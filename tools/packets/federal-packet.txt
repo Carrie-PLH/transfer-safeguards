@@ -1,0 +1,1960 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Federal layer (United States)
+SLUG: federal
+ASSEMBLED: 2026-08-30
+CAPTURE NOTES: Sources 1 and 2 fetched from the eCFR versioner API (title-42 XML, point-in-time 2026-08-27, the title's most recent issue date at retrieval) and converted to plain text by mechanical tag-stripping only. Source 3 extracted from the CMS State Operations Manual Appendix PP PDF (Rev. 232, issued 07-23-25; ModDate 2025-07-30) by pdftotext -layout, lines spanning tags F622 through F628 inclusive, copied without retyping. OCR/layout artifacts in Source 3 (column spacing, watermark fragments) are the extractor's, not edits.
+PENDING: none at assembly.
+
+SOURCE 1: eCFR — 42 CFR 483.15 (Admission, transfer, and discharge rights) | https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-483/subpart-B/section-483.15 | source current as of: 2026-08-27 | retrieved: 2026-08-30
+§ 483.15 Admission, transfer, and discharge rights. 
+ (a) Admissions policy. (1) The facility must establish and implement an admissions policy. 
+ (2) The facility must— 
+ (i) Not request or require residents or potential residents to waive their rights as set forth in this subpart and in applicable state, federal or local licensing or certification laws, including but not limited to their rights to Medicare or Medicaid; and 
+ (ii) Not request or require oral or written assurance that residents or potential residents are not eligible for, or will not apply for, Medicare or Medicaid benefits. 
+ (iii) Not request or require residents or potential residents to waive potential facility liability for losses of personal property 
+ (3) The facility must not request or require a third party guarantee of payment to the facility as a condition of admission or expedited admission, or continued stay in the facility. However, the facility may request and require a resident representative who has legal access to a resident's income or resources available to pay for facility care to sign a contract, without incurring personal financial liability, to provide facility payment from the resident's income or resources. 
+ (4) In the case of a person eligible for Medicaid, a nursing facility must not charge, solicit, accept, or receive, in addition to any amount otherwise required to be paid under the State plan, any gift, money, donation, or other consideration as a precondition of admission, expedited admission or continued stay in the facility. However,— 
+ (i) A nursing facility may charge a resident who is eligible for Medicaid for items and services the resident has requested and received, and that are not specified in the State plan as included in the term “nursing facility services” so long as the facility gives proper notice of the availability and cost of these services to residents and does not condition the resident's admission or continued stay on the request for and receipt of such additional services; and 
+ (ii) A nursing facility may solicit, accept, or receive a charitable, religious, or philanthropic contribution from an organization or from a person unrelated to a Medicaid eligible resident or potential resident, but only to the extent that the contribution is not a condition of admission, expedited admission, or continued stay in the facility for a Medicaid eligible resident. 
+ (5) States or political subdivisions may apply stricter admissions standards under State or local laws than are specified in this section, to prohibit discrimination against individuals entitled to Medicaid. 
+ (6) A nursing facility must disclose and provide to a resident or potential resident prior to time of admission, notice of special characteristics or service limitations of the facility. 
+ (7) A nursing facility that is a composite distinct part as defined in § 483.5 must disclose in its admission agreement its physical configuration, including the various locations that comprise the composite distinct part, and must specify the policies that apply to room changes between its different locations under paragraph (c)(9) of this section. 
+ (b) Equal access to quality care. (1) A facility must establish, maintain and implement identical policies and practices regarding transfer and discharge, as defined in § 483.5 and the provision of services for all individuals regardless of source of payment, consistent with § 483.10(a)(2); 
+ (2) The facility may charge any amount for services furnished to non-Medicaid residents unless otherwise limited by state law and consistent with the notice requirement in § 483.10(g)(18)(i) and (g)(4)(i) describing the charges; and 
+ (3) The State is not required to offer additional services on behalf of a resident other than services provided in the State plan. 
+ (c) Transfer and discharge —(1) Facility requirements —(i) The facility must permit each resident to remain in the facility, and not transfer or discharge the resident from the facility unless— 
+ (A) The transfer or discharge is necessary for the resident's welfare and the resident's needs cannot be met in the facility; 
+ (B) The transfer or discharge is appropriate because the resident's health has improved sufficiently so the resident no longer needs the services provided by the facility; 
+ (C) The safety of individuals in the facility is endangered due to the clinical or behavioral status of the resident; 
+ (D) The health of individuals in the facility would otherwise be endangered; 
+ (E) The resident has failed, after reasonable and appropriate notice, to pay for (or to have paid under Medicare or Medicaid) a stay at the facility. Non-payment applies if the resident does not submit the necessary paperwork for third party payment or after the third party, including Medicare or Medicaid, denies the claim and the resident refuses to pay for his or her stay. For a resident who becomes eligible for Medicaid after admission to a facility, the facility may charge a resident only allowable charges under Medicaid; or 
+ (F) The facility ceases to operate. 
+ (ii) The facility may not transfer or discharge the resident while the appeal is pending, pursuant to § 431.230 of this chapter, when a resident exercises his or her right to appeal a transfer or discharge notice from the facility pursuant to § 431.220(a)(3) of this chapter, unless the failure to discharge or transfer would endanger the health or safety of the resident or other individuals in the facility. The facility must document the danger that failure to transfer or discharge would pose. 
+ (2) Documentation. When the facility transfers or discharges a resident under any of the circumstances specified in paragraphs (c)(1)(i)(A) through (F) of this section, the facility must ensure that the transfer or discharge is documented in the resident's medical record and appropriate information is communicated to the receiving health care institution or provider. 
+ (i) Documentation in the resident's medical record must include: 
+ (A) The basis for the transfer per paragraph (c)(1)(i) of this section. 
+ (B) In the case of paragraph (c)(1)(i)(A) of this section, the specific resident need(s) that cannot be met, facility attempts to meet the resident needs, and the service available at the receiving facility to meet the need(s). 
+ (ii) The documentation required by paragraph (c)(2)(i) of this section must be made by— 
+ (A) The resident's physician when transfer or discharge is necessary under paragraph (c)(1)(A) or (B) of this section; and 
+ (B) A physician when transfer or discharge is necessary under paragraph (c)(1)(i)(C) or (D) of this section. 
+ (iii) Information provided to the receiving provider must include a minimum of the following: 
+ (A) Contact information of the practitioner responsible for the care of the resident 
+ (B) Resident representative information including contact information. 
+ (C) Advance Directive information. 
+ (D) All special instructions or precautions for ongoing care, as appropriate. 
+ (E) Comprehensive care plan goals, 
+ (F) All other necessary information, including a copy of the resident's discharge summary, consistent with § 483.21(c)(2), as applicable, and any other documentation, as applicable, to ensure a safe and effective transition of care. 
+ (3) Notice before transfer. Before a facility transfers or discharges a resident, the facility must— 
+ (i) Notify the resident and the resident's representative(s) of the transfer or discharge and the reasons for the move in writing and in a language and manner they understand. The facility must send a copy of the notice to a representative of the Office of the State Long-Term Care Ombudsman. 
+ (ii) Record the reasons for the transfer or discharge in the resident's medical record in accordance with paragraph (c)(2) of this section; and 
+ (iii) Include in the notice the items described in paragraph (c)(5) of this section. 
+ (4) Timing of the notice. (i) Except as specified in paragraphs (c)(4)(ii) and (8) of this section, the notice of transfer or discharge required under this section must be made by the facility at least 30 days before the resident is transferred or discharged. 
+ (ii) Notice must be made as soon as practicable before transfer or discharge when— 
+ (A) The safety of individuals in the facility would be endangered under paragraph (c)(1)(i)(C) of this section; 
+ (B) The health of individuals in the facility would be endangered, under paragraph (c)(1)(i)(D) of this section; 
+ (C) The resident's health improves sufficiently to allow a more immediate transfer or discharge, under paragraph (c)(1)(i)(B) of this section; 
+ (D) An immediate transfer or discharge is required by the resident's urgent medical needs, under paragraph (c)(1)(i)(A) of this section; or 
+ (E) A resident has not resided in the facility for 30 days. 
+ (5) Contents of the notice. The written notice specified in paragraph (c)(3) of this section must include the following: 
+ (i) The reason for transfer or discharge; 
+ (ii) The effective date of transfer or discharge; 
+ (iii) The location to which the resident is transferred or discharged; 
+ (iv) A statement of the resident's appeal rights, including the name, address (mailing and email), and telephone number of the entity which receives such requests; and information on how to obtain an appeal form and assistance in completing the form and submitting the appeal hearing request; 
+ (v) The name, address (mailing and email) and telephone number of the Office of the State Long-Term Care Ombudsman; 
+ (vi) For nursing facility residents with intellectual and developmental disabilities or related disabilities, the mailing and email address and telephone number of the agency responsible for the protection and advocacy of individuals with developmental disabilities established under Part C of the Developmental Disabilities Assistance and Bill of Rights Act of 2000 (Pub. L. 106-402, codified at 42 U.S.C. 15001 et seq. ); and 
+ (vii) For nursing facility residents with a mental disorder or related disabilities, the mailing and email address and telephone number of the agency responsible for the protection and advocacy of individuals with a mental disorder established under the Protection and Advocacy for Mentally Ill Individuals Act. 
+ (6) Changes to the notice. If the information in the notice changes prior to effecting the transfer or discharge, the facility must update the recipients of the notice as soon as practicable once the updated information becomes available. 
+ (7) Orientation for transfer or discharge. A facility must provide and document sufficient preparation and orientation to residents to ensure safe and orderly transfer or discharge from the facility. This orientation must be provided in a form and manner that the resident can understand. 
+ (8) Notice in advance of facility closure. In the case of facility closure, the individual who is the administrator of the facility must provide written notification prior to the impending closure to the State Survey Agency, the Office of the State Long-Term Care Ombudsman, residents of the facility, and the resident representatives, as well as the plan for the transfer and adequate relocation of the residents, as required at § 483.70(k). 
+ (9) Room changes in a composite distinct part. Room changes in a facility that is a composite distinct part (as defined in § 483.5) are subject to the requirements of § 483.10(e)(7) and must be limited to moves within the particular building in which the resident resides, unless the resident voluntarily agrees to move to another of the composite distinct part's locations. 
+ (d) Notice of bed-hold policy and return —(1) Notice before transfer. Before a nursing facility transfers a resident to a hospital or the resident goes on therapeutic leave, the nursing facility must provide written information to the resident or resident representative that specifies— 
+ (i) The duration of the state bed-hold policy, if any, during which the resident is permitted to return and resume residence in the nursing facility; 
+ (ii) The reserve bed payment policy in the state plan, under § 447.40 of this chapter, if any; 
+ (iii) The nursing facility's policies regarding bed-hold periods, which must be consistent with paragraph (e)(1) of this section, permitting a resident to return; and 
+ (iv) The information specified in paragraph (e)(1) of this section. 
+ (2) Bed-hold notice upon transfer. At the time of transfer of a resident for hospitalization or therapeutic leave, a nursing facility must provide to the resident and the resident representative written notice which specifies the duration of the bed-hold policy described in paragraph (d)(1) of this section. 
+ (e)(1) Permitting residents to return to facility. A facility must establish and follow a written policy on permitting residents to return to the facility after they are hospitalized or placed on therapeutic leave. The policy must provide for the following. 
+ (i) A resident, whose hospitalization or therapeutic leave exceeds the bed-hold period under the State plan, returns to the facility to their previous room if available or immediately upon the first availability of a bed in a semi-private room if the resident 
+ (A) Requires the services provided by the facility; and 
+ (B) Is eligible for Medicare skilled nursing facility services or Medicaid nursing facility services. 
+ (ii) If the facility that determines that a resident who was transferred with an expectation of returning to the facility cannot return to the facility, the facility must comply with the requirements of paragraph (c) as they apply to discharges. 
+ (2) Readmission to a composite distinct part. When the facility to which a resident returns is a composite distinct part (as defined in § 483.5), the resident must be permitted to return to an available bed in the particular location of the composite distinct part in which he or she resided previously. If a bed is not available in that location at the time of return, the resident must be given the option to return to that location upon the first availability of a bed there. 
+ [81 FR 68855, Oct. 4, 2016, as amended at 82 FR 32259, July 13, 2017; 89 FR 40996, May 10, 2024]
+END SOURCE 1
+
+SOURCE 2: eCFR — 42 CFR part 431, subpart E (Fair Hearings for Applicants and Beneficiaries) | https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-C/part-431/subpart-E | source current as of: 2026-08-27 | retrieved: 2026-08-30
+Subpart E—Fair Hearings for Applicants and Beneficiaries 
+
+ Source: 44 FR 17932, Mar. 29, 1979, unless otherwise noted.
+
+ General Provisions 
+
+ § 431.200 Basis and scope. 
+ This subpart— 
+ (a) Implements section 1902(a)(3) of the Act, which requires that a State plan provide an opportunity for a fair hearing to any person whose claim for assistance is denied or not acted upon promptly; 
+ (b) Prescribes procedures for an opportunity for a hearing if the State agency or non-emergency transportation PAHP (as defined in § 438.9(a) of this chapter) takes action, as stated in this subpart, to suspend, terminate, or reduce services, or of an adverse benefit determination by an MCO, PIHP or PAHP under subpart F of part 438 of this chapter; and 
+ (c) Implements sections 1919(f)(3) and 1919(e)(7)(F) of the Act by providing an appeals process for any person who— 
+ (1) Is subject to a proposed transfer or discharge from a nursing facility; or 
+ (2) Is adversely affected by the pre-admission screening or the annual resident review that are required by section 1919(e)(7) of the Act. 
+ (d) Implements section 1943(b)(3) of the Act and section 1413 of the Affordable Care Act to permit coordinated hearings and appeals among insurance affordability programs. 
+ [67 FR 41094, June 14, 2002, as amended at 81 FR 27852, May 6, 2016; 81 FR 86448, Nov. 30, 2016]
+
+ § 431.201 Definitions. 
+ For purposes of this subpart: 
+ Action means one of the following: 
+ (1) A termination, suspension of, or reduction in covered benefits or services, including benefits or services for which there is a current approved prior authorization; 
+ (2) A termination, suspension of, or reduction in Medicaid eligibility, or an increase in beneficiary liability, including a determination that a beneficiary must incur a greater amount of medical expenses to establish income eligibility in accordance with § 435.121(e)(4) or § 435.831 of this chapter; 
+ (3) A determination that a beneficiary is subject to an increase in premiums or cost-sharing charges under subpart A of part 447 of this chapter; or 
+ (4) A determination by a skilled nursing facility or nursing facility to transfer or discharge a resident and an adverse determination by a State regarding the preadmission screening and resident review requirements of section 1919(e)(7) of the Act. 
+ Adverse determination means a determination made in accordance with sections 1919(b)(3)(F) or 1919(e)(7)(B) of the Act that the individual does not require the level of services provided by a nursing facility or that the individual does or does not require specialized services. 
+ Date of action means the intended date on which a termination, suspension, reduction, transfer or discharge becomes effective. It also means the date of the determination made by a State with regard to the preadmission screening and annual resident review requirements of section 1919(e)(7) of the Act. 
+ De novo hearing means a hearing that starts over from the beginning. 
+ Evidentiary hearing means a hearing conducted so that evidence may be presented. 
+ Joint fair hearing request means a request for a Medicaid fair hearing which is included in an appeal request submitted to an Exchange or Exchange appeals entity under 45 CFR 155.520 or other insurance affordability program or appeals entity, in accordance with the signed agreement between the agency and an Exchange or Exchange appeals entity or other program or appeals entity described in § 435.1200(b)(3) of this chapter . 
+ Local evidentiary hearing means a hearing held on the local or county level serving a specified portion of the State. 
+ Notice means a written statement that meets the requirements of § 431.210. 
+ Request for a hearing means a clear expression by the applicant or beneficiary, or his authorized representative, that he wants the opportunity to present his case to a reviewing authority. 
+ Send means deliver by mail or in electronic format consistent with § 435.918 of this chapter. 
+ Service authorization request means a managed care enrollee's request for the provision of a service. 
+ [44 FR 17932, Mar. 29, 1979, as amended at 57 FR 56505, Nov. 30, 1992; 67 FR 41095, June 14, 2002; 78 FR 42301, July 15, 2013; 81 FR 86448, Nov. 30, 2016; 89 FR 8980, Feb. 8, 2024]
+
+ § 431.202 State plan requirements. 
+ A State plan must provide that the requirements of §§ 431.205 through 431.246 of this subpart are met. 
+
+ § 431.205 Provision of hearing system. 
+ (a) The Medicaid agency must be responsible for maintaining a hearing system that meets the requirements of this subpart. 
+ (b) The State's hearing system must provide for— 
+ (1) A hearing before— 
+ (i) The Medicaid agency; or 
+ (ii) For the denial of eligibility for individuals whose income eligibility is determined based on the applicable modified adjusted gross income standard described in§ 435.911(c) of this chapter, the Exchange or Exchange appeals entity to which authority to conduct fair hearings has been delegated under § 431.10(c)(1)(ii), provided that individuals who have requested a fair hearing are given the choice to have their fair hearing conducted instead by the Medicaid agency; at state option the Exchange or Exchange appeals entity decision may be subject to review by the Medicaid agency in accordance with § 431.10(c)(3)(iii); or 
+ (2) An evidentiary hearing at the local level, with a right of appeal to the Medicaid agency. 
+ (c) The agency may offer local hearings in some political subdivisions and not in others. 
+ (d) The hearing system must meet the due process standards set forth in Goldberg v. Kelly, 397 U.S. 254 (1970), and any additional standards specified in this subpart. 
+ (e) The hearing system must be accessible to persons who are limited English proficient and persons who have disabilities, consistent with § 435.905(b) of this chapter. 
+ (f) The hearing system must comply with the United States Constitution, the Social Security Act, title VI of the Civil Rights Act of 1964, section 504 of the Rehabilitation Act of 1973, the Americans with Disabilities Act of 1990, the Age Discrimination Act of 1975, and section 1557 of the Affordable Care Act and implementing regulations. 
+ [44 FR 17932, Mar. 29, 1979, as amended at 78 FR 42301, July 15, 2013; 81 FR 86448, Nov. 30, 2016]
+
+ § 431.206 Informing applicants and beneficiaries. 
+ (a) The agency must issue and publicize its hearing procedures. 
+ (b) The agency must, at the time specified in paragraph (c) of this section, inform every applicant or beneficiary in writing— 
+ (1) Of his or her right to a fair hearing and right to request an expedited fair hearing; 
+ (2) Of the method by which he may obtain a hearing; 
+ (3) That he may represent himself or use legal counsel, a relative, a friend, or other spokesman; and 
+ (4) Of the time frames in which the agency must take final administrative action, in accordance with § 431.244(f). 
+ (c) The agency must provide the information required in paragraph (b) of this section—(1) At the time that the individual applies for Medicaid; 
+ (2) At the time the agency denies an individual's claim for eligibility, benefits or services; or denies a request for exemption from mandatory enrollment in an Alternative Benefit Plan; or takes other action, as defined at § 431.201; or whenever a hearing is otherwise required in accordance with § 431.220(a); 
+ (3) At the time a skilled nursing facility or a nursing facility notifies a resident in accordance with § 483.15 of this chapter that he or she is to be transferred or discharged; and 
+ (4) At the time an individual receives an adverse determination by the State with regard to the preadmission screening and annual resident review requirements of section 1919(e)(7) of the Act. 
+ (d) If, in accordance with § 431.10(c)(1)(ii), the agency has delegated authority to the Exchange or Exchange appeals entity to conduct the fair hearing, the agency must inform the individual in writing that— 
+ (1) He or she has the right to have his or her hearing before the agency, instead of the Exchange or the Exchange appeals entity; and 
+ (2) The method by which the individual may make such election; 
+ (e) The information required under this subpart must be accessible to individuals who are limited English proficient and to individuals with disabilities, consistent with § 435.905(b) of this chapter, and may be provided in electronic format in accordance with § 435.918 of this chapter. 
+ [44 FR 17932, Mar. 29, 1979, as amended at 57 FR 56505, Nov. 30, 1992; 58 FR 25784, Apr. 28, 1993; 78 FR 42301, July 15, 2013; 81 FR 68847, Oct. 4, 2016; 81 FR 86448, Nov. 30, 2016]
+
+ Notice 
+
+ § 431.210 Content of notice. 
+ A notice required under § 431.206 (c)(2), (c)(3), or (c)(4) of this subpart must contain— 
+ (a) A statement of what action the agency, skilled nursing facility, or nursing facility intends to take and the effective date of such action; 
+ (b) A clear statement of the specific reasons supporting the intended action; 
+ (c) The specific regulations that support, or the change in Federal or State law that requires, the action; 
+ (d) An explanation of— 
+ (1) The individual's right to request a local evidentiary hearing if one is available, or a State agency hearing; or 
+ (2) In cases of an action based on a change in law, the circumstances under which a hearing will be granted; and 
+ (e) An explanation of the circumstances under which Medicaid is continued if a hearing is requested. 
+ [44 FR 17932, Mar. 29, 1979, as amended at 57 FR 56505, Nov. 30, 1992; 81 FR 86448, Nov. 30, 2016]
+
+ § 431.211 Advance notice. 
+ The State or local agency must send a notice at least 10 days before the date of action, except as permitted under §§ 431.213 and 431.214. 
+ [78 FR 42301, July 15, 2013]
+
+ § 431.213 Exceptions from advance notice. 
+ The agency may send a notice not later than the date of action if— 
+ (a) The agency has factual information confirming the death of a beneficiary; 
+ (b) The agency receives a clear written statement signed by a beneficiary that— 
+ (1) He no longer wishes services; or 
+ (2) Gives information that requires termination or reduction of services and indicates that he understands that this must be the result of supplying that information; 
+ (c) The beneficiary has been admitted to an institution where he is ineligible under the plan for further services; 
+ (d) The beneficiary's whereabouts are unknown and the post office returns agency mail directed to him indicating no forwarding address (see § 431.231(d) for procedure if the beneficiary's whereabouts become known). The provisions of this paragraph (d) sunset on October 1, 2034. CMS will follow applicable rulemaking procedures to ensure that policies governing whereabouts unknown are implemented and effective on October 1, 2034, replacing the policies scheduled to sunset on that date; 
+ (e) The agency establishes the fact that the beneficiary has been accepted for Medicaid services by another local jurisdiction, State, territory, or commonwealth; 
+ (f) A change in the level of medical care is prescribed by the beneficiary's physician; 
+ (g) The notice involves an adverse determination made with regard to the preadmission screening requirements of section 1919(e)(7) of the Act; or 
+ (h) The date of action will occur in less than 10 days, in accordance with § 483.15(b)(4)(ii) and (b)(8), which provides exceptions to the 30 days notice requirements of § 483.15(b)(4)(i) of this chapter. 
+ [44 FR 17932, Mar. 29, 1979, as amended at 57 FR 56505, Nov. 30, 1992; 58 FR 25784, Apr. 28, 1993; 78 FR 42301, July 15, 2013; 81 FR 68847, Oct. 4, 2016; 89 FR 22866, Apr. 2, 2024; 91 FR 33469, June 3, 2026]
+
+ § 431.214 Notice in cases of probable fraud. 
+ The agency may shorten the period of advance notice to 5 days before the date of action if— 
+ (a) The agency has facts indicating that action should be taken because of probable fraud by the beneficiary; and 
+ (b) The facts have been verified, if possible, through secondary sources. 
+
+ Right to Hearing 
+
+ § 431.220 When a hearing is required. 
+ (a) The State agency must grant an opportunity for a hearing to the following: 
+ (1) Any individual who requests it because he or she believes the agency has taken an action erroneously, denied his or her claim for eligibility or for covered benefits or services, or issued a determination of an individual's liability, or has not acted upon the claim with reasonable promptness including, if applicable— 
+ (i) An initial or subsequent decision regarding eligibility; 
+ (ii) A determination of the amount of medical expenses that an individual must incur in order to establish eligibility in accordance with § 435.121(e)(4) or § 435.831 of this chapter; or 
+ (iii) A determination of the amount of premiums and cost sharing charges under subpart A of part 447 of this chapter; 
+ (iv) A change in the amount or type of benefits or services; 
+ (v) A request for exemption from mandatory enrollment in an Alternative Benefit Plan; or 
+ (vi) A prior authorization decision. 
+ (2) Any resident who requests it because he or she believes a skilled nursing facility or nursing facility has erroneously determined that he or she must be transferred or discharged. 
+ (3) Any individual who requests it because he or she believes the State has made an erroneous determination with regard to the preadmission and annual resident review requirements of section 1919(e)(7) of the Act. 
+ (4) Any MCO, PIHP, or PAHP enrollee who is entitled to a hearing under subpart F of part 438 of this chapter. 
+ (5) Any enrollee in a non-emergency medical transportation PAHP (as that term is defined in § 438.9 of this chapter) who has an action as stated in this subpart. 
+ (6) Any enrollee who is entitled to a hearing under subpart B of part 438 of this chapter. 
+ (b) The agency need not grant a hearing if the sole issue is a Federal or State law requiring an automatic change adversely affecting some or all beneficiaries. 
+ [44 FR 17932, Mar. 29, 1979, as amended at 57 FR 56505, Nov. 30, 1992; 67 FR 41095, June 14, 2002; 67 FR 65505, Oct. 25, 2002; 81 FR 27853, May 6, 2016; 81 FR 86448, Nov. 30, 2016; 89 FR 8980, Apr. 8, 2024]
+
+ § 431.221 Request for hearing. 
+ (a)(1) The agency must establish procedures that permit an individual, or an authorized representative as defined at § 435.923 of this chapter, to— 
+ (i) Submit a hearing request via any of the modalities described in § 435.907(a) of this chapter, except that the requirement to establish procedures for submission of a fair hearing request described in § 435.907(a)(1), (2) and (5) of this chapter (relating to submissions via Internet Web site, telephone and other electronic means) is effective no later than the date described in § 435.1200(i) of this chapter; and 
+ (ii) Include in a hearing request submitted under paragraph (a)(1)(i) of this section, a request for an expedited fair hearing. 
+ (2) [Reserved] 
+ (b) The agency may not limit or interfere with the applicant's or beneficiary's freedom to make a request for a hearing. 
+ (c) The agency may assist the applicant or beneficiary in submitting and processing his request. 
+ (d) The agency must allow the applicant or beneficiary a reasonable time, not to exceed 90 days from the date that notice of action is mailed, to request a hearings. 
+ [44 FR 17932, Mar. 29, 1979, as amended at 81 FR 86448, Nov. 30, 2016]
+
+ § 431.222 Group hearings. 
+ The agency— 
+ (a) May respond to a series of individual requests for hearing by conducting a single group hearing; 
+ (b) May consolidate hearings only in cases in which the sole issue involved is one of Federal or State law or policy; 
+ (c) Must follow the policies of this subpart and its own policies governing hearings in all group hearings; and 
+ (d) Must permit each person to present his own case or be represented by his authorized representative. 
+
+ § 431.223 Denial or dismissal of request for a hearing. 
+ The agency may deny or dismiss a request for a hearing if— 
+ (a) The applicant or beneficiary withdraws the request. The agency must accept withdrawal of a fair hearing request via any of the modalities available per § 431.221(a)(1)(i). For telephonic hearing withdrawals, the agency must record the individual's statement and telephonic signature. For telephonic, online and other electronic withdrawals, the agency must send the affected individual written confirmation, via regular mail or electronic notification in accordance with the individual's election under § 435.918(a) of this chapter. 
+ (b) The applicant or beneficiary fails to appear at a scheduled hearing without good cause. 
+ [44 FR 17932, Mar. 29, 1979, as amended at 81 FR 86449, Nov. 30, 2016]
+
+ § 431.224 Expedited appeals. 
+ (a) General rule. (1) The agency must establish and maintain an expedited fair hearing process for individuals to request an expedited fair hearing, if the agency determines that the time otherwise permitted for a hearing under § 431.244(f)(1) could jeopardize the individual's life, health or ability to attain, maintain, or regain maximum function. 
+ (2) The agency must take final administrative action within the period of time permitted under § 431.244(f)(3) if the agency determines that the individual meets the criteria for an expedited fair hearing in paragraph (a)(1) of this section. 
+ (b) Notice. The agency must notify the individual whether the request is granted or denied as expeditiously as possible. Such notice must be provided orally or through electronic means in accordance with § 435.918 of this chapter, if consistent with the individual's election under such section; if oral notice is provided, the agency must follow up with written notice, which may be through electronic means if consistent with the individual's election under § 435.918. 
+ [81 FR 86449, Nov. 30, 2016]
+
+ Procedures 
+
+ § 431.230 Maintaining services. 
+ (a) If the agency sends the 10-day or 5-day notice as required under § 431.211 or § 431.214 of this subpart, and the beneficiary requests a hearing before the date of action, the agency may not terminate or reduce services until a decision is rendered after the hearing unless— 
+ (1) It is determined at the hearing that the sole issue is one of Federal or State law or policy; and 
+ (2) The agency promptly informs the beneficiary in writing that services are to be terminated or reduced pending the hearing decision. 
+ (b) If the agency's action is sustained by the hearing decision, the agency may institute recovery procedures against the applicant or beneficiary to recoup the cost of any services furnished the beneficiary, to the extent they were furnished solely by reason of this section. 
+ [44 FR 17932, Mar. 29, 1979, as amended at 45 FR 24882, Apr. 11, 1980; 78 FR 42302, July 15, 2013]
+
+ § 431.231 Reinstating services. 
+ (a) The agency may reinstate services if a beneficiary requests a hearing not more than 10 days after the date of action. 
+ (b) The reinstated services must continue until a hearing decision unless, at the hearing, it is determined that the sole issue is one of Federal or State law or policy. 
+ (c) The agency must reinstate and continue services until a decision is rendered after a hearing if— 
+ (1) Action is taken without the advance notice required under § 431.211 or § 431.214 of this subpart; 
+ (2) The beneficiary requests a hearing within 10 days from the date that the individual receives the notice of action. The date on which the notice is received is considered to be 5 days after the date on the notice, unless the beneficiary shows that he or she did not receive the notice within the 5-day period; and 
+ (3) The agency determines that the action resulted from other than the application of Federal or State law or policy. 
+ (d) If a beneficiary's whereabouts are unknown, as indicated by the return of unforwardable agency mail directed to him, any discontinued services must be reinstated if his whereabouts become known during the time he is eligible for services. The provisions of this paragraph (d) sunset on October 1, 2034. CMS will follow applicable rulemaking procedures to ensure that policies governing when a beneficiary's whereabouts become known are implemented and effective on October 1, 2034, replacing the policies scheduled to sunset on that date. 
+ [44 FR 17932, Mar. 29, 1979, as amended at 78 FR 42302, July 15, 2013; 89 FR 22866, Apr. 2, 2024; 91 FR 33469, June 3, 2026]
+
+ § 431.232 Adverse decision of local evidentiary hearing. 
+ If the decision of a local evidentiary hearing is adverse to the applicant or beneficiary, the agency must— 
+ (a) Inform the applicant or beneficiary of the decision; 
+ (b) Inform the applicant or beneficiary in writing that he or she has a right to appeal the decision to the State agency within 10 days after the individual receives the notice of the adverse decision. The date on which the notice is received is considered to be 5 days after the date on the notice, unless the individual shows that he or she did not receive the notice within the 5-day period; and 
+ (c) Inform the applicant or beneficiary of his right to request that his appeal be a de novo hearing; and 
+ (d) Discontinue services after the adverse decision. 
+ [44 FR 17932, Mar. 29, 1979, as amended at 81 FR 86449, Nov. 30, 2016]
+
+ § 431.233 State agency hearing after adverse decision of local evidentiary hearing. 
+ (a) Unless the applicant or beneficiary specifically requests a de novo hearing, the State agency hearing may consist of a review by the agency hearing officer of the record of the local evidentiary hearing to determine whether the decision of the local hearing officer was supported by substantial evidence in the record. 
+ (b) A person who participates in the local decision being appealed may not participate in the State agency hearing decision. 
+
+ § 431.240 Conducting the hearing. 
+ (a) All hearings must be conducted— 
+ (1) At a reasonable time, date, and place; 
+ (2) Only after adequate written notice of the hearing; and 
+ (3) By one or more impartial officials or other individuals who have not been directly involved in the initial determination of the action in question. 
+ (b) If the hearing involves medical issues such as those concerning a diagnosis, an examining physician's report, or a medical review team's decision, and if the hearing officer considers it necessary to have a medical assessment other than that of the individual involved in making the original decision, such a medical assessment must be obtained at agency expense and made part of the record. 
+ (c) A hearing officer must have access to agency information necessary to issue a proper hearing decision, including information concerning State policies and regulations. 
+ [44 FR 17932, Mar. 29, 1979, as amended at 78 FR 42302, July 15, 2013]
+
+ § 431.241 Matters to be considered at the hearing. 
+ The hearing must cover— 
+ (a) Any matter described in § 431.220(a)(1) for which an individual requests a fair hearing. 
+ (b) A decision by a skilled nursing facility or nursing facility to transfer or discharge a resident; and 
+ (c) A State determination with regard to the preadmission screening and annual resident review requirements of section 1919(e)(7) of the Act. 
+ [57 FR 56505, Nov. 30, 1992, as amended at 81 FR 86449, Nov. 30, 2016]
+]
+
+ § 431.242 Procedural rights of the applicant or beneficiary. 
+ The applicant or beneficiary, or his representative, must be given an opportunity to— 
+ (a) Examine at a reasonable time before the date of the hearing and during the hearing: 
+ (1) The content of the applicant's or beneficiary's case file and electronic account, as defined in § 435.4 of this chapter; and 
+ (2) All documents and records to be used by the State or local agency or the skilled nursing facility or nursing facility at the hearing; 
+ (b) Bring witnesses; 
+ (c) Establish all pertinent facts and circumstances; 
+ (d) Present an argument without undue interference; and 
+ (e) Question or refute any testimony or evidence, including opportunity to confront and cross-examine adverse witnesses. 
+ (f) Request an expedited fair hearing. 
+ [44 FR 17932, Mar. 29, 1979, as amended at 57 FR 56506, Nov. 30, 1992; 81 FR 86449, Nov. 30, 2016]
+
+ § 431.243 Parties in cases involving an eligibility determination. 
+ If the hearing involves an issue of eligibility and the Medicaid agency is not responsible for eligibility determinations, the agency that is responsible for determining eligibility must participate in the hearing. 
+
+ § 431.244 Hearing decisions. 
+ (a) Hearing recommendations or decisions must be based exclusively on evidence introduced at the hearing. 
+ (b) The record must consist only of— 
+ (1) The transcript or recording of testimony and exhibits, or an official report containing the substance of what happened at the hearing; 
+ (2) All papers and requests filed in the proceeding; and 
+ (3) The recommendation or decision of the hearing officer. 
+ (c) The applicant or beneficiary must have access to the record at a convenient place and time. 
+ (d) In any evidentiary hearing, the decision must be a written one that— 
+ (1) Summarizes the facts; and 
+ (2) Identifies the regulations supporting the decision. 
+ (e) In a de novo hearing, the decision must— 
+ (1) Specify the reasons for the decision; and 
+ (2) Identify the supporting evidence and regulations. 
+ (f) The agency must take final administrative action as follows: 
+ (1) Ordinarily, within 90 days from: 
+ (i) The date the enrollee filed an MCO, PIHP, or PAHP appeal, not including the number of days the enrollee took to subsequently file for a State fair hearing; or 
+ (ii) For all other fair hearings, the date the agency receives a request for a fair hearing in accordance with § 431.221(a)(1). 
+ (2) As expeditiously as the enrollee's health condition requires, but no later than 3 working days after the agency receives, from the MCO, PIHP, or PAHP, the case file and information for any appeal of a denial of a service that, as indicated by the MCO, PIHP, or PAHP— 
+ (i) Meets the criteria for expedited resolution as set forth in § 438.410(a) of this chapter, but was not resolved within the timeframe for expedited resolution; or 
+ (ii) Was resolved within the timeframe for expedited resolution, but reached a decision wholly or partially adverse to the enrollee. 
+ (3) In the case of individuals granted an expedited fair hearing in accordance with § 431.224(a)— 
+ (i) For a claim related to eligibility described in § 431.220(a)(1), or any claim described in § 431.220(a)(2) (relating to a nursing facility) or § 431.220(a)(3) (related to preadmission and annual resident review), as expeditiously as possible and, effective no later than the date described in § 435.1200(i) of this chapter, no later than 7 working days after the agency receives a request for expedited fair hearing; or 
+ (ii) For a claim related to services or benefits described in § 431.220(a)(1) as expeditiously as possible and, effective no later than the date described in § 435.1200(i) of this chapter, within the time frame in paragraph (f)(2) of this section. 
+ (iii) For a claim related to services or benefits described in § 431.220(a)(4), (5) or (6), in accordance with the time frame in paragraph (f)(2) of this section. 
+ (4)(i) The agency must take final administrative action on a fair hearing request within the time limits set forth in this paragraph except in unusual circumstances when— 
+ (A) The agency cannot reach a decision because the appellant requests a delay or fails to take a required action; or 
+ (B) There is an administrative or other emergency beyond the agency's control. 
+ (ii) The agency must document the reasons for any delay in the appellant's record. 
+ (g) The public must have access to all agency hearing decisions, subject to the requirements of subpart F of this part for safeguarding of information. 
+ [44 FR 17932, Mar. 29, 1979, as amended at 67 FR 41095, June 14, 2002; 81 FR 27853, May 6, 2016; 81 FR 86449, Nov. 30, 2016]
+
+ § 431.245 Notifying the applicant or beneficiary of a State agency decision. 
+ The agency must notify the applicant or beneficiary in writing of— 
+ (a) The decision; and 
+ (b) His right to request a State agency hearing or seek judicial review, to the extent that either is available to him. 
+
+ § 431.246 Corrective action. 
+ The agency must promptly make corrective payments, retroactive to the date an incorrect action was taken, and, if appropriate, provide for admission or readmission of an individual to a facility if— 
+ (a) The hearing decision is favorable to the applicant or beneficiary; or 
+ (b) The agency decides in the applicant's or beneficiary's favor before the hearing. 
+ [57 FR 56506, Nov. 30, 1992]
+
+ Federal Financial Participation 
+
+ § 431.250 Federal financial participation. 
+ FFP is available in expenditures for— 
+ (a) Payments for services continued pending a hearing decision; 
+ (b) Payments made— 
+ (1) To carry out hearing decisions; and 
+ (2) For services provided within the scope of the Federal Medicaid program and made under a court order. 
+ (c) Payments made to take corrective action prior to a hearing; 
+ (d) Payments made to extend the benefit of a hearing decision or court order to individuals in the same situation as those directly affected by the decision or order; 
+ (e) Retroactive payments under paragraphs (b), (c), and (d) of this section in accordance with applicable Federal policies on corrective payments; and 
+ (f) Administrative costs incurred by the agency for— 
+ (1) Transportation for the applicant or beneficiary, his representative, and witnesses to and from the hearing; 
+ (2) Meeting other expenses of the applicant or beneficiary in connection with the hearing; 
+ (3) Carrying out the hearing procedures, including expenses of obtaining the additional medical assessment specified in § 431.240 of this subpart; and 
+ (4) Hearing procedures for Medicaid and non-Medicaid individuals appealing transfers, discharges and determinations of preadmission screening and annual resident reviews under part 483, subparts C and E of this chapter. 
+ [44 FR 17932, Mar. 29, 1979, as amended at 45 FR 24882, Apr. 11, 1980; 57 FR 56506, Nov. 30, 1992]
+END SOURCE 2
+
+SOURCE 3: CMS State Operations Manual, Appendix PP (Guidance to Surveyors for Long Term Care Facilities), tags F622–F628 | https://www.cms.gov/regulations-and-guidance/guidance/manuals/downloads/som107ap_pp_guidelines_ltcf.pdf | source's own date: Rev. 232, issued 07-23-25 | retrieved: 2026-08-30
+F622
+(Rev. 231; Issued: 07-09-25; Effective: 04-25-25; Implementation: 04-28-25)
+
+Note: Regulatory requirements for §483.15(c)(1), §483.15(c)(2), and §483.15(c)(2)(i)-(ii) have
+been relocated to F627, and the regulatory requirements for §483.15(c)(2)(iii) have been
+relocated to F628.
+
+F623
+(Rev. 231; Issued: 07-09-25; Effective: 04-25-25; Implementation: 04-28-25)
+
+Note: Regulatory requirements §483.15(c)(3)-(6) and (8) have been relocated to F628.
+
+F624
+(Rev. 231; Issued: 07-09-25; Effective: 04-25-25; Implementation: 04-28-25)
+
+Note: Regulatory requirements §483.15(c)(7) have been relocated to F627.
+
+
+F625
+(Rev. 231; Issued: 07-09-25; Effective: 04-25-25; Implementation: 04-28-25)
+
+Note: Regulatory requirements §483.15(d)(1)-(2) have been relocated to F628.
+
+F626
+(Rev. 231; Issued: 07-09-25; Effective: 04-25-25; Implementation: 04-28-25)
+
+Note: Regulatory requirements §483.15(e)(1)-(2) have been relocated to F627.
+F627
+(Rev. 232; Issued: 07-23-25; Effective: 04-25-25; Implementation: 04-28-25)
+
+§483.15(c) Transfer and discharge-
+§483.15(c)(1) Facility requirements-
+    (i) The facility must permit each resident to remain in the facility, and not transfer or
+        discharge the resident from the facility unless—
+
+       (A)The transfer or discharge is necessary for the resident’s welfare and the
+           resident’s needs cannot be met in the facility;
+
+
+       (B) The transfer or discharge is appropriate because the resident’s health has
+           improved sufficiently so the resident no longer needs the services provided by
+           the facility;
+
+
+       (C)The safety of individuals in the facility is endangered due to the clinical or
+           behavioral status of the resident;
+
+
+       (D)The health of individuals in the facility would otherwise be endangered;
+
+
+       (E) The resident has failed, after reasonable and appropriate notice, to pay for (or to
+           have paid under Medicare or Medicaid) a stay at the facility. Nonpayment
+           applies if the resident does not submit the necessary paperwork for third party
+           payment or after the third party, including Medicare or Medicaid, denies the
+           claim and the resident refuses to pay for his or her stay. For a resident who
+           becomes eligible for Medicaid after admission to a facility, the facility may
+           charge a resident only allowable charges under Medicaid; or
+
+
+       (F) The facility ceases to operate.
+
+
+   (ii) The facility may not transfer or discharge the resident while the appeal is pending,
+        pursuant to § 431.230 of this chapter, when a resident exercises his or her right to
+        appeal a transfer or discharge notice from the facility pursuant to § 431.220(a)(3) of
+        this chapter, unless the failure to discharge or transfer would endanger the health or
+        safety of the resident or other individuals in the facility. The facility must document
+        the danger that failure to transfer or discharge would pose.
+
+§483.15(c)(2) Documentation.
+When the facility transfers or discharges a resident under any of the circumstances
+specified in paragraphs (c)(1)(i)(A) through (F) of this section, the facility must ensure that
+the transfer or discharge is documented in the resident’s medical record and appropriate
+information is communicated to the receiving health care institution or provider.
+
+     (i) Documentation in the resident’s medical record must include:
+
+
+       (A) The basis for the transfer per paragraph (c)(1)(i) of this section.
+
+
+       (B) In the case of paragraph (c)(1)(i)(A) of this section, the specific resident need(s)
+           that cannot be met, facility attempts to meet the resident needs, and the service
+           available at the receiving facility to meet the need(s).
+
+
+     (ii) The documentation required by paragraph (c)(2)(i) of this section must be made
+       by—
+
+
+       (A) The resident’s physician when transfer or discharge is necessary under
+           paragraph (c) (1) (A) or (B) of this section; and
+
+
+       (B) A physician when transfer or discharge is necessary under paragraph (c)(1)(i)(C)
+           or (D) of this section.
+
+
+§483.15(c)(7) Orientation for transfer or discharge.
+A facility must provide and document sufficient preparation and orientation to residents to
+ensure safe and orderly transfer or discharge from the facility. This orientation must be
+provided in a form and manner that the resident can understand.
+
+§483.15(e)(1) Permitting residents to return to facility.
+A facility must establish and follow a written policy on permitting residents to return to the
+facility after they are hospitalized or placed on therapeutic leave. The policy must provide
+for the following.
+
+     (i) A resident, whose hospitalization or therapeutic leave exceeds the bed-hold period
+       under the State plan, returns to the facility to their previous room if available or
+       immediately upon the first availability of a bed in a semi-private room if the
+       resident—
+
+
+       (A) Requires the services provided by the facility; and
+          (B) Is eligible for Medicare skilled nursing facility services or Medicaid nursing
+              facility services
+
+
+     (ii) If the facility that determines that a resident who was transferred with an
+          expectation of returning to the facility, cannot return to the facility, the facility must
+          comply with the requirements of paragraph (c) as they apply to discharges.
+
+
+§483.15(e)(2) Readmission to a composite distinct part. When the facility to which a
+resident returns is a composite distinct part (as defined in § 483.5), the resident must be
+permitted to return to an available bed in the particular location of the composite distinct
+part in which he or she resided previously. If a bed is not available in that location at the
+time of return, the resident must be given the option to return to that location upon the
+first availability of a bed there.
+
+§483.21(c)(1) Discharge Planning Process
+
+The facility must develop and implement an effective discharge planning process that
+focuses on the resident’s discharge goals, the preparation of residents to be active partners
+and effectively transition them to post-discharge care, and the reduction of factors leading
+to preventable readmissions. The facility’s discharge planning process must be consistent
+with the discharge rights set forth at 483.15(b) as applicable and—
+
+   (i)       Ensure that the discharge needs of each resident are identified and result in the
+             development of a discharge plan for each resident.
+
+   (ii)      Include regular re-evaluation of residents to identify changes that require
+             modification of the discharge plan. The discharge plan must be updated, as
+             needed, to reflect these changes.
+
+   (iii)     Involve the interdisciplinary team, as defined by §483.21(b)(2)(ii), in the ongoing
+             process of developing the discharge plan.
+
+   (iv)      Consider caregiver/support person availability and the resident’s or
+             caregiver’s/support person(s) capacity and capability to perform required care,
+             as part of the identification of discharge needs.
+
+   (v)       Involve the resident and resident representative in the development of the
+             discharge plan and inform the resident and resident representative of the final
+             plan.
+
+   (vi)      Address the resident’s goals of care and treatment preferences.
+
+   (vii)     Document that a resident has been asked about their interest in receiving
+             information regarding returning to the community.
+          (A)      If the resident indicates an interest in returning to the community, the
+                   facility must document any referrals to local contact agencies or other
+                   appropriate entities made for this purpose.
+
+          (B)      Facilities must update a resident’s comprehensive care plan and discharge
+                   plan, as appropriate, in response to information received from referrals to
+                   local contact agencies or other appropriate entities.
+
+          (C)      If discharge to the community is determined to not be feasible, the facility
+                   must document who made the determination and why.
+
+   (viii) For residents who are transferred to another SNF or who are discharged to a
+          HHA, IRF, or LTCH, assist residents and their resident representatives in
+          selecting a post-acute care provider by using data that includes, but is not
+          limited to SNF, HHA, IRF, or LTCH standardized patient assessment data, data
+          on quality measures, and data on resource use to the extent the data is available.
+          The facility must ensure that the post-acute care standardized patient
+          assessment data, data on quality measures, and data on resource use is relevant
+          and applicable to the resident’s goals of care and treatment preferences.
+
+   (ix)         Document, complete on a timely basis based on the resident’s needs, and include
+                in the clinical record, the evaluation of the resident’s discharge needs and
+                discharge plan. The results of the evaluation must be discussed with the resident
+                or resident’s representative. All relevant resident information must be
+                incorporated into the discharge plan to facilitate its implementation and to avoid
+                unnecessary delays in the resident’s discharge or transfer.
+
+§483.21(c)(2) Discharge Summary
+
+When the facility anticipates discharge, a resident must have a discharge
+summary that includes, but is not limited to, the following:
+
+   (iv)         A post-discharge plan of care that is developed with the participation of the
+                resident and, with the resident’s consent, the resident representative(s), which
+                will assist the resident to adjust to his or her new living environment. The post-
+                discharge plan of care must indicate where the individual plans to reside, any
+                arrangements that have been made for the resident’s follow up care and any
+                post-discharge medical and non-medical services.
+
+INTENT
+   • These regulations and guidance address inappropriate discharges and:
+
+
+          o Specify the limited conditions under which a skilled nursing facility or nursing facility
+            may transfer or discharge a resident, the documentation that must be included in the
+           medical record, and who is responsible for making the documentation.Ensure policies
+           are developed and implemented which allow residents to return to the facility
+           following hospitalization or therapeutic leave.
+
+
+       o Ensure a facility does not transfer or discharge a resident in an unsafe manner, such
+         as a location that does not meet the resident’s needs, does not provide needed support
+         and resources, or does not meet the resident’s preferences and, therefore, should not
+         have occurred.
+
+
+       o Ensure the discharge planning process addresses each resident’s discharge goals and
+         needs, including caregiver support and referrals to local contact agencies, as
+         appropriate, and involves the resident and if applicable, the resident representative and
+         the interdisciplinary team in developing the discharge plan.
+
+
+DEFINITIONS
+
+“Bed-hold”: Holding or reserving a resident’s bed while the resident is absent from the facility
+for therapeutic leave or hospitalization.
+
+“Composite Distinct Part”: A composite distinct part is a distinct part consisting of two or
+more noncontiguous components that are not located within the same campus, as that term is
+defined in §413.65(a)(2). The definition and additional requirements specific to SNF/NF
+composite distinct parts are found at §483.5.
+
+“Campus”: Campus is defined in §413.65(a)(2) and means the physical area immediately
+adjacent to the provider’s main buildings, other areas and structures that are not strictly
+contiguous to the main buildings but are located within 250 yards of the main buildings, and any
+other areas determined on an individual case basis, by the CMS regional office, to be part of the
+provider’s campus.
+
+“Discharge Planning”: A process that generally begins on admission and involves identifying
+each resident’s discharge goals and needs, developing and implementing interventions to address
+them, and continuously evaluating them throughout the resident’s stay to ensure a successful
+discharge.
+
+“Distinct Part”: A distinct part SNF or NF is physically distinguishable from the larger
+institution or institutional complex that houses it, meets the requirements of paragraph (2) of this
+definition at §483.5, and meets the applicable statutory requirements for SNFs or NFs in sections
+1819 or 1919 of the Act, respectively. A distinct part SNF or NF may be comprised of one or
+more buildings or designated parts of buildings (that is, wings, wards, or floors) that are: In the
+same physical area immediately adjacent to the institution's main buildings; other areas and
+structures that are not strictly contiguous to the main buildings but are located within close
+proximity of the main buildings; and any other areas that CMS determines on an individual basis,
+to be part of the institution's campus. A distinct part must include all of the beds within the
+designated area, and cannot consist of a random collection of individual rooms or beds that are
+scattered throughout the physical plant. The term “distinct part” also includes a composite
+distinct part that meets the additional requirements specified in the definition of
+“compositedistinct part” of §483.5 described above. Requirements specific to distinct part SNFs
+or NFs are found at §483.5.
+
+“Home Health Agency (HHA)”: a public agency or private organization (or a subdivision of
+either) which is primarily engaged in providing skilled nursing services and other therapeutic
+services in the patient’s home and meets the requirements of sections 1861(o) and 1891 of the
+Social Security Act.
+
+“Inpatient Rehabilitation Facility (IRF)”: are freestanding rehabilitation hospitals or
+rehabilitation units in acute care hospitals that serve an inpatient population requiring intensive
+services for treatment.
+
+“Local Contact Agency”: refers to each State’s designated community contact agencies that can
+provide individuals with information about community living options and available supports and
+services. These local contact agencies may be a single entry point agency, such as an Aging and
+Disability Resource Center (ADRC), an Area Agency on Aging (AAA), a Center for
+Independent Living (CIL), or other state designated entities.
+
+“Long Term Care Hospital (LTCH)”: are certified as acute-care hospitals, but focus on
+patients who, on average, stay more than 25 days. Many of the patients in LTCHs are transferred
+there from an intensive or critical care unit. LTCHs specialize in treating patients who may have
+more than one serious condition, but who may improve with time and care, and return home.
+
+“Patient Assessment Data”: standardized, publicly available information derived from a post-
+acute care provider’s patient/resident assessment instrument, e.g., Minimum Data Set (MDS),
+Outcome and Assessment Information Set (OASIS).
+
+“Therapeutic Leave”: Resident absences for purposes other than required hospitalization.
+
+“Transfer and Discharge”: Includes movement of a resident to a bed outside of the certified
+facility whether that bed is in the same physical plant or not. Transfer and discharge does not
+refer to movement of a resident to a bed within the same certified facility. (See §483.5).
+Specifically, transfer refers to the movement of a resident from a bed in one facility to a bed in
+another facility when the resident expects to return to the original facility. Discharge refers to the
+movement of a resident from a bed in one certified facility to a bed in another facility or other
+location in the community, when return to the original facility is not expected.
+
+GUIDANCE
+
+Investigating noncompliance with the transfer and discharge requirements begins when
+conducting offsite preparation. The team coordinator (TC) should contact the local ombudsman
+and inquire if there are specific residents from whom the ombudsman has received complaints
+related to inappropriate discharges for review (see Investigative Procedure section below). The
+TC should also be sure to review complaints and survey history of the facility for indications of
+noncompliance with the requirements for transfer and/or discharge.
+
+§483.15(c)(1)(i)-(ii) Transfer and Discharge Requirements
+
+Use guidance at this Ftag to determine if noncompliance exists when evidence suggests a facility
+should not have transferred or discharged a resident at the time of discharge, or at all. These
+circumstances may include, but are not limited to, the following:
+
+       •   When evidence in the medical record does not support the basis for discharge, such
+           as:
+
+
+       o Discharge based on an inability to meet the resident’s needs, but there is no evidence
+         of facility attempts to meet the resident’s needs, or no evidence of an assessment at
+         the time of discharge indicating what needs cannot be met;
+
+
+       o Discharge based on improvement of resident’s health such that the services provided
+         by the facility are no longer needed, but documentation shows the resident’s health did
+         not improve or actually declined;
+
+
+       o Discharge based on the endangerment of the safety or health of individuals in the
+         facility, but there is no documentation in the resident’s medical record that supports
+         this discharge;
+       o Discharge based on failure to pay, however there is no evidence that the facility
+         offered the resident to pay privately or apply for Medical Assistance or that the
+         resident refused to pay or have paid under Medicare or Medicaid;
+
+
+       o Discharge occurs even though the resident appealed the discharge, the appeal is
+         pending, and there is no documentation to support the failure to discharge would
+         endanger the health and safety of individuals in the facility.
+
+
+       •   When evidence in the medical record shows a resident was not permitted to return
+           following hospitalization or therapeutic leave, and there is no valid basis for
+           discharge.
+
+
+       •   There is no evidence that the facility considered the care giver’s availability,
+           capacity, and/or capability to perform needed care to the resident following
+           discharge.
+       •   The post-discharge plan of care did not address resident limitations in ability to care
+           for themself.
+
+
+These regulations describe the requirements that must be met in order for a facility to transfer or
+discharge a resident, thus protecting nursing home residents from transfers and discharges which
+should not have occurred, and thus violate federal regulations.
+
+§483.15(c)(1)(i)(A), (C) or (D) - Discharge when Needs Cannot be Met, or when Safety or
+Health of Individuals is Endangered
+Facilities are required to determine their capacity and capability to care for the residents they
+admit. Therefore, facilities should not admit residents whose needs they cannot meet based on the
+Facility Assessment requirements at §483.71 (see also F838, Facility Assessment). For residents
+the facility has admitted, §483.15(c)(1)(i) provides that “The facility must permit each resident to
+remain in the facility, and not transfer or discharge the resident from the facility unless….” This
+means that once admitted, residents have a right to remain in the facility unless the discharge or
+transfer meets one of the specified exceptions in §§483.15(c)(1)(i)(A)-(F). Discharging a resident
+is a violation of this right unless the facility can demonstrate that one of the limited circumstances
+listed in the regulation is met.
+
+Surveyors must ensure that for discharges related to circumstances at §483.15(c)(1)(i)(A), (C), or
+(D) above, the facility has fully evaluated the resident, and does not base the discharge on the
+resident’s status at the time of transfer to an acute care facility. Without an assessment of the
+resident’s status and needs at the time of proposed return to the facility, there can be no
+determination of (A), the resident’s needs cannot be met, or (C) and (D), that the safety or health
+of individuals would be endangered.
+
+In situations where a resident’s choice to refuse care or treatment poses a risk to the resident’s or
+others’ health or safety, the comprehensive care plan must identify the care or service being
+declined, the risk the declination poses to the resident, and efforts by the interdisciplinary team to
+educate the resident and the representative, as appropriate (See F656, §483.21(b)(1)(ii),
+Comprehensive Care Plans.) The facility must be able to demonstrate that the resident or, if
+applicable, resident representative, received information regarding the risks of refusal of
+treatment, (§483.10(c)(5) and (6), F552 and F578) and that staff conducted the appropriate
+assessment to determine if care plan revisions would allow the facility to meet the resident needs
+or protect the health and safety of others, and see also §§483.20 Resident Assessment and 483.35
+Nursing Services).
+
+If unable to resolve situations where a resident’s refusal for care poses a risk to the resident’s or
+others’ health or safety, the facility administration, nursing and medical director may wish to
+convene an ethics meeting, which includes legal consultation, in order to determine if the facility
+can meet the resident’s needs, or if the resident should be transferred or discharged.
+
+§483.15(c)(1)(i)(E) Nonpayment as Basis for Discharge
+Non-payment for a stay in the facility occurs when the resident has failed, after reasonable and
+appropriate notice, to pay for a stay at the facility and also may apply:
+    •   When the resident has not submitted the necessary paperwork for third party (including
+        Medicare/Medicaid) payment; or
+
+
+    •   After the third party payor (including Medicare or Medicaid) denied the claim and the
+        resident refused to pay for his/her stay.
+
+
+It is the responsibility of the facility to notify the resident of their change in payment status, and
+the facility should ensure the resident has the necessary assistance to submit any third party
+paperwork. In situations where a resident representative has failed to pay, the facility may
+discharge the resident for nonpayment; however, if there is evidence of exploitation or
+misappropriation of the resident’s funds by the representative, the facility should take steps to
+notify the appropriate authorities on the resident’s behalf, before discharging the resident.
+
+In situations where a resident’s Medicare coverage may be ending, the facility must comply with
+the requirements at §483.10(g)(17) and (18), F582. If the resident continues to need long-term
+care services, the facility, under the requirements above, should offer the resident the ability to
+remain, which may include:
+
+    •   Offering the resident the option to remain in the facility by paying privately for a bed;
+
+
+    •   Providing the Medicaid-eligible resident with necessary assistance to apply for Medicaid
+        coverage in accordance with §483.10(g)(13), F579, with an explanation that:
+
+
+        o if denied Medicaid coverage, the resident would be responsible for payment for all
+          days after Medicare payment ended; and
+
+
+        o if found eligible, and no Medicaid bed became available in the facility or the facility
+          participated only in Medicare (SNF only), the resident would be discharged to another
+          facility with available Medicaid beds if the resident wants to have the stay paid by
+          Medicaid.
+
+
+The resident cannot be discharged for nonpayment while a determination on the resident’s
+Medicaid eligibility is pending.
+
+NOTE: Surveyors should be aware of a facility’s Medicare and Medicaid certification status
+and/or the presence of a distinct part as this can affect whether a resident’s discharge for non-
+payment is justified and is a relevant part of the investigation.
+
+For a resident who becomes eligible for Medicaid after admission to a facility, the facility may
+charge a resident only allowable charges under Medicaid. Additionally, conversion from a
+private pay rate to payment at the Medicaid rate does not constitute non-payment.
+
+In certain cases, residents are admitted for short-term, skilled rehabilitation under Medicare, but,
+following completion of the rehabilitation program, they communicate that they are not ready to
+leave the facility. In these situations, if the facility proceeds with discharge, the survey team
+should investigate to determine if the discharge violates these requirements, is inappropriate and
+should not have occurred. Additionally, these situations may require further investigation to
+ensure that discrimination based on payment source has not occurred in accordance with
+§483.10(a)(2) (F550).
+
+NOTE: Situations in which residents sign out of the facility, or leave Against Medical Advice
+(AMA) should be thoroughly investigated to determine if the resident or resident representative
+was forced, pressured, or intimidated into leaving AMA. Additionally, the discharge would
+require further investigation to determine compliance with the requirements at 483.15(c),
+including the requirement to provide a notice at F628. See additional guidance at Abuse, Neglect
+and Exploitation at F600.
+
+NOTE: Residents who are sent to the acute care setting for routine treatment/planned
+procedures must also be allowed to return to the facility (See F626, Permitting Residents to
+Return to Facility).
+
+§483.15(c)(1)(ii) Discharge pending appeal
+
+When a resident chooses to appeal his or her discharge from the facility, the facility may not
+discharge the resident while the appeal is pending.
+
+If the resident, or if applicable, their representative, appeals his or her discharge while in a
+hospital, facilities must allow the resident to return pending their appeal, unless there is evidence
+that the facility cannot meet the resident’s needs, or the resident’s return would pose a danger to
+the health or safety of the resident or others in the facility. If there are concerns related to a
+facility’s determination that it cannot meet a resident’s needs, surveyors should assess whether
+the facility has admitted residents with similar needs. A facility’s determination to not permit a
+resident to return while an appeal of the resident’s discharge is pending must not be based on the
+resident’s condition when originally transferred to the hospital.
+
+Successful Appeals on Discharges
+
+For residents who have appealed their discharge and obtained a favorable ruling from the
+hearing, the resident or their representative may choose to report the discharge as a complaint
+to the State Survey Agency based on the favorable appeal ruling. However, the State Survey
+Agency cannot take a survey action, such as citing noncompliance exclusively based on the
+ruling of the hearing. Rather, the State Survey Agency must triage the complaint and conduct a
+survey in accordance with the timelines specified in Section 5079.9 of Chapter 5 of the State
+Operations Manual. During the survey, surveyors must investigate compliance with the
+applicable regulations, such as the discharge requirements in this F-tag. Surveyors should also
+consider compliance with §483.70(b), Compliance with Federal, State, and local laws and
+professional standards at F836. If noncompliance is found, cite the appropriate tag and level of
+scope and severity. Also, if the resident’s discharge location is to a setting that does not meet
+their health or safety needs, the facility’s plan of correction should state that the facility will
+either, 1) Re-admit the resident until a safe and compliant discharge can be done, or 2)
+Coordinate a transfer of the resident to another setting where they will be safe. See the
+Deficiency Categorization section towards the end of this guidance for more information.
+
+§483.15(c)(2) Required Documentation in the Resident’s Medical Record
+To demonstrate that any of the circumstances permissible for a facility to transfer or discharge as
+specified in the regulations have occurred, the medical record must show documentation of the
+basis for transfer or discharge.
+
+For circumstances where the discharge or transfer is necessary for the resident’s welfare and the
+facility cannot meet the resident’s needs or the resident’s health has improved sufficiently so that
+the resident no longer needs the care of the facility, the resident’s physician must document
+information about the basis for the transfer or discharge. Additionally, if the facilitydetermines it
+cannot meet the resident’s needs, the documentation made by the resident’s physician must
+include:
+
+   •   The specific resident needs the facility could not meet;
+
+
+   •   The facility efforts to meet those needs; and
+
+
+   •   The specific services the receiving facility will provide to meet the needs of the resident
+       which cannot be met at the current facility.
+
+
+In situations where the facility determines a resident’s clinical or behavioral status endangers
+the safety or health of individuals in the facility, documentation regarding the reason for the
+transfer or discharge must be provided by a physician, not necessarily the attending physician.
+
+NOTE: Documentation of the transfer or discharge may be completed by a non-physician
+practitioner (NPP) in accordance with State law.
+
+§483.15(d)(1) – (e)(1)-(2) Bed Hold and Permitting Residents to Return
+
+Facilities must develop and implement policies for bed-hold and permitting residents to return
+following hospitalization or therapeutic leave. These policies apply to all residents, regardless
+of their payment source. The facility policies must provide that residents who seek to return to
+the facility within the bed-hold period defined in the State plan are allowed to return to their
+previous room, if available. Additionally, residents who seek to return to the facility after the
+expiration of the bed-hold period or when state law does not provide for bed- holds are allowed to
+return to their previous room if available or immediately to the first available bed in a semi-private
+room provided that the resident:
+    •   Still requires the services provided by the facility; and
+
+
+    •   Is eligible for Medicare skilled nursing facility or Medicaid nursing facility services.
+
+
+The policies must also provide that if the facility determines that a resident cannot return, the
+facility must comply with the requirements at 42 CFR 483.15(c).
+
+Medicaid-eligible residents must be permitted to return to the first available bed even if the
+residents have outstanding Medicaid balances.
+
+Emergency Transfers to Acute Care
+
+When residents are sent emergently to an acute care setting, these scenarios are considered
+transfers, NOT discharges, because the resident’s return is generally expected.
+
+Residents who are sent emergently to an acute care setting, such as a hospital, must be permitted
+to return to the facility. In a situation where the facility discharges the resident while he or she is
+in the hospital following emergency transfer, the facility must have evidence that the resident’s
+status at the time the resident seeks to return to the facility (not at the time the resident was
+transferred for acute care) meets one of the criteria at §483.15(c)(1)(i)(A) through (D).
+Additionally, the resident has the right to return to the facility pending an appeal of the discharge
+unless the return would endanger the health or safety of the resident or other individuals in the
+facility. The facility must document the danger that the failure to transfer or discharge would
+pose. (§483.15(c)(1)(ii)).
+
+A facility may have concerns about permitting a resident to return to the facility after a hospital
+stay due to the resident’s clinical or behavioral condition at the time of transfer.
+The facility must not evaluate the resident based on his or her condition when originally
+transferred to the hospital. If the facility determines it will not be permitting the resident to return,
+the medical record should show evidence that the facility made efforts to:
+
+    •   Determine if the resident still requires the services of the facility and is eligible for
+        Medicare skilled nursing facility or Medicaid nursing facility services.
+
+
+    •   Ascertain an accurate status of the resident’s condition—this can be accomplished via
+        communication between hospital and nursing home staff and/or through visits by nursing
+        home staff to the hospital.
+
+
+    •   Find out from the hospital the treatments, medications, and services the facility would
+        need to provide to meet the resident’s needs upon returning to the facility. If the facility is
+        unable to provide the treatments, medications, and services needed, the facility may not be
+       able to meet the resident’s needs. For example, a resident now requires ventilator care or
+       dialysis, and the nursing home is unable to provide this same level of care.
+
+
+   •   Work with the hospital to ensure the resident’s condition and needs are within the nursing
+       home’s scope of care, based on its facility assessment, prior to hospital discharge. For
+       example, the nursing home could ask the hospital to:
+
+
+       o Attempt reducing a resident’s psychotropic medication prior to discharge and monitor
+         symptoms so that the nursing home can determine whether it will be able to meet the
+         resident’s needs upon return;
+
+
+       o Convert IV medications to oral medications and ensure that the oral medications
+         adequately address the resident’s needs.
+
+
+§483.15(e)(1)(ii) Not Permitting Residents to Return
+
+Not permitting a resident to return following hospitalization or therapeutic leave constitutes a
+discharge and requires a facility to meet the requirements as outlined in §483.15(c)(1)(ii).
+
+Because the facility was able to care for the resident prior to the hospitalization or therapeutic
+leave, documentation related to the basis for discharge must clearly show why the facility can no
+longer care for the resident.
+
+If the facility does not permit a resident’s return to the facility (i.e., discharges the resident)
+based on inability to meet the resident’s needs, documentation must be in accordance with
+requirements at §483.15(c)(2)(i)(B). The facility must notify the resident, his or her
+representative, and the LTC ombudsman in writing of the discharge, including notification of
+appeal rights. (§483.15(c)(3) and (5)(iv)) If the resident chooses to appeal the discharge, the
+facility must allow the resident to return to his or her room or an available bed in the nursing
+home during the appeal process, unless there is documented evidence that the resident’s return
+would endanger the health or safety of the resident or other individuals in the facility.
+
+If concerns arise regarding facility failure to permit a resident to return, review the medical
+record for evidence of whether a notice of transfer and discharge and notice of bed-hold were
+provided. Determine the basis for discharge and how the facility evaluated the resident. The
+surveyor may have to obtain hospital records for further investigation. Review any other
+documentation necessary to ascertain the extent to which the facility made efforts to enable the
+resident to return.
+
+In cases where a facility did not allow a resident to return due to lack of an available bed, the
+surveyor should review facility admissions beginning with when the resident was ready to return
+to determine whether the facility held the resident’s bed in accordance with its bed-hold policies,
+or, if the resident’s stay outside of the facility exceeded the bed-hold period, whether there was
+an available bed at the time the resident sought return to the facility. If there was not an
+available bed at the time the resident sought return to the facility, the surveyor should determine
+whether or not the resident was allowed to return to the first available bed in a semi-private
+room.
+
+When a facility alleges they cannot meet the resident’s needs and does not allow a resident to
+return, the surveyor should 1) investigate why the resident’s needs cannot be met; and 2) review
+facility admissions to determine if residents with similar care needs have been admitted or
+permitted to remain, which could indicate the facility has the capability to meet the needs of the
+resident who is not being allowed to return and demonstrates noncompliance with this
+requirement.
+
+Additionally, facilities must not treat situations where a resident goes on therapeutic leave and
+returns later than agreed upon, as a discharge. The resident must be permitted to return and be
+appropriately assessed for any ill-effects from being away from the facility longer than expected
+and provide any needed medications or treatments which were not administered because they
+were out of the building. If a resident has not returned from therapeutic leave as expected, the
+medical record should show evidence that the facility attempted to contact the resident and
+resident representative. The facility must not discharge the resident unless it has ascertained from
+the resident or resident representative that the he or she does not wish to return.
+
+NOTE: In reviewing complaints for discharges that do not honor a resident’s right to
+return following a hospitalization or therapeutic leave, surveyors would review both
+transfer and discharge requirements because the situation begins as a transfer and
+then changes to a discharge when the facility decides it will not permit the resident to
+return.
+
+Composite Distinct Part
+
+If a facility does not have a composite distinct part, §483.15(e)(2) does not apply. When a
+resident is returning to a composite distinct part, he/she must be allowed to return to an available
+bed in the particular location of the composite distinct part in which he/she resided previously, or
+the next available bed in that location.
+
+NOTE: If there are concerns as to whether or not a facility is appropriately certified as a distinct
+or composite distinct part, consult with the CMS Location for clarification.
+
+§483.15(c)(7) Preparation for Transfer or Discharge
+
+Sufficient preparation and orientation means the facility informs the resident where he or she is
+going and takes steps under its control to minimize anxiety. Examples of preparation and
+orientation may include explaining to a resident why they are going to the emergency room or
+other location or leaving the facility; working with family or resident’s representative to assure
+that the resident’s possessions (as needed or requested by the resident) are not left behind or lost;
+and ensuring that staff handle transfers and discharges in a manner that minimizes anxiety or
+depression and recognizes characteristic resident reactions identified by the resident’s assessment
+and care plan.
+The facility must orient and prepare the resident regarding his or her transfer or discharge in a
+form and manner that the resident can understand. The form and manner of this orientation and
+preparation must take into consideration factors that may affect the resident’s ability to
+understand, such as educational level, language and/or communication barriers, and physical and
+mental impairments. The facility must also document this orientation in the medical record,
+including the resident’s understanding of the transfer or discharge.
+
+§483.21(c)(1) Discharge Planning
+
+Discharge planning is the process of creating an individualized discharge care plan, which is part
+of the comprehensive care plan. It involves the interdisciplinary team (as defined in
+§483.21(b)(2)(ii) working with the resident and resident representative, if applicable, to develop
+interventions to meet the resident’s discharge goals and needs to ensure a smooth and safe
+transition from the facility to the post-discharge setting. Discharge planning begins at admission
+and is based on the resident’s assessment and goals for care, desire to be discharged, and the
+resident’s capacity for discharge. It also includes identifying changes in the resident’s condition,
+which may impact the discharge plan, warranting revisions to interventions. A well-executed
+discharge planning process, without avoidable complications, maximizes each resident’s
+potential to improve, to the extent possible, based on his or her clinical condition. An inadequate
+discharge planning process may complicate the resident’s recovery, lead to admission to a
+hospital, or even result in the resident’s death.
+
+The discharge care plan is part of the comprehensive care plan and must:
+
+   •       Be developed by the interdisciplinary team and involve direct communication with the
+           resident and if applicable, the resident representative;
+
+
+   •       Address the resident’s goals for care and treatment preferences;
+
+
+   •       Identify needs that must be addressed before the resident can be discharged, such as
+           resident education, rehabilitation, and caregiver support and education;
+
+
+   •       Be re-evaluated regularly and updated when the resident’s needs or goals change;
+
+
+   •       Document the resident’s interest in, and any referrals made to the local contact
+           agency; and
+
+
+   •       Identify post-discharge needs such as nursing and therapy services, medical
+           equipment or modifications to the home, or ADL assistance.
+Resident Discharge to the Community
+
+Section Q of the Minimum Data Set (MDS) requires that individuals be periodically assessed for
+their interest in being transitioned to community living, unless the resident indicates otherwise.
+See: https://www.cms.gov/medicare/quality/nursing-home-improvement/resident-assessment-
+instrument-manual.
+
+For residents who want to be discharged to the community, the nursing home must determine if
+appropriate and adequate supports are in place, including capacity and capability of the resident’s
+caregivers at home. Family members, significant others or the resident’s representative should
+be involved in this determination, with the resident’s permission, unless the resident is unable to
+participate in the discharge planning process.
+
+Each situation is unique to the resident, his/her family, and/or guardian/legally authorized
+representative. A referral to the Local Contact Agency (LCA) may be appropriate for many
+individuals, who could be transitioned to a community setting of their choice. The nursing home
+staff is responsible for making referrals to the LCA, if appropriate, under the process that the
+State has established. Nursing home staff should also make the resident and if applicable, the
+resident representative aware that the local ombudsman is available to provide information and
+assist with any transitions from the nursing home.
+
+For residents who have been in the facility for a longer time, it is still important to inquire, as
+appropriate, whether the resident would like to talk with LCA experts about returning to the
+community. New or improved community resources and supports may have become available
+since the resident was first admitted which may now enable the resident to return to a community
+setting.
+
+If the resident is unable to communicate his or her preference or is unable to participate in
+discharge planning, the information should be obtained from the resident’s representative.
+
+Discharge planning must include procedures for:
+
+   •   Documentation of referrals to local contact agencies, the local ombudsman, or other
+       appropriate entities made for this purpose;
+
+
+   •   Documentation of the response to referrals; and
+
+
+   •   For residents for whom discharge to the community has been determined to not be
+       feasible, the medical record must contain information about who made that decision and
+       the rationale for that decision.
+
+
+Discharge planning must identify the discharge destination, and ensure it meets the resident’s
+health and safety needs, as well as preferences. If a resident wishes to be discharged to a setting
+that does not appear to meet his or her post-discharge needs, or appears unsafe, the facility must
+treat this situation similarly to refusal of care, and must:
+
+   •   Discuss with the resident, (and/or his or her representative, if applicable) and document
+       the implications and/or risks of being discharged to a location that is not equipped to
+       meet his/her needs and attempt to ascertain why the resident is choosing that location;
+
+
+   •   Document that other, more suitable, options of locations that are equipped to meet the
+       needs of the resident were presented and discussed;
+
+
+   •   Document that despite being offered other options that could meet the resident’s needs,
+       the resident refused those other more appropriate settings;
+
+
+   •   Determine if a referral to Adult Protective Services or other state entity charged with
+       investigating abuse and neglect is necessary. The referral should be made at the time of
+       discharge.
+
+
+As appropriate, facilities should follow their policies, or state law as related to discharges which
+are Against Medical Advice (AMA). Note: These situations only apply when a resident expresses
+their wishes to be discharged earlier than outlined in the care plan. These situations do not apply
+if a facility offers to discharge a resident to a location which does not meet their health and/or
+safety needs, and the resident agrees (this would constitute noncompliance).
+
+§483.21(c)(1)(viii) Residents who will be discharged to another SNF/NF, HHA, IRF, or
+LTCH
+
+If a resident will be discharged to another SNF, an IRF, LTCH, or HHA, the facility must assist
+the resident in choosing an appropriate post-acute care provider that will meet the resident’s
+needs, goals, and preferences. Assisting the resident means the facility must compile available
+data on other appropriate post-acute care options to present to the resident. Information the
+facility must gather about potential receiving providers includes, but is not limited to:
+
+   •   Publicly available standardized quality information, as reflected in specific quality
+       measures, such as the CMS Nursing Home Compare, Home Health Compare, Inpatient
+       Rehabilitation Facility (IRF) Compare, and Long-Term Care Hospital (LTCH) Compare
+       websites, and
+
+
+   •   Resource use data, which may include, number of residents/patients who are discharged
+       to the community, and rates of potentially preventable hospital readmissions.
+The listing of potential providers and data compiled must be relevant to the resident’s needs, and
+be aligned with the resident’s goals of care and treatment preferences.
+To ensure resident involvement, facilities are expected to present provider information to the
+resident and resident representative, if applicable, in an accessible and understandable format.
+For example, the facility should provide the aforementioned quality data on other post-acute care
+providers that meet the resident’s needs, goals, and preferences, and are within the resident’s
+desired geographic area. Facilities must then assist residents and/or resident representative as
+they seek to understand the data and use it to help them choose a post-acute care provider, or
+other setting for discharge, that is best suited to their goals, preferences, needs and
+circumstances. For residents who are discharged to another SNF/NF, a HHA, IRF, or LTCH the
+facility must provide evidence that the resident and if applicable, the resident representative was
+given provider information that includes standardized patient assessment data, and information
+on quality measures and resource use (where that data is available).
+
+Post-Discharge Plan of Care
+
+The post-discharge plan of care details the arrangements that facility staff have made to address
+the resident’s needs after discharge, and includes instructions given to the resident and his or her
+representative, if applicable. The post-discharge plan of care must be developed with the
+participation of the Interdisciplinary team and the resident and, with the resident’s consent, the
+resident’s representative. At the resident’s request, a representative of the local contact agency
+may also be included in the development of the post-discharge plan of care. The post-discharge
+plan of care should show what arrangements have been made regarding:
+
+   •       Where the resident will live after leaving the facility;
+
+
+   •   Follow-up care the resident will receive from other providers, and that provider’s contact
+       information;
+
+
+   •       Needed medical and non-medical services (including medical equipment);
+
+
+   •       Community care and support services, if needed; and
+
+
+   •       When and how to contact the continuing care provider.
+
+
+Instructions to residents discharged to home
+
+For residents discharged to their home, the medical record should contain documentation that
+written discharge instructions were given to the resident and if applicable, the resident
+representative. These instructions must be discussed with the resident and resident representative
+and conveyed in a language and manner they will understand.
+INVESTIGATIVE PROTOCOL
+
+Use the Critical Element (CE) Pathways for Discharge, or Hospitalization, as appropriate, along
+with the above interpretive guidelines when determining if the facility meets the requirements
+for, or investigating concerns related to the facility requirements on when a facility can transfer
+or discharge a resident and ensuring the transfer or discharge meets the resident’s health and/or
+safety needs.
+
+Summary of Investigative Procedure
+
+Use Offsite Preparation information from the Ombudsman to identify residents or resident
+representatives (for residents already discharged) who may have concerns with inappropriate
+discharges. For any residents with concerns, briefly review the most recent comprehensive
+assessment, comprehensive care plan (specifically the discharge care plan), progress notes, and
+orders to:
+
+   •   Identify the basis for the transfer or discharge,
+
+
+   •   Determine whether the facility has identified and addressed the resident’s goals and
+       discharge needs;
+
+
+   •   Determine if the resident was appropriately oriented, prepared, and understood the
+       information provided to him or her.
+
+
+During this review, identify the extent to which the facility has developed and implemented
+interventions in accordance with the resident’s needs, goals for care and professional standards of
+practice. This information will guide observations and interviews to be made in order to
+corroborate concerns identified.
+
+DEFICIENCY CATEGORIZATION
+
+In addition to actual or potential physical harm, always consider whether psychosocial harm has
+occurred when determining severity level (See Psychosocial Outcome Severity Guide,
+https://www.cms.gov/Medicare/Provider-Enrollment-and-
+Certification/GuidanceforLawsAndRegulations/Nursing-Homes.html, select the Survey
+
+Resources download and select the Psychosocial Outcome Severity Guide from the list of
+resources.
+
+Violations of the requirements at F627, Inappropriate Discharges, would generally be cited at
+the severity level of Harm (Level 3) or Immediate Jeopardy (Level 4) when using the reasonable
+person approach in considering psychosocial outcomes as well as the likelihood for serious
+physical harm resulting from an unsafe discharge. See State Operations Manual Appendix Q and
+the Psychosocial Outcome Severity Guide located in the Survey Resources zip file located at
+https://www.cms.gov/medicare/provider-enrollment-and-
+certification/guidanceforlawsandregulations/nursing-homes) for additional information about
+psychosocial/mental harm and using the reasonable person concept.
+
+NOTE: For citations at any level of scope and severity, if the discharged resident’s health
+and/or safety is threatened in the setting they are currently located, the facility’s plan of
+correction should state that the facility will either, 1) Re-admit the resident until a safe and
+compliant discharge can be done, or 2) Coordinate a transfer of the resident to another setting
+where they will be safe. The facility should not be determined in substantial compliance until one
+of these two items is complete (and all other noncompliance has been corrected). If the resident’s
+needs are being met in their current location, the plan of correction should include specifics on
+how the facility will prevent inappropriate noncompliant discharges in the future.
+
+Additionally, for situations in which residents’ discharge locations did not meet their health
+and/or safety needs,, enforcement should be implemented immediately. For example, a
+discretionary denial of payment for new admissions should be imposed to go into effect within 2
+or 15 days (as appropriate) and remain in effect until a return to substantial compliance as
+evidenced by either, 1) the resident is readmitted and not discharged unless a safe and compliant
+discharge is done, or 2) the facility coordinates a discharge to another setting where their needs
+will be met.
+
+Examples of Severity Level 4 Non-compliance: Immediate Jeopardy to Resident Health or
+Safety include, but are not limited to:
+
+   •   A facility discharged a resident on the basis that the resident’s health had improved so
+       that the resident no longer needed the services provided by the facility, however, the
+       resident and her family disagreed and filed an appeal. The facility did not allow the
+       resident to remain in the facility while the appeal was pending and dropped her off at her
+       daughter’s home. The resident’s daughter previously stated she could not care for her
+       mother at her home where needed medical equipment and wound care was not available,
+       thus creating an inappropriate discharge for this resident, which did not meet her health
+       needs.
+
+
+   •   A facility discharged a resident based on the facility’s inability to meet the resident’s
+       needs. However, upon complaint investigation, it was determined by interview and
+       record review that, while the resident was depressed and had challenging behaviors
+       requiring staff attention, he did not have needs which could not be met in that facility, and
+       there was evidence that the facility was caring for other residents with similar behaviors.
+       The resident was discharged to an unsafe setting, or in a manner, that placed the resident
+       at risk for serious harm (e.g., the resident still has medical needs, but they cannot be
+       supported in the setting they were discharged to).
+   •   A facility failed to allow a resident requiring the facility’s services to return following
+       therapeutic leave to a family member’s home. Additionally, when the facility refused to
+       allow him to return, they took no steps to comply with the discharge requirements for
+       notice and appeal rights. This resulted in an inappropriate discharge. The resident was
+       found living on the street, without the needed care and adequate food and shelter, and
+       susceptible to serious injury.
+
+
+   •   A facility failed to ensure that the post-discharge destination and continuing care provider
+       could meet the resident’s needs prior to the discharge of a resident with a feeding tube to
+       a residential group facility, resulting in discharge to an unsafe setting. The surveyor
+       discovered that within 24 hours of discharge, the resident was transferred to the hospital
+       for aspiration, was intubated for respiratory distress and diagnosed with brain death.
+       Review of medical records showed no documentation of the resident’s tube feeding needs
+       in the discharge plan, or whether the nursing home informed the receiving facility of the
+       presence of the feeding tube and the need for aspiration precautions. It was also unclear
+       whether the nursing home had determined that the receiving facility had the ability to
+       care for a resident with a feeding tube prior to placement of the individual.
+
+
+Examples of Severity Level 3 Noncompliance: Actual Harm that is not Immediate Jeopardy
+include, but are not limited to:
+
+   •   The facility failed to allow a resident to remain in the facility after his skilled
+       rehabilitation ended and while his application for Medical Assistance was pending. The
+       resident consequently was discharged to another facility that was located further from the
+       resident’s family, resulting in the resident expressing persistent sadness and withdrawal
+       from social activities.
+
+
+   •   A facility discharged a resident after the resident attempted to hit a staff member during
+       morning care over several days. The facility discharged the resident claiming the resident
+       was a danger to others. Upon investigation of a complaint, it was determined the facility
+       had been failing to provide the resident with their prescribed medication prior to morning
+       care in accordance with the care plan. Evidence also showed the resident had never
+       attempted to hit staff when pain was managed according to the care plan, therefore the
+       resident was not actually a danger to others. There was also no documentation of the
+       facility’s attempts to meet the resident’s needs or what services the new receiving facility
+       had in order to meet the resident’s needs. During an interview with the resident, the
+       surveyor found the resident was not happy in the new facility and was no longer
+       participating in activities or therapy, resulting in a significant decreased ability to perform
+    ADLs.
+
+
+•   Facility failed to allow a resident to return to an available bed in the same location of the
+    composite distinct part in which they resided previously. The new location was not on the
+    same campus where the resident previously resided, and was farther from the resident’s
+    family, resulting in the resident expressing sustained and persistent sadness and
+    withdrawal.
+
+
+•   After transfer to an acute care facility, a facility failed to allow a resident to return to the
+    facility where the resident had lived for several months saying they could not meet the
+    resident’s needs. Review of the resident’s records did not show the resident had any new
+    needs after hospitalization that could not be met by the facility. As a result, the resident
+    was transferred from the hospital to a different nursing home 40 minutes away, where he
+    did not know anyone, and where he developed increased anxiety and depression.
+
+
+•   The facility failed to develop and/or implement a discharge care plan for a resident who
+    had expressed a desire to return home as soon as possible once she completed
+    rehabilitation for a fractured hip. The medical record revealed the therapist had
+    discontinued the active treatment one week ago. The resident stated and the medical
+    record verified that the facility had not developed plans for her care after her discharge
+    and had not contacted any community providers to assist in her discharge. She indicated
+    that she has not slept well due to worrying about returning to her home and paying the
+    rent while in the facility. The resident’s home was over an hour away. She stated she was
+    depressed over having to remain in the nursing home, and spent most of the day in her
+    room as it was too far for her friends to visit.
+
+
+•   A facility failed to develop discharge plans to meet the needs and goals of each resident,
+    resulting in significant psychosocial harm, when the facility determined it would be
+    closing, necessitating the discharge of all residents. The facility notified residents and
+    resident representatives it would assist with relocation. Interviews with residents and
+    observations showed residents were agitated, fearful, and in tears over the impending
+    move. Residents indicated they were not asked their preferences and many would be
+    relocated far away from family. Residents also indicated they were not given
+    opportunities to provide input into the discharge planning process, specifically regarding
+    discharge location. Record review showed no evidence of interaction with residents or
+    resident representatives related to discharge planning. This was cross-referenced and
+    cited at F845, Facility Closure.
+An example of Severity Level 2 Noncompliance: No Actual Harm with Potential for More
+Than Minimal Harm that is Not Immediate Jeopardy includes, but is not limited to:
+
+   •   A facility transferred a resident to the hospital emergently due to a change in condition.
+       The facility failed to provide the hospital with contact information for the practitioner
+       responsible for the resident’s care leading to a delay in admitting the resident.
+
+
+   •   Facility failed to develop a discharge care plan that addressed all of the needs for
+       a resident being discharged home. Specifically, the care plan did not address the
+       resident’s need for an oxygen concentrator at home. After the resident was discharged to
+       his home, a family member had to contact the physician to obtain the order and make
+       arrangements for delivery of the equipment. Although there was a delay in obtaining the
+       oxygen concentrator, the resident did not experience harm, however this four-hour delay
+       had a potential for compromising the residents’ ability to maintain his well-being.
+
+
+An example of Severity Level 1 noncompliance:
+
+   •   The failure to permit the resident to remain in the facility, document the resident’s
+       transfer or discharge, and communicate necessary information to the receiving provider
+       places the resident at risk for more than minimal harm. Therefore, Severity Level 1 does
+       not apply for this regulatory requirement.
+
+
+
+F628
+(Rev. 229; Issued: 04-25-25; Effective: 04-25-25; Implementation: 04-28-25)
+
+§483.15(c)(2) Documentation.
+
+When the facility transfers or discharges a resident under any of the circumstances
+specified in paragraphs (c)(1)(i)(A) through (F) of this section, the facility must ensure that
+the transfer or discharge is documented in the resident’s medical record and appropriate
+information is communicated to the receiving health care institution or provider.
+
+   (iii) Information provided to the receiving provider must include a minimum of the
+   following:
+
+       (A) Contact information of the practitioner responsible for the care of the resident.
+
+       (B) Resident representative information including contact information
+
+       (C) Advance Directive information
+       (D) All special instructions or precautions for ongoing care, as appropriate.
+
+       (E) Comprehensive care plan goals;
+
+       (F) All other necessary information, including a copy of the resident’s discharge
+          summary, consistent with §483.21(c)(2) as applicable, and any other
+          documentation, as applicable, to ensure a safe and effective transition of care.
+
+§483.15(c)(3) Notice before transfer.
+
+Before a facility transfers or discharges a resident, the facility must—
+
+   (i) Notify the resident and the resident’s representative(s) of the transfer or discharge
+       and the reasons for the move in writing and in a language and manner they
+       understand. The facility must send a copy of the notice to a representative of the
+       Office of the State Long-Term Care Ombudsman.
+
+   (ii) Record the reasons for the transfer or discharge in the resident’s medical record in
+        accordance with paragraph (c)(2) of this section; and
+
+   (iii) Include in the notice the items described in paragraph (c)(5) of this section.
+
+§483.15(c)(4) Timing of the notice.
+
+   (i) Except as specified in paragraphs (c)(4)(ii) and (c)(8) of this section, the notice of
+   transfer or discharge required under this section must be made by the facility at least
+   30 days before the resident is transferred or discharged.
+
+   (ii) Notice must be made as soon as practicable before transfer or discharge when—
+
+       (A) The safety of individuals in the facility would be endangered under paragraph
+           (c)(1)(i)(C) of this section;
+
+       (B) The health of individuals in the facility would be endangered, under paragraph
+           (c)(1)(i)(D) of this section;
+
+       (C) The resident’s health improves sufficiently to allow a more immediate transfer
+           or discharge, under paragraph (c)(1)(i)(B) of this section;
+
+       (D) An immediate transfer or discharge is required by the resident’s urgent medical
+           needs, under paragraph (c)(1)(i)(A) of this section; or
+
+       (E) A resident has not resided in the facility for 30 days.
+§483.15(c)(5) Contents of the notice. The written notice specified in paragraph (c)(3) of this
+section must include the following:
+
+   (i)     The reason for transfer or discharge;
+
+   (ii)    The effective date of transfer or discharge;
+
+   (iii)   The location to which the resident is transferred or discharged;
+
+   (iv)    A statement of the resident’s appeal rights, including the name, address (mailing
+           and email), and telephone number of the entity which receives such requests;
+           and information on how to obtain an appeal form and assistance in completing
+           the form and submitting the appeal hearing request;
+
+   (v)     The name, address (mailing and email) and telephone number of the Office of
+           the State Long-Term Care Ombudsman;
+
+   (vi) For nursing facility residents with intellectual and developmental disabilities or
+       related disabilities, the mailing and email address and telephone number of the
+       agency responsible for the protection and advocacy of individuals with
+       developmental disabilities established under Part C of the Developmental
+       Disabilities Assistance and Bill of Rights Act of 2000 (Pub. L. 106-402, codified at 42
+       U.S.C. 15001 et seq.); and
+
+   (vii) For nursing facility residents with a mental disorder or related disabilities, the
+       mailing and email address and telephone number of the agency responsible for the
+       protection and advocacy of individuals with a mental disorder established under the
+       Protection and Advocacy for Mentally Ill Individuals Act.
+
+§483.15(c)(6) Changes to the notice.
+
+If the information in the notice changes prior to effecting the transfer or discharge, the
+facility must update the recipients of the notice as soon as practicable once the updated
+information becomes available.
+
+§483.15(c)(8) Notice in advance of facility closure
+
+In the case of facility closure, the individual who is the administrator of the facility must
+provide written notification prior to the impending closure to the State Survey Agency, the
+Office of the State Long-Term Care Ombudsman, residents of the facility, and the resident
+representatives, as well as the plan for the transfer and adequate relocation of the
+residents, as required at § 483.70(l).
+
+§483.15(d) Notice of bed-hold policy and return—
+§483.15(d)(1) Notice before transfer. Before a nursing facility transfers a resident to a
+hospital or the resident goes on therapeutic leave, the nursing facility must provide written
+information to the resident or resident representative that specifies—
+
+   (i)     The duration of the state bed-hold policy, if any, during which the resident is
+           permitted to return and resume residence in the nursing facility;
+
+   (ii)    The reserve bed payment policy in the state plan, under § 447.40 of this chapter,
+           if any;
+
+   (iii)   The nursing facility’s policies regarding bed-hold periods, which must be
+           consistent with paragraph (e)(1 ) of this section, permitting a resident to return;
+           and
+
+   (iv) The information specified in paragraph (e)(1) of this section.
+
+§483.15(d)(2) Bed-hold notice upon transfer. At the time of transfer of a resident for
+hospitalization or therapeutic leave, a nursing facility must provide to the resident and the
+resident representative written notice which specifies the duration of the bed-hold policy
+described in paragraph (d)(1) of this section.
+
+§483.21(c)(2) Discharge Summary
+
+When the facility anticipates discharge, a resident must have a discharge summary that
+includes, but is not limited to, the following:
+
+   (i) A recapitulation of the resident's stay that includes, but is not limited to, diagnoses,
+   course of illness/treatment or therapy, and pertinent lab, radiology, and consultation
+   results.
+
+   (ii) A final summary of the resident's status to include items in paragraph (b)(1) of
+   §483.20, at the time of the discharge that is available for release to authorized persons
+   and agencies, with the consent of the resident or resident’s representative.
+
+   (iii) Reconciliation of all pre-discharge medications with the resident’s post-discharge
+        medications (both prescribed and over-the-counter).
+
+INTENT
+
+The intent of this tag is to ensure the facility adheres to all of the applicable components of the
+process for transferring or discharging a resident which include documentation and information
+conveyed to the receiving provider, the notice of transfer or discharge, notice of bed-hold policy,
+and completing the discharge summary.
+
+DEFINITIONS §483.21(c)(2)
+“Anticipated Discharge”: A discharge that is planned and not due to the resident’s death or an
+emergency (e.g., hospitalization for an acute condition or emergency evacuation).
+
+“Bed-hold”: Holding or reserving a resident’s bed while the resident is absent from the facility
+for therapeutic leave or hospitalization.
+
+“Continuing Care Provider”: The entity or person who will assume responsibility for the
+resident’s care after discharge. This includes licensed facilities, agencies, physicians,
+practitioners, and/or other licensed caregivers.
+
+“Recapitulation of Stay”: A concise summary of the resident’s stay and course of treatment in
+the facility.
+
+“Reconciliation of Medications”: A process of comparing pre-discharge medications to post-
+discharge medications by creating an accurate list of both prescription and over the counter
+medications that includes the drug name, dosage, frequency, route, and indication for use for the
+purpose of preventing unintended changes or omissions at transition points in care.
+
+“Reserve Bed Payment”: Payments made by a State to the facility to hold a bed during a
+resident’s temporary absence from a nursing facility.
+
+“Therapeutic Leave”: Absences for purposes other than required hospitalization.
+
+“Transfer and Discharge”: Includes movement of a resident to a bed outside of the certified
+facility whether that bed is in the same physical plant or not. Transfer and discharge does not
+refer to movement of a resident to a bed within the same facility. (See §483.5) Specifically,
+transfer refers to the movement of a resident from a bed in one facility to a bed in another
+facility when the resident expects to return to the original facility. Discharge refers to the
+movement of a resident from a bed in one certified facility to a bed in another facility or other
+location in the community, when return to the original facility is not expected.
+
+GUIDANCE
+
+§483.15(c)(2) Information Conveyed to Receiving Provider
+
+The regulations at §483.15(c)(2)(iii) address information that must be conveyed to the
+receiving provider when a resident is transferred or discharged. The specific information
+which must be conveyed depends upon whether the resident is transferred (expected to return),
+or is discharged (not expected to return). If the resident is being transferred, and return is
+expected, the following information must be conveyed to the receiving provider:
+
+   •   Contact information of the practitioner who was responsible for the care of the resident;
+
+   •   Resident representative information, including contact information;
+
+   •   Advance directive information;
+   •   All special instructions and/or precautions for ongoing care, as appropriate such as:
+
+       o Treatments and devices (oxygen, implants, IVs, tubes/catheters);
+
+       o Transmission-based precautions such as contact, droplet, or airborne;
+
+       o Special risks such as risk for falls, elopement, bleeding, or pressure injury and/or
+         aspiration precautions;
+
+   •   The resident’s comprehensive care plan goals; and
+
+   •   All other information necessary to meet the resident’s needs, which includes, but may
+       not be limited to:
+
+       o Resident status, including baseline and current mental, behavioral, and
+         functional status, reason for transfer, recent vital signs;
+
+       o Diagnoses and allergies;
+
+       o Medications (including when last received); and
+
+       o Most recent relevant labs, other diagnostic tests, and recent immunizations.
+
+   •   Additional information, if any, outlined in the transfer agreement with the acute care
+       provider (See §483.70(j) for additional information).
+
+    NOTE: It may not be possible to convey all care plan information prior to urgent
+    transfers, however, this information must be conveyed as close as possible to the actual
+    time of transfer.
+
+For residents being discharged (return not expected), the facility must convey all of the
+information listed above, along with a copy of the required information found at §483.21(c)(2)
+Discharge Summary, as applicable. Communicating this information to the receiving provider is
+one way the facility can reduce the risk of complications and adverse events during the resident’s
+transition to a new setting.
+
+Facilities may choose their own method of communicating transfer or discharge information,
+such as a universal transfer form or an electronic health record summary, as long as the method
+contains the required elements. The transferring or discharging facility may transmit the
+information electronically in a secure manner which protects the resident’s privacy, as long as
+the receiving facility has the capacity to receive and use the information. Communication of this
+required information should occur as close as possible to the time of transfer or discharge.
+
+§483.15(c)(3) Notice of Transfer or Discharge and Ombudsman Notification
+ When a facility transfers or discharges a resident, prior to the transfer or discharge, the facility
+must notify the resident and the resident’s representative(s) of the transfer or discharge and the
+reasons for the move in writing and in a language and manner they understand. Additionally, the
+facility must send a copy of the notice of transfer or discharge to the representative of the Office
+of the State Long-Term Care (LTC) Ombudsman. The intent of sending copies of the notice to a
+representative of the Office of the State LTC Ombudsman is to provide added protection to
+residents from being inappropriately transferred or discharged, provide residents with access to
+an advocate who can inform them of their options and rights, and to ensure that the Office of the
+State LTC Ombudsman is aware of facility practices and activities related to transfers and
+discharges. The facility must maintain evidence that the notice was sent to the Ombudsman.
+While Ombudsman Programs vary from state to state, facilities should know the process for
+ombudsman notification in their state.
+
+ In situations where the facility has decided to discharge the resident while the resident is still
+hospitalized, the facility must send a notice of discharge to the resident and resident
+representative before the discharge, and must also send a copy of the discharge notice to a
+representative of the Office of the State LTC Ombudsman. Notice to the Office of the State LTC
+Ombudsman must occur at the same time the notice of discharge is provided to the resident and
+resident representative, even though, at the time of initial emergency transfer, sending a copy of
+the transfer notice to the ombudsman only needed to occur as soon as practicable.
+
+For any other types of discharges, the facility must provide notice of discharge to the resident
+and resident representative along with a copy of the notice to the Office of the State LTC
+Ombudsman at least 30 days prior to the discharge or as soon as possible. The copy of the notice
+to the ombudsman must be sent at the same time notice is provided to the resident and resident
+representative.
+
+Emergency Transfers--When a resident is temporarily transferred on an emergency basis to an
+acute care facility a notice of transfer must be provided to the resident and resident
+representative as soon as practicable before the transfer, according to 42 CFR
+§483.15(c)(4)(ii)(D). Copies of notices for emergency transfers must also still be sent to the
+ombudsman, but they may be sent when practicable, such as in a list of residents on a monthly
+basis, as long as the list meets all requirements for content of such notices at §483.15(c)(5).
+
+§483.15(c)(5) Contents of the Notice
+
+The facility’s notice must include all of the following at the time notice is provided:
+
+   •   The specific reason for the transfer or discharge, including the basis under
+       §§483.15(c)(1)(i)(A)-(F);
+
+   •   The effective date of the transfer or discharge;
+
+   •   The specific location (such as the name of the new provider or description and/or address
+       if the location is a residence) to which the resident is to be transferred or discharged;
+   •   An explanation of the right to appeal the transfer or discharge to the State;
+
+   •   The name, address (mail and email), and telephone number of the State entity which
+       receives such appeal hearing requests;
+
+   •   Information on how to obtain an appeal form;
+
+   •   Information on obtaining assistance in completing and submitting the appeal hearing
+       request; and
+
+   •   The name, address (mailing and email), and phone number of the representative of the
+       Office of the State Long-Term Care ombudsman.
+
+For nursing facility residents with intellectual and developmental disabilities (or related
+disabilities) or with mental illness (or related disabilities), the notice must include the name,
+mailing and e-mail addresses and phone number of the state agency responsible for the
+protection and advocacy for these populations.
+
+§483.15(c)(4) Timing of the Notice
+
+Generally, this notice must be provided at least 30 days prior to the transfer or discharge of the
+resident. Exceptions to the 30-day requirement apply when the transfer or discharge is affected
+because:
+
+   •   The health and/or safety of individuals in the facility would be endangered due to the
+       clinical or behavioral status of the resident;
+
+   •   The resident’s health improves sufficiently to allow a more immediate transfer or
+       discharge;
+
+   •   An immediate transfer or discharge is required by the resident’s urgent medical needs; or
+
+   •   A resident has not resided in the facility for 30 days.
+
+In these exceptional cases, the notice must be provided to the resident, resident’s
+representative if appropriate, and LTC ombudsman as soon as practicable before the transfer
+or discharge.
+
+§483.15(c)(6) Changes to the Notice
+
+If information in the notice changes, the facility must update the recipients of the notice as
+soon as practicable with the new information to ensure that residents and their representatives
+are aware of and can respond appropriately. For significant changes, such as a change in the
+transfer or discharge destination, a new notice must be given that clearly describes the
+change(s) and resets the transfer or discharge date in order to provide 30 day advance
+notification and permit adequate time for discharge planning. Surveyors should be aware that
+if a change in destination indicates that the original basis for discharge has changed, a new
+notice is required and additional appeal rights may exist for the resident. This situation may
+require further investigation to determine whether the facility is in compliance with the
+Transfer and Discharge requirements at 42 CFR 483.15(c).
+
+Example: A facility determines it cannot meet a resident’s needs and arranges for discharge to
+another nursing home which can meet the resident’s needs. Before the discharge occurs, the
+receiving facility declines to take the resident and the discharging facility changes the
+destination to a setting that does not appear to meet the resident’s ongoing medical needs. This
+could indicate that the basis for discharge has changed and would require further investigation.
+
+NOTE: Federal regulations at 42 CFR Part 431, Subpart E, Fair Hearings for Applicants and
+Beneficiaries, address the requirements for States to implement a fair hearing process.
+
+§483.15(c)(8) Notice in Advance of Facility Closure:
+
+Refer to §483.70(l), F845 for guidance related to evaluating Notice in Advance of
+Facility Closure.
+
+§483.15(d) Notice of Bed-Hold Policy
+
+All facilities must have policies that address holding a resident’s bed during periods of absence,
+such as during hospitalization or therapeutic leave. Additionally, facilities must provide written
+information about these policies to residents prior to and upon transfer for such absences. This
+information must be provided to all facility residents, regardless of their payment source.
+
+These provisions require facilities to issue two notices related to bed-hold policies. The first
+notice could be given well in advance of any transfer, i.e., information provided in the admission
+packet. Reissuance of the first notice would be required if the bed-hold policy under the State
+plan or the facility’s policy were to change.
+
+The second notice must be provided to the resident, and if applicable the resident’s
+representative, at the time of transfer, or in cases of emergency transfer, within 24 hours. It is
+expected that facilities will document multiple attempts to reach the resident’s representative in
+cases where the facility was unable to notify the representative. The notice must provide
+information to the resident that explains the duration of bed-hold, if any, and the reserve bed
+payment policy. It should also address permitting the return of residents to the next available
+bed.
+
+When a resident residing in a skilled nursing facility under Medicare is hospitalized or takes
+therapeutic leave, Medicare will not pay to hold the bed. Facility policies may allow the
+resident to pay privately to hold his or her bed. While the provisions of this requirement
+specifically address bed-hold under Medicaid law, facilities must make all residents aware in
+writing of their policies related to holding beds during absences from the facility.
+NOTE: Residents not covered by Medicare or Medicaid, may be permitted to privately provide
+reserve bed payments.
+
+Medicaid law requires each state Medicaid plan to address bed-hold policies for hospitalization
+and periods of therapeutic leave. State plans vary in payment for and duration of bed-holds.
+However, federal regulations do not require states to pay nursing facilities for holding beds while
+the resident is away from the facility. In general, the State plan sets the length of time, if any,
+that the state will pay the facility for holding a bed for a Medicaid-eligible resident. It is the
+responsibility of the survey team to know the bed-hold policies of their State Medicaid plan.
+
+Additionally, regulations at §483.15(e)(1) require facilities to permit residents to return to the
+facility immediately to the first available bed in a semi-private room.
+
+As stated above, a participating facility must provide notice to its residents and if applicable,
+their representatives, of the facility’s bed-hold policies, as stipulated in each State’s plan. This
+notice must be provided prior to and upon transfer and must include information on how long a
+facility will hold the bed, how reserve bed payments will be made (if applicable), and the
+conditions upon which the resident would return to the facility. These conditions are:
+
+   •   The resident requires the services which the facility provides; and
+
+   •   The resident is eligible for Medicare skilled nursing facility services or Medicaid nursing
+       facility services.
+
+Bed-hold for days of absence in excess of the State’s bed-hold limit is considered a non-covered
+service which means that the resident could use his/her own income to pay for the bed-hold.
+However, if a resident does not elect to pay to hold his or her bed, the resident will be permitted
+to return to the next available bed, consistent with the requirements at §483.15(e).
+
+The provision at §483.15(d)(1)(ii) references regulations for Medicaid Payments for Reserving
+Beds in Institutions (§447.40), which state “Absences for purposes other than required
+hospitalization (which cannot be anticipated and planned) are included in the patient’s plan of
+care.” This means that therapeutic leave of absence must be consistent with the resident’s goals
+for care, be assessed by the comprehensive assessment, and incorporated into the comprehensive
+care plan, and cannot be a means of discharging the resident against their wishes or stated goals.
+
+§483.21(c)(2) Discharge Summary
+The discharge summary provides necessary information to continuing care providers pertaining
+to the course of treatment while the resident was in the facility and the resident’s plans for care
+after discharge. A discharge summary must include an accurate and current description of the
+clinical status of the resident and sufficiently detailed, individualized care instructions, to ensure
+that care is coordinated and the resident transitions safely from one setting to another. The
+discharge summary may help reduce or eliminate confusion among the various facilities,
+agencies, practitioners, and caregivers involved with the resident’s care.
+In the case of discharge to a non-institutional setting such as the resident’s home, provision of a
+discharge summary, with the resident’s consent, to the resident’s community-based
+physicians/practitioners allows the resident to receive continuous and coordinated, person-
+centered care.
+
+For residents who are being discharged from the facility to another health care facility, the
+discharge summary enables the receiving facility to provide appropriate and timely care. The
+medical record must identify the receiving facilities or physicians/practitioners to whom the
+discharge summary is provided.
+
+Content of the Discharge Summary
+
+§483.21(c)(2)(i) Recapitulation of Resident’s Stay
+
+Recapitulation of the resident’s stay describes the resident’s course of treatment while residing in
+the facility. The recapitulation includes, but is not limited to, diagnoses, course of illness,
+treatment, and/or therapy, and pertinent lab, radiology, and consultation results, including any
+pending lab results.
+
+§483.21(c)(2)(ii) Final Summary of Resident Status
+
+In addition to the recapitulation of the resident’s stay, the discharge summary must include a
+final summary of the resident’s status which includes the items from the resident’s most recent
+comprehensive assessment identified at §483.20(b)(1)(i) – (xviii) Comprehensive Assessment.
+This is necessary to accurately describe the current clinical status of the resident. Items required
+to be in the final summary of the resident’s status are:
+    • Identification and demographic information;
+
+   •   Customary routine;
+
+   •   Cognitive patterns;
+
+   •   Communication;
+
+   •   Vision;
+
+   •   Mood and Behavior patterns;
+
+   •   Psychosocial well-being;
+
+   •   Physical functioning and structural problems;
+
+   •   Continence;
+
+   •   Disease diagnoses and health conditions;
+   •   Dental and nutritional status
+
+   •   Skin condition;
+
+   •   Activity pursuit;
+
+   •   Medications;
+
+   •   Special treatments and procedures;
+
+   •   Discharge planning (as evidenced by most recent discharge care plan);,
+   •   Documentation of summary information regarding the additional assessment performed
+       on the care areas triggered by the completion of the MDS; and
+
+   •   Documentation of participation in assessment. This refers to documentation of who
+       participated in the assessment process. The assessment process must include direct
+       observation and communication with the resident, as well as communication with
+       licensed and non-licensed direct care/direct access staff members on all shifts.
+
+Timing of the Discharge Summary
+
+The discharge summary contains necessary medical information that the facility must furnish at
+the time the resident leaves the facility, to the receiving provider assuming responsibility for
+the resident’s care after discharge. The discharge summary may be furnished in either hard copy
+or electronic format, if the provider assuming responsibility for the resident’s care has the
+capacity to receive and use the discharge summary in electronic format. Delays in preparing and
+forwarding the discharge summary hinder the coordination required to provide optimal care to
+the resident. The medical record must contain the discharge summary information and identify
+the recipient of the summary.
+
+NOTE: In situations where there is no continuing care provider (e.g., resident has no primary
+care physician in the community), the facility is expected to document in the medical record
+efforts to assist the resident in locating a continuing care provider.
+
+§483.21(c)(2)(iii) Reconciliation of Medications Prior to Discharge
+
+A resident’s discharge medications may differ from what the resident was receiving while
+residing in the facility. Facility staff must compare the medications listed in the discharge
+summary to medications the resident was taking while residing in the nursing home. Any
+discrepancies or differences found during the reconciliation must be assessed and resolved, and
+the resolution documented in the discharge summary, along with a rationale for any changes.
+For example, a resident who was receiving rehabilitative services may have required antibiotic
+therapy postoperatively but does not need to continue the antibiotic at home. The
+discontinuation of the medication should be documented in the discharge summary.
+Discharge instructions and accompanying prescriptions provided to the resident and if
+applicable, the resident representative must accurately reflect the reconciled medication list in
+the discharge summary.
+
+DEFICIENCY CATEGORIZATION
+
+An example of Level 4, immediate jeopardy to resident health or safety, includes, but is not
+limited to:
+
+   •   A resident experienced a stroke during the SNF stay and was started on a blood thinning
+       medication. The resident was then discharged to another facility, but the discharge
+       summary did not include the new orders for Coumadin and PT/INR monitoring. The
+       receiving facility did not start the resident on their blood thinning medication.
+
+An example of level 3, actual harm that is not immediate jeopardy includes, but is not
+limited to:
+
+   •   Review of a discharge summary for a discharged resident showed that the discharge
+       summary did not contain necessary information about the resident’s wound care needs
+       and arrangements for wound care after discharge. Investigation showed that the resident
+       did not receive appropriate wound care at home because details of wound care received in
+       the facility were not conveyed in the discharge summary. The facility’s failure to provide
+       instructions for the care of the wound in the discharge summary information caused the
+       resident’s wound to worsen at home resulting in readmission to a hospital.
+
+An example of Level 2, no actual harm with potential for than more than minimal harm
+that is not immediate jeopardy, includes, but is not limited to:
+
+   •   A resident was discharged to another facility closer to her family. The transferring
+       facility did not send a complete discharge summary to the receiving facility until one
+       week after the resident was admitted to the new facility. The receiving facility had to
+       take additional time and use multiple sources to verify medications and other medical
+       orders while waiting for a complete discharge summary. This placed the resident at risk
+       for more than minimal harm due to the potential for inaccuracies in medication and other
+       orders while waiting for a complete discharge summary.
+
+An example of Level 1, no actual harm with potential for no more than a minor negative
+impact on the resident, includes, but is not limited to:
+
+   • The failure of the facility to provide in its recapitulation of the resident’s stay, the most
+     recent laboratory results (which were normal). The recapitulation contained all other
+     required components. This resulted in no negative impact to the resident.
+
+END SOURCE 3
+
+END OF PACKET — 3 sources

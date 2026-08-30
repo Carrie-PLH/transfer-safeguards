@@ -18,7 +18,7 @@ Injects between HTML comment markers:
 in both site/index.html and site/states/index.html. Never hand-edit the
 picker markup between those markers — it is overwritten on every run.
 
-Run from the project root (Licensure Mobility):
+Run from the project root (transfer-safeguards):
     python3 tools/build-state-picker.py
 """
 

@@ -35,7 +35,12 @@ def paras(lines):
     flush(); return ''.join(out)
 
 def render(slug):
-    md=(ROOT/'states'/f'{slug}.md').read_text(); lines=md.splitlines(); state=lines[0][2:]
+    # The federal layer page lives at the repo root (federal.md) and renders
+    # to site/federal.html; state pages live in states/ and render to
+    # site/states/. Asset and nav paths differ by one directory level.
+    federal = (slug == 'federal')
+    src = (ROOT/'federal.md') if federal else (ROOT/'states'/f'{slug}.md')
+    md=src.read_text(); lines=md.splitlines(); state=lines[0][2:]
     sections=[]; current=None
     for line in lines[1:]:
         if line.startswith('## '):
@@ -51,15 +56,26 @@ def render(slug):
                 m=re.match(r'\*\*(.+?)\.\*\*\s*(.*)',line)
                 if m: entries.append((m.group(1),m.group(2)))
                 elif line.strip(): note.append(line)
-            dl=''.join(f'<div><dt>{inline(k)}</dt><dd{(" class=\"docket-checked\"" if k=="Sources last checked" else "")}>{inline(v)}</dd></div>' for k,v in entries)
+            checked_attr=' class="docket-checked"'
+            dl=''.join(f'<div><dt>{inline(k)}</dt><dd{(checked_attr if k=="Sources last checked" else "")}>{inline(v)}</dd></div>' for k,v in entries)
             chunks.append(f'<section class="section reveal"><div class="section-no"></div><div><h1>{state}</h1><dl class="docket">{dl}</dl><p class="docket-note">{inline(" ".join(note))}</p></div></section>')
         else:
             if title=='Lede': no='Lede<small>What this page holds</small>'; cls='section reveal'; heading='Lede'
             else:
                 m=re.match(r'(\d+) — (.*)',title); no=f'{m.group(1)}<small>{m.group(2)}</small>'; cls='section'; heading=m.group(2)
             chunks.append(f'<section class="{cls}"><div class="section-no">{no}</div><div><h2>{heading}</h2>{paras(body)}</div></section>')
-    doc=f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{state} — nurse licensure endorsement and mobility — Board &amp; Border</title><meta name="description" content="{state} nurse licensure endorsement and mobility, quoted and linked to first-party sources."><link rel="icon" href="../assets/favicon.ico" sizes="any"><link rel="stylesheet" href="../assets/style.css"></head><body><a class="skip-link" href="#main">Skip to content</a><header class="topline"><a class="wordmark" href="../index.html"><img src="../assets/logo-lockup.png" alt="Board &amp; Border" width="653" height="132"></a><nav><a href="index.html">States</a><a href="../compact.html">The compact</a><a href="../about.html">About</a></nav></header><main id="main">{''.join(chunks)}</main><footer class="colophon"><div class="rows"><div><img class="mark" src="../assets/logo-lockup.png" alt="" width="653" height="132"><p>A project of <a href="https://fieldassembly.net" target="_blank" rel="noopener">Field Assembly LLC</a>.</p><p><a href="mailto:hello@fieldassembly.net">hello@fieldassembly.net</a></p><p><a href="../legal/privacy.html">Privacy</a> &middot; <a href="../legal/terms.html">Terms</a></p></div><div><p class="foot-label">The limits</p><p>Reference information, not legal or professional advice. Independent of the {state} nursing regulator, of the compact commission, of staffing agencies, and of employers.</p></div></div></footer></body></html>'''
-    (ROOT/'site'/'states'/f'{slug}.html').write_text(doc)
+    up = '' if federal else '../'
+    states_href = 'states/index.html' if federal else 'index.html'
+    federal_href = 'federal.html' if federal else '../federal.html'
+    if federal:
+        desc = 'The federal floor for nursing-home involuntary transfer and discharge — 42 CFR 483.15(c), 42 CFR part 431 subpart E, and CMS guidance — quoted and linked to first-party sources.'
+        limits = 'Reference information, not legal or medical advice. Independent of every facility and operator, of CMS and every state agency, and of the ombudsman programs.'
+    else:
+        desc = f'{state} nursing-home involuntary transfer and discharge procedure, quoted and linked to first-party sources.'
+        limits = f'Reference information, not legal or medical advice. Independent of every facility and operator, of CMS and every {state} state agency, and of the ombudsman programs.'
+    doc=f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{state} — nursing-home transfer and discharge safeguards — Room &amp; Recourse</title><meta name="description" content="{desc}"><link rel="icon" href="{up}assets/favicon.ico" sizes="any"><link rel="stylesheet" href="{up}assets/style.css"></head><body><a class="skip-link" href="#main">Skip to content</a><header class="topline"><a class="wordmark" href="{up}index.html"><img src="{up}assets/logo-lockup.png" alt="Room &amp; Recourse" width="653" height="132"></a><nav><a href="{states_href}">States</a><a href="{federal_href}">The federal floor</a><a href="{up}about.html">About</a></nav></header><main id="main">{''.join(chunks)}</main><footer class="colophon"><div class="rows"><div><img class="mark" src="{up}assets/logo-lockup.png" alt="" width="653" height="132"><p>A project of <a href="https://fieldassembly.net" target="_blank" rel="noopener">Field Assembly LLC</a>.</p><p><a href="mailto:hello@fieldassembly.net">hello@fieldassembly.net</a></p><p><a href="{up}legal/privacy.html">Privacy</a> &middot; <a href="{up}legal/terms.html">Terms</a></p></div><div><p class="foot-label">The limits</p><p>{limits}</p></div></div></footer></body></html>'''
+    out = (ROOT/'site'/'federal.html') if federal else (ROOT/'site'/'states'/f'{slug}.html')
+    out.write_text(doc)
 
 if __name__=='__main__':
     for arg in sys.argv[1:]: render(arg)

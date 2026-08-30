@@ -9,7 +9,7 @@ Three layers, because each catches a different fabrication mode:
    external hostname on the page — must appear in the packet. Catches the
    failure the quote check cannot see: a plausible hallucinated phone
    number or mailing address written outside quotation marks. These are
-   the facts a nurse mid-move would actually dial or post to. Postal
+   the facts a resident or family member would actually dial or post to. Postal
    addresses joined this layer on 2026-08-29, when the index was clean and
    the check therefore cost nothing to add.
 3. Advisory language must not appear outside verbatim quotation.
@@ -47,7 +47,7 @@ Usage:
 
 Exit codes: 0 clean, 1 failures, 2 usage error.
 
-Allowlist: the site's own domains and mailbox (boardandborder.com, and
+Allowlist: the site's own domains and mailbox (roomandrecourse.com, and
 fieldassembly.net for the publisher link), which legitimately appear on every
 page and in no packet.
 """
@@ -59,15 +59,17 @@ import re
 import sys
 
 ALLOW_HOSTS = {"fieldassembly.net", "www.fieldassembly.net",
-                "boardandborder.com", "www.boardandborder.com"}
+                "roomandrecourse.com", "www.roomandrecourse.com"}
 ALLOW_EMAILS = {"hello@fieldassembly.net"}
 
-# "you qualify" and "we advise" are Board & Border's additions to the sibling's
-# list. Eligibility for endorsement and for a multistate license is the board's
-# determination and never this page's, so a construction that reads as telling a
-# nurse they qualify crosses the charter's hardest boundary.
+# "you qualify" and "we advise" were Board & Border's additions to the
+# sibling list; Room & Recourse keeps them and adds "you have grounds" and
+# "file by". Whether grounds apply, whether a notice is lawful, and what any
+# deadline means for a case are the hearing office's determinations and never
+# this page's, so a construction that reads as telling a resident their case
+# crosses the charter's hardest boundary.
 ADVISORY = ["you should", "we recommend", "your deadline", "be sure to",
-            "you qualify", "we advise"]
+            "you qualify", "we advise", "you have grounds", "file by"]
 
 # Editorial annotation written into a packet's source body by whoever assembled
 # it. A packet body is meant to hold the source's text and nothing else: the
