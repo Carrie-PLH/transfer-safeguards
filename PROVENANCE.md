@@ -47,3 +47,15 @@ roomandrecourse.com (unregistered at scaffold time; registration pending).
 Wordmarks, page titles, colophons, and the fidelity checker's allowlist
 carry the name; the repository directory and the internal tooling keep the
 slug.
+
+## Record Standard conformance
+
+Collected under Field Assembly Record Standard 1.0 (effective 2026-08-30;
+~/Projects/Field Assembly/field-assembly-standard, release frozen under
+versions/1.0 and externally anchored). Local extensions: CHARTER.md and this
+file. Adoption status: packet grammar, immutability and supplements, and the
+fidelity gate conform; the tooling lineage carries retention and recipes
+from Board & Border, adopted as pages are built. Anchoring is not yet
+initialized (per CLAUDE.md, it starts under the Gathered Work scheme when
+the owner says so, now that real evidence exists) — until the first anchor
+run, that is the recorded deviation from STANDARD.md §3.6.
