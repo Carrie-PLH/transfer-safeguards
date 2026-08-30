@@ -24,6 +24,29 @@ anything on a published page. If a finding is good enough to put in the
 docket, it is good enough to capture — and if it cannot be captured, the
 page should not carry it.
 
+Agency APIs as a transport. Adopted 2026-08-30, at the owner's decision,
+when Alabama's operative rule proved unreachable by every ordinary means:
+the Department of Public Health publishes chapter 420-5-10 only as a
+scanned PDF with no text layer, and the Legislature's code site renders its
+pages only to a scripted client. The site is backed by a public GraphQL
+endpoint that returns the rule as text to curl, and that capture is
+admitted as first-party — it is the publisher's own text from the
+publisher's own system, not a rendering, a mirror, or a machine's reading
+of a picture. Three conditions attach. The capture notes must carry the
+full request URL, including any query hash. They must state plainly that
+the capture came from the site's API rather than from its pages, so that a
+reader and a reviewer both know which surface was read. And where the URL
+carries an application-level identifier — a persisted-query hash, a session
+or build token — the notes must say so, because such an identifier can
+change when the site is redeployed: when a previously good request stops
+returning the document, the reviewer treats it as capture drift to be
+re-established, never as evidence that the document moved or was withdrawn.
+A browser-rendered capture remains a last resort below this, and must be
+marked as not re-verifiable by the automated pass. OCR is not a capture at
+all: it is a machine's reading of an image of the text, and admitting it as
+quotable would put a silent error channel inside the discipline the whole
+corpus rests on.
+
 The federal layer. The federal materials (42 CFR 483.15(c), 42 CFR part
 431 subpart E, CMS guidance) are a source universe of their own and get
 their own packet (`tools/packets/federal-packet.txt`) and their own page. A

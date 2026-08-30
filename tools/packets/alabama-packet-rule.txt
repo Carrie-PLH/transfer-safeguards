@@ -1,0 +1,173 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Alabama
+SLUG: alabama
+ASSEMBLED: 2026-08-30
+SUPPLEMENT TO: alabama-packet.txt — this packet holds the operative rule text that the first Alabama packet recorded as capture-blocked.
+CAPTURE NOTES: Both sources are rules of the Alabama State Board of Health, captured from the Alabama Administrative Code published by the Legislature. The code site at admincode.legislature.state.al.us renders its pages only to a scripted client, and the Department of Public Health publishes the same chapter only as a scanned PDF with no text layer, so neither serves the rule text to a plain fetch. The site is backed by a public GraphQL endpoint that does, and these captures were taken from that endpoint by curl with a browser user-agent and an `accept: application/json` header. This is the site's API, not its pages: the URL below is the full request, and the sha256Hash it carries is the site's own persisted-query identifier, an implementation detail of the application rather than a location of the document. If that hash changes when the site is redeployed, the request will stop returning the rule; the reviewer should treat that as capture drift to be re-established, not as the document having moved or been withdrawn. Each capture is the JSON response's `description` field, converted to text mechanically (paragraph and break tags to newlines, remaining tags stripped, entities unescaped), preceded by the response's own title, author, authority, history and createdAt fields as the API returns them; the publisher's own typographic errors ("a family members", "and upright position means") stand as served.
+PENDING: A first-party statement of where a resident sends a transfer or discharge appeal and by when. Rule 420-5-10-.06(1)(f)4 requires the notice to carry "A statement that the resident has the right to appeal the action to the State;" and names no office, address, form or deadline; rule 420-5-10-.05 (Source 2) requires the facility to give residents the contacts of state advocacy bodies but states no appeal route; and rule 420-5-10-.02, captured and searched, provides hearings for licensees rather than residents. Also pending: any first-party statement of the Alabama Medicaid bed-hold period — rule 420-5-10-.06(2)(a)1 requires the facility to state "The duration of the bed-hold policy under the State plan, if any" and states no period; and the Department of Senior Services' own ombudsman page.
+
+SOURCE 1: Alabama Administrative Code, Rule 420-5-10-.06, Admission, Transfer, Transport And Discharge Rights (Alabama State Board of Health) — captured from the code site's GraphQL API | https://admincode.legislature.state.al.us/api/graphql?operationName=publicCode&variables=%7B%22number%22%3A%22420-5-10-.06%22%7D&extensions=%7B%22persistedQuery%22%3A%7B%22sha256Hash%22%3A%22b72bac93737153227218ba9055454a07afe68f2d%22%2C%22version%22%3A1%7D%7D | source's own date: history: Amended: Filed June 23, 2004; effective July 28, 2004 | retrieved: 2026-08-30
+title: Admission, Transfer, Transport And Discharge Rights
+author: Rick Harris 
+authority: Code of Ala. 1975, §§22-21-20, et seq.
+history: Repealed and Replaced: Filed July 19, 1996; effective  August 23, 1996. Amended: Filed July 20, 1998; effective  August 25, 1998. Amended: Filed June 23, 2004; effective  July 28, 2004.
+createdAt: 2023-03-28T16:17:32.052-05:00
+
+(1) Admissions, transfers, transport and discharge.
+(a) Transfer and discharge includes movement of a resident to a bed outside of the certified facility whether that bed is in the same physical plant or not. Transfer and discharge does not refer to movement of a resident to a bed within the same certified facility.
+(b) The facility must permit each resident to remain in the facility, and not transfer or discharge the resident from the facility unless--
+1. The transfer or discharge is necessary for the resident's welfare and the resident's needs cannot be met in the facility; 
+2. The transfer or discharge is appropriate because the resident's health has improved sufficiently so the resident no longer needs the services provided by the facility; 
+3. The safety of individuals in the facility is endangered; 
+4. The health of individuals in the facility would otherwise be endangered; 
+5. The resident has failed, after reasonable and appropriate notice, to pay for (or to have paid under Medicare or Medicaid) a stay at the facility. For a resident who becomes eligible for Medicaid after admission to a nursing facility, the nursing facility may charge a resident only allowable charges under Medicaid; or 
+6. The facility ceases to operate. 
+(c) Documentation. When the facility transfers or discharges a resident under any of the circumstances specified in this section, the resident's clinical record must be documented. The documentation must be made by-- 
+1. The resident's physician when transfer or discharge is necessary under paragraph (1)(b)1 or paragraph (1)(b)2 of this section; and 
+2. A physician when transfer or discharge is necessary under paragraph (1)(b)4 of this section. 
+(d) Notice before transfer. Before a facility transfers or discharges a resident, the facility must-- 
+1. Notify the resident and, if known, a family members or legal representative of the resident of the transfer or discharge and the reasons for the move in writing and in a language and manner they understand. 
+2. Record the reasons in the resident's clinical record; and
+3. Include in the notice the items described in paragraph (f)l of this section. 
+(e) Timing of the notice. Except when specified in paragraph (e)1 of this section, the notice of transfer or discharge required under paragraph (d) 1 of this section must be made by the facility at least 30 days before the resident is transferred or discharged. 
+1. Notice may be made as soon as practicable before transfer or discharge when-- 
+(i) The safety of individuals in the facility would be endangered, under paragraph (1) (b)3 of this section. 
+(ii) The health of individuals in the facility would be endangered, under (1)(b)4 of this section. 
+(iii) The resident's health improves sufficiently to allow a more immediate transfer or discharge, under paragraph (1)(b)2 of this section; 
+(iv) An immediate transfer or discharge is required by the resident's urgent medical needs, under paragraph (1)(b)1 of this section; or 
+(v) A resident has not resided in the facility for 30 days. 
+(f) Contents of the notice. The written notice specified in paragraph (d) of this section must include the following: 
+1. The reason for transfer or discharge; 
+2. The effective date of transfer or discharge; 
+3. The location to which the resident is transferred or discharged; 
+4. A statement that the resident has the right to appeal the action to the State; 
+5. The name, address and telephone number of the State long term care ombudsman;
+6. For nursing facility residents with developmental disabilities, or are mentally ill, the mailing address and telephone number of the Alabama Developmental Disabilities Advocacy Program (ADDAP) at the University of Alabama School of Law; and 
+(g) Orientation for transfer or discharge. A facility must provide sufficient preparation and orientation to residents to ensure safe and orderly transfer or discharge from the facility. 
+(h) Resident Transport. If a resident is unable to ride in an upright position or if such resident’s condition is such that he or she needs observation or treatment by Emergency Medical Services personnel, or if the resident requires transportation on a stretcher, gurney or cot, the facility shall arrange or request transportation services only from providers who are ambulance service operators licensed by the Alabama State Board of Health. If such resident is being transported to or from a health care facility in another state, transportation services may be arranged with a transport provider licensed as an ambulance service operator in that state. For the purposes of this rule, and upright position means no more than 20 degrees from vertical. 
+(2) Notice of bed-hold policy and readmission-- 
+(a) Notice before transfer. Before a nursing facility transfers a resident to a hospital or allows a resident to go on therapeutic leave, the nursing facility must provide written information to the resident and a family member or legal representative that specifies-- 
+1. The duration of the bed-hold policy under the State plan, if any, during which the resident is permitted to return and resume residence in the nursing facility; and 
+2. The nursing facility's policies regarding bed-hold periods, which must be consistent with paragraph (2)(c) of this section, permitting a resident to return. 
+(b) Bed-hold notice upon transfer. At the time of a transfer of a resident for hospitalization or therapeutic leave, a nursing facility must provide to the resident and a family member or legal representative written notice which specifies the duration of the bed hold policy described in paragraph (2)(a)1 and 2 of this section. 
+(c) Permitting resident to return to facility. A nursing facility must establish and follow a written policy under which a resident whose hospitalization or therapeutic leave exceeds the bed-hold period under the State plan, is readmitted to the facility immediately upon the first availability of a bed in a semi-private room if the resident-- 
+1. Requires the services provided by the facility; and 
+2. Is eligible for Medicaid nursing facility services. 
+(3) Equal access to quality care. 
+(a) A facility must establish and maintain identical policies and practices regarding transfer, discharge, and the provision of services under the State plan for all individuals regardless of source of payment; 
+(b) The facility may charge any amount for services furnished to non-Medicaid residents consistent with the notice requirement in 420-5-10.05(3)(a)(e) and (f) describing the charges; and 
+(c) The State is not required to offer additional services on behalf of a resident other than services provided in the State plan. 
+(4) Admissions policy. 
+(a) The facility must-- 
+1. Not require residents or potential residents to waive their rights to Medicare or Medicaid; and 
+2. Not require oral or written assurance that residents or potential residents are not eligible for, or will not apply for, Medicare or Medicaid benefits. 
+(b) Medicare/Medicaid facilities must not require a third party guarantee of payment to the facility as a condition of admission or expedited admission, or continued stay in the facility. However, the facility may require an individual who has legal access to a resident's income or resources available to pay for facility care to sign a contract, without incurring personal financial liability, to provide facility payment from the resident's income or resources.
+(c) In the case of a person eligible for Medicaid, a nursing facility must not charge, solicit, accept, or receive, in addition to any amount otherwise required to be paid under the State plan, any gift, money, donation, or other consideration as a precondition of admission, expedited admission or continued stay in the facility. However,--
+1. A nursing facility may charge a resident who is eligible for Medicaid for items and services the resident has requested and received, and that are not specified in the State plan as included in the term "nursing facility services" so long as the facility gives proper notice of the availability and cost of these services to residents and does not condition the resident's admission or continued stay on the request for and receipt of such additional services; and
+2. A nursing facility may solicit, accept, or receive a charitable, religious, or philanthropic contribution from an organization or from a person unrelated to a Medicaid eligible resident or potential resident, but only to the extent that the contribution is not a condition of admission, expedited admission, or continued stay in the facility for a Medicaid eligible resident.
+(d) States or political subdivisions may apply stricter admissions standards under State or local laws than are specified in this section, to prohibit discrimination against individuals entitled to Medicaid.
+END SOURCE 1
+
+SOURCE 2: Alabama Administrative Code, Rule 420-5-10-.05, Resident Rights (Alabama State Board of Health) — captured from the code site's GraphQL API | https://admincode.legislature.state.al.us/api/graphql?operationName=publicCode&variables=%7B%22number%22%3A%22420-5-10-.05%22%7D&extensions=%7B%22persistedQuery%22%3A%7B%22sha256Hash%22%3A%22b72bac93737153227218ba9055454a07afe68f2d%22%2C%22version%22%3A1%7D%7D | source's own date: see the history line in the capture | retrieved: 2026-08-30
+title: Resident Rights
+author: Patricia E. Ivie
+authority: Code of Ala. 1975, §§22-21-20, et seq.
+history: Repealed and Replaced: Filed July 19, 1996; effective  August 23, 1996.
+createdAt: 2023-03-28T16:16:50.940-05:00
+
+(1) Resident rights. The resident has a right to a dignified existence, self-determination, and communication with and access to persons and services inside and outside the facility. A facility must protect and promote the rights of each resident, including each of the following rights
+(2) Exercise of rights.
+(a) The resident has the right to exercise his or her rights as a resident of the facility and as a citizen or resident of the United States
+(b) The resident has the right to be free of interference, coercion, discrimination, and reprisal from the facility in exercising his or her rights
+(c) In the case of a resident adjudged incompetent under the laws of a State by a court of competent jurisdiction, the rights of the resident are exercised by the person appointed under State law to act on the resident's behalf.
+(d) In the case of a resident who has not been judged incompetent by the State court, any legal-surrogate designated in accordance with State law may exercise the resident's right to the extent provided by State law.
+(3) Notice of rights and services
+(a) The facility must inform the resident both orally and in writing in a language that the resident understands of his or her rights and all rules and regulations governing resident conduct and responsibilities during the stay in the facility. Such notification must be made prior to or upon admission and during the resident's stay. Receipt of such information, and many amendments to it, must be acknowledged in writing.
+(b) The resident or his or her legal representative has the right:
+1. Upon an oral or written request, to access all records pertaining to himself or herself including current clinical records within 24 hours(excluding weekends and holidays); and
+2. After receipt of his or her records for inspection, to purchase at a cost not to exceed the community standard photocopies of the records or any portions of them upon request and two working days advance notice of the facility.
+(c) The resident has the right to be fully informed in language that he or she can understand of his or her total health status, including but not limited to, his or her medical condition.
+(d) The resident has the right to refuse treatment, to refuse to participate in experimental research, and to formulate an advance directive as specified in paragraph (h) of this section; and
+(e) The facility must:
+1. Inform each resident who is entitled to Medicaid benefits, in writing, at the time of admission to the nursing facility or, when the resident becomes eligible for Medicaid of:
+(i) The items and services that are included in nursing facility services under the State plan for which the resident may not be charged.
+(ii) Those other items and services that the facility offers and for which the resident may be charged, and the amount of charges for those services; and
+2. Inform each resident when changes are made to the items and services specified in paragraphs (e)1(i) & (ii) above.
+(f) The facility must inform each resident before, or at the time of admission, and periodically during the resident's stay, of services available in the facility and of charges for those services, including any charges for services not covered under Medicare or by the facility's per diem rate.
+(g) The facility must furnish a written description of legal rights which includes:
+1. A description of the manner of protecting personal funds.
+2. A description of the requirements and procedures for establishing eligibility for Medicaid, including the right to request an assessment by the State Medicaid Agency to determine the extent of a couple's non-exempt resources at the time of institutionalization and attributes to the community spouse an equitable share of resources which cannot be considered available for payment toward the cost of the institutionalized spouse's medical care in his or her process of spending down to Medicaid eligibility levels;
+3. A posting of names, addresses, and telephone numbers of all pertinent State client advocacy groups such as the State survey and certification agency, the State licensure office, the State ombudsman program, the protection and advocacy network, and the Medicaid fraud control unit; and
+4. A statement that the resident may file a complaint with the State survey and certification agency concerning resident abuse, neglect, and misappropriation of resident property in the facility.
+(h) The facility must maintain written policies and procedures regarding advance directives. These requirements include provisions to inform and provide written information to all adult residents concerning the right to accept or refuse medical or surgical treatment and, at the individual's option, formulate an advance directive. This includes a written description of the facility's policies to implement advance directives.
+(i) The facility must inform each resident of the name, specialty, and a way of contacting the physician responsible for his or her care.
+(j) The facility must prominently display in the facility written information, and provide to residents and applicants for admission oral and written information about how to apply for and use Medicare and Medicaid benefits, and how to receive refunds for previous payments covered by such benefits.
+(k) Notification of changes. A facility must immediately inform the resident; consult with the resident's physician; and if known, notify the resident's legal representative or an interested family member when there is:
+1. An accident involving the resident which results in injury and has the potential for requiring physician intervention;
+2. A significant change in the resident's physical, mental, or psychosocial status (i.e., a deterioration in health, mental, or psychosocial status in either life-threatening conditions or clinical complications);
+3. A need to alter treatment significantly (i.e., a need to discontinue an existing form of treatment due to adverse consequences, or to commence a new form of treatment); or
+4. A decision to transfer or discharge the resident from the facility as specified in Section 420-5-10-.06.
+(l) The facility must also promptly notify the resident and, if known, the resident's legal representative or interested family member where there is:
+1. A change in room or roommate assignment; or
+2. A change in resident rights under Federal or State law or regulations.
+(m) The facility must record and periodically update the address and phone number of the resident's legal representative or interested family member.
+(n) Protection of Resident Funds. The resident has the right to manage his or her financial affairs, and the facility may not require residents to deposit their personal funds with the facility.
+(o) Management of personal funds. Upon written authorization of a resident, the facility must hold, safeguard, manage, and account for the personal funds of the resident deposited with the facility.
+(p) Deposit of funds.
+1. Funds in excess of $50. The facility must deposit any resident's personal funds in excess of $50 in an interest bearing account (or accounts) that is separate from any of the facility's operating accounts, and that credits all interest earned on residents funds to that account. (In pooled accounts, there must be a separate accounting for each resident's share).
+2. Funds less than $50. The facility must maintain a residents personal funds that do not exceed $50 in a non-interest bearing account, interest-bearing account, or petty cash fund.
+(q) Accounting and records. The facility must establish and maintain a system that assures a full and complete and separate accounting, according to generally accepted accounting principles, of each resident's personal funds entrusted to the facility on the resident's behalf.
+1. The system must preclude any co-mingling of resident funds with facility funds or with the funds of any person other than another resident.
+2. The individual financial records must be available through quarterly statements and on request to the resident or his or her legal representative.
+(r) Notice of certain balances. The facility must notify each resident that receives Medicaid benefits:
+1. When the amount in the resident's account reaches $200 less than the SSI resource limit for one person; and
+2. That, if the amount in the account, in addition to the value of the resident's other nonexempt resources, reaches the SSI resource limit for one person, the resident may lose eligibility for Medicaid or SSI.
+(s) Conveyance upon death. Upon the death of a resident with a personal fund deposited with the facility, the facility must convey within 30 days the resident's funds, and a final accounting of those funds, to the individual or probate jurisdiction administering the resident's estate.
+(t) Assurance of financial security. The facility must purchase a surety bond, or otherwise provide assurance satisfactory to the Secretary, to assure the security of all personal funds of residents deposited with the facility.
+(u) Limitation on charges to personal funds. The facility may not impose a charge against the personal funds of a resident for any item or service for which payment is made under Medicaid and Medicare.
+(v) Free choice. The resident has the right to:
+1. Choose a personal attending physician;
+2. Be fully informed in advance about care and treatment and of any changes in that care or treatment that may affect the resident's well-being; and
+3. Unless adjudged incompetent or otherwise found to be incapacitated under the laws of the State, participate in planning care and treatment or changes in care and treatment.
+(w) Privacy and confidentiality. The resident has the right to personal privacy and confidentiality of his or her personal and clinical records.
+1. Personal privacy includes accommodations, medical treatment, written and telephone communications, personal care, visits, and meetings of family and resident groups, but this does not require the facility to provide a private room for each resident;
+2. Except as provided in paragraph (i)(ii) below, the resident may approve or refuse the release of personal and clinical records to any individual outside the facility;
+3. The resident's right to refuse release of personal and clinical records does not apply when:
+(i) The resident is transferred to another health care institution; or
+(ii) Record release is required by law.
+(x) Grievances. A resident has the right to:
+1. Voice grievances without discrimination or reprisal. Such grievances include those with respect to treatment which has been furnished as well as that which has not been furnished; and
+2. Prompt efforts by the facility to resolve grievances the resident may have, including those with respect to the behavior of other residents.
+(y) Examination of survey results. A resident has the right to:
+1. Examine the results of the most recent survey of the facility conducted by Federal or State surveyors and any plan of correction in effect with respect to the facility.
+2. In a place readily accessible to residents, the facility must make the results available for examination and must post either the results themselves or a notice of their availability; and
+3. Receive information from agencies acting as client advocates, and be afforded the opportunity to contact these agencies.
+(z) Work. The resident has the right to:
+1. Refuse to perform services for the facility;
+2. Perform services for the facility, if he or she chooses, when:
+(i) The facility has documented the need or desire for work in the plan of care;
+(ii) The plan specifies the nature of the services performed and whether the services are voluntary or paid;
+(iii) Compensation for paid services is at or above prevailing rates; and
+(iv) The resident agrees to the work arrangement described in the plan of care.
+(aa) Mail. The resident has the right to privacy in written communications, including the right to:
+1. Send and promptly receive mail that is unopened; and
+2. Have access to stationery, postage, and writing implements at the resident's own expense.
+(bb) Access and visitation reports. The resident has the right and the facility must provide immediate access to any resident by the following:
+1. Any representative of the Secretary;
+2. Any representative of the State;
+3. The resident's individual physician;
+4. The State long term care ombudsman (established under Section 712 of the Older Americans Act of 1965 as amended);
+5, The Alabama Developmental Disabilities Advocacy Program (ADDAP) at the University of Alabama School of Law.
+6. Subject to the resident's right to deny or withdraw consent at any time, immediate family or other relatives of the resident; and
+7. Subject to reasonable restrictions and the resident's right to deny or withdraw consent at any time, others who are visiting with the consent of the resident.
+(cc) The facility must provide reasonable access to any resident by any entity or individual that provides health, social, legal, or other services to the resident, subject to the resident's right to deny or withdraw consent at any time.
+(dd) The facility must allow representatives of the State Ombudsman, described in paragraph (bb)4 above of this section, to examine a resident's clinical records with the
+permission of the resident or the resident's legal representative, and consistent with State law.
+(ee) Telephone. The resident has the right to have reasonable access to the use of a telephone where calls can be made without being overheard.
+(ff) Personal property. The resident has the right to retain and use personal possessions, including some furnishings, and appropriate clothing, as space permits, unless to do so would infringe upon the rights or health and safety of other residents.
+(gg) Married couples. The resident has the right to share a room with his or her spouse when married residents live in the same facility and both spouses consent to the arrangement.
+(hh) Self-Administration of Drugs. An individual resident may self-administer drugs if the interdisciplinary team, has determined that this practice is safe.
+(ii) Refusal of Certain Transfers. An individual has the right to refuse a transfer to another room within the facility, if the purpose of the transfer is to relocate.
+END SOURCE 2
+
+END OF PACKET — 2 sources
