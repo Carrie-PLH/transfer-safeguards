@@ -55,7 +55,9 @@ Collected under Field Assembly Record Standard 1.0 (effective 2026-08-30;
 versions/1.0 and externally anchored). Local extensions: CHARTER.md and this
 file. Adoption status: packet grammar, immutability and supplements, and the
 fidelity gate conform; the tooling lineage carries retention and recipes
-from Board & Border, adopted as pages are built. Anchoring is not yet
-initialized (per CLAUDE.md, it starts under the Gathered Work scheme when
-the owner says so, now that real evidence exists) — until the first anchor
-run, that is the recorded deviation from STANDARD.md §3.6.
+from Board & Border, adopted as pages are built. Anchoring initialized
+2026-08-30 at the owner's request: first chain entry 2026-08-30T144139Z
+over tools/packets/ (federal, ohio, texas), both TSA tokens verifying, OTS
+proof pending upgrade. Unlike the siblings' first entries, this one is
+near-contemporaneous with the initial captures, not a backfill. No open
+deviations from STANDARD.md §3.

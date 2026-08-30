@@ -69,9 +69,11 @@ write whole files); avoid sandbox-side in-place edits of tracked files.
   tools/README.md.
 - Build/review skills exist: rr-state-page and rr-state-review (account
   skills, saved 2026-08-30).
-- Anchoring (tools/anchor.py, anchors/) not yet initialized; start it per
-  the Gathered Work scheme now that real evidence exists, when the owner
-  says so.
+- Anchoring initialized 2026-08-30 (first chain entry 2026-08-30T144139Z,
+  near-contemporaneous with the initial captures). Run
+  `python3 tools/anchor.py run` after every capture or review session and
+  commit anchors/; `upgrade` a day later; never edit anything under
+  anchors/.
 
 ## Deploy only when asked, and only on a passing check
 

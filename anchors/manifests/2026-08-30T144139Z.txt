@@ -1,0 +1,4 @@
+# anchor manifest 2026-08-30T144139Z repo=transfer-safeguards
+725c10add680db5d35f4e4939de210bdbd3fdf1cc6e14c2762ee4cdc66d4db1e  tools/packets/federal-packet.txt
+684e9ed5795353c4337abe6c1cf28bdb0024bd0c5396d5565c846dde5f996cde  tools/packets/ohio-packet.txt
+107303a079dea4e095ac2933ef661934dd14e505ad7c65608ad9712ecdec99ca  tools/packets/texas-packet.txt
