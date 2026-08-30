@@ -1,0 +1,388 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Texas
+SLUG: texas
+ASSEMBLED: 2026-08-30
+CAPTURE NOTES: hhs.texas.gov and apps.hhs.texas.gov refuse non-browser fetches, so Sources 1-3 were retrieved through the session's HTTP fetch tool (which renders the served document to text) and copied to file without retyping; list glyphs and footnote layout are the extractor's. Source 4 is the Texas Secretary of State's TAC portal (texas-sos.appianportalsgov.com) rule listing for 26 TAC Chapter 554, Subchapter F, captured as page text from the portal, which renders rule body text only inside a session-bound frame that returns HTTP 403 to direct capture — see PENDING.
+PENDING: The full rule texts of 26 TAC 554.502 and 554.503 (Texas SOS TAC portal, recordId 203098 and 203099) — the portal serves rule bodies through a frame that refuses direct retrieval, so only the rule numbers, titles, and chapter review date were captured; the rule's notice-contents text is captured via Source 2, which quotes 26 TAC 554.502 verbatim. A first-party statement of Medicaid bed-hold payment policy was searched (hhs.texas.gov provider letters, Medicaid for the Elderly and People with Disabilities Handbook R-2100, fhb.hhs.texas.gov NF handbook - removed per its own notice, tmhp.com LTC user guide) and not found.
+
+SOURCE 1: Texas HHSC, Long-Term Care Regulation Provider Letter PL 2022-25, Nursing Facility Resident Discharge and Appeal | https://www.hhs.texas.gov/sites/default/files/documents/pl2022-25.pdf | source's own date: September 29, 2022 | retrieved: 2026-08-30
+P.O. Box 13247 • Austin, Texas 78711-3247 • 512-424-6500 • hhs.texas.gov
+
+Long-Term Care Regulation Provider Letter
+
+Number: PL 2022-25 (replaces PL 2020-04)
+
+Title: Nursing Facility Resident Discharge and Appeal
+
+Provider Types: Nursing Facility (NF)
+
+Date Issued: September 29, 2022
+
+1.0 Subject and Purpose
+
+The purpose of this letter is to provide guidance to NFs regarding resident discharges and discharge appeal hearings. Providing clear notice and documentation during a discharge are legal requirements and essential to protecting the rights and dignity of residents.
+
+2.0 Policy Details & Provider Responsibilities
+
+A discharge is defined in rule as the movement of a resident to a bed outside the nursing facility.1 A NF must adhere to state and federal regulations when discharging a resident and must provide adequate notice to the resident who is being discharged and (if applicable) to the resident's representative.
+
+NF staff should also be familiar with the process for a fair hearing and with their obligation to provide evidence during an appeal if a resident or the resident's representative contests the discharge. It is the responsibility of the NF to prepare an evidence packet for the fair hearing and to ensure that the resident, the resident's representative, and the hearings officer receive the evidence packet.
+
+1 See 26 Texas Administrative Code (TAC) §554.502(a).
+
+2.1 Reasons for Discharge Permitted by Rule
+
+A NF must determine its capacity and ability to care for a resident upon admission. The facility must allow a resident to remain in the facility and may not involuntarily discharge the resident unless:
+
+• the transfer or discharge is necessary for the resident's welfare, and the resident's needs cannot be met in the facility;
+
+• the transfer or discharge is appropriate because the resident's health has improved sufficiently so the resident no longer needs the services provided by the facility;
+
+• the safety of individuals in the facility is endangered due to the clinical or behavioral status of the resident;
+
+• the health of other individuals in the facility would otherwise be endangered;
+
+• the resident has failed, after reasonable and appropriate notice, to pay for (or to have paid under Medicare or Medicaid) a stay at the facility. Nonpayment applies if the resident does not submit the necessary paperwork for third party payment or after the third party, including Medicare or Medicaid, denies the claim and the resident refuses to pay for the resident's stay. For a resident who becomes eligible for Medicaid after admission to a facility, the facility may charge a resident only allowable charges under Medicaid;
+
+• the resident or resident representative requests a voluntary transfer or discharge; or
+
+• the facility ceases to operate as a nursing facility and no longer provides resident care.
+
+2.2 Proper Discharge Notification
+
+If a NF initiates a resident discharge, the facility must provide written notification of the discharge—in a language and manner the resident can understand—to the resident, the resident representative (if applicable), and a representative of the Long-Term Care Ombudsman Program, at least 30 days before the intended discharge date2
+
+The discharge notification must include:
+
+2 See 26 TAC §554.502(d)(1) and 26 TAC §554.502(e)(1).
+
+• the reason for the discharge;
+
+• the effective date of the discharge;
+
+• the location to which the resident is being discharged;
+
+• a statement that informs the resident of his or her rights to appeal the discharge by requesting a hearing through the Health and Human Services Commission (HHSC) within 90 days;
+
+• information on how to obtain an appeal form and assistance in completing and submitting it;
+
+• contact information of the managing local ombudsman and the toll-free number for the Long-Term Care Ombudsman Program, which is 1-800-252-2412;
+
+• if applicable, for residents with a mental illness, contact information of the state mental health authority; and
+
+• if applicable, for residents with an intellectual or developmental disability (IDD), contact information for the authority for individuals with IDD, along with the contact information for the agency responsible for the protection and advocacy of individuals with IDD.3
+
+A NF must provide a discharge notice as soon as practicable before the 30-day period described above if:
+
+• the safety of an individual in the facility would be endangered;
+
+• the health of an individual in the facility would be endangered;
+
+• the resident’s health improves sufficiently to allow a more immediate discharge;
+
+• the discharge is necessary for the resident’s welfare because the resident’s needs cannot be met in the facility; or
+
+• the resident has not resided in the facility for 30 days.4
+
+A NF should provide as much specific information as possible in the discharge notice to notify the resident why he or she is being discharged and how the discharge meets discharge criteria as outlined in rule. The statement of the resident’s appeal rights must:
+
+3 See 26 TAC §554.502(f)(1)-(7).
+4 See 26 TAC §554.502(e)(3) and 42 Code of Federal Regulations (CFR) §483.15(c)(4)(ii)(A)-(E).
+
+• inform the resident that he or she has the right to appeal the action as outlined in HHSC's Fair and Fraud Hearings Handbook by requesting a hearing within 90 days of the date of the notice;
+
+• provide information on how to obtain an appeal form and assistance in completing the form and submitting the fair hearing request; and
+
+• inform the resident that, if the resident requests the hearing before the discharge date, the resident has the right to remain in the facility until the hearings officer makes a final determination unless failure to discharge would endanger the health or safety of the resident or individuals in the facility.5 The facility must document how a failure to discharge a resident would present a danger to the resident or others.
+
+NF staff must record the reason for discharge in the resident’s clinical record.6
+
+A NF provides the discharge notice to the resident and the resident's authorized representative. When notifying the resident and the representative, it is imperative to ensure that the representative’s contact information is current.
+
+If a resident in the NF is married to another resident in the same NF and the facility proposes to discharge one spouse to another facility, the NF must give the other spouse notice of his or her right to be discharged to the same facility. If the spouse notifies the NF in writing that he or she wishes to be discharged to the other facility, the NF must discharge both spouses on the same day, pending availability of accommodations.7
+
+2.3 Preparation and Discharge Planning
+
+A NF is required to provide a resident with enough preparation regarding his or her discharge so that it may be safe and orderly.8 Appropriate preparation can include:
+
+5 See 26 TAC §554.502(f)(4).
+6 See 26 TAC §554.502(d)(3).
+7 See 26 TAC §554.502(k).
+8 See 26 TAC §554.502(h).
+
+• explaining the discharge to the resident in a manner that he or she can understand;
+
+• working with the resident or the resident’s representative to ensure all the resident’s personal belongings are collected; and
+
+• ensuring NF staff handle the discharge in a way that will ease the transition for the resident.
+
+A NF must provide the resident with a discharge summary that includes:
+
+• a summary of the resident’s overall stay;
+
+• the status of his or her permanent medical necessity under the Medicaid program with a new medical necessity determination; and
+
+• a post-discharge plan of care that will assist the resident to adjust to the new living environment.9
+
+2.4 Resident’s Right to a Fair Hearing
+
+Regardless of the reason for discharge, a resident has the right to appeal a discharge within 90 days of a discharge notice.10 If the resident appeals before the discharge date, the facility may not discharge the resident while the appeal is pending. A NF is required to allow the resident to remain in the facility until the hearing officer makes a final determination unless:11
+
+• the resident has failed, after reasonable and appropriate notice, to pay for (or to have paid under Medicare or Medicaid) a stay at the facility. Nonpayment applies if the resident does not submit the necessary paperwork for third party payment or after the third party, including Medicare or Medicaid, denies the claim and the resident refuses to pay for the resident's stay;
+
+• the safety of individuals in the facility would be endangered;
+
+• the health of individuals in the facility would be endangered;
+
+• the resident's health improves sufficiently to allow a more immediate transfer or discharge;
+
+• the transfer and discharge is necessary for the resident's welfare because the resident's needs cannot be met in the facility and the resident's urgent medical needs require an immediate transfer or discharge; or
+
+• a resident has not resided in the facility for 30 days.
+
+9 See 26 TAC §554.803(b).
+10 See 1 TAC §357.3(b)(2)(B).
+11 See 26 TAC §554.502(j)(1), 42 CFR §483.15(c)(1)(ii), 26 TAC §554.502(b)(5), and 26 TAC §554.502(e)(3).
+
+2.5 Fair Hearings Processes and Procedures
+
+HHSC’s Uniform Fair Hearings rules guide discharge appeal hearings.12 Under these rules, a NF is responsible for preparing an evidence packet to be reviewed at the fair hearing. The evidence packet should contain all forms and notices related to the hearing, along with documents that demonstrate that the NF met the legal criteria to discharge the resident.
+
+The evidence packet must demonstrate how the resident’s discharge meets the discharge criteria in rule. The evidence may include:
+
+• the policy being followed;
+
+• excerpts from progress notes;
+
+• doctor’s orders;
+
+• prescriptions;
+
+• recommendations from other professional staff about the resident’s needs;
+
+• documentation of alternative room assignments;
+
+• documentation of other steps the facility may have taken to address the resident’s status or situation; and
+
+• any other documentation supporting the need for discharge.
+
+A NF must send copies of the evidence packet to the hearings officer via the fax, email, or address listed on the hearing notice and to the resident appealing the discharge and the resident’s representative.13
+
+The recipients of the evidence packet, such as the resident and his or her authorized representative, should be determined on a case-by-case basis. Failure to provide a packet to either party may be grounds for rescheduling the hearing and may delay the appeal process.
+
+A NF is encouraged to send the evidence packet as soon as possible before the hearing date. While there are no federal or state regulations regarding how far ahead of the hearing to send the packet, NFs are encouraged to send it no less than five business days before the hearing date and document its delivery to the resident, his or her representative, and the hearings officer. While permitted, sending an evidence packet the day of the hearing could result in exclusion of the evidence or hearing postponement for lack of sufficient time to review it.
+
+If the resident or the representative indicate they did not receive the evidence packet with sufficient time to review it, the hearing officer may reconvene the hearing at a later date to allow sufficient time for evidence packet to be reviewed by all parties.
+
+A NF representative must appear at the scheduled hearing, be prepared to defend the decision to discharge the resident, and implement the hearing officer’s final order.14 During a fair hearing, the NF should present documentation to show the discharge notice was provided to the resident and the representative. The NF has the burden of proof at an appeal hearing and must provide evidence that the resident’s discharge meets state or federal requirements.15
+
+2.6 Fair Hearing Determinations and Notifications
+
+A hearing officer will determine if a discharge is appropriate and will provide a written decision to the facility and the resident.16 Medicaid must recoup any payments made on behalf of the resident after the date of discharge or decision, whichever is later, must be recouped.17
+
+If a hearing officer determines the discharge is inappropriate, the facility, upon written notification by the hearing officer, must readmit the resident immediately to the facility or to the next available bed.18 If the NF has not discharged the resident, the NF is required to allow the resident to remain at the facility.
+
+The hearing officer will report the findings to HHSC Long-term Care Regulation. Failure to readmit or allow the resident to remain at the facility is subject to an investigation of noncompliance and potential enforcement remedies if noncompliance is found.
+
+12 1 TAC Chapter 357, Subchapter A.
+13 1 TAC §357.7(b)(2).
+14 See 1 TAC §357.7(b)(3)-(5).
+15 26 TAC §554.502(b) and 42 CFR §483.15(c)(1)(i).
+16 See 15 TAC §357.5(c)(3)(D).
+17 See 26 TAC §554.502(j)(3)
+18 See 26 TAC §554.502(j)(2).
+
+3.0 Background/History
+
+This letter is being issued to remind NF providers of the rules and regulations for proper discharges and to clarify the necessary content of discharge notices, the expectations for a NF to provide evidence as part of the fair hearing should a resident appeal the discharge, and the requirement of a facility to comply with a hearing officer's order.
+
+4.0 Resources
+
+HHSC Fair and Fraud Hearings
+HHSC Form 4800 Fair Hearing Request Summary
+HHSC Form 4800-A Fair Hearing Request Summary Addendum
+HHSC Office of the Long-Term Care Ombudsman
+
+5.0 Contact Information
+
+If you have any questions about this letter, please contact the Policy and Rules Section by email at LTCRPolicy@hhs.texas.gov or call (512) 438-3161.
+END SOURCE 1
+
+SOURCE 2: Texas HHSC, Fair and Fraud Hearings Handbook, 1300 Notice | https://www.hhs.texas.gov/handbooks/fair-fraud-hearings-handbook/1300-notice | source's own date: Revision 23-1, Effective July 31, 2023 | retrieved: 2026-08-30
+Fair and Fraud Hearings Handbook — 1300, Notice
+
+Revision 23-1; Effective July 31, 2023
+
+1310 Notice of Proposed Adverse Action - 1 TAC Section 357.11
+
+Revision 23-1; Effective July 31, 2023
+
+Whenever an adverse action is taken, agencies are required to send an adequate notice to the client. The HHS agency follows notice requirements set forth in the appropriate state or federal law or regulations for the individual program.
+
+A notice must:
+
+be sent to the client when a denial or reduction in services or eligibility action is taken.
+advise the client of:
+the right to a fair hearing;
+how to appeal;
+the right to be represented by others, including legal counsel;
+available legal services in the community; and
+an explanation of the circumstances when continued benefits may apply.
+
+1320 Content of Notice
+
+Revision 23-1; Effective July 31, 2023
+
+Notice requirements vary for different programs. Notice requirements for the various programs are listed below.
+
+1321 Medicaid
+
+Revision 23-1; Effective July 31, 2023
+
+According to 42 CFR Section 431.210, relating to notice requirements for Medicaid-funded programs, “a notice required under §431.206(c)(2), (c)(3), or (c)(4) of this subpart must contain:
+
+a statement of what action the agency, skilled nursing facility or nursing facility intends to take and the effective date of such action;
+a clear statement of the specific reasons supporting the intended action;
+the specific regulations that support, or the change in federal or state law that requires, the action;
+an explanation of:
+the individual's right to request an evidentiary hearing if one is available, or a state agency hearing; or
+in cases of an action based on a change in law, the circumstances under which a hearing will be granted;
+an explanation of the circumstances under which Medicaid is continued if a hearing is requested."
+
+1322 Alberto N. Settlement
+
+Revision 23-1; Effective July 31, 2023
+
+In addition, in cases involving denials or reductions of services provided to Medicaid clients under age 21, the Alberto N. settlement requires an explanation of why the request for services was denied and where appropriate, how to obtain services through other programs.
+
+1323 Nursing Facility Discharge
+
+Revision 23-1; Effective July 31, 2023
+
+26 TAC Section 554.502 specifies requirements for the notice on a nursing facility discharge action:
+
+“Contents of the notice. For nursing facilities, the written notice specified in subsection (d) of this section must include the following:
+
+the reason for transfer or discharge;
+the effective date of transfer or discharge;
+the location to which the resident is transferred or discharged;
+a statement of the resident’s appeal rights, including:
+the resident has the right to appeal the action as outlined in HHSC's Fair and Fraud Hearings Handbook by requesting a hearing within 90 days after the date of the notice;
+if the resident requests the hearing before the discharge date, the resident has the right to remain in the facility until the hearing officer makes a final determination unless failure to transfer or discharge would endanger the health or safety of the resident or individuals in the facility. The facility must document the danger failure to discharge would present; and
+information on how to obtain an appeal form and assistance in completing the form and submitting the appeal hearing request;
+the name, address, email address, and telephone number of the managing local ombudsman and the toll-free number of the Ombudsman Program;
+in the case of a resident with mental illness, the address, email address, and phone number of the state mental health authority; and
+in the case of a resident with an intellectual or developmental disability, the authority for individuals with intellectual and developmental disabilities, and the phone number, address, and email address of the agency responsible for the protection and advocacy of individuals with intellectual and developmental disabilities.”
+
+1324 SNAP
+
+Revision 23-1; Effective July 31, 2023
+
+According to 7 CFR Section 273.13, relating to notices required for SNAP, "The notice of adverse action shall be considered adequate if it explains in easily understandable language:
+
+the proposed action;
+the reason for the proposed action;
+the household's right to request a fair hearing;
+the telephone number of the SNAP office (toll-free number or a number where collect calls will be accepted for households outside the local calling area) and, if possible,
+the name of the person to contact for additional information;
+the availability of continued benefits; and
+the liability of the household for any over issuances received while awaiting a fair hearing if the hearing official's decision is adverse to the household. If there is an individual or organization available that provides free legal representation, the notice shall also advise the household of the availability of the service."
+
+1325 TANF
+
+Revision 23-1; Effective July 31, 2023
+
+According to 45 CFR Section 206.10 (4), adequate notice shall be sent to applicants and recipients to indicate that assistance has been authorized (including the amount of financial assistance) or that it has been denied or terminated. Under this requirement, adequate notice means:
+
+a written notice that contains a statement of the action taken;
+the reasons for and specific regulations supporting such action; and
+an explanation of the individual's right to request a hearing.
+
+1330 Agency Action Notice Issues
+
+Revision 23-1; Effective July 31, 2023
+
+1331 When Appellant Raises a Notice Issue
+
+Revision 23-1; Effective July 31, 2023
+
+The appellant has the right to receive adequate notice. If the appellant raises an issue at the hearing questioning the sufficiency of the notice, or if the hearings officer identifies an issue with the notice, the hearings officer must address the issue on the record at that time.
+
+If the hearings officer determines that the notice is not adequate, the hearings officer must instruct the agency representative to prepare a new notice and provide it to the appellant. After the new notice is provided, the hearings officer will reconvene the hearing.
+
+If the hearings officer determines that the notice is adequate, they will inform all parties and proceed with the hearing.
+
+If the hearings officer requires additional time or escalation of the notice to determine if it is sufficient or not, the hearings officer can recess the hearing and escalate the notice to their management. Once a response has been received regarding the adequacy of the notice, the hearings officer will reconvene the hearing and provide a response.
+
+Nursing Facility Discharge
+
+Notices are of particular importance in nursing facility discharge hearings. Regardless of the issue listed as the basis for appeal, the hearings officer must also address adequacy of the notice to show that it complies with policy. In these hearings, if the notice issue is not raised by the appellant, the hearings officer must develop the record to include information to determine the legal adequacy of the notice.
+
+1340 Receipt of Agency Notices
+
+Revision 23-1; Effective July 31, 2023
+
+An appellant may testify at the hearing that an agency notice, such as an appointment notice or a request for additional information, was not received.
+
+The hearings officer should address this issue by asking questions and taking testimony from both the appellant or the appellant’s representative and the agency representative.
+
+If a letter is sent and not returned, the sender may presume the letter was received.
+
+The decision should include findings of fact regarding the determinations used in reaching the decision on whether the agency notice letter was received.
+END SOURCE 2
+
+SOURCE 3: Texas HHS, Office of the Long-Term Care Ombudsman | https://apps.hhs.texas.gov/news_info/ombudsman/ | source's own date: none stated on page | retrieved: 2026-08-30
+Office of the Long-Term Care Ombudsman
+
+Long-term care (LTC) ombudsmen are advocates for residents' rights. They help protect the quality of life and quality of care of anybody who lives in a nursing facility or an assisted living facility.
+
+Ombudsmen can be volunteers or paid staff of agencies that are independent of any long-term care facility. Services are free, confidential and available statewide.
+
+Call 1-800-252-2412 to speak with an LTC ombudsman in your area.
+
+If you have concerns or questions about the care of a person with a developmental disability who lives in a state supported living center, please call the Office of the Independent Ombudsman for State Supported Living Centers at 1-877-323-6466 or visit their website.
+
+Find an LTC Ombudsman in Your Area
+
+What Does an LTC Ombudsman Do?
+
+Some of the ways LTC ombudsmen help nursing home and assisted living residents include:
+
+Listening to residents and family members when they have concerns or issues.
+Telling residents about their rights.
+Protecting resident health, safety, welfare and rights.
+Helping families learn about nursing homes and how to pay for them.
+Working to solve problems and making sure state regulations and laws protect residents.
+
+Learn More About LTC Ombudsmen
+
+How Do I Become an LTC Ombudsman?
+
+People who live in nursing homes and assisted living facilities may have little or no contact with the outside world. Many feel they lack control over their lives. A volunteer LTC ombudsman who visits regularly can be the highlight of a resident's day and ensure residents get good care.
+
+If you have a passion for helping others, a caring spirit and a willingness to learn, we need you! Become an ombudsman and help improve the quality of life and care for residents in a facility near you. We provide training, tools and ongoing support.
+
+Become an LTC Ombudsman
+END SOURCE 3
+
+SOURCE 4: Texas Secretary of State, TAC portal — 26 TAC Chapter 554, Subchapter F rule listing | https://texas-sos.appianportalsgov.com/rules-and-meetings?recordId=203098&queryAsDate=08%2F30%2F2026&interface=VIEW_TAC_SUMMARY | source's own date: Chapter Review Date 03/11/2024 | retrieved: 2026-08-30
+Rules & Meetings — View TAC
+
+TITLE 26 — HEALTH AND HUMAN SERVICES
+PART 1 — HEALTH AND HUMAN SERVICES COMMISSION
+CHAPTER 554 — NURSING FACILITY REQUIREMENTS FOR LICENSURE AND MEDICAID CERTIFICATION
+SUBCHAPTER F — ADMISSION, TRANSFER, AND DISCHARGE RIGHTS IN MEDICAID-CERTIFIED FACILITIES
+
+Rules
+
+§554.501 Admissions Policy for Medicaid-certified Facilities
+§554.502 Transfer and Discharge in Medicaid-certified Facilities
+§554.503 Notice of Bed-Hold Policy and Return To Medicaid-certified Facilities
+§554.504 Equal Access to Quality Care in Medicaid-certified Facilities
+§554.505 Discharge Planning in Medicaid-certified Facilities
+
+Rule §554.502 — Transfer and Discharge in Medicaid-certified Facilities — Chapter Review Date 03/11/2024
+Rule §554.503 — Notice of Bed-Hold Policy and Return To Medicaid-certified Facilities — Chapter Review Date 03/11/2024
+END SOURCE 4
+
+END OF PACKET — 4 sources

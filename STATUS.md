@@ -7,7 +7,7 @@ present. Spanish = a translated page is published; it carries the
 docket, the hoisted rows, and the notice periods and deadlines, in
 the state's own published translation only.
 
-**Baseline: 0 of 51 · Full pages: 0 of 51 · Spanish: 0 of 51 · Federal layer: built**
+**Baseline: 2 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
 
 | State | Baseline | Full page | Spanish | Sources last checked |
 |---|:---:|:---:|:---:|---|
@@ -46,7 +46,7 @@ the state's own published translation only.
 | New York | [ ] | [ ] | [ ] |  |
 | North Carolina | [ ] | [ ] | [ ] |  |
 | North Dakota | [ ] | [ ] | [ ] |  |
-| Ohio | [ ] | [ ] | [ ] |  |
+| [Ohio](site/states/ohio.html) | [x] | [x] | [ ] | 2026-08-30 |
 | Oklahoma | [ ] | [ ] | [ ] |  |
 | Oregon | [ ] | [ ] | [ ] |  |
 | Pennsylvania | [ ] | [ ] | [ ] |  |
@@ -54,7 +54,7 @@ the state's own published translation only.
 | South Carolina | [ ] | [ ] | [ ] |  |
 | South Dakota | [ ] | [ ] | [ ] |  |
 | Tennessee | [ ] | [ ] | [ ] |  |
-| Texas | [ ] | [ ] | [ ] |  |
+| [Texas](site/states/texas.html) | [x] | [x] | [ ] | 2026-08-30 |
 | Utah | [ ] | [ ] | [ ] |  |
 | Vermont | [ ] | [ ] | [ ] |  |
 | Virginia | [ ] | [ ] | [ ] |  |

@@ -1,0 +1,473 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Ohio
+SLUG: ohio
+ASSEMBLED: 2026-08-30
+CAPTURE NOTES: Sources 1-6 fetched from codes.ohio.gov (Legislative Service Commission publication of the Revised and Administrative Codes) and converted to plain text by mechanical tag-stripping only. Source 7 fetched from aging.ohio.gov (Ohio Department of Aging, Long-Term Care Ombudsman, Discharge & Transfer Rights page, page-dated February 19, 2025) the same way. Navigation chrome remains where the stripper left it; nothing was retyped.
+PENDING: An Ohio Department of Health page publishing a street address for filing the hearing request was searched for (odh.ohio.gov, and the ODH legal-services office referenced in ORC 3721.16(A)(2)(f) and OAC 3701-61-03(B)(7)) and not found as a stable first-party page; the codified route is quoted as published.
+
+SOURCE 1: Ohio Revised Code 3721.13, Residents' rights (Legislative Service Commission) | https://codes.ohio.gov/ohio-revised-code/section-3721.13 | source's own date: Effective October 3, 2023 | retrieved: 2026-08-30
+The Legislative Service Commission staff updates the Revised Code on an ongoing basis, as it completes its act review of enacted legislation.
+ Updates may be slower during some times of the year, depending on the volume of enacted legislation.
+
+ Section 3721.13 | Residents' rights. 
+
+ Ohio Revised Code 
+
+ / 
+
+ Title 37 Health-Safety-Morals 
+
+ / 
+
+ Chapter 3721 Nursing Homes; Residential Care Facilities 
+
+ Effective: 
+ October 3, 2023 
+
+ Latest Legislation: 
+ House Bill 33 - 135th General Assembly 
+
+ PDF: 
+ Download Authenticated PDF 
+
+ (A) The rights of residents of a home shall include, but are not limited to, the following: (1) The right to a safe and clean living environment pursuant to the medicare and medicaid programs and applicable state laws and rules adopted by the director of health; (2) The right to be free from physical, verbal, mental, and emotional abuse and to be treated at all times with courtesy, respect, and full recognition of dignity and individuality; (3) Upon admission and thereafter, the right to adequate and appropriate medical treatment and nursing care and to other ancillary services that comprise necessary and appropriate care consistent with the program for which the resident contracted. This care shall be provided without regard to considerations such as race, color, religion, national origin, age, or source of payment for care. (4) The right to have all reasonable requests and inquiries responded to promptly; (5) The right to have clothes and bed sheets changed as the need arises, to ensure the resident's comfort or sanitation; (6) The right to obtain from the home, upon request, the name and any specialty of any physician or other person responsible for the resident's care or for the coordination of care; (7) The right, upon request, to be assigned, within the capacity of the home to make the assignment, to the staff physician of the resident's choice, and the right, in accordance with the rules and written policies and procedures of the home, to select as the attending physician a physician who is not on the staff of the home. If the cost of a physician's services is to be met under a federally supported program, the physician shall meet the federal laws and regulations governing such services. (8) The right to participate in decisions that affect the resident's life, including the right to communicate with the physician and employees of the home in planning the resident's treatment or care and to obtain from the attending physician complete and current information concerning medical condition, prognosis, and treatment plan, in terms the resident can reasonably be expected to understand; the right of access to all information in the resident's medical record; and the right to give or withhold informed consent for treatment after the consequences of that choice have been carefully explained. When the attending physician finds that it is not medically advisable to give the information to the resident, the information shall be made available to the resident's sponsor on the resident's behalf, if the sponsor has a legal interest or is authorized by the resident to receive the information. The home is not liable for a violation of this division if the violation is found to be the result of an act or omission on the part of a physician selected by the resident who is not otherwise affiliated with the home. (9) The right to withhold payment for physician visitation if the physician did not visit the resident; (10) The right to confidential treatment of personal and medical records, and the right to approve or refuse the release of these records to any individual outside the home, except in case of transfer to another home, hospital, or health care system, as required by law or rule, or as required by a third-party payment contract; (11) The right to privacy during medical examination or treatment and in the care of personal or bodily needs; (12) The right to refuse, without jeopardizing access to appropriate medical care, to serve as a medical research subject; (13) The right to be free from physical or chemical restraints or prolonged isolation except to the minimum extent necessary to protect the resident from injury to self, others, or to property and except as authorized in writing by the attending physician for a specified and limited period of time and documented in the resident's medical record. Prior to authorizing the use of a physical or chemical restraint on any resident, the attending physician shall make a personal examination of the resident and an individualized determination of the need to use the restraint on that resident. Physical or chemical restraints or isolation may be used in an emergency situation without authorization of the attending physician only to protect the resident from injury to self or others. Use of the physical or chemical restraints or isolation shall not be continued for more than twelve hours after the onset of the emergency without personal examination and authorization by the attending physician. The attending physician or a staff physician may authorize continued use of physical or chemical restraints for a period not to exceed thirty days, and at the end of this period and any subsequent period may extend the authorization for an additional period of not more than thirty days. The use of physical or chemical restraints shall not be continued without a personal examination of the resident and the written authorization of the attending physician stating the reasons for continuing the restraint. If physical or chemical restraints are used under this division, the home shall ensure that the restrained resident receives a proper diet. In no event shall physical or chemical restraints or isolation be used for punishment, incentive, or convenience. (14) The right to the pharmacist of the resident's choice and the right to receive pharmaceutical supplies and services at reasonable prices not exceeding applicable and normally accepted prices for comparably packaged pharmaceutical supplies and services within the community; (15) The right to exercise all civil rights, unless the resident has been adjudicated incompetent pursuant to Chapter 2111. of the Revised Code and has not been restored to legal capacity, as well as the right to the cooperation of the home's administrator in making arrangements for the exercise of the right to vote; (16) The right of access to opportunities that enable the resident, at the resident's own expense or at the expense of a third-party payer, to achieve the resident's fullest potential, including educational, vocational, social, recreational, and habilitation programs; (17) The right to consume a reasonable amount of alcoholic beverages at the resident's own expense, unless not medically advisable as documented in the resident's medical record by the attending physician or unless contradictory to written admission policies; (18) The right to use tobacco at the resident's own expense under the home's safety rules and under applicable laws and rules of the state, unless not medically advisable as documented in the resident's medical record by the attending physician or unless contradictory to written admission policies; (19) The right to retire and rise in accordance with the resident's reasonable requests, if the resident does not disturb others or the posted meal schedules and upon the home's request remains in a supervised area, unless not medically advisable as documented by the attending physician; (20) The right to observe religious obligations and participate in religious activities; the right to maintain individual and cultural identity; and the right to meet with and participate in activities of social and community groups at the resident's or the group's initiative; (21) The right upon reasonable request to private and unrestricted communications with the resident's family, social worker, and any other person, unless not medically advisable as documented in the resident's medical record by the attending physician, except that communications with public officials or with the resident's attorney or physician shall not be restricted. Private and unrestricted communications shall include, but are not limited to, the right to: (a) Receive, send, and mail sealed, unopened correspondence; (b) Reasonable access to a telephone for private communications; (c) Private visits at any reasonable hour. (22) The right to assured privacy for visits by the spouse, or if both are residents of the same home, the right to share a room within the capacity of the home, unless not medically advisable as documented in the resident's medical record by the attending physician; (23) The right upon reasonable request to have room doors closed and to have them not opened without knocking, except in the case of an emergency or unless not medically advisable as documented in the resident's medical record by the attending physician; (24) The right to retain and use personal clothing and a reasonable amount of possessions, in a reasonably secure manner, unless to do so would infringe on the rights of other residents or would not be medically advisable as documented in the resident's medical record by the attending physician; (25) The right to be fully informed, prior to or at the time of admission and during the resident's stay, in writing, of the basic rate charged by the home, of services available in the home, and of any additional charges related to such services, including charges for services not covered under the medicare or medicaid program. The basic rate shall not be changed unless thirty days' notice is given to the resident or, if the resident is unable to understand this information, to the resident's sponsor. (26) The right of the resident and person paying for the care to examine and receive a bill at least monthly for the resident's care from the home that itemizes charges not included in the basic rates; (27)(a) The right to be free from financial exploitation; (b) The right to manage the resident's own personal financial affairs, or, if the resident has delegated this responsibility in writing to the home, to receive upon written request at least a quarterly accounting statement of financial transactions made on the resident's behalf. The statement shall include: (i) A complete record of all funds, personal property, or possessions of a resident from any source whatsoever, that have been deposited for safekeeping with the home for use by the resident or the resident's sponsor; (ii) A listing of all deposits and withdrawals transacted, which shall be substantiated by receipts which shall be available for inspection and copying by the resident or sponsor. (28) The right of the resident to be allowed unrestricted access to the resident's property on deposit at reasonable hours, unless requests for access to property on deposit are so persistent, continuous, and unreasonable that they constitute a nuisance; (29) The right to receive reasonable notice before the resident's room or roommate is changed, including an explanation of the reason for either change. (30) The right not to be transferred or discharged from the home unless the transfer is necessary because of one of the following: (a) The welfare and needs of the resident cannot be met in the home. (b) The resident's health has improved sufficiently so that the resident no longer needs the services provided by the home. (c) The safety of individuals in the home is endangered. (d) The health of individuals in the home would otherwise be endangered. (e) The resident has failed, after reasonable and appropriate notice, to pay or to have the medicare or medicaid program pay on the resident's behalf, for the care provided by the home. A resident shall not be considered to have failed to have the resident's care paid for if the resident has applied for medicaid, unless both of the following are the case: (i) The resident's application, or a substantially similar previous application, has been denied. (ii) If the resident appealed the denial, the denial was upheld. (f) The home's license has been revoked, the home is being closed pursuant to section 3721.08 , sections 5165.60 to 5165.89 , or section 5155.31 of the Revised Code, or the home otherwise ceases to operate. (g) The resident is a recipient of medicaid, and the home's participation in the medicaid program is involuntarily terminated or denied. (h) The resident is a beneficiary under the medicare program, and the home's participation in the medicare program is involuntarily terminated or denied. (31) The right not to be transferred or discharged from the home to a location that is incapable of meeting the resident's health care and safety needs. (32) The right not to be transferred or discharged from the home without adequate preparation prior to the transfer or discharge to ensure a safe and orderly transfer or discharge from the home, including proper arrangements for medication, equipment, health care services, and other necessary services. (33) All rights provided under 42 C.F.R. 483.15 and 483.21 and any other transfer or discharge rights provided under federal law. (34) The right to voice grievances and recommend changes in policies and services to the home's staff, to employees of the department of health, or to other persons not associated with the operation of the home, of the resident's choice, free from restraint, interference, coercion, discrimination, or reprisal. This right includes access to a residents' rights advocate, and the right to be a member of, to be active in, and to associate with persons who are active in organizations of relatives and friends of nursing home residents and other organizations engaged in assisting residents. (35) The right to have any significant change in the resident's health status reported to the resident's sponsor. As soon as such a change is known to the home's staff, the home shall make a reasonable effort to notify the sponsor within twelve hours. (36) The right, if the resident has requested the care and services of a hospice care program, to choose a hospice care program licensed under Chapter 3712. of the Revised Code that best meets the resident's needs. (B) A sponsor may act on a resident's behalf to assure that the home does not deny the residents' rights under sections 3721.10 to 3721.17 of the Revised Code. (C) Any attempted waiver of the rights listed in division (A) of this section is void. 
+
+ Last updated October 3, 2023 at 4:15 PM 
+
+ Available Versions of this Section 
+
+ September 29, 2013 – House Bill 59 - 130th General Assembly 
+
+ [ View September 29, 2013 Version ]
+
+ October 17, 2019 – Amended by House Bill 166 - 133rd General Assembly 
+
+ [ View October 17, 2019 Version ]
+
+ October 3, 2023 – Amended by House Bill 33 - 135th General Assembly 
+
+ [ View October 3, 2023 Version ]
+END SOURCE 1
+
+SOURCE 2: Ohio Revised Code 3721.16, Residents' rights concerning transfer or discharge | https://codes.ohio.gov/ohio-revised-code/section-3721.16 | source's own date: Effective October 3, 2023 | retrieved: 2026-08-30
+The Legislative Service Commission staff updates the Revised Code on an ongoing basis, as it completes its act review of enacted legislation.
+ Updates may be slower during some times of the year, depending on the volume of enacted legislation.
+
+ Section 3721.16 | Residents' rights concerning transfer or discharge. 
+
+ Ohio Revised Code 
+
+ / 
+
+ Title 37 Health-Safety-Morals 
+
+ / 
+
+ Chapter 3721 Nursing Homes; Residential Care Facilities 
+
+ Effective: 
+ October 3, 2023 
+
+ Latest Legislation: 
+ House Bill 33 - 135th General Assembly 
+
+ PDF: 
+ Download Authenticated PDF 
+
+ For each resident of a home, all of the following apply with respect to a proposed transfer or discharge from the home: (A)(1) The administrator of a home shall notify a resident in writing, and the resident's sponsor in writing by certified mail, return receipt requested, in advance of any proposed transfer or discharge from the home. The administrator shall send a copy of the notice to the state department of health. The notice shall be provided at least thirty days in advance of the proposed transfer or discharge, unless any of the following applies: (a) The resident's health has improved sufficiently to allow a more immediate discharge or transfer to a less skilled level of care; (b) The resident has resided in the home less than thirty days; (c) An emergency arises in which the safety of individuals in the home is endangered; (d) An emergency arises in which the health of individuals in the home would otherwise be endangered; (e) An emergency arises in which the resident's urgent medical needs necessitate a more immediate transfer or discharge. In any of the circumstances described in divisions (A)(1)(a) to (e) of this section, the notice shall be provided as many days in advance of the proposed transfer or discharge as is practicable. (2) The notice required under division (A)(1) of this section shall include all of the following: (a) The reasons for the proposed transfer or discharge; (b) The proposed date the resident is to be transferred or discharged; (c) Subject to division (A)(3) of this section, a proposed location to which the resident may relocate and a notice that the resident and resident's sponsor may choose another location to which the resident will relocate; (d) Notice of the right of the resident and the resident's sponsor to an impartial hearing at the home on the proposed transfer or discharge, and of the manner in which and the time within which the resident or sponsor may request a hearing pursuant to section 3721.161 of the Revised Code; (e) A statement that the resident will not be transferred or discharged before the date specified in the notice unless the home and the resident or, if the resident is not competent to make a decision, the home and the resident's sponsor, agree to an earlier date; (f) The address of the legal services office of the department of health; (g) The name, address, and telephone number of a representative of the state long-term care ombudsman program and, if the resident or patient has a developmental disability or mental illness, the name, address, and telephone number of the Ohio protection and advocacy system. (3) The proposed location to which a resident may relocate as specified pursuant to division (A)(2)(c) of this section in the proposed transfer or discharge notice shall be capable of meeting the resident's health-care and safety needs. The proposed location for relocation need not have accepted the resident at the time the notice is issued to the resident and resident's sponsor. (B) No home shall transfer or discharge a resident before the date specified in the notice required by division (A) of this section unless the home and the resident or, if the resident is not competent to make a decision, the home and the resident's sponsor, agree to an earlier date. (C) Transfer or discharge actions shall be documented in the resident's medical record by the home if there is a medical basis for the action. (D) A resident or resident's sponsor may challenge a transfer or discharge by requesting an impartial hearing pursuant to section 3721.161 of the Revised Code, unless the transfer or discharge is required because of one of the following reasons: (1) The home's license has been revoked under this chapter; (2) The home is being closed pursuant to section 3721.08 , sections 5165.60 to 5165.89 , or section 5155.31 of the Revised Code; (3) The resident is a recipient of medicaid and the home's participation in the medicaid program has been involuntarily terminated or denied by the federal government; (4) The resident is a beneficiary under the medicare program and the home's certification under the medicare program has been involuntarily terminated or denied by the federal government. (E) If a resident is to be transferred or discharged pursuant to this section, the home proposing the transfer or discharge shall provide the resident with adequate preparation prior to the transfer or discharge to ensure a safe and orderly transfer or discharge from the home, and the home or alternative setting to which the resident is to be transferred or discharged shall have accepted the resident for transfer or discharge. (F) At the time of a transfer or discharge of a resident who is a recipient of medicaid from a home to a hospital or for therapeutic leave, the home shall provide notice in writing to the resident and in writing by certified mail, return receipt requested, to the resident's sponsor, specifying the number of days, if any, during which the resident will be permitted under the medicaid program to return and resume residence in the home and specifying the medicaid program's coverage of the days during which the resident is absent from the home. An individual who is absent from a home for more than the number of days specified in the notice and continues to require the services provided by the facility shall be given priority for the first available bed in a semi-private room. 
+
+ Last updated October 3, 2023 at 4:16 PM 
+
+ Available Versions of this Section 
+
+ October 1, 2012 – House Bill 153 - 129th General Assembly 
+
+ [ View October 1, 2012 Version ]
+
+ September 29, 2013 – House Bill 59 - 130th General Assembly 
+
+ [ View September 29, 2013 Version ]
+
+ October 3, 2023 – Amended by House Bill 33 - 135th General Assembly 
+
+ [ View October 3, 2023 Version ]
+END SOURCE 2
+
+SOURCE 3: Ohio Revised Code 3721.161, Hearing on proposed transfer or discharge | https://codes.ohio.gov/ohio-revised-code/section-3721.161 | source's own date: Effective October 3, 2023 | retrieved: 2026-08-30
+The Legislative Service Commission staff updates the Revised Code on an ongoing basis, as it completes its act review of enacted legislation.
+ Updates may be slower during some times of the year, depending on the volume of enacted legislation.
+
+ Section 3721.161 | Hearing challenging proposed transfer or discharge. 
+
+ Ohio Revised Code 
+
+ / 
+
+ Title 37 Health-Safety-Morals 
+
+ / 
+
+ Chapter 3721 Nursing Homes; Residential Care Facilities 
+
+ Effective: 
+ October 3, 2023 
+
+ Latest Legislation: 
+ House Bill 33 - 135th General Assembly 
+
+ PDF: 
+ Download Authenticated PDF 
+
+ (A) Not later than thirty days after the date a resident or the resident's sponsor receives under section 3721.16 of the Revised Code a notice of a proposed transfer or discharge, whichever date of receiving the notice is later, the resident or resident's sponsor may challenge the proposed transfer or discharge by submitting a written request for a hearing to the state department of health. On receiving the request, the department shall conduct a hearing in accordance with section 3721.162 of the Revised Code to determine whether the proposed transfer or discharge complies with divisions (A)(30) to (33) of section 3721.13 and section 3721.16 of the Revised Code. (B) Except in the circumstances described in divisions (A)(1)(a) to (e) of section 3721.16 of the Revised Code, if a resident or the resident's sponsor submits a written hearing request not later than ten days after the date the resident or resident's sponsor received notice of the proposed transfer or discharge, whichever date of receiving the notice is later, the home shall not transfer or discharge the resident unless the department determines after the hearing that the transfer or discharge complies with divisions (A)(30) to (33) of section 3721.13 and section 3721.16 of the Revised Code or the department's determination to the contrary is reversed on appeal. (C) If a resident or the resident's sponsor does not request a hearing pursuant to division (A) of this section, the home may transfer or discharge the resident on the date specified in the notice required by division (A) of section 3721.16 of the Revised Code or thereafter, unless the home and the resident or, if the resident is not competent to make a decision, the home and the resident's sponsor, agree to an earlier date. (D) If a resident or the resident's sponsor requests a hearing in writing pursuant to division (A) of this section and the home transfers or discharges the resident before the department issues a hearing decision, the home shall readmit the resident in the first available bed if the department determines after the hearing that the transfer or discharge does not comply with divisions (A)(30) to (33) of section 3721.13 and section 3721.16 of the Revised Code or the department's determination to the contrary is reversed on appeal. 
+
+ Last updated October 3, 2023 at 4:18 PM 
+
+ Available Versions of this Section 
+
+ September 5, 2001 – House Bill 94 - 124th General Assembly 
+
+ [ View September 5, 2001 Version ]
+
+ October 3, 2023 – Amended by House Bill 33 - 135th General Assembly 
+
+ [ View October 3, 2023 Version ]
+END SOURCE 3
+
+SOURCE 4: Ohio Revised Code 3721.162, Conduct of hearing | https://codes.ohio.gov/ohio-revised-code/section-3721.162 | source's own date: Effective October 3, 2023 | retrieved: 2026-08-30
+The Legislative Service Commission staff updates the Revised Code on an ongoing basis, as it completes its act review of enacted legislation.
+ Updates may be slower during some times of the year, depending on the volume of enacted legislation.
+
+ Section 3721.162 | Determining whether transfer or discharge complies. 
+
+ Ohio Revised Code 
+
+ / 
+
+ Title 37 Health-Safety-Morals 
+
+ / 
+
+ Chapter 3721 Nursing Homes; Residential Care Facilities 
+
+ Effective: 
+ October 3, 2023 
+
+ Latest Legislation: 
+ House Bill 33 - 135th General Assembly 
+
+ PDF: 
+ Download Authenticated PDF 
+
+ (A) On receiving a request pursuant to section 3721.161 of the Revised Code, the department of health shall conduct hearings under this section in accordance with 42 C.F.R. 431, subpart E, to determine whether the proposed transfer or discharge of the resident from the home complies with divisions (A)(30) to (33) of section 3721.13 and section 3721.16 of the Revised Code. (B) The department shall employ or contract with an attorney to serve as hearing officer. The hearing officer shall conduct a hearing in the home not later than ten days after the date the department receives a request pursuant to section 3721.161 of the Revised Code, unless the resident and the home or, if the resident is not competent to make a decision, the resident's sponsor and the home, agree otherwise. The hearing shall be recorded on audiotape, but neither the recording nor a transcript of the recording shall be part of the official record of the hearing. A hearing conducted under this section is not subject to section 121.22 of the Revised Code. (C) Unless the parties otherwise agree, the hearing officer shall issue a decision within five days of the date the hearing concludes. In all cases, a decision shall be issued not later than thirty days after the department receives a request pursuant to section 3721.161 of the Revised Code. The hearing officer's decision shall be served on the resident or resident's sponsor and the home by certified mail. The hearing officer's decision shall be considered the final decision of the department. (D) A resident, resident's sponsor, or home may appeal the decision of the department to the court of common pleas pursuant to section 119.12 of the Revised Code. The appeal shall be governed by section 119.12 of the Revised Code, except for all of the following: (1) The resident, resident's sponsor, or home shall file the appeal in the court of common pleas of the county in which the home is located. (2) The resident or resident's sponsor may apply to the court for designation as an indigent and, if the court grants the application, the resident or resident's sponsor shall not be required to furnish the costs of the appeal. (3) The appeal shall be filed with the department and the court within thirty days after the hearing officer's decision is served. The appealing party shall serve the opposing party a copy of the notice of appeal by hand-delivery or certified mail, return receipt requested. If the home is the appealing party, it shall provide a copy of the notice of appeal to both the resident and the resident's sponsor or attorney, if known. (4) The department shall not file a transcript of the hearing with the court unless the court orders it to do so. The court shall issue such an order only if it finds that the parties are unable to stipulate to the facts of the case and that the transcript is essential to the determination of the appeal. If the court orders the department to file the transcript, the department shall do so not later than thirty days after the day the court issues the order. (E) The court shall not require an appellant to pay a bond as a condition of issuing a stay pending its decision. (F) The resident, resident's sponsor, home, or department may commence a civil action in the court of common pleas of the county in which the home is located to enforce the decision of the department or the court. If the court finds that the resident or home has not complied with the decision, it shall enjoin the violation and order other appropriate relief, including attorney's fees. 
+
+ Last updated October 3, 2023 at 4:19 PM 
+
+ Available Versions of this Section 
+
+ September 5, 2001 – House Bill 94 - 124th General Assembly 
+
+ [ View September 5, 2001 Version ]
+
+ October 3, 2023 – Amended by House Bill 33 - 135th General Assembly 
+
+ [ View October 3, 2023 Version ]
+END SOURCE 4
+
+SOURCE 5: Ohio Administrative Code 3701-61-03, Notice and hearing request requirements | https://codes.ohio.gov/ohio-administrative-code/rule-3701-61-03 | source's own date: Effective February 1, 2024 | retrieved: 2026-08-30
+This website publishes administrative rules on their effective dates, as designated by the adopting state agencies, colleges, and
+ universities.
+
+ Rule 3701-61-03 | Notice and hearing request requirements. 
+
+ Ohio Administrative Code 
+
+ / 
+
+ 3701 
+
+ / 
+
+ Chapter 3701-61 | Nursing Home Residents' Rights on Transfer or Discharge; Employee Background Checks 
+
+ Effective: 
+ February 1, 2024 
+
+ Promulgated Under: 
+ 119.03 
+
+ PDF: 
+ Download Authenticated PDF 
+
+ (A) The administrator of the home is
+ obligated to notify a resident in writing, and the resident's sponsor or
+ legal representative in writing by certified mail, return receipt requested, in
+ advance of any proposed transfer or discharge from the home. In addition to,
+ but not in place of, the written notification by certified mail, the
+ administrator of the home may provide a copy of the written notice through
+ electronic mail to the resident, resident's sponsor or legal
+ representative. The administrator is obligated to send a copy of the notice to
+ the department. The administrator of the home is obligated to provide the
+ notice to the resident, and the resident's sponsor or legal
+ representative, at least thirty days in advance of the proposed transfer or
+ discharge, unless any of the following apply: (1) The resident's
+ health has improved sufficiently to allow a more immediate discharge or
+ transfer to a less skilled level of care; (2) The resident has
+ resided in the home less than thirty days. (3) An emergency arises
+ in which the safety of individuals in the home is endangered; (4) An emergency arises
+ in which the health of individuals in the home would otherwise be
+ endangered; (5) An emergency arises
+ in which the resident's urgent medical needs necessitate a more immediate
+ transfer or discharge. In any of the circumstances described in
+ paragraphs (A)(1) to (A)(5) of this rule, the notice will be provided as many
+ days in advance of the of the proposed transfer or discharge as is practicable.
+ The administrator is obligated to obtain written acknowledgment of receipt of
+ the notice from the resident unless the resident is unable to acknowledge
+ receipt. (B) The administrator of the home is
+ obligated to provide the following information in the notice obligated under
+ paragraph (A) of this rule : (1) The reasons for the
+ proposed transfer or discharge; (2) The proposed date the
+ resident is to be transferred or discharged; (3) Subject to paragraph
+ (C) of this rule, a proposed location to which the resident may relocate and a
+ notice that the resident and resident's sponsor may choose another
+ location to which the resident will relocate; (4) Notice of the following information
+ pursuant to this rule and section 3721.161 of the Revised Code: (a) The right of the resident, and the resident's sponsor or
+ legal representative to an impartial hearing at the home on the proposed
+ transfer or discharge; (b) The manner in which and the resident or the resident's
+ sponsor may request a hearing pursuant to this rule; (c) The time within which the resident or the resident's
+ sponsor may request a hearing as provided in paragraph (E) of this rule;
+ and (d) The time within which the resident or the resident's
+ sponsor may request a hearing as provided in paragraph (F) of this rule. This
+ information will be placed in bold type within the notice. (5) A statement that the
+ resident will not be transferred or discharged before the date specified in the
+ notice unless the home and the resident or, if the resident is not competent to
+ make a decision, the home and the resident's sponsor, agree to an earlier
+ date; (6) The name, address,
+ electronic mail address, and telephone number of the administrator of the
+ facility seeking the transfer or discharge of the resident; (7) The address and telephone number of
+ the legal services office of the department; and (8) The name, address, electronic mail
+ address, and telephone number of the state designated regional long-term care
+ ombudsman program serving the area in which the home is located and, if the
+ resident has a developmental disability or mental illness, the name, address,
+ electronic mail, and telephone number of the Ohio legal rights
+ service. (C) The proposed location to which a
+ resident may relocate as specified pursuant to paragraph (B)(3) of this rule in
+ the proposed transfer or discharge notice is obligated to be capable of meeting
+ the resident's healthcare and safety needs. The proposed location for
+ relocation need not have accepted the resident at the time the notice is issued
+ to the resident or resident's sponsor. (D) No home is allowed to transfer or discharge a resident
+ before the date specified in the notice obligated by this rule unless the home
+ and the resident or, if the resident is not competent to make a decision, the
+ home and the resident's sponsor, agree to an earlier date. (E) Pursuant to division (A) of section 3721.161 of the
+ Revised Code the resident or resident's sponsor may challenge a proposed
+ transfer or discharge by submitting a written request for a hearing to the
+ department not later than thirty days after the resident or resident's
+ sponsor receive notice of the proposed transfer or discharge, whichever is
+ later. On receiving the request the department is obligated to conduct a
+ hearing in accordance with section 3721.162 of the Revised Code and paragraphs
+ (A) to (E) of rule 3701-61-04 of the Administrative Code to determine whether
+ the proposed transfer or discharge complies with division (A)(30) of section
+ 3721.13 of the Revised Code and paragraphs (A)(1) to (A)(7) of rule 3701-61-02 
+ of the Administrative Code. (F) Except in the circumstances described in paragraphs
+ (A)(1) to (A)(5) of this rule, if a resident or resident's sponsor submits
+ a written hearing request not later than ten days after the resident or
+ resident's sponsor received notice of the proposed transfer or discharge,
+ whichever is later, the home is not allowed to transfer or discharge the
+ resident unless the department determines after the hearing that the transfer
+ or discharge complies with division (A)(30) of section 3721.13 of the Revised
+ Code and paragraphs (A)(1) to (A)(7) of rule 3701-61-02 of the Administrative
+ Code or the department's determination to the contrary is reversed on
+ appeal. (G) If a resident or resident's sponsor does not
+ request a hearing pursuant to paragraph (E) of this rule the home may transfer
+ or discharge the resident on the date specified in the notice obligated by
+ paragraph (A) of this rule or thereafter, unless the home and the resident or,
+ if the resident is not competent to make a decision, the home and the
+ resident's sponsor, agree to an earlier date. (H) If a resident or resident's sponsor requests a
+ hearing pursuant to paragraph (E) of this rule and the home transfers or
+ discharges the resident before the department issues a hearing decision, the
+ home is obligated to readmit the resident in the first available bed if the
+ department determines after the hearing that the transfer does not comply with
+ division (A)(30) of section 3721.13 of the Revised Code or the
+ department's determination to the contrary is reversed on
+ appeal. (I) If there is a medical basis for the discharge of a
+ resident, the administrator of the home is obligated to ensure that the
+ transfer or discharge reason is documented in the resident's medical
+ record. 
+
+ Last updated February 1, 2024 at 8:13 AM 
+
+ Supplemental Information 
+
+ Authorized By: 
+ 3721.11 
+
+ Amplifies: 
+ 3721.13 , 3721.16 , 3721.161 
+
+ Current Five Year Review Date: -->
+ -->
+ -->
+
+ Five Year Review Date: 
+ 2/1/2029 
+
+ Prior Effective Dates: 
+ 10/12/1979, 10/14/1999, 3/20/2005, 1/15/2012
+END SOURCE 5
+
+SOURCE 6: Ohio Administrative Code 5160-3-16.4, Bed-hold days (Ohio Department of Medicaid rule) | https://codes.ohio.gov/ohio-administrative-code/rule-5160-3-16.4 | source's own date: Effective August 17, 2017 | retrieved: 2026-08-30
+This website publishes administrative rules on their effective dates, as designated by the adopting state agencies, colleges, and
+ universities.
+
+ Rule 5160-3-16.4 | Nursing facilities (NFs): covered days and bed-hold days. 
+
+ Ohio Administrative Code 
+
+ / 
+
+ 5160 
+
+ / 
+
+ Chapter 5160-3 | Long-Term Care Facilities; Nursing Facilities; Intermediate Care Facilities for Individuals with Intellectual Disabilities. 
+
+ Effective: 
+ August 17, 2017 
+
+ Promulgated Under: 
+ 119.03 
+
+ PDF: 
+ Download Authenticated PDF 
+
+ (A) Definitions. (1) "Home and community-based services" (HCBS) means services that enable individuals to live in a community setting rather than in an institutional setting such as a NF, an intermediate care facility for individuals with intellectual disabilities (ICF-IID), or a hospital. (2) "Hospitalization" means transfer of a NF resident to a medical institution as defined in paragraph (A)(4) of this rule. A NF resident is considered hospitalized if the resident is formally admitted to a medical institution, or is on observation status in a medical institution. (3) "Institution for mental disease" (IMD) means a hospital, NF, or other institution of more than sixteen beds that is engaged primarily in the diagnosis, treatment, and care of persons with mental diseases, and that provides medical attention, nursing care, and related services. An institution is determined to be an IMD when its overall character is that of a facility established and maintained primarily for the care and treatment of individuals with mental diseases, whether or not it is licensed as such. (4) "Medical institution" means an institution other than a NF that meets all of the following criteria: (a) Is organized to provide medical care, including nursing and convalescent care. (b) Has the necessary professional personnel, equipment, and facilities to manage the medical, nursing, and other health care needs of patients on a continuing basis in accordance with accepted standards. (c) Is authorized under state law to provide medical care. (d) Is staffed by professional personnel who are responsible to the institution for professional medical and nursing services. Professional medical and nursing services shall include all of the following: (i) Adequate and continual medical care and supervision by a physician. (ii) Registered nurse or licensed practical nurse supervision and services sufficient to meet nursing care needs. (iii) Nurses' aid services sufficient to meet nursing care needs. (iv) A physician's guidance on the professional aspects of operating the institution. (5) "NF admission" means the act that allows an individual who was not considered a resident of any Ohio medicaid certified NF during the time immediately preceding their current NF residence to officially enter a facility to receive NF services. This may include former NF residents who have exhausted their bed-hold days while in the community and/or hospital and returned to the facility. A NF admission may be a new admission or a return admission after an official discharge. A NF admission is distinguished from the readmission of a resident who has not exhaused all bed-hold days.. (6) "NF bed-hold day," also referred to as "NF leave day," means a day for which a bed is reserved for a NF resident while the resident is temporarily absent from the NF for hospitalization, therapeutic leave days, or visitation with friends or relatives. Payment for NF bed-hold days may be made only if the resident has the intent and ability to return to the same NF. A resident on NF bed-hold day status is not considered discharged from the NF. (7) "NF discharge" means the full release of a NF resident from the facility, allowing the resident who leaves the facility to no longer be counted in the NF's census. Reasons for NF discharge include but are not limited to the resident's transfer to another facility, exhaustion of NF bed-hold days, decision to reside in a community-based setting, or death. (8) "NF occupied day" means one of the following: (a) A day of admission or readmission. (b) A day during which a medicaid eligible resident's stay in a NF is eight hours or more, and for which the facility receives the full per resident per day payment directly from medicaid in accordance with Chapter 5165. of the Revised Code. (9) "NF readmission" means the status of a resident who is readmitted to the same NF following a stay in a hospital to which the resident was sent to receive care, or the status of a resident who returns after a therapeutic program or visit with friends or relatives. A NF resident can only be readmitted to a facility if that individual was not officially discharged from the facility during that NF stay. (10) "NF therapeutic leave day" means a day that a resident is temporarily absent from a NF with intent and ability to return, and is in a residential setting other than a long-term care facility, hospital, or other entity eligible to receive federal, state, or county funds to maintain a resident, for the purpose of receiving a regimen or program of formal therapeutic services. (11) "NF transfer" means the events that occur when a person's place of residence changes from one Ohio medicaid certified NF to another, with or without an intervening hospital stay. However, when the person has an intervening IMD admission, or when the person is discharged from a NF during a hospital stay due to exhaustion of available NF bed-hold days and is admitted to a different NF immediately following that hospital stay, the change of residence is not considered a NF transfer. (12) "Skilled nursing facility" (SNF) means a facility certified to participate in the medicare program. (B) Prohibition of preadmission NF bed-hold payment. (1) The Ohio department of medicaid (ODM) shall not make payment to reserve a bed for a medicaid eligible prospective NF resident. (2) A NF provider shall not accept preadmission bed-hold payments from a medicaid eligible prospective NF resident or from any other source on the prospective resident's behalf as a precondition for NF admission. (C) Determination of NF bed-hold day or NF occupied day. To determine whether a specific day during a resident's stay is payable as a NF bed-hold day or a NF occupied day, the following criteria shall be used: (1) The day of NF admission or readmission counts as one occupied day. (2) The day of NF discharge is not counted as either a bed-hold or an occupied day. (3) When NF admission and NF discharge occur on the same day, the day is considered a day of admission and counts as one occupied day, even if the day is less than eight hours. (4) The day a resident leaves on bed-hold status counts as one occupied day for payment purposes if the resident is in the NF for eight hours or more. A day begins at twelve a.m. and ends at eleven fifty-nine p.m. (D) Limits and payment for NF bed-hold days. (1) For medicaid eligible residents in a certified NF, except those described in paragraph (K) of this rule, ODM shall pay the NF provider to reserve a bed only for as long as the resident intends to return to the facility, but for not more than thirty days in any calendar year, and only if the requirements of paragraph (D)(3) of this rule are met. (2) According to section 5165.34 of the Revised Code, payment for NF bed-hold days shall be as follows: (a) Fifty per cent of the NF provider's per diem rate if the facility had an occupancy rate in the preceding calendar year exceeding ninety-five per cent; or (b) Eighteen per cent of the NF provider's per diem rate if the facility had an occupancy rate in the preceding calendar year of ninety-five per cent or less. (3) Payment for NF bed-hold days according to paragraph (D)(2) of this rule shall be considered payment in full, and the NF provider shall not seek supplemental payment from the resident. (4) Payment for NF bed-hold days shall be made for the following reasons: (a) Hospitalization. NF bed-hold days used for hospitalization of NF residents, including NF residents on HCBS waivers, shall be authorized only until: (i) The day the resident's anticipated level of care (LOC) at the time of NF discharge from the hospital changes to a LOC that the NF provider is not certified to provide; or (ii) The day the resident is discharged from the hospital, including discharge resulting in transfer to another hospital-based or free-standing NF or SNF; or (iii) The day the resident decides to go to another NF upon discharge from the hospital and notifies the first NF provider; or (iv) The day the hospitalized resident dies. (b) NF therapeutic leave days. (i) Any plan to use therapeutic leave days must be approved in advance by the resident's primary physician and documented in the resident's medical record. The documentation shall be available for viewing by the county department of job and family services (CDJFS) and ODM staff. (ii) A NF provider shall make arrangements for the resident to receive required care and services while on approved therapeutic leave, but medicaid shall not pay for care and services that are included in medicaid's continued payments, including but not limited to home health care, personal care services, durable medical equipment (DME), and private duty nursing. (iii) NF therapeutic leave days are not payable for NF residents who are on an HCBS waiver and do not count towards the annual leave day limit specified in this rule. (c) Visits with friends or relatives. (i) Any plan for a limited absence to visit with friends or relatives must be approved in advance by the resident's primary physician and documented in the resident's medical record. The documentation shall be available for viewing by the CDJFS and ODM staff. (ii) The number of days per visit is flexible within the maximum NF bed-hold days, allowing for differences in the resident's physical condition, the type of visit, and travel time. (iii) The NF provider shall make arrangements for the resident to receive required care and services while on approved visits, but medicaid shall not pay for care and services that are included in medicaid's continued payments, including but not limited to home health care, personal care services, DME, and private duty nursing. (iv) Leave days for visits with friends or relatives are not payable for NF residents who are on an HCBS waiver and do not count towards the annual leave day limit specified in this rule. (5) The number and frequency of NF bed-hold days used shall be considered in evaluating the continuing need of a resident for NF care. (E) Submission of claims for NF bed-hold days. A NF provider shall submit claims for NF bed-hold days electronically to ODM in accordance with rule 5160-3-39.1 of the Administrative Code. (F) NF admission after depletion of NF bed-hold days. (1) A resident who leaves a facility and has already exhausted their bed-hold days is considered in a NF discharge status. (2) A NF provider shall establish and follow a written policy under which a medicaid resident who has expended their annual allotment of thirty NF bed-hold days, and therefore is no longer entitled to a reserved bed under the medicaid bed-hold limit, and is considered to be discharged, shall be admitted to the first available medicaid certified bed in a semiprivate room. (a) The first available bed means the first unoccupied bed not being held by a resident (regardless of the source of payment) who has elected to make payment to hold that bed. (b) Unless involuntary discharge hearing and notice requirements were issued as set forth in section 3721.16 of the Revised Code for the previous admission span, a resident shall be admitted to the first available medicaid certified bed in a semiprivate room even if the resident has an outstanding balance owed to the NF provider from the previous admission. The admitted NF resident may be discharged if the NF provider can demonstrate that nonpayment of charges exists, and if hearing and notice requirements have been issued as set forth in section 3721.16 of the Revised Code. (3) A medicaid eligible NF resident whose absence from the facility exceeds the bed-hold limit or for whom no bed-hold coverage is available may choose to do one of the following: (a) Return to the NF upon the availability of the first semiprivate bed in the facility. (b) Ensure the timely availability of a specific bed upon return to the facility by making bed-hold payments for any days of absence in excess of the medicaid limit or for which no bed-hold coverage is available. Such payment is separate and distinct from the prohibition of any third party payment guarantee as set forth in rule 5160-3-02 of the Administrative Code. (4) A medicaid eligible resident's NF bed-hold day rights extend only to situations in which the resident leaves the NF for hospitalization, therapeutic leave days, or visits with friends or relatives, and has the intent and ability to return to the same NF. (a) If a resident who has depleted medicaid covered NF bed-hold days is transferred from a NF to a hospital and then undergoes a NF transfer to a second NF because the second NF provider offers services the first NF provider does not, the first NF provider has no obligation to admit the resident. (b) If a resident who has depleted medicaid NF bed-hold days is admitted from a NF to a hospital and then is transferred to a hospital-based NF or SNF, the type of NF or SNF to which the resident is transferred does not change the requirements stated in paragraph (F) of this rule. Therefore, a resident transfer to a hospital-based NF or SNF shall be considered the same as a transfer to any other NF or SNF, and the first NF provider has no obligation to admit the resident. (5) NF admission following the depletion of bed-hold days during a prior stay and subsequent NF discharge requires that a resident has a NF LOC and is eligible for medicaid NF services. (G) Information and notice prior to leave. (1) Prior to a resident's use of NF bed-hold days, a NF provider shall furnish the resident and their family member or legal representative written information about the facility's bed-hold policies, which shall be consistent with paragraph (F) of this rule. (2) At the time a resident is scheduled for a temporary leave of absence, a NF provider shall furnish the resident and their family member or legal representative a written notice that specifies all of the following: (a) The maximum duration of medicaid covered NF bed-hold days as described in this rule. (b) The duration of bed-hold status during which the resident is permitted to return to the NF. (c) Whether medicaid payment will be made to hold a bed and if so, for how many days. (d) The resident's option to make payments to hold a bed beyond the medicaid bed-hold day limit, and the amount of such payments. (H) Emergency hospitalization. (1) In the case of emergency hospitalization, a NF provider shall furnish the resident and a family member or legal representative a written notice as described in paragraph (G) of this rule within twenty-four hours of the hospitalization. (2) This requirement is met if the resident's copy of the notice is sent to the hospital with other documents that accompany the resident. (I) Maximum number of NF bed-hold days. (1) Medicaid payment for covered NF bed-hold days is considered payment for reserving a bed for a resident who intends to return to the same NF and is able to do so. (2) The number of NF inpatient days as defined in section 5165.01 of the Revised Code for the calendar year shall not exceed one hundred per cent of available bed days. (J) Residents eligible for payment of NF bed-hold days. (1) Medicaid payment for NF bed-hold days is available under the provisions specified in this rule if a resident meets all of the following criteria: (a) Is eligible for medicaid services and has met the patient liability and financial eligibility requirements as stated in rule 5160:1-3-04.3 of the Administrative Code. (b) Requires a NF LOC or is using medicare part A SNF benefits as described in paragraph (J)(2) of this rule. (c) Is not a participant of special medicaid programs or assigned special status as outlined in paragraph (K) of this rule. (2) Dual eligible for both medicare and medicaid. (a) If a resident meets all of the criteria in paragraph (J)(1) of this rule and is both medicare part A and medicaid eligible, medicaid payment shall be made for NF bed-hold days up to the bed-hold day limit specified in this rule. Medicaid will, therefore, pay NF bed-hold days during the acute care hospitalization of a medicaid eligible resident who had been receiving medicare part A SNF benefits in the NF immediately prior to and/or following the period of hospitalization. (b) A level of care evaluation is not necessary in the following circumstances: (i) A medicaid eligible resident receives medicare part A SNF benefits in the NF. (ii) A medicaid eligible resident who receives medicare part A SNF benefits in the NF is transferred to the hospital, and the NF bills the hospital bed-hold days to medicaid. (3) Medicaid pending. If a resident meets all of the criteria in paragraph (J)(1) of this rule, and is pending approval of a medicaid application and requires NF bed-hold days, medicaid payment shall be made retroactive to the date the resident became medicaid eligible and approved for NF medicaid payment, through the date the resident returns from a leave or until the maximum number of NF bed-hold days are exhausted. (4) Medicaid eligible. If a resident meets all of the criteria in paragraph (J)(1) of this rule, and is approved for NF medicaid payment, medicaid payment shall be made for NF bed-hold days up to the maximum number of days as specified in this rule. Medicaid eligible residents include low resource utilization residents for whom medicaid payment is made in accordance with section 5165.152 of the Revised Code. (5) HCBS waiver. If a resident using the NF for a short-term stay is enrolled in an HCBS waiver program and is not using short-term respite care as a waiver service, medicaid payment shall be made for NF bed-hold days for hospitalization up to the bed-hold day limit specified in this rule. Payment for NF bed-hold days shall not be made for NF residents who are on an HCBS waiver for purposes other than hospitalization. (K) Exclusions. NF bed-hold days are not available to medicaid eligible NF residents in the following situations: (1) Hospice. A person enrolled in a medicare or medicaid hospice program is not entitled to medicaid covered NF bed-hold days. It is the hospice provider's responsibility to contract with and pay the NF provider. Hospice program provisions and criteria are stated in Chapter 5160-56 of the Administrative Code. (2) IMD. A resident age twenty-one and over, and in some circumstances age twenty-two and over, and under age sixty-five who becomes a patient of an IMD is not entitled to NF bed-hold days, and a NF provider shall not receive reimbursement for NF bed-hold days during the period the person is hospitalized in an IMD except as permitted in 42 C.F.R. 438.6(e) (October 1, 2016). (3) HCBS waiver. NF bed-hold days do not apply to a person enrolled in a HCBS waiver program who is using the NF for short-term respite care as a waiver service. (4) Restricted medicaid coverage. A person who is medicaid eligible but is in a period of restricted medicaid coverage because of an improper transfer of resources is not eligible for NF bed-hold days until the period of restricted coverage has been met. The criteria for the determination of restricted medicaid coverage are specified in rule 5160:1-3-07.2 of the Administrative Code. (5) Facility closure and resident relocation. NF bed-hold days are not available to residents who have relocated due to the facility's anticipated closure, voluntary withdrawal from participation in the medicaid program, or other termination of the facility's medicaid provider agreement. No span of NF bed-hold days shall be approved that ends on a facility's date of closure or termination from participation in the medicaid program. (L) Compliance. (1) Without limiting such other remedies provided by law for noncompliance with the provisions of this rule, ODM may do one or both of the following: (a) Require the provider to submit and implement a corrective action plan approved by ODM on a schedule specified by ODM. (b) Terminate the facility's NF provider agreement. (2) A NF provider shall cooperate with any investigation and shall provide copies of any records requested by ODM. 
+
+ Last updated February 9, 2024 at 1:18 PM 
+
+ Supplemental Information 
+
+ Authorized By: 
+ 5165.02 
+
+ Amplifies: 
+ 5165.34 
+
+ Current Five Year Review Date: -->
+ -->
+ -->
+
+ Five Year Review Date: 
+ 8/17/2022 
+
+ Prior Effective Dates: 
+ 4/7/1977, 8/8/1977, 9/19/1977, 12/30/1977, 1/1/1979, 1/1/1980, 7/1/1980, 11/10/1983, 4/1/1987, 7/7/1989 (Emer.), 9/23/1989, 1/1/1995, 7/1/1997, 9/1/2002, 7/1/2005, 11/15/2007, 3/19/2012, 5/9/2013
+END SOURCE 6
+
+SOURCE 7: Ohio Department of Aging, Long-Term Care Ombudsman — Discharge & Transfer Rights | https://aging.ohio.gov/care-and-living/ombudsman/residents-rights/discharge-transfer | source's own date: February 19, 2025 | retrieved: 2026-08-30
+Discharge & Transfer Rights
+
+ February 19, 2025 
+ | 
+ Agency 
+
+ Rights Regarding Discharge & Transfer 
+
+ The Nursing Home Reform Law of 1987 prohibits nursing homes from transferring or discharging a resident unless it can establish that one of the permissible reasons for transfer/discharge exists: 
+
+ The nursing home cannot provide adequate care for the resident 
+ The resident’s health has improved to the point that he or she no longer needs nursing home care 
+ The safety of individuals in the facility is endangered 
+ The health of others in the facility would otherwise be endangered 
+ The resident has failed, after reasonable and appropriate notice, to pay for care (although the facility cannot evict a resident who is waiting for Medicaid eligibility and should work with other state agencies to obtain payment if the resident’s money is being held by a family member or other individual) 
+ The facility ceases to operate. 
+
+ Contact your regional ombudsman program  if you are concerned about plans for a transfer or discharge from a nursing home. 
+
+ Before Proposing a Transfer/Discharge 
+
+ Before proposing a transfer/discharge, a facility must identify and try to meet the resident’s individual medical, nursing, and psychosocial needs. They would do so by formulating and implementing an individualized care plan designed to meet those needs. Many of the permissible reasons for transfer or discharge can be addressed through assessment and care planning, making transfer or discharge unnecessary. Because most nursing homes provide fairly complex care for sick residents, it is rare that the facility cannot find a way to provide adequate care for the resident or to keep the resident and others safe with the use of a good assessment and care plan. 
+
+ Further, universal health precautions should be in place in every nursing home that protect the health of residents and others and also prevent the spread of infection. The nursing home assesses the care needs of prospective residents upon initial admission. Once a resident has been accepted by the nursing home, the nursing home should find ways to provide safe and appropriate care.    
+
+ Notification 
+
+ If a resident is to be transferred or discharged, the facility must record the reason for transfer in the resident’s clinical record. They must also notify the resident and the resident’s family member, guardian, or legal representative in writing. The notice must include:  
+
+ The reason for the transfer or discharge; 
+ The location to which the resident will be moved; 
+ The date of transfer or discharge, and; 
+ Information about the resident’s right to appeal to the state concerning the transfer or discharge, with the name, address, and telephone number of the state long-term care ombudsman.   
+
+ Location 
+
+ The location the resident will be moved to must be specific, appropriate, available, and agreeable to taking the resident. 
+
+ Time Limits 
+
+ The law requires that a nursing home must inform the resident and the resident’s family member, guardian, or legal representative about a transfer or discharge at least thirty (30) days in advance. 
+
+ Preparation Before Transfer or Discharge 
+
+ The nursing home must provide discharge planning and sufficient preparation and orientation to residents being transferred/discharged. The law guarantees the right of the resident (or responsible family member) to participate in planning care and treatment, which should include choosing a new place to live. The nursing home should also prepare an orientation, such as a visit to the new home, and ensure a safe arrival. The resident should know where he or she is going. The facility should also inform the new residence about the resident’s needs, preferences, and habits. Lastly, the nursing home should ensure possessions aren’t lost in the moving process and any personal funds are given to the resident or transferred to a new account.      
+
+ Bed Hold and Readmission 
+
+ The Nursing Home Reform Law gives Medicaid recipients the right to return to their facility after they have been out of the facility due to hospitalization or therapeutic leave. Some states will pay to hold a bed for Medicaid residents who are temporarily absent. If a Medicaid recipient loses a bed – either because the state does not pay to hold the bed, or they have exceeded the state’s bed hold period – readmission rights permit him or her to return to the next available bed in a semi-private room in the nursing home. Residents are entitled to notice about bed-hold and readmission rights twice: once upon admission and again at the time of transfer. A facility’s bed hold policy must be consistent with state regulations.  
+
+ Additional Rights 
+
+ The Nursing Home Resident Protection Amendment of 1999 requires that nursing homes continue to provide care for Medicaid residents already living in the facility even if the nursing home chooses to cease participation in Medicaid. A resident has the right to participate in planning care and treatment or changes in care and treatment. A resident and their family member or legal representative must receive notice before the resident’s room or roommate in the facility is changed. A resident can refuse transfer from a portion of the nursing home that is certified at one level of care to another portion with a different certification. 
+
+ Complaints and Appeals 
+
+ A resident has the right to appeal the facility’s decision to transfer or discharge him or her. The transfer or discharge notice must include information about how to request a hearing, the resident’s right to use legal counsel or other spokesperson at the hearing, and the mailing address and telephone number of the state long-term care ombudsman. A complaint may also be filed with the state survey agency.   
+
+ Protection Against Inappropriate Discharge or Transfer 
+
+ Contact your local Long-Term Care Ombudsman Program  if you are concerned about plans for transfer or discharge from a nursing home. The ombudsman is empowered by law to advocate for nursing home residents. Also, find out if there is a family council at the nursing home. When families meet to share concerns and organize a consumer voice, this is a source of power for negotiation with the facility’s administration. 
+
+ Components > Global > Components for Presentation Templates > Sidebar Components > Download Component -->
+
+ Components > Global > Components for Presentation Templates > Sidebar Components > Download Component -->
+
+ Components > Global > Components for Presentation Templates > Sidebar Components > Downloads HTML Component -->
+
+ Components > Global > Components for Presentation Templates > Sidebar Components > Downloads HTML Component -->
+
+ Share this
+
+ Components > Global > Components for Presentation Templates > Sidebar Components > More Information Component -->
+
+ odx-more-information 
+
+ Contact Your Local Ombudsman: 
+
+ Find Your Regional Program 
+
+ State Program Contact: 
+
+ OhioOmbudsman@age.ohio.gov 
+
+ 1-800-282-1206 
+
+ Follow Us: 
+
+ Facebook   |   X 
+
+ Components > Global > Components for Presentation Templates > Sidebar Components > More Information Component -->
+
+ Components > Global > Components for Presentation Templates > Sidebar Components > External Resources Resource Detail Component -->
+
+ Components > Global > Components for Presentation Templates > Sidebar Components > External Resources Resource Detail Component -->
+
+ Related Laws & Forms 
+
+ Discharge Notice Requirements 
+
+ Nursing Home Resident Protection Amendments of 1999 
+
+ Nursing Home Law Reform of 1987 
+
+ View Other Laws & Forms
+END SOURCE 7
+
+END OF PACKET — 7 sources
