@@ -1,0 +1,799 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: North Carolina
+SLUG: north-carolina
+ASSEMBLED: 2026-08-30
+CAPTURE NOTES: All four sources were retrieved by curl with a browser user-agent. Sources 1 and 2 are PDFs, extracted with `pdftotext -layout`; the General Assembly's section PDF prints its own hyphenation character in section numbers and defined terms, and the notice form's blank rules, checkbox glyphs and the form number line ("NC Medicaid-9050 (6/2026)") are the form's own. Sources 3 and 4 were reduced to text mechanically (tag strip over the served document); NCDHHS site navigation, the accordion duplication of the "Skilled Nursing Facility Discharge Appeals" block, and the department's footer are left in the captured text as the extractor produced it.
+PENDING: The Nursing Home Hearing Request Form (NC Medicaid-9051), which the notice form calls the "attached form" and which Source 3 links; the download URL found for it returned HTTP 404 with an HTML error page. Also pending: 10A NCAC 22H .0200, the rule Source 3 cites for these hearings, not captured; a statewide published contact for the Office of the State Long-Term Care Ombudsman — Source 4 describes a state office and "16 Offices of the Regional Long-Term Care Ombudsman that are housed in Area Agencies on Aging" and publishes no statewide telephone number for the program on the page captured; and any first-party statement of a North Carolina Medicaid bed-hold period, which none of these four sources states.
+
+SOURCE 1: N.C.G.S. § 131E-117, Declaration of patient's rights | https://www.ncleg.gov/EnactedLegislation/Statutes/PDF/BySection/Chapter_131E/GS_131E-117.pdf | source's own date: none stated on document | retrieved: 2026-08-30
+§ 131E‑117. Declaration of patient's rights.
+    All facilities shall treat their patients in accordance with the provisions of this Part. Every
+patient shall have the following rights:
+            (1)     To be treated with consideration, respect, and full recognition of personal
+                    dignity and individuality;
+            (2)     To receive care, treatment and services which are adequate, appropriate, and
+                    in compliance with relevant federal and State statutes and rules;
+            (3)     To receive at the time of admission and during the stay, a written statement
+                    of the services provided by the facility, including those required to be
+                    offered on an as‑needed basis, and of related charges. Charges for services
+                    not covered under Medicare or Medicaid shall be specified. Upon receiving
+                    this statement, the patient shall sign a written receipt which must be on file
+                    in the facility and available for inspection;
+            (4)     To have on file in the patient's record a written or verbal order of the
+                    attending physician containing any information as the attending physician
+                    deems appropriate or necessary, together with the proposed schedule of
+                    medical treatment. The patient shall give prior informed consent to
+                    participation in experimental research. Written evidence of compliance with
+                    this subdivision, including signed acknowledgements by the patient, shall be
+                    retained by the facility in the patient's file;
+            (5)     To receive respect and privacy in the patient's medical care program. Case
+                    discussion, consultation, examination, and treatment shall remain
+                    confidential and shall be conducted discreetly. Personal and medical records
+                    shall be confidential and the written consent of the patient shall be obtained
+                    for their release to any individual, other than family members, except as
+                    needed in case of the patient's transfer to another health care institution or as
+                    required by law or third party payment contract;
+            (6)     To be free from mental and physical abuse and, except in emergencies, to be
+                    free from chemical and physical restraints unless authorized for a specified
+                    period of time by a physician according to clear and indicated medical need;
+            (7)     To receive from the administrator or staff of the facility a reasonable
+                    response to all requests;
+            (8)     To associate and communicate privately and without restriction with persons
+                    and groups of the patient's choice on the patient's initiative or that of the
+                    persons or groups at any reasonable hour; to send and receive mail promptly
+                    and unopened, unless the patient is unable to open and read personal mail; to
+                    have access at any reasonable hour to a telephone where the patient may
+                    speak privately; and to have access to writing instruments, stationery, and
+                    postage;
+            (9)     To manage the patient's financial affairs unless authority has been delegated
+                    to another pursuant to a power of attorney, or written agreement, or some
+                    other person or agency has been appointed for this purpose pursuant to law.
+                    Nothing shall prevent the patient and facility from entering a written
+                    agreement for the facility to manage the patient's financial affairs. In the
+                    event that the facility manages the patient's financial affairs, it shall have an
+                    accounting available for inspection and shall furnish the patient with a
+                    quarterly statement of the patient's account. The patient shall have
+                    reasonable access to this account at reasonable hours; the patient or facility
+
+
+G.S. 131e-117                                                                                   Page 1
+                 may terminate the agreement for the facility to manage the patient's financial
+                 affairs at any time upon five days' notice.
+          (10)   To enjoy privacy in visits by the patient's spouse, and, if both are inpatients
+                 of the facility, they shall be afforded the opportunity where feasible to share
+                 a room;
+          (11)   To enjoy privacy in the patient's room;
+          (12)   To present grievances and recommend changes in policies and services,
+                 personally or through other persons or in combination with others, on the
+                 patient's personal behalf or that of others to the facility's staff, the
+                 community advisory committee, the administrator, the Department, or other
+                 persons or groups without fear of reprisal, restraint, interference, coercion,
+                 or discrimination;
+          (13)   To not be required to perform services for the facility without personal
+                 consent and the written approval of the attending physician;
+          (14)   To retain, to secure storage for, and to use personal clothing and possessions,
+                 where reasonable;
+          (15)   To not be transferred or discharged from a facility except for medical
+                 reasons, the patient's own or other patients' welfare, nonpayment for the stay,
+                 or when the transfer or discharge is mandated under Title XVIII (Medicare)
+                 or Title XIX (Medicaid) of the Social Security Act. The patient shall be
+                 given at least five days' advance notice to ensure orderly transfer or
+                 discharge, unless the attending physician orders immediate transfer, and
+                 these actions, and the reasons for them, shall be documented in the patient's
+                 medical record;
+          (16)   To be notified within 10 days after the facility has been issued a provisional
+                 license because of violation of licensure regulations or received notice of
+                 revocation of license by the North Carolina Department of Health and
+                 Human Services and the basis on which the provisional license or notice of
+                 revocation of license was issued. The patient's responsible family member or
+                 guardian shall also be notified. (1977, c. 897, s. 1; 1983, c. 775, s. 1; 1989, c.
+                 75; 1997‑443, s. 11A.118(a).)
+
+
+
+
+G.S. 131e-117                                                                                 Page 2
+
+END SOURCE 1
+
+SOURCE 2: NC Medicaid, Nursing Home Notice of Transfer/Discharge, NC Medicaid-9050 (PDF) | https://medicaid.ncdhhs.gov/nursing-home-transfer-dicharge-notice/download | source's own date: NC Medicaid-9050 (6/2026) | retrieved: 2026-08-30
+                                                      NURSING HOME
+                                              NOTICE OF TRANSFER/DISCHARGE
+
+1) DATE OF NOTICE: _____________________
+
+2) RESIDENT:  _________________________________________
+   FACILITY:  ______________________________________________________________________
+   ADDRESS:   ______________________________________________________________________
+   ADMINISTRATOR: _______________________________ PHONE: _________________________
+
+3) DATE OF TRANSFER/DISCHARGE: ___________________________________________
+
+4) REASON(S) FOR TRANSFER/DISCHARGE:
+   Under federal law 42 CFR §483.15, you may only be transferred or discharged from this nursing facility for one of the following
+   reasons:
+
+☐        It is necessary for your welfare and your needs cannot be met in this facility;
+☐        Your health has improved sufficiently so that you no longer need the services provided by this facility;
+☐        The safety of individuals in this facility is endangered due to the clinical or behavioral status of the resident;
+☐        The health of individuals in this facility would otherwise be endangered;
+☐        You have failed, after reasonable and appropriate notice, to pay for (or to have paid under Medicare or Medicaid) a stay at this
+         facility; or
+☐        The facility ceases to operate.
+
+5) In addition to notifying you (i.e. the resident) of this transfer/discharge, _______________________________ has also been
+   notified.                                                                        [Resident’s representative(s)]
+
+6) THIS FACILITY PLANS TO TRANSFER OR DISCHARGE YOU TO:
+
+NAME OF FACILITY/LOCATION: ___________________________________________________________________
+ADDRESS: ____________________________________________________ PHONE: ________________________
+
+                                                             APPEAL RIGHTS
+ You have the right to appeal this transfer/discharge to the DHHS Hearing Office WITHIN 11 CALENDAR DAYS of the date of
+ this notice if you want to continue to stay at this facility. The appeal will be at no cost to you or your representative. The request for
+ an appeal (see attached form) must be received by the hearing officer no later than the 11 th calendar day or your right to appeal is
+ waived. If you wish to review your medical record, the facility must allow you to see it no later than five working days prior to the
+ hearing.
+
+
+                                                LONG TERM CARE OMBUDSMAN
+ You may wish to contact your regional Long Term Care Ombudsman for help in mediation with the facility or for assistance in
+ obtaining free legal services, if qualified. The ombudsman’s contact information is below:
+
+ NAME: ___________________________________________                   EMAIL: ____________________________________
+
+ ADDRESS: ______________________________________________ PHONE: ________________________
+
+ Facility sent Ombudsman a copy of the Notice:           ☐ Yes              ☐ No
+
+
+ If mentally ill or developmentally disabled, you or your family member or legal representative may wish to contact: DISABILITY
+ RIGHTS NORTH CAROLINA, 3724 National Drive, Suite 100, Raleigh, NC 27612. Telephone number: (919) 856-2195 or 1-
+ 877-235-4210 or TTY 1-888-268-5535
+
+_______________________________________________                           ________________________________
+Signature of Administrator                                                Date
+
+    NC Medicaid-9050 (6/2026)
+
+END SOURCE 2
+
+SOURCE 3: NC Medicaid, Appeals and Grievances — NC Medicaid Hearing Office | https://medicaid.ncdhhs.gov/beneficiaries/appeals-and-grievances | source's own date: none stated on page | retrieved: 2026-08-30
+Appeals | NC Medicaid
+
+ Skip to main content
+
+ An official website of the State of North Carolina
+ An official website of NC
+
+ How you know 
+
+ State Government websites value user privacy. To learn
+ more, view our full
+ privacy policy.
+
+ Secure websites use HTTPS certificates. A lock icon or
+ https:// means you’ve safely connected to the official
+ website.
+
+ Utility Menu
+
+ NC.GOV
+
+ NCDHHS
+
+ SERVICES
+
+ Main menu
+
+ About NC Medicaid
+
+ About NC Medicaid
+
+ What We Do
+
+ Eligibility
+
+ NC Medicaid Ombudsman
+
+ Understanding the Impact of Cuts to the NC Medicaid Budget
+
+ North Carolina Expands Medicaid
+
+ Copays
+
+ Behavioral Health and Intellectual/​Developmental Disabilities Tailored Plan
+
+ Contacts
+
+ Division of Health Benefits Fellowship Programs
+
+ Health Plans
+
+ Beneficiaries
+
+ Beneficiaries
+
+ Apply for Medicaid
+
+ Medicaid Health Plans and Programs
+
+ Medicaid Programs and Services
+
+ Medicaid Recertification
+
+ The Impact of H.R. 1 and Federal Changes to Medicaid
+
+ Non-Emergency Medical Transportation (NEMT)
+
+ Long Term Services and Supports
+
+ Children and Families Specialty Plan
+
+ 1915(i) Services
+
+ NC Innovations Waiver
+
+ Tailored Care Management
+
+ Find a Doctor
+
+ Providers
+
+ Providers
+
+ Programs and Services
+
+ Physician Administered Drug Program Catalog
+
+ Provider Enrollment
+
+ Program Specific Clinical Coverage Policies
+
+ Claims and Billing
+
+ Medicaid Bulletin
+
+ Provider Playbook: Medicaid Managed Care
+
+ Health Plan Billing Guidance
+
+ Information for Tailored Care Management Providers
+
+ Reports
+
+ Reports
+
+ Annual Reports and Tables
+
+ NC Medicaid Enrollment Reports
+
+ Dashboards
+
+ Quality Management and Improvement
+
+ Managed Care Program Annual Report (MCPAR)
+
+ Medicaid Expansion Dashboard
+
+ Wellness Visits, and Diagnostic and Treatment Services
+
+ 1115 Demonstration Waiver Monitoring Reports
+
+ Federally Required Reports
+
+ Comparative Payment Rate Analysis
+
+ Meetings/Notices
+
+ Meetings/Notices
+
+ Committees and Work Groups
+
+ Medicaid State Plan Public Notices
+
+ Director of Social Services Letters
+
+ Report Fraud, Waste or Abuse
+
+ Counties
+
+ Counties
+
+ County Playbook: Medicaid Managed Care
+
+ Beneficiary Outreach Materials
+
+ Utility Menu
+
+ NC.GOV
+
+ NCDHHS
+
+ SERVICES
+
+ Search
+
+ Home
+
+ Resources
+
+ Appeals
+
+ The NC Medicaid Hearing Office:
+Conducts impartial informal appeals (reconsideration reviews) regarding adverse determinations (e.g., recoupment amounts accessed after post-payment reviews or Medicaid provider denial or enrollment termination) made by NC Medicaid or one of its agents or contractors
+Hears appeals by long-term care residents who are being transferred or discharged from an adult care home or skilled nursing facility and for individuals who appeal a Preadmission Screening and Resident Review (PASRR) determination.
+Skilled Nursing Facility Discharge Appeals
+The Hearings Office conducts formal hearings for residents appealing a notice of discharge from a Skilled Nursing Facility. (10A NCAC 22H.0200)
+Nursing Home Hearing Request Form
+Nursing Home Notice of Transfer or Discharge
+Adult Care Home Discharge Appeals
+The Hearing Office conducts formal hearings for residents appealing a notice of discharge from an Adult Care Home. (NCGS § 131D-4.8 and 10A NCAC 13F.0702)
+Adult Care Home Hearing Request Form
+Adult Care Home Notice of Discharge
+Transfer/Discharge Process Webinars
+These webinars are for informational purposes only and are not to be considered legal advice. If you have questions of a legal nature after viewing these materials, you are encouraged to consult an attorney.
+Please Note:
+Subsequent to the recording of these webinars the language of federal regulations concerning transfers and discharges from nursing homes has been refined and additional requirements added. In addition, these regulations have been moved from 42 CFR 483.12 to 42 CFR 483.15(c). Please review this revised regulation to ensure full understanding and compliance. Thank you.
+Preadmission Screening and Resident Review Determination Hearings
+Hearing Office conducts formal hearings for adverse PASRR determinations. (10A NCAC 22H.0300)
+PASRR is a federally mandated program for screening applicants and residents of Medicaid certified nursing facilities to ensure that individuals with serious mental illness, intellectual disabilities or conditions related to intellectual disabilities who are entering or residing in Medicaid-certified nursing facilities receive appropriate placement and services.
+Continuance Requests
+Requests for the continuance of a hearing will be granted at the discretion of the Hearing Officer if good cause is shown. “Good cause” is circumstances beyond the control of the party requesting the continuance.
+Hearing continuance requests must be made in writing and must be received by the Hearing Officer assigned to the case at least 5 days prior to the scheduled hearing date. No continuances will be granted after that time except for extraordinary circumstances as determined by the Hearing Officer if good cause is shown. Parties should notify the opposing party when requesting a continuance.
+Examples of good cause include but are not limited to:
+Death or illness of a party, representative or attorney
+Lack of proper notice of the hearing
+Parties have agreed to enter settlement negotiations, and both sides request a continuance to pursue settlement
+Attorney has a scheduling conflict with another court appearance that takes precedence
+Party obtained legal counsel subsequent to filing the appeal and the attorney needs additional time to prepare for hearing
+Contact
+NC Medicaid Hearing Office
+919-814-0090
+Fax: 984-687-9584
+Medicaid.Hearings@dhhs.nc.gov
+
+ Additional Information
+
+ Skilled Nursing Facility Discharge Appeals
+
+Adult Care Home Discharge Appeals
+
+Transfer/Discharge Process Webinars
+
+PASRR Adverse Determination Hearings
+
+ Tab/Accordion Items
+
+ Skilled Nursing Facility Discharge Appeals
+
+ The Hearings Office conducts formal hearings for residents appealing a notice of discharge from a Skilled Nursing Facility. (10A NCAC 22H.0200)
+
+ Nursing Home Hearing Request Form
+
+ Nursing Home Notice of Transfer or Discharge
+
+ Adult Care Home Discharge Appeals
+
+ The Hearing Office conducts formal hearings for residents appealing a notice of discharge from an Adult Care Home. (NCGS § 131D-4.8 and 10A NCAC 13F.0702)
+
+ Adult Care Home Hearing Request Form
+
+ Adult Care Home Notice of Discharge
+
+ Transfer/Discharge Process Webinars
+
+ These webinars are for informational purposes only and are not to be considered legal advice. If you have questions of a legal nature after viewing these materials, you are encouraged to consult an attorney.
+General Overview of the Transfer/Discharge Hearing Process
+The Transfer/Discharge Hearing Process - Information for Facilities
+The Transfer/Discharge Hearing Process - Information for Residents and Resident Representatives
+Update of the General Overview of the Transfer/Discharge Hearing Process (2020)
+Please Note:
+Subsequent to the recording of these webinars, the language of federal regulations concerning transfers and discharges from nursing homes has been refined and additional requirements added. In addition, these regulations have been moved from 42 CFR 483.12 to 42 CFR 483.15(c). Please review this revised regulation to ensure full understanding and compliance. Thank you.
+
+ PASRR Adverse Determination Hearings
+
+ Hearing Office conducts formal hearings for adverse PASRR determinations. (10A NCAC 22H.0300)
+PASRR is a federally mandated program for screening applicants and residents of Medicaid certified nursing facilities to ensure that individuals with serious mental illness, intellectual disabilities or conditions related to intellectual disabilities who are entering or residing in Medicaid-certified nursing facilities receive appropriate placement and services.
+Continuance Requests
+Requests for the continuance of a hearing will be granted at the discretion of the Hearing Officer if good cause is shown. “Good cause” is circumstances beyond the control of the party requesting the continuance.
+Hearing continuance requests must be made in writing and must be received by the Hearing Officer assigned to the case at least 5 days prior to the scheduled hearing date. No continuances will be granted after that time except for extraordinary circumstances as determined by the Hearing Officer if good cause is shown. Parties should notify the opposing party when requesting a continuance.
+Examples of good cause include but are not limited to:
+Death or illness of a party, representative or attorney
+Lack of proper notice of the hearing
+Parties have agreed to enter into settlement negotiations and both sides request a continuance to pursue settlement
+Attorney has a scheduling conflict with another court appearance that takes precedence
+Party obtained legal counsel subsequent to filing the appeal and the attorney needs additional time to prepare for hearing
+Contact
+NC Medicaid Hearing Office
+919-814-0090
+Fax: 984-687-9584
+Medicaid.Hearings@dhhs.nc.gov
+
+ On This Page Jump Links
+
+ On
+
+ This page was last modified on 06/19/2026
+
+ Side Nav
+
+ About NC Medicaid
+
+ Beneficiaries
+
+ Find a Doctor
+
+ Providers
+
+ Reports
+
+ Meetings/Notices
+
+ Counties
+
+© 2026 The State of North Carolina. All rights reserved.
+
+ Contact Information
+
+ NC Medicaid, Division of Health Benefits
+2501 Mail Service Center
+Raleigh, NC 27699-2501
+NC Medicaid Contact Center
+Phone: 888-245-0179
+Monday-Friday 8 a.m. to 5 p.m.
+Closed on State holidays.
+
+Visit RelayNC for information about TTY services.
+More
+
+ Follow Us
+
+ Network Menu
+
+ nc.gov
+
+ Website Feedback
+
+ Accessibility
+
+ Disclaimer & Terms of Use
+
+ Privacy Policy
+
+ Open Budget
+
+ Hosted on
+ Digital Commons
+END SOURCE 3
+
+SOURCE 4: NCDHHS Division of Aging, Long-Term Care Ombudsman | https://www.ncdhhs.gov/divisions/aging/long-term-care-ombudsman | source's own date: none stated on page | retrieved: 2026-08-30
+NCDHHS: Long-Term Care Ombudsman
+
+ Skip to main content
+
+ An official website of the State of North Carolina
+ An official website of NC
+
+ How you know 
+
+ State Government websites value user privacy. To learn
+ more, view our full
+ privacy policy.
+
+ Secure websites use HTTPS certificates. A lock icon or
+ https:// means you’ve safely connected to the official
+ website.
+
+ Utility Menu
+
+ NCDHHS Translation Disclaimer
+
+ Main menu
+
+ Assistance
+
+ Assistance
+
+ ADA and Civil Rights Grievance Procedure
+
+ Division of Aging Assistance
+
+ Assistive Technology
+
+ Children's Services
+
+ Crisis Services
+
+ Deaf-Blind Services 
+
+ Disability Services
+
+ Guardianship
+
+ Hearing Loss
+
+ Low-Income Services
+
+ Medicaid
+
+ Assistance with Mental Health, Developmental Disabilities, Substance Use and Traumatic Brain Injury
+
+ Mental Health Crisis Services 
+
+ Nondiscrimination and Accessibility Requirements
+
+ North Carolina Reproductive Health Services
+
+ Unemployment Services
+
+ Veteran's Services
+
+ Vision Loss 
+
+ Disaster Preparation and Recovery
+
+ Divisions
+
+ Divisions
+
+ Aging
+
+ Child and Family Well-Being
+
+ Child Development And Early Education 
+
+ Disability Determination Services
+
+ Employment and Independence for People with Disabilities
+
+ Health Benefits (NC Medicaid)
+
+ Health Service Regulation
+
+ Mental Health, Developmental Disabilities and Substance Use Services
+
+ Office of Economic Opportunity
+
+ Office of Minority Health and Health Disparities
+
+ Office of Rural Health
+
+ Public Health
+
+ Services for the Blind
+
+ Services for the Deaf and Hard of Hearing (DSDHH)
+
+ Social Services
+
+ State Operated Healthcare Facilities
+
+ Providers
+
+ Providers
+
+ Child Care
+
+ Health Care
+
+ Licensure
+
+ LME-MCO Directory
+
+ Mental Health, Development Disabilities, Substance Use Services and Traumatic Brain Injuries
+
+ Policies, Manuals and Forms
+
+ News
+
+ News
+
+ Press Releases
+
+ Events
+
+ Newsletter Articles
+
+ Follow NCDHHS on Social Media
+
+ About
+
+ About
+
+ Administrative Offices
+
+ Data Dashboards, Action Plans/White Papers
+
+ Department Initiatives
+
+ DHHS Mission, Vision, Values and Goals
+
+ Directives
+
+ Federal Government Shutdown
+
+ Grant Opportunities
+
+ Leadership
+
+ Overview
+
+ Strategic Plan
+
+ Contact
+
+ Contact
+
+ Division Contacts
+
+ Hotlines
+
+ Mail Services for NCDHHS Headquarters
+
+ Report Fraud
+
+ Vendor Resources
+
+ Utility Menu
+
+ NCDHHS Translation Disclaimer
+
+ Search
+
+ Home
+
+ Long-Term Care Ombudsman
+
+ The Long-Term Care Ombudsman Program consists of an Office of the State Long-Term Care Ombudsman and 16 Offices of the Regional Long-Term Care Ombudsman that are housed in Area Agencies on Aging. Long-Term Care Ombudsmen assist residents of long-term care facilities in exercising their rights and attempting to resolve grievances between residents, families, and facilities. The regional ombudsmen help support the efforts of Adult Care Home and Nursing Home Community Advisory Committees (N.C.G.S. 131E-128 and 131D-3).
+The services provided by the Ombudsman Program include:
+Answering questions and giving guidance about the long-term care system. An ombudsman will:Explain long-term care options.
+Provide advice on selecting a long-term care facility and provide information on specific facilities.
+Explain residents' rights and other federal and state laws and regulations affecting long-term care facilities and residents.
+Give guidance on the Medicaid and Medicare programs. Specifically on coverage criteria, application procedures, and what services these programs cover.
+Give guidance on matters such as powers of attorney, living wills, and guardianship.
+
+Educating community groups and long-term care providers on various topics such as residents' rights, restraint use, care planning, activities, and new laws.
+Investigating and assessing matters to help families and residents resolve concerns and problems. Common areas of complaint include:Inadequate medical and personal services being provided to residents such as problems with medication, nutrition, and personal hygiene.
+Financial concerns such as handling of residents' funds, Medicare, Medicaid, and Social Security.
+Rights of residents, such as the right to be treated with courtesy and to have individual requests and preferences respected.
+Nursing home administrative decisions such as admission to or discharge from a facility.
+
+Working with appropriate regulatory agencies and referring individuals to such agencies when resolutions of concerns or grievances are not possible through the Long-Term Care Ombudsman Program alone.
+Raising long-term care issues of concern to policymakers.
+Guidance for Families Regarding the Long-Term Care Ombudsman
+Adult Care Home Community Advisory Committee Handbook
+How do I access the service?
+Find information for your county
+
+ Documents
+
+ Ombudsman Program Snaphot 
+
+ Ombudsman Listed by Area Agency on Aging 
+
+ Ombudsman Program Annual Report 2024.pdf 
+
+ On This Page Jump Links
+
+ Off
+
+ Side Nav
+
+ Aging
+
+ Adult Care Homes
+
+ Adult Day Services
+
+ Aging Resource Management System (ARMS)
+
+ All Ages, All Stages
+
+ Announcements and Public Notices
+
+ Community Alternative Programs for Disabled Adults
+
+ Dementia Capable NC
+
+ Division of Aging Councils and Committees
+
+ Documents about Finding and Maintaining Housing
+
+ FY 22 Funding Authorizations By County
+
+ Facts, Figures and Reports
+
+ Family Caregiver Support
+
+ Funded Partner Resources
+
+ Healthy Living
+
+ Home Care Independence
+
+ Housing and Home Improvement Assistance
+
+ In-Home Aides
+
+ Information and Options Counseling
+
+ Legal Assistance for Older Adults
+
+ Long-Term Care Ombudsman
+
+ Adult Care Home Community Advisory Committee Handbook
+
+ Long Term Care Community Advisory Committees (CACs) Guide
+
+ Residents' Rights
+
+ Monitoring
+
+ NC Emergency Solutions Grant
+
+ NC Lifespan Respite Program
+
+ North Carolina Seniors Farmers' Market Nutrition Program
+
+ Nutrition-Congregate and Home Delivered Meals
+
+ Operation Fan and Heat Relief
+
+ Partners and Stakeholders
+
+ Project CARE
+
+ Senior Centers
+
+ Senior Community Service Employment Program
+
+ Senior Tar Heel Athletic Card
+
+ Special Care Center Nursing Facility
+
+ State Aging Plan
+
+ Tammy Koger
+
+ The Targeting Program
+
+ Transportation Services
+
+© 2026 The State of North Carolina. All rights reserved.
+
+ Contact Information
+
+ Physical Address 
+1915 Health Services Way 
+Raleigh, NC 27607
+This address does not receive mail. Please use the appropriate mailing address found on the page below.
+Find Mailing Addresses for all NCDHHS Divisions
+
+Customer Service Center: 1-800-662-7030
+Visit RelayNC for information about TTY services.
+
+ Follow Us
+
+ Network Menu
+
+ Employee Directory
+
+ nc.gov
+
+ Website Feedback
+
+ Accessibility
+
+ Disclaimer & Terms of Use
+
+ Privacy Policy
+
+ Open Budget
+
+ Hosted on
+ Digital Commons
+END SOURCE 4
+
+END OF PACKET — 4 sources

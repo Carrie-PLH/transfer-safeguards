@@ -1,0 +1,185 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Massachusetts
+SLUG: massachusetts
+ASSEMBLED: 2026-08-30
+CAPTURE NOTES: mass.gov returns HTTP 403 to curl for both its document downloads and its regulation pages, so all three sources were retrieved through the session's HTTP fetch tool, which renders the served document to text, and copied to file without retyping. Source 1 is a PDF the fetch tool rendered directly; its line breaks and the roman-numeral section headings are the document's own, and only the sections bearing on transfer, discharge, room change and notice of rights are kept. Sources 2 and 3 are mass.gov service pages; the site chrome, language picker, duplicated contact blocks and feedback form are omitted, and the "Contact" block retained at the foot of each is the page's own.
+PENDING: 130 CMR 456.000 (Long-Term Care Services) and 130 CMR 610.000 (MassHealth Fair Hearing Rules), the two regulations that state the notice requirements and the hearing rules; both returned HTTP 403 to curl and were not captured. Also pending: the Fair Hearing Request Form itself, which Source 2 says carries the filing timeframes ("You will need to fill out the Fair Hearing Request form within the timeframes listed on the form."); a Massachusetts statement of the permissible grounds for transfer or discharge — Source 1 states the right to notice and to appeal but enumerates no grounds, and no Department of Public Health or MassHealth enumeration was captured; and any first-party statement of a MassHealth bed-hold period.
+
+SOURCE 1: Commonwealth of Massachusetts, Division of Medical Assistance — Notice of Nursing Facility Residents' Rights, LTC-013 (PDF) | https://www.mass.gov/doc/notice-of-nursing-facility-residents-rights-ltc-013/download | source's own date: LTC-013 (Rev. 01/01) | retrieved: 2026-08-30
+LTC-013 (Rev. 01/01)
+Commonwealth of Massachusetts
+Executive Office of Health and Human Services
+Division of Medical Assistance
+NOTICE OF NURSING FACILITY RESIDENTS' RIGHTS
+This is a summary of your rights as a nursing facility resident. When you enter a
+nursing facility, you do not lose your rights as an individual. A nursing facility must
+protect and promote your rights and the rights of each resident as described below.
+
+V. Accommodation of Needs
+ You have the right to reside and receive services with reasonable accommodation
+of your needs and preferences, except where your health and safety or that of any
+other resident would be endangered, and to receive notice before your room or
+roommate in the facility is changed.
+
+XI. Refusal of Certain Transfers
+ You have the right to refuse a transfer to another room within the facility if the
+purpose of the transfer is based upon your eligibility or ineligibility for Medicare
+coverage. Should you choose to exercise your right to refuse a transfer, this will not
+affect your eligibility for or entitlement to Medicare or MassHealth benefits.
+
+XII. Notice Requirements for Transfers or Discharges
+ You have the right to receive written notice if the nursing facility intends to transfer
+or discharge you to another unit within the facility, to another nursing facility, to a
+hospital or other institution, or to the community. You have the right to appeal the
+transfer or discharge by requesting a fair hearing before the Division of Medical
+Assistance (the state Medicaid agency). The nursing facility must provide you with
+the address to which you must send the request for a fair hearing and must assist
+you with requesting a hearing. If you are disabled, you have the right to request
+that the Division accommodate your disability to ensure your access to the fair
+hearing.
+
+XIV. Notice of Your Rights
+ The nursing facility must inform you orally and in writing at the time you enter the
+facility, regardless of your payment source at that time, of your legal rights during
+your stay at the facility and of the requirements and procedures for establishing
+eligibility for MassHealth. The nursing facility must also give you a separate,
+detailed copy of residents' rights at the time of admission, which fully explains all of
+your rights as a nursing facility resident.
+
+END SOURCE 1
+
+SOURCE 2: MassHealth — How to appeal a MassHealth decision (Office of Medicaid, Board of Hearings) | https://www.mass.gov/how-to/how-to-appeal-a-masshealth-decision | source's own date: none stated on page | retrieved: 2026-08-30
+How to appeal a MassHealth decision
+
+As a MassHealth applicant or member, if you disagree with a MassHealth decision, or if we modify or deny a prior authorization (PA), you have a right to appeal the decision.
+
+What you need
+
+You will need to fill out the Fair Hearing Request form within the timeframes listed on the form. Please be sure to read the form before completing.
+
+If you have a disability and need an accommodation in order to attend or participate in your hearing, you can send us a Request for Reasonable Accommodation form to get the accommodation you need.
+
+The Board of Hearings must receive your completed, signed request within 60 calendar days from the date you received the notice of the MassHealth agency’s action.
+
+How to appeal
+
+By mail
+
+1. Fill out the Fair Hearing Request Form.
+2. Make a copy for yourself. Include the MassHealth notice you are appealing.
+3. Send a copy to the Office of Medicaid, Board of Hearings at:
+
+    1 Enterprise Drive
+3rd Floor
+Quincy, MA 02171
+
+By fax
+
+1. Fill out the Fair Hearing Request Form.
+2. Fax the form to the Office of Medicaid, Board of Hearings at 1-617-887-8797.
+3. Include the MassHealth notice you are appealing.
+
+By phone
+
+To file an appeal by telephone, you may call the MassHealth Customer Service Center at (800) 841-2900, TDD/TTY: 711.
+
+Self-service is available 24 hours per day in English and Spanish. Other services are available Monday through Friday, 8 a.m.- 5 p.m. Interpreter service is available. Please do not call the Board of Hearings to file a fair hearing request.
+
+In person
+
+You can file an appeal in person between the hours of 8:45 and 4:45 at the following location:
+
+Office of Medicaid, Board of Hearings
+1 Enterprise Drive, 3rd Floor
+Quincy, MA 02171
+
+You must bring the MassHealth notice you received with you. Your appeal will then be filed and processed. A hearing will be scheduled in the ordinary course.
+
+Online
+
+1. Fill out the Fair Hearing Request Form
+2. Include the MassHealth notice you are appealing
+3. E-Mail your request for a Fair Hearing to boh-fairhearingsrequest@mass.gov, with both the completed form and notice attached to the e-mail. MassHealth can only accept password-encrypted/protected documents that are physically attached to the email. We recommend this approach for your privacy. Unencrypted e-mails are not secure and could be intercepted and read by a third party.
+
+More info
+
+After you submit your appeal, the Board of Hearings will send you a notice of your hearing date, time, and place at least 10 calendar days before your scheduled hearing date.
+
+At the hearing, you may represent yourself or be represented by a lawyer or other representative at your own expense. You may contact a local legal service or community agency to get advice or representation at no cost. To get information about legal service or community agencies, call the MassHealth Customer Service Center.
+
+If you cannot come to the hearing for good cause, or if you need a telephone hearing, you must call the Office of Medicaid, Board of Hearings before the hearing date.
+
+- Main: (617) 847-1200
+- Toll free: (800) 655-0338
+
+Failure to appear without having good cause, or having previously rescheduled the hearing, will result in the dismissal of your appeal.
+
+Contact
+
+Office of Medicaid, Board of Hearings
+
+Address
+
+Mailing Address
+
+100 Hancock Street, 6th Floor, Quincy, MA 02171
+
+Phone
+
+Main: (617) 847-1200
+Toll free: (800) 655-0338
+
+Fax
+
+1-617-887-8797
+
+END SOURCE 2
+
+SOURCE 3: Executive Office of Aging & Independence — Talk to an Ombudsman about a problem | https://www.mass.gov/how-to/talk-to-an-ombudsman-about-a-problem | source's own date: none stated on page | retrieved: 2026-08-30
+Talk to an Ombudsman about a problem
+
+Learn about how to find and speak with your local Ombudsman about a problem.
+
+What you need
+
+An Ombudsman is an advocate. The ombudsman service offers a way for consumers to voice their complaints and have concerns addressed so they can live with dignity and respect.
+
+Anyone can bring a complaint before the ombudsman. The complaint can be on behalf of a specific resident or on behalf of residents as a group.
+
+How to find
+
+By phone
+
+Anyone can bring a complaint before the ombudsman. The complaint can be on behalf of a specific resident or on behalf of residents as a group.
+
+Contact an Ombudsman Program: (617) 727-7750/711 MassRelay/TTY
+
+Community Care Ombudsman
+
+Long-Term Care Ombudsman and Assisted Living Ombudsman: 617-222-7495
+
+Contact
+
+Executive Office of Aging & Independence
+
+Address
+
+One Ashburton Place, 10th floor, Boston, MA 02108
+
+Phone
+
+MassOptions 800-243-4636
+
+Call Specialist available Monday-Friday, 9:00 AM - 5:00 PM (interpreter services are available in 100+ languages)
+
+Online
+
+Email information.resources@mass.gov
+
+Fax
+
+Fax Number (617) 727-9368
+
+END SOURCE 3
+
+END OF PACKET — 3 sources

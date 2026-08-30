@@ -1,0 +1,708 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Missouri
+SLUG: missouri
+ASSEMBLED: 2026-08-30
+CAPTURE NOTES: Both sources were retrieved by curl with a browser user-agent. Source 1 is a mechanical slice of the Secretary of State's published PDF of 19 CSR 30-82 (extracted whole with `pdftotext -layout`, then cut as a contiguous line range covering the printed pages that carry 19 CSR 30-82.050, from a point inside the preceding rule 19 CSR 30-82.020 through the start of 19 CSR 30-82.060, because the rule's own definitions and grounds begin in the right-hand column of a page whose left column is still printing an earlier rule). The document is set in two columns, so the extractor renders each printed line as one column's text followed by the other's; a sentence that runs down one column is therefore broken across lines that carry unrelated text from the neighbouring column, and the running heads, page numbers and the Secretary of State's name and date stamp inside that range are the document's own. The grounds in section (2) of the rule sit in the right-hand column of an earlier page and are inside the sliced range. Source 2 was reduced to text mechanically (tag strip); the department's site navigation appears at the head of the capture as the extractor produced it.
+PENDING: The Nursing Facility Transfer or Discharge Hearing Request form (MO Form 886-3245), which Source 1 names and states "may be obtained from the Department of Health and" "Senior Services or the regional ombudsman" — not captured. Also pending: section 198.088, RSMo, which the rule's purpose statement says it incorporates; the department's ombudsman transfer-and-discharge handout at health.mo.gov/seniors/ombudsman/pdf/TransferAndDischarge.pdf and its know-your-rights page, both of which returned HTTP 404 at the paths found; and any first-party statement of a Missouri Medicaid bed-hold period, which neither captured source states.
+
+SOURCE 1: 19 CSR 30-82.050, Transfer and Discharge Procedures (excerpt from the Secretary of State's published 19 CSR 30-82) | https://www.sos.mo.gov/cmsimages/adrules/csr/current/19csr/19c30-82.pdf | source's own date: rule history line ends Amended: Filed Sept. 1, 2021, effective March 30, 2022; page stamp (3/31/26) | retrieved: 2026-08-30
+classification is merited because of the extent of the violation,               of distinct class III standards total twenty (20) or more, the
+the violations effect on residents or the impact when combined                  facility will be deemed to be in substantial noncompliance
+with other deficiencies. The division, on the Statement of                      under the Omni-bus Nursing Home Act and the division may
+Deficiency, shall indicate for the operator which classification                take action as provided under section 198.026, RSMo.
+has been applied and if the higher one is used, for what reason.                   (C) The division shall not revoke an operator’s license to
+                                                                                operate a long-term care facility for violations of class III
+(3) A violation of a class I standard is one which would present                standards unless—
+either an imminent danger to the health, safety or welfare of                         1. The uncorrected violations taken all together present
+any resident or a substantial probability that death or serious                 either an imminent danger to the health, safety or welfare of
+physical harm would result. If a violation of a class I standard is             any resident or a substantial probability of death or serious
+
+       Denny Hoskins           (3/31/26)                     CODE OF STATE REGULATIONS				                                                        9
+       Secretary of State
+               DIVISION 30—DIVISION OF REGULATION                                         19 CSR 30-82—DEPARTMENT OF HEALTH AND
+               AND LICENSURE 					                                                                     SENIOR SERVICES
+
+
+physical harm; or                                                               than ninety (90) days;
+     2. The operator or his/her agent knowingly acted or                          (C) Consent to or agreement with transfer or discharge
+knowingly omitted any duty which would materially and                           means one of the following:
+adversely affect the health, safety, welfare or property of a                        1. The resident or a legally authorized representative of
+resident.                                                                       the resident has consented to, agreed with, or requested the
+   (D) Points will not be assessed for class III violations if the              discharge; or
+operator can show that the violation had been corrected since                        2. The resident’s treating physician has ordered the transfer
+it was initially noted, that the operator made a good faith                     and the releasing facility intends to readmit the resident if
+effort, as judged by the division, to stay in compliance and that               requested to do so;
+the violation again occurred for reasons beyond the operator’s                    (D) Consent of the resident means that the resident, with
+control.                                                                        sufficient mental capacity to fully understand the effects
+                                                                                and consequences of the transfer or discharge, consents to or
+(6) The division shall not initiate any action against an                       agrees with the transfer or discharge; and
+operator as authorized by law, including issuance of a notice                     (E) Legally authorized representative of a resident means
+of noncompliance for uncorrected violations of class II or III                  a duly appointed guardian or an attorney-in-fact who has
+standards, unless the facility’s record, the cited violations and               current and valid power to make health care decisions for the
+the circumstances are reviewed by the director of the division                  resident.
+or his/her designee.
+                                                                                (2) The facility shall permit each resident to remain in the
+AUTHORITY: sections 198.009 and 198.085.1, RSMo 1986.* This                     facility unless—
+rule was originally filed as 13 CSR 15-10.020. Original rule filed                 (A) The transfer or discharge is appropriate because the
+Dec. 10, 1981, effective May 13, 1982. Amended: Filed July 13, 1983,            resident’s welfare and the resident’s needs cannot be met by
+effective Oct. 13, 1983. Moved to 19 CSR 30-82.020, effective Aug.              the facility;
+28, 2001.                                                                          (B) The transfer or discharge is appropriate because the
+                                                                                resident’s health has improved sufficiently so the resident no
+*Original authority: 198.009, RSMo 1979 and 198.085, RSMo 1979, amended 1984.   longer needs the services provided by the facility;
+                                                                                   (C) The safety of individuals in the facility is endangered;
+                                                                                   (D) The health of individuals in the facility would otherwise
+19 CSR 30-82.030 Assessment of Availability of Beds                             be endangered;
+(Rescinded March 30, 2020)                                                         (E) The resident has failed, after reasonable and appropriate
+                                                                                notice, to pay for (or have paid under Medicare or Medicaid)
+AUTHORITY: sections 197.318, RSMo Supp. 1992 and 198.009, RSMo                  a stay at the facility. For a resident who becomes eligible for
+1986. This rule was originally filed as 13 CSR 15-10.030. Emergency             Medicaid after admission to a facility, the facility may charge
+rule filed June 17, 1986, effective June 27, 1986, expired Oct. 24,             that resident only allowable charges under Medicaid; or
+1986. Original rule filed June 17, 1986, effective Oct. 24, 1986.                  (F) The facility ceases to operate.
+Moved to 19 CSR 30-82.030, effective Aug. 28, 2001. Rescinded:
+Filed Aug. 28, 2019, effective March 30, 2020.                                  (3) When the facility transfers or discharges a resident under
+                                                                                any of the circumstances specified in subsections (2)(A)–(E),
+                                                                                the resident’s clinical record shall be documented. The facility
+19 CSR 30-82.050 Transfer and Discharge Procedures                              shall ensure that documentation for the transfer or discharge
+                                                                                is obtained from—
+PURPOSE: This rule provides instructions for persons who are dis-                  (A) The resident’s personal physician when transfer or
+charged from a licensed long-term care facility under involuntary               discharge is necessary under subsections (2)(A)–(B); and
+circumstances. When this proposed rule becomes effective it will                   (B) A physician when transfer or discharge is necessary under
+replace 13 CSR 15-9.010(17) which will be rescinded by subsequent               subsection (2)(D); and
+rulemaking. This rule also includes the provisions of section                      (C) The facility administrator or the facility director of
+198.088, RSMo, applicable to transfer or discharge and the notice               nursing in all circumstances.
+and due process required of all licensed facilities.
+                                                                                (4) Before a facility transfers or discharges a resident, the
+(1) For the purposes of this rule, the following terms shall be                 facility shall—
+defined as follows:                                                                (A) Send written notice to the resident in a language
+   (A) Transfer means moving a resident from one institutional                  and manner reasonably calculated to be understood by the
+setting to another institutional setting for care and under                     resident. The notice must also be sent to any legally authorized
+circumstances where the releasing facility has decided                          representative of the resident and to at least one (1) family
+that it will not readmit the resident or a legally authorized                   member. In the event that there is no family member known
+representative of the resident has not consented or agreed with                 to the facility, the facility shall send a copy of the notice to
+the transfer. Unless indicated otherwise from the context of                    the appropriate regional coordinator of the Missouri State
+this rule, a transfer shall be deemed the same as a discharge;                  Ombudsman’s office;
+   (B) Discharge means releasing from a facility or refusing                       (B) Include in the written notice the following information:
+to readmit a resident from a community setting under                                  1. The reason for the transfer or discharge;
+circumstances where the resident or a legally authorized                              2. The effective date of transfer or discharge;
+representative of the resident has not consented or agreed                            3. The resident’s right to appeal the transfer or discharge
+with the move or decision to refuse readmittance. Refusal to                    notice to the director of the Department of Health and Senior
+readmit a former resident shall not constitute a discharge if                   Services or his/her designated hearing official within thirty (30)
+the former resident has been absent from the facility for more                  days of the receipt of the notice;
+
+10			 			CODE OF STATE REGULATIONS                                                                               (3/31/26)    Denny Hoskins
+                                                                                                                              Secretary of State
+19 CSR 30-82—DEPARTMENT OF HEALTH AND                                    DIVISION 30—DIVISION OF REGULATION
+             SENIOR SERVICES                                                                  AND LICENSURE
+
+
+      4. That a request for a hearing should be sent to Department    Jefferson City, Missouri 65102-0570, by fax to (573) 751-0247, or
+of Health and Senior Services Appeals Unit, PO Box 570, 912           by email to DHSS.Appeals@health.mo.gov within thirty (30)
+Wildwood Drive 3rd floor, Jefferson City, Missouri 65102-0570,        days of the date the resident received the discharge notice
+by fax to (573) 751-0247, or by email to DHSS.Appeals@health.         from the facility. The resident’s legal guardian, the resident’s
+mo.gov and the phone number for the appeals unit is (573)             attorney-in-fact appointed under sections 404.700–404.725,
+522-1699;                                                             RSMo (Durable Power of Attorney Law of Missouri) or pursuant
+      5. That filing an appeal will allow a resident to remain in     to sections 404.800–404.865, RSMo (Durable Power of Attorney
+the facility until the hearing is held unless a hearing official      for Health Care Act), or any other individual may file an
+finds otherwise;                                                      appeal on the resident’s behalf. A Nursing Facility Transfer or
+      6. The location to which the resident is being transferred      Discharge Hearing Request form (MO Form 886-3245) to request
+or discharged;                                                        a hearing may be obtained from the Department of Health and
+      7. The name, address, and telephone number of the               Senior Services or the regional ombudsman. However, the use
+designated regional long-term care ombudsman office;                  of a form is not required in order to file a request for a hearing.
+      8. For Medicare and Medicaid certified facility residents       The request for a hearing shall be verified in writing by the
+with developmental disabilities, the mailing address and              resident, his/her legal guardian, attorney-in-fact, or any other
+telephone number of the Missouri Protection and Advocacy              party requesting a hearing on the resident’s behalf by attesting
+Agency, 925 South Country Club Drive, Jefferson City, MO              to the truth of the resident’s request for a hearing.
+65109, (573) 893-3333, or the current address and telephone
+number of the protection advocacy agency if it has changed.           (7) The director of the Department of Health and Senior
+The protection and advocacy agency is responsible for                 Services shall designate a hearing official to hear and decide
+the protection and advocacy of developmentally disabled               the resident’s appeal.
+individuals established under Part C of the Developmental                (A) The designated hearing official shall notify the resident,
+Disabilities Assistance and Bill of Rights Act. For Medicare          the state long-term care ombudsman and the facility that the
+and Medicaid certified facility residents with mental illness,        request for a hearing has been received and that a hearing has
+the address and telephone number of Missouri Protection and           been scheduled.
+Advocacy Agency, the agency responsible for persons with                 (B) The hearing may be held by telephone conference call or
+mental illness under the Protection and Advocacy for Mentally         in person at any location the designated hearing official deems
+Ill Individuals Act; and                                              reasonably appropriate to accommodate the resident’s needs.
+   (C) Record and document in detail in each affected resident’s
+record the reason for the transfer or discharge. The recording        (8) The discharge of the resident shall be stayed at the time
+of the reason for the transfer or discharge shall be entered into     the request for a hearing was filed unless the facility can
+the resident’s record prior to the date the resident receives         show good cause why the resident should not remain in the
+notice of the transfer or discharge, or prior to the time when        facility until a written hearing decision has been issued by the
+the transferring or discharging facility decides to transfer or       designated hearing official. Good cause shall include, but is not
+discharge the resident.                                               limited to, those exceptions when the facility may notify the
+                                                                      resident of a discharge from the facility with less than thirty
+(5) The notice of transfer or discharge described in this rule        (30) days notice as set forth in section (5) of this rule.
+shall be made by the facility no less than thirty (30) days before       (A) The facility may show good cause for discharging the
+the resident is to be transferred or discharged. In the case of       resident prior to a hearing decision being issued by the
+an emergency discharge, the notice shall be made as soon as           designated hearing official by filing a written Motion to Set
+practicable before the discharge when it is specifically alleged      Aside the Stay with the Department of Health and Senior
+in the notice that—                                                   Services Appeals Unit at the address, fax number, or email
+   (A) The safety of individuals in the facility would be             address in paragraph (4)(B)4. The facility must provide a copy
+endangered under subsection (2)(C) of this rule and the notice        of the Motion to Set Aside the Stay to the resident, or to the
+contains specific facts upon which the facility has based its         resident’s legally authorized representative and to at least
+determination that the safety of said individuals would be so         one (1) family member, if one is known. In the event that
+endangered;                                                           a resident has no legally authorized representative and no
+   (B) The health of individuals in the facility would be             known family members, then a copy of the Motion to Set Aside
+endangered under subsection (2)(D) of this rule and the notice        the Stay must be provided to the Missouri State Long-Term Care
+contains specific facts upon which the facility has based its         Ombudsman’s Office.
+determination that the safety of said individuals would be so            (B) Within five (5) days after a written Motion to Set Aside
+endangered;                                                           the Stay has been filed with the Department of Health and
+   (C) The resident’s health has improved sufficiently to allow       Senior Services Appeals Unit the designated hearing official
+a more immediate transfer or discharge under subsection (2)           shall schedule a hearing to determine whether the facility has
+(B) of this rule;                                                     good cause to discharge the resident prior to a written hearing
+   (D) An immediate transfer or discharge is required by the          decision being issued. Notice of the good cause hearing need
+resident’s urgent medical needs under subsection (2)(A) of this       not be in writing. All parties and representatives who received
+rule; or                                                              a copy of the Motion to Set Aside the Stay under subsection (8)
+   (E) The resident has not resided in the facility for thirty (30)   (A) of this rule shall also be notified of the good cause hearing.
+days.                                                                       1. The designated hearing official shall have the discretion
+                                                                      to consolidate the facility’s good cause hearing with the
+(6) Any resident of a facility who receives notice of discharge       discharge hearing requested by the resident. In the case of an
+from the facility in which he/she resides may file an appeal of       emergency discharge, an expedited hearing shall be held upon
+the notice with the Department of Health and Senior Services          the request of the resident, legally authorized representative,
+Appeals Unit, PO Box 570, 912 Wildwood Drive 3rd floor,               family member, and in a case where notice was required to be
+
+      Denny Hoskins        (3/31/26)                 CODE OF STATE REGULATIONS				                                                    11
+      Secretary of State
+            DIVISION 30—DIVISION OF REGULATION                                 19 CSR 30-82—DEPARTMENT OF HEALTH AND
+            AND LICENSURE 					                                                             SENIOR SERVICES
+
+
+sent to the regional ombudsman, to the state long-term care         resident shall be permitted to remain in the facility. If the
+ombudsman, so long as the parties waive the ten- (10-) day          decision is in the facility’s favor, the resident shall be granted
+notice requirement specified in section (9).                        an additional ten (10) days after the decision is received for
+     2. Subsequent to the good cause hearing, the designated        purpose of relocation, and the facility shall assist the resident
+hearing official shall issue an order granting or denying the       in making suitable arrangements for relocation. If the resident
+facility’s Motion to Set Aside the Stay. If the facility’s good     prevails and has already been discharged, the facility shall
+cause hearing and the resident’s discharge hearing were             notify the resident, the qualified representative, or any other
+consolidated, the order shall also set forth whether the facility   responsible party who will assure that the resident is made
+may discharge the resident.                                         aware of the decision and that the resident may return to the
+                                                                    facility. In the event that there are no beds available, the facility
+(9) Written notice of a hearing shall contain the date and time     shall admit the resident to occupy the first available bed
+for the hearing and shall be mailed to the facility, the resident   without regard to any waiting list maintained by the facility.
+or the resident’s legally authorized representative, and to any
+and all parties in interest, including any family members           AUTHORITY: sections 192.2000, 198.009, and 198.088, RSMo
+who received notice of the discharge, that are known to the         2016.* This rule was originally filed as 13 CSR 15-10.050. Original
+designated hearing official. The written notice shall be mailed     rule filed Feb. 13, 1998, effective Sept. 30, 1998. Moved to 19 CSR
+to the parties at least ten (10) days prior to the hearing.         30-82.050, effective Aug. 28, 2001. Amended: Filed Sept. 1, 2021,
+                                                                    effective March 30, 2022.
+(10) If the facility’s good cause hearing and the resident’s
+discharge hearing were not consolidated and the designated          Original authority: 192.2000, RSMo 1984, amended 2014; 198.009, RSMo 1979,
+hearing official issues an order denying the facility’s Motion      amended 1993, 1995; and 198.088, RSMo 1997, amended 1988, 1989, 1994.
+to Set Aside the Stay, the designated hearing official shall
+schedule the discharge hearing subsequent to the date the
+
+END SOURCE 1
+
+SOURCE 2: Missouri Department of Health and Senior Services, Long-Term Care Ombudsman | https://health.mo.gov/seniors/ombudsman/ | source's own date: none stated on page | retrieved: 2026-08-30
+Long-Term Care Ombudsman | Missouri Department of Health and Senior Services
+
+ Skip to main content
+
+ Welcome to the new Missouri Department of Health & Senior Services website!
+
+ Please tell us what you think in our feedback survey. We are resolving technical issues.
+
+ Secondary navigation
+
+ Find an Agency
+
+ Governor Kehoe
+
+ MO.gov
+
+ Online Services
+
+ Search
+
+ Health & Wellness
+
+ Toggle submenu
+
+ Resources, tips and guidance to help individuals adopt and maintain healthy lifestyle habits for improved overall well-being.
+
+ Conditions & Diseases
+
+ Chronic Diseases
+
+ Communicable Diseases
+
+ Providers
+
+ Office of Rural Health and Primary Care
+
+ Primary Care 
+
+ Families
+
+ Genetic Disease & Early Childhood
+
+ Healthy Families
+
+ Women, Infants & Children (WIC)
+
+ Prevention
+
+ Antibiotic Resistance
+
+ Environmental Factors
+
+ Overdose Prevention & Response
+
+ Wellness & Prevention
+
+ Immunizations
+
+ School & Childcare
+
+ School Immunizations
+
+ Online Reporting System
+
+ School Health Overview
+
+ Health Emergencies
+
+ Alerts, Advisories, Updates & Guidance
+
+ Natural Disasters & Weather Emergencies
+
+ Hazardous Substances
+
+ Licensing & Regulations
+
+ Toggle submenu
+
+ Guidance and resources to ensure compliance with state health and safety standards across various professions, facilities and services.
+
+ Providers
+
+ Ambulatory Surgery Centers
+
+ Birthing Centers
+
+ Boards, Commissions & Councils
+
+ Certificate of Need
+
+ CLIA
+
+ Community Health Workers
+
+ CNA, CMT, LIMA & Insulin Registry
+
+ Emergency Medical Services
+
+ End Stage Renal Diseases
+
+ Family Care Safety Registry
+
+ Form Library
+
+ Good Cause Waiver
+
+ Home Care
+
+ Home & Community Based Services Provider Information
+
+ Hospice
+
+ Hospital Standards
+
+ Long-Term Care
+
+ Manuals
+
+ Narcotics & Dangerous Drugs
+
+ Radiation Control
+
+ Strategic National Stockpile
+
+ Supplemental Health Care Service Agencies
+
+ Business Professionals
+
+ Cannabis
+
+ Employee Disqualification List (EDL)
+
+ Food Safety
+
+ Free Resources
+
+ Lodging
+
+ Lead Licensing
+
+ Onsite Wastewater Treatment
+
+ Citizens
+
+ Cannabis - Patient Services
+
+ Food & Drug Recalls
+
+ Report Adult Abuse & Neglect
+
+ Sunshine & Records Requests
+
+ Vital Records
+
+ Senior & Disability Services
+
+ Toggle submenu
+
+ Resources and support to promote health, well-being and access to care for seniors and citizens with disabilities.
+
+ Senior & Disability Services
+
+ Caregivers Support
+
+ Financial Planning Resources
+
+ Home & Community Based Services
+
+ Long-Term Care Ombudsman
+
+ Medicare Outreach and Assistance
+
+ Nursing Homes
+
+ Rules & Regulations
+
+ Senior Programs
+
+ Partners & Providers
+
+ Area Agencies on Aging
+
+ Home & Community-Based Services Provider Information
+
+ Manuals
+
+ Missouri Master Plan on Aging
+
+ Senior Employment
+
+ Silver Haired Legislature
+
+ Report Adult Abuse
+
+ Stop Adult Abuse
+
+ Avoiding Scams
+
+ Get Involved
+
+ Caregiver Support
+
+ Missouri Century Club
+
+ Volunteer Opportunities
+
+ Programs & Services
+
+ Toggle submenu
+
+ Support services to promote health, well-being and access to care for individuals, families and communities.
+
+ Food & Nutrition
+
+ Food Programs
+
+ Form Library
+
+ Women, Infants & Children (WIC)
+
+ VITAL RECORDS & REGISTRIES
+
+ Vital Records
+
+ ORGAN, EYE & TISSUE DONATION & REGISTRY
+
+ Library
+
+ Archive Library
+
+ Events
+
+ Form Library
+
+ Free Resources
+
+ Manuals
+
+ Sitewide Publications
+
+ Emergency Planning
+
+ Healthcare Preparedness
+
+ Public Health Emergency Preparedness
+
+ Ready in 3 - Prepare for Emergencies
+
+ Volunteer Opportunities
+
+ STATE PUBLIC HEALTH LABORATORY
+
+ State Public Health Laboratory Overview
+
+ Newborn Screening
+
+ Specimen Delivery & Courier Information
+
+ Data & Reports
+
+ Toggle submenu
+
+ Find public health data, statistics and research reports that inform community decision-making.
+
+ Data Dashboards & Tools
+
+ MOPHIMS (Missouri Public Health Information Management System)
+
+ MoHealthData
+
+ Drug Overdose Dashboard
+
+ Influenza Dashboard
+
+ Wastewater Surveillance Dashboard
+
+ Rabies Dashboard
+
+ Sexually Transmitted Infections (STI) Dashboard
+
+ School Immunizations Dashboard
+
+ Guidelines & Requests
+
+ Data Request Form
+
+ Data Release Policies, Procedures & Guidelines
+
+ Institutional Review Guidelines
+
+ Surveillance Systems & Reports
+
+ Missouri Cancer Registry
+
+ Deaths
+
+ Live Births
+
+ Missouri State Health Assessment
+
+ Environmental Public Health Tracking
+
+ Pregnancy Risk Assessment Monitoring System (PRAMS) 
+
+ Missouri Wastewater Surveillance
+
+ Legionella
+
+ Vital Records
+
+ Rabies
+
+ Communicable Disease
+
+ Local
+
+ Toggle submenu
+
+ A central hub with search tools to help you quickly find services and resources in your community.
+
+ Local
+
+ Events
+
+ Area Agencies on Aging
+
+ Find Cooling Centers
+
+ Find Your Ombudsman
+
+ Find Your Local Public Health Agency
+
+ Find WIC Clinics & Retailers
+
+ Search
+
+ MO.gov
+
+ Governor Kehoe
+
+ Find an Agency
+
+ Online Services
+
+ Breadcrumb
+
+ Home
+
+ Senior & Disability Services
+
+ Long-Term Care Ombudsman
+
+ Long-Term Care Ombudsman
+
+ Topic Menu
+
+ Family Councils
+
+ Residents' Right to Vote
+
+ Ombudsman Resources
+
+ Ombudsman Know Your Rights
+
+ Contact Information
+
+ Long-Term Care Ombudsman
+
+ 912 Wildwood Dr.
+PO Box 570
+Jefferson City, MO 65102-0570
+
+ Email
+
+ LTCOmbudsman@health.mo.gov
+
+ Phone
+
+ 800-309-3282
+
+Improving the quality of life for residents of long-term care through advocacy, education and empowerment.
+Visit us on Facebook
+
+ What is an Ombudsman?
+The word “Ombudsman” (om-budz-man) comes from Swedish. It means someone who speaks or helps on behalf of another person. The Missouri Long-Term Care Ombudsman Program is a group of trained volunteers across the state who help residents in long‑term care facilities. Their goal is to make sure residents have a good quality of life and that their rights are protected.
+Volunteers are recruited by regional Ombudsman coordinators who work in local programs run by the Area Agencies on Aging (AAAs) or their service partners. After training, Ombudsmen visit residents regularly to discuss any issues. Residents may file complaints anonymously through volunteers, but it will not be acted upon until the resident gives permission. When they act on a complaint, they first support residents in solving the problem themselves. Ombudsmen always act based on what the resident wants, unless a very serious situation requires a different response. Ombudsmen encourage residents to make their own choices and use their rights.
+Overall Program Policy
+It is important to understand the Ombudsman Program does not have enforcement powers of its own and is not a regulatory agency in any sense. Trust and confidence can be maintained only so long as residents, nursing home facilities, agencies and the public know the Ombudsman has no vested interest in any given case. The Ombudsman's only interest is ensuring long-term care residents are able to freely exercise their rights.
+Ombudsman Program Structure
+The Missouri Long‑Term Care Ombudsman Program is overseen by the Office of the State Long‑Term Care Ombudsman. This office is part of the Missouri Department of Health and Senior Services (DHSS), within the Division of Senior and Disability Services (DSDS).
+The State Office, led by the State Ombudsman, manages and directs all activities of the program.
+Missouri law requires DSDS to work with Area Agencies on Aging (AAAs) to run services under the Older Americans Act (OAA), including the Long‑Term Care Ombudsman Program.
+
+ Mission: 
+To improve the quality of life for residents in long‑term care facilities through advocacy and education.
+
+ Ombudsman Goals:
+• Advocate for residents’ rights.
+• Educate residents about their rights and help the community learn about long‑term care issues.
+• Empower residents to speak up when they feel unheard.
+
+ Ombudsman Roles
+
+ Copy link
+
+ Ombudsman Roles
+Ombudsmen take on several roles in their work:
+Facilitator: Help residents speak up for themselves and learn how to solve their own problems.
+Educator: Give information and resources to residents, staff, families, and the community to support learning and problem‑solving.
+Broker: Connect residents with people or services that can help and follow up until the issue is solved.
+Intermediary: Help improve communication between people who are involved in a problem.
+Collaborator: Work with residents and staff to find solutions that meet the resident’s needs.
+Mediator: Bring together residents with similar abilities to help them reach an agreement or compromise.
+Advocate: Speak or act on behalf of someone else.
+Investigator: Gather important information from different sources to understand the problem and find a solution.
+Problem solver: Help resolve complaints and issues from residents.
+Activist: Work to improve systems and policies that affect residents in long‑term care.
+
+ Systems Advocacy
+
+ Copy link
+
+ The federal Older Americans Act created the Long‑Term Care Ombudsman program and explains what Ombudsmen are required to do. Ombudsmen at the state and regional levels have several jobs, especially in systems advocacy, which means speaking up for residents on a larger, public level.
+According to the Older Americans Act, Ombudsmen should:
+• Speak up for residents to government agencies and seek solutions that protect their health, safety, and rights.
+• Review and comment on laws, rules and government actions that affect residents.
+• Help the public share their opinions on laws and policies.
+• Support resident and family councils.
+• Do any other activities that help protect residents.
+To make sure residents’ voices are heard by the public and lawmakers, Ombudsmen also:
+• Teach advocacy groups, government agencies and lawmakers how laws and policies affect residents.
+• Work to change laws, rules or practices that harm residents’ rights or well‑being.
+• Help residents, families and the public share opinions about laws and policies.
+• Join work groups that study important issues.
+• Take part in public hearings and meetings.
+• Provide education in the community.
+• Teach other aging‑service providers and the public about long‑term care issues.
+
+ Find Your Ombudsman
+
+ Long-Term Care Ombudsmen are a group of trained volunteers across the state who help residents in long‑term care facilities.
+
+ Find Your Ombudsman
+
+ Become an Ombudsman
+
+ Become part of a support system for those living in long-term care facilities.
+
+ Volunteer to Help
+
+ Resources
+
+ Resources for the Ombudsman Program
+
+ Ombudsman Resources
+
+ Ombudsman Annual Report
+
+ Missouri Long-Term Care Ombudsman
+
+ Ombudsman Annual Report
+
+ Ombudsman Dashboard
+
+ Bed and Services Availability Dashboard
+
+ Dashboard
+
+ Governor
+
+ Mike Kehoe
+
+ Director
+
+ Sarah Willson
+
+ Footer
+
+ About Us
+
+ Accessibility
+
+ Careers
+
+ Contact Us
+
+ Privacy Policy
+
+ Subscribe to Emails
+
+ Sunshine Requests
+
+ Secondary Footer
+
+ Data Policy
+
+ Pre-Rulemaking
+
+ Proposed Rules
+
+ Publications
+
+ Recalls
+
+ Site Index A - Z
+
+ State Agencies
+
+ Follow Us:
+END SOURCE 2
+
+END OF PACKET — 2 sources

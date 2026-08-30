@@ -7,7 +7,7 @@ present. Spanish = a translated page is published; it carries the
 docket, the hoisted rows, and the notice periods and deadlines, in
 the state's own published translation only.
 
-**Baseline: 10 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
+**Baseline: 14 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
 
 | State | Baseline | Full page | Spanish | Sources last checked |
 |---|:---:|:---:|:---:|---|
@@ -21,7 +21,7 @@ the state's own published translation only.
 | Delaware | [ ] | [ ] | [ ] |  |
 | District of Columbia | [ ] | [ ] | [ ] |  |
 | [Florida](site/states/florida.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| Georgia | [ ] | [ ] | [ ] |  |
+| [Georgia](site/states/georgia.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Hawaii | [ ] | [ ] | [ ] |  |
 | Idaho | [ ] | [ ] | [ ] |  |
 | [Illinois](site/states/illinois.html) | [x] | [ ] | [ ] | 2026-08-30 |
@@ -32,11 +32,11 @@ the state's own published translation only.
 | Louisiana | [ ] | [ ] | [ ] |  |
 | Maine | [ ] | [ ] | [ ] |  |
 | Maryland | [ ] | [ ] | [ ] |  |
-| Massachusetts | [ ] | [ ] | [ ] |  |
+| [Massachusetts](site/states/massachusetts.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Michigan](site/states/michigan.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Minnesota | [ ] | [ ] | [ ] |  |
 | Mississippi | [ ] | [ ] | [ ] |  |
-| Missouri | [ ] | [ ] | [ ] |  |
+| [Missouri](site/states/missouri.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Montana | [ ] | [ ] | [ ] |  |
 | Nebraska | [ ] | [ ] | [ ] |  |
 | Nevada | [ ] | [ ] | [ ] |  |
@@ -44,7 +44,7 @@ the state's own published translation only.
 | [New Jersey](site/states/new-jersey.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | New Mexico | [ ] | [ ] | [ ] |  |
 | [New York](site/states/new-york.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| North Carolina | [ ] | [ ] | [ ] |  |
+| [North Carolina](site/states/north-carolina.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | North Dakota | [ ] | [ ] | [ ] |  |
 | [Ohio](site/states/ohio.html) | [x] | [x] | [ ] | 2026-08-30 |
 | Oklahoma | [ ] | [ ] | [ ] |  |

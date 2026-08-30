@@ -1,0 +1,1022 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Georgia
+SLUG: georgia
+ASSEMBLED: 2026-08-30
+CAPTURE NOTES: rules.sos.ga.gov returns HTTP 403 to curl, and the Department of Community Health's own PDF copy of Chapter 111-8-50 does the same, so Source 1 was retrieved through the session's HTTP fetch tool and copied to file without retyping. That tool renders the Secretary of State's rule tables as markdown tables, so each numbered subsection appears as a table row between pipe characters, followed by a row of dashes; the double spaces inside the rule text are the served page's own. The capture is the whole chapter as served, including the subject's rule index at the foot. Source 2 was retrieved by curl with a browser user-agent and reduced to text mechanically (tag strip); the division's site navigation is left in the captured text as the extractor produced it.
+PENDING: Chapter 111-8-56 (Rules and Regulations for Nursing Homes) was captured separately from dch.georgia.gov and holds no transfer or discharge provision; it is not in this packet. Also pending: the Department of Community Health's published route for requesting a discharge appeal — Rule 111-8-50-.15 states a request "shall be mailed or delivered to the Department of Community Health" without an address, and no first-party page stating a postal address, email or form for a long-term care discharge appeal was captured; and any first-party statement of a Georgia Medicaid bed-hold period.
+
+SOURCE 1: Georgia Rules and Regulations, Subject 111-8-50, Long-Term Care Facilities: Residents' Bill of Rights (Department of Community Health) | https://rules.sos.ga.gov/gac/111-8-50 | source's own date: none stated on page | retrieved: 2026-08-30
+GA R&R - GAC - Subject 111-8-50 LONG-TERM CARE FACILITIES: RESIDENTS' BILL OF RIGHTS
+https://rules.sos.ga.gov/gac/111-8-50
+→ https://rules.sos.ga.gov/gac/111-8-50
+Content-Type: text/html; charset=utf-8
+
+---
+title: GA R&amp;R - GAC - Subject 111-8-50 LONG-TERM CARE FACILITIES: RESIDENTS' BILL OF RIGHTS
+---
+
+[![Rules and Regulations of the State of Georgia](https://rules.sos.ga.gov/images/ga_rulesreg.gif)](https://rules.sos.ga.gov/ "Home")
+
+[Home](https://rules.sos.ga.gov/) | [Browse](https://rules.sos.ga.gov/gac/) | [Help](https://rules.sos.ga.gov/help.aspx) | [Go to Georgia SOS](https://sos.ga.gov/) | [Download](https://rules.sos.ga.gov/Download_pdf.aspx)
+
+Hierarchy Search:  Y  N
+
+[Search tips](https://rules.sos.ga.gov/help.aspx#searching)
+
+ [*R*oute](javascript:; "Route"):
+
+- [GA R&R](https://rules.sos.ga.gov/gac/ "GAC")
+- » [Department 111](https://rules.sos.ga.gov/gac/111 "111")
+- » [Chapter 111-8](https://rules.sos.ga.gov/gac/111-8 "111-8")
+- » Subject 111-8-50
+
+# Subject 111-8-50 LONG-TERM CARE FACILITIES: RESIDENTS' BILL OF RIGHTS
+
+## [Rule 111-8-50-.01 Definitions](https://rules.sos.ga.gov/gac/111-8-50-.01 "111-8-50-.01")
+
+Unless a different meaning is required by the context, the
+ following terms as used in these rules and regulations shall have the meaning
+ hereafter respectively ascribed to them:
+
+| (a) | "Administrator" means an individual who  is licensed by the Georgia State Board of Nursing Home Administrators and who  has the necessary authority and responsibility for management of the  facility; |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (b) | "Department" means  the Department of Community Health of the State of Georgia; |
+| --- | ------------------------------------------------------------------------------- |
+
+| (c) | "Long-term Care Facility" or "Facility"  means any intermediate care home, skilled nursing home or intermingled home now  or hereafter subject to regulation and licensure by the Department; |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (d) | "Resident" means any person residing in  and receiving treatment in a long-term care facility; |
+| --- | ---------------------------------------------------------------------------------------------- |
+
+| (e) | "Guardian" means a resident's legal  guardian or conservator, or the parent of a minor resident who does not have a  duly appointed guardian; |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (f) | "Representative" means a person authorized by a resident or his guardian to act  for the resident as an official delegate or agent; |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------- |
+
+| (g) | "Long-term Care Ombudsman" or "Ombudsman"  means a person certified as a community ombudsman or the state ombudsman  pursuant to O.C.G.A. § [31-8-52](https://public.fastcase.com/Jhe1Qn%2bmJndQYQU6z%2feNm7kKcFMGTh%2bgXVtfMYqSHTbnBMOMSYR5W%2f3liJR%2f7GXih1ZDvse2cQxS%2bs4Rp%2bkA6g%3d%3d)*et  seq.*; |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (h) | "Complainant"  means resident, applicant for residency, guardian or representative, who  presents a grievance or complaint; |
+| --- | --------------------------------------------------------------------------------------------------------------------------- |
+
+| (i) | "Physician" shall mean a person duly  licensed to practice in this State by the Composite State Board of Medical  Examiners, under the provisions of O.C.G.A. § [43-34-1](https://public.fastcase.com/Jhe1Qn%2bmJndQYQU6z%2feNmwankFhGTMJmBzWvFI%2fxPz%2bnszWzNtPt3VekdAE%2bw99AoZe2tQwVd%2fr0hwr2GG%2bjgA%3d%3d)*et  seq.*; |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (j) | "Person in  Charge" means either the administrator of a facility or the person authorized  by the administrator to be in charge when the administrator is not  present; |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (k) | "Medical Necessity  Review" means a review of the social and medical needs of a resident, whose  stay is being paid by Medicaid or Medicare or other third party payor, to  determine the appropriate level of care of such resident; |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (l) | "Referee" means a volunteer jointly  chosen by the complainant and the administrator; |
+| --- | ------------------------------------------------------------------------------------- |
+
+| (m) | "Grievance" means a complaint presented  pursuant to Rule .14 of these regulations. |
+| --- | ----------------------------------------------------------------------------------- |
+
+## [Rule 111-8-50-.02 Administration](https://rules.sos.ga.gov/gac/111-8-50-.02 "111-8-50-.02")
+
+| (1) | Each facility  shall establish written policies and procedures to provide that it complies  with these rules and regulations and provides for implementation of these rules  and regulations at the facility. Such written policies and procedures shall not  conflict with the intent of the Act nor these rules and regulations and shall  not be more restrictive than these rules and regulations except where  specifically provided. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (2) | Each  facility must conduct training or make provision for the training of all staff  on a quarterly basis, and for new staff, as employed. The content of the  training may vary from quarter to quarter as long as it provides that all staff  are familiar with the Long-term Care Facilities: Residents' Bill of Rights.  O.C.G.A. § [31-8-100](https://public.fastcase.com/Jhe1Qn%2bmJndQYQU6z%2feNm7Gzv6FpMwFSqm1PdcznpjqdwWSNSU%2fHqe1jPyVd9ldAcpimcxheNberQgxQ6lHRiw%3d%3d)*et seq.*  and these rules and regulations. Such training may be combined with any other  quarterly training required to be done for staff of long-term care facilities.  The facility shall document the dates, topics, and staff attending such  training. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (3) | Each facility must  provide a written explanation of the rights, grievance procedures, and  enforcement procedures to each resident and guardian, or representative if the  resident does not have a guardian. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (4) | A facility must bill for all charges at  least once each month, unless otherwise agreed to in writing by the facility  and the resident or guardian. Each bill must itemize charges for daily or  monthly rates and for all extra charges. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (5) | Each facility must post in the most  frequented and conspicuous places, accessible to all residents, notices of  residents' rights prepared by the Department. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (6) | Copies of these rules and regulations  shall be kept by the facility and shall be available for examination by any  resident, guardian or representative. |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (7) | Upon the request of the resident,  guardian or representative, the facility shall provide such person making the  request with the name, address and telephone number of the resident's  physician. |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+- (8) Each resident or
+ guardian shall he entitled to have reported promptly to persons of the
+ resident's choice significant changes in the resident's health status. A
+ resident or guardian who desires that family members or other persons of their
+ choice be notified in the case of significant changes in the resident's health
+ status shall either:
+
+| (a) | Notify the administrator in advance that he desires that certain persons be notified in the event of any significant change in the resident's health status, with such notification being made part of the resident's personal file; or |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (b) | If such advance notification has not been given, a resident or guardian may inform the physician or administrator at any time that he desires that certain persons be notified of significant current changes. In the case of a resident unable to communicate who does not have a legally appointed guardian, the physician or administrator shall immediately contact family members or other interested persons concerning any significant change in the resident's health status. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (9) | Upon a resident's request or a request of  his or her guardian or representative, the facility must provide him or her  with a current list of all services and charges. Current charges must be posted  in the most frequented places, conspicuous, and accessible to all  residents. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (10) | The facility must  inform each resident in writing, at least 30 days in advance of the effective  date of any changes in the rates or the services that these rates  cover. |
+| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (11) | Each resident or his  guardian or authorized representative shall be entitled to inspect and receive  a copy of the resident' s non-medical records kept by the facility. The  facility may charge a reasonable fee for duplication, not to exceed actual  cost. |
+| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+## [Rule 111-8-50-.03 Notification of Rights](https://rules.sos.ga.gov/gac/111-8-50-.03 "111-8-50-.03")
+
+| (1) | At or before being admitted to a  facility, each resident and guardian, or representative if there is no  guardian, must be given a copy of the written explanation of the resident's  rights, grievance procedure and enforcement procedures. A staff member must  also orally explain to such persons the resident's rights, grievance procedures  and enforcement procedures. Written acknowledgement of this written and oral  explanation must be given by the resident, or in the case of a resident unable  to give a written acknowledgement, by the resident's guardian or representative  if there is no guardian. Such written acknowledgement shall be kept in the  resident's file. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+- (2) At the time of
+ admission to a facility, each resident, guardian, or representative must be
+ provided with the following information in writing:
+
+| (a) | The basic daily or monthly rate of the facility for the level of care to be received by the resident; |
+| --- | ------------------------------------------------------------------------------------------------------ |
+
+| (b) | A list of the services of the facility. Such list must show which services are offered as a part of the daily rate and which services are offered on an as-needed basis along with the related charges for such services. Such list must also show which services are not covered under Medicare or Medicaid programs and for which there are extra charges; |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (c) | A statement disclosing the facility's name and business address and the administrator's name and business address. The statement should also disclose that upon request at any time during normal business hours, a resident or a person applying to be a resident must be given a current copy of the annual disclosure statement filed with the Department of Medical Assistance. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (d) | Notice of right of access to the written policies and procedures of the facility adopted pursuant to .02(1) of these rules and regulations during normal business hours; |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (e) | The right to select at admission, or to change at any time, the pharmacy or pharmacist of the resident's choice for those pharmaceutical supplies and services not provided as a part of the facility's basic rate. If the facility uses a specific type of unit dose drug system, any pharmacy or pharmacist chosen by the resident must be able to provide pharmaceuticals under such a system. Such notice at the time of admission shall also include a list of which pharmaceutical supplies and services are not provided by the facility. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (3) | Provisions of these rules and regulations  shall apply to current as well as future residents. |
+| --- | ---------------------------------------------------------------------------------------------- |
+
+## [Rule 111-8-50-.04 Citizenship and Personal Choice](https://rules.sos.ga.gov/gac/111-8-50-.04 "111-8-50-.04")
+
+Residents shall be free from any duty to perform services for
+ the facility and must be permitted to exercise all rights of citizenship and of
+ personal choice in accordance with the following:
+
+| (a) | All residents legally eligible to vote  must be permitted to vote in all primary, special and general elections and in  referenda. If requested by the resident, the facility must assist in obtaining  voter registration forms, applications for absentee ballots and in obtaining  such ballots and assist the resident in meeting all other legal requirements in  order to be able to vote. The facility shall not interfere with nor attempt to  influence the actual casting of the resident's vote. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (b) | All residents must be free to practice  their religion and religious beliefs as they choose.  <br>All residents must also be free from the imposition, by the  facility or any of its employees, of any religious beliefs and practices if  they so choose. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (c) | All  residents must be free to associate, meet and communicate in private with  persons of the resident's choice. Residents must be permitted to participate in  social, familial, religious, and community group activities of their choice  either on or off of the facility grounds, provided that if such event occurs  off the facility grounds, the right to leave the facility shall be subject to  .10 of these rules and regulations. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (d) | All residents shall be permitted (subject  to .10 of these rules and regulations) to rise and retire at any time of their  choice, provided the resident does not interfere with the rights of  others. |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (e) | Subject to applicable  state law and the written policies of the facility given and explained to the  resident, guardian and/or representative at the time of admission, all  residents must be permitted to use tobacco and to consume alcoholic beverages,  as long as the resident does not interfere with the rights of others. This  right is subject to .10 of these rules and regulations. Residents shall be  notified 30 days in advance of any change in the facility's policies affecting  the use of tobacco or consumption of alcoholic beverages; |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (f) | Subject to .10 of these rules and  regulations, all residents must be free to enter and leave the facility grounds  as the resident chooses. If the facility desires, as stated in its written  policies, it may require a resident to inform the facility at the times he is  leaving and re-entering the facility grounds. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (g) | The facility must have visiting hours of  at least 12 continuous hours in any 24-hour period, seven days a  week. |
+| --- | ----------------------------------------------------------------------------------------------------------------- |
+
+- (h) Visitors must be granted
+ access to residents during normal visiting hours provided that each visitor
+ entering a facility promptly discloses his presence and identifies himself to
+ the person in charge and enters the immediate living quarters of a resident
+ only after identifying himself and receiving permission to enter. Place of
+ visitation shall be any place of the resident's choice so long as it does not
+ disrupt the normal operation of the facility or disturb the other residents.
+ Residents may terminate visits at any time. The person in charge may refuse a
+ visitor access or require such a visitor to leave only if:
+
+| 1. | The person in charge has reason to believe that the presence of such visitor would result in severe harm to a resident's health, safety or property; or |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| 2. | Access is sought for financial solicitation or commercial purposes; or |
+| --- | ----------------------------------------------------------------------- |
+
+| 3. | A resident does not wish such visitor to stay. If access by a visitor is denied, the person in charge shall document such denial, along with the reasons therefore. This section does not limit the power of any public agency, ombudsman, persons from federally mandated advocacy programs, or other persons permitted or required by state or federal law to enter or inspect a facility. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (i) | Residents must be permitted to form  resident councils to address any issues they may feel are appropriate or for  other purposes and to meet without staff, if residents so desire. The facility  must provide sufficient space for meetings of such resident councils and shall  assist in attending such meetings those residents who request such assistance.  The facility shall not compel the attendance of any residents at such  meetings. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (j) | Each resident must be  permitted to voice complaints and recommend changes in policies, procedures,  and services to the administrator, his or her designee, or the residents'  counsel. |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+## [Rule 111-8-50-.05 Privacy](https://rules.sos.ga.gov/gac/111-8-50-.05 "111-8-50-.05")
+
+All residents shall enjoy privacy in their rooms and in their
+ portions of any room which they share.
+
+| (a) | Staff shall not enter a resident's room  without first making their presence known before entering unless such staff  member has reason to believe that the resident is asleep or it is an emergency  which threatens the health or safety of the resident or unless it is required  by the resident's care plan and documented in said plan. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (b) | A resident shall be entitled to an  available private room and a personal sitter if the resident pays the  difference between the facility's charge for such a room and/or sitter and the  amount reimbursed through Medicaid or Medicare provided that this provision is  not prohibited by overriding Federal law or regulations. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (c) | A resident shall have the right to visit  privately with the resident's spouse. A resident and spouse shall be permitted  to share a room if both are residents of the facility and space  permits. |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (d) | Residents shall enjoy  the right of freedom from eavesdropping, and the right to unimpeded, private  and uncensored communication with anyone of the resident's choice by mail,  telephone and visit. The administrator shall provide that mail is received and  mailed on regular postal days. Public telephones must be available and  accessible to residents, including those in wheelchairs, and must permit and be  conducive to private conversation. Residents shall have the right to refuse any  telephone call or correspondence. Such refusal shall be documented in the  resident's file. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (e) | The facility  must provide at least one place for private visitation during normal visiting  hours. This place must be provided in addition to the residents'  rooms. |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+## [Rule 111-8-50-.06 Management of Personal Property and Financial Affairs](https://rules.sos.ga.gov/gac/111-8-50-.06 "111-8-50-.06")
+
+| (1) | Each resident must be permitted to retain  and use his/her personal property in his/her immediate living quarters subject  to space limitations and state and federal safety laws and  regulations. |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+- (2) Upon request, the
+ facility shall provide a means of securing the resident's property in his/her
+ room or another convenient location in the facility, subject to the following:
+
+| (a) | The resident must have access to the secured items at least during all normal business hours and where facility policy allows, on weekends and holidays; |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (b) | The facility shall keep an updated written record of all personal belongings which a resident has requested that the facility keep in a secure place. |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (3) | The facility shall have procedures for  investigating complaints and allegations of thefts of residents' property. Such  procedures must provide that the facility promptly investigate complaints of  theft, and the facility report the results of its investigation to the  complainant within two weeks. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (4) | All payments made to or on behalf of a resident, regardless of the source,  shall be used only for the benefit of that resident, unless state or federal  law provides otherwise. |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+- (5) Every
+ resident or guardian shall be permitted to manage his own financial affairs.
+ The facility may establish a personal account, consistent with federal
+ regulations, for each resident at the facility. The resident or guardian may
+ authorize the administrator or designated employee of the facility to help in
+ managing the resident's financial affairs subject to the following:
+
+| (a) | The resident or guardian must authorize the facility in writing to help in the management of all or the part specified of the resident's finances. Such written authorization must be kept in the resident's file; |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (b) | The facility may expend funds for the resident only at the specific written or oral request of the resident or guardian and only for the purpose designated by the resident or guardian. |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (c) | The resident or his guardian shall be given any portion or all of the resident's funds upon request of the resident or guardian. The resident or guardian may authorize in writing a representative to withdraw funds from the resident's account. Such authorization must contain a specific amount permitted to be withdrawn and the date such authorization expires. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (d) | A current written record of all financial arrangements and transactions made to or on behalf of the resident must be maintained by the facility either individually in each resident's file or individually in a separate file for all transactions made to or in behalf of each resident. A resident or guardian shall be permitted to inspect and duplicate at cost such current record for that resident. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (e) | The facility shall issue to each resident or guardian a written quarterly statement, and prior to any change in ownership of the facility, showing the current balance and an itemized listing of all transactions made to or on behalf of the resident. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (6) | Funds received from a resident on his  behalf may be deposited in an interest bearing account. All funds not needed  for the ordinary use by a resident on a daily basis above $150.00 per resident  must be kept in an account insured by agencies of or corporations chartered by  the state or federal government. Such account must clearly show that the  facility has only a fiduciary interest in the funds in such account. All  interest earned upon such account must accrue to the resident, with each  resident being credited with the portion of the interest attributable to his  portion of the account. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (7) | To  guarantee the security of residents' funds, each facility shall obtain an  irrevocable letter of credit from a bank or savings and loan association, as  defined in O.C.G.A. § [7-1-4](https://public.fastcase.com/Jhe1Qn%2bmJndQYQU6z%2feNm3LG4CHknD%2fSCFA4Znt1wdNFiL%2bunZudPh25YVB2bqoytredkwGMjfouDCJcF8TKkw%3d%3d), or purchase a surety bond at  least equal to the amount of all funds in the residents' accounts maintained by  the facility. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+## [Rule 111-8-50-.07 Residential Care and Treatment](https://rules.sos.ga.gov/gac/111-8-50-.07 "111-8-50-.07")
+
+Each resident must receive care, treatment and services which
+ are adequate and appropriate for the condition of the resident, as determined
+ by periodic review of each resident's treatment plan. Such care, treatment, and
+ services must be provided with reasonable care and skill and in compliance with
+ all applicable laws and regulations and with the goal of the resident's return
+ home or to a less restrictive environment.
+
+| (a) | The quality of a particular service or  treatment must be the same to all residents without regard to the source of  payment for such service or treatment. In particular, the quality of care  provided to a resident whose care is being paid for from Medicaid or Medicare  funds must be that same quality of care provided to those residents whose care  is being paid for from other sources. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+- (b) Care, treatment and services must be
+ provided with respect for the resident's personal dignity and privacy subject
+ to the following:
+
+| 1. | All aspects of a resident's medical, personal and bodily care program shall be conducted in private and kept confidential. Any persons not directly involved in the particular aspect of care being provided to a resident must have the resident's permission to be present at the time that component of the resident's care is being provided; |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| 2. | A resident's personal and medical records must be kept confidential. Only the resident or guardian may approve the release or disclosure of such records to persons or agencies outside the facility which must be in writing, unless it is a case of the resident's transfer to another health care facility or during Medicare, Medicaid, licensure, medical care foundation, or peer review surveys, or as otherwise provided by law or third-party payment contract; |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| 3. | Each resident or guardian shall have the right of access to all information in the medical and personal records of that resident and to have given to him by the physician a complete and current explanation of his medical diagnosis, treatment and prognosis in language the resident can understand. Each resident or guardian shall have the right to inspect and receive a copy of such records unless said right is suspended in accordance with .10 of these rules and regulations. The facility may charge a reasonable fee for duplication of the medical records, not to exceed actual cost. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (c) | Each resident  or guardian shall be entitled to choose or change at any time the resident's  physician(s). A physician so chosen shall inform the resident in advance  whether or not the physician's fees can be paid for by Medicaid, Medicare, or  from any other public or private benefits and agree to and provide  documentation to any third party payor as required by law, regulations or  contract. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (d) | The resident or  guardian shall be entitled to participate in the development of the resident's  care plan and in the provision of treatment under the plan. The resident or  guardian shall be informed of the right to participate in the planning of care  and treatment each time a substantial change in the treatment is  needed. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (e) | A resident shall not  take part in any experimental research or be the recipient of any experimental  treatment unless informed written consent (consistent with O.C.G.A. § [31-9-1](https://public.fastcase.com/Jhe1Qn%2bmJndQYQU6z%2feNm%2bugBOwwvMZZaognCxaQljGiSZr%2bzLFYHliuKPaaAkRydkVFTeyrxwTMFApyZdTTCQ%3d%3d)*et seq.*) is  given by the resident or guardian. Such written consent shall be made a part of  the resident's medical record. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (f) | Subject to the resident's choice of pharmacy or pharmacist, pursuant to  .03(2)(e) of these rules and regulations, each resident shall receive  pharmaceutical supplies and services at reasonable prices not exceeding  applicable and normally accepted prices for comparably packaged pharmaceutical  supplies and services within the community. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+## [Rule 111-8-50-.08 Refusal of Medical Treatment, Dietary Restrictions and Medications](https://rules.sos.ga.gov/gac/111-8-50-.08 "111-8-50-.08")
+
+Each resident or guardian shall have the right to refuse any
+ aspect of medical treatment, dietary restriction or any medication, subject to
+ the following:
+
+| (a) | When a resident or  guardian makes such refusal such person shall be notified by the appropriate  facility staff person or physician of the immediate and possible long-term  consequences of the refusal. The refusal shall be documented in the resident's  record as shall the possible consequences of the refusal, and the resident's  physician shall be notified as soon as practical. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+- (b) If such refusal would result in serious
+ injury, illness or death, the facility shall:
+
+| 1. | Promptly notify the resident's physician and if serious injury, illness or death is imminent, transport the resident to a hospital; and |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+
+| 2. | Notify the resident's guardian, representative or responsible family member in that order of priority as specified in O.C.G.A. § [31-9-2](https://public.fastcase.com/Jhe1Qn%2bmJndQYQU6z%2feNm%2fArscioO1trVEkoz6YvV8KCsRnZosfdaYj0NtxDoI0y5tauriczM4%2fHF7V6Vakt2Q%3d%3d) or if no such persons are immediately available, notify the director of the County Department of Family and Children Services or his designee. The director or designee shall document such notification and take appropriate protective measures. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (c) | If such refusal would result  in injury, illness or death to any other person, such resident or guardian  shall not enjoy this right of refusal. The likelihood of injury, illness, or  death to any other person must be documented in the resident's records by the  resident's physician. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (d) | Any  facility or employee of a facility acting in accordance with this section shall  be immune from all liability resulting from such refusal in accord with Ga.  Code Ann; 88-1914B. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+## [Rule 111-8-50-.09 Use of Restraints, Isolation and Restrictions](https://rules.sos.ga.gov/gac/111-8-50-.09 "111-8-50-.09")
+
+Each resident must be free from actual or threatened physical
+ restraints, isolation or restrictions on mobility within or outside the
+ facility grounds, including the use of drugs to limit mobility, activity and
+ functional capacity or the use of any other restrictions, except to the minimum
+ extent necessary to protect the resident from immediate injury to the resident
+ or to any other person. Restraints are defined to include, but not limited to,
+ any contrivance, situation, safety device, or medication that has the
+ purposeful or incidental effect of restricting a resident's mobility within or
+ outside of the facility grounds. All authorization and use of restraints,
+ restrictions, or isolation must be documented in the resident's medical
+ file.
+
+| (a) | Restraints, restrictions, or  isolation may not be used for punishment, incentive, behavior conditioning or  modification, convenience of the facility or any purpose other than to protect  the resident from immediate injury to himself or to any other person. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+- (b) Except in an emergency situation
+ described in subsection (c) of this rule, below, restraints, restrictions, or
+ isolation must be authorized as follows:
+
+| 1. | Prior to authorizing restraints, restrictions, or isolation, the attending physician shall make a personal examination and individualized determination that such restraint, restriction, or isolation is necessary to protect the resident or other persons from immediate injury; and |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| 2. | The physician shall specify the length of time for which such restraint, restriction, or isolation is authorized. Such authorization may not exceed 65 days for intermediate care home residents or 35 days for skilled nursing home residents, but in no event shall such restraint, restriction, or isolation be used beyond the period of actual need to protect the resident or other persons from immediate injury. Any period beyond that specified shall be regarded as a new period and all requirements for the use of such restraints, restriction or isolation must be met. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (c) | In an emergency situation severely  threatening the health or safety of the resident or others, restraints,  restrictions, or isolation may be authorized only by the person in charge. In  an emergency situation, restraints, restrictions or isolation may be used only  for 12 hours from the time of onset of the emergency situation. Beyond the  12-hour period, restraints, restrictions, or isolation may not be used unless  it is in accordance with subsection (b) of this rule. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (d) | The resident and guardian or persons  designated by the resident, if any, shall be immediately informed of the need  for such restraints, restrictions or isolation, the reasons for such use, and  the time specified for such use. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (e) | A restrained or isolated resident shall  be monitored by staff at least every hour. A restrained or isolated resident  must be released and exercised every two hours except during normal sleeping  hours. Such activities shall be documented in the resident's record. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (f) | A resident who is restrained, restricted  or isolated pursuant to this section shall retain all other rights and  responsibilities provided by these rules and regulations. |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+## [Rule 111-8-50-.10 Temporary Suspension of Rights](https://rules.sos.ga.gov/gac/111-8-50-.10 "111-8-50-.10")
+
+Convenience to the facility shall not justify the suspension
+ of any rights to individual residents.
+
+- (a) Only the following rights may be
+ temporarily suspended:
+
+| 1. | The right to rise and retire as the resident chooses, pursuant to .04(d) of these rules and regulations; |
+| --- | ---------------------------------------------------------------------------------------------------------- |
+
+| 2. | The right to use tobacco and consume alcoholic beverages, pursuant to .04(e) of these rules and regulations; |
+| --- | -------------------------------------------------------------------------------------------------------------- |
+
+| 3. | The right of access to his own medical records and explanation of condition, treatment and diagnosis, pursuant to .07(b)3 of these rules and regulations; and |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| 4. | The right to enter and leave as desired, pursuant to .04(f) of these rules and regulations. |
+| --- | -------------------------------------------------------------------------------------------- |
+
+- (b) The above rights may be temporarily
+ suspended only after the following:
+
+| 1. | The physician must personally examine the resident and document in the resident's file that the exercise of such right or rights endangers the health or safety of other residents or imposes an immediate and substantial danger to the resident; |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| 2. | Prior to or at the time of such suspension, the resident and guardian or representative if there be no guardian, shall be notified of such suspension, its duration and of the resident's right to meet with legal counsel, ombudsman, family members, his guardian, or any other person of the resident's choice; |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| 3. | If the threatened danger is only to the resident and not to the health or safety to other residents, and the resident has had the reasons for the proposed suspension fully explained to him along with the danger if that right is exercised, the resident's rights shall not be suspended pursuant to this regulation if the resident or guardian understands the danger and insists on the exercise of the right. This fact must be documented in the resident's file. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (c) | A temporary suspension of rights may be  authorized for a maximum of 65 days for residents of intermediate care homes  and for 35 days for residents of nursing homes. In no event shall the  suspension of such right or rights be authorized for a period longer than  actual need. Any additional period shall be considered a new suspension, for  which all provisions and requirements of this section shall be met. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+## [Rule 111-8-50-.11 Transfer and Discharge](https://rules.sos.ga.gov/gac/111-8-50-.11 "111-8-50-.11")
+
+| (1) | In an emergency situation where the  resident or other residents are subject to an imminent and substantial danger  that only immediate transfer or discharge will relieve, the facility may  involuntarily transfer the resident to another health facility. The person in  charge shall document in the resident's file the reasons for such emergency  transfer and shall immediately inform the resident, guardian and other persons  of the resident's choice regarding such transfer and the place where the  resident is to be transferred. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+- (2) In all other situations an involuntary transfer or discharge must be in
+ accordance with any of the following reasons and procedures and only after all
+ other reasonable alternatives to transfer have been exhausted:
+
+| (a) | The resident's physician or, if unavailable, another physician determines that failure to transfer the resident will result in injury or illness to the resident or others. The resident's physician shall be kept informed of actions taken. The attending physician must document that determination in the resident's record. If the basis for the transfer or discharge is the threat of injury or illness to the resident only, the resident cannot be transferred or discharged unless the physician documents in the resident's medical record that such transfer or discharge is not expected to endanger the resident to a greater extent than remaining in the facility; or |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (b) | The facility does not participate in, or voluntarily or involuntarily ceases to operate or participate in the program which reimburses for the resident's care. In the event that a facility voluntarily or involuntarily ceases to operate or participate in the program which reimburses for the resident's care and proposes to transfer or discharge a resident because of that fact, the facility must cooperate fully with and take all reasonable directives from the State Medicaid Agency and the Health Care Financing Administration Regional Office in the implementation of any transfer planning and transfer counseling conducted by these agencies; or |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (c) | Nonpayment of allowable fees has occurred. When a resident has been converted from full or private pay status to Medicaid eligibility due to exhaustion of personal financial resources, nonpayment of allowable fees has not occurred so long as the facility participates in the Medicaid program. Similarly, conversion from Medicare/Medicaid eligibility status does not constitute nonpayment of allowable fees; or |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (d) | The findings of a Medicare or Medicaid medical necessity review determine that the resident no longer requires the level of care presently being provided, subject to the right of the resident to any appeal procedure available to challenge the determination of medical necessity review. Where space permits, the resident must be given the option of staying at the facility, if the facility is certified to provide the new level of care. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (3) | The  facility must give written notice to the resident, guardian or representative,  if there is no guardian, and the resident's physician at least 30 days before  any proposed transfer or discharge is made in accordance with subsections  (2)(a), (2)(b), or (2)(c) of this rule. The written notice must contain the  following information: the reasons for the proposed transfer or discharge; the  effective date of the proposed transfer or discharge; the location or other  facility to which the facility proposes to transfer or discharge the resident;  and notice of the right to a hearing pursuant to the Georgia Administrative  Procedure Act and Section .15 of these rules and regulations, and of the right  to representation by legal counsel. If the resident so desires, the facility  shall also send a copy of such notice to the community ombudsman, or state  ombudsman if there is no community ombudsman. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (4) | If two residents are married and the  facility proposes to transfer one spouse to another facility at a similar level  of care, notice must be given to the other spouse of the right to be  transferred to the same facility if the other spouse makes a request to that  facility in writing. Married residents must be transferred on the same day,  pending availability of accommodations. If also available, that facility shall  place both residents in the same room if the residents so desire. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (5) | In the event of an involuntary transfer  pursuant to subsections (2)(a), (2)(b), or (2)(c) of this rule, the facility  must assist the resident and guardian in finding a reasonably appropriate  alternative placement prior to the proposed transfer or discharge by developing  a plan designed to minimize any transfer stress to the resident. Such plan  shall include counseling the resident, guardian, or representative, regarding  available community resources and informing the appropriate state or social  service organizations, including, but not limited to, the community or state  long-term care ombudsman and assisting in arranging for the transfer. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (6) | In the event that the facility proposes  an involuntary transfer of the resident to another bed in the same facility,  the resident and guardian shall receive 15 days written notice prior to such  change. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (7) | A resident shall be  voluntarily discharged from a facility when the resident or guardian gives the  person in charge notice of the resident's intention to be discharged and the  expected date of departure. In the case of a resident without a guardian, the  facility may not require that the resident be "signed out" or authorized to be  discharged by any person or agency other than the resident. Notice of the  resident's or guardian's intention to be discharged, and the expected and  actual dates of departure shall be documented in the resident's record. If the  resident appears to be capable of living independently of the facility, upon  such discharge, the facility is relieved of any further responsibility for the  resident's care, safety, or well-being. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+- (8) If a resident being voluntarily
+ discharged into the community, appears to be incapable of living independently
+ of the facility, in addition to the requirements under section (7) of this
+ rule, the facility shall also do the following:
+
+| (a) | Notify the Department of Human Services in order to obtain social or protective services for the resident immediately after the facility receives notice of the resident's intention to be discharged; |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (b) | Document such notice to the Department of Human Services in the resident's record along with the resident's notice of intention to be discharged and the expected and actual dates of departure; |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (c) | Upon notice to the Department of Human Services and upon actual discharge of the resident, the facility shall be relieved of any further responsibility for the resident's care, safety, or well-being. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (9) | Each resident transferred from a facility  to a hospital, other health care facility, or trial alternative living  placement shall have the right to return to the facility immediately upon  discharge from the hospital, other health care facility or upon termination of  the trial living placement, provided that the resident has continued to pay the  facility or payment on behalf of the resident by another person or agency has  been provided for the period of the resident's absence. If payment is provided  for the period of absence, the facility shall continue the same room assignment  for such resident. In cases of nonpayment to the facility during such absence,  a resident who requests to return to a facility from a hospital shall be  admitted to the facility to the first bed available, with priority over any  existing waiting list. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (10) | Whenever allowed by the resident's health condition, a resident shall be  provided treatment and care, rehabilitative services, and assistance by the  facility to prepare the resident to return to the resident's home or other  living situation less restrictive than the facility. Upon the request of the  resident, guardian, or representative, the facility shall provide him with  information regarding available resources and inform him of the appropriate  state or social service organizations. |
+| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+## [Rule 111-8-50-.12 Contributions to the Facility](https://rules.sos.ga.gov/gac/111-8-50-.12 "111-8-50-.12")
+
+No resident, resident's family, guardian or representative
+ shall be coerced directly or indirectly into contributing to a resident,
+ facility, staff person, or corporation or agency with any financial interest in
+ the facility.
+
+| (a) | Free will  contributions may be made for general or restricted purposes. When free will  contributions are made by a person for a restricted purpose, such contribution  must be used only for the purpose so designated. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+- (b) When a free will contribution is made, a
+ signed receipt shall be issued to the person making the contribution and shall
+ contain the following information:
+
+| 1. | The name of the person making the contribution; |
+| --- | ------------------------------------------------ |
+
+| 2. | The date the contribution is made; |
+| --- | ----------------------------------- |
+
+| 3. | The amount and type of the contribution; |
+| --- | ----------------------------------------- |
+
+| 4. | The restricted purpose, if any, for which the contribution is intended. |
+| --- | ------------------------------------------------------------------------ |
+
+| (c) | The facility shall keep in a central  file, copies of all receipts issued in accordance with section (b) of this  rule. |
+| --- | ----------------------------------------------------------------------------------------------------------------------- |
+
+## [Rule 111-8-50-.13 Nondiscrimination](https://rules.sos.ga.gov/gac/111-8-50-.13 "111-8-50-.13")
+
+- (1) Each resident
+ or person requesting admission to a facility shall be free from discrimination
+ by the facility through its refusing admission or continued residency on the
+ basis of the resident's or applicant's history or condition of mental or
+ physical disease or disability unless either:
+
+| (a) | Such admission would cause the facility or any resident or applicant to lose eligibility for any state or federal program of financial assistance; or |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (b) | The facility cannot provide adequate and appropriate care, treatment, and services to the resident or applicant due to such disease or disability, provided such exclusion is not contrary to federal or state law and regulation prohibiting such discrimination nor contrary to federal or state law or regulation requiring that care must be provided if the facility participates in a financial program requiring such admittance or continued residency. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (2) | A facility shall not discriminate in the provision of a service to a resident  based upon the source of payment for the service. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------- |
+
+| (3) | No person shall be discriminated against  as to admission or continued residency on the basis of the person's choice of  pharmacy, pharmacist and/or physician. |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (4) | No person shall be discriminated against  as to admission or continued residency and as to care, treatment and services  on the basis of failure or refusal by the resident, guardian or representative  to make contributions to a resident, facility, staff person, or corporation or  agency with a financial interest in a facility. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (5) | No person shall be discriminated against  in any manner whatsoever for exercising any of the rights described in these  rules and regulations, nor shall any form of restraint, interference, or  coercion be used against any person for exercising any of the rights described  in these rules and regulations. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+## [Rule 111-8-50-.14 Grievance Procedure](https://rules.sos.ga.gov/gac/111-8-50-.14 "111-8-50-.14")
+
+Any resident, guardian or representative who believes his
+ rights or, in the case of a guardian or representative, the rights of the
+ resident, have been violated, may present a grievance. The grievance procedure
+ shall be in accordance with the following:
+
+| (a) | The facility shall maintain a  confidential central file of documents and materials pertaining to grievances.  Any resident, guardian or representative shall be free to review any document  or materials pertaining to that resident. All documents and materials  pertaining to grievances shall be available to the Department. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+- (b) To initiate a grievance, the resident,
+ guardian, or representative must submit an oral or written complaint to the
+ administrator or his designee, who, in the event of an oral complaint, shall
+ promptly reduce the substance of the complaint to writing. The administrator
+ shall also promptly act to resolve the complaint. If the complaint is not
+ resolved within three business days, the administrator or designee shall give a
+ written response to the complainant. The content of such response shall
+ include:
+
+| 1. | The names of the complainant and of the person making the written response; |
+| --- | ---------------------------------------------------------------------------- |
+
+| 2. | The date the grievance was commenced and the date of the written response; |
+| --- | --------------------------------------------------------------------------- |
+
+| 3. | A complete description of the complaint; |
+| --- | ----------------------------------------- |
+
+| 4. | The facility's position in regard to the complaint; and |
+| --- | -------------------------------------------------------- |
+
+| 5. | A description of the review and appeal rights including the name and telephone number of the community ombudsman or state ombudsman, if there is no community ombudsman. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+- (c) If the complainant is not satisfied with
+ the resolution or written response of the administrator or designee, he shall
+ submit an oral or written complaint to the community or state ombudsman,
+ pursuant to O.C.G.A. § [31-8-124](https://public.fastcase.com/Jhe1Qn%2bmJndQYQU6z%2feNm%2b8RJ8RiljTFxjQF5%2bgdMze6ZatQoX4NIb3MhIdZACwybeqmi3p60wB5SGBZabDeVw%3d%3d) and [31-8-150](https://public.fastcase.com/Jhe1Qn%2bmJndQYQU6z%2feNm%2fmVsrJ%2bkbH29FDkPEogWviQ3g%2fyHARTw1iZ3TVIB6ZX2Ehkft%2fyBZM9g5pQ5zBNEw%3d%3d) et. seq.
+
+| (d) | If the ombudsman is unable to resolve the  grievance to the complainant's satisfaction within 10 calendar days of  submission to such ombudsman, the complainant may submit the grievance to an  impartial referee, jointly chosen by the administrator or his designee and the  complainant. The referee may be any person who is mutually acceptable to the  complainant and the administrator or designee. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (e) | Within 14 calendar days after the  complainant has requested a hearing before an impartial referee, such hearing  shall be held at a time convenient to the administrator, complainant and  referee and such hearing shall be held at the facility. The complainant and the  administrator may review relevant records and documents, present evidence, call  witnesses, cross-examine witnesses, make oral arguments, and be represented by  any persons of their choice. The referee may ask questions of any person,  review relevant records and documents, call witnesses, and receive other  evidence as appropriate. The referee shall keep a record of the proceedings,  which may be a sound recording. In the event that the complainant and the  administrator/designee cannot agree upon an imparital referee within seven  calendar days after the complainant has requested a referee's hearing, the  complainant shall have the right to an administrative hearing pursuant to .15  of these rules and regulations. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+- (f) Within 72 hours after the hearing before the referee, the referee shall render
+ a written decision, on forms to be provided by the Department. Copies of the
+ decision shall be given to the complainant, to the administrator for filing in
+ the central file for that purpose, and a copy shall be sent to the Department.
+ The decision shall be divided as follows:
+
+| 1. | Contentions of the parties; |
+| --- | --------------------------- |
+
+| 2. | Findings of the relevant and significant facts; |
+| --- | ----------------------------------------------- |
+
+| 3. | Decisions of the referee as to whether a violation of resident's rights has occurred, along with a recommendation to the Department for corrective action and the date by which the correction should be made; and |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| 4. | A complete description of the right and manner in which to appeal the referee's decision in accordance with .15 of these rules and regulations |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+
+| (g) | The decision of the impartial referee  shall be binding upon all the parties unless reversed upon appeal. |
+| --- | --------------------------------------------------------------------------------------------------------- |
+
+| (h) | If a resident or complainant is unable  for any reason to understand any writing or communication pertinent to this  section, such information shall be communicated to him in a manner that takes  into account any communication impairment he may have. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (i) | A resident, guardian or representative  who elects not to proceed under this section shall not be prohibited from  proceeding under .15 or .16 of these rules and regulations. Nothing in these  rules and regulations is meant to modify or diminish any complaint procedure  set up or in operation pursuant to O.C.G.A. § [31-8-80](https://public.fastcase.com/Jhe1Qn%2bmJndQYQU6z%2feNm8Onx1m6W4OAqda2KsoWQaDWPaCERE%2fgzMs%2f7x%2b0AJXadEnR3jgGe2QU5udohaQtiw%3d%3d)*et  seq.* |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+## [Rule 111-8-50-.15 Administrative Hearing](https://rules.sos.ga.gov/gac/111-8-50-.15 "111-8-50-.15")
+
+Any resident, guardian or representative or administrator who
+ is dissatisfied with the decision of the impartial referee or any resident,
+ guardian or representative who is unable to agree upon an impartial referee, or
+ who be believes that any of his rights under these rules and regulations have
+ been violated, shall have the right to request a hearing from the Department
+ pursuant to the Georgia Administrative Procedure Act O.C.G.A. § [50-13-1](https://public.fastcase.com/Jhe1Qn%2bmJndQYQU6z%2feNmwQLipxKm703CiZgF10P3lknO3s8wKGCr4C5IlyeHHiMcrRk7DNg1d3R78Pe%2bApKzA%3d%3d)*et seq.* in
+ conjunction with the statute, Long-term Care Facilities: Residents' Bill of
+ Rights O.C.G.A. § [31-8-125](https://public.fastcase.com/Jhe1Qn%2bmJndQYQU6z%2feNm4NPLV59o9fYYKFJZaUQbuQJWw9h%2fuK1D%2fGVXURpHcYMKt3GGtmhgBkisAaZXGL%2b9Q%3d%3d).
+
+| (a) | The Department is authorized to hold such  hearings and in the cases of an appeal from the decision of a referee, the  Department may hold such hearings by review of the record of the hearing  provided by the referee. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (b) | A  person desiring a hearing under this section may request such a hearing in  writing to the Department. The request shall include the person's name, the  name of the facility and the reason the hearing is requested. The request shall  be mailed or delivered to the Department of Community Health. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (c) | The hearing shall be conducted within 45  calendar days of the receipt by the Department of the request for the hearing.  The Department shall send written notice to the administrator and complainant  confirming the date, time and location (which shall be the facility unless the  resident's medical condition requires a different location) of the hearing.  Except where the ombudsman has been unable to resolve the matter at issue, the  Department shall refer the complaint to the state or community ombudsman for  informal resolution pending the hearing. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (d) | Except in the event of an emergency  situation in which the resident or other residents are subject to imminent and  substantial danger that only immediate transfer will reduce, o except in case  of nonpayment under subsection .11(2)(c), of these rules and regulations, no  transfer shall take place until all appeal rights are exhausted. However, if a  resident is transferred before exhaustion of all appeal rights, such resident  in no way relinquishes any appeal rights under these rules and  regulations. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (e) | Where two or more  residents in a facility allege a common complaint, the Department may, at the  resident's request, schedule a common hearing. |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+
+- (f) The decision of the hearing officer shall
+ be made within 30 calendar days from the date of the hearing and shall be based
+ upon whether or not a violation has been found. The decision shall be divided
+ as follows:
+
+| 1. | The issues to be decided; |
+| --- | -------------------------- |
+
+| 2. | A summary of any actions already taken; |
+| --- | ---------------------------------------- |
+
+| 3. | The contentions of the parties; |
+| --- | -------------------------------- |
+
+| 4. | The findings of the hearing officer including whether a violation has occurred; |
+| --- | --------------------------------------------------------------------------------- |
+
+| 5. | If a violation has occurred, the corrective action to be taken, and the date by which such corrective action shall be taken; and |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------- |
+
+| 6. | The right to appeal the decision to the Superior Court of the county in which the facility is located or as provided otherwise by law. |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+
+| (g) | Upon the failure to correct any violations found within the time specified, the  Department may impose appropriate civil penalties as provided in .16 of these  rules and regulations. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+## [Rule 111-8-50-.16 Enforcement](https://rules.sos.ga.gov/gac/111-8-50-.16 "111-8-50-.16")
+
+Any person or persons aggrieved because a long-term care
+ facility has violated or failed to provide any rights granted under O.C.G.A. § [31-8-100](https://public.fastcase.com/Jhe1Qn%2bmJndQYQU6z%2feNm7Gzv6FpMwFSqm1PdcznpjqdwWSNSU%2fHqe1jPyVd9ldAcpimcxheNberQgxQ6lHRiw%3d%3d)*et seq.* or these rules and regulations shall have a cause of action against such
+ facility for damages and such other relief as the court having jurisdiction of
+ the action deems proper. No person shall be prohibited from maintaining such an
+ action for failure to exhaust any rights to administrative or other relief
+ granted under O.C.G.A. § [31-8-100](https://public.fastcase.com/Jhe1Qn%2bmJndQYQU6z%2feNm7Gzv6FpMwFSqm1PdcznpjqdwWSNSU%2fHqe1jPyVd9ldAcpimcxheNberQgxQ6lHRiw%3d%3d)*et seq.* or these rules and regulations. In addition to all other penalties or remedies
+ that may be imposed by these rules and regulations, or any state or federal
+ law, the Department is authorized to impose civil penalties as follows:
+
+- (a) If a violation has occurred, the
+ Department shall order the facility to correct such violation by a specified
+ date. It shall be presumed for the purposes of this section that a violation
+ has occurred when any of the following findings are made:
+
+| 1. | An impartial referee has rendered a decision pursuant to subsection .14(f)3 that a violation has occurred and such finding is not reversed upon appeal; or |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+
+| 2. | A hearing officer determines pursuant to subsection .15(f) that a violation has occurred and such finding is not reversed upon appeal; or |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+
+- 3. A
+ superior court judge, pursuant to an action under O.C.G.A. § [31-8-126](https://public.fastcase.com/Jhe1Qn%2bmJndQYQU6z%2feNm%2feOVZUc3khbO9YuOV6cBCMhgHo5Uz91bhbRAJRpiGL2Cw%2bKBh2qwSHsYRMrr6frlA%3d%3d), finds that a facility
+ has violated or failed to provide any rights under O.C.G.A. § [31-8-100](https://public.fastcase.com/Jhe1Qn%2bmJndQYQU6z%2feNm7Gzv6FpMwFSqm1PdcznpjqdwWSNSU%2fHqe1jPyVd9ldAcpimcxheNberQgxQ6lHRiw%3d%3d)*et seq.*,
+ and such finding is not reversed upon appeal; or
+
+| 4. | The Department determines in any inspection, required or permitted by law or regulation, that a violation has occurred. |
+| --- | ------------------------------------------------------------------------------------------------------------------------- |
+
+| (b) | If an  impartial referee, hearing officer, superior court judge, or the Department  finds a violation pursuant to section (a) of this rule, the facility shall  correct such violation within the time specified by the Department. If the  facility does not correct the violation within the time specified or within a  reasonable time, as established by the Department, the Department shall have  the power to order the facility to discontinue admitting residents to such  facility until such violation has been corrected. The Department shall have the  authority to visit and inspect the facility to determine if a known or alleged  violation has been corrected. |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+- (c) In cases of violation repeated by a facility under the same license within a
+ 12-month period, the Department may assess a civil penalty not to exceed $75.00
+ per violation for each day in which the violation continues, except that the
+ maximum civil penalty for each violation within a 12-month period shall not
+ exceed $2,500.00. If a facility commits a violation against an individual or
+ group of individuals and commits the same violation within a 12-month period
+ against another individual or group of individuals, such violation shall be
+ considered a repeat violation for the purpose of imposing civil penalties under
+ this section. In imposing such civil penalties, the Department shall consider
+ all relevant factors including, but not limited to:
+
+| 1. | The amount of assessment necessary to insure immediate and continued compliance; |
+| --- | --------------------------------------------------------------------------------- |
+
+| 2. | The character and degree of impact of the violation on the health, safety, and welfare of any resident in the facility; |
+| --- | ------------------------------------------------------------------------------------------------------------------------- |
+
+| 3. | The conduct of the person or facility against whom the citation is issued in taking all feasible steps or procedures necessary or appropriate to comply or to correct the violations; |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+| 4. | Any prior violations by the facility of statutes, regulations, or orders administered, adopted, or issued by the Department. |
+| --- | ------------------------------------------------------------------------------------------------------------------------------ |
+
+- (d) No civil penalty shall be collected by
+ the Department until notice and opportunity for hearing are afforded pursuant
+ to O.C.G.A. § [31-2-8](https://public.fastcase.com/Jhe1Qn%2bmJndQYQU6z%2feNm9nMan5WyXTqa%2fTqsbkNL21pe7KLel2STaLF1Htt8HTnfO%2fkV3k2iMH6dfc2TBo5gQ%3d%3d). Any person or facility
+ subject to a civil penalty is entitled to review pursuant to O.C.G.A. § [50-13-19](https://public.fastcase.com/Jhe1Qn%2bmJndQYQU6z%2feNmyCozViU9VEXFKZrahCFWLNvbtDMtfvCWwUivrRet7%2bCwIZlJsgUBvRj1wMOSSaW3g%3d%3d). Nothing in these
+ regulations shall be construed to preempt any other law or regulations or to
+ deny any rights or remedies which are provided under any other law or
+ regulations.
+
+| (e) | All civil  penalties recovered by the Department shall be paid into the State  Treasury. |
+| --- | ---------------------------------------------------------------------------------------- |
+
+- [Rule 111-8-50-.01 Definitions](https://rules.sos.ga.gov/gac/111-8-50-.01 "111-8-50-.01")
+- [Rule 111-8-50-.02 Administration](https://rules.sos.ga.gov/gac/111-8-50-.02 "111-8-50-.02")
+- [Rule 111-8-50-.03 Notification of Rights](https://rules.sos.ga.gov/gac/111-8-50-.03 "111-8-50-.03")
+- [Rule 111-8-50-.04 Citizenship and Personal Choice](https://rules.sos.ga.gov/gac/111-8-50-.04 "111-8-50-.04")
+- [Rule 111-8-50-.05 Privacy](https://rules.sos.ga.gov/gac/111-8-50-.05 "111-8-50-.05")
+- [Rule 111-8-50-.06 Management of Personal Property and Financial Affairs](https://rules.sos.ga.gov/gac/111-8-50-.06 "111-8-50-.06")
+- [Rule 111-8-50-.07 Residential Care and Treatment](https://rules.sos.ga.gov/gac/111-8-50-.07 "111-8-50-.07")
+- [Rule 111-8-50-.08 Refusal of Medical Treatment, Dietary Restrictions and Medications](https://rules.sos.ga.gov/gac/111-8-50-.08 "111-8-50-.08")
+- [Rule 111-8-50-.09 Use of Restraints, Isolation and Restrictions](https://rules.sos.ga.gov/gac/111-8-50-.09 "111-8-50-.09")
+- [Rule 111-8-50-.10 Temporary Suspension of Rights](https://rules.sos.ga.gov/gac/111-8-50-.10 "111-8-50-.10")
+- [Rule 111-8-50-.11 Transfer and Discharge](https://rules.sos.ga.gov/gac/111-8-50-.11 "111-8-50-.11")
+- [Rule 111-8-50-.12 Contributions to the Facility](https://rules.sos.ga.gov/gac/111-8-50-.12 "111-8-50-.12")
+- [Rule 111-8-50-.13 Nondiscrimination](https://rules.sos.ga.gov/gac/111-8-50-.13 "111-8-50-.13")
+- [Rule 111-8-50-.14 Grievance Procedure](https://rules.sos.ga.gov/gac/111-8-50-.14 "111-8-50-.14")
+- [Rule 111-8-50-.15 Administrative Hearing](https://rules.sos.ga.gov/gac/111-8-50-.15 "111-8-50-.15")
+- [Rule 111-8-50-.16 Enforcement](https://rules.sos.ga.gov/gac/111-8-50-.16 "111-8-50-.16")
+
+Copyright © 2026 Fastcase, Inc - All rights reserved. | [Email Us](<mailto:support@fastcase.com?subject=Rules and Regulations of the State of Georgia>) | 844-838-0769
+END SOURCE 1
+
+SOURCE 2: Georgia Department of Human Services, Division of Aging Services — Long-Term Care Ombudsman Program | https://aging.georgia.gov/programs-and-services/long-term-care-ombudsman-program | source's own date: none stated on page | retrieved: 2026-08-30
+Long-Term Care Ombudsman Program | Georgia Department of Human Services Division of Aging Services
+
+ Skip to main content
+
+ An official website of the State of Georgia.
+
+ How you know
+
+ Language icon
+
+ English
+
+ Organizations
+
+ The .gov means it’s official.
+
+ Local, state, and federal government websites often end in .gov. State of Georgia government websites and email systems use “georgia.gov” or “ga.gov” at the end of the address. Before sharing sensitive or personal information, make sure you’re on an official state website.
+
+ Still not sure?
+
+ Call 1-800-GEORGIA to verify that a website is an official website of the State of Georgia.
+
+ Loading… 
+
+ Georgia.gov logo
+
+ Georgia Department of Human Services
+ Division of Aging Services
+
+ Search
+
+ Close
+
+ Menu
+
+ Main navigation
+
+ About
+
+ Subnavigation toggle for About
+
+ Find an Area Agency on Aging 
+
+ Older Americans Act (OAA)
+
+ Jobs at DAS
+
+ Publications
+
+ Programs & Services
+
+ Subnavigation toggle for Programs & Services
+
+ Adult Guardianship Program (AGP)
+
+ Forensic Special Initiatives Unit (FSIU)
+
+ Home & Community Based Services Program
+
+ Medicare Assistance
+
+ Long-Term Care Ombudsman Program
+
+ Senior Community Service Employment Program (SCSEP)
+
+ Healthy Aging Conference
+
+ Georgia's Aging and Disability Resource Connection
+
+ Report Elder Abuse
+
+ Subnavigation toggle for Report Elder Abuse
+
+ Adult Protective Services (APS)
+
+ About Abuse, Neglect, and Exploitation of At-Risk Adults
+
+ Tools & Resources
+
+ Subnavigation toggle for Tools & Resources
+
+ Dementia Resources
+
+ Mental Health Resources
+
+ Elderly Legal Assistance Program
+
+ Caregiving
+
+ Grandparents Raising Grandchildren
+
+ Aging Network Training
+
+ Get Involved
+
+ Subnavigation toggle for Get Involved
+
+ Aging Careers in Georgia
+
+ Georgia Alzheimer's Disease & Related Dementias State Plan
+
+ Honor a Centenarian
+
+ Senior Hunger
+
+ Volunteer in my Community
+
+ Yellow Dot Program
+
+ Light Up the Holidays
+
+ Georgia's State Plan on Aging
+
+ DHS Home
+
+ Header Utility Narrow
+
+ Search this site
+
+ Enter your keywords
+
+ Popular searches
+
+ Mission Statement
+
+ Organization of the office
+
+ History
+
+ Meeting Requests
+
+ Key Staff
+
+ Duties of the Office
+
+ Event Requests
+
+ Contact
+
+ EBT IVR Temporarily Offline 
+
+ Click here for more information.
+
+ Breadcrumb
+
+ Home
+
+ Programs & Services
+
+ Long-Term Care Ombudsman Program
+
+ Programs & Services
+
+ Adult Guardianship Program (AGP) 
+
+ Forensic Special Initiatives Unit (FSIU) 
+
+ Subnavigation toggle for Forensic Special Initiatives Unit (FSIU)
+
+ Certified At-Risk Adult Crime Tactics Specialist (CACTS) Training 
+
+ Facility At-Risk Adult Crimes Training (FACT) 
+
+ Georgia Abuse Neglect Exploitation (GANE) App 
+
+ FSIU OnDemand eLearning 
+
+ Register for Training 
+
+ Home & Community Based Services Program 
+
+ Subnavigation toggle for Home & Community Based Services Program
+
+ Nutrition and Wellness 
+
+ In-Home Services 
+
+ Caregiver Programs 
+
+ Medicare Assistance 
+
+ Subnavigation toggle for Medicare Assistance
+
+ Medicare Financial Assistance Programs 
+
+ Medicare Preventive Services 
+
+ Request for Medicare Assistance 
+
+ Volunteer Request Form 
+
+ Event Request Form 
+
+ Partnership Request Form 
+
+ Long-Term Care Ombudsman Program 
+
+ Senior Community Service Employment Program (SCSEP) 
+
+ Healthy Aging Conference 
+
+ Georgia's Aging and Disability Resource Connection 
+
+ Subnavigation toggle for Georgia's Aging and Disability Resource Connection
+
+ ADRC Missions and Goals 
+
+ About ADRC 
+
+ Find Local Assistance 
+
+ Frequently Asked Questions 
+
+ Long-Term Care Ombudsman Program
+
+ What is a Long-Term Care Ombudsman?
+A Long-Term Care Ombudsman seeks to improve the quality of life for residents of long-term care facilities. These facilities include nursing homes, personal care homes, and assisted living facilities. In addition, Ombudsmen serve residents who live in community living arrangements (CLAs) and intermediate care facilities for persons with intellectual and developmental disabilities (ICF/IDDs).
+What does an ombudsman do?
+Investigates and works to resolve problems or complaints affecting long-term care facility residents
+Identifies problem areas in long-term care and advocates for change
+Provides information about long-term care and related services
+Promotes resident, family and community involvement in long-term care
+Educates the community about the needs of long-term care residents
+Coordinates efforts with other agencies concerned with long-term care
+Visits long-term care facilities routinely to talk to residents and monitor conditions
+Educates facility staff about resident rights and other issues
+Related Links
+Georgia Ombudsman
+Nursing Home Compare
+How to Get Local Help
+The Office of the State Long-Term Care Ombudsman is administratively attached to the Department of Human Services' Division of Aging Services (DAS). The Office seeks resolution of problems and advocates for the rights of residents of long-term care facilities with the goal of enhancing the quality of life and care for residents. For more information, go to georgiaombudsman.org or call 1-866-552-4464 and select option "5."
+
+ Georgia.gov logo
+
+ Georgia Department of Human Services
+ Division of Aging Services
+
+ Facebook page for Georgia Department of Human Services Division of Aging Services
+
+ X (Twitter) page for Georgia Department of Human Services Division of Aging Services
+
+ Linkedin page for Georgia Department of Human Services Division of Aging Services
+
+ YouTube page for Georgia Department of Human Services Division of Aging Services
+
+ How can we help?
+
+ Call Us
+
+ Toll-Free: (866) 552-4464
+
+ Who to Call Directory
+
+ Message
+
+ Online Form
+
+ Mail
+
+ 47 Trinity Ave. S.W. 
+Atlanta, GA 30334 US
+
+ Hours
+
+ Eastern Time Zone
+
+ Find Resources with a Local Area Agency on Aging
+
+ Area Agencies on Aging
+
+ Work with Us
+
+ Jobs at Division of Aging Services
+
+ Careers in Aging
+
+ Volunteer
+
+ © Georgia.gov
+
+ Accessibility
+
+ Privacy/Security
+
+ Website powered by GovHub
+
+ Human Trafficking Notice
+
+ Georgia Web Analytics
+END SOURCE 2
+
+END OF PACKET — 2 sources
