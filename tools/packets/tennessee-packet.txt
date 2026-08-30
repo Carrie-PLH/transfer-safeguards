@@ -1,0 +1,605 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Tennessee
+SLUG: tennessee
+ASSEMBLED: 2026-08-30
+CAPTURE NOTES: All three sources were retrieved by curl with a browser user-agent. Source 1 is TennCare's fillable notice PDF, extracted with `pdftotext -layout`; the underscore rules, the signature grid and the per-page footer ("TennCare LTSS dev. 09/2014 Rev 02/2026") are the form's own, and the asterisked footnote about physician sign-off sits where the form prints it. Source 2 is a mechanical slice of the Secretary of State's published rule chapter 1200-08-06 (extracted whole with `pdftotext -layout`, then cut from the heading "1200-08-06-.05 ADMISSIONS, DISCHARGES, AND TRANSFERS." to the start of rule .06); the running heads, the page number and the "(Rule 1200-08-06-.05, continued)" line inside that range are the document's own. Source 3 was reduced to text mechanically (tag strip); TennCare's site navigation appears twice in the capture because the page renders both a section menu and a side menu.
+PENDING: The state ombudsman's own transfers-and-discharges FAQ at tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/transfers-and-discharges-faq.html, which returned HTTP 404 at the path found; the Commission on Disability and Aging's own published contact page for the Office of the State Long-Term Care Ombudsman, not captured — the ombudsman contacts in this packet are the ones TennCare prints on Source 1; TennCare's own appeal form, named by Source 3 as "the Appeal Form"; and any first-party statement of a Tennessee Medicaid bed-hold period, which none of these three sources states.
+
+SOURCE 1: Bureau of TennCare, Nursing Home Notice of Involuntary Transfer or Discharge (PDF) | https://www.tn.gov/content/dam/tn/tenncare/documents/NFInvoluntaryDischargeNotice.pdf | source's own date: TennCare LTSS dev. 09/2014 Rev 02/2026 | retrieved: 2026-08-30
+                    Nursing Home Notice of
+               Involuntary Transfer or Discharge
+To the Nursing Home: This notice is for an involuntary discharge or transfer. Fill out this notice
+for the resident you want to move. Give these pages to the resident and to his or her representative.
+Also, send these pages to the TennCare Commissioner’s Designee, State Long Term Care (“LTC”)
+Ombudsman, and the District LTC Ombudsman. The federal rules at 42 C.F.R. § 483.15 give more
+information.
+
+Resident’s Name: __________________________ Medicaid ID (if applicable): ___________________
+
+Resident’s Representative’s Name: _______________________________ Phone: __________________
+Resident’s Representative’s Address: ______________________________________________________
+Name of place where Resident is going (Required): _________________________ Phone: ___________
+Address of place where Resident is going: __________________________________________________
+
+Current Nursing Home and Contact Information:
+Name of Nursing Home: ___________________________________ Contact Person: ________________
+
+Nursing Home Address: _______________________________________ Phone: ___________________
+
+Date Nursing Home Provided Notice: ______________________________________________________
+
+Date the Nursing Home wants to move the Resident: __________________________________________
+A nursing home can move a resident 30 days after it gives this Notice to the resident, unless an appeal is
+pending. The nursing home can move a resident before then if an exception applies. But the nursing
+home must document the exception. The resident can choose to move before the 30 days is up. This is
+up to the resident.
+
+Reason for Discharge or Transfer: (select an option from the below list)
+____ You did not pay your bill from the nursing home. The nursing home told you this. And the nursing
+     home gave you time to pay.
+____ The nursing home is closing.
+____ The nursing home says it cannot care for you. Your needs are too high.*
+____ You got better. And you do not need care in a nursing home now.*
+____ You make the nursing home unsafe for other people.*
+____ You may endanger the health of other people in the nursing home.*
+
+* A doctor must agree if the nursing home checks this box. The doctor must also sign the third page. Or
+the nursing home must attach the doctor’s written order. This could be your doctor – or the doctor at the
+nursing home. Or it could be a nurse practitioner or physician assistant who works for one of these
+doctors.
+
+TennCare LTSS dev. 09/2014 Rev 02/2026
+To the Resident: The nursing home must tell you why they want you to move. Here is what they
+said:_________________________________________________________________________________
+_____________________________________________________________________________________
+____________________________________________________________________________________
+
+You Can Get Help
+You can appeal this. The State will have a hearing for your case. Also, you can get help with your
+appeal. See below. If you ask, the nursing home must help you with this. Talk to the Nursing Home
+Contact Person on the first page. And the nursing home must help you call the people below. You can
+appeal if you don’t agree with the nursing home. If you appeal within 30 days, the nursing home usually
+cannot make you move until you get a decision. The 30 days starts on the day you got this page. But, if
+you do not appeal within 30 days, you must move by the proposed date on the first page.
+
+How to Appeal:
+If you want to appeal, call 1-833-582-1224. Or fax your appeal to 615-734-5317. Or email
+cd.appeals.tenncare@tn.gov. Or write to TennCare’s Office of General Counsel, ATTN: Involuntary NF
+Discharge Appeals, 310 Great Circle Road, Nashville, TN 37243. Make sure to send a copy of these
+pages.
+
+Long-Term Care Ombudsman Information:
+You can ask a resident advocate to help you. This person is the Long-Term Care Ombudsman and their
+services are free and confidential. They can explain this page to you. They can also help you appeal.
+Call 1-877-236-0013. Or write to them at 502 Deaderick Street, Andrew Jackson Building, 9th Floor,
+Nashville, TN 37243-0860. Frequently asked questions about involuntary discharges.
+
+Other Help You Can Get:
+    •   Disability Rights Tennessee: Do you have a mental illness? Do you have an intellectual or
+        developmental disability? And do you need help with the nursing home? Disability Rights
+        Tennessee can help. Call 1-800-342-1660. Or email GetHelp@disabilityrightstn.org. Or write to
+        them at 2 International Plaza, Suite 825, Nashville, TN 37217. Or fax to 615-298-2046.
+    •   Department of Intellectual and Developmental Disabilities. Call 1-800-535-9725. Or email
+        Carmelita.9.Hillsman@tn.gov. Or write to them at Davy Crockett Tower, 2nd Floor, 500 James
+        Robertson Parkway, Nashville, TN 37243.
+    •   TennCare Advocacy Program. Call 1-800-758-1638. Or email TennCareAdvocacy@tncsa.com.
+        Or write to them at 310 Great Circle Road, Nashville, TN 37243.
+
+
+
+
+TennCare LTSS dev. 09/2014 Rev 02/2026
+To the Nursing Home: I gave these completed pages to the Resident:
+________________________________________________   _________________________________   ______________________
+Nursing Home Administrator                         Signature                           Date
+
+________________________________________________   _________________________________   ______________________
+Physician Name (when required)                     Signature                           Date
+
+
+
+To the Resident: I received these pages:
+_____________________________________________      _________________________________   ______________________
+Resident or Representative Name                    Signature                           Date
+
+
+Notice given by the Nursing Home to:
+Resident                                           ____________________ (Date)
+Resident’s Representative                          ____________________ (Date)
+Resident Clinical Record                           ____________________ (Date)
+District LTC Ombudsman                             ____________________ (Date)
+State LTC Ombudsman                                ____________________ (Date)
+TennCare Commissioner’s Designee                   ____________________ (Date)
+Health Facilities Commission                       ____________________ (Date)
+
+To the Nursing Home: Send these pages to the TennCare Commissioner’s Designee, the State
+and District LTC Ombudsman, and the Health Facilities Commission at:
+
+        TennCare’s Commissioner’s Designee at Large
+        ATTN: Involuntary Discharge Appeals- NF
+        310 Great Circle Road- 3W, Nashville, TN 37243
+        P: 833-582-1224
+        Fax: 615-734-5317
+        Email: cd.appeals.tenncare@tn.gov
+
+        State Long-Term Care Ombudsman
+        Tennessee Commission on Disability and Aging
+        ATTN: Teresa Teeple
+        David Crockett Tower, 2nd Floor, 500 James Robertson Parkway, Nashville, TN 37243
+        P: 615-253-5412
+        Fax: 615-741-3309
+        Email: Teresa.Teeple@tn.gov
+        Contact information for each District LTC Ombudsman
+
+         Health Facilities Commission
+         665 Mainstream Drive, 2nd Floor, Nashville, TN 37243
+         P: (615) 741-7532
+         Email: caroline.tippens@tn.gov
+
+
+
+TennCare LTSS dev. 09/2014 Rev 02/2026
+
+END SOURCE 1
+
+SOURCE 2: Rules of the Tennessee Department of Health, Chapter 1200-08-06, Standards for Nursing Homes — Rule .05 Admissions, Discharges, and Transfers (excerpt) | https://publications.tnsosfiles.com/rules/1200/1200-08/1200-08-06.20210818.pdf | source's own date: August, 2021 (Revised); rule history ends amendment filed April 17, 2007, effective July 1, 2007 | retrieved: 2026-08-30
+1200-08-06-.05 ADMISSIONS, DISCHARGES, AND TRANSFERS.
+
+      (1)   Every person admitted for care or treatment shall be under the supervision of a physician
+            who holds a license in good standing to practice in Tennessee. The name of the resident’s
+            attending physician shall be recorded in the resident’s medical record. The nursing home
+            shall not admit the following types of residents:
+
+            (a)   Persons who pose a clearly documented danger to themselves or to other residents in
+                  the nursing home.
+
+            (b)   Children under fourteen (14) years of age, except when the department has approved
+                  the admission of a specific child.
+
+            (c)   Persons for whom the nursing home is not capable of providing the care ordered by the
+                  attending physician. Documentation of the reason(s) for refusal of the admission shall
+                  be maintained.
+
+      (2)   A diagnosis must be entered in the admission records of the nursing home for every person
+            admitted for care or treatment.
+
+      (3)   Prior to the admission of a resident to a nursing home or prior to the execution of a contract
+            for the care of a resident in a nursing home (whichever occurs first), each nursing home shall
+            disclose in writing to the resident or to the resident’s guardian, conservator or representative,
+            if any, whether the facility has liability insurance and the identity of the primary insurance
+            carrier. If the facility is self-insured, their statement shall reflect that fact and indicate the
+            corporate entity responsible for payment of any claims.
+
+      (4)   Any residential facility licensed by the board of licensing health care facilities shall upon
+            admission provide to each resident the division of adult protective services’ statewide toll-free
+            number: 888-277-8366.
+
+      (5)   Facilities utilizing secured units must be able to provide survey staff with twelve (12) months
+            of the following performance information specific to the secured unit and its residents:
+
+            (a)   Documentation that each secured resident has been evaluated by an interdisciplinary
+                  team consisting of at least a physician, a social worker, a registered nurse, and a family
+                  member (or patient care advocate) prior to admittance to the unit;
+
+            (b)   Ongoing and up-to-date documentation of quarterly review by each resident’s
+                  interdisciplinary team as to the appropriateness of placement in the secured unit;
+
+            (c)   A current listing of the number of deaths and hospitalizations with diagnoses that have
+                  occurred on the unit;
+
+            (d)   A current listing of all unusual incidents and/or complications on the unit;
+
+            (e)   An up-to-date staffing pattern and staff ratios for the unit is recorded on a daily basis.
+                  The staffing pattern must ensure that there is a minimum of one (1) attendant, awake,
+
+
+
+August, 2021 (Revised)                               16
+STANDARDS FOR NURSING HOMES                                                             CHAPTER 1200-08-06
+
+(Rule 1200-08-06-.05, continued)
+                 on duty, and physically located on the unit twenty-four (24) hours per day, seven (7)
+                 days per week at all times;
+
+           (f)   A formulated calendar of daily group activities scheduled including a resident
+                 attendance record for the previous three (3) months;
+
+           (g)   An up-to-date listing of any incidences of decubitus and/or nosocomial infections,
+                 including resident identifiers; and,
+
+           (h)   Documentation showing that 100% of the staff working on the unit receives and has
+                 received annual in-service training which shall include, but not be limited to the
+                 following subject areas:
+
+                 1.      Basic facts about the causes, progression and management of Alzheimer’s
+                         Disease and related disorders;
+
+                 2.      Dealing with dysfunctional behavior and catastrophic reactions in the residents;
+
+                 3.      Identifying and alleviating safety risks to the resident;
+
+                 4.      Providing assistance in the activities of daily living for the resident; and,
+
+                 5.      Communicating with families and other persons interested in the resident.
+
+     (6)   The facility shall ensure that no person on the grounds of race, color, national origin, or
+           handicap, will be excluded from participation in, be denied benefits of, or otherwise subjected
+           to discrimination in the provision of any care or service of the facility. The facility shall protect
+           the civil rights of residents under the Civil Rights Act of 1964 and Section 504 of the
+           Rehabilitation Act of 1973.
+
+     (7)   Any admission in excess of the licensed bed capacity is prohibited except when an
+           emergency admission is directed by the department.
+
+     (8)   No resident shall be discharged without a written order from the attending physician or
+           through other legal processes and timely notification of next of kin and/or sponsor or
+           authorized representative, if any. Each nursing home shall establish a policy for handling
+           patients who wish to leave against medical advice.
+
+     (9)   When a resident is discharged, a brief description of the significant findings and events of the
+           resident’s stay in the nursing home, the condition on discharge and the recommendation and
+           arrangement for future care, if any, shall be provided.
+
+     (10) No resident shall be transferred without a written order from the attending physician or
+          through other legal processes and timely notification of next of kin and/or sponsor or
+          authorized representative, if any.
+
+     (11) When a resident is transferred, a summary of treatment given at the nursing home, condition
+          of the resident at time of transfer and date and place to which he is transferred shall be
+          entered in the record. If the transfer is due to an emergency, this information will be recorded
+          within forty-eight (48) hours, otherwise, it will precede the transfer of the resident.
+
+     (12) When a resident is transferred, a copy of the clinical summary shall, with consent of the
+          resident, be sent to the nursing home that will continue the care of the resident.
+
+     (13) Where an involuntary transfer is proposed, in addition to any other relevant factors, the
+          following factors shall be taken into account:
+
+
+
+August, 2021 (Revised)                                17
+STANDARDS FOR NURSING HOMES                                                        CHAPTER 1200-08-06
+
+(Rule 1200-08-06-.05, continued)
+
+            (a)   The traumatic effect on the resident.
+
+            (b)   The proximity of the proposed nursing home to the present nursing home and to the
+                  family and friends of the resident.
+
+            (c)   The availability of necessary medical and social services at the proposed nursing
+                  home.
+
+            (d)   Compliance by the proposed nursing home with all applicable Federal and State
+                  regulations.
+
+      (14) When the attending physician has ordered a resident transferred or discharged, but the
+           resident or a representative of the resident opposes the action, the nursing home shall
+           counsel with the resident, the next of kin, sponsor and representative, if any, in an attempt to
+           resolve the dispute and shall not transfer the resident until such counseling has been
+           provided. No involuntary transfer or discharge shall be made until the nursing home has first
+           informed the department and the area long-term care ombudsman. Unless a disaster occurs
+           on the premises or the attending physician orders the transfer as a medical emergency (due
+           to the resident’s immediate need for a higher level of care) no involuntary transfer or
+           discharge shall be made until five (5) business days after these agencies have been notified,
+           unless they each earlier declare that they have no intention of intervening.
+
+      (15) Except when the Board has revoked or suspended the license, a nursing home which intends
+           to close, cease doing business, or reduce its licensed bed capacity by ten percent (10%) or
+           more shall notify both the department and the area long-term care ombudsman at the earliest
+           moment of the decision, but not later than thirty (30) days before the action is to be
+           implemented. The facility shall establish a protocol, subject to the department’s approval, for
+           the transfer or discharge of the residents. Should the nursing home violate the provisions of
+           this paragraph, the department shall request the Attorney General of the State of Tennessee
+           to intervene to protect the residents, as is provided by T.C.A. § 68-11-213(a).
+
+Authority: T.C.A. §§ 4-5-202, 4-5-204, 68-11-201, 68-11-202, 68-11-204, 68-11-206, 68-11-209, 68-11-
+257, and 71-6-121. Administrative History: Original rule filed March 27; effective April 25, 1975. Repeal
+and new rule filed July 14, 1983; effective August 15, 1983. Repeal and new rule filed January 31, 2000;
+effective April 15, 2000. Amendment filed April 10, 2000; effective June 24, 2000. Amendment filed
+February 23, 2007; effective May 9, 2007. Amendment filed April 17, 2007; effective July 1, 2007.
+
+
+END SOURCE 2
+
+SOURCE 3: Bureau of TennCare, Involuntary Discharge and Transfer Appeals | https://www.tn.gov/tenncare/long-term-services-supports/involuntary-discharge-and-transfer-appeals.html | source's own date: none stated on page | retrieved: 2026-08-30
+Involuntary Discharge and Transfer Appeals
+
+ Skip to Main Content
+
+ Go to TN.gov
+
+ Go to TN.gov
+
+ Section
+
+ Go to TennCare
+
+ Members & Applicants
+
+ Learn More & Apply
+
+ Benefits & Services
+
+ Need Help?
+
+ Providers
+
+ Provider Registration
+
+ Verify Eligibility
+
+ Dental Providers
+
+ Managed Care Contractors (MCCs)
+
+ Programs and Facilities
+
+ Report Provider Fraud
+
+ TennCare Provider News, Notices & Forms
+
+ Training and Education
+
+ Contact Us
+
+ Policy & Guidelines
+
+ Cost-Effective Alternative Prior Authorization Form
+
+ Eligibility Policy
+
+ Information Systems Policies
+
+ Mental Health Parity
+
+ Policies
+
+ Privacy Policies
+
+ State Plan
+
+ TennCare 1115 Demonstration
+
+ TennCare 1915(c) HCBS Waivers
+
+ TennCare Rules
+
+ Waiver and State Plan Public Notices
+
+ Long-Term Services & Supports
+
+ Dual Eligible Special Needs Plan (D-SNP)
+
+ CHOICES
+
+ How to Apply?
+
+ Employment and Community First CHOICES
+
+ 1915(c) HCBS Waivers
+
+ Member Resources
+
+ LTSS Contact Information
+
+ PACE
+
+ Katie Beckett Waiver
+
+ Involuntary Discharge and Transfer Appeals
+
+ Beneficiary Support System
+
+ LTSS Documents- Memos, Forms, Protocols, Trainings, Historical
+
+ Media
+
+ Contact Us
+
+ Print This Page
+
+ Print This Page
+
+ Go to Search
+
+ For information on important changes to D-SNP, please visit our D-SNP page.
+
+ Please see the Privacy Announcements page for updates on current incidents impacting TennCare members.
+
+ Long-Term Services & Supports
+
+ Dual Eligible Special Needs Plan (D-SNP)
+
+ Tennessee D-SNP Options
+
+ D-SNP Resource
+
+ CHOICES
+
+ How to Apply?
+
+ Employment and Community First CHOICES
+
+ 1915(c) HCBS Waivers
+
+ Member Resources
+
+ LTSS Contact Information
+
+ PACE
+
+ Katie Beckett Waiver
+
+ System Transformation- WFD, MFP, VBP
+
+ E-Badge Academy
+
+ Involuntary Discharge and Transfer Appeals
+
+ Beneficiary Support System
+
+ LTSS Documents- Memos, Forms, Protocols, Trainings, Historical
+
+ LTSS Quality and Accountability
+
+ Report an Issue
+
+ Provider Agency Information for Hiring Family Caregivers
+
+ Inclusive Internship Opportunities 
+
+ Involuntary Discharge and Transfer Appeals
+
+ What is an Involuntary Transfer or Discharge?
+
+Any transfer or discharge of a resident that is initiated by a Medicare skilled nursing facility or a Medicaid nursing facility.
+Involuntary Transfers and Discharges are governed by 42 CFR § 483.15.
+
+Nursing Facilities must give written notice to the resident (sample Involuntary Discharge Notice).
+
+Can I Appeal an Involuntary Transfer or Discharge?
+
+Yes. Pursuant to 42 CFR § 431.220(a)(2), any resident in a Medicare skilled nursing facility or a Medicaid nursing facility can request an appeal if he or she believes a facility has erroneously determined that he or she must be transferred or discharged.
+The appeal can be filed by the resident, their family or other representative.
+
+How Do I Appeal?
+
+You can appeal by phone, fax, email or mail.
+Toll Free Phone: 833-582-1224
+
+Fax: 615-734-5317
+
+Email: cd.appeals.tenncare@tn.gov
+
+Mail: TennCare’s Commissioner’s Designee ATTN: Involuntary NF Discharge Appeals 310 Great Circle Road, Nashville, TN 37243
+
+You can use the Appeal Form or you can write your appeal on plain paper, but be sure to include:
+Resident’s Name and Phone Number
+
+Resident’s Representative and Phone Number, if applicable
+
+Facility Name
+
+Provide a copy of the discharge notice from the facility
+
+What Happens Next?
+
+After an appeal has been submitted, you will receive written confirmation that your appeal was filed. If the appeal was timely filed, a contested case hearing will be held and a written decision will be issued on the involuntary discharge. The hearing will be conducted pursuant to the Uniform Administrative Procedures Act at Tenn. Code Ann. §§ 4-5-301 – 325.
+
+Where Can I Get More Information?
+
+42 CFR § 483.15 (eCFR)
+
+TennCare Long-Term Care Rules
+
+Long-Term Care Ombudsmen
+
+Disability Rights Tennessee
+
+ Social Media
+
+ facebook
+
+ twitter
+
+ youtube
+
+ instagram
+
+ linkedin
+
+ Stay Informed
+
+ Proposed Medical Necessity Rule Changes
+
+ Katie Beckett Program
+
+ Preparing for Renewals
+
+ Need Language help?
+
+ Upcoming Procurements
+
+ 1095-B Health Coverage Tax Document
+
+ Reimbursement Information for RHC and FQHC Providers
+
+ Legal
+
+ Estate Recovery
+
+ TennCare Forms and Agreements
+
+ Privacy Policies
+
+ HIPAA Privacy Information
+
+ TennCare Public Records
+
+ Subrogation
+
+ Civil Rights Notice
+
+ Fraud and Abuse
+
+ Program Integrity
+
+ Quick Links
+
+ Deputy Commissioner
+
+ Eligibility Reference Guide
+
+ Enrollment Data
+
+ kidcentral tn
+
+ Site Map (xml)
+
+ TennCare
+
+ Stephen Smith
+
+ 310 Great Circle Rd.
+
+ Nashville, TN 37243
+
+ 1-800-342-3145
+
+ Tenn.Care@tn.gov
+
+ Flag Status
+
+ Help
+
+ Translate
+
+ Font Size
+
+ a-
+
+ Normal
+
+ A+
+
+ TN.gov Services
+
+ TN.gov Directory
+
+ Web Policies
+
+ About Tennessee
+
+ Title VI
+
+ Accessibility
+
+ Help & Contact
+
+ Survey
+
+ Close
+END SOURCE 3
+
+END OF PACKET — 3 sources

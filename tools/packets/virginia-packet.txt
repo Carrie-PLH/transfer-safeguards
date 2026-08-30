@@ -1,0 +1,973 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Virginia
+SLUG: virginia
+ASSEMBLED: 2026-08-30
+CAPTURE NOTES: All three sources were retrieved by curl with a browser user-agent. Sources 1 and 3 were reduced to text mechanically (tag strip over the served document); Virginia's law site runs each section heading straight into the first sentence with no separator, which is the site's own markup, and the DARS page's navigation and footer are left in the capture as the extractor produced it. Source 2 is a PDF, extracted with `pdftotext -layout`; the appeals-contact block prints as a five-column table whose cells the extractor renders on one line, and the bullet glyphs in the rights lists did not survive extraction and appear as leading spaces.
+PENDING: 12VAC5-371, the Department of Health's nursing home regulations, which state resident rights by reference to §§ 32.1-138 and 32.1-138.1 — not captured. Also pending: a Virginia statement of the notice's required contents; § 32.1-138.1 states the period and the consultation duty but does not enumerate what the written notice must say, and no Department of Health or DMAS statement of the contents was captured. Also pending: any published statewide telephone contact for the Office of the State Long-Term Care Ombudsman — Source 3 publishes a locator ("Find Your Ombudsman") and the department's own main number, not a program number; and any first-party statement of a Virginia Medicaid bed-hold period.
+
+SOURCE 1: Code of Virginia, Title 32.1, Chapter 5, Article 2 — Rights and Responsibilities of Patients in Nursing Homes (§§ 32.1-137.01 through 32.1-138.6) | https://law.lis.virginia.gov/vacodefull/title32.1/chapter5/article2/ | source's own date: sections carry their own enactment lines; § 32.1-138.1 ends 1987, c. 221; 1993, c. 692 | retrieved: 2026-08-30
+Code of Virginia Code - Article 2. Rights and Responsibilities of Patients in Nursing Homes
+
+ Virginia General Assembly /
+
+ LIS Learning Center /
+
+ Privacy Policy /
+
+ LIS home /
+
+ Register Account /
+
+ Login
+
+ Session Information
+
+ Bills & Resolutions
+
+ State Budget
+
+ Virginia Law
+
+ Reports to the General Assembly
+
+ Virginia Law
+
+ Select Search Type
+
+ All
+ Code of Virginia
+ Administrative Code
+ Constitution
+ Charters
+ Authorities
+ Compacts
+ Uncodified Acts
+
+ Code of Virginia
+
+ Table of Contents » Title 32.1. Health » Chapter 5. Regulation of Medical Care Facilities and Services » Chapter 5. Regulation of Medical Care Facilities and Services » Article 2. Rights and Responsibilities of Patients in Nursing Homes
+
+ Article 
+
+ Creating a Report: Check the sections you'd like to appear in the report, then use the "Create Report" button at the bottom of the page to generate your report. Once the report is generated you'll then have the option to download it as a pdf, print or email the report.
+
+ Code of Virginia
+Title 32.1. Health
+Chapter 5. Regulation of Medical Care Facilities and Services
+8/30/2026
+
+ Article 2. Rights and Responsibilities of Patients in Nursing Homes.
+§ 32.1-138. Enumeration; posting of policies; staff training; responsibilities devolving on guardians, etc.; exceptions; certification of compliance; nursing home quality and oversight; report.A. The governing body of a nursing home facility required to be licensed under the provisions of Article 1 (§ 32.1-123 et seq.) of this chapter, through the administrator of such facility, shall cause to be promulgated policies and procedures to ensure that, at the minimum, each patient admitted to such facility:
+1. Is fully informed, as evidenced by the patient's written acknowledgment, prior to or at the time of admission and during his stay, of his rights and of all rules and regulations governing patient conduct and responsibilities;
+2. Is fully informed, as evidenced by the patient's written acknowledgment, prior to or at the time of admission and during his stay, of services available in the facility, the terms of such services, and related charges, including any charges for services not covered under Titles XVIII or XIX of the United States Social Security Act or not covered by the facility's basic per diem rate;
+3. Is fully informed in summary form of the findings concerning the facility in federal Centers for Medicare & Medicaid Services surveys and investigations, if any;
+4. Is fully informed by a physician, a physician assistant, or an advanced practice registered nurse of his medical condition unless medically contraindicated as documented by a physician, a physician assistant, or an advanced practice registered nurse in his medical record and is afforded the opportunity to participate in the planning of his medical treatment and to refuse to participate in experimental research;
+5. Is transferred or discharged only for medical reasons, or for his welfare or that of other patients, or for nonpayment for his stay except as prohibited by Titles XVIII or XIX of the United States Social Security Act, and is given reasonable advance notice as provided in § 32.1-138.1 to ensure orderly transfer or discharge, and such actions are documented in his medical record;
+6. Is encouraged and assisted, throughout the period of his stay, to exercise his rights as a patient and as a citizen and to this end may voice grievances and recommend changes in policies and services to facility staff and to outside representatives of his choice, free from restraint, interference, coercion, discrimination, or reprisal;
+7. May manage his personal financial affairs, or may have access to records of financial transactions made on his behalf at least once a month and is given at least a quarterly accounting of financial transactions made on his behalf should the facility accept his written delegation of this responsibility to the facility for any period of time in conformance with state law;
+8. Is free from mental and physical abuse and free from chemical and, except in emergencies, physical restraints except as authorized in writing by a physician for a specified and limited period of time or when necessary to protect the patient from injury to himself or to others;
+9. Is assured confidential treatment of his personal and medical records and may approve or refuse their release to any individual outside the facility, except in case of his transfer to another health care institution or as required by law or third-party payment contract;
+10. Is treated with consideration, respect, and full recognition of his dignity and individuality, including privacy in treatment and in care for his personal needs;
+11. Is not required to perform services for the facility that are not included for therapeutic purposes in his plan of care;
+12. May associate and communicate privately with persons of his choice and send and receive his personal mail unopened, unless medically contraindicated as documented by his physician in his medical record;
+13. May meet with and participate in activities of social, religious and community groups at his discretion, unless medically contraindicated as documented by his physician, physician assistant, or advanced practice registered nurse in his medical record;
+14. May retain and use his personal clothing and possessions as space permits unless to do so would infringe upon rights of other patients and unless medically contraindicated as documented by his physician, physician assistant, or advanced practice registered nurse in his medical record;
+15. If married, is assured privacy for visits by his or her spouse and if both are inpatients in the facility, is permitted to share a room with such spouse unless medically contraindicated as documented by the attending physician, physician assistant, or advanced practice registered nurse in the medical record; and
+16. Is fully informed, as evidenced by the written acknowledgment of the resident or his legal representative, prior to or at the time of admission and during his stay, that he should exercise whatever due diligence he deems necessary with respect to information on any sexual offenders registered pursuant to Chapter 9 (§ 9.1-900 et seq.) of Title 9.1, including how to obtain such information. Upon request, the nursing home facility shall assist the resident, prospective resident, or the legal representative of the resident or prospective resident in accessing this information and provide the resident, prospective resident, or the legal representative of the resident or prospective resident with printed copies of the requested information.
+B. All established policies and procedures regarding the rights and responsibilities of patients shall be printed in at least 12-point type and posted conspicuously in a public place in all nursing home facilities required to be licensed under the provisions of Article 1 (§ 32.1-123 et seq.) of this chapter. These policies and procedures shall include the name and telephone number of the complaint coordinator in the Division of Licensure and Certification of the Virginia Department of Health, the Adult Protective Services' toll-free telephone number, as well as the toll-free telephone number for the Virginia Long-Term Care Ombudsman Program and any substate ombudsman program serving the area. Copies of such policies and procedures shall be given to patients upon admittance to the facility and made available to patients currently in residence, to any guardians, responsible party as defined in regulation, next of kin, or sponsoring agency or agencies, and to the public.
+C. The provisions of this section shall not be construed to restrict any right that any patient in residence has under law.
+D. Each facility shall provide appropriate staff training to implement each patient's rights included in subsection A hereof.
+E. All rights and responsibilities specified in subsection A hereof and § 32.1-138.1 as they pertain to (i) a patient adjudicated incapacitated in accordance with state law, (ii) a patient who is found, by his physician, to be medically incapable of understanding these rights, or (iii) a patient who is unable to communicate with others shall devolve to such patient's guardian, responsible party as defined in regulation, next of kin, sponsoring agency or agencies, or representative payee, except when the facility itself is representative payee, selected pursuant to section 205(j) of Title II of the United States Social Security Act. The persons to whom such rights and responsibilities have devolved shall be deemed to have legal authority to act on the patient's behalf with respect to the matters specified in this section.
+F. Nothing in this section shall be construed to prescribe, regulate, or control the remedial care and treatment or nursing service provided to any patient in a nursing institution to which the provisions of § 32.1-128 are applicable.
+G. It shall be the responsibility of the Commissioner to insure that the provisions of this section and the provisions of § 32.1-138.1 are observed and implemented by nursing home facilities. Each nursing home facility to which this section and § 32.1-138.1 are applicable shall certify to the Commissioner that it is in compliance with the provisions of this section and the provisions of § 32.1-138.1 as a condition to the issuance or renewal of the license required by Article 1 (§ 32.1-123 et seq.) of this chapter.
+H. The Commissioner shall submit to the Governor and the General Assembly by December 1, 2026, and by December 1 of each year thereafter, a report on recommendations for the continued improvement of nursing home quality and oversight in the Commonwealth.
+Code 1950, § 32-296.1; 1976, c. 349; 1979, c. 711; 1987, c. 221; 1997, c. 801; 1999, c. 783; 2000, c. 177; 2004, c. 855; 2006, c. 396; 2007, cc. 120, 163; 2010, c. 57; 2023, c. 183; 2026, c. 944.
+§ 32.1-138.1. Implementation of transfer and discharge policies.A. To implement and conform with the provisions of subdivision A 4 of § 32.1-138, a facility may discharge the patient, or transfer the patient, including transfer within the facility, only:
+1. If appropriate to meet that patient's documented medical needs;
+2. If appropriate to safeguard that patient or one or more other patients from physical or emotional injury;
+3. On account of nonpayment for his stay except as prohibited by Titles XVIII or XIX of the United States Social Security Act and the Virginia State Plan for Medical Assistance Services; or
+4. With the informed voluntary consent of the patient, or if incapable of providing consent, with the informed voluntary consent of the patient's authorized decision maker pursuant to § 54.1-2986 acting in the best interest of the patient, following reasonable advance written notice.
+B. Except in an emergency involving the patient's health or well being, no patient shall be transferred or discharged without prior consultation with the patient, the patient's family or responsible party and the patient's attending physician. If the patient's attending physician is unavailable, the facility's medical director in conjunction with the nursing director, social worker or another health professional, shall be consulted. In the case of an involuntary transfer or discharge, the attending physician of the patient or the medical director of the facility shall make a written notation in the patient's record approving the transfer or discharge after consideration of the effects of the transfer or discharge, appropriate actions to minimize the effects of the transfer or discharge, and the care and kind of service the patient needs upon transfer or discharge.
+C. Except in an emergency involving the patient's health or well being, reasonable advance written notice shall be given in the following manner. In the case of a voluntary transfer or discharge, notice shall be reasonable under the circumstances. In the case of an involuntary transfer or discharge, reasonable advance written notice shall be given to the patient at least five days prior to the discharge or transfer.
+D. Nothing in this section or in subdivision A 4 of § 32.1-138 shall be construed to authorize or require conditions upon a transfer within a facility that are more restrictive than Titles XVIII or XIX of the United States Social Security Act or by regulations promulgated pursuant to either title.
+1987, c. 221; 1993, c. 692.
+§ 32.1-138.2. Certain contract provisions prohibited.No contract or agreement for nursing home care shall contain any provisions which restrict or limit the ability of a resident to apply for and receive Medicaid or which require a specified period of residency prior to applying for Medicaid. The resident may be required to notify the facility when an application for Medicaid has been made. No contract or agreement may require a deposit or other prepayment from Medicaid recipients. No contract or agreement shall contain provisions authorizing the facility to refuse to accept retroactive Medicaid benefits.
+1987, c. 221.
+§ 32.1-138.3. Third party guarantor prohibition.Any facility certified under Title XVIII or XIX of the United States Social Security Act shall not require a third party guarantee of payment to the facility as a condition of admission or of expedited admission to, or continued stay in, the facility. This section shall not be construed to prevent a facility from requiring an individual who has legal access to a resident's income or resources which are available to pay for care in the facility to sign a contract without incurring personal financial liability except for breach of the duty to provide payment from the resident's income or resources for such care.
+For purposes of this section, the resident's income or resources shall include any amount deemed to be income or resources of the resident for purposes of Medicaid eligibility and any resources transferred by the resident to a third party if the transfer disqualifies the resident from Medicaid coverage for nursing facility services.
+1989, c. 193.
+§ 32.1-138.4. Retaliation or discrimination against complainants.No nursing facility may retaliate or discriminate in any manner against any person who (i) in good faith complains or provides information to, or otherwise cooperates with, the Department or any other agency of government or any person or entity operating under contract with an agency of government, having responsibility for protecting the rights of patients of nursing facilities or (ii) attempts to assert any right protected by state or federal law.
+1994, c. 941.
+§ 32.1-138.5. Confidentiality of complainant's identity.Whenever the Department conducts inspections and investigations in response to complaints received from the public, the identity of the complainant and the identity of any patient who is the subject of the complaint, or identified therein, shall be treated as confidential and shall not be open to inspection by members of the public. Identities of the complainant and patient who is the subject of the complaint shall be revealed only if a court order so requires. Nothing contained herein shall prevent the Department, in its discretion, from disclosing to the nursing facility the nature of the complaint or the identity of the patient who is the subject of the complaint. Nothing contained herein shall prevent the Department or its employees from making reports under § 63.2-1603 et seq. If the Department intends to rely, in whole or in part, on any statements made by the complainant, at any administrative hearing brought against the nursing facility, the Department shall disclose the identity of the complainant to the nursing facility a reasonable time in advance of such hearing.
+1994, c. 941.
+§ 32.1-138.5:1. (Effective pursuant to Acts 2025, c. 432, cl. 2) Electronic monitoring in resident rooms.A. As used in this section:
+"Electronic monitoring" means the use of a surveillance device with a fixed position video camera or audio recording device, or a combination thereof, that is installed in a resident's room and broadcasts or records activities or sounds occurring within the confines of the room. Electronic monitoring shall not include use of a device that enables audio communication into the resident's room from another source.
+"Family member" means the resident's spouse, parent, stepparent, child, stepchild, brother, sister, half-brother, half-sister, grandparent, or grandchild.
+"Legal representative" means a person legally responsible for representing or standing in the place of the resident for the conduct of his affairs. This may include a guardian, conservator, attorney-in-fact under durable power of attorney, trustee, or other person expressly named by a court of competent jurisdiction or the resident as his agency in a legal document that specifies the scope of the representative's authority to act. A legal representative may only represent or stand in the place of a resident for the function for which he has legal authority to act.
+B. All requests for electronic monitoring shall be made in writing and signed by the resident or, if the resident has been legally deemed incompetent, the resident's legal representative. Only electronic monitoring in accordance with this section is permitted.
+Electronic monitoring shall be permitted only:
+1. Upon the informed consent of the resident or resident's legal representative, which shall be obtained prior to the installation or use of any electronic monitoring device. Consent for electronic monitoring shall be kept in the resident's medical record;
+2. When the resident resides:
+a. In a room with no roommates; or 
+b. In a room with any roommates and obtains written consent to visual recording from such roommates or, if any roommate has been legally deemed incompetent, such roommate's legal representative. When a resident resides with any roommates, only video electronic monitoring shall be permitted pursuant to this subsection;
+3. Upon execution of an agreement for the sharing and release of medical data and information protected by the federal Health Insurance Portability and Accountability Act of 1996 (42 U.S.C. § 1320d et seq.) signed by the resident or resident's legal representative or, if applicable, any such agreement signed by any roommate or roommate's legal representative shall be kept in all consenting individuals' medical records; and
+4. When the nursing facility has secured and password-protected wireless Internet access or other means available to operate the electronic monitoring device without modification to the nursing facility or a change in level or capacity of Internet access.
+C. A nursing facility shall allow electronic monitoring of a resident of a nursing facility if the electronic monitoring is conducted in accordance with this section. A nursing facility shall not refuse to admit an individual and shall not discharge or transfer a resident due to a request to conduct authorized electronic monitoring.
+D. Family members shall not implement or activate electronic monitoring over the objections of or contrary to the instructions of the resident or the resident's legal representative. No electronic monitoring equipment may be installed over the objections of or contrary to the instructions of the resident or resident's legal representative.
+E. Nursing facilities shall designate one or more staff persons to be the point of contact for electronic monitoring requests and for providing information and policies upon request during normal business hours.
+F. Except as provided in subsection O, nursing facilities may assume custodial ownership of any recordings from electronic monitoring devices from the resident or resident's legal representative. Recordings from electronic monitoring devices shall not be considered part of the resident's medical record.
+G. If a nursing facility chooses to assume ownership of recordings from electronic monitoring devices pursuant to subsection F, the nursing facility shall not permit viewings of recordings without consent of the resident or resident's legal representative except to the extent that disclosure is required by law or for quality assurance purposes.
+H. A nursing facility shall not be held liable for any breach of data or privacy related to the presence of the electronic monitoring device.
+I. A nursing facility shall require its staff to immediately report any incidents regarding safety or quality of care discovered or reported to staff as a result of viewing a recording from an electronic monitoring device to the administrator of the nursing facility.
+J. A nursing facility shall have no obligation to seek access to a recording for which it has not assumed custodial ownership or to have knowledge of a recording's content unless (i) the nursing facility is aware of a recorded incident of suspected abuse or neglect or of an accident or injury based upon a report received by the facility of such incident, accident, or injury or (ii) the resident, the resident's legal representative, or a government agency seeks to use a recording.
+K. Unless a nursing facility chooses to assume ownership of any recordings from an electronic monitoring device, the resident or resident's legal representative shall be responsible for all aspects of the operation of the electronic monitoring device, including the removal and replacement of recordings; adherence to local, state, and federal privacy laws; and use of firewall protections to prevent images that would violate obscenity laws from being inadvertently shown on the Internet.
+L. A nursing facility shall prohibit assigned staff from refusing to enter a resident's room solely because of electronic monitoring.
+M. A nursing facility shall make reasonable physical accommodations for electronic monitoring devices, including:
+1. Providing a reasonably secure place to mount the device; and
+2. Providing reasonable access to power sources if already in proximity to the device.
+N. A nursing facility shall require a resident or resident's legal representative to pay for all costs, other than the cost of electricity, associated with the purchase and installation of the electronic monitoring device. In addition, a nursing facility offering facility-managed electronic monitoring may charge a one-time fee not to exceed $150 when the electronic monitoring device is installed along with a security deposit not to exceed $250. A nursing facility may charge a monthly fee not to exceed $10 to cover costs associated with the electronic monitoring device. Such costs may include equipment, secured and password-protected wireless Internet and server capabilities, compliance with life safety and building and electrical codes, maintenance or removal of the equipment, posting and removal of any public notices, or structural repairs to the building resulting from the removal of the equipment. Nursing facilities shall give 45 days' notice of an increase in monthly fees.
+O. The resident or resident's legal representative of a room with an electronic monitoring device may verbally or in writing condition consent to the installation or use of the electronic monitoring device. Such conditions on consent may include: (i) the ability of the resident, any roommate, or staff at the request of the resident or any roommate, to turn off or disable the audio or video electronic monitoring device during certain periods of time and (ii) a prohibition on the ability of the nursing facility to, pursuant to subsection F, choose to assume custodial ownership of any recordings from the electronic monitoring device after the electronic monitoring device has been installed and is operational. If the resident or resident's legal representative or any roommate or roommate's legal representative places any such conditions on consent, the nursing facility and staff shall ensure that the installation, use, and operation of the electronic monitoring device and any electronic monitoring or other activities conducted in connection therewith are conducted in compliance with such conditions.
+P. The nursing facility shall conspicuously post and maintain a notice at the entrance to the resident's room stating that an electronic monitoring device is in operation.
+Q. Nursing facilities shall notify assigned staff for the resident when electronic monitoring is in use in a resident's room pursuant to this section.
+R. Each nursing facility shall adopt policies and procedures for electronic monitoring consistent with this section.
+S. Each nursing facility shall adopt a policy prohibiting staff from willfully tampering with electronic monitoring devices in violation of this section. Adjusting or disabling an electronic monitoring device during the provision of patient care shall not constitute willful tampering if such adjusting or disabling is done in order to protect the dignity of a resident or at the direction of the resident or resident's legal representative.
+T. If the placement or position of the electronic monitoring device creates risk to a nursing facility employee, resident, or any roommate, or if the resident or resident's legal representative or family member violates the nursing facility's policies and procedures for electronic monitoring, the equipment may be disabled and removed and the resident, resident's legal representative, or family member responsible for the camera shall be notified of the removal.
+2025, c. 432.
+§ 32.1-138.5:2. Periodic medical visits.If any required visits to a resident by a physician do not take place in accordance with the federal physician visit schedule described in 42 C.F.R. § 483.30(c), any nursing home licensed under this chapter shall send notice to the resident, the resident's family or legal representative, and the Department.
+2026, c. 944.
+§ 32.1-138.5:3. Resident assessment and plan of care.A. All nursing homes licensed under this chapter shall conduct comprehensive assessments of each resident's needs pursuant to subsection B. Such assessments shall accurately describe the resident's capability to perform daily life functions and significant impairments in functional capacity, and shall include:
+1. Medically defined conditions and prior medical history;
+2. Medical status;
+3. Physical and mental functional status;
+4. Sensory and physical impairments;
+5. Nutritional status and requirements;
+6. Special treatments or procedures;
+7. Psychosocial status;
+8. Discharge potential;
+9. Dental condition;
+10. Activities potential;
+11. Rehabilitative potential;
+12. Cognitive status;
+13. Drug therapy; and
+14. Any known advance directives.
+B. The nursing facility shall conduct a complete assessment as described in subsection A:
+1. No later than 14 days after the date of admission;
+2. Promptly after a significant change in the resident's physical or mental condition; and
+3. In all cases, at least once every 366 days.
+C. The nursing home shall review each resident's assessment at least once every 92 days and shall update the plan of care as indicated.
+D. Each assessment shall be coordinated by a registered nurse who signs, dates, and certifies completion of the assessment.
+E. Each assessment shall be conducted or coordinated with the participation of health professionals. Each person completing a portion of the assessment shall sign and date such portion of the assessment.
+F. The nursing home shall use the results of the assessment to develop, review, and revise the resident's comprehensive plan of care.
+G. The nursing home shall develop a comprehensive plan of care for each resident within seven days of completion of the comprehensive assessment. Such plan shall include measurable objectives and timetables to meet the resident's medical, nursing, nutritional, and psychosocial needs identified in the comprehensive assessment. The plan shall also describe the services that are to be furnished to maintain or improve the resident's physical, mental, and psychosocial status. Upon request, a copy or summary of such comprehensive plan of care, as defined by the facility's established policy, shall be delivered to the resident and the resident's family or legal representative within seven days of completion.
+H. The comprehensive plan of care required pursuant to subsection G shall be prepared by a multidisciplinary team. The multidisciplinary team shall include a registered nurse, the attending physician, to the extent practicable, and other staff in disciplines as determined by the resident's needs. The resident and the resident's family or legal representative shall also be provided a meaningful opportunity to participate in developing the plan of care.
+2026, c. 944.
+
+ Article 
+
+ Code of Virginia
+
+ Popular Names
+
+ 2026 Updates
+
+ Section Look Up
+
+ Go
+
+ Administrative Code
+
+ Constitution of Virginia
+
+ Charters
+
+ Authorities
+
+ Compacts
+
+ Uncodified Acts
+
+ Virginia Law Library
+
+ The Code of Virginia, Constitution of Virginia, Charters, Authorities, Compacts and Uncodified Acts are available in both PDF and CSV formats. 
+
+ Helpful Resources
+
+ Virginia Code Commission
+
+ Virginia Register of Regulations
+
+ U.S. Constitution
+
+ For Developers
+
+ The Virginia Law website data is available via a web service. 
+
+ Sign In
+
+ Username:  
+
+ Password:  
+
+ Cancel
+
+ LIS Home
+
+ Lobbyist-in-a-Box
+
+ Privacy Policy
+
+ © Copyright Commonwealth of Virginia,
+ . All rights reserved. Site developed by the Division of Legislative Automated Systems (DLAS).
+ Sign In
+END SOURCE 1
+
+SOURCE 2: Virginia Department of Medical Assistance Services, Virginia Medicaid/FAMIS Client Appeals — Frequently Asked Questions (PDF) | https://www.dmas.virginia.gov/media/3221/client-appeals-frequently-asked-questions-2021-05-21.pdf | source's own date: 05/21/2021 (page footer) | retrieved: 2026-08-30
+Virginia Medicaid/FAMIS Client Appeals
+Frequently Asked Questions
+
+FILING AN APPEAL
+
+The Virginia Department of Medical Assistance Services (DMAS) has a portal to make it easier for you to file an
+appeal. The portal is called the Appeals Information Management System (AIMS). The AIMS portal is easy to
+use and includes step-by-step instructions to walk you through the entire appeals process. The AIMS portal
+allows you the convenience of filing your appeal, submitting documents and monitoring the status of your
+appeal online throughout the process.
+While DMAS encourages you to use the AIMS portal, we will continue to accept appeals by email, fax, mail and
+phone. To register for the AIMS portal, go to: https://appeals-registration.dmas.virginia.gov/client. To log in to
+the AIMS portal, go to https://login.vamedicaid.dmas.virginia.gov/.
+
+                                                  DMAS Appeals Division
+
+            Email                   Fax            Phone                  Mail                     AIMS Portal
+
+
+                                                                DMAS Appeals Division
+   appeals@dmas.virginia.gov   (804) 452-5454   804-371-8488      600 E. Broad Street   https://www.dmas.virginia.gov/appeals
+                                                                 Richmond, VA 23219
+
+
+
+
+BEFORE YOU FILE AN APPEAL
+
+Virginia’s two medical assistance programs are Medicaid and the Family Access to Medical Insurance Security
+plan, which is known as FAMIS.
+The Virginia Department of Medical Assistance Services (DMAS) administers the Medicaid and FAMIS programs.
+Eligibility determinations for these programs are the responsibility of local departments of social services under
+the supervision of the Virginia Department of Social Services (VDSS). Cover Virginia also processes certain
+applications for medical assistance, including referrals from the Federal Health Insurance Marketplace.
+The DMAS Appeals Division is separate and apart from operational divisions within and outside of DMAS. The
+DMAS Appeals Division provides a neutral forum for appeals, by providing an impartial Hearing Officer to
+conduct fair hearings for issues regarding eligibility for medical assistance and medical services. The DMAS
+Appeals Division also hears appeals related to actions for services provided by a nursing facility, in accordance
+with § 1919(b)(3)(F) or 1919(e)(7)(B) of the Social Security Act.
+
+What are appeal rights?
+You have the right to request an appeal in response to notices of action regarding your eligibility for Medicaid
+and FAMIS coverage. This includes:
+      Denial of your application for Medicaid or FAMIS coverage
+      Denial, suspension, reduction or termination, in whole or in part, for a medical service
+      The effective date of your Medicaid coverage
+
+
+Client Appeals FAQs                                Page 1 of 10                                                  05/21/2021
+      Actions to terminate, suspend, or reduce benefits
+      Delayed processing of your application for medical assistance
+      A decision that benefits have been paid in error and must be repaid
+      The amount of your Medicaid spenddown, or amount of your patient pay obligation to be paid to a
+       health care facility
+      The agency takes action or proposes to take action to recover applicable Medicaid payments from the
+       estate of a person who has died
+      A determination made by a nursing facility to transfer or discharge a resident
+      Any other action that affects your receipt of medical assistance
+
+What is an appeal?
+An appeal is a written or verbal request for a fair hearing before an impartial representative of the DMAS
+Appeals Division to determine whether the action taken or proposed by the agency is correct.
+The DMAS Appeals Division only hears appeals for medical assistance programs and related services (Medicaid
+and FAMIS), and nursing facility discharges. The DMAS Appeals Division does not hear appeals that relate to
+other benefit programs, such as Temporary Assistance for Needy Families (TANF), Supplemental Nutrition
+Assistance Program (SNAP), Auxiliary Grants, Child Care Applications and Energy Assistance (EA); these are
+administered by the VDSS. The DMAS Appeals Division does not hear appeals related to Social Security
+Administration disability determinations or Medicare determinations; those are administered by their
+respective federal agencies. For information about those programs or to learn how to file an appeal, please
+contact the appropriate agency.
+
+What is a fair hearing?
+A fair hearing is an informal procedure conducted by a DMAS Appeals Division Hearing Officer. All hearings are
+de novo hearings, which means the Hearing Officer considers your appeal “from the new,” or from the
+beginning. All documentation submitted by either you or the Agency for this appeal, along with the testimony
+taken at the hearing, will be used by the Hearing Officer to determine if you qualify for the requested coverage.
+At the hearing, the Hearing Officer asks questions, and listens to the agency representative’s explanation of the
+action taken on your case. They also listen to your explanation why you do not agree with the agency’s action.
+The Hearing Officer reviews documents provided by the agency, as well as documents that you provided in
+support of your appeal. Afterwards, the Hearing Officer evaluates the evidence presented at the hearing, and
+decides whether you qualify for the requested coverage based on the applicable law, regulation and policy.
+
+Will I receive notice of my right to a hearing?
+Within 10 calendar days, the agency is required to mail a written notice before they take a new action regarding
+your benefits or services. Examples of when the agency must send a notice include:
+      Approvals of benefits and/or medical services
+      Denials, terminations, suspensions, or reductions of benefits and/or medical services
+      Delays in processing your application
+      A decision has been made that benefits were paid in error and must be repaid
+      When a request for re-evaluation of an application in spenddown status has been completed
+
+The agency must process your Medicaid application within 45 days of receipt, or within 90 days of receipt for
+cases of Medicaid disability determinations. If the agency denies your application for medical assistance, or
+denies your request for medical services, they must mail you a written notice.
+
+
+
+Client Appeals FAQs                             Page 2 of 10                                        05/21/2021
+What will the notice say?
+The written notice must have the following information:
+      The action taken or proposed by the agency;
+      The reasons for the intended action;
+      The law, regulation or policy that supports the intended action;
+      An explanation of your right to a hearing, as well as the methods and time limits for requesting a hearing;
+      The circumstances under which your benefits may be continued by timely requesting a hearing; and
+      The right to have representation at the hearing.
+
+Is there a time limit for filing an appeal?
+Yes, the time limit for filing an appeal is noted on the written notice of action from the agency. In most cases,
+the time limit is 30 days from the date you receive the written notice of action from the agency. It is presumed
+that you will receive the notice five days after the agency mails the notice, unless you can show that you did not
+receive the notice within the five-day period. The date of filing an appeal will be determined by the postmark
+date, or the date it was faxed or hand-delivered to DMAS. If you are appealing an unreasonable delay in
+processing your application, you may file your appeal at any time until the agency has acted on your application.
+
+How do I claim good cause for filing an untimely appeal?
+The DMAS Appeals Division may grant an extension of the time limit for filing an appeal if the reason for failing
+to meet the time limit is due to a good cause. There is a Good Cause Questionnaire section in the Virginia
+Medicaid and FAMIS Appeal Request Form that allows you to provide information about why you filed an
+untimely appeal. Please complete this entire section. You may also submit this electronically via the AIMS portal.
+A DMAS Hearing Officer will evaluate your response and make a determination whether your untimely filing
+was due to good cause. You may also receive a letter from the DMAS Appeals Division requesting an explanation
+of your good cause reason for untimely filing. If you file your appeal within the allowed timeframe, you do not
+need to complete the Good Cause Questionnaire section.
+
+What is an MCO Appeal?
+If you are in the Medicaid program and receive services from one of the Managed Care Organizations (MCO)
+that are part of the Medicaid program, different rules apply to the timeframe of appeals and there are certain
+other procedures that must be followed. Examples of MCOs in the Medicaid program include:
+ Aetna Better Health of Virginia                     Anthem Healthkeepers, Inc.
+ Magellan Complete Care of Virginia, LLC             Optima Health Plans
+ UnitedHealthcare of the Mid-Atlantic, Inc.          Virginia Premier Health Plan
+
+The key difference with MCO decision appeals is that you may only appeal a final adverse determination from
+an MCO. This means you have to exhaust your appeal rights with the MCO that took the action before you file
+an appeal with DMAS. You must file an appeal with DMAS within 120 days of receiving a final decision from the
+MCO (as opposed to 30 days) and the 120 days cannot be extended.
+
+Who can file an appeal?
+Either you or your authorized representative may file an appeal on your behalf. The authorized representative
+may be an attorney, friend, relative, a patient advocate, or any other adult you choose. Use the following
+guidelines when submitting your appeal and authorized representative documents:
+
+
+
+
+Client Appeals FAQs                              Page 3 of 10                                        05/21/2021
+Spouse, Family Member, or Other Designee
+In cases where a spouse, family member, or other designated person is representing an adult appellant, the
+representative must have authorization in writing which must be signed by the appellant. A Power of Attorney
+authorizing the representative to act on the appellant’s behalf during the appeal will be accepted.
+
+Parent or Legal Guardian
+A parent may file an appeal on behalf of their minor child. If the parent wishes to appoint a representative, the
+representative must have authorization in writing and be signed by the parent. If you are appealing as a child’s
+legal guardian, proof of guardianship is needed.
+
+Physically Unable to Sign
+If an appellant is physically unable to sign a written authorization, the person acting on their behalf must provide
+written authorization and describe the physical reason why the appellant cannot sign the form.
+
+Mentally Unable to Sign
+If an appellant is mentally unable to sign a written authorization, proof of guardianship is needed.
+
+Deceased Appellant
+If an appellant is deceased, you must submit evidence from a court that you qualified as the Executor or the
+Administrator of the appellant’s estate. A Power of Attorney or Last Will and Testament is not acceptable proof
+of representation.
+
+The Virginia Medicaid and FAMIS Appeal Request Form includes an Authorized Representative Form. Complete
+this form if you wish to have an authorized representative file an appeal on your behalf. You and your
+representative may also receive a letter from the DMAS Appeals Division, with instructions and an Authorized
+Representative Form, if the form is not submitted at the same time as your appeal request. A Power of Attorney
+authorizing your representative to act on your behalf during the appeal will be accepted. If the appellant is
+deceased, then proof of guardianship needs to be submitted. If you wish to have an attorney or a paralegal
+working under the supervision of an attorney represent you, a signed statement by the attorney or paralegal
+that he or she is authorized to represent you prepared on the attorney’s letterhead, will be accepted as
+representation. You may also submit a request for another individual or organization to represent you
+electronically ivia the AIMS portal.
+
+How do I file an appeal?
+The AIMS portal allows you the convenience of filing your appeal, submitting documents, and monitoring the
+status of your appeal online throughout the process. While DMAS encourages you to use the AIMS portal,
+we also accept appeals by email, fax, mail, and phone. Your request should explain the reason for your appeal,
+the action by the agency you are appealing, and a copy of the notice of action you are appealing.
+You may submit a written appeal by letter or by using the Virginia Medicaid and FAMIS Appeal Request Form,
+available at https://www.dmas.virginia.gov/appeals and your local department of social services. Send the
+Virginia Medicaid and FAMIS Appeal Request Form or appeal request letter and related documents, including
+the notice of action you are appealing to DMAS using the information below:
+                                                  DMAS Appeals Division
+
+            Email                   Fax            Phone                  Mail                     AIMS Portal
+
+
+                                                                DMAS Appeals Division
+   appeals@dmas.virginia.gov   (804) 452-5454   804-371-8488      600 E. Broad Street   https://www.dmas.virginia.gov/appeals
+                                                                 Richmond, VA 23219
+
+
+
+
+Client Appeals FAQs                                Page 4 of 10                                                  05/21/2021
+Can the DMAS Appeals Division deny my request for a hearing?
+Yes, your request for a hearing can be denied for any of the following reasons:
+    You filed an untimely appeal, unless you had good cause
+    The appeal request was not made by you or by your authorized representative
+    Your representative did not provide proper authorization
+    The issue is not appealable
+    The issue was resolved by the agency
+    The issue was previously decided through the hearing process
+
+If your appeal request is denied, you will receive a written notice. You have the right to appeal DMAS’ decision
+to the Circuit Court.
+
+What happens to my benefits if I appeal?
+You may request to have your coverage continued during the appeal process if you file your appeal request
+before the date coverage is terminated or within 10 days of the date stated on the notice of action you are
+appealing. This is known as continued coverage. Not all cases qualify for continued coverage. Should any of the
+following situations occur, your continued coverage will end:
+      Your appeal is invalidated
+      You withdraw your appeal
+      You abandon your appeal
+      The Hearing Officer agrees with the agency decision
+      The Hearing Officer determines that no facts are disputed and the sole issue of the appeal is a
+       disagreement with existing state or federal law or policy
+
+If the Hearing Officer agrees with the decision of the local agency, or any of the above situations occur, you may
+have to pay back the costs of medical care received during the period of continued coverage. Requesting
+continued coverage is optional. If not requested, your benefits will not be continued during the appeal process.
+
+What is a pre-hearing conference for Medicaid and FAMIS eligibility cases?
+A pre-hearing conference is an opportunity for you to discuss your Medicaid and FAMIS eligibility case with a
+representative from your local department of social services. This could potentially resolve the agency’s action.
+If your action is resolved, you may not need to move forward with a DMAS appeal. Your local department of
+social services must schedule a pre-hearing conference within 10 working days of your request.
+The pre-hearing conference is less formal than the DMAS appeal hearing. At the conference, your eligibility
+worker will explain the agency’s action and you will have an opportunity to present any information to support
+your disagreement with the action. You are allowed to have a representative at the conference. If the agency
+decides not to take the action, you will be notified in writing or if the agency decides to proceed with the action,
+you will be informed of the agency’s decision.
+The pre-hearing conference is separate from the fair hearing appeal process with the DMAS Appeals Division.
+To protect your appeal rights, file an appeal within the timeframe stated on your notice of action if you want to
+request an appeal hearing.
+
+Can I file a new application if my benefits have been stopped or denied, even if I appeal?
+Yes, you can file a new application. If your circumstances change during your appeal, such as a change in income
+or household size, be sure to notify your local agency to reapply.
+
+
+Client Appeals FAQs                               Page 5 of 10                                         05/21/2021
+AFTER YOU FILE AN APPEAL
+
+What happens after I file my appeal?
+When the DMAS Appeals Division receives your appeal request, you will receive a letter acknowledging receipt
+of your appeal. Your appeal request will then be reviewed to see if a hearing can be granted, or if more
+information is needed.
+If you submit your appeal after the deadline, which in most cases is 30 days, and do not give a good reason for
+your late appeal, you will receive a letter with instructions on how to provide a reason for the delay, called
+“good cause.” Whether there is “good cause” for a late appeal will be decided by a Hearing Officer, based upon
+regulations. If an appeal is filed on your behalf without proper authorized representation, a letter will be sent
+with instructions on how to provide authorization.
+If you submit documents to the DMAS Appeals Division without a clear explanation of your intent to appeal or
+what action you are appealing, you will receive a letter with instructions on how to properly file your appeal
+request and what information you need to include.
+
+The DMAS Appeals Division will close your appeal if it is determined that no adverse action was taken on your
+case or the agency re-evaluates your case and resolves the action you are appealing. You will receive a written
+notice if your appeal is closed without a hearing.
+Once the DMAS Appeals Division determines that your appeal request is eligible for a hearing, your hearing will
+be scheduled with the agency that took the action. You will be notified in writing of the date, time, and location
+of your hearing.
+
+What if I no longer want to appeal?
+If you no longer want to continue with your appeal, you may withdraw your appeal request. The easiest way to
+withdraw your appeal is via the AIMS portal. You may also submit your withdrawal request in writing to the
+DMAS Appeals Division via email, fax, or mail, or call the DMAS Appeals Division and explain that you want to
+withdraw your appeal. The contact information for the DMAS Appeals division is below. After you submit your
+withdrawal and it is reviewed by the DMAS Appeals Division, your case will be closed and you will receive a
+letter confirming your withdrawal.
+
+                                                  DMAS Appeals Division
+
+            Email                   Fax            Phone                  Mail                     AIMS Portal
+
+
+                                                                DMAS Appeals Division
+   appeals@dmas.virginia.gov   (804) 452-5454   804-371-8488      600 E. Broad Street   https://www.dmas.virginia.gov/appeals
+                                                                 Richmond, VA 23219
+
+
+
+
+What happens at a hearing?
+The hearing is an informal proceeding. The DMAS Hearing Officer will begin the hearing, state the action that is
+being appealed, and allow each side to present its case. The DMAS Hearing Officer will swear-in all hearing
+participants who are presenting testimony and record the hearing proceedings. All hearings are de novo
+hearings, which means the Hearing Officer considers your appeal “from the new,” or from the beginning. All
+documentation submitted by either you or the Agency for this appeal, along with the testimony taken at the
+hearing, will be used by the hearing officer to determine if you qualify for the requested coverage.
+
+
+Client Appeals FAQs                                Page 6 of 10                                                  05/21/2021
+During the hearing, the DMAS Hearing Officer will allow the agency representative to explain the agency’s
+action, and will ask the agency representative and witnesses relevant questions. You will be allowed to ask
+questions of the agency representative and witnesses. You can also let it be known if you disagree with any of
+the testimony and evidence presented.
+The DMAS Hearing Officer will then allow you and/or your authorized representative to express your
+disagreement with the agency’s action and present evidence. You will be allowed to bring witnesses to testify
+on your behalf and present documents to support your case. The DMAS Hearing Officer may also ask you and
+your witnesses questions.
+You will have the opportunity to examine all of the documents being used by the agency before and during the
+hearing.
+The Hearing Officer will allow you and the agency representative to make closing remarks. At the end, the
+Hearing Officer closes the hearing, and explains when you can expect the hearing decision. The Hearing Officer
+evaluates the evidence presented at the hearing, and decides whether your case was properly evaluated based
+on the applicable law, regulation and policy.
+
+Who may represent me at a hearing?
+You may represent yourself, or have an authorized representative at the hearing. The authorized representative
+may be an attorney, friend, relative, a patient advocate, or any other adult you choose. If you do not plan to
+attend the hearing yourself and your authorized representative will attend on your behalf, provide the DMAS
+Appeals Division with your written authorization of representation prior to the hearing. You may authorize an
+authorized representative via the AIMS portal or the “Virginia Medicaid and FAMIS Client Appeal Authorized
+Representative Form” available at https://www.dmas.virginia.gov/appeals. Use the guidelines outlined in the
+“Who can file an appeal?” section in this document when submitting your authorized representative documents.
+
+Who will be at my hearing?
+Attendance at the hearing will include the following:
+      The DMAS Hearing Officer, usually participating by telephone;
+      The agency representative;
+      You and/or your authorized representative.
+There may also be witnesses participating on behalf of the agency, as well as any witnesses you bring to the
+hearing. You are allowed to have an attorney present, but you are not required to obtain legal representation.
+The agency may have the local city or county attorney attend the hearing.
+
+How do I prepare for the hearing?
+Review the schedule letter from the DMAS Appeals Division carefully for the location, date, and time of your
+hearing. If your hearing is scheduled to be conducted by telephone, make sure that the DMAS Appeals Division
+has the correct telephone number to reach you, and that you will be available to participate by telephone at the
+date and time specified on the schedule letter.
+Prior to your hearing, think about the points you would like to make during the hearing and any questions that
+you may have for the agency.
+Review all of the documents you have received from the agency, and have them available to reference on your
+scheduled hearing date. You can also request to review your case file with the agency prior to your hearing.
+If there are any documents you want the DMAS Hearing Officer to review for the hearing, submit them via the
+AIMS portal or email, mail or fax them to the DMAS Appeals Division and the agency that took the action several
+days before the hearing.
+
+Client Appeals FAQs                             Page 7 of 10                                        05/21/2021
+What is an appeal summary?
+An appeal summary is a document from the agency that explains the reasons for the agency’s action, including
+relevant facts and applicable policy. The appeal summary should also include any supporting documentation
+for the agency’s action.
+The agency will send you and the DMAS Appeals Division a copy of the appeal summary before the hearing. The
+agency should send the appeal summary by the deadline written on the schedule letter.
+If you do not receive the appeal summary before the hearing, let the agency know and call the DMAS Appeals
+Division so that we may work to have your hearing take place on time.
+
+Will I be able to submit documents before or during the hearing?
+Yes, you may submit documents that you would like the DMAS Hearing Officer to consider before the hearing
+via the AIMS portal or by email, fax, or mail at the following addresses:
+
+                                                  DMAS Appeals Division
+
+            Email                   Fax            Phone                  Mail                     AIMS Portal
+
+
+                                                                DMAS Appeals Division
+   appeals@dmas.virginia.gov   (804) 452-5454   804-371-8488      600 E. Broad Street   https://www.dmas.virginia.gov/appeals
+                                                                 Richmond, VA 23219
+
+
+
+Also, send copies of the documents to the agency that took the action you are appealing. The Hearing Officer
+may also consider documents that you bring to the hearing when making a decision about your appeal.
+During the hearing, the Hearing Officer may decide to “leave the record open” for a limited amount of time to
+permit you to submit additional documentation that was not available for the hearing. If this happens, the
+Hearing Officer will provide instructions during the hearing.
+If the Hearing Officer does not “leave the record open,” any documentation that you submit after the hearing
+will not be considered by the Hearing Officer when making a decision about your appeal.
+
+Where will my hearing be held?
+Most eligibility appeal hearings will take place at the local department of social services. Appeal hearings
+regarding medical issues are usually conducted by telephone. Reference your schedule letter for the hearing
+location.
+
+Can I request a telephone hearing?
+Yes, if you are unable to attend the hearing at the scheduled location, you may contact the DMAS Appeals
+Division to request to participate by telephone. The Hearing Officer will call you on the scheduled hearing date
+and time at the telephone number you provide to the DMAS Appeals Division.
+
+What if I need an interpreter?
+If you need an interpreter at the hearing, you can ask for one in your appeal request, or by contacting the DMAS
+Appeals Division prior to your hearing. The DMAS Appeals Division will provide an interpreter for your hearing.
+
+Will my hearing be recorded?
+Yes, your hearing will be recorded by the DMAS Hearing Officer to ensure an accurate and complete hearing
+record.
+
+
+Client Appeals FAQs                                Page 8 of 10                                                  05/21/2021
+How do I postpone my hearing if needed?
+If you will not be able to attend your hearing on the scheduled date and time, notify the DMAS Appeals Division
+before the day of the hearing. The hearing will then be rescheduled, and you will be notified of the new date
+and time. Your decision date will be extended based on your request to postpone your hearing. You will only
+be able to reschedule your hearing twice, unless you have a compelling reason for an additional reschedule
+request.
+
+What if I miss my hearing?
+The DMAS Hearing Officer will send you a letter with instructions, asking you for good cause why you missed
+your hearing. You will have 10 days to respond to the letter with your reason for missing the hearing.
+If you do not respond to the good cause request letter by the deadline, or if the Hearing Officer determines that
+your reason for missing the hearing was not for good cause, your appeal will be closed and you will receive a
+written notice. You have the right to appeal this decision to the Circuit Court.
+
+What happens after the hearing? When will I receive my decision?
+Following your hearing, the DMAS Hearing Officer will review the testimony and the evidence presented at the
+hearing, and issue a written decision.
+The Hearing Officer will make a decision within 90 days from the date you filed your appeal. If you requested
+that your hearing be postponed, or asked that the hearing record be held open to submit additional information,
+the Hearing Officer will have more time to issue the decision.
+Delays requested or caused by you or your representative may extend the 90-day timeframe by the number of
+days as explained below.
+If you ask to postpone the hearing:
+      Within 30 days of your appeal request, the 90-day time limit will be extended by the number of days
+       from the date when the first hearing was scheduled until the date to which the hearing is rescheduled;
+      Within 31 to 60 days of your appeal request, the 90-day time limit will be extended by 1.5 times the
+       number of days from the date when the most recent hearing was scheduled until the date to which the
+       hearing is rescheduled;
+      Within 61 to 90 days of your appeal request, the 90-day time limit will be extended by 2 times the
+       number of days from the date when the most recent hearing was scheduled until the date to which the
+       hearing is rescheduled; and
+      If you ask to keep the record open after the hearing, the 90-day time limit will be extended by the
+       number of days the record is left open.
+For an MCO appeal, the 90-day decision period includes the combined MCO and DMAS appeal processing time.
+For more information on MCO appeals, refer to the “What is an MCO Appeal” section in this document.
+
+What will the decision say?
+The DMAS Hearing Officer’s written decision will include the following information:
+      The issue or issues of your appeal;
+      Findings of fact, which is an overview of the facts of your case;
+      A description of the testimony and evidence presented at your hearing;
+      Conclusions of law and policy, which is the analysis of your case; and
+      The DMAS Hearing Officer’s decision.
+The decision options a DMAS Hearing Officer can make about your appeal include:
+
+Client Appeals FAQs                             Page 9 of 10                                        05/21/2021
+      Sustaining the agency’s action; finding the agency’s action was correct
+      Reversing the agency’s action; finding the agency acted incorrectly
+      Remanding the agency’s action; sending your case back to the agency for further evaluation
+      Sustain in Part and Remand in Part the agency’s action; finding that the agency’s action was correct but
+       there is some additional evaluation that the agency must complete.
+      Agency Error; determining that the action or failure to take action of the agency was in error and there
+       is no further remedy.
+The DMAS Hearing Officer’s decision is the final decision in the administrative appeals process.
+
+What if I disagree with the outcome of the decision?
+If you disagree with the outcome of the decision, you may appeal to Circuit Court by using a two-step process
+as provided by Rules 2A:2 and 2A:4 of the Rules of the Supreme Court of Virginia. Information about how to
+appeal will be included in your decision.
+Within 30 days from the date you receive the decision, you must file a Notice of Appeal with the Director of
+DMAS. The next step is to file a Petition for Appeal in Circuit Court within 30 days after the Notice of Appeal is
+filed.
+
+Who do I contact for assistance?
+      For questions about your case, contact the agency that took the action related to your benefits or
+       services.
+      For questions specific to the appeal process, contact the DMAS Appeals Division by calling 804-371-8488.
+      For legal assistance, you may want to contact an attorney. Legal Aid can provide free civil legal assistance
+       to low income individuals. For the Statewide Legal Aid Helpline, call 1-866-LEGL-AID, 1-866-534-5243,
+       or visit http://www.valegalaid.org/. There are local Legal Aid organizations located throughout Virginia.
+
+                                                  DMAS Appeals Division
+
+            Email                   Fax            Phone                  Mail                     AIMS Portal
+
+
+                                                                DMAS Appeals Division
+   appeals@dmas.virginia.gov   (804) 452-5454   804-371-8488      600 E. Broad Street   https://www.dmas.virginia.gov/appeals
+                                                                 Richmond, VA 23219
+
+
+
+
+Client Appeals FAQs                                Page 10 of 10                                                 05/21/2021
+
+END SOURCE 2
+
+SOURCE 3: Virginia Department for Aging and Rehabilitative Services — Long-Term Care & Ombudsman | https://dars.virginia.gov/aging/ombudsman/ | source's own date: none stated on page | retrieved: 2026-08-30
+Long-Term Care & Ombudsman - DARS
+
+ Skip to content
+
+Virginia Department for Aging
+and Rehabilitative Services
+
+ DARS
+
+ Virginia Department for Aging and Rehabilitative Services
+
+Virginia Department for Aging
+and Rehabilitative Services
+
+ Search
+
+ Search
+ Find DARS Services
+
+ About
+
+About DARS
+Services to improve jobs, quality of life, security, and independence of Virginians
+
+News
+Program updates, successes, the latest stories and resources for the people we serve
+
+Divisions & Programs
+DARS is made up of multiple divisions ready to serve Virginians
+
+Calendar
+Events, meetings, and opportunities to connect with DARS and our partners
+
+Boards & Councils
+Bringing together lived experience, partners and experts to guide DARS' work
+
+Job Opportunities
+Would you like to work for a Disability Services Agency?
+
+Employment Services
+
+Employment Overview
+DARS' services to employ disabled Virginians and strengthen the workforce
+
+For Individuals
+DARS helps people with disabilities prepare for, find, and keep a job
+
+For Businesses
+Hiring individuals with disabilities through DARS can benefit your business in many ways
+
+For Students
+Helping students with disabilities ages 14+ transition into employment
+
+For Parents
+DARS can help your child with disabilities achieve their highest level of employment
+
+For Providers
+Info for current and potential vocational rehabilitation providers across the state
+
+Aging Services
+
+Aging Services Overview
+Helping older adults live independently and with dignity in the communities they love
+
+Long-Term Care
+Long-term care decisions and support for your loved one
+
+Find Your Local Aging Agency
+Most of our aging services are provided by local offices in your community
+
+Dementia Services
+Help and resources for people with Alzheimer's and their caregivers
+
+Home & Community Based Services
+Services and supports, such as meals, transportation and care for older Virginians
+
+Senior Employment Program
+Helping low-income, age 55+ adults get back in to the workforce
+
+Caregiver Support
+Information and services to support you and your loved ones in the caregiving journey
+
+Virginia Easy Access
+Your trusted resource for finding services and connecting with local support.
+
+Disability Programs
+
+Disability Programs Overview
+DARS helps people with disabilities live, work, and thrive in their communities
+
+Brain Injury Services
+Connecting people with brain injuries to resources and information
+
+Centers for Independent Living
+Non-residential places of support run by and for people with disabilities
+
+Personal Assistance Services
+Self-managed attendant care for people with severe disabilities
+
+Assistive Technology
+Helps people with disabilities get devices to help them live, work and learn
+
+Public Guardianship
+Contracts with providers across Virginia to serve as public guardians for eligible adults
+
+Virginia Guardian Training
+All guardians, public or private, must complete this training
+
+Long-Term Rehabilitation Case Management
+Connects people with disabilities to services that help them live more independently
+
+Benefits
+
+Benefits Overview
+Access and navigate essential benefits like Disability, Medicaid and Medicare
+
+Auxiliary Grant
+Gives money to Virginians with low income to help them pay for housing
+
+Medicare Counseling
+VICAP helps you understand your Medicare benefits through no-cost counseling
+
+Disability Determination
+Helps make medical determinations on disability claims filed under SSDI and SSI
+
+Medicaid Managed Care Advocates
+Helps Cardinal Care recipients navigate and solve problems with their healthcare
+
+Safety & Security
+
+Safety & Security Overview
+Recognizing and reporting abuse, neglect and exploitation
+
+Recognizing Abuse
+What is abuse, neglect or exploitation? Learn to spot the signs
+
+File a Report
+If you suspect your loved one is being abused, neglected, or exploited, file a report
+
+Mandated Reporters
+Some professions are required by law to report suspected abuse
+
+ Home Aging Services Long-Term Care & Ombudsman
+
+Section Menu Long-Term Care & Ombudsman
+Find Your Local Ombudsman
+
+Screenings & Assessments
+
+Choosing a Facility
+
+Paying for Long-Term Care
+
+Residents’ Rights
+
+ Resident Rights FAQs
+
+Solving Problems
+
+ Long-Term Care & Ombudsman
+
+DARS helps older adults and people with disabilities live with dignity, independence, and choice in any care setting. 
+
+The Long-Term Care Ombudsmen speak up for people in long-term care, whether they live in a nursing home, an assisted living facility, or are in their own homes with home and community based care.
+
+ Find Your Ombudsman
+
+ LTC Screenings
+
+ Choosing a Facility 
+
+ Paying for Long-Term Care
+
+ Residents' Rights
+
+ Solving Problems in LTC
+
+ -->
+
+Latest News
+
+View All
+
+Speak Up — Help Virginia Age Better!
+August 11, 2026
+
+Aging is About Living — Not Just Receiving Care
+April 6, 2026
+
+What does an ombudsman do?
+
+ Investigate Complaints from Long-Term Care Recipients
+
+ Helps a person receiving long-term care to resolve problems with their care and services.
+
+ Your Local Ombudsman Can Help 
+
+ Help People Understand Their Rights
+
+ Residents and participants in long-term care settings have the same rights as any legal US citizen, and some special rights as well. Ombudsmen can help you exercise your rights.
+
+ Long-Term Care Resident Rights 
+
+ Help Solve Problems
+
+ Your local ombudsman can help solve disagreements as they arise with your care, or a loved one’s care.
+
+ Solving Problems 
+
+ Advocate for Residents
+
+ Ombudsmen track rules and policies to make sure they are fair and helpful for people getting long-term care. They speak to law-makers about introducing new laws that improve care.
+
+ Give Helpful Information
+
+ Ombudsmen can provide valuable knowledge to you, like help with choosing the right facility, or how Medicare can help pay for a facility.
+
+Explore More Resources 
+
+With the Long-term Care Service Finder on Virginia Easy Access you can find services and connect with local support. 
+
+Launch Service Finder
+
+This program is managed by the Office of the State Long-Term Care Ombudsman.
+
+Department for Aging and Rehabilitative Services
+5620 Cox Rd
+Glen Allen, VA 23060
+
+Phone: 804-662-7000
+Videophone: 804-325-1316
+
+Email: dars@dars.virginia.gov
+
+ Facebook
+Instagram
+LinkedIn
+Twitter
+YouTube
+
+ ADA
+
+Accessibility
+
+FOIA
+
+HRRC
+
+Title IX
+
+Web Use
+
+Contact the Webmasters
+
+© Virginia Department for Aging and Rehabilitative Services, Commonwealth of Virginia
+
+Back to Top
+END SOURCE 3
+
+END OF PACKET — 3 sources

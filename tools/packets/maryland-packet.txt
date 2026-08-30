@@ -1,0 +1,607 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Maryland
+SLUG: maryland
+ASSEMBLED: 2026-08-30
+CAPTURE NOTES: Source 1 is the General Assembly's statute page, which renders its text only to a scripted client — curl returns the site chrome with no statute text — so it was retrieved through the session's HTTP fetch tool and copied to file without retyping; the section symbol and the en dash in "§19–345" are the publisher's own. Source 2 was retrieved by curl with a browser user-agent from the Division of State Documents' regulation library and reduced to text mechanically (tag strip), one regulation per fetch, concatenated here in the order .10, .11, .12, .13 with each regulation's own heading block left in place; the library's licence notice appears on each page and is trimmed with the navigation. Source 3 was retrieved by curl and reduced to text mechanically; the department's section menu appears twice in the capture as the extractor produced it.
+PENDING: The Department's prescribed transfer and discharge notice form. COMAR 10.07.09.10D states the notice "shall be on a form developed by the Department" and lists what it must contain; the form itself was not captured. Also pending: a published filing address for the Office of Administrative Hearings — Regulation .13C(1) directs the resident to send a written request to that office by the 30th calendar day, but no first-party page from the Office of Administrative Hearings stating an address or a form for these hearings was captured; and any published statewide telephone contact for the Maryland Long-Term Care Ombudsman Program — Source 3 describes the program but publishes no program number on the page captured, and COMAR 10.07.09.10D(3) requires the facility's notice to carry the State's Office on Aging and local ombudsman contacts.
+
+SOURCE 1: Maryland Code, Health-General § 19-345 (Involuntary transfer or discharge) | https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=ghg&section=19-345&enactments=false | source's own date: none stated on page | retrieved: 2026-08-30
+Statutes Text
+
+Article - Health - General
+
+§19–345.
+
+(a) A resident of a facility may not be transferred or discharged from the facility involuntarily except for the following reasons:
+
+(1) The transfer or discharge is necessary for the resident’s welfare and the resident’s needs cannot be met in the facility;
+
+(2) The transfer or discharge is appropriate because the resident’s health has improved sufficiently so that the resident no longer needs the services provided by the facility;
+
+(3) The health or safety of an individual in a facility is endangered;
+
+(4) The resident has failed, after reasonable and appropriate notice, to pay for, or under Medicare or Medicaid or otherwise, to have paid for a stay at the facility; or
+
+(5) The facility ceases to operate.
+
+(b) (1) A Medicaid certified facility may not:
+
+(i) Include in the admission contract of a resident any requirement that, to stay at the facility, the resident will be required to pay for any period of time or amount of money as a private pay resident for any period when the resident is eligible for Medicaid benefits; or
+
+(ii) Transfer or discharge a resident involuntarily because the resident is a Medicaid benefits recipient.
+
+(2) (i) Except as provided in subparagraph (ii) of this paragraph, a Medicaid certified facility is presumed to be transferring or discharging a resident in violation of this subsection, if the resident is or becomes eligible for Medicaid benefits.
+
+(ii) A Medicaid certified facility is not presumed to be transferring or discharging a resident in violation of this subsection for transferring or discharging a resident for nonpayment for services while the resident was ineligible for assistance under the medical assistance program.
+
+END SOURCE 1
+
+SOURCE 2: COMAR 10.07.09, Residents' Bill of Rights: Comprehensive Care Facilities and Extended Care Facilities — Regulations .10 through .13 | https://dsd.maryland.gov/regulations/Pages/10.07.09.10.aspx | source's own date: chapter administrative history: Regulations .01—.20 adopted effective April 22, 1996; Regulation .12A amended effective August 24, 2009 | retrieved: 2026-08-30
+Code of Maryland Regulations
+
+ Title 10 MARYLAND DEPARTMENT OF HEALTH
+
+ Subtitle 07 HOSPITALS
+
+ Chapter 09 Residents' Bill of Rights: Comprehensive Care Facilities and Extended Care Facilities
+
+ .10 Resident Transfers and Discharges.
+
+ Code of Maryland Regulations
+
+ .10 Resident Transfers and Discharges.
+
+ A. A nursing facility may not involuntarily transfer or discharge a resident from the nursing facility unless the:
+
+ (1) Transfer or discharge is necessary for the resident's welfare and the resident's needs cannot be met in the nursing facility;
+
+ (2) Transfer or discharge is appropriate because the resident's health has improved sufficiently so that the resident no longer needs the health care or services provided by the nursing facility;
+
+ (3) Resident's presence endangers the health or safety of other individuals in the nursing facility;
+
+ (4) Resident has failed, after reasonable and appropriate notice, to pay, or to have paid under third-party payers, for a stay at the nursing facility; or
+
+ (5) Nursing facility ceases to operate or, in the case of a resident who receives Medicare or Medicaid services, when the nursing facility has been decertified or has withdrawn from the Medicare or Medicaid Program.
+
+ B. A resident has a right to request a hearing on the proposed transfer or discharge, except when the transfer or discharge is being taken pursuant to §A(5) of this regulation.
+
+ C. Notice.
+
+ (1) Transfer and Discharge. Except in emergency situations such as a hospitalization, or if the resident has not resided in the facility for 30 days, the nursing facility shall notify the resident, representative, or interested family member, the State Long-Term Care Ombudsman, and the Department at least:
+
+ (a) 30 days before any proposed transfer or discharge if the nursing facility is not part of a continuing care retirement community as defined in Article 70B, Annotated Code of Maryland; or
+
+ (b) 60 days before any proposed transfer or discharge if the nursing facility is part of a continuing care retirement community.
+
+ (2) Emergency Transfers, Discharges, and Relocations. In an emergency situation, a nursing facility shall notify the resident, representative, or interested family member of a transfer as soon as possible.
+
+ D. Contents of Notice. The required notice to a resident under this regulation shall be on a form developed by the Department and shall include:
+
+ (1) Each reason for the proposed transfer or discharge;
+
+ (2) A statement that the resident has the right to request a hearing on a proposed transfer or discharge, and how to request a hearing pursuant to Regulation .13 of this chapter, except in the case of a discharge made pursuant to §A(5) of this regulation;
+
+ (3) The name, address, and telephone number of the State's Office on Aging and local office on aging long-term care ombudsman;
+
+ (4) The right of a resident to consult with any lawyer the resident chooses;
+
+ (5) The name, address, and telephone number of the Legal Aid Bureau, The Older American Act Senior Legal Assistance Programs, and other agencies that may provide assistance to individuals who need legal counsel;
+
+ (6) For nursing facility residents with developmental disabilities, the mailing address and telephone number of the agency responsible for the protection and advocacy of developmentally disabled individuals;
+
+ (7) For nursing facility residents who are mentally ill, the mailing address and telephone number of the agency responsible for the protection and advocacy of mentally ill individuals;
+
+ (8) The effective date of the proposed transfer or discharge which, except as set forth in §C of this regulation, is at least 30 days after receiving the notice and at least 60 days after receipt of the notice if the nursing facility is part of a continuing care retirement center; and
+
+ (9) The resident's rights concerning discharge, as set forth in Regulation .11 of this chapter.
+
+ E. Documentation.
+
+ (1) In the event of a discharge or transfer of a resident, a nursing facility shall ensure that the following appears in the resident record:
+
+ (a) The circumstances surrounding the discharge or transfer, including interventions initiated by the facility before proposing the discharge;
+
+ (b) The notice described in §§C and D of this regulation; and
+
+ (c) If applicable, any express consent given by the resident or, when applicable, the resident's representative.
+
+ (2) When a resident is transferred or discharged pursuant to §A(1) and (2) of this regulation, the resident's physician shall document in the resident's clinical records the reason or reasons why the transfer or discharge is necessary.
+
+ (3) When a resident is transferred or discharged pursuant to §A(3) of this regulation, a physician shall document in the resident's clinical records the reason or reasons why the transfer or discharge is necessary.
+
+ Cross References
+
+ 10.07.09.11A
+
+ 10.07.09.11G(1)
+
+ 10.07.09.11G(2)
+
+ 10.07.09.13A
+
+Code of Maryland Regulations
+
+ Title 10 MARYLAND DEPARTMENT OF HEALTH
+
+ Subtitle 07 HOSPITALS
+
+ Chapter 09 Residents' Bill of Rights: Comprehensive Care Facilities and Extended Care Facilities
+
+ .11 Involuntary Discharge or Transfer of a Resident.
+
+ Code of Maryland Regulations
+
+ .11 Involuntary Discharge or Transfer of a Resident.
+
+ A. In addition to the provisions of Regulation .10 of this chapter, a facility may not involuntarily discharge or transfer a resident unless, within 48 hours before the discharge or transfer, the facility has:
+
+ (1) Provided or obtained:
+
+ (a) A comprehensive medical assessment and evaluation of the resident, including a physical examination, that is documented in the resident's medical record;
+
+ (b) A post-discharge plan of care for the resident that is developed, if possible, with the participation of the resident's representative; and
+
+ (c) Written documentation from the resident's attending physician indicating that the transfer or discharge is in accordance with the post-discharge plan of care and is not contraindicated by the resident's medical condition; and
+
+ (2) Provided information to the resident concerning the resident's rights to make decisions concerning health care, including the right to:
+
+ (a) Accept or refuse medical treatment;
+
+ (b) Make an advance directive, including the right to make a living will and the right to appoint an agent to make health care decisions; and
+
+ (c) Revoke an advance directive.
+
+ B. With the exception of residents of a certified continuing care facility as set forth in §D of this regulation, at the time of transfer or discharge, the facility shall provide the resident and, when appropriate, the representative or interested family member with:
+
+ (1) A written statement of the medical assessment and evaluation and post-discharge plan of care required under §A of this regulation;
+
+ (2) A written statement itemizing the medications currently being taken by the resident;
+
+ (3) To the extent permitted under federal and State law, at least a 3-day supply of the medications currently being taken by the resident;
+
+ (4) Information necessary to assist the resident or the resident's representative in obtaining additional prescriptions for necessary medication through consultation with the resident's attending physician; and
+
+ (5) A written statement containing the date, time, method, mode, and destination of the resident's discharge.
+
+ C. A facility may not discharge or transfer a resident:
+
+ (1) Unless the resident or appropriate representative consented in writing to the discharge or transfer; or
+
+ (2) Except when the discharge or transfer:
+
+ (a) Is in accordance with a post-discharge plan of care developed under §A of this regulation;
+
+ (b) Is to a safe and secure environment where the resident will be under the care of a:
+
+ (i) Licensed, certified, or registered care provider; or
+
+ (ii) Person who has agreed in writing to provide a safe and secure environment.
+
+ D. A continuing care facility certified under Article 70B, Annotated Code of Maryland, is not subject to §B of this regulation if the:
+
+ (1) Facility transfers a resident to a lesser level of care within the same facility in accordance with a contract between the facility and the resident; and
+
+ (2) Transfer is approved by the resident's attending physician.
+
+ E. If the requirements of §§A—D of this regulation have been met, the resident's representative, in conjunction with the facility, shall cooperate and assist in the resident's discharge planning, including:
+
+ (1) Contacting, cooperating with, and assisting other health care facilities considering admitting the resident; and
+
+ (2) Cooperating with government agencies, including applying for Medical Assistance for the resident.
+
+ F. If requested by a person during the process of transferring or discharging a resident, or on its own initiative, the Office of the Attorney General may investigate whether an abuse of a resident's funds contributed to the decision to transfer or discharge the resident, and may make appropriate referrals of the matter to other government agencies.
+
+ G. The Secretary may impose a civil money penalty not to exceed $10,000 for each:
+
+ (1) Violation by a facility of its obligations under this regulation and Regulation .10 of this chapter; or
+
+ (2) Willfully or grossly negligent violation by a resident's representative of the representative's obligations under this regulation and Regulation .10 of this chapter.
+
+ H. If a civil money penalty is imposed under §G of this regulation, the facility or representative has the right to request a hearing on the proposed civil money penalty in accordance with State Government Article, Title 10, Subtitle 2, Annotated Code of Maryland, and COMAR 10.01.04.
+
+ I. A resident, resident's representative, resident's attorney, or the Attorney General, on behalf of a resident who believes that an involuntary discharge or transfer that violates this regulation is imminent or has taken place, may request appropriate injunctive relief from the appropriate circuit court.
+
+ Cross References
+
+ 10.07.09.10D(9)
+
+ 10.07.09.12F
+
+ 10.07.09.13B(1)
+
+Code of Maryland Regulations
+
+ .12 Resident Relocation and Bed Hold.
+
+ A. Notification of Resident Relocation Within a Facility.
+
+ (1) Except in emergency situations or when it is documented in the resident's record that a resident's physical, clinical, or psychological well-being would be jeopardized, a nursing facility shall notify a resident or, when applicable, the resident's representative or interested family member, if available, in writing at least 30 days before the resident is relocated within a facility or to a different part of a facility, unless the resident or, if the resident is incapacitated, the resident's legally authorized representative, agrees to the relocation and this is documented in the resident's record.
+
+ (2) Under the limited conditions set forth in §A(1) of this regulation where 30-days notice cannot be provided in advance of a relocation, the facility shall document that it has provided notice of the relocation as soon as practicable.
+
+ (3) When a resident is relocated, the facility shall elicit and make reasonable efforts to comply with the resident's request of location and, if applicable, assignment of roommate.
+
+ B. A resident's right to refuse a change in room assignment under §A of this regulation does not affect the resident's eligibility or entitlement to Medicaid benefits.
+
+ C. Notice.
+
+ (1) Notice of Bed-Hold Policy at the Time of Admission. At the time of admission, a nursing facility shall provide written information to a resident or, when applicable, the resident's representative or interested family member, describing the facility's bed-hold policy, including the period of time during which the resident is permitted to return and resume residence in the nursing facility.
+
+ (2) Notice of Bed-Hold Policy at Time of Transfer. At the time of transfer of a resident to a hospital or for therapeutic leave, a nursing facility shall provide a written notice to the resident, or when applicable, the resident's representative or interested family member, which specifies the duration of the bed-hold policy described in §C of this regulation.
+
+ D. Permitting a Resident to Return to the Nursing Facility. When a resident's hospitalization or therapeutic leave exceeds the bed-hold period under the State Medicaid plan, the resident has a right to be readmitted to the nursing facility immediately upon the first availability of a bed in a semiprivate room if the resident:
+
+ (1) Requires the services provided by the nursing facility; and
+
+ (2) Is eligible for Medicaid coverage for the nursing facility's services.
+
+ E. Unless the bed hold has expired, for purposes of this regulation, transfer includes the refusal of a nursing facility to accept the return of a resident who was previously transferred from the nursing facility:
+
+ (1) Whose bed at the nursing facility was continuously reserved or required to be reserved through payment to the nursing facility from any source; or
+
+ (2) Who had an application for medical assistance pending at the time of the transfer if there is no reason to believe that the application will not be approved.
+
+ F. Transfer and Discharge Planning. In addition to the requirements of Regulation .11 of this chapter, a nursing facility shall provide, in all cases, orientation and planning to residents to ensure safe and orderly transfer of discharge from the nursing facility.
+
+ Cross References
+
+ 10.07.09.02B(14)(b)
+
+Code of Maryland Regulations
+
+ Title 10 MARYLAND DEPARTMENT OF HEALTH
+
+ Subtitle 07 HOSPITALS
+
+ Chapter 09 Residents' Bill of Rights: Comprehensive Care Facilities and Extended Care Facilities
+
+ .13 Hearings for Transfers and Discharges, and Establishment of an Escrow Account.
+
+ Code of Maryland Regulations
+
+ .13 Hearings for Transfers and Discharges, and Establishment of an Escrow Account.
+
+ A. A resident may request a hearing within 30 days of receiving a notice of an intended involuntary transfer or discharge as provided in Regulation .10C of this chapter.
+
+ B. Except in an emergency or when the resident has resided in a facility for less than 30 days, after a request for a hearing has been filed, a nursing facility may not discharge or transfer the resident until:
+
+ (1) A final decision is issued after the hearing and all requirements of Regulation .11 of this chapter are met; or
+
+ (2) The resident consents to the discharge or transfer and withdraws the request for a hearing.
+
+ C. Procedure.
+
+ (1) The resident shall send a written request for a hearing to the Office of Administrative Hearings by the 30th calendar day after the resident receives the nursing facility's notice of the proposed transfer or discharge.
+
+ (2) After receiving the written request, the Office of Administrative Hearings shall schedule a hearing.
+
+ (3) The Office of Administrative Hearings shall conduct the hearing in accordance with COMAR 10.01.04 and 28.02.01.
+
+ (4) The Department is not a party to a hearing conducted pursuant to this regulation. The parties are the nursing facility and the resident. Therefore, a hearing conducted pursuant to this regulation is not a contested case as defined in the Administrative Procedure Act, State Government Article, §10-202, Annotated Code of Maryland.
+
+ D. A facility may require that an escrow account be established when the:
+
+ (1) Basis for a resident's discharge is nonpayment; and
+
+ (2) Resident continues to reside in the facility pending a final decision.
+
+ E. If an escrow account is required under §D of this regulation, the facility shall develop a policy and procedure that is acceptable to the Department concerning the establishment and disposition of funds from the escrow account.
+
+ Cross References
+
+ 10.07.09.10D(2)
+END SOURCE 2
+
+SOURCE 3: Maryland Department of Aging — Long-Term Care Ombudsman | https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx | source's own date: none stated on page | retrieved: 2026-08-30
+Long-Term Care Ombudsman | Department of Aging
+
+ Skip to main content
+
+ An official website of the State of Maryland.
+
+ Here’s how you know
+
+ Maryland.gov
+
+ Translate
+
+ Official websites use .gov
+A
+ .gov website belongs to an official government
+ organization in the United States.
+
+ Secure .gov websites use HTTPS
+A
+ lock (
+
+ Lock
+
+ Locked padlock icon
+
+ ) or https:// means you’ve safely connected to
+ the .gov website. Share sensitive information only on official,
+ secure websites.
+
+ Utility Navigation
+
+ Gov. Moore Signs the LRM Act
+
+ Department of Aging
+
+ Search Department of Aging
+
+ Search
+
+ Search Maryland.gov
+
+ Search
+
+ About
+
+ See all About
+
+ Area Agencies on Aging
+
+ Connect
+
+ Join Our Team
+
+ Maryland Commission on Aging
+
+ Office of the Secretary
+
+ Older Americans Act
+
+ Oversight Committee
+
+ Public Information Act Requests
+
+ Serious Illness Council
+
+ State Plan on Aging
+
+ Programs and Services
+
+ See all Programs and Services
+
+ Brain Health
+
+ Caregivers
+
+ Continuing Care
+
+ Durable Medical Equipment
+
+ Health Promotion and Disease Prevention
+
+ Legal Assistance
+
+ Legislation
+
+ Long-Term Care Ombudsman
+
+ Longevity Ready Maryland
+
+ Maryland Access Point
+
+ Medicare Support
+
+ Nutrition Services
+
+ Public Guardianship
+
+ Senior Centers
+
+ Supporting Older Adults with Resources
+
+ Supportive Communities
+
+ Senior Call Check
+
+ News
+
+ See all News
+
+ Grants
+
+ News and Information
+
+ Gov. Moore Signs the LRM Act
+
+ Maryland.gov
+
+ Home
+
+ Programs and Services
+
+ Long-Term Care Ombudsman
+
+ Long-Term Care Ombudsman
+
+ Skip sidebar navigation
+
+ Close
+ Section Menu
+
+ Programs and Services
+
+ Brain Health
+
+ Caregivers
+
+ Continuing Care
+
+ Durable Medical Equipment
+
+ Health Promotion and Disease Prevention
+
+ Legal Assistance
+
+ Legislation
+
+ Long-Term Care Ombudsman
+
+ Longevity Ready Maryland
+
+ Maryland Access Point
+
+ Medicare Support
+
+ Nutrition Services
+
+ Public Guardianship
+
+ Senior Centers
+
+ Supporting Older Adults with Resources
+
+ Supportive Communities
+
+ Senior Call Check
+
+Support for Long-Term Care Residents
+The Maryland Long-Term Care Ombudsman Program advocates for the health, safety, well-being, and rights of residents in assisted living and nursing homes. Working at the direction of the resident and only taking action with their consent, Ombudsman services are confidential and free of charge. Ombudsman also advocate for laws, regulations, and policies that protect resident rights and improve quality of life. 
+
+ 2025 Impact
+
+ The Maryland Long-Term Care Ombudsman Program serves over 54,000 Maryland residents, visiting more than 1,800 licensed assisted living and nursing homes each year, and resolving 86% of all complaints to the satisfaction of the resident.
+
+ 3,978
+
+ Complaints investigated, verified, and resolved
+
+ 7,252
+
+ Visits to nursing homes and assisted living communities
+
+ 505
+
+ Resident and family councils attended
+
+ Support for Long-Term Care Residents
+
+ Supports and Services Provided
+
+ When I came to the nursing home I felt out of place. Then I met my ombudsman, who was someone I could talk to. They told me about the resident council, which changed how I felt about being in the nursing home because participating gives me purpose and makes me feel like I make a difference for other people.
+
+~Brian (Nursing Home Resident)
+Empowers residents to direct their own lives
+Investigates complaints made by or on behalf of residents
+Listens to residents about their concerns and wishes
+Educates residents, staff and the community about resident rights
+Offers ideas and discusses options to resolve resident concerns
+Advocates on behalf of residents​
+Supports resident and family councils
+
+ Contact your Local LTC Ombudsman Office
+
+ Allegany County: 301-783-1771
+Anne Arundel County: 410-222-4257
+Baltimore City: 410-396-3144
+Baltimore County: 410-887-4200
+Calvert County: 410-535-4606, ext. 143
+Caroline County: 410-778-6000
+Carroll County: 410-386-3810
+Cecil County: 410-996-8429
+Charles County: 301-934-0109
+Dorchester County: 410-742-0505, ext. 104
+Frederick County: 301-600-2877
+Garrett County: 301-334-9431 ext. 6140
+Harford County: 410-638-3025
+Howard County: 410-313-6423
+Kent County: 410-778-6000
+Montgomery County: 240-777-3369
+Prince George's County: 301-265-8483
+Queen Anne's County: 410-758-0848
+Somerset County: 410-742-0505, ext. 104
+St. Mary's County: 301-475-4200 ext. 71055
+Talbot County: 410-778-6000
+Washington County: 301-790-0275
+Wicomico County: 410-742-0505, ext. 104
+Worcester County: 410-742-0505, ext. 104
+
+ Additional Resources
+
+ Residents' Rights from the National Long-Term Care Ombudsman Resource Center
+Find and C​ompare Nursing Homes ​​from Medicare.gov
+
+ Department of Aging
+
+ Contact us
+
+ 36 S Charles Street, 12th Floor
+
+ Baltimore, MD 21201
+
+ Main: 410-767-1100
+
+ Toll-Free: 800-243-3425
+
+ Fax: 410-333-7943
+
+ Maryland Relay: 7-1-1
+
+ Explore Maryland.gov
+
+ Top Benefits and Services
+
+ Drivers and Motor Vehicles
+
+ Food Assistance and SNAP
+
+ Unemployment
+
+ Taxes
+
+ Register to Vote
+
+ Visit Maryland
+
+ More Maryland Benefits
+
+ More Maryland Services
+
+ Your Government
+
+ Governor Wes Moore
+
+ Maryland Cabinet Agencies
+
+ All State Agencies
+
+ State Employee Directory
+
+ For State Employees
+
+ Maryland State Jobs
+
+ Report State Government Fraud
+
+ Policies
+
+ Statewide Accessibility Policy
+
+ Privacy and Security Policy
+
+ Terms of Use
+
+ Stay Connected
+
+ Maryland Relay: 7-1-1
+
+ Maryland News
+
+ Emergency Alerts
+
+ Travel Alerts
+
+ Report a Cybersecurity Incident
+
+ Report Human Trafficking
+
+ Key Bridge Updates
+
+ © 2026 State of Maryland. All rights reserved.
+END SOURCE 3
+
+END OF PACKET — 3 sources

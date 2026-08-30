@@ -7,7 +7,7 @@ present. Spanish = a translated page is published; it carries the
 docket, the hoisted rows, and the notice periods and deadlines, in
 the state's own published translation only.
 
-**Baseline: 14 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
+**Baseline: 18 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
 
 | State | Baseline | Full page | Spanish | Sources last checked |
 |---|:---:|:---:|:---:|---|
@@ -29,9 +29,9 @@ the state's own published translation only.
 | Iowa | [ ] | [ ] | [ ] |  |
 | Kansas | [ ] | [ ] | [ ] |  |
 | Kentucky | [ ] | [ ] | [ ] |  |
-| Louisiana | [ ] | [ ] | [ ] |  |
+| [Louisiana](site/states/louisiana.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Maine | [ ] | [ ] | [ ] |  |
-| Maryland | [ ] | [ ] | [ ] |  |
+| [Maryland](site/states/maryland.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Massachusetts](site/states/massachusetts.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Michigan](site/states/michigan.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Minnesota | [ ] | [ ] | [ ] |  |
@@ -53,11 +53,11 @@ the state's own published translation only.
 | Rhode Island | [ ] | [ ] | [ ] |  |
 | South Carolina | [ ] | [ ] | [ ] |  |
 | South Dakota | [ ] | [ ] | [ ] |  |
-| Tennessee | [ ] | [ ] | [ ] |  |
+| [Tennessee](site/states/tennessee.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Texas](site/states/texas.html) | [x] | [x] | [ ] | 2026-08-30 |
 | Utah | [ ] | [ ] | [ ] |  |
 | Vermont | [ ] | [ ] | [ ] |  |
-| Virginia | [ ] | [ ] | [ ] |  |
+| [Virginia](site/states/virginia.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Washington | [ ] | [ ] | [ ] |  |
 | West Virginia | [ ] | [ ] | [ ] |  |
 | Wisconsin | [ ] | [ ] | [ ] |  |

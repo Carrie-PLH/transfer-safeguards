@@ -1,0 +1,520 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Louisiana
+SLUG: louisiana
+ASSEMBLED: 2026-08-30
+CAPTURE NOTES: Both sources were retrieved by curl with a browser user-agent. Source 1 is a mechanical slice of the Department of Health's published PDF of the nursing facility licensing standards, LAC Title 48 Part I (extracted whole with `pdftotext -layout`, then cut to the printed pages carrying §9775). The Administrative Code prints in two columns, so the extractor renders each printed line as the left column's text followed by the right column's; a subsection that runs down one column is therefore broken across lines carrying unrelated text from the neighbouring column, and the running heads, page numbers and the start of §9777 inside that range are the document's own. Source 2 was reduced to text mechanically (tag strip); the office's navigation appears twice in the capture, and the regional ombudsman roster is included as served, with the site's own email obfuscation ("[email protected]") left as the page renders it.
+PENDING: A first-party page published by the Division of Administrative Law stating the route for a nursing facility transfer or discharge appeal — §9775.E names that division as the appeal body, and §9775.C.5.d requires the notice to carry "The address, phone number and hours of operation of the Division of Administrative Law or its successor;", but no such page was captured, so no address, telephone number or filing deadline for the appeal is in this packet. Also pending: R.S. 40:2010.6 et seq., the residents' bill of rights statute the rule implements; and any first-party statement of a Louisiana Medicaid bed-hold period.
+
+SOURCE 1: LAC Title 48 Part I, §9775, Transfer and/or Discharge of the Resident (excerpt from the Department of Health's published nursing facility standards) | https://ldh.la.gov/assets/medicaid/hss/docs/NH/NH_Regulations/NF_regs_as_of_3-14-22.pdf | source's own date: Louisiana Administrative Code February 2022; §9775 historical note LR 42:1911 (November 2016) | retrieved: 2026-08-30
+and priority for visitation by immediate family members and                      Subchapter C. Resident Rights
+other designated persons to residents receiving end-of-life
+care;                                                                   §9775. Transfer and/or Discharge of the Resident
+
+        b. that visitation by immediate family members of                 A. Voluntary Individual Transfer or Discharge. The
+the residents and other designated persons will be screened             nursing facility shall provide sufficient preparation and
+for infectious agents or infectious diseases and will pass              orientation to residents to ensure safe and orderly transfer or
+such screening prior to each visitation, utilizing at least the         discharge from the nursing facility to the receiving entity.
+current screening or testing methods and protocols                      The information in the transferred and/or discharged
+recommended by the Centers for Disease Control and                      resident’s care plan, MDS, any mental health and/or
+Prevention, as applicable; if there is a current Louisiana              psychosocial assessments and/or evaluations and discharge
+SHO order or emergency notice that requires more rigorous               plan shall be submitted to the individual or institution into
+screening or testing methods and protocols, then the nursing            whose care the resident is being discharged
+facility shall utilize those methods and protocols;                       B. Involuntary Transfer or Discharge. The nursing
+       c. that an immediate family member or other                      facility shall permit each resident to remain in the nursing
+designated person not be allowed to visit a nursing facility            facility, and shall not transfer or discharge the resident from
+resident if such immediate family member or other                       the nursing facility unless:
+designated person has obvious signs or symptoms of an                        1. the transfer or discharge is necessary for the
+infectious agent or infectious disease, or if such immediate            resident’s welfare and/or the resident’s needs cannot be met
+                                                                        in the nursing facility;
+
+                                                                  149          Louisiana Administrative Code            February 2022
+                                                          PUBLIC HEALTH—GENERAL
+
+     2. the transfer or discharge is appropriate because the                       f. for nursing facility residents with developmental
+resident’s health has improved sufficiently such that the                   disabilities, the mailing address and telephone number of the
+resident no longer needs the services provided by the nursing               agency responsible for the protection and advocacy of
+facility;                                                                   individuals with developmental disabilities; and
+     3. the safety and health of individuals in the nursing                       g. for nursing facility residents with mental illness,
+facility is endangered by the resident to be transferred or                 the mailing address and telephone number of the agency
+discharged;                                                                 responsible for the protection and advocacy of individuals
+                                                                            with mental illness established under the Protection and
+    4. the resident has failed, after reasonable and
+                                                                            Advocacy for Mentally Ill Individuals Act;
+appropriate notice, to pay for services rendered by the
+nursing facility;                                                                6. the nursing facility shall transmit a copy of the
+                                                                            involuntary transfer/discharge notice to the local long-term
+    5.        the nursing facility ceases to operate.
+                                                                            care ombudsman program.
+   C. Notice before Involuntary Transfer or Discharge.
+                                                                               D. Transfer. The nursing facility shall ensure that the
+Before a nursing facility involuntary transfers or discharges
+                                                                            transfer or discharge is effectuated in a safe and orderly
+a resident, the nursing facility shall:
+                                                                            manner. The resident and his/her legal representative or
+    1. notify the resident, and if known, a family member                   interested family member, if known and available, shall be
+or legal representative of the resident, of the transfer or                 consulted in choosing another nursing facility if nursing
+discharge and the reasons for the move in writing and in a                  facility placement is required.
+language and manner easily understood;
+                                                                               E. Appeal of Involuntary Discharge or Transfer. The
+    2.        record the reasons in the resident’s clinical record;         resident, or his/her legal representative or designated
+                                                                            contact, if known and available, has the right to appeal any
+    3. timing of the notice. The notice of transfer or
+                                                                            transfer or discharge to the Division of Administrative Law,
+discharge shall be made by the nursing facility at least 30
+                                                                            which shall provide a fair hearing in all such appeals.
+days before the resident is transferred or discharged;
+                                                                              AUTHORITY NOTE: Promulgated in accordance with R.S.
+     4. notice may be made as soon as practicable before                    40:2009.1-2116.
+transfer or discharge when:                                                   HISTORICAL NOTE: Promulgated by the Department of
+                                                                            Health, Bureau of Health Services Financing, LR 42:1911
+      a. the safety and health of the individuals in the
+                                                                            (November 2016).
+nursing facility would be endangered;
+                                                                            §9777. Statement of Rights and Responsibilities
+       b. the resident’s health improves sufficiently to
+allow a more immediate transfer or discharge;                                  A. In accordance with R.S. 40:2010.6 et seq., all nursing
+                                                                            facilities shall adopt and make public a statement of the
+       c. an immediate transfer or discharge is required by                 rights and responsibilities of the residents residing therein
+the resident’s urgent medical needs; or                                     and shall treat such residents in accordance with the
+       d. a resident has not resided in the nursing facility                provisions of the statement. The statement shall assure each
+for 30 days;                                                                resident the following:
+     NOTE: In nursing facilities not certified to provide services               1. the right to civil and religious liberties, including
+     under Title XVIII or Title XIX of the Social Security Act, the         but not limited to:
+     advance notice period may be shortened to fifteen days for
+     nonpayment of a bill for a stay at the nursing facility.                      a.   knowledge of available choices;
+     5. contents of the notice. The written notice to the                          b.   the right to independent personal decision; and
+resident and/or resident’s representative (if applicable) of
+                                                                                   c. the right to encouragement and assistance from
+involuntary discharge or transfer shall include the following
+                                                                            the staff of the nursing facility in the fullest possible exercise
+information:
+                                                                            of these civil and religious rights;
+         a.     the reason for transfer or discharge;
+                                                                               2. the     right    to    private     and         uncensored
+         b.     the effective date of transfer or discharge;                communications, including but not limited to:
+       c. the location to which the resident is to be                              a.   receiving and sending unopened correspondence;
+transferred or discharged;
+                                                                                   b.   access to a telephone;
+      d. a statement that the resident has the right to
+                                                                                  c. visitation with any person of the resident's
+appeal the action to the state. The address, phone number
+                                                                            choice; and
+and hours of operation of the Division of Administrative
+Law or its successor;                                                              d. overnight visitation outside the nursing facility
+
+END SOURCE 1
+
+SOURCE 2: Louisiana Governor's Office of Elderly Affairs — Louisiana Ombudsman Program | https://goea.louisiana.gov/services/louisiana-ombudsman-program/ | source's own date: none stated on page | retrieved: 2026-08-30
+Louisiana Ombudsman Program - Governor's Office of Elderly Affairs
+
+ An official Louisiana.gov website.
+
+ Here's how you know 
+
+ The .gov means it’s official.
+
+ Louisiana government websites often end in .gov. Before sharing sensitive information, make sure you’re on a Louisiana government site.
+
+ The site is secure. 
+
+ The https:// ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely.
+
+ About Us
+
+ About The Office
+
+ Agency Overview
+
+ GOEA Executive Staff Contact Information
+
+ Disaster Preparedness
+
+ Web Accessibility
+
+ Agency Departments
+
+ Accounting & Finance
+
+ Compliance & Planning
+
+ Elderly Protective Services
+
+ Home & Community Based Services (HCBS)
+
+ Human Resources
+
+ Events
+
+ 2024 Hurricane Season
+
+ Older Americans Month - May
+
+ LEBA Quarterly Meeting
+
+ Ageism Awareness Day
+
+ Financial Exploitation Awareness Month
+
+ EBRCOA Drive Thru Food Giveaway
+
+ National Senior Nutrition Month
+
+ World Elder Abuse Awareness Day
+
+ Publications
+
+ Plans and Reports
+
+ Newsfeed Archive
+
+ Resources
+
+ ADRCLA.org
+
+ Caregiver Resources
+
+ GOEA Policy & Procedure Manual
+
+ GOEA Training
+
+ LEBA Personal Financial Disclosure Filing
+
+ Interdiction and Court Appointed Curator Education in Louisiana
+
+ Legal Self Help Page
+
+ Resource Library
+
+ Resource Links
+
+ Rulemaking
+
+ Services
+
+ Agency Network Services Provided
+
+ Louisiana Ombudsman Program
+
+ Nutrition
+
+ Senior Community Service Employment Program (SCSEP)
+
+ ×
+
+ About Us
+
+ About The Office
+
+ Agency Overview
+
+ GOEA Executive Staff Contact Information
+
+ Disaster Preparedness
+
+ Web Accessibility
+
+ Agency Departments
+
+ Accounting & Finance
+
+ Compliance & Planning
+
+ Elderly Protective Services
+
+ Home & Community Based Services (HCBS)
+
+ Human Resources
+
+ Events
+
+ 2024 Hurricane Season
+
+ Older Americans Month - May
+
+ LEBA Quarterly Meeting
+
+ Ageism Awareness Day
+
+ Financial Exploitation Awareness Month
+
+ EBRCOA Drive Thru Food Giveaway
+
+ National Senior Nutrition Month
+
+ World Elder Abuse Awareness Day
+
+ Publications
+
+ Plans and Reports
+
+ Newsfeed Archive
+
+ Resources
+
+ ADRCLA.org
+
+ Caregiver Resources
+
+ GOEA Policy & Procedure Manual
+
+ GOEA Training
+
+ LEBA Personal Financial Disclosure Filing
+
+ Interdiction and Court Appointed Curator Education in Louisiana
+
+ Legal Self Help Page
+
+ Resource Library
+
+ Resource Links
+
+ Rulemaking
+
+ Services
+
+ Agency Network Services Provided
+
+ Louisiana Ombudsman Program
+
+ Nutrition
+
+ Senior Community Service Employment Program (SCSEP)
+
+ ×
+
+ Web Results
+
+ Close
+
+-->
+
+ Louisiana Ombudsman Program
+
+ Home Services Louisiana Ombudsman Program
+
+Long-Term Care Ombudsmen investigate and resolve complaints made by or on behalf of residents of long-term care facilities. Long-term care facilities include nursing homes, assisted living facilities, and personal care homes that serve individuals who are elderly or disabled. Ombudsmen also assist consumers and potential consumers with the process of choosing a facility.
+
+Ombudsman Program FAQ
+
+Ombudsmen services are confidential and free of charge.
+
+ Who are ombudsmen?
+
+ Ombudsmen are individuals who are trained to respond to the problems and needs of residents of nursing facilities and other long-term care facilities.
+
+ What do ombudsmen do?
+
+ Ombudsmen work to protect and promote the rights of residents of long-term care facilities.  Ombudsmen work with residents, their families, facilities, community organizations, and other interested parties to address concerns that affect the lives of residents.  Ombudsmen listen, provide information, assist residents in solving problems, and help families identify suitable long-term care facilities for loved ones.
+
+ What kinds of problems do ombudsmen respond to?
+
+ Ombudsmen respond to any problem, complaint, or concern a resident may have.  Common problems are with the quality of care, food, finances, activities, visitation, and the ability to exercise their rights as a resident or citizen.
+
+ Who should contact an ombudsman?
+
+ Anyone who has questions or concerns about the care or treatment a resident is receiving should contact an ombudsman. 
+
+ How do you contact an ombudsman?
+
+ Ombudsmen visit the facility regularly.  You can talk to the ombudsman during one of these regular visits or view the list of Ombudsman Coordinators below.
+
+Ombudsmen services are confidential and free of charge.
+
+Service Providers by Regions and Parishes Served
+
+NOTE:  Some of the toll-free 800 numbers below are within Louisiana ONLY. If calling from outside Louisiana, you may need to use the non-toll-free phone numbers or contact the State Office via its toll-free number: (866) 632-0922.  The State Office will ask the local office to contact you.
+
+ Alexandria Region
+
+ Avoyelles, Catahoula, Concordia, Grant, LaSalle, Natchitoches, Rapides, Sabine, and Winn
+
+Carolyn Smith, Ombudsman Coordinator
+Cenla Area Agency on Aging 
+Post Office Box 13027
+Alexandria, LA 71315
+Office: (318) 484-2260 or (800) 454-9573
+Fax: (318) 484-2266
+[email protected]
+
+ Baton Rouge Region
+
+ Ascension, Assumption, East Baton Rouge, East Feliciana, Iberville, Lafourche, Livingston, Pointe Coupee, St. Charles, St. Helena, St. James, St. John, Tangipahoa, Terrebonne, Washington, West Baton Rouge, and West Feliciana
+
+Mavis Lee, Ombudsman Coordinator
+Capital Area Agency on Aging
+2051 Silverside Drive, Suite 208
+Baton Rouge, LA 70808
+Office: (800) 833-9883
+Work Cell: (225) 229-7586
+Fax: (225) 922-2528
+[email protected]
+
+ Lafayette Region
+
+ Acadia, Evangeline, Iberia, Lafayette, St. Landry, St. Martin, St. Mary, and Vermilion
+
+Dana Adams, Ombudsman Coordinator
+Cajun Area Agency on Aging
+Post Office Drawer 60850
+Lafayette, LA 70596-0850
+Office: (337) 572-8940 or (800) 738-2256
+Fax: (337) 572-8974
+[email protected]
+
+ Lake Charles Region
+
+ Allen, Beauregard, Calcasieu, Cameron, Jefferson Davis, and Vernon
+
+Shelly Young, Ombudsman Coordinator
+Calcasieu Council on Aging
+3950 Gerstner Memorial Blvd.
+Lake Charles, LA 70607
+Office: (337) 474-2583 or (800) 223-5872
+Work Cell: (337) 532-7385
+Fax: (337) 474-6563 
+[email protected]
+
+ Monroe Region
+
+ Caldwell, East Carroll, Franklin, Jackson, Lincoln, Madison, Morehouse, Ouachita, Richland, Tensas, Union, and West Carroll
+
+Anna Horne, Ombudsman Coordinator
+Cenla Area Agency on Aging
+1900 N. 18th Street, Suite 410
+Monroe, LA 71201
+Office: (318) 362-4288 or (800) 454-9573
+Fax: (318) 362-4287
+[email protected]
+
+ New Orleans Region
+
+ Jefferson, Orleans, Plaquemines, St. Bernard, and St. Tammany
+
+Tanya Hayes, Ombudsman Coordinator
+Capital Area Agency on Aging
+Silverside Drive, Suite 208
+Baton Rouge, LA 70808
+Office: (800) 833-9883
+Work Cell: (504) 909-0672
+Fax: (225) 922-2528
+[email protected]
+
+ Shreveport Region
+
+ Bienville, Bossier, Caddo, Claiborne, DeSoto, Red River, and Webster
+
+Caddo Council on Aging
+1700 Buckner St., Suite 240
+Shreveport, LA 71101
+Office: (318) 676-7900 or (800) 256-3003
+Fax: (318) 676-7911
+
+ State Office
+
+ Rosa Walton, State Ombudsman
+State Long-Term Care Ombudsman Office
+Governor's Office of Elderly Affairs
+P.O. Box 61
+Baton Rouge, LA 70821-0061
+Phone: (225) 342-9723
+Toll-Free: (866) 632-0922
+[email protected]
+
+Interested in becoming a volunteer?
+
+Volunteer opportunities vary by region and depend on current needs. Ombudsman certification training sessions are available throughout the year, depending on demand.
+
+Complete the application below. For any inquiries, please call (504) 782-6640.
+
+Ombudsman Program Application
+
+Volunteer Recruitment Video
+
+Ombudsman Login
+
+ Helpful Resources
+
+ Ombudsman Brochure
+
+ Ombudsman Brochure (Spanish)
+
+ Ombudsman Flyer
+
+ Your Guide To Choosing A Nursing Home or Other Long-Term Services & Support
+
+ Nursing Home Comparison Site
+
+ Nursing Home Residents' Bill of Rights (State Laws)
+
+ Nursing Home Residents' Rights (Federal Regulations)
+
+ Nursing Home Virtual Visitation Act
+
+ The National Consumer Voice for Quality Long-Term Care
+
+ Long-Term Care Community Coalition 
+
+ Pioneer Network - Changing the Culture in Nursing Homes
+
+ Louisiana Department of Health, Health Standards Section
+
+ Health Standards Complaint Form
+
+ Louisiana Department of Health, Nursing Facilities Website
+
+ ARCP Resident Rights (State Law)
+
+ MS-LA Assisted Living Association 
+
+ Argentum
+
+ LeadingAge
+
+ Louisiana Department of Health, Office of Aging and Adult Services
+
+ Louisiana Department of Insurance 
+
+Nursing Facilities
+
+For questions about this webpage, please contact the State Long-Term Care Ombudsman at [email protected]
+
+ Information
+
+ About GOEA
+
+ Web Accessibility
+
+ Policy
+
+ Staff Directory
+
+ News Archive
+
+ AAA Directory
+
+ Links
+
+ Louisiana.gov
+
+ Office of the Governor
+
+ GetAGamePlan.org
+
+ Fight Fraud, Waste, and Abuse
+
+ Louisiana Transparency & Accountability
+
+ Contact
+
+ 602 North 5th Street, Suite 435
+ Baton Rouge, LA 70802
+
+ Phone: (225) 342-7100
+
+ Fax: (225) 342-7133
+
+ © . All rights reserved.
+END SOURCE 2
+
+END OF PACKET — 2 sources
