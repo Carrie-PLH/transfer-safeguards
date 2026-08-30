@@ -1,0 +1,510 @@
+/* ============================================================
+   Room & Recourse (repo slug: transfer-safeguards) — design v1
+   Derived from the Gathered Work design system v3 via Rules &
+   Record and Board & Border: same document anchor (a report
+   built to hold up under challenge), same apparatus, different
+   ground. Dark muted garnet in place of B&B's purple, R&R's
+   spruce, and GW's navy — the four sites must read as siblings,
+   not the same site. No warm/beige paper palettes, no royal
+   blue, no neons (standing rule).
+   Fonts: system stacks only — no third-party requests of any
+   kind on this site.
+   Serif for argument, sans for apparatus, mono for data.
+   Token pairs must pass WCAG 2.1 AA (text ≥4.5:1 on every
+   ground painted here; edges ≥3:1) via tools/check-contrast.py
+   before any deploy.
+   ============================================================ */
+
+:root {
+  --bg: #171013;
+  --bg-raise: #1f1518;
+  --bg-inset: #1a1215;
+  --text: #efe8ea;
+  --text-dim: #b4a4aa;
+  --hair: #332327;
+  --hair-strong: #533a40;
+  --accent: #e0aab5;        /* soft rose — links, data, section numbers */
+  --accent-dim: #a26f7c;    /* link underlines, button edges — never text */
+  --accent-muted: #d097a3;  /* the name in running text; ≥4.5:1 on every ground */
+  --edge: #907279;          /* borders of interactive controls, ≥3:1 per 1.4.11 */
+
+  --font-display: Charter, "Bitstream Charter", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, "Courier New", monospace;
+
+  --measure: 42rem;
+  --gutter: clamp(1.25rem, 5vw, 4rem);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--accent); color: var(--bg); }
+
+/* ---------- masthead ---------- */
+
+.topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem var(--gutter);
+  border-bottom: 1px solid var(--hair);
+}
+.topline a { text-decoration: none; }
+.topline .wordmark {
+  display: inline-flex;
+  align-items: center;
+  /* Text wordmark for now; a logo lockup replaces it when the name is
+     settled, and these type tokens then style the fallback text a browser
+     shows if the image fails. */
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: var(--text);
+}
+.topline .wordmark img {
+  display: block;
+  height: 3.2rem;          /* doubled from the siblings' 1.6rem at the owner's
+                              direction, 2026-08-26 — this lockup's letterforms
+                              are smaller within its frame */
+  width: auto;
+}
+.topline .wordmark:hover { color: var(--accent); }
+.topline .wordmark:hover img { opacity: 0.82; }
+.topline .wordmark img { transition: opacity 0.15s ease; }
+@media (prefers-reduced-motion: reduce) {
+  .topline .wordmark img { transition: none; }
+}
+.topline nav { display: flex; gap: 1.75rem; flex-wrap: wrap; }
+.topline nav a {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+}
+.topline nav a:hover { color: var(--accent); }
+
+/* ---------- typography ---------- */
+
+h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2.4rem, 6.5vw, 4.75rem);
+  line-height: 1.04;
+  letter-spacing: -0.015em;
+  max-width: 18ch;
+}
+h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.1rem;
+  max-width: 28ch;
+}
+h3 {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-dim);
+  margin-bottom: 0.8rem;
+}
+
+p { max-width: var(--measure); margin-bottom: 1rem; }
+p.lede {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  line-height: 1.5;
+  color: var(--text);
+}
+
+a { color: var(--accent); text-decoration-color: var(--accent-dim); }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+strong { font-weight: 600; color: var(--text); }
+em { font-style: italic; }
+
+blockquote {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  background: var(--bg-inset);
+  border: 1px solid var(--hair);
+  border-left: 2px solid var(--accent);
+  padding: 1.25rem 1.5rem;
+  max-width: 46rem;
+  margin: 1.1rem 0 1.25rem;
+  color: var(--text-dim);
+}
+blockquote .cite { display: block; margin-top: 0.7rem; font-size: 0.72rem; }
+
+/* ---------- report sections ---------- */
+
+.section {
+  display: grid;
+  grid-template-columns: minmax(5.5rem, 9rem) 1fr;
+  gap: clamp(1rem, 3vw, 3rem);
+  padding: clamp(2.5rem, 6vw, 4.5rem) var(--gutter);
+  border-top: 1px solid var(--hair);
+  max-width: 80rem;
+}
+.section:first-of-type { border-top: none; }
+.section--raise { background: var(--bg-raise); }
+
+.section-no {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  padding-top: 0.5rem;
+}
+.section-no small {
+  display: block;
+  color: var(--text-dim);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin-top: 0.35rem;
+  text-transform: none;
+}
+
+@media (max-width: 720px) {
+  .section { grid-template-columns: 1fr; gap: 0.75rem; }
+}
+
+/* ---------- tables ---------- */
+
+.claim-table { width: 100%; max-width: 48rem; border-collapse: collapse; }
+.claim-table th, .claim-table td {
+  text-align: left;
+  padding: 0.8rem 1rem 0.8rem 0;
+  border-bottom: 1px solid var(--hair);
+  vertical-align: top;
+  font-size: 0.92rem;
+}
+.claim-table th {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  border-bottom: 1px solid var(--hair-strong);
+}
+.claim-table td { color: var(--text-dim); }
+.claim-table td:first-child { color: var(--text); font-weight: 500; }
+.claim-yes { color: var(--accent); }
+
+/* A wide table scrolls inside its own container; the page body must never
+   scroll horizontally (WCAG 2.1 AA, SC 1.4.10 Reflow). The min-width:0 is
+   load-bearing: without it a grid item's automatic minimum size is its
+   min-content width, so a table's min-content pushes the whole .section
+   wider than the viewport and the page scrolls sideways instead of the
+   table. */
+.section > * { min-width: 0; }
+/* Long unbreakable tokens — board emails and license-verification URLs —
+   otherwise set a min-content floor wider than a 320px viewport and force
+   the page to scroll sideways. "anywhere" rather than "break-word" because
+   only "anywhere" is honored when the browser computes min-content sizing. */
+a, dd, td, p, li { overflow-wrap: anywhere; }
+.table-scroll { overflow-x: auto; }
+.table-scroll > table { min-width: 34rem; }
+
+/* ---------- forms & buttons ---------- */
+
+label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  margin: 1rem 0 0.4rem;
+}
+input[type="email"], input[type="text"] {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  padding: 0.65rem 0.8rem;
+  background: var(--bg-inset);
+  border: 1px solid var(--edge);
+  color: var(--text);
+  max-width: 30rem;
+  width: 100%;
+}
+input::placeholder { color: var(--text-dim); opacity: 1; }
+
+button, .button {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent-dim);
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+button:hover, .button:hover { background: var(--accent); color: var(--bg); }
+.button--solid { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+.button--solid:hover { background: var(--text); border-color: var(--text); }
+
+/* ---------- finder (homepage: find your state) ---------- */
+
+.finder { margin-top: 1.9rem; max-width: 34rem; }
+.finder label { margin-top: 0; }
+.finder input[type="text"] { max-width: 34rem; }
+.finder-fallback { color: var(--text-dim); }
+.finder-note {
+  color: var(--text-dim);
+  margin: 0.6rem 0 0;
+  max-width: 34rem;
+  line-height: 1.7;
+}
+.finder-out:empty { display: none; }
+
+.finder-results {
+  list-style: none;
+  margin-top: 0.9rem;
+  border-top: 1px solid var(--hair);
+  max-width: 34rem;
+}
+.finder-results li {
+  border-bottom: 1px solid var(--hair);
+  padding: 0.7rem 0;
+}
+.finder-results a {
+  display: block;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.finder-results a:hover { border-bottom-color: var(--accent-dim); }
+.finder-meta {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  margin-top: 0.15rem;
+}
+
+.finder-none {
+  margin-top: 0.9rem;
+  max-width: 34rem;
+  background: var(--bg-inset);
+  border: 1px solid var(--hair);
+  border-left: 2px solid var(--accent);
+  padding: 1.1rem 1.25rem;
+}
+.finder-none p { margin-bottom: 0.6rem; max-width: none; color: var(--text-dim); }
+.finder-none p:last-child { margin-bottom: 0; }
+
+/* ---------- state picker (click an abbreviation, go to its page) ---------- */
+/* Static, no JavaScript required. Generated by tools/build-state-picker.py
+   from what's actually published on disk — never hand-edit the grid
+   between its STATE-PICKER markers. */
+
+/* Bypass block (WCAG 2.4.1) — off-screen until focused. Accent on
+   --bg-raise is 8.20:1, --edge border 3.75:1; both pass 2.1 AA. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 0.55rem 0.9rem;
+  background: var(--bg-raise);
+  color: var(--accent);
+  border: 1px solid var(--edge);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: var(--gutter);
+  top: 0.5rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.state-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: 40rem;
+  margin-top: 1.6rem;
+}
+
+.state-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.6rem;
+  padding: 0.4rem 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  border: 1px solid var(--accent-dim);
+  color: var(--accent);
+  background: transparent;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+a.state-pill:hover, a.state-pill:focus-visible {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.state-pill--pending {
+  color: var(--text-dim);
+  border-color: var(--hair-strong);
+  cursor: default;
+}
+
+.picker-note {
+  color: var(--text-dim);
+  margin: 0.75rem 0 0;
+  max-width: 40rem;
+  line-height: 1.7;
+}
+
+/* ---------- docket (state page: the facts, hoisted) ---------- */
+
+.docket {
+  max-width: 46rem;
+  margin: 1.75rem 0 0;
+  border-top: 1px solid var(--hair-strong);
+}
+.docket > div {
+  display: grid;
+  grid-template-columns: minmax(9rem, 13rem) 1fr;
+  gap: 0.5rem 1.5rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--hair);
+}
+.docket dt {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  padding-top: 0.15rem;
+}
+.docket dd { font-size: 0.92rem; color: var(--text); }
+.docket dd .dim { color: var(--text-dim); }
+.docket-note {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  max-width: 46rem;
+  margin-top: 0.7rem;
+}
+
+@media (max-width: 560px) {
+  .docket > div { grid-template-columns: 1fr; gap: 0.25rem; }
+}
+
+/* ---------- footer ---------- */
+
+.colophon {
+  border-top: 1px solid var(--hair);
+  padding: 2.75rem var(--gutter) 3rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--text-dim);
+}
+.colophon a { color: var(--text-dim); }
+.colophon a:hover { color: var(--accent); }
+.colophon .rows {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 2rem 3rem;
+  align-items: start;
+  max-width: 80rem;
+}
+.colophon .rows > div { max-width: 26rem; }
+.colophon .foot-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  /* No opacity here. --text-dim is 7.42:1 on --bg, but composited through an
+     opacity it would fall under the 4.5:1 that SC 1.4.3 requires at this
+     size. The mono/uppercase/letter-spaced treatment already separates the
+     label from the body text; it does not need to be dimmer as well. */
+  margin-bottom: 0.6rem;
+}
+.colophon .mark {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: var(--text);
+}
+img.mark {
+  display: block;
+  height: 2.1rem;
+  width: auto;
+  max-width: 100%;
+}
+
+/* ---------- motion: one settle ---------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal > * {
+    opacity: 0;
+    transform: translateY(0.35rem);
+    animation: settle 0.5s ease-out forwards;
+  }
+  .reveal > *:nth-child(1) { animation-delay: 0.05s; }
+  .reveal > *:nth-child(2) { animation-delay: 0.13s; }
+  .reveal > *:nth-child(3) { animation-delay: 0.21s; }
+  @keyframes settle { to { opacity: 1; transform: none; } }
+}
+
+/* ---------- utilities ---------- */
+
+/* The name, wherever it appears in running text. Not a link — links on this
+   site carry an underline; this is the accent used as emphasis. */
+.si { color: var(--accent-muted); letter-spacing: 0.03em; white-space: nowrap; }
+a .si, .si a { color: inherit; }
+
+.mono { font-family: var(--font-mono); }
+.small { font-size: 0.85rem; }
+.muted { color: var(--text-dim); }
+.mw { max-width: var(--measure); }
