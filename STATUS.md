@@ -7,11 +7,11 @@ present. Spanish = a translated page is published; it carries the
 docket, the hoisted rows, and the notice periods and deadlines, in
 the state's own published translation only.
 
-**Baseline: 18 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
+**Baseline: 22 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
 
 | State | Baseline | Full page | Spanish | Sources last checked |
 |---|:---:|:---:|:---:|---|
-| Alabama | [ ] | [ ] | [ ] |  |
+| [Alabama](site/states/alabama.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Alaska | [ ] | [ ] | [ ] |  |
 | Arizona | [ ] | [ ] | [ ] |  |
 | Arkansas | [ ] | [ ] | [ ] |  |
@@ -26,15 +26,15 @@ the state's own published translation only.
 | Idaho | [ ] | [ ] | [ ] |  |
 | [Illinois](site/states/illinois.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Indiana](site/states/indiana.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| Iowa | [ ] | [ ] | [ ] |  |
+| [Iowa](site/states/iowa.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Kansas | [ ] | [ ] | [ ] |  |
-| Kentucky | [ ] | [ ] | [ ] |  |
+| [Kentucky](site/states/kentucky.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Louisiana](site/states/louisiana.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Maine | [ ] | [ ] | [ ] |  |
 | [Maryland](site/states/maryland.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Massachusetts](site/states/massachusetts.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Michigan](site/states/michigan.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| Minnesota | [ ] | [ ] | [ ] |  |
+| [Minnesota](site/states/minnesota.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Mississippi | [ ] | [ ] | [ ] |  |
 | [Missouri](site/states/missouri.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Montana | [ ] | [ ] | [ ] |  |

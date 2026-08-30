@@ -1,0 +1,248 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Iowa
+SLUG: iowa
+ASSEMBLED: 2026-08-30
+CAPTURE NOTES: Source 1 is the Legislature's own single-rule PDF and was retrieved by curl with a browser user-agent and extracted with `pdftotext -layout`; the running heads ("IAC Ch 58, p.1"), the indented statutory-quotation blocks, and the parenthesised class citations at the end of many paragraphs — "(I, II, III)", "(II)" — are the rule's own. Source 2 (hhs.iowa.gov) was retrieved through the session's HTTP fetch tool, which renders the served document to text, and copied to file without retyping; the department's site navigation, meeting archives and resource lists are omitted, the department's own email obfuscation ("[email protected]") is left as the page renders it, and the fetch tool's updated-time line is retained at the foot.
+PENDING: Iowa Code § 135C.14, which directs the department to adopt rules on involuntary discharge and transfer including "provisions for notice and agency hearings" — captured but not sliced into this packet, and not quoted on the page. Also pending: the department's own page stating the appeal route as it now stands. Source 1 names the "Iowa department of inspections and appeals" and its "Division of Health Facilities" at the Lucas State Office Building; the ombudsman page in this packet is published by the Department of Health and Human Services, and no first-party page reconciling the two agency names for this appeal was captured. Also pending: any first-party statement of the Iowa Medicaid bed-hold period, and the department's Involuntary Discharge Brochure, which Source 2 links.
+
+SOURCE 1: 481 IAC 58.40(135C), Involuntary discharge or transfer (nursing facilities) — Iowa Administrative Code (PDF) | https://www.legis.iowa.gov/docs/iac/rule/481.58.40.pdf | source's own date: none stated on document beyond the IAC chapter running head | retrieved: 2026-08-30
+IAC                                                                                              Ch 58, p.1
+
+
+481—58.40(135C) Involuntary discharge or transfer.
+    58.40(1) Involuntary discharge or transfer permitted. A facility may involuntarily discharge or
+transfer a resident for only one of the following reasons:
+    a. Medical reasons;
+    b. The resident’s welfare or that of other residents;
+    c. Nonpayment for the resident’s stay, as described in the contract for the resident’s stay;
+    d. Due to action pursuant to Iowa Code chapter 229;
+    e. By reason of negative action by the Iowa department of human services; or
+    f. By reason of negative action by the quality improvement organization (QIO). (I, II, III)
+    58.40(2) Medical reasons. Medical reasons for transfer or discharge shall be based on the resident’s
+needs and shall be determined and documented in the resident’s record by the primary care provider.
+Transfer or discharge may be required in order to provide a different level of care to the resident. (II)
+    58.40(3) Welfare of a resident. Welfare of a resident or that of other residents refers to a resident’s
+social, emotional, or physical well-being. A resident may be transferred or discharged because the
+resident’s behavior poses a continuing threat to the resident (e.g., suicidal) or to the well-being of other
+residents or staff (e.g., the resident’s behavior is incompatible with other residents’ needs and rights).
+Written documentation that the resident’s continued presence in the facility would adversely affect the
+resident’s own welfare or that of other residents shall be made by the administrator or designee and shall
+include specific information to support this determination. (II)
+    58.40(4) Involuntary discharge or transfer prohibited—payment source. A resident shall not be
+transferred or discharged solely because the cost of the resident’s care is being paid under Iowa Code
+chapter 249A or because the resident’s source of payment is changing from private support to payment
+under Iowa Code chapter 249A. (I, II)
+    58.40(5) Notice. Involuntary transfer or discharge of a resident from a facility shall be preceded by a
+written notice to the resident and the responsible party. (II, III)
+    a. The notice shall contain all of the following information:
+    (1) The stated reason for the proposed transfer or discharge. (II)
+    (2) The effective date of the proposed transfer or discharge. (II)
+    (3) A statement, in not less than 12-point type, that reads as follows: (II)
+
+      You have a right to appeal the facility’s decision to transfer or discharge you. If you
+      think you should not have to leave this facility, you may request a hearing, in writing or
+      verbally, with the Iowa department of inspections and appeals (hereinafter referred to as
+      “department”) within 7 days after receiving this notice. You have a right to be represented at
+      the hearing by an attorney or any other individual of your choice. If you request a hearing, it
+      will be held no later than 14 days after the department’s receipt of your request and you will
+      not be transferred before a final decision is rendered. Extension of the 14-day requirement
+      may be permitted in emergency circumstances upon request to the department’s designee.
+      If you lose the hearing, you will not be transferred before the expiration of either (1) 30
+      days following your receipt of the original notice of the discharge or transfer, or (2) 5 days
+      following final decision of such hearing, including the exhaustion of all appeals, whichever
+      occurs later. To request a hearing or receive further information, call the department at
+      (515)281-4115, or write to the department to the attention of: Administrator, Division of
+      Health Facilities, Department of Inspections and Appeals, Lucas State Office Building, Des
+      Moines, Iowa 50319-0083.
+    b. The notice shall be personally delivered to the resident and a copy placed in the resident’s record.
+A copy shall also be transmitted to the department; the resident’s responsible party; the resident’s primary
+care provider; the person or agency responsible for the resident’s placement, maintenance, and care in the
+facility; and the department on aging’s office of the long-term care ombudsman. The notice shall indicate
+that copies have been transmitted to the required parties by using the abbreviation “cc:” and listing the
+names of all parties to whom copies were sent.
+Ch 58, p.2                                                                                                IAC
+
+
+     c. The notice required by paragraph 58.40(5)“a” shall be provided at least 30 days in advance of the
+proposed transfer or discharge unless one of the following occurs:
+     (1) An emergency transfer or discharge is mandated by the resident’s health care needs and is in
+accordance with the written orders and medical justification of the primary care provider. Emergency
+transfers or discharges may also be mandated in order to protect the health, safety, or well-being of other
+residents and staff from the resident being transferred. (II)
+     (2) The transfer or discharge is subsequently agreed to by the resident or the resident’s responsible
+party, and notification is given to the responsible party, the resident’s primary care provider, and the person
+or agency responsible for the resident’s placement, maintenance, and care in the facility.
+     (3) The discharge or transfer is the result of a final, nonappealable decision by the department of
+human services or the QIO.
+     d. A hearing requested pursuant to this subrule shall be held in accordance with subrule 58.40(7).
+     58.40(6) Emergency transfer or discharge. In the case of an emergency transfer or discharge, the
+resident must be given a written notice prior to or within 48 hours following the transfer or discharge. (II,
+III)
+     a. A copy of this notice shall be placed in the resident’s file. The notice shall contain all of the
+following information:
+     (1) The stated reason for the transfer or discharge. (II)
+     (2) The effective date of the transfer or discharge. (II)
+     (3) A statement, in not less than 12-point type, that reads as follows: (II)
+
+     You have a right to appeal the facility’s decision to transfer or discharge you on an
+     emergency basis. If you think you should not have to leave this facility, you may request
+     a hearing, in writing or verbally, with the Iowa department of inspections and appeals
+     (hereinafter referred to as “department”) within 7 days after receiving this notice. You have
+     a right to be represented at the hearing by an attorney or any other individual of your choice.
+     If you request a hearing, it will be held no later than 14 days after the department’s receipt
+     of your request. You may be transferred or discharged before the hearing is held or before
+     a final decision is rendered. If you win the hearing, you have the right to be transferred
+     back into the facility. To request a hearing or receive further information, call the department
+     at (515)281-4115, or write to the department to the attention of: Administrator, Division of
+     Health Facilities, Department of Inspections and Appeals, Lucas State Office Building, Des
+     Moines, Iowa 50319-0083.
+    b. The notice shall be personally delivered to the resident and a copy placed in the resident’s record.
+A copy shall also be transmitted to the department; the resident’s responsible party; the resident’s primary
+care provider; the person or agency responsible for the resident’s placement, maintenance, and care in the
+facility; and the department on aging’s office of the long-term care ombudsman. The notice shall indicate
+that copies have been transmitted to the required parties by using the abbreviation “cc:” and listing the
+names of all parties to whom copies were sent.
+    c. A hearing requested pursuant to this subrule shall be held in accordance with subrule 58.40(7).
+    58.40(7) Hearing.
+    a. Request for hearing.
+    (1) The resident must request a hearing within 7 days of receipt of the written notice.
+    (2) The request must be made to the department, either in writing or verbally.
+    b. The hearing shall be held no later than 14 days after the department’s receipt of the request unless
+either party requests an extension due to emergency circumstances.
+    c. Except in the case of an emergency discharge or transfer, a request for a hearing shall stay a
+transfer or discharge pending a final decision, including the exhaustion of all appeals. (II)
+    d. The hearing shall be heard by a department of inspections and appeals administrative law judge
+pursuant to Iowa Code chapter 17A and 7—Chapter 2506. The hearing shall be public unless the resident
+or resident’s legal representative requests in writing that the hearing be closed. In a determination as to
+IAC                                                                                                Ch 58, p.3
+
+
+whether a transfer or discharge is authorized, the burden of proof by a preponderance of the evidence rests
+on the party requesting the transfer or discharge.
+    e. Notice of the date, time, and place of the hearing shall be sent by certified mail or delivered in
+person to the facility, the resident, the responsible party, and the office of the long-term care ombudsman
+not later than 5 full business days after the department’s receipt of the request. The notice shall also inform
+the facility and the resident or the responsible party that they have a right to appear at the hearing in
+person or be represented by an attorney or other individual. The appeal shall be dismissed if neither party is
+present or represented at the hearing. If only one party appears or is represented, the hearing shall proceed
+with one party present. The office of the long-term care ombudsman shall have the right to appear at the
+hearing.
+    f. The administrative law judge’s written decision shall be mailed by certified mail to the facility,
+resident, responsible party, and the office of the long-term care ombudsman within 10 working days after
+the hearing has been concluded.
+    g. If the basis for an involuntary transfer or discharge is the result of a negative action by the Iowa
+department of human services or the QIO, an appeal shall be filed with those agencies as appropriate.
+Continued payment shall be consistent with rules of those agencies.
+    58.40(8) Nonpayment. If nonpayment is the basis for involuntary transfer or discharge, the resident
+shall have the right to make full payment up to the date that the discharge or transfer is to be made and then
+shall have the right to remain in the facility. (II)
+    58.40(9) Discussion of involuntary transfer or discharge. Within 48 hours after notice of involuntary
+transfer or discharge has been received by the resident, the facility shall discuss the involuntary transfer or
+discharge with the resident, the resident’s responsible party, and the person or agency responsible for the
+resident’s placement, maintenance, and care in the facility. (II)
+    a. The facility administrator or other appropriate facility representative serving as the administrator’s
+designee shall provide an explanation and discussion of the reasons for the resident’s involuntary transfer
+or discharge. (II)
+    b. The content of the explanation and discussion shall be summarized in writing, shall include the
+names of the individuals involved in the discussion, and shall be made part of the resident’s record. (II)
+    c. The provisions of this subrule do not apply if the involuntary transfer or discharge has already
+occurred pursuant to subrule 58.40(6) and emergency notice is provided within 48 hours.
+    58.40(10) Transfer or discharge planning.
+    a. The facility shall develop a plan to provide for the orderly and safe transfer or discharge of each
+resident to be transferred or discharged. (II)
+    b. To minimize the possible adverse effects of the involuntary transfer, the resident shall receive
+counseling services by the sending facility before the involuntary transfer and by the receiving facility after
+the involuntary transfer. Counseling shall be documented in the resident’s record. (II)
+    c. The counseling requirement in paragraph 58.40(10)“b” does not apply if the discharge has already
+occurred pursuant to subrule 58.40(6) and emergency notice is provided within 48 hours.
+    d. Counseling, if required, shall be provided by a licensed mental health professional as defined in
+Iowa Code section 228.1(6). (II)
+    e. The health care facility that receives a resident who has been involuntarily transferred shall
+immediately formulate and implement a plan of care which takes into account possible adverse effects the
+transfer may cause. (II)
+    58.40(11) Transfer upon revocation of license or voluntary closure. Residents shall not have the right
+to a hearing to contest an involuntary discharge or transfer resulting from the revocation of the facility’s
+license by the department of inspections and appeals. In the case of the voluntary closure of a facility, a
+period of 60 days must be allowed for an orderly transfer of residents to other facilities.
+    58.40(12) Intrafacility transfer.
+    a. Residents shall not be arbitrarily relocated from room to room within a licensed health care
+facility. (I, II) Involuntary relocation may occur only in the following situations, which shall be
+documented in the resident’s record: (II)
+    (1) Resident’s incompatibility with or disturbance to other roommates.
+Ch 58, p.4                                                                                                          IAC
+
+
+     (2) For the welfare of the resident or other residents of the facility.
+     (3) For medical, nursing or psychosocial reasons, as judged by the primary care provider, nurse or
+social worker in the case of a facility which groups residents by medical, nursing or psychosocial needs.
+     (4) To allow a new admission to the facility that would otherwise not be possible due to separation of
+roommates by sex.
+     (5) In the case of a resident whose source of payment was previously private, but who now is eligible
+for Title XIX (Medicaid) assistance, the resident may be transferred from a private room to a semiprivate
+room or from one semiprivate room to another.
+     (6) Reasonable and necessary administrative decisions regarding the use and functioning of the
+building.
+     b. Unreasonable and unjustified reasons for changing a resident’s room without the concurrence of
+the resident or responsible party include:
+     (1) Change from private pay status to Title XIX, except as outlined in subparagraph 58.40(12)“a”(5).
+(II)
+     (2) As punishment or behavior modification, except as specified in subparagraph 58.40(12)“a”(1).
+(II)
+     (3) Discrimination on the basis of race or religion. (II)
+     c. If intrafacility relocation is necessary for reasons outlined in paragraph 58.40(12)“a,” the resident
+shall be notified at least 48 hours prior to the transfer and the reason therefor shall be explained. The
+responsible party shall be notified as soon as possible. The notification shall be documented in the
+resident’s record and signed by the resident or responsible party. (II)
+     d. If emergency relocation is required in order to protect the safety or health of the resident or
+other residents, the notification requirements may be waived. The conditions of the emergency shall be
+documented. The family or responsible party shall be notified immediately or as soon as possible of the
+condition that necessitates emergency relocation, and such notification shall be documented. (II)
+     e. A transfer to a part of a facility that has a different license must be handled the same way as a
+transfer to another facility and not as an intrafacility transfer. (II, III)
+[ARC 1752C, IAB 12/10/14, effective 1/14/15; ARC 3523C, IAB 12/20/17, effective 1/24/18; ARC 7033C, IAB 5/31/23, effective
+7/5/23; Editorial change: IAC Supplement 8/5/26]
+
+END SOURCE 1
+
+SOURCE 2: Iowa Department of Health and Human Services — Office of the State Long-Term Care Ombudsman | https://hhs.iowa.gov/family-community/aging-services/ltc-ombudsman | source's own date: page updated 2026-08-13 (meta og:updated_time) | retrieved: 2026-08-30
+Office of the State Long-Term Care Ombudsman
+
+The Office of the State Long-Term Care Ombudsman offers free, confidential advocacy for Iowans living in nursing facilities, assisted living programs, residential care facilities, and elder group homes. We’re here to help residents and families understand their rights and address concerns about long-term care.
+
+We also assist Medicaid managed care members who live in a long-term care facility or receive services through an HCBS waiver, making sure they understand their rights and receive the services they need.
+
+Our team listens, looks into concerns when needed, and works with facilities to ensure every resident is treated with dignity and respect. If you’re unsure where to start or have a question, we’re here to help.
+
+You can reach us through our online form or by contacting us directly.
+
+Toll-Free: 866-236-1430
+Email: [email protected]
+Mailing Address: 321 E. 12th St., 2nd Floor, Des Moines, IA 50319
+
+Quick Help - What Do You Need Today?
+
+- Report a concern → Share what’s happening and get support.
+- Find local support → Connect with your regional Ombudsman.
+- Know your rights → Clear, easy-to-read guides.
+- Involuntary discharge help → Understand notices and appeal steps.
+- Facility closure → What to expect and how we can help.
+
+Transfers, Discharges and Facility Closures
+
+Residents have important rights during transfers or discharges. This includes receiving written notice and having the opportunity to appeal. Facilities may only issue a discharge for specific reasons, such as medical needs they cannot meet, safety concerns, nonpayment, certain policy issues, or a facility closure. If you receive a notice—or are concerned about a possible move—contact us. We can explain your rights and help you determine next steps. Learn more about involuntary discharges with the Involuntary Discharge Brochure. Facilities submitting their monthly discharge information may use the Monthly Discharge Tracking Sheet.
+
+If a facility closes, we support residents and families throughout the transition. We assist with planning, understanding rights, selecting a new placement, and coordinating with the facility to help ensure the move is as safe and smooth as possible.
+
+Contact - Talk to Us
+
+Office of the State Long-Term Care Ombudsman
+
+321 E. 12th Street, 2nd Floor Des Moines, IA 50319
+Phone: 866-236-1430
+Email: [email protected]
+
+meta-og:updated_time: 2026-08-13T08:42:23-0500
+
+END SOURCE 2
+
+END OF PACKET — 2 sources

@@ -1,0 +1,637 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Minnesota
+SLUG: minnesota
+ASSEMBLED: 2026-08-30
+CAPTURE NOTES: Sources 1 and 2 were retrieved by curl with a browser user-agent from the Revisor of Statutes and reduced to text mechanically (tag strip over the served document); the Revisor prints a section-symbol marker before each subdivision heading and runs the subdivision number into its title, which is the site's own markup, and Source 1 is a mechanical slice of § 144.651 from subdivision 29 to the start of subdivision 30. Source 2 is § 144A.135 whole, including the amendment notes the Revisor prints above the section and the History line below it. Source 3 (mn.gov) renders its page text only to a scripted client — curl returns a 677-byte shell — so it was retrieved through the session's HTTP fetch tool and copied to file without retyping; the office's navigation and image captions are omitted and the fetch tool's meta description and modified date are retained at the foot.
+PENDING: Minnesota Rules chapter 4658 (nursing homes), which carries the department's own transfer and discharge provisions — not captured. Also pending: any Minnesota enumeration of the permissible grounds for involuntary transfer or discharge; § 144.651 subdivision 29 states that residents "shall not be arbitrarily transferred or discharged" and lists circumstances that may shorten the notice period, but neither captured statute enumerates grounds. Also pending: the commissioner's published route for filing a transfer or discharge appeal — § 144A.135 requires a written request within 30 days but names no office, address, email or form, and no Department of Health page stating that route was captured; and any first-party statement of a Minnesota Medicaid bed-hold period.
+
+SOURCE 1: Minnesota Statutes § 144.651, Health Care Bill of Rights — subdivision 29, Transfers and discharges (excerpt) | https://www.revisor.mn.gov/statutes/cite/144.651 | source's own date: see the section's own history notes in the Revisor's page | retrieved: 2026-08-30
+r spouses and, if both spouses are residents of the facility, they shall be permitted to share a room, unless medically contraindicated and documented by their physicians in the medical records.
+
+ §
+ Subd. 29.Transfers and discharges.
+
+ Residents shall not be arbitrarily transferred or discharged. Residents must be notified, in writing, of the proposed discharge or transfer and its justification no later than 30 days before discharge from the facility and seven days before transfer to another room within the facility. This notice shall include the resident's right to contest the proposed action, with the address and telephone number of the area nursing home ombudsman pursuant to the Older Americans Act, section 307(a)(12). The resident, informed of this right, may choose to relocate before the notice period ends. The notice period may be shortened in situations outside the facility's control, such as a determination by utilization review, the accommodation of newly admitted residents, a change in the resident's medical or treatment program, the resident's own or another resident's welfare, or nonpayment for stay unless prohibited by the public program or programs paying for the resident's care, as documented in the medical record. Facilities shall make a reasonable effort to accommodate new residents without disrupting room assignments.
+
+ §
+ 
+END SOURCE 1
+
+SOURCE 2: Minnesota Statutes § 144A.135, Transfer and discharge appeals | https://www.revisor.mn.gov/statutes/cite/144A.135 | source's own date: History line begins 1989 c 282 art 3 s 26 | retrieved: 2026-08-30
+Sec. 144A.135 MN Statutes
+
+ Skip to main content
+ Skip to footer
+
+ Minnesota Legislature
+
+ Advanced
+ Search
+ Search Legislature
+
+ Search
+
+ Menu
+
+ House
+
+ Minnesota House of Representatives
+
+ House Members and Staff
+
+ House Members
+
+ Leadership
+
+ Staff
+
+ Employment
+
+ Who Represents Me?
+
+ Committees
+
+ Committee List
+
+ Committee Roster
+
+ Upcoming Meetings
+
+ Standing Committee Schedule
+
+ Minutes
+
+ Committee Deadlines
+
+ Offices
+
+ Chief Clerk
+
+ Fiscal Analysis
+
+ House Research
+
+ Public Information
+
+ Sergeant-at-Arms
+
+ Caucuses - DFL/GOP
+
+ Other Information
+
+ House Journal
+
+ House Rules
+
+ Joint Rules
+
+ Educational Programs
+
+ Pronunciation Guide
+
+ Address Spreadsheet
+
+ Senate
+
+ Minnesota Senate
+
+ Senators and Staff
+
+ Senators
+
+ Leadership
+
+ Staff
+
+ Employment
+
+ Who Represents Me?
+
+ Committees
+
+ Committee List
+
+ Committee Roster
+
+ Upcoming Meetings
+
+ Standing Committee Schedule
+
+ Committee Deadlines
+
+ Offices
+
+ Secretary of the Senate
+
+ Senate Counsel, Research & Fiscal Analysis
+
+ Caucuses - DFL/GOP
+
+ Other Information
+
+ Senate Journal
+
+ Senate Rules
+
+ Joint Rules
+
+ Educational Programs
+
+ Address Labels
+
+ Subscriptions
+
+ Joint
+
+ Joint Department, Offices, and Commissions
+
+ Joint Legislative Offices
+
+ Legislative Budget Office
+
+ Legislative Coordinating Commission (LCC)
+
+ Legislative Reference Library
+
+ Office of the Legislative Auditor
+
+ Office of the Revisor of Statutes
+
+ Commissions
+
+ Legislative-Citizen Commission on MN Resources
+
+ Legislative Commission on Pensions & Retirement
+
+ Lessard-Sams Outdoor Heritage Council
+
+ More...
+
+ More Information
+
+ Joint Offices Directory
+
+ Joint Offices Staff
+
+ Accessibility
+
+ Legacy Amendment
+
+ Schedules
+
+ Schedules, Calendars, and Legislative Business
+
+ House
+
+ House Schedules
+
+ Order of Business
+
+ Calendar for the Day
+
+ Supplemental Calendar for the Day
+
+ Fiscal Calendar
+
+ Senate
+
+ Senate Schedules
+
+ Order of Business
+
+ Senate Calendar
+
+ General Orders of the Day
+
+ Joint
+
+ Combined Upcoming Meetings
+
+ Broadcast TV Schedule
+
+ Committee Deadlines
+
+ Committees
+
+ Legislative Committees
+
+ House
+
+ Committee List
+
+ Committee Roster
+
+ Upcoming Meetings
+
+ Standing Committee Schedule
+
+ Minutes
+
+ Senate
+
+ Committee List
+
+ Committee Roster
+
+ Upcoming Meetings
+
+ Standing Committee Schedule
+
+ Joint
+
+ Joint Committees & Task Forces
+
+ Committee Deadlines
+
+ Bills In Conference Committee
+
+ Side by Side Comparisons
+
+ Bills
+
+ Bills
+
+ House
+
+ Bill Search & Status (House)
+
+ Bill Introductions
+
+ Bill Summaries
+
+ Act Summaries
+
+ Fiscal Tracking Sheets
+
+ Senate
+
+ Bill Search & Status (Senate)
+
+ Bill Introductions
+
+ Bill Summaries
+
+ Act Summaries
+
+ Fiscal Tracking Sheets
+
+ Joint
+
+ Bill Search & Status
+
+ MyBills
+
+ Side by Side Comparisons
+
+ Bills In Conference Committee
+
+ Vetoes
+
+ Current Session Laws
+
+ Law
+
+ Statutes, Laws, and Rules
+
+ Statutes
+
+ Keyword Search
+
+ Current Statutes
+
+ Statutes by Topic (Index)
+
+ Statutes Archive
+
+ Session Laws
+
+ Keyword Search
+
+ Current Session Laws
+
+ Session Laws by Topic (Index)
+
+ Session Laws Archive
+
+ Session Laws Changed (Table 1)
+
+ Statutes Changed (Table 2)
+
+ Administrative Rules
+
+ Keyword Search
+
+ Current Rules
+
+ Rules by Topic (Index)
+
+ Rules Archive
+
+ Minnesota Rule Status
+
+ State Register
+
+ Other Legal Materials
+
+ Minnesota Constitution
+
+ State Constitutional Amendments
+
+ Court Rules
+
+ Multimedia
+
+ Multimedia - Audio, Video, Broadcast TV, News, & Photos
+
+ House
+
+ Live Video
+
+ Audio
+
+ Webcast Schedule
+
+ Audio & Video Archives
+
+ Session Daily
+
+ Photos
+
+ Senate
+
+ Live Video
+
+ Audio
+
+ Webcast Schedule
+
+ Audio & Video Archives
+
+ Senate Media Services
+
+ Photos
+
+ Joint
+
+ Combined Media Page
+
+ Legislative Media Archive
+
+ Broadcast TV Schedule
+
+ Commission Audio/Video
+
+ Publications
+
+ Legislative Research, Reports & Information
+
+ Office Research & Reports
+
+ House Fiscal Analysis
+
+ House Research
+
+ Senate Counsel Publications
+
+ Legislative Auditor
+
+ Revisor Publications
+
+ Legislative Reference Library
+
+ News
+
+ House Session Daily
+
+ Senate Media Services
+
+ Senate Information
+
+ Legislators Roster
+
+ Member Guide
+
+ Legislative History
+
+ Legislative History Guide
+
+ Legislators Past & Present
+
+ House Journal
+
+ Senate Journal
+
+ Legislative Time Capsule
+
+ Vetoes
+
+ Notable Documents
+
+ Fiscal Review
+
+ Minnesota Issues Guides
+
+ New Laws
+
+ Books & reports
+
+ Search Legislature
+
+ Search
+
+ Office of the Revisor of Statutes
+
+ Office of the Revisor of Statutes
+
+ Revisor Menu
+
+ Retrieve by number
+
+ Document type
+
+ Statutes
+
+ Laws
+
+ Rules
+
+ Bills
+
+ GO
+
+ Statutes
+
+ Laws
+
+ Rules
+
+ Court Rules
+
+ Constitution
+
+ Revisor's Office
+
+ Revisor Intranet
+ Attorney
+ Drafting Areas
+ Staff Directory
+ Office Duties
+ Publications
+ Educational
+ Seminars
+ Employment
+ Openings
+ Order Publications
+
+ Search Law by Keyword
+
+ 2025 Minnesota Statutes
+
+ HEALTH
+
+ Chapter 144A
+
+ Section 144A.135
+
+ 144A.13
+
+ 144A.14
+
+ 2025 Minnesota Statutes
+
+ Authenticate
+
+ PDF
+
+ Resources
+
+ Search Minnesota Statutes
+
+ About Minnesota Statutes
+
+ 2025 Statutes New, Amended or Repealed
+
+ 2025 Table of Chapters
+
+ 2025 Statutes Topics (Index)
+
+ Chapter 144A
+
+ Table of Sections
+
+ Full Chapter Text
+
+ Version List
+
+ Section 144A.135
+
+ Version List
+
+ Recent History
+
+ 2022 144A.135 Amended 2022 c 58 s 62
+
+ 2020 144A.135 Amended 2020 c 115 art 4 s 56
+
+ 2005 144A.135 Amended 2005 c 136 art 3 s 2
+
+ 144A.135 TRANSFER AND DISCHARGE APPEALS.
+
+ (a) The commissioner shall establish a mechanism for hearing appeals on transfers and discharges of residents by nursing homes or boarding care homes licensed by the commissioner. The commissioner may adopt permanent rules to implement this section.
+
+ (b) Until federal regulations are adopted under sections 1819(f)(3) and 1919(f)(3) of the Social Security Act that govern appeals of the discharges or transfers of residents from nursing homes and boarding care homes certified for participation in Medicare or medical assistance, the commissioner shall provide hearings under sections 14.57 to 14.62 and the rules adopted by the Office of Administrative Hearings governing contested cases. To appeal the discharge or transfer, or notification of an intended discharge or transfer, a resident or the resident's representative must request a hearing in writing no later than 30 days after receiving written notice, which conforms to state and federal law, of the intended discharge or transfer.
+
+ (c) Hearings under this section shall be held no later than 14 days after receipt of the request for hearing, unless impractical to do so or unless the parties agree otherwise. Hearings shall be held in the facility in which the resident resides, unless impractical to do so or unless the parties agree otherwise.
+
+ (d) A resident who timely appeals a notice of discharge or transfer, and who resides in a certified nursing home or boarding care home, may not be discharged or transferred by the nursing home or boarding care home until resolution of the appeal. The commissioner can order the facility to readmit the resident if the discharge or transfer was in violation of state or federal law. If the resident is required to be hospitalized for medical necessity before resolution of the appeal, the facility shall readmit the resident unless the resident's attending physician, advanced practice registered nurse, or physician assistant documents, in writing, why the resident's specific health care needs cannot be met in the facility.
+
+ (e) The commissioner and Office of Administrative Hearings shall conduct the hearings in compliance with the federal regulations described in paragraph (b), when adopted.
+
+ (f) Nothing in this section limits the right of a resident or the resident's representative to request or receive assistance from the Office of Ombudsman for Long-Term Care or the Office of Health Facility Complaints with respect to an intended discharge or transfer.
+
+ (g) A person required to inform a health care facility of the person's status as a registered predatory offender under section 243.166, subdivision 4b, who knowingly fails to do so shall be deemed to have endangered the safety of individuals in the facility under Code of Federal Regulations, chapter 42, section 483.12. Notwithstanding paragraph (d), any appeal of the notice and discharge shall not constitute a stay of the discharge.
+
+ History: 
+
+ 1989 c 282 art 3 s 26; 1991 c 286 s 7; 2005 c 136 art 3 s 2; 2007 c 147 art 7 s 75; 2020 c 115 art 4 s 56; 2022 c 58 s 62
+
+ Official Publication of the State of Minnesota
+
+ Revisor of Statutes
+
+ About the Legislature
+
+ Historical Information
+
+ Employment/Internships
+
+ Visiting the Capitol
+
+ Accessibility
+
+ Frequently Asked Questions
+
+ Contact Your Legislator
+
+ Who Represents Me?
+
+ House Members
+
+ Senators
+
+ General Contact
+
+ Contact a legislative librarian:
+
+ (651) 296-8338 or Email
+
+ Phone Numbers
+
+ Submit website comments
+
+ Get Connected
+
+ House News
+
+ Senate News
+
+ MyBills
+
+ Email Updates & RSS Feeds
+
+ Minnesota Office of the Revisor of Statutes, Centennial Office Building,
+ 3rd Floor, 658 Cedar Street, St. Paul, MN 55155
+END SOURCE 2
+
+SOURCE 3: Minnesota Office of Ombudsman for Long-Term Care | https://mn.gov/ooltc/ | source's own date: page modified 2025-04-21 (meta dc.modified) | retrieved: 2026-08-30
+Office of Ombudsman for Long-Term Care
+
+Working to preserve individual rights for all who live in a long-term care community.
+
+We empower, educate, and advocate for you.
+
+The Office of Ombudsman for Long-Term Care (OOLTC) is an independent state agency that serves people needing or receiving long-term care through complaint investigation, advocacy, and education.
+
+EMPOWER
+
+We empower residents to self advocate and to understand their rights by working with them, their families, health care and service providers, and public agencies to ensure their health, safety, and well-being.
+
+EDUCATE
+
+We educate residents about their rights, by offering free services to anyone seeking information about long-term care.
+
+ADVOCATE
+
+We advocate for residents, to ensure needs are met and dignity upheld. The office also works to improve the health care and social services delivery systems through changes in state and federal law and policy.
+
+The Office of Ombudsman for Long-Term Care
+540 Cedar Street
+St. Paul, MN 55101
+1-800-657-3591
+
+meta-dc.description: The Office of Ombudsman for Long-Term Care (OOLTC) advocates for Minnesota adults needing or receiving long-term care. The office promotes person-directed living that respects people's values and preferences, and works to preserve individual rights. Ombudsmen and volunteers work with individuals, their families, health care and service providers and public agencies to ensure the health, safety, well-being and rights of long-term care consumers. The office also works to improve the health care and social services delivery systems through changes in state and federal law and policy. OOLTC is a service of the Minnesota Board on Aging. All services provided by our program are free.
+meta-dc.modified: 2025-04-21T15:39:36.1445209Z
+
+END SOURCE 3
+
+END OF PACKET — 3 sources

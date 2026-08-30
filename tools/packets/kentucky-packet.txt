@@ -1,0 +1,731 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Kentucky
+SLUG: kentucky
+ASSEMBLED: 2026-08-30
+CAPTURE NOTES: All three sources were retrieved by curl with a browser user-agent and reduced to text mechanically (tag strip over the served document). The Legislative Research Commission's regulation pages run each subsection number straight into the text that follows it, with the paragraph break falling after the number rather than before — that is the site's own markup and is left as the extractor produced it. Each regulation page also serves the regulation twice, once in the current text and once under an "ALTERNATE VIEW" heading showing the pre-engrossment version; both are in the capture as served. The Cabinet's ombudsman page carries its site navigation twice.
+PENDING: KRS 216.515, the residents' rights statute the regulations implement, cited throughout 900 KAR 2:050 and 2:060 — not captured. Also pending: the Cabinet's own published filing address for a transfer or discharge appeal — 900 KAR 2:050 Section 3 directs the resident to "inform the cabinet in writing" within fifteen days but names no office, address or form, and 900 KAR 2:060 describes the hearing without stating where the appeal is sent; the Office of the State Long Term Care Ombudsman's own published telephone contact, which does not appear on the page captured (the page publishes an ombudsman listing by county instead); and any first-party statement of the Kentucky Medicaid bed-hold period, which 900 KAR 2:050 Section 2(7) requires the facility to state to the resident but does not itself state.
+
+SOURCE 1: 900 KAR 2:050, Transfer and discharge rights | https://apps.legislature.ky.gov/law/kar/titles/900/002/050/ | source's own date: HISTORY line ends 146 Ky.R. 1695, 2280; eff. 2-27-2020 | retrieved: 2026-08-30
+Title 900 Chapter 2 Regulation 050 • Kentucky Administrative Regulations • Legislative Research Commission•
+Kentucky
+General Assembly
+•
+
+Search
+
+ Legislators Legislators
+Senate Members
+House Members
+Who's My Legislator
+Contact a Member
+
+Committees Committees
+House Standing Committees
+Senate Standing Committees
+Interim Joint Committees
+Special Committees
+Statutory Committees
+Caucuses
+Prior Committee Information
+
+Bills
+Kentucky Law Kentucky Law
+Kentucky Administrative Regulations Kentucky Administrative Regulations
+KAR List by Title
+Registers
+KAR FAQs
+Last Effective Dates, Expirations, and Certifications
+Emergency Regulations by Number
+
+Kentucky Revised Statutes Kentucky Revised Statutes
+Statute Revision Information
+KRS Title Page
+Certified Versions
+History & Functions
+Normal Effective Dates
+Extraordinary Sessions since 1940
+
+Acts of the Kentucky General Assembly
+Kentucky Constitution
+
+Public Services Public Services
+Geographic Information Systems Geographic Information Systems (GIS)
+Maps
+Redistricting Information
+GIS Data
+Map Requests
+
+Public Information Office Public Information Office
+Radio News Releases
+News Releases
+News Photos
+Video Productions
+Capitol Campus Identification Badges
+School Group Tours
+Live Streams
+
+Public Bill Room
+Peggy King Legislative Reference Library
+
+Legislative Research Commission Legislative Research Commission
+LRC Organizational Chart
+Glossary of Legislative Terms
+LRC Publications LRC Publications
+LRC Research Reports
+LRC Informational Bulletins
+LRC Research Memoranda
+
+Office of Education Accountability Office of Education Accountability
+OEA Hotline
+OEA Publications
+OEA Staff
+
+Office of Economic Analysis
+Agency Reports
+Career Opportunities
+
+Visitors & Education Visitors & Education
+Educational Resources for Teachers
+Directions & Local Maps
+Postsecondary Internship Opportunites
+Annex Committee Room Reservations
+Capitol Campus Identification Badges
+Presenting to the Legislative Committees
+
+/
+Kentucky Law/
+KAR/
+Titles/
+Title 900/
+Chapter 002/
+Regulation 050
+Title 900 | Chapter 002 | Regulation 050
+ALTERNATE VIEW
+This is how this document appeared before it was engrossed.
+
+900 KAR 2:050.Transfer and discharge rights.
+RELATES TO:
+KRS 216.510(2), 216.525, 216.555, 216.557, 216.560, 216B.015(13), 42 U.S.C. 1395, 1396, 42 C.F.R. 483.15, 483.204
+STATUTORY AUTHORITY:
+KRS 216.515(4), 42 C.F.R. 483.204
+NECESSITY, FUNCTION, AND CONFORMITY:
+42 C.F.R. 483.204 requires that the state shall provide a process for appeals related to involuntary transfer and discharge. This administrative regulation establishes guidelines for this process for long-term care facilities, including long-term care facilities certified in accordance with 42 C.F.R. Part 483. This administrative regulation also establishes the requirements for reasonable notice of involuntary transfer or discharge pursuant to KRS 216.515(4) and appeal rights.
+
+Section 1.
+Definitions.(1)
+"Discharge" or "transfer" means:(a)
+Relocation of a resident from a long-term care facility to a noninstitutional setting or another health facility as defined by KRS 216B.015(13); or(b)
+Any intrafacility relocation of a resident, except between beds within the same distinct Medicare or Medicaid certified or noncertified part of the facility.(2)
+"Facility" means a long-term care facility as defined by KRS 216.510(1), except for family care homes licensed pursuant to 902 KAR 20:041.(3)
+"Resident" is defined by KRS 216.510(2).(4)
+"Transfer or discharge rights" means those rights of notification and appeal guaranteed in KRS 216.515(4) and (26), and as outlined in this administrative regulation.Section 2.
+Transfer and Discharge Rights.(1)
+Transfer and discharge requirements. The facility shall permit each resident to remain in the facility, and shall not transfer or discharge the resident from the facility unless:(a)
+The transfer or discharge is necessary for the resident's welfare and the resident's needs cannot be met in the facility;(b)
+The transfer or discharge is appropriate because the resident's health has improved sufficiently so the resident no longer needs the services provided by the facility;(c)
+The safety of individuals in the facility is endangered;(d)
+The health of individuals in the facility would otherwise be endangered;(e)
+The resident has failed, after reasonable and appropriate notice, to pay for (or to have paid under Medicare, Medicaid, or state supplementation) a stay at the facility; or(f)
+The facility ceases to operate.(2)
+Documentation. Before a facility transfers or discharges a resident under any of the circumstances specified in subsection (1)(a) through (f) of this section, the reasons for the transfer or discharge shall be documented in the resident's clinical record. The documentation shall be made by:(a)
+The resident's physician if transfer or discharge is necessary under subsection (1)(a) or (b) of this section; and(b)
+A physician if transfer or discharge is necessary under subsection (1)(c) or (d) of this section.(3)
+Notice before transfer. Before a facility transfers or discharges a resident, the facility shall:(a)
+Notify the resident and the responsible party, responsible family member, or guardian, in writing, of the transfer or discharge and the reasons for the relocation in a language and manner they understand;(b)
+Record the reasons in the resident's clinical record; and(c)
+Include in the notice the items described in subsection (5) of this section.(4)
+Timing of the notice.(a)
+Except as specified in paragraph (b) of this subsection, the notice of transfer or discharge required under subsection (3) of this section shall be made by the facility at least thirty (30) days before the resident is transferred or discharged.(b)
+Notice may be made as soon as practicable before transfer or discharge if:1.
+An immediate transfer or discharge is required by the resident's urgent medical needs, under subsection (1)(a) of this section;2.
+The resident's health improves sufficiently to allow a more immediate transfer or discharge, under subsection (1)(b) of this section;3.
+The safety of individuals in the facility would be endangered, under subsection (1)(c) of this section;4.
+The health of individuals in the facility would be endangered, under subsection (1)(d) of this section; or5.
+The resident has not resided in the facility for thirty (30) days.(5)
+Contents of the notice. The written notice specified in subsection (3) of this section shall include the following:(a)
+The reason for transfer or discharge;(b)
+The effective date of transfer or discharge;(c)
+The location to which the resident is transferred or discharged;(d)
+A statement that the resident, responsible party, responsible family member, or guardian has the right to appeal the action to the cabinet;(e)
+The name, address (mailing and email), and telephone number of the cabinet office responsible for receiving requests for appeal;(f)
+Information on how to obtain assistance with submitting a request for appeal;(g)
+The name, address (mailing and email), and telephone number of the state long-term care ombudsman; and(h)
+For a nursing facility resident with a developmental disability or mental illness, the mailing and email address and telephone number of Kentucky Protection and Advocacy.(6)
+Orientation for transfer or discharge. A facility shall provide sufficient preparation and orientation to residents to ensure safe and orderly transfer or discharge from the facility.(7)
+Notice of bed-hold policy and readmission.(a)
+Notice before transfer. Before a facility transfers a resident to a hospital or allows a resident to go on therapeutic leave, the facility shall provide written information to the resident, responsible party, responsible family member, or legal guardian that specifies the following:1.
+The duration of the bed-hold policy, which shall be requested if available under the Medicaid state plan and provider agreement, during which a resident who receives Medicaid or has a pending application for Medicaid benefits is permitted to return and resume residence in the facility;2.
+The facility's policies regarding bed-hold periods, which shall be consistent with paragraph (c) of this subsection, permitting a resident to return; and3.
+For a resident who does not receive or does not have an application pending for Medicaid, the facility's established policy governing readmission.(b)
+Notice upon transfer. Upon transfer of a resident to a hospital or for therapeutic leave, a long-term care facility shall provide written notice to the resident, responsible party, responsible family member, or legal guardian. The notice shall specify the duration of the bed-hold policy described in paragraph (a) of this subsection.(c)
+Permitting resident to return to facility. A long-term care facility shall establish and follow a written policy under which a resident whose hospitalization or therapeutic leave exceeds the bed-hold period under the Medicaid state plan, is notified and readmitted to the facility immediately upon the first availability of a bed in a semiprivate room if the resident:1.
+Chooses to be readmitted;2.
+Requires the services provided by the facility; and3.
+Is eligible for Medicaid nursing facility services and the facility is certified to participate in Title XVIII, 42 U.S.C. 1395, or Title XIX, 42 U.S.C. 1396, of the Social Security Act.(8)
+Equal access to quality care. A facility shall establish and maintain identical policies and practices regarding transfer, discharge, and the provision of service under the Medicaid state plan for all individuals regardless of source of payment.Section 3.
+Appeal Rights.(1)
+A resident, responsible party, responsible family member, or guardian may appeal any discharge.(2)
+A resident, responsible party, responsible family member, or guardian may appeal a transfer if the resident is transferred from:(a)
+A certified bed into a noncertified bed; or(b)
+A bed in a certified entity to a bed in an entity that is certified as a different provider.(3)
+A resident, responsible party, responsible family member, or guardian has no appeal rights if the resident is moved from a certified bed into another certified bed of the same certification in the same facility.(4)
+A resident, responsible party, responsible family member, or guardian may request that the cabinet review any proposed transfer or discharge. The cabinet shall investigate the proposed transfer or discharge to ascertain whether there has been a violation of the resident's transfer or discharge rights.(5)
+(a)
+A resident, responsible party, responsible family member, or guardian may appeal any discharge or appealable transfer to the cabinet.(b)
+The resident, responsible party, responsible family member, or guardian shall inform the cabinet in writing of his or her intent to appeal within fifteen (15) days from receipt of notice of the facility's intent to transfer or discharge and include:1.
+A copy of the notice of the facility's intent to transfer or discharge the resident; and2.
+If not included on the notice, the name and address of the facility.(c)
+Hearing procedures for appeals shall be followed, as established in 900 KAR 2:060.(6)
+Penalties. The cabinet shall enforce the provision of this administrative regulation pursuant to KRS 216.555, 216.557, and 216.560.
+HISTORY: (18 Ky.R. 1729; Am. 2343; 2823; eff. 3-7-1992; TAm eff. 10-10-2010; 41 Ky.R. 2133; 2551; eff. 6-17-2015; 146 Ky.R. 1695, 2280; eff. 2-27-2020.)
+
+900 KAR 2:050.Transfer and discharge rights.
+RELATES TO:
+KRS 216.510(2), 216.525, 216.555, 216.557, 216.560, 216B.015(13), 42 U.S.C. 1395, 1396, 42 C.F.R. 483.15, 483.204
+STATUTORY AUTHORITY:
+KRS 216.515(4), 42 C.F.R. 483.204
+NECESSITY, FUNCTION, AND CONFORMITY:
+42 C.F.R. 483.204 requires that the state shall provide a process for appeals related to involuntary transfer and discharge. This administrative regulation establishes guidelines for this process for long-term care facilities, including long-term care facilities certified in accordance with 42 C.F.R. Part 483. This administrative regulation also establishes the requirements for reasonable notice of involuntary transfer or discharge pursuant to KRS 216.515(4) and appeal rights.
+
+Section 1.
+Definitions.(1)
+"Discharge" or "transfer" means:(a)
+Relocation of a resident from a long-term care facility to a noninstitutional setting or another health facility as defined by KRS 216B.015(13); or(b)
+Any intrafacility relocation of a resident, except between beds within the same distinct Medicare or Medicaid certified or noncertified part of the facility.(2)
+"Facility" means a long-term care facility as defined by KRS 216.510(1), except for family care homes licensed pursuant to 902 KAR 20:041.(3)
+"Resident" is defined by KRS 216.510(2).(4)
+"Transfer or discharge rights" means those rights of notification and appeal guaranteed in KRS 216.515(4) and (26), and as outlined in this administrative regulation.Section 2.
+Transfer and Discharge Rights.(1)
+Transfer and discharge requirements. The facility shall permit each resident to remain in the facility, and shall not transfer or discharge the resident from the facility unless:(a)
+The transfer or discharge is necessary for the resident's welfare and the resident's needs cannot be met in the facility;(b)
+The transfer or discharge is appropriate because the resident's health has improved sufficiently so the resident no longer needs the services provided by the facility;(c)
+The safety of individuals in the facility is endangered;(d)
+The health of individuals in the facility would otherwise be endangered;(e)
+The resident has failed, after reasonable and appropriate notice, to pay for (or to have paid under Medicare, Medicaid, or state supplementation) a stay at the facility; or(f)
+The facility ceases to operate.(2)
+Documentation. Before a facility transfers or discharges a resident under any of the circumstances specified in subsection (1)(a) through (f) of this section, the reasons for the transfer or discharge shall be documented in the resident's clinical record. The documentation shall be made by:(a)
+The resident's physician if transfer or discharge is necessary under subsection (1)(a) or (b) of this section; and(b)
+A physician if transfer or discharge is necessary under subsection (1)(c) or (d) of this section.(3)
+Notice before transfer. Before a facility transfers or discharges a resident, the facility shall:(a)
+Notify the resident and the responsible party, responsible family member, or guardian, in writing, of the transfer or discharge and the reasons for the relocation in a language and manner they understand;(b)
+Record the reasons in the resident's clinical record; and(c)
+Include in the notice the items described in subsection (5) of this section.(4)
+Timing of the notice.(a)
+Except as specified in paragraph (b) of this subsection, the notice of transfer or discharge required under subsection (3) of this section shall be made by the facility at least thirty (30) days before the resident is transferred or discharged.(b)
+Notice may be made as soon as practicable before transfer or discharge if:1.
+An immediate transfer or discharge is required by the resident's urgent medical needs, under subsection (1)(a) of this section;2.
+The resident's health improves sufficiently to allow a more immediate transfer or discharge, under subsection (1)(b) of this section;3.
+The safety of individuals in the facility would be endangered, under subsection (1)(c) of this section;4.
+The health of individuals in the facility would be endangered, under subsection (1)(d) of this section; or5.
+The resident has not resided in the facility for thirty (30) days.(5)
+Contents of the notice. The written notice specified in subsection (3) of this section shall include the following:(a)
+The reason for transfer or discharge;(b)
+The effective date of transfer or discharge;(c)
+The location to which the resident is transferred or discharged;(d)
+A statement that the resident, responsible party, responsible family member, or guardian has the right to appeal the action to the cabinet;(e)
+The name, address (mailing and email), and telephone number of the cabinet office responsible for receiving requests for appeal;(f)
+Information on how to obtain assistance with submitting a request for appeal;(g)
+The name, address (mailing and email), and telephone number of the state long-term care ombudsman; and(h)
+For a nursing facility resident with a developmental disability or mental illness, the mailing and email address and telephone number of Kentucky Protection and Advocacy.(6)
+Orientation for transfer or discharge. A facility shall provide sufficient preparation and orientation to residents to ensure safe and orderly transfer or discharge from the facility.(7)
+Notice of bed-hold policy and readmission.(a)
+Notice before transfer. Before a facility transfers a resident to a hospital or allows a resident to go on therapeutic leave, the facility shall provide written information to the resident, responsible party, responsible family member, or legal guardian that specifies the following:1.
+The duration of the bed-hold policy, which shall be requested if available under the Medicaid state plan and provider agreement, during which a resident who receives Medicaid or has a pending application for Medicaid benefits is permitted to return and resume residence in the facility;2.
+The facility's policies regarding bed-hold periods, which shall be consistent with paragraph (c) of this subsection, permitting a resident to return; and3.
+For a resident who does not receive or does not have an application pending for Medicaid, the facility's established policy governing readmission.(b)
+Notice upon transfer. Upon transfer of a resident to a hospital or for therapeutic leave, a long-term care facility shall provide written notice to the resident, responsible party, responsible family member, or legal guardian. The notice shall specify the duration of the bed-hold policy described in paragraph (a) of this subsection.(c)
+Permitting resident to return to facility. A long-term care facility shall establish and follow a written policy under which a resident whose hospitalization or therapeutic leave exceeds the bed-hold period under the Medicaid state plan, is notified and readmitted to the facility immediately upon the first availability of a bed in a semiprivate room if the resident:1.
+Chooses to be readmitted;2.
+Requires the services provided by the facility; and3.
+Is eligible for Medicaid nursing facility services and the facility is certified to participate in Title XVIII, 42 U.S.C. 1395, or Title XIX, 42 U.S.C. 1396, of the Social Security Act.(8)
+Equal access to quality care. A facility shall establish and maintain identical policies and practices regarding transfer, discharge, and the provision of service under the Medicaid state plan for all individuals regardless of source of payment.Section 3.
+Appeal Rights.(1)
+A resident, responsible party, responsible family member, or guardian may appeal any discharge.(2)
+A resident, responsible party, responsible family member, or guardian may appeal a transfer if the resident is transferred from:(a)
+A certified bed into a noncertified bed; or(b)
+A bed in a certified entity to a bed in an entity that is certified as a different provider.(3)
+A resident, responsible party, responsible family member, or guardian has no appeal rights if the resident is moved from a certified bed into another certified bed of the same certification in the same facility.(4)
+A resident, responsible party, responsible family member, or guardian may request that the cabinet review any proposed transfer or discharge. The cabinet shall investigate the proposed transfer or discharge to ascertain whether there has been a violation of the resident's transfer or discharge rights.(5)
+(a)
+A resident, responsible party, responsible family member, or guardian may appeal any discharge or appealable transfer to the cabinet.(b)
+The resident, responsible party, responsible family member, or guardian shall inform the cabinet in writing of his or her intent to appeal within fifteen (15) days from receipt of notice of the facility's intent to transfer or discharge and include:1.
+A copy of the notice of the facility's intent to transfer or discharge the resident; and2.
+If not included on the notice, the name and address of the facility.(c)
+Hearing procedures for appeals shall be followed, as established in 900 KAR 2:060.(6)
+Penalties. The cabinet shall enforce the provision of this administrative regulation pursuant to KRS 216.555, 216.557, and 216.560.
+HISTORY: (18 Ky.R. 1729; Am. 2343; 2823; eff. 3-7-1992; TAm eff. 10-10-2010; 41 Ky.R. 2133; 2551; eff. 6-17-2015; 146 Ky.R. 1695, 2280; eff. 2-27-2020.)
+
+7-Year Expiration: 2/27/2027
+ Download Download PDF (.pdf) Download Word (.docx)
+
+ Show Changes: Red/Green Show Changes: Off Show Changes: Red/Green Show Changes: Yellow/Blue Show Changes: Pink/Teal
+
+View Markup
+
+Page Generated: 8/28/2026, 1:03:35 PM
+About
+Contact Us
+Career Opportunities
+Site Map
+Calendars
+Legislative Calendar
+Regular Session Calendar
+Interim Calendar
+Standing Committee Schedule
+Miscellaneous
+Kentucky Educational Television
+Legislative Ethics Commission
+Office of Educational Accountability
+
+Copyright © 2024 Kentucky Legislative Research Commission
+All rights reserved
+
+Policies
+Security
+Disclaimer
+Accessibility
+END SOURCE 1
+
+SOURCE 2: 900 KAR 2:060, Hearings concerning transfer and discharge rights | https://apps.legislature.ky.gov/law/kar/titles/900/002/060/ | source's own date: see the regulation's own HISTORY line in the capture | retrieved: 2026-08-30
+Title 900 Chapter 2 Regulation 060 • Kentucky Administrative Regulations • Legislative Research Commission•
+Kentucky
+General Assembly
+•
+
+Search
+
+ Legislators Legislators
+Senate Members
+House Members
+Who's My Legislator
+Contact a Member
+
+Committees Committees
+House Standing Committees
+Senate Standing Committees
+Interim Joint Committees
+Special Committees
+Statutory Committees
+Caucuses
+Prior Committee Information
+
+Bills
+Kentucky Law Kentucky Law
+Kentucky Administrative Regulations Kentucky Administrative Regulations
+KAR List by Title
+Registers
+KAR FAQs
+Last Effective Dates, Expirations, and Certifications
+Emergency Regulations by Number
+
+Kentucky Revised Statutes Kentucky Revised Statutes
+Statute Revision Information
+KRS Title Page
+Certified Versions
+History & Functions
+Normal Effective Dates
+Extraordinary Sessions since 1940
+
+Acts of the Kentucky General Assembly
+Kentucky Constitution
+
+Public Services Public Services
+Geographic Information Systems Geographic Information Systems (GIS)
+Maps
+Redistricting Information
+GIS Data
+Map Requests
+
+Public Information Office Public Information Office
+Radio News Releases
+News Releases
+News Photos
+Video Productions
+Capitol Campus Identification Badges
+School Group Tours
+Live Streams
+
+Public Bill Room
+Peggy King Legislative Reference Library
+
+Legislative Research Commission Legislative Research Commission
+LRC Organizational Chart
+Glossary of Legislative Terms
+LRC Publications LRC Publications
+LRC Research Reports
+LRC Informational Bulletins
+LRC Research Memoranda
+
+Office of Education Accountability Office of Education Accountability
+OEA Hotline
+OEA Publications
+OEA Staff
+
+Office of Economic Analysis
+Agency Reports
+Career Opportunities
+
+Visitors & Education Visitors & Education
+Educational Resources for Teachers
+Directions & Local Maps
+Postsecondary Internship Opportunites
+Annex Committee Room Reservations
+Capitol Campus Identification Badges
+Presenting to the Legislative Committees
+
+/
+Kentucky Law/
+KAR/
+Titles/
+Title 900/
+Chapter 002/
+Regulation 060
+Title 900 | Chapter 002 | Regulation 060
+ALTERNATE VIEW
+This is how this document appeared before it was engrossed.
+
+900 KAR 2:060.Hearings concerning transfer and discharge rights.
+RELATES TO:
+KRS 194.030(12)(b)
+STATUTORY AUTHORITY:
+KRS 216.515, 216.525, 216.557, 216.560, 216.567, 42 C.F.R. 483.12
+CERTIFICATION STATEMENT:
+
+NECESSITY, FUNCTION, AND CONFORMITY:
+42 CFR 483.12 requires that the state shall have in place a fair and impartial decision-making process for appeals related to involuntary transfer and discharge. This administrative regulation sets forth guidelines for this process for long-term care facilities as licensed by 902 KAR 20:300 or those long-term care facilities certified in accordance with 42 CFR 483. This administrative regulation sets forth the hearing process for appeals related to residents' transfer and discharge rights under Kentucky's Nursing Home Reform statutes and administrative regulations.
+
+Section 1.
+Definitions.(1)
+"Facility" means a long-term care facility as defined by KRS 216.510(1) excluding those facilities licensed as family care homes.(2)
+"Hearing officer" means the person designated by the cabinet to conduct a hearing and make a decision regarding any appealed transfer or discharge.(3)
+"Resident" means a resident of a facility or any legal representative or individual acting on behalf of the resident.Section 2.
+Hearing Procedure.(1)
+Upon receipt of notice of appeal in accordance with 900 KAR 2:050 or 900 KAR 2:020, Section 2(1) and (2), the secretary of the cabinet shall appoint a hearing officer and a hearing shall occur within thirty (30) days.(2)
+Notice of hearing shall be mailed to the facility and resident not less than ten (10) days prior to the commencement of the hearing. The notice of hearing shall contain the reasons, time, and place of the hearing. The notice of hearing shall be mailed by certified mail, return receipt requested, to the facility and the resident.(3)
+The facility and the resident may be represented by counsel and make oral or written argument, offer testimony, cross-examine witnesses, or take any combination of such actions. No depositions shall be permitted for the purpose of discovery, however, the hearing officer may authorize depositions of witnesses who, in his opinion, for good cause shown cannot be present at the hearing. A hearing officer shall preside at the hearing, shall keep order, administer oaths, may issue subpoenas and may admit relevant and probative evidence and shall conduct the hearing in accordance with reasonable administrative practice.(4)
+All testimony at the hearing shall be recorded but need not be transcribed unless requested. The person or organization requesting a transcript shall bear the cost of such transcript.(5)
+The hearing officer may place reasonable time limits upon the presentation of testimony, evidence and argument and may terminate or exclude irrelevant or redundant evidence, testimony or argument.(6)
+ (a)
+The hearing officer shall review the:1.
+Cabinet's determination that the resident's rights were violated; and2.
+Fine imposed by the cabinet.(b)
+The hearing officer shall base his review of the cabinet's determination and fines on the:1.
+Facts of the case; and2.
+Requirements of KRS 216.555, 216.557, 216.560, and this administrative regulation.(c)
+Appropriate to the facts of the case, KRS Chapter 216, and this administrative regulation, the hearing officer may:1.
+Sustain the cabinet's determination and fine; or2.
+Determine that the rights of the resident were not violated, and that the imposition of a fine was not warranted; or3.
+Make a different determination with regard to the severity or type of violation, and the fine required by KRS Chapter 216; or4.
+Make any other decision warranted by the facts, KRS Chapter 216, and this administrative regulation.(7)
+The hearing shall be the only hearing as it relates to cabinet findings regarding fines, citations and cited deficiencies concerning transfer and discharge rights under this or any licensure regulations.(8)
+The hearing officer's decision shall be the final determination of the cabinet. The cabinet shall forward the decision to the resident and facility within ten (10) days of the receipt of the hearing officer's decision.(9)
+no hearing officer shall participate in any hearing involving a facility with which he has had in the past twelve (12) months preceding the hearing, any ownership, in whole or in part, employment, fiduciary, contractual creditor or consultative relationship or any familial relation to the resident.(10)
+A judicial review may be accorded the resident or facility as specified in KRS 216.570.
+HISTORY: (18 Ky.R. 1731; 2345; 2824; eff. 3-7-1992; eff. 3-22-2019; Crt eff. 12-29-2025.)
+
+900 KAR 2:060.Hearings concerning transfer and discharge rights.
+RELATES TO:
+KRS 194.030(12)(b)
+STATUTORY AUTHORITY:
+KRS 216.515, 216.525, 216.557, 216.560, 216.567, 42 C.F.R. 483.12
+CERTIFICATION STATEMENT:
+
+NECESSITY, FUNCTION, AND CONFORMITY:
+42 CFR 483.12 requires that the state shall have in place a fair and impartial decision-making process for appeals related to involuntary transfer and discharge. This administrative regulation sets forth guidelines for this process for long-term care facilities as licensed by 902 KAR 20:300 or those long-term care facilities certified in accordance with 42 CFR 483. This administrative regulation sets forth the hearing process for appeals related to residents' transfer and discharge rights under Kentucky's Nursing Home Reform statutes and administrative regulations.
+
+Section 1.
+Definitions.(1)
+"Facility" means a long-term care facility as defined by KRS 216.510(1) excluding those facilities licensed as family care homes.(2)
+"Hearing officer" means the person designated by the cabinet to conduct a hearing and make a decision regarding any appealed transfer or discharge.(3)
+"Resident" means a resident of a facility or any legal representative or individual acting on behalf of the resident.Section 2.
+Hearing Procedure.(1)
+Upon receipt of notice of appeal in accordance with 900 KAR 2:050 or 900 KAR 2:020, Section 2(1) and (2), the secretary of the cabinet shall appoint a hearing officer and a hearing shall occur within thirty (30) days.(2)
+Notice of hearing shall be mailed to the facility and resident not less than ten (10) days prior to the commencement of the hearing. The notice of hearing shall contain the reasons, time, and place of the hearing. The notice of hearing shall be mailed by certified mail, return receipt requested, to the facility and the resident.(3)
+The facility and the resident may be represented by counsel and make oral or written argument, offer testimony, cross-examine witnesses, or take any combination of such actions. No depositions shall be permitted for the purpose of discovery, however, the hearing officer may authorize depositions of witnesses who, in his opinion, for good cause shown cannot be present at the hearing. A hearing officer shall preside at the hearing, shall keep order, administer oaths, may issue subpoenas and may admit relevant and probative evidence and shall conduct the hearing in accordance with reasonable administrative practice.(4)
+All testimony at the hearing shall be recorded but need not be transcribed unless requested. The person or organization requesting a transcript shall bear the cost of such transcript.(5)
+The hearing officer may place reasonable time limits upon the presentation of testimony, evidence and argument and may terminate or exclude irrelevant or redundant evidence, testimony or argument.(6)
+ (a)
+The hearing officer shall review the:1.
+Cabinet's determination that the resident's rights were violated; and2.
+Fine imposed by the cabinet.(b)
+The hearing officer shall base his review of the cabinet's determination and fines on the:1.
+Facts of the case; and2.
+Requirements of KRS 216.555, 216.557, 216.560, and this administrative regulation.(c)
+Appropriate to the facts of the case, KRS Chapter 216, and this administrative regulation, the hearing officer may:1.
+Sustain the cabinet's determination and fine; or2.
+Determine that the rights of the resident were not violated, and that the imposition of a fine was not warranted; or3.
+Make a different determination with regard to the severity or type of violation, and the fine required by KRS Chapter 216; or4.
+Make any other decision warranted by the facts, KRS Chapter 216, and this administrative regulation.(7)
+The hearing shall be the only hearing as it relates to cabinet findings regarding fines, citations and cited deficiencies concerning transfer and discharge rights under this or any licensure regulations.(8)
+The hearing officer's decision shall be the final determination of the cabinet. The cabinet shall forward the decision to the resident and facility within ten (10) days of the receipt of the hearing officer's decision.(9)
+no hearing officer shall participate in any hearing involving a facility with which he has had in the past twelve (12) months preceding the hearing, any ownership, in whole or in part, employment, fiduciary, contractual creditor or consultative relationship or any familial relation to the resident.(10)
+A judicial review may be accorded the resident or facility as specified in KRS 216.570.
+HISTORY: (18 Ky.R. 1731; 2345; 2824; eff. 3-7-1992; eff. 3-22-2019; Crt eff. 12-29-2025.)
+
+7-Year Expiration: 12/29/2032
+ Download Download PDF (.pdf) Download Word (.docx)
+
+ Show Changes: Red/Green Show Changes: Off Show Changes: Red/Green Show Changes: Yellow/Blue Show Changes: Pink/Teal
+
+View Markup
+
+Page Generated: 8/28/2026, 1:03:35 PM
+About
+Contact Us
+Career Opportunities
+Site Map
+Calendars
+Legislative Calendar
+Regular Session Calendar
+Interim Calendar
+Standing Committee Schedule
+Miscellaneous
+Kentucky Educational Television
+Legislative Ethics Commission
+Office of Educational Accountability
+
+Copyright © 2024 Kentucky Legislative Research Commission
+All rights reserved
+
+Policies
+Security
+Disclaimer
+Accessibility
+END SOURCE 2
+
+SOURCE 3: Kentucky Cabinet for Health and Family Services, Department for Aging and Independent Living — Long-Term Care Ombudsman | https://www.chfs.ky.gov/agencies/dail/Pages/ltcomb.aspx | source's own date: none stated on page | retrieved: 2026-08-30
+Long-Term Care Ombudsman - 
+
+ Cabinet for Health and Family Services
+
+ -->
+
+Skip to main navigationSkip to main content
+
+ Ky.gov An Official Website of the Commonwealth of Kentucky
+
+ Cabinet for Health and Family Services
+
+ Cabinet for Health and Family Services
+
+ Contact Us
+
+ CHFS Facebook
+
+ CHFS Twitter
+
+ CHFS YouTube
+
+ CHFS Instagram
+
+ Toggle navigation
+
+ Menu
+
+ Go to home - Kentucky Cabinet for Health and Family Services
+
+ About
+
+ Agencies
+
+ Social Services
+
+ Public Health
+
+ Health Coverage & Resources
+
+ Family Services
+
+ Licensing & Certification
+
+ Employment
+
+ In this section
+ Department for Aging and Independent Living
+
+ In this section
+ Department for Aging and Independent Living
+
+ Recent
+
+ Emergency Preparedness
+
+ Aging and Disability Resource Center
+
+ Alzheimer’s Disease and Related Disorders Council
+
+ Area Agencies on Aging and Independent Living
+
+ Caregiver Support Services
+
+ Chronic Disease Self Management Program
+
+ Emergency Preparedness
+
+ Hart-Supported Living Program
+
+ HCB Waiver Provider Directory
+
+ Homecare Program
+
+ Long-Term Care Ombudsman
+
+ Nutrition Program for the Elderly
+
+ Office of Dementia Services
+
+ Office of the Commissioner
+
+ Participant Directed Services
+
+ Personal Care Attendant Program
+
+ Programs of All-Inclusive Care for the Elderly
+
+ Senior Community Service Employment Program
+
+ Standard Operating Procedures Manual
+
+ State Health Insurance Assistance Program
+
+ Traumatic Brain Injury Trust Fund
+
+ Home
+
+ Agencies
+
+ Department for Aging and Independent Living
+
+ Long-Term Care Ombudsman
+
+ Long-Term Care Ombudsman
+
+ Main Content
+​​​​​The Kentucky Long-Term Care Ombudsman program advocates for residents of nursing homes, personal care homes and family care homes, improving care and encouraging positive change at all levels.
+
+Far too many long-term-care residents suffer psychological, physical and other types of abuse and neglect. More than 80 trained volunteer ombudsmen regularly visit Kentucky long-term care facilities, monitor conditions and care and give a voice to those unable to speak for themselves.
+
+Use the ​ombudsman listing by county to find a LTC ombudsman in your area.
+
+Long-term care ombudsman services are coordinated through the Office of the State Long Term Care Ombudsman. The program also oversees 15 district programs affiliated with Area Agencies on Aging and Independent Living. The program receives federal, state and local funding and does not charge for services.
+Responsibilities​
+
+The responsibilities of long-term care ombudsmen include:
+Identifying, investigating and resolving complaints made by or on behalf of residents;
+Providing information to residents about long-term care services;
+Representing the interest of residents before governmental agencies and seeking administrative, legal and other remedies to protect residents;
+Analyzing, commenting on and recommending changes in laws and regulations pertaining to the health, safety, welfare and rights of residents;
+Educating and informing consumers and the general public about long-term care issues and concerns and facilitating public comment on laws, regulations, policies and actions;
+Promoting development of citizen organizations to participate in the program;
+Providing technical support to develop resident and family councils that protect the well-being and rights of residents; and
+Advocating for changes to improve residents’ quality of life and care.
+Complaint Resolution Process​​
+
+When complaints and problems with long-term care, services, facilities or other matters arise, try first to resolve concerns with the health care provider. Often, your expression of concern can prompt solutions and improvements.
+If problems cannot be resolved with the health care provider, the certified ombudsman serving the county where the facility is located can help you. Fifteen ombudsmen districts across the state serve residents and their families and provide assistance resolving problems and concerns. Please see our regional map to locate contact information for the ombudsman in your district.
+Complaints are treated confidentially and you will control the complaint process and determine the extent to which ombudsmen become involved in resolving your problem. Ombudsmen and program staff will not act without consulting you.
+An ombudsman first investigates complaints to verify and document reports. The findings of investigations are shared with the complaining party. Ombudsmen explain options for resolving concerns to residents and families and help find solutions. Ombudsmen will only take action that is authorized by residents and their families.
+Ombudsmen follow-up on resolved problems to ensure agreements remain in effect and additional problems do not arise.
+Ombudsmen do not disclose the identity of residents or family members reporting complaints without their consent, unless ordered to do so by a court. When an ombudsman is unable to resolve a complaint without revealing the identity of the complaining party, the person making the complaint may decide whether the ombudsman proceeds in efforts to resolve a complaint.
+Standard Operating Procedures
+1. Introduction
+2. Program Structure
+3. Designation
+4. De-Designation
+5. Certification
+6. Refusal to Certify and De-Designation
+7. Administration Roles Responsibilities
+8. State LTCO Responsibilities
+9. State LTCO Responsibilities - Residents
+10. State LTCO Responsibilities - District
+11. State LTCO Responsibilities - AAAIL
+12. State LTCO Responsibilities - Provider
+13. AAAIL Responsibilities
+14. Provider Responsibilities
+15. Conflicts of Interest
+16. Records
+17. Documentation Info System
+18. Liability
+19. Regional LTCO Responsibilities
+20. Interference Retaliation
+21. District LTCO Specific Responsibilities
+22. Advisory Councils
+23. Complaint Investigation
+24. Complaint Resolution
+25. Confidentiality
+26. Investigation Documentation
+27. Referrals
+28. Training
+29. Monitoring
+30. Grievance Process
+31. Monitoring
+
+ Relative Content
+​LTCO Regions
+
+​Ombudsman listing by county
+
+ Additional Information
+
+ Resources
+Caring Conversations Workbook
+Ombuddy Website
+Residents Rights Booklet
+Underperforming Facilities
+
+Helpful Links
+CHFS OIG Facilities Directories
+Elder Abuse Tip Line
+Eldercare Locator
+Kentucky Department of Community Based Services
+Kentucky Inspector General Division of Health Care Facilities and Services
+Long Term Care Ombudsman
+Nursing Home Compare
+Nursing Home Ratings
+Office of the CHFS Inspector General (OIG)
+Office of the Kentucky Attorney General (OAG)
+State Adult Protective Services
+U.S. Administration on Aging
+U.S. Centers for Medicare and Medicaid Services
+U.S. Social Security Administration (SSA)
+
+ Contact Information
+
+ 45
+
+ Related Agencies
+
+ Department for Aging and Independent Living
+
+ Division of Quality Living
+
+ Cabinet for Health and Family Services
+
+ Contact
+
+ Site Map
+
+ Información en Español
+
+ Civil Rights / Derechos Civiles
+
+ CHFS Facebook
+
+ CHFS Twitter
+
+ CHFS YouTube
+
+ CHFS Instagram
+
+ © 2023 Commonwealth of Kentucky. All Rights Reserved.
+
+ Policies
+
+ Security
+
+ Disclaimer
+
+ Accessibility
+END SOURCE 3
+
+END OF PACKET — 3 sources

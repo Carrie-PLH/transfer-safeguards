@@ -1,0 +1,34 @@
+# Alabama
+
+## Docket
+
+**Grounds stated in the sources.** The Department of Senior Services' Elder Rights Guide states, as item 20 of its list of nursing home residents' rights, "The right to stay in the nursing home unless removal is necessary for the" "resident’s welfare, the resident no longer requires services, the failure to pay after" "reasonable notice, to prevent harm to others or the facility ceases to operate." That is a guide's restatement, not the rule: Chapter 420-5-10 of the Rules of the Alabama State Board of Health, which is the operative regulation, could not be captured — see the change log. No Alabama regulation or statute enumerating the grounds is in this packet.
+
+**Notice stated in the sources.** The same guide, item 21: "The right to thirty days notice of a proposed transfer or discharge with the right to" "appeal." Item 19 covers moves inside the building: "The right to receive notice before their room or roommate is changed and the right" "to refuse the transfer if the purpose is to move them from a Medicare bed to a" "Medicaid bed or vice versa." No statement of what the notice must contain appears in the captured sources.
+
+**Hearing office in these sources.** Not stated in the sources reviewed. The Elder Rights Guide states a right to appeal but names no office, no address, no form and no deadline, and no Alabama page stating the route for a transfer or discharge appeal was captured. What the Department of Public Health does publish is a complaint route to the survey agency, which is a different thing: "If you have a complaint about the care of a resident in a nursing home located in Alabama, the Alabama State Survey Agency has the regulatory responsibility for all nursing homes in the state." — with the "ElderCare Hotline at 1-800-356-9596." and a written route to "ATTN: Complaint Unit, Alabama Department of Public Health, Bureau of Health Provider Standards, 201 Monroe Street, Suite 700, Montgomery, AL 36130-3017". This page does not present that as an appeal of a discharge, because no captured source says it is.
+
+**Ombudsman in these sources.** The Long Term Care Ombudsman program: "The Alabama Department of Senior Services administers a Long Term Care Ombudsman" program "that provides services to protect individuals residing in nursing facilities, assisted living facilities, specialty care facilities and boarding homes." The guide publishes one contact route: "Call" "1-800-AGELINE to reach your local Ombudsman." — a word, not a digit string, as the guide prints it.
+
+**Sources last checked.** 2026-08-30
+
+Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
+
+## Lede
+
+This page assembles what Alabama's own publishers state about involuntary transfer and discharge from a nursing home. It is a baseline page and the thinnest in this index so far, because the operative rule refused capture. Chapter 420-5-10 of the Rules of the Alabama State Board of Health is published by the Department of Public Health only as a scanned image with no text layer, and the state's administrative code site serves its text only to a scripted client. What this page holds instead is the Department of Senior Services' Elder Rights Guide, which restates the rights in the department's own words, and the Department of Public Health's complaint page.
+
+The gap that leaves is the hearing itself: Alabama tells residents they may appeal, and no captured Alabama source says to whom, by when, or how. That absence is the docket's third row, stated rather than filled. The federal floor for Medicare/Medicaid-certified facilities is assembled separately on [the federal page](../federal.html); nothing here fills a gap from federal law or another state. Confirm applicability with the agencies named in the sources: whether any provision applies to a particular facility, resident, or notice is for the hearing office to determine. Deadlines and periods on this page are quoted from the sources, not calculated for any case.
+
+## 03 — Source map
+
+| Document | Publisher and location | Source's own date | Retrieved |
+| --- | --- | --- | --- |
+| Elder Rights Guide for Older Alabamians, nursing home chapter (PDF) | [Alabama Department of Senior Services, published on alabamapublichealth.gov](https://www.alabamapublichealth.gov/homehealth/assets/elderrightsguide.pdf) | none stated on document | 2026-08-30 |
+| Filing Complaints | [ADPH, Bureau of Health Provider Standards](https://www.alabamapublichealth.gov/providerstandards/complaints.html) | Page last updated: March 30, 2026 | 2026-08-30 |
+
+Captured: both, in tools/packets/alabama-packet.txt. Pending: Chapter 420-5-10 of the State Board of Health rules, any published appeal route and deadline, the Department of Senior Services' own ombudsman page, and any statement of a bed-hold period — per the packet's pending list.
+
+## 04 — Change log
+
+2026-08-30 — Baseline page built from the first Alabama packet: docket, lede, source map, change log. Not yet captured or written: section 01 (the grounds, as Alabama describes them) and section 02 (the published process, including the notice's required contents, bed-hold and return, and the notice-periods register). Findings: (1) The operative rule is uncaptured, and by two independent obstacles. The Department of Public Health publishes Chapter 420-5-10 as a scanned PDF with no text layer — `pdftotext` returns 88 bytes from a 4.8 MB file — and the Alabama Administrative Code site returns a JavaScript shell with no rule text to direct capture. Every row on this page therefore rests on a guide and a complaint page rather than on the regulation, and the docket says so. (2) No captured Alabama source states where a transfer or discharge appeal goes, by when, or on what form; the hearing row states the absence. The department's complaint route to the survey agency is quoted separately and is not presented as an appeal. (3) The Elder Rights Guide publishes the ombudsman contact as a word — 1-800-AGELINE — rather than as digits; it is reproduced as printed, and no digit form was captured. (4) The guide states no date of its own. (5) The guide restates a bed-hold right — that the resident must be informed of how long the bed will be held — without stating a period, and no Alabama Medicaid statement of the period was captured. (6) An OCR pass over the scanned rule would put the regulation's own text within reach, but OCR output is not a first-party capture and would need its own convention before any of it could be quoted; that decision is left for the owner rather than taken here. Capture pending: per the source map. Internet Archive: not yet submitted. Reviewer: Carrie Schluter; review pending before publication. Corrections: hello@fieldassembly.net.

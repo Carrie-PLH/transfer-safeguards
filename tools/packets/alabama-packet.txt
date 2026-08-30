@@ -1,0 +1,244 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Alabama
+SLUG: alabama
+ASSEMBLED: 2026-08-30
+CAPTURE NOTES: Source 1 is a PDF published on alabamapublichealth.gov and was retrieved by curl with a browser user-agent and extracted with `pdftotext -layout`, then sliced mechanically to the guide's nursing home chapter (from the heading "SELECTING A NURSING HOME" to the start of "LONG TERM CARE INSURANCE"); the page numbers, the wrapped text around the guide's inset illustrations, and the numbering of the rights list are the document's own. Source 2 (alabamapublichealth.gov) refuses plain curl for this page and was retrieved through the session's HTTP fetch tool, which renders the served document to text, and copied to file without retyping; the site's navigation is omitted, and the department's own email obfuscation ("[email protected]") is left as the page renders it.
+PENDING: Chapter 420-5-10 of the Rules of the Alabama State Board of Health (Nursing Facilities), which is the operative rule and states the transfer and discharge requirements. The Department of Public Health publishes it only as a scanned PDF with no text layer — `pdftotext` returns 88 bytes from a 4.8 MB file — and the Alabama Administrative Code site at admincode.legislature.state.al.us serves its code only to a scripted client, returning a JavaScript shell to direct capture. Neither the rule's grounds, its notice requirements, nor its appeal procedure are therefore in this packet. Also pending: any first-party statement of where a resident sends a transfer or discharge appeal and by when — Source 1 states a right to appeal but names no office, address or deadline, and Source 2 publishes a complaint route to the survey agency, which is not an appeal of a discharge; the Alabama Department of Senior Services' own ombudsman page, not captured (the ombudsman contact in this packet is the one Source 1 prints); and any first-party statement of an Alabama Medicaid bed-hold period.
+
+SOURCE 1: Alabama Department of Senior Services, Elder Rights Guide for Older Alabamians — nursing home chapter (PDF, published on alabamapublichealth.gov) | https://www.alabamapublichealth.gov/homehealth/assets/elderrightsguide.pdf | source's own date: none stated on document | retrieved: 2026-08-30
+SELECTING A NURSING HOME
+
+Before selecting a nursing home for you or a
+loved one, it’s important to understand the
+distinction between the types of nursing home
+care. A nursing home generally provides
+several levels of care—skilled nursing care,
+intermediate care and custodial care. Skilled
+nursing care is when you need skilled nursing
+or rehabilitation staff to manage, observe and
+evaluate your care. An example of skilled
+nursing care is when you need intravenous
+injections or physical therapy. A skilled
+nursing facility can be part of a nursing home
+or hospital. At the other end of the scale is
+custodial care. Custodial care is non-skilled
+personal care which helps with activities of
+daily living such as bathing, dressing, eating,
+getting in and out of a bed or chair, moving
+
+
+                                            -19-
+around and using the bathroom. In most cases, Medicare does not pay for custodial care.
+
+Nursing homes provide a wide range of personal care and health services. For most
+people, this care is generally to assist with support services such as dressing and bathing
+or assisting those with physical, emotional or mental problems.
+
+When selecting a nursing home, you must consider your medical and physical needs.
+Your family, friends and health care providers can help you decide what kind of care you
+need. You must also consider the costs of each nursing home and your financial resources
+including Long Term Care Insurance, Medicare and Medicaid, to be sure you find a
+nursing home you can afford. Additionally, you should try to find a nursing home located
+convenient to your friends and family because their visits will be important to you.
+
+It is important that you find the nursing home that best suits your needs. When inquiring
+about a specific nursing home, be sure to ask the right questions. Here are some
+important things to consider and questions to ask when you are visiting different nursing
+homes:
+
+                                        Licensure. Is the nursing home and administrator
+                                        licensed and is the license in danger of being
+                                        revoked, suspended, or not renewed?
+
+                                        Nursing/Physician Services. What level of care
+                                        is provided and is there a staff physician who
+                                        makes emergency calls?
+
+                                        Activities. Does the nursing home have a variety
+                                        of scheduled activities that may be of interest to
+                                        you?
+
+                                        Staffing. Is there enough staff available to assist
+                                        residents and do they respond in a timely manner
+                                        to a resident’s call for help?
+
+                                        Cleanliness. Is the nursing home clean and
+                                        pleasant and do the residents appear to be clean
+                                        and well groomed?
+
+                                      Cost. What is the cost of care in the nursing
+                                      home? What services are included in this price
+   and what additional costs will have to be paid?
+
+   Dietary service. Does the nursing home serve attractive, nutritious meals that are
+   planned by a Registered Dietician? Are special diets available?
+
+
+
+
+                                            -20-
+   Safety. Is there an adequate fire safety system that includes smoke and heat detectors
+   as well as sprinklers or approved fire resistant construction?
+
+   Privacy and Respect. Are the residents treated with respect and dignity and do they
+   have as much privacy as possible? Are the residents treated as adults and not
+   children?
+
+   Policies. What policies does the nursing home have about visiting hours, gifts of
+   food, etc.?
+
+
+PATIENT RIGHTS
+
+Residents of nursing homes have many rights under state and federal law. Under federal
+guidelines, each nursing facility must develop and implement written policies and
+procedures prohibiting mistreatment, neglect, or abuse of residents. Each facility must
+also ensure that all alleged violations of these policies are reported immediately to the
+facility administrator or other officials and must demonstrate that all alleged policy
+violations are thoroughly investigated.
+
+A resident in a nursing facility is entitled to receive verbal and written notice of the rights
+and services to which he or she is entitled. This notice must be given prior to or upon
+admission, and periodically throughout the resident’s stay, in a language the resident
+understands.
+
+A nursing home resident is entitled to the following:
+
+   1. The right to see family members, ombudsmen, or other resident advocates,
+      physicians, service providers and representatives of the state and federal
+      government.
+
+   2. The right to keep and use personal possessions and clothing unless doing so
+      would endanger health and safety.
+
+   3. The right to apply for and receive Medicare and Medicaid benefits and cannot be
+      asked to leave a home because they receive such benefits.
+
+   4. The right to receive the same treatment as other residents regardless of whether
+      they are private payers or Medicare or Medicaid recipients.
+
+   5. The right to keep clinical and personal records confidential.
+
+   6. The right to choose their own personal physician.
+
+   7. The right to be fully informed about their medical care.
+
+
+
+                                             -21-
+8. The right to obtain lists of services paid by Medicare and Medicaid benefits.
+
+9. The right to participate in the planning of care and treatment and to refuse
+   treatment.
+
+10. The right to be free from mental and physical abuse.
+
+11. The right to not be kept apart from other residents against their will.
+
+12. The right to not be tied down or given drugs to restrain when restraint is not
+    necessary to treat medical symptoms.
+
+13. The right to raise grievances and have them resolved in a timely manner.
+
+14. The right to participate in social, religious and community activities to the extent
+                                         that they do not interfere with the rights of other
+                                         residents.
+
+                                    15. The right to choose whether or not personal
+                                        funds are managed by the nursing home.
+
+                                    16. The right to privacy regarding medical
+                                        treatment, visits, communications and meetings
+                                        with family and resident groups.
+
+                                    17. The right to review medical records within 24
+                                        hours of making a request.
+
+                                    18. The right to review the most recent state
+                                        inspection report relating to the nursing home.
+
+19. The right to receive notice before their room or roommate is changed and the right
+    to refuse the transfer if the purpose is to move them from a Medicare bed to a
+    Medicaid bed or vice versa.
+
+20. The right to stay in the nursing home unless removal is necessary for the
+    resident’s welfare, the resident no longer requires services, the failure to pay after
+    reasonable notice, to prevent harm to others or the facility ceases to operate.
+
+21. The right to thirty days notice of a proposed transfer or discharge with the right to
+    appeal.
+
+22. The right to be informed by the nursing home of the length of time that a
+    resident’s bed will be held open for their return in the event they are transferred
+    for hospitalization or therapy, and the right to be readmitted as soon as the first
+
+
+
+
+                                         -22-
+       semi-private bed becomes available if returned after the expiration of the bedhold
+       period.
+
+
+
+LONG TERM CARE OMBUDSMAN
+
+The Alabama Department of Senior Services administers a Long Term Care Ombudsman
+program that provides services to protect individuals residing in nursing facilities,
+assisted living facilities, specialty care facilities and boarding homes. Ombudsmen are
+advocates for residents, or their friends and families, who work to protect the health,
+safety, welfare and rights of Alabama’s senior citizens. The Ombudsman’s job is to
+protect the rights of residents and ensure they receive fair treatment and quality care. Call
+1-800-AGELINE to reach your local Ombudsman.
+
+
+
+
+END SOURCE 1
+
+SOURCE 2: Alabama Department of Public Health, Bureau of Health Provider Standards — Filing Complaints | https://www.alabamapublichealth.gov/providerstandards/complaints.html | source's own date: Page last updated: March 30, 2026 | retrieved: 2026-08-30
+Bureau of Health Provider Standards
+
+Filing Complaints
+
+To File a Complaint Against a Nursing Home
+
+If you have a complaint about the care of a resident in a nursing home located in Alabama, the Alabama State Survey Agency has the regulatory responsibility for all nursing homes in the state.
+
+Examples of reasons for filing a complaint:
+
+- Abuse
+- Neglect
+- Poor care
+- Insufficient staff
+- Unsafe or unsanitary conditions
+- Dietary problems
+- Mistreatment
+
+Complete the Nursing Home Complaint Form. You may complete this fillable form and submit it electronically to the department's complaint email address for nursing home complaints. Other ways to file a complaint:
+
+- For elder complaints, contact the ElderCare Hotline at 1-800-356-9596.
+- For nursing home complaints, email us at [email protected]; or
+- Write a letter of complaint addressed to: ATTN: Complaint Unit, Alabama Department of Public Health, Bureau of Health Provider Standards, 201 Monroe Street, Suite 700, Montgomery, AL 36130-3017
+
+To File a Complaint Against an Acute and Continuing Care Facility
+
+- E-mail us at [email protected]; or
+- Call the Bureau of Health Provider Standards Complaint Hotline at 1-800-356-9596; or
+- Write a letter of complaint addressed to: ATTN: ACC Complaint Unit, Alabama Department of Public Health, Bureau of Health Provider Standards, 201 Monroe Street, Suite 700, Montgomery, AL 36130-3017
+
+To File a Complaint for Violations of In-Person Visitation Rights
+
+If you would like to file a complaint regarding visitation rights in Alabama health care facilities, please click the appropriate link:
+
+- General Acute Hospital
+- Long Term Care Facility
+- Skilled Nursing Facility
+- Assisted Living Facility
+- Specialty Care Assisted
+
+Page last updated: March 30, 2026
+
+END SOURCE 2
+
+END OF PACKET — 2 sources
