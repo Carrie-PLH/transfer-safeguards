@@ -1,5 +1,22 @@
 # transfer-safeguards — operating notes
 
+## Doctrine — the long-horizon frame (read before optimizing anything)
+
+Field Assembly is privately funded institution-building, not a startup. The
+full thesis is ~/Projects/Field Assembly/field-assembly-standard/STEWARDSHIP.md;
+the rules a working session must not violate are these four. Public access is
+permanent and free: no gating, no analytics, no accounts, no advertising, at
+any depth, ever. The endowment ceilings (~$6k/year, eventually ≤10 hours/week)
+mean expansion never comes at the cost of maintaining what exists — a
+collection that cannot be faithfully observed for years is a liability, not
+progress. A competent stranger must be able to inherit everything: no
+undocumented cleverness, no reliance on memory, no single-vendor dependence.
+The corpus is designed to outlive Field Assembly LLC: portable, independently
+verifiable, separable from its current custodian. Revenue, if it ever comes,
+is upside, not oxygen — never redesign toward a buyer. Collection conventions
+live in the Field Assembly Record Standard
+(~/Projects/Field Assembly/field-assembly-standard).
+
 Working notes for Claude sessions in this repository. Content rules live in
 CHARTER.md (page specification, hard boundaries) and PROVENANCE.md (packet
 and quotation rules); this file covers only how to run commands against
