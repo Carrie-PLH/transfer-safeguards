@@ -347,9 +347,19 @@ def check(page_path, packet_path, out=print, lang='en', index_path=None):
             fails.append(f'QUOTE not in packet: {q[:80]!r}')
 
     # 2a. phones: page phones (visible text + tel: hrefs) vs packet phones
+    #
+    # http(s) URLs are removed before the page is scanned for phone numbers.
+    # Added 2026-08-30, when Michigan's source map linked the department's own
+    # form at .../LARA-BCHS-ITD-100-07262024.pdf and the digits inside that
+    # filename matched PHONE_RE as 100-072-6202. The layer exists to catch a
+    # plausible invented number a reader might dial; a digit run inside a URL
+    # is not dialable, and the URL itself is already checked by the hostname
+    # layer. tel: hrefs are collected separately below, so real telephone
+    # links are still checked.
     packet_phones = {canon_phone(m) for m in PHONE_RE.findall(bodies)}
     packet_phones.discard(None)
-    page_phones = {canon_phone(m) for m in PHONE_RE.findall(text)}
+    text_no_urls = re.sub(r'https?://\S+', ' ', text)
+    page_phones = {canon_phone(m) for m in PHONE_RE.findall(text_no_urls)}
     for h in hrefs:
         if h.startswith('tel:'):
             page_phones.add(canon_phone(h))
@@ -441,6 +451,7 @@ def self_test():
         '[help@agency.example.gov](mailto:help@agency.example.gov). '
         '[rules](https://agency.example.gov/rules) '
         '[site](https://fieldassembly.net) hello@fieldassembly.net '
+        '[form](https://agency.example.gov/FORM-100-07262024.pdf) '
         'Write to P.O. Box 12345 or call at 700 North Pine Street.\n'
     )
     bad = (

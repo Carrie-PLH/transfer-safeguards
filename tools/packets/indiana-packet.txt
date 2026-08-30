@@ -1,0 +1,1759 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Indiana
+SLUG: indiana
+ASSEMBLED: 2026-08-30
+CAPTURE NOTES: All four sources were retrieved by curl with a browser user-agent. Source 1 is a mechanical slice of the Department of Health's own published PDF of Article 16.2 (3.4 MB, extracted whole with `pdftotext -layout`, then cut from the heading "410 IAC 16.2-3.1-12 Transfer and discharge rights" to the start of section 13); the running heads and page numbers that fall inside that range are the document's own and are left in place. Sources 2 and 3 are fillable PDF state forms, extracted with `pdftotext -layout`; blank fields, the "Reset Form" button label and the checkbox glyphs are the forms' own. Source 4 was reduced to text mechanically (tag strip); the site's navigation appears twice in the capture because the page renders both a menu and a side navigation, and the county-by-county local ombudsman roster is included as served.
+PENDING: A first-party statement of the Indiana Medicaid bed-hold period. Source 1 requires the facility to give written information specifying "The duration of the bed-hold policy under the Medicaid state plan during which the resident is permitted to return and resume residence in the facility." but states no number of days, and no Family and Social Services Administration or Medicaid statement of the state-plan duration was captured. Also pending: the Department of Health's Resident Transfer and Discharge Information Center page, which returned HTTP 404 at the path found, and any published procedural rules for the hearing itself under IC 4-21.5, cited by Source 1 as affected law.
+
+SOURCE 1: 410 IAC 16.2-3.1-12, Transfer and discharge rights (excerpt from the Department of Health's published Article 16.2) | https://www.in.gov/health/files/A00162.pdf | source's own date: rule history line ends readopted filed Nov 13, 2019, 3:14 p.m.: 20191211-IR-410190391RFA | retrieved: 2026-08-30
+410 IAC 16.2-3.1-12 Transfer and discharge rights
+      Authority: IC 16-28-1-7
+      Affected: IC 4-21.5; IC 16-28-5-1
+
+     Sec. 12. (a) The transfer and discharge rights of residents of a facility are as follows:
+     (1) As used in this section, "interfacility transfer and discharge" means the movement of a resident to a bed outside of the
+     licensed facility. For Medicare and Medicaid certified facilities, an interfacility transfer and discharge means the movement
+     of a resident to a bed outside of the certified facility whether that bed is in the same physical plant or not.
+     (2) As used in this section, "intrafacility transfer" means the movement of a resident to a bed within the same licensed facility.
+     For Medicare and Medicaid certified facilities, an intrafacility transfer means the movement of a resident to a bed within the
+     same certified facility.
+     (3) When a transfer or discharge of a resident is proposed, whether intrafacility or interfacility, provision for continuity of care
+     shall be provided by the facility.
+     (4) Health facilities must permit each resident to remain in the facility and not transfer or discharge the resident from the
+     facility unless:
+            (A) the transfer or discharge is necessary for the resident's welfare and the resident's needs cannot be met in the facility;
+            (B) the transfer or discharge is appropriate because the resident's health has improved sufficiently so that the resident
+            no longer needs the services provided by the facility;
+            (C) the safety of individuals in the facility is endangered;
+            (D) the health of individuals in the facility would otherwise be endangered;
+            (E) the resident has failed, after reasonable and appropriate notice, to pay for (or to have paid under Medicare or
+            Medicaid) a stay at the facility; or
+            (F) the facility ceases to operate.
+     (5) When the facility proposes to transfer or discharge a resident under any of the circumstances specified in subdivision
+     (4)(A), (4)(B), (4)(C), (4)(D), or (4)(E), the resident's clinical records must be documented. The documentation must be made
+     by the following:
+            (A) The resident's physician when transfer or discharge is necessary under subdivision (4)(A) or (4)(B).
+            (B) Any physician when transfer or discharge is necessary under subdivision (4)(D).
+     (6) Before an interfacility transfer or discharge occurs, the facility must, on a form prescribed by the department, do the
+     following:
+            (A) Notify the resident of the transfer or discharge and the reasons for the move in writing and in a language and manner
+            that the resident understands. The health facility must place a copy of the notice in the resident's clinical record and
+            transmit a copy to the following:
+                   (i) The resident.
+                   (ii) A family member of the resident if known.
+                   (iii) The resident's legal representative if known.
+                   (iv) The local long term care ombudsman program (for involuntary relocations or discharges only).
+                   (v) The person or agency responsible for the resident's placement, maintenance, and care in the facility.
+                   (vi) In situations where the resident is developmentally disabled, the regional office of the division of disability,
+                   aging, and rehabilitative services, who may assist with placement decisions.
+                   (vii) The resident's physician when the transfer or discharge is necessary under subdivision (4)(C), (4)(D), (4)(E),
+                   or (4)(F).
+            (B) Record the reasons in the resident's clinical record.
+            (C) Include in the notice the items described in subdivision (9).
+     (7) Except when specified in subdivision (8), the notice of transfer or discharge required under subdivision (6) must be made
+     by the facility at least thirty (30) days before the resident is transferred or discharged.
+     (8) Notice may be made as soon as practicable before transfer or discharge when:
+            (A) the safety of individuals in the facility would be endangered;
+            (B) the health of individuals in the facility would be endangered;
+            (C) the resident's health improves sufficiently to allow a more immediate transfer or discharge;
+
+
+Indiana Administrative Code                                                                                                     Page 36
+                         HEALTH FACILITIES; LICENSING AND OPERATIONAL STANDARDS
+
+             (D) an immediate transfer or discharge is required by the resident's urgent medical needs; or
+             (E) a resident has not resided in the facility for thirty (30) days.
+     (9) For health facilities, the written notice specified in subdivision (7) must include the following:
+             (A) The reason for transfer or discharge.
+             (B) The effective date of transfer or discharge.
+             (C) The location to which the resident is transferred or discharged.
+             (D) A statement in not smaller than 12-point bold type that reads, "You have the right to appeal the health facility's
+             decision to transfer you. If you think you should not have to leave this facility, you may file a written request for a
+             hearing with the Indiana state department of health postmarked within ten (10) days after you receive this notice. If you
+             request a hearing, it will be held within twenty-three (23) days after you receive this notice, and you will not be
+             transferred from the facility earlier than thirty-four (34) days after you receive this notice of transfer or discharge unless
+             the facility is authorized to transfer you under subdivision (8). If you wish to appeal this transfer or discharge, a form
+             to appeal the health facility's decision and to request a hearing is attached. If you have any questions, call the Indiana
+             state department of health at the number listed below.".
+             (E) The name of the director, address, telephone number, and hours of operation of the division.
+             (F) A hearing request form prescribed by the department.
+             (G) The name, address, and telephone number of the division and local long term care ombudsman.
+             (H) For facility residents with developmental disabilities or who are mentally ill, the mailing address and telephone
+             number of the protection and advocacy services commission.
+     (10) If the resident appeals the transfer or discharge, the facility may not transfer or discharge the resident within thirty-four
+     (34) days after the resident receives the initial transfer or discharge notice, unless an emergency exists as provided under
+     subdivision (8).
+     (11) If nonpayment is the basis of a transfer or discharge, the resident shall have the right to pay the balance owed to the facility
+     up to the date of the transfer or discharge and then is entitled to remain in the facility.
+     (12) The department shall provide a resident who wishes to appeal the transfer or discharge from a facility the opportunity to
+     file a request for a hearing postmarked within ten (10) days following the resident's receipt of the written notice of the transfer
+     or discharge from the facility.
+     (13) If a facility resident requests a hearing, the department shall hold an informal hearing at the facility within twenty-three
+     (23) days from the date the resident receives the notice of transfer or discharge. The department shall attempt to give at least
+     five (5) days written notice to all parties prior to the informal hearing. The department shall issue a decision within thirty (30)
+     days from the date the resident receives the notice. The facility must convince the department by a preponderance of the
+     evidence that the transfer or discharge is authorized under subdivision (4). If the department determines that the transfer is
+     appropriate, the resident must not be required to leave the facility within the thirty-four (34) days after the resident's receipt
+     of the initial transfer or discharge notice unless an emergency exists under subdivision (8). Both the resident and the facility
+     have the right to administrative or judicial review under IC 4-21.5 of any decision or action by the department arising under
+     this section. If a hearing is to be held de novo, that hearing shall be held in the facility where the resident resides.
+     (14) An intrafacility transfer can be made only if:
+             (A) the transfer is necessary for medical reasons as judged by the attending physician; or
+             (B) the transfer is necessary for the welfare of the resident or other persons.
+     (15) If an intrafacility transfer is required, the resident must be given notice at least two (2) days before relocation, except
+     when:
+             (A) the safety of individuals in the facility would be endangered;
+             (B) the health of individuals in the facility would be endangered;
+             (C) the resident's health improves sufficiently to allow a more immediate transfer; or
+             (D) an immediate transfer is required by the resident's urgent medical needs.
+     (16) The written notice of an intrafacility transfer must include the following:
+             (A) Reasons for transfer.
+             (B) Effective date of transfer.
+             (C) Location to which the resident is transferred.
+             (D) Name, address, and telephone number of the local and state long term care ombudsman.
+
+
+Indiana Administrative Code                                                                                                       Page 37
+                           HEALTH FACILITIES; LICENSING AND OPERATIONAL STANDARDS
+
+             (E) For facility residents with developmental disabilities or who are mentally ill, the mailing address and telephone
+             number of the protection and advocacy services commission.
+      (17) The resident has the right to relocate prior to the expiration of the two (2) day notice.
+      (18) Prior to any interfacility or involuntary intrafacility relocation, the facility shall prepare a relocation plan to prepare the
+      resident for relocation and to provide continuity of care. In nonemergency relocations, the planning process shall include a
+      relocation planning conference to which the resident, his or her legal representative, family members, and physician shall be
+      invited. The planning conference may be waived by the resident or his or her legal representative.
+      (19) At the planning conference, the resident's medical, psychosocial, and social needs with respect to the relocation shall be
+      considered and a plan devised to meet these needs.
+      (20) The facility shall provide reasonable assistance to the resident to carry out the relocation plan.
+      (21) The facility must provide sufficient preparation and orientation to residents to ensure safe and orderly transfer or discharge
+      from the facility.
+      (22) If the relocation plan is disputed, a meeting shall be held prior to the relocation with the administrator or his or her
+      designee, the resident, and the resident's legal representative. An interested family member, if known, shall be invited. The
+      purpose of the meeting shall be to discuss possible alternatives to the proposed relocation plan.
+      (23) A written report of the content of the discussion at the meeting and the results of the meeting shall be reviewed by the
+      administrator or his or her designee, the resident, the resident's legal representative, and an interested family member, if known,
+      each of whom may make written comments on the report.
+      (24) The written report of the meeting shall be included in the resident's permanent record.
+      (25) Before a facility transfers a resident to a hospital or allows a resident to go on therapeutic leave of twenty-four (24) hours
+      duration or longer, the facility must provide written information to the resident and a family member or legal representative
+      that specifies the following:
+             (A) The duration of the bed-hold policy under the Medicaid state plan during which the resident is permitted to return
+             and resume residence in the facility.
+             (B) The facility's policies regarding bed-hold periods, which must be consistent with subdivision (27), permitting a
+             resident to return.
+      (26) Except in an emergency, at the time of transfer of a resident for hospitalization or therapeutic leave, a facility must provide
+      to the resident and a family member or legal representative written notice which specifies the duration of the bed-hold policy
+      described in subdivision (25).
+      (27) Medicaid certified facilities must establish and follow a written policy under which a resident, whose hospitalization or
+      therapeutic leave exceeds the bed-hold period under the state plan, is readmitted to the facility immediately upon the first
+      availability of a bed in a semiprivate room if the resident:
+             (A) requires the services provided by the facility; and
+             (B) is eligible for Medicaid nursing facility services.
+      (b) For purposes of IC 16-28-5-1, a breach of subsection (a) is a deficiency. (Indiana State Department of Health; 410 IAC
+16.2-3.1-12; filed Jan 10, 1997, 4:00 p.m.: 20 IR 1533, eff Apr 1, 1997; errata filed Apr 10, 1997, 12:15 p.m.: 20 IR 2414;
+readopted filed Jul 11, 2001, 2:23 p.m.: 24 IR 4234; readopted filed May 22, 2007, 1:44 p.m.: 20070613-IR-410070141RFA;
+readopted filed Sep 11, 2013, 3:19 p.m.: 20131009-IR-410130346RFA; readopted filed Nov 13, 2019, 3:14 p.m.: 20191211-IR-
+410190391RFA)
+END SOURCE 1
+
+SOURCE 2: Indiana State Department of Health, Notice of Transfer or Discharge, State Form 49669 (PDF) | https://forms.in.gov/download.aspx?id=5667 | source's own date: State Form 49669 (R8 / 1-19) | retrieved: 2026-08-30
+                                                                                                                                 Reset Form
+
+
+NOTICE OF TRANSFER OR DISCHARGE
+State Form 49669 (R8 / 1-19)
+Indiana State Department of Health - Division of Long Term Care
+
+
+
+                                                      Resident Information
+Resident Name                                                  Date Notice Issued (month, day, year)
+
+Facility Name (Facility resident is being discharged from)
+
+Facility Street Address (number and street)                        Facility City                       Facility ZIP Code
+
+
+                                               Transfer / Discharge Notice
+Transfer or Discharge Effective Date (month, day, year)
+
+Resident Is Being Transferred To:
+    Another Nursing Facility (Specify facility name below.)
+    Another Health Facility (Specify facility name below.)
+    A private residence (including home)
+    Other (Please specify):
+Name of Facility Being Transferred To
+
+Address of Facility Being Transferred To (number and street)
+
+City                                          State                                     ZIP Code
+
+
+                Reason for Transfer or Discharge (Must select one of the reasons below.)
+    The transfer or discharge is necessary to meet the resident’s welfare and the resident’s needs
+    cannot be met in the facility.
+
+    The transfer or discharge is appropriate because the resident’s health has improved
+    sufficiently so the resident no longer needs the services provided by the nursing facility.
+
+    The safety of the individuals in the facility is endangered.
+
+    The health of the individuals in the facility would otherwise be endangered.
+
+    The resident has failed, after reasonable and appropriate notice, to pay or payment has not
+    been made under Medicare/Medicaid for a stay in a nursing facility.
+
+    The facility ceases to operate.
+                                                        Bed Hold Policy
+The facility must attach a copy of the facility’s bed hold policy to this Notice of Transfer or Discharge and provide
+contact information for a facility employee to contact about the bed hold policy.
+Facility Contact Name                           Facility Contact Title                       Facility Contact Telephone Number
+
+
+
+
+                                                           Page 1 of 2
+                                                 Appeal Rights
+You have the right to appeal the health facility’s decision to transfer you. If you think you
+should not have to leave this facility, you may file a written request for a hearing with the
+Indiana State Department of Health postmarked within ten (10) days after you receive this
+notice. If you request a hearing, it will be held within twenty-three (23) days after you receive
+this notice, and you will not be transferred from the facility earlier than thirty-four (34) days
+after you receive this notice of transfer or discharge, unless the facility is authorized to transfer
+you as an emergency transfer under 410 IAC 16.2-3.1-12(a)8. If you wish to appeal this
+transfer or discharge, please fill out the attached State Form 49831 and return to the address
+below. If you have any questions, call the Indiana State Department of Health at 317-233-7540
+between the hours of 8:15 am and 4:45 pm.
+       To appeal this transfer or discharge, use the attached State Form 49831 and mail it to:
+                                   Indiana State Department of Health
+                               Court Administrator, Office of Legal Affairs
+                                    2 North Meridian St. Section 3-H
+                                         Indianapolis, IN 46204
+                                                  Attachments
+The facility must attach the following documents to this Notice of Transfer or Discharge:
+   Attach facility bed hold policy
+   Attach State Form 49831 Notice of Transfer or Discharge Request for Hearing
+                               State Long Term Care (LTC) Ombudsman
+         The State LTC Ombudsman is a State Office that serves as an advocate for nursing home residents.
+                     The State long term care Ombudsman’s address and telephone number is:
+                                               State LTC Ombudsman
+                                     Family and Social Services Administration
+                                      P.O. Box 7083, 402 W. Washington St.
+                                         IGC South, Room W451 – MS 27
+                                            Indianapolis, IN 46207-7083
+                                    (317) 232-7134 or Toll free 1-800-622-4484
+                                                Fax: (317) 972-3285
+                                     http://www.in.gov/ombudsman/2348.htm
+                                          Your Local Ombudsman
+The following is contact information for your local Ombudsman:
+Name of Local Ombudsman                                                         Telephone of Local Ombudsman
+
+Address of Local Ombudsman (number and street)
+
+City                                    State                                   ZIP Code
+
+
+                                          Indiana Disability Rights
+   The Indiana Disability Rights organization provides assistance, if needed, for residents who are mentally ill or
+                        developmentally disabled. Their address and telephone number is:
+                                              Indiana Disability Rights
+                                      4701 North Keystone Avenue, Suite 222
+                                               Indianapolis, IN 46205
+                                      Voice 1-800/622-4845 or 317/722-5555
+                                      TTY 1-800/838-1131; Fax 317/722-5564
+                                      http://www.IndianaDisabilityRights.org
+
+                                                    Page 2 of 2
+
+END SOURCE 2
+
+SOURCE 3: Indiana Department of Health, Notice of Transfer or Discharge Request for Hearing, State Form 49831 (PDF) | https://forms.in.gov/Download.aspx?id=5668 | source's own date: State Form 49831 (R8 / 4-23) | retrieved: 2026-08-30
+                                                                                                                                  Reset Form
+
+            NOTICE OF TRANSFER OR DISCHARGE REQUEST FOR HEARING
+            State Form 49831 (R8 / 4-23)
+            Indiana Department of Health-Division of Long Term Care
+
+
+
+
+Use this form to notify the Indiana Department of Health that you wish to appeal your involuntary transfer or
+discharge. If you want to appeal the involuntary transfer or discharge, you must send this form (State Form
+49831) along with the Notice of Transfer or Discharge (State Form 49669) to the Department of Health within
+ten (10) days of your receiving the notice of transfer or discharge from the facility to:
+
+                                              Indiana Department of Health
+                                        Court Administrator, Office of Legal Affairs
+                                          2 North Meridian Street – Section 3-H
+                                               Indianapolis, Indiana 46204
+
+                                                                      Or
+
+                                                CourtAdministrator@health.in.gov
+
+
+I received a Notice of Transfer or Discharge from the health facility informing me that I am going to be
+transferred or discharged from the facility. I hereby request a hearing on the facility’s decision to transfer or
+discharge me from the health facility.
+
+Resident Name                                                                                   Date Received (Month, Day, Year)
+
+
+Resident Telephone Number                   Resident Email Address                              Resident Preferred Method of Contact
+                                                                                                    Email               US Mail
+Name of Resident Representative                                                                 Representative Relation to Resident
+
+
+Representative Address (Number and Street, City, State and ZIP Code)
+
+
+Representative Telephone Number             Representative Email Address                   Representative Preferred Method of Contact
+                                                                                                Email              US Mail
+Facility Name (Facility resident is being discharged from)
+
+
+Facility Street Address (Number and Street)                    Facility City                        Facility ZIP Code
+
+
+Facility Telephone Number                                             Facility Email Address
+
+END SOURCE 3
+
+SOURCE 4: Indiana Long-Term Care Ombudsman, Contact information | https://www.in.gov/ombudsman/long-term-care-ombudsman/contact-information/ | source's own date: none stated on page | retrieved: 2026-08-30
+Ombudsman.IN.gov: Contact information
+
+ Skip to main content
+
+ IN.gov
+
+ An official website of the Indiana State Government
+
+ --> Language Translation -->
+
+ Governor Mike Braun
+
+ MENU
+
+ Ombudsman.IN.gov
+
+ Start voice
+ input
+
+ Frequent Searches
+
+ >Submit text
+ search
+
+ Ombudsman Home
+
+ DCS Ombudsman
+
+ Toggle submenu
+
+ About
+
+ DCS Ombudsman Staff
+
+ Online Complaint Form
+
+ Complaint FormPDF
+
+ DOC Ombudsman
+
+ Toggle submenu
+
+ Overview of DOC Ombudsman
+
+ Overview
+
+ Ombudsman Bureau Complaint Form
+
+ DOE Equitable Services Ombudman
+
+ Toggle submenu
+
+ Overview
+
+ Contact Us
+
+ Long-Term Care Ombudsman
+
+ Toggle submenu
+
+ Overview of Long-Term Care Ombudsman
+
+ Contact Information
+
+ Residents' rights
+
+ What is resident-directed and what does it mean for LTC residents?
+
+ Long-Term Care Ombudsman FAQs
+
+ How to file a complaint
+
+ File a Complaint Online
+
+ Nursing Home Minimum Staffing 
+
+ Becoming a Certified Volunteer Long-Term Care Program
+
+ Business Ombudsman- Services
+
+ Toggle submenu
+
+ Overview of Business Ombudsman Services
+
+ Disabilities Ombudsman
+
+ Toggle submenu
+
+ Overview of Disabilities Ombudsman
+
+ Contact information
+
+ Learn More
+
+ I Want To
+
+ Toggle submenu
+
+Get information on nursing homes in Indiana.
+
+Ask someone how I can get help for a family member in a nursing home.
+
+Make a complaint about the care my mother is receiving in a nursing home.
+
+Make a complaint about the services in an assisted living.
+
+Contact the Business Ombudsman.
+
+Submit a complaint to the DOC Ombudsman.
+
+ Online Services
+
+ Toggle submenu
+
+Other States’ LTC Ombudsman Programs
+
+Forms.IN.gov
+
+More IN.gov Online Services
+
+IN.gov Subscriber Center
+
+ Top FAQs
+
+ Toggle submenu
+
+   Close Menu
+
+ Side Navigation
+
+ Ombudsman
+
+ DCS Ombudsman
+
+ Toggle submenu
+
+ About
+
+ DCS Ombudsman Staff
+
+ Online Complaint Form
+
+ Complaint FormPDF
+
+ DOC Ombudsman
+
+ Toggle submenu
+
+ Overview of DOC Ombudsman
+
+ Overview
+
+ Ombudsman Bureau Complaint Form
+
+ DOE Equitable Services Ombudman
+
+ Toggle submenu
+
+ Overview
+
+ Contact Us
+
+ Long-Term Care Ombudsman
+
+ Toggle submenu
+
+ Overview of Long-Term Care Ombudsman
+
+ Contact Information
+
+ Residents' rights
+
+ What is resident-directed and what does it mean for LTC residents?
+
+ Long-Term Care Ombudsman FAQs
+
+ How to file a complaint
+
+ File a Complaint Online
+
+ Nursing Home Minimum Staffing 
+
+ Becoming a Certified Volunteer Long-Term Care Program
+
+ Business Ombudsman- Services
+
+ Toggle submenu
+
+ Overview of Business Ombudsman Services
+
+ Disabilities Ombudsman
+
+ Toggle submenu
+
+ Overview of Disabilities Ombudsman
+
+ Contact information
+
+ Learn More
+
+ I Want To
+
+ Toggle submenu
+
+Get information on nursing homes in Indiana.
+
+Ask someone how I can get help for a family member in a nursing home.
+
+Make a complaint about the care my mother is receiving in a nursing home.
+
+Make a complaint about the services in an assisted living.
+
+Contact the Business Ombudsman.
+
+Submit a complaint to the DOC Ombudsman.
+
+ Online Services
+
+ Toggle submenu
+
+Other States’ LTC Ombudsman Programs
+
+Forms.IN.gov
+
+More IN.gov Online Services
+
+IN.gov Subscriber Center
+
+ Top FAQs
+
+ Toggle submenu
+
+ Breadcrumbs
+
+ Ombudsman
+
+ Long-Term Care Ombudsman
+
+ Contact Information
+
+ Contact information
+
+Contact the State Long Term Care Ombudsman
+Office of the Long Term Care Ombudsman
+ 402 West Washington Street, Room W451
+ Post Office Box 7083, MS 27
+ Indianapolis, Indiana 46207-7083
+Information/complaint line: 800-622-4484 or 317-232-7134
+Fax number: 317-972-3285
+Email: LongTermCareOmbudsman@ombudsman.IN.gov
+
+Ombudsman in other states
+To find an ombudsman in other states please click here.
+Contact a local ombudsman
+State Ombudsman – 800-622-4484 or 317-232-7134
+
+Ombudsman area contact map
+Click on a county on the Indiana state map at right to find the Long-Term Care Ombudsman contact information for that county.
+State Contacts
+FSSA Office of General Counsel
+402 W. Washington St.
+P.O. Box 7083, MS 27
+Indianapolis, IN 46207-7083
+Lynn Clough
+State Long-Term Care Ombudsman, Director
+Email: Lynn.Clough@fssa.in.gov 
+Phone: 317-234-5544 / Fax: 317-972-3285
+Mary Swinford
+State LTC Ombudsman, Deputy Director
+Email: Mary.Swinford@fssa.in.gov
+Phone: 317-232-7134 / Fax: 317-972-3285
+
+ County Name Here
+
+ Area 3
+Zanzy Lewis, LTC Ombudsman
+Email: zanzy@longtermcare-ombudsman.org
+Phone: 260-469-3161
+Kathy Lewis, LTC Ombudsman
+Email: Kathy@doingthegood-ombudsman.org
+Phone: 260-469-3161
+Ta'korei Moore, LTC Ombudsman
+Email: Takorei@doingthegood-ombudsman.org
+Phone: 260-469-3161
+LTC Ombudsman Program of N.E. Indiana
+3201 Stellhorn Rd. 
+Fort Wayne, IN 46815
+
+ Area 3
+Zanzy Lewis, LTC Ombudsman
+Email: zanzy@longtermcare-ombudsman.org
+Phone: 260-469-3161
+Kathy Lewis, LTC Ombudsman
+Email: Kathy@doingthegood-ombudsman.org
+Phone: 260-469-3161
+Ta'korei Moore, LTC Ombudsman
+Email: Takorei@doingthegood-ombudsman.org
+Phone: 260-469-3161
+LTC Ombudsman Program of N.E. Indiana
+3201 Stellhorn Rd. 
+Fort Wayne, IN 46815
+
+ Area 11
+Kirsten Bouthier, LTC Ombudsman
+Email: Kirsten.Bouthier@ilsi.net
+Phone: 812-314-2727
+Indiana Legal Services
+1531 13th St., Suite G 330
+Columbus, IN 47201
+
+ Area 4
+Andrea Smothers, LTC Ombudsman
+Email: Andrea.Smothers@ilsi.net
+Phone: 765-404-6436
+Debbie Winchester, LTC Ombudsman
+Email: Debbie.Winchester@ilsi.net 
+Phone: 765-250-0008
+Indiana Legal Services
+8 N. Third St., Suite 102
+Lafayette, IN 47901
+
+ Area 6
+Maureen Walby, LTC Ombudsman
+Email: Maureen.Walby@ilsi.net
+Phone: 765-759-3371 or 463-237-9384 (Work)
+Indiana Legal Services, Inc.
+1701 Pilgrim Blvd.
+Yorktown, IN 47396
+
+ Area 8
+Robin Willis, LTC Ombudsman
+robin.willis@ilsi.net
+ Phone: 463-237-9348
+Indiana Legal Services, Inc.
+1200 Madison St., Suite 300
+Indianapolis, IN 46225
+
+ Area 11
+Kirsten Bouthier, LTC Ombudsman
+Email: Kirsten.Bouthier@ilsi.net
+Phone: 812-314-2727
+Indiana Legal Services
+1531 13th St., Suite G 330
+Columbus, IN 47201
+
+ Area 4
+Andrea Smothers, LTC Ombudsman
+Email: Andrea.Smothers@ilsi.net
+Phone: 765-404-6436
+Debbie Winchester, LTC Ombudsman
+Email: Debbie.Winchester@ilsi.net 
+Phone: 765-250-0008
+Indiana Legal Services
+8 N. Third St., Suite 102
+Lafayette, IN 47901
+
+ Area 5
+Dana Neer, LTC Ombudsman
+Email: dneer@areafive.com
+Phone: 260-568-0579
+Area 5 Agency on Aging
+1801 Smith St.
+Logansport, IN 46947
+
+ Area 14
+Mary Cleavinger, LTC Ombudsman
+Email: mary.cleavinger@ilsi.net
+Phone: 812-913-7361 ext. 11223
+Indiana Legal Services
+3303 Plaza Dr. #5
+New Albany, IN 47150
+
+ Area 7
+Carmen Osterhoudt, LTC Ombudsman
+Email: Carmen.Osterhoudt@ilsi.net
+Phone: 317-445-2464
+Indiana Legal Services, Inc.
+1200 Madison St., Suite 300
+Indianapolis, IN 46225
+
+ Area 4
+Andrea Smothers, LTC Ombudsman
+Email: Andrea.Smothers@ilsi.net
+Phone: 765-404-6436
+Debbie Winchester, LTC Ombudsman
+Email: Debbie.Winchester@ilsi.net 
+Phone: 765-250-0008
+Indiana Legal Services
+8 N. Third St., Suite 102
+Lafayette, IN 47901
+
+ Area 15
+Kirsten Bouthier, LTC Ombudsman
+Email: kirsten.bouthier@ilsi.net
+Phone: 463-237-9346
+Indiana Legal Services
+1531 13th Street, Suite G 330
+Columbus, IN 47201
+Serving: Lawrence County
+Christina Lafferty, LTC Ombudsman
+Email: christina.lafferty@ilsi.net
+Phone: 317-675-0642
+Indiana Legal Services
+1200 Madison Street, Suite 300
+Indianapolis, IN 46225
+Serving: Crawford, Orange and Washington Counties
+
+ Area 13
+Christina Lafferty, LTC Ombudsman
+Email: christina.lafferty@ilsi.net
+Phone: 317-675-0642
+Indiana Legal Services
+1200 Madison Street, Suite 300 
+Indianapolis, IN 46225
+
+ Area 12
+Mhelody Martinez, LTC Ombudsman
+Email: Area12Ombudsman@gmail.com
+Phone: 800-622-4484
+SIILC - Southeastern Indiana Independent Living Center
+817 East Main Street
+Vevay, IN 47043
+Serving: Dearborn, Jefferson, Ohio, Ripley and Switzerland counties
+
+ Area 11
+Kirsten Bouthier, LTC Ombudsman
+Email: Kirsten.Bouthier@ilsi.net
+Phone: 812-314-2727
+Indiana Legal Services
+1531 13th St., Suite G 330
+Columbus, IN 47201
+
+ Area 3
+Zanzy Lewis, LTC Ombudsman
+Email: zanzy@longtermcare-ombudsman.org
+Phone: 260-469-3161
+Kathy Lewis, LTC Ombudsman
+Email: Kathy@doingthegood-ombudsman.org
+Phone: 260-469-3161
+Ta'korei Moore, LTC Ombudsman
+Email: Takorei@doingthegood-ombudsman.org
+Phone: 260-469-3161
+LTC Ombudsman Program of N.E. Indiana
+3201 Stellhorn Rd. 
+Fort Wayne, IN 46815
+
+ Area 6
+Maureen Walby, LTC Ombudsman
+Email: Maureen.Walby@ilsi.net
+Phone: 765-759-3371 or 463-237-9384 (Work)
+Indiana Legal Services, Inc.
+1701 Pilgrim Blvd.
+Yorktown, IN 47396
+
+ Area 13
+Christina Lafferty, LTC Ombudsman
+Email: christina.lafferty@ilsi.net
+Phone: 317-675-0642
+Indiana Legal Services
+1200 Madison Street, Suite 300 
+Indianapolis, IN 46225
+
+ Area 2
+Gretchen Camblin, LTC Ombudsman
+gretchen.camblin@ilsi.net
+Phone: 574-855-5122
+Fax: 574-239-2185
+Katie Bohm, LTC Ombudsman
+Email: katie.bohm@ilsi.net
+Phone: 574-528-1858
+Indiana Legal Services
+227 S. Main Street, Suite 200 
+South Bend, IN 46601
+Serving: Elkhart, Kosciusko, LaPorte, Marshall and St. Joseph Counties
+Gretchen Camblin, LTC Ombudsman
+Email: gretchen@realservices.org
+Phone: 574-284-7127
+-->
+
+ Area 9
+Daulphine Day, LTC Ombudsman
+Email: daulphine.day@ilsi.net
+Phone: 463-237-9373
+Indiana Legal Services, Inc.
+1200 Madison St., Suite 300
+Indianapolis, IN 46225
+
+ Area 14
+Mary Cleavinger, LTC Ombudsman
+Email: mary.cleavinger@ilsi.net
+Phone: 812-913-7361 ext. 11223
+Indiana Legal Services
+3303 Plaza Dr. #5
+New Albany, IN 47150
+
+ Area 4
+Andrea Smothers, LTC Ombudsman
+Email: Andrea.Smothers@ilsi.net
+Phone: 765-404-6436
+Debbie Winchester, LTC Ombudsman
+Email: Debbie.Winchester@ilsi.net 
+Phone: 765-250-0008
+Indiana Legal Services
+8 N. Third St., Suite 102
+Lafayette, IN 47901
+
+ Area 9
+Daulphine Day, LTC Ombudsman
+Email: daulphine.day@ilsi.net
+Phone: 463-237-9373
+Indiana Legal Services, Inc.
+1200 Madison St., Suite 300
+Indianapolis, IN 46225
+
+ Area 5
+Dana Neer, LTC Ombudsman
+Email: dneer@areafive.com
+Phone: 260-568-0579
+Area 5 Agency on Aging
+1801 Smith St.
+Logansport, IN 46947
+
+ Area 16
+Laura George, LTC Ombudsman
+Email: laura.george@ilsi.net
+Phone: 463-237-9345
+Indiana Legal Services
+915 Main St., Suite #201
+Evansville, IN 47708
+
+ Area 6
+Maureen Walby, LTC Ombudsman
+Email: Maureen.Walby@ilsi.net
+Phone: 765-759-3371 or 463-237-9384 (Work)
+Indiana Legal Services, Inc.
+1701 Pilgrim Blvd.
+Yorktown, IN 47396
+
+ Area 13
+Christina Lafferty, LTC Ombudsman
+Email: christina.lafferty@ilsi.net
+Phone: 317-675-0642
+Indiana Legal Services
+1200 Madison Street, Suite 300 
+Indianapolis, IN 46225
+
+ Area 8
+Sherry Marckel, LTC Ombudsman
+Sherry.marckel@ilsi.net
+Phone: 317-631-9424
+Indiana Legal Services, Inc.
+1200 Madison St., Suite 300
+Indianapolis, IN 46225
+
+ Area 8
+Kit Paternoster, LTC Ombudsman
+Email: Kathryn.Paternoster@ilsi.net
+Phone: 317-631-9424
+Indiana Legal Services, Inc.
+1200 Madison St., Suite 300
+Indianapolis, IN 46225
+
+ Area 14
+Mary Cleavinger, LTC Ombudsman
+Email: mary.cleavinger@ilsi.net
+Phone: 812-913-7361 ext. 11223
+Indiana Legal Services
+3303 Plaza Dr. #5
+New Albany, IN 47150
+
+ Area 8
+Stacey Writt, LTC Ombudsman
+Email: Stacey.Writt@ilsi.net
+Phone: 317-631-9424
+Indiana Legal Services, Inc.
+1200 Madison St., Suite 300
+Indianapolis, IN 46225
+
+ Area 6
+Maureen Walby, LTC Ombudsman
+Email: Maureen.Walby@ilsi.net
+Phone: 765-759-3371 or 463-237-9384 (Work)
+Indiana Legal Services, Inc.
+1701 Pilgrim Blvd.
+Yorktown, IN 47396
+
+ Area 5
+Dana Neer, LTC Ombudsman
+Email: dneer@areafive.com
+Phone: 260-568-0579
+Area 5 Agency on Aging
+1801 Smith St.
+Logansport, IN 46947
+
+ Area 3
+Zanzy Lewis, LTC Ombudsman
+Email: zanzy@longtermcare-ombudsman.org
+Phone: 260-469-3161
+Kathy Lewis, LTC Ombudsman
+Email: Kathy@doingthegood-ombudsman.org
+Phone: 260-469-3161
+Ta'korei Moore, LTC Ombudsman
+Email: Takorei@doingthegood-ombudsman.org
+Phone: 260-469-3161
+LTC Ombudsman Program of N.E. Indiana
+3201 Stellhorn Rd. 
+Fort Wayne, IN 46815
+
+ Area 11
+Kirsten Bouthier, LTC Ombudsman
+Email: Kirsten.Bouthier@ilsi.net
+Phone: 812-314-2727
+Indiana Legal Services
+1531 13th St., Suite G 330
+Columbus, IN 47201
+
+ Area 1
+China Leatherwood, LTC Ombudsman
+Email: cleatherwood@coaction.care
+Phone:219-794-1829
+Northwest Indiana Community Action
+5240 Fountain Drive
+Crown Point, IN 46307
+Phone: 800-826-7871, 219-794-1829 ext. 2468
+
+ Area 6
+Maureen Walby, LTC Ombudsman
+Email: Maureen.Walby@ilsi.net
+Phone: 765-759-3371 or 463-237-9384 (Work)
+Indiana Legal Services, Inc.
+1701 Pilgrim Blvd.
+Yorktown, IN 47396
+
+ Area 12
+Mhelody Martinez, LTC Ombudsman
+Email: Area12Ombudsman@gmail.com
+Phone: 800-622-4484
+SIILC - Southeastern Indiana Independent Living Center
+817 East Main Street
+Vevay, IN 47043
+Serving: Dearborn, Jefferson, Ohio, Ripley and Switzerland counties
+
+ Area 11
+Kirsten Bouthier, LTC Ombudsman
+Email: Kirsten.Bouthier@ilsi.net
+Phone: 812-314-2727
+Indiana Legal Services
+1531 13th St., Suite G 330
+Columbus, IN 47201
+
+ Area 8
+Stacey Writt, LTC Ombudsman
+Email: Stacey.Writt@ilsi.net
+Phone: 317-631-9424
+Indiana Legal Services, Inc.
+1200 Madison St., Suite 300
+Indianapolis, IN 46225
+
+ Area 13
+Christina Lafferty, LTC Ombudsman
+Email: christina.lafferty@ilsi.net
+Phone: 317-675-0642
+Indiana Legal Services
+1200 Madison Street, Suite 300 
+Indianapolis, IN 46225
+
+ Area 2
+Gretchen Camblin, LTC Ombudsman
+Email: gretchen@realservices.org
+Phone: 574-284-7127
+-->Gretchen Camblin, LTC Ombudsman
+gretchen.camblin@ilsi.net
+Phone: 574-855-5122
+Fax: 574-239-2185
+Katie Bohm, LTC Ombudsman
+Email: katie.bohm@ilsi.net
+Phone: 574-528-1858
+Indiana Legal Services
+227 S. Main Street, Suite 200 
+South Bend, IN 46601
+Serving: Elkhart, Kosciusko, LaPorte, Marshall and St. Joseph Counties
+
+ Area 3
+Zanzy Lewis, LTC Ombudsman
+Email: zanzy@longtermcare-ombudsman.org
+Phone: 260-469-3161
+Kathy Lewis, LTC Ombudsman
+Email: Kathy@doingthegood-ombudsman.org
+Phone: 260-469-3161
+Ta'korei Moore, LTC Ombudsman
+Email: Takorei@doingthegood-ombudsman.org
+Phone: 260-469-3161
+LTC Ombudsman Program of N.E. Indiana
+3201 Stellhorn Rd. 
+Fort Wayne, IN 46815
+
+ Area 1
+China Leatherwood, LTC Ombudsman
+Email: cleatherwood@coaction.care
+Phone:219-794-1829
+Northwest Indiana Community Action
+5240 Fountain Drive
+Crown Point, IN 46307
+Phone: 800-826-7871, 219-794-1829 ext. 2468
+
+ Area 2
+Gretchen Camblin, LTC Ombudsman
+Email: gretchen@realservices.org
+Phone: 574-284-7127
+-->Gretchen Camblin, LTC Ombudsman
+gretchen.camblin@ilsi.net
+Phone: 574-855-5122
+Fax: 574-239-2185
+Katie Bohm, LTC Ombudsman
+Email: katie.bohm@ilsi.net
+Phone: 574-528-1858
+Indiana Legal Services
+227 S. Main Street, Suite 200 
+South Bend, IN 46601
+Serving: Elkhart, Kosciusko, LaPorte, Marshall and St. Joseph Counties
+
+ Area 15
+Kirsten Bouthier, LTC Ombudsman
+Email: kirsten.bouthier@ilsi.net
+Phone: 463-237-9346
+Indiana Legal Services
+1531 13th Street, Suite G 330
+Columbus, IN 47201
+Serving: Lawrence County
+Christina Lafferty, LTC Ombudsman
+Email: christina.lafferty@ilsi.net
+Phone: 317-675-0642
+Indiana Legal Services
+1200 Madison Street, Suite 300
+Indianapolis, IN 46225
+Serving: Crawford, Orange and Washington Counties
+
+ Area 6
+Maureen Walby, LTC Ombudsman
+Email: Maureen.Walby@ilsi.net
+Phone: 765-759-3371 or 463-237-9384 (Work)
+Indiana Legal Services, Inc.
+1701 Pilgrim Blvd.
+Yorktown, IN 47396
+
+ Area 8 (NE Marion County)
+Sherry Marckel, LTC Ombudsman
+Sherry.marckel@ilsi.net
+Phone: 317-631-9424
+Area 8 (SW Marion County)
+Stacey Writt, LTC Ombudsman
+Email: Stacey.Writt@ilsi.net
+Phone: 317-631-9424
+Area 8 (E and SE Marion County)
+Kit Paternoster, LTC Ombudsman
+Email: Kathryn.Paternoster@ilsi.net
+Phone: 317-631-9424
+Area 8 (NW Marion County)
+Robin Willis, LTC Ombudsman
+robin.willis@ilsi.net
+ Phone: 463-237-9348
+Indiana Legal Services, Inc.
+1200 Madison St., Suite 300
+Indianapolis, IN 46225
+
+ Area 2
+Gretchen Camblin, LTC Ombudsman
+Email: gretchen@realservices.org
+Phone: 574-284-7127
+-->Gretchen Camblin, LTC Ombudsman
+gretchen.camblin@ilsi.net
+Phone: 574-855-5122
+Fax: 574-239-2185
+Katie Bohm, LTC Ombudsman
+Email: katie.bohm@ilsi.net
+Phone: 574-528-1858
+Indiana Legal Services
+227 S. Main Street, Suite 200 
+South Bend, IN 46601
+Serving: Elkhart, Kosciusko, LaPorte, Marshall and St. Joseph Counties
+
+ Area 13
+Christina Lafferty, LTC Ombudsman
+Email: christina.lafferty@ilsi.net
+Phone: 317-675-0642
+Indiana Legal Services
+1200 Madison Street, Suite 300 
+Indianapolis, IN 46225
+
+ Area 5
+Dana Neer, LTC Ombudsman
+Email: dneer@areafive.com
+Phone: 260-568-0579
+Area 5 Agency on Aging
+1801 Smith St.
+Logansport, IN 46947
+
+ Area 10
+Kirsten Bouthier, LTC Ombudsman
+Email: Kirsten.Bouthier@ilsi.net
+Phone: 812-314-2727
+Indiana Legal Services
+1531 13th St., Suite G 330
+Columbus, IN 47201
+
+ Area 4
+Andrea Smothers, LTC Ombudsman
+Email: Andrea.Smothers@ilsi.net
+Phone: 765-404-6436
+Debbie Winchester, LTC Ombudsman
+Email: Debbie.Winchester@ilsi.net 
+Phone: 765-250-0008
+Indiana Legal Services
+8 N. Third St., Suite 102
+Lafayette, IN 47901
+
+ Area 8
+Stacey Writt, LTC Ombudsman
+Email: Stacey.Writt@ilsi.net
+Phone: 317-631-9424
+Indiana Legal Services, Inc.
+1200 Madison St., Suite 300
+Indianapolis, IN 46225
+
+ Area 1
+China Leatherwood, LTC Ombudsman
+Email: cleatherwood@coaction.care
+Phone:219-794-1829
+Northwest Indiana Community Action
+5240 Fountain Drive
+Crown Point, IN 46307
+Phone: 800-826-7871, 219-794-1829 ext. 2468
+
+ Area 3
+Zanzy Lewis, LTC Ombudsman
+Email: zanzy@longtermcare-ombudsman.org
+Phone: 260-469-3161
+Kathy Lewis, LTC Ombudsman
+Email: Kathy@doingthegood-ombudsman.org
+Phone: 260-469-3161
+Ta'korei Moore, LTC Ombudsman
+Email: Takorei@doingthegood-ombudsman.org
+Phone: 260-469-3161
+LTC Ombudsman Program of N.E. Indiana
+3201 Stellhorn Rd. 
+Fort Wayne, IN 46815
+
+ Area 12
+Mhelody Martinez, LTC Ombudsman
+Email: Area12Ombudsman@gmail.com
+Phone: 800-622-4484
+SIILC - Southeastern Indiana Independent Living Center
+817 East Main Street
+Vevay, IN 47043
+Serving: Dearborn, Jefferson, Ohio, Ripley and Switzerland counties
+
+ Area 15
+Kirsten Bouthier, LTC Ombudsman
+Email: kirsten.bouthier@ilsi.net
+Phone: 463-237-9346
+Indiana Legal Services
+1531 13th Street, Suite G 330
+Columbus, IN 47201
+Serving: Lawrence County
+Christina Lafferty, LTC Ombudsman
+Email: christina.lafferty@ilsi.net
+Phone: 317-675-0642
+Indiana Legal Services
+1200 Madison Street, Suite 300
+Indianapolis, IN 46225
+Serving: Crawford, Orange and Washington Counties
+
+ Area 10
+Kirsten Bouthier, LTC Ombudsman
+Email: Kirsten.Bouthier@ilsi.net
+Phone: 812-314-2727
+Indiana Legal Services
+1531 13th St., Suite G 330
+Columbus, IN 47201
+
+ Area 7
+Carmen Osterhoudt, LTC Ombudsman
+Email: Carmen.Osterhoudt@ilsi.net
+Phone: 317-445-2464
+Indiana Legal Services, Inc.
+1200 Madison St., Suite 300
+Indianapolis, IN 46225
+
+ Area 16
+Laura George, LTC Ombudsman
+Email: laura.george@ilsi.net
+Phone: 463-237-9345
+Indiana Legal Services
+915 Main St., Suite #201
+Evansville, IN 47708
+
+ Area 13
+Christina Lafferty, LTC Ombudsman
+Email: christina.lafferty@ilsi.net
+Phone: 317-675-0642
+Indiana Legal Services
+1200 Madison Street, Suite 300 
+Indianapolis, IN 46225
+
+ Area 1
+China Leatherwood, LTC Ombudsman
+Email: cleatherwood@coaction.care
+Phone:219-794-1829
+Northwest Indiana Community Action
+5240 Fountain Drive
+Crown Point, IN 46307
+Phone: 800-826-7871, 219-794-1829 ext. 2468
+
+ Area 16
+Laura George, LTC Ombudsman
+Email: laura.george@ilsi.net
+Phone: 463-237-9345
+Indiana Legal Services
+915 Main St., Suite #201
+Evansville, IN 47708
+
+ Area 1
+China Leatherwood, LTC Ombudsman
+Email: cleatherwood@coaction.care
+Phone:219-794-1829
+Northwest Indiana Community Action
+5240 Fountain Drive
+Crown Point, IN 46307
+Phone: 800-826-7871, 219-794-1829 ext. 2468
+
+ Area 7
+Carmen Osterhoudt, LTC Ombudsman
+Email: Carmen.Osterhoudt@ilsi.net
+Phone: 317-445-2464
+Indiana Legal Services, Inc.
+1200 Madison St., Suite 300
+Indianapolis, IN 46225
+
+ Area 6
+Maureen Walby, LTC Ombudsman
+Email: Maureen.Walby@ilsi.net
+Phone: 765-759-3371 or 463-237-9384 (Work)
+Indiana Legal Services, Inc.
+1701 Pilgrim Blvd.
+Yorktown, IN 47396
+
+ Area 12
+Mhelody Martinez, LTC Ombudsman
+Email: Area12Ombudsman@gmail.com
+Phone: 800-622-4484
+SIILC - Southeastern Indiana Independent Living Center
+817 East Main Street
+Vevay, IN 47043
+Serving: Dearborn, Jefferson, Ohio, Ripley and Switzerland counties
+
+ Area 9
+Daulphine Day, LTC Ombudsman
+Email: daulphine.day@ilsi.net
+Phone: 463-237-9373
+Indiana Legal Services, Inc.
+1200 Madison St., Suite 300
+Indianapolis, IN 46225
+
+ Area 14
+Mary Cleavinger, LTC Ombudsman
+Email: mary.cleavinger@ilsi.net
+Phone: 812-913-7361 ext. 11223
+Indiana Legal Services
+3303 Plaza Dr. #5
+New Albany, IN 47150
+
+ Area 8
+Kit Paternoster, LTC Ombudsman
+Email: Kathryn.Paternoster@ilsi.net
+Phone: 317-631-9424
+Indiana Legal Services, Inc.
+1200 Madison St., Suite 300
+Indianapolis, IN 46225
+
+ Area 16
+Laura George, LTC Ombudsman
+Email: laura.george@ilsi.net
+Phone: 463-237-9345
+Indiana Legal Services
+915 Main St., Suite #201
+Evansville, IN 47708
+
+ Area 2
+Gretchen Camblin, LTC Ombudsman
+Email: gretchen@realservices.org
+Phone: 574-284-7127
+-->Gretchen Camblin, LTC Ombudsman
+gretchen.camblin@ilsi.net
+Phone: 574-855-5122
+Fax: 574-239-2185
+Katie Bohm, LTC Ombudsman
+Email: katie.bohm@ilsi.net
+Phone: 574-528-1858
+Indiana Legal Services
+227 S. Main Street, Suite 200 
+South Bend, IN 46601
+Serving: Elkhart, Kosciusko, LaPorte, Marshall and St. Joseph Counties
+
+ Area 1
+China Leatherwood, LTC Ombudsman
+Email: cleatherwood@coaction.care
+Phone:219-794-1829
+Northwest Indiana Community Action
+5240 Fountain Drive
+Crown Point, IN 46307
+Phone: 800-826-7871, 219-794-1829 ext. 2468
+
+ Area 3
+Zanzy Lewis, LTC Ombudsman
+Email: zanzy@longtermcare-ombudsman.org
+Phone: 260-469-3161
+Kathy Lewis, LTC Ombudsman
+Email: Kathy@doingthegood-ombudsman.org
+Phone: 260-469-3161
+Ta'korei Moore, LTC Ombudsman
+Email: Takorei@doingthegood-ombudsman.org
+Phone: 260-469-3161
+LTC Ombudsman Program of N.E. Indiana
+3201 Stellhorn Rd. 
+Fort Wayne, IN 46815
+
+ Area 7
+Carmen Osterhoudt, LTC Ombudsman
+Email: Carmen.Osterhoudt@ilsi.net
+Phone: 317-445-2464
+Indiana Legal Services, Inc.
+1200 Madison St., Suite 300
+Indianapolis, IN 46225
+
+ Area 12
+Mhelody Martinez, LTC Ombudsman
+Email: Area12Ombudsman@gmail.com
+Phone: 800-622-4484
+SIILC - Southeastern Indiana Independent Living Center
+817 East Main Street
+Vevay, IN 47043
+Serving: Dearborn, Jefferson, Ohio, Ripley and Switzerland counties
+
+ Area 4
+Andrea Smothers, LTC Ombudsman
+Email: Andrea.Smothers@ilsi.net
+Phone: 765-404-6436
+Debbie Winchester, LTC Ombudsman
+Email: Debbie.Winchester@ilsi.net 
+Phone: 765-250-0008
+Indiana Legal Services
+8 N. Third St., Suite 102
+Lafayette, IN 47901
+
+ Area 5
+Dana Neer, LTC Ombudsman
+Email: dneer@areafive.com
+Phone: 260-568-0579
+Area 5 Agency on Aging
+1801 Smith St.
+Logansport, IN 46947
+
+ Area 9
+Daulphine Day, LTC Ombudsman
+Email: daulphine.day@ilsi.net
+Phone: 463-237-9373
+Indiana Legal Services, Inc.
+1200 Madison St., Suite 300
+Indianapolis, IN 46225
+
+ Area 16
+Michelle Motta, LTC Ombudsman
+Email: mmotta@voicesinc.info
+Phone: 812-423-2927
+Alicia Reeves, LTC Ombudsman
+Email: areeves@voicesinc.info
+Phone: 812-423-2927
+VOICES, INC.
+2425 US 41 N., Suite 405
+Evansville, IN 47711
+
+ Area 7
+Carmen Osterhoudt, LTC Ombudsman
+Email: Carmen.Osterhoudt@ilsi.net
+Phone: 317-445-2464
+Indiana Legal Services, Inc.
+1200 Madison St., Suite 300
+Indianapolis, IN 46225
+
+ Area 7
+Carmen Osterhoudt, LTC Ombudsman
+Email: Carmen.Osterhoudt@ilsi.net
+Phone: 317-445-2464
+Indiana Legal Services, Inc.
+1200 Madison St., Suite 300
+Indianapolis, IN 46225
+
+ Area 5
+Dana Neer, LTC Ombudsman
+Email: dneer@areafive.com
+Phone: 260-568-0579
+Area 5 Agency on Aging
+1801 Smith St.
+Logansport, IN 46947
+
+ Area 4
+Andrea Smothers, LTC Ombudsman
+Email: Andrea.Smothers@ilsi.net
+Phone: 765-404-6436
+Debbie Winchester, LTC Ombudsman
+Email: Debbie.Winchester@ilsi.net 
+Phone: 765-250-0008
+Indiana Legal Services
+8 N. Third St., Suite 102
+Lafayette, IN 47901
+
+ Area 16
+Laura George, LTC Ombudsman
+Email: laura.george@ilsi.net
+Phone: 463-237-9345
+Indiana Legal Services
+915 Main St., Suite #201
+Evansville, IN 47708
+
+ Area 15
+Kirsten Bouthier, LTC Ombudsman
+Email: kirsten.bouthier@ilsi.net
+Phone: 463-237-9346
+Indiana Legal Services
+1531 13th Street, Suite G 330
+Columbus, IN 47201
+Serving: Lawrence County
+Christina Lafferty, LTC Ombudsman
+Email: christina.lafferty@ilsi.net
+Phone: 317-675-0642
+Indiana Legal Services
+1200 Madison Street, Suite 300
+Indianapolis, IN 46225
+Serving: Crawford, Orange and Washington Counties
+
+ Area 9
+Daulphine Day, LTC Ombudsman
+Email: daulphine.day@ilsi.net
+Phone: 463-237-9373
+Indiana Legal Services, Inc.
+1200 Madison St., Suite 300
+Indianapolis, IN 46225
+
+ Area 3
+Zanzy Lewis, LTC Ombudsman
+Email: zanzy@longtermcare-ombudsman.org
+Phone: 260-469-3161
+Kathy Lewis, LTC Ombudsman
+Email: Kathy@doingthegood-ombudsman.org
+Phone: 260-469-3161
+Ta'korei Moore, LTC Ombudsman
+Email: Takorei@doingthegood-ombudsman.org
+Phone: 260-469-3161
+LTC Ombudsman Program of N.E. Indiana
+3201 Stellhorn Rd. 
+Fort Wayne, IN 46815
+
+ Area 4
+Andrea Smothers, LTC Ombudsman
+Email: Andrea.Smothers@ilsi.net
+Phone: 765-404-6436
+Debbie Winchester, LTC Ombudsman
+Email: Debbie.Winchester@ilsi.net 
+Phone: 765-250-0008
+Indiana Legal Services
+8 N. Third St., Suite 102
+Lafayette, IN 47901
+
+ Area 3
+Zanzy Lewis, LTC Ombudsman
+Email: zanzy@longtermcare-ombudsman.org
+Phone: 260-469-3161
+Kathy Lewis, LTC Ombudsman
+Email: Kathy@doingthegood-ombudsman.org
+Phone: 260-469-3161
+Ta'korei Moore, LTC Ombudsman
+Email: Takorei@doingthegood-ombudsman.org
+Phone: 260-469-3161
+LTC Ombudsman Program of N.E. Indiana
+3201 Stellhorn Rd. 
+Fort Wayne, IN 46815
+
+   Return to Introduction
+ Back to Top
+
+ Or select a County:
+
+ - county name -
+ Adams Allen Bartholomew Benton Blackford Boone Brown Carroll Cass Clark Clay Clinton Crawford Daviess Dearborn Decatur DeKalb Delaware Dubois Elkhart Fayette Floyd Fountain Franklin Fulton Gibson Grant Greene Hamilton Hancock Harrison Hendricks Henry Howard Huntington Jackson Jasper Jay Jefferson Jennings Johnson Knox Kosciusko LaGrange Lake LaPorte Lawrence Madison Marion Marshall Martin Miami Monroe Montgomery Morgan Newton Noble Ohio Orange Owen Parke Perry Pike Porter Posey Pulaski Putnam Randolph Ripley Rush Scott Shelby Spencer St. Joseph Starke Steuben Sullivan Switzerland Tippecanoe Tipton Union Vanderburgh Vermillion Vigo Wabash Warren Warrick Washington Wayne Wells White Whitley 
+
+ County Map Legend
+
+ Area 1
+China Leatherwood, LTC Ombudsman
+Email: cleatherwood@coaction.care
+Phone:219-794-1829
+Northwest Indiana Community Action
+5240 Fountain Drive
+Crown Point, Indiana 46307
+Phone: 800-826-7871 | 219-794-1829 X2468
+Serving: Jasper, Lake, Newton, Porter, Pulaski and Starke Counties
+Area 2
+Gretchen Camblin, LTC Ombudsman
+Email: gretchen@realservices.org
+Phone: 574-284-7127
+-->Gretchen Camblin, LTC Ombudsman
+gretchen.camblin@ilsi.net
+Phone: 574-855-5122
+Fax: 574-239-2185
+Katie Bohm, LTC Ombudsman
+Email: katie.bohm@ilsi.net
+Phone: 574-528-1858
+Indiana Legal Services
+227 S. Main Street, Suite 200 
+South Bend, IN 46601
+Serving: Elkhart, Kosciusko, LaPorte, Marshall and St. Joseph Counties
+Area 3
+Zanzy Lewis, LTC Ombudsman
+Email: zanzy@longtermcare-ombudsman.org
+Phone: 260-469-3161
+Kathy Lewis, LTC Ombudsman
+Email: Kathy@doingthegood-ombudsman.org
+Phone: 260-469-3161
+Ta'korei Moore, LTC Ombudsman
+Email: Takorei@doingthegood-ombudsman.org
+Phone: 260-469-3161
+LTC Ombudsman Program of N.E. Indiana
+3201 Stellhorn Rd. 
+Fort Wayne, Indiana 46815
+Serving: Adams, Allen, DeKalb, Huntington, LaGrange, Noble, Steuben, Wells and Whitley Counties
+Area 4
+Andrea Smothers, LTC Ombudsman
+Email: Andrea.Smothers@ilsi.net
+Phone: 765-404-6436
+Debbie Winchester, LTC Ombudsman
+Email: Debbie.Winchester@ilsi.net 
+Phone: 765-250-0008
+Indiana Legal Services
+8 N. Third Street, Suite 102
+Lafayette, Indiana 47901
+Serving: Benton, Carroll, Clinton, Fountain, Montgomery, Tippecanoe, Warren and White Counties
+Area 5
+Dana Neer, LTC Ombudsman
+Email: dneer@areafive.com 
+Phone: 260-568-0579
+Area 5 Agency on Aging
+1801 Smith St.
+Logansport, IN 46947
+Serving: Cass, Fulton, Howard, Miami, Tipton, and Wabash Counties
+Area 6
+Maureen Walby, LTC Ombudsman
+Email: Maureen.Walby@ilsi.net
+Phone: 765-759-3371 or 463-237-9384 (Work)
+Indiana Legal Services, Inc.
+1701 Pilgrim Blvd.
+Yorktown, IN 47396
+Serving: Blackford, Delaware, Grant, Henry, Jay, Madison and Randolph Counties
+
+ Area 7
+Carmen Osterhoudt, LTC Ombudsman
+Email:  Carmen.Osterhoudt@ilsi.net
+Phone: 317-445-2464
+1200 Madison Street, Suite 300
+Indianapolis, IN 46225
+Serving: Clay, Parke, Putnam, Sullivan, Vermillion, and Vigo Counties
+Area 8
+Sherry Marckel, LTC Ombudsman
+Sherry.marckel@ilsi.net
+Phone: 317-631-9424
+Kit Paternoster, LTC Ombudsman
+Kathryn.Paternoster@ilsi.net
+Phone: 317-631-9424
+Stacey Writt, LTC Ombudsman
+Stacey.writt@ilsi.net 
+Phone: 317-631-9424
+Robin Willis, LTC Ombudsman
+robin.willis@ilsi.net
+Phone: 463-237-9348
+Indiana Legal Services
+1200 S. Madison Ave, Suite #300
+Indianapolis, IN. 46225
+Serving: Boone, Hamilton, Hancock, Hendricks, Johnson, Marion, Morgan and Shelby Counties
+Area 9
+Daulphine Day, LTC Ombudsman
+Email: daulphine.day@ilsi.net
+Phone: 463-237-9373
+Indiana Legal Services, Inc.
+Indiana Legal Services
+1200 S. Madison Ave, Suite #300
+Indianapolis, IN. 46225
+Serving: Fayette, Franklin, Rush, Union, and Wayne Counties
+Area 10 & 11
+Kirsten Bouthier, LTC Ombudsman
+ Email: Kirsten.Bouthier@ilsi.net
+Phone: 463-237-9346
+Indiana Legal Services
+1531 13th Street, Suite G 330
+Columbus, IN 47201
+Serving: Bartholomew, Brown, Decatur, Jackson, Jennings, Monroe and Owen Counties
+Area 12
+Mhelody Martinez, LTC Ombudsman
+Email: Area12Ombudsman@gmail.com
+Phone: 800-622-4484
+SIILC - Southeastern Indiana Independent Living Center
+817 East Main Street
+Vevay, IN 47043
+Serving: Dearborn, Jefferson, Ohio, Ripley and Switzerland counties
+Area 13
+Christina Lafferty, LTC Ombudsman
+Email: christina.lafferty@ilsi.net
+Phone: 317-675-0642
+Indiana Legal Services
+1200 Madison Street, Suite 300 
+Indianapolis, IN 46225
+Serving: Daviess, Dubois, Greene, Knox, Martin and Pike Counties
+Area 14 
+Mary Cleavinger, LTC Ombudsman
+Email: mary.cleavinger@ilsi.net
+Phone: 812-913-7361 ext. 11223
+Indiana Legal Services
+3303 Plaza Dr. #5
+New Albany, IN 47150
+Serving: Clark, Floyd, Harrison and Scott Counties
+
+ Area 15
+Kirsten Bouthier, LTC Ombudsman
+Email: kirsten.bouthier@ilsi.net
+Phone: 463-237-9346
+Indiana Legal Services
+1531 13th Street, Suite G 330
+Columbus, IN 47201
+Serving: Lawrence County
+Christina Lafferty, LTC Ombudsman
+Email: christina.lafferty@ilsi.net
+Phone: 317-675-0642
+Indiana Legal Services
+1200 Madison Street, Suite 300
+Indianapolis, IN 46225
+Serving: Crawford, Orange and Washington Counties
+Area 16 
+Laura George, LTC Ombudsman
+Email: laura.george@ilsi.net
+Phone: 463-237-9345
+Indiana Legal Services
+915 Main Street, Suite #201
+Evansville, IN 47708
+Serving: Gibson, Perry, Posey, Spencer and Warrick Counties
+VOICES
+Michelle Motta, LTC Ombudsman
+Email: mmotta@voicesinc.info
+Phone: 812-423-2927
+Alicia Reeves, LTC Ombudsman
+Email: areeves@voicesinc.info
+Phone: 812-423-2927
+VOICES, INC.
+2425 US 41 N., Suite 405
+Evansville, Indiana 47711
+Serving: Vanderburgh County
+State Contacts
+Lynn Clough
+State Long-Term Care Ombudsman, Director
+FSSA Office of General Counsel
+402 West Washington Street
+P.O. Box 7083, MS 27
+Indianapolis, Indiana 46207-7083
+Email: Lynn.Clough@fssa.in.gov 
+Phone: 317-234-5544/fax: 317-972-3285
+Mary Swinford
+State LTC Ombudsman, Deputy Director
+FSSA Office of General Counsel
+402 West Washington Street
+P.O. Box 7083, MS 27
+Indianapolis, Indiana 46207-7083
+Email: Mary.Swinford@fssa.in.gov
+Phone: 317-232-7134/fax: 317-972-3285
+
+ Ombudsman.IN.gov
+
+ Social Media
+
+ Email
+
+ Find Information
+
+ State Information Live Chat
+
+ Email State Information Center
+
+ Find an Agency
+
+ Call: 1-800-457-8283
+
+ Text: 1-888-311-1846
+
+ Quick Information
+
+ IN.gov User Survey
+
+ Advanced Search
+
+ Policies
+
+ Sitemap
+
+ IN.gov FAQs
+
+ State Employee
+ Resources
+
+ State Information
+
+ Maps & Information
+
+ IN.gov News &
+ Events
+
+ Email Updates
+
+ Indiana Code
+
+ Indiana Administrative Code
+
+ Awards
+
+ Report
+ Accessibility Issues
+
+ Copyright © 2026 State of Indiana - All rights reserved.
+END SOURCE 4
+
+END OF PACKET — 4 sources

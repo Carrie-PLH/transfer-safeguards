@@ -7,7 +7,7 @@ present. Spanish = a translated page is published; it carries the
 docket, the hoisted rows, and the notice periods and deadlines, in
 the state's own published translation only.
 
-**Baseline: 6 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
+**Baseline: 10 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
 
 | State | Baseline | Full page | Spanish | Sources last checked |
 |---|:---:|:---:|:---:|---|
@@ -24,8 +24,8 @@ the state's own published translation only.
 | Georgia | [ ] | [ ] | [ ] |  |
 | Hawaii | [ ] | [ ] | [ ] |  |
 | Idaho | [ ] | [ ] | [ ] |  |
-| Illinois | [ ] | [ ] | [ ] |  |
-| Indiana | [ ] | [ ] | [ ] |  |
+| [Illinois](site/states/illinois.html) | [x] | [ ] | [ ] | 2026-08-30 |
+| [Indiana](site/states/indiana.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Iowa | [ ] | [ ] | [ ] |  |
 | Kansas | [ ] | [ ] | [ ] |  |
 | Kentucky | [ ] | [ ] | [ ] |  |
@@ -33,7 +33,7 @@ the state's own published translation only.
 | Maine | [ ] | [ ] | [ ] |  |
 | Maryland | [ ] | [ ] | [ ] |  |
 | Massachusetts | [ ] | [ ] | [ ] |  |
-| Michigan | [ ] | [ ] | [ ] |  |
+| [Michigan](site/states/michigan.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Minnesota | [ ] | [ ] | [ ] |  |
 | Mississippi | [ ] | [ ] | [ ] |  |
 | Missouri | [ ] | [ ] | [ ] |  |
@@ -41,7 +41,7 @@ the state's own published translation only.
 | Nebraska | [ ] | [ ] | [ ] |  |
 | Nevada | [ ] | [ ] | [ ] |  |
 | New Hampshire | [ ] | [ ] | [ ] |  |
-| New Jersey | [ ] | [ ] | [ ] |  |
+| [New Jersey](site/states/new-jersey.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | New Mexico | [ ] | [ ] | [ ] |  |
 | [New York](site/states/new-york.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | North Carolina | [ ] | [ ] | [ ] |  |

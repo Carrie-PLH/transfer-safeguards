@@ -1,0 +1,964 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Illinois
+SLUG: illinois
+ASSEMBLED: 2026-08-30
+CAPTURE NOTES: All three sources were retrieved by curl with a browser user-agent. Source 1 is the General Assembly's own print view of Part 4 of Article III of the Nursing Home Care Act, reduced to text mechanically (tag strip over the served document, kept from the Part 4 heading onward); the mid-sentence line breaks inside subsection text are the ILGA page's own markup, and each section's "(Source: P.A. ...)" line is the Assembly's own currency note. Source 2 is a fillable PDF form and was extracted with `pdftotext -layout`; the blank fields, checkbox glyphs, and the page furniture ("Page 1 of 7", "Printed by Authority of the State of Illinois 6/26", "IOCI 26-25") are the form's own. Source 3 was reduced to text mechanically (tag strip), and the department's site navigation is left in the captured text as the extractor produced it.
+PENDING: The Department of Public Health's administrative rules for involuntary transfer and discharge — 210 ILCS 45/3-401 states "The Department shall adopt rules setting forth the criteria and procedures to be applied in cases of involuntary transfer or discharge permitted under this Section." and 77 Ill. Adm. Code 300 was not captured. Also pending: any first-party statement of the Illinois Medicaid bed-hold or bed-reserve period — Source 2 states only that a copy of "the facility's bed hold policy" is given to the resident, and no Healthcare and Family Services statement of the period was captured; and Sections 3-406 through 3-423 of the Act were captured within Source 1 but are not yet read into any page section.
+
+SOURCE 1: 210 ILCS 45, Nursing Home Care Act, Article III Part 4 — Discharge and Transfer | https://www.ilga.gov/legislation/ILCS/details?MajorTopic=REGULATION&Chapter=HEALTH+FACILITIES+AND+REGULATION&ActName=Nursing+Home+Care+Act.&ActID=1225&ChapterID=21&ChapAct=210+ILCS+45/&SeqStart=17400000&SeqEnd=19900000&Print=True | source's own date: sections carry their own Source lines; the newest is P.A. 104-191, eff. 1-1-26 | retrieved: 2026-08-30
+(210 ILCS 45/Art. III Pt. 4 heading) PART 4. 
+ DISCHARGE AND TRANSFER
+
+    (210 ILCS 45/3-401) (from Ch. 111 1/2, par. 4153-401)
+    Sec. 3-401. A facility may involuntarily transfer or discharge a resident only for one or more of the following reasons:
+        (a) the facility is unable to meet the medical needs 
+
+of the resident, as documented in the resident's clinical record by the resident's physician;
+
+        (b) for the resident's physical safety;
+        (c) for the physical safety of other residents, the 
+
+facility staff or facility visitors; or
+
+        (d) for either late payment or nonpayment for the 
+
+resident's stay, except as prohibited by Titles XVIII and XIX of the federal Social Security Act. For purposes of this Section, "late payment" means non-receipt of payment after submission of a bill. If payment is not received within 45 days after submission of a bill, a facility may send a notice to the resident and responsible party requesting payment within 30 days. If payment is not received within such 30 days, the facility may thereupon institute transfer or discharge proceedings by sending a notice of transfer or discharge to the resident and responsible party by registered or certified mail. The notice shall state, in addition to the requirements of Section 3-403 of this Act, that the responsible party has the right to pay the amount of the bill in full up to the date the transfer or discharge is to be made and then the resident shall have the right to remain in the facility. Such payment shall terminate the transfer or discharge proceedings. This subsection does not apply to those residents whose care is provided for under the Illinois Public Aid Code. The Department shall adopt rules setting forth the criteria and procedures to be applied in cases of involuntary transfer or discharge permitted under this Section.
+
+    In the absence of other bases for transfer or discharge in this Section, unless it has complied with the prior notice and other procedural requirements of this Act, a facility may not refuse to readmit a resident following a medical leave of absence if the resident's need for care does not exceed the provisions of the facility's license or current services offered. 
+(Source: P.A. 104-191, eff. 1-1-26.)
+
+    (210 ILCS 45/3-401.1) (from Ch. 111 1/2, par. 4153-401.1)
+    Sec. 3-401.1. (a) A facility participating in the Medical Assistance Program is prohibited from failing or refusing to retain as a resident any person because he or she is a recipient of or an applicant for the Medical Assistance Program.
+    (a-5) A facility of which only a distinct part is certified to participate in the Medical Assistance Program may refuse to retain as a resident any person who resides in a part of the facility that does not participate in the Medical Assistance Program and who is unable to pay for his or her care in the facility without Medical Assistance only if:
+        (1) the facility, no later than at the time of 
+
+admission and at the time of the resident's contract renewal, explains to the resident (unless he or she is incompetent), and to the resident's representative, and to the person making payment on behalf of the resident for the resident's stay, in writing, that the facility may discharge the resident if the resident is no longer able to pay for his or her care in the facility without Medical Assistance;
+
+        (2) the resident (unless he or she is incompetent), 
+
+the resident's representative, and the person making payment on behalf of the resident for the resident's stay, acknowledge in writing that they have received the written explanation;
+
+        (3) in circumstances where the Medicare coverage is 
+
+ending prior to the full 100-day benefit period, the facility provides notice to the resident and to the resident's representative that the resident's Medicare coverage will likely end in 5 days. This notification shall specify that the resident shall not be required to move under this Section until these 5 days are up. In cases where the facility is notified in a shorter time frame than 5 days by a managed care organization or the time frame is shorter than 5 days due to inaccurate reporting by an outside entity, the facility must provide a minimum of 2 days' notification. 
+
+    (a-10) For the purposes of this Section, a recipient or applicant shall be considered a resident in the facility during any hospital stay totaling 10 days or less following a hospital admission. The Department of Healthcare and Family Services shall recoup funds from a facility when, as a result of the facility's refusal to readmit a recipient after hospitalization for 10 days or less, the recipient incurs hospital bills in an amount greater than the amount that would have been paid by that Department (formerly the Illinois Department of Public Aid) for care of the recipient in the facility. The amount of the recoupment shall be the difference between the Department of Healthcare and Family Services' (formerly the Illinois Department of Public Aid's) payment for hospital care and the amount that Department would have paid for care in the facility.
+    (b) A facility which violates this Section shall be guilty of a business offense and fined not less than $500 nor more than $1,000 for the first offense and not less than $1,000 nor more than $5,000 for each subsequent offense.
+(Source: P.A. 103-691, eff. 1-1-25.)
+
+    (210 ILCS 45/3-402) (from Ch. 111 1/2, par. 4153-402)
+    Sec. 3-402. Involuntary transfer or discharge of a resident from a facility shall be preceded by the discussion required under Section 3-408 and by a minimum written notice of 30 days, except in one of the following instances:
+    (a) When an emergency transfer or discharge is ordered by the resident's attending physician because of the resident's health care needs. The State Long Term Care Ombudsman shall be notified at the time of the emergency transfer or discharge. 
+    (b) When the transfer or discharge is mandated by the physical safety of other residents, the facility staff, or facility visitors, as documented in the clinical record. The Department, the Office of State Long Term Care Ombudsman, and the resident's managed care organization, if applicable, and the State Long Term Care Ombudsman shall be notified prior to any such involuntary transfer or discharge. The Department shall immediately offer transfer, or discharge and relocation assistance to residents transferred or discharged under this subparagraph (b), and the Department may place relocation teams as provided in Section 3-419 of this Act.
+    (c) When an identified offender is within the provisional admission period defined in Section 1-120.3. If the Identified Offender Report and Recommendation prepared under Section 2-201.6 shows that the identified offender poses a serious threat or danger to the physical safety of other residents, the facility staff, or facility visitors in the admitting facility and the facility determines that it is unable to provide a safe environment for the other residents, the facility staff, or facility visitors, the facility shall transfer or discharge the identified offender within 3 days after its receipt of the Identified Offender Report and Recommendation. 
+(Source: P.A. 103-320, eff. 1-1-24; 104-191, eff. 1-1-26.)
+
+    (210 ILCS 45/3-403) (from Ch. 111 1/2, par. 4153-403)
+
+    Sec. 3-403. 
+The notice required by Section 3-402 shall be on a form
+prescribed by the Department and shall contain all of the following:
+
+    (a) The stated reason for the proposed transfer or discharge;
+
+    (b) The effective date of the proposed transfer or discharge;
+
+    (c) A statement in not less than 12-point type, which reads: "You
+have a right to appeal the facility's decision to transfer or discharge
+you. If you think you should not have to leave this facility, you may
+file a request for a hearing with the Department of Public Health within
+10 days after receiving this notice. If you request a hearing, it will
+be held not later than 10 days after your request, and you generally will
+not be transferred or discharged during that time. If the decision
+following the hearing is not in your favor, you generally will not be
+transferred or discharged prior to the expiration of 30 days following
+receipt of the original notice of the transfer or discharge. A form to
+appeal the facility's decision and to request a hearing is attached. If
+you have any questions, call the Department of Public Health or the State Long Term Care Ombudsman at the
+telephone numbers listed below.";
+
+    (d) A hearing request form, together with a postage paid,
+preaddressed envelope to the Department; and
+
+    (e) The name, address, and telephone number of the person charged
+with the responsibility of supervising the transfer or discharge.
+
+(Source: P.A. 103-320, eff. 1-1-24.)
+
+    (210 ILCS 45/3-404) (from Ch. 111 1/2, par. 4153-404)
+    Sec. 3-404. A request for a hearing made under Section 3-403 shall stay a transfer or discharge pending a hearing or appeal of the decision, unless a condition which would have allowed transfer or discharge in less than 30 days as described under paragraphs (a) and (b) of Section 3-402 develops in the interim.
+(Source: P.A. 104-191, eff. 1-1-26.)
+
+    (210 ILCS 45/3-405) (from Ch. 111 1/2, par. 4153-405)
+    Sec. 3-405. A copy of the notice required by Section 3-402 shall be placed in the resident's clinical record and a copy shall be transmitted to the Department, the State Long Term Care Ombudsman, the resident, the resident's representative, if any, and the resident's managed care organization.
+(Source: P.A. 103-320, eff. 1-1-24; 104-191, eff. 1-1-26.)
+
+     (210 ILCS 45/3-406) (from Ch. 111 1/2, par. 4153-406)
+
+    Sec. 3-406. When the basis for an involuntary transfer or discharge is
+the result of an action by the Department of Healthcare and Family Services (formerly Department of Public Aid) with
+respect to a recipient of Title XIX and a hearing request is filed with
+the Department of Healthcare and Family Services (formerly Department of Public Aid), the 21-day written notice period shall not
+begin until a final decision in the matter is rendered by the Department of Healthcare and Family Services (formerly Department
+of Public Aid) or a court of competent jurisdiction and notice of that final
+decision is received by the resident and the facility.
+
+(Source: P.A. 95-331, eff. 8-21-07.)
+
+     (210 ILCS 45/3-407) (from Ch. 111 1/2, par. 4153-407)
+
+    Sec. 3-407. 
+
+ When nonpayment is the basis for involuntary transfer or discharge,
+the resident shall have the right to redeem up to the date that the discharge
+or transfer is to be made and then shall have the right to
+remain in the facility.
+
+(Source: P.A. 81-223.)
+
+     (210 ILCS 45/3-408) (from Ch. 111 1/2, par. 4153-408)
+
+    Sec. 3-408. 
+
+ The planned involuntary transfer or discharge shall be discussed
+with the resident, the resident's representative and person or agency responsible
+for the resident's placement, maintenance, and care in the facility. The
+explanation and discussion of the reasons for involuntary
+transfer or discharge shall include the facility administrator or other
+appropriate facility representative as the administrator's designee. The
+content of the discussion and explanation shall be summarized in writing
+and shall include the names of the individuals
+involved in the discussions and made a part of the resident's clinical record.
+
+(Source: P.A. 81-223.)
+
+     (210 ILCS 45/3-409) (from Ch. 111 1/2, par. 4153-409)
+
+    Sec. 3-409. 
+
+ The facility shall offer the resident counseling services
+before the transfer or discharge of the resident.
+
+(Source: P.A. 81-223.)
+
+     (210 ILCS 45/3-410) (from Ch. 111 1/2, par. 4153-410)
+
+    Sec. 3-410. 
+
+ A resident subject to involuntary transfer or discharge from
+a facility, the resident's guardian or if the resident is a minor, his parent
+shall have the opportunity to file a request for a hearing with the Department
+within 10 days following receipt of the written notice
+of the involuntary transfer or discharge by the facility.
+
+(Source: P.A. 81-223.)
+
+    (210 ILCS 45/3-411) (from Ch. 111 1/2, par. 4153-411)
+    Sec. 3-411. The Department of Public Health, when the basis for involuntary transfer or discharge is other than action by the Department of Healthcare and Family Services (formerly Department of Public Aid) with respect to the Title XIX Medicaid recipient, shall hold a hearing at the resident's facility not later than 10 days after a hearing request is filed, and render a decision within 14 days after the filing of the hearing request. The Department has continuing jurisdiction over the transfer or discharge irrespective of the timing of the hearing and decision. Once a request for a hearing is filed, the Department shall hold a hearing unless the request is withdrawn by the resident. If the request for a hearing is withdrawn based upon a representation made by the facility to the resident and the Department, including the hearing officer, that a resident who has been denied readmission will be readmitted, and the resident or resident representative notifies the Department that the facility is still denying readmission, failure to readmit is considered failure to comply with a Department order to readmit pursuant to Section 3-305.6, including the imposition of a $2,500 fine under Section 3-305.6. 
+(Source: P.A. 104-191, eff. 1-1-26.)
+
+     (210 ILCS 45/3-412) (from Ch. 111 1/2, par. 4153-412)
+
+    Sec. 3-412. 
+
+ The hearing before the Department provided under Section 3-411
+shall be conducted as prescribed under Section 3-703. In determining whether
+a transfer or discharge is authorized, the burden of proof in this hearing
+rests on the person requesting the transfer or discharge.
+
+(Source: P.A. 81-223.)
+
+    (210 ILCS 45/3-413) (from Ch. 111 1/2, par. 4153-413)
+    Sec. 3-413. If the Department determines that a transfer or discharge is authorized under Section 3-401, the resident shall not be required to leave the facility before the 34th day following receipt of the notice required under Section 3-402, or the 10th day following receipt of the Department's decision, whichever is later, unless a condition which would have allowed transfer or discharge in less than 30 days as described under paragraphs (a) and (b) of Section 3-402 develops in the interim. The Department maintains jurisdiction over the transfer or discharge irrespective of the timing of the notice and discharge. 
+(Source: P.A. 104-191, eff. 1-1-26.)
+
+    (210 ILCS 45/3-413.1) 
+    Sec. 3-413.1. Denial of transfer or discharge. If the Department determines that a transfer or discharge is not authorized under Section 3-401, then the Department shall issue a written decision stating that the transfer or discharge is denied. If the action of the facility giving rise to the request for hearings is the facility's failure to readmit the resident following hospitalization, other medical leave of absence, or other absence, then the Department shall order the immediate readmission of the resident to the facility. The facility shall comply with the order immediately. A copy of the Department's written decision shall be placed in the resident's medical chart. A surveyor shall make an on-site inspection of the facility's compliance with the order unless the resident or resident representative notifies the Department in writing that there is compliance with the order.
+(Source: P.A. 104-191, eff. 1-1-26.)
+
+     (210 ILCS 45/3-414) (from Ch. 111 1/2, par. 4153-414)
+
+    Sec. 3-414. The Department of Healthcare and Family Services shall continue Title XIX Medicaid
+funding during the appeal, transfer, or discharge period for those residents
+who are Title XIX recipients affected by Section 3-401.
+
+(Source: P.A. 95-331, eff. 8-21-07.)
+
+     (210 ILCS 45/3-415) (from Ch. 111 1/2, par. 4153-415)
+
+    Sec. 3-415. 
+
+ The Department may transfer or discharge any resident from
+any facility required to be licensed under this Act when any of the following
+conditions exist:
+
+    (a) Such facility is operating without a license;
+
+    (b) The Department has suspended, revoked or refused to renew the license
+of the facility as provided under Section 3-119;
+
+    (c) The facility has requested the aid of the Department in the transfer
+or discharge of the resident and the Department finds that the resident
+consents to transfer or discharge;
+
+    (d) The facility is closing or intends to close and adequate arrangement
+for relocation of the resident has not been made at least 30 days prior to closure; or
+
+    (e) The Department determines that an emergency exists which requires
+immediate transfer or discharge of the resident.
+
+(Source: P.A. 81-223.)
+
+     (210 ILCS 45/3-416) (from Ch. 111 1/2, par. 4153-416)
+
+    Sec. 3-416. 
+
+ In deciding to transfer or discharge a resident from a facility
+under Section 3-415, the Department shall consider the likelihood
+of serious harm which may result if the resident remains in the facility.
+
+(Source: P.A. 81-223.)
+
+    (210 ILCS 45/3-417) (from Ch. 111 1/2, par. 4153-417)
+
+    Sec. 3-417. Transfer or discharge; alternative placements. The Department shall offer transfer or discharge and relocation
+assistance to residents transferred or discharged under Sections 3-401 through
+3-415, including information on available alternative placements. Residents
+shall be involved in planning the transfer or discharge and shall choose
+among the available alternative placements, except that where an emergency
+makes prior resident involvement impossible the Department may make a temporary
+placement until a final placement can be arranged. Residents may choose
+their final alternative placement and shall be given assistance in transferring
+to such place. No resident may be forced to remain in a temporary or permanent
+placement. Where the Department makes or participates
+in making the relocation decision, consideration shall be given to proximity
+to the resident's relatives and friends. The resident shall be allowed 3
+visits to potential alternative placements prior to removal, except where
+medically contraindicated or where the need for immediate transfer or discharge
+requires reduction in the number of visits.
+    When the Department provides information on available alternative placements in community-based settings for individuals being discharged or transferred from facilities licensed under this Act, the information must include a comprehensive list of a range of appropriate, client-oriented services and the name of and contact information for the ADA coordinator in the relocation locale. The comprehensive list must include the name and contact information for each agency or organization providing those services and a summary of the services provided by each agency or organization. A hotline or similar crisis telephone number must also be provided to individuals relocating into the community. 
+
+(Source: P.A. 96-477, eff. 8-14-09.)
+
+     (210 ILCS 45/3-418) (from Ch. 111 1/2, par. 4153-418)
+
+    Sec. 3-418. 
+
+ The Department shall prepare resident transfer or discharge
+plans to assure safe and orderly removals and protect residents' health,
+safety, welfare and rights. In nonemergencies, and where possible in emergencies,
+the Department shall design and implement such plans in advance of transfer
+or discharge.
+
+(Source: P.A. 81-223.)
+
+     (210 ILCS 45/3-419) (from Ch. 111 1/2, par. 4153-419)
+
+    Sec. 3-419. 
+
+ The Department may place relocation teams in any facility from
+which residents are being discharged or transferred for any reason, for
+the purpose of implementing transfer or discharge plans.
+
+(Source: P.A. 81-223.)
+
+     (210 ILCS 45/3-420) (from Ch. 111 1/2, par. 4153-420)
+
+    Sec. 3-420. 
+
+ In any transfer or discharge conducted under Sections 3-415
+through 3-418 the Department shall:
+
+    (a) Provide written notice to the facility prior to the transfer or
+discharge. The notice shall state the basis for the order of transfer or
+discharge and shall inform the facility of its right to an informal conference
+prior to transfer or discharge under this Section, and its right to a
+subsequent hearing under Section 3-422. If a facility desires to contest a
+nonemergency transfer or discharge, prior to transfer or discharge it shall,
+within 4 working days after receipt of the notice, send a written request for
+an informal conference to the Department. The Department shall, within 4
+working days from the receipt of the request, hold an informal conference in
+the county in which the facility is located. Following this conference,
+the Department may affirm, modify or overrule its previous decision. Except
+in an emergency, transfer or discharge may not begin until the period for
+requesting a conference has passed or, if a conference is requested, until
+after a conference has been held; and
+
+    (b) Provide written notice to any resident to be removed, to the resident's
+representative, if any, and to a member of the resident's family, where
+practicable, prior to the removal. The notice shall state the reason for
+which transfer or discharge is ordered and shall inform the resident of
+the resident's right to challenge the transfer or discharge under Section
+3-422. The Department shall hold an informal conference with the resident
+or the resident's representative prior to transfer or discharge at which
+the resident or the representative may present any objections to the proposed
+transfer or discharge plan or alternative placement.
+
+(Source: P.A. 81-223.)
+
+     (210 ILCS 45/3-421) (from Ch. 111 1/2, par. 4153-421)
+
+    Sec. 3-421. In any transfer or discharge conducted under subsection (e)
+of Section 3-415, the Department shall notify the facility and any resident
+to be removed that an emergency has been found to exist and removal
+has been ordered, and shall involve the residents in removal planning if
+possible. With the consent of the resident or his or her representative, the facility must inform the resident's designated case coordination unit, as defined in 89 Ill. Adm. Code 240.260, of the resident's pending discharge and must provide the resident or his or her representative with the case coordination unit's telephone number and other contact information. Following emergency removal, the Department shall provide written
+notice to the facility, to the resident, to the resident's representative,
+if any, and to a member of the resident's family, where practicable, of
+the basis for the finding that an emergency existed and of the right to
+challenge removal under Section 3-422.
+
+(Source: P.A. 94-767, eff. 5-12-06.)
+
+     (210 ILCS 45/3-422) (from Ch. 111 1/2, par. 4153-422)
+
+    Sec. 3-422. 
+
+ Within 10 days following transfer or discharge, the facility
+or any resident transferred or discharged may send a written request to
+the Department for a hearing under Section 3-703 to challenge the transfer
+or discharge. The Department shall hold the hearing within 30 days of receipt
+of the request. The hearing shall be held at the facility from which the
+resident is being transferred or discharged, unless the resident or
+resident's representative, requests an alternative hearing site. If the
+facility prevails, it may file a claim against the State under the "Court
+of Claims Act" for payments lost less expenses saved as a result of the
+transfer or discharge. No resident transferred or discharged may be held
+liable for the charge for care which would have been made had the resident
+remained in the facility. If a resident prevails,
+the resident may file a claim against the State under the "Court of Claims
+Act" for any excess expenses directly caused by the order to transfer or
+discharge. The Department shall assist the resident in returning to the
+facility if assistance is requested.
+
+(Source: P.A. 85-1378.)
+
+    (210 ILCS 45/3-423) (from Ch. 111 1/2, par. 4153-423)
+
+    Sec. 3-423. 
+The administrator of a facility licensed under this Act shall give 60
+ days notice prior to voluntarily closing a facility or closing any part
+of a facility, or prior to closing any part of a facility if closing such
+part will require the transfer or discharge of more than 10% of the residents.
+Such notice shall be given to the Department, to the Office of State Long Term Care Ombudsman, to any resident who must be
+transferred or discharged, to the resident's representative, and to a member
+of the resident's family, where practicable. If the Department suspends, revokes, or denies renewal of the facility's license, then notice shall be given no later than the date specified by the Department. Notice shall state the proposed
+date of closing and the reason for closing. The facility shall submit a closure plan to the Department for approval which shall address the process for the safe and orderly transfer of residents. The approved plan shall be included in the notice.
+The facility shall offer to assist the resident in securing an alternative
+placement and shall advise the resident on available alternatives. Where
+the resident is unable to choose an alternate placement and is not under
+guardianship, the Department shall be notified of the need for relocation
+assistance. A facility closing in its entirety shall not admit any new residents on or after the date written notice is submitted to the Department under this Section. The facility shall comply with all applicable laws and regulations until
+the date of closing, including those related to transfer or discharge of
+residents. The Department may place a relocation team in the facility as
+provided under Section 3-419.
+
+(Source: P.A. 98-834, eff. 8-1-14.)
+END SOURCE 1
+
+SOURCE 2: Illinois Department of Public Health, Notice of Involuntary Transfer or Discharge and Opportunity for Hearing for Nursing Home Residents (form, PDF) | https://dph.illinois.gov/content/dam/soi/en/web/idph/forms/topics-services/health-care-regulation/nursing-homes/itd-form.pdf | source's own date: Printed by Authority of the State of Illinois 6/26, IOCI 26-25 | retrieved: 2026-08-30
+                                                          Notice of Involuntary Transfer or Discharge and
+                                                      Opportunity for Hearing for Nursing Home Residents
+                                                                                              (for Assisted Living forms, visit www.dph.illinois.gov)
+
+FACILITY INFORMATION
+
+Facility Name                                                     Address                                                       County
+
+
+Phone Number            Fax Number              Email Address                                                        Date of Notice to Resident
+
+
+RESIDENT INFORMATION
+
+Resident’s Name                                             Resident’s Date of Birth               Resident’s Representative Name
+
+
+Resident’s Representative Address                                                                             Resident’s Representative Phone Number
+
+
+    FEDERAL PROCEEDING                 STATE PROCEEDING                      EMERGENCY TRANSFER OR DISCHARGE                             YES           NO
+
+    FEDERAL PROCEEDING. This facility admits private-pay and Medicare or Medicaid residents and is federally certified
+    and state licensed, or this facility admits only Medicare or Medicaid residents and is federally funded. This facility seeks
+    to transfer or discharge you pursuant to the regulations of the Health Care Financing Administration for states and long-
+    term care facilities,. 42 CFR 483.15 (“federal regulations”). As recorded in your clinical record in accordance with Section
+    483.15(c) of the federal regulations, the reason for this proposed transfer or discharge is:
+        your welfare and needs cannot be met in this facility, as documented in your clinical record by your physician,
+        483.15 (c)(1)(i)(A);
+        your health has improved sufficiently so you no longer need the services provided by this facility, as documented in your
+        clinical record by your physician, 483.15 (c)(1)(i)(B);
+        the safety of individuals in this facility is endangered, 483.15 (c)(1)(i)(C);
+        the health of individuals in this facility would otherwise be endangered, as documented in your clinical record by your
+        physician, 483.15 (c)(1)(i)(D);
+        you have failed, after reasonable and appropriate notice, to pay for your stay at this facility, 483.15 (c)(1)(i)(E); or
+        this facility ceases to operate, 483.15 (c)(1)(i)(F).;
+
+    On the date of transfer or discharge, you will be relocated to:
+
+        Facility/Person:
+
+        Address:
+
+        Telephone:
+
+    Pursuant to Section 483.15(c)(7) of the federal regulations, this facility will provide sufficient preparation and orientation to
+    ensure your safe and orderly transfer or discharge from this facility.
+
+        A copy of the facility’s bed hold policy has been given to the resident or their responsible party, along with a copy of this
+        notice.
+
+
+
+
+                     Submit all forms to: Illinois Department of Public Health, Division of Administrative Hearing Review,
+                 535 W. Jefferson St., Springfield, IL 62761; Email: DPH.AdminHearings@illinois.gov; or fax: 630-954-3502.
+Page 1 of 7                                        Printed by Authority of the State of Illinois   6/26                                   IOCI 26-25
+                                                            Notice of Involuntary Transfer or Discharge and
+                                                        Opportunity for Hearing for Nursing Home Residents
+                                                                                                (for Assisted Living forms, visit www.dph.illinois.gov)
+
+    STATE PROCEEDING. This facility admits only private-pay residents and is state-licensed. This facility seeks to transfer or
+    discharge you pursuant to the Nursing Home Care Act, 210 ILCS 45/1-101, et seq. (“state law”). You will be responsible for
+    securing shelter and health care for yourself. You may seek relocation assistance from the Illinois Department of Public
+    Health, including information on alternative placements.
+
+    As discussed with                                           on                         and as documented in your clinical
+    record pursuant to Section 3-408 of the state law, the reason for this proposed transfer or discharge is:
+              medical reasons, as documented in your clinical record by your physician, 210 ILCS 45/3-401(a);
+              your physical safety, 210 ILCS 45/3-401(b);
+              the physical safety of other residents, the facility’s staff, or visitors, 210 ILCS 45/3-401(c); or
+              late payment or nonpayment for your stay, 210 ILCS 45/3-401(d).
+
+    The responsible party,                                            , has the right to pay the amount of the bill in full up to the
+    date the transfer or discharge is to be made, and then you shall have the right to remain in this facility.
+
+    To obtain the name of a local representative of the Illinois Long-term Care Ombudsman Program in your community, you
+    may call the Illinois Department on Aging, Senior Helpline, toll-free at 800-252-8966 or write to the Illinois Department on
+    Aging, One Natural Resources Way, Suite 100, Springfield, IL 62702-1271.
+    The agency responsible for the protection and advocacy of the developmentally disabled or mentally ill individuals is Equip
+    for Equality, Inc.
+        20 N. Michigan Ave., Suite 300, Chicago, IL 60602, 312-341-0022, (Voice) 800-537-2632, (TTY) 800-610-2779,
+        (Fax) 312-341-0295.
+        300 East Main St., Suite 18, Carbondale, IL 62901, 618-457-7930, (Voice) 800-758-6869, (TTY) 800-610-2779,
+        (Fax) 618-457-7985.
+        1 West Old State Capitol Plaza, Suite 500, Springfield, IL 62701, 217-544-0464, (Voice) 800-758-0464,
+        (TTY) 800-610-2779, (Fax) 312-800-0912.
+
+    The effective date of the proposed transfer or discharge is                                             .
+    The person who will supervise your transfer or discharge is:
+
+        Name:
+
+        Address:
+
+        Telephone:
+
+        Email:
+
+
+
+
+                       Submit all forms to: Illinois Department of Public Health, Division of Administrative Hearing Review,
+                   535 W. Jefferson St., Springfield, IL 62761; Email: DPH.AdminHearings@illinois.gov; or fax: 630-954-3502.
+Page 2 of 7                                          Printed by Authority of the State of Illinois   6/26                                 IOCI 26-25
+                                                         Notice of Involuntary Transfer or Discharge and
+                                                     Opportunity for Hearing for Nursing Home Residents
+                                                                                             (for Assisted Living forms, visit www.dph.illinois.gov)
+
+APPEAL RIGHTS
+Regardless of whether the facility’s proposed action is under federal regulations or state law, you have the right to appeal the
+decision to transfer or discharge you.
+If you think you should not have to leave this facility, you may file a Request for Hearing with the Illinois Department of Public
+Health within 10 days after receiving the notice.
+If you request a hearing, it will be held not later than 10 days after your request, and you generally will not be transferred or
+discharged during that time. If the decision following the hearing is not in your favor, you generally will not be transferred or
+discharged prior to the expiration of 30 days following receipt of the original Notice of Transfer or Discharge. A form to appeal
+the facility’s decision is attached. If you have questions, call the Illinois Department of Public Health, Administrative Hearing
+Review, at 217-557-9592 or 217-557-5688.
+A copy of this notice was placed in your clinical record and a copy was transmitted to the Illinois Department of Public Health,
+to you, to the long-term care ombudsman, to your representative or a family member, and if your care is paid for, in whole or
+in part, through Title XIX, to the Illinois Department of Healthcare and Family Services on                         .
+
+If you are a Williams/Colbert Class Member, you may be entitled to certain benefits under the consent decrees, which give
+you the right to receive information about housing and service options before being discharged from the facility. You may have
+already been engaged with a Williams/Colbert provider, called a “Prime Agency,” who is required to support you in the
+discharge process. You may contact them through your facility or on your own if you already have their contact information,
+for linkage to housing and services if you have been assessed and recommended for a community-based setting. You may
+also request that the Prime Agency provide an assessment and related services after discharge. Prime Agency contact
+information and facility assignment information are on the Illinois Department of Human Services (DHS) Olmstead web page
+at https://www.dhs.state.il.us/page.aspx?item=125944. If you are a class member, a list of community services that may
+be available to you as a class member will be provided before or at the point of your discharge from the facility. If you are a
+Williams/Colbert Class Member, answers to questions about your rights can be found by calling the IDHS Williams/Colbert
+hotline 312-793-7205 or emailing ILOA@maximus.com prior to your discharge from the facility.
+
+Printed name of facility’s agent:
+
+Agent’s Title:                                                   Facility agent’s email:
+
+
+
+Signature of facility’s agent:                                                                             Date:
+
+Printed name of facility’s attorney:
+
+Attorney’s email:                                                                   Telephone:
+
+
+
+
+                     Submit all forms to: Illinois Department of Public Health, Division of Administrative Hearing Review,
+                 535 W. Jefferson St., Springfield, IL 62761; Email: DPH.AdminHearings@illinois.gov; or fax: 630-954-3502.
+Page 3 of 7                                       Printed by Authority of the State of Illinois   6/26                                 IOCI 26-25
+                                                                                                 Involuntary Transfer or Discharge
+                                                                                                               Request for Hearing
+INSTRUCTIONS
+If you wish to contest the proposed involuntary transfer or discharge, complete this form and submit to:
+Illinois Department of Public Health, Division of Administrative Hearing Review, 535 W. Jefferson St., Springfield, IL 62761,
+Email: DPH.AdminHearings@illinois.gov; Fax: 630-954-3502 within 10 days after receiving the Notice of Involuntary Transfer
+or Discharge.
+
+FACILITY INFORMATION
+
+Facility Name                                                   Address                                                       County
+
+
+Phone Number           Fax Number             Email Address                                                        Date of Notice to Resident
+
+
+RESIDENT INFORMATION
+
+Resident’s Name                                           Resident’s Date of Birth               Resident’s Representative Name
+
+
+Resident’s Representative Address                                                                           Resident’s Representative Phone Number
+
+
+I request a hearing, within 10 days of receipt of this request by the Illinois Department of Public Health, to contest the Notice
+of Involuntary Transfer or Discharge received by                                                      on                        .
+
+Printed name of person requesting a hearing:
+
+
+
+Signature of person requesting a hearing:                                                                                 Date:
+
+Relationship to the resident:
+
+Email address:
+
+Printed name of resident’s attorney (if applicable):
+
+Resident’s attorney’s address:
+
+Resident’s attorney’s email:
+
+Resident’s attorney’s phone number:
+
+
+
+
+                    Submit all forms to: Illinois Department of Public Health, Division of Administrative Hearing Review,
+                535 W. Jefferson St., Springfield, IL 62761; Email: DPH.AdminHearings@illinois.gov; or fax: 630-954-3502.
+Page 4 of 7                                      Printed by Authority of the State of Illinois   6/26                                   IOCI 26-25
+                                                                                                      Availability of Translation and
+                                                                                                             Interpretation Services
+
+
+
+
+                  Submit all forms to: Illinois Department of Public Health, Division of Administrative Hearing Review,
+              535 W. Jefferson St., Springfield, IL 62761; Email: DPH.AdminHearings@illinois.gov; or fax: 630-954-3502.
+Page 5 of 7                                    Printed by Authority of the State of Illinois   6/26                         IOCI 26-25
+                                                                                                      Availability of Translation and
+                                                                                                             Interpretation Services
+
+
+
+
+                  Submit all forms to: Illinois Department of Public Health, Division of Administrative Hearing Review,
+              535 W. Jefferson St., Springfield, IL 62761; Email: DPH.AdminHearings@illinois.gov; or fax: 630-954-3502.
+Page 6 of 7                                    Printed by Authority of the State of Illinois   6/26                         IOCI 26-25
+                                                                                                      Availability of Translation and
+                                                                                                             Interpretation Services
+
+
+
+
+                  Submit all forms to: Illinois Department of Public Health, Division of Administrative Hearing Review,
+              535 W. Jefferson St., Springfield, IL 62761; Email: DPH.AdminHearings@illinois.gov; or fax: 630-954-3502.
+Page 7 of 7                                    Printed by Authority of the State of Illinois   6/26                         IOCI 26-25
+
+END SOURCE 2
+
+SOURCE 3: Illinois Department on Aging, Contact Information: Office of the State Long-Term Care Ombudsman | https://ilaging.illinois.gov/programs/ltcombudsman/contact-information--office-of-the-state-long-term-care-ombudsma.html | source's own date: none stated on page | retrieved: 2026-08-30
+Contact Information: Office of the State Long-Term Care Ombudsman 
+
+ Skip to main content
+
+ Agencies
+
+ Services
+
+ Mary Killough, Director
+
+ Senior HelpLine: 1-800-252-8966 (711 TRS)
+
+ About Us
+
+ Administration and Funding
+
+ Calendar
+
+ DEI Initiatives
+
+ Employment Opportunities
+
+ Governor's Engaging Aging Award
+
+ Legislation
+
+ News, Publications, and Reports
+
+ Organizational Overview
+
+ Senior Illinoisans Hall of Fame
+
+ Statutes & Rules
+
+ Family & Caregivers
+
+ Who Are Caregivers?
+
+ Caregiver Wellness
+
+ Caregiver Training & Best Practices
+
+ Care for Veterans
+
+ Family and Caregiver Services
+
+ Family and Caregiver Resource Centers
+
+ Grandparents Raising Grandchildren Program
+
+ Home & Community-Based Services
+
+ Hospital Discharge Planning
+
+ In-Home Care
+
+ Nursing Home Care
+
+ Paying for Care
+
+ Alzheimer's and Dementia
+
+ Programs
+
+ Adult Day Service
+
+ Adult Protective Services (APS)
+
+ Benefit Access Program
+
+ Community Care Program
+
+ Advocacy: Home Care Ombudsman Program
+
+ Advocacy: Long-Term Care Ombudsman Program
+
+ Senior Health Insurance Program
+
+ More Programs
+
+ Providers & Partners
+
+ Advisory Groups
+
+ Apply to be a Provider
+
+ Area Agencies on Aging
+
+ Care Coordination Opportunities
+
+ Child and Adult Care Food Program
+
+ Conference Recordings
+
+ Current Providers
+
+ Multisector Plan for Aging
+
+ Nutrition Providers
+
+ Partner Portal
+
+ Referrals to IL Care Connections
+
+ Training
+
+ Volunteer Opportunities
+
+ Vendor Payments
+
+ Service Locator
+
+ Contact Us
+
+ Freedom of Information Act (FOIA)
+
+ Records Destruction Application
+
+ Reasonable Accommodation and Civil Rights Complaint Procedures
+
+ Release of Information
+
+ Release of Information in Additional Languages
+
+ Share a Compliment or Story
+
+ Report Abuse: 1-866-800-1409
+
+ More
+
+ Mary Killough, Director
+
+ Senior HelpLine: 1-800-252-8966 (711 TRS)
+
+ Illinois Department on Aging
+
+ Programs
+
+ Advocacy: Long-Term Care Ombudsman Program
+
+ Contact Information: Office of the State Long-Term Care Ombudsman 
+
+ Advocacy: Long-Term Care Ombudsman Program
+
+ Advocacy: The Home Care Ombudsman Program
+
+ COVID-19 Information and Resources
+
+ LTC Ombudsman Program Policies and Procedures
+
+ Illinois Long-Term Care Council
+
+ Choosing a Long-Term Care Facility
+
+ Culture Change
+
+ Reporting Abuse in Long-Term Care Facilities
+
+ Annual Survey of Long-Term Care Facilities
+
+ Regional Artifacts of Culture Change Trainings
+
+ Volunteer to be an Ombudsman
+
+ Resident and Family Support Council
+
+ Resident Council Information and Tools
+
+ Residents Rights in Long-Term Care Facilities
+
+ LTCOP Regional Ombudsman Public Contact List
+
+ Contact Information: Office of the State Long-Term Care Ombudsman 
+
+ Office of the Ombudsman 
+
+ Contact Information 
+
+ Email Us
+
+ State Long-Term Care Ombudsman
+
+Kelly Richards
+
+ Illinois Department on Aging
+
+555 W. Monroe St., 15th Floor
+
+Chicago, IL 60661
+
+(312) 814-1203
+
+Fax: (217) 524-9644
+
+Kelly.Richards@illinois.gov
+
+Deputy State Long-Term Care Ombudsman
+
+Lee Moriarty
+
+ Illinois Department on Aging
+
+555 W. Monroe St. 15th Floor
+
+Chicago, IL
+
+Lee.Moriarty@illinois.gov
+
+ (312) 814-1510
+
+Fax: (217) 524-2049
+
+Deputy State Home Care Ombudsman
+
+Glenda Love
+
+ Illinois Department on Aging 
+
+One Natural Resources Way, #100
+
+Springfield, IL 62702 
+
+Glenda.Love2@illinois.gov
+
+ (217) 836-0129
+
+Fax: (217) 524-204
+
+Home Care Ombudsman
+
+Tiffany Askew
+
+Illinois Department on Aging
+
+555 W. Monroe St. Suite 1500S
+
+Chicago, IL 60661
+
+Tiffany.Askew@illinois.gov
+
+(312) 550-0260
+
+Jennee Celletti
+
+ Illinois Department on Aging
+
+One Natural Resources Way, Suite 100
+
+Springfield, IL 62702
+
+Jennee.Celletti@illinois.gov
+
+(217) 843-1669
+
+Tiffany Holmes
+
+ Illinois Department on Aging
+
+555 W Monroe St.
+
+Chicago, IL 60661
+
+Tiffany.Holmes@illinois.gov
+
+(312) 550-0921    
+
+Ombudsman Specialist
+
+Jessica Belsly
+
+ Illinois Department on Aging 
+
+One Natural Resources Way, #100
+
+Springfield, IL 62702 
+
+Jessica.Belsly@illinois.gov
+
+217-685-7102
+
+Fax: (217) 524-2049 
+
+Ombudsman Training Coordinator
+
+Stephen Maxwell
+
+ Illinois Department on Aging 
+
+One Natural Resources Way, #100
+
+Springfield, IL 62702 
+
+Stephen.Maxwell@illinois.gov
+
+ (217) 725-4875
+
+Fax: (217) 524-2049
+
+Administrative Assistant II
+
+Farrah Borders
+
+ Illinois Department on Aging 
+
+One Natural Resources Way, #100
+
+Springfield, IL 62702 
+
+Farrah.Borders@illinois.gov
+
+ (217) 606-1252
+
+Fax: (217) 524-2049
+
+ Key Toll-Free Numbers for Older Adults and Caregivers
+
+ IDoA Senior HelpLine:
+
+1-800-252-8966
+
+ Illinois Department of Public Health Hotline:
+
+1-800-252-4343
+
+ Footer
+
+ Back to top
+
+ Contact the Department on Aging
+
+ SENIOR HELPLINE
+
+ 1-800-252-8966
+
+ Helpful Links
+
+ 988 Suicide & Crisis Lifeline
+
+ Attorney General's Senior Citizens Consumer Fraud Hotline 
+
+ BenefitsCheckup Screening Tool
+
+ National Elder Fraud Hotline
+
+ FEMA Disaster Preparedness Guide for Older Adults
+
+ Language Accessibility
+
+ Register to Vote
+
+ Resources for Seniors
+
+ States and Federal Programs for Older Adults
+
+ Web Accessibility
+
+ Missing & Exploited Children
+
+ Amber Alerts
+
+ Illinois Privacy Info
+
+Governor JB Pritzker
+
+© 2026
+
+State of Illinois
+END SOURCE 3
+
+END OF PACKET — 3 sources

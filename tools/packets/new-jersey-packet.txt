@@ -1,0 +1,576 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: New Jersey
+SLUG: new-jersey
+ASSEMBLED: 2026-08-30
+CAPTURE NOTES: Both sources were retrieved by curl with a browser user-agent from nj.gov. Source 1 is a PDF and was extracted with `pdftotext -layout`; the bullet glyphs at the foot of the summary did not survive extraction and appear as leading spaces, and the block addresses keep the document's own line breaks. Source 2 was reduced to text mechanically (tag strip over the served document); the office's site navigation and footer are left in the captured text as the extractor produced it, and the "Last Updated" line near the foot is the page's own date.
+PENDING: A first-party Division of Medical Assistance and Health Services statement of the transfer and discharge fair-hearing route. The Division's Medicaid hearings page at nj.gov/humanservices/dmahs/clients/medicaid/hearings/ returned HTTP 404, and no other DMAHS page stating the route for nursing-facility transfer and discharge appeals was captured; what this packet holds is the Office of the Long-Term Care Ombudsman's publication of the Fair Hearing Unit's address in Source 1. Also pending: the New Jersey Department of Health's own long-term care licensing rules at N.J.A.C. 8:39, and N.J.A.C. 8:85-1.10, cited by Source 1 as the procedure requiring Office of Community Choice Options permission before relocating a Medicaid resident — neither captured; and any first-party statement of the New Jersey Medicaid bed-hold period, which Source 2 references only as the facility's own "bed-hold policy".
+
+SOURCE 1: New Jersey Office of the Long-Term Care Ombudsman, Notice Requirements for Transfer/Discharge of a Long-Term Care Resident (PDF) | https://www.nj.gov/ooie/div-assets/docs/Notice-Requirements-for-Transfer.pdf | source's own date: none stated on document | retrieved: 2026-08-30
+     Notice Requirements for Transfer/Discharge of a Long-Term Care Resident
+
+I.       Content
+
+Allowable Reason
+
+The facility must permit each resident to remain in the facility, and not transfer or discharge the resident from the
+facility unless:
+
+      1. The transfer or discharge is necessary for the resident's welfare and the resident's needs cannot be met in
+         the facility pursuant to 42 C.F.R. § 483.15 (a)(6);
+
+      2. The transfer or discharge is appropriate because the resident's health has improved sufficiently so the
+         resident no longer needs the services provided by the facility;
+
+      3. The safety of individuals in the facility is endangered due to the clinical or behavioral status of the
+         resident;
+
+      4. The health of individuals in the facility would otherwise be endangered;
+
+      5. The resident has failed, after reasonable and appropriate notice, to pay for (or to have paid under Medicare
+         or Medicaid) a stay at the facility. Non-payment applies if the resident does not submit the necessary
+         paperwork for third party payment or after the third party, including Medicare or Medicaid, denies the
+         claim and the resident refuses to pay for his or her stay. (For a resident who becomes eligible for Medicaid
+         after admission to a facility, the facility may charge a resident only allowable charges under Medicaid); or
+
+      6. The facility closes.
+
+Please note: A facility may not transfer or discharge a resident while an appeal is pending, when a resident
+exercises his or her right to appeal a transfer or discharge notice from the facility, unless the failure to discharge
+or transfer would endanger the health or safety of the resident or other individuals in the facility. The facility must
+also be sure to document the danger that failure to transfer or discharge would pose. 42 C.F.R. § 483.15(c)(1).
+
+All transfer and discharge notices must specifically cite one of the six above reasons. Other justifications, such as
+behavioral problems or failure to follow facility policies, are not reasons under federal law.
+
+In addition, when the facility transfers or discharges a resident under any circumstances, the facility must ensure
+that the transfer or discharge is documented in the resident’s medical record and appropriate information is
+communicated to the receiving health care institution or provider. 42 C.F.R. § 483.15(c)(2).
+
+Date
+
+The notice must include the effective date when the transfer/discharge is to be carried out and must be issued at
+least 30 days prior to that date. When the facility is closing, the notice must be issued at least 60 days prior to the
+proposed transfer/discharge date. Notice to the resident or the resident’s representative is still required in
+emergent circumstances.
+
+Destination of Resident
+
+The notice must identify the location to which the resident will be transferred or discharged. This too, must be
+specific. Vague language such as “to other facility” or “home” is not sufficient.
+Appeals Information
+
+Residents, regardless of payor source, have the right under federal law to appeal transfer/discharge notices to the
+State Medicaid agency. You must include contact information for the Fair Hearing Unit of the State Medicaid
+agency for this purpose.
+
+                        Division of Medical Assistance and Health Services
+                        Fair Hearing Unit
+                        P.O. Box 712
+                        Trenton, NJ 08625
+                        (609) 588-2655
+
+Please note: Notices should never list the LTCO as an appeals agency. The LTCO has no involvement in facility
+decisions to involuntarily remove residents, nor does the LTCO have a process for resident appeals. Again, the
+LTCO contact information should be provided for resident advocacy purposes only.
+
+Contact Information for the LTCO and Other Advocacy Organizations
+
+The notice must include the name, telephone number and address of the LTCO.
+
+                        Office of the Long-Term Care Ombudsman
+                        P.O. Box 852
+                        Trenton, NJ 08625-0852
+                        (877) 582-6995
+                        Fax: (609) 943-3479
+                        mandatoryreports@LTCO.nj.gov
+
+The LTCO should at all times be represented as an advocacy organization that exists to assist residents. Thus, any
+language suggesting that the LTCO is involved in the facility’s decision to transfer/discharge a resident or will
+investigate residents or their families on behalf of facilities is improper. For example, “We are also sending this
+notice to LTCO for their investigative purposes,” is inappropriate.
+
+If the resident has an intellectual or developmental disability or a mental illness, the notice must also include the
+mailing and email address and telephone number of the agency responsible for protection and advocacy under
+federal law. In New Jersey this agency is:
+
+                        Disability Rights New Jersey
+                        210 South Broad Street, 3rd Floor
+                        Trenton, New Jersey 08608
+                        (609) 292-9742 or (800) 922-7233 in NJ Only
+                        (609) 777-0187 (Fax)
+                        (609) 633-7106 (TTY)
+                        advocate@drnj.org
+
+Changes to the Notice
+
+If the information in the notice changes prior to effecting the transfer or discharge, the facility must update the
+recipients of the notice as soon as practicable once the updated information becomes available.
+
+II.    Delivery of Notice
+
+The notice of the transfer/discharge must be given to the resident or the resident’s representative(s). The notice
+must contain the reasons for the move in writing and in a language and manner they understand. Again, a copy of
+the notice must be sent to the LTCO when the transfer/discharge is initiated by the facility. Copies can also be
+faxed to the LTCO at 609-943-3479 or emailed to mandatoryreports@LTCO.nj.gov.
+
+There are times when facility staff do not want to “upset” the resident and gives the notice only to the resident’s
+family. This is not legally sufficient and, more importantly, does not alert the very person whose rights are
+impacted by the proposed transfer or discharge.
+
+III.       Medicaid and Medicaid-Pending Residents
+
+If the resident is receiving Medicaid, you must first contact your local Office of Community Choice Options
+(OCCO) for permission to relocate him or her. The New Jersey Department of Health’s regulations outlining that
+procedure can be found at N.J.A.C. 8:85-1.10. If OCCO grants its permission to transfer the resident, only then
+can you issue a 30-day notice to relocate the resident to another appropriate placement.
+
+IV.        Allegations of Financial Exploitation
+
+You may sometimes seek to transfer or discharge a resident because the resident or his/her legal representative is
+not paying the bill and you believe something suspect may be happening with the resident’s income or funds. If
+you suspect the resident has been or is being exploited, you are required by state law to report it independently to
+the LTCO - as a “mandatory report.” N.J.S.A. 52:27G-7.1(a). The sole fact that you are not receiving payment
+does not meet the LTCO’s definition of exploitation. See N.J.S.A. 52:27G-2(e).
+
+Summary of Notice Requirements
+
+To summarize, the notice requirements for transfer/discharge of a resident from a nursing facility must contain:
+
+          The reason for transfer or discharge;
+          The effective date;
+          The location to which the resident is transferred or discharged;
+          A statement of the resident’s appeal rights, including contact information for the appeal agency,
+           information on how to obtain an appeal form and assistance in completing the form and submitting the
+           appeal hearing request;
+          Contact information for the NJ LTCO or Disability Rights NJ and appeals information for the Division of
+           Medical Assistance and Health Services Fair Hearing Unit. (See above.)
+
+END SOURCE 1
+
+SOURCE 2: New Jersey Long-Term Care Ombudsman, Nursing Home Resident Rights | https://www.nj.gov/ooie/resident.shtml | source's own date: Last Updated: Thursday, 05/15/25 | retrieved: 2026-08-30
+New Jersey Long-Term Care Ombudsman - Nursing Home Resident Rights
+
+Back
+to top
+
+ Official Site of The State of New Jersey
+
+ Governor Mikie Sherrill • Lt. Governor Dr. Dale G. Caldwell 
+
+ Translate 
+
+ Translation Disclaimer 
+
+ close
+
+ NJ.gov
+
+ Services
+
+ Agencies
+
+ FAQsFrequently Asked Questions
+
+ Get Updates 
+
+ close
+
+ Search 
+
+ Search: 
+
+ close
+
+ New Jersey Long-Term Care Ombudsman
+
+ Navbar -->
+ NJ LTCO
+
+ LTCO 
+
+ About
+
+ History
+
+ Mission
+
+ Complaint Process
+
+ Mandatory Reporting 
+
+ Contact
+
+ Statutes and Regulations
+
+ LTC Ombudsman Bio
+
+ Programs
+
+ Ombudsman
+
+ Volunteer Advocate Program
+
+ I Choose Home NJ
+
+Regional Ethics Committees
+-->
+ Resident Experience Program
+
+ Community Engagement Program
+
+ NJ Nursing Home Residents United 
+
+ Know Your Rights
+
+ Nursing Home Bill of Rights
+
+ Assisted Living Bill of Rights
+
+ Independent Living Continuing Care Retirement Community Residents’ Rights
+
+ DOH Residential Health Care Facility Bill of Rights
+
+ DCA Residential Health Care Facility Bill of Rights
+
+ Rooming and Bording House Bill of Rights
+
+ LGBTQI and HIV+ Residents’ Bill of Rights
+
+ Resident and Family Councils
+
+ Guardianship
+
+ Nursing Home Visitation — COVID-19 
+
+ Newsroom
+
+ LTCO in the News
+
+ Press Releases
+
+ Videos
+
+ Resident Profiles
+
+ Legislation 
+
+ Publications
+
+ LTCO Publications
+
+ Reports
+
+ Resident Newsletters
+
+ Resources
+
+ Webinars
+
+ Volunteer
+
+ Become a Volunteer 
+
+ Certified Volunteer Advocate Program
+
+ World Elder Abuse Awareness Day 2024
+
+ CVA Stories
+
+ Current CVA Log
+
+ CVAP Survey
+
+ Request Our Newsletter
+
+ Get Help
+
+ 1-877-582-6995
+
+Untitled Document
+
+ -->
+
+ READ ALL ABOUT IT! The Beacon, our monthly resident newsletter 
+
+ NEW! 2026 Election Guide for Long-Term Care Residents 
+
+VIDEO! Consumer Voice 2024 Residents' Voice Challenge: In Their Own Words 
+-->
+
+ HomeNursing Home Bill of Rights
+
+ Nursing Home Resident Rights
+
+Planning and Implementing Care
+To be involved in creating your care plan—which should be developed within 7 days of admission.
+
+To designate a person you wish to have included in the planning process.
+
+To participate in establishing goals of care and type/amount/frequency/duration of care.
+
+To request meetings and to request changes to your person-centered care plan.
+
+To see, review and signoff on significant changes to your care plan.
+
+To have nursing aides and food service staff participate in developing your care plan.
+
+Medical Care
+To retain the services of a physician you choose, at your own expense or through a health care plan.
+
+To have a physician explain to you (in language that you understand) your complete medical condition, the treatment planned for your care, and the expected results of your treatment.
+
+To participate in planning your medical treatment.
+
+To refuse medication and treatment after you have been informed of the possible consequences of your decision. You may also refuse to participate in experimental research and you have the right to formulate an advance directive. An advance directive is a document that states what kinds of treatment you do or do not want to receive should you become incapacitated and/or names another person to make those decisions for you.
+
+To receive assistance in awakening, dressing, and participating in activities, as approved by your physician.
+
+To self-administer medications if the interdisciplinary team has determined this to be clinically appropriate.
+
+To have access to your personal and medical records in the form and format you request, including electronic files and readable hard copy.
+
+Freedom from Abuse and Restraints
+Freedom from physical and mental abuse, corporal punishment or involuntary seclusion.
+
+Freedom from chemical and physical restraints.
+ Restraints should never be used as punishment.
+
+Finances
+To manage your own finances or to delegate that responsibility.
+
+To receive a written statement describing the services provided by the nursing home and the related charges.
+
+To receive a quarterly written account of all your funds and property that are deposited with the facility for your use and safekeeping.
+
+To have daily access during specified, reasonable hours to the money and property you have deposited with the nursing home.
+
+Physical and Personal Environment
+To live in a safe, clean, comfortable and home-like environment.
+
+To be treated with courtesy, dignity and respect.
+
+To wear your own clothes, unless this would be unsafe or impractical. All clothes provided by the nursing home must fit you properly.
+
+To be provided with routine personal hygiene items including, but not limited to, shampoo, combs, soap, razors, shaving cream, denture and dental supplies, lotion, cotton balls, deodorant, incontinence supplies and sanitary napkins.
+
+To select your own roommate, if practicable, and to share a room with a spouse when living in same facility and both agree.
+
+To keep and use your personal property, unless this would be unsafe, impractical, or an infringement on the rights of other residents. The nursing home must take precautions to ensure that your personal possessions are secure from theft, loss and misplacement. You cannot be required to sign a waiver removing the facility’s liability for lost property.
+
+Privacy and Confidential Treatment
+To have physical privacy.
+ You must be allowed, for example, to maintain the privacy of your body during medical treatment and personal hygiene activities unless you need assistance for your own safety.
+
+To have reasonable opportunities for intimate physical and social interaction with other people.
+
+To have your medical and personal records kept strictly confidential.
+
+Communications, including Mail and Telephones 
+To receive and send your mail in unopened envelopes.
+ You also have a right to request and receive assistance in reading and writing correspondence and you should be provided with pens and paper.
+
+To have private access to a telephone.
+ You may have a private telephone in your living quarters at your own expense.
+
+To reasonable access (at your expense, if not available from facility) to email and video communication and internet research.
+
+Visits and Activities 
+To stay in or out of bed as long as you wish if approved by your doctor and to make your own schedule, including sleeping and waking hours.
+
+To meet with any visitors of your choice at the time of your choosing as long as it does not impose on the rights of other residents, and conforms with the facility’s policies.
+
+To take part in nursing home activities, and to meet with, and participate in the activities of any social, religious and community groups.
+
+To leave the nursing home during the day or, in coordination with the facility, for an overnight visit.
+
+To refuse to perform services for the nursing home.
+
+To request visits at any time by representatives of the religion of your choice and to attend outside religious services at your own expense.
+
+To participate in meals, recreation and social activities without being subjected to discrimination based on your age, race, religion, sex or nationality.
+
+To organize and participate in a Resident or Family Council that presents residents’ concerns to the administration of the facility – and to which the administration is required to respond. The facility must designate a staff person, who is approved by the Council, to provide assistance and ensure that Council concerns are responded to in a timely way. The Council can choose not to have a staff member in attendance.
+
+Food and Snacks
+To be provided with a nourishing, palatable and well-balanced diet that takes into consideration your preferences as well as the cultural, ethnic and religious make-up of the facility population.
+
+To provide input on the menu either through the Resident Council or directly.
+
+To receive at least three meals daily, at regular times comparable to normal mealtimes in the community or in accordance with your needs, preferences, requests, and plan of care.
+
+To be provided alternative meals and snacks outside of normal meal times as indicated in your care plan. Further, you cannot be charged for special foods and meals ordered by your medical provider.
+
+Discharges and Transfers 
+To refuse to be transferred to another room or to have your roommate changed. You must be notified in writing of a change in your room or roommate and you have a right to have an informal hearing with the administrator first.
+
+Transfers to another facility cannot be solely for the convenience of the facility – and LTCO must be notified.
+
+To discharge yourself from the nursing home by presenting a release signed by you, your next of kin, or your guardian.
+
+To be informed of the facility’s bed-hold policy when you are transferred to an acute care or psychiatric hospital.
+
+To be transferred or discharged only for one or more of the following reasons:
+
+In an emergency, with notification of your physician and your next of kin or guardian or if the facility closes.
+
+For medical reasons, to protect your welfare or the welfare of others or to comply with your advance directive.
+
+For nonpayment of fees, in situations not prohibited by law.
+
+Your health has improved and you no longer require nursing home care.
+
+To receive notice at least 30 days in advance when the nursing home requests your transfer or discharge, except in an emergency. That notice should provide appeal information and a copy should be sent to LTCO.
+
+Notice of Discharge/Transfer Requirement 
+
+Protection of Your Rights
+To be given a written statement of all of your rights under federal and state law.
+
+To be given a copy of and informed about the facility’s grievance policy which should include specific information on how to file a complaint orally, in writing and anonymously and should include a timeframe for the facility to review and respond.
+
+To retain and exercise all the constitutional, civil and legal rights to which you are entitled by law. The nursing home is required to encourage and help you to exercise these rights.
+
+To be provided with specific contact information on how to report abuse, neglect, exploitation or a violation of residents’ rights and how to obtain information about returning to the community. The LTCO can be contacted at 1-877-582-6995.
+
+Last Updated: Thursday, 05/15/25 
+
+ Information for Facilities
+
+ New Jersey Long-Term Care Ombudsman
+
+ About
+
+ History
+
+ Mission
+
+ Complaint Process
+
+ Mandatory Reporting 
+
+ Contact
+
+ Statutes and Regulations
+
+ LTC Ombudsman Bio
+
+ Programs
+
+ Ombudsman
+
+ Volunteer Advocate Program
+
+ I Choose Home NJ
+
+ Resident Experience Program
+
+ Social Isolation Project
+
+ Community Engagement Program
+
+ NJ Nursing Home Residents United 
+
+ Know Your Rights
+
+ Nursing Home Bill of Rights
+
+ Assisted Living Bill of Rights
+
+ Independent Living Continuing Care Retirement Community Residents’ Rights
+
+ DOH Residential Health Care Facility Bill of Rights
+
+ DCA Residential Health Care Facility Bill of Rights
+
+ Rooming and Bording House Bill of Rights
+
+ LGBTQI and HIV+ Residents' Bill of Rights
+
+ Resident and Family Councils
+
+ Guardianship
+
+ Nursing Home Visitation — COVID-19 
+
+ Newsroom
+
+ LTCO in the News
+
+ Press Releases
+
+ Videos
+
+ Resident Profiles
+
+ Legislation 
+
+ Publications
+
+ LTCO Publications
+
+ Reports
+
+ Resident Newsletters
+
+ Resources
+
+ Webinars
+
+ Volunteer
+
+ Become a Volunteer 
+
+ Volunteer Advocate Program
+
+ World Elder Abuse Awareness Day 2024
+
+ CVA Stories
+
+ Request Our Newsletter
+
+ Get Help
+
+ CMS COVID Guidance 
+
+ Statewide
+
+ Governor Mikie Sherrill
+
+ Lt. Governor Dr. Dale G. Caldwell
+
+ NJ Home
+
+ Services A to Z
+
+ Departments/Agencies
+
+ FAQsFrequently Asked Questions
+
+ Contact Us
+
+ Privacy Notice
+
+ Legal Statement & Disclaimers
+
+ Accessibility Statement
+
+ Copyright © State of New Jersey, 1996 - 
+
+ 2025
+
+ State of New Jersey
+
+New Jersey Long-Term Care Ombudsman
+
+P.O. Box 852
+
+Trenton, NJ 08625-0852
+
+1-877-582-6995 
+
+ Site Maintained by Division of Revenue and Enterprise Services
+
+ -->
+END SOURCE 2
+
+END OF PACKET — 2 sources

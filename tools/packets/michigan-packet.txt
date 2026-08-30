@@ -1,0 +1,652 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Michigan
+SLUG: michigan
+ASSEMBLED: 2026-08-30
+CAPTURE NOTES: Both sources are PDFs published by the Department of Licensing and Regulatory Affairs, retrieved by curl with a browser user-agent from michigan.gov and extracted with `pdftotext -layout`. Source 1 is a fillable form; its blank fields, checkbox glyphs, table rules and the per-page footer ("LARA-BCHS-ITD-100 (07/26/2024)", "Authority: P.A. 368 of 1978 as amended") are the form's own, and the two-column layout of the state and federal reason lists is the form's own arrangement, which the extractor renders as interleaved lines. Source 2 reproduces the statute inside the department's guidance; the indentation, the running foot ("Guidance in the Preparation of a Notice of an Involuntary Transfer or Discharge", "September 12, 2013") and the department-name substitutions inside the quoted statute are the guidance document's own.
+PENDING: The statute itself, MCL 333.21773, from the Legislature's own site. legislature.mi.gov serves an incomplete certificate chain to curl (SSL verification fails) and the session's HTTP fetch tool returned an empty body for both the section page and the Part 217 PDF, so what this packet holds is the department's reproduction of the statute inside Source 2, not the Legislature's text. Also pending: the department's Involuntary Transfer/Discharge overview page at michigan.gov/lara/bureau-list/bchs/nav-longterm-care/itd, which returned the site's 404 page; a published contact for the Michigan Long Term Care Ombudsman from the program's own site — mltcop.org publishes a county-by-county picker and no statewide number on the page captured, so the ombudsman contact in this packet is the one the department prints on Source 1; and any first-party statement of a Michigan Medicaid bed-hold period, which neither source states.
+
+SOURCE 1: Michigan Department of Licensing and Regulatory Affairs, Bureau of Community and Health Systems — Notice of Involuntary Transfer or Discharge and Facility-Initiated Discharge for Nursing Homes, LARA-BCHS-ITD-100 (PDF) | https://www.michigan.gov/lara/-/media/Project/Websites/lara/bchs/Folder2/LARA-BCHS-ITD-100-07262024.pdf | source's own date: LARA-BCHS-ITD-100 (07/26/2024) | retrieved: 2026-08-30
+                                                     Licensing and Regulatory Affairs
+                                                 Bureau of Community and Health Systems
+                                            NOTICE OF INVOLUNTARY TRANSFER OR DISCHARGE AND
+                                              FACILITY-INTIATED DISCHARGE FOR NURSING HOMES
+
+
+As defined in 42 CFR 483.15(c)(1), this form is to be used when there is a discharge of a resident
+from the nursing home to any location with the expectation that the resident will not return to the
+nursing home.
+
+The Notice form will be accepted by the department only if all informational boxes have been
+completed, including a proposed transfer or discharge location, date, and specific information
+about the reasons for transfer or discharge.
+
+                           Date of Notice
+                           Date Notice is Updated – If the destination changes and this change was
+                           initiated by the facility, an updated notice with the new destination must be
+                           issued. This type of change restarts the 30-day timeline for transfer or
+                           discharge from the federal perspective.
+ Resident Name
+ Does the resident have a guardian or resident representative?                    Yes          No
+
+ If yes, complete the information below and this serves as confirmation that the guardian or
+ resident representative was served with a copy of this notice.
+
+ Guardian/Representative Name
+ Address
+ City, State, Zip
+ Email
+ Phone
+
+
+ Nursing Home Name*
+ Administrator                      Name
+                                    Email
+                                    Phone
+ Street Address
+ City, State, Zip
+* This process does not apply to hospital long-term care units for state statutory purposes.
+
+
+LARA-BCHS-ITD-100 (07/26/2024)
+Authority: P.A. 368 of 1978 as amended
+Page 1 of 7
+This is to provide notice that the above resident will be transferred or discharged for the
+following reason(s):
+
+ Reason(s) for transfer or discharge, both a state and federal must be selected.
+ State Requirements, MCL 333.21773(1) CMS Requirements, 42 CFR 483.15(c)(1)
+
+       Medical reasons                           Resident’s needs cannot be met in the facility
+       Welfare of the resident                   Resident no longer needs services provided by
+       Welfare of other residents and staff   the facility
+       Nonpayment of resident stay               Safety of other individuals in the facility is
+                                              endangered due to clinical or behavioral status of
+                                              resident
+                                                 Health of other individuals in the facility is
+                                              endangered
+                                                 Nonpayment of resident stay
+                                                 Facility is ceasing to operate
+
+ Supply specific information on the reasons identified above:
+
+
+
+
+This is to ensure compliance with MCL 333.21773(6).
+
+ Has the resident had a recent level of care determination that negatively         Yes      No
+ affects his or her ability to receive Medicaid covered services within the
+ nursing home?
+
+ If yes, has a final determination been issued by the Michigan Department          Yes      No
+ of Health and Human Services (MDHHS)?
+
+ If no, an involuntary transfer or discharge cannot be issued to a resident
+ until the final determination has been issued by MDHHS.
+
+
+
+
+LARA-BCHS-ITD-100 (07/26/2024)
+Authority: P.A. 368 of 1978 as amended
+Page 2 of 7
+This is to identify the destination and date for the proposed transfer or discharge.
+
+The single location identified below is appropriate to meet the medical and psychosocial needs of
+the resident and the proposed date is at least 30 days from the date of the notice unless compliant
+with MCL 333.21773(2)(a), (b), or (c) and 42 CFR 483.15(c).
+
+ Transfer or                 Destination Type         Nursing Home        Private Residence
+ Discharge                                            Assisted Living     Other:
+ Destination                 Facility Name
+                             Address
+                             City, State, Zip
+ Proposed Date of Transfer or Discharge
+
+
+ Right to An Appeal Hearing
+
+ The resident has a right to appeal the nursing home's decision for transfer or discharge.
+
+ If the resident thinks that they should not have to leave, a resident may file a request for a
+ hearing with the Department of Licensing and Regulatory Affairs (LARA).
+
+ If the resident, guardian, or resident representative requests a hearing, it will be held at least
+ 7 days after the request, and the resident will not be transferred during that time.
+
+ A form to appeal the nursing home's decision and to request a hearing is attached as page 5
+ of this notice. The nursing home shall provide a postage paid envelope addressed or
+ assistance with electronic submission of the form to LARA.
+
+ The appeal request must be received by LARA within 10 days of the date of notice. The
+ appeal request form can be submitted in the following methods:
+
+ Mail                          Michigan Department of Licensing and Regulatory Affairs
+                               Bureau of Community and Health Systems
+                               P.O. Box 30664
+                               Lansing, MI 48909
+
+ Email                         LARA-BCHS-InvoluntaryTransfer@michigan.gov
+ Fax                           517-763-0213
+
+
+
+
+LARA-BCHS-ITD-100 (07/26/2024)
+Authority: P.A. 368 of 1978 as amended
+Page 3 of 7
+ Transfer or Discharge Timeline, Discharge Plan, and Waiver of Timeline
+
+ If LARA determines that a transfer or discharge is authorized, the resident shall not be
+ required to transfer or discharge from the facility before the 34th day following receipt of the
+ notice or the 10th day following appeal hearing decision, whichever is later.
+
+ Prior to any involuntary transfer or discharge, a transfer or discharge plan must be prepared
+ by the nursing home and approved by LARA.
+
+ The timeline for transfer or discharge may be waived upon submission of a request by the
+ nursing home, and approved by LARA, in accordance with MCL 333.21773(2)(a), (b), or (c)
+ and 42 CFR 483.15(c).
+
+
+ For questions about the process or assistance with the request for an appeal hearing, please
+ contact LARA as follows:
+
+ Mail                          Michigan Department of Licensing and Regulatory Affairs
+                               Bureau of Community and Health Systems
+                               P.O. Box 30664, Lansing, MI 48909
+
+ Email                         LARA-BCHS-InvoluntaryTransfer@michigan.gov
+ Phone Number                  877-458-2757
+
+ You may contact the following organizations for assistance with this process:
+
+ Michigan Long Term Care Ombudsman                        Disability Rights Michigan
+ 15851 South US 27, Suite 73                              4095 Legacy Parkway, Suite 500
+ Lansing, MI 48912                                        Lansing, MI 48911-4263
+ Email: MLTCOP@meji.org                                   Phone: 1-800-288-5923 or (517) 487-1755
+ Toll Free: 1-866-485-9393
+
+
+ Signature of Nursing Home Administrator or Designee
+ X
+ Date of Notice
+ A copy of this notice must be emailed to:
+          LARA at LARA-BCHS-InvoluntaryTransfer@michigan.gov
+          Michigan Long Term Care Ombudsman at MLTCOP@meji.org.
+
+
+The Michigan Department of Licensing & Regulatory Affairs will not discriminate against any individual or
+group because of race, sex, religion, age, national origin, color, marital status, disability, or political beliefs.
+You may make your needs known to this Agency under the Americans with Disabilities Act if you need
+assistance with reading, writing, hearing, etc.
+LARA-BCHS-ITD-100 (07/26/2024)
+Authority: P.A. 368 of 1978 as amended
+Page 4 of 7
+                                                        Licensing and Regulatory Affairs
+                                                    Bureau of Community and Health Systems
+
+                                                 APPEAL REQUEST FOR NOTICE OF AN INVOLUNTARY
+                                                  TRANSFER OR DISCHARGE AND FACILITY-INTIATED
+                                                        DISCHARGE FOR NURSING HOMES
+
+
+I hereby appeal and request a hearing due to a Notice of Involuntary Transfer or Discharge and
+Facility-Initiated Discharge from this nursing home or a distinct part of the nursing home.
+
+ Date of Notice
+ Resident Name
+ Person Requesting Appeal                Name
+
+      Resident                           Address
+      Guardian                           City/Zip
+      Resident representative
+      Other:                             Email
+                                         Phone
+
+
+ Nursing Home Name
+ Street Address
+ City, State, Zip
+
+
+ Signature of Person Requesting Appeal
+
+ X
+ Date of Appeal Request
+
+The appeal request must be received by LARA within 10 days of the date of notice.
+
+The appeal request form can be submitted in the following methods:
+
+ Mail                          Michigan Department of Licensing and Regulatory Affairs
+                               Bureau of Community and Health Systems
+                               P.O. Box 30664
+                               Lansing, MI 48909
+
+ Email                         LARA-BCHS-InvoluntaryTransfer@michigan.gov
+ Fax                           517-763-0213
+
+LARA-BCHS-ITD-100 (07/26/2024)
+Authority: P.A. 368 of 1978 as amended
+Page 5 of 7
+                                         HEARING GUIDANCE
+APPEAL HEARING INFORMATION
+
+An appeal hearing will be conducted by the Michigan Office of Administrative Hearings and Rules
+(MOAHR) in accordance with the Michigan Administrative Code, R 792.10101-R 792.11289 and
+Administrative Procedures Act (APA), MCL 24.201 et seq. The Michigan Rules of Evidence and
+the Michigan Court Rules may be applicable.
+
+A person is expected to conduct themselves with courtesy towards other parties, witnesses, and
+the administrative law judge (ALJ). This includes timely attendance and silencing cell phones.
+
+For additional information, see the MOAHR webpage on Frequently Asked Questions: LARA -
+Administrative Hearings Frequently Asked Questions (michigan.gov).
+
+REPRESENTATION
+
+The resident may speak for themself and may be represented by an attorney, a relative, or another
+person of choice by the resident. A nursing facility may be represented by an attorney or an
+authorized representative. MOAHR does not recommend or appoint attorneys.
+
+WITNESSES
+
+A person may present witnesses to testify under oath at a hearing, subject to cross-examination by
+the opposing person and/or questions by the ALJ.
+
+DOCUMENTS OR EXHIBITS
+
+A person may present documents in accordance with R 792.10126. A person must offer any
+proposed exhibits at hearing with a copy for other parties. Proposed exhibits must be filed and
+exchanged with other parties a minimum of 3 business days before hearing, unless the ALJ orders
+a different timeframe. Proposed exhibits must be marked by number or letter showing Petitioner or
+Respondent such as “P-1” or “R-1”, bookmarked or in separate .pdf files, include a cover listing
+with case docket number, and submitted in electronic format to MOAHR-GA@michigan.gov.
+MOAHR is not responsible for photocopying.
+
+Proposed video evidence must be in a format supported by Windows Media Player and complete a
+security scan before MOAHR can accept it. E-mail MOAHR-IT@michigan.gov in advance for
+instructions. Overnight Carrier Address (UPS, FedEx, DHL Deliveries): MOAHR-GA, c/o
+Department of Licensing and Regulatory Affairs, Mail Services, 2407 N. Grand River Avenue,
+Lansing, MI 48906.
+
+MOTIONS OR REQUESTS
+
+A motion is a request filed by a person that certain action be taken in the case. Other than during
+prehearing or hearing, all motions, pleadings, or requests must be submitted in writing to the ALJ
+at the address provided below with a copy to the other parties, indicating the case docket number.
+A person has no later than 3 business days prior to hearing to respond to the motion in writing,
+unless the ALJ sets a different due date for response.
+LARA-BCHS-ITD-100 (07/26/2024)
+Authority: P.A. 368 of 1978 as amended
+Page 6 of 7
+          Adjournment or Withdrawal: A motion to adjourn the hearing date or convert it to a
+          prehearing conference must be filed in advance and state good cause for the request. If the
+          nursing facility no longer wishes to proceed with the hearing, based on settlement or other
+          reason, it may file a motion to withdraw the Notice of Involuntary Transfer or Discharge.
+
+          Equipment or Interpreter: A person may request that audio or visual equipment be made
+          available at the time of the hearing for presentation of evidence. Any request for non-
+          English language, sign-language, or other translator/interpreter service must be submitted in
+          writing to MOAHR after receipt of the Notice of Hearing.
+
+FAILURE TO APPEAR
+
+A person’s failure to timely appear or participate in a hearing may result in a default order against
+the person and/or dismissal of the case. Within 7 days after service of a default order, a person
+may file a written motion requesting that the order be vacated for good cause under Mich Admin
+Code, R 792.10134.
+
+REASONABLE ACCOMMODATION
+
+A person requiring reasonable accommodation for participation in a hearing, including accessible
+documentation such as braille, large print, electronic or audio reader, must contact MOAHR at
+(517) 335-2484 or MOAHR-GA@michigan.gov and complete the Disability Accommodation
+Request form after receipt of the Notice of Hearing:
+
+https://www.michigan.gov/documents/lara/Disability_Accommodation_form_for_MOAHR_Internet_
+5-2.web_654057_7.pdf
+
+PRIVACY OF INFORMATION
+
+In order to conduct a comprehensive and fair hearing, it may be necessary to disclose a person’s
+private or confidential information, such as health or financial information, to the ALJ and other
+parties and their attorneys or representatives. However, the following personal identifying
+information (PII) must not be included in any public document or attachment filed with MOAHR
+except as provided by MCR 1.109 or specifically authorized by the assigned ALJ:
+
+  (i)       Date of birth,
+  (ii)      Social security number or national identification number,
+  (iii)     Driver’s license number or state-issued personal identification card number,
+  (iv)      Passport number, and
+  (v)       Financial account numbers.
+
+If a person considers disclosure of PII on a document necessary to the case, the person may file a
+motion for special protection of the document(s) or other accommodation in the process.
+
+
+
+
+LARA-BCHS-ITD-100 (07/26/2024)
+Authority: P.A. 368 of 1978 as amended
+Page 7 of 7
+
+END SOURCE 1
+
+SOURCE 2: Michigan Department of Licensing and Regulatory Affairs — Guidance in the Preparation of a Notice of an Involuntary Transfer or Discharge (PDF) | https://www.michigan.gov/-/media/Project/Websites/lara/healthsystemslicensing/Folder9/bhs_GUIDANCE_for_Inv_Transfer.pdf | source's own date: September 12, 2013 | retrieved: 2026-08-30
+                     GUIDANCE IN THE PREPARATION OF A
+             NOTICE OF AN INVOLUNTARY TRANSFER OR DISCHARGE
+
+What Constitutes a Transfer?
+
+The term Transfer means the movement of a resident (patient) from one licensed facility
+to another or in certain situations, movement from one certified distinct part of a facility
+to another certified distinct part of the same facility.
+
+What Constitutes a Discharge?
+
+The term Discharge means the movement of a resident out of a licensed facility
+regardless of the resident’s destination.
+
+What laws pertain to involuntary transfer or discharge of residents from a nursing
+home?
+
+A resident has the right to stay in a licensed facility or the distinct part of the facility
+except under certain situations specified below. Even in those situations, residents
+have the right to challenge the facility’s proposal for a transfer or discharge through
+processes spelled out in state and federal law.
+
+The facility must give the resident at least a 30-day written notice (Section 21773 of
+P.A. 137 of 2001) before a resident is involuntarily transferred or discharged. The
+notice must state the intention to transfer or discharge a resident and notify the resident
+that he/she has the right to appeal that action. In addition, the facility must inform and
+prepare a resident for transfer or discharge as required by Part 217 of the Public Health
+Code, Sections MCL 333.21773-MCL 333.21776, as amended. An involuntary transfer
+or discharge plan must be completed and approved by the Department before
+transfer/discharge. The plan may be submitted for Department approval with a copy of
+the Notice of an Involuntary Transfer or Discharge.
+
+Section 21773, P. A. 137 of 2001:
+
+
+  Sec. 21773.(1) A nursing home shall not involuntarily transfer or discharge a patient
+  except for one or more of the following purposes:
+
+       (a)    Medical reasons.
+
+       (b)    The patient's welfare.
+
+       (c)    The welfare of other patients or nursing home employees.
+
+       (d)    Nonpayment for the patient's stay, except as prohibited by title XIX of
+              the Social Security Act, Chapter 531, 49 Stat. 620, 42 U.S.C. 1396 to
+              1396r-6 and 1396r-8 to 1396v.
+Guidance in the Preparation of a Notice of an Involuntary Transfer or Discharge
+September 12, 2013
+Page 2 of 7
+
+  (2)   A licensed nursing home shall provide written notice at least 30 days before a
+        patient is involuntarily transferred or discharged. The 30-day requirement of
+        this subsection does not apply in any of the following instances:
+
+        (a)   If an emergency transfer or discharge is mandated by the patient's
+              health care needs and is in accord with the written orders and medical
+              justification of the attending physician.
+
+        (b)   If the transfer or discharge is mandated by the physical safety of other
+              patients and nursing home employees as documented in the clinical
+              record.
+
+        (c)   If the transfer or discharge is subsequently agreed to by the patient or
+              the patient's legal guardian, and notification is given to the next of kin
+              and the person or agency responsible for the patient's placement,
+              maintenance, and care in the nursing home.
+
+  (3)   The notice required by subsection (2) shall be on a form prescribed by the
+        Michigan Department of Licensing and Regulatory Affairs and shall contain all
+        of the following:
+
+        (a)   The stated reason for the proposed transfer.
+
+        (b)   The effective date of the proposed transfer.
+
+        (c)   A statement in not less than 12-point type that reads: "You have a right
+              to appeal the nursing home's decision to transfer you. If you think you
+              should not have to leave this facility, you may file a request for a hearing
+              with the Michigan Department of Licensing and Regulatory Affairs within
+              10 days after receiving this notice. If you request a hearing, it will be
+              held at least seven (7) days after your request, and you will not be
+              transferred during that time. If you lose the hearing, you will not be
+              transferred until at least 30 days after you received the original notice of
+              the discharge or transfer.” A form to appeal the nursing home's decision
+              and to request a hearing is attached. If you have any questions, call the
+              Michigan Department of Licensing and Regulatory Affairs at the number
+              listed below.
+
+        (d)   A hearing request form, together with a postage paid, preaddressed
+              envelope to the Michigan Department of Licensing and Regulatory
+              Affairs.
+
+        (e)   The name, address, and telephone number of the responsible official in
+              the Michigan Department of Licensing and Regulatory Affairs.
+
+        (f)   The location to which the resident is transferred or discharged.
+Guidance in the Preparation of a Notice of an Involuntary Transfer or Discharge
+September 12, 2013
+Page 3 of 7
+
+        (g)   The name, address and telephone number of the State long term care
+              ombudsman.
+
+  (4)   A request for a hearing made under subsection (3) shall stay a transfer
+        pending a hearing or appeal decision.
+
+  (5)   A copy of the notice required by subsection (3) shall be placed in the patient's
+        clinical record and a copy shall be transmitted to the Michigan Department of
+        Licensing and Regulatory Affairs, the patient, the patient's next of kin, patient's
+        representative, or legal guardian, and the person or agency responsible for
+        the patient's placement, maintenance, and care in the nursing home.
+
+  (6)   If the basis for an involuntary transfer or discharge is the result of a negative
+        action by the Michigan Department of Licensing and Regulatory Affairs with
+        respect to a Medicaid client and a hearing request is filed with that
+        Department, the 21-day written notice period of subsection (2) does not begin
+        until a final decision in the matter is rendered by the Michigan Department of
+        Licensing and Regulatory Affairs or a court of competent jurisdiction and
+        notice of that final decision is received by the patient and the nursing home.
+
+  (7)   If nonpayment is the basis for involuntary transfer or discharge, the patient
+        may redeem up to the date that the discharge or transfer is to be made and
+        then may remain in the nursing home.
+
+  (8)   The nursing home administrator or other appropriate nursing home employee
+        designated by the nursing home administrator shall discuss an involuntary
+        transfer or discharge with the patient, the patient's next of kin or legal
+        guardian, and person or agency responsible for the patient's placement,
+        maintenance, and care in the nursing home. The discussion shall include an
+        explanation of the reason for the involuntary transfer or discharge. The
+        content of the discussion and explanation shall be summarized in writing and
+        shall include the names of the individuals involved in the discussions and
+        made a part of the patient's clinical record.
+
+  (9)   The nursing home shall provide the patient with counseling services before
+        the involuntary transfer or discharge and the Department shall assure that
+        counseling services are available after the involuntary transfer or discharge to
+        minimize the possible adverse effect of the involuntary transfer or discharge.
+
+  (10) If a nursing home voluntarily withdraws from participation in the State plan for
+       Medicaid funding, but continues to provide services, the nursing home shall
+       not, except as provided in subsection (1), involuntarily transfer or discharge a
+       patient, whether or not the patient is eligible for Medicaid benefits, who
+       resided in the nursing home on the day before the effective date of the nursing
+       home's withdrawal from participation. The prohibition against transfer or
+Guidance in the Preparation of a Notice of an Involuntary Transfer or Discharge
+September 12, 2013
+Page 4 of 7
+
+        discharge imposed by this subsection continues unless the patient falls within
+        one (1) or more of the exceptions described in subsection (1).
+
+  (11) If an individual becomes a resident of a nursing home after the date the
+       nursing home withdraws from participation in the state plan for Medicaid
+       funding, the nursing home, on or before the date the individual signs a
+       contract with the nursing home, shall provide to the patient oral and written
+       notice of both of the following:
+
+        (a)   That the nursing home is not participating in the state plan for Medicaid
+              funding.
+
+        (b)   That the facility may involuntarily transfer or discharge the patient for
+              nonpayment under subsection (1)(d) even if the patient is eligible for
+              Medicaid benefits.
+
+Section 21776:
+
+   A facility, with the approval of the Department, shall develop a plan to effectuate
+    the orderly and safe transfer or discharge of a resident.
+
+   The resident and resident’s family or representative shall be consulted in
+    choosing another facility.
+
+   The resident shall receive counseling services before the move to minimize the
+    adverse effects of transfer trauma.
+
+   The Department shall assure that counseling is available if the resident requires
+    counseling after transfer or discharge.
+
+Administrative Rule R 325.20116:
+
+   The facility and the Department shall assure that counseling mandated in
+    Section 21773(9) of the Public Health Code is provided.
+
+   The Department shall monitor counseling of residents who are involuntarily
+    transferred or discharged utilizing appropriate members of the Department’s staff.
+    These staff, as part of the monitoring activity, shall be responsible for approving a
+    facility plan to effectuate the orderly and safe transfer or discharge of a resident.
+
+   It shall be the objective of a transfer or discharge plan to assure all of the
+    following:
+
+       The proposed new placement is appropriate for the resident’s needs and
+        considers the recommendations of the attending physician.
+Guidance in the Preparation of a Notice of an Involuntary Transfer or Discharge
+September 12, 2013
+Page 5 of 7
+
+       The optimum placement is made, insofar as possible, the first time to avoid the
+        necessity for additional transfers at a later date.
+
+       The resident or the next of kin, guardian, designated representative, agency, or
+        organization responsible for placing and maintaining the resident in a facility is
+        involved in the choice of the facility to which the resident is to be transferred.
+
+   That at least one counseling session is provided for each involuntarily
+    transferred or discharged resident.
+
+   The resident shall have the opportunity to visit the proposed new placement at
+    least once. The visit to the new site may only be waived if the attending physician
+    documents in the resident’s clinical record that such a visit are medically
+    contraindicated or if the resident, guardian, or resident representative determines,
+    in writing, that the visit is not in the resident’s best interest. In such instances, the
+    resident shall receive appropriate information, such as floor plans, brochures,
+    pictures, and other documents, to familiarize the resident with the new facility.
+
+   A family member or other appropriate person is available to accompany the
+    resident on the involuntary transfer or discharge from the home to a new
+    placement, unless the resident requests otherwise.
+
+   Counseling in the new placement is provided following transfer or discharge and
+    that counseling occurs within 72 hours following the transfer or discharge.
+
+A resident may not be transferred or discharged until the requirements of Section
+21773, 21776 and Rule 325.20116 are met and the transfer plan is completed and
+approved by the Department.
+
+The attached sample, Facility Involuntary Transfer/Discharge Plan Checklist
+(BHCS-LTC-512), or equivalent may be used to document the transfer plan. The plan
+may be submitted to the Department with the Notice of Involuntary Transfer or
+Discharge carbon copy. Questions regarding this procedure may be submitted in
+writing to the address indicated or by calling the Manager of the Complaint Investigation
+Unit at (517) 241-4712. Submit documentation of the plan to:
+
+        Michigan Department of Licensing and Regulatory Affairs
+        Bureau of Health Care Services
+        Long Term Care Division
+        P.O. Box 30664
+        Lansing, MI 48909
+
+Please notify the Department if the transfer/discharge is canceled or if the resident
+voluntarily agrees to a discharge or transfer to another facility.
+Guidance in the Preparation of a Notice of an Involuntary Transfer or Discharge
+September 12, 2013
+Page 6 of 7
+
+Under What Circumstances May a Facility Involuntarily Transfer or Discharge a
+Resident?
+
+NOTE: The requirements under state and federal regulations which are applicable to
+most circumstances are summarized below.
+
+A facility may transfer or discharge a resident in the following events:
+
+  a. Necessary for the resident’s welfare, when the facility cannot meet the resident’s
+     (non-urgent) needs.
+
+  b. Resident’s health has improved to no longer require the facility’s services.
+
+  c. The physical safety of the resident or other residents and facility employees is
+     endangered.
+
+  d. The health of any individuals in the facility, including this resident, would otherwise
+     be endangered.
+
+  e. Nonpayment:
+
+        NOTE: a transfer may not be initiated for nonpayment when:
+
+         A resident loses his/her Medicare or other insurance coverage unless that
+          third party payment has stopped, the resident has been billed, and the
+          resident has failed to make timely payment.
+
+         If a resident has submitted appropriate paperwork to a third party payer and
+          is waiting for a response to the claim.
+
+         A nursing home voluntarily withdraws from participation in the state plan for
+          Medicaid funding, whether or not the resident is eligible for Medicaid
+          benefits, and the resident resided in the nursing home on the day before the
+          effective date of the nursing home's withdrawal from participation.
+
+         If an individual becomes a patient of a nursing home after the date the
+          nursing home withdraws from participation in the state plan for Medicaid
+          funding, the nursing home, on or before the date the individual signs a
+          contract with the nursing home, shall provide to the patient oral and written
+          notice of both of the following:
+
+            That the nursing home is not participating in the state plan for Medicaid
+             funding.
+Guidance in the Preparation of a Notice of an Involuntary Transfer or Discharge
+September 12, 2013
+Page 7 of 7
+
+            That the facility may involuntarily transfer or discharge the patient for
+             nonpayment under subsection (1)(d) even if the patient is eligible for
+             Medicaid benefits.
+
+  f. The facility ceases to operate.
+
+  g. An emergency transfer or discharge is mandated by the patient’s health (urgent)
+     needs.
+
+  h. The transfer or discharge is agreed to by the resident or resident’s legal guardian.
+
+See for reference:
+
+Part 217 of the Public Health Code, Section MCL 333.21773
+Administrative Rule 325.20116
+42 CFR 483.12
+Public Act 137 of 2001
+
+END SOURCE 2
+
+END OF PACKET — 2 sources
