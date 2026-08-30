@@ -35,24 +35,26 @@ Write through Desktop Commander or the Read/Write/Edit file tools. Python
 tools in `tools/` are safe to *run* from a sandbox mount (they read and
 write whole files); avoid sandbox-side in-place edits of tracked files.
 
-## Not yet provisioned (as of 2026-08-29 scaffold)
+## Provisioning status (updated 2026-08-30)
 
-- roomandrecourse.com: unregistered at scaffold time; register before any
-  public naming. No Cloudflare worker exists yet; create per the sibling
-  pattern (Workers static assets, domain bound in the dashboard outside
-  wrangler.toml, `workers_dev` false) when the first pages are ready.
-- `tools/` is copied from licensure-mobility as a starting point and NOT
-  yet adapted: check-fidelity.py's allowlist must gain roomandrecourse.com,
-  build-status.py's full-page marker must match this charter's heading
-  ("Notice periods and deadlines, as stated in the sources"), and the
-  docket-row logic in build-status.py / render-state.py must match the
-  five-row docket in CHARTER.md. Adapt before first use; do not trust a
-  passing run from unadapted tools.
-- No build/review skills exist yet (sibling pattern: sped-state-page /
-  lm-jurisdiction-page and their review twins). Create once the exemplar
-  pages have settled the format.
-- Anchoring (tools/anchor.py, anchors/) starts after the first real
-  evidence exists, per the Gathered Work scheme.
+- Domain: roomandrecourse.com registered by the owner (2026-08-30 session
+  handoff). Cloudflare worker: config scaffolded at site/wrangler.toml
+  (worker name quiet-marram-7t2d, workers_dev false); the worker itself is
+  created by the first `npx wrangler deploy`, which must wait for the site
+  shell (index.html, assets/, about.html, legal/, 404.html — not yet
+  built) and for the owner to ask. Domain binding happens in the dashboard
+  outside wrangler.toml, per the sibling pattern.
+- `tools/` adapted 2026-08-30: check-fidelity.py allowlist carries
+  roomandrecourse.com (plus two advisory additions), build-status.py uses
+  the "Notice periods and deadlines, as stated in the sources" marker and
+  tracks the federal layer, render-state.py renders the Room & Recourse
+  shell with federal.md → site/federal.html special-cased. See
+  tools/README.md.
+- Build/review skills exist: rr-state-page and rr-state-review (account
+  skills, saved 2026-08-30).
+- Anchoring (tools/anchor.py, anchors/) not yet initialized; start it per
+  the Gathered Work scheme now that real evidence exists, when the owner
+  says so.
 
 ## Deploy only when asked, and only on a passing check
 

@@ -1,0 +1,31 @@
+# transfer-safeguards site — Workers static assets deployment
+# Modeled on the Board & Border config (itself modeled on Rules & Record).
+# The worker name is nondescript on purpose, per the sibling convention.
+# The product name is Room & Recourse and the domain is roomandrecourse.com,
+# to be bound in the Cloudflare dashboard outside this file once the worker
+# exists, per the sibling pattern (proxied www CNAME with a 301 to the apex,
+# and no-mail hardening: null MX, SPF "v=spf1 -all", DMARC p=reject — mail
+# is hello@fieldassembly.net).
+#
+# Deploy (host side, via Desktop Commander — the sandbox has no wrangler
+# session), from this directory, only when the owner asks and only on a
+# passing check: bash predeploy-check.sh && npx wrangler deploy
+#
+# workers_dev is false from the start so the pages never publish at a
+# second address. Expect deploys to end with "No targets deployed" once the
+# custom domain is bound — that is a successful deploy, not a failure.
+#
+# First-deploy note: the site shell (index.html, assets/, about.html,
+# legal/, 404.html) is not yet built; predeploy-check.sh will fail until it
+# is. Do not deploy a shell-less site.
+
+name = "quiet-marram-7t2d"
+compatibility_date = "2026-08-30"
+
+workers_dev = false
+preview_urls = false
+
+[assets]
+directory = "."
+html_handling = "auto-trailing-slash"
+not_found_handling = "404-page"

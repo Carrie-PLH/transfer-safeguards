@@ -1,0 +1,6 @@
+wrangler.toml
+.assetsignore
+.wrangler
+predeploy-check.sh
+.DS_Store
+**/.DS_Store
