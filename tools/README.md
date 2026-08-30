@@ -9,6 +9,17 @@ packet-set.py, check-all.py, pass-health.py, anchor.py, and
 build-state-picker.py run unchanged from the sibling. Anchoring begins once
 real evidence exists.
 
+trace-lockup.py is local to this repository (added 2026-08-30). It traces the
+owner's lockup art, site/assets/roomandrecourse.png, into
+site/assets/roomandrecourse-wordmark.svg as filled outlines in the art's own
+pixel coordinates, recolouring each shape from the site's tokens so the mark
+reads on the dark ground. Outlines rather than live text, so the lockup depends
+on no installed font. It needs potracer, a pure-Python port of potrace, which is
+required only to retrace and never to serve the site; install it into a
+throwaway environment as the script's docstring shows. The source .png is
+excluded from deploy by .assetsignore but is committed, so the mark can always
+be retraced.
+
 make-icons.py is local to this repository (added 2026-08-30). It redraws the
 site's raster icons — favicon-16.png, favicon-32.png, favicon.ico,
 apple-touch-icon.png, icon-512.png — from the door glyph, in the same

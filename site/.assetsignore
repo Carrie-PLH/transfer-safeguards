@@ -4,3 +4,4 @@ wrangler.toml
 predeploy-check.sh
 .DS_Store
 **/.DS_Store
+assets/roomandrecourse.png

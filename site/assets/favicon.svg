@@ -1,17 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
   <title id="title">Room &amp; Recourse</title>
   <desc id="desc">An open door on a dark ground.</desc>
-  <!-- The door glyph from assets/roomandrecourse-wordmark.svg, alone, on the
-       site ground #171013. Drawn in the wordmark's source coordinates and scaled
-       into the 64px box; the stroke is widened from 9.5 to 20 in those source
-       units (3.4px here) so the glyph survives a 16px rendering.
-       tools/make-icons.py redraws this same geometry for the PNG and ICO icons. -->
+  <!-- The door from assets/roomandrecourse-wordmark.svg, carved down for icon
+       sizes. The lockup draws the door as linework; three light strokes 16px
+       wide turn to mush, so here the swung panel is filled solid, the knob is
+       knocked out of it in the ground colour, and only the doorway frame stays
+       a stroke, in the dimmer rose so the panel carries the shape. The geometry
+       is still the lockup's own coordinates, scaled into the 64px box.
+       tools/make-icons.py redraws exactly this for the PNG and ICO icons. -->
   <rect width="64" height="64" fill="#171013"/>
-  <g transform="translate(-2.08 -45.47) scale(0.17082)"
-     fill="none" stroke="#e0aab5" stroke-width="20" stroke-linecap="square" stroke-linejoin="miter">
-    <path d="M184.5 313V594"/>
-    <path d="M184.5 349.5H117.5V565"/>
-    <path d="M184.5 315L281 349V559L184.5 593"/>
-    <circle cx="252" cy="456" r="14" fill="#e0aab5" stroke="none"/>
+  <g transform="translate(-3.47 -48.81) scale(0.178)">
+    <path d="M184.5 349.5H117.5V565" fill="none" stroke="#a26f7c" stroke-width="24" stroke-linecap="square"/>
+    <path d="M184.5 315L281 349V559L184.5 593Z" fill="#e0aab5"/>
+    <circle cx="252" cy="456" r="16" fill="#171013"/>
   </g>
 </svg>
