@@ -1,0 +1,185 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Massachusetts
+SLUG: massachusetts
+ASSEMBLED: 2026-08-30
+SUPPLEMENT TO: massachusetts-packet.txt — this packet holds the regulation text that the first Massachusetts packet recorded as capture-blocked.
+CAPTURE NOTES: mass.gov returns HTTP 403 to curl for both its regulation pages and its document downloads, so this capture was taken through the session's HTTP fetch tool and copied to file without retyping. The regulation page at mass.gov/regulations/130-CMR-456000-long-term-care-services carries no rule text of its own — only metadata, a table of contents for 130 CMR, and download links — so the capture is the PDF the Commonwealth posts there, rendered to text by the fetch tool and sliced mechanically from the heading "456.701: Notice Requirements for Transfers and Discharges Initiated by a Nursing Facility" (its occurrence in the body, not the one in the document's own table of contents) to the end of 456.705(C). The Nursing Facility Manual's page furniture — the running block reading "Commonwealth of Massachusetts / MassHealth / Provider Manual Series", the subchapter title, the page number, "Transmittal Letter NF-64" and the date "09/08/25" — falls inside that range and is left in place as the document prints it.
+PROVENANCE NOTE FROM THE PUBLISHER: the mass.gov page carrying this PDF describes its own copy as unofficial and names the Massachusetts Register as the official version; that page is captured here as Source 2 so the statement stands in the publisher's own words rather than in this header. This packet holds the Commonwealth's own posted copy, described as the Commonwealth describes it; the Register's version is not captured.
+PENDING: 130 CMR 610.000, MassHealth's Fair Hearing Rules, which 130 CMR 456.703(A) makes the governing procedure for these appeals and which 456.701(D) and 456.705(B) cite for notice requirements and expedited appeals — not captured. Also pending: the address a hearing request is sent to. 456.701(C)(5)(a) requires the facility's notice to carry "the address to send a request for a hearing" and the regulation does not itself state one; the Board of Hearings addresses in the first Massachusetts packet come from MassHealth's general appeals page, which gives two different ones. Also pending: any first-party statement of a MassHealth bed-hold period.
+
+SOURCE 1: 130 CMR 456.701 through 456.705 (transfers and discharges initiated by a nursing facility, notice time frames, fair hearing time frames, stay pending appeal, scheduling) — excerpt from the Nursing Facility Manual PDF the Commonwealth posts as 130 CMR 456.000 | https://www.mass.gov/doc/long-term-care-services-1/download | source's own date: regulation page date 09/08/2025; document Transmittal Letter NF-64, dated 09/08/25 | retrieved: 2026-08-30
+456.701: Notice Requirements for Transfers and Discharges Initiated by a Nursing Facility
+(A) A resident may be transferred or discharged from a nursing facility only when
+(1) the transfer or discharge is necessary for the resident's welfare and the resident's needs 
+cannot be met in the nursing facility;
+(2) the transfer or discharge is appropriate because the resident's health has improved 
+sufficiently so that the resident no longer needs the services provided by the nursing facility;
+(3) the safety of individuals in the nursing facility is endangered;
+(4) the health of individuals in the nursing facility would otherwise be endangered;
+(5) the resident has failed, after reasonable and appropriate notice, to pay for (or failed to 
+have MassHealth or Medicare pay for) a stay at the nursing facility; or
+(6) the nursing facility ceases to operate.
+(B) When the facility transfers or discharges a resident under any of the circumstances specified
+in 130 CMR 456.701(A)(1) through (4), the resident's clinical record must contain
+documentation to explain the transfer or discharge. The documentation must be made by
+(1) the resident's physician or PCP when a transfer or discharge is necessary under 130 CMR
+456.701(A)(1) or (2); and
+(2) a physician or PCP when the transfer or discharge is necessary under 130 CMR
+456.701(A)(3) or (4).
+(C) Before a nursing facility discharges or transfers any resident, the nursing facility must hand 
+deliver to the resident and mail to the authorized or legal representative a notice written in 12-
+point or larger type that contains, in a language the member understands, the following:
+(1) the action to be taken by the nursing facility;
+(2) the specific reason or reasons for the discharge or transfer;
+(3) the effective date of the discharge or transfer;
+(4) the location to which the resident is to be discharged or transferred;
+(5) a statement informing the resident of their right to request a hearing before MassHealth’s
+Board of Hearings, including
+(a) the address to send a request for a hearing;
+(b) the time frame for requesting a hearing as provided for under 130 CMR 456.702; 
+and
+(c) the effect of requesting a hearing as provided for under 130 CMR 456.704;
+(6) the name, address, and telephone number of the local long-term-care ombudsman office;
+(7) for nursing facility residents with developmental disabilities, the address and telephone 
+number of the agency responsible for the protection and advocacy of developmentally 
+disabled individuals established under Part C of the Developmental Disabilities Assistance 
+and Bill of Rights Act (42 U.S.C. s. 6041 et seq.);
+(8) for nursing facility residents who are mentally ill, the mailing address, and telephone
+number of the agency responsible for the protection and advocacy of mentally ill individuals 
+established under the Protection and Advocacy for Mentally Ill Individuals Act (42 U.S.C. s. 
+10801 et seq.);
+Commonwealth of Massachusetts
+MassHealth
+Provider Manual Series
+Subchapter Number and Title
+1. Program Regulations
+(130 CMR 456.000)
+Page
+4-27
+Nursing Facility Manual
+Transmittal Letter
+NF-64
+Date
+09/08/25
+(9) a statement that all residents may seek legal assistance and that free legal assistance may 
+be available through their local legal services office. The notice should contain the address of 
+the nearest legal services office; and
+(10) the name of a person at the nursing facility who can answer any questions the resident 
+has about the notice and who will be available to assist the resident in filing an appeal.
+(D) A nursing facility’s failure to readmit a resident following a medical leave of absence will 
+be deemed a transfer or discharge (depending on the resident’s circumstances). The nursing 
+facility must issue notice to the resident and an authorized or legal representative in accordance 
+with 130 CMR 456.701(A) through (C), 456.702(C), 130 CMR 610.028: Notice Requirements 
+Regarding Actions Initiated by a Nursing Facility, and 610.029: Time Frames for Notices 
+Issued by Nursing Facilities.
+456.702: Time Frames for Notices Issued by Nursing Facilities
+(A) The notice of discharge or transfer required under 130 CMR 456.701(C) must be made by
+the nursing facility at least 30 days prior to the date the resident is to be discharged or 
+transferred, except as provided for under 130 CMR 456.702(B).
+(B) In lieu of the 30-day notice requirement set forth in 130 CMR 456.702(A), the notice of 
+discharge or transfer required under 130 CMR 456.701(C) must be made as soon as practicable 
+before the discharge or transfer in any of the following circumstances.
+(1) The health or safety of individuals in the nursing facility would be endangered and this is 
+documented in the resident's record by a physician or PCP.
+(2) The resident's health improves sufficiently to allow a more immediate transfer or 
+discharge and the resident's attending physician or PCP documents this in the resident's 
+record.
+(3) An immediate transfer or discharge is required by the resident's urgent medical needs and 
+this is documented in the medical record by the resident's attending physician or PCP.
+(4) The resident has not resided in the nursing facility for 30 days immediately prior to 
+receipt of the notice.
+(C) When the transfer or discharge is the result of a nursing facility’s failure to readmit a resident 
+following hospitalization or other medical leave of absence, the notice of transfer or discharge, 
+including that which is required under 130 CMR 456.429, must comply with the requirements set 
+forth in 130 CMR 456.701 and must be provided to the resident and an authorized or legal 
+representative at the time the nursing facility determines that it will not readmit the resident.
+456.703: Time Frames for Submission of Requests for Fair Hearings
+(A) Appeals of discharges and transfers will be handled by MassHealth’s Board of Hearings
+(BOH) pursuant to 130 CMR 610.000: MassHealth: Fair Hearing Rules.
+(B) Time Limitation on the Right of Appeal. The date of request for a fair hearing is the date on 
+which BOH receives such a request in writing. BOH must receive the request for a fair hearing 
+within the following time limits:
+Commonwealth of Massachusetts
+MassHealth
+Provider Manual Series
+Subchapter Number and Title
+1. Program Regulations
+(130 CMR 456.000)
+Page
+4-28
+Nursing Facility Manual
+Transmittal Letter
+NF-64
+Date
+09/08/25
+(1) 30 days after a resident receives written notice of a discharge or transfer pursuant to 130 
+CMR 456.702(A); or (2) 30 days after a nursing facility initiates a transfer or discharge or 
+fails to readmit and fails to give the resident notice; or
+(3) 14 days after a resident receives written notice of an emergency discharge or emergency 
+transfer pursuant to 130 CMR 456.702(B); or
+(4) 14 days after a resident receives written notice of a transfer or discharge that is the result 
+of a nursing facility’s failure to readmit a resident following hospitalization or other medical 
+leave of absence.
+456.704: Stay of a Transfer or Discharge from a Nursing Facility Pending Appeal
+(A) If a request for a hearing regarding a discharge or transfer from a nursing facility is received 
+by the Board of Hearings during the notice period described in 130 CMR 456.703(B)(1), the 
+nursing facility must stay the planned discharge or transfer until 30 days after the decision is 
+rendered. While this stay is in effect, the resident must not be transferred or discharged from the 
+nursing facility.
+(B) If a hearing is requested, in accordance with 130 CMR 456.703(B)(2), and the request is 
+received prior to the discharge or transfer, then the nursing facility must stay the planned transfer 
+or discharge until five days after the hearing decision.
+(C) If the request for a hearing, in accordance with 130 CMR 456.703(B)(2), is received within 
+the applicable time frame but after the transfer, the nursing facility must, upon receipt of an 
+appeal decision favorable to the resident, promptly readmit the resident to the next available bed 
+in the facility.
+(D) In the case of a transfer or discharge that is the result of a nursing facility’s failure to readmit 
+a resident following hospitalization or other medical leave of absence, if the request for a hearing 
+is received within the applicable time period as described in 130 CMR 456.703(B)(3), the nursing 
+facility must, upon receipt of an appeal decision favorable to the resident, promptly readmit the 
+resident to the next available bed in the facility.
+456.705: Scheduling by the Board of Hearings
+(A) Upon receipt of a request for a fair hearing, BOH will register the appeal, set a date for 
+a hearing, and so notify the appellant and the nursing facility.
+(B) In accordance with 130 CMR 610.015(F): Expedited Appeals for Discharges and 
+Transfers from a Nursing Facility Under 130 CMR 610.029(B) or (C), a resident may request 
+an expedited appeal when a nursing facility notifies a resident of a discharge or transfer under 
+the time frames in 130 CMR 456.702(B) or (C).
+(C) BOH will designate a site for the hearing accessible to the appellant. If the appellant has a 
+handicap or disability that reasonably prevents their appearance at the designated site, they
+may request that the hearing be held by telephone or video conferencing, or at an accessible 
+location.
+END SOURCE 1
+
+SOURCE 2: MassHealth, regulation page for 130 CMR 456.000: Long Term Care Services (the page carrying the posted PDF) | https://www.mass.gov/regulations/130-CMR-456000-long-term-care-services | source's own date: Date: 09/08/2025 | retrieved: 2026-08-30
+130 CMR 456.000: Long Term Care Services | Mass.gov
+
+Regulation
+
+Regulation  130 CMR 456.000: Long Term Care Services
+
+Date: 09/08/2025
+Organization: MassHealth
+Regulatory Authority: M.G.L. c. 118E, s. 7   M.G.L. c. 118E, s. 12
+Official Version: Published by the Massachusetts Register
+
+This is an unofficial version of Commonwealth regulations and is posted here for the convenience of the public. It is not an official statement of the regulations. You will find a link to the related rate regulations in the Related section.
+
+Downloads
+
+Open PDF file, 454.32 KB, Long Term Care Services (English, PDF 454.32 KB)
+Open DOCX file, 124.33 KB, Long Term Care Services (English, DOCX 124.33 KB)
+
+Related
+
+Nursing Facility Manual for MassHealth Providers
+Regulation
+101 CMR 206.00: Standard Payments to Nursing Facilities
+
+meta-mg_date: 20250908
+meta-mg_organization: masshealth
+meta-mg_type: regulation
+
+END SOURCE 2
+
+END OF PACKET — 2 sources
