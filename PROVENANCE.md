@@ -18,6 +18,18 @@ later goes in a supplemental packet beside the original
 (`<slug>-packet-<topic>.txt`), and `check-fidelity.py` accepts any number
 of packets and checks the page against their concatenation.
 
+A packet header is not evidence. The capture notes and the pending list
+describe how the capture was taken and what is missing; only the text
+inside a `SOURCE n:` block proves anything. Anything a page will quote must
+therefore sit in a source body, and where the thing worth quoting is
+something a publisher says about its own document — Massachusetts calls its
+posted copy of 130 CMR 456.000 an unofficial version and names the
+Massachusetts Register as official — the page carrying that statement is
+captured as its own source rather than summarised in the header. The
+fidelity checker enforces this on its own: it reads only source bodies, so
+a quotation supported by header text fails, which is how the rule was
+found.
+
 The rule this enforces: a page may not assert what no packet holds.
 Research notes in `research/` are working material and are not evidence for
 anything on a published page. If a finding is good enough to put in the

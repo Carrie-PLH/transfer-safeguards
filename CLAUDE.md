@@ -100,3 +100,70 @@ trusting the deploy log.
 A page that has not passed `python3 tools/check-fidelity.py` against its
 packet(s) — markdown and HTML both, zero failures — is not done. There is
 no expected miss.
+
+## Capture traps, learned in the build (2026-08-30)
+
+Record here rather than in a page, because these cost an hour each to
+rediscover and none of them is about any one state.
+
+An empty-looking page is not an absent document. mass.gov's regulation
+pages carry no regulation: only metadata, a table of contents for the
+title, and download links. The rule lives in the PDF or DOCX posted there.
+Massachusetts spent a build cycle recorded as "capture-blocked" on that
+mistake. Before writing an absence into a docket row, fetch the downloads
+the page offers.
+
+Slice on the body, not the table of contents. A long document usually
+prints its section headings twice, and a naive `find()` for the heading
+lands in the contents list, producing a slice that begins at the front
+matter and runs for tens of thousands of characters. Anchor on the heading
+plus the first words of the text under it, and check the head and tail of
+every slice before it goes into a packet.
+
+Two-column PDFs interleave. The Missouri CSR and the Louisiana
+Administrative Code print in two columns, and `pdftotext -layout` renders
+each printed line as one column's text followed by the other's. A sentence
+running down a column is therefore broken across lines carrying unrelated
+text. Quotations from such a capture are contiguous spans of the capture as
+rendered, not of the printed column; verify every candidate span against
+the packet mechanically before writing it, and expect to quote some
+passages as two adjacent spans.
+
+Transports that need something other than plain curl: mass.gov (403 to
+curl on regulation pages and document downloads — use the session fetch
+tool); cdph.ca.gov (incomplete certificate chain to curl and to
+python/certifi); dhcs.ca.gov (returns a script shell); aging.ny.gov,
+rules.sos.ga.gov and dch.georgia.gov PDFs (403); mgaleg.maryland.gov and
+mn.gov (render to a scripted client only); legislature.mi.gov (incomplete
+chain to curl, and an empty body to the fetch tool — Michigan's statute is
+therefore carried through the department's own reproduction of it);
+admincode.legislature.state.al.us (JavaScript app over a curl-able GraphQL
+endpoint — see the API paragraph in PROVENANCE.md). Curl with a browser
+user-agent has been enough for ilga.gov, leg.state.fl.us, revisor.mn.gov,
+apps.legislature.ky.gov, legis.iowa.gov, publications.tnsosfiles.com,
+law.lis.virginia.gov, dsd.maryland.gov, health.ny.gov and ldh.la.gov.
+
+Scanned PDFs with no text layer are not a dead end by themselves. Alabama's
+department publishes its nursing facility chapter as an image, but the
+Legislature publishes the same rule as text. Look for the other publisher
+before concluding the text is unreachable, and never reach for OCR — see
+PROVENANCE.md.
+
+## Checker and renderer traps
+
+The fidelity checker's contact layers match on patterns, and two false
+positives have surfaced. Digits inside an http(s) URL were being read as a
+telephone number — Michigan's form filename `.../ITD-100-07262024.pdf`
+matched as 100-072-6202 — fixed 2026-08-30 by stripping URLs before the
+phone scan, with a self-test case; `tel:` links are still checked. The
+address layer has the same shape of bug and is not fixed: where a packet
+prints a street address with a street-type abbreviation opening the next
+line, as in "540 Cedar Street\nSt. Paul", the packet-side match swallows
+the "St." and no longer equals the page-side match. Quote such an address
+as a single contiguous span rather than as two.
+
+`render-state.py` runs its markdown inline pass over quoted text, so a
+literal asterisk inside a quotation is read as emphasis and disappears from
+the HTML. Tennessee's notice footnotes its grounds with asterisks and hit
+this; the HTML fidelity check catches it, which is how it was found. Quote
+around the asterisk, or fix the renderer if a state's text ever needs one.
