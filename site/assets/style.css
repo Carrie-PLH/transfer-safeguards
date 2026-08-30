@@ -66,9 +66,9 @@ body {
 .topline .wordmark {
   display: inline-flex;
   align-items: center;
-  /* Text wordmark for now; a logo lockup replaces it when the name is
-     settled, and these type tokens then style the fallback text a browser
-     shows if the image fails. */
+  /* The lockup is assets/roomandrecourse-wordmark.svg (adopted 2026-08-30).
+     These type tokens style the alt text a browser shows if the image
+     fails, so the masthead still reads as the site's name. */
   font-family: var(--font-mono);
   font-size: 0.8rem;
   font-weight: 600;
@@ -484,7 +484,8 @@ a.state-pill:hover, a.state-pill:focus-visible {
   letter-spacing: 0.22em;
   color: var(--text);
 }
-img.mark {
+img.mark,
+.colophon .mark img {
   display: block;
   height: 2.1rem;
   width: auto;

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1520" height="300" viewBox="100 300 1520 300" role="img" aria-labelledby="title desc">
+  <title id="title">Room &amp; Recourse</title>
+  <desc id="desc">An open door beside a dashed threshold line and the joined Room and Recourse wordmark.</desc>
+  <!-- Geometry traced from the original lockup art (2026-08-30) in that file's
+       own pixel coordinates; the viewBox is trimmed to the ink so the CSS box
+       hugs the lockup. Colours are the site tokens from assets/style.css, so the
+       mark sits on the dark ground: text #efe8ea for ROOM, accent-muted #d097a3
+       for the ampersand, accent #e0aab5 for RECOURSE, and an accent to
+       accent-dim gradient on the door, which the source art also carries. -->
+  <defs>
+    <linearGradient id="rr-door" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e0aab5"/>
+      <stop offset="1" stop-color="#a26f7c"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#rr-door)" stroke-width="9.5" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M184.5 313V594"/>
+    <path d="M184.5 349.5H117.5V565"/>
+    <path d="M184.5 315L281 349V559L184.5 593"/>
+    <circle cx="252" cy="456" r="7" fill="url(#rr-door)" stroke="none"/>
+    <path d="M353.5 316V584" stroke="#a26f7c" stroke-dasharray="18 16"/>
+  </g>
+  <!-- textLength locks the wordmark's drawn width to the source art (449 to 1609),
+       so the lockup keeps its proportions whichever system face renders it. -->
+  <text x="449" y="493" textLength="1160" lengthAdjust="spacing"
+        font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+        font-size="124" font-weight="700"><tspan fill="#efe8ea">ROOM</tspan><tspan fill="#d097a3"> &amp; </tspan><tspan fill="#e0aab5">RECOURSE</tspan></text>
+</svg>
