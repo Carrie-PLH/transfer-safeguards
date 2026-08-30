@@ -1,0 +1,581 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Pennsylvania
+SLUG: pennsylvania
+ASSEMBLED: 2026-08-30
+CAPTURE NOTES: Sources 1 and 4 were retrieved by curl with a browser user-agent and reduced to text mechanically (tag strip over the whole served document); the Pennsylvania Code page's own site chrome, including the line stating the edition the site reflects, is left in the captured text as the extractor produced it. Source 2 is a PDF served by the Department of Health's facility web application and was retrieved by curl and extracted with `pdftotext -layout`; it is a decision-flow diagram, so the extractor's column order does not follow reading order, and the publisher's own typographic errors ("reprentative", "resident-initated") stand as printed. Source 3 (pa.gov) was retrieved through the session's HTTP fetch tool, which renders the served document to text, and copied to file without retyping; site chrome and footer are omitted and the fetch tool's meta-description line is retained at the foot.
+PENDING: A Pennsylvania regulation enumerating the permissible bases for facility-initiated transfer or discharge from a nursing facility. 28 Pa. Code § 201.29 (Source 4) states resident rights by incorporating 42 CFR 483.10 and adds state-specific rights, but does not enumerate transfer or discharge grounds; what Source 1 states about grounds is the Department of Human Services' Long-Term Care Handbook, a Medical Assistance eligibility manual, citing 42 CFR 483.12 and 028 Pa. Code § 201.29(f). Also pending: the Department of Human Services' notice and appeal regulations at 55 Pa. Code Chapter 275, cited by Source 1 and not captured; and any published street address or filing form for the Bureau of Hearings and Appeals itself — Source 1 states the appeal "must be filed with the Bureau of Hearings and Appeals" and publishes an address only for the Office of Long-Term Living, to which the county assistance office sends a copy.
+
+SOURCE 1: Pennsylvania Department of Human Services, Long-Term Care Handbook, 423.6 Changes in Residence/Discharge/Transfers | http://services.dpw.state.pa.us/oimpolicymanuals/ltc/423_Residence/423_6_Discharge_and_Transfer_from_an_LTC_Facility_or_HCBS.htm | source's own date: Updated June 11, 2025, Replacing August 22, 2019 | retrieved: 2026-08-30
+423_6_Changes_Residence_Discharge_Transfers
+
+ Long-Term Care Handbook
+
+ Click here to see this page in full context
+
+ 423.6 Changes in Residence/Discharge/Transfers
+
+ When an MA LTC Services recipient is admitted to a hospital, but not officially discharged from the facility, the CAO will not take any immediate action because a recipient can be eligible for a maximum of 15 days consecutive bed hold days due to hospitalization.
+
+ The individual continues to be a resident of the county where the LTC Services were originally being received even if the hospital is in another county or state. 
+
+ The LTC Service providers and the Office of Long-Term Living are responsible for correct billing and payment to the LTC provider.      
+
+ 42 CFR § 483.12
+
+ NOTE: The LTC
+ facility may not bill the individual separately or at the private pay rate for his payment towards the cost of LTC facility services for those days he is in the hospital,unless they used the MA 103 to report discharge.
+
+ 55 Pa. Code § 1187.104(a)
+
+ An LTC facility will send a Long-Term Care Admissions and Discharge Transmittal (MA 103) to CAO staff within three working days of a transfer or discharge from the facility. An MA 103 must be completed by the LTC facility and sent to CAO staff within three working days for:       
+
+ 55 Pa. Code § 1187.32(3)
+
+ a transfer to another LTC facility or any other residence;
+
+ a discharge from the LTC facility to another LTC facility, a hospital or any other residence; or
+
+ a discharge due to the MA recipient's death.
+
+ An LTC facility is not required to send an MA 103 for an MA LTC recipient admitted to a hospital from the LTC facility.  The MA 103 is only required if the LTC facility discharges the recipient when admitted to the hospital.  An HCBS provider is not required to send a 
+ PA 1768
+  for a MA LTC recipient admitted to a hospital from the community.  The PA 1768 is only required if the individual is terminated from eligibility for HCBS.  If an individual is discharged from an LTC facility or terminated from an HCBS program, the CAO will determine continued eligibility for other MA programs.
+
+ If an MA LTC Services recipient dies, the LTC facility will notify the CAO with an MA 103 and the HCBS provider will notify the CAO with a PA 1768. The CAO will send a notice to the individual’s representative and to the LTC Services provider for notification of discontinuance of MA LTC eligibility effective the date of death. The CAO will close the case effective the day for which the deadline can be met.        
+
+ 55 Pa. Code § 1187.32
+
+ 423.61 LTC Facility Discharge and Transfer
+
+ An LTC facility may discharge an individual for nonpayment of his payment towards the cost of LTC Facility Services when:
+
+ 42 CFR § 483.12 
+
+     028 Pa. Code § 201.29(f)
+
+ The LTC facility has provided reasonable and appropriate notice.
+
+ The LTC facility has demonstrated that it made reasonable efforts to collect the debt.
+
+ The individual’s health improved to the point where LTC facility services are no longer needed.
+
+ The individual’s health has deteriorated requiring care which the facility is unable to provide.
+
+ When an LTC facility discharges an individual or transfers the individual to another facility, the former facility must give the individual 30 days advance written notice, and, if known, a copy of the notice to the individual’s representative.
+
+ Exception: The notice is not required for an emergency or an urgent need for medical services which the facility cannot provide.
+
+ The facility must make arrangements for the safe and orderly transfer and must prepare the individual for the transfer.
+
+ The LTC facility will notify the CAO of the discharge or transfer with an MA 103 and a copy of the Facility's Notice of Discharge.  The facility is required to send the appropriate form to the CAO within three working days of the date the facility administrator, designee or the Registered Nurse Assessment Coordinator (RNAC) signs the MA 103.
+
+ NOTE: The MA 103 must be completed. It must include the effective date of discharge and must be signed and dated by the administrator, designee, or the RNAC of the LTC facility.  If the MA 103 is not completed, signed, dated, or is missing the effective date, the CAO will advise the LTC facility of what is missing. The CAO can accept verbal statements from the administrator, designee or RNAC of the LTC facility of the effective date of discharge until the MA 103 is received.  The CAO will monitor the receipt of the MA 103 and narrate any outreach attempts to obtain the form. Verbal verification does not negate the LTC Facility’s responsibility to provide the MA 103. The CAO can update the case without the MA 103 if collateral contact was made and narrated. After the appropriate case updates were made the CAO should contact the LTC facility one more time to request the completed MA 103 and narrate all contact information.
+
+ The individual or the individual’s representative has the right to appeal a discharge or transfer.  There is no specific form that an individual or the individual’s representative must complete to file an appeal. However, the appeal request must contain the following:        
+
+ 55 Pa. Code § 275.1
+
+ the name of the individual on whose behalf the appeal is being filed.
+
+ the name and address of the LTC facility involved.
+
+ the reason for the appeal.
+
+ the name of the individual or the individual’s legally authorized representative filing the appeal.
+
+ The appeal must be received by the CAO within 30 days of the date of the facility's notice to the individual of discharge. The appeal must be filed with the Bureau of Hearings and Appeals.  The CAO will send a copy of the appeal request to the Office of Long-Term Living (OLTL) at the following address: 
+
+ Office of Long-Term Living
+
+ Bureau of Provider Support
+
+ P. O.  Box 8025
+
+ Harrisburg, PA  17105
+
+ (717) 772-2570
+
+ A copy of the appeal request must also be sent to the LTC facility.  If the appeal involves a dispute with the recommendations of the individual’s physician, a copy must also be sent to the physician.
+
+ If the CAO has reason to believe that an individual’s appeal rights are being violated or the discharge is inappropriate or illegal, it should refer the situation by telephone to the Office of Long-Term Living, Bureau of Provider Support, (717) 772-2570.
+
+ If an individual transfers from one LTC facility to another, a new PA 600L is not required. The new LTC facility will complete the MA 103  and send to the new CAO to establish the continuing need for LTC facility services.
+
+ NOTE: In cases of inter-county transfers, the receiving county should complete a partial renewal. See 
+ Chapter 476, Renewal
+ .
+
+ If an individual is discharged to the community from an LTC facility, the CAO will send a notice advising the individual that he is no longer eligible for LTC services.  The CAO will send a copy to the LTC Services provider.  The CAO will determine eligibility for other MA programs.                                                                                                                                                                                                    
+
+ 42 CFR § 483.12
+
+ If an LTC facility resident is discharged from a hospital and does not return to the LTC facility, the CAO will determine eligibility for continuing MA in the community.
+
+ If the individual moves to the community in another county, the CAO will process an intercounty transfer.  The CAO will send the individual a notice advising him that MA remains open in the new county and that he must contact the CAO in the new county for continued MA. See the Medical Assistance Eligibility Handbook, Chapter 323, Residence, for procedures for the intercounty transfer of MA.
+
+ When an MA recipient is discharged from an LTC facility, the CAO needs to update the Facility Placement screen in eCIS:
+
+ The CAO worker will enter the following information on the Facility Placement Screen (eCIS):
+
+ 1. The effective date when the MA recipient was determined ineligible for LTC facility services payment or discharged from the LTC facility;
+
+ 2. One of the following discharge codes provided by the facility in the comments section of the MA 103 "Long Term Care Admission and Discharge Transmittal" form when a MA recipient is determined ineligible for LTC facility services payment or discharged from an LTC facility;
+
+ 01—Routine Discharge
+
+ 02—Discharged Against Medical Advice
+
+ 03—Expired, No Autopsy
+
+ 04—Expired, Autopsy
+
+ 05—Discharge/Transfer to Another Hospital
+
+ 06—Discharge/Transfer to an LTC Facility
+
+ 07—Discharge/Transfer to a Rehabilitation Facility
+
+ 08—Discharge/Transfer to a Psychiatric Facility
+
+ 09—Discharge/Transfer to a Boarding Home/DC Facility
+
+ 10—Still a Patient
+
+ 11—Discharged Hospital Home Care
+
+ 12—Other
+
+ 13—Automated MFP
+
+ NOTE: For those MA individuals who transfer from one type of facility to another type of facility within the same county, the old facility code must be end dated. The discharge code and the new facility code must be entered with a begin date.
+
+ NOTE: For those MA individuals who transfer to the same type of facility within the same county and remain eligible for MA, a new facility code is not needed.
+
+ NOTE: For an MA individual who transfers to the same type of facility in a new county or a new type of facility in the new county, the old facility code must be end dated. The discharge code and the new county code and new facility code must be entered with a begin date.
+
+ NOTE: For those MA individuals determined ineligible for an LTC facility services payment by the Department and the facility did not provide a reason for the discharge, the CAO worker will enter a discharge code of 12.
+
+ NOTE: There are 13 discharge codes in eCIS. Discharge code 13 (Automated MFP) pre-populates with the date the individual's 365-day time limit will expire after submitting the Facility Placement screen in eCIS. Discharge code 13 is a system-generated code only and should never be entered manually.
+
+ 423.611 Intra-County LTC Facility Transfers
+
+ An intra-county transfer occurs when a LTC facility recipient moves from one LTC facility to another LTC facility in the same county. A new facility code is not needed on the Facility Placement screen in eCIS. 
+
+ Once the CAO receives the MA 103 verifying an intra-county LTC transfer, the CAO will update the MA Provider information in the LTC recipient’s eCIS case and mail the MA Provider copy of the most recent PA162 to the gaining LTC facility. 
+
+ To do this the CAO will follow the steps below: 
+
+ 1. In eCIS, click on the Correspondence Tab. 
+
+ 2. Data enter the case information in the Search Criteria box and submit to receive the Search Results box.
+
+ 3. Select the PA 162 notice showing the current cost of care using the Correspondence ID hyperlink.
+
+ 4. Print a copy of the most recent PA 162 notice sent to the losing LTC facility (MA Provider copy) and mail or fax the notice to the gaining LTC facility. 
+
+ Do not update any information on the reprinted notice previously sent to the losing LTC facility. (i.e. dates, LTC facility name, etc.)
+
+ Do not mail the recipient’s or any other representative’s copy of the notice to the gaining CAO.
+
+ 5. Narrate all actions in the case record. 
+
+ NOTE:  If the most recent LTC PA 162 notice issued was a manual notice, provide a copy of the scanned manual notice to the gaining facility. 
+
+ The PA 162 that is valid as of the date of admission to the gaining facility should be sent to the gaining facility. If the gaining CAO realizes the cost of care is incorrect then they must make the correction in eCIS and send a new notice. The most recent LTC PA 162 notice is a required part of the recipient’s medical record when the LTC facility is audited. Sending the most recent MA provider copy of the PA 162 to the gaining facility ensures the new facility can bill the individual correctly.
+
+ 423.62 HCBS Termination and Transfer
+
+ The HCBS Provider will notify the CAO of the termination of eligibility for HCBS or transfer with a 
+ PA 1768
+ . The HCBS Provider is required to send the form to the CAO within 3 days of the individual’s change in status.
+
+ NOTE: The PA 1768 must be complete. It must include the effective date of termination/transfer and must be signed and dated by the HCBS Provider. If the PA 1768 is not completed, signed, dated or is missing the effective date, the CAO will advise the HCBS provider of what is missing.
+
+ If an individual transfers from one HCBS Provider to another within the same county, a new PA 600L is not required. The new HCBS Provider will forward a 
+ PA 1768
+ to the CAO and a copy to the former service provider.  The CAO will provide a copy of the Notice discontinuing the former HCBS and authorizing eligibility for the new HCBS to the individual, the former HCBS Service provider and the new HCBS Service provider.
+
+ NOTE: If eCIS fails to generate a notice when an individual transfers from one waiver to another, the following notice text and citations must be included on the manual notice:
+
+ You no longer qualify for Home and Community-Based Services (HCBS) in the <losing waiver> effective <losing waiver code end date>. Starting <gaining waiver code start date> you qualify for payment of HCBS in the <gaining waiver>. You continue to qualify for Medical Assistance.
+
+ Citations for PAW/PJW/PMW 66 & 80: SSA 1915 § (c)(4)(A), 62 PS § 441.8, 55 Pa. Code § 140.21, 141.71, 178.1, 181.1, 181.11
+
+ Citations for PAW/PJW/PMW 00: SSA 1915 § (c)(4)(A), 62 PS § 441.8, 55 Pa. Code § 141.71, 178.1, 181.1, 181.11
+
+ If an individual transfers from one HCBS Provider to another outside of the current county, a new PA 600L is not required. 
+
+ If an individual is terminated from HCBS and enters an LTC facility, a new application is not required. The LTC facility must submit a MA 51 to verify eligibility for the Home Maintenance Deduction (HMD) and MA 103 to verify admission to the facility. The CAO will end the waiver medical category and reauthorize in a nursing home category.
+
+ NOTE: The CAO should request the MA 51 but should not reject LTC facility services for a HCBS recipient who enters a LTC facility when a MA 51 is not provided.  If questions 20A-C of the MA 51 are completed the CAO should review for the Home Maintenance Deduction (HMD). If the MA 51 is not provided the client is not eligible for the HMD but may still be eligible for payment of LTC facility services because the client was already determined Nursing Facility Clinically Eligible (NFCE) during the HCBS assessment.   
+
+ 423.63 Inter-County Transfer
+
+ When an LTC facility/HCBS recipient transfers to a new county, eligibility will continue from the former county for a limited period of time (two semimonthly benefit eligibility periods).  The new county will review the resident’s eligibility for continued MA within the limited time period.
+
+ 55 Pa. Code § 148.14
+
+ 423.631 Former CAO
+
+ The FORMER CAO will:
+
+ 1.  Complete any renewal that is due in the month of transfer or the following month.
+
+ 2.  Access the case via case maintenance in eCIS.
+
+ 3.  Enter the following information on the Household screen:
+
+ Update the residential and mailing addresses.
+
+ Check the “Case Close” checkbox and select “099—Inter-County Transfer” in the “Close Reason” dropdown in the “Case Action” section. Enter the gaining transfer county and district in the “Case Action” section.
+
+ 4.  Select the “Next” button to save the information.
+
+ 5.  Access the Waiver or Facility Placement screen via the left-hand navigation panel.
+
+ 6.  Enter the end date and discharge code for the former county’s waiver or facility information. 
+
+ 7.  Click “Add more” and enter the waiver or facility information for the gaining county.
+
+             REMINDER:  The waiver/facility placement begin date in the new county must be the day after the waiver/facility placement close date in the former county so that there is no lapse in coverage.
+
+ 8. Run eligibility.
+
+ 9.  Send a copy of the notice to the losing LTC Provider, the gaining LTC Provider, recipient and recipient’s representative.
+
+ 10.  E-mail the record to the gaining CAO within 5 workdays.
+
+ A transfer to a new LTC services provider does not require the individual to be re-assessed for functional need.
+
+ NOTE: The former LTC facility will bill for LTC Facility Services up to but not including the date of discharge.  The new LTC facility may begin billing effective the date of admission. The new LTC facility may bill using the Eligibility Verification System (EVS) to verify eligibility.
+
+ 423.632 New CAO
+
+ The NEW CAO will:
+
+ 1. 
+ Review the case record and other information submitted by the individual or the individual’s representative to determine if the individual remains financially, non-financially and functionally eligible for LTC Services.
+
+ If needed the CAO will calculate the individual’s payment towards the cost of
+ LTC 
+ Facility Services.
+
+ 2. 
+ Review the
+ MA 103
+ /
+
+ PA 1768
+
+ submitted by the new
+ LTC 
+ Provider to determine if the individual still needs
+ LTC 
+ Services.
+
+ 3. If the individual remains eligible for LTC Services, the new CAO will authorize eligibility effective the day after the closure date. Provide a notice to the individual, individual’s representative and LTC Provider. The CAO will send a notice of payment towards the cost of LTC Facility Services, if the individual is residing in an LTC facility.  
+
+ REMINDER: The renewal date should be adjusted in CIS to remain the same as in the former CAO.
+
+ 4. 
+ Send a notice advising that
+ LTC 
+ Services will not be continued in the new county if the individual is not eligible or fails to submit the required information to the CAO.
+
+ 423.64 Transfer of Pending Application
+
+ If an application is being held pending admission and the CAO learns that the individual has been admitted to an LTC facility in another county, the CAO will forward the PA 600L, the MA 51, and all other information to the CAO in the new county.  The new CAO will determine eligibility based on the date the PA 600L was received in the former CAO.       
+
+ 55 Pa. Code § 148.11
+
+ NOTE: The new CAO will determine eligibility for MA as well as LTC Services.  If all requirements are met, the new CAO will authorize retroactive MA to cover medical expenses incurred during the retroactive period while the individual resided in another county.
+
+ Updated June 11, 2025, Replacing August 22, 2019
+END SOURCE 1
+
+SOURCE 2: Pennsylvania Department of Health, Involuntary Discharge and Transfer Notices — When and what to send to the PA Long-Term Care Ombudsman Office (State Office) | https://sais.health.pa.gov/CommonPOC/content/FacilityWeb/attachment.asp?messageid=3521&filename=Involuntary+Discharge+Notice+Protocol.pdf&attachmentnumber=1 | source's own date: none stated on document | retrieved: 2026-08-30
+Involuntary Discharge and Transfer Notices
+       When and what to send to the PA Long-Term Care Ombudsman Office (State Office)
+
+
+                                                        Type of Notice
+
+
+
+                                  Transfer 1                                        Discharge 2
+
+
+
+                                     Resident                                            Resident
+                    Yes                                                                                                          Yes
+                                    Initiated?                                          Initiated? 3
+
+
+               A transfer                                                                                                   A discharge
+             notice is not               No                                                    No                          notice is not
+            required to be                                                                                                required to be
+              sent to the                                                                                                   sent to the
+             State Office.4                                                                                                State Office.4
+                                      Facility                                             Facility
+                                     Initiated                                            Initiated
+
+
+                                                                                                                     A discharge notice is
+                                                                                                                    required to be sent to
+                                                         Non-                                                        the State Office the
+              Emergency                Why?            Emergency                                                     same day it’s issued
+                                                                                                                       to the resident.7
+
+                                                                                    1
+                                                                                      Resident is temporarily sent to another acute care facility, but is
+                                                                                    expected to return to original facility.
+                                                                                      Resident is leaving original facility and is not expected to return
+                                                        Will the
+                                                                                    2
+                 Will the                                                           to original facility.
+                resident                               resident                     3
+                                                                                      The resident or, if appropriate, the resident representative has
+   Yes          return to                No            return to            Yes     provided verbal or written notice of intent to leave the facility.
+                                                                                    4
+                                                                                      The medical record must contain documentation or evidence of
+                 original                               original                    the resident’s or resident representative’s verbal or written notice
+                 facility?                              facility?                   of intent to leave the facility. See CMS Ref: S&C: 17-27-NH.
+                                                                                    5
+                                                                                       Notification should be sent as soon as practical and is
+                                                                                    recommended to be sent via monthly list. The notification must
+                                                                                    include resident’s name, location of transfer, notice to resident
+                               A discharge notice is                                reprentative date, transfer date, return to facility date, and reason
+  A monthly list                                            A transfer notice is    for discharge. This list should be e-mailed by the 15th of each
+                              required to be sent to
+is required to be                                           required to be sent     month to the State Office at LTC-ombudsman@pa.gov. See CMS
+                               the State Office the
+    sent to the                                            to the State Office as   Ref: S&C 17-27-NH.
+                               same day it’s issued                                 6
+                                                                                      A transfer notice must be sent to the State Office before the
+  State Office.5                                             soon as practical.6    transfer.
+                                 to the resident.8                                  7
+                                                                                      Issue a written 30-day notice of discharge to the resident and
+                                                                                    e-mail notice to LTC-ombudsman@pa.gov the same day it’s issued
+                                                                                    to the resident. The State Office will distribute the notice to the
+                                                                                    appropriate local ombudsman.
+                                                                                    8
+                                                                                       A discharge notice is required unless the discharge is now
+                                                                                    resident-initated.
+
+END SOURCE 2
+
+SOURCE 3: Commonwealth of Pennsylvania, Department of Aging — Request Assistance from a Long-Term Care Ombudsman | https://www.pa.gov/services/aging/request-assistance-from-a-long-term-care-ombudsman | source's own date: none stated on page | retrieved: 2026-08-30
+Advocacy for Older Adults
+
+Request Assistance from a Long-Term Care Ombudsman
+
+The Pennsylvania Long-Term Care Ombudsman Program helps fix problems for people living in long-term care. Long-term care includes nursing homes, assisted living facilities, and personal care homes.
+
+Call the LTC Ombudsman (tel:7177838975)
+
+Pennsylvania’s Long-Term Care Ombudsman Program
+
+The Long-Term Care Ombudsman Program helps people by solving problems they have with long-term care services. They also work to make long-term living better for residents and their families.
+
+When should I contact an Ombudsman?
+
+It’s the vision of the Long-term Care Ombudsmen to “Advocate for those who can’t, support those who can, and ensure all long-term care consumers live with dignity and respect.” Contact an Ombudsman with any concern that involves the quality of life of a person living in long-term care.
+
+The most frequent complaints from residents of skilled nursing, board and care facilities:
+
+- Discharge or eviction
+- Response to requests for assistance
+- Personal property loss or theft
+- Dietary concerns
+- Facility policies and procedures
+- Medications
+- Staffing
+
+Get started
+
+Contact the Pennsylvania State Long-term Care Ombudsman by phone, email or mail.
+
+By Phone
+
+Call the PA Long-term Care Office to connect with your local Ombudsman.
+
+717-783-8975
+
+By Email
+
+Email the PA Long-term Care Office to connect with your local Ombudsman.
+
+LTC-Ombudsman@pa.gov
+
+meta-description: The Pennsylvania Long-Term Care Ombudsman Program helps fix problems for people living in long-term care. Long-term care includes nursing homes, assisted living facilities, and personal care homes.
+
+END SOURCE 3
+
+SOURCE 4: 28 Pa. Code § 201.29 (Resident rights) | https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/028/chapter201/s201.29.html&d=reduce | source's own date: site states the Code reflects changes effective through 56 Pa.B. 3438 (June 6, 2026) | retrieved: 2026-08-30
+28 Pa. Code § 201.29. Resident rights.
+
+ Skip to main content
+
+ HOME
+
+ SEARCH 
+
+ Pennsylvania Bulletin
+
+ Pennsylvania Code
+
+ Search Tips
+
+ ABOUT
+
+ CONTACT
+
+ FAQ
+
+ ALERTS
+
+ Pennsylvania
+Code
+-->
+
+ COMMONWEALTH OF
+
+ PENNSYLVANIA
+
+ COMMONWEALTH OF
+
+ PENNSYLVANIA
+
+ No statutes or acts will be found at this website.
+
+ The Pennsylvania Code website reflects the Pennsylvania Code
+ changes effective through 56 Pa.B. 3438 (June 6, 2026).
+
+ About the Pennsylvania Code & Bulletin
+
+ • No statutes or acts will be found at this website.
+
+ The Pennsylvania Code website reflects the Pennsylvania Code changes effective through 56 Pa.B. 3438 (June 6, 2026).
+
+ Previous Doc
+
+ Next Doc
+
+ Chapter 201 Contents
+
+ Title 28 Contents
+
+ Search
+
+ Enter Full Screen
+
+ Previous Doc
+
+ Next Doc
+
+ Chapter 201 Contents
+
+ Title 28 Contents
+
+ Search
+
+ Print
+
+ Enter Full Screen
+
+ Title 28
+ Chapter 201
+ 28 Pa. Code § 201.29. Resident rights.
+
+28 Pa. Code § 201.29. Resident rights.
+
+§ 201.29. Resident rights.
+
+ (a)  The governing body of the facility shall establish written policies regarding the rights and responsibilities of residents as provided for in 42 CFR 483.10 (relating to resident rights) and this section. Through the administrator, the governing body shall be responsible for development of and adherence to procedures implementing the policies. The written policies shall include a mechanism for the inclusion of residents, or a resident representative, in the development, implementation and review of the policies and procedures regarding the rights and responsibilities of residents.
+
+ (b)  Policies and procedures regarding rights and responsibilities of residents shall be available to residents and members of the public.
+
+ (c)  Policies of the facility shall be available to staff, residents, consumer groups and the interested public, including a written outline of the facility’s objectives and a statement of the rights of its residents. The policies shall set forth the rights of the resident and prohibit mistreatment and abuse of the resident.
+
+ (c.1)  The facility shall post in a conspicuous place near the entrances and on each floor of the facility a notice which sets forth the list of resident rights. The posting of resident rights shall include the rights under subsection (c.3) and 42 CFR 483.10.
+
+ (c.2)  A facility shall provide personal notice of a resident’s rights in accordance with 42 CFR 483.10(g)(16). A certificate of the provision of personal notice shall be entered in the resident’s medical record.
+
+ (c.3)  In addition to the resident rights set forth in 42 CFR 483.10, residents have a right to the following:
+
+   (1)  If changes in charges occur during the resident’s stay, the resident, or resident representative, shall be advised verbally and in writing reasonably in advance of the change. ‘‘Reasonably in advance’’ shall be interpreted to be 30 days prior to the change unless circumstances dictate otherwise. If a facility requires a security deposit, the written procedure or contract that is given to the resident, or resident representative, shall indicate how the deposit will be used and the terms for the return of the deposit. A security deposit is not permitted for a resident receiving medical assistance.
+
+   (2)  Prior to transfer, the facility shall inform the resident, or the resident representative, as to whether the facility where the resident is being transferred is certified to participate in the Medicare and the Medical Assistance Programs.
+
+   (3)  Experimental research or treatment in a facility may not be carried out without the approval of the Department, including the Department’s Institutional Review Board, and without the written approval and informed consent of the resident, or resident representative, obtained prior to participation and initiation of the experimental research or treatment. The following apply:
+
+     (i)   The resident, or resident representative, shall be fully informed of the nature of the experimental research or treatment and the possible consequences, if any, of participation.
+
+     (ii)   The resident, or resident representative, shall be given the opportunity to refuse to participate both before and during the experimental research or treatment.
+
+     (iii)   For the purposes of this subsection, ‘‘experimental research’’ means the development, testing and use of a clinical treatment, such as an investigational drug or therapy that has not yet been approved by the United States Food and Drug Administration or medical community as effective and conforming to medical practice.
+
+   (4)  A resident has the right to care without discrimination based upon race, color, familial status, religious creed, ancestry, age, sex, gender, sexual orientation, gender identity or expression, national origin, ability to pay, handicap or disability, use of guide or support animals because of the blindness, deafness or physical handicap of the resident or because the resident is a handler or trainer of support or guide animals.
+
+ (d)  [Reserved].
+
+ (e)  [Reserved].
+
+ (f)  [Reserved].
+
+ (g)  [Reserved].
+
+ (h)  [Reserved].
+
+ (i)  [Reserved].
+
+ (j)  [Reserved].
+
+ (k)  [Reserved].
+
+ (l)  [Reserved].
+
+ (m)  [Reserved].
+
+ (n)  [Reserved].
+
+ (o)  [Reserved].
+
+Authority
+
+   The provisions of this §  201.29 amended under sections 102, 201(12), 601, 801.1 and 803 of the Health Care Facilities Act (35 P.S. § §  448.102, 448.201(12), 448.601, 448.801a and 448.803); and section 2102(a) and (g) of The Administrative Code of 1929 (71 P.S. §  532(a) and (g)).
+
+Source
+
+   The provisions of this §  201.29 adopted August 29, 1975, effective September 1, 1975, 5 Pa.B. 2233; amended July 6, 1979, effective July 7, 1979, 9 Pa.B. 2252; amended April 23, 1982, 12 Pa.B. 1316; amended January 31, 1987, effective July 1, 1987, 17 Pa.B. 514; corrected June 19, 1987, 17 Pa.B. 2462; amended July 23, 1999, effective July 24, 1999, 29 Pa.B. 3999; amended December 23, 2022, effective July 1, 2023, 52 Pa.B. 8098. Immediately preceding text appears at serial pages (258335) to (258336) and (336945).
+
+No part of the information on this site may be reproduced for profit or sold for profit.
+
+This material has been drawn directly from the official Pennsylvania Code full text database. Due to the limitations of HTML or differences in display capabilities of different browsers, this version may differ slightly from the official printed version.
+
+ Top
+ Bottom
+
+ No part of the information on this site may be reproduced forprofit or sold for profit. Please direct comments or questions to webmaster@PaBulletin.com
+
+ Accessibility
+
+ Privacy
+
+ Disclaimer
+
+ Style Manual
+
+ Code Publication Schedule
+
+ Bulletin Publication Schedule
+
+ Accessibility  | 
+ Privacy  | 
+ Disclaimer  | 
+ Style Manual  | 
+ Code Publication Schedule  | 
+ Bulletin Publication Schedule
+END SOURCE 4
+
+END OF PACKET — 4 sources

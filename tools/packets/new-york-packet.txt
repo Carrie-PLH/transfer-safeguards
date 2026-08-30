@@ -1,0 +1,770 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: New York
+SLUG: new-york
+ASSEMBLED: 2026-08-30
+CAPTURE NOTES: Sources 1 and 2 (health.ny.gov) were retrieved by curl with a browser user-agent and reduced to text mechanically (tag strip over the <main> element); the department's own site chrome — navigation menus, language list, footer — is left in the captured text as the extractor produced it rather than trimmed by hand, and the "Revised:" line near the foot of each is the page's own date. Source 3 (aging.ny.gov) returns HTTP 403 to curl, so it was retrieved through the session's HTTP fetch tool, which renders the served document to text, and copied to file without retyping; the page's navigation, image captions and volunteer-programme sections are omitted and the fetch tool's meta-description line is retained at the foot.
+PENDING: The text of 10 NYCRR 415.3 (Admission, transfer and discharge rights) itself. The Department of Health's regulation portal at regs.health.ny.gov returned HTTP 404 to the section path tried; the department's own consumer pages (Sources 1 and 2) state the transfer and discharge rules in the department's own words, and the regulation text is capture-pending. Also pending: the Department's discharge notice template (discharge_notice_template.docx, linked from Source 2 and available in eleven languages), retrieved as a binary but not yet extracted or quoted, and any first-party statement of the Medicaid bed-hold payment period — Source 1 states the facility's bed-hold notice duties and the readmission duty but does not state a number of days.
+
+SOURCE 1: New York State Department of Health, Transfer and Discharge Resident Rights | https://www.health.ny.gov/facilities/nursing/rights/transfer_discharge.htm | source's own date: Revised: April 2022 | retrieved: 2026-08-30
+Transfer and Discharge Resident Rights
+
+-->
+
+-->
+
+skip to main content
+
+ Your browser does not support iFrames
+
+ Navigation menu
+
+ Department of Health
+
+ Individuals/Families
+
+ COVID-19 Vaccine
+
+ Birth, Death, Marriage & Divorce Records
+
+ Health Insurance Programs
+
+ Consumer Health Care Information
+
+ Community Health
+
+ Healthy Lifestyles
+
+ Health & Safety in the Home, Workplace & Outdoors
+
+ Diseases & Conditions
+
+ Data & Reports
+
+ Health Topics A to Z
+
+ Providers/Professionals
+
+ Novel Coronavirus
+
+ Narcotic Enforcement
+
+ EMS
+
+ Health Initiatives
+
+ Data & Reports
+
+ Diseases & Conditions
+
+ Patient Resources
+
+ Disease Reporting
+
+ Clinical Guidelines, Standards & Quality of Care
+
+ Permits, Licenses & Certification
+
+ Health Commerce System (HCS)
+
+ All Health Care Professionals & Patient Safety
+
+ Health Topics A to Z
+
+ Health Facilities
+
+ Compare Health Care Providers
+
+ Adult Care Facilities/Assisted Living
+
+ Home Care & Hospice
+
+ Hospitals & Clinics
+
+ New York State Veterans Homes
+
+ Nursing Homes
+
+ School Based Health Centers
+
+ Health Commerce System (HCS)
+
+ All Health Care Facilities
+
+ Health Topics A to Z
+
+ Health Data
+
+ Open Health Data
+ NYS Health Connector
+
+ Public Health Science Center
+
+ Data & Reports
+
+ About Us
+
+ About the Department
+ Related Sites
+
+ Health Topics A to Z
+
+ Search
+
+ -->
+
+ Search:
+
+ -->
+
+You are Here: Home Page
+
+>
+ Your Rights as a Nursing Home Resident in New York State
+
+> Transfer and Discharge Resident Rights
+
+Transfer and Discharge Resident Rights
+
+You have the right to:
+
+be given 30 day notice before transfer or discharge except in certain situations,( as outlined below in the section addressing Nursing Home Responsibilities) where such notice shall be provided as soon as practicable but no later than the date a determination is made by the nursing home to transfer/discharge you.
+
+file an appeal to the New York State Department of Health in response to an involuntary transfer or discharge, for which a hearing can be held under the auspices of the Department; All appeals must be filed within sixty (60) days from the date of receipt of the transfer/discharge notice.
+
+examine your own medical records and all documents to be used by the facility at the hearing, at a reasonable time prior to the date of the hearing, at the facility, and during the hearing.
+
+remain in the facility pending the appeal determination if the request for an appeal is filed with the Department prior to you being discharged from the facility.
+
+a post-transfer/discharge appeal determination if the request for an appeal is timely filed with the Department but after you are discharged from the facility.
+
+return to the facility to the first available semi-private bed if you win the appeal, prior to the facility admitting any other person.
+
+information such as the name, address and telephone number of the New York State Department of Health, the New York State Long Term Care Ombudsman and the Disability Rights New York.
+
+Nursing Home Responsibility
+
+The nursing home may transfer or discharge you:
+
+only after the interdisciplinary care team, in consultation with you or your representative, determines that:
+
+the transfer or discharge is necessary for your welfare and your needs cannot be met after reasonable attempts at accommodation in the facility.
+
+the transfer or discharge is appropriate because your health has improved sufficiently to the point where you no longer need the services provided by the facility.
+
+your health or safety or the health or safety of other individuals in the facility would otherwise be endangered.
+
+when you have failed, after reasonable and appropriate notice, to pay for (or to have paid under Medicare, Medicaid or third-party insurance) a stay at the facility. For failure to pay, such transfer or discharge is permissible only if:
+
+ a charge is not in dispute.
+
+ no appeal of a denial of benefits is pending.
+
+ funds for payment are available, but you refuse to cooperate with the facility in obtaining them.
+
+when the facility discontinues operation and has received approval of its plan of closure from the New York State Department of Health.
+
+The nursing home shall:
+
+at the time of admission and again at the time of transfer for any reason, inform you and your designated representative both orally and in writing, information that specifies:
+
+ the duration of the bed-hold policy during which you are permitted to return and resume residence in the facility; and
+
+ the facility's policies regarding bed-hold periods permitting you to return.
+
+at the time of transfer for hospitalization or for therapeutic leave, provide written notice to you and your designated representative, which specifies the duration of the bed-hold policy.
+
+ readmit you, pursuant to an established and written policy, immediately to the first available bed in a semi-private room at the facility if you were hospitalized or on therapeutic leave for a period of time that exceeds the bed-hold period, and:
+
+ you require the services provided by the facility; and
+
+ you are eligible for Medicaid nursing home services.
+
+readmit you, pursuant to an established and written policy, immediately to the first available bed in a semi-private room at the facility if you have resided in the nursing home for 30 days or more and you have been hospitalized or you have been transferred or discharged on therapeutic leave without being given a bed-hold, and:
+
+ you require the services provided by the facility; and
+
+ you are eligible for Medicaid nursing home services.
+
+ensure complete documentation in your clinical record when the facility transfers or discharges you under any of the circumstances specified above. The documentation shall be made by:
+
+ your physician and, as appropriate, interdisciplinary care team, when transfer or discharge is
+
+ necessary for your welfare and your needs cannot be met;
+
+ appropriate because your health has improved sufficiently so you no longer need services provided by the facility.
+
+ a physician when transfer or discharge is necessary due to the endangerment of the health of other individuals in the facility.
+
+before transferring or discharging you:
+
+ notify you and your designated representative, if any, and, if known, your family member of the transfer or discharge and the reasons for the move in writing and in a language and manner the resident and/or family member understand.
+
+ record the reasons in your clinical record.
+
+ include in the notice the following items:
+
+ The reason for transfer or discharge;
+
+ The specific regulations that support, or the change in Federal or State law that requires, the action;
+
+ The effective date of transfer or discharge;
+
+ The location to which you will be transferred or discharged;
+
+ A statement that the resident has the right to appeal the action to the State Department of Health, which includes:
+
+ an explanation of the individual's right to request an evidentiary hearing appealing the decision.
+
+ the method by which an appeal may be obtained.
+
+ in cases of an action based on a change in law, an explanation of the circumstances under which an appeal will be granted.
+
+ an explanation that the resident may remain in the facility (except in cases of imminent danger) pending the appeal decision if the request for an appeal is filed prior to the resident getting discharged from the facility.
+
+ in cases of residents discharged/transferred due to imminent danger, a statement that the resident may return to the first available bed if he or she prevails at the hearing on appeal.
+
+ a statement that the resident may represent him or herself or use legal counsel, a relative, a friend, or other spokesman.
+
+ the name, address, and telephone number of the State long term care ombudsman;
+
+ for nursing facility residents with developmental disabilities, the mailing address and telephone number of the agency responsible for the protection and advocacy of developmentally disabled individuals established under Part C of the Developmental Disabilities Assistance and Bill of Rights Act;
+
+ for nursing facility residents who are mentally ill, the mailing address and telephone number of the agency responsible for the protection and advocacy of mentally ill individuals established under the Protection and Advocacy for Mentally Ill Individuals Act;
+
+provide its notice of transfer or discharge to you at least 30 days before you are transferred or discharged, except that notice shall be given as soon as practicable before transfer or discharge, but no later than the date on which a determination was made to transfer or discharge you, under the following circumstances:
+
+ the safety of individuals in the facility would be endangered;
+
+ the health of individuals in the facility would be endangered;
+
+ your health improves sufficiently to allow a more immediate transfer or discharge;
+
+ an immediate transfer or discharge is required by your urgent medical needs;
+
+ the transfer or discharge is the result of a change in the level of medical care prescribed by your physician;
+
+ you have not resided in the facility for 30 days; or
+
+ the transfer or discharge is made in compliance with your request.
+
+provide sufficient preparation and orientation to you to ensure safe and orderly transfer or discharge from the facility in the form of a discharge plan which addresses your medical needs and how these will be met after discharge and provide a discharge summary.
+
+permit you, your legal representative or health care agent the opportunity to participate in deciding where you will reside after discharge from the facility.
+
+provide written notification to you, your authorized representative, the Department of Health, and the NYS Long Term Care Ombudsman of an impending closure at least sixty (60) days prior to the date of the facilities anticipated closure.
+
+Nursing Home Transfer or Discharge Appeal
+
+   Back to top
+
+ Questions or comments: nhinfo@health.ny.gov
+
+ Revised: April 2022
+
+ -->
+
+ Department of Health
+
+ General Information
+
+ James V. McDonald, M.D., M.P.H., Commissioner
+
+ About the Department of Health
+
+ Meetings & Webcasts
+
+ Employment Opportunities
+
+ Wadsworth Center
+
+ AIDS Institute
+
+ New York State Veterans Homes
+
+ Helen Hayes Hospital
+
+ NY State of Health (Health Plan Marketplace)
+
+ New York State Physician Profile
+
+ New York State Public Health Corps
+
+ Contact
+
+ Councils and Boards
+
+ Grants & Funding Opportunities
+
+ Laws & Regulations
+
+ Press Releases, Reports & Publications
+
+ Freedom of Information Law (FOIL)
+
+ Forms
+
+ Current Issues/Info
+
+ Abortion in NYS: Know Your Rights
+
+ Bird Flu (Avian Influenza)
+
+ Consumer Directed Personal Assistance Program (CDPAP)
+
+ Donate Life - Enroll Today!
+
+ Drinking Water Protection Program
+
+ Ending the Epidemic
+
+ Exposure to Smoke from Fires
+-->
+ Lesbian, Gay, Bisexual and Transgender Health
+
+ Long COVID
+
+ Master Plan for Aging
+-->
+ Measles
+
+ Medicaid in New York State
+
+ Office of Drug User Health
+
+ Polio
+
+ Reproductive Health
+
+ School Vaccination Fraud
+-->
+ Vaping and E-Cigarettes
+
+ Wastewater Surveillance
+
+ Help
+
+ Help Increasing the Text Size in Your Web Browser
+
+ File Formats Used on this Web Site
+
+ Disclaimer
+
+ Privacy Policy
+
+ Accessibility
+
+ Language Assistance
+
+ English
+
+ Español (Spanish)
+
+ 中文 (Chinese)
+
+ Русский (Russian)
+
+ ইংরেজি (Bengali)
+
+ Italiano (Italian)
+
+ Kreyòl Ayisyen (Haitian-Creole) 
+
+ 한국어 (Korean)
+
+ יידיש (Yiddish)
+
+ العربية (Arabic)
+
+ Polski (Polish)
+
+ Français (French)
+
+ اُردُو (Urdu)
+
+ Website Language Translations
+
+ CONNECT WITH US
+
+ FACEBOOK
+
+ X
+
+ YOUTUBE
+
+ PINTEREST
+
+-->
+
+ INSTAGRAM
+
+ FLICKR
+
+ LINKEDIN
+
+ THREADS
+
+ BLUESKY
+
+ Your browser does not support iFrames
+END SOURCE 1
+
+SOURCE 2: New York State Department of Health, Nursing Home Transfer or Discharge Appeal | https://www.health.ny.gov/facilities/nursing/rights/transfer_discharge_appeal.htm | source's own date: Revised: July 2026 | retrieved: 2026-08-30
+Nursing Home Transfer or Discharge Appeal
+
+-->
+
+-->
+
+skip to main content
+
+ Your browser does not support iFrames
+
+ Navigation menu
+
+ Department of Health
+
+ Individuals/Families
+
+ COVID-19 Vaccine
+
+ Birth, Death, Marriage & Divorce Records
+
+ Health Insurance Programs
+
+ Consumer Health Care Information
+
+ Community Health
+
+ Healthy Lifestyles
+
+ Health & Safety in the Home, Workplace & Outdoors
+
+ Diseases & Conditions
+
+ Data & Reports
+
+ Health Topics A to Z
+
+ Providers/Professionals
+
+ Novel Coronavirus
+
+ Narcotic Enforcement
+
+ EMS
+
+ Health Initiatives
+
+ Data & Reports
+
+ Diseases & Conditions
+
+ Patient Resources
+
+ Disease Reporting
+
+ Clinical Guidelines, Standards & Quality of Care
+
+ Permits, Licenses & Certification
+
+ Health Commerce System (HCS)
+
+ All Health Care Professionals & Patient Safety
+
+ Health Topics A to Z
+
+ Health Facilities
+
+ Compare Health Care Providers
+
+ Adult Care Facilities/Assisted Living
+
+ Home Care & Hospice
+
+ Hospitals & Clinics
+
+ New York State Veterans Homes
+
+ Nursing Homes
+
+ School Based Health Centers
+
+ Health Commerce System (HCS)
+
+ All Health Care Facilities
+
+ Health Topics A to Z
+
+ Health Data
+
+ Open Health Data
+ NYS Health Connector
+
+ Public Health Science Center
+
+ Data & Reports
+
+ About Us
+
+ About the Department
+ Related Sites
+
+ Health Topics A to Z
+
+ Search
+
+ -->
+
+ Search:
+
+ -->
+
+You are Here: Home Page
+
+>
+ Your Rights as a Nursing Home Resident in New York State
+
+> Nursing Home Transfer or Discharge Appeal
+
+Nursing Home Transfer or Discharge Appeal
+
+Appeal & Hearing Rights
+
+If you do not agree with the proposed transfer/discharge, you have the right to appeal the action and request an evidentiary hearing. You may file a request for an appeal and hearing by contacting the New York State Department of Health (NYSDOH) in one of the following manners:
+
+Phone: Call the NYSDOH Nursing Home Complaint and Discharge Appeal Hotline at 1-888-201-4563.
+
+Internet: 
+
+ Complete and submit the online Nursing Home Complaint Form.
+
+ Complete and submit the online Nursing Home Discharge Appeal Form
+
+Mail: Complete and mail a paper Nursing Home Complaint Form to the following address:
+
+NYS DOH Centralized Complaint Intake Program
+875 Central Ave,
+Albany, NY 12206
+
+Fax: Complete and fax a Nursing Home Complaint Form to 518-408-1157.
+
+Email: Complete and email a scanned copy of a Nursing Home Complaint Form to nhintake@health.ny.gov.
+
+The Nursing Home is required by regulation to provide written discharge notification when the facility makes the determination to discharge the resident from a nursing home (involuntary discharge). The links below will explain Resident Rights specific to transfers and discharge and provide an example of a Discharge notice template. This template is not required to be used by Nursing Homes, it is an example of the required regulatory language that must be in a discharge/transfer notice.
+
+Resident Rights regarding Transfers and Discharge
+
+Discharge Appeal template (DOCX) - Available in the following languages: Spanish, Chinese, Haitian Creole, Italian, Korean, Russian, Yiddish, Polish, Bengali, Arabic
+
+Nursing Home Discharge Appeal Decisions
+
+   Back to top
+
+ Questions or comments: nhinfo@health.ny.gov
+
+ Revised: July 2026
+
+ -->
+
+ Department of Health
+
+ General Information
+
+ James V. McDonald, M.D., M.P.H., Commissioner
+
+ About the Department of Health
+
+ Meetings & Webcasts
+
+ Employment Opportunities
+
+ Wadsworth Center
+
+ AIDS Institute
+
+ New York State Veterans Homes
+
+ Helen Hayes Hospital
+
+ NY State of Health (Health Plan Marketplace)
+
+ New York State Physician Profile
+
+ New York State Public Health Corps
+
+ Contact
+
+ Councils and Boards
+
+ Grants & Funding Opportunities
+
+ Laws & Regulations
+
+ Press Releases, Reports & Publications
+
+ Freedom of Information Law (FOIL)
+
+ Forms
+
+ Current Issues/Info
+
+ Abortion in NYS: Know Your Rights
+
+ Bird Flu (Avian Influenza)
+
+ Consumer Directed Personal Assistance Program (CDPAP)
+
+ Donate Life - Enroll Today!
+
+ Drinking Water Protection Program
+
+ Ending the Epidemic
+
+ Exposure to Smoke from Fires
+-->
+ Lesbian, Gay, Bisexual and Transgender Health
+
+ Long COVID
+
+ Master Plan for Aging
+-->
+ Measles
+
+ Medicaid in New York State
+
+ Office of Drug User Health
+
+ Polio
+
+ Reproductive Health
+
+ School Vaccination Fraud
+-->
+ Vaping and E-Cigarettes
+
+ Wastewater Surveillance
+
+ Help
+
+ Help Increasing the Text Size in Your Web Browser
+
+ File Formats Used on this Web Site
+
+ Disclaimer
+
+ Privacy Policy
+
+ Accessibility
+
+ Language Assistance
+
+ English
+
+ Español (Spanish)
+
+ 中文 (Chinese)
+
+ Русский (Russian)
+
+ ইংরেজি (Bengali)
+
+ Italiano (Italian)
+
+ Kreyòl Ayisyen (Haitian-Creole) 
+
+ 한국어 (Korean)
+
+ יידיש (Yiddish)
+
+ العربية (Arabic)
+
+ Polski (Polish)
+
+ Français (French)
+
+ اُردُو (Urdu)
+
+ Website Language Translations
+
+ CONNECT WITH US
+
+ FACEBOOK
+
+ X
+
+ YOUTUBE
+
+ PINTEREST
+
+-->
+
+ INSTAGRAM
+
+ FLICKR
+
+ LINKEDIN
+
+ THREADS
+
+ BLUESKY
+
+ Your browser does not support iFrames
+END SOURCE 2
+
+SOURCE 3: New York State Office for the Aging, Long Term Care Ombudsman Program | https://aging.ny.gov/long-term-care-ombudsman-program | source's own date: none stated on page | retrieved: 2026-08-30
+Long Term Care Ombudsman Program
+
+An Advocate and Resource
+
+Helping residents in long term care facilities. Call 1 (855) 582-6769 to reach your Ombudsman.
+
+Find Your Ombudsman
+
+Call An Ombudsman (tel:18555826769)
+
+Overview: Educating, Empowering and Advocating for Long-Term Care Residents
+
+The Ombudsman Program is an effective advocate and resource for older adults and people with disabilities who live in nursing homes, assisted living, and other licensed adult care homes. Ombudsmen help residents understand and exercise their rights to good care in an environment that promotes and protects their dignity and quality of life.
+
+Ombudsmen:
+
+- Advocate on behalf of residents to assure rights are not violated, identifying, investigating and working towards resolution of resident complaints.
+- Mediate among residents, family members, and staff towards achieving mutually beneficial solutions to the issues they are experiencing in long term care facilities.
+- Educate residents, families, facility staff, and community about issues in long term care and specific issues they are experiencing in facilities.
+- Refer complaints to the New York State Department of Health or other appropriate agencies when resolution through the Ombudsman program is not achievable.
+
+Contact Claudette Royal, the New York State Ombudsman.
+
+Your Rights
+
+Your Rights as a Nursing Home Resident in New York State
+Resident Rights, Protections, and Responsibilities in Certified Adult Care Facilities
+Long Term Care Residents Living with HIV and Members of the LGBTQIA+ Bill of Rights
+
+Support Services
+
+For Residents and Families
+
+Advocacy
+
+The Long Term Care Ombudsman Program (LTCOP) is a federal advocacy program dedicated to protecting people living in long-term care facilities. In New York State, the Office of the State Long Term Care Ombudsman is an independent office administratively housed in the New York State Office for the Aging.
+
+Service
+
+The State Ombudsman supervises Regional Ombudsman Coordinators who serve all communities throughout the state. Regional Ombudsman programs are sponsored by non-profit organizations, independent living centers and area agencies on aging.
+
+Dedication
+
+The heart of the Long Term Care Ombudsman Program is its corps of specially trained and certified citizen-volunteer ombudsmen. Many volunteers are retired professionals from various fields. These dedicated Ombudsmen spend an average of two to four hours a week in each of their assigned facilities, advocating for the residents.
+
+Contact Us
+
+New York State Ombudsman Program
+
+The New York State Ombudsman Program supervises the coordinators and is here to help with understanding the program and connecting you with help. Contact the office for help or concerns.
+
+meta-description: Helping residents in long term care facilities. Call 1 (855) 582-6769 to reach your Ombudsman.
+
+END SOURCE 3
+
+END OF PACKET — 3 sources

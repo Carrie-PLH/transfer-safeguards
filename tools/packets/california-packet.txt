@@ -1,0 +1,400 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: California
+SLUG: california
+ASSEMBLED: 2026-08-30
+CAPTURE NOTES: www.cdph.ca.gov and www.dhcs.ca.gov refuse non-browser fetches (cdph.ca.gov returns an incomplete certificate chain to curl and to python/certifi; dhcs.ca.gov returns a 212-byte script shell), so Sources 1 and 2 were retrieved through the session's HTTP fetch tool, which renders the served document to text, and copied to file without retyping; bullet glyphs, typographic apostrophes and quotation marks are the publisher's own as the extractor rendered them, and the site chrome (navigation, translation menu, footer) is omitted. Source 3 was retrieved by curl with a browser user-agent and reduced to text mechanically (tag strip over the <main> element). Source 4 was retrieved by curl from leginfo.legislature.ca.gov and reduced to text mechanically (tag strip over the codeLawSectionNoHead element); the line breaks inside sentences are leginfo's own markup.
+PENDING: The full texts of 22 CCR 72527 (Patients' Rights) and 22 CCR 72520 (Bed Hold) — California publishes its regulations through govt.westlaw.com/calregs, which serves rule bodies only to a scripted client and returns a 4.8 KB shell with no rule text to direct capture; both rules are named and linked by Sources 1 and 2 but their text is not captured. A first-party statement of the Medi-Cal bed-hold payment policy was searched (cdph.ca.gov All Facilities Letters, dhcs.ca.gov laws and regulations, the DHCS Transfer Discharge and Refusal to Readmit Unit page) and not captured beyond the reference in Source 2 and the readmission-appeal statement in Source 4. No enumerated list of permissible grounds for involuntary transfer or discharge was found in any captured California source; Source 1 states the notice must give the reason "including the basis under Title 42 CFR section 483.15(c)(1)(i)(A)-(F)" and points to the federal enumeration rather than restating one.
+
+SOURCE 1: California Department of Public Health, All Facilities Letter AFL 25-17, SNF Discharge Notice Requirements | https://www.cdph.ca.gov/Programs/CHCQ/LCP/Pages/AFL-25-17.aspx | source's own date: May 28, 2025 | retrieved: 2026-08-30
+Skip Navigation LinksAFL-25-17
+
+State of Cal Logo
+EDMUND G. BROWN JR.
+Governor
+
+Health and Human Services Agency
+California Department of Public Health
+
+
+AFL 25-17
+May 28, 2025
+
+
+TO:
+Skilled Nursing Facilities (SNFs)
+
+SUBJECT:
+SNF Discharge Notice Requirements
+
+
+AUTHORITY:     Health and Safety Code (HSC) section 1599.1(i)
+                                Title 42 Code of Federal Regulations (CFR) section 483.15
+                                Title 22 California Code of Regulations (CCR) section 72527
+
+
+All Facilities Letter (AFL) Summary
+
+  • This AFL reminds skilled nursing facilities (SNFs) of the transfer and discharge notice requirements, as specified in Title 42 CFR section 483.15(c).
+  • Transfer and discharge notices must be in writing and in a language and manner the resident and resident representative(s) understand.
+  • Noncompliance with transfer and discharge requirements will be cited as a deficiency and may result in a citation and/or civil action.
+
+Background
+
+Title 42 CFR section 483.15(c)(3)-(6) provides the notice requirements for facility-initiated transfers and discharges, including discharges that occur while the resident remains in the hospital after an emergency transfer. HSC section 1599.1(i) requires SNFs to comply with Title 42 CFR section 483.15, regardless of a resident’s payment source or the Medi-Cal or Medicare certification status of the SNF in which the resident resides, except that a noncertified facility is not obligated to provide notice of Medicaid or Medicare benefits, covered services, or eligibility procedures.
+
+Notice Before Transfer or Discharge
+
+Pursuant to Title 42 CFR section 483.15(c)(3), before a SNF transfers or discharges a resident, the SNF must:
+
+  • Notify the resident and the resident’s representative(s) of the transfer or discharge and the reasons for the move in writing and in a language and manner they understand.
+  • Send a copy of the notice of transfer or discharge to the representative of the Office of the State Long-Term Care (LTC) Ombudsman.
+  • Record the reasons for the transfer or discharge in the resident’s medical record, in accordance with Title 42 CFR section 483.15(c)(2).
+  • Include in the notice all items required in Title 42 CFR section 483.15(c)(5) – see  “Contents of the Notice" section below.
+
+Contents of the Notice
+
+The facility’s notice must include all of the following at the time notice is provided:
+
+  • The specific reason for the transfer or discharge, including the basis under Title 42 CFR section 483.15(c)(1)(i)(A)-(F).
+  • The effective date of transfer or discharge.
+  • The specific location (such as the name of the new provider or description and/or address if the location is a residence) to which the resident is to be transferred or discharged.
+  • An explanation of the right to appeal the transfer or discharge to the State (Department of Health Care Services (DHCS), Office of Administrative Hearings and Appeals (OAHA)).
+  • The name, address (mail and email), and telephone number of the state entity which receives such appeal hearing requests (DHCS OAHA, Transfer Discharge and Refusal to Readmit Unit).
+  • Information on how to obtain an appeal form.
+  • Information on obtaining assistance in completing and submitting the appeal hearing request.
+  • The name, address (mailing and email), and phone number of the representative of the Office of the State LTC Ombudsman.
+
+For nursing facility residents with intellectual and developmental disabilities (or related disabilities) or with mental illness (or related disabilities), the notice must include the name, mailing and e-mail addresses, and phone number of the agency responsible for the protection and advocacy for these populations (Disability Rights California, Get Help Webpage).
+
+Timing of The Notice
+
+Notice must be provided at least 30 days prior to the transfer or discharge of the resident. Exceptions to the 30-day requirement apply when the transfer or discharge is affected because:
+
+  • The health and/or safety of individuals in the facility would be endangered due to the clinical or behavioral status of the resident.
+  • The resident’s health improves sufficiently to allow a more immediate transfer or discharge.
+  • An immediate transfer or discharge is required by the resident’s urgent medical needs; or
+  • A resident has not resided in the facility for 30 days.
+
+In these exceptional cases, the notice must be provided to the resident, resident’s representative(s) if appropriate, and LTC ombudsman as soon as practicable before the transfer or discharge.
+
+The information in this AFL is a brief summary of the laws and regulations governing the rights of resident and the resident’s representative(s) on receiving a notification of transfer or discharge from a SNF. SNFs are responsible for complying with all applicable laws. Consequences of not complying will result in a deficiency that can lead to a citation and/or civil action against the licensee of the SNF.
+
+For more information regarding rights, admission, and transfer and discharge requirements, refer to the California Standard Admission Agreement (PDF) and the applicable state and federal requirements referenced above.
+
+If you have questions, please contact your respective district office.
+
+Sincerely,
+
+Original signed by Mandi Posner
+
+Mandi Posner
+
+Deputy Director
+
+END SOURCE 1
+
+SOURCE 2: California Department of Health Care Services, Office of Administrative Hearings and Appeals — Transfer Discharge and Refusal to Readmit Unit | https://www.dhcs.ca.gov/forms-laws-publications/laws-and-regulations/transfer-discharge-and-refusal-to-readmit-unit/ | source's own date: page modified 2026-07-15 (meta article:modified_time) | retrieved: 2026-08-30
+Transfer Discharge and Refusal to Readmit Unit
+
+The Office of Administrative Hearings and Appeals (OAHA) is responsible for adjudicating appeals of residents who face a facility-initiated transfer or discharge from their nursing facility, or whose nursing facility has refused to readmit the resident following a period of hospitalization or therapeutic leave.
+
+Transfer or Discharge Appeals (TDA)
+
+Under federal and state law, when a nursing facility initiates the transfer or discharge of a nursing home resident, the resident has established rights that must be addressed in order to ensure that the discharge is fair and appropriate. An essential component to these rights is the right to request a hearing. Only the resident or a resident’s authorized representative may request a transfer/discharge hearing. Residents desiring a hearing should submit a request as soon as possible in order for a decision in the matter to be rendered before the proposed date of discharge.
+
+Resources
+
+- 42 Code of Federal Regulations part 483.15 - Admission, transfer and discharge rights
+- 42 Code of Federal Regulations part 483.21(c) - Discharge Planning
+- California Code of Regulations, title 22, section 72527 - Patients’ Rights
+- Directory of Local Ombudsman Programs
+
+Refusal to Readmit (RTR) Appeals
+
+Under federal and state law, when a resident is transferred to the hospital or approved for therapeutic leave, they have a right to return to the nursing facility after they are hospitalized or when the period of therapeutic leave has concluded. When the resident is hospitalized and the nursing facility refuses to readmit the resident, the resident may request a hearing. Only the resident or a resident’s authorized representative may request a RTR hearing. Preferably, an RTR hearing request is submitted to OAHA while the resident is still hospitalized. OAHA conducts RTR hearings only for those residents who wish to return to their nursing facility.
+
+Resources
+
+- 42 Code of Federal Regulations part 483.15 - Admission, transfer and discharge rights
+- 42 Code of Federal Regulations part 483.21(c) - Discharge Planning
+- California Code of Regulations, title 22, section 72520 - Bed Hold
+- California Code of Regulations, title 22, section 72527 - Patients’ Rights
+- California Health and Safety Code section 1599.1
+- Directory of Local Ombudsman Programs
+
+TDA and RTR Hearings
+
+OAHA’s hearing officers conduct the TDA and RTR hearings. Generally, the hearing is held via telephone. The resident or his/her authorized representative must be present at the hearing.
+
+The hearing officer controls the course of the proceedings, digitally records the hearing, and takes sworn testimony from participants who are in attendance. The burden of proof is on the nursing facility to present evidence to support that its action is appropriate and in compliance with prevailing federal and state law. The resident or his/her representative will have the opportunity to present testimony, including from witnesses that they compel to appear at the hearing. Only testimony that is relevant to the action will be allowed, at the hearing officer’s discretion. After conclusion of the hearing, the hearing officer writes the final administrative decision of the Department, known as a Decision & Order. The Decision & Order will either “grant,” “deny,” or “dismiss” the residents’ appeal and outline the remedy that has been ordered. RTR hearings that are granted in favor of the resident will require the facility to submit a Certification of Compliance with the Department of Health Care Services.
+
+Resources
+
+- 42 Code of Federal Regulations (CFR), Section 431. Subpart E - Fair Hearings for Applicants and Recipients
+- 42 Code of Federal Regulations part 435.923 - Authorized Representatives
+- Certification of Compliance
+
+Requesting a Hearing
+
+When submitting a hearing request, an OAHA representative will ask you a series of questions. To avoid unnecessary delay, please have the following information available before making your request:
+
+- Full name and date of birth of the affected resident
+- The name of the resident’s nursing facility and address (if you have it)
+- The name of the hospital if the resident is currently an inpatient
+- If filing an appeal on behalf of a resident, be prepared to provide your contact information and information to demonstrate that you are authorized to make the hearing request. For example, the resident asked you to request the hearing on his or her behalf, or you have a Durable Power of Attorney for the resident’s health care.
+- For TDA requests, it is preferable to have the written Notice of Transfer/Discharge available at the time of your call. If the SNF did not provide you with a written notice, ask them to do so.
+- For RTR requests, provide the date of your transfer from the nursing facility to the hospital and the date(s) that the nursing facility refused to readmit you.
+
+A hearing request is complete when all the necessary information is received. OAHA will notify the resident and the nursing facility in writing of the time, date, and location of the hearing.
+
+To request a hearing, residents or their authorized representative can contact OAHA via telephone at (916) 445-9775, fax at (916) 440-5105, or email at OAHAefax@dhcs.ca.gov, or by using the OAHA E-Filing Portal (https://oaha.mes.dhcs.ca.gov/).
+
+END SOURCE 2
+
+SOURCE 3: California Department of Aging, Long-Term Care Ombudsman (consumer page) | https://aging.ca.gov/programs_and_services/long-term_care_ombudsman/ | source's own date: none stated on page | retrieved: 2026-08-30
+Long-Term Care Ombudsman - Consumer | California Department of Aging - State of California
+
+ ×
+
+ Excessive Heat Warning
+
+ California is experiencing significant and rapid increases in temperature.
+
+ Visit the Emergency Resources page to find cooling centers, safety tips, and other emergency resources.
+
+ Skip to Main Content
+
+ ×
+
+ Saving your location allows us to provide you with more relevant information.
+
+ Set Location
+
+ return to homepage
+
+ department of aging facebook
+
+ department of aging instagram
+
+ department of aging twitter
+
+ department of aging youtube channed
+
+ Email california department of aging
+
+ Settings
+-->
+ Change Text Size T T T
+
+ ×
+
+ Default
+
+ High Contrast
+
+ Reset
+
+ Increase Font SizeFont 
+
+ Decrease Font SizeFont 
+
+ -->
+ -->
+
+ -->
+
+ Menu
+ Menu-->
+
+ Search
+
+ About Us
+
+ Providers & Partners
+
+ Careers with CDA
+
+ Newsroom
+
+ Contact Us
+
+ Search
+
+ How Do I?
+
+ Get home delivered meals
+
+ Find a nutrition or exercise class
+
+ Digital Resources
+
+ Apply for Medi-Cal
+
+ Get help with Medicare
+
+ Determine the best housing option for me
+
+ Get help with my landlord
+
+ Get legal assistance
+
+ Make home modifications so that I can safely stay in my current home
+
+ Get help dealing with memory problems
+
+ Learn more about hearing, vision, and speech assistive technology
+
+ Get transportation to appointments
+
+ Learn more about safe senior driving
+
+ Get paid to take care of a family member
+
+ Open an Adult Day Care Center
+
+ Report elder abuse or neglect
+
+ Outside California
+
+ Call 1-800-677-1116 
+
+ Eldercare Locator
+
+ For information on services for seniors or adults with disabilities who live outside California.
+
+ State Health Insurance Assistance Programs (SHIP)
+
+ For one-on-one insurance counseling and assistance to Medicare beneficiaries, their families, friends, and caregivers.
+
+ Long-Term Care Ombudsman
+
+ How To Find Services In My Area
+
+ You can locate a local Ombudsman office in your area by selecting your county on the Find Services in My County page of this website.
+
+ Additionally, all long-term care facilities are required to post, in a visible location, the phone number for the local Ombudsman office and the Statewide Ombudsman Hotline number 1-800-231-4024. The Ombudsman Hotline is available 24 hours a day, 7 days a week to take calls and refer complaints from residents in long-term care facilities.
+
+ What Services Are Available
+
+ Long-Term Care Ombudsman representatives assist residents in long-term care facilities with issues related to day-to-day care, health, safety, and personal preferences. Problems can include, but are not limited to:
+
+ Violation of residents' rights or dignity
+
+ Physical, verbal, mental, or financial abuse
+
+ Poor quality of care
+
+ Dietary concerns
+
+ Medical care, therapy, and rehabilitation issues
+
+ Medicare and Medi-Cal benefit issues
+
+ Improper transfer or discharge of a resident
+
+ Inappropriate use of chemical or physical restraints
+
+ An Ombudsman:
+
+ Will follow your wishes
+ Ombudsman representatives follow the expressed wishes of residents or, in cases where residents cannot indicate their choices, the expressed wishes of their representatives.
+
+ Receives extensive training
+ Every new Ombudsman representative completes a minimum of 36 hours of training as well as a supervised internship. After being certified, Ombudsman representatives must complete a minimum of 18 hours of ongoing education each year.
+
+ Is usually a volunteer
+ nearly 80 percent of California's State-certified Ombudsman representatives are volunteers.
+
+ Reviews and investigates reports of abuse or neglect in long-term care facilities
+
+ All Ombudsman services are provided for free and all complaints are confidential.
+
+ Who Can Get These Services
+
+ All residents of Long-Term Care facilities regardless of age.
+
+ Residents' Rights
+
+ Learn more about Long-Term Care facility Residents' Rights.
+
+ Program Data
+
+ For past and current program data visit the Data and Reports sections of the website.
+
+ Volunteer to be a Long-Term Care Ombudsman
+
+ Learn more about the volunteer opportunities as a Long-Term Care Ombudsman.
+
+ Back to Top
+
+ Conditions of Use
+
+ Privacy Policy
+
+ Accessibility
+
+ Get Free Reader
+
+ CDA Forms
+
+ Program Memos
+
+ department of aging facebook
+
+ department of aging instagram
+
+ department of aging twitter
+
+ navigate to linkin login
+
+ department of aging youtube channed
+
+ Copyright ©
+ State of California
+END SOURCE 3
+
+SOURCE 4: California Health and Safety Code section 1599.1 (Skilled Nursing and Intermediate Care Facility Patient's Bill of Rights) | https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=1599.1 | source's own date: amended by Stats. 2023, Ch. 794, Sec. 3 | retrieved: 2026-08-30
+id="codeLawSectionNoHead">Health and Safety Code - HSC
+
+DIVISION 2. LICENSING PROVISIONS [1200 - 1796.88]
+  ( Division 2 enacted by Stats. 1939, Ch. 60. )
+  
+CHAPTER 3.9. Skilled Nursing and Intermediate Care Facility Patient’s Bill of Rights [1599 - 1599.4]
+  ( Chapter 3.9 added by Stats. 1979, Ch. 893. )
+
+  1599.1.  
+Written policies regarding the rights of residents shall be established and shall be made available to the resident, to any guardian, next of kin, sponsoring agency or representative payee, and to the public. Those policies and procedures shall ensure that each resident admitted to the facility has the following rights and is notified of the following facility obligations, in addition to those specified by regulation:
+(a) The facility shall employ an adequate number of qualified personnel to carry out all of the functions of the facility.
+(b) Each resident shall show evidence of good personal hygiene and be given care to prevent bedsores, and
+ measures shall be used to prevent and reduce incontinence for each resident.
+(c) The facility shall provide food of the quality and quantity to meet the residents’ needs in accordance with physicians’ orders.
+(d) The facility shall provide an activity program staffed and equipped to meet the needs and interests of each resident and to encourage self-care and resumption of normal activities. Residents shall be encouraged to participate in activities suited to their individual needs.
+(e) The facility shall be clean, sanitary, and in good repair at all times.
+(f) A nurses’ call system shall be maintained in operating order in all nursing units and provide
+ visible and audible signal communication between nursing personnel and residents. Extension cords to each resident’s bed shall be readily accessible to residents at all times.
+(g) (1) If a facility has a significant beneficial interest in an
+ ancillary health service provider or if a facility knows that an ancillary health service provider has a significant beneficial interest in the facility, as provided by subdivision (a) of Section 1323, or if the facility has a significant beneficial interest in another facility, as provided by subdivision (c) of Section 1323, the facility shall disclose that interest in writing to the resident, or the resident’s representative, and advise the resident, or the resident’s representative, that the resident may choose to have another ancillary health service provider, or facility, as the case may be, provide any supplies or services ordered by a member of the medical staff of the facility.
+(2) A facility is not required to make any disclosures required by this subdivision to a resident, or the resident’s representative, if the
+ resident is enrolled in an organization or entity that provides or arranges for the provision of health care services in exchange for a prepaid capitation payment or premium.
+(h) (1) If a resident of a long-term health care facility has been hospitalized in an acute care hospital and asserts their rights to readmission pursuant to bed hold provisions, or readmission rights of either state or federal law, and the facility refuses to readmit them, the resident may appeal the facility’s refusal.
+(2) The refusal of the facility, as described in this subdivision, shall be treated as if it were an involuntary transfer under federal law, and the rights and procedures that apply to appeals of transfers and discharges of nursing facility residents shall apply to the resident’s
+ appeal under this subdivision.
+(3) If the resident appeals pursuant to this subdivision, and the resident is eligible under the Medi-Cal program, the resident shall remain in the hospital and the hospital may be reimbursed at the administrative day rate, pending the final determination of the hearing officer, unless the resident agrees to placement in another facility.
+(4) If the resident appeals pursuant to this subdivision, and the resident is not eligible under the Medi-Cal program, the resident shall remain in the hospital if other payment is available, pending the final determination of the hearing officer, unless the resident agrees to placement in another facility.
+(5) If the resident is not eligible for
+ participation in the Medi-Cal program and has no other source of payment, the hearing and final determination shall be made within 48 hours.
+(i) (1) Sections 483.10, 483.12, 483.15, and 483.24 of Title 42 of the Code of Federal Regulations in effect on July 13, 2017, shall apply to each skilled nursing facility and intermediate care facility, regardless of a resident’s payment source or the Medi-Cal or Medicare certification status of the skilled nursing facility or intermediate care facility in which the resident resides, except that a noncertified facility is not obligated to provide notice of Medicaid or Medicare benefits, covered services, or eligibility procedures.
+(2) Sections 483.10, 483.12, 483.15, and 483.24 of Title 42 of the Code of Federal Regulations in effect on July 13, 2017, shall apply to each hospice facility, regardless of a resident’s payment source or the Medi-Cal or Medicare certification status of the hospice facility in which the resident resides, except that a noncertified facility is not obligated to provide notice of Medicaid or Medicare benefits, covered services, or eligibility procedures and a hospice facility is not obligated to comply with the provisions of subdivision (f) of Section 483.15 of Title 42 of the Code of Federal Regulations.
+(3) All residents of skilled nursing facilities, intermediate care
+ facilities, and hospice facilities have the right to appeal an involuntary transfer or discharge through the appeal process provided under Section 483.204 of Title 42 of the Code of Federal Regulations, regardless of a resident’s payment source or the Medi-Cal or Medicare certification status of the skilled nursing facility, intermediate care facility, or hospice facility in which the resident resides.
+(j) In addition to other rights to provide or withhold informed consent to a proposed treatment or procedure, a resident shall have the right to receive the information that is material to an individual’s informed consent decision concerning whether to accept or refuse the administration of psychotherapeutic drugs pursuant to
+ Sections 72528 and 73524 of Title 22 of the California Code of Regulations. The disclosure of material information for administration of psychotherapeutic drugs shall also include the disclosures required by Section 1599.15.
+(k) A resident shall have the right to be free from psychotherapeutic drugs used for the purpose of resident discipline or convenience. The resident shall have the right to be free from psychotherapeutic drugs used as a chemical restraint, except in an emergency as described in subdivision (e) of Section 72528 of, or subdivision (e) of Section 73524 of, Title 22 of the
+ California Code of Regulations.
+ If a chemical restraint is administered during that emergency, that drug shall be only a drug that is required to treat the unanticipated condition, after being deemed the least intrusive treatment alternative for the resident, and used only for a specified and limited period of time. As used in this section, “chemical restraint” means a drug used to control behavior and used in a manner not required to treat the resident’s medical symptoms.
+(l) “Resident” shall have the same
+ meaning as provided in Section 1599.15.
+(Amended by Stats. 2023, Ch. 794, Sec. 3. (AB 48) Effective January 1, 2024.)
+END SOURCE 4
+
+END OF PACKET — 4 sources

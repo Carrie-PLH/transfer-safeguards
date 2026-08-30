@@ -1,0 +1,8 @@
+# anchor manifest 2026-08-30T205344Z repo=transfer-safeguards
+cbd7d20c7db5715822851fb274797f6a65609c780421048de35b6d6d7d05280b  tools/packets/california-packet.txt
+725c10add680db5d35f4e4939de210bdbd3fdf1cc6e14c2762ee4cdc66d4db1e  tools/packets/federal-packet.txt
+a03d9138bdd7202d977adabc2f419202bd00b460519629841807e1c5a1b5371e  tools/packets/florida-packet.txt
+f57c92ae2850e855fdcc7864a9ee400055bf9b0bc10218a3fd654f20dff25a0a  tools/packets/new-york-packet.txt
+684e9ed5795353c4337abe6c1cf28bdb0024bd0c5396d5565c846dde5f996cde  tools/packets/ohio-packet.txt
+ac2234f79ca43e128ef162afbfa37492a9563744314b0fdb426d1cad6bddf0b4  tools/packets/pennsylvania-packet.txt
+107303a079dea4e095ac2933ef661934dd14e505ad7c65608ad9712ecdec99ca  tools/packets/texas-packet.txt

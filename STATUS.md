@@ -7,7 +7,7 @@ present. Spanish = a translated page is published; it carries the
 docket, the hoisted rows, and the notice periods and deadlines, in
 the state's own published translation only.
 
-**Baseline: 2 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
+**Baseline: 6 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
 
 | State | Baseline | Full page | Spanish | Sources last checked |
 |---|:---:|:---:|:---:|---|
@@ -15,12 +15,12 @@ the state's own published translation only.
 | Alaska | [ ] | [ ] | [ ] |  |
 | Arizona | [ ] | [ ] | [ ] |  |
 | Arkansas | [ ] | [ ] | [ ] |  |
-| California | [ ] | [ ] | [ ] |  |
+| [California](site/states/california.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Colorado | [ ] | [ ] | [ ] |  |
 | Connecticut | [ ] | [ ] | [ ] |  |
 | Delaware | [ ] | [ ] | [ ] |  |
 | District of Columbia | [ ] | [ ] | [ ] |  |
-| Florida | [ ] | [ ] | [ ] |  |
+| [Florida](site/states/florida.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Georgia | [ ] | [ ] | [ ] |  |
 | Hawaii | [ ] | [ ] | [ ] |  |
 | Idaho | [ ] | [ ] | [ ] |  |
@@ -43,13 +43,13 @@ the state's own published translation only.
 | New Hampshire | [ ] | [ ] | [ ] |  |
 | New Jersey | [ ] | [ ] | [ ] |  |
 | New Mexico | [ ] | [ ] | [ ] |  |
-| New York | [ ] | [ ] | [ ] |  |
+| [New York](site/states/new-york.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | North Carolina | [ ] | [ ] | [ ] |  |
 | North Dakota | [ ] | [ ] | [ ] |  |
 | [Ohio](site/states/ohio.html) | [x] | [x] | [ ] | 2026-08-30 |
 | Oklahoma | [ ] | [ ] | [ ] |  |
 | Oregon | [ ] | [ ] | [ ] |  |
-| Pennsylvania | [ ] | [ ] | [ ] |  |
+| [Pennsylvania](site/states/pennsylvania.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Rhode Island | [ ] | [ ] | [ ] |  |
 | South Carolina | [ ] | [ ] | [ ] |  |
 | South Dakota | [ ] | [ ] | [ ] |  |
