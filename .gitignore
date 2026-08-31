@@ -5,6 +5,5 @@ __pycache__/
 # pre-upgrade version. The upgraded proof is a strict superset — it carries the
 # same commitment plus the attestation path — so the backup records nothing the
 # proof does not. Ignored rather than deleted: nothing under anchors/ is ever
-# edited or removed by hand. Eleven .bak files committed on 2026-08-31 predate
-# this rule and remain tracked.
+# edited or removed by hand, so the backups stay on disk and out of the index.
 anchors/ots/*.bak
