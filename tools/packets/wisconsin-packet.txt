@@ -1,0 +1,193 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Wisconsin
+SLUG: wisconsin
+ASSEMBLED: 2026-08-30
+CAPTURE NOTES: Source 1 was retrieved by curl with a browser user-agent from the Legislature's administrative code site and reduced to text mechanically (tag strip), then sliced from the heading of DHS 132.53(1) to the end of the served document. The Legislature prints each provision with its citation run into the text and the paragraph letter or number doubled — "DHS 132.53(2)(a)1.1." — which is the site's own markup, and the page's reader controls and the standing publication line at the foot are left in the capture as the extractor produced them. Source 2 was retrieved through the session's HTTP fetch tool, which renders the served document to text, and copied to file without retyping; the board's SharePoint page furniture, video captions and menu are omitted, and the board's own notice of its domain change is kept.
+PENDING: The department's bed-hold policy at DHS 107.09(4)(j), which Source 1's own note names as the location of the policy — not captured. Also pending: the address and telephone number of the nearest Bureau of Quality Assurance regional office, which DHS 132.53(6)(a)2 requires the facility to post and which the rule does not itself state; and Wis. Stat. ss. 49.45(6c), 49.498(4) and 50.03(5m) and (14), which DHS 132.53(1) states prevail over the rule where they conflict.
+
+SOURCE 1: Wisconsin Administrative Code, DHS 132.53, Transfer and discharge (chapter DHS 132, subchapter V) | https://docs.legis.wisconsin.gov/code/admin_code/dhs/110/132/V/53 | source's own date: the site states the code is published under s. 35.93, Stats., and updated on the first day of each month | retrieved: 2026-08-30
+DHS 132.53(1)(1) Scope. This section shall apply to all resident transfers and discharges, except that in the event of conflict with s. 49.45 (6c) (c) and (d), 49.498 (4) or 50.03 (5m) or (14), Stats., the relevant statutory requirement shall apply.
+DHS 132.53(2)(2) Conditions. 
+DHS 132.53(2)(a)(a) Prohibition and exceptions. No resident may be discharged or transferred from a facility, except:
+DHS 132.53(2)(a)1.1. Upon the request or with the informed consent of the resident or guardian;
+DHS 132.53(2)(a)2.2. For nonpayment of charges, following reasonable opportunity to pay any deficiency;
+DHS 132.53(2)(a)3.3. If the resident requires care other than that which the facility is licensed to provide;
+DHS 132.53(2)(a)4.4. If the resident requires care which the facility does not provide and is not required to provide under this chapter;
+DHS 132.53(2)(a)5.5. For medical reasons as ordered by a physician;
+DHS 132.53(2)(a)6.6. In case of a medical emergency or disaster;
+DHS 132.53(2)(a)7.7. If the health, safety or welfare of the resident or other residents is endangered, as documented in the resident’s clinical record;
+DHS 132.53(2)(a)8.8. If the resident does not need nursing home care;
+DHS 132.53(2)(a)9.9. If the short-term care period for which the resident was admitted has expired; or
+DHS 132.53(2)(a)10.10. As otherwise permitted by law.
+DHS 132.53(2)(b)(b) Alternate placement. 
+DHS 132.53(2)(b)1.1. Except for transfers or discharges under par. (a) 2. and 6., for nonpayment or in a medical emergency, no resident may be involuntarily transferred or discharged unless an alternative placement is arranged for the resident. The resident shall be given reasonable advance notice of any planned transfer or discharge and an explanation of the need for and alternatives to the transfer or discharge except when there is a medical emergency. The facility, agency, program or person to which the resident is transferred shall have accepted the resident for transfer in advance of the transfer, except in a medical emergency.
+DHS 132.53(2)(b)2.2. No resident may be involuntarily transferred or discharged under par. (a) 2. for nonpayment of charges if the resident meets both of the following conditions:
+DHS 132.53(2)(b)2.a.a. He or she is in need of ongoing care and treatment and has not been accepted for ongoing care and treatment by another facility or through community support services; and
+DHS 132.53(2)(b)2.b.b. The funding of the resident’s care in the nursing home under s. 49.45 (6m), Stats., is reduced or terminated because either the resident requires a level or type of care which is not provided by the nursing home or the nursing home is found to be an institution for mental diseases as defined under 42 CFR 435.1009.
+DHS 132.53(3)(3) Procedures. 
+DHS 132.53(3)(a)(a) Notice. The facility shall provide a resident, the resident’s physician and, if known, an immediate family member or legal counsel, guardian, relative or other responsible person at least 30 days notice of transfer or discharge under sub. (2) (a) 2. to 10., and the reasons for the transfer or discharge, unless the continued presence of the resident endangers the health, safety or welfare of the resident or other residents. The notice shall also contain the name, address and telephone number of the board on aging and long-term care. For a resident with developmental disability or mental illness, the notice shall contain the mailing address and telephone number of the protection and advocacy agency designated under s. 51.62 (2) (a), Stats.
+DHS 132.53(3)(b)(b) Planning conference. 
+DHS 132.53(3)(b)1.1. Unless circumstances posing a danger to the health, safety or welfare of a resident require otherwise, at least 7 days before the planning conference required by subd. 2., the resident, guardian, if any, any appropriate county agency, and others designated by the resident, including the resident’s physician, shall be given a notice containing the time and place of the conference, a statement informing the resident that any persons of the resident’s choice may attend the conference, and the procedure for submitting a complaint to the department.
+DHS 132.53(3)(b)2.2. Unless the resident is receiving respite care or unless precluded by circumstances posing a danger to the health, safety, or welfare of a resident, prior to any involuntary transfer or discharge under sub. (2) (a) 2. to 10., a planning conference shall be held at least 14 days before transfer or discharge with the resident, guardian, if any, any appropriate county agency, and others designated by the resident, including the resident’s physician, to review the need for relocation, assess the effect of relocation on the resident, discuss alternative placements and develop a relocation plan which includes at least those activities listed in subd. 3.
+DHS 132.53(3)(b)3.3. Transfer and discharge activities shall include:
+DHS 132.53(3)(b)3.a.a. Counseling regarding the impending transfer or discharge;
+DHS 132.53(3)(b)3.b.b. The opportunity for the resident to make at least one visit to the potential alternative placement, if any, including a meeting with that facility’s admissions staff, unless medically contraindicated or waived by the resident;
+DHS 132.53(3)(b)3.c.c. Assistance in moving the resident and the resident’s belongings and funds to the new facility or quarters; and
+DHS 132.53(3)(b)3.d.d. Provisions for needed medications and treatments during relocation.
+DHS 132.53(3)(b)4.4. A resident who is transferred or discharged at the resident’s request shall be advised of the assistance required by subd. 3. and shall be provided with that assistance upon request.
+DHS 132.53(3)(c)(c) Records. Upon transfer or discharge of a resident, the documents required by s. DHS 132.45 (5) (L) and (6) (h) shall be prepared and provided to the facility admitting the resident, along with any other information about the resident needed by the admitting facility.
+DHS 132.53(4)(4) Transfer agreements. 
+DHS 132.53(4)(a)(a) Requirement. Each facility shall have in effect a transfer agreement with one or more hospitals under which inpatient hospital care or other hospital services are available promptly to the facility’s residents when needed. Each intermediate care facility shall also have in effect a transfer agreement with one or more skilled care facilities.
+DHS 132.53(4)(b)(b) Transfer of residents. A hospital and a facility shall be considered to have a transfer agreement in effect if there is a written agreement between them or, when the 2 institutions are under common control, if there is a written statement by the person or body which controls them, which gives reasonable assurance that:
+DHS 132.53(4)(b)1.1. Transfer of residents will take place between the hospital and the facility ensuring timely admission, whenever such transfer is medically appropriate as determined by the attending physician; and
+DHS 132.53(4)(b)2.2. There shall be interchange of medical and other information necessary for the care and treatment of individuals transferred between the institutions, or for determining whether such individuals can be adequately cared for somewhere other than in either of the institutions.
+DHS 132.53(4)(d)(d) Notice requirements. 
+DHS 132.53(4)(d)1.1. Before a resident of a facility is transferred to a hospital or for therapeutic leave, the facility shall provide written information to the resident and an immediate family member or legal counsel concerning the provisions of the approved state medicaid plan about the period of time, if any, during which the resident is permitted to return and resume residence in the nursing facility.
+DHS 132.53(4)(d)2.2. At the time of a resident’s transfer to a hospital or for therapeutic leave, the facility shall provide written notice to the resident and an immediate family member or legal counsel of the duration of the period, if any, specified under subd. 1.
+DHS 132.53 NoteNote: The “approved state medicaid plan” referred to s. 49.498 (4) (d) 1a, Stats., and subd. 1. states that the department shall have a bedhold policy. The bedhold policy is found in s. DHS 107.09 (4) (j).
+DHS 132.53(5)(5) Bedhold. 
+DHS 132.53(5)(a)(a) Bedhold. A resident who is on leave or temporarily discharged, as to a hospital for surgery or treatment, and has expressed an intention to return to the facility under the terms of the admission statement for bedhold, shall not be denied readmission unless, at the time readmission is requested, a condition of sub. (2) (b) has been satisfied.
+DHS 132.53(5)(b)(b) Limitation. The facility shall hold a resident’s bed under par. (a) until the resident returns, until the resident waives his or her right to have the bed held, or up to 15 days following the temporary leave or discharge, whichever is earlier.
+DHS 132.53 NoteNote: See s. DHS 107.09 (4) (j) for medical assistance bedhold rules.
+DHS 132.53(6)(6) Appeals on transfers and discharges. 
+DHS 132.53(6)(a)(a) Right to appeal. 
+DHS 132.53(6)(a)1.1. A resident may appeal an involuntary transfer or discharge decision.
+DHS 132.53(6)(a)2.2. Every facility shall post in a prominent place a notice that a resident has a right to appeal a transfer or discharge decision. The notice shall explain how to appeal that decision and shall contain the address and telephone number of the nearest bureau of quality assurance regional office. The notice shall also contain the name, address and telephone number of the state board on aging and long-term care or, if the resident is developmentally disabled or has a mental illness, the mailing address and telephone number of the protection and advocacy agency designated under s. 51.62 (2) (a), Stats.
+DHS 132.53(6)(a)3.3. A copy of the notice of a resident’s right to appeal a transfer or discharge decision shall be placed in each resident’s admission folder.
+DHS 132.53(6)(a)4.4. Every notice of transfer or discharge under sub. (3) (a) to a resident, relative, guardian or other responsible party shall include a notice of the resident’s right to appeal that decision.
+DHS 132.53(6)(b)(b) Appeal procedures. 
+DHS 132.53(6)(b)1.1. If a resident wishes to appeal a transfer or discharge decision, the resident shall send a letter to the nearest regional office of the department’s bureau of quality assurance within 7 days after receiving a notice of transfer or discharge from the facility, with a copy to the facility administrator, asking for a review of the decision.
+DHS 132.53(6)(b)2.2. The resident’s written appeal shall indicate why the transfer or discharge should not take place.
+DHS 132.53(6)(b)3.3. Within 5 days after receiving a copy of the resident’s written appeal, the facility shall provide written justification to the department’s bureau of quality assurance for the transfer or discharge of the resident from the facility.
+DHS 132.53(6)(b)4.4. If the resident files a written appeal within 7 days after receiving notice of transfer or of discharge from the facility, the resident may not be transferred or discharged from the facility until the department’s bureau of quality assurance has completed its review of the decision and notified both the resident and the facility of its decision.
+DHS 132.53(6)(b)5.5. The department’s bureau of quality assurance shall complete its review of the facility’s decision and notify both the resident and the facility in writing of its decision within 14 days after receiving written justification for the transfer or discharge of the resident from the facility.
+DHS 132.53(6)(b)6.6. A resident or a facility may appeal the decision of the department’s bureau of quality assurance in writing to the department of administration’s division of hearings and appeals within 5 days after receipt of the decision.
+DHS 132.53 NoteNote: The mailing address of the Division of Hearings and Appeals is P.O. Box 7875, Madison, Wisconsin 53707.
+DHS 132.53(6)(b)7.7. The appeal procedures in this paragraph do not apply if the continued presence of the resident poses a danger to the health, safety or welfare of the resident or other residents.
+DHS 132.53 NoteNote: The bureau of quality assurance was renamed the division of quality assurance.
+ Down
+
+ Down
+
+ /code/admin_code/dhs/110/132
+ true
+ administrativecode
+ /code/admin_code/dhs/110/132/v/53
+ Department of Health Services (DHS)
+ Chs. DHS 110-199; Health
+ administrativecode/DHS 132.53
+ administrativecode/DHS 132.53
+ section
+ true
+
+Menu
+»Administrative Rules Related
+»Administrative Code
+»Department of Health Services (DHS)
+»Chs. DHS 110-199; Health
+»Chapter DHS 132
+
+ ×
+
+ Details for
+
+ PDF view
+
+ Link (Permanent link)
+
+ Bookmark this location
+
+ View toggle
+
+ Go to top of document
+
+ Search in this chapter
+
+ Search in this section
+
+ Search in this agency
+
+ Search in this chapter group
+
+ Search in this chapter
+
+ Search in this section
+
+ Cross references for section
+
+ Acts affecting this section
+
+ References to this
+
+ 1970 Statutes Annotations
+
+ Appellate Court Citations
+
+ Administrative Code Index
+
+ Reference lines
+
+ Clear highlighting
+
+Published under s. 35.93, Stats. Updated on the first day of each month. Entire code is always current. The Register date on each page is the date the chapter was last published.
+END SOURCE 1
+
+SOURCE 2: Wisconsin Board on Aging and Long Term Care — home page (Ombudsman Program) | https://boaltc.wi.gov/Pages/Home.aspx | source's own date: none stated on page beyond the February 25 domain-change notice | retrieved: 2026-08-30
+BOALTC — Board on Aging and Long Term Care
+
+Effective February 25, our website address has changed from longtermcare.wi.gov to boaltc.wi.gov
+
+Guiding You to Aging Resources
+
+No matter where you live in the Badger state, travel through life with confidence. The Board on Aging and Long Term Care exists to help you understand your options regarding aging, long-term care, Medicare and prescription drug coverage. Start here to get your questions answered.
+
+Ombudsman Services
+
+In Wisconsin, the Ombudsman Program has statutory authority to advocate for long-term care consumers aged 60 and over.
+
+call 1-800-815-0015
+
+Your Independent Guide to Medicare & Long-Term Care
+
+In 1981, the State of Wisconsin created the Board on Aging and Long Term Care as an independent board appointed by the Governor with the advice and consent of the state Senate. The Board on Aging and Long Term Care, led by Executive Director, Jessica Trudell, consists of seven appointed Board Members and Agency staff who operate the Long Term Care Ombudsman, Ombudsman Volunteer, and Medigap Helpline Services.
+
+Mission
+
+The mission of the Board on Aging and Long Term Care is to advocate for the interests of the state’s long-term care consumers and Medicare beneficiaries, to inform those consumers of their rights, and to educate the public at large about health care systems, Medicare and long-term care.
+
+Who We Serve
+
+The Board on Aging and its programs are here to serve:
+
+- Wisconsin residents aged 60 and older living in nursing homes, adult family homes, residential care apartment complexes, or community-based residential facilities.
+- Wisconsin residents aged 60 and older enrolled in long-term care programs, including Family Care, Partnership, PACE, or IRIS.
+- Medicare beneficiaries of any age seeking insurance counseling.
+
+State of Wisconsin - Board on Aging & Long Term Care
+
+1402 Pankratz Street, Suite 111
+Madison, Wisconsin 53704
+
+Ombudsman Program/Volunteer Program: 1-800-815-0015
+
+Medigap Helpline: 1-800-242-1060
+
+Medigap Part D & Prescription Drug Helpline: 1-855-677-2783
+
+Fax: 1-608-246-7001
+
+Email: BOALTC@Wisconsin.Gov
+
+We provide free, independent advocacy and information. To remain unbiased, we do not recommend or endorse specific care facilities, insurance companies, or products.
+
+Contact Information
+
+1402 Pankratz Street #111
+Madison, WI 53704
+1-800-815-0015 (Ombudsman)
+1-800-242-1060 (Medigap)
+BOALTC@wisconsin.gov
+
+END SOURCE 2
+
+END OF PACKET — 2 sources

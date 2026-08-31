@@ -1,0 +1,207 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Oklahoma
+SLUG: oklahoma
+ASSEMBLED: 2026-08-30
+CAPTURE NOTES: Sources 1 and 2 are PDFs published on oklahoma.gov, retrieved by curl with a browser user-agent and extracted with `pdftotext -layout`, then sliced mechanically — Source 1 from the heading of §1-1926 to the start of §1-1929, Source 2 by line range covering the transfer and discharge rule with its Source line at each end. Both documents label themselves unofficial in their own running feet: Source 1 prints "Unofficial Version – copied from OSCN.NET version" with the date April 27, 2021, and Source 2 prints "Unofficial – copied from/linked to OAR.STATE.OK.US" with the date September 13, 2020. Those lines, the running heads and the page numbers fall inside the slices and are left as printed. Source 2 also carries a bracketed editor's remark inserted by whoever assembled the document — "[OAR website shows 2 paragraph "d" – changed this one to "c" – sic?}" — which is reproduced as served. Source 3 is a Department of Human Services consumer leaflet, extracted the same way and reduced to its two content pages; its layout is a folded brochure, so the extractor's line order follows the panels.
+PENDING: An official version of either the statute or the rule, from the Oklahoma Statutes on oscn.net or the Administrative Rules on oar.state.ok.us — both captures here are the state's own posted copies, and both label themselves unofficial. Also pending: a first-party page from the Attorney General's Long-Term Care Ombudsman division stating that office's own contact — the ombudsman contacts in this packet come from a Department of Human Services leaflet dated 2022, and the Attorney General's site now lists the Long-Term Care Ombudsman among its divisions; and any first-party statement of an Oklahoma Medicaid bed-hold period.
+
+SOURCE 1: Oklahoma Nursing Home Care Act, 63 O.S. §§ 1-1926 through 1-1928 (excerpt from the state's posted copy of Title 63 §§ 1-1900 et seq.) | https://oklahoma.gov/content/dam/ok/en/osbeltca/documents/statutes/osdh/nursing-home-care-act-2021-gzt-from-oscn.pdf | source's own date: document foot: Unofficial Version – copied from OSCN.NET version, April 27, 2021 | retrieved: 2026-08-30
+§1-1926. Involuntary Transfer or Discharge of Resident – Grounds
+
+A facility shall not involuntarily transfer or discharge a resident except for medical reasons, for
+the resident's safety or for the safety of other residents, or for nonpayment for the resident's
+stay, unless limited by the Federal Social Security Act.
+
+Historical Data
+Laws 1980, HB 1853, c. 241, § 26, eff. October 1, 1980.
+
+
+§1-1927. Notice of Involuntary Transfer or Discharge
+
+Involuntary transfer or discharge of a resident from a facility shall be preceded by a minimum
+written notice of ten (10) days. The ten day requirement shall not apply in any of the following
+instances:
+
+
+                                                  56
+      Unofficial Version – copied from OSCN.NET version                                                        April 27, 2021
+Title 63 O.S. §§ 1-1900 et seq.                                                               NURSING HOME CARE ACT
+
+
+          1. When an emergency transfer or discharge is mandated by the resident's health care
+          needs and is in accordance with the written orders and medical justification of the
+          attending physician; or
+          2. When the transfer or discharge is necessary for the physical safety of other residents
+          as documented in the clinical record.
+
+Historical Data
+Laws 1980, HB 1853, c. 241, § 27, eff. October 1, 1980.
+
+
+§1-1928. Rules and Regulations for Transfer of Residents by Facility
+
+The Department shall develop reasonable rules and regulations that establish appropriate
+criteria for the transfer of residents initiated by a facility or a residential care home, including
+notice and hearings if the resident is aggrieved by the decision. The primary purpose and
+emphasis of the departmental rules and regulations shall be the preservation of the health,
+welfare, and safety of the residents.
+
+The process of developing these rules and regulations shall include the consideration of advice
+and comments from the Long-Term Care Facility Advisory Board, representatives of nursing
+homes, residential care homes, and representatives of statewide organizations for the elderly.
+
+Historical Data
+Laws 1980, HB 1853, c. 241, § 28, eff. October 1, 1980; Amended by Laws 1984, HB 1898, c. 128, § 6, eff. November 1, 1984;
+Amended by Laws 1987, HB 1092, c. 98, § 28, emerg. eff. May 20, 1987.
+
+
+
+END SOURCE 1
+
+SOURCE 2: OAC 310:675-7-5.1, Involuntary transfer or discharge (excerpt from the state's posted copy of OAC 310 chapter 675) | https://oklahoma.gov/content/dam/ok/en/osbeltca/documents/rules/osdh/oac310-ch675-nursing-and-specialized-facilities-gzt-from-oar-2020.pdf | source's own date: document foot: Unofficial – copied from/linked to OAR.STATE.OK.US, September 13, 2020 | retrieved: 2026-08-30
+[Source: Amended at 9 Ok Reg 3163, eff 7-1-92 (emergency); Amended at 10 Ok Reg 1639, eff 6-1-93]
+
+
+310:675-7-4. Resident transfers or discharge
+(a) Reasons for transfer or discharge. Involuntary transfer or discharge of a resident may be initiated
+by a facility only for one or more of the following:
+        (1) Medical reasons, including needs that the facility is unable to meet, as documented by the
+        attending physician, in consultation with the medical director if the medical director and attending
+        physician are not the same person.
+        (2) The resident's safety, or for the safety of other residents, as documented by the clinical
+        record. The facility shall show through medical records that:
+                 (A) the resident has had a comprehensive assessment by an interdisciplinary team and
+                 alternative measures have been attempted unsuccessfully; or
+                 (B) the resident is a danger to himself, herself or other resident as documented by the
+                 medical record and the facility is not capable of managing that resident.
+        3) The non-payment of charges for the resident's care as documented by the facility's business
+        records for services for more than 30 days.
+(b) Procedures. Procedures for involuntary transfer or discharge by the facility are as follows:
+        (1) Written notice shall be provided at least thirty (30) days in advance of the transfer or
+        discharge date to the resident, resident's legal representative, person responsible for payment of
+        charges for the resident's care, if different from any of the foregoing, and the Department.
+        (2) The ten day requirement shall not apply when an emergency transfer is mandated by the
+        resident's health care needs and is in accordance with the attending physician's written orders and
+        medical justification; or the transfer or discharge is necessary for the physical safety of other
+        residents as documented in the clinical record. The facility shall not use a discharge to a hospital
+        as a reason for failing to re-admit a resident after release from the hospital to the first available
+        bed in a semi-private room. Such action shall be considered to be an involuntary discharge
+        subject to all the requirements of this section, unless the discharge was required by the
+        Department.
+        (3) The written notice shall include:
+                 (A) A full explanation of the reasons for the transfer or discharge;
+                 (B) The date of the notice;
+                 (C) The date notice was given to the resident and the resident's representative;
+                 (D) The date by which the resident must leave the facility; and
+                 (E) Information that the resident's representative or person responsible for payment of
+                 the resident's care who is aggrieved by the facility's decision, may file within ten (10)
+                 days of notice a written request for a hearing with the Department by sending a letter to
+                 the Hearing Clerk, Oklahoma State Department of Health, 1000 NE Tenth Street,
+                 Oklahoma City, OK 73117.
+        (4) Failure of the facility to give the notice as substantially specified above shall result in an
+        order without hearing from the Department denying the right of the facility to discharge the
+        resident.
+        (5) If a written request for a hearing is properly filed by an eligible aggrieved party, the
+        Department shall convene a hearing within ten working days of receipt of the request. The request
+        may be in the form of a letter or a formal request for hearing from the resident or resident's
+        representative. In the event that the resident is unable to write, a verbal request made to the
+
+                                                 30
+Unofficial – copied from/linked to OAR.STATE.OK.US                                                   September 13, 2020
+OAC 310: Chapter 675                                                                NURSING AND SPECIALIZED FACILITIES
+
+
+      hearing clerk shall be sufficient. The Department shall reduce the verbal request to writing and
+      send a copy to the resident. The request should state the reason for the discharge and attach a
+      copy of the letter from the facility.
+      (6) During the pendency of the hearing, the facility shall not discharge the resident unless the
+      discharge was required by the Department or is an emergency situation. If the resident relocates
+      from the facility but wants to be readmitted, the Department may proceed with the hearing and
+      the facility shall be required to readmit the resident to the first available bed in a semi-private
+      room if the discharge is found not to meet the requirements of the Nursing Home Care Act and
+      OAC 310:675.
+      (7) The Department shall provide the Administrative Law Judge and the space for the hearing.
+      The parties, including the resident and the facility, may be represented by counsel or may
+      represent themselves.
+      (8) The hearing shall be conducted at the Oklahoma State Department of Health building unless
+      there is a request for the hearing to be held at the facility or at another place. Providing the
+      hearing room in such a case shall be the responsibility of the parties. The Department shall
+      maintain a record on the case as it does for any other individual proceeding.
+      (9) The hearing shall be conducted in accordance with the Department's procedures, Chapter 2
+      of this Title. The Administrative Law Judge's order shall include findings of fact, conclusions of
+      law and an order as to whether or not the transfer or discharge was according to law. If a facility
+      receives federal funds for services, it shall also comply with the certification standards. The more
+      restrictive rule toward the facility shall be applied.
+      (10) If the Administrative Law Judge finds that the discharge was not according to law, the
+      Department shall review, investigate and issue deficiencies as appropriate.
+      (11) If the discharge is according to law, the order shall give the facility the right to discharge
+      the resident.
+      (12) The scope of the hearing may include:
+               (A) Inadequate notice;
+               (B) Discharge based on reason not stated in the law;
+               (C) Sufficiency of the evidence to support the involuntary discharge; or
+               (D) The finding of emergency.
+      (13) The Administrative Law Judge shall render a written decision within ten working days of
+      the close of the record.
+      (14) If the Administrative Law Judge sustains the facility, the facility may proceed with the
+      discharge. If the Administrative Law Judge finds in favor of the resident, the facility shall
+      withdraw its notice of intent to transfer or discharge the resident. The decision of the
+      Administrative Law Judge shall be final and binding on all parties unless appealed under the
+      Administrative Procedures Act.
+(c) Room relocation
+      (1) If a facility wants to relocate a resident from one room toanother, the facility shall give the
+      resident at least forty-eight hours written notice. The notice shall include the cost of transferring
+      the resident's telephone, if applicable.
+      (2) If the resident or the resident's representative agrees in writing to the relocation, the
+      relocation may take place in less than forty-eight hours.
+      (3) No hearing is required if the resident requests or agrees to relocation from one room to
+      another.
+[Source: Amended at 9 Ok Reg 3163, eff 7-1-92 (emergency); Amended at 10 Ok Reg 1639, eff 6-1-93; Amended at 20 Ok Reg 2399, eff 7-11-
+03; Amended at 26 Ok Reg 2059, eff 6-25-09]
+
+
+
+
+                                                 31
+Unofficial – copied from/linked to OAR.STATE.OK.US                                                         September 13, 2020
+OAC 310: Chapter 675                                                         NURSING AND SPECIALIZED FACILITIES
+
+
+
+END SOURCE 2
+
+SOURCE 3: Oklahoma Department of Human Services, Nursing Home Transfers & Discharges (consumer leaflet, PDF) | https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/19-06_NursingHomeTransfersandDischarge_cap_03292022.pdf | source's own date: publication 19-06, file dated 03292022 | retrieved: 2026-08-30
+Nursing Home Transfers & Discharges
+Have you been told to leave?
+Now What?
+
+Many involuntary discharges can be resolved successfully. You have rights. Become informed and act.
+
+FACTS TO KNOW
+
+1. All notices of discharge must be communicated in writing, in a language and manner you understand.
+2. Most discharge notices must be given at least 30 days prior to the discharge date.
+3. You have the right to appeal within ten days of notice.
+4. Federal and State law gives you rights and legal protections when facing discharge.
+5. If you receive a notice, contact the Long-Term Care Ombudsman Program (LTCOP) immediately by calling (405) 521-6734 or 1-800-211-2116. You can also email ombudsman.intake.line@okdhs.org. Ombudsman program representatives are knowledgeable about discharge requirements and empowered by law to advocate for you.
+
+You may also file an appeal with the state licensing and certification agency by e-mail at OAH@HEALTH.OK.GOV, or by phone at 405-426-8244.
+
+IMPORTANT INFORMATION
+
+1. THE REASON(S) FOR DISCHARGE MUST BE VALID.
+
+FACTS:
+
+There are only 6 reasons why a facility can transfer or discharge a resident against their will:
+
+- The facility cannot meet the resident’s needs;
+- The resident no longer needs nursing facility services;
+- The resident’s presence endangers the safety of others in the facility;
+- The resident’s presence endangers the health of others in the facility;
+- The resident has failed to pay; or
+- The facility is closing.
+
+END SOURCE 3
+
+END OF PACKET — 3 sources

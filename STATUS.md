@@ -7,7 +7,7 @@ present. Spanish = a translated page is published; it carries the
 docket, the hoisted rows, and the notice periods and deadlines, in
 the state's own published translation only.
 
-**Baseline: 22 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
+**Baseline: 26 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
 
 | State | Baseline | Full page | Spanish | Sources last checked |
 |---|:---:|:---:|:---:|---|
@@ -17,7 +17,7 @@ the state's own published translation only.
 | Arkansas | [ ] | [ ] | [ ] |  |
 | [California](site/states/california.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Colorado | [ ] | [ ] | [ ] |  |
-| Connecticut | [ ] | [ ] | [ ] |  |
+| [Connecticut](site/states/connecticut.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Delaware | [ ] | [ ] | [ ] |  |
 | District of Columbia | [ ] | [ ] | [ ] |  |
 | [Florida](site/states/florida.html) | [x] | [ ] | [ ] | 2026-08-30 |
@@ -47,11 +47,11 @@ the state's own published translation only.
 | [North Carolina](site/states/north-carolina.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | North Dakota | [ ] | [ ] | [ ] |  |
 | [Ohio](site/states/ohio.html) | [x] | [x] | [ ] | 2026-08-30 |
-| Oklahoma | [ ] | [ ] | [ ] |  |
+| [Oklahoma](site/states/oklahoma.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Oregon | [ ] | [ ] | [ ] |  |
 | [Pennsylvania](site/states/pennsylvania.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Rhode Island | [ ] | [ ] | [ ] |  |
-| South Carolina | [ ] | [ ] | [ ] |  |
+| [South Carolina](site/states/south-carolina.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | South Dakota | [ ] | [ ] | [ ] |  |
 | [Tennessee](site/states/tennessee.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Texas](site/states/texas.html) | [x] | [x] | [ ] | 2026-08-30 |
@@ -60,5 +60,5 @@ the state's own published translation only.
 | [Virginia](site/states/virginia.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Washington | [ ] | [ ] | [ ] |  |
 | West Virginia | [ ] | [ ] | [ ] |  |
-| Wisconsin | [ ] | [ ] | [ ] |  |
+| [Wisconsin](site/states/wisconsin.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Wyoming | [ ] | [ ] | [ ] |  |
