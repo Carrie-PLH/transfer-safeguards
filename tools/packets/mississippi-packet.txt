@@ -1,0 +1,408 @@
+FIELD ASSEMBLY SOURCE PACKET — DO NOT EDIT AFTER A PAGE IS BUILT FROM IT
+
+STATE: Mississippi
+SLUG: mississippi
+ASSEMBLED: 2026-08-30
+
+CAPTURE NOTES: Both regulation sources are PDFs the agencies post themselves, fetched by curl
+with a browser user-agent and rendered with pdftotext -layout; sources 1, 2 and 3 are contiguous
+spans of those renderings. The ombudsman page was captured by curl and stripped of markup. All
+three transports are machine-repeatable. The department's own ombudsman URLs under
+/divisions-programs/ and /aging-adult-services/ return 404 after a site rebuild; the live page
+is at /ombudsman/.
+
+PENDING: Mississippi Code Ann. 43-11-13; the Division of Medicaid's fair-hearing rule at Title 23
+Part 300, which the ombudsman page points to without naming; any statement of a bed-hold or
+temporary-leave period; and the Mississippi State Department of Health complaint page the
+ombudsman page links to.
+
+SOURCE 1: Chapter 45, Minimum Standards for Institutions for the Aged or Infirm — Rule 45.17.2 Residents' Rights, excerpt | https://msdh.ms.gov/page/resources/119.pdf | source's own date: none stated in the captured span | retrieved: 2026-08-30
+Rule 45.17.2 Residents' Rights. The residents' rights policies and procedures ensure that each
+             resident admitted to the facility:
+
+              1. Is fully informed, as evidenced by the resident's written acknowledgment,
+                 prior to or at the time of admission and during stay, of these rights and is
+                 given a statement of the facility's rules and regulations and an explanation of
+                 the resident's responsibility to obey all reasonable regulations of the facility
+                 and to respect the personal rights and private property of other residents;
+
+              2. Is fully informed, and is given a written statement prior to or at time of
+                 admission and during stay, of services available in the facility, and of related
+                 charges including any charges for services covered by the facility's basic per
+                 diem rate;
+
+              3. Is assured of adequate and appropriate medical care, is fully informed by a
+                 physician or nurse practitioner/physician assistant of his medical conditions
+                 unless medically contraindicated (as documented by a physician or nurse
+                 practitioner/physician assistant in his medical record), is afforded the
+                 opportunity to participate in the planning of his medical treatment, to not be
+                 limited in his/her choice of a pharmacy or pharmacist provider in accordance
+                 with state law, as referenced in House Bill 1439, which states that the facility
+                 shall not limit a resident’s choice of pharmacy or pharmacy provider if that
+                 provider meets the same standards of dispensing guidelines required of long
+                 term care facilities, to refuse to participate in experimental research, and to
+                 refuse medication and treatment after fully informed of and understanding
+                 the consequences of such action;
+
+              4. Is transferred or discharged only for medical reasons, or for his welfare or
+                 that of other residents, or for nonpayment for his stay (except as prohibited by
+                 sources of third-party payment), and is given a two week advance notice in
+                 writing to ensure orderly transfer or discharge. A copy of this notice is
+                 maintained in his medical record;
+
+              5. Is encouraged and assisted, throughout his period of stay, to exercise his
+                 rights as a resident and as a citizen, and to this end may voice grievances,
+                 has a right of action for damages or other relief for deprivations or
+                 infringements of his right to adequate and proper treatment and care
+                 established by an applicable statute, rule, regulation or contract, and to
+                 recommend changes in policies and services to facility staff and/or to outside
+                 representatives of his choice, free from restraint, interference, coercion,
+                 discrimination, or reprisal;
+
+              6. May manage his personal financial affairs, or is given at least a quarterly
+                 accounting of financial transactions made on his behalf should the facility
+                 accept his written delegation of this responsibility to the facility for any
+                 period of time in conformance with State law;
+END SOURCE 1
+
+SOURCE 2: Chapter 45, Minimum Standards for Institutions for the Aged or Infirm — opening | https://msdh.ms.gov/page/resources/119.pdf | source's own date: none stated in the captured span | retrieved: 2026-08-30
+CHAPTER 45 MINIMUM STANDARDS FOR INSTITUTIONS FOR THE AGED OR
+           INFIRM
+
+Subchapter 1 GENERAL NURSING HOMES: LEGAL AUTHORITY
+
+Rule 45.1.1   Adoption of Rules, Regulations, and Minimum Standards. By virtue of
+              authority vested in it by Mississippi Code Annotated §43-11-1 through §43-11-
+              17, or as otherwise amended, the Mississippi State Department of Health
+              (otherwise known as the licensing agency), does hereby adopt and promulgate the
+              following Rules, Regulations, and Minimum Standards for Institutions for the
+              Aged or Infirm (hereinafter referred to as facility/ies). Upon adoption of these
+              Rules, Regulations, and Minimum Standards for Institutions for the Aged or
+              Infirm, any former rules, regulations, and minimum standards, in conflict
+              therewith, previously adopted by the licensing agency are hereby repealed.
+END SOURCE 2
+
+SOURCE 3: Title 23 Part 207, Institutional Long Term Care Services — Rule 2.20, Facility Initiated Discharges | https://medicaid.ms.gov/wp-content/uploads/2026/07/Title-23-Part-207-Institutional-LTC-eff-8.1.26.pdf | source's own date: effective 8.1.26; rule history New Rule eff. 09/01/19 | retrieved: 2026-08-30
+Rule 2.20: Facility Initiated Discharges
+
+A. A nursing facility must notify the resident and the resident's guardian or legal representative
+   of a facility initiated transfer or discharge.
+
+   1. The notice of transfer or discharge must be given at least thirty (30) calendar days prior to
+      the transfer or discharge unless:
+
+       a) The safety or health of the individuals in the nursing facility would be endangered,
+
+       b) The resident no longer requires the level of care provided by the nursing facility,
+
+       c) An immediate transfer or discharge is required by the resident’s urgent medical
+          needs, or
+
+       d) The resident has not resided in the nursing facility for thirty (30) calendar days.
+
+   2. The notice must be written, easily understood and include the following information:
+
+       a) The reason for the transfer or discharge,
+
+
+
+                                                56
+       b) The effective date of the transfer or discharge,
+
+       c) The location to which the resident is being transferred or discharged,
+
+       d) A statement that the resident has the right to appeal the action to the appropriate state
+          authorities,
+
+       e) The name, address and telephone number of the State long-term care ombudsman,
+
+       f) For residents with developmental disabilities, the mailing address and telephone
+          number of the agency responsible for the protection and advocacy of developmentally
+          disabled individuals, and
+
+       g) For residents with mental illness, the mailing address and telephone number of the
+          agency responsible for the protection and advocacy of mentally ill individuals.
+
+B. The nursing facility must maintain physician documentation in the medical record of
+   transfers or discharges and the reasons for the transfer or discharge.
+
+C. Residents must be provided sufficient preparation and orientation by the nursing facility to
+   ensure safe and orderly transfers or discharges.
+
+Source: 42 C.F.R. § 483.15; Miss. Code Ann. §§ 43-13-117, 43-13-121.
+
+History: New Rule eff. 09/01/19.
+
+END SOURCE 3
+
+SOURCE 4: Long-Term Care Ombudsman | https://www.mdhs.ms.gov/ombudsman/ | source's own date: none stated on page | retrieved: 2026-08-30
+Long-Term Care Ombudsman - Mississippi Department of Human Services 
+ Skip to main content 
+ Quick Apply 
+ Report Fraud 
+ Document Upload 
+ SNAP & TANF Document Upload 
+ Child Support Document Upload 
+ English English Español Tiếng Việt Who We Are 
+ Divisions & Programs 
+ Economic Assistance Eligibility 
+ SNAP – Supplemental Nutrition Access Program 
+ TANF – Temporary Assistance for Needy Families 
+ The Emergency Food Assistance Program (TEFAP) 
+ Commodity Supplemental Food Program (CSFP) 
+ SNAP-Ed 
+ Aging & Adult Services 
+ Help Living in the Community for Older Adults 
+ Finding Services for Older Adults 
+ Caregiver Support 
+ Adult Protective Services 
+ Early Childhood Care & Development 
+ Parents 
+ Child Care Providers 
+ Director Credentialing 
+ Mississippi Child Care Transformation Project 
+ Information Sessions 
+ Child Abuse Prevention & Protection 
+ Rules & Regulations 
+ Child Care Reports & Archives 
+ Service Requests & Complaints 
+ Child Support 
+ Paying Child Support 
+ Receiving Child Support 
+ Way2Go Debit Card 
+ Mississippi Access & Visitation Program 
+ For Employers 
+ Community Services 
+ Low-Income Home Energy Assistance Program 
+ Weatherization Assistance Program 
+ Community Service Block Grant 
+ Long-Term Care Ombudsman 
+ Workforce Development & Partnership Management 
+ SNAP E&T 
+ TANF Work Program (TWP) 
+ Workforce Training & Education Programs 
+ Afterschool and Parenthood Initiatives 
+ Youth Services 
+ Community Services & Programs 
+ Probation & After Care Services 
+ Oakley Youth Development Center 
+ The Williams School 
+ Sexual Risk Avoidance Education Program 
+ MDHS Support Divisions 
+ Office of Inspector General 
+ Office of Compliance 
+ Communications 
+ Procurement Services 
+ Leadership 
+ Mission & Values 
+ Partner Resources 
+ Eligibility Flyers 
+ Procurement Services 
+ Public Records 
+ Administrative Codes 
+ Acronyms & Glossary 
+ Reports and Records 
+ Public Records 
+ Administrative Hearings Division 
+ Annual Reports 
+ Legislation 
+ State Plans 
+ Strategic Plan 
+ Audits 
+ I Need Help With… 
+ Food 
+ Getting a Job 
+ Child Care 
+ Caring for an Older Adult 
+ Paying Bills 
+ Supporting My Child 
+ News 
+ Contact Us 
+ Contact Information 
+ Work at MDHS 
+ Search 
+ Long-Term Care Ombudsman 
+ Protecting the health, safety, welfare, and rights of residents in long-term care facilities. 
+ Quick Help 
+ Residents’ Rights 
+ RESOURCES 
+ About Mississippi’s Long-Term Care Ombudsman 
+ For residents in long-term care facilities, the State Long-Term Care Ombudsman provides services that protect the health, safety, welfare, and rights of residents through leadership, oversight, and monitoring. The Ombudsman Program is authorized by the  Older Americans Act  and the Ombudsman services are always confidential and free. 
+ An Ombudsman (awm-budzman) is an individual who advocates for the rights of residents living in long-term care facilities such as nursing homes or assisted living facilities. An ombudsman also strives to be the voice for residents while encouraging self-advocacy by providing education about residents’ rights. 
+ The Ombudsman can help with: 
+ Residents’ rights  
+ Environmental concerns  
+ Discharge and eviction  
+ Personal care concerns  
+ Quality of life issues 
+ For residents in long-term care facilities, the State Long-Term Care Ombudsman provides services that protect the health, safety, welfare, and rights of residents through leadership, oversight, and monitoring. 
+ Residents in long-term care facilities in Mississippi have the right to: 
+ Be treated with dignity and respect. 
+ Choose schedules and activities. 
+ Be fully informed of all personal information. 
+ Share a complaint with anyone without any repercussions. 
+ Decide who visits and who does not. 
+ Have information regarding personal financial affairs. 
+ Have private conversation with anyone they decide. 
+ Appeal a discharge or transfer. 
+ Check out TheConsumerVoice.org for more in depth information 
+ RESOURCES 
+ Contact Your Ombudsman: 
+ Call the Mississippi statewide Long-Term Ombudsman Help Line: 1-888-844-0041. 
+ CALL 1-888-844-0041 
+ Complaints and Appeals 
+ If you would like to file a complaint with the Mississippi State Department of Health regarding a long-term care facility, please visit the Make a Health Facility Complaint page. 
+ Attorney Generals Office : 601-359-3680 
+ HOW WE CAN HELP 
+ When a resident has been asked to leave a long-term care facility, federal law provides the right to appeal. For issues relating to the appeals process, please contact your local ombudsman. 
+ During a proposed discharge, the Ombudsman program can answer questions, work to address your concerns, and provide support and assistance to appeal your facility initiated discharge. 
+ Written Notice Required 
+ If the facility initiates a discharge, they must give a written notice to you, your representative and the Ombudsman program. The notice must be given at least 30 days before the planned discharge date. 
+ The notice must include: 
+ The reason for discharge. 
+ The date of the discharge. 
+ A statement of your right to appeal. 
+ The location to which you will be discharged. 
+ If you want to stay in the nursing home talk to your Ombudsman as soon as possible. Your Ombudsman can you try and solve the issue that caused the discharge or help file an appeal on your behalf. 
+ For additional information relating to the hearing process, please visit the Mississippi Division of Medicaid website. 
+ Finding Services 
+ To find a long-term care facility near you please visit Medicare’s Care Compare Tool where you can find and compare Medicare-certified nursing homes based on a location, and compare the quality of care they provide and their staffing. 
+ Medicaid 
+ For information on Medicaid in Mississippi and how to apply, please visit the Mississippi Division of Medicaid . 
+ Click here for more information on the State Health Insurance Assistance Program (SHIP) . Whether it is Medicare, Medicaid, supplemental insurance or other coverage, SHIP volunteers are trained to answer questions, compare policies, organize paperwork and help with claims and filing appeals. 
+ SHIP volunteers help older Mississippians and caregivers understand Medicare benefits; organize doctor and hospital bills; file Medicare appeals; review Medicare Supplemental Insurance; evaluate Medicare+ Choice or Health Maintenance Organization (HMO) options; understand Medicaid eligibility, and explore long-term care options. 
+ Anyone can get free help through SHIP – their help is available regardless of income. Plus, their help is free, un-biased, and confidential. 
+ Call SHIP at (844) 822-4622 
+ Legal Assistance and Advocacy Services 
+ Legal assistance and advocacy services are available to older adults to help them protect their rights, secure benefits, and promote a higher quality of life. Services include: 
+ Referrals for legal assistance for older persons who need legal advice, a consultation and/or representation. 
+ Elder abuse prevention activities and public information programs that focus on issues to help prevent abuse, fraud, and exploitation. 
+ Call MAC at (844) 822-4622 
+ Long-Term Care Ombudsman 
+ Start typing your county name 
+ Adams 
+ Alcorn 
+ Amite 
+ Attala 
+ Benton 
+ Bolivar 
+ Calhoun 
+ Carroll 
+ Chickasaw 
+ Choctaw 
+ Claiborne 
+ Clarke 
+ Clay 
+ Coahoma 
+ Copiah 
+ Covington 
+ DeSoto 
+ Forrest 
+ Franklin 
+ George 
+ Greene 
+ Grenada 
+ Hancock 
+ Harrison 
+ Hinds 
+ Holmes 
+ Humphreys 
+ Issaquena 
+ Itawamba 
+ Jackson 
+ Jasper 
+ Jefferson 
+ Jefferson Davis 
+ Jones 
+ Kemper 
+ Lafayette 
+ Lamar 
+ Lauderdale 
+ Lawrence 
+ Leake 
+ Lee 
+ Leflore 
+ Lincoln 
+ Lowndes 
+ Madison 
+ Marion 
+ Marshall 
+ Monroe 
+ Montgomery 
+ Neshoba 
+ Newton 
+ Noxubee 
+ Oktibbeha 
+ Panola 
+ Pearl River 
+ Perry 
+ Pike 
+ Pontotoc 
+ Prentiss 
+ Quitman 
+ Rankin 
+ Scott 
+ Sharkey 
+ Simpson 
+ Smith 
+ Stone 
+ Sunflower 
+ Tallahatchie 
+ Tate 
+ Tippah 
+ Tishomingo 
+ Tunica 
+ Union 
+ Walthall 
+ Warren 
+ Washington 
+ Wayne 
+ Webster 
+ Wilkinson 
+ Winston 
+ Yalobusha 
+ Yazoo 
+ Back 
+ Related 
+ Facility-Initiated Transfers and Discharges 
+ Caring for an Older Adult 
+ Adult Protective Services Flyer 
+ National Association of State Long-Term Care Ombudsman Programs (NASOP) 
+ The National Consumer Voice for Quality Long-Term Care 
+ Administration for Community Living (ACL) 
+ Long-term Care Ombudsman flyer 
+ Derechos De Los Residentes 
+ Latest 
+ MDHS Spotlights National Family Caregivers Month: Encouraging Mississippians to “Plug into Care” November 3, 2025 
+ SHIP Provides Free and Unbiased Medicare Guidance October 16, 2025 
+ Giving a Voice to the Vulnerable October 8, 2025 
+ MDHS Highlights Long Term Care Residents’ Rights Month, October 2025 October 3, 2025 
+ Governor Reeves Declares May as “Older Americans Month” in Mississippi June 17, 2025 
+ ANNUAL REPORT 
+ FFY 2025 Ombudsman 
+ FFY 2024 Ombudsman 
+ FFY 2023 Ombudsman By The Numbers 
+ Help today. Hope tomorrow. 
+ Find Help 
+ Report Fraud 
+ Locations 
+ Public Notices 
+ Contact 
+ 200 South Lamar St. 
+Jackson, MS 39201 
+ 1 (601) 359-4500 
+ Notices 
+ Privacy Policy 
+ Non-Discrimination: 
+ English 
+ Español 
+ Tiếng Việt 
+ My Resources 
+ Work at MDHS 
+ Employee Portal 
+ © Copyright 2026 
+ Mississippi Department of Human Services 
+ All Rights Reserved
+END SOURCE 4
+
+END OF PACKET — 4 sources

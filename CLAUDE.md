@@ -143,6 +143,26 @@ user-agent has been enough for ilga.gov, leg.state.fl.us, revisor.mn.gov,
 apps.legislature.ky.gov, legis.iowa.gov, publications.tnsosfiles.com,
 law.lis.virginia.gov, dsd.maryland.gov, health.ny.gov and ldh.la.gov.
 
+A revoked rule is a finding, not a missing capture. Kansas's transfer and
+discharge regulations, K.A.R. 28-39-147 and 28-39-148, appear in the
+Secretary of State's own regulation volume as a bare citation with a
+revocation date of May 22, 2009 and no text beneath. Before recording a
+rule as uncaptured, check whether the state's code prints it as revoked;
+the two look identical from a search engine and mean opposite things.
+
+Some states have no reachable publisher at all. Arkansas defeated every
+transport available on 2026-08-30 and is deliberately unbuilt:
+codeofarrules.arkansas.gov, the only publisher of 20 CAR 410-805, fails TLS
+to curl from both the sandbox and the Mac, returns an empty body to the
+session fetch tool, and is denied to both the built-in browser and Chrome;
+humanservices.arkansas.gov 403s to curl and truncates long PDFs through the
+fetch tool at roughly 137k characters, which lands short of the section
+that matters; arkleg's code search returns 500. The reachable Arkansas
+sources — the 2024 Rules for Nursing Homes, section 317.7, and the DHS
+ombudsman site — carry a ten-day notice and no contacts, which would state
+Arkansas's law more thinly than it is. Retry from a different publisher
+rather than publishing that.
+
 Scanned PDFs with no text layer are not a dead end by themselves. Alabama's
 department publishes its nursing facility chapter as an image, but the
 Legislature publishes the same rule as text. Look for the other publisher

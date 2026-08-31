@@ -1,0 +1,107 @@
+FIELD ASSEMBLY SOURCE PACKET — DO NOT EDIT AFTER A PAGE IS BUILT FROM IT
+
+STATE: Kansas
+SLUG: kansas
+ASSEMBLED: 2026-08-30
+
+CAPTURE NOTES: K.S.A. 39-936 was captured by curl with a browser user-agent from the Revisor
+of Statutes' own page and stripped of markup. Source 2 is a span of the Secretary of State's
+2022 Kansas Administrative Regulations volume (Book 2), rendered with pdftotext -layout; that
+volume prints in two columns, so each line of this capture carries text from both columns and a
+sentence running down one column is broken across lines carrying unrelated text. Quotations from
+source 2 are contiguous spans of the capture as rendered, not of the printed column. The
+ombudsman page defeats curl (403) and was captured with the session fetch tool.
+
+PENDING: Any current Kansas rule replacing K.A.R. 28-39-147 and 28-39-148 for nursing facilities;
+a KDADS or KDHE statement of where a resident appeals an involuntary discharge and by when; the
+Medicaid fair-hearing route; and any statement of a bed-hold period.
+
+SOURCE 1: K.S.A. 39-936 | https://www.ksrevisor.org/statutes/chapters/ch39/039_009_0036.html | source's own date: history line ends L. 2024, ch. 103, § 3; July 1 | retrieved: 2026-08-30
+39-936.
+ Statement on admission; qualified personnel; education and training of unlicensed employees and certified nurse aides; requirements for instructors thereof; examination and fees; state registry established; refresher course required; supplier of medication; limitations on involuntary transfer or discharge of resident; effect of reliance upon spiritual means or prayer for healing by resident.
+ (a) The presence of each resident in an adult care home shall be covered by a statement provided at the time of admission, or prior thereto, setting forth the general responsibilities and services and daily or monthly charges for such responsibilities and services. Each resident shall be provided with a copy of such statement, with a copy going to any individual responsible for payment of such services and the adult care home shall keep a copy of such statement in the resident's file. No such statement shall be construed to relieve any adult care home of any requirement or obligation imposed upon it by law or by any requirement, standard or rule and regulation adopted pursuant thereto.
+ (b) A qualified person shall be in attendance at all times when residents receive accommodation, board, care, training or treatment in adult care homes. The licensing agency may establish necessary standards and rules and regulations prescribing the number, qualifications, training, standards of conduct and integrity for such qualified person attendant upon the residents.
+ (c) (1) The licensing agency shall require unlicensed employees working in an adult care home, except an adult care home licensed for the provision of services to people with intellectual disability that has been granted an exception by the secretary for aging and disability services upon a finding by the licensing agency that an approved training program for certified nurse aides is in place for such adult care home, who provide direct, individual care to residents and who do not administer medications to residents and who have not completed a course of education and training relating to resident care and treatment approved by the secretary for aging and disability services or are not participating in such a course to complete successfully 40 hours of training in basic resident care skills. Any unlicensed employee who has not completed at least 40 hours of the certified nurse aide training approved by the secretary for aging and disability services or who is not making progress to complete the course of education and training required by the secretary for aging and disability services under paragraph (2) within four months following completion of such 40 hours shall not provide direct, individual care to residents.
+ (A) The 40 hours of training and remaining hours in the certified nurse aide training shall be performed under the general supervision of a course supervisor. The course supervisor shall be defined in rules and regulations and approved by the secretary for aging and disability services. As used in this subparagraph, "supervision" means the same as defined in K.S.A. 65-1165 , and amendments thereto. The 40 hours of training may be prepared and administered by an adult care home, hospital, as defined in K.S.A. 65-425 , and amendments thereto, hospice or program for all-inclusive care for the elderly or by any other qualified course sponsor and may be conducted on the premises of the adult care home, hospital, hospice or program for all-inclusive care for the elderly. The 40 hours of training required in this section shall be a part of an approved certified nurse aide training course required by the secretary for aging and disability services under subsection (c)(2).
+ (B) Each instructor under the supervision of a course supervisor of the certified nurse aide training course shall be licensed to practice in Kansas and in good standing. As used in this subparagraph, "in good standing" includes the possession of a license, certificate or registration that is subject to probation or non-disciplinary conditions, limitations or restrictions, but does not include a license, certificate or registration that is revoked, canceled or surrendered or subject to pending license-related disciplinary action. If the records of the Kansas department for aging and disability services reflect that an individual has a prohibiting offense, such license, certificate or registration shall not be considered "in good standing." Any license, certificate or registration that is subject to disciplinary conditions, limitations or restrictions shall remain subject to such conditions, limitations or restrictions.
+ (C) Training for paid nutrition assistants shall consist of at least eight hours of instruction, at a minimum, that meets the requirements of 42 C.F.R. § 483.160.
+ (2) The licensing agency may require unlicensed employees working in an adult care home, except an adult care home licensed for the provision of services to people with intellectual disability that has been granted an exception by the secretary for aging and disability services upon a finding by the licensing agency that an appropriate training program for certified nurse aides is in place for such adult care home, who provide direct, individual care to residents and who do not administer medications to residents and who do not meet the definition of paid nutrition assistant as defined in K.S.A. 39-923 (a), and amendments thereto, after 90 days of employment to successfully complete an approved course of instruction and an examination relating to resident care and treatment as a condition to continued employment by an adult care home.
+ (A) A course of instruction may be prepared and administered by any adult care home, hospital, as defined in K.S.A. 65-425 , and amendments thereto, hospice or program for all-inclusive care for the elderly or by any other qualified person. A course of instruction prepared and administered by an adult care home, hospital, hospice or program for all-inclusive care for the elderly may be conducted on the premises of the adult care home, hospital, hospice or program for all-inclusive care for the elderly that prepared and that will administer the course of instruction.
+ (B) As evidence of successful completion of the training course, such unlicensed employees shall demonstrate competency in a list of skills that are identified and prescribed by the secretary for aging and disability services. The skills demonstration shall be evaluated by a registered professional nurse licensed, including multistate licensure privilege, and in good standing in this state. Such registered professional nurse shall have at least one year of licensed nurse experience providing care for the elderly or chronically ill in a healthcare setting approved by the secretary for aging and disability services. As used in this subparagraph, "in good standing" includes the possession of a license, certificate or registration that is subject to probation or non-disciplinary conditions, limitations or restrictions, but does not include a license, certificate or registration that is revoked, canceled or surrendered or subject to pending license-related disciplinary action. If the records of the Kansas department for aging and disability services reflect that an individual has a prohibiting offense, such license, certificate or registration shall not be considered "in good standing." Any license, certificate or registration that is subject to disciplinary conditions, limitations or restrictions shall remain subject to such conditions, limitations or restrictions.
+ (3) The licensing agency shall not require unlicensed employees working in an adult care home who provide direct, individual care to residents and who do not administer medications to residents to enroll in any particular approved course of instruction as a condition to the taking of an examination, but the secretary for aging and disability services shall prepare guidelines for the preparation and administration of courses of instruction and shall approve or disapprove courses of instruction.
+ (4) Unlicensed employees working in adult care homes who provide direct, individual care to residents and who do not administer medications to residents may enroll in any approved course of instruction and upon completion of the approved course of instruction shall be eligible to take an examination. The examination shall be:
+ (A) Prescribed by the secretary for aging and disability services;
+ (B) reasonably related to the duties performed by unlicensed employees working in adult care homes who provide direct, individual care to residents and who do not administer medications to residents; and
+ (C) the same examination given by the secretary for aging and disability services to all unlicensed employees working in adult care homes who provide direct, individual care to residents and who do not administer medications.
+ (5) The secretary for aging and disability services shall fix, charge and collect a fee to cover all or any part of the costs of the licensing agency under this subsection. The fee shall be fixed by rules and regulations of the secretary for aging and disability services. The fee shall be remitted to the state treasurer in accordance with the provisions of K.S.A. 75-4215 , and amendments thereto. Upon receipt of each such remittance, the state treasurer shall deposit the entire amount in the state treasury to the credit of the health occupations credentialing fee fund created by K.S.A. 39-979 , and amendments thereto.
+ (6) The secretary for aging and disability services shall establish a state registry containing information about certified nurse aides working in adult care homes who provide direct, individual care to residents and who do not administer medications in compliance with the requirements pursuant to PL 100-203, subtitle C, as amended November 5, 1990.
+ (7) No adult care home shall use an individual working as a certified nurse aide in an adult care home who provides direct, individual care to residents and who does not administer medications unless the facility has inquired of the state registry as to information contained in the registry concerning the individual.
+ (8) (A) The adult care home shall require any certified nurse aide working in an adult care home to complete an approved refresher course if such employee:
+ (i) Provides direct, individual care to residents;
+ (ii) does not administer medications; and
+ (iii) since passing the examination required under paragraph (2), has had a continuous period of 24 consecutive months when the certified nurse aide has not provided direct, individual care to residents.
+ (B) The secretary for aging and disability services shall prepare guidelines for the preparation and administration of refresher courses and shall approve or disapprove courses.
+ (d) Any person who has been employed as a certified nurse aide working in an adult care home in another state may be so employed in this state without an examination if the secretary for aging and disability services determines that such other state requires training or examination, or both, for such employees at least equal to that required by this state.
+ (e) All medical care and treatment shall be given under the direction of a person licensed by the state board of healing arts to practice medicine and surgery and shall be provided promptly as needed.
+ (f) No adult care home shall require as a condition of admission to or as a condition to continued residence in the adult care home that a person change from a supplier of medication needs of their choice to a supplier of medication selected by the adult care home. Nothing in this subsection shall be construed to abrogate or affect any agreements entered into prior to the effective date of this act between the adult care home and any person seeking admission to or resident of the adult care home.
+ (g) Except in emergencies as defined by rules and regulations of the licensing agency and except as otherwise authorized under federal law, no resident may be transferred from or discharged from an adult care home involuntarily unless the resident or legal guardian of the resident has been notified in writing at least 30 days in advance of a transfer or discharge of the resident.
+ (h) No resident who relies in good faith upon spiritual means or prayer for healing shall, if such resident objects thereto, be required to undergo medical care or treatment.
+ History:
+ L. 1961, ch. 231, § 14; L. 1972, ch. 171, § 11; L. 1977, ch. 152, § 2; L. 1978, ch. 162, § 14; L. 1979, ch. 131, § 1; L. 1983, ch. 148, § 1; L. 1983, ch. 286, § 10; L. 1989, ch. 126, § 3; L. 1992, ch. 250, § 1; L. 1994, ch. 3, § 1; L. 2001, ch. 5, § 111; L. 2003, ch. 149, § 7; L. 2004, ch. 146, § 4; L. 2012, ch. 91, § 19; L. 2014, ch. 115, § 130; L. 2018, ch. 32, § 1; L. 2022, ch. 77, § 1; L. 2024, ch. 103, § 3; July 1.
+END SOURCE 1
+
+SOURCE 2: Kansas Administrative Regulations 2022, Book 2 — article 28-39 entries for 28-39-145 through 28-39-149 | https://sos.ks.gov/publications/KAR/2022/2022_KAR_Volumes_Book_2.pdf | source's own date: 2022 volumes | retrieved: 2026-08-30
+healing arts as a physical therapy assistant.           39-932, and 39-933; implementing K.S.A. 39-
+   (vv) “Physician” means an individual who meets       927, 39-930, 39-932, and 39-933; effective Oct. 8,
+the requirements of the Kansas board of healing         1999; revoked May 22, 2009.)
+arts to practice medicine or osteopathy.
+   (ww) “Psychopharmacologic drug” means any              28-39-146. (Authorized by and implement-
+drug prescribed with the intent of controlling          ing K.S.A. 39-954; effective Nov. 1, 1993; amend-
+mood, mental status, or behavior.                       ed Feb. 21, 1997; revoked May 22, 2009.)
+   (xx) “Registered professional nurse” means an          28-39-147 and 28-39-148. (Authorized
+individual who is licensed by the Kansas state          by and implementing K.S.A. 39-932; effective
+board of nursing as a registered professional           Nov. 1, 1993; amended Feb. 21, 1997; revoked
+nurse.                                                  May 22, 2009.)
+   (yy) “Respite care” means the provision of ser-
+vices to a resident on an intermittent basis for pe-      28-39-149. Protection of resident funds
+riods of fewer than 30 days at any one time.            and possessions in nursing facilities. The
+   (zz) “Sanitization” means effective bactericidal     nursing facility shall have written policies and
+treatment by a process that reduces the bacteri-        procedures which ensure the security of residents’
+al count, including pathogens, to a safe level on       possessions and residents’ funds accepted by the
+utensils and equipment.                                 facility for safekeeping. (a) The facility shall afford
+END SOURCE 2
+
+SOURCE 3: Involuntary Discharge | https://www.ombudsman.ks.gov/helpful-resources/issues-of-interest/involuntary-discharge | source's own date: none stated on page | retrieved: 2026-08-30
+Involuntary Discharge | Office of the Long-Term Care Ombudsman
+
+# Involuntary Discharge
+
+Involuntary Discharge continues to be one of the top complaints that ombudsmen report here in Kansas and nationally. The threat of transfer or discharge from a nursing home can be both frightening and stressful for residents and their families. Too often, a facility may respond to resident's difficulties or increasing need for care or repeated questions or complaints from family members by transferring or discharging the resident. The Nursing Home Reform Law of 1987 protects residents of nursing facilities from involuntary transfer and discharge.
+
+## Resident Rights During Transfers and Discharges
+
+- Remain in the nursing facility unless a transfer or discharge:
+  1. is necessary to meet the resident's welfare;
+  2. is appropriate because the resident's health has improved and s/he no longer requires nursing home care;
+  3. is needed to protect the health and safety of other residents or staff;
+  4. is required because the resident has failed, after reasonable notice, to pay the facility charge for an item or service provided at the resident's request
+- Receive thirty-day notice of transfer or discharge which includes the reason, effective date, location to which the resident is transferred or discharged, the right to appeal, and the name, address, and telephone number of the state long-term care ombudsman
+- Safe transfer or discharge through sufficient preparation by the nursing home
+
+## Information and Guides
+
+Involuntary Transfer and Discharge Factsheet, from the National Consumer Voice for Quality Long-Term Care gives consumers details on what the law says about transfer/discharge, notification, time limits, bed-holds and readmission, and appeals.
+
+## Mailing Address
+
+Kansas Long-Term Care Ombudsman
+
+900 SW Jackson, Suite 1041 Topeka, Kansas 66612
+
+## Phone
+
+Toll FREE: 1 (877) 662 - 8362
+
+END SOURCE 3
+
+END OF PACKET — 3 sources

@@ -7,7 +7,7 @@ present. Spanish = a translated page is published; it carries the
 docket, the hoisted rows, and the notice periods and deadlines, in
 the state's own published translation only.
 
-**Baseline: 26 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
+**Baseline: 29 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
 
 | State | Baseline | Full page | Spanish | Sources last checked |
 |---|:---:|:---:|:---:|---|
@@ -16,7 +16,7 @@ the state's own published translation only.
 | Arizona | [ ] | [ ] | [ ] |  |
 | Arkansas | [ ] | [ ] | [ ] |  |
 | [California](site/states/california.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| Colorado | [ ] | [ ] | [ ] |  |
+| [Colorado](site/states/colorado.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Connecticut](site/states/connecticut.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Delaware | [ ] | [ ] | [ ] |  |
 | District of Columbia | [ ] | [ ] | [ ] |  |
@@ -27,7 +27,7 @@ the state's own published translation only.
 | [Illinois](site/states/illinois.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Indiana](site/states/indiana.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Iowa](site/states/iowa.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| Kansas | [ ] | [ ] | [ ] |  |
+| [Kansas](site/states/kansas.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Kentucky](site/states/kentucky.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Louisiana](site/states/louisiana.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Maine | [ ] | [ ] | [ ] |  |
@@ -35,7 +35,7 @@ the state's own published translation only.
 | [Massachusetts](site/states/massachusetts.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Michigan](site/states/michigan.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Minnesota](site/states/minnesota.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| Mississippi | [ ] | [ ] | [ ] |  |
+| [Mississippi](site/states/mississippi.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Missouri](site/states/missouri.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Montana | [ ] | [ ] | [ ] |  |
 | Nebraska | [ ] | [ ] | [ ] |  |

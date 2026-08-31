@@ -1,0 +1,509 @@
+FIELD ASSEMBLY SOURCE PACKET — DO NOT EDIT AFTER A PAGE IS BUILT FROM IT
+
+STATE: Colorado
+
+SLUG: colorado
+
+ASSEMBLED: 2026-08-30
+
+CAPTURE NOTES: The regulation was captured as the Secretary of State's own generated PDF of
+6 CCR 1011-1 Chapter 5 (GenerateRulePdf.do, ruleVersionId=12005), rendered to text with
+pdftotext -layout; sources 1 through 4 are contiguous spans of that rendering. The Colorado
+Department of Human Services ombudsman page was captured by curl with a browser user-agent
+and stripped of markup. Both transports are machine-repeatable.
+
+PENDING: The Department of Health Care Policy and Financing's Medicaid bed-hold rule (10 CCR
+2505-10), which section 5.2 of this chapter leaves to facility policy; the Colorado Long-Term
+Care Ombudsman program's own site, which the department's page links to rather than
+reproducing; and any published form or address for an appeal to the Executive Director.
+
+SOURCE 1: 6 CCR 1011-1 Chapter 5, section 15.6 (Resident transfer, discharge or room change) | https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12005&fileName=6+CCR+1011-1+Chapter+05 | source's own date: Adopted by the Board of Health on April 16, 2025. Effective July 1, 2025. | retrieved: 2026-08-30
+15.6    RESIDENT TRANSFER, DISCHARGE OR ROOM CHANGE
+
+        A)      The following definitions apply to this section 15.6:
+
+                1)      “Discharge” means movement of a resident from a nursing care facility to a non-
+                        institutional setting when the discharging facility ceases to be legally responsible
+                        for the care of the resident.
+
+                2)      “Transfer” means movement of a resident from a nursing care facility to another
+                        institutional setting when the legal responsibility for the care of the resident
+                        changes from the transferring facility to the receiving facility.
+
+                3)      “Room change” refers to the movement of a resident from one room to another.
+
+        B)      A resident shall not be transferred or discharged unless:
+
+                1)      The transfer or discharge is necessary for the resident's welfare. Facilities that
+                        are certified to participate in the Medicaid and/or Medicare reimbursement
+                        program must also demonstrate that the resident's needs cannot be met in the
+                        facility,
+
+                2)      The transfer or discharge is only for medical reasons. Facilities that are certified
+                        to participate in the Medicaid and/or Medicare reimbursement program must also
+                        demonstrate that the resident's needs cannot be met in the facility,
+
+                3)      The transfer or discharge is necessary to preserve the welfare of other residents,
+                        or
+
+                4)      The resident has failed to pay for (or to have paid under Medicaid or Medicare) a
+                        stay at the facility.
+
+                        a)       Facilities that are certified to participate in the Medicaid and/or Medicare
+                                 reimbursement program must also provide the resident with reasonable
+                                 and appropriate notice regarding non-payment and its consequences at
+                                 least 30 calendar days before initiating a transfer or discharge for non-
+                                 payment.
+
+        C)      When a resident is transferred or discharged under any of the circumstances specified in
+                15.6(B), the facility shall ensure that the resident's health information record contains
+                documentation from:
+
+                1)      The resident's practitioner when the transfer or discharge is for the reasons
+                        described in sections 15.6(B)(1), (2) or (3); and
+
+                2)      The nursing home administrator when transfer or discharge is for the reason
+                        described in section 15.6(B)(4).
+
+
+
+
+                                                                                                               38
+CODE OF COLORADO REGULATIONS                                                         6 CCR 1011-1 Chapter 5
+Health Facilities and Emergency Medical Services Division
+
+
+        D)      Whenever a resident is transferred or discharged for the reasons described in sections
+                15.6(B)(1), (2) or (3), the facility shall provide assessment and reasonable intervention
+                prior to determining the need for the transfer or discharge. The assessment, attempted
+                intervention and reason for the discharge or transfer shall be documented in the
+                resident’s health information record.
+
+        E)      The facility shall provide reasonable advance notice to the resident and resident
+                representative of its intent to transfer or discharge the resident. Reasonable advance
+                notice means notice in writing at least 30 days before the transfer or discharge except in
+                the following circumstances in which the professional staff determines there is an
+                emergency, in which case the notice must be made as soon as practicable before the
+                transfer or discharge:
+
+                1)      The safety of residents in the facility is endangered,
+
+                2)      The health of residents in the facility is endangered, and/or
+
+                3)      An immediate transfer or discharge is required by the resident's urgent medical
+                        needs.
+
+        F)      The written notice shall be in a language and manner understandable to the resident and
+                the resident representative, if applicable, and shall include:
+
+                1)      The reason for the transfer or discharge,
+
+                2)      The effective date of the transfer or discharge,
+
+                3)      The location to which the resident is transferred or discharged,
+
+                4)      The grievance procedure, and
+
+                5)      The following text:
+
+                        “You have a right to appeal the nursing care facility's decision to transfer or
+                        discharge you. If you think you should not be transferred or discharged, you must
+                        appeal to _________ (staff designee) within 14 calendar days. If you do not wish
+                        to handle the appeal yourself, you may use an attorney, relative, or friend. If your
+                        appeal is not resolved to your satisfaction by the staff designee, you may appeal
+                        to the nursing care facility's grievance committee within 10 calendar days of
+                        receipt of the decision of the staff designee. If your appeal is not resolved to your
+                        satisfaction by the nursing care facility’s grievance committee, you may appeal to
+                        the Executive Director of the Colorado Department of Public Health and
+                        Environment within 10 calendar days of receipt of the grievance committee
+                        decision. If you are not satisfied with the Executive Director’s decision, you have
+                        30 calendar days to request that the Department of Public Health and
+                        Environment set the matter for an administrative hearing. You may direct
+                        questions regarding this notice to the Department of Public Health and
+                        Environment at____________________(division name, address and phone
+                        number).”
+
+                        a)      Nursing care facilities that are certified for Medicaid and/or Medicare
+                                reimbursement, must also add the following statement:
+
+
+
+
+                                                                                                            39
+CODE OF COLORADO REGULATIONS                                                         6 CCR 1011-1 Chapter 5
+Health Facilities and Emergency Medical Services Division
+
+
+                                “In addition, if you have questions or complaints about the transfer or
+                                discharge or would like help to appeal, call or write the state or local
+                                Long-Term Care Ombudsman at ___________(phone
+                                numbers/addresses).”
+
+                        b)      If the resident who is being involuntarily transferred is a person with a
+                                developmental disability for whom an agency has been authorized by law
+                                as the agency responsible for advocacy and protection of the rights of
+                                persons with developmental disabilities, the nursing care facility must
+                                also furnish to resident and the resident representative, the following
+                                statement:
+
+                                “In addition, if you have questions or complaints about the transfer or
+                                discharge or would like help to appeal, call or write the _____________,
+                                (name, phone number and address of the agency.)”
+
+                        c)      If the resident who is being transferred is a person with mental illness for
+                                whom an agency has been authorized by law as the agency responsible
+                                for the advocacy and protection of persons with mental illness, the
+                                nursing care facility must also furnish to the resident and the resident
+                                representative the following statement:
+
+                                “In addition, if you have questions or complaints about the transfer or
+                                discharge or would like help to appeal, call or write the _____.________,
+                                (name, phone number and address of the agency.)”
+
+        G)      In cases where a resident is being involuntarily transferred or discharged from a nursing
+                care facility that is certified to participate in the Medicaid and/or Medicare reimbursement
+                program, a copy of the written notice (including the grievance and appeal rights, and
+                current contact information for the state and local Long-Term Care Ombudsman) shall
+                also be sent to the state and local Long-Term Care Ombudsman at the same time it is
+                sent to the resident or as soon as the determination is made that the transfer or
+                discharge is involuntary.
+
+        H)      A facility must provide sufficient preparation and orientation to residents to ensure safe
+                and orderly transfer or discharge from the facility.
+
+        I)      When the facility intends to move a resident to another room in the facility without the
+                resident's consent, the facility shall provide the resident and resident representative with
+                written notice of such intent to be received at least five calendar days before such move,
+                including an explanation of their right to appeal.
+
+        J)      A resident shall not be involuntarily transferred, discharged, or moved to another room
+                within the facility until:
+
+                1)      The expiration of the facility notice period, and
+
+                2)      The time for filing a grievance or appeal has expired, or
+
+                3)      The grievance or appeal has been resolved.
+
+
+
+
+                                                                                                             40
+CODE OF COLORADO REGULATIONS                                                            6 CCR 1011-1 Chapter 5
+Health Facilities and Emergency Medical Services Division
+
+
+END SOURCE 1
+
+SOURCE 2: 6 CCR 1011-1 Chapter 5, section 15.1 (Statement of rights), excerpt | https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12005&fileName=6+CCR+1011-1+Chapter+05 | source's own date: Adopted by the Board of Health on April 16, 2025. Effective July 1, 2025. | retrieved: 2026-08-30
+                other patients.
+
+                1)      If the resident has limited English proficiency, the right to an explanation of rights
+                        and responsibilities in a language the resident can understand; and
+
+                2)      The right to see facility policies, upon request, and state survey reports on the
+                        facility.
+
+        K)      The right to be transferred or discharged only for medical reasons, his or her welfare or
+                that of other residents, or for nonpayment for his or her stay; and the right to be given
+                reasonable advance notice of any transfer or discharge, except in the case of an
+                emergency as determined by professional staff, consistent with section 15.6.
+
+        L)      The right not to be transferred or discharged for raising concerns or complaints.
+
+        M)      The right to have privacy in treatment and in caring for personal needs, confidentiality in
+END SOURCE 2
+
+SOURCE 3: 6 CCR 1011-1 Chapter 5, section 5.2 (Bed hold policies) | https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12005&fileName=6+CCR+1011-1+Chapter+05 | source's own date: Adopted by the Board of Health on April 16, 2025. Effective July 1, 2025. | retrieved: 2026-08-30
+5.2     BED HOLD POLICIES
+
+        The facility shall develop policies for holding beds available for residents who are temporarily
+        absent from the facility, provide a copy of the policy upon admission and explain these policies to
+        residents upon admission and before each temporary absence.
+
+END SOURCE 3
+
+SOURCE 4: 6 CCR 1011-1 Chapter 5, cover page and Editor's Notes | https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12005&fileName=6+CCR+1011-1+Chapter+05 | source's own date: Adopted by the Board of Health on April 16, 2025. Effective July 1, 2025. | retrieved: 2026-08-30
+
+
+    DEPARTMENT OF PUBLIC HEALTH AND ENVIRONMENT
+
+    Health Facilities and Emergency Medical Services Division
+
+    STANDARDS FOR HOSPITALS AND HEALTH FACILITIES
+
+    CHAPTER 5 - NURSING CARE FACILITIES
+
+    6 CCR 1011-1 Chapter 5
+    [Editor’s Notes follow the text of the rules at the end of this CCR Document.]
+
+    _________________________________________________________________________
+
+    Adopted by the Board of Health on April 16, 2025. Effective July 1, 2025.
+
+    INDEX
+
+Editor’s Notes
+
+6 CCR 1011-1 has been divided into separate chapters for ease of use. Versions prior to 05/01/2009 are
+located in the main section, 6 CCR 1011-1. Prior versions can be accessed from the All Versions list on
+the rule’s current version page. To view versions effective on or after 05/01/2009, select the desired
+chapter, for example 6 CCR 1011-1 Chap 04 or 6 CCR 1011-1 Chap 18.
+
+History
+Rule 2.5 eff. 07/30/2008.
+Sections 18, 19, 24, 25 eff. 04/30/2009. Rules 28.3-28.5 repealed eff. 04/30/2009.
+Parts 01, 1 rules 3.1.2, 3.3, 5.1.2, 5.1.6, 6.2, 7.11, 7.11.6, 7.12, 11.8-11.16, 16.6.1 18.2.8, 19.1, 19.8-
+         19.9, 23.1.1, 24.1, Parts 27-29 eff. 12/30/2010.
+Rule 16.6.2 eff. 04/30/2011.
+Definitions, rules 18.2.3-18.2.4, 19.2, 25 eff. 08/14/2013. Rules 18.8, 19.9 repealed eff. 08/14/2013.
+Entire rule eff. 06/01/2016.
+Section 32 eff. 07/01/2019.
+Rules 1.1, 3.3., 4.6, 9.5 B), 15.1 F) 3), 17.7 F), 21.1, 31.7, 31.8, 32.4 eff. 01/14/2020.
+Section 32 eff. 07/01/2020.
+Index, rule 1.1, Section 2, rules 4.4-4.8, 6.3 F), 6.4, 15.1 P) eff. 01/14/2024.
+Section 32 eff. 07/01/2024.
+Section 32 eff. 07/01/2025.
+
+
+
+
+                                                                                                              64
+
+END SOURCE 4
+
+SOURCE 5: Long-Term Care Ombudsman | https://cdhs.colorado.gov/long-term-care-ombudsman | source's own date: none stated on page | retrieved: 2026-08-30
+Long-Term Care Ombudsman | Colorado Department of Human Services 
+ Skip to main content
+ Search 
+ Search 
+ Menu 
+ Benefits assistance
+ Toggle Benefits assistance submenu 
+ Cash assistance
+ Toggle Cash assistance submenu 
+ Colorado Works (TANF)
+ Adult Financial Programs
+ Disability assistance
+ Toggle Disability assistance submenu 
+ Disability Determination Services
+ Employment assistance
+ Toggle Employment assistance submenu 
+ Colorado Employment First
+ CW STEP
+ ReHire Colorado
+ Senior Community Service Employment Program
+ Training to Career Pathways
+ Energy assistance
+ Toggle Energy assistance submenu 
+ Colorado Low-income Energy Assistance Program (LEAP)
+ Energy EBT
+ Food assistance
+ Toggle Food assistance submenu 
+ Supplemental Nutrition Assistance Program (SNAP)
+ Toggle Supplemental Nutrition Assistance Program (SNAP) submenu 
+ Colorado Healthy Choice Waiver
+ Colorado SNAP Produce Bonus
+ SNAP-Ed
+ SNAP Outreach
+ ABAWDs
+ Summer EBT
+ Toggle Summer EBT submenu 
+ FAQs about Summer EBT
+ How to use your Summer EBT benefits
+ More food resources for Summer EBT recipients
+ Food Distribution Programs
+ Toggle Food Distribution Programs submenu 
+ Household programs
+ Toggle Household programs submenu 
+ Commodity Supplemental Food Program (Everyday Eats)
+ The Emergency Food Assistance Program
+ Child nutrition and schools
+ Disaster feeding and commodity alerts
+ Local Food Purchase Assistance
+ Colorado EBT
+ Toggle Colorado EBT submenu 
+ Discount admission for Colorado EBT card holders
+ Our services
+ Toggle Our services submenu 
+ Adult Protective Services
+ Toggle Adult Protective Services submenu 
+ CAPS Check Unit
+ Mental health services
+ Toggle Mental health services submenu 
+ Mental Health Hospitals
+ Toggle Mental Health Hospitals submenu 
+ Colorado Mental Health Hospital in Fort Logan
+ Colorado Mental Health Hospital in Pueblo
+ Forensic services
+ Mental Health Transitional Living Homes
+ Behavioral Health Administration
+ Child and family services
+ Toggle Child and family services submenu 
+ Adoption
+ Colorado Sexual Health Initiative (CoSHI)
+ Child support
+ Child welfare
+ Toggle Child welfare submenu 
+ Child welfare collaborations
+ Data and accountability
+ Family First Prevention Services Act forms and resources
+ Forms and policies
+ Plans of Safe Care
+ Frequently asked questions
+ Research and action
+ Resources and training
+ Unaccompanied Refugee Minors Program
+ Domestic Violence Program
+ Toggle Domestic Violence Program submenu 
+ Resources for community members
+ Resources for domestic violence service providers
+ Positive Youth Development
+ Disability services
+ Toggle Disability services submenu 
+ Colorado Commission for the Deaf, Hard of Hearing, and Deafblind
+ Disability Determination Services
+ Division of Regional Centers
+ Toggle Division of Regional Centers submenu 
+ About the Division of Regional Centers
+ Regional Centers Community Partners
+ Regional Centers Individuals and Families
+ Grand Junction Regional Center
+ Pueblo Regional Center
+ Wheat Ridge Regional Center
+ MINDSOURCE Brain Injury Network
+ Older adult services
+ Toggle Older adult services submenu 
+ State Unit on Aging
+ Toggle State Unit on Aging submenu 
+ Aging and Disability Resources
+ Caregiver support
+ Colorado Commission on Aging
+ Legal assistance
+ Long-Term Care Ombudsman
+ Nutrition services
+ Senior Community Services Employment Program
+ Support services
+ Veterans Community Living Centers
+ Toggle Veterans Community Living Centers submenu 
+ Veterans Community Living Center at Fitzsimons
+ Bruce McCandless Veterans Community Living Center at Florence
+ Veterans Community Living Center at Homelake
+ Veterans Community Living Center at Rifle
+ Spanish Peaks Veterans Community Living Center at Walsenburg
+ Youth services
+ Toggle Youth services submenu 
+ Careers
+ Education
+ Families of youth services clients
+ Frequently asked questions
+ Policies
+ Records requests
+ Regional offices and administration
+ Residential youth centers
+ Toggle Residential youth centers submenu 
+ Betty K. Marler Youth Services Center
+ Gilliam Youth Services Center
+ Golden Peak Youth Services Center
+ Grand Mesa Youth Services Center
+ Marvin W. Foote Youth Services Center
+ Platte Valley Youth Services Center
+ Prairie Vista Youth Services Center
+ Pueblo Youth Services Center
+ Rocky Mountain Youth Services Center
+ Spring Creek Youth Services Center
+ Willow Point Youth Services Center
+ Zebulon Pike Youth Services Center
+ Victim Services
+ Our partners
+ Toggle Our partners submenu 
+ Boards and commissions
+ Toggle Boards and commissions submenu 
+ State Board of Human Services
+ Governor-appointed boards and commissions
+ Internal boards and commissions
+ Policy Advisory Committee
+ Resources for members
+ Public meeting calendar
+ Counties
+ Toggle Counties submenu 
+ CDHS County Portal
+ Toggle CDHS County Portal submenu 
+ County Portal home
+ About CDHS and contacts
+ Boards and commissions
+ Finance, legislation and audits
+ Offices and divisions
+ Training and resources
+ Memo Series
+ Toggle Memo Series submenu 
+ Current memos
+ Memo archives
+ State-tribal relations
+ Training
+ About CDHS
+ Toggle About CDHS submenu 
+ Leadership and organizational structure
+ Performance, outcomes and reviews
+ Toggle Performance, outcomes and reviews submenu 
+ Quality Assurance and Quality Improvement
+ Toggle Quality Assurance and Quality Improvement submenu 
+ Administrative Review Division
+ Direct Care Facilities Quality assurance
+ Division of Youth Services Quality Assurance
+ Public Assistance Quality Assurance
+ Performance Management
+ Toggle Performance Management submenu 
+ C-Stat
+ CDHS Performance Plan
+ Ombudsman offices
+ Toggle Ombudsman offices submenu 
+ Behavioral Health Ombudsman
+ Long-Term Care Ombudsman
+ Child Protection Ombudsman
+ Featured initiatives
+ Toggle Featured initiatives submenu 
+ CDHS for ALL
+ CDHS Legislative Affairs
+ CDHS Strategic Plan
+ Family Voice Council
+ Two-generation approach
+ News
+ Toggle News submenu 
+ Press releases
+ Publications and reports
+ Social media
+ Forms, policies, data and records requests
+ Toggle Forms, policies, data and records requests submenu 
+ Forms
+ Policies
+ Data
+ Records requests
+ HIPAA
+ Privacy Statement
+ Careers
+ A to Z index
+ I want to ...
+ Contact us
+ 0
+ Home 
+ About CDHS 
+ Performance, outcomes and reviews 
+ Ombudsman offices 
+ Long-Term Care Ombudsman 
+Long-Term Care Ombudsman
+ The Colorado State Long-Term Care Ombudsman Program advocates for residents of skilled nursing homes, and licensed assisted living residences. The authority of the long-term care ombudsman program comes from Title VII, Chapter 2, of the Older Americans Act, as well as Title 26, Article 11.5, of the Older Coloradans Act. The primary purpose of the Long-Term Care Ombudsman Program is to promote and protect the residents’ rights guaranteed to residents under federal and state law. 
+ Long-Term Care Ombudsman Program 
+ Services Certified Long-Term Care Ombudsmen are trained to receive complaints and resolve problems in situations involving quality of care, use of restraints, transfer and discharge, abuse, and other aspects of resident dignity and rights. Ombudsman services are free, confidential and resident-directed. Contact an Ombudsman Every licensed long-term care facility is required to display a poster with the facility's assigned ombudsman's name and contact information. If you are a resident or family member of a resident in a facility, call the ombudsman listed on the poster. To speak with a long-term care ombudsman, visit the Colorado Long-Term Care Program website or call 303.862.3524. Resources Long-Term Care Ombudsman Program Annual Report 2023 
+ About CDHS Our mission: Together, we empower Coloradans to thrive. Our vision: To serve Coloradans through bold and innovative health and human services. Our values: People-first; balance; accountability; transparency; ethical; collaboration. About CDHS 
+ CDHS contact information Colorado Department of Human Services 1575 Sherman St. Denver, CO 80203 303-866-5700 County human services departments Full contact information 
+ Accessibility at CDHS CDHS is committed to meeting members of our community where they are, and strives to provide all Coloradans with access to our programs, services, resources, activities and communication regardless of ability. Digital accessibility statement 
+ Popular pages Contact your county Supplemental Nutrition Assistance Program (SNAP) Low-income Energy Assistance Program (LEAP) EBT card Summer EBT Colorado Works Careers A to Z index 
+ placeholder 
+ © 2026 State of Colorado 
+ Transparency Online 
+ General Notices 
+ Colorado Official State Web Portal
+END SOURCE 5
+
+END OF PACKET — 5 sources
