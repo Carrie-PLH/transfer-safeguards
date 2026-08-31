@@ -1,0 +1,204 @@
+FIELD ASSEMBLY SOURCE PACKET — DO NOT EDIT AFTER A PAGE IS BUILT FROM IT
+
+STATE: West Virginia
+SLUG: west-virginia
+ASSEMBLED: 2026-08-30
+
+CAPTURE NOTES: The Secretary of State serves 64 CSR 13 as a Microsoft Word document; the same
+endpoint with Format=HTML, Format=PDF and Format=TEXT all return the identical 60-page scanned
+PDF, which carries no text layer at all, so the Word document is the only machine-readable copy
+the state publishes. It was fetched by curl with a browser user-agent and converted to text with
+libreoffice --headless --convert-to txt. Sources 1 through 3 are contiguous spans of that
+conversion. The ombudsman page was captured by curl over http and stripped of markup. Both
+transports are machine-repeatable, but a reviewer re-running the conversion must use libreoffice:
+a naive byte-level extraction of the Word file drops short lines and breaks apostrophes.
+
+PENDING: The State Board of Review's own published procedure, address and deadline, which this
+rule names without stating; W. Va. Code 16-5C-1 et seq.; the ombudsman brochure the Bureau links
+to; and any statement of a bed-hold period.
+
+SOURCE 1: 64 CSR 13, Nursing Home Licensure Rule — section 4.13, transfer and discharge | https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=8271&Format=WORD | source's own date: none stated in the captured span | retrieved: 2026-08-30
+			4.12.b.1.  If a former resident wishes to return to the nursing home and meets the requirements for coverage under the Medicare program, the resident may be placed in a bed certified to participate in that program. 
+
+			4.12.b.2.  If the nursing home is not certified under the Medicare program and the resident chooses placement in a nursing home providing Medicare coverage, the resident may be placed on a waiting list for readmission to the nursing home after Medicare coverage has ceased if the nursing home can provide the necessary services to the former resident. 
+
+	4.13.  Admission, Transfer and Discharge.
+
+		4.13.a.  Refusal of Certain Transfers. A resident has the right to refuse a transfer to another room within the nursing home if the purpose of the transfer is to relocate:
+
+			4.13.a.1.  A resident of a Medicare certified skilled nursing home (SNF) from the distinct part of the institution that is a SNF to a part of the institution that is not a SNF; or
+
+			4.13.a.2.  A resident of a non-Medicare certified nursing home (NF), from the distinct part of the institution that is a NF to a distinct part of the institution that is a SNF. 
+
+		4.13.b.  Transfer and discharge requirements.  The nursing home shall permit each resident to remain in the nursing home, unless:
+
+			4.13.b.1.  The transfer or discharge is necessary for the resident's welfare and the resident's needs cannot be met in the nursing home;
+
+			4.13.b.2.  The transfer or discharge is appropriate because the resident's health has improved sufficiently so the resident no longer needs the services provided by the nursing home;
+
+			4.13.b.3.  The health or safety of persons in the nursing home is endangered;
+
+			4.13.b.4.  The resident has failed, after reasonable and appropriate notice, to pay for a stay at the nursing home; or 
+
+			4.13.b.5.  The nursing home ceases to operate.
+
+		4.13.c.  Documentation. 
+
+			4.13.c.1.  When a nursing home transfers or discharges a resident, the resident’s clinical record shall contain the reason for the transfer or discharge.
+
+			4.13.c.2.  The documentation shall be made by the resident's physician when transfer or discharge is necessary under paragraphs 4.13.b.1 through 4.13.b.3 of this Subsection.
+
+		4.13.d.  Notice before transfer or discharge.  Before a nursing home transfers or discharges a resident, it shall:
+
+			4.13.d.1.  Provide written notice to the resident or his or her legal representative as appropriate, of the transfer or discharge.  The notice shall be in a language the resident understands and shall include the following:
+
+				4.13.d.1.A.  The reason for the proposed transfer or discharge;
+
+				4.13.d.1.B.  The effective date of the proposed transfer or discharge;
+
+				4.13.d.1.C.  The location or other nursing home to which the resident is being transferred or discharged;
+
+				4.13.d.1.D.  A statement that the resident has the right to appeal the action to the State Board of Review, with the appropriate information regarding how to do so;
+
+				4.13.d.1.E.  The name, address and telephone number of the State long term care ombudsman;
+
+				4.13.d.1.F.  For nursing home residents with developmental disabilities, the mailing address and telephone number of the agency responsible for the protection and advocacy of developmentally disabled persons; and
+
+				4.13.d.1.G.  For nursing home residents who are mentally ill, the mailing address and telephone number of the agency responsible for the protection and advocacy of  mentally ill persons.
+
+		4.13.e.  Time of notice.  The notice of transfer or discharge shall be made by the nursing home at least thirty (30) days before the resident is discharged or transferred, except the notice shall be made as soon as practicable before a transfer or discharge when:
+
+			4.13.e.1.  The discharge is to a community setting in accordance with Subdivision 4.13.g. of this Subsection.;
+
+			4.13.e.2.  The safety of persons in the nursing home would be endangered;
+
+			4.13.e.3.  The health of persons in the nursing home would be endangered;
+
+			4.13.e.4.  The resident’s health improves sufficiently to allow a more immediate transfer or discharge;
+		
+			4.13.e.5.  An immediate transfer or discharge is required by the resident’s urgent medical needs; or
+
+			4.13.e.6.  A resident has not resided in the nursing home for thirty (30) days.
+
+		4.13.f.  Orientation for Transfer or Discharge.
+
+			4.13.f.1.  A nursing home shall provide sufficient preparation and orientation to residents to ensure safe and orderly transfer or discharge from the nursing home. 
+
+			4.13.f.2.  Involuntary Transfer.  In the event of an involuntary transfer, the nursing home shall assist the resident or legal representative or both in finding a reasonably appropriate alternative placement prior to the proposed transfer or discharge and by developing a plan designed to minimize any transfer trauma to the resident. 
+
+				4.13.f.2.A.  The plan may include counseling the resident, or legal representative or both regarding available community resources and taking steps under the nursing home’s control to assure safe relocation.
+
+		4.13.g.  Discharge to a Community Setting. 
+
+			4.13.g.1.  A nursing home shall not discharge a resident requiring the nursing home’s services to a community setting against his or her will.
+
+			4.13.g.2.  A nursing home shall document that a resident who was voluntarily discharged to a community setting fully understood all options for care and helped develop a plan of care in anticipation of the resident’s discharge. 
+
+			4.13.g.3.  Each resident shall understand fully the right to refuse a discharge. 
+
+	4.14.  Equal Access to Quality Care.
+
+		4.14.a.  Each resident or person requesting admission to a nursing home shall be free from discrimination by the nursing home, unless the discrimination:
+
+			4.14.a.1.  Is the result of the nursing home not being able to provide adequate and appropriate care, and treatment and services to the resident or applicant due to the resident’s or applicant’s history of mental or physical disease or disability; and 
+
+			4.14.a.2.  Is not contrary to a federal or State law, regulation or rule:
+
+				4.14.a.2.A.  That prohibits the discrimination; or
+
+				4.14.a.2.B.  That requires the care to be provided if the nursing home participates in a financial program requiring the admittance or continued residence of the person.
+
+END SOURCE 1
+
+SOURCE 2: 64 CSR 13, Nursing Home Licensure Rule — definitions, excerpt | https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=8271&Format=WORD | source's own date: none stated in the captured span | retrieved: 2026-08-30
+	2.35.  Nursing Personnel. -- The director of nursing, the charge nurse and all employees under the direct supervision of the director of nursing or charge nurse who attend to resident-oriented nursing functions, including registered professional nurses, licensed practical nurses and nursing aides, but excluding employees engaged in administration, dietetics, social services, activities staff, housekeeping, laundry and maintenance.
+
+	2.36.  Ombudsman. -- Any person or organization designated by the State Long Term Care Ombudsman as part of the West Virginia Long-Term Care Ombudsman Program.
+
+	2.37.  Plan of Care. -- The overall profile of services and expected outcomes of care that may include those plans to meet the person’s needs after discharge to the community.  This includes all care and services outlined in the resident’s medical record.
+
+	2.38.  Poor Performer. -- A nursing home which has repeat deficiencies that resulted in harm or greater whereby the nursing home cannot avoid an enforcement action by correction of the deficiency.  
+
+	2.39.  Premises. -- A tract of land, together with all buildings, equipment, fixtures and facilities erected, constructed or situated on the land, and all rights, powers, easements, and rights-of-way, and all interests in property, real, personal or mixed, now owned or hereafter acquired by a licensed person and appurtenant to or used in connection with the nursing home.
+
+	2.40.  The Protection and Advocacy Network. -- The system established to protect and advocate the rights of persons with developmental disabilities specified in the Developmental Disabilities Assistance and Bill of Rights Act, and the protection and advocacy system established under the Protection and Advocacy for Mentally Ill Individuals Act.
+
+	2.41.  Qualified. -- The capacity of a person who is licensed, certified or registered to perform a duty or a task in accordance with applicable State law and other accrediting bodies.
+
+	2.42.  Regulatory Grouping. -- A set of directly-related regulatory requirements.
+
+	2.43.  Repeat Deficiency. -- A deficiency that: 1) is cited on the current inspection and, 2) was cited on the previous inspection or any intervening inspection between the current inspection and the previous inspection and, 3) has had a plan of correction submitted for the previous inspection or any intervening inspection that was accepted by the director and, 4) is cited based on the same regulatory grouping.
+
+	2.44.  Resident Council. -- A group of residents having the right to meet as a group and to express grievances in relation to the residents’ well-being in general and to make recommendations concerning nursing home policies and procedures.
+
+	2.45.  Restraint. -- Any manual method or physical or mechanical device, material or equipment attached or adjacent to the resident’s body that the person cannot remove at will and which restricts freedom from movement or normal access to one’s body, or any drug used to limit movement by a resident or to limit mental capacity of a resident beyond the requirements of therapeutic treatment.
+
+	2.46.  Routine Dental Service. -- A service consisting of an annual inspection of the oral cavity for signs of disease, diagnosis of dental disease, dental radiographs as needed, dental cleaning, fillings, minor dental plate adjustments, smoothing of broken teeth, and limited prosthodontic procedures such as impressions of dentures and fitting of dentures.
+
+	2.47.  Secretary. -- The Secretary of the Department of Health and Human Resources.
+
+	2.48.  Staff. -- Any person or persons who perform personal services for the nursing home in exchange for monetary compensation where such personal services, including the results to be accomplished as well as the details and the means by which the results are accomplished, are controlled and directed by the nursing home, regardless of whether monetary compensation is effected through the nursing home’s payroll system or the nursing home’s accounts payable system.
+
+	2.49.  State Board of Review. -- A board designated by State law through which a resident may appeal a discharge from a nursing home.
+
+	2.50.  Standard Quality of Care. -- Substantial compliance with this rule.
+
+END SOURCE 2
+
+SOURCE 3: 64 CSR 13, Nursing Home Licensure Rule — opening | https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=8271&Format=WORD | source's own date: none stated in the captured span | retrieved: 2026-08-30
+﻿TITLE 64
+LEGISLATIVE RULES
+WEST VIRGINIA DIVISION OF HEALTH
+
+SERIES 13
+NURSING HOME LICENSURE RULE
+
+
+§64-13-1.  General Provisions.
+
+	1.1.  Scope.  --  It is the purpose of this rule to implement state and federal law governing the licensing, operation, and standard of care in nursing homes located in the State of West Virginia.  Compliance with this rule will help each resident attain or maintain the highest practicable physical, mental and psychosocial well-being in accordance with a comprehensive assessment and plan of care and prevailing standards of care, and will promote a standard of care that assures that the ability of each resident to perform activities of daily living does not diminish unless the resident's ability is diminished solely as a result of a change in the resident's clinical condition.
+
+	1.2.  Authority.  --  W. Va. Code §§16-1-4 and 16-5C-5.
+
+END SOURCE 3
+
+SOURCE 4: Long-Term Care Ombudsman Program | http://www.wvseniorservices.gov/StayingSafe/LongTermCareOmbudsmanProgram/tabid/81/Default.aspx | source's own date: Updated 3/25/24 | retrieved: 2026-08-30
+Long-Term Care Ombudsman Program 
+ The country's Long-Term Care Ombudsman programs were established in each state by the Older Americans Act. The mission of the Long-Term Care Ombudsman Program is to enhance the quality of life, improve the level of care, protect individual rights, and promote the dignity of each senior citizen and/or person with a disability, of any age, housed in a long-term care facility. Long-term care facilities include nursing homes, assisted living facilities, and other types of care homes. (You can find detailed information about the past performance of every Medicare- and Medicaid-certified nursing home in the country at Care Compare .) Ombudsmen are not employed by the long-term care facilities. West Virginia's State Ombudsman is employed by the Bureau of Senior Services, and the Bureau contracts with West Virginia Legal Aid to conduct the day-to-day operation of the program via an Ombudsman Supervisor and nine Regional Ombudsmen . The Ombudsman Program will train interested individuals to become certified Ombudsman Volunteers. After an initial 25-hour certification training period, a volunteer will visit the facility to which they are assigned a few hours each month. Learn more about becoming an Ombudsman Volunteer . In conjunction with the Ombudsman Program, the Medicaid Aged and Disabled Waiver Program has published a brochure entitled " How to Report Adult Abuse and Neglect ," which defines different types of abuse, neglect, and emergency situations, and what you can do to report them. For more information about the Ombudsman Program view the Ombudsman brochure , or call 1-800-834-0598 to speak with an ombudsman or to request services. Updated 3/25/24 
+ West Virginia Bureau of Senior Services 
+ Mailing address: 
+ 1900 Kanawha Blvd. East 
+ Charleston, WV 25305 
+ Location: 
+ One Players Club Drive 
+ Suite 301 
+ Charleston, WV 
+ Phone: (304) 558-3317 , (877) 987-3646 
+ Fax: (304) 558-0004 
+ Hours: Monday - Friday 8:00 am - 4:00 pm
+ Copyright (c) 2026 West Virginia Bureau of Senior Services 
+ - Privacy Statement - Disclaimer 
+ Login 
+ Navigation Areas 
+ Home 
+ Getting Answers 
+ Overview of Aging Programs In West Virginia 
+ Frequently Asked Questions 
+ Links to Helpful Sites 
+ About Us 
+ Freedom of Information Act 
+ Governing Statutes, Legislative & Procedural Rules 
+ Staying Healthy 
+ Disease Prevention and Management 
+ Food and Fitness 
+ Health Care Promotion 
+ Older Americans Act Programs/LIFE 
+ SHIP (Medicare) 
+ Help at Home 
+ Lighthouse 
+ FAIR (Family Alzheimer’s In-Home Respite) 
+ Older Americans Act Programs/LIFE 
+ Medica
+END SOURCE 4
+
+END OF PACKET — 4 sources

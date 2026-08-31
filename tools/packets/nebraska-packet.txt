@@ -1,0 +1,184 @@
+FIELD ASSEMBLY SOURCE PACKET — DO NOT EDIT AFTER A PAGE IS BUILT FROM IT
+
+STATE: Nebraska
+SLUG: nebraska
+ASSEMBLED: 2026-08-30
+
+CAPTURE NOTES: The three statutes were captured by curl with a browser user-agent from the
+Legislature's own statute pages and stripped of markup. Source 4 is a contiguous span of the
+department's own Title 175 compilation (Title-175-Complete.pdf, about 8.9 MB) rendered with
+pdftotext -layout; the span runs across a printed page break, so the running head and page
+number of chapter 12 appear inside it. The ombudsman page was captured by curl. All transports
+are machine-repeatable. Two department ombudsman URLs, /Pages/Long-Term-Care-Ombudsman.aspx and
+/Pages/Long-Term-Care-Ombudsman-Program.aspx, return 404; the live page is /Pages/Aging-Ombudsman.aspx.
+
+PENDING: Any published route, office or deadline for appealing an involuntary transfer or
+discharge, which none of these sources states; the Medicaid fair-hearing rule at Title 471; any
+statement of a bed-hold period; and the ombudsman contacts map the department links to.
+
+SOURCE 1: Neb. Rev. Stat. 71-6022 | https://nebraskalegislature.gov/laws/statutes.php?statute=71-6022 | source's own date: Laws 1983, LB 235, § 15; Laws 1986, LB 782, § 5 | retrieved: 2026-08-30
+71-6022.
+ Transfer or discharge of resident; conditions; procedure; involuntary transfer or discharge; notice requirements. 
+ (1) A nursing home shall not transfer or discharge a resident except (a) upon his or her consent, (b) for medical reasons, (c) for the resident's safety or the safety of other residents or nursing home employees, (d) when rehabilitation is such that movement to a less restrictive setting is possible, or (e) for nonpayment for the resident's stay, except as prohibited by section 71-6023.01 or by Title XVIII or XIX of the Social Security Act as amended. 
+ (2) Involuntary transfer from a nursing home or discharge of a resident shall be preceded by a minimum written notice of thirty days, except when subdivision (d) of subsection (1) of this section applies, five days written notice shall be given to the resident or his or her representative and when subdivision (e) of subsection (1) of this section applies, a resident shall be given ten days' written notice if his or her charges are five days or more in arrears. This subsection shall not apply when (a) an emergency transfer or discharge is mandated by the resident's health care needs and is in accord with the written orders and medical justification of the attending physician or (b) the transfer is mandated by the physical safety of other residents or nursing home employees, as documented in the nursing home records. 
+ Source 
+ Laws 1983, LB 235, § 15; 
+ Laws 1986, LB 782, § 5.
+END SOURCE 1
+
+SOURCE 2: Neb. Rev. Stat. 71-6023 | https://nebraskalegislature.gov/laws/statutes.php?statute=71-6023 | source's own date: Laws 1983, LB 235, § 16; Laws 2000, LB 819, § 125 | retrieved: 2026-08-30
+71-6023.
+ Involuntary transfer or discharge; notice; contents. 
+ (1) The notice required by subsection (2) of section 71-6022 shall contain: 
+ (a) The stated reason for the proposed transfer or discharge; 
+ (b) The effective date of the proposed transfer or discharge; and 
+ (c) In not less than twelve-point type, the text of section 71-445 . 
+ (2) A copy of the notice required by subsection (2) of section 71-6022 shall be transmitted to the resident and the resident's representative, if a representative has been designated. 
+ Source 
+ Laws 1983, LB 235, § 16; 
+ Laws 2000, LB 819, § 125.
+END SOURCE 2
+
+SOURCE 3: Neb. Rev. Stat. 71-445 | https://nebraskalegislature.gov/laws/statutes.php?statute=71-445 | source's own date: Laws 2000, LB 819, § 45; Laws 2007, LB296, § 372; Laws 2016, LB750, § 10 | retrieved: 2026-08-30
+71-445.
+ Discrimination or retaliation prohibited; action for relief authorized. 
+ (1) A health care facility or health care service shall not discriminate or retaliate against a person residing in, served by, or employed at such facility or service who has initiated or participated in any proceeding authorized by the Health Care Facility Licensure Act or who has presented a complaint or provided information to the administrator of such facility or service or the Department of Health and Human Services. Such person may maintain an action for any type of relief, including injunctive and declaratory relief, permitted by law. 
+ (2) A health care facility licensed pursuant to the Health Care Facility Licensure Act shall not discriminate or retaliate against any person who has initiated or participated in the making of a report under the Uniform Credentialing Act to the department. Such person may maintain an action for any type of relief, including injunctive and declaratory relief, permitted by law. 
+ Source 
+ Laws 2000, LB 819, § 45; 
+ Laws 2007, LB296, § 372; 
+ Laws 2016, LB750, § 10. 
+ Cross References 
+ Uniform Credentialing Act, see section 38-101 . 
+ Annotations 
+ The State has not waived its sovereign immunity for claims arising under the Health Care Facility Licensure Act. Baker-Heser v. State, 309 Neb. 979, 963 N.W.2d 59 (2021).
+END SOURCE 3
+
+SOURCE 4: 175 NAC 12, Skilled Nursing and Nursing Facilities — resident rights, transfer and discharge | https://dhhs.ne.gov/Documents/Title-175-Complete.pdf | source's own date: running head EFFECTIVE 2/27/07 | retrieved: 2026-08-30
+                rate;
+          2.    Be fully informed of his or her rights and responsibilities as a resident and of
+                all rules and regulations governing resident conduct and responsibilities. This
+                information must be provided prior to or at the time of admission and its
+                receipt acknowledged by the resident in writing, or, in the case of residents
+
+                                            30
+EFFECTIVE         NEBRASKA HEALTH AND HUMAN SERVICES                             SNF-NF-ICF
+2/27/07                REGULATION AND LICENSURE                                  175 NAC 12
+
+             already in the facility, upon the facility’s adoption or amendment of resident
+             rights policies;
+        3.   Be fully informed by a physician of his or her health and medical condition
+             unless medically contraindicated;
+        4.   Participate in the planning of his or her total care and medical treatment, or to
+             refuse treatment. A resident may participate in experimental research only
+             upon informed written consent;
+        5.   Be free from arbitrary transfer or discharge. The resident must be informed at
+             the time of admission that he or she may be transferred or discharged only
+             upon the following terms:
+
+             a.     Upon his or her consent;
+             b.     For medical reasons, which must be based on the resident’s needs and
+                    be determined and documented by a physician;
+             c.     For the resident’s safety or the safety of other residents or facility
+                    employees;
+             d.     When rehabilitation is such that movement to a less restrictive setting is
+                    possible; or
+             e.     For nonpayment of the resident’s stay, except as prohibited by Title
+                    XVIII or XIX of the Social Security Act as amended, or the Nebraska
+                    Nursing Home Act, Neb. Rev. Stat. §§ 71-6008 to 71-6037. Non-
+                    payment under the Nebraska Nursing Home Act must not include a
+                    change in resident economic status so that the resident receives
+                    Medicaid or becomes eligible for Medicaid if the resident has resided in
+                    the facility for a period of at least one year after July 17, 1986, unless
+                    10% of the facility’s residents are receiving Medicaid or are eligible for
+                    Medicaid. This provision does not apply to Nebraska Veterans’ Homes
+                    established under Chapter 80, Article 3 of Nebraska Statutes.
+
+             A minimum of 30 days written notice must be given to the resident or to his or
+             her designee prior to involuntary transfer or discharge of a resident, except
+             that:
+
+                    (1)   Five days written notice must be given if the transfer is to a less
+                          restrictive setting due to rehabilitation.
+                    (2)   Ten days written notice will be given if the resident is five or more
+                          days in arrears of payment for stay.
+                    (3)   Written notice is not required in the event of emergency transfer or
+                          discharge if the transfer or discharge is mandated by the
+                          resident’s health care needs and is in accord with the written
+                          orders and medical justification of the attending physician, or if
+                          mandated for safety of other residents or facility employees as is
+                          documented in the facility’s records.
+
+             Written notice must contain:
+
+                    (1)   The stated reason for transfer or discharge;
+                    (2)   The effective date of the transfer or discharge; and
+
+                                         31
+EFFECTIVE          NEBRASKA HEALTH AND HUMAN SERVICES                             SNF-NF-ICF
+2/27/07                 REGULATION AND LICENSURE                                  175 NAC 12
+
+                     (3)   In not less than 12-point type, the following text:
+
+                           A health care facility or health care service shall not discriminate
+                           or retaliate against a person residing in, served by, or employed at
+                           the facility or service who has initiated or participated in any
+                           proceeding authorized by the Health Care Facility Licensure Act or
+                           who has presented a complaint or provided information to the
+                           administrator of the facility or service, the Department of Health
+                           and Human Services, the Department of Health and Human
+                           Services Finance and Support, or the Department of Health and
+                           Human Services Regulation and Licensure. Such person may
+                           maintain an action for any type of relief, including injunctive and
+                           declaratory relief, permitted by law.
+
+        6.    Exercise rights as a resident of the facility and as a citizen of the United
+END SOURCE 4
+
+SOURCE 5: Long-Term Care Ombudsman | https://dhhs.ne.gov/Pages/Aging-Ombudsman.aspx | source's own date: none stated on page | retrieved: 2026-08-30
+Page Content ​​​​​​The Long-Term Care Ombudsman (LTCO) works with nursing home and assisted living residents. They help answer resident concerns and complaints. The LTCO advocates for resident rights and their well-being. Who is my Long-Term Care Ombudsman? ​Email: DHHS.LTCOmbudsman@nebraska.gov Call: (800) 942-7830​ Ombudsman Contacts & Service Area ​​​Map​ What services are available? Education : Inform residents, families, facility staff, and others on a variety of issues related to aging, long-term care, and residents' rights. Information & Referral : Empower individuals to resolve concerns and complaints on their own behalf. Consultation : Make recommendations for protecting the rights of residents. Make recommendations to improve resident care and quality of life. Individual Advocacy : Facilitate the resolution of concerns and complaints. Protect the rights of residents. Systems Advocacy : Identify significant concerns and problematic trends. Advocate for systemic changes that will benefit current and future residents in long-term care facilities. 
+ Neat to know... Ombudsman acronyms Current State Regulations: Title 15 - Chapter 6 Federal Website: Administration on community living National LTCO Resource Center FFY 2025 Annual Report​ ​​ 
+ Guides & Other Resources 
+ Long-Term Care ombudsman brochure 
+ Learn more about the Long-Term Care Ombudsman Program. 
+ Residents' Rights Poster 
+ A brief overview of your rights as a long-term care facility resident. 
+ Residents Rights Brochure 
+ Know your rights as a Long-Term Care resident. 
+ Selecting a Nursing Home 
+ This checklist helps you know what to look for when you visit possible nursing homes. 
+ Know the Facts about Assisted Living Facilities 
+ This guide will help you prepare to visit facilities and make the best choice for you. 
+ Surrogate Decision Making Guide 
+ This guide will help you determine what surrogate decision making options are the best for you. 
+ Toma de Decisiones Sustitutas 
+ La toma de decisiones sustitutas es un término que describe situaciones en que alguien toma decisions a nombre de otra persona. 
+ Volunteer! 
+ Are you interested in volunteering as an Ombudsman Advocate? 
+ Five Wishes 
+ The Five Wishes Program for Health Care 
+ Five Wishes Sample 
+ A sample Five Wishes plan. 
+  ​ 
+   More 
+ Navigation List Name 
+ ©
+ 2026
+ Nebraska Department of Health and Human Services
+ 301 Centennial Mall South,
+ Lincoln, Nebraska 68508 
+ (402) 471-3121
+ TDD
+ (800) 833-7352
+ Contact Us
+ For Latest Updates :
+ Sign Up
+ Careers
+ Security, Privacy & Accessibility Policy
+ Non Discrimination & Language Assistance
+ General Disclaimer
+ HIPAA
+ Helping People Live Better Lives
+END SOURCE 5
+
+END OF PACKET — 5 sources

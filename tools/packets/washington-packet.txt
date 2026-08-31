@@ -1,0 +1,182 @@
+FIELD ASSEMBLY SOURCE PACKET — DO NOT EDIT AFTER A PAGE IS BUILT FROM IT
+
+STATE: Washington
+SLUG: washington
+ASSEMBLED: 2026-08-30
+
+CAPTURE NOTES: The statute and the regulation were captured by curl with a browser user-agent
+from the Legislature's own code pages and stripped of markup; sources 1 and 2 are the spans
+running from each citation's heading to the page's site footer. The ombudsman program's home
+page was captured the same way. All three transports are machine-repeatable. The Department of
+Social and Health Services' own ombuds page at
+dshs.wa.gov/altsa/home-and-community-services/long-term-care-ombuds returns 404; the program's
+own site carries the contacts, and the department's current page is capture-pending.
+
+PENDING: The department's own long-term care ombuds page; the hearing rule and the form RCW
+74.42.450(5) says is attached to a department discharge notice; WAC 388-97-0160 on
+social/therapeutic leave; and the Office of Civil Legal Aid's discharge programme.
+
+SOURCE 1: RCW 74.42.450 | https://app.leg.wa.gov/RCW/default.aspx?cite=74.42.450 | source's own date: history line ends 2013 c 23 s 229 | retrieved: 2026-08-30
+RCW 74.42.450 
+ Residents limited to those the facility qualified to care for — Transfer or discharge of residents — Appeal of department discharge decision — Reasonable accommodation. 
+ (1) The facility shall admit as residents only those individuals whose needs can be met by: (a) The facility; (b) The facility cooperating with community resources; or (c) The facility cooperating with other providers of care affiliated or under contract with the facility. (2) The facility shall transfer a resident to a hospital or other appropriate facility when a change occurs in the resident's physical or mental condition that requires care or service that the facility cannot provide. The resident, the resident's guardian, if any, the resident's next of kin, the attending physician, and the department shall be consulted at least fifteen days before a transfer or discharge unless the resident is transferred under emergency circumstances. The department shall use casework services or other means to insure that adequate arrangements are made to meet the resident's needs. (3) A resident shall be transferred or discharged only for medical reasons, the resident's welfare or request, the welfare of other residents, or nonpayment. A resident may not be discharged for nonpayment if the discharge would be prohibited by the medicaid program. (4) If a resident chooses to remain in the nursing facility, the department shall respect that choice, provided that if the resident is a medicaid recipient, the resident continues to require a nursing facility level of care. (5) If the department determines that a resident no longer requires a nursing facility level of care, the resident shall not be discharged from the nursing facility until at least thirty days after written notice is given to the resident, the resident's surrogate decision maker and, if appropriate, a family member or the resident's representative. A form for requesting a hearing to appeal the discharge decision shall be attached to the written notice. The written notice shall include at least the following: (a) The reason for the discharge; (b) A statement that the resident has the right to appeal the discharge; and (c) The name, address, and telephone number of the state long-term care ombuds. (6) If the resident appeals a department discharge decision, the resident shall not be discharged without the resident's consent until at least thirty days after a final order is entered upholding the decision to discharge the resident. (7) Before the facility transfers or discharges a resident, the facility must first attempt through reasonable accommodations to avoid the transfer or discharge unless the transfer or discharge is agreed to by the resident. The facility shall admit or retain only individuals whose needs it can safely and appropriately serve in the facility with available staff or through the provision of reasonable accommodations required by state or federal law. "Reasonable accommodations" has the meaning given to this term under the federal Americans with disabilities act of 1990, 42 U.S.C. Sec. 12101 et seq. and other applicable federal or state antidiscrimination laws and regulations. [ 2013 c 23 s 229 ; 1997 c 392 s 216 ; 1995 1st sp.s. c 18 s 64 ; 1979 ex.s. c 211 s 45 .] Notes: Short title — Findings — Construction — Conflict with federal requirements — Part headings and captions not law — 1997 c 392: See notes following RCW 74.39A.009 . Conflict with federal requirements — Severability — Effective date — 1995 1st sp.s. c 18: See notes following RCW 74.39A.030 .
+END SOURCE 1
+
+SOURCE 2: WAC 388-97-0120, Individual transfer and discharge rights and procedures | https://app.leg.wa.gov/WAC/default.aspx?cite=388-97-0120 | source's own date: WSR 26-08-015, filed 3/20/26, effective 4/20/26 | retrieved: 2026-08-30
+WAC 388-97-0120 
+ Individual transfer and discharge rights and procedures. 
+ Agency filings affecting this section 
+ The department amended or repealed portions of this section to help facilitate care to align state nursing home rules with federal rules that were amended or suspended during the COVID-19 pandemic from April 13, 2020, through May 23, 2023, in response to the state of emergency. For requirements in place during that time, see WAC 388-97-01201 . (1) The skilled nursing facility and nursing facility must comply with all of the requirements of 42 C.F.R. § 483.10 and § 483.12, and RCW 74.42.450 , or successor laws, and the nursing home must comply with all of the requirements of RCW 74.42.450 (1) through (4) and (7), or successor laws, including the following provisions and must not transfer or discharge any resident unless: (a) At the resident's request; (b) The transfer or discharge is necessary for the resident's welfare and the resident's needs cannot be met in the facility; (c) The transfer or discharge is appropriate because the resident's health has improved enough so the resident no longer needs the services provided by the facility; (d) The safety of individuals in the facility is endangered; (e) The health of individuals in the facility would otherwise be endangered; or (f) The resident has failed, after reasonable and appropriate notice, to pay for a stay at the facility. (2) The following notice requirements apply if a nursing home/facility initiates the transfer or discharge of a resident. The notice must: (a) Include all information required by 42 C.F.R. § 483.12 when given in a nursing facility; (b) Be in writing, in language the resident understands; (c) Be given to the resident, the resident's surrogate decision maker, if any, the resident's family, and to the department; (d) Be provided 30 days in advance of a transfer or discharge initiated by the nursing facility, except that the notice may be given as soon as practicable when the facility cannot meet the resident's urgent medical needs, or under the conditions described in (1)(c), (d), and (e) of this section; and (e) Be provided 15 days in advance of a transfer or discharge initiated by the nursing home, unless the transfer is an emergency. (3) The nursing home must: (a) Provide sufficient preparation and orientation to the resident to ensure safe and orderly transfer or discharge from the nursing home; (b) Attempt to avoid the transfer or discharge of a resident from the nursing home through the use of reasonable accommodations unless agreed to by the resident and the requirements of WAC 388-97-0080 are met; and (c) Develop and implement a bed-hold policy. This policy must be consistent with any bed-hold policy that the department develops. (4) The nursing home must provide the bed-hold policy, in written format, to the resident, and a family member, before the resident is transferred or goes on therapeutic leave. At a minimum the policy must state: (a) The number of days, if any, the nursing home will hold a resident's bed pending return from hospitalization or social/therapeutic leave; (b) That a medicaid eligible resident, whose hospitalization or social/therapeutic leave exceeds the maximum number of bed-hold days will be readmitted to the first available semi-private bed, provided the resident needs nursing facility services. Social/therapeutic leave is defined under WAC 388-97-0001 . The number of days of social/therapeutic leave allowed for medicaid residents and the authorization process is found under WAC 388-97-0160 ; and (c) That a medicaid eligible resident may be charged if they request that a specific bed be held, but may not be charged a bed-hold fee for the right to return to the first available bed in a semi-private room. (5) The nursing facility must send a copy of the federally required transfer or discharge notice to: (a) The department's home and community services when the nursing home has determined under WAC 388-97-0100 , that the medicaid resident's health has improved sufficiently so that the resident no longer needs the services provided by the facility; and (b) The department's designated local office when the transfer or discharge is for any of the following reasons: (i) The resident's needs cannot be met in the facility; (ii) The health or safety of individuals in the facility is endangered; or (iii) The resident has failed to pay for, or to have paid under medicare or medicaid, a stay at the facility. [Statutory Authority: RCW 74.42.620 . WSR 26-08-015, s 388-97-0120, filed 3/20/26, effective 4/20/26. Statutory Authority: Chapters 18.51 and 74.42 RCW and 42 C.F.R. 489.52. WSR 08-20-062, § 388-97-0120, filed 9/24/08, effective 11/1/08.]
+END SOURCE 2
+
+SOURCE 3: Washington State Long-Term Care Ombudsman Program — home page | https://www.waombudsman.org/ | source's own date: none stated beyond the 2026 copyright line | retrieved: 2026-08-30
+Advocacy for Long-Term Care Residents | Federal Way, WA | Washington State Long-Term Care Ombudsman Program 
+ Skip to content 
+ Accessibility tools 
+ ltcop@mschelps.org 1-800-562-6028 253-815-8173 Contact 
+ Subscribe 
+ Facebook YouTube 
+ Home 
+ About 
+ About Us 
+ Staff 
+ FAQ 
+ Careers 
+ Access to Program Records 
+ Grievance Policy 
+ Get Involved 
+ Donate 
+ Volunteer 
+ Share Your Story 
+ Subscribe 
+ Our Work 
+ Our Work 
+ Reports 
+ Policy 
+ Resident Advisory Council 
+ Education 
+ Consumer Information 
+ Resources 
+ Find an Ombuds 
+ File a Complaint 
+ What is an Ombuds? What exactly does the Ombudsman Program do? 
+ Learn More What is an Ombuds? Volunteer Volunteers are the backbone of our program, and we need you! 
+ Learn More Volunteer Consumer Education Check out our latest information! 
+ Learn More Consumer Education Podcast Listen to our new podcast, “Please Knock Before Entering!” 
+ Learn More Podcast 
+ File a Complaint You have the option to remain anonymous. Learn More Resident Rights State laws that protect long-term care residents. Learn More Find an Ombuds Locate the office and contact person 
+nearest to you. Learn More Volunteer Volunteers are the backbone of our program, and we need you! Learn More Washington State Long-Term Care Ombudsman Program 
+ “Ensuring the rights, dignity, and well-being of individuals living in long-term care today and tomorrow.” 
+ The Washington State Long-Term Care Ombudsman advocates for residents of nursing homes, adult family homes, and assisted living facilities. Our purpose is to protect and promote the Resident Rights guaranteed these residents under federal and state law and regulations. 
+ We are trained to receive complaints and resolve problems in situations involving quality of care, use of restraints, transfer and discharge, abuse and other aspects of resident dignity and rights. 
+ LTCOP Bill Status & Upcoming Events 
+ CLICK HERE to view the Bill Status Report   provided by our Lobbyist, Melanie Smith for more information. 
+ Events this week: TBD 
+ Bill # 
+ Abbrev. Title 
+ Short Description 
+ Status 
+ Sponsor 
+ Position 
+ Priority 
+ SHB 1390 
+ Community protection program 
+ Repealing the community protection program. 
+ S Rules 2 
+ Goodman 
+ Support 
+ Low 
+ SHB 2152  (SB 5900) 
+ Cannabis/health facilities 
+ Permitting the medical use of cannabis by qualifying patients in specified health care facilities. 
+ S Ways & Means 
+ Kloba 
+ ESHB 2242  (SB 5967) 
+ Preventive health services 
+ Preserving access to preventive services by clarifying state authority and definitions. 
+ S Passed 3rd 
+ Bronoske 
+ Support 
+ Low 
+ ESHB 2319 
+ DD RHC facilities renaming 
+ Renaming certain state residential facilities for persons with developmental disabilities. 
+ S Rules 2 
+ Farivar 
+ Support 
+ Low 
+ SHB 2350 
+ DD RHC federal compliance 
+ Increasing transparency regarding residential habilitation center compliance with certain federal requirements. 
+ S Rules 2 
+ Farivar 
+ Support 
+ Low 
+ SHB 2355  (SSB 6053) 
+ Domestic workers 
+ Establishing labor protections for domestic workers. 
+ S Passed 3rd 
+ Thomas 
+ Support 
+ Low 
+ 2SHB 2384 
+ Continuing care retirement 
+ Increasing regulatory oversight of continuing care retirement communities. 
+ S Rules 2 
+ Macri 
+ Support 
+ Low 
+ SHB 2505  (SSB 6036) 
+ Adult family home licensure 
+ Exempting certain former foster care providers from adult family home licensure. 
+ S Rules 2 
+ Eslick 
+ Neutral 
+ Monitoring 
+ ESSB 5837 
+ Guardianship, etc. 
+ Concerning guardianship, conservatorship, and other protective arrangements. 
+ H Rules R 
+ Pedersen 
+ Support 
+ Medium 
+ E2SSB 6070 
+ Recovery of missing persons 
+ Supporting the recovery of missing persons. 
+ H Rules R 
+ Dhingra 
+ Support 
+ Low 
+ New Regulations Regarding Community Based Settings and the Discharge of Medicaid Residents 
+ Beginning January 1, 2026, assisted living facilities, adult family homes, and enhanced services facilities must notify the State LTC Ombuds of transfers and discharges of Medicaid recipients under new state regulations. The new WAC requirements can be found at WAC 388-78A-2661 (assisted living facilities); WAC 388-76-10617 (adult family homes); WAC 388-107-0281 (enhanced services facilities). 
+ Click Here for a Frequency Asked Questions resource created by the State LTCOP Office to support you in implementing the new requirements. 
+ Please include your facility’s address (on the cover sheet or on the notice) so that we can identify the right resident in the right facility. Please complete all the fields on the DSHS Transfer/Discharge form, and please print legibly. 
+ If you or your team members have any questions about the FAQ, please feel free to email at ltcop@mschelps.org or contact the State LTCOP office by phone at 1.800.562.6028. 
+ Other helpful resources for these new requirements are RCS, your provider member association or your legal counsel. 
+ Legal Counsel for Long-Term Care Office of Civil Legal Aid The new legal services program for Medicaid residents who are facing discharge or eviction from a community based care setting. 
+(888) 437-0017 Resources 15-458 HCBS Notice of Transfer/Discharge Form Click Here to view the Form Click Here to View Form HCBS Discharge Contact Info HCBS Discharge Postcard Click Here to view the HCBS Discharge Postcard 
+ Facility DSHS/Ombudsman Poster 
+ WAC 388-97-0300 
+ A posting of names, addresses, and telephone numbers of all relevant state client advocacy groups such as the state survey and certification agency, the state licensure office, the state ombuds program, the protection and advocacy network, and the medicaid fraud control unit 
+ English Cambodian Korean Vietnamese 
+ NORC, ALTSA, Justice in Aging, Etc. 
+ Who is my Regional Ombudsman? 
+ Find my Ombuds 
+ Contact Us 
+ ltcop@mschelps.org 
+ 1-800-562-6028 
+ Fax: 253-815-8173 
+ TTY Number: 711 
+ 1200 S. 336th St, Federal Way, WA 98003 
+ Privacy Statement Accessibility 
+ Copyright © 2026 
+ Washington State Long-Term Care Ombudsman Program 
+ All rights reserved. 
+ Website Design by IlluminAge 
+ Facebook YouTube 
+ Contrast 
+ A a Font Size 
+ Search
+END SOURCE 3
+
+END OF PACKET — 3 sources

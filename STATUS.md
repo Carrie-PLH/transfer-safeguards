@@ -7,7 +7,7 @@ present. Spanish = a translated page is published; it carries the
 docket, the hoisted rows, and the notice periods and deadlines, in
 the state's own published translation only.
 
-**Baseline: 29 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
+**Baseline: 33 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
 
 | State | Baseline | Full page | Spanish | Sources last checked |
 |---|:---:|:---:|:---:|---|
@@ -38,7 +38,7 @@ the state's own published translation only.
 | [Mississippi](site/states/mississippi.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Missouri](site/states/missouri.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Montana | [ ] | [ ] | [ ] |  |
-| Nebraska | [ ] | [ ] | [ ] |  |
+| [Nebraska](site/states/nebraska.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Nevada | [ ] | [ ] | [ ] |  |
 | New Hampshire | [ ] | [ ] | [ ] |  |
 | [New Jersey](site/states/new-jersey.html) | [x] | [ ] | [ ] | 2026-08-30 |
@@ -48,7 +48,7 @@ the state's own published translation only.
 | North Dakota | [ ] | [ ] | [ ] |  |
 | [Ohio](site/states/ohio.html) | [x] | [x] | [ ] | 2026-08-30 |
 | [Oklahoma](site/states/oklahoma.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| Oregon | [ ] | [ ] | [ ] |  |
+| [Oregon](site/states/oregon.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Pennsylvania](site/states/pennsylvania.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Rhode Island | [ ] | [ ] | [ ] |  |
 | [South Carolina](site/states/south-carolina.html) | [x] | [ ] | [ ] | 2026-08-30 |
@@ -58,7 +58,7 @@ the state's own published translation only.
 | Utah | [ ] | [ ] | [ ] |  |
 | Vermont | [ ] | [ ] | [ ] |  |
 | [Virginia](site/states/virginia.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| Washington | [ ] | [ ] | [ ] |  |
-| West Virginia | [ ] | [ ] | [ ] |  |
+| [Washington](site/states/washington.html) | [x] | [ ] | [ ] | 2026-08-30 |
+| [West Virginia](site/states/west-virginia.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Wisconsin](site/states/wisconsin.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | Wyoming | [ ] | [ ] | [ ] |  |

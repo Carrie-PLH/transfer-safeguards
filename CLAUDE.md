@@ -163,6 +163,27 @@ ombudsman site — carry a ten-day notice and no contacts, which would state
 Arkansas's law more thinly than it is. Retry from a different publisher
 rather than publishing that.
 
+Arizona is unbuilt for the same reason, by a different mechanism.
+apps.azsos.gov 403s to curl from both the sandbox and the Mac even with a
+full browser header set, and the session fetch tool truncates the 10.3 MB
+Title 9 Chapter 10 PDF at about 117k characters — page i of a 343-page
+file, far short of R9-10-408 on page 94. The built-in browser can fetch the
+bytes (fetch from that origin returns 200) but there is no way to get text
+out of them; inflating the content streams in-page fails. The only
+reachable Article 4 text is the department's 2013 rulemaking copy, which
+titles the rule "Discharge" where the current code titles it "Transfer;
+Discharge" and whose own first line says the official version is published
+in the Administrative Register. Retry when a per-article publisher exists.
+
+A scanned PDF can hide behind a format parameter. West Virginia's Secretary
+of State serves 64 CSR 13 from readfile.aspx, and Format=HTML, Format=PDF
+and Format=TEXT all return the same 60-page scanned PDF with no text layer;
+only Format=WORD returns the real document. Convert such a file with
+`libreoffice --headless --convert-to txt` rather than scraping printable
+runs out of the bytes — a naive extraction silently drops short lines and
+breaks apostrophes, which corrupts quotations in ways the checker cannot
+see, because it compares the page against the same corrupted packet.
+
 Scanned PDFs with no text layer are not a dead end by themselves. Alabama's
 department publishes its nursing facility chapter as an image, but the
 Legislature publishes the same rule as text. Look for the other publisher
