@@ -72,6 +72,43 @@ else
   ok "no advisory language"
 fi
 
+# 3b — house spelling: license, not licence, in the project's own prose.
+#
+# Field Assembly house style is American spelling (field-assembly-standard/
+# STYLE.md). This is a gate rather than a note because a note is only as good
+# as whoever remembers to read it, and this drift is invisible: "licence" reads
+# as correct to a large share of English speakers, nothing downstream complains,
+# and it accumulates. Board & Border reached 408 occurrences across 31
+# published pages before anyone noticed; Gathered Work carried 33 more.
+#
+# Quotations are exempt, and that exemption matters more here than in the
+# advisory check. Sources do write "licence", and correcting a quoted one would
+# be falsifying a source to satisfy a style rule — a worse fault than the
+# inconsistency it tidies. Quoted spans come out before the scan, tags first:
+# in rendered HTML every attribute delimiter is also a double quote, so parity
+# counted on raw markup inverts at the first tag and the check would protect
+# prose while rewriting quotations, exactly backwards.
+#
+# Known gap, deliberate: text inside attributes is not scanned, because tags
+# are masked. A meta description is prose living in an attribute and is invisible
+# to this check. Gathered Work had two; they were found by hand.
+#
+# Tripwire before trusting any change to this, in both directions — a check that
+# never fires looks exactly like a clean corpus:
+#   inject <p>The licence is issued.</p> into a page  -> must FAIL
+#   inject <p>The board wrote "your licence" here.</p> -> must PASS
+sp=$(for f in $HTML; do
+       perl -0777 -pe 's/<[^>]*>/ /g; s/&quot;/"/g; s/[\x{201C}][^\x{201D}]*[\x{201D}]//g; s/"[^"]*"//g;' "$f" \
+         | grep -Ein '\blicenc(e|es|ed|ing)?\b' \
+         | sed "s|^|$f:|"
+     done 2>/dev/null | cut -c1-160 || true)
+if [ -n "$sp" ]; then
+  bad "British 'licence' outside a quotation (house style is 'license'):"
+  printf '%s\n' "$sp" | sed 's/^/        /'
+else
+  ok "no 'licence' outside quotations"
+fi
+
 # 4 — WCAG 2.1 AA contrast, measured from the tokens in assets/style.css
 if command -v python3 >/dev/null 2>&1; then
   if out=$(python3 ../tools/check-contrast.py 2>&1); then

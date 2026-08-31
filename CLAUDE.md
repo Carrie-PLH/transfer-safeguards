@@ -26,6 +26,29 @@ after Gathered Work, Rules & Record (sped-safeguards), and Board & Border
 is not answered here, licensure-mobility is the nearest sibling and its
 answer usually transfers.
 
+## Spelling: license, not licence — except inside a quotation
+
+Field Assembly house style is American spelling; the cross-project rule and
+its rationale live in ~/Projects/Field Assembly/field-assembly-standard/STYLE.md.
+*License* as both noun and verb, in this project's own prose everywhere: page
+text, change logs, capture notes, recipe notes, queue entries, commit messages.
+
+**Never change the spelling inside a quotation.** If a source writes *licence*,
+the quotation reads *licence*. Restyling quoted text to match house style is
+falsifying a source, and it is a worse fault than the inconsistency it tidies
+away. The same protection covers a source's own title, filename, and any name
+or figure quoted from it.
+
+The deploy gate enforces this (check 3b), stripping quoted spans before the
+scan. Two things it does not catch, both known: prose inside an HTML attribute,
+such as a meta description, because tags are masked out first; and markdown
+sources, which the gate does not read. `tools/fix-licence-spelling.py` does a
+corpus-wide pass and carries a self-test whose central case is a quoted
+*licence* surviving untouched.
+
+Evidence is never touched. Packets and captures hold what the publisher
+published, spelling included.
+
 ## Run host commands through Desktop Commander
 
 Anything that touches the git repository or Cloudflare should run through
