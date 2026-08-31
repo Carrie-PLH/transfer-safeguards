@@ -162,6 +162,26 @@ overrides what a state agency says on the state's page, and where state and
 federal materials publish different things, both are quoted and the
 discrepancy is a numbered finding — reconciled nowhere.
 
+Standing scope note on the federal page (added 2026-08-31). The federal page
+carries one further standing paragraph, immediately after its lede, stating
+the condition on which everything the page quotes depends: that these
+requirements reach a facility through its participation in Medicare or
+Medicaid, that whether a particular facility participates is a fact about
+that facility rather than about its state, that this site does not record
+it, and that the ombudsman named on the reader's state page can be asked.
+The note is a statement of the collection's scope, not of anyone's rights,
+and is written to stay one: it says what this site does and does not carry,
+names no consequence of participating or not participating, and does not
+tell a reader what law governs them. It may quote 42 CFR 483.1(b) for the
+publisher's own statement of scope, which is carried in the supplement
+tools/packets/federal-packet-scope.txt; everything else in it is Field
+Assembly describing its own method and needs no source. This note is the
+only place on the site where the relationship between the layers is
+described in prose. It does not appear on state pages, whose existing
+one-line pointer to the federal page is unchanged, because a scope note
+repeated fifty-one times invites the reader to treat it as the answer to
+the gap it exists to mark.
+
 ## Build order
 
 1. Exemplars first: the federal layer page, then two states bounding the

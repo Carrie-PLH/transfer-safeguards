@@ -1,0 +1,38 @@
+FIELD ASSEMBLY SOURCE PACKET — DO NOT EDIT AFTER A PAGE IS BUILT FROM IT
+
+STATE: Federal layer
+SLUG: federal
+ASSEMBLED: 2026-08-31
+
+SUPPLEMENT to tools/packets/federal-packet.txt, which was closed when federal.md was built on
+2026-08-30. This supplement carries one further first-party source, added to support the standing
+scope note added to the federal page on 2026-08-31 under the charter amendment of the same date.
+It adds no source that bears on the grounds, the notice, the hearing or the ombudsman; the
+original packet remains the evidence for every docket row.
+
+CAPTURE NOTES: Captured by curl with a browser user-agent from the eCFR's own section page and
+stripped of markup; source 1 is the span running from the section heading to the site footer. The
+page states its own currency as "Displaying title 42, up to date as of 8/27/2026. Title 42 was
+last amended 8/13/2026." Machine-repeatable.
+
+PENDING: Nothing at assembly. Whether a particular facility holds a provider agreement is a fact
+about that facility published by CMS, not by this section, and is deliberately not carried here:
+this collection records what publishers state about the procedure, not the status of any building.
+
+SOURCE 1: 42 CFR 483.1, Basis and scope | https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-483/subpart-B/section-483.1 | source's own date: current as of 8/27/2026; section amended 81 FR 68848, Oct. 4, 2016 | retrieved: 2026-08-31
+§ 483.1 Basis and scope. 
+ ( a ) Statutory basis. 
+ ( 1 ) Sections 1819(a), (b), (c), (d), and (f) of the Act provide that— 
+ ( i ) Skilled nursing facilities participating in Medicare must meet certain specified requirements; and 
+ ( ii ) The Secretary may impose additional requirements (see section 1819(d)(4)(B)) if they are necessary for the health and safety of individuals to whom services are furnished in the facilities. 
+ ( 2 ) Section 1861(l) of the Act requires the facility to have in effect a transfer agreement with a hospital. 
+ ( 3 ) Sections 1919(a), (b), (c), (d), and (f) of the Act provide that nursing facilities participating in Medicaid must meet certain specific requirements. 
+ ( 4 ) Sections 1128I(b) and (c) require that— 
+ ( i ) Skilled nursing facilities or nursing facility have in operation a compliance and ethics program that is effective in preventing and detecting criminal, civil, and administrative violations. 
+ ( ii ) The Secretary establish and implement a quality assurance and performance improvement program for facilities, including multi-unit chains of facilities. 
+ ( 5 ) Section 1150B establishes requirements for reporting to law enforcement crimes occurring in federally funded LTC facilities. 
+ ( b ) Scope. The provisions of this part contain the requirements that an institution must meet in order to qualify to participate as a Skilled Nursing Facility in the Medicare program, and as a nursing facility in the Medicaid program. They serve as the basis for survey activities for the purpose of determining whether a facility meets the requirements for participation in Medicare and Medicaid. 
+ [ 56 FR 48867 , Sept. 26, 1991, as amended at 57 FR 43924 , Sept. 23, 1992; 60 FR 50443 , Sept. 29, 1995; 81 FR 68848 , Oct. 4, 2016]
+END SOURCE 1
+
+END OF PACKET — 1 source
