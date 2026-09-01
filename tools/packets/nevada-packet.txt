@@ -1,0 +1,691 @@
+FIELD ASSEMBLY SOURCE PACKET — DO NOT EDIT AFTER A PAGE IS BUILT FROM IT
+
+STATE: Nevada
+SLUG: nevada
+ASSEMBLED: 2026-09-01
+
+CAPTURE NOTES: All nine sources were fetched by curl with a browser user-agent.
+Sources 1-4 are the Nevada Legislature's own HTML publication of NRS chapters
+449 and 449A and NAC chapter 449 (leg.state.nv.us), stripped of markup by a
+mechanical script; the entity &#8194; (an en space) appears throughout the
+Legislature's HTML as a spacer between section numbers and text and is
+preserved as whitespace. Sources 5-7 are PDFs Nevada Medicaid posts itself
+under nevadamedicaid.nv.gov, rendered with pdftotext -layout; the domain
+dhcfp.nv.gov, printed on some of the documents themselves and cited in
+searches, now 301-redirects everything to www.nevadamedicaid.nv.gov, so all
+three were retrieved from the live nevadamedicaid.nv.gov paths. The current
+Chapter 3100 (Hearings) is the version the site itself labels "Current -
+Effective Feb 23, 2018" on its Chapter 3100 landing page
+(nevadamedicaid.nv.gov/Resources/AdminSupport/Manuals/MSM/C3100/Chapter3100/),
+found because that landing page lists its documents only through client-side
+script and returns no fetchable link to curl — the JS-rendered document list
+was read with a browser tool to find the PDF's actual path, a milder version
+of the empty-looking-page trap in CLAUDE.md. Sources 8-9 are the Aging and
+Disability Services Division's own long-term-care ombudsman page and its
+posted discharge-rights brochure (adsd.nv.gov), the page by curl and the
+brochure PDF by curl-then-pdftotext. All nine transports are machine-repeatable.
+
+PENDING: The Bureau of Health Care Quality and Compliance's own complaint and
+investigation materials (a facility-complaint route distinct from the Medicaid
+fair-hearing appeal captured here); any Nevada Medicaid statement of a
+reserve-bed or per-diem policy specific to a hospital stay (Source 5 states a
+therapeutic-leave bed-hold reimbursement of up to 24 days a year and expressly
+excludes hospital stays from that definition; no Medicaid source found states
+whether or how a hospital-stay bed-hold is reimbursed); and any published
+statement from the Nevada Division of Public and Behavioral Health's Bureau of
+Health Care Quality and Compliance, the facility licensing survey agency,
+addressing transfer or discharge directly (its published complaint materials
+concern complaints about facility conditions, not discharge appeals, and were
+not captured for that reason).
+
+SOURCE 1: Nevada Administrative Code, Chapter 449, Facilities for Skilled Nursing — NAC 449.74429, Transfer or discharge of patient | https://www.leg.state.nv.us/NAC/NAC-449.html | source's own date: added by the Board of Health, effective 9-27-99 | retrieved: 2026-09-01
+NAC 449.74429  Transfer or discharge of patient.
+(NRS
+449.0302)
+
+ 1.  A facility for skilled nursing may
+transfer or discharge a patient from the facility only if:
+
+ (a) The facility can no longer provide for the
+needs of the patient and the transfer or discharge is necessary for the
+patients welfare;
+
+ (b) The health of the patient has improved
+sufficiently so that the patient no longer requires the services provided by
+the facility;
+
+ (c) The health or safety of other persons in the
+facility is endangered if the patient remains in the facility;
+
+ (d) The charges for services provided to the
+patient by the facility have not been paid after the facility has given notice
+of those charges; or
+
+ (e) The facility ceases to operate.
+
+ 2.  Before a facility for skilled nursing may
+transfer or discharge a patient from the facility, the facility shall:
+
+ (a) Record the reasons for the transfer or
+discharge in the medical records of the patient. If a patient is transferred or
+discharged under the circumstances described in:
+
+ (1) Paragraph (a) or (b) of subsection 1, the
+reasons for the transfer or discharge must be recorded by the patients
+physician.
+
+ (2) Paragraph (c) of subsection 1, the reasons
+for the transfer or discharge must be recorded by any physician.
+
+ (b) Give notice of the transfer or discharge to the
+patient and, if known, to the legal representative of the patient or a member
+of the patients family. The notice must:
+
+ (1) Be in writing;
+
+ (2) Be in a language that is understood by the
+patient and his or her legal representative or a member of his or her family;
+
+ (3) Except as otherwise provided in subsection
+3, be given at least 30 days before the effective date of the transfer or
+discharge;
+
+ (4) Include the reasons for the transfer or
+discharge;
+
+ (5) Include the effective date of the transfer
+or discharge;
+
+ (6) Specify the location to which the patient
+will be transferred or discharged;
+
+ (7) Include a statement that the patient has a
+right to appeal the transfer or discharge;
+
+ (8) Include the name, address and telephone
+number of the advocates for residents of facilities for long-term care
+appointed pursuant to chapter 427A of
+NRS; and
+
+ (9) If the patient is developmentally disabled
+or mentally ill, include the name, address and telephone number of persons who
+advocate for and are responsible for the protection of such persons.
+
+ 3.  The notice required by paragraph (b) of
+subsection 2 may be given less than 30 days before the effective date of the
+transfer or discharge if:
+
+ (a) The health or safety of other persons in the
+facility is endangered if the patient remains in the facility;
+
+ (b) The health of the patient has improved
+sufficiently to allow a more immediate transfer or discharge of the patient;
+
+ (c) The medical needs of the patient require a more
+immediate transfer or discharge; or
+
+ (d) The patient has not resided in the facility for
+at least 30 days.
+
+ 4.  Upon admission of a patient to a facility
+for skilled nursing and at the time the facility transfers the patient for
+hospitalization or therapeutic leave, the facility shall provide to the patient
+and to the legal representative of the patient or to a member of the patients
+family, in writing:
+
+ (a) The time within which the patient may resume
+his or her residency in the facility without waiting for readmission; and
+
+ (b) The policy of the facility for readmitting a
+patient whose hospitalization or therapeutic leave exceeds the time within
+which he or she may resume his or her residency in the facility without waiting
+for readmission upon the first availability of a bed in a semiprivate room.
+
+ 5.  A facility for skilled nursing shall
+prepare a patient for his or her transfer or discharge in such a manner as to
+ensure the safe and orderly transfer or discharge of the patient from the
+facility.
+
+ 6.  As used in this section, transfer or
+discharge means the movement of a patient to a location outside of a facility
+for skilled nursing, whether or not that location is within the same physical area
+of the facility. The term does not include the movement of a patient to a bed
+located within the facility for skilled nursing.
+
+ (Added to NAC by Bd. of Health by R051-99, eff. 9-27-99)
+END SOURCE 1
+
+SOURCE 2: Nevada Revised Statutes Chapter 449A, Care and Rights of Patients — NRS 449A.114, Certain facilities to notify patient and State Long-Term Care Ombudsman of intent to transfer patient and provide opportunity for patient or representative to meet with administrator; exceptions | https://www.leg.state.nv.us/nrs/nrs-449a.html | source's own date: Added to NRS by 2019, 440; amended 2021, 3443; amended 2023, 718 | retrieved: 2026-09-01
+NRS 449A.114  Certain facilities to notify patient and State Long-Term Care
+Ombudsman of intent to transfer patient and provide opportunity for patient or
+representative to meet with administrator; exceptions.
+
+ 1.  Except as otherwise provided in
+subsection 2, before a facility for intermediate care, facility for skilled
+nursing or residential facility for groups transfers a patient to another
+medical facility or facility for the dependent or discharges the patient or
+resident from the facility, the facility shall:
+
+ (a) At least 30 calendar days before transferring
+or discharging the patient, provide the patient and the Ombudsman with written
+notice of the intent to transfer or discharge the patient; and
+
+ (b) Within 10 calendar days after providing
+written notice to the patient or resident and the Ombudsman pursuant to
+paragraph (a), allow the patient and any person authorized by the patient the
+opportunity to meet in person with the administrator of the facility to discuss
+the proposed transfer or discharge.
+
+ 2.  The provisions of this section do not
+apply to:
+
+ (a) A voluntary discharge or transfer of a
+patient to another medical facility or facility for the dependent at the
+request of the patient; or
+
+ (b) The transfer of a patient to another facility
+because the condition of the patient necessitates an immediate transfer to a
+facility for a higher level of care.
+
+ 3.  As used in this section:
+
+ (a) Facility for intermediate care has the
+meaning ascribed to it in NRS 449.0038.
+
+ (b) Facility for skilled nursing has the
+meaning ascribed to it in NRS 449.0039.
+
+ (c) Ombudsman means the State Long-Term Care
+Ombudsman appointed pursuant to NRS
+427A.125.
+
+ (Added to NRS by 2019,
+440; A 2021,
+3443; 2023,
+718)
+END SOURCE 2
+
+SOURCE 3: Nevada Revised Statutes Chapter 449, Medical Facilities and Other Related Entities — NRS 449.183, Facility for intermediate care, facility for skilled nursing and residential facility for groups to adopt written policy concerning readmission after temporary transfer of patient or resident | https://www.leg.state.nv.us/nrs/nrs-449.html | source's own date: Added to NRS by 2011, 1063 | retrieved: 2026-09-01
+NRS 449.183  Facility for intermediate care, facility for skilled nursing and
+residential facility for groups to adopt written policy concerning readmission
+after temporary transfer of patient or resident.
+
+ 1.  A facility for intermediate care,
+facility for skilled nursing and residential facility for groups shall adopt a
+written policy that establishes:
+
+ (a) The number of days the facility will hold the
+bed of a patient or resident for his or her return if the patient or resident
+is transferred temporarily to a hospital or other facility for medical reasons;
+and
+
+ (b) That a patient or resident who is so
+transferred for a period that exceeds the period of the hold established
+pursuant to paragraph (a) will be allowed to resume his or her residency as
+soon as a bed becomes available, if the facility is suitable for properly
+caring for the patient upon his or her return.
+
+ 2.  Upon admission of a patient or resident
+to a facility for intermediate care, facility for skilled nursing or
+residential facility for groups, the facility shall provide to the patient or
+resident and, if applicable, to the legal representative of the patient or
+resident, a copy of the policy established pursuant to subsection 1.
+
+ (Added to NRS by 2011,
+1063)
+END SOURCE 3
+
+SOURCE 4: Nevada Revised Statutes Chapter 449A, Care and Rights of Patients — NRS 449A.282, Limitations on transfer or involuntary discharge; and NRS 449A.284, Notices concerning discharge of resident, excerpt (both apply on their own terms to a "residential facility for groups," a facility type distinct from a facility for skilled nursing and out of this project's v1 scope; captured to document that distinction) | https://www.leg.state.nv.us/nrs/nrs-449a.html | source's own date: NRS 449A.282 added to NRS by 2023, 716; NRS 449A.284 added to NRS by 2023, 717 | retrieved: 2026-09-01
+NRS 449A.282  Limitations on transfer or involuntary discharge; opportunity to
+cure delinquency; duty to attempt to resolve circumstances with potential to
+result in involuntary discharge.
+
+ 1.  A residential facility for groups shall
+not transfer or involuntarily discharge a resident except where:
+
+ (a) The health of the resident has improved
+sufficiently such that the resident no longer needs the services provided by
+the residential facility for groups;
+
+ (b) The health or safety of any person in the
+residential facility for groups is endangered;
+
+ (c) The resident has failed, after notice has
+been provided pursuant to subsection 2, to pay for contracted charges for a
+residency at or a service provided by the residential facility for groups; 
+
+ (d) The services available to the resident at the
+residential facility for groups are no longer adequate to meet the needs of the
+resident, as determined using information from the annual physical examination
+and assessment conducted pursuant to NRS
+449.1845; or
+
+ (e) The residential facility for groups ceases to
+operate.
+
+ (Added to NRS by 2023,
+716)
+
+ NRS 449A.284  Notices concerning discharge of resident.
+
+ 1.  Written notice of the intent of a
+residential facility for groups to discharge a resident provided pursuant to NRS 449A.114 must, in addition to the
+persons described in that section, be provided to the representative of the
+patient, where applicable, and must include, without limitation:
+
+ (a) The reason for the proposed discharge; and
+
+ (b) The date of the proposed discharge. 
+
+ (Added to NRS by 2023,
+717)
+END SOURCE 4
+
+SOURCE 5: Nevada Medicaid Services Manual, Chapter 500 — Nursing Facilities, Section 503.5, Therapeutic Leave of Absence, excerpt | https://www.nevadamedicaid.nv.gov/siteassets/content/resources/adminsupport/manuals/msm/c500/MSM_500_25_07_01.pdf | source's own date: effective July 1, 2025 (MTL 16/25) | retrieved: 2026-09-01
+503.5          THERAPEUTIC LEAVE OF ABSENCE
+
+               Therapeutic Leave means a recipient leaves the facility for one or more days for reasons outlined in
+               their POC, but not for purposes of hospitalization or transfer to another facility. A therapeutic leave
+               must include therapeutic or rehabilitative home and community visits with relatives and friends.
+               Therapeutic leave also includes leave used in preparation for discharge to community living.
+
+503.5A         THERAPEUTIC LEAVE OF ABSENCE COVERAGE AND LIMITATIONS
+
+               1.      The absence of a Medicaid recipient from the facility for the purpose of therapeutic leave
+                       must be authorized in writing by the recipient’s attending physician and included in the
+                       recipient’s POC.
+
+               2.      Therapeutic leave days are considered overnight stays. Therapeutic leave does not apply
+                       when a recipient is out on pass for short periods of time.
+
+               3.      Therapeutic leave does not include hospital emergency room visits or hospital stays.
+
+503.5B         THERAPEUTIC LEAVE OF ABSENCE PROVIDER RESPONSIBILITIES
+
+               1.      Therapeutic leave days must be authorized by the physician for specific dates. If a recipient
+                       fails to return to the facility within the specified timeframe, Medicaid reimbursement is not
+                       available for dates beyond the physician’s order.
+
+               2.      Each therapeutic leave of absence must be authorized by the attending physician’s order to
+                       ensure the recipient is medically stable and capable of safely tolerating the absence.
+
+               3.      The physicians order should specify:
+
+                       a.     The dates the recipient will be out of the facility;
+
+                       b.     Authorize the facility to provide necessary medications for recipient use during
+                              therapeutic leave; and
+
+                       c.     If the recipient does not have the capacity to administer their own medications, then
+                              instructions must be included for the family member/friend on how and when to
+                              administer the medications.
+
+               4.      A physician’s order such as “may go out on pass” does not meet the requirements for
+                       therapeutic leave of absence. The NF must provide care instructions for the responsible
+                       person who will be accompanying the recipient during their therapeutic leave of absence.
+
+               5.      In those instances where a Medicaid recipient resides in more than one NF within a calendar
+                       year, the admitting facility must determine the number of therapeutic leave days that
+                       have been exhausted by the discharging facility within the same calendar year. A record of
+                       any leave days must be a part of the information provided to the admitting facility as part of
+                       the transfer documents.
+
+               6.      NFs will be reimbursed their per diem rate for reserving beds for Medicaid recipients who
+                       are absent from the facility on therapeutic leave up to a maximum of 24 days annually.
+
+                       a.     For this purpose, annually is defined as a calendar year beginning on January 1 and
+                              ending on December 31. No portion of the unused leave days may be carried over
+                              into the next calendar year.
+
+                       b.     The facility must maintain accurate leave day records on the recipient’s chart, for
+                              review by Medicaid staff.
+
+               7.      The NF must reserve and hold the same room and bed for the Medicaid recipient on a
+                       therapeutic leave for the dates specified in the physicians order. The bed may not be
+                       occupied by another individual during the period of time in which the Medicaid recipient is
+                       on such leave.
+
+               8.      When billing for therapeutic leave of absence days provider must use therapeutic leave of
+                       absence code specified on the Provider Billing Guide.
+
+503.5C      THERAPEUTIC LEAVE OF ABSENCE RECIPIENT RESPONSIBILITIES
+
+            1.      The recipient is responsible to abide by the physician’s order and to return to the facility by
+                    the date specified on the physician’s order.
+
+            2.      The recipient must contact the facility to advise them of any change in the plan regarding
+                    therapeutic leave.
+END SOURCE 5
+
+SOURCE 6: Nevada Medicaid Services Manual, Chapter 3100 — Hearings, Sections 3100 through 3104.1B, excerpt | https://www.nevadamedicaid.nv.gov/uploadedFiles/dhcfpnvgov/content/Resources/AdminSupport/Manuals/MSM/C3100/MSM_Ch_3100_18_02_23.pdf | source's own date: transmittal letter dated February 22, 2018; the Chapter 3100 landing page at nevadamedicaid.nv.gov labels this document "Current - Effective Feb 23, 2018" | retrieved: 2026-09-01
+3100        INTRODUCTION
+
+            The Division of Health Care Financing and Policy (DHCFP) (also referred to as the “agency”)
+            makes a Fair Hearing process available to any Nevada Medicaid or Nevada Check Up (NCU)
+            recipient who disagrees with: any action resulting in the reduction, suspension, termination, denial
+            or denial-in-part of a Medicaid service; any recipient who makes a request for a service and
+            believes the request was not acted upon with reasonable promptness by the DHCFP and/or the
+            health plan. Also, the DHCFP makes available a Fair Hearing process for any Nursing Facility
+            (NF) resident eviction.
+
+            The DHCFP makes available a Fair Hearing process whereby providers may request a hearing for
+            any adverse action taken by the Division or its agents which affects the provider’s participation in
+            the Medicaid program, and/or reimbursement for services rendered to eligible Medicaid recipients’
+            recoupment of overpayments or disenrollment.
+
+            For purposes of this manual section, Medicaid and NCU are referred to as Medicaid. All Medicaid
+            policies and requirements (such as prior authorization, etc.) are the same for NCU, with the
+            exception of three areas where Medicaid and NCU policies differ as referenced in the NCU
+            Manual, Section 1003.6.
+
+3101        AUTHORITY
+
+            The Fair Hearing process for recipients is a mandated service. The citation denoting the right to a
+            hearing is found in 42 Code of Federal Regulations (CFR), §431, Subpart E and 42 CFR 457.1130
+            and Nevada Revised Statute (NRS) 422.276. Please see CFR §431.244 for exceptions to the
+            Hearing decision due dates. In addition, the citation denoting the appeals procedure for NF and
+            Intermediate Care Facility for Individuals with Intellectual Disabilities (ICF/IID) is found in 42
+            CFR §431, Subpart D.
+
+            The Fair Hearing process for providers is cited at NRS Chapter 422.306 – Hearing to review action
+            taken against provider of services under state plan for Medicaid regulations; appeal of final
+            decision.
+
+3103        POLICY
+
+3103.1      The DHCFP provides the Fair Hearing process pursuant to Sections 3104 and 3105 of this Chapter
+            of the Medicaid Services Manual (MSM).
+
+3104        RECIPIENT FAIR HEARINGS
+
+3104.1      FAIR HEARINGS
+
+3104.1A     MEDICAID SERVICES STANDARD FAIR HEARING
+
+            1.       WHO MAY REQUEST
+
+                     A recipient or his authorized representative may request a Standard Fair Hearing. A request
+                     for a Fair Hearing can be submitted via the internet, telephonically, in person, through other
+                     commonly available electronic means and in writing and signed by the recipient or the
+                     recipient’s authorized representative.
+
+            2.       DATE OF REQUEST
+
+                     The date of the request for a Standard Fair Hearing is the date the request is received by the
+                     DHCFP office. The request must be received by the DHCFP office within 90 calendar days
+                     from the Notice Date, unless a recipient can substantiate “good cause” for not doing so.
+                     When the deadline falls on a weekend or holiday, the deadline is extended to the next
+                     working day.
+
+                     The request for hearing must contain the recipient’s name, address, telephone number and
+                     Medicaid number as well as the name, telephone number and address of the authorized
+                     representative, if applicable.
+
+                     Recipients enrolled in a Managed Care Organization (MCO) must request a Fair Hearing
+                     no later than 120 days from the date on the MCO’s Notice of Decision (NOD) (Action).
+            3.       SUBJECT MATTER
+
+                     The DHCFP must grant an opportunity for a hearing to:
+
+                     a.     a recipient who requests it because his request for services is denied, reduced,
+                            suspended or terminated;
+
+                     b.     a recipient who requests it because his request for services is not acted upon with
+                            reasonable promptness;
+
+                     c.     a recipient who requests it because he believes the agency or managed health plan
+                            has taken an action erroneously;
+
+                     d.     any resident of a nursing facility who believes the facility erroneously determined
+                            that he must be transferred or discharged;
+
+                      e.     any recipient who requests it because he believes the State has made an erroneous
+                             determination with regard to the Pre-admission Screening and Resident Review
+                             (PASRR) as outlined in Section 1917(e)(7) of the Social Security Act;
+
+                      f.     any recipient who is assigned (locked in) to using one pharmacy for all controlled
+                             substance prescriptions.
+
+                      This includes an adverse determination that the recipient does not require specialized
+                      services as defined in 42 CFR §431.201, 431.206 and 431.220 as determined by a PASRR.
+
+                      Pursuant to 42 CFR §483.204, the state will provide a system for a resident of a NF to appeal
+                      a notice from the NF of intent to discharge or transfer the resident. Upon receipt of the
+                      discharge notice, the resident may request a Fair Hearing via the internet, telephonically, in
+                      person, through other commonly available electronic means or by submitting the request to
+                      the DHCFP. The DHCFP will inform the Department of Administration of the residents
+                      request for a Fair Hearing. The DHCFP does not take an adverse action against the resident;
+                      rather the facility takes the action via the discharge. The DHCFP is not a party to the action.
+
+3104.1B      MEDICAID SERVICES EXPEDITED FAIR HEARING
+
+             1.       WHO MAY REQUEST
+
+                      A recipient, his/her authorized representative or a provider acting on a recipient’s behalf
+                      (only under circumstances described below) may file for an Expedited Fair Hearing if the
+                      clinical documentation shows that the time permitted for a Standard Fair Hearing could
+                      jeopardize the individual’s life, health or ability to attain, maintain or regain maximum
+                      function. The Expedited Fair Hearing request must be submitted with pertinent medical
+                      information that supports the reason for the urgent need of the expedited timeframe.
+                      Providers may file a request only in cases where the recipient is unable to act on their own
+                      behalf, either because of physical incapacity or mental incapacity. Additional
+                      documentation may be required to demonstrate the incapacity on a case by case basis. A
+                      request for an Expedited Fair Hearing can be made via the internet, telephonically, in
+                      person, through other commonly available electronic means and in writing.
+
+             2.       DATE OF REQUEST
+
+                      The date of the request for an Expedited Fair Hearing is the date the request is received by
+                      the DHCFP office.
+
+                      The request for an Expedited Fair Hearing must contain the recipient’s name, address,
+                      telephone number and Medicaid number, as well as the name, telephone number and address
+                      of the authorized representative and/or provider, if applicable, and must include all pertinent
+                      medical information that supports the reason for the urgent need of the expedited timeframe.
+
+                    If the Expedited Hearing request is submitted without pertinent medical information, the
+                    Hearing request will be treated as a Standard Fair Hearing request (90-day decision). If the
+                    required documentation is submitted after the initial Expedited Hearing request is received,
+                    the timeframe for the Expedited Fair Hearing will begin the day the required pertinent
+                    medical documentation is received by the DHCFP.
+
+           3.       SUBJECT MATTER
+
+                    The DHCFP must grant an opportunity for an Expedited Fair Hearing to:
+
+                    a.     a recipient who requests it because his request for services is denied, reduced,
+                           suspended or terminated and the time permitted for a Standard Fair Hearing could
+                           jeopardize the individual’s life, health or ability to attain, maintain or regain
+                           maximum function;
+
+                    d.     any resident of a NF who believes the facility erroneously determined that he must
+                           be transferred or discharged and the time permitted for a standard Fair Hearing could
+                           jeopardize the individual’s life, health or ability to attain, maintain or regain
+                           maximum function;
+
+                    Pursuant to 42 CFR §483.204, the state will provide a system for a resident of a NF to appeal
+                    a notice from the NF of intent to discharge or transfer the resident. Upon receipt of the
+                    discharge notice, the resident may request an Expedited Fair Hearing over the phone,
+                    electronically or in writing by submitting a letter to the DHCFP. The DHCFP will inform
+                    the Department of Administration of the resident’s request for a Fair Hearing. The DHCFP
+                    does not take an adverse action against the resident; rather the facility takes the action via
+                    the discharge. The DHCFP is not a party to the action. A decision will be provided within
+                    seven working days from when the Hearing request was received.
+END SOURCE 6
+
+SOURCE 7: Nevada Medicaid Fair Hearing Request Form, NMO-6300 (English portion) | https://www.nevadamedicaid.nv.gov/siteassets/content/providers/fair-hearings/documents/final-nmo-6300-fair-hearing-request-form-6-25.pdf | source's own date: NMO-6300 (6/25) | retrieved: 2026-09-01
+                                    REQUESTING A FAIR HEARING
+•      If you disagree with Medicaid's denial, reduction, suspension, or termination of service, you may request a
+       Fair Hearing. A Fair Hearing allows you and Medicaid to give information about your situation to a Hearing
+       Officer. The Hearing Officer is a neutral party who makes a decision on your appeal. There is no charge for a Fair
+       Hearing.
+
+•      Medicaid must receive your request within 90 calendar days from the Notice Date.
+
+•      You may represent yourself or have the help of another adult. The adult can be a friend, family member, or
+       lawyer. Medicaid has provided the names of some agencies that may be able to help you. (See below).
+
+•      The request for a Fair Hearing must include: (1) your name, address, telephone number, (2) Medicaid number;
+       and (3) if someone is helping you, the name, telephone number and address of the adult who will help you (the
+       "authorized representative"). You must sign the request unless you are unable to do so because of your disability.
+       You may use the enclosed form to request a Fair Hearing.
+
+•      If you want your services to stay the same during Fair Hearing process, you must: 1) ask for a hearing not
+       more than 10 calendar days after the Date of Action (shown on the Notice of Decision); and 2) you must
+       ask that your services stay the same. (During the Fair Hearing process, your services will be continued) You
+       may use the enclosed form to do this.
+
+•      Medicaid may ask you to pay back the cost of the continued services if you lose your appeal.
+
+•      After you have requested a Fair Hearing, Medicaid will contact you within 10 days to arrange a Hearing
+       Preparation Meeting (HPM). The meeting will be by telephone. The goal of this meeting is to try to resolve
+       your appeal. Medicaid will explain its decision and give you the chance to provide more information. If you and
+       Medicaid cannot agree, you may go to a Fair Hearing. A Hearing Preparation Meeting (HPM) is optional. You
+       do not have to take part in a HPM. You can let Medicaid know you want to go directly to a Fair Hearing and have
+       a Hearing Officer decide your appeal.
+
+To find out more about Medicaid appeals, you may go to the Nevada Department of Health and Human Services, Division
+        of Health Care Financing and Policy's Medicaid Service Manual Chapter 3100 — Hearings at: https://dhcfp.nv.gov
+
+                                       Return this request with a copy of the Notice of Decision to /
+                                    Regrese esta petición con una copia de la Notificación de Decisión a:
+
+                                                     Nevada Medicaid Hearings Unit
+                                                       9850 Double R Blvd Ste. 200
+                                                             Reno, NV 89521
+                                       Fax # (775) 684-3610, E-Mail medicaidhearings@nvha.nv.gov
+
+                                                                                                                          NMO-6300 (6/25)
+END SOURCE 7
+
+SOURCE 8: Long Term Care Ombudsman | Nevada Aging and Disability Services Division | https://www.adsd.nv.gov/programs/programs-for-seniors/long-term-care-ombudsman/ | source's own date: none stated on page | retrieved: 2026-09-01
+The Nevada State Long Term Care Ombudsman Program (LTCOP) is authorized by the federal Older American’s Act. Federal law requires each state have a Long Term Care (LTC) Ombudsman Program managed by a State Long Term Care Ombudsman. The program was initiated to improve the quality of care in America’s nursing homes.
+LTC Ombudsmen receive complaints on behalf of residents who reside in LTC facilities. LTC facilities include homes for individual residential care, residential facilities for groups and nursing homes. LTC Ombudsmen conduct investigations with the resident’s consent and attempt to resolve the complaints to the satisfaction of the resident. LTC Ombudsmen work with the resident to address their concerns using person centered advocacy. Services provided by the LTCOP are confidential. LTC Ombudsmen do not share the name of the individual who filed a complaint. Any resident living in LTC facilities is eligible for services.
+
+Who Can Make a Report to the Ombudsman Program?
+
+All residents of long term care facilities;
+Friends and relatives of persons living in long term care facilities;
+Health care professionals; and
+Long term care facility staff members.
+
+How to Make a Report to the Ombudsman Program?
+
+To report concerns in long-term care facilities, please contact LTCOP Helpline at
+1-888-282-1155
+or complete the complaint form: Long-Term Care Ombudsman Complaint Form.
+
+Please Note: The Aging and Disability Services Division's Adult Protective Services focuses on investigations regarding abuse, neglect, including self-neglect, isolation, exploitation and abandonment involving community members and those in a long term care setting for vulnerable persons, age 18-59, in addition to older persons 60 years and older.
+
+Aging & Disability Services Division
+Carson City
+Regional Office
+1550 E College Parkway
+Carson City, NV 89706
+(775) 687-4210
+(775) 687-0574 Fax
+END SOURCE 8
+
+SOURCE 9: Nursing Home Discharges, Transfers, and Room Changes: Know Your Rights (LTC Discharges Brochure), excerpt (first page only; the brochure's inside spread runs in three interleaved newspaper columns per CLAUDE.md's two-column-PDF trap and is captured separately below exactly as pdftotext rendered it) | Nevada Aging and Disability Services Division, Long Term Care Ombudsman Program | https://www.adsd.nv.gov/uploadedFiles/adsdnvgov/content/Programs/Seniors/LTCOmbudsman/LTC%20Discharges%20Brochure(2).pdf | source's own date: none stated | retrieved: 2026-09-01
+      Long Term Care
+    Ombudsman Program                          For more information please
+                                                      contact your
+        Mission Statement                         local Long Term Care
+                                                      Ombudsman:
+   To empower residents and advo-
+    cate for the protection of residents’                Carson City
+    health, safety, welfare, and rights             3416 Goni Rd. Suite 132
+                                                     Carson City, NV 89706
+   To promote or support resident                      (775) 687-4210
+    councils, family councils, and com-
+                                                             Elko
+    munity groups
+                                                 1010 Ruby Vista Dr. Suite 104
+                                                       Elko, NV 89801
+   To represent the interests of resi-
+    dents before governmental agen-
+    cies
+                                                       (775) 738-1966
+                                                          Las Vegas
+                                                                                       Nursing Home
+   To analyze, comment on, and moni-
+                                                     3320 W. Sahara Ave
+                                                     Las Vegas, NV 89104
+                                                                                        Discharges,
+    tor laws, regulations, and policies
+    pertinent to long term care residents
+                                                        (702) 486-3545                 Transfers, and
+                                                            Reno
+                                                  9670 Gateway Dr. Suite 100          Room Changes:
+                                                       Reno, NV 89521
+                                                       (775) 687-0800                    Know Your
+                                                                                           Rights
+
+
+
+
+                                            To report concerns about long term care
+                                                    facilities please call the
+                                                     Ombudsman Helpline:
+
+                                                        1-888-282-1155
+             Discharges                                            Transfers                                      Room Changes
+According to Nevada Revised Statute 449            A nursing facility must give you, your guardian,     Under the Code of Federal Regulations 483.10(b)
+                                                                                                        (11) residents have an absolute right to refuse to
+and Code of Federal Regulations 483.12             conservator or legally liable relative a written
+                                                                                                        accept:
+the only legitimate reasons to be dis-             notice with at least 30 days notice before a
+                                                                                                        • a transfer from the portion of a nursing home
+charged from a Nursing Home are as fol-            resident is transferred or discharged. In order
+                                                                                                            designated as the Medicare wing to any other
+lows:                                              to ensure that the resident has been made
+                                                                                                            portion of the home ;
+                                                   aware of their rights and afforded the oppor-
+•   Transfer or discharge is necessary to                                                               •   a transfer from the portion of a nursing home
+                                                   tunity to appeal the nursing home must comply
+    meet the resident’s welfare; and the res-                                                               designated as the Medicaid wing to any other
+                                                   with all of the following notice requirements:
+    ident’s welfare cannot be met in the fa-                                                                portion of the home
+    cility; (i.e. resident requires hospitaliza-                                                        Room-to-room transfers are permitted only in fol-
+                                                   •   The reason for transfer/ discharge.              lowing instances:
+    tion)                                          •   The date of the proposed transfer/
+                                                                                                        •   If it is necessary to promote the resident’s well
+•   Resident is well enough to be dis-                 discharge.
+                                                                                                        -being. (i.e. infection control or need for special-
+    charged to a lower level of care and no        •   The location to which the nursing facility       ized equipment that cannot be accommodated in
+    longer needs Nursing Home placement;               proposes transfer/ discharge                     current room)
+                                                   •   Resident’s right to a hearing to appeal the
+                                                                                                        •   If roommates are incompatible causing risk.
+•   The resident has become a danger to                 transfer/discharge.
+                                                                                                        •   If a temporary transfer is needed to make re-
+    themselves or others in the facility;          •   The procedures you must follow to request
+                                                                                                        pairs or renovations. The resident has the right to
+                                                       a hearing.
+•   The resident’s health status is a danger                                                            return as soon as the repairs or renovations are
+                                                   •   The date by which you must request a
+    to others in the facility; (i.e. infectious                                                         completed.
+                                                       hearing in order to prevent the transfer/
+    disease)                                                                                            • If the transfer is necessary to permit the ad-
+                                                       discharge.
+                                                                                                        mission of a resident of the opposite sex.
+•   The resident has failed to pay their bill      •   Resident’s right to representation at the
+                                                       hearing.                                         • If the resident no longer needs specialized
+    after reasonable and appropriate notice;                                                            medical equipment that cannot be moved from the
+    or                                             •   If a resident is being transferred to a hospi-
+                                                                                                        resident’s room, or another resident needs access
+                                                       tal; information regarding holding your bed
+                                                                                                        to that equipment.
+•   The facility ceases to operate.                    and readmission to the facility.
+                                                   •   Contact information for the Long-term Care       •   If the resident no longer needs the specialized
+The need for all discharges must be appro-                                                              services or programming that is the focus of the
+                                                       Ombudsman .
+priately documented by physicians and clin-                                                             area of the facility in which the patient is located.
+ical staff. Moreover the facility is responsi-                                                          •   If facility wants to transfer a Medicaid recipient
+ble to arrange for safe and appropriate dis-                                                            from a private room to a non-private room.
+charge.                                                                                                 •   If a temporary transfer is necessary because
+                                                                                                        of an emergency. (i.e. infection control, environ-
+                                                                                                        mental emergency)
+
+END SOURCE 9
+
+END OF PACKET — 9 sources

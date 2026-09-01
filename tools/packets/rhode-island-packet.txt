@@ -1,0 +1,722 @@
+FIELD ASSEMBLY SOURCE PACKET — DO NOT EDIT AFTER A PAGE IS BUILT FROM IT
+
+STATE: Rhode Island
+SLUG: rhode-island
+ASSEMBLED: 2026-09-01
+
+CAPTURE NOTES: rules.sos.ri.gov (the Rhode Island Code of Regulations) serves an
+empty JavaScript shell to curl; Sources 1, 2 and 5 were read from the rendered
+page in a browser, then independently verified against the same document's own
+PDF — linked from the page as "Download Regulation," hosted at
+risos-apa-production-public.s3.amazonaws.com — fetched with curl and rendered
+with pdftotext -layout. The two transports produced identical text for the
+sections quoted below; the PDF rendering is what is captured. Sources 3 and 4
+(webserver.rilegislature.gov, the General Assembly's own statute pages), and
+Sources 7 through 11 (eohhs.ri.gov, oha.ri.gov, alliancebltc.org) served plain
+HTML to curl with a browser user-agent; captured and stripped of markup.
+Source 6 (DHS-200NF) is a fillable PDF form whose contact-organizations table is
+printed in a multi-column layout; pdftotext -layout interleaves that table's
+columns line by line (the same trap logged in CLAUDE.md for the Missouri and
+Louisiana codes), so the table is captured in full below but nothing on the
+built page quotes across it — only the form's single-column paragraphs are
+quoted, each verified line by line against this capture first. alliancebltc.org
+is the nonprofit that operates the state-designated Office of the RI State Long
+Term Care Ombudsman under contract with the Office of Healthy Aging, per
+oha.ri.gov's own referral to it (Source 8); it is captured as the program's own
+site, per PROVENANCE.md's ombudsman-contact rule.
+
+PENDING: DHS-121NF (Request for Hearing) and the EOHHS Fillable Appeal Form,
+both named on the EOHHS Appeals Office page (Source 7), not separately fetched.
+The RIDOH Center for Health Facility Regulations for the aged, the Rhode Island
+Disability Law Center, and the state's Mental Health Advocate — three contacts
+210-RICR-10-05-2 § 2.4.8(D)(2)(f) requires the notice to carry — not separately
+verified. eohhs.ri.gov's general "How To File An Appeal" page appears to
+describe HealthSource RI/DHS eligibility appeals rather than nursing-facility
+discharge appeals specifically and was not captured. Assisted-living-specific
+provisions are out of v1 scope per CHARTER.md; several sources below cover
+nursing facilities and assisted living residences together and are quoted only
+for what they state about nursing facilities.
+
+SOURCE 1: 210-RICR-50-00-7, Involuntary Discharge from a Long-Term Care Facility | https://rules.sos.ri.gov/regulations/part/210-50-00-7 | source's own date: Regulation Effective Date 01/04/2022 (Periodic Refile; original E-SIGNED December 15, 2021) | retrieved: 2026-09-01
+210-RICR-50-00-7
+
+TITLE 210 - EXECUTIVE OFFICE OF HEALTH AND HUMAN SERVICES
+CHAPTER 50 – MEDICAID LONG-TERM SERVICES AND SUPPORTS
+
+SUBCHAPTER 00 – LONG-TERM SERVICES
+
+PART 7 - Involuntary Discharge from a Long-Term Care Facility
+
+7.1   Purpose and Overview
+      The purpose of this rule is to set forth requirements related to resident
+      discharges and transfers initiated by state licensed long-term care facilities,
+      without regard to the resident's source of payment. All such transfer/ discharges
+      that are taken by a long-term care facility without the agreement or consent of the
+      resident or the resident representative are involuntary and are prohibited, except
+      as provided herein.
+
+7.2   Legal Authority
+A.    State authorities: These rules are promulgated pursuant to the authority set forth
+      in R.I. Gen. Laws Chapter 40-8, "Medical Assistance"; R.I. Gen. Laws Chapter
+      40-6, "Public Assistance Act"; R.I. Gen. Laws § 23-17-19.1, "Rights of Patients";
+      R.I. Gen. Laws Chapter 23-17.5, "Rights of Nursing Home Patients"; R.I. Gen.
+      Laws § 23-17.5-17, "Transfer to Another Facility"; R.I. Gen. Laws Chapter 23-
+      17.4, "Assisted Living Residence Licensing Act"; R.I. Gen. Laws § 23-17.4-16,
+      "Rights of Residents."
+
+B.    Federal authorities: Additional authority is derived from 42 C.F.R. § 483 Subpart
+      B, "Requirements for Long Term Care Facilities"; Title XIX of the Social Security
+      Act; 42 U.S.C. § 1396r, "An Act to Amend Title XIX of the Social Security Act to
+      Prohibit Transfers or Discharges of Residents of Nursing Facilities as a Result of
+      a Voluntary Withdrawal from Participation in the Medicaid Program"; the State's
+      Medicaid State Plan; and the Rhode Island Comprehensive Section 1115
+      Demonstration, as approved in final form on February 25, 2014, and as
+      subsequently amended.
+
+7.3   Definitions
+A.    As used herein, the following terms are defined as follows:
+
+      5.    "Long-term care facility" means and includes nursing facilities (NF),
+            assisted living residences (ALR), long-term care hospitals (LTH), and
+            intermediate care facilities for persons with intellectual/ developmental
+            disabilities (ICF-I/DD). Assisted living residences are also included for this
+            rule only, although not licensed as health care facilities under R.I. Gen.
+            Laws Chapter 23-17.
+
+      6.    "Nursing facility" means an institutional setting that provides long-term
+            care and is licensed in accordance with R.I. Gen. Laws Chapter 23-17,
+            "Licensing of Health Care Facilities."
+
+      8.    "Transfer" or "discharge" means movement of a resident to a bed outside
+            of the long-term care facility whether that bed is in the same physical plant
+            or not. "Transfer" or "discharge" does not refer to the movement of a
+            resident to a bed within the same long-term care facility.
+
+7.4   Discharge Criteria
+A.    The long-term care facility must permit each resident to remain in the long-term
+      care facility, and not transfer or discharge the resident from the long-term care
+      facility unless:
+
+      1.    The transfer or discharge is necessary for the resident's welfare and the
+            resident's needs cannot be met in the long-term care facility;
+
+      2.    The transfer or discharge is appropriate because the resident's health has
+            improved sufficiently so the resident no longer needs the services
+            provided by the long-term care facility;
+
+      3.    The safety of individuals in the long-term care facility is endangered due to
+            the clinical or behavioral status of the resident;
+
+      4.    The health of individuals in the long-term care facility would otherwise be
+            endangered;
+
+      5.    The resident has failed, after reasonable and appropriate notice, to pay for
+            (or to have paid under Medicare or Medicaid) a stay at the facility.
+
+            a.     Non-payment applies if the resident does not submit the necessary
+                   paperwork for third party payment or after the third party, including
+                   Medicare or Medicaid, denies the claim and the resident refuses to
+                   pay for his or her stay.
+
+            b.     For a resident who becomes eligible for Medicaid after admission to
+                   a long-term care facility, the long-term care facility may charge a
+                   resident only allowable charges under Medicaid; or
+
+      6.    The long-term care facility ceases to operate.
+
+B.    Each long-term care facility must display a notice which identifies these transfer
+      and discharge criteria and informs residents of their appeal rights. The notice
+      should be prominently posted along with the Resident's Bill of Rights.
+
+C.    This information must be provided to the individual both verbally and in a
+      prominent manner in writing on a separate page at the time of admission. A
+      written acknowledgment of the receipt of the notice, signed by the individual must
+      be obtained.
+
+7.6   PRE-TRANSFER/ DISCHARGE NOTICE
+A.    Before transferring or discharging a resident, a long-term care facility must notify
+      the resident (and, if known, a resident representative) of the transfer or discharge
+      and of the reasons for the discharge in a language and manner they understand.
+      The long-term care facility must also notify the Office of the State Long-Term
+      Care Ombudsman.
+
+B.    The written notice must include the following:
+
+      1.    The reason for transfer or discharge;
+
+      2.    The effective date of transfer or discharge;
+
+      3.    The location to which the resident is transferred or discharged;
+
+      4.    A statement of the resident's appeal rights, including the name, address
+            (mailing and email), and telephone number of the entity that receives such
+            requests; and information on how to obtain an appeal form and assistance
+            in completing the form and submitting the appeal hearing request;
+
+      5.    The name, address (mailing and email) and telephone number of the
+            Office of the State Long-Term Care Ombudsman;
+
+      6.    For nursing facility residents with intellectual and developmental
+            disabilities or related disabilities, the mailing and email address and
+            telephone number of the agency responsible for the protection and
+            advocacy of individuals with developmental disabilities; and
+
+      7.    For nursing facility residents with a mental disorder or related disabilities,
+            the mailing and email address and telephone number of the agency
+            responsible for the protection and advocacy of individuals with a mental
+            disorder.
+
+C.    The long-term care facility must notify the resident at least thirty (30) days in
+      advance of the resident's transfer or discharge.
+
+D.    At the time the resident receives the discharge notice, s/he must receive a notice
+      of appeal rights.
+
+E.    Thirty (30) days advance notice is not required under the following
+      circumstances:
+
+      1.    In the event of danger to the safety or health of the individuals in the long-
+            term care facility;
+
+      2.    When the resident's health improves sufficiently to allow a more
+            immediate transfer or discharge;
+
+      3.    Where a more immediate transfer or discharge is necessitated by the
+            resident's urgent medical needs;
+
+      4.    When the resident has not resided in the long-term care facility for a
+            period of at least thirty (30) days.
+
+      5.    In the case of such exceptions (as above), notice must be given as many
+            days before the date of the move as is practicable, and include all of the
+            information set forth in § 7.6(B) of this Part.
+
+7.7   RESIDENT APPEAL RIGHTS
+A.    Long-term care facility residents who wish to challenge their transfers or
+      discharges may appeal in accordance with the provisions of § 10-05-2.4.8 of this
+      Title, "Appeals Process and Procedures for EOHHS Agencies and Programs."
+
+B.    The appeals process cannot be limited to Medicaid-eligible long-term care facility
+      residents. EOHHS will conduct administrative hearings for any long-term care
+      facility resident who wishes to appeal a transfer or discharge from the facility,
+      regardless of source of payment.
+
+C.    The long-term care facility may not transfer or discharge the resident while the
+      appeal is pending, when a resident exercises his or her right to appeal a transfer
+      or discharge notice from the facility, unless the failure to discharge or transfer
+      would endanger the health or safety of the resident or other individuals in the
+      long-term care facility.
+END SOURCE 1
+
+SOURCE 2: 210-RICR-10-05-2, Appeals Process and Procedures for EOHHS Agencies and Programs — excerpt: EHO definition, § 2.2.1(A)(4) filing procedures, and § 2.4.8 (Institutional and Community-Based Long-Term Care Resident Involuntary Discharges and Transfers) in full | https://rules.sos.ri.gov/regulations/part/210-10-05-2 | source's own date: Regulation Effective Date 01/04/2022 (Refile Capabilities; original E-SIGNED December 14, 2021; original signing date 09/13/2018) | retrieved: 2026-09-01
+2.1   Definitions
+
+16.   "EHO" means the Executive Office of Health and Human Services Hearing
+      Office which has been designated by law and the Secretary to serve as
+      the appeals entity for programs administered by the Department of
+      Behavioral Healthcare, Developmental Disabilities and Hospitals, the
+      Department of Children, Youth and Families, the Department of Human
+      Services, the EOHHS and which may also have been designated under
+      Rules and Regulations Pertaining to HealthSource RI (220-RICR-90-00-1)
+      as the appeals entity for programs administered by HealthSource RI.
+
+2.2   Appeals: General Provisions
+2.2.1 APPEAL PROCESS
+
+4.    Procedures for Filing an Appeal. Appeal Request. An affected party may
+      file an appeal in the format designated for such purposes, or in any other
+      format allowed under applicable laws and regulations. The EHO will
+      accept appeals via the state's web-based IES. An affected party may also
+      download the EHO Appeal Form and file an appeal by traditional means
+      (by postal mail, fax, or personal or commercial delivery). A complete and
+      up-to-date appeal request form is located on the EOHHS website at:
+      www.eohhs.ri.gov
+
+2.4.8 INSTITUTIONAL AND COMMUNITY-BASED LONG-TERM CARE RESIDENT
+      INVOLUNTARY DISCHARGES AND TRANSFERS
+
+A.   The Executive Office of Health and Human Services is the single state agency
+     for Medicaid under Title XIX of federal law. In this capacity, the EOHHS has been
+     designated as the appeal entity for resident discharges and transfers initiated by
+     state licensed and federally certified nursing facilities and state licensed assisted
+     living residences, without regard to payer. All such transfer/discharges that are
+     taken by a provider without the written agreement or consent of the resident or
+     the resident's legal guardian or authorized representative are considered to be
+     involuntary and referred to hereinafter as such.
+
+B.   The provisions of this subpart apply only to involuntary resident discharges and
+     transfers and irrespective of whether Medicare, Medicaid or private parties pay
+     all or some of the costs for the resident's stay. State agency actions affecting
+     Medicaid eligibility or Medicaid-funded long-term services and supports (LTSS)
+     must be appealed through the process set forth in §§ 2.2 and 2.3 of this Part
+     and/or, where applicable, the Medicaid managed care or expedited appeal
+     provisions set forth in § 2.4.2 of this Part.
+
+C.   In accordance with applicable federal and state laws, regulations and rules, an
+     involuntary transfer or discharge may only be initiated by a licensed entity as
+     follows:
+     1.     A resident transfer/discharge is permitted under applicable federal
+            regulations when it is necessary for medical reasons; when the resident's
+            health and/or safety or the health and safety of other residents or staff is
+            endangered if the resident remains; when a resident – or the party
+            responsible for the resident – has failed, after reasonable and appropriate
+            notice, to pay for their stay at the facility; or in the event of a facility
+            closure.
+
+     2.     A resident transfer/discharge may be initiated in accordance with the
+            regulations set forth in the RI Department of Health (RIDOH).
+
+D.   Both licensed nursing facilities and assisted living residences must provide a
+     formal notice of the intent to transfer/discharge to the resident and/or resident's
+     authorized representative.
+
+     1.     If the resident has been in the facility or residence for more than thirty (30)
+            days, at least thirty (30) days advance notice is required. If the resident's
+            stay is less than (30) days, the notice of the intent to discharge/transfer
+            must be sent as soon as feasible prior to the relocation date. The advance
+            notice period begins on the fifth day from the date notice is mailed.
+
+     2.     For the notice to be valid, it must be sent within the time limits indicated
+            above and include the following written in plain language:
+
+            a.     The reason for the transfer;
+
+            b.     The effective date of the transfer;
+
+            c.     Where the resident will be re-located;
+
+            d.     Notice to the resident of the right to appeal and request a hearing
+                   through the EHO, designate someone, including legal counsel, to
+                   act as an authorized representative during the appeals process,
+                   and to review medical and other pertinent evidence.
+
+            e.     Indicate that if the transfer/discharge is related to facility/licensure
+                   closure or non-payment or may pose imminent risk to a resident's
+                   health, a request for an expedited appeal should be filed within ten
+                   (10) days of the notice. The ten (10) day period begins on the fifth
+                   day after the notice mailing date.
+
+            f.     Contact information for both the state's Long-term Care
+                   Ombudsman and the RIDOH Center for Health Facility Regulations
+                   for the aged. Persons with behavioral health care conditions must
+                   be provided with information about the state's Mental Health
+                   Advocate and contact information for the RI Department of
+                   Behavioral Healthcare, Developmental Disabilities, and Hospitals
+                   and persons with developmental disabilities must be provided with
+                   contact information for the Rhode Island Disability Law Center.
+
+E.   An appeal of an involuntary discharge must be filed in writing to the EHO during
+     the thirty (30) day appeal period. An expedited appeal request may be filed and
+     determined to be valid in instances involving non-payment by a third party
+     (Medicaid or Medicare) and/or imminent risk to the resident, at the discretion of
+     the EHO, if received within ten (10) days of the notice of the intent to
+     transfer/discharge sent by the provider. To ensure timely resolution of such
+     cases, the EHO must notify the provider upon the appeal's receipt that a written
+     response must be prepared within the timelines specified in § 2.4.8(D)(1) of this
+     Part.
+
+F.   The EHO must provide the nursing facility or assisted living residence with a
+     copy of the appeal. The provider must prepare and return a response to the
+     EHO in no more than seven (7) calendar days. In instances in which the EHO
+     has approved a request for an expedited appeals process, the response must be
+     prepared in accordance with the requirements of § 2.4.8(D)(1) of this Part.
+
+G.   If a resident's appeal request is submitted within ten (10) days of the date of the
+     notice of intent to discharge/transfer, the resident is prohibited from being
+     relocated pending the decision of the hearing officer, including in instances in
+     which a continuation is granted beyond the date of the intended action. In all
+     cases where the appellant remains in the facility pending the appeal, the hearing
+     must be scheduled no later than thirty (30) days after the receipt of the request
+     for appeal by the EHO. If the appeal decision is rendered prior to the date of the
+     intended action but upholds the nursing facility's decision to discharge/transfer,
+     the resident may remain in the facility until the date of the intended action.
+
+H.   Prior to issuing a notice, the provider and the resident may have attempted and
+     exhausted all available informal dispute resolution options. Appeals to the EHO
+     may only occur subsequent to the sending of the notice of intended action by the
+     facility/residence.
+
+I.   The administrative hearing generally will be conducted at the appellant's
+     facility/residence, unless otherwise requested by the appellant.
+
+J.   If not an expedited appeal, official notice of the hearing must be sent by the EHO
+     to all parties involved at least ten (10) days prior to the scheduled hearing date.
+     Expedited appeals proceed in accordance with the provisions in section § 2.4.3
+     of this Part.
+
+K.   The administrative hearing process proceeds in accordance with the provisions
+     established in § 2.3 of this Part except as indicated herein and as follows:
+
+     1.     An appellant may request a continuance of the appeal hearing by
+            contacting the EHO prior to the date of the scheduled hearing. To the
+            extent feasible, continued hearings must be rescheduled by the EHO for a
+           date that is within forty (40) days from the date of the notice of intended
+           action. The EHO may require an appellant seeking more than one
+           rescheduling of the same hearing to provide good cause, as defined in §
+           2.3.1(E)(3) of this Part. Notice of the rescheduled hearing must be
+           provided to the affected parties must be provided in a minimum of two (2)
+           business days prior to the date of the rescheduled hearing.
+
+     2.    The EHO administrative hearing office must issue a decision in no more
+           than ten (10) days from the date of the hearing.
+
+L.   In instances in which an appellant does not remain in a facility or residence
+     during an appeal, a hearing must be conducted as soon as feasible but not more
+     than ninety (90) days from the date the EHO receives the appeal. An appellant
+     may request in writing one or more continuance(s) that extends beyond this date
+     for the purposes of case preparation.
+END SOURCE 2
+
+SOURCE 3: R.I. Gen. Laws § 23-17.5-17, Transfer to another facility | https://webserver.rilegislature.gov/Statutes/TITLE23/23-17.5/23-17.5-17.HTM | source's own date: History of Section — P.L. 1978, ch. 235, § 1; P.L. 2000, ch. 240, § 1; P.L. 2015, ch. 141, art. 5, § 3 | retrieved: 2026-09-01
+Title 23 Health and Safety
+
+Chapter 17.5 Rights of Nursing Home Patients
+
+R.I. Gen. Laws § 23-17.5-17
+
+§ 23-17.5-17. Transfer to another facility.
+(a) Before transferring a patient to another facility or level of care within a facility,
+the patient shall be informed of the need for the transfer and of any alternatives
+to the transfer.
+
+(b) A patient shall be transferred or discharged only for medical reasons, or for the
+patient's welfare or that of other patients or for nonpayment of the patient's stay.
+A facility seeking to discharge a patient for nonpayment of the patient's stay must,
+if the patient has been a patient of the facility for thirty (30) days or longer,
+provide the patient and, if known, a family member or legal representative of the
+patient, with written notice of the proposed discharge thirty (30) days in advance
+of the discharge.
+
+(c) The patient may file an appeal of the proposed discharge with the state agency designated
+for hearing such appeals, and if the appeal is received by that agency within ten
+days after the date of written notice, the patient may remain in the facility until
+the decision of the hearing officer. For appeals where the patient remains in the
+facility:
+
+(i) Any hearing on the appeal shall be scheduled no later than thirty (30) days after
+the receipt by the state agency of the request for appeal;
+
+(ii) No more than one request for continuance by the patient shall be permitted and, if
+granted, the hearing on the appeal must be rescheduled for a date and time no later
+than forty (40) days after the receipt by the state agency of the request for appeal;
+and
+
+(iii) The decision of the hearing officer shall be rendered as soon as possible, but in
+any event within five (5) days after the date of the hearing.
+
+(d) Reasonable advance notice of transfers to healthcare facilities other than hospitals
+shall be given to ensure orderly transfer or discharge and those actions shall be
+documented in the medical record.
+
+(g) Nothing herein shall be construed to relieve a patient from any obligation to pay
+for the patient's stay in a facility.
+
+History of Section. P.L. 1978, ch. 235, § 1; P.L. 2000, ch. 240, § 1; P.L. 2015, ch. 141, art. 5, § 3.
+END SOURCE 3
+
+SOURCE 4: R.I. Gen. Laws § 23-17.5-25, Notice on bed-hold policy and readmission | https://webserver.rilegislature.gov/Statutes/TITLE23/23-17.5/23-17.5-25.HTM | source's own date: History of Section — P.L. 1989, ch. 270, § 1; P.L. 2004, ch. 228, § 1; P.L. 2004, ch. 303, § 1 | retrieved: 2026-09-01
+Title 23 Health and Safety
+
+Chapter 17.5 Rights of Nursing Home Patients
+
+R.I. Gen. Laws § 23-17.5-25
+
+§ 23-17.5-25. Notice on bed-hold policy and readmission.
+(a) Notice before transfer. Before a resident of a nursing facility is transferred for hospitalization or therapeutic
+leave, a nursing facility must provide written information to the resident and a family
+member or legal representative concerning:
+
+(1) The provisions of the medical assistance program state plan regarding the period (if
+any) during which the resident will be permitted under the state plan to return and
+resume residence in the facility; and
+
+(2) The policies of the facility regarding the period, which policies must be consistent
+with subsection (c).
+
+(b) Notice upon transfer. At the time of the transfer of a resident to a hospital or for therapeutic leave,
+a nursing facility must provide written notice to the resident and a family member
+or legal representative of the duration of any period described in subsection (c).
+
+(c) Permitting resident to return. A nursing facility must establish and follow a written policy under which a resident:
+
+(1) Who is transferred from the facility for hospitalization or therapeutic leave; and
+
+(2) Whose hospitalization or therapeutic leave exceeds a period paid for under the state
+plan for the holding of a bed in the facility for the resident, will be permitted
+to be readmitted to the facility immediately upon the first availability of a bed
+of appropriate level of care in a semi-private room in the facility if at the time
+of readmission, the resident requires the services provided by the facility.
+
+(d) Any nursing facility that accepts private payment for purposes of reserving a bed
+in the facility for a resident who is transferred from the facility for hospitalization
+or other institutional therapeutic leave, and that resident's medical and health care
+is being paid for by the state medical assistance program, shall not charge an amount
+per day for reserving a bed in the facility that exceeds the facility's current Medicaid
+daily rate; for a minimum of the first five (5) days of said hospitalization or the
+institutional therapeutic leave.
+
+(e) The departments of human services and health shall receive, on a monthly basis, the
+names from each nursing home of those persons awaiting readmission under these provisions.
+
+(f) The department of health shall promulgate regulations governing these provisions.
+
+History of Section. P.L. 1989, ch. 270, § 1; P.L. 2004, ch. 228, § 1; P.L. 2004, ch. 303, § 1.
+END SOURCE 4
+
+SOURCE 5: 216-RICR-40-10-1, Licensing of Nursing Facilities — § 1.15.4(S), Rights of Residents (transfer, discharge, and bed-hold) | https://rules.sos.ri.gov/regulations/part/216-40-10-1 | source's own date: Regulation Effective Date 05/07/2025 (Amendment; Agency Signature April 17, 2025) | retrieved: 2026-09-01
+216-RICR-40-10-1
+
+TITLE 216 – DEPARTMENT OF HEALTH
+CHAPTER 40 – PROFESSIONAL LICENSING AND FACILITY REGULATION
+
+SUBCHAPTER 10 – FACILITIES REGULATION
+
+PART 1 – Licensing of Nursing Facilities
+
+1.15.4 Rights of Residents
+
+S.   Before transferring a resident to another nursing facility or level of care within a
+     nursing facility, the resident shall be informed of the need for such a transfer and
+     of any alternatives to such a transfer.
+
+     1.     A resident shall be transferred or discharged only for medical reasons, or
+            for his welfare or that of other residents or for nonpayment of his stay.
+
+     2.     Reasonable advance notice for transfers to health care facilities other than
+            hospitals shall be given to ensure orderly transfer or discharge and such
+            actions shall be documented in the medical record.
+
+     3.     Bed-Hold and Readmission: A nursing facility must provide written
+            information pertaining to bed-hold and readmission for residents
+            transferred for hospitalization or therapeutic leave as follows:
+
+            a.     Notice before transfer: Before a resident of a nursing facility is
+                   transferred for hospitalization or therapeutic leave, a nursing facility
+                   must provide written information to the resident and a family
+                   member or legal representative concerning:
+
+            (1)    The provisions of the medical assistance program State plan
+                   regarding the period (if any) during which the resident will be
+                   permitted under the State plan to return and resume
+                   residence in the nursing facility; and
+
+            (2)    The policies of the nursing facility regarding such a period,
+                   which policies must be consistent with § 1.15.4(S)(3)(b) of
+                   this Part;
+
+            b.     Notice upon transfer: At the time of the transfer of a resident to
+                   a hospital or for therapeutic leave, a nursing facility must provide
+                   written notice to the resident and a family member or legal
+                   representative of the duration of any period described in §
+                   1.15.4(S)(3)(c) of this Part; except in an emergency, said notice
+                   must be given within twenty-four (24) hours of the transfer.
+
+            c.     Permitting resident to return: A nursing facility must establish and
+                   follow a written policy under which a resident:
+END SOURCE 5
+
+SOURCE 6: DHS-200NF, Pre-Transfer or Pre-Discharge 30 Day Notice (Rhode Island Department of Human Services) | https://eohhs.ri.gov/media/45546/download?language=en | source's own date: Rev. 11-18 | retrieved: 2026-09-01
+                                                                                                                                    DHS-200NF
+                                                                                                                                     Rev. 11-18
+
+              RHODE ISLAND DEPARTMENT OF HUMAN SERVICES
+                      PRE-TRANSFER OR PRE-DISCHARGE 30 DAY NOTICE
+Resident Information                                                           Nursing / Assisted Living Facility Information
+
+Name:     ____________________________________                                 Name:      _____________________________________
+
+Medicaid ID # (if applicable): ___________________                             Address: _____________________________________
+
+Resident Representative (if applicable)                                                  _____________________________________
+
+Name:     ____________________________________                                 Phone:     _____________________________________
+
+Address: ____________________________________
+                                                                               Facility contact person: _________________________
+          ____________________________________
+                                                                              Contact phone: ________________________________
+Phone:     ____________________________________
+                                                                               Location to which resident is transferred or discharged
+Date Notice is given: _________________________                                (required):
+
+Effective Date: ______________________________                                 Name:      ____________________________________
+
+The effective date must be at least thirty (30) days from date                 Address: ____________________________________
+notice is given unless an exception applies.
+The resident may choose to move earlier than effective date.                              ____________________________________
+
+                                                                              Phone:      ____________________________________
+
+Reason for Discharge or Transfer:
+   Your bill for services at this facility has not been paid after reasonable and appropriate notice to pay.
+
+   This facility is closing.
+
+The following reasons require a physician to either sign this form or provide a written order for discharge or transfer. The signing
+physician shall be the resident's attending or treating physician.
+
+   The health and/or safety of other individuals in this facility is endangered.
+    Please provide a brief explanation to support this action in the designated space below (attach additional documentation if necessary):
+
+   The health and/or safety of the resident is endangered by remaining in the facility, or the discharge or transfer from the facility is
+necessary for medical reasons.
+    Please provide a brief explanation to support this action in the designated space below (attach additional documentation if necessary):
+EXPLANATION:
+
+    Physician Signature: __________________________________________________________                                   Date: _______________
+REQUESTING ASSISTANCE
+If requested, facility staff must provide the assistance necessary to contact the organizations below or request an appeal of this
+decision if you disagree with the discharge or transfer. Please see nursing home contact person's name and phone number on the front
+of this form.
+
+DHS Long Term Care Offices                       RI State Long Term Care                         Behavioral Healthcare,
+Providence LTC Location:                         Ombudsman                                       Developmental Disabilities, and
+206 Elmwood Avenue                               422 Post Road, Suite 204                        Hospitals
+Providence, RI 02907                             Warwick, RI 02888                               Division of Developmental Disabilities
+1 (401) 415–8455                                 1 (401) 785-3340 or                             Simpson Hall
+Newport LTC Location:                            1 (888) 351–0808                                6 Harrington Road
+272 Valley Road                                  http://alliancebltc.com                         Cranston, RI 02920
+Middletown, RI 02842                                                                             1 (401) 462–3201
+1 (855) 697–4347)                                OHHS Appeals Office                              Office of Mental Health Advocate
+                                                 Virks Building                                  John O. Pastore Campus
+                                                 3 West Road                                     57 Howard Avenue – 4th Floor
+                                                 Cranston, RI 02920                               Cranston, RI 02920
+                                                 1 (401) 462–2132                                 1 (401) 462-2003 or
+                                                                                                   1 (800) 346–2282
+
+REQUESTING AN APPEAL OF THIS DECISION
+You have the right to appeal if you disagree with this decision. You have up to thirty (30) days upon receipt of this notice to request a
+fair hearing. If you request a fair hearing within ten (10) days after receiving this notice, you will not be transferred or discharged
+until the hearing decision has been made, unless your circumstance(s) requires an emergency transfer or discharge. If you do not
+request a fair hearing within ten (10) days after receiving this notice, you will be transferred or discharged at the end of the thirty-day
+notice period.
+
+ Please be advised that thirty (30) days advanced notice is not required under the following circumstances:
+ 1. In the event of danger to the safety or health of the individuals in the long-term care facility;
+ 2. When the Resident's health improves sufficiently to allow a more immediate transfer or discharge;
+ 3. Where a more immediate transfer or discharge is necessitated by the resident's urgent medical needs;
+ 4. When the resident has not resided in the long-term care facility for a period of at least thirty (30) days.
+ 5. In the case of such exceptions (as above), notice must be given as many days before the date of the move as is practicable,
+    and include all the information set forth in § 7.6(B) of this Part.
+END SOURCE 6
+
+SOURCE 7: EOHHS Appeals Office | https://eohhs.ri.gov/reference-center/eohhs-appeals-office | source's own date: page last updated on July 22nd, 2024 | retrieved: 2026-09-01
+EOHHS Appeals Office
+The EOHHS Appeals Office conducts administrative appeals hearings in accordance with the requirements of State law.
+Medicaid Appeals and Fair Hearings
+EOHHS has sought federal approval to temporarily delay scheduling non-emergency fair hearing appeals and issuance of fair hearing decisions for 60 days or until the termination of the COVID 19 declaration of emergency, whichever is longer. All emergency expedited hearings will be scheduled and heard telephonically. If needed, recipients impacted by COVID-19 may be given more time to submit an appeal through their health plan or request a fair hearing.
+Below are the administrative decisions issued by the Office redacted to protect the confidentiality and privacy of the people involved. You will need Google Chrome browser to view documents.
+New-
+Searchable Appeals Decisions
+EOHHS Fillable Appeal Form.pdf
+PDF file, less than 1
+mb
+megabytes
+DHS-121NF Request for Hearing.pdf
+PDF file, less than 1
+mb
+megabytes
+DHS - 200NF - Involuntary Discharge Form.pdf
+PDF file, less than 1
+mb
+megabytes
+DCYF Formal Request for Hearing.doc
+Word file, less than 1
+mb
+megabytes
+Executive Office of Health and Human Services
+3 West Road
+Cranston, RI 02920
+© 2026
+RI.gov. This page last updated on July 22nd, 2024.
+END SOURCE 7
+
+SOURCE 8: Ombudsman Program (Rhode Island Office of Healthy Aging) | https://oha.ri.gov/resources/fraud-and-abuse/ombudsman-program | source's own date: page last updated on February 25th, 2026 | retrieved: 2026-09-01
+Ombudsman Program
+Rhode Island's Long-Term Care Ombudsman advocates on behalf of residents in care facilities, listening to their concerns and taking action to protect their rights. To learn more about the Ombudsman program and/or to report suspected abuse of a person living in a care facility (such as an assisted living or nursing home),
+contact the
+Office of the Rhode Island State Long Term Care Ombudsman
+at 401.785.3340 or toll-free at 1.888.351.0808.
+Connect to info & help 24/7
+Call
+401.462.4444
+anytime
+Contact Us
+Office of Healthy Aging
+25 Howard Ave, Building 57
+Cranston,
+RI
+02920
+Phone:
+401-462-3000
+TTY:
+401-462-0740
+© 2026
+RI.gov. This page last updated on February 25th, 2026.
+END SOURCE 8
+
+SOURCE 9: Contact (Alliance for Better Long Term Care) | https://alliancebltc.org/contact/ | source's own date: none stated on page | retrieved: 2026-09-01
+Contact
+Alliance for Better Long Term Care
+422 Post Road, Suite 204
+Warwick, RI 02888
+Phone:
+(401) 785-3340
+Toll-Free:
+(888) 351-0808
+Fax: (401) 785-3391
+We will respond as soon as possible.
+Click here if you would like to send a message to the
+RI State Long Term Care Ombudsman Program
+We Listen. We Act. We Care.
+CALL US TODAY
+(401) 785-3340
+The RI State Long Term Care Ombudsman Program is
+supported by federal funding, state grants through the
+Office of Healthy Aging and philanthropic giving through
+private donations, under the umbrella of the Alliance for
+Better Long Term Care.
+© Copyright Alliance For Better Long Term Care
+END SOURCE 9
+
+SOURCE 10: Contact Us — Office of the RI State Long Term Care Ombudsman (Alliance for Better Long Term Care) | https://alliancebltc.org/ombudsman-program/contact/ | source's own date: none stated on page | retrieved: 2026-09-01
+Contact Us - Office of the RI State Long Term Care Ombudsman
+Call Us Today
+(401) 785-3340
+Ombudsman Program
+Call Now
+Program Overview
+What does an Ombudsman do?
+Certified Volunteer Program
+Resident's Rights
+Choosing a Nursing Home
+Contact Us
+We will respond as soon as possible.
+PLEASE DO NOT INCLUDE PERSONAL IDENTIFYING INFORMATION OF A RESIDENT OR PATIENT.
+We Listen. We Act. We Care.
+CALL US TODAY
+(401) 785-3340
+The RI State Long Term Care Ombudsman Program is
+supported by federal funding, state grants through the
+Office of Healthy Aging and philanthropic giving through
+private donations, under the umbrella of the Alliance for
+Better Long Term Care.
+END SOURCE 10
+
+SOURCE 11: Resident's Rights — Office of the RI State Long Term Care Ombudsman (Alliance for Better Long Term Care) | https://alliancebltc.org/ombudsman-program/residents-rights/ | source's own date: none stated on page | retrieved: 2026-09-01
+Admission, Transfer and Discharge Rights
+Transfer and Discharge
+You may not be transferred or discharged unless your needs cannot be met, safety is endangered, services are no longer required, or payment has not been made.
+Notice of and reason(s) for transfer or discharge must be provided to you in an understandable manner.
+Notice of transfer or discharge must be given 30 days prior, except in cases of health and safety needs.
+The transfer or discharge notice must include the name, address and telephone number of the appropriate, responsible protective agency.
+A facility must provide sufficient preparation to ensure a safe transfer or discharge.
+Equal Access to Quality Care
+The facility must use identical policies regarding transfer, discharge and services for all residents.
+The facility may determine charges for a non-Medicaid resident as long as written notice was provided at the time of admission.
+Notice of Bed Hold Policy and Readmission
+You and a family member must receive written notice of state and facility bed hold policies before and at the time of a transfer.
+The facility must follow a written policy for readmittance if the bed hold period is exceeded.
+END SOURCE 11
+
+END OF PACKET — 11 sources

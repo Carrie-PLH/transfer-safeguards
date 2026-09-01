@@ -1,0 +1,301 @@
+FIELD ASSEMBLY SOURCE PACKET — DO NOT EDIT AFTER A PAGE IS BUILT FROM IT
+
+STATE: New Hampshire
+SLUG: new-hampshire
+ASSEMBLED: 2026-09-01
+
+CAPTURE NOTES: RSA 151:21, 151:25 and 151:26 were fetched directly from the
+General Court's own codified-statute pages (gc.nh.gov) by curl with a browser
+user-agent (HTTP 200 on all three). The raw HTML was stripped of markup
+mechanically (tags removed, &nbsp;/&#150; entities decoded) rather than
+retyped, preserving the statute's own paragraph breaks and numbering; sources
+1-3 are that stripped text in full. dhhs.nh.gov pages and PDFs return HTTP 403
+to curl — tried plain, and again with a full Chrome-like header set
+(Accept, Accept-Language, sec-ch-ua, sec-fetch-*, upgrade-insecure-requests)
+— and 403 to the session WebFetch tool as well. A rendered browser
+(Claude_Browser navigate + get_page_text) reached the DHHS pages directly and
+returned their plain visible text; sources 4-6 are that text with the
+sitewide navigation chrome ("Main navigation / OPEN MENU / Home / About DHHS
+/ Programs & Services / Apply for Assistance / Doing Business With DHHS /
+Reports, Regulations & Statistics / News & Events") and the sitewide footer
+chrome ("Escape Site"; the archived-file ADA accommodation notice) trimmed,
+since both are boilerplate repeated on every dhhs.nh.gov page rather than
+page-specific content. The DHHS PDF he-p803-nursing-home-rules.pdf (He-P 803,
+the nursing-home administrative rules that implement RSA 151:21/151:26 in
+more granular form) could not be captured by any of curl (both header sets),
+WebFetch, or the rendered browser, which treated the URL as a file download
+and did not render it. The NH Medicaid provider manual PDF (nhmmis.nh.gov,
+the state Medicaid program's own provider-manual host) was reachable
+directly by curl (HTTP 200) and rendered with pdftotext -layout; sources 7-9
+are contiguous spans of that rendering, each anchored on its own heading.
+The three DHHS contact addresses captured in sources 4-6 render on the live
+pages as separate address-line elements (confirmed against each page's own
+accessibility tree: "Brown Building" / "129 Pleasant Street" / "Concord" /
+"NH" / "03301" are five distinct nodes, and likewise for the Administrative
+Appeals Unit's address), but get_page_text's plain-text rendering
+concatenates adjacent block elements with no delimiter between them
+("Brown Building129 Pleasant StreetConcordNH03301"). That run-together
+string is a linearization artifact of the capture tool, not the page's own
+text, so the source bodies below join those fields with ", " instead.
+
+PENDING: He-P 803 (New Hampshire Nursing Home Rules), the DHHS administrative
+rule that fills in RSA 151:21/151:26 in more granular form — blocked on every
+transport tried (see capture notes above). He-E 802 (Nursing Facility
+Services, the Medicaid administrative rule the provider manual cites for the
+bed-hold, temporary-absence and level-of-care provisions) — hosted on the
+same blocked DHHS PDF path, not attempted separately given the He-P 803
+block. RSA 161-F:10 and RSA 161-F:12, the enabling statutes for the
+long-term care ombudsman program that RSA 151:26 II(a)(4) cross-references —
+not themselves fetched.
+
+SOURCE 1: RSA 151:21, Patients' Bill of Rights | https://gc.nh.gov/rsa/html/XI/151/151-21.htm | source's own date: none stated on the page (Source note lists amending sessions through 2025, 287:11, 12, eff. July 1, 2025) | retrieved: 2026-09-01
+TITLE XI
+HOSPITALS AND SANITARIA
+CHAPTER 151
+RESIDENTIAL CARE AND HEALTH FACILITY LICENSING
+Patients' Bill of Rights
+Section 151:21
+151:21 Patients' Bill of Rights. -
+The policy describing the rights and responsibilities of each patient admitted to a facility, except those admitted by a home health care provider, shall include, as a minimum, the following:
+I. The patient shall be treated with consideration, respect, and full recognition of the patient's dignity and individuality, including privacy in treatment and personal care and including being informed of the name, licensure status, and staff position of all those with whom the patient has contact, pursuant to RSA 151:3-b.
+II. The patient shall be fully informed of a patient's rights and responsibilities and of all procedures governing patient conduct and responsibilities. This information must be provided orally and in writing before or at admission, except for emergency admissions. Receipt of the information must be acknowledged by the patient in writing. When a patient lacks the capacity to make informed judgments the signing must be by the person legally responsible for the patient.
+III. The patient shall be fully informed in writing in language that the patient can understand, before or at the time of admission and as necessary during the patient's stay, of the facility's basic per diem rate and of those services included and not included in the basic per diem rate. A statement of services that are not normally covered by medicare or medicaid shall also be included in this disclosure.
+IV. The patient shall be fully informed by a health care provider of his or her medical condition, health care needs, and diagnostic test results, including the manner by which such results will be provided and the expected time interval between testing and receiving results, unless medically inadvisable and so documented in the medical record, and shall be given the opportunity to participate in the planning of his or her total care and medical treatment, to refuse treatment, and to be involved in experimental research upon the patient's written consent only. For the purposes of this paragraph "health care provider" means any person, corporation, facility, or institution either licensed by this state or otherwise lawfully providing health care services, including, but not limited to, a physician, hospital or other health care facility, dentist, nurse, optometrist, podiatrist, physical therapist, or psychologist, and any officer, employee, or agent of such provider acting in the course and scope of employment or agency related to or supportive of health care services.
+V. The patient shall be transferred or discharged after appropriate discharge planning only for medical reasons, for the patient's welfare or that of other patients, if the facility ceases to operate, or for nonpayment for the patient's stay, except as prohibited by Title XVIII or XIX of the Social Security Act. No patient shall be involuntarily discharged from a facility because the patient becomes eligible for medicaid as a source of payment.
+VI. The patient shall be encouraged and assisted throughout the patient's stay to exercise the patient's rights as a patient and citizen. The patient may voice grievances and recommend changes in policies and services to facility staff or outside representatives free from restraint, interference, coercion, discrimination, or reprisal.
+VII. The patient shall be permitted to manage the patient's personal financial affairs. If the patient authorizes the facility in writing to assist in this management and the facility so consents, the assistance shall be carried out in accordance with the patient's rights under this subdivision and in conformance with state law and rules.
+VIII. The patient shall be free from emotional, psychological, sexual and physical abuse and from exploitation, neglect, corporal punishment and involuntary seclusion.
+IX. The patient shall be free from chemical and physical restraints except when they are authorized in writing by a physician for a specific and limited time necessary to protect the patient or others from injury. In an emergency, restraints may be authorized by the designated professional staff member in order to protect the patient or others from injury. The staff member must promptly report such action to the physician and document same in the medical records.
+X. The patient shall be ensured confidential treatment of all information contained in the patient's personal and clinical record, including that stored in an automatic data bank, and the patient's written consent shall be required for the release of information to anyone not otherwise authorized by law to receive it. Medical information contained in the medical records at any facility licensed under this chapter shall be deemed to be the property of the patient. The patient shall be entitled to a copy of such records upon request. The charge for the copying of a patient's medical records shall not exceed $15 for the first 30 pages or $.50 per page, whichever is greater; provided, that copies of filmed records such as radiograms, x-rays, and sonograms shall be copied at a reasonable cost.
+XI. The patient shall not be required to perform services for the facility. Where appropriate for therapeutic or diversional purposes and agreed to by the patient, such services may be included in a plan of care and treatment.
+XII. The patient shall be free to communicate with, associate with, and meet privately with anyone, including family and resident groups, unless to do so would infringe upon the rights of other patients. The patient may send and receive unopened personal mail. The patient has the right to have regular access to the unmonitored use of a telephone.
+XIII. The patient shall be free to participate in activities of any social, religious, and community groups, unless to do so would infringe upon the rights of other patients.
+XIV. The patient shall be free to retain and use personal clothing and possessions as space permits, provided it does not infringe on the rights of other patients.
+XV. The patient shall be entitled to privacy for visits and, if married, to share a room with his or her spouse if both are patients in the same facility and where both patients consent, unless it is medically contraindicated and so documented by a physician. The patient has the right to reside and receive services in the facility with reasonable accommodation of individual needs and preferences, including choice of room and roommate, except when the health and safety of the individual or other patients would be endangered.
+XVI. The patient shall not be denied appropriate care on the basis of age, sex, gender identity, sexual orientation, race, color, marital status, familial status, disability, religion, national origin, source of income, source of payment, or profession.
+XVII. The patient shall be entitled to be treated by the patient's physician of choice, subject to reasonable rules and regulations of the facility regarding the facility's credentialing process.
+XVIII. The patient shall be entitled to have the patient's parents, if a minor, or spouse, or next of kin, unmarried partner, or a personal representative chosen by the patient, if an adult, visit the facility, without restriction, if the patient is considered terminally ill by the physician responsible for the patient's care.
+XIX. The patient shall be entitled to receive representatives of approved organizations as provided in RSA 151:28.
+XX. The patient shall not be denied admission to the facility based on medicaid as a source of payment when there is an available space in the facility.
+XXI. Subject to the terms and conditions of the patient's insurance plan, the patient shall have access to any provider in his or her insurance plan network and referral to a provider or facility within such network shall not be unreasonably withheld pursuant to RSA 420-J:8, XIV.
+XXII. The patient shall not be denied admission, care, or services based solely on the patient's vaccination status.
+XXIII. (a) In addition to the rights specified in paragraph XVIII, the patient shall be entitled to designate a spouse, family member, or caregiver who may visit the facility while the patient is receiving care. A patient who is a minor may have a parent, guardian, or person standing in loco parentis visit the facility while the minor patient is receiving care.
+(b)(1) Notwithstanding subparagraph (a), a health care facility may establish visitation policies that limit or restrict visitation when:
+(A) The presence of visitors would be medically or therapeutically contraindicated in the best clinical judgment of health care professionals;
+(B) The presence of visitors would interfere with the care of or rights of any patient;
+(C) Visitors are engaging in disruptive, threatening, or violent behavior toward any staff member, patient, or another visitor; or
+(D) Visitors are noncompliant with written facility policy.
+(2) Upon request, the patient or patient's representative, if the patient is incapacitated, shall be provided the reason for denial or revocation of visitation rights under this paragraph.
+(c) A health care facility may require visitors to wear personal protective equipment provided by the facility, or provided by the visitor and approved by the facility. A health care facility may require visitors to comply with reasonable safety protocols and rules of conduct. The health care facility may revoke visitation rights for failure to comply with this subparagraph.
+(d) Nothing in this paragraph shall be construed to require a health care facility to allow a visitor to enter an operating room, isolation room, isolation unit, behavioral health setting or other typically restricted area or to remain present during the administration of emergency care in critical situations. Nothing in this paragraph shall be construed to require a health care facility to allow a visitor access beyond the rooms, units, or wards in which the patient is receiving care or beyond general common areas in the health care facility.
+(e) The rights specified in this paragraph shall not be terminated, suspended, or waived by the health care facility, the department of health and human services, or any governmental entity, notwithstanding declarations of emergency declared by the governor or the legislature. No health care facility licensed pursuant to RSA 151:2 shall require a patient to waive the rights specified in this paragraph.
+(f) Each health care facility licensed pursuant to RSA 151:2 shall post on its website:
+(1) Informational materials explaining the rights specified in this paragraph;
+(2) The patients' bill of rights which applies to the facility on its website; and
+(3) Facility visitation policy detailing the rights and responsibilities specified in this paragraph, and the limitations placed upon those rights by written facility policy on its website.
+(g) Unless expressly required by federal law or regulation, the department or any other state agency shall not take any action arising out of this paragraph against a health care facility for:
+(1) Giving a visitor individual access to a property or location controlled by the health care facility;
+(2) Failing to protect or otherwise ensure the safety or comfort of a visitor given access to a property or location controlled by the health care facility;
+(3) The acts or omissions of any visitor who is given access to a property or location controlled by the health care facility.
+END SOURCE 1
+
+SOURCE 2: RSA 151:25, Temporary Absence | https://gc.nh.gov/rsa/html/XI/151/151-25.htm | source's own date: none stated on the page (Source note lists amending sessions through 2013, 265:8, eff. Jan. 1, 2014) | retrieved: 2026-09-01
+TITLE XI
+HOSPITALS AND SANITARIA
+CHAPTER 151
+RESIDENTIAL CARE AND HEALTH FACILITY LICENSING
+Patients' Bill of Rights
+Section 151:25
+151:25 Temporary Absence. -
+I. When a patient leaves a facility for emergency medical treatment the facility shall hold the bed open for the patient for 10 calendar days, if there is a reasonable expectation that the patient will return within 10 days and if the facility receives payment for the period of absence, provided that no town, city, county, or state funds shall be used for such payment. Temporary absences for therapeutic reasons shall be limited to 10 days a year.
+II. When a patient's absence is longer than 10 days, or the facility has not received payment for the period of absence, the patient shall have the option to return to the facility for the next available bed.
+III. This section shall not apply to home health care providers.
+END SOURCE 2
+
+SOURCE 3: RSA 151:26, Transfer or Discharge of Patients | https://gc.nh.gov/rsa/html/XI/151/151-26.htm | source's own date: none stated on the page (Source note lists amending sessions through 2013, 265:9, eff. Jan. 1, 2014) | retrieved: 2026-09-01
+TITLE XI
+HOSPITALS AND SANITARIA
+CHAPTER 151
+RESIDENTIAL CARE AND HEALTH FACILITY LICENSING
+Patients' Bill of Rights
+Section 151:26
+151:26 Transfer or Discharge of Patients. -
+I. A facility subject to RSA 151:21 shall not transfer or discharge a patient except for those reasons listed under RSA 151:21, V.
+II. (a) Transfer or discharge of a patient from a facility subject to RSA 151:21 shall in all instances be preceded by written notice which shall contain the following:
+(1) The reason for the proposed transfer or discharge;
+(2) The effective date of the proposed transfer or discharge;
+(3) The location to which the patient is transferred or discharged;
+(4) The name, address and telephone number of the long-term care ombudsman, established under RSA 161-F:10, and the name, address, and telephone number of the federally-designated protection and advocacy agency for individuals with disabilities;
+(5) A statement which shall read: "You have a right to appeal the facility's decision to transfer or discharge you. If you think you should not have to leave this facility, you may file an appeal in superior or probate court." If the patient is in a skilled nursing facility or nursing facility certified under Title XVIII or Title XIX of the Social Security Act, the statement shall inform the patient of his or her right to request an administrative hearing before the department of health and human services.
+Except as specified in paragraph II(b) of this section, written notice of transfer or discharge shall be given at least 30 days before the resident is transferred or discharged. A copy of the notice shall be placed in the patient's clinical record and a copy shall be transmitted to the patient, the patient's personal representative, legal guardian, the long-term care ombudsman, established under RSA 161-F:10, and the federally-designated protection and advocacy agency for individuals with disabilities.
+(b) Written notice as specified in subparagraph II(a) shall be given as soon as practicable before transfer or discharge in the following circumstances:
+(1) If an emergency transfer or discharge is mandated by the patient's health care needs and is in accord with the written orders and medical justification of the patient's physician or advanced practice registered nurse (APRN);
+(2) If the transfer or discharge is mandated by the health or safety of other individuals in the facility, as documented in the patient's clinical record upon consultation with the patient's physician or advanced practice registered nurse (APRN);
+(3) If the patient's health has improved sufficiently so the patient no longer needs the services provided by the facility, as documented in the patient's clinical record by the patient's physician or advanced practice registered nurse (APRN); or
+(4) If the patient has resided in the facility for less than 30 days.
+(c) The basis for the transfer or discharge shall be documented in the patient's clinical record. The facility shall consult with the patient's physician or advanced practice registered nurse prior to transferring or discharging the patient for medical reasons or for the patient's welfare or that of other patients. The documentation of the basis for the transfer or discharge shall be made by:
+(1) The patient's physician or advanced practice registered nurse (APRN) if the transfer or discharge is necessary because the patient's needs cannot be met in the facility;
+(2) The patient's physician or advanced practice registered nurse (APRN) if the transfer or discharge is appropriate because the patient's health has improved sufficiently so the patient no longer needs the services provided by the facility;
+(3) A physician or advanced practice registered nurse (APRN) if the health of individuals in the facility would be endangered.
+III. Transfer or discharge of a patient of a skilled nursing facility or nursing facility certified under Title XVIII or Title XIX of the Social Security Act shall take into account any additional rights and safeguards prescribed by the commissioner of the department of health and human services and the secretary of the United States Department of Health and Human Services.
+IV. Upon notice, a patient may petition the superior or probate court to enjoin the facility's decision to transfer or discharge. This petition shall stay any transfer or discharge pending a decision.
+V. For the purposes of this section, "transfer" or "discharge" shall not include transfers or discharges initiated at the request of the patient or his or her legal guardian, except that transfer or discharge of a resident from a nursing home certified under federal law even if initiated at the request of the resident or his or her legal guardian shall be subject to all federal notice requirements.
+VI. If the patient or his or her legal guardian wishes to have the patient relocate to another facility or place, the patient shall be relocated according to the patient's or legal guardian's wishes; provided, that the patient or legal guardian gives written notice of such relocation to the facility.
+END SOURCE 3
+
+SOURCE 4: Long-Term Care Ombudsman | https://www.dhhs.nh.gov/about-dhhs/long-term-care-ombudsman | source's own date: none stated on the page body; a linked document is dated 03/08/2022 | retrieved: 2026-09-01
+Long-Term Care Ombudsman
+Information about the Long-Term Care Ombudsman and its role in investigating and resolving complaints or problems concerning residents of long-term health care facilities
+
+The Long-Term Care Ombudsman receives, services, investigates and resolves complaints or problems concerning residents of long-term health care facilities. The program also provides advocacy services to long-term care facility residents, and comments on existing and proposed legislation, regulations and policies affecting long-term care residents. Education is provided to residents, family members and facility staff concerning the legal rights of residents.
+
+Our Mission
+
+The Office of the Long Term Care Ombudsman shall represent the interests and concerns of elders residing in New Hampshire's long term care facilities and advocate on their behalf to ensure full realization of their rights to receive quality care and services and to experience an optimal quality of life.
+
+Long-Term Care Ombudsman activities are organized around three major areas: Prevention, Intervention and Advocacy.
+
+Prevention
+Education and consultation to both staff and individuals on issues affecting residents in long-term care facilities;
+Problem solving before a crisis occurs and to make recommendations to facility administration and staff concerning needed changes in policy and procedures;
+Information and referral to help connect persons to the best available resources; and
+Regular visitation services to residents by Certified Long-Term Care Ombudsman Volunteers to try and identify and resolve issues before they become complaints or serious problems.
+Intervention
+Investigation of problems and complaints, negotiation and intervention to assist residents and their family members in resolving conflicts or problems.
+Advocacy
+Service gap assessment and recommendations for the development of programs and supports to meet the needs of elder long-term care residents; and represent the interests of residents before governmental agencies and seek administrative, legal and other remedies, to protect the health, safety, welfare and rights of the residents.
+NH State Commission on Aging
+Resources
+Become an Advocate - Join the Volunteer Force!
+
+Document Format: PDF
+Tags: Civil RightsElderlyCare
+Date: 03/08/2022
+RSA 161-F:12 - Long-Term Care Ombudsman
+
+Document Format: PDF
+Contact Information
+LONG-TERM CARE OMBUDSMAN (OLTC)
+Address:
+Brown Building, 129 Pleasant Street, Concord, NH 03301
+Email Address: OLTCO@dhhs.nh.gov
+Phone: (603) 271-4375
+Alternate Phone: (800) 442-5640
+Fax: (603) 271-5574
+END SOURCE 4
+
+SOURCE 5: Long-Term Care Ombudsman (OLTC) | https://www.dhhs.nh.gov/long-term-care-ombudsman-oltc | source's own date: none stated on the page | retrieved: 2026-09-01
+Long-Term Care Ombudsman (OLTC)
+Address:
+Brown Building, 129 Pleasant Street, Concord, NH 03301
+Email Address:
+OLTCO@dhhs.nh.gov
+Office Phone:
+603-271-4375
+Alternate Phone:
+1-800-442-5640
+Fax:
+603-271-5574
+END SOURCE 5
+
+SOURCE 6: Administrative Appeals | https://www.dhhs.nh.gov/doing-business-dhhs/legal-services/administrative-appeals | source's own date: none stated on the page | retrieved: 2026-09-01
+Administrative Appeals
+The Administrative Appeals Unit (AAU) is independent of DHHS Program Offices and Divisions, with a mission to conduct impartial hearings and render decisions in accordance with the requirements of NH Statutes and Administrative Rules.
+
+While administrative hearings are formal legal proceedings, they are conducted in an informal manner, allowing those who challenge a DHHS decision to tell their stories to an impartial hearing officer. These hearing officers review documentary evidence, hear testimony under oath from individuals, and issue written final DHHS legal decisions that may confirm or reverse the original determinations made by DHHS program offices.
+
+Find an Attorney
+DHHS Administrative Rules Chapter He-C 200
+
+Any individual or organization dissatisfied with any matter within the jurisdiction of DHHS may request an administrative appeal hearing.
+
+Examples of decisions that may be appealed include:
+
+DHHS Actions to deny, terminate or decrease individual benefits (e.g. Medicaid, SNAP, home and community based care, Temporary Assistance for Needy Families, Old Age Assistance, child care assistance);
+Denials and revocations of licenses and certifications;
+Imposition of administrative fines;
+Allegations of client rights violations for mentally ill or developmentally disabled individuals;
+Revocation of conditional discharges from New Hampshire Hospital (NHH);
+Transfers of NHH patients to the Secure Psychiatric Unit; and
+Findings that place individuals on the DHHS central registry of child abuse and neglect.
+How to Start an Appeal
+
+Generally, an appeal request must be in writing. You can use the Appeal Request form  or just write a letter to the Department. Your request can be submitted in a few different ways:
+
+Dropped off or mailed to your local District Office;
+Mailed to the Administrative Appeals Unit; or
+Emailed to the Administrative Appeals Unit at dhhs.aau@dhhs.nh.gov.
+
+If you cannot complete the form or write a letter, you may start an appeal by telling a representative of DHHS that you want to file an appeal.
+
+Be aware that there are time limits for filing an appeal. Generally, you must file an appeal within 30 days from the date on the Notice of Decision (90 days for SNAP). Carefully read your Notice of Decision for specific information to be sure of how long you have to file your appeal.
+Under certain circumstances, if you appeal an action within 15 days of the date on the Notice of Decision, you may be able to continue to receive benefits at the same level until a decision on your appeal is issued. If the appeal decision upholds the Department's action, the continued benefits will have to be repaid.
+
+Get Help Preparing
+
+You do not need an attorney, but you may want to have one to protect your interests. You do not have the right to appointed counsel for a hearing, and must pay for your own attorney. If you want an attorney and cannot afford one, the organizations on the Legal Resources page may be able to assist you, or provide a referral.
+
+Contact Information
+ADMINISTRATIVE APPEALS UNIT
+Address:
+Main Building, 105 Pleasant Street, Concord, NH 03301
+Email Address: dhhs.aau@dhhs.nh.gov
+Phone: (800) 852-3345
+Alternate Phone: (603) 271-4292
+Fax: (603) 271-8422
+END SOURCE 6
+
+SOURCE 7: NH Medicaid Nursing Facilities and Swing Bed Hospitals Provider Manual, Volume II — Section 2, Provider Participation & Ongoing Responsibilities, p.2-1, excerpt | https://nhmmis.nh.gov/portals/wps/wcm/connect/07669c79-1c8c-4fae-b94e-5a367379f968/NH+Medicaid+Final++Nursing+Facility+Manual+7-14-2020.pdf?MOD=AJPERES&CVID=ninzmzW | source's own date: cover page reads "September, 2020"; the running page footer throughout reads "NH Medicaid Nursing Facilities and Swing Bed Hospitals – December 2017" (the document is internally inconsistent about its own date) | retrieved: 2026-09-01
+    1. Plans of care in accordance with He-E 802.12;
+    2. Temporary Absence policy in accordance with He-E 802.15; and
+    3. Annual Cost Reporting in accordance with He-E 806.02.
+
+A nursing facility shall inform the Bureau of Elderly and Adult Services (BEAS) via a “Change of
+Status/Transfer/Discharge Form”, incorporated by reference in He-E 802.18(a), of any change in the
+resident’s status, including:
+    (1) Death of the resident;
+    (2) Transfer to a different facility; and
+    (3) Transition to a community setting.
+
+The “Change of Status” form in (b) above shall include the source of facility reimbursement and be
+submitted within 5 business days of the change, except that a transition to a community setting, either
+home care or residential care, shall require notification no later than 14 days prior to the discharge date
+from the facility. The change of status form is available on E-Studio.
+
+E-Studio is an on-line system that allows the secure exchange of data between DHHS and approved
+external parties.
+END SOURCE 7
+
+SOURCE 8: NH Medicaid Nursing Facilities and Swing Bed Hospitals Provider Manual, Volume II — Section 5, Service Authorizations and Utilization Review, p.5-2, excerpt | https://nhmmis.nh.gov/portals/wps/wcm/connect/07669c79-1c8c-4fae-b94e-5a367379f968/NH+Medicaid+Final++Nursing+Facility+Manual+7-14-2020.pdf?MOD=AJPERES&CVID=ninzmzW | source's own date: cover page reads "September, 2020"; the running page footer reads "NH Medicaid Nursing Facilities and Swing Bed Hospitals – December 2017" | retrieved: 2026-09-01
+When, as a result of utilization review, the medical condition of a resident in a specific placement no
+longer meets the criteria specified in He-E 802.04 for the specific placement, a notice of the determination
+and the right to request an appeal shall be sent to the resident and the nursing facility, pursuant to He-E
+802.05(h).
+
+If BEAS approves a continued stay, BEAS sends a Notice of Eligibility to the facility.
+END SOURCE 8
+
+SOURCE 9: NH Medicaid Nursing Facilities and Swing Bed Hospitals Provider Manual, Volume II — Section 10, Payment Policies, "Bed Days and Temporary Absences," p.10-1/10-2, excerpt | https://nhmmis.nh.gov/portals/wps/wcm/connect/07669c79-1c8c-4fae-b94e-5a367379f968/NH+Medicaid+Final++Nursing+Facility+Manual+7-14-2020.pdf?MOD=AJPERES&CVID=ninzmzW | source's own date: cover page reads "September, 2020"; the running page footer reads "NH Medicaid Nursing Facilities and Swing Bed Hospitals – December 2017" | retrieved: 2026-09-01
+Bed Days and Temporary Absences
+Bed days shall include the day of admission, but not the day of discharge. If admission and discharge
+occur on the same day, one bed day shall be allowed.
+
+A facility shall establish and follow a written policy regarding bed-hold periods which is consistent with
+RSA 151:25 and which indicates when a facility has not received payment for a period of temporary
+absence or when the absence is longer than 10 days:
+    (1) The resident shall have the option to return to the facility to the next available bed; and
+    (2) If more than one person has a right of readmission, vacancies shall be allocated on a first request
+    made, first request honored basis, and without regard to the source of payment.
+
+When a resident is absent from a nursing facility due to therapeutic leave, the facility may bill for
+reserved bed days pursuant to 42 CFR 447.40, subject to the following conditions:
+    (1) Such days shall be specified in the resident’s plan of care;
+    (2) The plan of care shall describe provisions for continuity of care while the resident is out of the
+        facility;
+    (3) Such days shall not be for hospitalization or for transferring to another facility;
+    (4) The facility may not bill for more than 30 reserved bed days per resident per state fiscal year; and
+    (5) When a recipient is on reserved bed day status, the department shall not pay separately for any
+        services covered as part of the facility’s rate pursuant to He-E 806.
+END SOURCE 9
+
+END OF PACKET — 9 sources

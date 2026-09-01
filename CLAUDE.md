@@ -173,6 +173,34 @@ revocation date of May 22, 2009 and no text beneath. Before recording a
 rule as uncaptured, check whether the state's code prints it as revoked;
 the two look identical from a search engine and mean opposite things.
 
+More transports learned building Rhode Island, Nevada and New Hampshire
+(2026-09-01). rules.sos.ri.gov (Rhode Island's official regulation code,
+RICR) serves an empty JavaScript shell to curl; render it in a browser, and
+where the page offers a "Download Regulation" link, cross-verify against
+that PDF (hosted on risos-apa-production-public.s3.amazonaws.com) fetched
+by curl and `pdftotext -layout` — both should match. nevadamedicaid.nv.gov
+lists its Medicaid Services Manual chapters and forms only via client-side
+script, empty to curl; the document link itself must be read with a
+browser tool. dhcfp.nv.gov, Nevada's former Medicaid domain, now
+301-redirects everything to www.nevadamedicaid.nv.gov — re-resolve any URL
+found via search or printed on an older document rather than trusting it.
+dhhs.nh.gov (New Hampshire) 403s to both curl and the session fetch tool;
+use the browser. He-P 803 and He-E 802, the New Hampshire nursing-home
+rules that would sharpen the statute's procedure, stayed capture-blocked
+on that same host even from the browser, which offered the PDF only as a
+download rather than a page; New Hampshire's page is built on RSA 151:21,
+151:25 and 151:26 alone, which happen to state the notice's contents, the
+30-day period and its exceptions, and the appeal-rights sentence in full.
+
+A browser text-extraction tool can silently concatenate adjacent page
+elements with no delimiter, turning a five-line mailing address into one
+run-together string — seen on dhhs.nh.gov contact pages, rendering as
+"Brown Building129 Pleasant StreetConcordNH03301". Verify against the
+page's own accessibility tree or DOM structure before treating the
+concatenation as the source's own formatting, and join the genuinely
+separate elements with normal punctuation in the packet rather than
+reproducing the run-together artifact.
+
 Some states have no reachable publisher at all. Arkansas defeated every
 transport available on 2026-08-30 and is deliberately unbuilt:
 codeofarrules.arkansas.gov, the only publisher of 20 CAR 410-805, fails TLS
