@@ -305,11 +305,35 @@ rather than edited away. (One gate run during the tripwire did fail with no
 cause I could reproduce afterwards, most likely because it read the tree
 mid-rename; that is unexplained rather than explained by the stray file.)
 
-The standing exposure is the shape `.assetsignore` has: a denylist, complete
+The standing exposure was the shape `.assetsignore` has: a denylist, complete
 only to the extent someone remembered the last thing worth excluding. Gathered
 Work hit the same shape on 2026-09-01 from the other direction and moved its
-deploy root to `site/`. This repo already serves `site/`, so what remains is
-junk landing *inside* it, which no rule catches today.
+deploy root to `site/`. This repo already serves `site/`, so what remained was
+junk landing *inside* it.
+
+**Closed the same day by check 12**, an allowlist of the kinds of file the site
+publishes rather than a list of the ones it does not: `.tmp`, `.bak`, `.orig`,
+`.rej`, `.swp` and `.fuse_hidden*` all fail by not being on the list, without
+anyone having had to anticipate them. Written here and ported to all three
+siblings in the same pass, identical apart from the deploy root. `anchors/` is
+exempt everywhere, because where it is published it ships whole by decision and
+its extensions are open-ended; only Gathered Work publishes one. Widen the list
+in the same commit that adds a legitimate new file type; do not delete the check
+to get a deploy out. Tripwired on the Mac in every repo: `.tmp`,
+`.fuse_hidden0000`, `.orig` and a nested `.html.bak` each FAIL, clean passes.
+
+## The gate runs on bash 3.2, and the sandbox does not
+
+`/bin/bash` on this Mac is 3.2.57. The Cowork sandbox runs bash 5. Check 12 was
+written with a `case` statement inside a command substitution, which bash 5
+runs happily and bash 3.2 mis-parses, dying on the `;;` — so the check passed
+every test in the sandbox and killed the gate on the host, mid-run, after
+several checks had already reported ok.
+
+The gate runs on the host. A shell check tested only in the sandbox has not
+been tested. Run `bash site/predeploy-check.sh` through Desktop Commander
+before believing any change to it, and prefer `if`/`else` to `case` inside
+`$( )` in these scripts.
 
 ## Checker and renderer traps
 

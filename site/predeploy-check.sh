@@ -17,6 +17,9 @@
 #  10. Every published state page has a row in states/index.html and a record
 #      in the STATES JSON, and both carry the date the page itself publishes.
 #  11. The generated state picker markup is current.
+#  12. Nothing under the deploy root but the kinds of file this site
+#      publishes — an allowlist, so tool debris fails without anyone having
+#      had to anticipate it.
 # (Per-page quotation fidelity is tools/check-fidelity.py, run per page at
 # build time; this script gates the deploy as a whole.)
 cd "$(dirname "$0")" || exit 1
@@ -249,6 +252,68 @@ elif [ "$before" != "$after" ]; then
   bad "the state picker was stale and has been regenerated — review the diff to index.html and states/index.html, commit it, then re-run this check"
 else
   ok "state picker markup is current"
+fi
+
+# 12 — nothing but publishable files under the deploy root.
+#
+# This is an allowlist, and it is an allowlist on purpose. .assetsignore is a
+# denylist, complete only as far as whoever last remembered it exists, and the
+# portfolio has now been bitten by that shape twice in two days from opposite
+# directions: Gathered Work published .claude/scheduled_tasks.lock about a
+# minute after the directory holding it first existed, and this repo carried a
+# stray site/index.html.tmp — left by a sed -i through the sandbox mount, which
+# permits the create and refuses the unlink — that every one of the checks
+# above passed over, because they all glob *.html and that is not one. It would
+# have shipped, and been served at roomandrecourse.com/index.html.tmp: a stale
+# copy of the home page at an address nothing links and nobody would notice.
+#
+# So the question this asks is not "did someone exclude it?" but "is this a
+# kind of file this site publishes?" Editor and tool debris — .tmp, .bak,
+# .orig, .rej, .swp, .fuse_hidden* — fails by not being on the list, without
+# anyone having had to anticipate it.
+#
+# anchors/ is exempt where it is published, because it is an evidence tree that
+# ships whole by decision and its extensions are open-ended (.ots, .tsr, .tsq,
+# .pem). Only Gathered Work publishes one; the exemption is carried in all four
+# so the check stays the same file everywhere.
+#
+# If a legitimate new file type is ever added to the site, widen the list here
+# in the same commit that adds it. Do not delete the check to get a deploy out.
+#
+# Tripwire before trusting any change to this, in both directions:
+#   touch index.html.tmp / .fuse_hidden0000 / notes.orig  -> each must FAIL
+#   remove them                                           -> must pass
+DEPLOYROOT="."
+ALLOWED_EXT='html|css|js|svg|png|ico|jpg|jpeg|gif|webp|avif|woff|woff2|ttf|pdf|txt|md|json|jsonl|xml|webmanifest'
+ALLOWED_NAME='LICENSE|_redirects|_headers|CNAME'
+ALWAYS_OK='.assetsignore|.DS_Store|wrangler.toml|predeploy-check.sh'
+# literal (non-glob) lines of .assetsignore name files already kept out of the
+# deploy; a denylist entry must not also read as a gate failure.
+IGN=$(grep -vE '^[[:space:]]*(#|$)' "$DEPLOYROOT/.assetsignore" 2>/dev/null \
+      | grep -v '[*?]' | sed 's|^\./||' || true)
+stray=$(find "$DEPLOYROOT" -type f \
+          -not -path '*/.wrangler/*' -not -path '*/node_modules/*' \
+          -not -path '*/anchors/*'   -not -path '*/.git/*' 2>/dev/null \
+        | sed 's|^\./||' \
+        | while IFS= read -r f; do
+            b=${f##*/}
+            printf '%s\n' "$b" | grep -qxE "$ALWAYS_OK" && continue
+            [ -n "$IGN" ] && printf '%s\n' "$IGN" | grep -qxF -e "$f" -e "$b" && continue
+            # if/else rather than case: bash 3.2, which is what /bin/bash is on
+            # the Mac this gate runs on, mis-parses a case statement inside a
+            # command substitution and dies on the `;;`. The sandbox's bash 5
+            # runs it happily, so this passed there and failed on the host.
+            if printf '%s\n' "$b" | grep -q '\.'; then
+              printf '%s\n' "${b##*.}" | grep -qxE "$ALLOWED_EXT" || printf '%s\n' "$f"
+            else
+              printf '%s\n' "$b" | grep -qxE "$ALLOWED_NAME" || printf '%s\n' "$f"
+            fi
+          done)
+if [ -n "$stray" ]; then
+  bad "file(s) under the deploy root that this site does not publish:"
+  printf '%s\n' "$stray" | sed 's/^/        /'
+else
+  ok "no unpublishable files under the deploy root"
 fi
 
 echo
