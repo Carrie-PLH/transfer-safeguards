@@ -58,13 +58,32 @@ else
   ok "no external references in CSS"
 fi
 
-# 3 — advisory language (the product's hard boundary). Lines that are
-# verbatim source quotations are exempt: board materials legitimately say
-# "you must submit" etc. A quotation line begins with a double quote
-# (straight or curly) after optional whitespace/tags, per house style.
-adv=$(grep -Ein 'you should|we recommend|your deadline|be sure to|you qualify|we advise|you need to file' $HTML 2>/dev/null \
-      | grep -Ev '^[^:]+:[0-9]+:[[:space:]]*(<[^>]*>)*[[:space:]]*["““]' \
-      | cut -c1-160 || true)
+# 3 — advisory language (the product's hard boundary). Verbatim source
+# quotations are exempt: state materials legitimately say "you should" and
+# "you must submit", and reproducing that faithfully is the whole product.
+#
+# The exemption used to work line by line — a line beginning with a quotation
+# mark was taken to be a quoted passage. That fails on this project's rendered
+# pages, which are a single line, so one quotation put the entire file outside
+# the exemption. New Hampshire tripped it on 2026-09-01 quoting the notice RSA
+# 151:26 requires, which tells a resident "If you think you should not have to
+# leave this facility, you may file an appeal" — the state's own words.
+#
+# Masking quoted spans the way check 3b does is the fix, and it is stricter as
+# well as more accurate: it also catches advisory prose sharing a line with a
+# quotation, which the line rule let through. Tags come out first, because in
+# rendered HTML every attribute delimiter is also a double quote and parity
+# counted on raw markup inverts at the first tag.
+#
+# Tripwire before trusting any change to this, in both directions — a check
+# that never fires looks exactly like a clean corpus:
+#   inject <p>You should file within 30 days.</p> into a page  -> must FAIL
+#   inject <p>The state wrote "you should appeal" here.</p>    -> must PASS
+adv=$(for f in $HTML; do
+       perl -0777 -pe 's/<[^>]*>/ /g; s/&quot;/"/g; s/[\x{201C}][^\x{201D}]*[\x{201D}]//g; s/"[^"]*"//g;' "$f" \
+         | grep -Ein 'you should|we recommend|your deadline|be sure to|you qualify|we advise|you need to file' \
+         | sed "s|^|$f:|"
+     done 2>/dev/null | cut -c1-160 || true)
 if [ -n "$adv" ]; then
   bad "advisory language found:"
   printf '%s\n' "$adv" | sed 's/^/        /'
