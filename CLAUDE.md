@@ -289,10 +289,27 @@ row deleted -> FAIL; JSON record deleted -> FAIL; table date wrong -> FAIL;
 JSON date wrong -> FAIL; restored -> pass.
 
 One trap found doing it, and it is the mount trap this file already warns
-about, met from the other side: `sed -i` on a file under `site/` leaves an
-`index.html.tmp` beside it that the sandbox cannot unlink, and the colophon and
-skip-link checks then fail on that stray `.html`. Remove it through Desktop
-Commander, and prefer whole-file writes.
+about, met from the other side: `sed -i.tmp` on a file under `site/` leaves an
+`index.html.tmp` beside it that the sandbox cannot unlink — the fuse mount
+permits the create and refuses the unlink. Remove it through Desktop Commander,
+and prefer whole-file writes.
+
+**The deploy gate does not catch that file, and `.assetsignore` does not
+exclude it.** Checked on 2026-09-01 with the stray present: all seventeen
+checks pass, because every page check globs `*.html` and `index.html.tmp` is
+not one. It would have been uploaded and served at
+roomandrecourse.com/index.html.tmp — a copy of a page, at an address nothing
+links and nothing would ever notice. An earlier note here claimed the colophon
+and skip-link checks failed on it; that claim was wrong and is corrected here
+rather than edited away. (One gate run during the tripwire did fail with no
+cause I could reproduce afterwards, most likely because it read the tree
+mid-rename; that is unexplained rather than explained by the stray file.)
+
+The standing exposure is the shape `.assetsignore` has: a denylist, complete
+only to the extent someone remembered the last thing worth excluding. Gathered
+Work hit the same shape on 2026-09-01 from the other direction and moved its
+deploy root to `site/`. This repo already serves `site/`, so what remains is
+junk landing *inside* it, which no rule catches today.
 
 ## Checker and renderer traps
 
