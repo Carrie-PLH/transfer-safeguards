@@ -249,6 +249,51 @@ Legislature publishes the same rule as text. Look for the other publisher
 before concluding the text is unreachable, and never reach for OCR — see
 PROVENANCE.md.
 
+## One authority for the checked date, and two surfaces nothing generates
+
+A state's "sources last checked" date is published in three places and only one
+of them is authoritative: `<dd class="docket-checked">` on
+`site/states/<slug>.html`. The STATES JSON island in `site/index.html` (which
+feeds the pill tooltip through `build-state-picker.py`) and the last cell of
+each row in `site/states/index.html` are both derived from it.
+
+Neither derived surface has a generator behind it, and on 2026-09-01 that
+showed: `site/states/index.html` held two table rows — Ohio and Texas, the
+exemplars written when the index was created — against thirty-six published
+pages, and the STATES JSON held the same two records, so thirty-four states
+were live with no row, no record and a pill tooltip carrying no date. Nothing
+was broken. The `rr-state-page` skill's closing checklist named STATUS.md and
+the picker and never named the table, so thirty-four nightly builds each did
+exactly what they were told. The rows were written and the skill's checklist
+corrected in the same pass; fixing the rows alone would have lasted one night.
+
+`python3 tools/sync-checked-dates.py` copies the authority into both derived
+surfaces; `--check` reports without writing and is check 10 of the deploy gate.
+Check 11 covers the layer above it: the tooltip is rendered *from* the JSON, so
+a correct JSON whose picker has not been regenerated leaves a stale tooltip
+live while check 10 passes. Check 11 runs the generator and fails if it changed
+anything.
+
+Two properties of check 10 matter, and the second is the one the sibling's
+version does not have. The page is the authority and the script rewrites dates
+only, never the status prose — the table sentence and the JSON blurb are
+independently written, answer different questions in different places, and
+regenerating one from the other would silently rewrite published descriptions.
+And a *missing* row fails, not only a stale one: a check that verified the rows
+present would have passed on this page every night for thirty-four nights. A
+missing row is reported and never repaired, because the sentence is written
+from that state's own page and nothing can generate it.
+
+Tripwired both ways on 2026-09-01 before being trusted, the way check 3 was:
+row deleted -> FAIL; JSON record deleted -> FAIL; table date wrong -> FAIL;
+JSON date wrong -> FAIL; restored -> pass.
+
+One trap found doing it, and it is the mount trap this file already warns
+about, met from the other side: `sed -i` on a file under `site/` leaves an
+`index.html.tmp` beside it that the sandbox cannot unlink, and the colophon and
+skip-link checks then fail on that stray `.html`. Remove it through Desktop
+Commander, and prefer whole-file writes.
+
 ## Checker and renderer traps
 
 The fidelity checker's contact layers match on patterns, and two false

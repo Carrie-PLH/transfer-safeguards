@@ -14,6 +14,9 @@
 #   7. Every page carries the colophon footer.
 #   8. Every page carries the skip link and its target (WCAG 2.4.1).
 #   9. Every state page has a packet, globbed as <slug>-packet*.txt.
+#  10. Every published state page has a row in states/index.html and a record
+#      in the STATES JSON, and both carry the date the page itself publishes.
+#  11. The generated state picker markup is current.
 # (Per-page quotation fidelity is tools/check-fidelity.py, run per page at
 # build time; this script gates the deploy as a whole.)
 cd "$(dirname "$0")" || exit 1
@@ -195,6 +198,57 @@ if [ -n "$missing_pk" ]; then
   bad "state page(s) with no packet:$missing_pk"
 else
   ok "every state page has a packet"
+fi
+
+# 10 — every published state page is listed on both index surfaces, with the
+# date it publishes itself. A page's <dd class="docket-checked"> is the
+# authority; the STATES JSON in index.html and the last cell of each row in
+# states/index.html are derived from it.
+#
+# The sibling's version of this check compares the rows that exist. That is
+# not what went wrong here. states/index.html held two rows — Ohio and Texas,
+# the exemplars written when the index was created — while thirty-six pages
+# were live, and the STATES JSON held the same two records, so thirty-four
+# states sat published with no row, no record, and a pill tooltip carrying no
+# date. Thirty-four nightly builds passed over it, because the skill's closing
+# checklist named STATUS.md and the picker and never named the table. A check
+# that verified only the rows present would have passed too, every night.
+#
+# So coverage fails, not only staleness. tools/sync-checked-dates.py repairs a
+# stale date; a missing row it only reports, because the row carries a sentence
+# written from that state's own page and nothing can generate that.
+#
+# Tripwire before trusting any change to this, in both directions:
+#   delete a <tr> from states/index.html          -> must FAIL
+#   change a row's date to one the page disowns   -> must FAIL
+#   restore both                                  -> must pass
+if sync_out=$(cd .. && python3 tools/sync-checked-dates.py --check 2>&1); then
+  ok "every state page has an index row and a JSON record, dates agreeing"
+else
+  bad "states index disagrees with the pages it lists:"
+  printf '%s\n' "$sync_out" | sed 's/^/        /'
+fi
+
+# 11 — the generated state picker is current. Check 10 compares the page, the
+# STATES JSON and the table cell, but the pill tooltip is rendered *from* the
+# JSON by tools/build-state-picker.py. A correct JSON whose picker has not been
+# regenerated leaves a stale tooltip live while check 10 passes.
+#
+# Rather than re-derive the generator's logic here and let the two drift, this
+# runs the generator and fails if it changed anything: on a current tree it is
+# a no-op. If it fails, the regenerated files are already correct — review the
+# diff and commit them.
+before=$(shasum index.html states/index.html | shasum)
+picker_out=$(cd .. && python3 tools/build-state-picker.py 2>&1)
+picker_rc=$?
+after=$(shasum index.html states/index.html | shasum)
+if [ "$picker_rc" -ne 0 ]; then
+  bad "build-state-picker.py failed:"
+  printf '%s\n' "$picker_out" | sed 's/^/        /'
+elif [ "$before" != "$after" ]; then
+  bad "the state picker was stale and has been regenerated — review the diff to index.html and states/index.html, commit it, then re-run this check"
+else
+  ok "state picker markup is current"
 fi
 
 echo
