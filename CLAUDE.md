@@ -62,10 +62,11 @@ The sandboxed Linux shell reaches sibling folders through mounts, but it
 does not share the Mac's home directory. `npx wrangler deploy` fails there
 demanding `CLOUDFLARE_API_TOKEN`. Do not work around this by hunting for a
 token — run the command through Desktop Commander instead. The same applies
-to anything else expecting host credentials or host config. Note also that
-this folder is not currently mounted into the Cowork sandbox at all; until
-it is added as a connected folder, all reads and writes here go through
-Desktop Commander.
+to anything else expecting host credentials or host config. This folder is
+now a connected folder and is mounted into the Cowork sandbox (corrected
+2026-09-01; it was not when this section was written), so ordinary reads and
+tool runs work from the sandbox. Git and `wrangler` still go through Desktop
+Commander.
 
 ## Prefer host-side writes to this folder
 
@@ -75,15 +76,22 @@ Write through Desktop Commander or the Read/Write/Edit file tools. Python
 tools in `tools/` are safe to *run* from a sandbox mount (they read and
 write whole files); avoid sandbox-side in-place edits of tracked files.
 
-## Provisioning status (updated 2026-08-30)
+## Provisioning status (updated 2026-09-01)
 
-- Domain: roomandrecourse.com registered by the owner (2026-08-30 session
-  handoff). Cloudflare worker: config scaffolded at site/wrangler.toml
-  (worker name quiet-marram-7t2d, workers_dev false); the worker itself is
-  created by the first `npx wrangler deploy`, which must wait for the site
-  shell (index.html, assets/, about.html, legal/, 404.html — not yet
-  built) and for the owner to ask. Domain binding happens in the dashboard
-  outside wrangler.toml, per the sibling pattern.
+- **Live and published.** Worker `quiet-marram-7t2d` exists, serves
+  roomandrecourse.com through a custom domain bound in the dashboard outside
+  wrangler.toml, and `workers_dev` is false so the pages are not published at
+  a second address. Deploy with `bash site/predeploy-check.sh && (cd site &&
+  npx wrangler deploy)`, only on a passing check and only when the owner asks.
+  Unlike the siblings, this worker's deploys report the trigger
+  (`roomandrecourse.com (custom domain)`) rather than "No targets deployed".
+- The site shell is built: index.html, about.html, 404.html, federal.html,
+  legal/terms.html and legal/privacy.html, plus assets/ and the icon set.
+  Corrected 2026-09-01. This section previously said the worker was
+  scaffolded but uncreated and the shell not yet built; all three claims were
+  stale, and a session acting on them went looking for legal pages that had
+  existed since August. A provisioning note that is not updated at the moment
+  provisioning changes is worse than no note, because it is believed.
 - `tools/` adapted 2026-08-30: check-fidelity.py allowlist carries
   roomandrecourse.com (plus two advisory additions), build-status.py uses
   the "Notice periods and deadlines, as stated in the sources" marker and
