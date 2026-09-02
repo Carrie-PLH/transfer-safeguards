@@ -66,7 +66,7 @@ body {
 .topline .wordmark {
   display: inline-flex;
   align-items: center;
-  /* The lockup is assets/roomandrecourse-wordmark.svg (adopted 2026-08-30).
+  /* The lockup is assets/lockup.svg (adopted 2026-09-02).
      These type tokens style the alt text a browser shows if the image
      fails, so the masthead still reads as the site's name. */
   font-family: var(--font-mono);
@@ -77,9 +77,11 @@ body {
 }
 .topline .wordmark img {
   display: block;
-  height: 3.2rem;          /* doubled from the siblings' 1.6rem at the owner's
-                              direction, 2026-08-26 — this lockup's letterforms
-                              are smaller within its frame */
+  /* One value across all four works, 2026-09-02: the lockups now share a
+     single geometry (mark 40u tall, cap 26u), so the four hand-tuned
+     heights this replaced are no longer needed. 1.65rem renders the cap at
+     ~17px, matching what each site was individually tuned to before. */
+  height: clamp(1.45rem, 3.6vw, 1.65rem);
   width: auto;
 }
 .topline .wordmark:hover { color: var(--accent); }
@@ -487,7 +489,7 @@ a.state-pill:hover, a.state-pill:focus-visible {
 img.mark,
 .colophon .mark img {
   display: block;
-  height: 2.1rem;
+  height: 1.9rem;
   width: auto;
   max-width: 100%;
 }
