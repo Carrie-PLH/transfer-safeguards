@@ -2,7 +2,7 @@
 """Fidelity checker: every checkable fact on a jurisdiction page must trace to its packet.
 
 Three layers, because each catches a different fabrication mode:
-1. Quotations (>=15 chars between double quotes) must be verbatim,
+1. Quotations (>=15 chars, in either delimiter style) must be verbatim,
    whitespace-normalized substrings of the packet. Catches invented or
    paraphrased quotes.
 2. Contact facts — every phone number, email address, postal address and
@@ -234,10 +234,17 @@ LIGATURES = {
     # capture keeps the packet faithful to the document and is symmetric: a page
     # spelling it either way satisfies a source spelling it either way.
     #
-    # Apostrophes only. Curly double quotes are deliberately left alone, because
-    # quotations are extracted from the page by their ASCII double quotes before
-    # this runs, and teaching the two marks to be interchangeable is a change to
-    # what counts as a quotation rather than to how two strings are compared.
+    # Apostrophes only. Curly double quotes are still deliberately left alone
+    # here, but the reason has changed and the old one should not be left
+    # standing: it said quotations are extracted by their ASCII double quotes
+    # before this runs, which was true until 2026-09-02 and was the assumption
+    # that let curly-quoted passages onto published pages unchecked. Extraction
+    # now reads both delimiter styles (see extract_quotes below). What remains
+    # deliberate is the narrower thing the last sentence of the old comment was
+    # actually about: folding the two double-quote glyphs together would change
+    # how two strings are compared, letting a page set a glyph its source did
+    # not. Extraction is about what counts as a quotation; folding is about
+    # comparison. Fixing the first does not license the second.
     '’': "'", '‘': "'", 'ʼ': "'",
 }
 LIGATURE_RE = re.compile('[' + ''.join(LIGATURES) + ']')
@@ -249,6 +256,50 @@ def unligate(s):
 
 norm = lambda s: re.sub(r'\s+', ' ', unligate(s))
 digits = lambda s: re.sub(r'\D', '', s)
+
+
+# Both delimiter styles, read in one pass, so a page mixing them is checked
+# whole. Ported from Gathered Work on 2026-09-02, which had it from the start
+# and was the only repo in the portfolio that did.
+#
+# The bug this closes is the quiet kind. Extraction by ASCII quotes alone does
+# not report a curly-quoted passage as unverifiable; it never sees it, so the
+# checker returns zero failures over it and the pass records that silence as
+# verification. Two state pages here carried such passages, seven in the Rules
+# & Record sibling, and one in Board & Border ran to 248 characters. A clean
+# run over an unextracted quotation proves nothing, and proving nothing is the
+# one result this program must never report as success.
+#
+# Curly pairs are matched first and their spans masked, so a straight
+# apostrophe inside a curly quotation cannot be read as opening an ASCII
+# quotation of its own. Spans are returned with each quote because the advisory
+# layer and the Spanish pairing layer both need to know where on the page a
+# quotation sits, not merely that it exists.
+CURLY_QUOTE_RE = re.compile('“([^“”]*)”')
+ASCII_QUOTE_RE = re.compile(r'"([^"]*)"')
+
+
+def extract_quotes(text, minimum=15):
+    """Quoted spans of at least `minimum` chars, as (quote, start, end)."""
+    found = []
+    masked = list(text)
+    for m in CURLY_QUOTE_RE.finditer(text):
+        if len(m.group(1)) >= minimum:
+            found.append((m.group(1), m.start(1), m.end(1)))
+        for i in range(m.start(), m.end()):
+            masked[i] = ' '
+    # The mask exists only to stop the ASCII pass mis-pairing on delimiters
+    # inside a curly span. The quotation itself is always read back out of the
+    # original text, because a page may set a term in curly quotes inside an
+    # ASCII-quoted sentence — Utah's "The term “day” means calendar day" in the
+    # Rules & Record sibling is the case that caught this — and reading the
+    # masked copy would blank the inner term and then report the hole as a
+    # quotation the source never published.
+    for m in ASCII_QUOTE_RE.finditer(''.join(masked)):
+        if m.end(1) - m.start(1) >= minimum:
+            found.append((text[m.start(1):m.end(1)], m.start(1), m.end(1)))
+    found.sort(key=lambda t: t[1])
+    return found
 
 
 def canon_phone(s):
@@ -336,14 +387,20 @@ def check(page_path, packet_path, out=print, lang='en', index_path=None):
     if page_path.endswith('.html'):
         text = H.unescape(re.sub(r'<[^>]+>', ' ', text))
 
-    # 1. quotations — pair all quotes first, filter by length after
-    quotes = []
-    for m in re.finditer(r'"([^"]*)"', text):
-        q = m.group(1)
-        if len(q) < 15:
-            continue
-        quotes.append((q, m.start(1), m.end(1)))
-        if norm(q) not in pn:
+    # 1. quotations — both delimiter styles, paired before length filtering
+    #
+    # Leading and trailing whitespace is stripped before comparison because on
+    # an HTML page it is manufactured by this program, not written by anyone:
+    # tag stripping replaces <a href=...>303-722-0300</a> with spaces, so a
+    # quotation ending in a link acquires a trailing space its markdown twin
+    # does not have, and the same sentence then passes as .md and fails as
+    # .html. Colorado's unreconciled-phone-number finding in the Rules & Record
+    # sibling is the case. Interior whitespace is still normalized rather than
+    # discarded, and the strip is at the edges only: it cannot let a changed
+    # word through.
+    quotes = extract_quotes(text)
+    for q, _start, _end in quotes:
+        if norm(q).strip() not in pn:
             fails.append(f'QUOTE not in packet: {q[:80]!r}')
 
     # 2a. phones: page phones (visible text + tel: hrefs) vs packet phones
@@ -529,6 +586,103 @@ def self_test():
             failures.append('ligature: a real wording change (LEA -> school) passed '
                             'because the ligatures around it were decomposed')
 
+        # --- both delimiter styles are extracted (2026-09-02) ---
+        # The controls are negative in both directions, because the defect
+        # being guarded against is silence, not a wrong answer. A fabrication
+        # set in curly quotes must fail; a fabrication set in ASCII quotes must
+        # still fail; and a page mixing the two must have both of its
+        # quotations seen. A checker that extracted neither style would pass
+        # the first two of those tests by doing nothing at all, so each case
+        # is paired with a faithful quotation that must pass — if extraction
+        # ever stops working, the pair breaks in one direction or the other.
+        q_pk = os.path.join(d, 'quote-styles-packet.txt')
+        open(q_pk, 'w', encoding='utf-8').write(
+            "FIRST LINE OF PACKET\n\nSTATE: Testland\n\n"
+            "SOURCE 1: Test Agency | https://agency.example.gov/page | retrieved: 2026-01-01\n"
+            "The agency states that a complaint must be signed and filed in "
+            "writing with the Dispute Office.\n"
+            "A request must be “signed” and dated before filing.\n"
+            "END SOURCE 1\n")
+        quote_style_cases = [
+            ('curly-faithful',
+             '“a complaint must be signed and filed in writing”\n', 0),
+            ('curly-fabricated',
+             '“a complaint may be filed by telephone at any time”\n', 1),
+            ('ascii-faithful',
+             '"a complaint must be signed and filed in writing"\n', 0),
+            ('ascii-fabricated',
+             '"a complaint may be filed by telephone at any time"\n', 1),
+            ('mixed-curly-bad',
+             '"a complaint must be signed and filed in writing" and also '
+             '“a complaint may be filed by telephone at any time”\n', 1),
+            ('mixed-ascii-bad',
+             '“a complaint must be signed and filed in writing” and also '
+             '"a complaint may be filed by telephone at any time"\n', 1),
+            # A curly-quoted term inside an ASCII-quoted sentence. The masking
+            # that keeps the two passes from colliding must not reach the text
+            # that gets compared: read from the mask and the inner term comes
+            # back as blanks, which fails against a packet that is not wrong.
+            ('nested-curly-in-ascii-faithful',
+             '"A request must be “signed” and dated before filing"\n', 0),
+            ('nested-curly-in-ascii-fabricated',
+             '"A request must be “signed” and dated by telephone"\n', 1),
+        ]
+        for name, page_text, want in quote_style_cases:
+            pg = os.path.join(d, f'quote-style-{name}.md')
+            open(pg, 'w', encoding='utf-8').write(page_text)
+            sink = []
+            got = 1 if check(pg, q_pk, out=sink.append) != 0 else 0
+            if got != want:
+                failures.append(
+                    f'quote styles ({name}): expected '
+                    f'{"failure" if want else "a pass"}, got '
+                    f'{"failure" if got else "a pass"}'
+                    + (': ' + '; '.join(sink) if sink else ''))
+
+        # A quotation ending in a link, as HTML and as markdown. The pair must
+        # agree: the same sentence cannot be evidence in one serialization and
+        # a failure in the other, and before the edge strip it was exactly that.
+        link_pk = os.path.join(d, 'quote-link-packet.txt')
+        open(link_pk, 'w', encoding='utf-8').write(
+            "FIRST LINE OF PACKET\n\nSTATE: Testland\n\n"
+            "SOURCE 1: Test Agency | https://agency.example.gov/page | retrieved: 2026-01-01\n"
+            "Contact the Dispute Office at 303-722-0300.\n"
+            "END SOURCE 1\n")
+        link_html = os.path.join(d, 'quote-link.html')
+        open(link_html, 'w', encoding='utf-8').write(
+            '<p>The body text lists &ldquo;Contact the Dispute Office at '
+            '<a href="tel:+13037220300">303-722-0300</a>&rdquo;.</p>\n')
+        link_md = os.path.join(d, 'quote-link.md')
+        open(link_md, 'w', encoding='utf-8').write(
+            'The body text lists “Contact the Dispute Office at 303-722-0300”.\n')
+        for label, pg in (('html', link_html), ('markdown', link_md)):
+            sink = []
+            if check(pg, link_pk, out=sink.append) != 0:
+                failures.append(
+                    f'quote styles (link-{label}): a quotation ending in a link '
+                    'failed against a packet that carries it: ' + '; '.join(sink))
+
+        # An apostrophe inside a curly quotation must not open an ASCII
+        # quotation of its own. Without the masking in extract_quotes the
+        # text after the apostrophe pairs with the next one on the page and
+        # is checked as though it were a quotation, which reports a failure
+        # nobody wrote.
+        apos_pg = os.path.join(d, 'quote-style-apostrophe.md')
+        open(apos_pg, 'w', encoding='utf-8').write(
+            '“the agency\'s Dispute Office must be notified in writing” '
+            'and the page then says don\'t and doesn\'t in its own voice.\n')
+        apos_pk = os.path.join(d, 'quote-style-apostrophe-packet.txt')
+        open(apos_pk, 'w', encoding='utf-8').write(
+            "FIRST LINE OF PACKET\n\nSTATE: Testland\n\n"
+            "SOURCE 1: Test Agency | https://agency.example.gov/page | retrieved: 2026-01-01\n"
+            "the agency's Dispute Office must be notified in writing\n"
+            "END SOURCE 1\n")
+        sink = []
+        if check(apos_pg, apos_pk, out=sink.append) != 0:
+            failures.append('quote styles (apostrophe): an apostrophe inside a '
+                            'curly quotation was read as an ASCII delimiter: '
+                            + '; '.join(sink))
+
         # --- capture notes are not quotable evidence (Idaho, 2026-08-29) ---
         # A packet's preamble is the assembler's writing. A page quoting it is
         # quoting this project, not the agency, and must fail. Each preamble
@@ -644,7 +798,9 @@ def self_test():
             print('SELF-TEST FAILED:'); [print(' ', f) for f in failures]
             return 1
         print(f'SELF-TEST PASSED: clean page passes; all {len(expected)} fabrication modes caught; '
-              'multi-packet evidence checked and enforced; Spanish pairing enforced '
+              'multi-packet evidence checked and enforced; both quote delimiter styles '
+              'extracted (curly, ASCII, mixed, nested, apostrophe-in-curly, link-terminated); '
+              'Spanish pairing enforced '
               '(unpaired, unknown id, cross-state, wrong-language quote).')
         return 0
 
