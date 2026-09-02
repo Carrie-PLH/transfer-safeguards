@@ -1,0 +1,16 @@
+{
+ "entry": {
+  "file_count": 49,
+  "id": "2026-09-02T044135Z",
+  "manifest_file": "manifests/2026-09-02T044135Z.txt",
+  "manifest_sha256": "788c7614dbcf42710189a8303d0a83263936cf23832cb9159996a6ebaad1d4cc",
+  "note": "recipe backfill: iowa, virginia",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "7e120daa6a5d140b04788765a74244ac48bdea6d07704c642be3b4ccf28ed510",
+  "repo": "transfer-safeguards",
+  "utc": "2026-09-02T04:41:35+00:00"
+ },
+ "entry_sha256": "b32c799316fd2b7579f1ae56ed0353057e17423da356575c133e0c3f49875664"
+}
