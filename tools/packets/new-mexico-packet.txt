@@ -1,0 +1,462 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+
+STATE: New Mexico
+SLUG: new-mexico
+ASSEMBLED: 2026-09-01
+CAPTURE NOTES: Sources 1 and 2 (8.370.16 NMAC, Requirements for Long Term Care Facilities, and 8.312.2 NMAC, Nursing Facilities, both New Mexico Administrative Code) were retrieved from the New Mexico State Records Center and Archives (srca.nm.gov), the state's official NMAC publisher, by curl with a browser user-agent; the served page is a Word-generated HTML export, and its text was extracted by stripping HTML tags and collapsing whitespace mechanically, no retyping — the rule text itself, including its own lettered and numbered subsection markers and its own closing history-note brackets ("[8.370.16.38 NMAC - Rp, 8.370.16.38 NMAC, 7/1/2024]"), is reproduced exactly as the export rendered it. Source 1 is sliced to 8.370.16.1 (Issuing Agency), 8.370.16.3 (Statutory Authority), Subsection K of 8.370.16.22 (Rights of Residents), all of 8.370.16.38 (Removals from the Facility), and all of 8.370.16.40 (Bedhold) — the parts of the current rule that state the issuing agency, its statutory basis, grounds, notice, and bed-hold; the surrounding rights (communications, finances, privacy, and so on) are omitted as not relevant to this page. Source 2 is sliced to 8.312.2.16 (Reserve Bed Days), the Medicaid reimbursement rule's own bed-hold provision. Both rules were confirmed current as of retrieval: the New Mexico Department of Health's former chapter, 7.9.2 NMAC (Requirements for Long Term Care Facilities), was repealed effective 7/1/2024 and replaced by 8.370.16 NMAC under the newly created New Mexico Health Care Authority, per 8.370.16 NMAC's own issuing-agency and history-note lines; the department's old nmhealth.org copy of 7.9.2 NMAC was located during research and not captured, on that basis. Sources 3 and 4 (the Office of Fair Hearings FAQ and the Fair Hearing Request form, both hca.nm.gov) were retrieved by curl with a browser user-agent; Source 4 was extracted with `pdftotext -layout`, and Source 3's page navigation and cookie-consent boilerplate are omitted, noted here rather than in the body. Sources 5 and 6 (the Ombudsman Advocacy page and the Contact Us page, both aging.nm.gov) were likewise retrieved by curl with a browser user-agent, with navigation and cookie-consent boilerplate omitted; each page's own "dateModified" value, present in the page's embedded JSON-LD metadata rather than in its visible text, is recorded in the source map rather than quoted here.
+PENDING: No New Mexico statute (NMSA 1978) enumerating involuntary-discharge grounds independently of the administrative rule was located and none is captured; 8.370.16 NMAC cites Section 24-1-5 NMSA 1978 and related sections only as general licensing authority, not as a separate grounds provision. No first-party New Mexico source naming a specific office, address, telephone number, or deadline for a resident's own appeal of a facility-initiated transfer or discharge — as distinct from the general Medicaid fair-hearing route the Office of Fair Hearings publishes and the Fair Hearing Request form's own checkbox for "Nursing Facility Discharge/Admission & PASARR" — was located. The regulations the Office of Fair Hearings FAQ cites for the fair-hearing process itself (8.50.130 NMAC, 8.100.970 NMAC, 8.352.2 NMAC) were not independently captured; the FAQ's own statement of the 90-day filing window and the hearing procedure is quoted instead, per PROVENANCE.md's rule that a publisher's own statement about its process is itself capturable. No first-party statement of a named state ombudsman official (by name) was located on the pages captured, unlike some other states in this index; the program's own toll-free number and the department's own office address are captured instead. The Long-Term Care Ombudsman Program Brochure linked from aging.nm.gov/ombudsman/ was not captured for this baseline.
+
+
+SOURCE 1: 8.370.16 NMAC, Requirements for Long Term Care Facilities (New Mexico Administrative Code), sliced to 8.370.16.1, 8.370.16.3, 8.370.16.22.K, 8.370.16.38, and 8.370.16.40 | https://www.srca.nm.gov/parts/title08/08.370.0016.html | source's own date: 8.370.16.5 NMAC states: Effective Date: July 1, 2024, unless a different date is cited at the end of a section; the sliced sections' own closing history notes read 7/1/2024 | retrieved: 2026-09-01
+8.370.16.1
+ISSUING AGENCY:
+New Mexico Health Care Authority.
+[
+8.370.16.1 NMAC - N, 7/1/2024]
+8.370.16.3
+STATUTORY AUTHORITY:
+The regulations set forth
+herein are promulgated pursuant to the general authority granted under
+Subsection E of Section 9-8-6 NMSA 1978; and the authority granted under
+Subsection D of Section 24-1-2 NMSA 1978, Subsection I of Section 24-1-3 NMSA
+1978 and 24-1-5 NMSA 1978 of the Public Health Act, as amended. Section 9-8-1
+et seq. NMSA 1978 establishes the health care authority (authority) as a
+single, unified department to administer laws and exercise functions relating
+to health care purchasing and regulation.
+[8.370.16.3 NMAC - N, 7/1/2024]
+K.
+Transfer, discharge and bedhold:
+Involuntary transfer shall be conducted only for resident's welfare,
+health and safety of others, or failure to pay.
+Reasons other than failure to pay must be documented by a physician in
+resident's record.
+Prior to transfer the
+facility must notify resident and next of kin or responsible party of right to
+appeal and name and address of ombudsman.
+
+8.370.16.38
+REMOVALS FROM THE FACILITY:
+The provisions
+of this section shall apply to all resident removals.
+A.
+Conditions:
+No resident may be
+temporarily or permanently removed from this facility except:
+(1)
+Voluntary removal:
+Upon the request or with the informed consent
+of the resident or guardian.
+(2)
+Involuntary removal:
+(a)
+for nonpayment
+of charges, following seven days notice and opportunity to pay any deficiency;
+(b)
+if the resident
+requires care other than that which the facility is licensed to provide;
+(c)
+for medical
+reasons as ordered by a physician;
+(d)
+in case of a
+medical emergency or disaster;
+(e)
+for the
+resident's welfare or the welfare of other residents;
+(f)
+if the resident
+does not need nursing home care, and alternate placement is identified and
+arrangements for transfer have been completed;
+(g)
+if the
+short-term care period for which the resident was admitted has expired; and
+(h)
+as otherwise
+permitted by law.
+(3)
+Alternate placement:
+Except for removal under the preceding
+section, no resident may be involuntarily removed unless an alternate placement
+is arranged for the resident.
+B.
+Permanent removals:
+(1)
+Notice:
+The facility shall provide a resident, the
+resident's physician and guardian, relative, or other responsible person, at
+least 30 days notice of removal under Subsection A of 8.370.16.38 NMAC, except
+Subparagraph (a) of Paragraph (2) of Subsection A of 8.370.16.38 NMAC, unless
+the continued presence of the resident endangers the health, safety, or welfare
+of the resident or other residents.
+(2)
+Removal procedures:
+(a)
+The resident,
+shall be given a notice containing the time and place of a planning conference;
+a statement informing the resident that any persons of the resident's choice
+may attend the conference; and the -procedure for submitting a complaint to the
+authority.
+(b)
+Unless the
+resident is receiving respite care or unless precluded by circumstances posing
+a danger to the health, safety, or welfare of a resident, prior to involuntary
+removal under Subsection A of 8.370.16.38 NMAC a planning conference shall be
+held at least three days before removal with the resident, guardian, if any,
+any appropriate county agency, and others designated by the resident, including
+the resident's physician, to review the need for relocation, assess the effect
+of relocation on the resident, discuss alternative placements, and develop a
+relocation plan which includes at least those activities listed below.
+(c)
+Removal
+activities shall include:
+counseling
+regarding the impending removal; arrangements for the resident to visit the
+potential alternative placement or meeting with that facility's admissions
+staff, unless medically contra-indicated or waived by the resident; assistance
+to the resident in planning the moving of belongings and funds to the new
+facility or quarters; and provisions for needed medications and treatments
+during relocation.
+(d)
+Discharge
+records:
+Upon removal of a resident, all
+relevant documents shall be prepared and provided to the facility admitting the
+resident.
+[8.370.16.38 NMAC - Rp, 8.370.16.38
+NMAC, 7/1/2024]
+
+8.370.16.40
+BEDHOLD:
+A.
+Bedhold:
+A resident who is on
+leave or temporarily discharged has expressed an intention to return to the
+facility under the terms of the admission policy for bedhold, shall not be
+denied readmission, if level of care remains the same.
+B.
+Limitation:
+The facility shall
+hold a resident's bed until the resident returns, until the resident waives their
+right to have the bed held or until the maximum time allowable as defined by
+facility policies expires.
+The facility
+is responsible for notifying resident or family of their bedhold policy.
+[8.370.16.40 NMAC - N, 7/1/2024]
+END SOURCE 1
+
+SOURCE 2: 8.312.2 NMAC, Nursing Facilities (New Mexico Administrative Code), sliced to 8.312.2.16, Reserve Bed Days | https://www.srca.nm.gov/parts/title08/08.312.0002.html | source's own date: section's own closing history note reads: [8.312.2.16 NMAC - Rp, 8.312.2.16 NMAC, 8/1/2014; A/E, 3/1/2025] | retrieved: 2026-09-01
+8.312.2.16
+Reserve Bed Days
+:
+MAD pays to hold or reserve a bed for an
+eligible recipient or member resident in a NF to allow for the eligible
+recipient or member resident to make a brief home visit, for acclimation to a
+new environment, or for hospitalization according to the limits and conditions
+outlined below.
+A.
+Coverage of reserve bed days:
+MAD covers six reserve bed days per calendar
+year for every long term care eligible recipient or member resident for
+hospitalization without prior approval.
+MAD covers three reserve bed days per calendar year for a brief home
+visit without prior approval.
+MAD covers
+an additional six reserve bed days per calendar year with prior approval to
+support an eligible recipient or member resident to adjust to a new environment
+as part of the discharge plan.
+(1)
+An
+eligible recipient or member residents discharge plan must clearly state the
+objectives, including how the home visits or visits to alternative placement
+relate to discharge implementation.
+(2)
+The
+prior approval request must include the eligible recipient or member residents
+name, MAP identification number, requested approval dates, copy of the
+discharge plan, name and address for individuals who will care for the eligible
+recipient or member resident during the visit or placement and a written
+medical order for trial placement.
+B.
+Documentation of reserve bed days:
+When an eligible recipient or member
+resident is discharged from a NF for any reason, appropriate documentation must
+be placed in the eligible recipient or member residents chart. A medical order
+must be obtained if the eligible recipient or member resident is hospitalized,
+requests a home visit or a trial placement.
+C.
+Re-admission
+review:
+A new level of care (LOC)
+determination must be performed by MAD, its UR contractor or the MCO if an
+eligible recipient or member resident is gone from their NF for more than three
+midnights.
+A NF notification form must
+be completed, including information on the reason for the eligible recipient or
+member residents absence, outcome of the leave and any other pertinent
+information concerning the leave; see the MAD managed care policy manual.
+D.
+Reimbursement and billing for
+reserve bed days:
+Reimbursement for
+reserve bed days to the NF is limited to the rate applicable for LOC medically
+necessary for the eligible recipient or member resident, as determined and
+approved by MAD, its UR contractor or the MCO.
+The reserve bed day reimbursement is equal to 50% of the regular payment
+rate for MAD fee-for-service or as otherwise negotiated between the NF provider
+and the MCO.
+Billing for reserve bed
+days is based on the nursing census, which runs from midnight to midnight.
+MAD or the MCO pays for the admission day but
+not for the discharge day.
+[8.312.2.16 NMAC
+- Rp, 8.312.2.16 NMAC, 8/1/2014; A/E, 3/1/2025]
+END SOURCE 2
+
+SOURCE 3: Office of Fair Hearings — FAQ | https://www.hca.nm.gov/office-of-fair-hearings-faq/ | source's own date: page's own JSON-LD metadata: datePublished 2024-09-09; no dateModified value present | retrieved: 2026-09-01
+About Us:
+The Office of Fair Hearings (OFH) provides administrative hearings consistent with state (NMAC) and federal regulations (CFR). The OFH registers appeals of adverse actions across all public assistance categories as well as Child Support enforcement actions, Managed Care Organization actions, certain actions involving nursing home care as well as certain administrative actions concerning providers. Hearings are conducted by an Administrative Law Judge and typically held telephonically.  After most hearings, a Recommendation will be submitted to the appropriate Division Director who will issue the Final Decision (the OFH issues a Final Decision for BeWellNM and Child Support enforcement appeals as well as Administrative Disqualification Hearings).
+1. Q: What is a Fair Hearing?
+A: A Fair Hearing is an administrative challenge to an adverse action taken by the HCA. The hearing is conducted by an Administrative Law Judge who was not involved in the action taken. “Adverse actions”
+may
+include a denial, closure, reduction, sanction or delay of benefits. During the hearing, you and the HCA will present your case as to why the action was correct or incorrect. Each party has the right to submit evidence, call witnesses and ask questions of the other party.
+2. Q: Who can request a hearing?
+A: Any applicant or beneficiary can request a Fair Hearing. Fair Hearings can also be requested by an attorney, guardian or an authorized representative.  If requesting a hearing for someone else, you may be asked to provide proof of your authority to act on behalf of that individual.
+3. Q: How long do I have to file my appeal:
+A: Most appeals must be requested no later than 90 days from the date the action was taken by the HCA or its agent.
+4. Q: Can I continue to receive my benefits during the appeal process?
+A: You may be able to continue receiving your benefits at the prior level. The OFH does not administer benefits and this determination is made through the Income Support Division or the Medical Assistance Division. You do not have to continue receiving benefits during your appeal. If you do continue your benefits during the appeal, you may have to pay back any benefits issued to you if you lose your appeal.
+5. Q: Do I need an attorney?
+A: You have the right to represent yourself, have an attorney represent you or have an authorized representative (i.e. family member, friend, social worker, etc.) represent you. Most people who have hearings at the OFH do not have an attorney. The OFH cannot advise which course of action is best for you and does not endorse or recommend specific attorneys or community resources. You can contact the NM State Bar Association at 505-797-6000 for available legal resources.
+6. Q: What will I receive from the OFH?
+A: The OFH will send you an
+Acknowledgement Notice
+which will tell you your case number and the issue being appealed. You will also receive a
+Schedule Notice of Hearing
+which will provide you with the date and time of the hearing as well as the number to call to participate in the hearing.
+7. Q: How will my hearing be conducted?
+A: Hearings are primarily held telephonically but can be held in-person or on video conference if appropriate. When requesting a hearing, please indicate if you require an accommodation and the accommodation needed so this can be reviewed. You will have 15 minutes from the scheduled start time to appear for your hearing. The OFH does not call you, YOU MUST CALL the number on the
+Schedule Notice
+at the date and time of your hearing.
+8. Q: My hearing is scheduled for a date and/or time I am not available. How can I get it rescheduled?
+A: You can contact the OFH and request that your hearing be rescheduled. Please contact the OFH as soon as you know you will not be able to attend and provide any alternative dates/times for your hearing. Your hearing can be rescheduled one (1) time. Any additional requests for rescheduling will be at the discretion of the ALJ.
+9. Q: What should I tell the ALJ and what evidence do I need to submit?
+A: The OFH cannot advise you on what to say or what evidence to submit.
+8.50.130 NMAC
+,
+8.100.970 NMAC,
+and
+8.352.2 NMAC
+are the state regulations about the Fair Hearing process.
+10. Q: I have evidence I would like the ALJ to review, how do I submit it?
+A:  You can fax it to (505) 476-6215, email it to
+HCA-FairHearings@hca.nm.gov
+, send it via postal mail to Health Care Authority, Attn: Office of Fair Hearings, PO Box 2348, Santa Fe, NM 87504 or you can turn it in at any local ISD office and ask they send it to us via email.
+11. Q: Can I have witnesses at my hearing?
+A:  Yes, you can have witnesses attend your hearing.  You will have to provide them with the hearing information.  The OFH does not have the authority to subpoena witnesses or documents.
+12. Q: When will the decision on my appeal be made?
+A: Most hearings will result in the ALJ submitting a
+Recommendation
+to the appropriate Division Director, who will then issue the
+Final Decision
+. The
+Final
+Decision will be sent to the mailing address on file. Unless the appeal is dismissed, a decision WILL NOT be issued at the hearing. Depending on the benefit appealed, most decisions are issued within 60 or 90 days from the date of your appeal request.
+13. Q: I disagree with the Final Decision, what should I do next?
+A: You have 30 days from the date of the
+Final Decision
+to appeal to the NM District Court (NM Court of Appeals if a TANF hearing). The OFH and HCA will not pay for any expenses you may incur as a part of your appeal.
+14. Q: The issue with my benefits is resolved, how do I cancel my hearing?
+A: Most appeals can be withdrawn verbally over the phone. Appeals involving the DD and Mi Via Waivers, Managed Care Organizations and Child Support actions must be withdrawn in writing. Your written request to withdraw your appeal can be emailed to
+HCA-FairHearings@hca.nm.gov
+, faxed to (505) 476-6215, or sent through postal mail to Health Care Authority, Attn: Office of Fair Hearings, PO Box 2348, Santa Fe, NM 87504.
+15. Q: What do I do if I missed my hearing.
+A: You will have 10 days from the date of the hearing to contact the OFH and provide the reason you missed the hearing. If your reason is determined to be ‘good cause”, the hearing may be rescheduled. “Good cause” is typically defined as a death in the family, disabling illness or other significant emergency or exceptional circumstance.
+END SOURCE 3
+
+SOURCE 4: Fair Hearing Request (form, PDF) | https://www.hca.nm.gov/wp-content/uploads/Fair-Hearing-Request-Form-2024.pdf | source's own date: none stated on the form's face; the file's own PDF metadata records a creation date of 2024-11-06 | retrieved: 2026-09-01
+                                                                                     Michelle Lujan Grisham, Governor
+                                                                                                    Kari Armijo, Secretary
+                                                                                    Alex Castillo Smith, Deputy Secretary
+                                                                                      Kathy Slater Huff, Deputy Secretary
+                                                                                           Kyra Ochoa, Deputy Secretary
+                                                                                        Dana Flannery, Medicaid Director
+
+
+                                            Fair Hearing Request
+                     Please complete and submit this form to the Office of Fair Hearings at
+                            HCA-FairHearings@hca.nm.gov or 505-476-6215 (fax).
+Section A – Claimant Information                                   Section B – Representative Information
+                                                                   ☐ Check this box if you have a representative. Complete the
+__________________________ _____                                   information below
+First Name                  MI
+                                                                   ___________________       ____________________
+___________________________ _____                                  First Name                Last Name
+Last Name                   Suﬃx
+                                                                   __________________________________
+_________________________________                                  Agency Name
+Mailing address
+                                                                   __________________________________
+______________ ______           _________                          Mailing Address
+City           State            Zip Code
+                                                                   _____________________         ______    ________
+_________________________________                                  City                          State     Zip Code
+Case Number
+                                                                   ___________________________________
+_______________________________________                            Phone or message number
+If known, please list the name of the agency issuing the adverse
+action (i.e. ISD, Presbyterian, Blue Cross, United, Molina,        _______________________________________
+Comagine, DDSD, CSSD, etc.) and the date of the notice. If         Relationship to Claimant (enter if the representative is an
+available, please include a copy of the notice of adverse action   Attorney, Legal Guardian, POA, Authorized Representative,
+that was sent to you.                                              etc.) Documentation authorizing representation must be
+                                                                   submitted along with this form.
+Section C – Appeal Information
+I am requesting a Fair Hearing for the following program(s):
+                ☐ SNAP ☐ Temporary Assistance for Needy Families (TANF) ☐ LIHEAP/LIHWAP
+       ☐Child Support Services ☐ General Assistance ☐Medicaid ☐Managed Care Organization (MCO)
+       ☐DD/MiVia Waiver ☐Nursing Facility Discharge/Admission & PASARR ☐Medicaid Estate Recovery
+
+Issue(s) to be heard:
+      ☐ Closure ☐ Denial ☐ Reduction ☐ Delay ☐ Restoration of Beneﬁts ☐ Overpayment ☐ Sanction
+  ☐ Child Support Enforcement (i.e. tax intercept, bank lien, etc.) ☐ DD/MiVia Services (i.e. budget, therapy, etc.)
+          ☐ MCO Enrollment ☐ MCO Services (i.e. medication, equipment, procedures, etc.) ☐ Other
+
+                If the issue involves an MCO, has the MCO’s internal appeal process been completed?:
+                                                     ☐Yes ☐No
+                      PLEASE COMPLETE SECTIONS “D”, “E” AND “F” ON THE NEXT PAGE
+
+
+
+                                 New Mexico Health Care Authority | Office of Fair Hearings
+       Email: HCA-FairHearings@hca.nm.gov | Phone: (505) 476-6213| Fax: (505) 476-6215| PO Box 2348 Santa Fe, NM 87504
+
+                                                                                   Michelle Lujan Grisham, Governor
+                                                                                                  Kari Armijo, Secretary
+                                                                                  Alex Castillo Smith, Deputy Secretary
+                                                                                    Kathy Slater Huff, Deputy Secretary
+                                                                                         Kyra Ochoa, Deputy Secretary
+                                                                                      Dana Flannery, Medicaid Director
+
+
+
+Section D – Reason for Hearing
+Please provide a description below as to why a Fair Hearing is needed and why the action(s) taken is incorrect. Please
+provide as much detail as you can.
+
+
+
+
+Section E – Continuation of Beneﬁts
+
+Please Select from one of the choices below:
+☐ If receiving beneﬁts, I want to continue receiving the same amount of beneﬁts while I wait for a Final Decision.
+I understand I may be responsible for repayment of beneﬁts issued to me if the Final Decision is not in my favor.
+
+☐ I do not want to continue receiving the same amount of beneﬁts while I wait for my Final Decision.
+
+Section F – Signature
+Claimant or Authorized Representative Signature:                Date:                          Telephone Number:
+
+
+
+           You may contact the NM State Bar Association at 505-797-6000 for available legal resources.
+
+
+
+                   Any evidence you wish to present at your Fair Hearing can be emailed to HCA-
+                              FairHearings@hca.nm.gov or faxed to 505-476-6215.
+
+
+
+
+                                New Mexico Health Care Authority | Office of Fair Hearings
+       Email: HCA-FairHearings@hca.nm.gov | Phone: (505) 476-6213| Fax: (505) 476-6215| PO Box 2348 Santa Fe, NM 87504
+
+END SOURCE 4
+
+SOURCE 5: Ombudsman Advocacy | https://www.aging.nm.gov/ombudsman/ | source's own date: page's own JSON-LD metadata: dateModified 2026-07-05 | retrieved: 2026-09-01
+Ombudsman Advocacy
+Advocating for New Mexico’s older and disabled adults.
+Residents, their families, friends, and caregivers entrust long-term care and nursing facilities to provide safe environments that meet standards of care and provide a quality of life. If ever they fall short, the Long-Term Care Ombudsman offers an avenue for expressing and resolving concerns.
+Programs & Services
+Adults living in any New Mexico Long-Term Care Facility can access an Aging and Long-Term Services Ombudsman.
+Learn More
+Advocate Opportunities
+As an Ombudsman, you offer long-term care residents the voice they need at times when they need it most. Join other dedicated, caring individuals in a shared quest to provide safety, dignity, and quality of life to our older adults.
+Learn More
+Our advocates visit assisted living facilities and nursing homes on a regular basis, providing valuable services that help residents by:
+Advocating for rights
+Investigating complaints
+Exploring solutions
+Ensuring quality of care
+Report Facility Abuse
+To report facility abuse, neglect, or exploitation, call our hotline or click link below:
+Call to Report Abuse, Neglect, Exploitation:
+1-866-451-2901
+More Resources and Information
+Long-term Care Facility Licensing and Regulation
+For questions or concerns regarding long-term care facility licensing and regulation, please visit the New Mexico Health Care Authority, Division of Health Improvement.
+
+HCA Division of Health Improvement
+w
+Have a Question?
+Start a Live Chat
+Monday – Friday, 8 AM – 5 PM
+Don’t see what you’re looking for?
+Give us a call today, we’re happy to help.
+800-432-2080
+Location
+2550 Cerrillos Road
+Santa Fe, NM 87505
+Mailing Address
+2550 Cerrillos Road
+Santa Fe, NM 87505
+ALTSD Phone Number
+800-432-2080
+ALTSD Email
+nm.adrc@altsd.nm.gov
+Office of the Cabinet Secretary
+ALTSD-Executive@altsd.nm.gov
+Speaker Engagement Form
+ADRC (Aging and Disability Resource Center)
+800-432-2080
+Adult Protective Services Intake
+866-654-3219
+Toll-Free
+Long-Term Care Ombudsman Program
+866-451-2901
+Toll-Free; Statewide
+END SOURCE 5
+
+SOURCE 6: Contact Us | https://www.aging.nm.gov/contact-us/ | source's own date: page's own JSON-LD metadata: dateModified 2026-07-17 | retrieved: 2026-09-01
+Need help? We’re here for you.
+Please call the ADRC at
+1-800-432-2080
+if you need assistance.
+New Mexico Aging & Long-Term Services Department
+Includes home and community-based services that allow older individuals to remain in their home and receive supportive services. To find out about other in-home services such as those funded through Medicaid or Veterans services, please call the us at
+1-800-432-2080
+.
+Location
+2550 Cerrillos Road
+Santa Fe, NM 87505
+ALTSD Phone Number
+1-800-432-2080
+Mailing Address
+2550 Cerrillos Road
+Santa Fe, NM 87505
+ALTSD Email
+nm.adrc@altsd.nm.gov
+Office of the Cabinet Secretary
+ALTSD-Executive@altsd.nm.gov
+Adult Protective Services Intake
+If you suspect an adult is being abused, neglected, or exploited, call Adult Protective Services statewide intake toll free at:
+866-654-3219 Toll-Free
+ADRC (Aging and Disability Resource Center)
+Monday-Friday 7:45am-5pm MT
+1-800-432-2080
+Long-Term Care Ombudsman Program
+1-866-451-2901
+Toll-Free; Statewide
+END SOURCE 6
+
+END OF PACKET — 6 sources

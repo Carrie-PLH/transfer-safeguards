@@ -7,7 +7,7 @@ present. Spanish = a translated page is published; it carries the
 docket, the hoisted rows, and the notice periods and deadlines, in
 the state's own published translation only.
 
-**Baseline: 36 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
+**Baseline: 39 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
 
 | State | Baseline | Full page | Spanish | Sources last checked |
 |---|:---:|:---:|:---:|---|
@@ -30,7 +30,7 @@ the state's own published translation only.
 | [Kansas](site/states/kansas.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Kentucky](site/states/kentucky.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Louisiana](site/states/louisiana.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| Maine | [ ] | [ ] | [ ] |  |
+| [Maine](site/states/maine.html) | [x] | [ ] | [ ] | 2026-09-01 |
 | [Maryland](site/states/maryland.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Massachusetts](site/states/massachusetts.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Michigan](site/states/michigan.html) | [x] | [ ] | [ ] | 2026-08-30 |
@@ -42,7 +42,7 @@ the state's own published translation only.
 | [Nevada](site/states/nevada.html) | [x] | [ ] | [ ] | 2026-09-01 |
 | [New Hampshire](site/states/new-hampshire.html) | [x] | [ ] | [ ] | 2026-09-01 |
 | [New Jersey](site/states/new-jersey.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| New Mexico | [ ] | [ ] | [ ] |  |
+| [New Mexico](site/states/new-mexico.html) | [x] | [ ] | [ ] | 2026-09-01 |
 | [New York](site/states/new-york.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [North Carolina](site/states/north-carolina.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | North Dakota | [ ] | [ ] | [ ] |  |
@@ -55,7 +55,7 @@ the state's own published translation only.
 | South Dakota | [ ] | [ ] | [ ] |  |
 | [Tennessee](site/states/tennessee.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Texas](site/states/texas.html) | [x] | [x] | [ ] | 2026-08-30 |
-| Utah | [ ] | [ ] | [ ] |  |
+| [Utah](site/states/utah.html) | [x] | [ ] | [ ] | 2026-09-01 |
 | Vermont | [ ] | [ ] | [ ] |  |
 | [Virginia](site/states/virginia.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Washington](site/states/washington.html) | [x] | [ ] | [ ] | 2026-08-30 |

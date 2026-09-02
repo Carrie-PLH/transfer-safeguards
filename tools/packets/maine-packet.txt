@@ -1,0 +1,489 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Maine
+SLUG: maine
+ASSEMBLED: 2026-09-01
+CAPTURE NOTES: Source 1 (10-144 CMR chapter 110, the licensing rule) and Source 2 (10-144 CMR chapter 101, Chapter II, Section 67, the MaineCare Benefits Manual's nursing-facility-services chapter) were retrieved as .docx files from maine.gov/sos by curl with a browser user-agent and converted to text with python-docx (iterating document.paragraphs; the running heads "67.05 POLICIES AND PROCEDURES (cont.)" that recur mid-section are the manual's own repeated page header, reproduced as extracted). Each is a large document; the slice captured here is anchored on its own numbered heading (10.Q for Source 1; 67.05-9 through 67.05-12, and 67.05-18, for Source 2), not on a table of contents, and the head and tail of each slice were checked against the surrounding numbered sections before capture. Sources 3-4 (the DHHS Administrative Hearings page and its FAQ) and Sources 5-7 (the Maine Long-Term Care Ombudsman Program's home, contact and team pages) were retrieved by curl with a browser user-agent and extracted by stripping HTML tags and collapsing whitespace, mechanically, no retyping; site navigation common to every maine.gov and maineombudsman.org page (menu items, "Skip to" links, footer boilerplate) is omitted from the source bodies below except where a contact fact appears inside it.
+PENDING: Maine statute (Title 22) provisions, if any, independently enumerating involuntary-discharge grounds or an appeal deadline distinct from 10-144 CMR chapter 110 and the MaineCare Benefits Manual; a current, renamed-agency version of the "Office of Advocate, Department of Mental Health, Mental Retardation and Substance Abuse Services" that 10-144 CMR chapter 110 still names for residents with developmental disabilities or mental illness (that department was reorganized decades ago; no first-party page giving the current name and contact for this specific notice requirement was captured); Chapter I of the MaineCare Benefits Manual ("General Administrative Policies and Procedures"), which Section 67.05-9(G) and 67.05-18(B) both point to for hearings generally and was not itself captured; any first-party page reconciling the two different mailing addresses the sources give for the Long-Term Care Ombudsman Program (61 Winthrop St., Augusta, ME 04330 on the program's own site; P.O. Box 2723, Augusta, Maine 04333 in the MaineCare Benefits Manual); and Internet Archive submission.
+
+SOURCE 1: 10-144 CMR chapter 110, Regulations Governing the Licensing and Functioning of Skilled Nursing Facilities and Nursing Facilities — Section 10.Q, Transfer and Discharge Rights (Maine Department of Health and Human Services, Division of Licensing and Certification) | https://www.maine.gov/sos/sites/maine.gov.sos/files/content/assets/144c110.docx | source's own date: Effective August 1, 2020 | retrieved: 2026-09-01
+10-144 CMR chapter 110
+
+
+STATE OF MAINE
+
+
+Regulations Governing the Licensing and Functioning of
+Skilled Nursing Facilities and
+Nursing Facilities
+
+
+
+
+
+
+Effective August 1, 2020
+
+
+DEPARTMENT OF HUMAN SERVICES
+
+
+10.Q.	Transfer and Discharge Rights
+
+	10.Q.1.	Definition
+
+Transfer and discharge includes movement of a resident to a bed outside of the certified unit, whether that bed is in the same facility or not. Transfer and discharge does not refer to movement of a resident to a bed within the same certified unit.
+
+	10.Q.2.	Transfer and Discharge Requirements
+
+The facility must permit each resident to remain in the unit or facility, and not transfer or discharge the resident from the unit or facility unless:
+
+a.	The transfer or discharge is necessary for the resident's welfare and the resident's needs cannot be met in the unit or facility.
+
+b.	The transfer or discharge is appropriate because the resident's health and/or functional ability has improved sufficiently so that the resident no longer needs the services provided by the unit or facility.
+
+			c.	The safety and/or health of individuals in the facility is endangered.
+
+d.	The resident has failed, after reasonable and appropriate notice, to pay for (or to have paid under Medicare or Medicaid) a stay at the facility. For a resident who becomes eligible for Medicaid after admission to a facility, the facility may charge a resident only charges allowable under Medicaid.
+
+			e.	The facility ceases to operate.
+
+	10.Q.3.	Notice Before Transfer
+
+Before a facility transfers or discharges a resident, the facility must notify the resident and, if known, a family member or legal representative of the resident, of the transfer or discharge and the reasons.
+
+The resident’s clinical record shall contain documentation describing the basis for the transfer or discharge.
+
+	10.Q.4.	Contents of the Notice
+
+Each notice must be written and include, in a language and manner understood by the resident. 
+
+
+
+a.	In order to provide for informed resident decisions, a nursing facility shall provide lists of licensed providers of care and services for all patients prior to discharge for whom home health care is needed.
+
+(1)	For all residents requiring home health care, the list must include all licensed home health care providers that request to be listed and any branch offices, including addresses and telephone numbers, that serve the area in which the resident resides.
+
+(2)	The nursing facility shall disclose to the resident any direct or indirect financial interest which the nursing facility has in the home health care provider.
+
+b.	For all residents transferring to another nursing facility, a list must be provided of all nursing facilities that request to be listed that serve the area in which the resident resides or wishes to reside.
+
+c.	The reason for the transfer or discharge, including events which are the basis for such action.
+
+			d.	The effective date of the transfer or discharge.
+
+			e.	The location to which the resident is transferred or discharged.
+
+f.	Notice of the resident's right to appeal the transfer or discharge as set forth in the Maine Medical Assistance Manual.
+
+			g.	The location to which the resident is transferred or discharged. 
+
+h.	Notice of the resident’s right to appeal the transfer or discharge as set forth in the Maine Medical Assistance Manual.
+
+i.	The mailing address and telephone number of the Long Term Care Ombudsman Program.
+
+j.	In the case of residents with developmental disabilities or mental illness, the mailing address and telephone number of the Office of Advocate, Department of Mental Health, Mental Retardation and Substance Abuse Services.
+
+k.	The resident's right to be represented by himself or herself or by legal counsel, a relative, friend or other spokesman.
+
+	10.Q.5.	Timing of the Notice
+
+Except when specified in Section 10.Q.2.c., the notice of transfer or discharge must be made by the facility at least:
+
+		a.	Thirty (30) days before the resident is transferred or discharged.
+
+		b.	As soon as practicable before transfer or discharge when:
+
+				1.	The safety and/or health of individuals in the facility would be endangered.
+
+2.	The resident's health improves sufficiently to allow a more immediate transfer or discharge.
+
+3.	An immediate transfer or discharge is required by the resident's urgent medical needs, or
+
+				4.	A resident has not resided in the facility for thirty (30) days.
+
+	10.Q.6.	Appeal of Transfer or Discharge
+
+The resident has the right to appeal a transfer or discharge to the Administrative Hearings Unit of the Department.
+
+	10.Q.7.	Transfer or Discharge Orientation
+
+The resident has the right to receive sufficient preparation and orientation to ensure safe and orderly transfer or discharge from the facility. This shall be documented in the resident record.
+END SOURCE 1
+
+SOURCE 2: 10-144 CMR chapter 101, MaineCare Benefits Manual, Chapter II, Section 67, Nursing Facility Services — Sections 67.05-9 (Discharges), 67.05-10 (Quality Assurance), 67.05-11 (Prior Approval for Payment of Bed Holds During a Hospitalization), 67.05-12 (Therapeutic Leave of Absence), and 67.05-18 (Right of Appeal) (Maine Department of Health and Human Services) | https://www.maine.gov/sos/sites/maine.gov.sos/files/inline-files/c2s067-LUP%2009.15.2014%20NSC.docx | source's own date: page header states "SECTION 67 NURSING FACILITY SERVICES ESTABLISHED 7/1/91" and "LAST UPDATED 9/15/15"; the file's own name carries "LUP 09.15.2014" — both shown as published, not reconciled | retrieved: 2026-09-01
+10-144
+
+DEPARTMENT OF HEALTH AND HUMAN SERVICES
+
+Chapter 101
+
+MAINECARE BENEFITS MANUAL
+
+Chapter II
+
+10-144 Chapter 101
+MAINECARE BENEFITS MANUAL
+CHAPTER II
+SECTION 67	NURSING FACILITY SERVICES	ESTABLISHED 7/1/91
+LAST UPDATED 9/15/15
+
+67.05-9	Discharges
+
+	A.	Discharge Tracking Forms
+
+		When a resident is discharged from a nursing facility with no expectation of return, discharged with return anticipated, or discharged prior to completing a MDS, a Discharge Tracking Form is to be completed within seven (7) days of the event. Completion of the discharge tracking form is required upon discharge from a facility, admission to another health care facility, or for hospital stays of twenty-four (24) hours or more. The form is not required for therapeutic or social leaves or for observational stays of less than twenty-four (24) hours. Discharge tracking forms must be electronically submitted at least monthly to the Department or its Authorized Entity.
+
+	B.	Reentry Tracking Forms
+
+		Following submission of a discharge tracking form coded as discharged with return anticipated or discharged prior to completion of initial assessment, a reentry tracking form must be completed within seven (7) days of the reentry to the facility. The reentry tracking forms must be electronically submitted at least monthly to the Department or its Authorized Entity.
+
+C.	Discharge Planning Procedure
+
+1.	Each participating NF shall maintain written discharge planning procedures that describe which staff members of the facility will have operational responsibility for discharge planning; and, the manner and methods by which such staff members will function, including their relationship with the facility staff.
+
+
+67.05	POLICIES AND PROCEDURES (cont.)
+
+2.	At the time of the resident’s discharge, the facility shall provide to those persons responsible for post-discharge care such information as will insure the optimal continuity of care. Examples of such information are: current information relative to diagnosis, prior treatment, rehabilitation potential, physician advice concerning immediate care, and pertinent social information.
+
+	3.	Nursing facilities must notify the Department, Office of Elder Services, of all MaineCare discharges by submitting the Member Transfer form on the day of discharge. This notification is not required for Medicare discharges where MaineCare covers the co-pay, deductible and/or coinsurance. However, notification is required if a member is enrolled in a Medicare managed care plan and Medicare will be paying the member’s daily rate of reimbursement for a period of time. The NF must also notify the Department’s Office of Elder Services when the member’s Medicare benefits discontinue and MaineCare will again be responsible for the daily rate.
+
+4.	If the resident is transferring to another NF, copies of the current MDS assessment, the most recent MED form and all PAS CIC 
+records (Level I, Level II and Annual Resident Reviews) shall be sent along.
+
+	5.	Individuals who are discharged from a NF to their home or community setting shall be made aware of community resources prior to discharge. A referral may be submitted to the Department or its Authorized Entity for an assessment for long term care services.
+
+D.	Resident Transfer and Discharge Rights
+
+A nursing facility must permit each resident to remain in the facility and must not transfer or discharge the resident from the facility unless:
+
+1.	the transfer or discharge is necessary to meet the resident's welfare or medical needs and the resident's welfare or medical needs cannot be met in the facility;
+
+2.	the transfer or discharge is appropriate because the resident's health and/or functional abilities has improved sufficiently so the resident no longer needs the services provided by the facility; as determined by the resident’s physician or a third party payor including Medicare and/or MaineCare;
+
+the safety of individuals in the facility is endangered;
+
+67.05	POLICIES AND PROCEDURES (cont.)
+
+4.	the health of individuals in the facility would otherwise be endangered as determined by the resident's physician;
+
+5.	the resident has failed, after reasonable and appropriate notice, to pay or have paid on his or her behalf (including MaineCare, Medicare) for the stay at the facility. Conversion from private pay rate to payment at the MaineCare rate does not constitute non-payment. For a resident who becomes eligible for MaineCare after admission to a facility, the facility may charge a resident only allowable charges under MaineCare; or
+
+	6.	the facility ceases to operate. In the event a NF ceases to operate and the member is to be transferred to another NF, the member must accept the first available placement that is appropriate to meet his or her medical care needs within a sixty (60) miles radius of the member’s home, (or the NF, if this is considered home) or MaineCare reimbursement will cease. The member may accept a placement beyond the sixty (60) miles radius, however, this cannot be required.
+
+	The resident's clinical record shall contain documentation describing the basis for the transfer or discharge. When a resident is transferred or discharged for reasons described in 67.05-9(D)(1) or (2), the resident's clinical record shall contain documentation by the resident’s physician that identifies the need for transfer or discharge and Interdisciplinary Care Team planning. The member’s clinical record must be documented by a physician if the resident is being discharged for the reasons described in 67.05-9(D)(4). Documentation by a physician is not required if the discharge is based upon the reasons described in 67.05-9(D)(3), (5) or (6).
+
+The facility must demonstrate that appropriate multidisciplinary interventions have been tried and have failed before discharging a resident because of violent behavior.
+
+E.	Pre-transfer and Pre-discharge Notice
+
+1.	In General - Before transferring or discharging of a resident, a nursing facility must -
+
+a.	notify the resident (and, if known, a family member of the resident or legal representative) of the transfer or discharge and the reason(s);
+
+	b.	record the reason(s) in the resident's clinical record, including any documentation required in Section 67.05-9(D)(1-6) above; and
+
+67.05	POLICIES AND PROCEDURES (cont.)
+
+c.	include in the notice the items described in Section 65.05-9(E)(3) below.
+
+2.	Timing of Notice - Written notice must be made at least thirty (30) days in advance of the resident's transfer or discharge except:
+
+	a.	in a case described in Section 67.05-9(D) (3)and (4),
+
+b.	in a case described in Section 67.05-9(D)(2) where the resident's health and/or functional abilities improve sufficiently to allow a more immediate transfer or discharge;
+
+c.	in a case described in Section 67.05-9(D)(1) where a more immediate transfer or discharge is necessitated by the resident's urgent medical needs; or
+
+d.	in a case where a resident has not resided in the facility for thirty (30) days.
+
+In the case of such exceptions, written notice must be given as many days before the date of the transfer or discharge as is practicable.
+
+In addition, oral notice shall be provided immediately to the resident, his/her legal representative, or a family member (if they are able to be contacted) unless the discharge meets the exceptions. (67.05-9(E)(2)(a - d).
+
+3.	Items included in notice - Each notice must include:
+
+a.	the reason for the transfer or discharge including events that are the basis for such action;
+
+b.	the effective date of the transfer or discharge;
+
+c.	the location to which the resident is transferred or discharged;
+
+d.	notice of the resident’s right to appeal the transfer or discharge as set forth in Section 67.05-9(G);
+
+e.	the mailing address and telephone number of the State Long-term Care Ombudsman Program which is: P.O. Box 2723, Augusta, Maine 04333, 1-800-499-0229 (in-state only) and (207) 621-1079 (local and out-of state);
+
+
+67.05	POLICIES AND PROCEDURES (cont.)
+
+f.	in the case of resident’s with developmental disabilities, the mailing address and telephone number of the Office of Advocacy Services, Department of Health and Human Services, Office of Adults with Cognitive and Physical Disabilities, which is: 40 State House Station, Augusta, Maine 04333-0040, 287-4228; and for residents with mental illness, the advocacy office is “Disability Rights Center of Maine”, Office of Adults with Mental Illness, 40 State House Station, Augusta, Maine 04333-0040, 626-2774 or 1-800-452-1948.
+
+g.	the resident’s right to be represented by him or herself or by legal counsel, a relative, friend or other spokesperson.
+
+F.	Orientation for Transfer or Discharge
+
+A nursing facility must provide sufficient preparation and orientation to residents to ensure safe and orderly transfer or discharge from the facility as defined in the Department's "Regulations Governing the Licensing and Functioning of Skilled Nursing Facilities and Nursing Facilities."
+
+1.	Sufficient preparation and orientation shall include, a discharge summary that includes -
+
+a.	a recapitulation of the resident’s stay;
+
+b.	a final summary of the resident’s status to include an assessment of the resident’s current functional and physical abilities at the time of the discharge that is available for release to authorized persons and agencies, with the consent of the resident or legal representative; and
+
+c.	a post-discharge plan of care developed with the participation of the resident and his or her family (if available), that will assist the resident to adjust to his or her new living environment.
+
+2.	Sufficient preparation may include trial visits by the resident to a new location, working with family to ask their assistance in assuring the resident that valued possessions are not left.
+
+G.	Hearings
+
+A notice of intent to transfer or discharge (see Section 67.05-9(E)) shall include a statement that any resident has the right to appeal a decision to transfer or discharge to the Office of Administrative 
+
+
+67.05	POLICIES AND PROCEDURES (cont.)
+
+Hearings, Department of Health and Human Services. To challenge the transfer or discharge, submit a request in writing to the:
+
+	The Office of Administrative Hearings
+Department of Health and Human Services
+11 State House Station
+Augusta, Maine 04333-0011
+
+Hearings will be held on an expedited basis and a written decision will be rendered within three (3) working days. The decision by The Office of Administrative Hearings is enforceable following two (2) working
+days of the written decision, unless the resident has appealed the decision in court. The appeal must be submitted within two (2) working days. A facility decision to transfer or discharge will be upheld if consistent with the standard set forth in Section 67.05-9(D), (E), and (F). The hearing officer may consider violations, by the facility, of federal or state statutes or regulations that may have contributed to the basis for discharge.
+
+A facility may not transfer or discharge a resident until a decision is rendered if that resident has requested a hearing within ten (10) days of receipt of notice unless:
+
+1.	the health or safety of individuals is in immediate risk and cannot be otherwise protected until a decision is rendered (see Section 67.05-9(D) (3) and (4));
+
+2.	immediate transfer or discharge is necessitated by the resident's urgent medical need (see Section 67.05-9(D)(1)).
+
+Hearings will be held as described in Chapter I of this Manual unless inconsistent with this Section in which case this Section shall govern.
+
+67.05-10	Quality Assurance
+
+	Each nursing facility shall have in effect a written quality assurance plan that includes, but is not limited to:
+
+1.	Utilization Review
+
+2.	Infection Control
+
+3.	Discharge Planning
+
+As part of utilization review a NF is required to review the necessity for continued stay and discharge planning in accordance with Section 67.
+
+The Department will monitor the NF's compliance with Section 67.
+
+67.05	POLICIES AND PROCEDURES (cont.)
+
+67.05-11	Prior Approval for Payment of Bed Holds During a Hospitalization
+
+A.	All nursing facilities must provide written information to the member and a family member or legal representative that specifies the Department's bed hold policy and the facility's bed hold policy before the member is transferred to a hospital and at the time of transfer.
+
+	B.	A NF shall provide a member with the opportunity for readmission following hospitalization, if the individual remains a MaineCare member. The NF must request prior approval on the day of admission to the hospital or the first working day after admission, if admission is on a non-working day by submitting the Department’s member transfer form to the Department. If the NF fails to do so, reimbursement will be granted only for the remainder of the allowed days. If the NF fails to notify the Department Services, the patient shall not be billed for non-reimbursed days.
+
+C.	Effective March 25, 2013, payment of bed holds for a semi-private room for a short-term hospitalization of the member shall be granted up to four (4) days (midnights) absence through March 31, 2013, as long as the member is expected to return to the nursing facility. 
+
+	Effective April 1, 2013, payment for bed holds shall be granted up to seven (7) days (midnights) absence per inpatient hospitalization absence, as long as the member is expected to return to the nursing facility. 
+
+If a member leaves the hospital and does not return to the NF, MaineCare reimbursement for the bed hold will stop as of the date of discharge from the hospital.
+
+If the member’s hospitalization exceeds the applicable limit on the number of bed hold days, the resident must receive a medical eligibility assessment prior to continued MaineCare coverage of nursing facility services.
+
+MaineCare eligible members who are admitted to a NF from their home or community living situation and their expected stay is to be less than thirty (30) days in the NF, would not qualify for bed hold days. MaineCare members authorized under extraordinary circumstances (see Section 67.06) or awaiting placement for residential care (see Section 67.06-9) are not eligible for bed hold days. The facility must notify the Department by faxing the member transfer form.
+
+	D.	Upon a resident’s readmission to a NF, following a hospital stay, the NF must FAX or mail a completed copy of the Member Transfer Form to the Department.
+
+67.05	POLICIES AND PROCEDURES (cont.)
+
+E.	If at any point it is determined that the resident will not return to the NF, the Department must be notified and reimbursement for the bed hold will cease.
+
+	F.	Family or friends of a MaineCare-eligible resident may make payment for bed holds in excess of the maximum number of days allowed under MaineCare regulations. This payment may not exceed the usual and customary rate for a bed in a semi-private room.
+
+	67.05-12	Therapeutic Leave of Absence for a MaineCare Member
+
+Effective March 25, 2013, all nursing facilities are responsible for informing residents in writing of their right to one (1) overnight leave of absence through March 31, 2013.All nursing facilities must inform patients who are in days awaiting NF placement, in writing, of their right to twenty (20) therapeutic overnight leaves of absence from April 1, 2013 through June 30, 2013; and twenty (20) overnight leaves of absence from July 1, 2013 through June 30, 2014 and subsequent state fiscal years. A leave of absence may not be used to extend a bed hold during a hospital stay. 
+
+Payment may be made to a facility to reserve a bed for a resident on an overnight leave of absence if the following conditions are met:
+
+A.	The resident's plan of care provides for such an absence;
+B.	The resident takes no more than one (1) overnight leave of absence from March 25, 2013 through March 31, 2013; 
+C.	The member takes no more than a total of twenty (20) therapeutic overnight leaves of absence from April 1, 2013 through June 30, 2013;
+D.	The member takes no more than a total of twenty (20) therapeutic overnight leaves of absence from July 1, 2013 through June 30, 2014 and subsequent state fiscal years;
+E.	If at any point it is determined that the resident will not return to the NF, the Department must be notified and reimbursement for the bed will cease.
+
+
+67.05-18	Right of Appeal
+
+The following individuals may request an administrative hearing if aggrieved by a decision of the Department as set forth in this section.
+
+	A.	The Member, His or Her Family or Responsible Person
+
+An appeal may be made by the member, his or her family, or responsible person or the attending physician on behalf of the member, for any classification decision. In order to appeal, the member should state by letter his or her reasons for disagreement with the classification and any other pertinent information. This letter shall be addressed to the Director of the Office of Elder Services, Department of Health and Human Services, 11 State House Station, Augusta, Maine 04333-0011.
+
+B.	The Provider
+
+	Providers may request a hearing when aggrieved by a decision of the Department as set forth in Chapter I of this Manual. The procedure for administrative hearings is more specifically set forth in Chapter I of this Manual.
+END SOURCE 2
+
+SOURCE 3: Administrative Hearings — Maine Department of Health and Human Services | https://www.maine.gov/dhhs/about-us/administrative-hearings | source's own date: none stated on page (footer copyright 2023) | retrieved: 2026-09-01
+Administrative Hearings
+
+The Division of Administrative Hearings provides administrative hearings to citizens and clients who are aggrieved by actions or inactions of the Maine Department of Health and Human Services. Hearings are conducted on a variety of matters including, but not limited to, child support, medical eligibility determinations, eligibility for Food Supplement, MaineCare, Temporary Assistance for Needy Families, Emergency Assistance, ASPIRE, General Assistance and licensing matters. Hearings are generally held at the regional offices of the Maine Department of Health and Human Services from Sanford to Fort Kent.
+
+Contact Us
+Maine Department of Health and Human Services
+Division of Administrative Hearings
+109 Capitol Street
+11 State House Station
+Augusta, ME 04333-0011
+TEL: (207) 624-5350
+FAX: (207) 287-8448
+TTY: Users: Dial 711 (Maine Relay)
+DHHSadminhearings@maine.gov
+
+Copyright © 2023
+END SOURCE 3
+
+SOURCE 4: Frequently Asked Questions — Administrative Hearings, Maine Department of Health and Human Services | https://www.maine.gov/dhhs/about-us/administrative-hearings/faq | source's own date: none stated on page (footer copyright 2023) | retrieved: 2026-09-01
+Frequently Asked Questions
+
+What is a Fair Hearing?
+If you disagree with a Department of Health and Human Services' (DHHS) decision to grant, deny, or otherwise change a benefit, license, an amount owed, or some other decision affecting you, then you have a right to a hearing. Most DHHS hearings are held by the Division of Administrative Hearings. Sometimes hearings are held before another agency.
+
+Are there time limits to appeal a Decision by the Department??
+Time Limits: You generally have 30 days to appeal for a hearing. Each program has different rules on appeals. It is important to read carefully the notice you get from the Department to make sure that you do not miss any deadlines for your appeal. The Division of Administrative Hearings cannot give this information to you. Be clear that you are filing for an appeal and that your letter is postmarked within the filing time period.
+
+You may be allowed to file a late appeal. You will need to show "good cause" for filing the appeal late. "Good cause" happens when you were prevented from making the deadline by circumstances beyond your control. "Good cause" is difficult to prove, so it is very important that your appeal is filed within the time required.
+
+What Happens After the Hearing?
+You will get a written decision, by mail, from the Hearing Officer approximately 30 days after the hearing is closed.
+
+The decision may take one of two forms. For most hearings, the Hearing Officer's written decision is the final agency action. For some hearings, the Hearing Officer's written decision will be a "Recommended Decision." In this type of case, the Commissioner of the Department of Health and Human Services will have the final say and will issue a written "Final Decision."
+
+If you do not agree with the final decision of the Hearing Officer, you can appeal the decision within 30 days, to the Superior Court. If you do not agree with the "Recommended Decision" of the Hearing Officer, you have 7 to 20 days (depending on the type of case) to write to the Commissioner to explain your exceptions to the Recommended Decision. If you do not agree with the Final Decision of the Commissioner, you can appeal the decision within 30 days, to the Superior Court.
+
+Copyright © 2023
+END SOURCE 4
+
+SOURCE 5: Home page — Maine Long-Term Care Ombudsman Program | https://www.maineombudsman.org/ | source's own date: none stated on page (footer copyright 2026) | retrieved: 2026-09-01
+Maine Long-Term Care Ombudsman Program
+An Advocacy Program for Long-Term Care Consumers
+
+The Maine Long-Term Care Ombudsman Program is a non-profit agency whose mission is to advocate for quality of life and care for long-term care consumers. Our services are free and confidential.
+
+Federal law and Maine law authorize our staff to investigate complaints made by or on behalf of long-term care consumers and to assist consumers in exercising their rights that are guaranteed by law.
+
+Our program serves residents of nursing homes, assisted housing programs including residential care and assisted living, consumers receiving home care services including homemaker, adult day and hospice.
+
+We also serve patients in hospitals facing barriers in accessing long-term care services. Our staff is knowledgeable about long-term care services. We can answer questions about services, including where to find services, how services are paid for, what to do if services are denied, terminated or reduced, and how to proceed when problems arise.
+
+The Maine Long-Term Care Ombudsman Program provides advocacy services while maintaining strict confidence. This means that anyone reporting concerns about long-term care services can be assured that all communication with our staff and volunteers will not be disclosed without consent. In addition, when we are contacted with a request for assistance, we will not take action to investigate or resolve a complaint without obtaining consent first. In providing advocacy services we work to support the wishes of the consumer.
+
+The Maine Long-Term Care Ombudsman Program is here to help with information, guidance and advocacy. Our services are free and confidential. For more information or assistance contact us at (800) 499-0229 or (207) 621-1079.
+
+The Maine Long-Term Ombudsman Program complies with applicable state and federal civil rights laws and does not discriminate on the basis of race, color, religion, national origin, age, disability, sexual orientation, gender identity and/or expression in the administration or operation of its services, programs, or activities.
+
+61 Winthrop St.
+Augusta, ME 04330
+(800) 499-0229
+
+Copyright © 2026
+END SOURCE 5
+
+SOURCE 6: Contact, Advocacy Intake Office & Winthrop Street Headquarters — Maine Long-Term Care Ombudsman Program | https://www.maineombudsman.org/contact.aspx | source's own date: none stated on page (footer copyright 2026) | retrieved: 2026-09-01
+Contact Information
+
+Address:
+61 Winthrop St.
+Augusta, ME 04330
+
+Phone:
+(207) 621-1079
+Toll Free:
+(800) 499-0229
+Fax:
+(207) 621-0509
+
+Email:
+MLTCOP@MaineOmbudsman.org
+
+Hours:
+Mon – Thurs 8:00am – 4:30pm
+Fri: 8:00am - 4:00pm
+Closed on all federal and state holidays
+
+We look forward to assisting you with any questions you may have.
+
+Copyright © 2026
+END SOURCE 6
+
+SOURCE 7: Our Team — Maine Long-Term Care Ombudsman Program | https://www.maineombudsman.org/about.aspx | source's own date: none stated on page (footer copyright 2026) | retrieved: 2026-09-01
+Staff Directory
+
+Brenda Gallant
+Executive Director
+State Long-Term Care Ombudsman
+
+Pamela Marshall
+Associate Director
+
+Jasmine Labrie
+Executive Assistant
+
+Joanne West
+Intake Worker
+
+Stephanie Day
+Intake Worker
+
+Allison Knight
+Homeward Bound Transition Manager
+
+Kristen McCausland
+Volunteer and Community Engagement Manager
+
+Nicole Marchesi
+Public Policy Advocate
+
+Danielle Malcolm
+Home Care Program Manager
+
+Jamie Dyer
+Home Care Ombudsman
+
+Bethany Tompkins
+Regional Ombudsman – Team Leader
+
+Christopher Allen
+Regional Ombudsman – Team Leader
+
+Maria Woodward
+Regional Ombudsman
+
+Tracy Richard
+Regional Ombudsman
+
+Sue McKeen
+Regional Ombudsman
+
+Seth Morgan
+Regional Ombudsman - Patient Advocate
+
+Board of Directors
+Executive Committee
+Roy Gedat - President
+Diane Barnes - Vice-President
+George Roy - Treasurer
+
+Directors
+Paul Linet
+Diana Scully
+Sandra Butler
+Fred Fowler
+Betsy DiCapua
+Sharon Berz
+
+Copyright © 2026
+END SOURCE 7
+
+END OF PACKET — 7 sources
