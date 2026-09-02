@@ -1,0 +1,31 @@
+{
+  "recipe_version": 1,
+  "state": "iowa",
+  "sources": [
+    {
+      "n": 1,
+      "title": "481 IAC 58.40(135C), Involuntary discharge or transfer (nursing facilities) — Iowa Administrative Code (PDF)",
+      "url": "https://www.legis.iowa.gov/docs/iac/rule/481.58.40.pdf",
+      "source_date": "none stated on document beyond the IAC chapter running head",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "The Legislature's single-rule PDF, matching the standing packet's own extraction exactly: the running heads (\"IAC Ch 58, p.1\"), the indented statutory-quotation blocks, and the parenthesised class citations at the end of many paragraphs are the rule's own and survive -layout intact. Plain curl with a pinned browser user-agent is enough; no WAF or JS gate sits in front of this host."
+    },
+    {
+      "n": 2,
+      "title": "Iowa Department of Health and Human Services — Office of the State Long-Term Care Ombudsman",
+      "url": "https://hhs.iowa.gov/family-community/aging-services/ltc-ombudsman",
+      "source_date": "current on retrieval",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "main",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Plain curl with a browser user-agent returns the full server-rendered page; no client-side gate. Scope 'main' holds the page's own on-page table of contents plus the body copy and excludes the site-wide header/footer chrome. Wider than the standing packet's own hand-curated excerpt, which is safe: a superset can only add evidence, never narrow what verifies. The department's own Cloudflare-style email obfuscation renders literally as the placeholder text \"[email protected]\" rather than the decoded address, matching how the standing packet already carries it — this page's markup does not use the data-cfemail attribute capture.py's decoder targets, so nothing is silently changed here."
+    }
+  ]
+}

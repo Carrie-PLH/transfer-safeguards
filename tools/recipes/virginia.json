@@ -1,0 +1,46 @@
+{
+  "recipe_version": 1,
+  "state": "virginia",
+  "sources": [
+    {
+      "n": 1,
+      "title": "Code of Virginia, Title 32.1, Chapter 5, Article 2 — Rights and Responsibilities of Patients in Nursing Homes (§§ 32.1-137.01 through 32.1-138.6)",
+      "url": "https://law.lis.virginia.gov/vacodefull/title32.1/chapter5/article2/",
+      "source_date": "sections carry their own enactment lines; § 32.1-138.1 ends 1987, c. 221; 1993, c. 692",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "The standing packet's own method is 'reduced to text mechanically (tag strip over the served document)' with no scope narrower than the whole page — LIS's own site chrome (the General Assembly nav, the search-type picker) is left in as served. 'body' matches that: it is the widest legal scope and adds nothing the standing packet did not already carry. Plain curl with a browser user-agent is enough; no WAF sits in front of this host."
+    },
+    {
+      "n": 2,
+      "title": "Virginia Department of Medical Assistance Services, Virginia Medicaid/FAMIS Client Appeals — Frequently Asked Questions (PDF)",
+      "url": "https://www.dmas.virginia.gov/media/3221/client-appeals-frequently-asked-questions-2021-05-21.pdf",
+      "source_date": "05/21/2021 (page footer)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "Matches the standing packet's own extraction. The appeals-contact block prints as a five-column table whose cells the extractor renders on one line, and the bullet glyphs in the rights lists do not survive extraction and appear as leading spaces — both are the standing packet's own documented artifacts of this PDF under -layout, not a capture defect."
+    },
+    {
+      "n": 3,
+      "title": "Virginia Department for Aging and Rehabilitative Services — Long-Term Care & Ombudsman",
+      "url": "https://dars.virginia.gov/aging/ombudsman/",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Matches the standing packet's own 'tag strip over the served document' method: 'body' scope, no narrowing, so the page's navigation and footer are carried exactly as the standing packet already carries them. Plain curl with a browser user-agent is enough."
+    }
+  ]
+}
