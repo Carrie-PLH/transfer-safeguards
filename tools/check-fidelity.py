@@ -190,12 +190,21 @@ EMAIL_RE = re.compile(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}')
 # Deliberately narrow: a box number, or a street number followed by a street
 # name and a street-type word. A looser pattern matches statutory citations and
 # room numbers and would spend its life crying wolf.
+# The abbreviations' trailing period is optional, ported from the Rules & Record
+# sibling on 2026-09-02 where it was fixed on 2026-08-31. Requiring it made this
+# layer blind to the commonest way an address is written: Arkansas published
+# "1401 West Capitol Ave, Suite 450" — a comma, not a period — so the address was
+# never extracted and so never checked, and the page went on naming an office
+# DESE had moved out of. Nevada's two office addresses and New York's were
+# invisible here for the same reason. A false negative on a contact fact is worse
+# than a false positive on one, because nothing announces it.
 ADDRESS_RE = re.compile(
     r'P\.?\s?O\.?\s+Box\s+\d+'
     r'|\d{1,6}\s+(?:[NSEW]\.?\s+|North\s+|South\s+|East\s+|West\s+)?'
     r'(?:[A-Z][A-Za-z.\']*\s+){1,4}'
-    r'(?:Street|St\.|Avenue|Ave\.|Road|Rd\.|Drive|Dr\.|Boulevard|Blvd\.'
-    r'|Lane|Ln\.|Way|Place|Pl\.|Court|Ct\.|Circle|Cir\.|Highway|Hwy\.|Plaza|Mall)'
+    r'(?:Street|St\.?|Avenue|Ave\.?|Road|Rd\.?|Drive|Dr\.?|Boulevard|Blvd\.?'
+    r'|Lane|Ln\.?|Way|Place|Pl\.?|Court|Ct\.?|Circle|Cir\.?|Highway|Hwy\.?'
+    r'|Plaza|Mall)'
     r'(?![A-Za-z])')
 HREF_RE = re.compile(r'href="([^"]+)"|\]\((https?://[^)\s]+)\)')
 
@@ -797,12 +806,32 @@ def self_test():
         if failures:
             print('SELF-TEST FAILED:'); [print(' ', f) for f in failures]
             return 1
-        print(f'SELF-TEST PASSED: clean page passes; all {len(expected)} fabrication modes caught; '
-              'multi-packet evidence checked and enforced; both quote delimiter styles '
-              'extracted (curly, ASCII, mixed, nested, apostrophe-in-curly, link-terminated); '
-              'Spanish pairing enforced '
-              '(unpaired, unknown id, cross-state, wrong-language quote).')
-        return 0
+    # ADDRESS_RE must see a street type written without its period. Requiring
+    # the period made this layer silently blind to Arkansas's published address
+    # in the Rules & Record sibling; a contact fact that is never extracted is
+    # never checked, and nothing says so. The second loop is the fence around
+    # the loosening: an optional period must not turn prose into an address.
+    for probe, want in (
+            ('1401 West Capitol Ave, Suite 450, Little Rock', '1401 West Capitol Ave'),
+            ('1401 West Capitol Ave. Suite 450', '1401 West Capitol Ave.'),
+            ('123 Martin Luther King Blvd, Suite 2', '123 Martin Luther King Blvd'),
+            ('2 Capitol Mall, Little Rock', '2 Capitol Mall'),
+            ('540 Cedar Street, St. Paul', '540 Cedar Street'),
+            ('P.O. Box 480, Jefferson City', 'P.O. Box 480')):
+        got = ADDRESS_RE.findall(probe)
+        assert got and got[0] == want, (
+            f'ADDRESS_RE missed {want!r} in {probe!r}, got {got!r}')
+    for quiet in ('see 34 CFR Part 300 for more', 'Room 450 of the building',
+                  'within 45 Days of receipt'):
+        assert not ADDRESS_RE.findall(quiet), (
+            f'ADDRESS_RE matched prose that is not an address: {quiet!r}')
+    print(f'SELF-TEST PASSED: clean page passes; all {len(expected)} fabrication modes caught; '
+          'multi-packet evidence checked and enforced; both quote delimiter styles '
+          'extracted (curly, ASCII, mixed, nested, apostrophe-in-curly, link-terminated); '
+          'addresses extracted with and without the abbreviation period, and prose '
+          'rejected; Spanish pairing enforced '
+          '(unpaired, unknown id, cross-state, wrong-language quote).')
+    return 0
 
 
 def main(argv):
