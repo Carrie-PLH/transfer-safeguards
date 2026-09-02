@@ -7,3 +7,7 @@ __pycache__/
 # proof does not. Ignored rather than deleted: nothing under anchors/ is ever
 # edited or removed by hand, so the backups stay on disk and out of the index.
 anchors/ots/*.bak
+
+# Per-machine Claude tool permissions. The shared .claude/ config, if one
+# is ever added, stays tracked; only the local settings file is ignored.
+.claude/settings.local.json
