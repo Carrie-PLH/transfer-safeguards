@@ -152,16 +152,24 @@ def known_ca_bundles():
 # purpose is that two runs a month apart produce the same bytes, and a flag the
 # recipe can vary is a flag that will vary.
 #
-# NOTE 2026-09-03: -nopgbrk is carried over unchanged from this repo's original
-# recipe. sped-safeguards removed it this week after finding it welds a running
-# head to the prose it interrupts with no separator (see capture-core.py's own
-# comment on RUNHEAD_BREAK for the mechanism). This repo has not been audited
-# for the same defect and no filter here currently depends on the form feed
-# surviving, so the flag is left as-is pending that audit -- see the queue for
-# the scoping writeup. Do not remove it here without re-verifying every
-# PDF-sourced recipe the way Montana and North Dakota were.
-PDFTOTEXT_RAW = ["-raw", "-nopgbrk", "-enc", "UTF-8"]
-PDFTOTEXT_LAYOUT = ["-layout", "-nopgbrk", "-enc", "UTF-8"]
+# NOTE 2026-09-03: -nopgbrk removed, completing the portfolio. The flag
+# suppresses the form feed marking a page boundary rather than rendering it, so
+# a page break landing mid-sentence welds the running head that follows onto the
+# interrupted sentence with no separator left to cut on (see capture-core.py's
+# comment on RUNHEAD_BREAK for the mechanism).
+#
+# The audit that note asked for was done before the flag was removed, and this
+# repo is the small case: both PDF sources were fetched once and extracted
+# twice, with the flag and without. Both changed, and both changes are pure
+# page-break splits -- collapsing whitespace makes the two extractions
+# identical, so separators were restored and nothing else moved. Neither source
+# carried a fused word, which is consistent with both being pdftotext-layout:
+# that mode already breaks the running head onto its own line, so the flag cost
+# it a blank line rather than a sentence. Removing it is still right, because
+# the form feed is what strip-running-headers cuts on and what a future
+# -raw source here would need.
+PDFTOTEXT_RAW = ["-raw", "-enc", "UTF-8"]
+PDFTOTEXT_LAYOUT = ["-layout", "-enc", "UTF-8"]
 
 # The build pin itself lives in capture-core.py; see the import shim near the
 # top of this file. Untouched until now, this repo has always captured PDFs
@@ -332,8 +340,30 @@ def f_pipe_table_cells(t):
     return re.sub(r'\s*\|\s*', ' | ', t)
 
 
+def f_strip_running_headers(t):
+    """Drop a running head that recurs at page boundaries; keep everything else.
+
+    Two stages. A line repeating at least RUNHEAD_MIN_REPEATS times within
+    RUNHEAD_EDGE_LINES of a page break is a head, not prose. A head fused to the
+    line a break interrupted is split on the form feed first, so the sentence is
+    restored rather than carried into the packet with the head welded into it.
+
+    A line at an edge is held to a lower character floor
+    (RUNHEAD_BREAK_MIN_CHARS) so the short half of a split head is caught, and a
+    contact-node protection rule keeps legitimately repeated content -- an
+    agency's mailing address or hearing office recurring mid-page -- from being
+    eaten.
+
+    Depends on the form feed surviving extraction, which is why -nopgbrk was
+    removed above. The implementation lives in capture-core.py, driven by that
+    module's own constants; this repo calls it rather than carrying a second
+    copy that can drift."""
+    return _core.f_strip_running_headers(t)
+
+
 FILTERS = {
     'normalize-apostrophes': f_normalize_apostrophes,
+    'strip-running-headers': f_strip_running_headers,
     'normalize-ligatures': f_normalize_ligatures,
     'normalize-bullets': f_normalize_bullets,
     'strip-zero-width': f_strip_zero_width,
@@ -681,7 +711,23 @@ def capture_source(src, supplied=None):
     else:
         text = raw if isinstance(raw, str) else raw.decode('utf-8', 'replace')
 
-    return apply_filters(text, src.get('filters', []))
+    text = apply_filters(text, src.get('filters', []))
+
+    # Whatever page breaks the filters did not consume become line breaks here.
+    # Dropping -nopgbrk keeps the form feed so that strip-running-headers can
+    # find the head that follows it, but only the recipes that actually carry a
+    # running head run that filter, and the rest should not start carrying a
+    # control character into their packets. A line break is the honest
+    # rendering: it adds a break where the document has a page boundary and
+    # removes nothing.
+    #
+    # Deliberately after the filters and not before: converting earlier would
+    # destroy the same signal -nopgbrk used to destroy.
+    #
+    # form_feed_to_linebreak lives in capture-core.py; it is a one-line
+    # function, but every repo needs the exact same one line, called at the
+    # exact same point in the pipeline (after filters, not before).
+    return _core.form_feed_to_linebreak(text)
 
 
 class NeedsAgentFetch(Exception):
@@ -977,6 +1023,29 @@ def self_test():
           'structured contacts were not rendered as key: value lines')
 
     # Ordering is part of the recipe, so it must be honoured.
+    # -nopgbrk removal, 2026-09-03. Three properties, each of which the defect
+    # in sped-safeguards violated. Behavioural coverage of the filter itself
+    # lives in capture-core.py's own self-test; what is asserted here is that
+    # this repo is wired to it correctly.
+    #
+    # 1. Neither pinned mode may carry the flag back.
+    for _name, _flags in (('pdftotext-raw', PDFTOTEXT_RAW),
+                          ('pdftotext-layout', PDFTOTEXT_LAYOUT)):
+        check('-nopgbrk' not in _flags,
+              f'{_name} carries -nopgbrk; the page break it suppresses is what '
+              'welds a running head into the sentence it interrupts')
+    # 2. The filter is reachable by name, so a recipe that needs it can ask.
+    check(FILTERS.get('strip-running-headers') is f_strip_running_headers,
+          'strip-running-headers is not registered in FILTERS')
+    # 3. A form feed must not leak into a packet body, but must survive until
+    #    after the filters -- converting it earlier destroys the same signal
+    #    -nopgbrk used to destroy.
+    _ff = 'sentence cut here\x0cRUNNING HEAD'
+    check('\x0c' not in _core.form_feed_to_linebreak(_ff),
+          'a form feed survived into the packet body')
+    check(_core.form_feed_to_linebreak(_ff) == 'sentence cut here\nRUNNING HEAD',
+          'form_feed_to_linebreak did not render the page break as a line break')
+
     check(apply_filters('  x • y  ', ['trim-lines', 'normalize-apostrophes'])
           == '  x • y', 'filters applied out of order or not at all')
 

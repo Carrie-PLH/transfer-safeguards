@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: iowa
-ASSEMBLED: 2026-09-02
+ASSEMBLED: 2026-09-03
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/iowa.json (recipe digest 22f70411b354). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -10,7 +10,7 @@ CAPTURE NOTES:
 - SOURCE 2: transport curl; extractor html-text; scope main; filters trim-lines, collapse-blank-runs.
   Plain curl with a browser user-agent returns the full server-rendered page; no client-side gate. Scope 'main' holds the page's own on-page table of contents plus the body copy and excludes the site-wide header/footer chrome. Wider than the standing packet's own hand-curated excerpt, which is safe: a superset can only add evidence, never narrow what verifies. The department's own Cloudflare-style email obfuscation renders literally as the placeholder text "[email protected]" rather than the decoded address, matching how the standing packet already carries it — this page's markup does not use the data-cfemail attribute capture.py's decoder targets, so nothing is silently changed here.
 
-SOURCE 1: 481 IAC 58.40(135C), Involuntary discharge or transfer (nursing facilities) — Iowa Administrative Code (PDF) | https://www.legis.iowa.gov/docs/iac/rule/481.58.40.pdf | source date: none stated on document beyond the IAC chapter running head | retrieved: 2026-09-02
+SOURCE 1: 481 IAC 58.40(135C), Involuntary discharge or transfer (nursing facilities) — Iowa Administrative Code (PDF) | https://www.legis.iowa.gov/docs/iac/rule/481.58.40.pdf | source date: none stated on document beyond the IAC chapter running head | retrieved: 2026-09-03
 IAC                                                                                              Ch 58, p.1
 
 
@@ -65,6 +65,7 @@ care provider; the person or agency responsible for the resident’s placement, 
 facility; and the department on aging’s office of the long-term care ombudsman. The notice shall indicate
 that copies have been transmitted to the required parties by using the abbreviation “cc:” and listing the
 names of all parties to whom copies were sent.
+
 Ch 58, p.2                                                                                                IAC
 
 
@@ -119,6 +120,7 @@ transfer or discharge pending a final decision, including the exhaustion of all 
     d. The hearing shall be heard by a department of inspections and appeals administrative law judge
 pursuant to Iowa Code chapter 17A and 7—Chapter 2506. The hearing shall be public unless the resident
 or resident’s legal representative requests in writing that the hearing be closed. In a determination as to
+
 IAC                                                                                                Ch 58, p.3
 
 
@@ -174,6 +176,7 @@ period of 60 days must be allowed for an orderly transfer of residents to other 
 facility. (I, II) Involuntary relocation may occur only in the following situations, which shall be
 documented in the resident’s record: (II)
     (1) Resident’s incompatibility with or disturbance to other roommates.
+
 Ch 58, p.4                                                                                                          IAC
 
 
@@ -207,7 +210,7 @@ transfer to another facility and not as an intrafacility transfer. (II, III)
 [ARC 1752C, IAB 12/10/14, effective 1/14/15; ARC 3523C, IAB 12/20/17, effective 1/24/18; ARC 7033C, IAB 5/31/23, effective
 7/5/23; Editorial change: IAC Supplement 8/5/26]
 
-SOURCE 2: Iowa Department of Health and Human Services — Office of the State Long-Term Care Ombudsman | https://hhs.iowa.gov/family-community/aging-services/ltc-ombudsman | source date: current on retrieval | retrieved: 2026-09-02
+SOURCE 2: Iowa Department of Health and Human Services — Office of the State Long-Term Care Ombudsman | https://hhs.iowa.gov/family-community/aging-services/ltc-ombudsman | source date: current on retrieval | retrieved: 2026-09-03
 Office of the State Long-Term Care Ombudsman
 
  Topics:
