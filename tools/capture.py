@@ -97,8 +97,31 @@ TRANSPORTS = LOCAL_TRANSPORTS + AGENT_TRANSPORTS
 EXTRACTORS = ("pdftotext-raw", "pdftotext-layout", "pdfplumber",
               "html-text", "next-data", "docx", "none")
 
+# Opt-in per source (`"compressed": false`), not global, and default on so that
+# omitting it fetches exactly as before this option existed.
+#
+# What it is for. Some hosts serve a gzip stream that curl finishes reading and
+# then fails to write: every byte arrives -- byte-identical to a clean fetch --
+# and curl exits 23, "Failed writing received data to disk/application", so the
+# fetch raises and a complete document is discarded. Reproduced 2026-09-03 on
+# www.uab.edu's larger pages (167KB-259KB), intermittently across four sources
+# in a single run, and bisected against these very arguments: dropping
+# --compressed returns exit 0 with identical bytes, while dropping -L, the
+# writeout, or the retry flags changes nothing.
+#
+# It is a per-source escape rather than a change to CURL_ARGS because the flag
+# is worth having everywhere else -- these documents are large and mostly text --
+# and because the failure belongs to particular hosts rather than to the
+# fetcher. It is not an exit-code exception: treating exit 23 with a full body
+# as success would silence a genuine write failure everywhere, which is a much
+# worse trade than sending one host uncompressed bytes.
 CURL_ARGS = ["-sSL", "--compressed", "--max-time", "120",
              "--retry", "2", "--retry-delay", "3"]
+
+
+def curl_args(compressed=True):
+    """CURL_ARGS, minus --compressed when a source opts out. See the note above."""
+    return CURL_ARGS if compressed else [a for a in CURL_ARGS if a != '--compressed']
 
 # Some agencies refuse a request that sends no user-agent: education.vermont.gov
 # and mdek12.org both return HTTP 403 to a bare fetch and serve the document
@@ -440,6 +463,10 @@ def lint(rec, slug=None):
                         f'one of {", ".join(sorted(USER_AGENTS))}')
         if s.get('user_agent') and s.get('transport') != 'curl':
             errs.append(f'{w}: user_agent applies to the curl transport only')
+        if s.get('compressed') is not None and not isinstance(s['compressed'], bool):
+            errs.append(f'{w}: compressed must be true or false')
+        if s.get('compressed') is False and s.get('transport') != 'curl':
+            errs.append(f'{w}: compressed applies to the curl transport only')
         if s.get('ca_bundle') and s['ca_bundle'] not in known_ca_bundles():
             errs.append(f'{w}: unknown ca_bundle {s["ca_bundle"]!r}; '
                         f'expected a .pem in tools/certs/ '
@@ -478,6 +505,8 @@ def digest(rec):
         m['filters'] = list(s.get('filters', []))
         if s.get('user_agent') and s['user_agent'] != 'none':
             m['user_agent'] = s['user_agent']
+        if s.get('compressed') is False:
+            m['compressed'] = False
         if s.get('ca_bundle'):
             m['ca_bundle'] = s['ca_bundle']
         if s.get('pages'):
@@ -490,9 +519,10 @@ def digest(rec):
 
 # --- transports and extractors ----------------------------------------------
 
-def fetch_curl(url, binary, user_agent='none', ca_bundle=None):
+def fetch_curl(url, binary, user_agent='none', ca_bundle=None,
+               compressed=True):
     ua = USER_AGENTS[user_agent]
-    args = ['curl'] + CURL_ARGS + (['-A', ua] if ua else []) \
+    args = ['curl'] + curl_args(compressed) + (['-A', ua] if ua else []) \
         + (['--cacert', ca_bundle_path(ca_bundle)] if ca_bundle else []) \
         + ['-w', '%{http_code}', '-o', '-', url]
     r = subprocess.run(args, capture_output=True, timeout=180)
@@ -701,6 +731,7 @@ def capture_source(src, supplied=None):
     else:
         raw = fetch_curl(src['url'], binary=needs_binary,
                          user_agent=src.get('user_agent', 'none'),
+                         compressed=src.get('compressed', True),
                          ca_bundle=src.get('ca_bundle'))
 
     if isinstance(raw, str) and needs_binary:
@@ -1029,6 +1060,29 @@ def self_test():
           'a multi-path scope dropped the body copy or the contacts')
     check('phone: 404-656-3963' in both,
           'structured contacts were not rendered as key: value lines')
+
+
+    # Per-source --compressed opt-out, 2026-09-03. The guarantee that makes it
+    # safe to add: a recipe that does not mention it fetches, and digests,
+    # exactly as before the option existed.
+    check('--compressed' in curl_args(True), 'curl_args dropped --compressed by default')
+    check('--compressed' not in curl_args(False), 'compressed=False kept --compressed')
+    check([a for a in curl_args(False)] == [a for a in CURL_ARGS if a != '--compressed'],
+          'compressed=False changed an argument other than --compressed')
+    check(curl_args(True) == CURL_ARGS, 'curl_args(True) is not CURL_ARGS itself')
+    _cbase = {'recipe_version': RECIPE_VERSION, 'state': 'testland',
+              'sources': [{'n': 1, 'title': 'T', 'url': 'https://x.gov/a',
+                           'transport': 'curl', 'extractor': 'html-text',
+                           'scope': 'main', 'filters': []}]}
+    _con = json.loads(json.dumps(_cbase)); _con['sources'][0]['compressed'] = True
+    _coff = json.loads(json.dumps(_cbase)); _coff['sources'][0]['compressed'] = False
+    check(digest(_cbase) == digest(_con),
+          'setting compressed to its default moved the digest')
+    check(digest(_cbase) != digest(_coff),
+          'opting out of --compressed did not move the digest')
+    check(lint(_coff, 'testland') == [], 'a valid compressed:false source did not lint')
+    _cbad = json.loads(json.dumps(_cbase)); _cbad['sources'][0]['compressed'] = 'no'
+    check(lint(_cbad, 'testland'), 'lint accepted a non-boolean compressed')
 
     # Ordering is part of the recipe, so it must be honoured.
     # -nopgbrk removal, 2026-09-03. Three properties, each of which the defect
