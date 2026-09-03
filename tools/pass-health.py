@@ -15,7 +15,14 @@ process is dead.
 What it checks:
   1. Rotation freshness — the newest manifest entry anywhere. Three states a
      night means this should never be more than about a day old.
-  2. Cursor sanity — tools/review-cursor.txt names a state that exists.
+  2. Cursor sanity — tools/review-cursor.txt names a state that exists. An
+     absent cursor is read two ways, because it means two opposite things: in a
+     collection whose rotation has run, the position was lost and that is
+     severe; in one whose rotation has never started, there was no position to
+     lose and the first pass begins where it would have begun anyway. A
+     REVIEW-LOG.md, or git having ever tracked the cursor, distinguishes them.
+     Reported as severe on 2026-09-03 in a repository that had never had a
+     cursor at all, which cost an evening establishing that nothing was wrong.
   3. Coverage — the oldest state, and how many have not been reviewed within a
      full lap (17 nights at three a night, so 25 days allows slack).
   4. External anchoring — whether the newest anchor run got its OpenTimestamps
@@ -62,6 +69,7 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HISTORY = os.path.join(ROOT, 'tools', 'packets', 'history')
 CURSOR = os.path.join(ROOT, 'tools', 'review-cursor.txt')
+REVIEW_LOG = os.path.join(ROOT, 'REVIEW-LOG.md')
 ANCHOR_CHAIN = os.path.join(ROOT, 'anchors', 'chain.jsonl')
 ANCHOR_OTS = os.path.join(ROOT, 'anchors', 'ots')
 PACKETS = os.path.join(ROOT, 'tools', 'packets')
@@ -75,6 +83,34 @@ def _date(s):
         return datetime.date.fromisoformat(s)
     except (ValueError, TypeError):
         return None
+
+
+def cursor_ever_existed(cursor=CURSOR, log=REVIEW_LOG):
+    """Has this repository's rotation ever had a position to lose?
+
+    An absent cursor means two opposite things. In a collection whose rotation
+    has run, the file was lost, and the rotation's place with it — severe. In a
+    collection whose rotation has never started, there is nothing to lose and
+    the first pass will begin at the alphabetically first slug, which is what
+    it would have done anyway.
+
+    Two independent witnesses, either of which settles it: a REVIEW-LOG.md, the
+    append-only record a pass writes, and git having ever tracked the cursor.
+    The git question is asked of the file's own repository and answered False
+    if there is no repository or no git, so a temporary directory — or a clone
+    without history — reads as never-initialized rather than raising.
+    """
+    if os.path.exists(log):
+        return True
+    try:
+        import subprocess
+        out = subprocess.run(
+            ['git', 'log', '--oneline', '-1', '--', os.path.basename(cursor)],
+            cwd=os.path.dirname(os.path.abspath(cursor)),
+            capture_output=True, text=True, timeout=10)
+        return out.returncode == 0 and bool(out.stdout.strip())
+    except (OSError, subprocess.SubprocessError):
+        return False
 
 
 def latest_pass_by_state(history=HISTORY):
@@ -92,7 +128,8 @@ def latest_pass_by_state(history=HISTORY):
 
 
 def check(today=None, max_age_days=2, history=HISTORY, cursor=CURSOR,
-          chain=ANCHOR_CHAIN, ots_dir=ANCHOR_OTS, packets=PACKETS):
+          chain=ANCHOR_CHAIN, ots_dir=ANCHOR_OTS, packets=PACKETS,
+          log=REVIEW_LOG):
     today = today or datetime.date.today()
     findings = []   # (severity, text) — 'severe' counts against the exit code
     notes = []
@@ -123,8 +160,20 @@ def check(today=None, max_age_days=2, history=HISTORY, cursor=CURSOR,
                      f'{min(passes.values())}')
 
     if not os.path.exists(cursor):
-        findings.append(('severe', 'tools/review-cursor.txt is missing: the '
-                                   'rotation will restart at alabama'))
+        if cursor_ever_existed(cursor, log):
+            findings.append(('severe',
+                             'tools/review-cursor.txt is missing and this '
+                             'rotation has run before: the position was lost, '
+                             'not merely unset. Do not let a pass restart the '
+                             'rotation silently — reconstruct the position '
+                             'from REVIEW-LOG.md in a session with the owner'))
+        else:
+            findings.append(('note',
+                             'tools/review-cursor.txt does not exist and never '
+                             'has: this rotation has not started. The first '
+                             'pass begins at the alphabetically first '
+                             'published slug, which is where it would have '
+                             'begun anyway. Nothing was lost'))
     else:
         slug = open(cursor, encoding='utf-8').read().strip()
         if not os.path.exists(os.path.join(packets, f'{slug}-packet.txt')):
@@ -216,6 +265,24 @@ def self_test():
         if not any('not a state' in t for _, t in f):
             failures.append('a bogus cursor was not caught')
 
+        # an absent cursor is a note where the rotation never started and a
+        # severe finding where it ran and lost its place. The tmpdir is not a
+        # git repository, so the REVIEW-LOG.md is the only witness here.
+        os.remove(cur)
+        log = os.path.join(d, 'REVIEW-LOG.md')
+        f, _ = check(today=today, history=hist, cursor=cur, packets=pk,
+                     chain=os.path.join(d, 'none.jsonl'), log=log)
+        if any(s == 'severe' for s, t in f if 'review-cursor' in t):
+            failures.append('an uninitialized rotation was reported as severe')
+        if not any('never' in t for _, t in f if 'review-cursor' in t):
+            failures.append('an uninitialized rotation was not reported at all')
+        open(log, 'w').write('# Review log\n')
+        f, _ = check(today=today, history=hist, cursor=cur, packets=pk,
+                     chain=os.path.join(d, 'none.jsonl'), log=log)
+        if not any(s == 'severe' for s, t in f if 'review-cursor' in t):
+            failures.append('a lost cursor was not reported as severe')
+        open(cur, 'w').write('iowa\n')
+
         # an anchor run with no OTS proof beside it is a severe finding
         chain = os.path.join(d, 'chain.jsonl')
         with open(chain, 'w') as fh:
@@ -257,7 +324,8 @@ def self_test():
             print('  ' + f)
         return 1
     print('SELF-TEST PASSED: a fresh pass is healthy, a stalled one is caught, '
-          'a bogus cursor is caught, a missing OpenTimestamps proof is caught '
+          'a bogus cursor is caught, an uninitialized rotation is a note while '
+          'a lost one is severe, a missing OpenTimestamps proof is caught '
           'and a present one is not, a recipe-less supplement is reported and '
           'an archival one is not.')
     return 0
