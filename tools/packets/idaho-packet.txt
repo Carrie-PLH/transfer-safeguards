@@ -1,0 +1,2315 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Idaho
+SLUG: idaho
+ASSEMBLED: 2026-09-02
+CAPTURE NOTES: Source 1 (Idaho Session Laws 2025, chapter 122 — Senate Bill No. 1015, as enacted) was retrieved as a PDF from legislature.idaho.gov by the session fetch tool and converted to text with pdftotext -layout, appended in full. The PDF carries no "Approved by the Governor" stamp of its own, but its enactment as 2025 Session Laws chapter 122 is confirmed independently by Source 2: the current codified Idaho Code sections each carry a History line reading "added 2025, ch. 122, sec. <n>", and the section numbers in those History lines match this bill's own SECTION numbering exactly (e.g. 39-1301 <- SECTION 20). The bill is printed with a line number in the left margin of every line, and pdftotext's layout mode renders that number inline whenever a sentence wraps mid-line; SECTION 42's nullification sentence and SECTION 46's effective-date sentence (both quoted on the page) each wrap across such a number, reproduced exactly as extracted rather than removed. Source 2 (Idaho Code sections 39-1301, 39-1302, 39-1303, 39-1304, 39-1305, and 39-1309, Title 39, Chapter 13) was retrieved by curl with a browser user-agent from legislature.idaho.gov's own statute pages — one page per section — and extracted by stripping HTML tags and collapsing whitespace, mechanically; the site's own left/right navigation (chamber contact blocks, "Who's My Legislator?", "How current is this law?") is common to every page on the site and is omitted from the source bodies below, keeping each section's own heading, text, and History line. Section 39-1304's cross-reference to section 39-1303 is a hyperlink in the source HTML, and stripping that link's tags leaves an extra space before the following comma ("section 39-1303 , Idaho Code"), reproduced as extracted. Sections 39-1306, 39-1307, and 39-1308 (penalty, injunction, and a further redesignated section) were not independently captured; they concern penalties and injunctive relief for operating without a license and do not bear on grounds, notice, hearings, or bed-hold. Source 3 (IDAPA 16.03.26, "Medicaid Plan Benefits") was retrieved as a PDF from adminrules.idaho.gov by curl with a browser user-agent and converted to text with pdftotext -layout. The retrieved chapter is 11,691 lines (853,225 bytes) covering the entire Idaho Medicaid Basic/Plan Benefits program; this packet appends, as four contiguous excerpts in the chapter's own page order, the chapter's cover/description page, its general provisions (rule 000 through rule 003), its chapter-wide definition of "Facility" (subsection 28 of the A-through-H definitions), and the complete Nursing Facilities (NF) sub-area (sections 470 through 499, the chapter's own numbering) — omitting the table of contents and the thirty-odd other sub-areas (Hospital Services, Ambulatory Surgical Centers, ICF/IID, Hospice, and so on) that carry nothing quoted on the Idaho page. Each rule paragraph in the source carries the chapter's own per-paragraph date annotation, "(7-1-26)", reproduced as printed, and its own section headings are rendered in full capitals, reproduced as printed. Sources 4 and 5 (the Department of Health and Welfare's "Appeals and Fair Hearings" page and the Office of Administrative Hearings' "About Common Case Types" page) and Sources 6 and 7 (the Idaho Commission on Aging's "Long-Term Care Ombudsman Program" page and its "Our Staff" page) were retrieved by curl with a browser user-agent and extracted by stripping HTML tags and collapsing whitespace, mechanically; each site's own header/footer navigation, the department's program mega-menu, and (for Source 7) all staff-directory tabs other than "Stay Safe" are omitted, since they are common chrome or concern unrelated programs, though each source keeps its own page-footer "last updated" line. Source 7's two email addresses and one phone number for the "Stay Safe" team and its named ombudsman are not shown in the page's own visible text — they sit only in icon-only mailto: and tel: links — so the packet appends them, after the visible "Stay Safe" tab text, as the literal mailto:/tel: values read from the page's own markup.
+PENDING: Idaho Code sections 39-1306, 39-1307, and 39-1308 (penalty for operating without a license, injunction, and a redesignated cross-reference section) were checked in the bill text and found to concern only license enforcement, not grounds, notice, hearings, or bed-hold, and were not independently captured as full sources on that basis. Idaho Code Title 39, Chapter 33 (Idaho Residential Care or Assisted Living Act) was checked and found to govern only assisted living and residential care, out of this project's v1 scope by charter, and was not captured. aging.idaho.gov's own "Nursing Home Discharge Fact Sheet" (hosted at aging.idaho.gov/wp-content/uploads/2025/12/Nursing-Home-Discharge-Facts.pdf and linked from the Long-Term Care Ombudsman Program page) was fetched and read but is not captured as a source: its own last page credits it to the National Consumer Voice for Quality Long-Term Care / National Ombudsman Resource Center (ltcombudsman.org, ombudcenter@theconsumervoice.org) under an Administration for Community Living grant, with the notice "Bold emphasis added by NORC" — it is a third-party advocacy organization's restatement of the federal 42 CFR 483.15(c) requirements, not Idaho's own statement, and merely hosting a copy does not make it a first-party Idaho source under this project's rule against third-party guides. The individual named State Long-Term Care Ombudsman's own direct phone number was not located. Internet Archive submission: not yet done.
+
+
+SOURCE 1: Idaho Session Laws 2025, chapter 122 (Senate Bill No. 1015, Sixty-eighth Legislature, First Regular Session, as enacted) — "RELATING TO HOSPITALS AND HOME HEALTH AGENCIES" | https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2025/legislation/S1015.pdf | source's own date: the bill's own SECTION 46 declares an emergency and states the act "shall be in full force and effect on and after July 1, 2025"; enacted as 2025 Session Laws chapter 122 per the History lines on the codified sections in Source 2 | retrieved: 2026-09-02
+                        LEGISLATURE OF THE STATE OF IDAHO
+     Sixty-eighth Legislature                   First Regular Session - 2025
+
+                                    IN THE SENATE
+
+                                 SENATE BILL NO. 1015
+
+                           BY HEALTH AND WELFARE COMMITTEE
+
+1                                       AN ACT
+2    RELATING TO HOSPITALS AND HOME HEALTH AGENCIES; REPEALING SECTIONS 39-1301,
+3        39-1301A, 39-1301B, 39-1302, 39-1303, 39-1303a, 39-1303b, 39-1303c,
+4        39-1304, 39-1305, 39-1306, 39-1307, 39-1307A, 39-1307B, 39-1308,
+5        39-1312, 39-1313, AND 39-1314, IDAHO CODE, RELATING TO HOSPITAL LI-
+6        CENSES AND INSPECTION; AMENDING THE HEADING FOR CHAPTER 13, TITLE 39,
+7        IDAHO CODE; AMENDING CHAPTER 13, TITLE 39, IDAHO CODE, BY THE ADDITION
+8        OF A NEW SECTION 39-1301, IDAHO CODE, TO DEFINE TERMS; AMENDING CHAPTER
+9        13, TITLE 39, IDAHO CODE, BY THE ADDITION OF A NEW SECTION 39-1302, IDAHO
+10       CODE, TO PROVIDE A SHORT TITLE; AMENDING CHAPTER 13, TITLE 39, IDAHO
+11       CODE, BY THE ADDITION OF A NEW SECTION 39-1303, IDAHO CODE, TO ESTABLISH
+12       PROVISIONS REGARDING LICENSURE; AMENDING CHAPTER 13, TITLE 39, IDAHO
+13       CODE, BY THE ADDITION OF A NEW SECTION 39-1304, IDAHO CODE, TO PROVIDE
+14       FOR THE DENIAL OR REVOCATION OF A LICENSE; AMENDING SECTION 39-1309,
+15       IDAHO CODE, TO REVISE PROVISIONS REGARDING INSPECTIONS AND TO REDES-
+16       IGNATE THE SECTION; AMENDING SECTION 39-1310, IDAHO CODE, TO REVISE
+17       PROVISIONS REGARDING INFORMATION RECEIVED BY THE DEPARTMENT AND TO RE-
+18       DESIGNATE THE SECTION; AMENDING CHAPTER 13, TITLE 39, IDAHO CODE, BY THE
+19       ADDITION OF A NEW SECTION 39-1307, IDAHO CODE, TO PROVIDE FOR A PENALTY
+20       FOR OPERATING A FACILITY WITHOUT A LICENSE; AMENDING CHAPTER 13, TITLE
+21       39, IDAHO CODE, BY THE ADDITION OF A NEW SECTION 39-1308, IDAHO CODE,
+22       TO PROVIDE FOR AN INJUNCTION TO PREVENT OPERATION WITHOUT A LICENSE;
+23       AMENDING SECTION 39-1301C, IDAHO CODE, TO REDESIGNATE THE SECTION;
+24       REPEALING CHAPTER 24, TITLE 39, IDAHO CODE, RELATING TO HOME HEALTH
+25       AGENCIES; AMENDING SECTION 39-1392a, IDAHO CODE, TO PROVIDE A CORRECT
+26       CODE REFERENCE; AMENDING SECTION 39-3301, IDAHO CODE, TO PROVIDE A COR-
+27       RECT CODE REFERENCE; AMENDING SECTION 39-3322, IDAHO CODE, TO PROVIDE A
+28       CORRECT CODE REFERENCE; AMENDING SECTION 39-3501, IDAHO CODE, TO PRO-
+29       VIDE A CORRECT CODE REFERENCE; AMENDING SECTION 39-3505, IDAHO CODE, TO
+30       PROVIDE A CORRECT CODE REFERENCE; AMENDING SECTION 39-5302, IDAHO CODE,
+31       TO REVISE A DEFINITION; AMENDING SECTION 54-3215, IDAHO CODE, TO PRO-
+32       VIDE A CORRECT CODE REFERENCE; AMENDING SECTION 56-101, IDAHO CODE, TO
+33       PROVIDE A CORRECT CODE REFERENCE; AMENDING SECTION 56-1402, IDAHO CODE,
+34       TO PROVIDE A CORRECT CODE REFERENCE; AMENDING SECTION 56-1602, IDAHO
+35       CODE, TO REVISE A DEFINITION; AMENDING SECTION 56-1703, IDAHO CODE, TO
+36       REVISE A DEFINITION; AMENDING SECTION 63-701, IDAHO CODE, TO REVISE A
+37       DEFINITION; PROVIDING THAT CERTAIN ADMINISTRATIVE RULES CONTAINED IN
+38       IDAPA 16.03.02 SHALL BE NULL, VOID, AND OF NO FORCE AND EFFECT; PROVID-
+39       ING THAT CERTAIN ADMINISTRATIVE RULES CONTAINED IN IDAPA 16.03.07 SHALL
+40       BE NULL, VOID, AND OF NO FORCE AND EFFECT; PROVIDING THAT CERTAIN ADMIN-
+41       ISTRATIVE RULES CONTAINED IN IDAPA 16.03.11 SHALL BE NULL, VOID, AND OF
+42       NO FORCE AND EFFECT; PROVIDING THAT CERTAIN ADMINISTRATIVE RULES CON-
+43       TAINED IN IDAPA 16.03.14 SHALL BE NULL, VOID, AND OF NO FORCE AND EFFECT;
+44       AND DECLARING AN EMERGENCY AND PROVIDING AN EFFECTIVE DATE.
+                                           2
+
+
+
+
+1    Be It Enacted by the Legislature of the State of Idaho:
+
+2        SECTION 1. That Section 39-1301, Idaho Code, be, and the same is hereby
+3    repealed.
+
+4        SECTION 2. That Section 39-1301A, Idaho Code, be, and the same is hereby
+5    repealed.
+
+6        SECTION 3. That Section 39-1301B, Idaho Code, be, and the same is hereby
+7    repealed.
+
+8        SECTION 4. That Section 39-1302, Idaho Code, be, and the same is hereby
+9    repealed.
+
+10       SECTION 5. That Section 39-1303, Idaho Code, be, and the same is hereby
+11   repealed.
+
+12       SECTION 6. That Section 39-1303a, Idaho Code, be, and the same is hereby
+13   repealed.
+
+14       SECTION 7. That Section 39-1303b, Idaho Code, be, and the same is hereby
+15   repealed.
+
+16       SECTION 8. That Section 39-1303c, Idaho Code, be, and the same is hereby
+17   repealed.
+
+18       SECTION 9. That Section 39-1304, Idaho Code, be, and the same is hereby
+19   repealed.
+
+20       SECTION 10. That Section 39-1305, Idaho Code, be, and the same is hereby
+21   repealed.
+
+22       SECTION 11. That Section 39-1306, Idaho Code, be, and the same is hereby
+23   repealed.
+
+24       SECTION 12. That Section 39-1307, Idaho Code, be, and the same is hereby
+25   repealed.
+
+26       SECTION 13. That Section 39-1307A, Idaho Code, be, and the same is
+27   hereby repealed.
+
+28       SECTION 14. That Section 39-1307B, Idaho Code, be, and the same is
+29   hereby repealed.
+
+30       SECTION 15. That Section 39-1308, Idaho Code, be, and the same is hereby
+31   repealed.
+
+32       SECTION 16. That Section 39-1312, Idaho Code, be, and the same is hereby
+33   repealed.
+
+34       SECTION 17. That Section 39-1313, Idaho Code, be, and the same is hereby
+35   repealed.
+                                          3
+
+
+
+
+1        SECTION 18. That Section 39-1314, Idaho Code, be, and the same is hereby
+2    repealed.
+
+3         SECTION 19. That the Heading for Chapter 13, Title 39, Idaho Code, be,
+4    and the same is hereby amended to read as follows:
+
+5                                    CHAPTER 13
+6                    HOSPITAL LICENSES AND INSPECTION HOSPITALS
+
+7        SECTION 20. That Chapter 13, Title 39, Idaho Code, be, and the same is
+8    hereby amended by the addition thereto of a NEW SECTION, to be known and des-
+9    ignated as Section 39-1301, Idaho Code, and to read as follows:
+
+10        39-1301. DEFINITIONS. For purposes of this section through section
+11   39-1309, Idaho Code, the following terms shall be defined as follows:
+12        (1) "CMS" means the centers for medicare and medicaid services.
+13        (2) "Department" means the department of health and welfare.
+14        (3) "Government unit" means the state, or any county, municipality, or
+15   other political subdivision, or any department, division, board, or other
+16   agency thereof.
+17        (4) "Home health agency" means any business entity that primarily pro-
+18   vides skilled nursing services by licensed nurses and also provides at least
+19   one (1) other health care service to an individual in that individual's place
+20   of residence.
+21        (5) "Hospice house" means a facility that is owned and operated by a
+22   medicare certified hospice agency for the purpose of providing inpatient
+23   hospice services consistent with 42 CFR 418.110.
+24        (6) "Hospital" has the same meaning as in section 1861 of the social se-
+25   curity act.
+26        (7) "Intermediate care facility" means a nonnursing home facility, de-
+27   signed and operated to meet the unique educational, training, habilitative,
+28   and medical needs of the developmentally disabled through the provision of
+29   active treatment.
+30        (8) "Nursing facility" or "nursing home" has the same meaning as in 42
+31   CFR.
+32        (9) "Person" means any individual, firm, partnership, corporation,
+33   company, association, or joint stock association, and the legal successor
+34   thereof.
+
+35       SECTION 21. That Chapter 13, Title 39, Idaho Code, be, and the same is
+36   hereby amended by the addition thereto of a NEW SECTION, to be known and des-
+37   ignated as Section 39-1302, Idaho Code, and to read as follows:
+
+38        39-1302. STREAMLINED FACILITIES LICENSING AND INSPECTION ACT -- SHORT
+39   TITLE. Sections 39-1301 through 39-1309, Idaho Code, shall be known and may
+40   be cited as the "Streamlined Facilities Licensing and Inspection Act."
+
+41       SECTION 22. That Chapter 13, Title 39, Idaho Code, be, and the same is
+42   hereby amended by the addition thereto of a NEW SECTION, to be known and des-
+43   ignated as Section 39-1303, Idaho Code, and to read as follows:
+                                          4
+
+
+
+
+1         39-1303. LICENSURE. (1) All medicare-certified or medicaid-certified
+2    hospitals, nursing facilities, or intermediate care facilities shall meet
+3    the standards for licensing pursuant to this chapter.
+4         (2) A hospital shall have and maintain medicare certification through
+5    an accreditation organization recognized by CMS or receive a determination
+6    from the department that the hospital meets the criteria in 42 CFR for oper-
+7    ating a hospital.
+8         (3) A nursing facility or an intermediate care facility shall have and
+9    maintain CMS certification.
+10        (4) A hospital, nursing facility, or intermediate care facility mak-
+11   ing an initial application for a license shall be issued a license if the de-
+12   partment determines that all application information is acceptable and that
+13   the hospital, nursing facility, or intermediate care facility is at least in
+14   substantial compliance with the provisions of this chapter.
+15        (5) Each licensee shall be designated by a distinctive name in apply-
+16   ing for a license, and the name shall not be changed without first notifying
+17   the department in writing. Each licensee shall specify the maximum number of
+18   allowable beds in the hospital, nursing facility, or intermediate care fa-
+19   cility, whether in use or not, and the licensee shall not exceed such maximum
+20   number of beds.
+21        (6) When applicable, a licensee shall comply with rules adopted by the
+22   department, subject to legislative approval, on criminal history and back-
+23   ground checks.
+24        (7) A hospital, nursing facility, or intermediate care facility shall
+25   notify the department, in accordance with the time frame established in fed-
+26   eral regulations, for every change of ownership, lessee, or management firm.
+27   A hospital, nursing facility, or intermediate care facility shall notify the
+28   department within seventy-two (72) hours of any change in administrator and
+29   submit a new application for licensure for any change in ownership or opera-
+30   tor.
+31        (8) Neither medicare-certified hospice agencies nor home health agen-
+32   cies are required to be licensed or certified pursuant to this chapter.
+
+33       SECTION 23. That Chapter 13, Title 39, Idaho Code, be, and the same is
+34   hereby amended by the addition thereto of a NEW SECTION, to be known and des-
+35   ignated as Section 39-1304, Idaho Code, and to read as follows:
+
+36        39-1304. DENIAL OR REVOCATION. Notwithstanding the provisions of sec-
+37   tion 39-1303, Idaho Code, the department may deny any application or revoke
+38   any license when persuaded by evidence that such conditions exist as to en-
+39   danger the health or safety of any resident or patient. A license issued pur-
+40   suant to this chapter shall remain in force until the license is voluntarily
+41   surrendered or the facility fails to meet CMS certification standards.
+
+42       SECTION 24. That Section 39-1309, Idaho Code, be, and the same is hereby
+43   amended to read as follows:
+
+44       39-13095. INSPECTIONS AND CONSULTATIONS. The licensing agency
+45   department shall make or cause to be made such inspections and investiga-
+46   tions as it deems necessary. The licensing agency may prescribe by regula-
+47   tions that any Any licensee or applicant desiring to make specified types of
+                                          5
+
+
+
+
+1    alteration alterations or addition additions to its facilities or to con-
+2    struct new facilities shall, before commencing such alteration, addition
+3    alterations, additions, or new construction, submit plans and specifica-
+4    tions therefor to the licensing agency department for preliminary inspec-
+5    tion and approval or recommendations with respect to compliance with the
+6    regulations and standards herein authorized pursuant to sections 39-1301
+7    through 39-1309, Idaho Code. Necessary conferences and consultations may be
+8    provided The department recognizes the most recent edition of the facility
+9    guideline institute (FGI), guidelines for design and construction.
+
+10       SECTION 25. That Section 39-1310, Idaho Code, be, and the same is hereby
+11   amended to read as follows:
+
+12       39-131006. INFORMATION. Information received by the licensing agency
+13   department through filed reports, inspection inspections, or as other-
+14   wise authorized under this law, which pursuant to sections 39-1301 through
+15   39-1309, Idaho Code, that would identify individual residents or patients of
+16   facilities or agencies as defined shall be subject to disclosure according
+17   to chapter 1, title 74, Idaho Code, except in a proceeding involving the
+18   question of licensure. Public disclosure of information obtained by the
+19   licensing agency department for the purposes of this act sections 39-1301
+20   through 39-1309, Idaho Code, shall be governed by chapter 1, title 74, Idaho
+21   Code. Nothing in this act sections 39-1301 through 39-1309, Idaho Code,
+22   however, shall be construed, nor shall any rule or regulation be promulgated
+23   under this section, as to impair, restrict, or alter the confidentiality
+24   and privilege afforded the physician and patient communications, includ-
+25   ing without limitation, documentation thereof in records of facilities or
+26   agencies as defined, or communications to and with nurses or other assisting
+27   persons or entities, nor shall this act. Nothing in sections 39-1301 through
+28   39-1309, Idaho Code, shall be construed to amend by implication such physi-
+29   cian-patient communication privilege as provided elsewhere in this code by
+30   law, including without limitation section 9-203(4), Idaho Code, which shall
+31   remain inviolate.
+
+32       SECTION 26. That Chapter 13, Title 39, Idaho Code, be, and the same is
+33   hereby amended by the addition thereto of a NEW SECTION, to be known and des-
+34   ignated as Section 39-1307, Idaho Code, and to read as follows:
+
+35       39-1307. PENALTY FOR OPERATING A FACILITY WITHOUT LICENSE. Any person
+36   establishing, conducting, managing, or operating a hospital, nursing facil-
+37   ity, or intermediate care facility without a license pursuant to sections
+38   39-1301 through 39-1309, Idaho Code, shall be guilty of a misdemeanor. A vi-
+39   olation of this section is punishable by imprisonment in a county jail for a
+40   term not exceeding six (6) months, or by a fine not exceeding three hundred
+41   dollars ($300), or by both. Each day of continued violation of the provi-
+42   sions of this section shall constitute a separate offense.
+
+43       SECTION 27. That Chapter 13, Title 39, Idaho Code, be, and the same is
+44   hereby amended by the addition thereto of a NEW SECTION, to be known and des-
+45   ignated as Section 39-1308, Idaho Code, and to read as follows:
+                                           6
+
+
+
+
+1         39-1308. INJUNCTION TO PREVENT OPERATION WITHOUT LICENSE. Notwith-
+2    standing the existence or pursuit of any other remedy, the department may
+3    maintain an action in the name of the state for injunction or other process
+4    or remedy allowable by law against any person, entity, or governmental unit
+5    to restrain or prevent the establishment, conduct, management, or operation
+6    of a hospital, nursing facility, or intermediate care facility without a
+7    license pursuant to sections 39-1301 through 39-1309, Idaho Code.
+
+8        SECTION 28. That Section 39-1301C, Idaho Code, be, and the same is
+9    hereby amended to read as follows:
+
+10        39-1301C9. DEEMED STATUS OF HOSPICE AGENCY AND ITS HOSPICE HOME -- NO
+11   IDAHO LICENSE OR CERTIFICATION REQUIRED. (1) A hospice house and its owner
+12   and operator medicare certified hospice agency must have and maintain deemed
+13   status through a centers for medicare & medicaid services recognized accred-
+14   iting organization.
+15        (2) Neither a medicare certified hospice agency nor its hospice home is
+16   required to be licensed or certified by the state of Idaho.
+
+17       SECTION 29. That Chapter 24, Title 39, Idaho Code, be, and the same is
+18   hereby repealed.
+
+19       SECTION 30. That Section 39-1392a, Idaho Code, be, and the same is
+20   hereby amended to read as follows:
+
+21        39-1392a. DEFINITIONS. The following terms shall have the following
+22   meanings when used in this section:
+23        (1) "Emergency medical services personnel" means emergency medical
+24   services providers certified by the department of health and welfare pur-
+25   suant to section 56-1011 et seq., Idaho Code, and ambulance-based clinicians
+26   as defined in the rules governing emergency medical services as promulgated
+27   by the department of health and welfare.
+28        (2) "Group medical practice" means a partnership, corporation, limited
+29   liability company, or other association formed for the purpose of offering
+30   health care services through physicians and other licensed or otherwise au-
+31   thorized health care providers who are partners, shareholders, members, em-
+32   ployees, or contractors of such group medical practice.
+33        (3) "Health care organization" means a hospital, in-hospital medical
+34   staff committee, medical society, managed care organization, licensed emer-
+35   gency medical service, group medical practice, residential care facility or
+36   skilled nursing facility.
+37        (4) "Hospital" means a facility in Idaho licensed under sections
+38   39-1301 through 39-1314, Idaho Code, and defined in section 39-1301(a)(1) as
+39   defined in section 39-1301, Idaho Code.
+40        (5) "In-hospital medical staff committees" means any individual doctor
+41   who is a hospital staff member, or any hospital employee, or any group of such
+42   doctors and/or hospital employees, who are duly designated a committee by
+43   hospital staff bylaws, by action of an organized hospital staff, or by action
+44   of the board of directors of a hospital, and which committee is authorized
+45   by said bylaws, staff or board of directors, to conduct research or study of
+                                          7
+
+
+
+
+1    hospital patient cases, or of medical questions or problems using data and
+2    information from hospital patient cases.
+3         (6) "Licensed emergency medical service" means an ambulance service or
+4    a nontransport service licensed by the department of health and welfare pur-
+5    suant to section 56-1011 et seq., Idaho Code.
+6         (7) "Managed care organization" means a public or private person or or-
+7    ganization which offers a managed care plan.
+8         (8) "Managed care plan" means a contract of coverage given to an indi-
+9    vidual, family or group of covered individuals pursuant to which a member is
+10   entitled to receive a defined set of health care benefits through an orga-
+11   nized system of health care providers in exchange for defined consideration
+12   and which requires the member to use, or creates financial incentives for the
+13   member to use, health care providers owned, managed, employed by or under
+14   contract with the managed care organization.
+15        (9) "Medical society" means any duly constituted, authorized and rec-
+16   ognized professional society or entity made up of physicians licensed to
+17   practice medicine in Idaho, having as its purpose the maintenance of high
+18   quality in the standards of health care provided in Idaho or any region or
+19   segment of the state, operating with the approval of the Idaho state board
+20   of medicine, or any official committee appointed by the Idaho state board of
+21   medicine.
+22        (10) "Patient care records" means written or otherwise recorded, pre-
+23   served and maintained records of the medical or surgical diagnostic, clini-
+24   cal, or therapeutic care of any patient treated by or under the direction of
+25   licensed professional personnel, including emergency medical services per-
+26   sonnel, in every health care organization subject to this act, whether as an
+27   inpatient or outpatient of the health care organization.
+28        (11) "Peer review" means the collection, interpretation and analysis of
+29   data by a health care organization for the purpose of bettering the system
+30   of delivery of health care or to improve the provision of health care or to
+31   otherwise reduce patient morbidity and mortality and improve the quality of
+32   patient care. Peer review activities by a health care organization include,
+33   without limitation:
+34        (a) Credentialing, privileging or affiliating of health care providers
+35        as members of, or providers for, a health care organization;
+36        (b) Quality assurance and improvement, patient safety investigations
+37        and analysis, patient adverse outcome reviews, and root-cause analysis
+38        and investigation activities by a health care organization; and
+39        (c) Professional review action, meaning an action or recommendation
+40        of a health care organization which is taken or made in the conduct of
+41        peer review, that is based on the competence or professional conduct of
+42        an individual physician or emergency medical services personnel where
+43        such conduct adversely affects or could adversely affect the health
+44        or welfare of a patient or the physician's privileges, employment or
+45        membership in the health care organization or in the case of emergency
+46        medical services personnel, the emergency medical services personnel's
+47        scope of practice, employment or membership in the health care organ-
+48        ization.
+49        (12) "Peer review records" means all evidence of interviews, reports,
+50   statements, minutes, memoranda, notes, investigative graphs and compila-
+                                          8
+
+
+
+
+1    tions and the contents thereof, and all physical materials relating to peer
+2    review of any health care organization. "Peer review records" does not mean
+3    or include patient care records; provided however, that the records relating
+4    to the identification of which particular patient care records were selected
+5    for, or reviewed, examined or discussed in peer review by a health care or-
+6    ganization and the methodology used for selecting such records shall be con-
+7    sidered peer review records.
+8         (13) "Skilled nursing facility" means a facility licensed under chapter
+9    13, title 39, Idaho Code, to provide skilled care to recipients.
+
+10       SECTION 31. That Section 39-3301, Idaho Code, be, and the same is hereby
+11   amended to read as follows:
+
+12        39-3301. LEGISLATIVE INTENT AND DECLARATION. The purpose of a resi-
+13   dential care or assisted living facility in Idaho is to provide a humane,
+14   safe, and homelike living arrangement for adults who need some assistance
+15   with activities of daily living and personal care but do not require the
+16   level of care identified under section 39-1301(b) care of a nursing facility
+17   as defined in section 39-1301, Idaho Code, other than for short exceptional
+18   stays meaning a treatment window designed to allow a resident to receive
+19   treatment for a short term acute episode as determined by a licensed profes-
+20   sional nurse.
+21        The state will encourage the development of facilities tailored to the
+22   needs of individual populations which operate in integrated settings in
+23   communities where sufficient supportive services exist to provide the res-
+24   ident, if appropriate, an opportunity to work and be involved in recreation
+25   and education opportunities. Employment, recreational and educational
+26   opportunities for people with disabilities shall be offered in the most in-
+27   tegrated setting consistent with their needs.
+28        A residential care or assisted living facility shall be operated and
+29   staffed by individuals who have the knowledge and experience required to
+30   provide safe and appropriate services to all residents of the facility.
+31        The administrator of the facility shall ensure that an objective, in-
+32   dividualized assessment to determine resident needs is conducted, develop a
+33   comprehensive negotiated plan of care to meet those needs, deliver appropri-
+34   ate services to meet resident needs, and ensure resident rights are honored.
+
+35       SECTION 32. That Section 39-3322, Idaho Code, be, and the same is hereby
+36   amended to read as follows:
+
+37        39-3322. QUALIFICATIONS AND REQUIREMENTS FOR FACILITY STAFF. (1) Each
+38   facility must employ or arrange for sufficient trained staff to fully meet
+39   the needs of its residents and the requirements of this chapter. The facil-
+40   ity shall have sufficient staff to provide care during all hours required in
+41   each resident's negotiated service plan. Additional staff may be required
+42   if physical plant and disability of residents indicate that staff assistance
+43   in emergencies is required. Benchmarks shall be established in the assess-
+44   ment criteria where the need for certified nursing assistants or licensed
+45   nurses is indicated. Residential care or assisted living facilities shall
+46   not retain residents who require the care provided by nursing facilities
+47   under section 39-1301(b) care at a nursing facility as defined in section
+                                          9
+
+
+
+
+1    39-1301, Idaho Code, other than for short exceptional stays pursuant to ne-
+2    gotiated rulemaking as defined in chapter 52, title 67, Idaho Code.
+3        (2) Should a residential care or assisted living facility choose not
+4    to carry professional liability insurance, that information shall be dis-
+5    closed, in writing, to employees at the time of hiring.
+
+6        SECTION 33. That Section 39-3501, Idaho Code, be, and the same is hereby
+7    amended to read as follows:
+
+8         39-3501. LEGISLATIVE INTENT AND DECLARATION. (1) The purpose of a
+9    certified family home in Idaho is to provide a homelike alternative to
+10   more expensive or more restrictive congregate care or institutional care,
+11   designed to allow vulnerable adults to reside in a family-style living en-
+12   vironment focused on integrated community living. Certified family homes
+13   provide housing and care to vulnerable adults who are elderly, who have men-
+14   tal illnesses, developmental disabilities, or physical disabilities, or
+15   who are otherwise unable to live alone without personal assistance and whose
+16   mental, emotional, and physical condition can be met by the care provider.
+17   The legislature supports the capabilities of individuals receiving services
+18   in certified family homes to direct their own care. The care provider must
+19   obtain a waiver under section 39-1301A, Idaho Code, to house and care for
+20   two (2) persons requiring care described in section 39-1301(b) at a nursing
+21   facility as defined in section 39-1301, Idaho Code.
+22        (2) The certified family home shall be operated by a care provider who
+23   has demonstrated the knowledge and experience required to provide safe and
+24   appropriate services to each resident of the certified family home. The care
+25   provider shall ensure an objective, individualized assessment is conducted
+26   to determine resident needs and shall develop a comprehensive, negotiated
+27   plan of service describing how to meet those needs. The care provider shall
+28   ensure delivery of appropriate services to meet resident needs as described
+29   in the plan of service and shall ensure resident rights are honored and pro-
+30   tected.
+31        (3) The department is responsible for monitoring and enforcing the
+32   provisions of this chapter. This responsibility includes but is not limited
+33   to monitoring the condition of the certified family home, ensuring that
+34   each resident has an individualized written plan of service, and managing
+35   enforcement procedures when violations occur.
+
+36       SECTION 34. That Section 39-3505, Idaho Code, be, and the same is hereby
+37   amended to read as follows:
+
+38        39-3505. RULES. The board shall have the power and it shall be its duty
+39   to promulgate appropriate rules necessary to implement and enforce the stan-
+40   dards for certified family homes pursuant to this chapter, including but not
+41   limited to the following:
+42        (1) The care provider shall admit or retain no more than two (2) res-
+43   idents concurrently in the certified family home. However, the department
+44   may grant a variance for up to four (4) residents to receive care in the cer-
+45   tified family home upon application by the care provider and upon a finding
+46   by the department that the certified family home is able to comply with the
+47   requirements of section 39-3507, Idaho Code. The department shall not grant
+                                          10
+
+
+
+
+1    a variance for requests to admit or retain more than two (2) residents who re-
+2    quire nursing facility level of care as described in section 39-1301(b) care
+3    at a nursing facility as defined in section 39-1301, Idaho Code. A variance
+4    to exceed the two (2) resident limit in a certified family home shall not be
+5    transferable to another resident or care provider. Certified family homes
+6    issued a variance to exceed the two (2) resident limit shall be subject to
+7    all statutes and rules governing certified family homes but shall not be sub-
+8    ject to the residential care facility administrator licensing requirements
+9    of chapter 42, title 54, Idaho Code, or the requirements of section 39-3340,
+10   Idaho Code. Nothing in this subsection shall be construed to authorize in-
+11   creased group size for providers of any form of care other than certified
+12   family homes.
+13        (2) The care provider shall live in the certified family home as the
+14   care provider's primary residence.
+15        (3) An individual cannot be approved as a care provider operating a
+16   certified family home if the individual charges room or board to any person
+17   staying in the home who is not resident, a relative of the care provider, or
+18   full-time staff. A variance may be granted by the department for the spouse
+19   of a resident when the resident's spouse does not require personal assis-
+20   tance.
+21        (4) A home cannot be approved as a certified family home and for child
+22   foster care at the same time unless a variance is granted by the department.
+23        (5) The care provider, care provider's relative, or other adult living
+24   in the home shall not be the legal guardian of the resident unless the legal
+25   guardian is a relative of the resident. A variance may be granted by the de-
+26   partment when it determines the guardianship is in the best interest of the
+27   nonrelative resident.
+28        (6) The care provider must have sufficient resources to maintain the
+29   home and the services offered.
+30        (7) Information obtained by the care provider about current or prospec-
+31   tive residents shall be held confidential as described under section
+32   39-3516(7), Idaho Code.
+33        (8) The board may implement recordkeeping and reporting requirements
+34   as deemed necessary.
+35        (a) The certified family home shall maintain and keep current a record
+36        of at least the following information for each resident:
+37              (i) Admission records, including but not limited to the admission
+38              agreement, assessment, plan of service, history and physical ex-
+39              amination, review of resident rights policy, emergency contacts,
+40              advance directives if so formulated by the resident, and a list of
+41              belongings the resident or resident representative chooses to in-
+42              ventory; and
+43              (ii) Ongoing resident records as applicable, including but not
+44              limited to: medication management; incidents, accidents, or
+45              changes in the resident's condition and the care provider's re-
+46              sponse; and financial accounting records for use of the resident's
+47              funds when the care provider is deemed to be managing such funds on
+48              behalf of the resident.
+49        (b) The care provider shall report at least the following:
+                                          11
+
+
+
+
+1               (i) To the certifying agent: any incident of house fire in the
+2               certified family home; any criminal investigation or conviction,
+3               or child protection or adult protection investigation, when the
+4               alleged perpetrator is the care provider, a substitute caregiver,
+5               or any adult member of the household; any critical incident; and
+6               any resident discharge from the home;
+7               (ii) To the Idaho commission on aging: in accordance with section
+8               39-5303, Idaho Code, any abuse, neglect, or exploitation of a vul-
+9               nerable adult when the care provider has reasonable cause to be-
+10              lieve that such has occurred; and
+11              (iii) To local law enforcement: any serious physical injury to or
+12              the death of a resident when there is reasonable cause to believe
+13              the harm was due to abuse or neglect.
+14        (9) The board may implement requirements to ensure the safety and ade-
+15   quate care of residents. The care provider shall be responsible for ensuring
+16   appropriate and adequate supervision is provided to each resident based on
+17   the resident's plan of service.
+18        (10) The board may implement requirements for management of medica-
+19   tions, including:
+20        (a) Development of acceptable policies and procedures regarding the
+21        following:
+22              (i) Following the orders of the resident's health care profes-
+23              sionals;
+24              (ii) Maintaining evidence of such orders; and
+25              (iii) Training guidance that must be completed prior to any indi-
+26              vidual assisting the resident with medications;
+27        (b) For residents who wish to self-administer their own medications,
+28        the evaluation and approval criteria that shall be met prior to the care
+29        provider allowing the resident to self-administer medications; and
+30        (c) For residents who need assistance with medications:
+31              (i) Conditions under which certified family home staff may offer
+32              assistance, taking into consideration the resident's health sta-
+33              tus, level of assistance needed, and scope of any professional li-
+34              cense held by the individual offering assistance;
+35              (ii) Storage and safeguarding of medications, including taking
+36              regular inventory of narcotic medications;
+37              (iii) Documentation of assistance; and
+38              (iv) Proper and timely disposal of discontinued, unused, loose,
+39              or expired medications.
+40        (11) The certified family home staff shall allow certifying agents to
+41   inspect and investigate the certified family home as necessary to determine
+42   compliance with this chapter and the department's rules.
+43        (12) The board may establish rules for the revocation of certification
+44   or other enforcement actions.
+
+45       SECTION 35. That Section 39-5302, Idaho Code, be, and the same is hereby
+46   amended to read as follows:
+
+47       39-5302. DEFINITIONS. (1) For the purposes of this chapter:
+48       (a) "Administrator" means the administrator of the Idaho commission on
+49       aging appointed pursuant to section 67-5004, Idaho Code.
+                                      12
+
+
+
+
+1    (b) "Adult" means a person aged eighteen (18) years or older.
+2    (c) "Adult protective services" or "APS" means the legal and bureau-
+3    cratic systems and protections safeguarding vulnerable adults through
+4    investigation of APS reports alleging maltreatment and arrangements
+5    for the provision of emergency, supportive, or prevention services nec-
+6    essary to reduce or eliminate risk of harm.
+7    (d) "APS report" means an allegation of maltreatment of a vulnerable
+8    adult made to adult protective services.
+9    (e) "Caregiver" refers to a formal caregiver or an informal caregiver.
+10   (f) "Commission" means the Idaho commission on aging, established pur-
+11   suant to chapter 50, title 67, Idaho Code.
+12   (g) "Department" means the Idaho department of health and welfare.
+13   (h) "Emergency" means an exigent circumstance in which a vulnerable
+14   adult's health and safety is placed in imminent danger. Imminent danger
+15   is when death or severe bodily injury could reasonably be expected to
+16   occur without intervention.
+17   (i) "Facility" means a health or treatment facility as defined in
+18   statute or by the department, including:
+19         (i) Certified family homes, as defined in section 39-3502, Idaho
+20         Code;
+21         (ii) Developmental disabilities facilities, as defined in sec-
+22         tion 39-4604, Idaho Code;
+23         (iii) Home health agencies, as defined in section 39-2402 39-1301,
+24         Idaho Code;
+25         (iv) Hospitals, as defined in section 39-1301, Idaho Code;
+26         (v)   Intermediate care facilities for people with intellectual
+27         disabilities, as defined in section 39-1301, Idaho Code;
+28         (vi) Residential care or assisted living facilities, as defined
+29         in section 39-3302, Idaho Code; and
+30         (vii) Residential habilitation agencies.
+31   (j) "Financial exploitation" means the illegal or improper use, con-
+32   trol over, or withholding of the property, income, resources, or trust
+33   funds of a vulnerable adult by any person or entity for profit or ad-
+34   vantage other than for the vulnerable adult's profit or advantage. The
+35   term "financial exploitation" includes but is not limited to:
+36         (i) The use of deception, intimidation, or undue influence by a
+37         person or an entity in a position of trust and confidence with a
+38         vulnerable adult to obtain or use the property, income, resources,
+39         or trust funds of the vulnerable adult for the benefit of a person
+40         or an entity other than the vulnerable adult;
+41         (ii) The breach of a fiduciary duty, including but not limited
+42         to the misuse of a power of attorney, trust, or guardianship ap-
+43         pointment that results in the unauthorized appropriation, sale,
+44         or transfer of the property, income, resources, belongings, or
+45         trust funds of the vulnerable adult for the benefit of a person or
+46         an entity other than the vulnerable adult; or
+47         (iii) Obtaining or using a vulnerable adult's property, income,
+48         belongings, resources, or trust funds without lawful authority by
+49         a person or an entity who knows or clearly should know that the vul-
+                                     13
+
+
+
+
+1          nerable adult lacks the capacity to consent to the release or use
+2          of his property, income, belongings, resources, or trust funds.
+3    (k) "Formal caregiver" means a person or an entity that accepts compen-
+4    sation to perform a service or services for a vulnerable adult. Compen-
+5    sation may be provided by an employer, the vulnerable adult, or someone
+6    acting in the interests of the vulnerable adult.
+7    (l) "Human trafficking" means the recruitment, harboring, transporta-
+8    tion, provision, or obtaining of a person for labor or services through
+9    the use of force, fraud, or coercion, for the purpose of subjection to
+10   involuntary servitude, peonage, debt bondage, or slavery.
+11   (m) "Infirmities of aging" means physical or mental deterioration as-
+12   sociated with advanced age or organic brain damage, or other physical,
+13   mental, or emotional dysfunction, such that the ability of an older
+14   adult to provide adequately for the adult's own care or protection is
+15   impaired.
+16   (n) "Informal caregiver" means a person who provides support for a vul-
+17   nerable adult without expectation of compensation, goods, or services.
+18   (o) "Investigation" means the evaluation of allegations conducted by a
+19   provider or the commission through interviews, observations, and exam-
+20   ination of information.
+21   (p) "Legal representative" means a guardian, a conservator, an attor-
+22   ney, or an individual with power of attorney who has the legal obliga-
+23   tion to act for the benefit of another.
+24   (q) "Licensed medical professional" means an individual practicing in
+25   a medical or medical-related field who is licensed, certified, or oth-
+26   erwise credentialed by the state of Idaho.
+27   (r) "Neglect" means failure of a caregiver to provide food, clothing,
+28   shelter, or medical care, the absence of which impairs or threatens sus-
+29   tainable life or health of a vulnerable adult.
+30   (s) "Older adult" means a person aged sixty-five (65) years or older.
+31   (t) "Physical abuse" means the infliction of physical pain, injury, or
+32   unjust chemical or physical restraint on a vulnerable adult or death
+33   where:
+34         (i) The vulnerable adult's condition or death is not justifiably
+35         explained;
+36         (ii) The history given concerning such condition or death is at
+37         variance with the degree or type of the condition or death; or
+38         (iii) Circumstances indicate that such condition or death may not
+39         be the product of an accidental occurrence.
+40   (u) "Prevention services" means interventions designed to reduce the
+41   risk of maltreatment, including but not limited to case management, the
+42   provision of goods or services, or caregiver support.
+43   (v) "Protective action plan" or "PAP" means a person-centered plan
+44   addressing the remedial, social, legal, medical, educational, mental
+45   health, or other services available to reduce or eliminate the risk of
+46   harm to a vulnerable adult.
+47   (w) "Provider" means an area agency on aging or a person or an entity
+48   capable of providing adult protective services, including duly autho-
+49   rized agents and employees.
+                                          14
+
+
+
+
+1         (x) "Psychological abuse" means the infliction of fear, anguish, agi-
+2         tation, or other emotional distress through verbal or nonverbal acts or
+3         through unjust confinement of a vulnerable adult.
+4         (y) "Self-neglect" means failure of a vulnerable adult to provide for
+5         himself or refusal to accept support needed to obtain food, clothing,
+6         shelter, or medical care reasonably necessary to sustain the life and
+7         health of the vulnerable adult.
+8         (z) "Sexual abuse" means touching, fondling, intercourse, or any other
+9         sexual activity with a vulnerable adult when the vulnerable adult is
+10        unable to understand, unwilling to consent, threatened, or physically
+11        forced.
+12        (aa) "Skilled nursing facility" shall have the same meaning as "nursing
+13        facility" provided in section 39-1301, Idaho Code.
+14        (bb) "Supportive services" means social, legal, health, educational,
+15        mental health, and referral services.
+16        (cc) "Undue influence" means influence exercised over a vulnerable
+17        adult with the intent to:
+18              (i) Inhibit the vulnerable adult's freedom of choice;
+19              (ii) Deprive the vulnerable adult of freedom of choice; or
+20              (iii) Substitute the influencer's choice or desire over that of
+21              the vulnerable adult.
+22        (dd) "Vulnerable adult" means an adult who is unable to protect himself
+23        from maltreatment because of:
+24              (i) A mental, physical, or developmental disability;
+25              (ii) A degenerative brain disease;
+26              (iii) An inability to communicate or implement decisions regard-
+27              ing his person; or
+28              (iv) Other infirmities of aging in an older adult.
+29        (ee) "Vulnerable adult maltreatment" or "maltreatment" means the in-
+30        tentional or negligent infliction of pain or injury on a vulnerable
+31        adult, including financial exploitation, human trafficking, neglect,
+32        physical abuse, psychological abuse, or sexual abuse.
+33        (2) Nothing in this chapter shall be construed to mean a person is
+34   abused, neglected, or exploited for the sole reason he is relying upon treat-
+35   ment by spiritual means through prayer alone in accordance with the tenets
+36   and practices of a recognized church or religious denomination; nor shall
+37   the provisions of this chapter be construed to require any medical care or
+38   treatment in contravention of the stated or implied objection of such a per-
+39   son.
+
+40       SECTION 36. That Section 54-3215, Idaho Code, be, and the same is hereby
+41   amended to read as follows:
+
+42        54-3215. EXEMPTIONS. Students enrolled in a recognized program lead-
+43   ing to a degree in social work may practice only under the direct supervision
+44   of a social worker of the licensure status necessary to provide the appropri-
+45   ate level of supervision as provided by board rule. This chapter shall not
+46   apply to any employee of any nursing or intermediate care facility licensed
+47   under section 39-1301(b), Idaho Code, or section 39-1301(c), Idaho Code, who
+48   is designated in writing to be responsible for that facility's social ser-
+                                          15
+
+
+
+
+1    vices program and who receives regular consultation from a qualified social
+2    worker.
+
+3        SECTION 37. That Section 56-101, Idaho Code, be, and the same is hereby
+4    amended to read as follows:
+
+5         56-101. DEFINITIONS. Unless the context clearly requires otherwise,
+6    the definitions in this section apply throughout this chapter and shall have
+7    the following meanings:
+8         (1) "Appraisal" means the method of determining the value of the prop-
+9    erty as determined by an appraisal conducted by a member of the appraisal in-
+10   stitute (MAI), or successor organization. The appraisal must specifically
+11   identify the values of land, building, equipment, and goodwill.
+12        (2) "Assets" means economic resources of the contractor, recognized
+13   and measured in conformity with generally accepted accounting principles.
+14        (3) "Bed-weighted median" is determined by arraying the average per
+15   diem cost per bed of all facilities from high to low and identifying the bed
+16   at the point in the array at which half of the beds have equal or higher per
+17   diem costs and half have equal or lower per diem costs. The identified bed
+18   is the median bed. The per diem cost of the median bed is the bed-weighted
+19   median.
+20        (4) "Case mix index" is a numeric score assigned to each facility resi-
+21   dent, based on the resident's physical and mental condition, which projects
+22   the amount of relative resources needed to provide care to the resident.
+23        (5) "Depreciation" means the systematic distribution of the cost or
+24   other basis of tangible assets, less salvage, over the estimated useful life
+25   of the assets.
+26        (6) "Direct care costs" consists of the following costs directly as-
+27   signed to the nursing facility or allocated to the nursing facility through
+28   medicare cost finding principles:
+29        (a) Direct nursing salaries which include the salaries of registered
+30        nurses, licensed professional nurses, certificated nurse's aides, and
+31        unit clerks; and
+32        (b) Routine nursing supplies; and
+33        (c) Nursing administration; and
+34        (d) Direct portion of medicaid related ancillary services; and
+35        (e) Social services; and
+36        (f) Raw food; and
+37        (g) Employee benefits associated with the direct salaries.
+38        (7) "Director" means the director of the department of health and wel-
+39   fare or the director's designee.
+40        (8) "Equity" means the net book value of all tangible and intangible as-
+41   sets less the recorded value of all liabilities, as recognized and measured
+42   in conformity with generally accepted accounting principles.
+43        (9) "Facility" means an entity which contracts with the director
+44   to provide services to recipients in a structure owned, controlled, or
+45   otherwise operated by such entity, and which entity is responsible for oper-
+46   ational decisions. In conjunction with the use of the term "facility":
+47        (a) "Freestanding intermediate care" means an intermediate care facil-
+48        ity, as defined in and licensed under chapter 13, title 39, Idaho Code,
+                                          16
+
+
+
+
+1         which is not owned, managed, or operated by, nor is otherwise a part of a
+2         hospital, as defined in section 39-1301(a), Idaho Code; and
+3         (b) "Freestanding skilled care" means a nursing facility, as defined in
+4         and licensed under chapter 13, title 39, Idaho Code, which is not owned,
+5         managed, or operated by, nor is otherwise a part of a hospital, as de-
+6         fined in section 39-1301(a), Idaho Code; and
+7         (c) "Freestanding special care" means a facility that provides either
+8         intermediate care, or skilled care, or intermediate care for people
+9         with intellectual disabilities, or any combination of either, which is
+10        not owned, managed, or operated by, nor is otherwise a part of a hospi-
+11        tal, as defined in section 39-1301(a), Idaho Code; and
+12        (d) "Hospital-based" means a nursing or intermediate care facility, as
+13        defined in and licensed under chapter 13, title 39, Idaho Code, which is
+14        owned, managed, or operated by, or is otherwise a part of a hospital, as
+15        defined in section 39-1301(a), Idaho Code.
+16        (10) "Forced sale" is a sale required by a bankruptcy, foreclosure, the
+17   provisions of a will or estate settlement pursuant to the death of an owner,
+18   physical or mental incapacity of an owner which requires ownership transfer
+19   to existing partner or partners, or a sale required by the ruling of a federal
+20   agency or by a court order.
+21        (11) "Goodwill" means the amount paid by the purchaser that exceeds the
+22   net tangible assets received. The value of goodwill is derived from the eco-
+23   nomic benefits that a going concern may enjoy, as compared with a new one,
+24   from established relations in the related markets, with government depart-
+25   ments and other noncommercial bodies and with personal relationships. These
+26   intangible assets cannot be separated from the business and sold as can plant
+27   and equipment. Under the theory that the excess payment would be made only
+28   if expected future earnings justified it, goodwill is often described as the
+29   price paid for excess future earnings. The amortization of goodwill is non-
+30   allowable, nonreimbursable expense.
+31        (12) "Historical cost" means the actual cost incurred in acquiring and
+32   preparing an asset for use, including feasibility studies, architect's
+33   fees, and engineering studies.
+34        (13) "Indirect care costs" consists of the following costs either di-
+35   rectly coded to the nursing facility or allocated to the nursing facility
+36   through the medicare step-down process:
+37        (a) Administrative and general care cost; and
+38        (b) Activities; and
+39        (c) Central services and supplies; and
+40        (d) Laundry and linen; and
+41        (e) Dietary ("non-raw food" costs); and
+42        (f) Plant operation and maintenance (excluding utilities); and
+43        (g) Medical records; and
+44        (h) Employee benefits associated with the indirect salaries; and
+45        (i) Housekeeping; and
+46        (j) Other costs not included in direct care costs or costs exempt from
+47        cost limits.
+48        (14) "Interest rate limitation" means that the interest rate allowed
+49   for working capital loans and for loans for major movable equipment for in-
+50   termediate care facilities for people with intellectual disabilities shall
+                                          17
+
+
+
+
+1    be the prime rate as published in the western edition of the Wall Street
+2    Journal or successor publication, plus one percent (1%) at the date the loan
+3    is made. All interest expense greater than the amount derived by using the
+4    limitation above shall be nonreimbursable; provided, however, that this
+5    interest rate limitation shall not be imposed against loans or leases which
+6    were made prior to July 1, 1984. Said loans or leases shall be subject to the
+7    tests of reasonableness, relationship to patient care and necessity.
+8         (15) "Intermediate care facility for people with intellectual disabil-
+9    ities" means an habilitative facility designed and operated to meet the ed-
+10   ucational, training, habilitative and intermittent medical needs of the de-
+11   velopmentally disabled.
+12        (16) "Major movable equipment" means such items as accounting machines,
+13   beds, wheelchairs, desks, furniture, vehicles, etc. The general character-
+14   istics of this equipment are:
+15        (a) A relatively fixed location in the building;
+16        (b) Capable of being moved, as distinguished from building equipment;
+17        (c) A unit cost sufficient to justify ledger control;
+18        (d) Sufficient size and identity to make control feasible by means of
+19        identification tags; and
+20        (e) A minimum life of approximately three (3) years.
+21        (17) "Medicaid" means the 1965 amendments to the social security act
+22   (P.L. 89-97), as amended.
+23        (18) "Minor movable equipment" includes such items as wastebaskets,
+24   bedpans, syringes, catheters, silverware, mops, buckets, etc. The general
+25   characteristics of this equipment are:
+26        (a) In general, no fixed location and subject to use by various depart-
+27        ments of the provider's facility;
+28        (b) Comparatively small in size and unit cost;
+29        (c) Subject to inventory control;
+30        (d) Fairly large quantity in use; and
+31        (e) Generally, a useful life of approximately three (3) years or less.
+32        (19) "Net book value" means the historical cost of an asset, less accu-
+33   mulated depreciation.
+34        (20) "Normalized per diem costs" refers to direct care costs that have
+35   been adjusted based on the facility's case mix index for purposes of making
+36   the per diem costs comparable among facilities. Normalized per diem costs
+37   are calculated by dividing the facility's direct care per diem costs by its
+38   facility-wide case mix index, and multiplying the result by the statewide
+39   average case mix index.
+40        (21) "Nursing facility inflation rate" means the most specific skilled
+41   nursing facility inflation rate applicable to Idaho established by data re-
+42   sources, inc., or its successor. If a state or regional index has not been
+43   implemented, the national index shall be used.
+44        (22) "Patient-day" means a calendar day of care which will include the
+45   day of admission and exclude the day of discharge unless discharge occurs af-
+46   ter 3:00 p.m. or it is the date of death, except that, when admission and dis-
+47   charge occur on the same day, one (1) day of care shall be deemed to exist.
+48        (23) "Property costs" means the total of allowable interest expense,
+49   plus depreciation, property insurance, real estate taxes, amortization, and
+50   allowable lease/rental expense. The department may require and utilize an
+                                          18
+
+
+
+
+1    appraisal to establish those components of property costs which are identi-
+2    fied as an integral part of an appraisal.
+3         (24) "Raw food" means food used to meet the nutritional needs of the res-
+4    idents of a facility, including liquid dietary supplements, liquid thicken-
+5    ers, and tube feeding solutions.
+6         (25) "Reasonable property insurance" means that the consideration
+7    given is an amount that would ordinarily be paid by a cost-conscious buyer
+8    for comparable insurance in an arm's length transaction. Property insurance
+9    per licensed bed in excess of two (2) standard deviations above the mean of
+10   the most recently reported property insurance costs per licensed bed of all
+11   facilities in the reimbursement class as of the end of a facility's fiscal
+12   year shall not be considered reasonable.
+13        (26) "Recipient" means an individual determined eligible by the direc-
+14   tor for the services provided in the state plan for medicaid.
+15        (27) "Rural hospital-based nursing facilities" are those hospi-
+16   tal-based nursing facilities not located within a metropolitan statistical
+17   area (MSA) as defined by the United States bureau of the census.
+18        (28) "Urban hospital-based nursing facilities" are those hospi-
+19   tal-based nursing facilities located within a metropolitan statistical area
+20   (MSA) as defined by the United States bureau of the census.
+21        (29) "Utilities" means all expenses for heat, electricity, water and
+22   sewer.
+
+23       SECTION 38. That Section 56-1402, Idaho Code, be, and the same is hereby
+24   amended to read as follows:
+
+25        56-1402. DEFINITIONS. As used in this chapter:
+26        (1) "Department" means the department of health and welfare.
+27        (2) "Disproportionate share hospital" means a hospital that serves a
+28   disproportionate share of medicaid low-income patients as compared to other
+29   hospitals as determined by department rule.
+30        (3) "Governmental entity" means and includes the state and its politi-
+31   cal subdivisions.
+32        (4) "Hospital" is as defined in section 39-1301(a), Idaho Code.
+33        (5) "Political subdivision" means a county, city, municipal corpora-
+34   tion or hospital taxing district and, as used in this chapter, shall include
+35   state licensed hospitals established by counties pursuant to chapter 36, ti-
+36   tle 31, Idaho Code, or jointly by cities and counties pursuant to chapter 37,
+37   title 31, Idaho Code.
+38        (6) "Private hospital" means a hospital that is not owned by a govern-
+39   mental entity.
+40        (7) "Upper payment limit" means a limitation established by federal
+41   regulations, 42 CFR 447.272 and 42 CFR 447.321, that disallows federal
+42   matching funds when state medicaid agencies pay certain classes of hospitals
+43   an aggregate amount for inpatient and outpatient hospital services that
+44   would exceed the amount that would be paid for the same services furnished by
+45   that class of hospitals under medicare payment principles.
+
+46       SECTION 39. That Section 56-1602, Idaho Code, be, and the same is hereby
+47   amended to read as follows:
+                                          19
+
+
+
+
+1        56-1602. DEFINITIONS. As used in this chapter:
+2        (1) "CMS" means the centers for medicare and medicaid services.
+3        (2) "Department" means the Idaho department of health and welfare.
+4        (3) "Fiscal year" means the time period from July 1 to June 30.
+5        (4) "Fund" means the ICF assessment fund established pursuant to sec-
+6    tion 56-1603, Idaho Code.
+7        (5) "ICF" means an intermediate care facility for people with intellec-
+8    tual disabilities as defined in section 39-1301, Idaho Code, and licensed
+9    pursuant to chapter 13, title 39, Idaho Code.
+10       (6) "Net patient service revenue" means gross revenues from services
+11   provided to ICF patients, less reductions from gross revenue resulting from
+12   an inability to collect payment of charges. Patient service revenue ex-
+13   cludes nonpatient care revenues such as beauty and barber, vending income,
+14   interest and contributions, revenues from sale of meals and all outpatient
+15   revenues. Reductions from gross revenue includes: bad debts; contractual
+16   adjustments; uncompensated care; administrative, courtesy and policy dis-
+17   counts and adjustments; and other such revenue deductions.
+18       (7) "Resident day" means a calendar day of care provided to an ICF resi-
+19   dent, including the day of admission and excluding the day of discharge, pro-
+20   vided that one (1) resident day shall be deemed to exist when admission and
+21   discharge occur on the same day.
+22       (8) "Upper payment limit" means the limitation established in 42 CFR
+23   section 447.272, that disallows federal matching funds when state medicaid
+24   agencies pay certain classes of facilities an aggregate amount for services
+25   that exceed the amount that is paid for the same services furnished by that
+26   class of facilities under medicare payment principles.
+
+27       SECTION 40. That Section 56-1703, Idaho Code, be, and the same is hereby
+28   amended to read as follows:
+
+29        56-1703. DEFINITIONS. As used in this chapter:
+30        (1) "Activation" means a declaration by the director of the department
+31   of health and welfare that health care facilities may operate under crisis
+32   standards of care as necessary when scarce resource limitations preclude op-
+33   erating under usual standards of care.
+34        (2) "Assistance" means aid in meeting daily living needs.
+35        (3) "Crisis standards of care" means a substantial change in the usual
+36   health care operations and the level of care it is possible to deliver, jus-
+37   tified by specific circumstances and formally declared by a state government
+38   in recognition that crisis operations will be in effect for a sustained pe-
+39   riod.
+40        (4) "Declaration" means the issuance by the director of the department
+41   of health and welfare of a declaration or documentation that crisis stan-
+42   dards of care have been activated in a particular region or statewide.
+43        (5) "Department" means the Idaho department of health and welfare.
+44        (6) "Director" means the director of the Idaho department of health and
+45   welfare.
+46        (7) "Essential caregiver" means a person designated by a patient or
+47   resident to visit the patient or resident at a health care facility.
+48        (8) "Health care facility" or "facility" means a hospital, a nursing
+49   facility, or an intermediate care facility for individuals with intellec-
+                                          20
+
+
+
+
+1    tual disabilities as defined in chapter 13, title 39, Idaho Code, or a resi-
+2    dential care or assisted living facility as defined in chapter 33, title 39,
+3    Idaho Code.
+4        (9) "Health care services" means services for the diagnosis, preven-
+5    tion, treatment, cure, or relief of a health condition, illness, injury, or
+6    disease.
+7        (10) "Patient" means a person receiving health care services at a health
+8    care facility.
+9        (11) "Resident" means a person receiving assistance at a health care fa-
+10   cility.
+
+11       SECTION 41. That Section 63-701, Idaho Code, be, and the same is hereby
+12   amended to read as follows:
+
+13       63-701. DEFINITIONS. As used in this chapter:
+14       (1) "Claimant" means a person who has filed an application under sec-
+15   tion 63-602G, Idaho Code, and has filed a claim under the provisions of
+16   sections 63-701 through 63-710, Idaho Code. Except as provided in section
+17   63-702(2), Idaho Code, on January 1 or before April 15 of the year in which
+18   the claimant first filed a claim on the homestead in question, a claimant
+19   must be an owner of the homestead, a claimant must have lawful presence in the
+20   United States pursuant to section 67-7903, Idaho Code, and on January 1 of
+21   said year a claimant must be:
+22       (a) Not less than sixty-five (65) years old; or
+23       (b) A child under the age of eighteen (18) years who is fatherless or
+24       motherless or who has been abandoned by any surviving parent or parents;
+25       or
+26       (c) A widow or widower; or
+27       (d) A disabled person who is recognized as disabled by the social se-
+28       curity administration pursuant to title 42 of the United States Code,
+29       or by the railroad retirement board pursuant to title 45 of the United
+30       States Code, or by the office of management and budget pursuant to title
+31       5 of the United States Code, or, if a person is not within the purview of,
+32       and is therefore not recognized as disabled by, any other entity listed
+33       in this paragraph, then by the public employee retirement system or pub-
+34       lic employee disability plan in which the person participates that may
+35       be of any state, local unit of government or other jurisdiction in the
+36       United States of America; or
+37       (e) A disabled veteran of any war engaged in by the United States, whose
+38       disability is recognized as a service-connected disability of a degree
+39       of ten percent (10%) or more, or who has a pension for nonservice-con-
+40       nected disabilities, in accordance with laws and regulations adminis-
+41       tered by the United States department of veterans affairs; or
+42       (f) A person, as specified in 42 U.S.C. 1701, who was or is entitled
+43       to receive benefits because he is known to have been taken by a hostile
+44       force as a prisoner, hostage or otherwise; or
+45       (g) Blind.
+46       (2) "Homestead" means the dwelling, owner-occupied by the claimant
+47   as described in this chapter and used as the primary dwelling place of the
+48   claimant and may be occupied by any members of the household as their home,
+49   and so much of the land surrounding it, not exceeding one (1) acre, as is
+                                          21
+
+
+
+
+1    reasonably necessary for the use of the dwelling as a home. It may consist
+2    of a part of a multidwelling or multipurpose building and part of the land
+3    upon which it is built. "Homestead" does not include personal property such
+4    as furniture, furnishings or appliances, but a manufactured home may be a
+5    homestead.
+6         (3) "Household" means the claimant and the claimant's spouse. The term
+7    does not include bona fide lessees, tenants, or roomers and boarders on con-
+8    tract. "Household" includes persons described in subsection (8)(b) of this
+9    section.
+10        (4) "Household income" means all income received by the claimant and,
+11   if married, all income received by the claimant's spouse, in a calendar year.
+12        (5) "Income" means the sum of federal adjusted gross income as defined
+13   in the Internal Revenue Code, as defined in section 63-3004, Idaho Code, and
+14   to the extent not already included in federal adjusted gross income:
+15        (a) Alimony;
+16        (b) Support money;
+17        (c) Nontaxable strike benefits;
+18        (d) The nontaxable amount of any individual retirement account, pen-
+19        sion or annuity, including railroad retirement benefits, all payments
+20        received under the federal social security act except the social secu-
+21        rity death benefit as specified in this subsection, state unemployment
+22        insurance laws, and veterans disability pensions and compensation, ex-
+23        cluding any return of principal paid by the recipient of an annuity and
+24        excluding rollovers as provided in 26 U.S.C. 402 or 403, and excluding
+25        the nontaxable portion of a Roth individual retirement account distri-
+26        bution, as provided in 26 U.S.C. 408A;
+27        (e) Nontaxable interest received from the federal government or any of
+28        its instrumentalities or a state government or any of its instrumental-
+29        ities;
+30        (f) Worker's compensation; and
+31        (g) The gross amount of loss of earnings insurance.
+32   It does not include gifts from nongovernmental sources or inheritances. To
+33   the extent not reimbursed, the cost of medical care as defined in section
+34   213(d) of the Internal Revenue Code, incurred and paid by the claimant and,
+35   if married, the claimant's spouse, may be deducted from income. To the ex-
+36   tent not reimbursed, personal funeral expenses, including prepaid funeral
+37   expenses and premiums on funeral insurance, of the claimant and claimant's
+38   spouse only, may be deducted from income up to an annual maximum of five
+39   thousand dollars ($5,000) per claim. "Income" does not include veterans
+40   disability pensions received by a person described in subsection (1)(e)
+41   of this section who is a claimant or a claimant's spouse if the disability
+42   pension is received pursuant to a service-connected disability of a de-
+43   gree of forty percent (40%) or more. "Income" does not include dependency
+44   and indemnity compensation or death benefits paid to a person described in
+45   subsection (1) of this section by the United States department of veterans
+46   affairs and arising from a service-connected death or disability. "Income"
+47   does not include lump sum death benefits made by the social security admin-
+48   istration pursuant to 42 U.S.C. 402(i). Documentation of medical expenses
+49   may be required by the county assessor and state tax commission in such form
+50   as the county assessor or state tax commission shall determine. For pur-
+                                          22
+
+
+
+
+1    poses of this chapter only and in the case of a claimant who owns and whose
+2    homestead is a certified family home as defined in section 39-3502, Idaho
+3    Code, "income" does not include payments that the claimant received as an
+4    enrolled medicaid provider from the medical assistance program. "Income"
+5    shall be that received in the calendar year immediately preceding the year
+6    in which a claim is filed. Where a claimant and/or the claimant's spouse
+7    does not file a federal tax return, the claimant's and/or the claimant's
+8    spouse's federal adjusted gross income, for purposes of this section, shall
+9    be an income equivalent to federal adjusted gross income had the claimant
+10   and/or the claimant's spouse filed a federal tax return, as determined by the
+11   county assessor. The county assessor or state tax commission may require
+12   documentation of income in such form as each shall determine, including, but
+13   not limited to: copies of federal or state tax returns and any attachments
+14   thereto; and income reporting forms such as the W-2 and 1099.
+15        For determining income for certain married individuals living apart,
+16   the provisions of sections 2(c) and 7703(b) of the Internal Revenue Code
+17   shall apply.
+18        (6) "Occupied" means actual use and possession.
+19        (7) "Owner" means a person holding title in fee simple or holding a cer-
+20   tificate of motor vehicle title (either of which may be subject to mortgage,
+21   deed of trust or other lien) or who has retained or been granted a life estate
+22   or who is a person entitled to file a claim under section 63-702, Idaho Code.
+23   "Owner" shall also include any person who:
+24        (a) Is the beneficiary of a revocable or irrevocable trust which is the
+25        owner of such homestead and under which the claimant or the claimant's
+26        spouse has the primary right of occupancy of the homestead; or
+27        (b) Is a partner of a limited partnership, member of a limited liabil-
+28        ity company or shareholder of a corporation if such entity holds title
+29        in fee simple or holds a certificate of motor vehicle title and if the
+30        person holds at least a five percent (5%) ownership in such entity, as
+31        determined by the county assessor; or
+32        (c) Has retained or been granted a life estate.
+33   "Owner" includes a vendee in possession under a land sale contract. Any
+34   partial ownership shall be considered as ownership for determining initial
+35   qualification for property tax reduction benefits; however, the amount of
+36   property tax reduction under section 63-704, Idaho Code, and rules promul-
+37   gated pursuant to section 63-705, Idaho Code, shall be computed on the value
+38   of the claimant's partial ownership. "Partial ownership," for the purposes
+39   of this section, means any one (1) person's ownership when property is owned
+40   by more than one (1) person or where the homestead is held by an entity, as
+41   set forth in this subsection, but more than one (1) person has the right of
+42   occupancy of such homestead. A person holding either partial title in fee
+43   simple or holding a certificate of motor vehicle title together with another
+44   person, but who does not occupy the dwelling as his primary dwelling place,
+45   shall not be considered an owner for purposes of this section, if such person
+46   is a cosignatory of a note secured by the dwelling in question and at least
+47   one (1) of the other cosignatories of the note occupies the dwelling as his
+48   primary dwelling place. The combined community property interests of both
+49   spouses shall not be considered partial ownership as long as the combined
+50   community property interests constitute the entire ownership of the home-
+                                          23
+
+
+
+
+1    stead, including where the spouses are occupying a homestead owned by an en-
+2    tity, as set forth in this subsection, and the spouses have the primary right
+3    of occupancy of the homestead. The proportional reduction required under
+4    this subsection shall not apply to community property interests. Where
+5    title to property was held by a person who has died without timely filing a
+6    claim for property tax reduction, the estate of the deceased person shall be
+7    the "owner," provided that the time periods during which the deceased person
+8    held such title shall be attributed to the estate for the computation of any
+9    time periods under subsection (8)(a) or (b) of this section.
+10        (8)(a) "Primary dwelling place" means the claimant's dwelling place
+11        on January 1 or before April 15 of the year for which the claim is made.
+12        The primary dwelling place is the single place where a claimant has
+13        his true, fixed and permanent home and principal establishment, and to
+14        which whenever the individual is absent he has the intention of return-
+15        ing. A claimant must establish the dwelling to which the claim relates
+16        to be his primary dwelling place by clear and convincing evidence or by
+17        establishing that the dwelling is where the claimant resided on January
+18        1 or before April 15 and:
+19              (i) At least six (6) months during the prior year; or
+20              (ii) The majority of the time the claimant owned the dwelling if
+21              owned by the claimant less than one (1) year; or
+22              (iii) The majority of the time after the claimant first occupied
+23              the dwelling if occupied by the claimant for less than one (1)
+24              year. The county assessor may require written or other proof of
+25              the foregoing in such form as the county assessor may determine.
+26        (b) Notwithstanding the provisions of paragraph (a) of this subsec-
+27        tion, the property upon which the claimant makes application shall be
+28        deemed to be the claimant's primary dwelling place if the claimant is
+29        otherwise qualified and resides in a care facility and does not allow
+30        the property upon which the claimant has made application to be occu-
+31        pied by persons paying a consideration to occupy the dwelling. Payment
+32        of utilities shall not be payment of a consideration to occupy the
+33        dwelling. A claimant's spouse who resides in a care facility shall be
+34        deemed to reside at the claimant's primary dwelling place and to be a
+35        part of the claimant's household. A care facility is a hospital, nurs-
+36        ing facility or intermediate care facility for people with intellectual
+37        disabilities as defined in section 39-1301, Idaho Code, or a facility
+38        as defined in section 39-3302(16), Idaho Code, or a dwelling other than
+39        the one upon which the applicant makes application where a claimant who
+40        is unable to reside in the dwelling upon which the application is made
+41        lives and receives help in daily living, protection and security.
+
+42       SECTION 42. The rules contained in IDAPA 16.03.02, Idaho Department of
+43   Health and Welfare, relating to Skilled Nursing Facilities, shall be null,
+44   void, and of no force and effect on and after July 1, 2025.
+
+45        SECTION 43. The rules contained in IDAPA 16.03.07, Idaho Department of
+46   Health and Welfare, relating to Home Health Agencies, shall be null, void,
+47   and of no force and effect on and after July 1, 2025.
+                                         24
+
+
+
+
+1         SECTION 44. The rules contained in IDAPA 16.03.11, Idaho Department of
+2    Health and Welfare, relating to Intermediate Care Facilities for People with
+3    Intellectual Disabilities (ICFs/IID), shall be null, void, and of no force
+4    and effect on and after July 1, 2025.
+
+5        SECTION 45. The rules contained in IDAPA 16.03.14, Idaho Department of
+6    Health and Welfare, relating to Hospitals, shall be null, void, and of no
+7    force and effect on and after July 1, 2025.
+
+8        SECTION 46. An emergency existing therefor, which emergency is hereby
+9    declared to exist, this act shall be in full force and effect on and after
+10   July 1, 2025.
+
+END SOURCE 1
+
+SOURCE 2: Idaho Code Title 39, Chapter 13 (Hospitals), sections 39-1301 (Definitions), 39-1302 (Streamlined Facilities Licensing and Inspection Act — Short Title), 39-1303 (Licensure), 39-1304 (Denial or Revocation), 39-1305 (Inspections), and 39-1309 (Deemed Status of Hospice Agency) | https://legislature.idaho.gov/statutesrules/idstat/Title39/T39CH13/SECT39-1301/ (and the corresponding /SECT39-1302/, /SECT39-1303/, /SECT39-1304/, /SECT39-1305/, /SECT39-1309/ pages) | source's own date: each section carries its own History line: 39-1301 "[39-1301, added 2025, ch. 122, sec. 20, p. 634.]"; 39-1302 "[39-1302, added 2025, ch. 122, sec. 21, p. 634.]"; 39-1303 "[39-1303, added 2025, ch. 122, sec. 22, p. 635.]"; 39-1304 "[39-1304, added 2025, ch. 122, sec. 23, p. 635.]"; 39-1305 "[(39-1305) 39-1309, added 1947, ch. 133, sec. 9, p. 324; am. and redesig. 2025, ch. 122, sec. 24, p. 635.]"; 39-1309 "[(39-1309) 39-1301C, added 2010, ch. 84, sec. 2, p. 164; am. and redesig. 2025, ch. 122, sec. 28, p. 637.]" | retrieved: 2026-09-02
+39-1301.
+Definitions.
+For purposes of this section through section
+39-1309
+, Idaho Code, the following terms shall be defined as follows:
+(1)  "CMS" means the centers for medicare and medicaid services.
+(2)  "Department" means the department of health and welfare.
+(3)  "Government unit" means the state, or any county, municipality, or other political subdivision, or any department, division, board, or other agency thereof.
+(4)  "Home health agency" means any business entity that primarily provides skilled nursing services by licensed nurses and also provides at least one (1) other health care service to an individual in that individual’s place of residence.
+(5)  "Hospice house" means a facility that is owned and operated by a medicare certified hospice agency for the purpose of providing inpatient hospice services consistent with 42 CFR 418.110.
+(6)  "Hospital" has the same meaning as in section 1861 of the social security act.
+(7)  "Intermediate care facility" means a nonnursing home facility, designed and operated to meet the unique educational, training, habilitative, and medical needs of the developmentally disabled through the provision of active treatment.
+(8)  "Nursing facility" or "nursing home" has the same meaning as in 42 CFR.
+(9)  "Person" means any individual, firm, partnership, corporation, company, association, or joint stock association, and the legal successor thereof.
+History:
+[39-1301, added 2025, ch. 122, sec. 20, p. 634.]
+39-1302.
+streamlined facilities licensing and inspection act — SHORT TITLE.
+Sections
+39-1301
+through
+39-1309
+, Idaho Code, shall be known and may be cited as the "Streamlined Facilities Licensing and Inspection Act."
+History:
+[39-1302, added 2025, ch. 122, sec. 21, p. 634.]
+39-1303.
+LICENSURE.
+(1) All medicare-certified or medicaid-certified hospitals, nursing facilities, or intermediate care facilities shall meet the standards for licensing pursuant to this chapter.
+(2)  A hospital shall have and maintain medicare certification through an accreditation organization recognized by CMS or receive a determination from the department that the hospital meets the criteria in 42 CFR for operating a hospital.
+(3)  A nursing facility or an intermediate care facility shall have and maintain CMS certification.
+(4)  A hospital, nursing facility, or intermediate care facility making an initial application for a license shall be issued a license if the department determines that all application information is acceptable and that the hospital, nursing facility, or intermediate care facility is at least in substantial compliance with the provisions of this chapter.
+(5)  Each licensee shall be designated by a distinctive name in applying for a license, and the name shall not be changed without first notifying the department in writing. Each licensee shall specify the maximum number of allowable beds in the hospital, nursing facility, or intermediate care facility, whether in use or not, and the licensee shall not exceed such maximum number of beds.
+(6)  When applicable, a licensee shall comply with rules adopted by the department, subject to legislative approval, on criminal history and background checks.
+(7)  A hospital, nursing facility, or intermediate care facility shall notify the department, in accordance with the time frame established in federal regulations, for every change of ownership, lessee, or management firm. A hospital, nursing facility, or intermediate care facility shall notify the department within seventy-two (72) hours of any change in administrator and submit a new application for licensure for any change in ownership or operator.
+(8)  Neither medicare-certified hospice agencies nor home health agencies are required to be licensed or certified pursuant to this chapter.
+History:
+[39-1303, added 2025, ch. 122, sec. 22, p. 635.]
+39-1304.
+denial or revocation.
+Notwithstanding the provisions of section
+39-1303
+, Idaho Code, the department may deny any application or revoke any license when persuaded by evidence that such conditions exist as to endanger the health or safety of any resident or patient. A license issued pursuant to this chapter shall remain in force until the license is voluntarily surrendered or the facility fails to meet CMS certification standards.
+History:
+[39-1304, added 2025, ch. 122, sec. 23, p. 635.]
+39-1305.
+Inspections.
+The department shall make or cause to be made such inspections and investigations as it deems necessary. Any licensee or applicant desiring to make specified types of alterations or additions to its facilities or to construct new facilities shall, before commencing such alterations, additions, or new construction, submit plans and specifications to the department for inspection and approval or recommendations with respect to compliance with the regulations and standards authorized pursuant to sections
+39-1301
+through
+39-1309
+, Idaho Code. The department recognizes the most recent edition of the facility guideline institute (FGI), guidelines for design and construction.
+History:
+[(39-1305) 39-1309, added 1947, ch. 133, sec. 9, p. 324; am. and redesig. 2025, ch. 122, sec. 24, p. 635.]
+39-1309.
+deemed status of hospice agency and its hospice home — no Idaho license or certification required.
+(1) A hospice house and its owner and operator medicare certified hospice agency must have and maintain deemed status through a centers for medicare & medicaid services recognized accrediting organization.
+(2)  Neither a medicare certified hospice agency nor its hospice home is required to be licensed or certified by the state of Idaho.
+History:
+[(39-1309) 39-1301C, added 2010, ch. 84, sec. 2, p. 164; am. and redesig. 2025, ch. 122, sec. 28, p. 637.]
+END SOURCE 2
+
+SOURCE 3: IDAPA 16.03.26, "Medicaid Plan Benefits" (Idaho Department of Health and Welfare, Division of Medicaid) — excerpt: cover page, rules 000-003, the chapter's "Facility" definition, and the complete Nursing Facilities (NF) sub-area, sections 470-499 | https://adminrules.idaho.gov/rules/current/16/160326.pdf | source's own date: each rule paragraph in the source is dated "(7-1-26)" (i.e. effective July 1, 2026), the chapter's own per-paragraph amendment-date convention | retrieved: 2026-09-02
+            IDAPA 16 – IDAHO DEPARTMENT OF HEALTH AND WELFARE
+                                    Division of Medicaid
+                            16.03.26 – Medicaid Plan Benefits
+
+Who does this rule apply to?
+For those receiving medical assistance under Idaho Medicaid.
+
+What is the purpose of this rule?
+This chapter of rules contains the general provisions regarding the administration of the Medical
+Assistance Program (Medicaid).
+
+What is the legal authority for the agency to promulgate this rule?
+This rule implements the following statutes passed by the Idaho Legislature:
+
+Public Assistance and Welfare -
+Public Assistance Law:
+• Section 56-202(b), Idaho Code – Duties of Director of State Department of Health & Welfare
+• Section 56-265, Idaho Code – Provider Payment
+
+Where can I find information on Administrative Appeals?
+Administrative appeals and contested cases are governed by the provisions of the Idaho
+Administrative Procedures Act, Chapter 52, Title 67, Idaho Code, and IDAPA 62.01.01, “Idaho
+Rules of Administrative Procedure.”
+
+How do I request public records?
+Unless exempted, all public records are subject to disclosure by the Department that will comply
+with Title 74, Chapter 1, Idaho Code, upon requests. Confidential information may be restricted
+by state or federal law, federal regulation, and IDAPA 16.05.01, “Use and Disclosure of
+Department Records.”
+
+Who do I contact for more information on this rule?
+
+Idaho Department of Health and Welfare
+Division of Medicaid
+450 W. State Street,
+Boise, ID 83702
+
+P.O. Box 83720
+Boise, ID 83720-0036
+Phone: (208) 334-5747 or 1-877-200-5441 (toll free)
+
+000.     LEGAL AUTHORITY.
+Sections 56-202(b), and 56-265, Idaho Code.                                                                (7-1-26)
+
+001.     SCOPE.
+These rules contain the general provisions regarding the administration of Medicaid. All goods and services not
+specifically included in this chapter are excluded from coverage under Medicaid Benefit Plans. These rules also
+contain requirements for provider procurement and reimbursement. Individuals eligible for the Medicaid Enhanced
+Plan, including those enrolled in a duals managed care plan, also receive all Medicaid Basic Plan benefits. (7-1-26)
+
+002.    INCORPORATION BY REFERENCE.
+
+        01.      Estimated Useful Lives of Depreciable Hospital Assets, 2023 Revised Edition. The document
+may be obtained from the American Hospital Association, 155 North Wacker Drive, Ste. 400, Chicago, IL, 60606.
+                                                                                                        (7-1-26)
+
+        02.    Provider Reimbursement Manual (PRM). The Provider Reimbursement Manual (PRM), Part I
+and Part II (CMS Publication 15-1 and 15-2), is available at: https://www.cms.gov/Regulations-and-Guidance/
+Guidance/Manuals/Paper-Based-Manuals.html.                                                         (7-1-26)
+
+003.    BACKGROUND CHECK REQUIREMENTS.
+
+         01.      Background Check Compliance. Background checks are required for specific providers under
+these rules. Providers who are required to have a background check and their contractors must comply with IDAPA
+16.05.06.                                                                                                (7-1-26)
+
+        02.      Variances.                                                                                (7-1-26)
+
+        a.       The Department may allow variances to clearance requirements under certain circumstances.
+Applicable providers must still complete an application for a background check.                   (7-1-26)
+
+         b.       Applicants with prior convictions for disqualifying drug and alcohol-related offenses may, with
+prior written approval of the Department, deliver covered Medicaid Peer Support and Recovery Coaching services.
+                                                                                                         (7-1-26)
+
+         03.      Subsequent Convictions, Charges, or Investigations. Once clearances are received, any
+subsequent criminal, adult, or child protection convictions, charges, or investigations must be immediately reported
+by the agency to the Department once known.                                                                 (7-1-26)
+
+        04.      Providers Subject to Background Check Requirements.                                       (7-1-26)
+
+        a.       Adult Day Health Agencies.                                                                (7-1-26)
+
+        b.       Behavior Consultation or Crisis Management Providers.                                     (7-1-26)
+
+        c.       Chore Services Providers.                                                                 (7-1-26)
+
+        d.       Community Support Workers.                                                                (7-1-26)
+
+         e.       Contracted Non-Emergency Medical Transportation (NEMT) Providers, with direct contact with
+participants except for Individual Contracted NEMT providers.                                       (7-1-26)
+
+        f.       Independent CHIS Providers.                                                               (7-1-26)
+
+        g.       Non-Medical Transportation (NMT) Providers.                                               (7-1-26)
+
+        h.       Personal Assistance Agencies (PAA), including PAAs Acting as Fiscal Intermediaries.       (7-1-26)
+
+        i.       Provider types deemed by the Department to be at high risk for fraud, waste, or abuse.    (7-1-26)
+
+        j.       Respite Care Providers.                                                                   (7-1-26)
+
+
+Section 000                                          Page 14
+IDAHO ADMINISTRATIVE CODE                                                                        IDAPA 16.03.26
+Department of Health & Welfare                                                            Medicaid Plan Benefits
+
+         k.       Service Coordination Agencies.                                                             (7-1-26)
+
+         l.       Support Brokers.                                                                           (7-1-26)
+
+         m.       Supported Employment Agencies.                                                             (7-1-26)
+
+004.     (RESERVED)
+
+
+
+         27.     Evidence-Informed Interventions. Interventions that use elements or components of evidence-
+based techniques and are delivered by a qualified individual, who are not certified or credentialed in an EBM.
+                                                                                                             (7-1-26)
+
+         28.      Facility. Facility refers to a hospital, nursing facility (NF), or intermediate care facility for
+individuals with intellectual disabilities (ICF/IID).                                                     (7-1-26)
+
+                                    SUB AREA: NURSING FACILITIES (NF)
+                                             (Sections 470-499)
+
+470.    NF: DEFINITIONS.
+NF services include long term care services provided in a facility other than an institution for mental diseases (IMD).
+                                                                                                               (7-1-26)
+
+471.     NF: ELIGIBILITY.
+The Department determines whether a participant meets criteria for NF services, any patient liability and whether a
+participant's needs can be met in alternative living situations other than residing in a NF. The participant can select
+any certified NF to provide the level of care (LOC) required, if approved.                                    (7-1-26)
+
+        01.      Determination. The Department determines a participant’s level of care requirement and any need
+for DD or mental illness (MI) active treatment during the Level II screen.                               (7-1-26)
+
+       a.        Adult LOC. The Department uses a standard assessment to determine adults meet one (1) of the
+PDPM classifications.                                                                               (7-1-26)
+
+          b.      Children’s LOC. A child meets LOC when the age-appropriate developmental milestones, risk
+factors, and aggregate care or intervention needs identified in assessments indicate one (1) or more of the following
+applies as documented by physician's orders, progress notes, a service plan, and nursing or therapy notes: (7-1-26)
+
+        i.        A complex provider prescribed service that requires skills of an RN or licensed physical or
+occupational therapist or only under equivalent supervision for safe and effective delivery.         (7-1-26)
+
+          ii.      The child's condition requires skilled care to sustain current capacities, regardless of their
+restoration potential, even when improvement is not possible.                                            (7-1-26)
+
+         02.       Authorization. The Department does not authorize payment to any NF for care or services beyond
+the NF's licensed level of care or capability. The Department notifies the NF with the authorized payment for services
+and any patient liability prior to admission.                                                                 (7-1-26)
+
+472.      NF: PATIENT LIABILITY.
+The Department reduces payment to the NF by each participant’s patient liability as determined during the financial
+eligibility process.                                                                                       (7-1-26)
+
+473.     NF: COVERAGE AND LIMITATIONS.
+NFs must provide regular, health-related care and services to participants who require additional care and services
+due to a mental or physical condition above room, board, and supervision alone.                            (7-1-26)
+
+         01.      Minimum Coverage. Minimum services and supplies include:                                    (7-1-26)
+
+
+Section 470                                           Page 100
+IDAHO ADMINISTRATIVE CODE                                                                          IDAPA 16.03.26
+Department of Health & Welfare                                                              Medicaid Plan Benefits
+
+         a.      Room and board;                                                                            (7-1-26)
+
+         b.      Bed and bathroom linens;                                                                   (7-1-26)
+
+         c.      Nursing care, including special feeding if needed;                                         (7-1-26)
+
+         d.      Personal services;                                                                         (7-1-26)
+
+         e.      Supervision when required by the patient's condition;                                      (7-1-26)
+
+         f.      Special diets prescribed by a physician;                                                   (7-1-26)
+
+         g.      All common over-the counter medicine chest supplies;                                       (7-1-26)
+
+         h.      Dressings. Applications using prescription medications or aseptic techniques must be completed by
+an RN;                                                                                                    (7-1-26)
+
+         i.        Administration of intravenous, subcutaneous, or intramuscular injections and infusions, enemas,
+catheters, bladder irrigations, and oxygen;                                                                (7-1-26)
+
+         j.      Application or administration of all drugs;                                                (7-1-26)
+
+         k.      All common disposable medical supplies;                                                    (7-1-26)
+
+         l.      Social and recreational activities; and                                                    (7-1-26)
+
+         m.       Any reusable item commonly needed by patients expected to be available in a NF, such as bed rails,
+canes, crutches, walkers, wheelchairs, traction equipment, and other DME.                                  (7-1-26)
+
+         02.      Skilled Services.                                                                         (7-1-26)
+
+         a.        Overall development, management, and evaluation of a resident’s service plan, based on a
+physician's orders, when a patient's physical or mental condition or aggregate PCS tasks require technical or
+professional staff to meet their needs, promote recovery, and assure medical safety.                 (7-1-26)
+
+          b.      Ongoing assessment of rehabilitation needs concurrent with the management of a resident's service
+plan, including tests and measurements of range of motion, strength, balance, coordination, endurance, functional
+ability, ADLs, perceptual deficits, and speech, language, or hearing disorders.                           (7-1-26)
+
+         c.       Professional observation and assessment of a resident's changing condition required to identify and
+evaluate whether treatment modification or additional medical procedures to stabilize a condition are needed.
+                                                                                                            (7-1-26)
+
+         03.      Limitations.                                                                              (7-1-26)
+
+         a.       Services requiring skilled nursing staff include:                                         (7-1-26)
+
+         i.         Intravenous injections or feedings and intramuscular or subcutaneous injections required on more
+than one (1) shift;                                                                                          (7-1-26)
+
+         ii.      Nasopharyngeal feedings and aspiration;                                                   (7-1-26)
+
+         iii.     Tracheotomy aspiration;                                                                   (7-1-26)
+
+         iv.      Catheter insertion, sterile irrigation, and replacement;                                  (7-1-26)
+
+         v.       Treating extensive decubitus ulcers or other widespread skin disorders;                   (7-1-26)
+
+
+Section 473                                            Page 101
+IDAHO ADMINISTRATIVE CODE                                                                       IDAPA 16.03.26
+Department of Health & Welfare                                                           Medicaid Plan Benefits
+
+
+         vi.      Heat treatments specifically ordered by a physician as part of treatment and requiring nurse
+observation to adequately evaluate a resident's progress; and                                          (7-1-26)
+
+        vii.     Initial phases of a regimen involving oxygen administration.                              (7-1-26)
+
+        b.       Services requiring physical or occupational therapists include:                           (7-1-26)
+
+         i.       Therapeutic exercises or activities must be performed by or under supervision to ensure resident
+safety and treatment effectiveness;                                                                       (7-1-26)
+
+        ii.      Gait evaluation and training to restore function in a resident whose ability to walk is impaired by
+neurological, muscular, or skeletal abnormality;                                                            (7-1-26)
+
+        iii.     Ultrasound, short-wave, and microwave therapy treatments; and                             (7-1-26)
+
+         iv.     Other treatment and modalities including hot pack, hydroculator, infrared treatments, paraffin
+baths, and whirlpool for residents with circulatory deficiency, desensitization, open wounds, fractures, or other
+complications.                                                                                           (7-1-26)
+
+474.     NF: PROCEDURAL RESPONSIBILITIES.
+Each NF administrator, or their authorized representative must report the following information to the Department
+within three (3) working days of the date a NF is aware of:                                              (7-1-26)
+
+         01.       Change of Status. Any participant readmission, discharge, or any temporary absence due to
+hospitalization or therapeutic home visit.                                                           (7-1-26)
+
+        02.      Changes of Resident’s Income.                                                             (7-1-26)
+
+         03.      Amount Exceeded. When a resident’s account exceeds one thousand eight hundred dollars
+($1,800) for single participants, or two thousand eight hundred dollars ($2,800) for married couples. (7-1-26)
+
+         04.       Other Patient Financial Information. Other information about a resident’s finances that
+potentially affects eligibility for Medicaid.                                                     (7-1-26)
+
+475.      PREADMISSION SCREENING AND RESIDENT REVIEW PROGRAM (PASRR).
+NFs must assure that all screens are obtained and coordinated with the Department, independent mental illness (MI)
+evaluators, the State Mental Health Authority (SMHA) and State Intellectual Disabilities or Developmental
+Disabilities Authority (SDDA), and designees.                                                             (7-1-26)
+
+        01.       Level I Screening. All required Level I screens and level of care reviews are completed and
+submitted to the Department prior to NF admission.                                                   (7-1-26)
+
+          02.      Level II Screening.When a NF identifies an individual with MI or DD (typically through a Level I
+screen), they must contact the SMHA or SDDA (as appropriate), and to complete a Level II screen prior to admission,
+or for existing residents, to continue residing in the NF.                                                 (7-1-26)
+
+        03.      Change in Status. Resident reviews for residents with MI or DD must occur and a new
+determination made after any significant change in their physical or mental condition renders them incapable of
+responding to program interventions. NFs must notify the Department of any changes within two (2) working days of
+occurrence when any significant change requires new or increased specialized services.                   (7-1-26)
+
+476.     NF: ELIGIBILITY COORDINATION AND SPECIALIZED SERVICE NEEDS.
+When an individual identified with MI and DD is admitted to a NF, the NF must meet that individual's needs, except
+for specialized services.                                                                                (7-1-26)
+
+        01.      Categorical Determinations. When NF level of care is determined categorical, an individual may
+
+
+Section 474                                          Page 102
+IDAHO ADMINISTRATIVE CODE                                                                       IDAPA 16.03.26
+Department of Health & Welfare                                                           Medicaid Plan Benefits
+
+be conditionally admitted prior to completion of a determination for specialized services. However, conditional
+admissions cannot exceed seven (7) days, except for respite admissions which cannot exceed thirty (30) consecutive
+days in a calendar year.                                                                                  (7-1-26)
+
+         02.      Specialized Services. Needs must be documented and included in both the resident assessment and
+service plan.                                                                                            (7-1-26)
+
+        03.      Non-Compliance Penalty. No payment is made for any services rendered by a NF prior to
+completion of a Level I screen and, if required, a Level II screen.                           (7-1-26)
+
+         04.     Appeals. A Level I determination of MI or ID is not appealable but may be disputed as part of a
+Level II determination appeal.                                                                         (7-1-26)
+
+477.    NF: PREPAYMENT SCREEN AND DETERMINATION OF ENTITLEMENT TO MEDICAID
+PAYMENT FOR NF CARE AND SERVICES.
+A current Minimum Data Set (MDS) assessment is provided to the Department. Additional supporting information
+may be requested. In the event a required Level II screen was not completed prior to admission, entitlement for
+Medicaid payment is not earlier than the date of Level II screen completion, indicating NF placement is appropriate.
+                                                                                                            (7-1-26)
+
+478.     NF: PROVIDER QUALIFICATIONS AND DUTIES.
+
+         01.     Application.                                                                               (7-1-26)
+
+         02.      Licensure and Certification (L&C).                                                        (7-1-26)
+
+         a.        Upon receipt of a NF application, the State determines compliance with certification standards for
+the type of care the NF proposes to provide to Medicaid participants.                                        (7-1-26)
+
+        b.       NFs applying to participate as a Skilled Nursing Facility must meet Medicare certification and
+program participation requirements before Medicaid certification. The State determines NF compliance with
+Medicare and recommends certification to the Medicare Agency.                                          (7-1-26)
+
+        c.         The Department certifies to the appropriate branch of government when the State determines a NF
+meets certification standards for NF care.                                                                 (7-1-26)
+
+479. – 480.       (RESERVED)
+
+481.    NF: COST LIMITS.
+The Idaho Medicaid Provider Agreement Additional Terms – Nursing Facility provides requirements necessary to
+implement the provisions and accomplish the objectives of the NF reimbursement system.              (7-1-26)
+
+482.     NF: RATE SETTING.
+
+        01.      Payments. Payments to NFs through a prospective price-based system, which includes NF-specific
+case mix adjustments, separate margin payments for indirect care costs and direct care costs, and applied BAF.
+                                                                                                            (7-1-26)
+
+          02.      Rate Adjustment. To set rates based on each NF's CMI on a quarterly basis and establish rates
+reflecting the case mix of each NF's Medicaid residents as of a certain date during the prior quarter. (7-1-26)
+
+483.      NF: PRINCIPLE FOR RATE SETTING.
+Rates are set based on projected cost data from cost and audit reports for freestanding and hospital-based NFs. In
+general, methodology uses a cost-based prospective reimbursement system with an acuity adjustment for direct care
+costs, allowances for margin payments related to indirect and direct care costs, and subject to the application of a
+BAF.                                                                                                        (7-1-26)
+
+
+
+Section 477                                          Page 103
+IDAHO ADMINISTRATIVE CODE                                                                         IDAPA 16.03.26
+Department of Health & Welfare                                                             Medicaid Plan Benefits
+
+484.      NF: RATE DEVELOPMENT.
+NF rates are prospective, with new rates effective July 1st of each year, and are recalculated annually with quarterly
+case mix adjustments. In no case will a rate be set higher than the charge for like services to private pay patients in
+effect for the period for which payment is made as computed by the lower of costs or customary charges. Rates are
+calculated using audited cost reports for the periods ending in the calendar year two (2) years prior to each July 1,
+including inflation adjustments from the midpoint of the cost report period to the mid-point of a rate period, except
+for property costs.                                                                                           (7-1-26)
+
+485.     NF: OUT-OF-STATE FACILITIES.
+Medicaid reimburses for out-of-state NF placements when services are not available in Idaho to meet the medical
+need, or in temporary situations for safe transportation to an Idaho NF. Services are paid the per diem rate, except
+where noted, for the state where the NF is located.                                                         (7-1-26)
+
+486.        NF: DISTRESSED FACILITY.
+
+        01.       Department Determination. NFs in an under-served area, or addressing an under-served need,
+may receive an alternative rate.                                                                    (7-1-26)
+
+          02.      Discretionary Factors. A NF is not guaranteed increased payment. The Department considers
+factors for a higher rate on a NF-by-NF basis:                                                      (7-1-26)
+
+        a.        Prudent spending patterns and cost allocation as evidenced by a Department review of the NF’s
+accounts.                                                                                               (7-1-26)
+
+         b.        A NF diligently attempted to cover costs of care, hire qualified staff, and otherwise operate
+effectively and efficiently, but cannot due to causes beyond the NF’s reasonable control.               (7-1-26)
+
+         c.         The same costs of care used to determine special rates are not applied toward a determination of
+distressed facility status.                                                                                 (7-1-26)
+
+         d.       The determination of distressed status focuses on whether the NF’s distress stems from patient care
+costs, and not expenses unrelated to patient care costs.                                                    (7-1-26)
+
+         e.        A NF’s payment cannot exceed the lower of its actual costs or customary charge to private-pay
+patients unless except by federal law. The Department’s cost caps can be exceeded through the distressed facility
+process up to the federal UPL.                                                                          (7-1-26)
+
+        03.       Annual Review. Distressed facility payments are short-term and redetermined for each fiscal year
+a NF requests a distressed facility rate.                                                                 (7-1-26)
+
+            04.   Prospective Application. Only NFs currently distressed or entering a period of distress are
+eligible.                                                                                            (7-1-26)
+
+487.        NF: REVIEWS.
+
+         01.        Facility Review. The Department may send information for NF review for rate setting. The NF
+must confirm its accuracy in writing or communicate errors to the Department with supporting documentation. If
+nothing is provided, the Department may rely on other available information for rate setting. Once information is
+used to set rates, it is considered final unless modified by subsequent Department review.               (7-1-26)
+
+         02.     Department Review. The Department may retroactively adjust a NF's rate for incorrect
+information and calculate an overpayment. Adjustments do not include residents who received a default classification
+due to incomplete or inconsistent MDS data.                                                                (7-1-26)
+
+488.        NF: BEHAVIORAL CARE UNIT (BCU) RATES.
+
+            01.   Direct Care Costs. Additional direct care costs for BCU residents remain in direct care costs
+
+
+Section 484                                           Page 104
+IDAHO ADMINISTRATIVE CODE                                                                          IDAPA 16.03.26
+Department of Health & Welfare                                                              Medicaid Plan Benefits
+
+subject to the direct care cost limitation. Qualifying BCU NFs may have a direct care cost limitation higher than non-
+-BCU NFs, and do not receive an increased indirect care cost limitation.                                      (7-1-26)
+
+         02.      New Owner. The prior owner's cost report is used for rate calculations until the new owner has a
+qualifying cost report. The BCU continues to qualify for the same higher direct care cost limit as the previous owner.
+If the BCU is discontinued, the direct care cost limit is adjusted down to match a non-BCU NF.                (7-1-26)
+
+489.      NF: BCU QUALIFICATIONS.
+Facilities must meet the qualifications for a BCU described in the Idaho Medicaid Provider Agreement Additional
+Terms – Behavioral Care Units.                                                                        (7-1-26)
+
+490.     NF: BCU ELIGIBLE DAYS.
+NFs must demonstrate BCU days from a minimum of sixty (60) calendar days, regardless of payer source, divided by
+total census days for that same 60-day period, equals or exceeds a minimum of thirty percent (30%).     (7-1-26)
+
+491.     NF: SPECIAL RATES.
+The Department pays NFs an addition to their daily rate when a patient’s needs exceed the scope of NF services, and
+the cost is not adequately reflected in the calculated rates. This rate is in addition to any payments under other
+provisions and excluded from the computation of payments or rates under other sections of these rules.     (7-1-26)
+
+        01.       Determination. The Department approves special rates per patient based on identified conditions
+expected to continue for more than thirty (30) days. No rate is allowed if payment for these needs is available from a
+non-Medicaid source.                                                                                          (7-1-26)
+
+         02.      Effective Date. Upon approval, a special rate is effective on the date set by the Department.
+                                                                                                             (7-1-26)
+
+       03.      Reporting. Costs equivalent to payments for special rate add-on amounts are removed from cost
+components subject to limits and reported separately.                                                 (7-1-26)
+
+         04.      Limitation. Special rates cannot exceed a NF's charges to other patients for similar services.
+                                                                                                              (7-1-26)
+
+         05.      Prospective Rate Treatment. Special rates are paid under a prospective payment system. (7-1-26)
+
+         06.       Payment for Qualifying Residents. The Department calculates special rate add-on amounts using
+one (1) of the following methods:                                                                       (7-1-26)
+
+         a.       For NFs operating as a one hundred percent (100%) special care unit including Medicaid residents,
+the direct care cost per diem is not subject to the direct care cost limit. However, the direct care costs are case mix
+adjusted based on the ratio of a NF's Medicaid CMI for the rate period to the NF-wide CMI for the cost reporting
+period.                                                                                                         (7-1-26)
+
+         b.        The Department pays for equipment and non-therapy supplies not addressed in the coverage and
+limitations section in accordance with DMEPOS, as an add-on amount.                                     (7-1-26)
+
+          c.       NFs providing care to residents who are ventilator-dependent or receive tracheostomy care are
+eligible to submit requests for a fixed add-on amount, in addition to the NF’s rate for residents receiving this type of
+care. Approved requests are effective the date a resident needs this care, no earlier than sixty (60) days prior to
+request receipt. Add-on rates include the cost for equipment and supplies and for additional RN and CNA hours, as
+appropriate for each care type. Costs for equipment and supplies are adjusted annually for inflation, and skilled
+nursing costs are adjusted according to annual WAHR survey results.                                            (7-1-26)
+
+         i.       The Department reviews approved add-on rates for these residents annually to ensure the add-on
+rate remains necessary for the resident’s care needs.                                                    (7-1-26)
+
+         ii.      NFs must inform the Department when an approved add-on rate is no longer needed or a resident’s
+
+
+Section 489                                            Page 105
+IDAHO ADMINISTRATIVE CODE                                                                          IDAPA 16.03.26
+Department of Health & Welfare                                                              Medicaid Plan Benefits
+
+special needs change.                                                                                          (7-1-26)
+
+          iii.    The hourly add-on rate for staffing in an out-of-state NF equals the current WAHR CNA or RN
+wage rate plus a benefits allowance based on annual cost report data and weighted to remove CNA minimum daily
+staffing time adjusted for the appropriate staff skill level.                                         (7-1-26)
+
+         07.      Treatment of Special Rates In Future Rate Setting Periods. Special rates are established on a
+prospective basis as with the overall NF rate. When a cost report used to set rates contains a special add-on cost, the
+Department makes an adjustment to reduce costs by an amount equal to total incremental revenues, or add-on
+payments received by the NF during the cost reporting period. The amount received is calculated by multiplying the
+special rate add-on amount paid for each qualifying resident by the number of days paid. No related adjustment is
+made to the NF's CMIs.                                                                                        (7-1-26)
+
+         08.       Special Rate for NF Ownership Change or Closure. The Department does not require a closing
+cost report, and reviews special rates made in the closing cost reporting period.                    (7-1-26)
+
+492.    NF: OCCUPANCY ADJUSTMENT FACTOR.
+The Department makes adjustments to equitably allocate fixed costs for patients when a NF fails to maintain
+reasonable occupancy levels. No occupancy adjustment is made against costs used to calculate a property rental rate.
+Adjustments are made against all other property costs:                                                    (7-1-26)
+
+         01.       Occupancy Levels. If a NF maintains an average occupancy of less than eighty percent (80%) of
+capacity, the total property costs not including cost paid under a property rental rate, are prorated based upon an
+eighty percent (80%) occupancy rate. A NF's average occupancy percentage is subtracted from eighty percent (80%)
+and the result is multiplied by the total fixed costs to determine nonallowable fixed costs. When a NF changes
+designed capacity, average occupancy for the period before and after the change is computed for each period.
+                                                                                                            (7-1-26)
+
+         02.      Occupancy Adjustment. NF capacity is computed based on the greater of the largest number of
+beds under a NF’s license during the reporting period, except when a portion of the NF was converted to use for non-
+routine NF activities, or a newly constructed facility enters the Medicaid Program. If a NF's designed capacity
+changes, the number of beds used to determine occupancy is lowered by the capacity amount converted to non-
+routine NF activities. New NF capacity is based on the number of beds approved by the certificate of need process
+minus any capacity converted to non-routine NF activities.                                                  (7-1-26)
+
+        03.      Fixed Costs. Occupancy adjustments to fixed costs are considered allowable and reimbursable
+costs when reported under property cost categories.                                                 (7-1-26)
+
+        04.       Adjustment Exemption. An increase in number of beds and new NFs are not subject to an
+adjustment for the first six (6) months of licensure or operation.                             (7-1-26)
+
+493.     NF: RECAPTURE OF DEPRECIATION.
+When depreciable assets reimbursed by Medicaid based on cost are sold for an amount exceeding their net book
+value, depreciation is recaptured from the NF buyer in an amount equal to reimbursed depreciation or gain on the
+sale, whichever is less.                                                                                (7-1-26)
+
+         01.       Amount Recaptured. Depreciation is recaptured in full when a sale of a depreciated NF occurs
+within the first five (5) years of ownership. For every year an asset is held beyond the first five (5) years, total
+depreciation recaptured is reduced by ten percent (10%) per year.                                          (7-1-26)
+
+         02.      Time Frame. The Department recaptures depreciation from a NF buyer over no more than five (5)
+years from the sale date, with no less than one-fifth (1/5) of the total recaptured amount for each year after. (7-1-26)
+
+494.    NF: NURSE AIDE TRAINING AND COMPETENCY EVALUATION PROGRAMS (NATCEPS).
+NATCEP costs are outside the content of NF care and must be reported by all NFs. Costs are reported separately as
+exempt costs and not included in the percentile cap.                                                    (7-1-26)
+
+
+
+Section 492                                            Page 106
+IDAHO ADMINISTRATIVE CODE                                                                           IDAPA 16.03.26
+Department of Health & Welfare                                                               Medicaid Plan Benefits
+
+495.      NF: PAYMENTS FOR TEMPORARY ABSENCES.
+Limitations for payments made to reserve beds in NFs during a temporary absence if the NF charges private pay
+patients for reserve bed days:                                                                       (7-1-26)
+
+        01.      NF Occupancy Limits. Payment for temporary absences from NFs are made according to the
+number of licensed and unoccupied beds.                                                        (7-1-26)
+
+        a.      Payments are not allowed for NFs with less than one hundred (100) licensed beds when five (5) or
+more are unoccupied.                                                                                   (7-1-26)
+
+       b.     Payments may be allowed for NFs with one hundred (100) or more licensed beds when the
+minimum occupancy rate is ninety-five percent (95%).                                        (7-1-26)
+
+          02.      Time Limits. Payments for temporary absences are made for therapeutic home visits for residents
+up to three (3) days per visit, not exceeding fifteen (15) days per calendar year for days included as part of a treatment
+plan ordered by a provider.                                                                                       (7-1-26)
+
+         03.     Payment Limits. Reserve bed days payments are the lesser of seventy-five percent (75%) of the
+audited allowable NF costs or the rate charged to private pay residents.                              (7-1-26)
+
+496. – 499.       (RESERVED)
+END SOURCE 3
+
+SOURCE 4: Appeals and Fair Hearings | https://healthandwelfare.idaho.gov/appeals-and-fair-hearings | source's own date: "Page last updated: 6-15-2026" | retrieved: 2026-09-02
+Breadcrumb
+Home
+Appeals and Fair Hearings
+Appeals and Fair Hearings
+This page explains how to file an appeal for an eligibility decision for public assistance programs.
+Your Rights to Appeal or Request a Fair Hearing
+If you disagree with a decision from the department that impacts your eligibility or benefits you receive, you have the right to appeal that decision. The process for appealing a decision or requesting a fair hearing depends on the program that you are refuting.
+Appeals and fair hearings
+An appeal is also referred to as a fair hearing. If we made a decision about your benefits that you do not agree with, you can request an appeal. The department’s first step will include contacting you to discuss your concerns and reviewing the case to ensure eligibility and benefits were calculated accurately.
+The hearing is your chance to explain why you disagree with the department's decision. Most hearings are conducted telephonically. During the hearing, you will have the opportunity to have the decision you are appealing reviewed by a third party, independent hearing officer (similar to a judge). You will have the opportunity to present information to the hearing officer to show why you disagree with the department's decision on your case.
+The administrative hearing will be conducted by the Office of Administrative Hearings (OAH) under the rules applicable to Department of Health and Welfare in effect prior to July 1, 2024. These rules apply pursuant to, and are set forth within,
+OAH General Order No. 1
+. At the hearing, you may represent yourself, use legal counsel, a relative, a friend, or other spokesperson. The department will provide supporting documentation regarding their eligibility decision for your household. The hearing officer will make a decision based on the information both sides provide and the applicable program rules.
+There are different timelines for requesting an appeal or fair hearing. These timeframes begin the date the department gave or mailed you a notice.
+Find more information, instructions, and appeal forms, select a program below.
+Your non-discrimination rights
+View your non-discrimination rights and find information on how to file a complaint on our non-discrimination page.
+Nondiscrimination information
+Cash assistance
+Temporary Assistance for Families in Idaho (TAFI) and Aid to the Aged, Blind, and Disabled (AABD Cash)
+If the department denies or discontinues your cash assistance benefits, and you disagree with that decision, or you believe the amount of benefit you receive is incorrect, you have the right to file an appeal.
+You have 30 days from the date on your notice about the decision to file an appeal.
+How to file an appeal
+You can file an appeal in one of the following ways:
+Submit a request for an appeal by completing the
+Fair Hearing Request form
+and mailing it to us.
+Request an appeal in writing by mail, email, or fax. You may be asked to complete the Fair Hearing Request form.
+Call us to request an appeal. When you call, you may be asked to submit a request in writing or complete the Fair Hearing Request form.
+File your appeal
+Mail
+Email
+Fax
+Phone
+Self-Reliance Programs
+P.O. Box 83720
+Boise, ID 83720-0026
+mybenefits@dhw.idaho.gov
+866-434-8278 (toll free)
+877-456-1233 (toll free)
+In some instances, you may be able to continue receiving your benefits while your appeal is being considered. If your appeal is denied, you will be responsible to repay any benefits you received during this time period. If you want to continue receiving benefits during your appeal process,
+you must let us know within 10 days of the date of the notice.
+The hearing is your chance to explain why you disagree with the department's decision. Most hearings are conducted telephonically.  During the hearing, you will have the opportunity to have the decision you are appealing reviewed by a third party, independent hearing officer (similar to a judge). You will have the opportunity to present information to the hearing officer to show why you disagree with the department's decision on your case. At the hearing, you may represent yourself, use legal counsel, a relative, a friend, or other spokesperson. The department will provide supporting documentation regarding their eligibility decision for your household. The hearing officer will make a decision based on the information both sides provide and the applicable program rules.
+Child care assistance
+Idaho Child Care Program (ICCP)
+If the department denies or discontinues your ICCP benefits, and you disagree with that decision, or you believe the amount of benefit you receive is incorrect, you have the right to file an appeal.
+You have 30 days from the date on your notice about the decision to file an appeal.
+How to file an appeal
+You can file an appeal in one of the following ways:
+Submit a request for an appeal by completing the
+Fair Hearing Request form
+and mailing it to us.
+Request an appeal in writing by mail, email, or fax. You may be asked to complete the Fair Hearing Request form.
+Call us to request an appeal. When you call, you may be asked to submit a request in writing or complete the Fair Hearing Request form.
+File your appeal
+Mail
+Email
+Fax
+Phone
+Self-Reliance Programs
+P.O. Box 83720
+Boise, ID 83720-0026
+mybenefits@dhw.idaho.gov
+866-434-8278 (toll free)
+877-456-1233 (toll free)
+In some instances, you may be able to continue receiving your benefits while your appeal is being considered. If your appeal is denied, you will be responsible to repay any benefits you received during this time period. If you want to continue receiving benefits during your appeal process,
+you must let us know within 10 days of the date of the notice.
+The hearing is your chance to explain why you disagree with the department's decision. Most hearings are conducted telephonically.  During the hearing, you will have the opportunity to have the decision you are appealing reviewed by a third party, independent hearing officer (similar to a judge). You will have the opportunity to present information to the hearing officer to show why you disagree with the department's decision on your case. At the hearing, you may represent yourself, use legal counsel, a relative, a friend, or other spokesperson. The department will provide supporting documentation regarding their eligibility decision for your household. The hearing officer will make a decision based on the information both sides provide and the applicable program rules.
+Child support
+Child Support Services (CSS)
+For many enforcement actions taken by the department’s Child Support Program, you have the right to request a hearing or administrative review.
+Hearings
+You may request a hearing when either:
+You are notified that the department intends to suspend a license(s)
+You are notified that the department has frozen a financial account and intends to withhold the financial asset
+If you request a hearing, you and the department may present evidence to a third-party hearing officer. The hearing officer may uphold or suspend (prevent) the Department’s enforcement action.
+Requests for a hearing must be received in writing within the following timeframes:
+For a financial asset seizure, you have 14 calendar days from the date on your notice.
+For a license suspension, you have 21 calendar days from the date you receive the notice.
+Administrative Reviews
+You may request an administrative review for enforcement actions such as:
+Lottery winning offset
+Insurance enrollment
+Tax offset
+Unemployment Insurance Benefit (UIB) withholding
+Credit reporting
+Lien filing
+PERSI withholding order
+Income Withholding Order (IWO)
+Wage Withholding Order (WWO)
+An administrative review is completed by the department. It allows you to explain or provide documentation as to why the enforcement action is not correct. The department reviews the information and determines if the enforcement action is correct according to program rules and the facts of your case.
+How to request a hearing or administrative review
+You can request a hearing or administrative review by completing and returning the form included in your notice (only provided for some enforcement actions) or submitting a request in writing.
+Request your Hearing or Administrative Review in writing using one of the following methods:
+Mail
+Email
+Fax
+Idaho Child Support
+P.O. Box 83720
+Boise, ID 83720-5302
+childsupport@dhw.idaho.gov
+855-349-2408 (toll free)
+Food assistance
+Supplemental Nutrition Assistance Program (SNAP)
+If the department denies or discontinues your SNAP benefits, and you disagree with that decision, or you believe the amount of benefit you receive is incorrect, you have the right to file an appeal.
+You have 90 days from the date on your notice about the decision to file an appeal.
+How to file an appeal
+You can file an appeal in one of the following ways:
+Submit a request for an appeal by completing the
+Fair Hearing Request form
+and mailing it to us.
+Request an appeal in writing by mail, email, or fax. You may be asked to complete the Fair Hearing Request form.
+Call us to request an appeal. When you call, you may be asked to submit a request in writing or complete the Fair Hearing Request form.
+File your appeal
+Mail
+Email
+Fax
+Phone
+Self-Reliance Programs
+P.O. Box 83720
+Boise, ID 83720-0026
+mybenefits@dhw.idaho.gov
+866-434-8278 (toll free)
+877-456-1233 (toll free)
+In some instances, you may be able to continue receiving your benefits while your appeal is being considered. If your appeal is denied, you will be responsible to repay any benefits you received during this time period. If you want to continue receiving benefits during your appeal process,
+you must let us know within 10 days of the date of the notice.
+The hearing is your chance to explain why you disagree with the department's decision. Most hearings are conducted telephonically.  During the hearing, you will have the opportunity to have the decision you are appealing reviewed by a third party, independent hearing officer (similar to a judge). You will have the opportunity to present information to the hearing officer to show why you disagree with the department's decision on your case. At the hearing, you may represent yourself, use legal counsel, a relative, a friend, or other spokesperson. The department will provide supporting documentation regarding their eligibility decision for your household. The hearing officer will make a decision based on the information both sides provide and the applicable program rules.
+Medicaid
+Medicaid for Adults, Children's Medicaid, and Children's Health Insurance Program (CHIP)
+If the department denies or discontinues your Medicaid benefits, and you disagree with that decision, or you believe the amount of benefit you receive is incorrect, you have the right to file an appeal.
+You have 30 days from the date on your notice about the decision to file an appeal.
+How to file an appeal
+You can file an appeal in one of the following ways:
+Submit a request for an appeal by completing the
+Fair Hearing Request form
+and mailing it to us.
+Request an appeal in writing by mail, email, or fax. You may be asked to complete the Fair Hearing Request form.
+Call us to request an appeal. When you call, you may be asked to submit a request in writing or complete the Fair Hearing Request form.
+File your appeal
+Mail
+Email
+Fax
+Phone
+Self-Reliance Programs
+P.O. Box 83720
+Boise, ID 83720-0026
+mybenefits@dhw.idaho.gov
+866-434-8278 (toll free)
+877-456-1233 (toll free)
+In some instances, you may be able to continue receiving your benefits while your appeal is being considered. If your appeal is denied, you will be responsible to repay any benefits you received during this time period. If you want to continue receiving benefits during your appeal process,
+you must let us know within 10 days of the date of the notice.
+The hearing is your chance to explain why you disagree with the department's decision. Most hearings are conducted telephonically.  During the hearing, you will have the opportunity to have the decision you are appealing reviewed by a third party, independent hearing officer (similar to a judge). You will have the opportunity to present information to the hearing officer to show why you disagree with the department's decision on your case. At the hearing, you may represent yourself, use legal counsel, a relative, a friend, or other spokesperson. The department will provide supporting documentation regarding their eligibility decision for your household. The hearing officer will make a decision based on the information both sides provide and the applicable program rules.
+Division of Medicaid appeals
+If the department makes a decision about the Medicaid services and benefits you receive, such as developmental disability services or the level of care, and you disagree with that decision, or you believe the amount of benefit you receive is incorrect, you have the right to file an appeal.
+You have 28 days from the date on your notice about the decision to file an appeal about Medicaid services.
+Medicaid appeals
+If you disagree with a decision from the department about the benefits you receive, you can appeal that decision. See the library for more information.
+Medicaid Appeal Information Library
+Other programs
+Other programs - LIHEAP, Weatherization, CSBG, TEFAP
+If the department denies or discontinues your benefits, and you disagree with that decision, or you believe the amount of benefit you receive is incorrect, you have the right to file an appeal.
+You have 90 days from the date on your notice about the decision to file an appeal.
+How to file an appeal
+You can file an appeal in one of the following ways:
+Submit a request for an appeal by completing the
+Fair Hearing Request form
+and mailing it to us.
+Request an appeal in writing by mail, email, or fax. You may be asked to complete the Fair Hearing Request form.
+Call us to request an appeal. When you call, you may be asked to submit a request in writing or complete the Fair Hearing Request form.
+File your appeal
+Mail
+Email
+Fax
+Phone
+Self-Reliance Programs
+P.O. Box 83720
+Boise, ID 83720-0026
+mybenefits@dhw.idaho.gov
+866-434-8278 (toll free)
+877-456-1233 (toll free)
+In some instances, you may be able to continue receiving your benefits while your appeal is being considered. If your appeal is denied, you will be responsible to repay any benefits you received during this time period. If you want to continue receiving benefits during your appeal process,
+you must let us know within 10 days of the date of the notice.
+The hearing is your chance to explain why you disagree with the department's decision. Most hearings are conducted telephonically.  During the hearing, you will have the opportunity to have the decision you are appealing reviewed by a third party, independent hearing officer (similar to a judge). You will have the opportunity to present information to the hearing officer to show why you disagree with the department's decision on your case. At the hearing, you may represent yourself, use legal counsel, a relative, a friend, or other spokesperson. The department will provide supporting documentation regarding their eligibility decision for your household. The hearing officer will make a decision based on the information both sides provide and the applicable program rules.
+Page last updated:
+6-15-2026
+END SOURCE 4
+
+SOURCE 5: About Common Case Types | https://oah.idaho.gov/about-common-case-types/ | source's own date: "ver: 4.1.9 | last updated: August 12, 2025 at 11:08 am" | retrieved: 2026-09-02
+Office of Administrative Hearings
+About Common Case Types
+Home
+About Common Case Types
+-->
+The Office of Administrative Hearings (OAH) handles a wide range of legal disputes between individuals or businesses and Idaho state agencies. These are known as
+contested cases
+, and they typically arise when someone disagrees with an agency decision and requests a formal hearing.
+This page provides an overview of the most common types of cases we hear. While the specifics may vary, the goal is always the same: to ensure a fair, impartial, and lawful resolution.
+Professional Licensing
+Examples:
+Nurses, contractors, counselors, cosmetologists, real estate agents, law enforcement, and other licensed professionals
+OAH hears cases involving licensing applications, denials, suspensions, or disciplinary actions.
+These cases often come from boards or commissions which regulate professions in Idaho.
+Public Benefits and Eligibility
+Examples:
+Medicaid, SNAP (food stamps), Temporary Assistance for Families in Idaho (TAFI), or child care assistance
+These cases typically involve appeals when benefits are denied, reduced, or terminated.
+Individuals can present evidence to show eligibility or challenge a state agency’s decision.
+Employment-Related Matters
+Examples:
+Termination due to misconduct
+These cases usually involve public employment matters before Idaho Personnel Commission.
+OAH provides a neutral setting to review both sides of the issue.
+Regulatory Compliance and Enforcement
+Examples:
+Permitting, environmental regulations, or failure to comply with other agency rules
+OAH hears cases where individuals or businesses are seeking permitting or are alleged to have violated state regulations enforced by agencies.
+Penalties, fines, or corrective actions may be reviewed during the hearing.
+Medicaid Provider Cases
+Examples:
+Provider enrollment denials, audits, payment suspensions, or fraud allegations
+These cases involve healthcare providers challenging decisions made by the Idaho Department of Health and Welfare.
+They often include detailed record review and technical regulations.
+Child Support Enforcement Appeals
+Examples:
+Establishment of support, modifications, or enforcement actions
+OAH may review administrative decisions related to child support services, including paternity establishment and income withholding orders.
+Other Contested Matters
+OAH also hears a variety of other case types depending on the agency and subject matter, including:
+Spacing and integration in oil & gas matters
+School district boundaries
+Driver’s license suspensions, including CDLs (other than Administrative License Suspensions)
+Government contract or procurement challenges
+If you are unsure whether your case falls under OAH’s jurisdiction, please contact us. We’re happy to help clarify your next steps.
+Learn More
+Each type of case follows a process governed by Idaho law and administrative rules. To learn more about how hearings work, visit:
+About the Hearing Process
+Representing Yourself
+Forms
+Still Have Questions?
+Please don’t hesitate to Contact Us.
+Quick Links
+About the Hearing Process
+Representing Yourself
+Information for the Public
+Information for Attorneys
+Information for Agencies
+Tips & Help
+Know Your Rights
+General and Legal Aid Resources
+Code of Conduct and Guidelines
+FAQs
+Office of Administrative Hearings
+P.O. Box 83720
+Boise, ID 83720-0104
+(208) 605-4300
+general@oah.idaho.gov
+LinkedIn Icon
+RSS Feed Icon
+Envelope Icon
+idaho.gov
+Accessibility
+Cybersecurity
+Privacy
+Legal Notices
+Security
+Notice:
+Please do not include any personal or case-related information in the form.
+Close
+ver: 4.1.9 | last updated:
+August 12, 2025 at 11:08 am
+END SOURCE 5
+
+SOURCE 6: Long-Term Care Ombudsman Program | https://aging.idaho.gov/ombudsman-program/ | source's own date: "ver: 4.1.9 | last updated: December 2, 2025 at 11:24 am" | retrieved: 2026-09-02
+Long-Term Care Ombudsman Program
+-->
+Advocating for the Rights of Long-term Care Residents
+When we are unable to manage our own lives or those of a family member at home, assisted living and nursing facilities are options.  However to ensure that we still have our rights, Idaho’s Long-Term Care Ombudsmen are available to protect our health, safety, and welfare, when residing in a facility.
+Idaho-Long Term Care Ombudsman Program Mission, Vision, Core Values
+The Ombudsman duties are to:
+Advocate for the rights of residents
+Investigate complaints
+Provide consultations
+Visit each facility at least once per quarter
+For long-term care concerns, contact the
+State Ombudsman
+located at the Commission on Aging or a Local Ombudsman at an
+Area Agency on Aging
+.  Ombudsmen contact information is also posted at all facilities.
+Learn more about what a long-term care Ombudsman is with this short
+video
+. Also to the right, “Quick Tips” and “Resources” are available to better assist us with finding reliable information and supports.
+Find Nearby Services
+Find your area
+and click
+Keep Learning
+Successful people never quit learning. Caregivers deserve reliable and helpful
+information. When you take one of our FREE self-paced courses you will gain tips
+and skills that increase your abilities and confidence.
+Click HERE to go
+to our Keep Learning page
+and begin your journey to
+becoming a more skilled and
+confident care partner.
+Quick Tips
+Nursing Home Providers – Submit nursing home discharge notices to the State Ombudsman
+Idaho Department of Health & Welfare Facility Standards
+Review latest assisted living facility survey reports
+Nursing Home Discharge Fact Sheet – You’ve been told to leave now what?
+Nursing Home Resident Rights
+Residential Assisted Living Facility Resident Rights
+Locate an ombudsman program in a different state
+Idaho Legal Aid Services
+Resources
+Residential Assisted Living Facilities (RALF)
+Idaho Board of Guardians
+AARP Idaho
+Idaho Chapter Alzheimer’s Association
+Medicaid & Health Information
+Centers for Medicare & Medicaid Services (CMS)
+Idaho Medicaid Fraud Control Unit
+Idaho Commission on Aging
+6305 W Overland Rd Ste 110
+Boise, ID 83709
+(208) 334-3833
+(877) 471-2777
+(208) 334-3033
+Stay Healthy
+Stay Connected
+Keep Learning
+Stay Home
+Stay Safe
+Stay Informed
+About Us
+Commissioners
+Our Staff
+Area Agencies on Aging
+Facebook Icon
+LinkedIn Icon
+Instagram Icon
+Envelope Icon
+idaho.gov
+Accessibility
+Cybersecurity
+Privacy
+Legal Notices
+Security
+ver: 4.1.9 | last updated:
+December 2, 2025 at 11:24 am
+END SOURCE 6
+
+SOURCE 7: Our Staff ("Stay Safe" tab, naming the Idaho Long-Term Care Ombudsman) | https://aging.idaho.gov/about-us/our-staff/ | source's own date: "ver: 4.1.9 | last updated: July 14, 2025 at 06:37 pm" | retrieved: 2026-09-02
+Visit the Stay At Home page
+Stay Safe
+Deedra Hunt
+Program Supervisor
+Adult Protection
+Legal Assistance
+Stay Safe
+Fanny Rodriguez-Melnikovsky
+Idaho Long-Term Care Ombudsman
+Ombudsman
+Stay Safe
+Email the Stay Safe Team
+Call the Stay Safe Team:
+(208) 555-5678
+Visit the Stay Safe page
+
+ver: 4.1.9 | last updated:
+July 14, 2025 at 06:37 pm
+
+mailto:frmelnikovsky@aging.idaho.gov
+mailto:stay.safe@icoa.org
+tel:2085555678
+
+Idaho Commission on Aging
+6305 W Overland Rd Ste 110
+Boise, ID 83709
+(208) 334-3833
+(877) 471-2777
+(208) 334-3033
+END SOURCE 7
+
+END OF PACKET — 7 sources
