@@ -1,0 +1,66 @@
+{
+  "recipe_version": 1,
+  "state": "florida",
+  "sources": [
+    {
+      "n": 1,
+      "title": "Florida Statutes s. 400.0255, Resident transfer or discharge; requirements and procedures; hearings",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0400/Sections/0400.0255.html",
+      "source_date": "History line ends s. 22, ch. 2015-31",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "#statutes",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Matches the standing packet's own method, 'tag strip over the statute's Section div, ending at the History line': div#statutes holds exactly the section heading through the History line and excludes the search box and site chrome around it. Plain curl with a browser user-agent returns 200; no WAF sits in front of Online Sunshine, consistent with CLAUDE.md's note that leg.state.fl.us is curl-able with a browser user-agent. Typographic quotation marks and apostrophes are the publisher's own and are left untouched."
+    },
+    {
+      "n": 2,
+      "title": "Florida Statutes s. 400.022, Residents' rights",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0400/Sections/0400.022.html",
+      "source_date": "History line ends s. 1, ch. 2023-307",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "#statutes",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Same host and template as Source 1; div#statutes for the same reason."
+    },
+    {
+      "n": 3,
+      "title": "Florida Department of Children and Families, Office of Inspector General — Appeal Hearings",
+      "url": "https://www.myflfamilies.com/about/office-inspector-general/appeal-hearings",
+      "source_date": "page modified 2026-04-08 (meta article:modified_time)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "The standing packet says this host 'refuses or defeats plain curl' and was captured through a session fetch tool; retested 2026-09-03, plain curl with a browser user-agent now returns 200 with the full page, including the hearing office's address (2415 North Monroe Street), phone (850) 488-1429 and the 'individual or family“s eligibility' string the standing packet quotes verbatim. Whatever blocked it on 2026-08-30 no longer does, or never did with this header. The page's own <main id=\"main-content\"> element is empty in the served markup — the card content the page displays sits directly in <body>, several containers below main — so 'body' is the narrowest scope that is honestly stated and complete; it is also a superset of the standing packet's hand-curated excerpt, which the recipe README treats as safe."
+    },
+    {
+      "n": 4,
+      "title": "Florida Department of Elder Affairs, Long-Term Care Ombudsman Program",
+      "url": "https://elderaffairs.org/programs-and-services/long-term-care-ombudsman-program/",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Also recorded in the standing packet as defeating plain curl and captured through a session reader; retested 2026-09-03, plain curl with a browser user-agent returns 200 with the full Divi-theme page (the '14 district offices' line, the toll-free ombudsman number 1-888-831-0404, the Winewood Boulevard address and the 'medical reasons, the welfare of other residents or nonpayment of a bill' rights language all present). The page carries about 331 KB of markup but only ~16.6 KB of body text once script/style nodes are dropped, so 'body' is not the wide net it looks like; the resident-rights accordion content sits well outside any <main> or <article> wrapper this template exposes, so body is the narrowest honestly-stated scope, and again a safe superset of the standing packet's curated excerpt."
+    }
+  ]
+}

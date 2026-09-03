@@ -1,0 +1,50 @@
+{
+  "recipe_version": 1,
+  "state": "new-york",
+  "sources": [
+    {
+      "n": 1,
+      "title": "New York State Department of Health, Transfer and Discharge Resident Rights",
+      "url": "https://www.health.ny.gov/facilities/nursing/rights/transfer_discharge.htm",
+      "source_date": "Revised: April 2022",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "The standing packet's own method is 'tag strip over the <main> element', but this response has no <main> tag and its id=\"main\" div omits the page's own 'Revised: April 2022' line and site navigation that the standing packet plainly carries — the original capture must have scoped wider than that div, whatever tool produced it. 'body' is the widest legal scope and reproduces everything the standing packet holds (the nav menu, the rights list, the 'Revised' line, the footer) plus nothing narrower would have dropped; a superset is safe here per the recipe README. Plain curl with a browser user-agent returns 200 with the full server-rendered page; no WAF or JS gate sits in front of this host."
+    },
+    {
+      "n": 2,
+      "title": "New York State Department of Health, Nursing Home Transfer or Discharge Appeal",
+      "url": "https://www.health.ny.gov/facilities/nursing/rights/transfer_discharge_appeal.htm",
+      "source_date": "Revised: July 2026",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Same host and template as Source 1; 'body' scope for the same reason, and it carries the mailing address (NYS DOH Centralized Complaint Intake Program, 875 Central Ave, Albany, NY 12206), the fax number and the complaint-intake email, none of which sit in a narrower main-content div alone on this template."
+    },
+    {
+      "n": 3,
+      "title": "New York State Office for the Aging, Long Term Care Ombudsman Program",
+      "url": "https://aging.ny.gov/long-term-care-ombudsman-program",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "extractor": "html-text",
+      "scope": "main",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "CLAUDE.md records aging.ny.gov as 403-to-curl from earlier PDF traps, and the standing packet was captured through a session fetch tool for the same reason on this page. Retested 2026-09-03: a plain curl with NO user-agent returns HTTP 200 with the full server-rendered document. Sending a browser user-agent string instead trips a Cloudflare interstitial ('Just a moment...') and returns HTTP 403 — the inverse of the usual pattern recorded elsewhere in CLAUDE.md, where a bare fetch is what gets refused. This host's <main> element holds the phone number, 'Claudette Royal, the New York State Ombudsman', and the rest of the page's own prose, and excludes the site's navigation chrome; no mailing address is stated on this page, so none is expected in the capture."
+    }
+  ]
+}
