@@ -19,6 +19,18 @@ unrecorded failure is loud. A state cannot be quietly exempted, because the
 exemption comes from the retention manifest — written by retain-packet.py when
 a drift capture was stored — and not from a list anyone can edit by hand.
 
+The second exemption, added 2026-09-03, is `accepted`. Drift is a page waiting
+on a rebuild; accepted is a page that has already had every rebuild it can have
+and still cannot match its packet in full, because the two pinned extraction
+modes disagree about part of the document and the recipe had to choose one.
+Montana and north-dakota are in that position. Before the label existed they
+were recorded as rebuilds, which asserts a full match, so they failed here
+forever and blocked a gate no amount of work could clear — the exact pressure
+that gets a gate switched off. Accepted carries the same guarantee as drift
+about where it comes from: retain-packet.py writes it, nobody edits a list. What
+it does not carry is any claim that the mismatch will be fixed, and the recipe
+notes have to say why it will not.
+
 Pages are checked against the set tools/packet-set.py resolves, so a page whose
 evidence lives partly in a supplement is checked against the supplement too.
 Checking such a page against its main packet alone reports failures that are
@@ -28,10 +40,11 @@ Usage:
     python3 tools/check-all.py                 every state, md and html
     python3 tools/check-all.py <slug> [...]    named states only
     python3 tools/check-all.py --quiet         summary lines only
-    python3 tools/check-all.py --strict        drifted states fail too
+    python3 tools/check-all.py --strict        exempt states fail too
     python3 tools/check-all.py --self-test
 
-Exit codes: 0 clean (or only known drift), 1 failures, 2 usage error.
+Exit codes: 0 clean (or only known drift and accepted tradeoffs), 1 failures,
+2 usage error.
 """
 
 import argparse
@@ -55,11 +68,21 @@ CF = _load('check_fidelity', os.path.join(ROOT, 'tools', 'check-fidelity.py'))
 PS = _load('packet_set', os.path.join(ROOT, 'tools', 'packet-set.py'))
 
 
-def drifted_states(history=None):
-    """States whose latest pass of any kind is recorded as drift.
+EXEMPT = ('drift', 'accepted')
 
-    Same rule as tools/build-status.py: a drift entry is cleared by a later
-    rebuild or a later confirmation of that same kind, and by nothing else.
+
+def exempt_states(history=None):
+    """States whose latest pass of any kind is recorded as drift or accepted.
+
+    Returns {slug: {result: [kinds]}} so the two reasons stay apart in the
+    report. They mean opposite things about what happens next — drift is a page
+    waiting on a rebuild, accepted is a page that has had all the rebuild it can
+    get — and collapsing them into one "expected" bucket would lose the only
+    part a reader acts on.
+
+    Same clearing rule as tools/build-status.py: the latest entry for a kind is
+    the one that counts, so a drift entry is cleared by a later rebuild or a
+    later confirmation of that same kind, and by nothing else.
     """
     history = history or HISTORY
     out = {}
@@ -77,10 +100,19 @@ def drifted_states(history=None):
                     continue
                 r = json.loads(line)
                 latest[r.get('kind', 'main')] = r
-        kinds = [k for k, r in sorted(latest.items()) if r.get('result') == 'drift']
-        if kinds:
-            out[slug] = kinds
+        reasons = {}
+        for kind, r in sorted(latest.items()):
+            if r.get('result') in EXEMPT:
+                reasons.setdefault(r['result'], []).append(kind)
+        if reasons:
+            out[slug] = reasons
     return out
+
+
+def drifted_states(history=None):
+    """Back-compatible view: {slug: [kinds]} for states recorded as drift only."""
+    return {slug: r['drift'] for slug, r in exempt_states(history).items()
+            if 'drift' in r}
 
 
 def pages_of(slug):
@@ -106,7 +138,7 @@ def pages_of(slug):
 
 def run(slugs=None, quiet=False, strict=False, out=print):
     slugs = slugs or PS.all_slugs()
-    drift = drifted_states()
+    exempt = exempt_states()
     hard, soft, missing = [], [], []
     checked = 0
     for slug in slugs:
@@ -123,12 +155,15 @@ def run(slugs=None, quiet=False, strict=False, out=print):
                      and not l.startswith(('NOTE', 'COVERAGE'))]
             if not fails:
                 continue
-            (soft if slug in drift else hard).append((slug, page, fails))
+            (soft if slug in exempt else hard).append((slug, page, fails))
 
     if not quiet:
         for slug, page, fails in soft:
-            out(f'known drift — {os.path.relpath(page, ROOT)} '
-                f'(recorded drift: {", ".join(drift[slug])})')
+            why = '; '.join(f'recorded {res}: {", ".join(kinds)}'
+                            for res, kinds in sorted(exempt[slug].items()))
+            label = ('accepted tradeoff' if 'drift' not in exempt[slug]
+                     else 'known drift')
+            out(f'{label} — {os.path.relpath(page, ROOT)} ({why})')
             for f in fails:
                 out(f'    {f}')
         for slug, page, fails in hard:
@@ -144,8 +179,13 @@ def run(slugs=None, quiet=False, strict=False, out=print):
         f'full packet sets')
     if soft:
         states = sorted({s for s, _, _ in soft})
-        out(f'{len(soft)} page(s) failing in {len(states)} state(s) recorded as '
-            f'open drift: {", ".join(states)}'
+        drifted = sorted(s for s in states if 'drift' in exempt[s])
+        accepted = sorted(s for s in states if s not in drifted)
+        why = ' · '.join(part for part in (
+            f'open drift: {", ".join(drifted)}' if drifted else '',
+            f'accepted tradeoff: {", ".join(accepted)}' if accepted else '',
+        ) if part)
+        out(f'{len(soft)} page(s) failing in {len(states)} state(s) — {why}'
             + (' — counted as failures under --strict' if strict else
                ' — expected, not counted'))
     bad = len(hard) + len(missing) + (len(soft) if strict else 0)
@@ -222,6 +262,43 @@ def self_test():
         if run(['driftland'], quiet=True, strict=True, out=sink.append) == 0:
             failures.append('--strict did not fail on a drifted state')
 
+        # accepted exempts like drift but must not be reported as drift. The
+        # distinction is the whole reason the label was added: a reader who sees
+        # "open drift" goes looking for a source change to rebuild against, and
+        # for these states there is none to find.
+        os.makedirs(os.path.join(hist, 'tradeoffland'))
+        wp('tradeoffland-packet.txt', src)
+        with open(os.path.join(hist, 'tradeoffland', 'manifest.jsonl'), 'w') as fh:
+            fh.write(json.dumps({'date': '2026-09-03', 'kind': 'main',
+                                 'result': 'accepted', 'capture': 'y.txt'}) + '\n')
+        with open(os.path.join(d, 'states', 'tradeoffland.md'), 'w') as fh:
+            fh.write('"complaints are resolved within ten days"\n')
+        sink = []
+        if run(['tradeoffland'], quiet=True, out=sink.append) != 0:
+            failures.append('a state recorded as accepted blocked the run: '
+                            + '; '.join(sink))
+        if not any('accepted tradeoff' in l for l in sink):
+            failures.append('accepted state was not reported at all')
+        if any('open drift' in l for l in sink):
+            failures.append('accepted state was mislabelled as open drift')
+        sink = []
+        if run(['tradeoffland'], quiet=True, strict=True, out=sink.append) == 0:
+            failures.append('--strict did not fail on an accepted state')
+
+        # a rebuild is not an exemption. This is the state montana and
+        # north-dakota were in before the accepted label existed, and the
+        # failure it produced is the one that has to stay loud.
+        os.makedirs(os.path.join(hist, 'rebuiltland'))
+        wp('rebuiltland-packet.txt', src)
+        with open(os.path.join(hist, 'rebuiltland', 'manifest.jsonl'), 'w') as fh:
+            fh.write(json.dumps({'date': '2026-09-03', 'kind': 'main',
+                                 'result': 'rebuild', 'capture': 'z.txt'}) + '\n')
+        with open(os.path.join(d, 'states', 'rebuiltland.md'), 'w') as fh:
+            fh.write('"complaints are resolved within ten days"\n')
+        sink = []
+        if run(['rebuiltland'], quiet=True, out=sink.append) == 0:
+            failures.append('a rebuild was treated as an exemption')
+
         # a state with no drift record must still fail loudly
         wp('plainland-packet.txt', src)
         with open(os.path.join(d, 'states', 'plainland.md'), 'w') as fh:
@@ -250,9 +327,10 @@ def self_test():
             print('  ' + f)
         return 1
     print('SELF-TEST PASSED: multi-packet pages verify; a main-packet-only check '
-          'of the same page still fails; recorded drift reports without blocking '
-          'and blocks under --strict; unrecorded failures and missing packets '
-          'fail the run.')
+          'of the same page still fails; recorded drift and recorded accepted '
+          'each report without blocking, are labelled apart, and block under '
+          '--strict; a rebuild is not an exemption; unrecorded failures and '
+          'missing packets fail the run.')
     return 0
 
 

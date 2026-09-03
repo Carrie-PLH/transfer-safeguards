@@ -41,8 +41,23 @@ Layout:
     tools/packets/history/<slug>/<YYYY-MM-DD>.txt      a capture that differed
     tools/packets/history/<slug>/manifest.jsonl        append-only, one line per pass
 
+Accepted is a fifth result, ported 2026-09-03 from sped-safeguards, where it was
+added the same day: this page and this packet are both correct and they will
+never fully match, because the mismatch is extraction, not the source. Its
+motivating case there was a PDF whose two pinned pdftotext modes each read part
+of the document correctly and part of it wrongly, with no third mode that reads
+all of it right — a genuine, irreducible tradeoff, as distinct from `drift`
+(the source moved, awaiting a rebuild) as it is from `rebuild` (asserts a full
+match). Accepted promotes like a rebuild, because the packet is current, and
+check-all.py reports it without failing, because the failure is expected and
+its reason is written down. The obligation that comes with the label is that
+the recipe notes must say what the tradeoff is and why the other mode is worse
+— an accepted state with no explanation is just a silenced one. Not yet used by
+any state in this project; ported as capability, not as a fix for a case found
+here.
+
 Usage:
-    python3 tools/retain-packet.py <capture.txt> --result confirmed|drift|rebuild
+    python3 tools/retain-packet.py <capture.txt> --result confirmed|drift|rebuild|accepted
                                    [--date YYYY-MM-DD] [--state <slug>]
                                    [--kind main|es|languages] [--transport <note>]
                                    [--no-promote]
@@ -53,8 +68,9 @@ Usage:
 
 A confirmed retention also promotes the capture to tools/packets/<slug>-packet.txt,
 which is the workflow's definition of confirmed: these are now the current sources.
-Drift never promotes — the page and its packet are the owner's to change, through
-the sped-state-page skill, after a human reads the drift.
+Rebuild and accepted promote for the same reason. Drift never promotes — the page
+and its packet are the owner's to change, through the rr-state-page skill, after
+a human reads the drift.
 
 Exit codes: 0 clean, 1 failures, 2 usage error.
 """
@@ -72,7 +88,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PACKETS = os.path.join(ROOT, "tools", "packets")
 HISTORY = os.path.join(PACKETS, "history")
 
-RESULTS = ("baseline", "confirmed", "drift", "rebuild")
+RESULTS = ("baseline", "confirmed", "drift", "rebuild", "accepted")
 
 SOURCE_RE = re.compile(r'^SOURCE\s+\d+:\s*(.*)$', re.MULTILINE)
 RETRIEVED_RE = re.compile(r'retrieved:\s*\d{4}-\d{2}-\d{2}', re.IGNORECASE)
@@ -179,6 +195,72 @@ def header_lines(text):
     moved, or was re-dated by the agency without being rewritten, still registers
     as a change. A redirect is a finding even when the text behind it is identical."""
     return [RETRIEVED_RE.sub('', h).strip(' |') for h in source_headers(text)]
+
+
+ARTIFACT_RE = re.compile(
+    r'^-\s*SOURCE\s+(\d+):.*?\bartifact\s+(?:sha256|supplied):([0-9a-f]{16})\.',
+    re.MULTILINE)
+
+
+def source_artifacts(text):
+    """{source number: artifact id} from capture.py's capture notes, when it
+    wrote them. The artifact id hashes the raw fetched bytes, before extraction,
+    so two captures sharing one for the same source number are proof the input
+    was byte-identical — any difference in that source's extracted body is the
+    extractor's doing, not the source's."""
+    return {int(n): a for n, a in ARTIFACT_RE.findall(text)}
+
+
+def source_bodies(text):
+    """{source number: extracted text} split at the SOURCE N header lines that
+    mark where each document's own captured text begins."""
+    marks = [(int(m.group(1)), m.start(), m.end())
+             for m in re.finditer(r'^SOURCE\s+(\d+):.*$', text, re.MULTILINE)]
+    out = {}
+    for i, (n, _, hend) in enumerate(marks):
+        body_end = marks[i + 1][1] if i + 1 < len(marks) else len(text)
+        out[n] = text[hend:body_end]
+    return out
+
+
+def shorter_sources(prev_text, new_text):
+    """Sources whose raw artifact is unchanged between two captures but whose
+    extracted body has fewer non-blank lines in the new one.
+
+    A body-hash comparison cannot catch this: the body is supposed to change
+    whenever a filter or extraction mode changes, which is most of what this
+    tool exists to record, so a differing hash proves nothing wrong on its own.
+    What should never happen silently is the text getting shorter against
+    byte-identical input — that is a filter removing text the source actually
+    contains, not a reading of a document that changed. Ported 2026-09-03 from
+    sped-safeguards, where an interim strip-running-headers filter dropped 38
+    statutory citation labels and a contact block from a PDF whose artifact
+    hash never moved, and the shortened capture was promoted before anyone
+    noticed — the fidelity check could not see it, because the page did not
+    quote what was lost.
+
+    This is a warning, not a refusal. A deliberate extractor-mode change (an
+    -raw to -plain switch, say) can legitimately shorten one source while a
+    different mode fixes another; the artifact-id match already excludes any
+    source whose input differs, but not every legitimate case. It exists to be
+    seen by the person running retain, not to block them.
+
+    Coverage is only as old as the artifact id itself: a hand capture, or a
+    recipe capture predating this field, has no per-source artifact line, and a
+    source missing it on either side of the comparison is silently skipped
+    rather than treated as unchanged. This will not catch a regression against
+    an old-style capture; it catches every one going forward."""
+    prev_art, new_art = source_artifacts(prev_text), source_artifacts(new_text)
+    prev_body, new_body = source_bodies(prev_text), source_bodies(new_text)
+    nonblank = lambda t: sum(1 for l in t.splitlines() if l.strip())
+    out = []
+    for n, art in new_art.items():
+        if prev_art.get(n) != art or n not in prev_body or n not in new_body:
+            continue
+        old_n, new_n = nonblank(prev_body[n]), nonblank(new_body[n])
+        if new_n < old_n:
+            out.append((n, old_n, new_n))
+    return out
 
 
 def normalized_body(text):
@@ -351,11 +433,20 @@ def retain(capture, result, day=None, slug=None, kind='main',
             hc = header_changes()
             if hc:
                 row['header_changes'] = hc
+            prev_path = os.path.join(HISTORY, slug, prev['capture'])
+            if os.path.exists(prev_path):
+                prev_text = open(prev_path, encoding='utf-8',
+                                 errors='replace').read()
+                shorter = shorter_sources(prev_text, text)
+                if shorter:
+                    row['shorter_sources'] = [
+                        {'n': n, 'was': old, 'now': new}
+                        for n, old, new in shorter]
 
     append_manifest(slug, row)
 
     if promote is None:
-        promote = result in ('confirmed', 'rebuild')
+        promote = result in ('confirmed', 'rebuild', 'accepted')
     if promote:
         dest = os.path.join(PACKETS, f'{slug}-packet.txt' if kind == 'main'
                             else f'{slug}-packet-{kind}.txt')
@@ -370,6 +461,13 @@ def retain(capture, result, day=None, slug=None, kind='main',
             out(f'    - {x}')
         for x in row['header_changes']['new']:
             out(f'    + {x}')
+    if row.get('shorter_sources'):
+        out('  WARNING: extracted text got shorter against an unchanged artifact:')
+        for s in row['shorter_sources']:
+            out(f'    source {s["n"]}: {s["was"]} non-blank lines -> {s["now"]} '
+                f'(raw input byte-identical to {prev["capture"]})')
+        out('    the fetch did not change; something in extraction dropped text. '
+            'Verify before treating this capture as current.')
     return 0
 
 
@@ -495,6 +593,42 @@ def self_test():
     if source_urls(d) != ['https://x.gov/moved']:
         print('FAIL: URL extraction'); ok = False
 
+    # --- shorter-sources diagnosis (ported 2026-09-03 from sped-safeguards) --
+    # There, a filter dropped 38 citation labels and a contact block from a PDF
+    # whose raw bytes never changed. The body hash moved (it always does when
+    # text is removed), so this cannot be caught by hash comparison; it needs
+    # the artifact id, which hashes the input rather than the output.
+    def cap_art(sources, assembled='2026-09-03'):
+        notes = '\n'.join(
+            f'- SOURCE {i+1}: transport curl; extractor pdftotext-raw; '
+            f'artifact sha256:{art}.'
+            for i, (u, b, art) in enumerate(sources))
+        head = (f'FIRST LINE OF PACKET\n\nSTATE: testland\nASSEMBLED: {assembled}\n'
+                f'CAPTURE NOTES:\n{notes}\n\n')
+        return head + '\n'.join(
+            f'SOURCE {i+1}: Doc | {u} | source date: none | retrieved: {assembled}\n{b}'
+            for i, (u, b, art) in enumerate(sources))
+
+    full_body = ('34 CFR 300.30\nDefinition of Parent\nThe IDEA gives rights.\n'
+                'ARM 10.16.3502\nTransfer at age of majority\nMore text.\n')
+    short_body = 'Definition of Parent\nThe IDEA gives rights.\nMore text.\n'
+    same_artifact = cap_art([('https://x.gov/a', full_body, 'deadbeefdeadbeef')])
+    shortened = cap_art([('https://x.gov/a', short_body, 'deadbeefdeadbeef')])
+    diff_artifact = cap_art([('https://x.gov/a', short_body, '1111111111111111')])
+
+    found = shorter_sources(same_artifact, shortened)
+    if not found or found[0][0] != 1:
+        print('FAIL: a shortened body against an unchanged artifact was not caught')
+        ok = False
+    if shorter_sources(same_artifact, same_artifact):
+        print('FAIL: an unchanged body was reported as shorter'); ok = False
+    if shorter_sources(same_artifact, diff_artifact):
+        print('FAIL: sources whose raw artifact differs were compared as if it '
+              'matched — a real rebuild or drift would be reported as a filter '
+              'defect'); ok = False
+    if shorter_sources(shortened, same_artifact):
+        print('FAIL: a body that grew was reported as having shrunk'); ok = False
+
     # --- transport strings -----------------------------------------------
     # The capture notes line capture.py actually writes, and one without it.
     with_recipe = ('CAPTURE NOTES:\n- Captured by tools/capture.py from '
@@ -611,13 +745,56 @@ def self_test():
         if not rows[3].get('header_changes'):
             print('FAIL: moved URL not recorded as a change'); ok = False
 
+        # Accepted is a promoting result. It says the packet is current and the
+        # residual failure is a documented extraction tradeoff, so it must land
+        # in the packet exactly as a rebuild would; if it stopped promoting, an
+        # accepted state's page would be checked against a stale packet and the
+        # label would be hiding a real problem rather than naming a known one.
+        retain(write('c5.txt', c), 'accepted', out=quiet)
+        rows = read_manifest('testland')
+        if rows[4]['result'] != 'accepted':
+            print('FAIL: accepted result not recorded'); ok = False
+        promoted = open(os.path.join(PACKETS, 'testland-packet.txt'),
+                        encoding='utf-8').read()
+        if promoted != c:
+            print('FAIL: accepted retention did not promote'); ok = False
+
         files = [f for f in os.listdir(os.path.join(HISTORY, 'testland'))
                  if f.endswith('.txt')]
         if len(files) != 2:
-            print(f'FAIL: expected 2 retained captures across 4 passes, got {len(files)}')
+            print(f'FAIL: expected 2 retained captures across 5 passes, got {len(files)}')
             ok = False
         if verify(out=quiet) != 0:
             print('FAIL: verify rejected a well-formed history'); ok = False
+
+    # shorter_sources surfaced through retain() itself: recorded on the row and
+    # printed where a human running this by hand will see it.
+    with tempfile.TemporaryDirectory() as td:
+        ROOT = td
+        PACKETS = os.path.join(td, 'tools', 'packets')
+        HISTORY = os.path.join(PACKETS, 'history')
+        os.makedirs(PACKETS)
+
+        def write(name, text):
+            p = os.path.join(td, name)
+            open(p, 'w', encoding='utf-8').write(text)
+            return p
+
+        seen = []
+        retain(write('s1.txt', same_artifact), 'baseline', promote=False,
+               out=seen.append)
+        seen.clear()
+        retain(write('s2.txt', shortened), 'rebuild', out=seen.append)
+        row = read_manifest('testland')[-1]
+        if 'shorter_sources' not in row:
+            print('FAIL: retain() did not record shorter_sources on the row')
+            ok = False
+        if not any('WARNING' in l and 'shorter' in l for l in seen):
+            print('FAIL: retain() did not print the shorter-sources warning')
+            ok = False
+        if row['stored'] is not True:
+            print('FAIL: a shorter-sources warning blocked retention; it must '
+                  'only warn, never refuse'); ok = False
 
     print('self-test: ' + ('all checks passed' if ok else 'FAILURES'))
     return 0 if ok else 1
@@ -662,7 +839,7 @@ def main(argv):
     if 'date' in opts:
         opts['day'] = opts.pop('date')
     if 'result' not in opts:
-        print('--result is required (confirmed, drift, rebuild, baseline)', file=sys.stderr)
+        print('--result is required (confirmed, drift, rebuild, accepted, baseline)', file=sys.stderr)
         return 2
     return retain(capture, opts.pop('result'), **opts)
 
