@@ -75,6 +75,7 @@ a human reads the drift.
 Exit codes: 0 clean, 1 failures, 2 usage error.
 """
 
+import importlib.util
 import hashlib
 import json
 import os
@@ -83,6 +84,16 @@ import shutil
 import subprocess
 import sys
 from datetime import date
+
+# tools/capture-core.py is the portfolio's shared capture module, synced from
+# field-assembly-standard. Used here for compare_capture, which classifies what
+# a fresh capture does to each source of the packet it would replace.
+_core_spec = importlib.util.spec_from_file_location(
+    'capture_core',
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), 'capture-core.py'))
+_core = importlib.util.module_from_spec(_core_spec)
+_core_spec.loader.exec_module(_core)
+
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PACKETS = os.path.join(ROOT, "tools", "packets")
@@ -442,6 +453,25 @@ def retain(capture, result, day=None, slug=None, kind='main',
                     row['shorter_sources'] = [
                         {'n': n, 'was': old, 'now': new}
                         for n, old, new in shorter]
+                # The complement to shorter_sources, added 2026-09-03. That
+                # guard deliberately only speaks when the raw artifact is
+                # byte-identical, because its subject is a filter dropping text
+                # from an unchanged document. It is therefore silent on the
+                # case that nearly promoted a bad packet today: LSU's ombuds
+                # page still answered HTTP 200 while its content had been
+                # replaced by a pointer to another site, so the artifact
+                # differed, the guard skipped it by design, and the only
+                # signal was a source a quarter shorter than before. Content
+                # lost against a *changed* fetch is the source or the recipe
+                # moving rather than the filters misbehaving, which is a
+                # different finding and is reported as one.
+                cmp = _core.compare_capture(prev_text, text)
+                if cmp['shrank']:
+                    unchanged = {n for n, _, _ in shorter}
+                    lost = [{'n': n, 'was': a, 'now': b}
+                            for n, a, b in cmp['shrank'] if n not in unchanged]
+                    if lost:
+                        row['lost_content'] = lost
 
     append_manifest(slug, row)
 
@@ -461,6 +491,14 @@ def retain(capture, result, day=None, slug=None, kind='main',
             out(f'    - {x}')
         for x in row['header_changes']['new']:
             out(f'    + {x}')
+    if row.get('lost_content'):
+        out('  NOTE: sources with less text than the previous capture:')
+        for s in row['lost_content']:
+            out(f'    source {s["n"]}: {s["was"]} -> {s["now"]} chars '
+                '(whitespace collapsed; the fetch differed too)')
+        out('    the document itself may have changed, or a recipe may now be '
+            'reaching less of it. Read the diff before promoting: a page still '
+            'answering 200 with its content replaced looks exactly like this.')
     if row.get('shorter_sources'):
         out('  WARNING: extracted text got shorter against an unchanged artifact:')
         for s in row['shorter_sources']:

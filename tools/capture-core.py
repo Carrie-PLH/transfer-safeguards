@@ -395,6 +395,112 @@ def cell_text(c, links=False):
     return ' '.join([txt] + extras).strip() if extras else txt
 
 
+# --- comparing a fresh capture against the packet it would replace ------------
+#
+# Added 2026-09-03, after a day in which four separate defects were found and
+# not one of them made anything fail. A source page returned HTTP 200 with its
+# content replaced by a pointer elsewhere; a board's email addresses captured as
+# obfuscation placeholders; a page's wording vanished when a recipe consolidated
+# two transports into one; and a capture came back a source short because of a
+# transient fetch error, announcing it only in its own count. Every gate in the
+# portfolio passed through all of it, because the gates check that a page traces
+# to its packet, and all four defects damaged the packet instead.
+#
+# So this compares the capture about to be promoted against the packet it would
+# replace, and it is deliberately not a pass/fail gate. It classifies, and a
+# human reads the classification:
+#
+#   gone      a source in the old packet is absent from the new one
+#   new       a source in the new packet was not in the old one
+#   same      byte-identical
+#   respaced  identical once whitespace is collapsed -- the signature of the
+#             -nopgbrk correction, and of nothing else
+#   grew      content added; ordinary drift, or a decode recovering text
+#   shrank    content lost -- the one that always deserves a read
+#
+# "shrank" is a prompt, not a verdict, and today taught why. Decoding an
+# obfuscated address shortens the text ("[email protected]" is eighteen
+# characters, "otl@uvu.edu" is eleven), so a correct repair reports as loss. A
+# byte-length heuristic cannot tell recovery from loss. The diff can, which is
+# why this returns the numbers and leaves the judgement where it belongs.
+
+
+def packet_sources(text):
+    """{n: body} for every SOURCE block in a packet, headers excluded.
+
+    Tolerant of the header shapes across the portfolio: the body is everything
+    after a `SOURCE <n>:` line up to the matching END SOURCE or the next SOURCE.
+    Capture notes and pending lists sit above SOURCE 1 and are excluded, which
+    is correct -- a packet header describes, only a source body evidences.
+    """
+    out, n, buf = {}, None, []
+    for line in text.split('\n'):
+        m = re.match(r'^SOURCE (\d+):', line)
+        if m:
+            if n is not None:
+                out[n] = '\n'.join(buf)
+            n, buf = int(m.group(1)), []
+            continue
+        if n is not None and line.startswith('END SOURCE'):
+            out[n] = '\n'.join(buf)
+            n, buf = None, []
+            continue
+        if n is not None:
+            buf.append(line)
+    if n is not None:
+        out[n] = '\n'.join(buf)
+    return out
+
+
+def compare_capture(old_text, new_text):
+    """Classify what a fresh capture does to each source of a packet.
+
+    Returns {'gone': [...], 'new': [...], 'same': [...], 'respaced': [...],
+    'grew': [(n, before, after)], 'shrank': [(n, before, after)]}, where the
+    counts are characters with whitespace collapsed. Reports; decides nothing.
+    """
+    A, B = packet_sources(old_text), packet_sources(new_text)
+    r = {'gone': sorted(set(A) - set(B)), 'new': sorted(set(B) - set(A)),
+         'same': [], 'respaced': [], 'grew': [], 'shrank': []}
+    for n in sorted(set(A) & set(B)):
+        a, b = A[n], B[n]
+        if a == b:
+            r['same'].append(n); continue
+        ca, cb = re.sub(r'\s+', '', a), re.sub(r'\s+', '', b)
+        if ca == cb:
+            r['respaced'].append(n)
+        elif len(cb) >= len(ca):
+            r['grew'].append((n, len(ca), len(cb)))
+        else:
+            r['shrank'].append((n, len(ca), len(cb)))
+    return r
+
+
+def capture_report(cmp, label=''):
+    """One-line-per-finding rendering of compare_capture, quietest first."""
+    lines = []
+    if cmp['gone']:
+        lines.append(f"  SOURCE GONE     {cmp['gone']} -- present in the packet, "
+                     f"absent from this capture")
+    if cmp['new']:
+        lines.append(f"  source new      {cmp['new']}")
+    for n, a, b in cmp['shrank']:
+        lines.append(f"  SHRANK          source {n}: {a} -> {b} chars -- read the diff")
+    for n, a, b in cmp['grew']:
+        lines.append(f"  grew            source {n}: {a} -> {b} chars")
+    if cmp['respaced']:
+        lines.append(f"  respaced only   {cmp['respaced']} -- identical but for whitespace")
+    if cmp['same']:
+        lines.append(f"  unchanged       {cmp['same']}")
+    head = f'capture comparison{" for " + label if label else ""}:'
+    return head + '\n' + ('\n'.join(lines) if lines else '  (no sources)')
+
+
+def capture_needs_review(cmp):
+    """True when something in this comparison a human should look at."""
+    return bool(cmp['gone'] or cmp['shrank'])
+
+
 # --- self-test -----------------------------------------------------------------
 
 def self_test():
@@ -552,6 +658,48 @@ def self_test():
     dup_cell = FakeCell('mediation@dpi.nc.gov', [a2])
     check(cell_text(dup_cell, links=True) == 'mediation@dpi.nc.gov',
           'cell_text duplicated a self-naming address')
+
+
+    # compare_capture: the four defects of 2026-09-03, each as a case.
+    def _pk(*blocks):
+        out = ['CANARY', 'CAPTURE NOTES: header text is not evidence']
+        for n, body in blocks:
+            out += [f'SOURCE {n}: t | u | retrieved: 2026-01-01', body, f'END SOURCE {n}']
+        return '\n'.join(out + ['END OF PACKET'])
+
+    base = _pk((1, 'Alpha beta gamma.'), (2, 'Delta epsilon.'))
+    check(sorted(packet_sources(base)) == [1, 2], 'packet_sources missed a source')
+    check('CAPTURE NOTES' not in ''.join(packet_sources(base).values()),
+          'packet_sources let the header into a source body')
+
+    # a capture that came back a source short -- virginia, transiently
+    c = compare_capture(base, _pk((1, 'Alpha beta gamma.')))
+    check(c['gone'] == [2] and capture_needs_review(c),
+          'a missing source was not reported as gone')
+
+    # the -nopgbrk correction: separators restored, nothing else
+    c = compare_capture(base, _pk((1, 'Alpha beta\ngamma.'), (2, 'Delta epsilon.')))
+    check(c['respaced'] == [1] and c['same'] == [2] and not capture_needs_review(c),
+          'a whitespace-only change was not classified as respaced')
+
+    # content replaced by a pointer elsewhere -- lsu, behind an HTTP 200
+    c = compare_capture(base, _pk((1, 'See elsewhere.'), (2, 'Delta epsilon.')))
+    check(c['shrank'] and c['shrank'][0][0] == 1 and capture_needs_review(c),
+          'a source losing content was not flagged for review')
+
+    # a decode recovering an address: shorter, and correct. Flagged, not judged.
+    ob = _pk((1, 'Write to [email protected] today.'), (2, 'Delta epsilon.'))
+    c = compare_capture(ob, _pk((1, 'Write to otl@uvu.edu today.'), (2, 'Delta epsilon.')))
+    check(c['shrank'] and c['shrank'][0][0] == 1,
+          'a shortening repair was not surfaced at all')
+    check(capture_needs_review(c),
+          'compare_capture decided a shortening repair was fine on its own')
+
+    c = compare_capture(base, base)
+    check(c['same'] == [1, 2] and not capture_needs_review(c),
+          'an identical capture was reported as changed')
+    check('unchanged' in capture_report(c, 'x') and 'capture comparison for x' in capture_report(c, 'x'),
+          'capture_report did not render an unchanged comparison')
 
     try:
         require_poppler(pin='not-a-real-version')
