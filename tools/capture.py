@@ -58,6 +58,7 @@ Exit codes: 0 clean, 1 capture failure, 2 usage or recipe error,
 
 import argparse
 import hashlib
+import importlib.util
 import json
 import os
 import re
@@ -65,6 +66,20 @@ import subprocess
 import sys
 import unicodedata
 from datetime import date
+
+# tools/capture-core.py is a module shared across the Field Assembly portfolio
+# (synced from field-assembly-standard/tools/capture-core-sync.py), holding a
+# poppler/pdfplumber version pin discovered necessary in a sibling repo,
+# sped-safeguards: the same PDF under a different poppler build produces
+# different extracted text, which reads downstream as source drift when it is
+# actually an undeclared change of extraction tool. This repo pins to the same
+# version so that risk does not sit here unguarded. Added 2026-09-03; see
+# POPPLER_PIN below for the version and the reasoning in full.
+_core_spec = importlib.util.spec_from_file_location(
+    'capture_core',
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), 'capture-core.py'))
+_core = importlib.util.module_from_spec(_core_spec)
+_core_spec.loader.exec_module(_core)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RECIPES = os.path.join(ROOT, "tools", "recipes")
@@ -136,8 +151,38 @@ def known_ca_bundles():
 # pdftotext flags are pinned here rather than left to the recipe: the whole
 # purpose is that two runs a month apart produce the same bytes, and a flag the
 # recipe can vary is a flag that will vary.
+#
+# NOTE 2026-09-03: -nopgbrk is carried over unchanged from this repo's original
+# recipe. sped-safeguards removed it this week after finding it welds a running
+# head to the prose it interrupts with no separator (see capture-core.py's own
+# comment on RUNHEAD_BREAK for the mechanism). This repo has not been audited
+# for the same defect and no filter here currently depends on the form feed
+# surviving, so the flag is left as-is pending that audit -- see the queue for
+# the scoping writeup. Do not remove it here without re-verifying every
+# PDF-sourced recipe the way Montana and North Dakota were.
 PDFTOTEXT_RAW = ["-raw", "-nopgbrk", "-enc", "UTF-8"]
 PDFTOTEXT_LAYOUT = ["-layout", "-nopgbrk", "-enc", "UTF-8"]
+
+# The build pin itself lives in capture-core.py; see the import shim near the
+# top of this file. Untouched until now, this repo has always captured PDFs
+# under whatever poppler happened to be installed -- these two names, and the
+# require_poppler/require_pdfplumber checks wired into extract_pdf below, are
+# new, not a port of a fix this repo already had. They are a preflight guard
+# only: the installed poppler already matches the pin (verified 2026-09-03),
+# so extracted text is unchanged. What changes is that a future poppler
+# upgrade now fails loudly here instead of silently re-baselining every PDF
+# packet, which is exactly the failure mode that cost sped-safeguards two
+# working days this week.
+POPPLER_PIN = _core.DEFAULT_POPPLER_PIN
+PDFPLUMBER_PIN = _core.DEFAULT_PDFPLUMBER_PIN
+
+
+def require_poppler():
+    return _core.require_poppler(POPPLER_PIN)
+
+
+def require_pdfplumber():
+    return _core.require_pdfplumber(PDFPLUMBER_PIN)
 
 
 # --- filters -----------------------------------------------------------------
@@ -451,10 +496,12 @@ def extract_pdf(blob, mode, pages=None):
         p = os.path.join(td, 'in.pdf')
         open(p, 'wb').write(blob)
         if mode == 'pdfplumber':
+            require_pdfplumber()
             import pdfplumber
             with pdfplumber.open(p) as pdf:
                 sel = pdf.pages if not pages else pdf.pages[pages[0] - 1:pages[1]]
                 return '\n'.join((pg.extract_text() or '') for pg in sel)
+        require_poppler()
         flags = PDFTOTEXT_RAW if mode == 'pdftotext-raw' else PDFTOTEXT_LAYOUT
         if pages:
             flags = flags + ['-f', str(pages[0]), '-l', str(pages[1])]
