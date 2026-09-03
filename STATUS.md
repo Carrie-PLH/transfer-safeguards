@@ -7,7 +7,7 @@ present. Spanish = a translated page is published; it carries the
 docket, the hoisted rows, and the notice periods and deadlines, in
 the state's own published translation only.
 
-**Baseline: 40 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
+**Baseline: 41 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
 
 | State | Baseline | Full page | Spanish | Sources last checked |
 |---|:---:|:---:|:---:|---|
@@ -45,7 +45,7 @@ the state's own published translation only.
 | [New Mexico](site/states/new-mexico.html) | [x] | [ ] | [ ] | 2026-09-01 |
 | [New York](site/states/new-york.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [North Carolina](site/states/north-carolina.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| North Dakota | [ ] | [ ] | [ ] |  |
+| [North Dakota](site/states/north-dakota.html) | [x] | [ ] | [ ] | 2026-09-02 |
 | [Ohio](site/states/ohio.html) | [x] | [x] | [ ] | 2026-08-30 |
 | [Oklahoma](site/states/oklahoma.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Oregon](site/states/oregon.html) | [x] | [ ] | [ ] | 2026-08-30 |
