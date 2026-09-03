@@ -1,0 +1,464 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: South Dakota
+SLUG: south-dakota
+ASSEMBLED: 2026-09-02
+CAPTURE NOTES: Source 1 (ARSD chapter 44:73:11, Residents' Rights) and Source 2 (ARSD chapter 67:17:02, Fair Hearings) were retrieved from the South Dakota Legislature's own JSON API rather than its rendered pages. sdlegislature.gov/Rules/Administrative/<article> and the app-shell HTML at sdlegislature.gov/api/Rules/Rule/<article>.html?all=true both serve only a client-side application shell to curl, with no rule text present even with a browser user agent (confirmed on articles 44:73 and 44:70 — 2.6-3.1 MB of shell markup, zero occurrences of any rule number). The application itself calls sdlegislature.gov/api/Rules/<article-number> (URL-encoded colons, e.g. https://sdlegislature.gov/api/Rules/44%3A73), which returns the full article as JSON with the rule text in an "Html" field (a Microsoft Word HTML export) and is directly curl-able with a browser user agent — no query hash or session token in the URL, so this is a stable public endpoint rather than an application-level identifier that could drift. Both captures were sliced on the chapter, not the article, per this project's slicing discipline: the "Html" field for article 44:73 (all twelve chapters of Title 44, roughly 220,000 characters after stripping embedded <style> blocks and HTML tags) was sliced from its own heading "CHAPTER 44:73:11" to the next chapter's own heading "CHAPTER 44:73:12"; the "Html" field for chapter 67:17:02 was sliced from its own heading "CHAPTER 67:17:02" to "Rule 67:17:02:04.01", the heading of the next (repealed) section. The head and tail of each slice were checked against the surrounding numbered sections before capture, and each slice's own repeated per-section "Rule <number> <catchline>" running heads and embedded revision-tracking tokens (e.g. "lrpr14533", ISO timestamps, "MicrosoftInternetExplorer4") are the source's own HTML export artifacts, reproduced as extracted rather than removed. Source 3 (the Department of Social Services' own Fair Hearings page) was retrieved by curl with a browser user-agent and extracted by stripping HTML tags and collapsing whitespace, mechanically; site navigation and menu items common to every dss.sd.gov page are omitted from the source body below. Sources 4 and 5 (the Department of Human Services' Ombudsman Program page and the department's own Dakota at Home directory listing for the Long-Term Care Ombudsman Program) render only a client-side application shell to curl even with a browser user agent; both were captured by loading the rendered page in a browser tool and reading the page's own text content directly (not an AI summary, not paraphrased), with site navigation and menu items common to every page on each site omitted from the source bodies below.
+PENDING: SDCL Title 34, chapter 12 itself — cited by ARSD 44:73:11:14 as both "General Authority" and "Law Implemented" but not independently captured; whether the statute separately enumerates transfer-or-discharge grounds, a notice period, or a hearing route beyond what the rule itself states was not determined. A first-party document tying a nursing facility's own transfer-or-discharge decision explicitly to the Department of Social Services' Office of Administrative Hearings fair-hearing process (ARSD 67:17:02:03) or to any other named hearing office — none was located; ARSD 44:73:11:14(4) requires only that the facility's own notice describe "how the resident may appeal," without naming an office. The South Dakota Medicaid "Skilled Nursing Facilities and Nursing Facilities" billing manual (dss.sd.gov), found in search results but not yet captured, for any bed-hold or reserved-bed-day provision. The State Long-Term Care Ombudsman's individual name and title (not found on either captured ombudsman page). ARSD chapter 44:70:09 (the assisted-living-center resident-rights chapter the DHS Ombudsman Program page cites alongside chapter 44:73:11) — out of this project's v1 scope (nursing facilities only) and not captured. And Internet Archive submission.
+
+SOURCE 1: ARSD chapter 44:73:11, Residents' Rights (South Dakota Administrative Rules, Title 44 — Department of Health, Article 44:73, Nursing Facilities) | https://sdlegislature.gov/Rules/Administrative/44:73 (rule text captured via the site's own API, https://sdlegislature.gov/api/Rules/44%3A73) | source's own date: no single date for the chapter; each section carries its own "Source:" line — § 44:73:11:14 (Admission, transfer, and discharge policies) states "Source: 19 SDR 95, effective January 7, 1993; 22 SDR 70, effective November 10. 1995; transferred from § 44:04:17:14, 42 SDR 51, effective October 13, 2015; 51 SDR 53, effective November 11, 2024." | retrieved: 2026-09-02
+CHAPTER 44:73:11 RESIDENT'S RIGHTS Section44:73:11:01        Resident rights.44:73:11:02        Facility to inform resident of rights.44:73:11:03        Facility to provide information on available services, policies, and procedures.44:73:11:04        Notification when resident's condition changes.44:73:11:05        Repealed.44:73:11:06        Right to manage financial affairs.44:73:11:07        Repealed.44:73:11:08        Privacy and confidentiality.44:73:11:09        Quality of life.44:73:11:10        Grievances.44:73:11:11        Availability of survey results.44:73:11:12        Right to refuse to perform services.44:73:11:13        Self-administration of drugs, Repealed.44:73:11:14        Admission, transfer, and discharge policies.     44:73:11:01.  Resident rights. Each facility shall establish and implement policies consistent with 42 C.F.R. § 483.10 (September 17, 2024) and this chapter to protect and promote the rights of each resident.     Source: 19 SDR 95, effective January 7, 1993; 22 SDR 70, effective November 19, 1995; 38 SDR 115, effective January 9, 2012; transferred from § 44:04:17:01, 42 SDR 51, effective October 13, 2015; 51 SDR 53, effective November 11, 2024.    General Authority: SDCL 34-12-13.    Law Implemented: SDCL 34-12-13.     44:73:11:02.  Facility to inform resident of rights. Prior to or at the time of admission, a facility shall inform the resident, both orally and in writing, of the resident's rights and of the rules governing the resident's conduct and responsibilities while living in the facility. The resident shall acknowledge in writing that the resident received the information. During the resident's stay the facility shall notify the resident or the resident's legal representative, both orally and in writing, of any changes to the original information.     A facility's visiting hours and policies must permit and encourage the visiting of residents by friends and relatives. Visitors may not cause a disruption to the care and services residents receive, infringe on other residents' rights, or place an undue burden on the facility.     Source: SL 1975, ch 16, § 1; 6 SDR 93, effective July 1, 1980; 14 SDR 81, effective December 10, 1987; 19 SDR 95, effective January 7, 1993; subdivision (8) transferred from § 44:04:12:03, 22 SDR 70, effective November 19, 1995; 27 SDR 59, effective December 17, 2000; transferred from § 44:04:17:02, 42 SDR 51, effective October 13, 2015; 51 SDR 53, effective November 11, 2024.    General Authority: SDCL 34-12-13.    Law Implemented: SDCL 34-12-13.     44:73:11:03.  Facility to provide information on available services, policies, and procedures. A facility shall provide the following information in writing to each resident or resident's legal representative:     (1)  A list of items and services available in the facility, the charges for those items and services, and the items and services for which the resident may not be charged;     (2)  A description of how to apply for and use medicare and medicaid benefits, and the right to establish eligibility for medicaid, including the addresses and telephone numbers of the nearest office of the South Dakota Department of Social Services and of the United States Social Security Administration;     (3)  A description of the bed-hold policy that indicates the length of time the bed will be held for the resident, any policies regarding the held bed, and readmission rights of the resident; and     (4)  A description explaining the responsibilities of the resident and family members regarding self-administered medication.     A signed and dated admission agreement between the resident or the resident's legal representative and the facility must include information described in subdivisions (1) to (4), inclusive. The resident or resident's legal representative and the facility shall complete the admission agreement before or at the time of admission and before the resident has made a commitment for payment for proposed or actual care. The agreement must be printed in a manner to ensure ease of reading by the resident prior to signing. Any change in the admission agreement must be signed and dated by the resident or the resident's legal representative as an addendum to the original agreement.     Source: 19 SDR 95, effective January 7, 1993; 22 SDR 70, effective November 19, 1995; 24 SDR 90, effective January 4, 1998; 26 SDR 96, effective January 23, 2000; 28 SDR 83, effective December 16, 2001; transferred from § 44:04:17:03, 42 SDR 51, effective October 13, 2015; 51 SDR 53, effective November 11, 2024.    General Authority: SDCL 34-12-13.    Law Implemented: SDCL 34-12-13.
+
+Rule 44:73:11:04 Notification when resident's condition changes.
+
+          44:73:11:04.  Notification
+when resident's condition changes. A facility shall immediately inform the
+resident, consult with the resident's physician, physician assistant, or nurse
+practitioner, and, if known, notify the resident's legal representative or
+interested family member when any of the following occurs:
+
+          (1)  An accident
+involving the resident which results in injury or has the potential for
+requiring intervention by a physician, physician assistant, or nurse
+practitioner;
+
+          (2)  A significant
+change in the resident's physical, mental, or psychosocial status;
+
+          (3)  A need to alter
+treatment significantly; or
+
+          (4)  A decision to
+transfer or discharge the resident from the facility.
+
+          Source: 19 SDR 95,
+effective January 7, 1993; 22 SDR 70, effective November 19, 1995; transferred
+from § 44:04:17:04, 42 SDR 51, effective October 13, 2015.
+
+          General Authority: SDCL 34-12-13(15).
+
+          Law Implemented: SDCL 34-12-13(15).
+
+Rule 44:73:11:05 Repealed.
+
+          44:73:11:05.  Notification
+of resident's room assignment or rights change. Repealed.
+
+          Source: 19 SDR 95,
+effective January 7, 1993; 22 SDR 70, effective November 19, 1995; 29 SDR 81,
+effective December 11, 2002; transferred from § 44:04:17:05, repealed, 42
+SDR 51, effective October 13, 2015.
+
+Rule 44:73:11:06 Right to manage financial affairs.
+
+          44:73:11:06.  Right
+to manage financial affairs. A resident may manage personal financial
+affairs. A facility may not require residents to deposit their personal funds
+with the facility. If the resident chooses to deposit funds with the facility
+and gives written authorization, the facility shall hold the funds in
+accordance with SDCL 34-12-15.1 to 34-12-15.10, inclusive.
+
+          Source: 19 SDR 95,
+effective January 7, 1993; 22 SDR 70, effective November 19, 1995; 38 SDR 115,
+effective January 9, 2012; transferred from § 44:04:17:06, 42 SDR 51,
+effective October 13, 2015.
+
+          General Authority: SDCL 34-12-13(15).
+
+          Law Implemented: SDCL 34-12-13(15).
+
+Rule 44:73:11:07 Repealed.
+
+          44:73:11:07.  Choice
+in planning care. Repealed.
+
+          Source: 19 SDR 95,
+effective January 7, 1993; 22 SDR 70, effective November 19, 1995; transferred
+from § 44:04:17:07, repealed, 42 SDR 51, effective October 13, 2015.
+
+    44:73:11:08.  Privacy and confidentiality. A facility shall provide for privacy and confidentiality for the resident. A facility shall permit residents to:     (1)  Visit a spouse or significant other or, if both are residents of the same facility, share a room with the spouse or significant other, within the capacity of the facility, upon the consent of both parties;     (2)  Have room doors closed and to require knocking before entering the resident's room, except in an emergency;     (3)  Have only authorized personnel present during treatment or activities of personal hygiene;     (4)  Retire and rise according to the resident's wishes, as long as the resident does not disturb other residents;     (5)  Meet, associate, and communicate with any person of the resident's choice in a private place within the facility;     (6)  Participate in social, religious, and community activities that do not interfere with the rights of other residents in the facility;     (7)  Approve or refuse the release of personal and medical records to any individual outside the facility, except when the resident is transferred to another health care facility or when the release of the record is required by law;     (8)  Send and receive unopened mail and to have access to stationery, postage, and writing implements at the resident's own expense; and     (9)  Access and use a telephone without being overheard.     With the permission of the resident or the resident's legal representative, a facility must allow the state ombudsman or a representative of the ombudsman access to the resident's medical records.     Source: 19 SDR 95, effective January 7, 1993; 22 SDR 70, effective November 19, 1995.; transferred from §  44:04:17:08, 42 SDR 51, effective October 13, 2015; 51 SDR 53, effective November 11, 2024.    General Authority: SDCL 34-12-13.    Law Implemented: SDCL 34-12-13.     Cross-Reference: Written policies and confidentiality of records, § 44:73:09:03.     44:73:11:09.  Quality of life. A facility shall provide care and an environment that contributes to the resident's quality of life. The facility shall provide:     (1)  A safe, clean, comfortable, and homelike environment;    (2)  Maintenance or enhancement of the resident's ability to preserve individuality, exercise self-determination, and control everyday physical needs;    (3)  Freedom from physical or chemical restraints imposed for purposes of discipline or convenience;    (4)  Freedom from verbal, sexual, physical, and mental abuse;    (5)  Freedom from involuntary seclusion, neglect, or exploitation imposed by anyone,    (6)  Freedom from theft of personal property;    (7)  Retention and use of personal possessions, including furnishings and clothing, as space permits, unless to do so would infringe upon the rights or health and safety of other residents; and    (8)  Support and coordination to assure pain is recognized and addressed appropriately.     Source: 19 SDR 95, effective January 7, 1993; 22 SDR 70, effective November 19, 1995; 28 SDR 83, effective December 16, 2001; transferred from § 44:04:17:09, 42 SDR 51, effective October 13, 2015; 51 SDR 53, effective November 11, 2024.    General Authority: SDCL 34-12-13.    Law Implemented: SDCL 34-12-13.     Cross-Reference: Care policies, § 44:73:04:13.     44:73:11:10.  Grievances. A resident's grievance may be in writing or oral and may relate to treatment furnished, treatment that has not been furnished, the behavior of other residents, and infringement of the resident's rights. A facility shall adopt a grievance process and make the process known to each resident and to the resident's immediate family or legal representative. The grievance process must outline the facility's efforts to resolve the grievance and documentation of:     (1)  The grievance;    (2)  The names of the persons involved;    (3)  The disposition of the matter; and    (4)  The date of disposition.     Source: 19 SDR 95, effective January 7, 1993; 22 SDR 70, effective November 19, 1995; 29 SDR 81, effective December 11, 2002; transferred from § 44:04:17:10, 42 SDR 51, effective October 13, 2015; 51 SDR 53, effective November 11, 2024.    General Authority: SDCL 34-12-13.    Law Implemented: SDCL 34-12-13.     44:73:11:11.  Availability of survey results. A facility shall provide a copy of any survey results from a department inspection, along with the corresponding plan of correction to a resident or other individual upon request.     Source: 19 SDR 95, effective January 7, 1993; 22 SDR 70, effective November 19, 1995; 27 SDR 59, effective December 17, 2000; transferred from § 44:04:17:11, 42 SDR 51, effective October 13, 2015; 51 SDR 53, effective November 11, 2024.    General Authority: SDCL 34-12-13.    Law Implemented: SDCL 34-12-13.     44:73:11:12.  Right to refuse to perform services. A resident may perform services for the facility when the following conditions are met:     (1)  The plan of care includes documentation of the need or desire for work;    (2)  The nature of the services performed is specified, including whether the services are voluntary or paid;    (3)  Compensation for paid services is at or above prevailing rates; and    (4)  The resident agrees to the work arrangement.     A resident may refuse to perform services on behalf of the facility.     Source: 19 SDR 95, effective January 7, 1993; 22 SDR 70, effective November 19, 1995; transferred from § 44:04:17:12, 42 SDR 51, effective October 13, 2015; 51 SDR 53, effective November 11, 2024.    General Authority: SDCL 34-12-13.    Law Implemented: SDCL 34-12-13.     44:73:11:13.  Self-administration of drugs. Repealed.     Source: 19 SDR 95, effective January 7, 1993; 22 SDR 70, effective November 19, 1995; 28 SDR 83, effective December 16, 2001; 29 SDR 81, effective December 11, 2002; 32 SDR 128, effective January 30, 2006; 38 SDR 115, effective January 9, 2012; transferred from § 44:04:17:13, 42 SDR 51, effective October 13, 2015; 51 SDR 53, effective November 11, 2024.     44:73:11:14  Admission, transfer, and discharge policies. A facility shall establish and implement policies and procedures for admission, readmission, discharge, and transfer of residents that prohibit discrimination based upon payment source. The facility shall notify each resident at or before the time of admission of these policies and procedures. The policies and procedures must include the following provisions:     (1)  The resident may remain in the facility and may not be transferred or discharged unless the resident's needs and welfare cannot be met by the facility, the resident's health has improved sufficiently so the resident no longer needs the services provided by the facility, the safety or health of individuals in the facility is endangered by the resident, the resident has failed to pay for allowable billed services as agreed to, or the facility ceases to operate;     (2)  The facility must notify the resident or the resident's legal representative and state ombudsman in writing at least thirty days before the transfer or discharge unless a change in the resident's health requires immediate transfer or discharge or the resident has not resided in the facility for thirty days. The written notice must specify the reason for, and effective date of, the transfer or discharge and the location to which the resident will be transferred or discharged;     (3)  The conditions under which the resident may request or refuse transfer within the facility; and     (4)  A description of how the resident may appeal a decision by the facility to transfer or discharge the resident.     Source: 19 SDR 95, effective January 7, 1993; 22 SDR 70, effective November 10. 1995; transferred from § 44:04:17:14, 42 SDR 51, effective October 13, 2015; 51 SDR 53, effective November 11, 2024.    General Authority: SDCL 34-12-13.    Law Implemented: SDCL 34-12-13.
+END SOURCE 1
+
+SOURCE 2: ARSD chapter 67:17:02, Fair Hearings (South Dakota Administrative Rules, Title 67 — Department of Social Services), sections 67:17:02:01 through 67:17:02:04 | https://sdlegislature.gov/Rules/Administrative/67:17:02 (rule text captured via the site's own API, https://sdlegislature.gov/api/Rules/67%3A17%3A02) | source's own date: no single date for the chapter; § 67:17:02:03 (Hearing requests) states "Source: SL 1975, ch 16, § 1; transferred from § 67:12:03:03, 2 SDR 71, effective April 29, 1976; 7 SDR 66, 7 SDR 89, effective July 1, 1981; 35 SDR 166, effective December 24, 2008; 52 SDR 33, effective September 29, 2025." | retrieved: 2026-09-02
+CHAPTER 67:17:02
+
+FAIR HEARINGS
+
+Section
+
+67:17:02:01                                Right to
+hearing.
+
+67:17:02:02                                Right to be
+informed of hearing process.
+
+67:17:02:03                                Hearing
+requests.
+
+67:17:02:04                                Time limits for
+requesting hearing.
+
+67:17:02:04.01
+to 67:17:02:05    Repealed.
+
+67:17:02:06
+and 67:17:02:07  Transferred.
+
+67:17:02:08
+to 67:17:02:11         Repealed.
+
+67:17:02:11.01                           Hearings
+conducted by electronic means.
+
+67:17:02:12                                Written notice of hearing.
+
+67:17:02:13                                Dismissal.
+
+67:17:02:14                                Default.
+
+67:17:02:15                                Repealed.
+
+67:17:02:16                                Informal
+resolution.
+
+67:17:02:17                                Who may attend the hearing.
+
+67:17:02:18                                Hearing examiner
+to arrange for recorded testimony.
+
+67:17:02:19
+to 67:17:02:26         Repealed.
+
+67:17:02:27                                Final decision
+by secretary.
+
+67:17:02:28                                Repealed.
+
+67:17:02:29
+and 67:17:02:30  Transferred.
+
+Rule 67:17:02:01 Right to hearing.
+
+lrpr14533
+lrpr14296
+2
+0
+2008-12-24T14:20:00Z
+2008-12-24T14:20:00Z
+1
+106
+608
+State of South Dakota
+5
+1
+713
+10.6845
+
+Clean
+
+MicrosoftInternetExplorer4
+
+          67:17:02:01.  Right to hearing. An individual or entity
+that is aggrieved by the department's action or inaction taken under the
+provisions of ARSD Title 67 may request a hearing. A hearing is conducted under
+the provisions of this chapter and SDCL chapter 1-26. A hearing is not allowed if either state or federal law requires automatic grant adjustments unless the reason for the hearing is an incorrect computation.
+
+          Source:
+SL 1975, ch 16, § 1; transferred from § 67:12:03:01, 2 SDR 71,
+effective April 29, 1976; 7 SDR 66, 7 SDR 89, effective July 1, 1981; 8 SDR 58,
+effective November 29, 1981; 35 SDR 166, effective December 24, 2008.
+
+          General
+Authority: SDCL 28-1-24.1.
+
+          Law
+Implemented: SDCL 28-1-24.1.
+
+Rule 67:17:02:02 Right to be informed of hearing process.
+
+lrpr14533
+lrpr14296
+2
+1
+2008-12-24T14:20:00Z
+2008-12-24T14:20:00Z
+1
+90
+516
+State of South Dakota
+4
+1
+605
+10.6845
+
+Clean
+
+MicrosoftInternetExplorer4
+
+          67:17:02:02.  Right to be informed of hearing process. The
+department shall inform each applicant and recipient of the right to request a
+hearing. The department shall print this information on all applications for
+public assistance and on all formal notices issued by the department concerning
+an action taken.
+
+          Source:
+SL 1975, ch 16, § 1; transferred from § 67:12:03:02, 2 SDR 71,
+effective April 29, 1976; 6 SDR 66, effective January 10, 1980; 7 SDR 66, 7 SDR
+89, effective July 1, 1981; 35 SDR 166, effective December 24, 2008.
+
+          General
+Authority: SDCL 28-1-24.1.
+
+          Law
+Implemented: SDCL 28-1-24.1.
+
+    67:17:02:03.  Hearing requests. To appeal a Department of Social Services action or inaction regarding the supplemental nutrition assistance program or medical assistance program, an individual, or the individual's representative, shall submit a written or oral request for an appeal to the department's Office of Administrative Hearings.     For all other department programs, to appeal a department action or inaction, an individual, or the individual's representative, shall submit a written and signed request for a hearing to the Office of Administrative Hearings. A person assisting an individual may request a hearing on the individual's behalf.     An individual making a request for a hearing shall indicate what department action or inaction is being appealed. If the issue being appealed is unclear, any party involved in the action may request the Office of Administrative Hearings to clarify the issue.     A corporation that requests or is a party to a hearing must be represented throughout the hearing process by an attorney.     Source: SL 1975, ch 16, § 1; transferred from § 67:12:03:03, 2 SDR 71, effective April 29, 1976; 7 SDR 66, 7 SDR 89, effective July 1, 1981; 35 SDR 166, effective December 24, 2008; 52 SDR 33, effective September 29, 2025.    General Authority: SDCL 28-1-24.1.    Law Implemented: SDCL 28-1-24.1.     Cross-Reference: Definition of medical assistance program, subdivision 67:46:01:01(5).     67:17:02:04.  Time limits for requesting hearing. An individual, the individual's representative, or an entity shall request a hearing within one of the following applicable time limits:     (1)  Ten days after a nursing facility receives the department's final decision on an issue relating to an assessment and any resulting payment adjustment made under the provisions of chapter 67:45:03;     (2)  Ten days after a decision is entered as a result of a review on a petition to stay service of a proposed withholding action for the child support enforcement program under the provisions of chapter 67:18:01;     (3)  Ten days after a decision is entered as a result of a review of information reported to consumer reporting agencies under the provisions of chapter 67:18:01;     (4)  Ten days after a decision is entered as a result of a review that concerns restricting the issuance or renewal of a noncustodial parent's driver, professional, sporting, or recreational license, registration, certification, or permit under the provisions of chapter 67:18:01;     (5)  Ten days after a decision is entered as a result of a review that concerns a lottery setoff for the child support enforcement program under the provisions of chapter 67:18:01;     (6)  Thirty days after the department sends the final audit report to a nursing facility pursuant to § 67:16:04:37, or up to sixty days after the department sends the final audit report to a nursing facility if the department has granted an extension of time to request a fair hearing pursuant to § 67:16:04:38;     (7)  Thirty days after notice of the action complained of or the conference decision, or thirty days after action should have been taken by the department as provided by law or rule;     (8)  Thirty days after notice is received that the department is placing an individual's name on the central registry under the provisions of chapter 67:14:39;     (9)  Thirty days after the department sends a written notice of the department's denial of an individual's request for a record to be removed from the central registry under the provisions of chapter 67:14:39;     (10)  Thirty days after the department notifies a child care provider or a recipient of child care services of an intended action under the provisions of chapter 67:42:01 or 67:47:01;     (11)  Sixty days after an action is taken by the department, or after any loss of benefits, relating to the person's participation in the energy crisis intervention program or the low income energy assistance program under the provisions of chapter 67:15:01 or 67:15:04; or     (12)  Ninety days after an action is taken by the department related to the supplemental nutrition assistance program, or after any loss of benefits, relating to the person's participation in the supplemental nutrition assistance program under the provisions of article 67:13.     Source: SL 1975, ch 16, § 1; transferred from § 67:12:03:04, 2 SDR 71, effective April 29, 1976; 3 SDR 26, effective October 6, 1976; 6 SDR 66, effective January 10, 1980; 7 SDR 66, 7 SDR 89, effective July 1, 1981; 10 SDR 30, effective October 3, 1983; 14 SDR 97, effective January 17, 1988; 15 SDR 100, effective January 12, 1989; 16 SDR 26, effective August 13, 1989; 18 SDR 112, effective January 9, 1992; 18 SDR 134, effective February 25, 1992; 20 SDR 28, effective August 31, 1993; 21 SDR 8, effective July 25, 1994; 22 SDR 188, effective July 8, 1996; 26 SDR 21, effective August 24, 1999; 28 SDR 112, effective February 20, 2002; 35 SDR 166, effective December 24, 2008; 52 SDR 33, effective September 29, 2025.    General Authority: SDCL 28-1-24.1.    Law Implemented: SDCL 28-1-24.1.     Cross-References:    Fair hearings, 7 C.F.R. § 273.15(g).    Conference with department staff, § 67:10:10:06.    Notice when name is to be placed on central registry, § 67:14:39:05.    Request to remove record from central registry after five years -- Limited to individuals having substantiated report or court finding, § 67:14:39:09.    Request for fair hearing, § 67:15:01:49.    Fair hearings, § 67:15:04:07.    Audits -- Appeal provisions, § 67:16:04:37.    Time limits for requesting hearing, § 67:16:04:38.    Furnishing information to consumer reporting agencies, § 67:18:01:49.03.    Right to fair hearing following review of petition to stay withholding, § 67:18:01:58.02.    Administrative review -- Lottery setoff, § 67:18:01:58.03.    Administrative review and fair hearing before restricting issuance of license, registration, certification, or permit, § 67:18:01:62.    Notice to facility, § 67:42:01:05.03.    Fair hearing, § 67:45:03:12.    Overpayments -- Hearings -- Payments made pending hearing,§ 67:47:01:25.01.
+END SOURCE 2
+
+SOURCE 3: Fair Hearings — South Dakota Department of Social Services | https://dss.sd.gov/keyresources/adminhearings/fairhearing.aspx | source's own date: none stated on page (footer copyright 2020) | retrieved: 2026-09-02
+Fair Hearings
+
+What is a fair hearing?
+
+If you feel the Department of Social Services has made a mistake in your case, you may be entitled to a fair hearing. During this legal proceeding, an impartial Administrative Law Judge (ALJ) holds a hearing to learn more about the facts of your case.
+
+The ALJ has not had any prior involvement in your case. The ALJ will review the evidence presented at the hearing and issue a written decision. Any appeal of that decision is made to circuit court under the requirements of SDCL Chapter 1-26.
+
+How do I request a hearing?
+
+Submit a written request for hearing to the address below. The request should contain the reason for the request, your address with zip code, and your phone number. A hearing request regarding Food Stamps may also be made verbally to the Office of Administrative Hearings or to the local Department of Social Services office.
+
+Address:
+
+Department of Social Services
+
+Office of Administrative Hearings
+
+700 Governors Drive
+
+Pierre, SD 57501
+
+Phone Number:
+605.773.6851
+
+admhrngs@state.sd.us
+
+The deadline to request a fair hearing is stated on the Department’s notice of the adverse action.
+
+What is the notice of hearing
+?
+
+You will receive advance written notice of the hearing. Read the entire Notice of Hearing. It contains important information about the time and place of the hearing and about your rights.
+
+What is a speedy hearing?
+
+In most cases, the ALJ must issue a final decision within 90 days (60 days in food stamp cases) after your hearing request.
+
+You may request a postponement by contacting the Office of Administrative Hearings at least
+10 days before
+the hearing. Any delay caused by your postponement extends the deadline for a final decision in your case.
+
+What if the hearing is scheduled to be completed over the phone and I would rather have an in-person hearing?
+
+If the hearing is scheduled to be held by telephone and you would prefer an in-person hearing, you must make your request at least
+5 business days before
+the scheduled hearing.
+
+Can anybody else come with me to the hearing?
+
+A relative, friend or other authorized person may appear with and assist you. You have a right to the assistance of legal counsel at your own expense if you so choose.
+
+An attorney needs time to prepare, please do not wait until the day of the hearing to seek legal advice. In some cases, free legal assistance may be available from
+East River Legal Services
+,
+Dakota Plains Legal Services
+or other sources. The ALJ does not have authority to appoint or select an attorney for you or to order any party to pay another’s legal or other costs.
+
+What rights do I have?
+
+Reasonable advance notice.
+
+See evidence at a reasonable time before the hearing. At your request, the agency representative will provide you a free copy of documents or other exhibits it will offer as evidence during the hearing.
+
+Be present when all evidence is taken.
+
+Participate fully. You will be allowed to testify, bring witnesses, present exhibits, and ask questions or cross-examine witnesses.
+
+Be assisted by a friend, a relative or your lawyer.
+
+A decision made by an impartial official based solely on the evidence presented.
+
+What should I do to prepare for the hearing?
+
+Before the hearing, plan what you want to present. Write down questions you want to ask, arguments you want to make, and key points you may want to get across. Keep in mind that witnesses need sufficient advance notice of their need to appear.
+
+Submit your exhibits to the ALJ at least
+5 days before
+the hearing. If you are to appear by phone, you must also submit a copy of your exhibits to the Department representative at least
+5 days before
+the hearing. This way, the exhibits are available to all during the hearing. Save a copy for yourself so you have your exhibits during the hearing.
+
+A witnesses’ testimony must concern facts about which he or she has personal knowledge.  The ALJ will consider only the evidence produced for the record during the hearing, so it is important for you to present all information you want considered.
+
+What happens during the hearing?
+
+Fair hearings are pretty informal, but are held in a manner consistent with the rights of the parties and with respect and dignity to those involved.
+
+The ALJ will open the hearing by explaining how the hearing will be conducted and the parties’ rights.
+
+Listen carefully.
+
+Be prepared to explain your position fully and truthfully.
+
+It is helpful to bring pen and paper for notes.
+
+Avoid repetition and ask short, to-the-point questions.
+
+State legal objections and the ALJ will make a ruling.
+
+The ALJ makes a decision based only on the evidence presented at hearing. He or she ensures all parties have a fair opportunity to be heard and that the record is complete.
+
+The ALJ will not participate in a discussion with you or anyone else about the facts or merits of your case outside of a scheduled hearing.
+
+Additional information on administrative hearing procedure can be found in South Dakota Codified Law (SDCL) Chapter 1-26 and in Administrative Rules of South Dakota (ARSD) Chapter 67:17.
+
+© 2020 South Dakota Department
+of Social Services
+
+All Rights Reserved.
+
+Official State of South Dakota Website
+
+Home
+|
+SD.gov
+|
+Disclaimer
+|
+Nondiscrimination
+|
+Accessibility
+|
+Privacy
+|
+Intranet
+|
+Request Public Records
+|
+Contact Us
+
+700 Governors Drive | Pierre, SD 57501
+
+605.773.3165
+END SOURCE 3
+
+SOURCE 4: Ombudsman Program — South Dakota Department of Human Services | https://dhs.sd.gov/en/ltss/ombudsman-program | source's own date: none stated on page | retrieved: 2026-09-02
+Ombudsman Program
+
+The South Dakota Long-Term Care Ombudsman Program provides information and referral assistance, education to increase community awareness of resident’s rights, and training for long-term care facility staff.
+
+Services
+
+An Ombudsman program may help in the following ways:
+
+Empower residents to resolve concerns on their own behalf
+Inform people about their rights in long-term care
+Listen to residents and family members when they have concerns or issues
+Make recommendations for protecting the rights of residents and improving their care and quality of life
+Protect health, rights, safety, and welfare of residents
+Work to solve concerns and pursue resolutions through agencies that can assist such as medical providers, social service agencies, government agencies, and legal services
+Work to ensure that state regulations and laws protect residents
+Work with residents to expect excellence in their care
+Work with providers to promote a culture in which people have and can make choices
+Work with family and resident councils
+
+All reports and inquiries are confidential.
+
+The Ombudsman program does not regulate long-term care providers. The program works with providers, resident representatives, residents, and their families to resolve concerns.
+
+Who Is Eligible?
+
+Services are provided to people:
+
+Who live in a long-term care facility
+Without regard for income and resources
+
+Requested by or on behalf of a person
+Long-Term Care Facilities
+Nursing facilities
+Assisted living facilities
+Licensed adult foster care homes
+Community living homes
+Resident’s Bill of Rights
+
+The Bill of Rights for Nursing Home and Assisted Living Center is located here: Chapter 44:73:11 and Chapter:44:70:09.
+
+How to Learn More
+
+To learn more, contact Dakota at Home. You can also email the State Ombudsman at LTCO@state.sd.us.
+
+Read the 2025 Ombudsman Annual Report.
+
+Report a Transfer or Discharge
+
+Report a transfer or discharge to the DHS Ombudsman Program through the following form: Report Discharge or Transfer to DHS Ombudsman Program.
+
+Contact
+
+You can contact us in one of these ways:
+
+By phone: 833-663-9673
+By email: DakotaAtHome@state.sd.us
+By mail:
+
+Division of Long Term Services and Supports
+Hillsview Plaza, 3800 E Hwy 34
+c/o 500 E. Capitol Avenue
+Pierre, SD  57501
+END SOURCE 4
+
+SOURCE 5: Long-Term Care Ombudsman Program | South Dakota Department of Human Services — Dakota at Home directory listing | https://dakotaathome.sd.gov/search/c5a84daf-cd8f-5ac5-bad2-b72b20ac7b97 | source's own date: "Last Assured 11/20/2025" | retrieved: 2026-09-02
+Long-Term Care Ombudsman Program | South Dakota Department of Human Services
+
+Resource Name:
+Long-Term Care Ombudsman Program | South Dakota Department of Human Services
+address
+
+3800 E. Highway 34, Pierre, SD 57501
+
+Eligibility
+Anyone residing in or advocating for someone residing in a nursing home, assisted living community, or community living home.
+Hours
+8:00am - 5:00pm (CT), Monday - Friday
+833-663-9673
+Voice
+·
+
+Toll Free
+
+Website
+https://dhs.sd.gov/ltss/ombudsman.aspx
+Email
+LTCO@state.sd.us
+Service area
+SD
+Other Information
+Age Group
+Older Adults (65+)
+Adults (25-64)
+Young Adults (18-24)
+Payment Options
+Free
+Long-Term Care (LTC) Ombudsman programs work to resolve complaints related to the health, safety, welfare and rights of individuals who live in LTC facilities, such as nursing homes, assisted living centers and community living homes.
+
+LTC Ombudsman representatives ensure that residents have regular and timely access to ombudsman services, conduct unannounced visits to nursing homes and assisted living communities. The representatives identify, investigate, and work to resolve complaints made by or on behalf of residents. Additionally they provide information to residents, families, and community members about Long-Term Services and Supports.
+
+Last Assured
+11/20/2025
+
+Providing organization
+South Dakota Department of Human Services
+
+Enhances the quality of life of people with disabilities, in partnership with its stakeholders.
+END SOURCE 5
+
+END OF PACKET — 5 sources
