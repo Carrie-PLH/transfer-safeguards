@@ -1,5 +1,32 @@
 # transfer-safeguards — operating notes
 
+## Cloudflare email obfuscation is not a capture limit (2026-09-03)
+
+A page that renders every email address as the placeholder `[email protected]`
+has not withheld them. Cloudflare's obfuscation is a one-byte XOR carried in the
+page's own markup, so the plaintext is already in the bytes curl receives, and
+decoding it is extraction in the same category as reading a `__NEXT_DATA__`
+island. `capture-core.py` decodes it, and `extract_html` calls that decoder
+before anything else reads the document.
+
+This is worth stating as a rule because the failure was written down as a fact
+twice, in two repositories, by sessions that were being careful: Alabama's
+capture notes recorded the placeholder as "left as the page renders it", and
+Gathered Work's Walden page asserted that a plain fetch "cannot recover the real
+addresses" and that a browser executing the de-cloaking JavaScript was required.
+Both were reasoning from what the text looked like rather than from what the
+bytes contained.
+
+The failure mode it creates is silent and specific. `check-fidelity.py` requires
+every address a page publishes to appear in its packet, not the reverse -- so a
+packet full of placeholders passes every check while being unable to support any
+contact at all. The damage is to what a page *can* say, never to what it says,
+and nothing reports it. Alabama is the case that shows the cost: the department's
+nursing-home complaint address sat unpublishable for four days on the layer whose
+readers are families trying to complain about a facility.
+
+If a packet holds `[email protected]`, the capture is stale, not the source.
+
 ## Doctrine — the long-horizon frame (read before optimizing anything)
 
 Field Assembly is privately funded institution-building, not a startup. The
