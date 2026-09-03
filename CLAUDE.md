@@ -209,6 +209,27 @@ concatenation as the source's own formatting, and join the genuinely
 separate elements with normal punctuation in the packet rather than
 reproducing the run-together artifact.
 
+A JavaScript-only rules portal can carry a public JSON API underneath it,
+found building South Dakota (2026-09-02). sdlegislature.gov (the South
+Dakota Legislature's own rule and statute site) serves nothing but a
+client-side application shell to curl on every page and endpoint that looks
+like a document — the rule pages themselves, and even the "download in
+Word" and "printer friendly" links reached from them — up to 3 MB of
+JavaScript bundle with zero occurrences of any rule number, browser
+user-agent or not. The application itself calls a same-origin JSON
+endpoint, `https://sdlegislature.gov/api/Rules/<article-number>` (colons
+URL-encoded, e.g. `44%3A73`), which returns the whole article as JSON with
+the rule text sitting in an "Html" field — a Microsoft Word HTML export,
+complete with the document's own per-section revision-tracking tokens and
+repeated running heads — and is directly curl-able with no query hash or
+session token in the URL, so it is a stable public endpoint rather than an
+application-level identifier that could drift. Slice on the chapter, not
+the article, exactly as with any other long capture: the field for one
+article can hold a dozen chapters and run past 200,000 characters after
+stripping the embedded `<style>` blocks the export leaves inline throughout
+the body (strip those before stripping tags generally, or the CSS class
+declarations swamp the text).
+
 Some states have no reachable publisher at all. Arkansas defeated every
 transport available on 2026-08-30 and is deliberately unbuilt:
 codeofarrules.arkansas.gov, the only publisher of 20 CAR 410-805, fails TLS
