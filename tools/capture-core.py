@@ -275,6 +275,65 @@ def form_feed_to_linebreak(t):
     return t.replace(RUNHEAD_BREAK, '\n')
 
 
+# --- Cloudflare email obfuscation ----------------------------------------------
+#
+# Promoted here 2026-09-03 from sped-safeguards and licensure mobility, where two
+# byte-identical copies had grown independently. The scan that prompted it is
+# worth recording, because it is as clean a natural experiment as this portfolio
+# is likely to produce: the two repos carrying this function held zero
+# obfuscation placeholders in their packet bodies, and the two without it held
+# 76 across 11 packets. The function accounts for the whole difference.
+#
+# What makes this worth sharing rather than duplicating is that the failure is
+# silent in a specific way no gate catches. The fidelity checker requires every
+# address a page publishes to appear in its packet, not the reverse -- so a
+# packet full of placeholders passes every check while quietly being unable to
+# support any contact at all. The damage is to what a page can say, not to what
+# it says, and nothing reports it. Room & Recourse's Alabama packet is the case
+# that shows the cost: "For nursing home complaints, email us at [email
+# protected]" -- the complaint address, missing from the page whose readers are
+# families trying to complain about a facility.
+
+
+def decode_cfemail(hexstr):
+    """Plaintext of a Cloudflare-obfuscated email (data-cfemail attribute).
+
+    The encoding is a one-byte XOR: the first byte is the key, each later byte
+    XORs against it. The plaintext is therefore genuinely present in the served
+    bytes, and decoding it is extraction in the same category as reading a
+    __NEXT_DATA__ island -- not interpretation. Without this, a capture carries
+    '[email protected]', which is Cloudflare's placeholder standing in for text
+    the publisher published. Maryland is the case that forced it originally:
+    mbon.maryland.gov publishes no email address as visible text anywhere, so a
+    capture without this decode holds not one @maryland.gov string and cannot
+    vouch for a contact the page prints."""
+    b = bytes.fromhex(hexstr)
+    return ''.join(chr(c ^ b[0]) for c in b[1:])
+
+
+def decode_cfemail_nodes(soup):
+    """Replace every data-cfemail node in a parsed document with its address.
+
+    Callers differ in how they build the soup and what they do afterwards, so
+    this takes the parsed document rather than markup. A malformed attribute is
+    left exactly as the page rendered it: a capture that guesses at a broken
+    encoding is worse than one that records what was served.
+
+    Unconditional by design, not opt-in. Unlike the links field, this does not
+    add anything the publisher did not publish -- it renders text that is
+    already in the served bytes and would otherwise reach the packet as a
+    placeholder."""
+    from bs4 import NavigableString
+    n = 0
+    for cf in soup.find_all(attrs={'data-cfemail': True}):
+        try:
+            cf.replace_with(NavigableString(decode_cfemail(cf['data-cfemail'])))
+            n += 1
+        except (ValueError, IndexError, KeyError):
+            pass  # a malformed attribute is left as the page rendered it
+    return n
+
+
 # --- table-cell link targets ---------------------------------------------------
 #
 # These three operate on already-parsed bs4 Tag/anchor objects; this module
@@ -358,6 +417,37 @@ def self_test():
     check(artifact_id(b'abc', supplied=True).startswith('supplied:'),
           'supplied artifact id has the wrong prefix')
     check(len(artifact_id(b'abc').split(':')[1]) == 16, 'artifact id is not 16 hex digits')
+
+    # Cloudflare email obfuscation. The vector is the address Maryland's board
+    # publishes only as an attribute, and the one this decode was written for.
+    check(decode_cfemail('8dc5e8ecffe4e3eaa3c2ebebe4eee8cde9eea3eae2fb')
+          == 'Hearing.Office@dc.gov', 'cfemail XOR decode is wrong')
+    try:
+        from bs4 import BeautifulSoup
+    except ImportError:
+        BeautifulSoup = None
+    if BeautifulSoup is not None:
+        cf = ('<div><a href="/cdn-cgi/l/email-protection#8dc5e8ecffe4e3eaa3c2eb'
+              'ebe4eee8cde9eea3eae2fb"><span class="__cf_email__" '
+              'data-cfemail="8dc5e8ecffe4e3eaa3c2ebebe4eee8cde9eea3eae2fb">'
+              '[email&#160;protected]</span></a></div>')
+        soup = BeautifulSoup(cf, 'html.parser')
+        n = decode_cfemail_nodes(soup)
+        txt = soup.get_text()
+        check(n == 1, 'decode_cfemail_nodes did not report the node it replaced')
+        check('Hearing.Office@dc.gov' in txt,
+              'data-cfemail did not decode to the published address')
+        check('email' not in txt.replace('Hearing.Office@dc.gov', ''),
+              "Cloudflare's placeholder text survived the decode")
+        # A broken attribute must not raise and must not be guessed at: a
+        # capture that invents an address is worse than one holding a
+        # placeholder, because the placeholder is visibly not an address.
+        bad = BeautifulSoup('<div><span data-cfemail="zz">x</span></div>',
+                            'html.parser')
+        check(decode_cfemail_nodes(bad) == 0,
+              'a malformed data-cfemail was counted as decoded')
+        check(bad.get_text().strip() == 'x',
+              'a malformed data-cfemail raised or was rewritten')
 
     narrow = '\n'.join(['short line'] * 5)
     wide = '\n'.join(['a much longer line than the ones in the narrow '

@@ -555,6 +555,14 @@ def extract_html(text, scope):
     soup = BeautifulSoup(text, 'html.parser')
     for bad in soup(['script', 'style', 'noscript', 'svg']):
         bad.decompose()
+    # Cloudflare-obfuscated addresses are decoded before anything else reads the
+    # document, because the plaintext is already in the served bytes and a
+    # capture that keeps the placeholder cannot vouch for a contact the
+    # publisher prints. Wired in 2026-09-03: a portfolio scan found 76 of these
+    # placeholders across this repo and transfer-safeguards, and none in the two
+    # repos that already decoded them. Unconditional rather than opt-in, unlike
+    # the links field, because it adds nothing the publisher did not publish.
+    _core.decode_cfemail_nodes(soup)
     node = soup.body if scope == 'body' else soup.select_one(scope)
     if node is None:
         raise RuntimeError(f'scope selector matched nothing: {scope!r}')
