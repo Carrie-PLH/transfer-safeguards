@@ -1,0 +1,189 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Alabama
+SLUG: alabama
+SUPPLEMENT: complaints-page email addresses, recovered by decoding
+ASSEMBLED: 2026-09-03
+CAPTURE NOTES: This supplement re-captures the Bureau of Health Provider Standards complaints page for one reason: the standing packet's copy of it holds the department's email addresses as Cloudflare's placeholder text rather than as addresses. The Aug 30 capture recorded the page as it rendered to a text fetch, and the note in that packet says so plainly. What neither that note nor this project understood at the time is that the placeholder is not a limit of the capture: Cloudflare's obfuscation is a one-byte XOR carried in the page's own markup, so the plaintext is already in the bytes curl receives, and decoding it is extraction rather than interpretation. The capture tool decodes those attributes as of 2026-09-03 and this capture is the first here to carry the addresses the department publishes. Four are on the page; the one this state's page needed is the nursing-home complaint address. Transport: curl, no browser user-agent required, HTTP 200; extractor html-text at scope main; filters trim-lines and collapse-blank-runs. The standing packet is unchanged and remains the evidence for everything already quoted from it.
+PENDING: nothing for this supplement; it exists to carry addresses the standing packet holds only as placeholders.
+
+SOURCE 1: Alabama Department of Public Health, Bureau of Health Provider Standards — Filing Complaints (re-captured with Cloudflare email decoding) | https://www.alabamapublichealth.gov/providerstandards/complaints.html | source's own date: Page last updated: March 30, 2026 | retrieved: 2026-09-03
+<section class="page-section page-section-banner bg-img mb-0" style="background-image:url('')" title="photos of healthcare providers and patients">
+
+<div class="page-section banner-site-title m-0 bg-img" style="background-image:url('../images/headers/providerstandards.jpg');box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);" >
+
+ Bureau of Health Provider Standards
+
+Home
+
+Health Provider Standards
+
+Filing Complaints
+
+Font Size:
+
+ Increase Font
+
+ Increase Font
+
+ Share & Bookmark
+
+ Print
+
+Menu
+
+Health Provider Standards Home
+
+Facilities Descriptions
+
+Facilities Directory
+
+Facilities Questions
+
+Facilities Rules
+
+Visitation Rights
+
+Advance Directives
+
+Pre-License Filing
+
+Licensure Application
+
+Palliative Care
+
+Nursing Homes
+
+Activity Certification
+
+MDS Information
+
+OASIS Information
+
+Forms
+
+Publications
+
+Medical Director Meetings
+
+CLIA
+
+Civil Money Penalty (CMP) Fund Grants
+
+Licensure Advisory Board Meetings
+
+Filing Complaints
+
+Contact Us
+
+MCC
+
+NEED HELP?
+
+Having trouble finding what you are looking for? Use our A to Z Index.
+
+Filing Complaints
+
+Acute and Continuing Care Facility
+
+Assisted Living Facility
+
+Home Health or Hospice Agency
+
+Nursing Home
+
+Visitation Rights
+
+To File a Complaint Against an Acute and Continuing Care Facility
+
+E-mail us at ACCComplaints@adph.state.al.us; or
+
+Call the Bureau of Health Provider Standards Complaint Hotline at 1-800-356-9596; or
+
+Write a letter of complaint addressed to: ATTN: ACC Complaint Unit, Alabama Department of Public Health, Bureau of Health Provider Standards, 201 Monroe Street, Suite 700, Montgomery, AL 36130-3017
+
+These include:
+
+Abortion or Reproductive Health Centers
+
+Ambulatory Surgical Centers
+
+Cerebral Palsy Centers
+
+End Stage Renal Disease Treatment and Transplant Centers
+
+Hospitals
+
+Portable X-Ray Suppliers
+
+Rehabilitation Centers
+
+Rural Health Clinics
+
+Sleep Disorder Facilities
+
+To File a Complaint Against an Assisted Living Facility
+
+E-mail us at ALFComplaints@adph.state.al.us;
+
+Call the Assisted Living Facilities complaint hotline at 1-866-873-0366; or
+
+Write a letter of complaint addressed to: ATTN: ALF Complaint Unit, Alabama Department of Public Health, Bureau of Health Provider Standards, 201 Monroe Street, Suite 700, Montgomery, AL 36130-3017
+
+To File a Complaint Against a Home Health or Hospice Agency
+
+E-mail us at ACCComplaints@adph.state.al.us; or
+
+Call the Bureau of Health Provider Standards Home Health and Hospice Complaint Hotline at 1-800-356-9596; or
+
+Write a letter of complaint addressed to: ATTN: ACC Complaint Unit, Alabama Department of Public Health, Bureau of Health Provider Standards, 201 Monroe Street, Suite 700, Montgomery, AL 36130-3017
+
+To File a Complaint Against a Nursing Home
+
+If you have a complaint about the care of a resident in a nursing home located in Alabama, the Alabama State Survey Agency has the regulatory responsibility for all nursing homes in the state.
+
+Examples of reasons for filing a complaint:
+
+Abuse
+
+Neglect
+
+Poor care
+
+Insufficient staff
+
+Unsafe or unsanitary conditions
+
+Dietary problems
+
+Mistreatment
+
+Complete the Nursing Home Complaint Form. You may complete this fillable form and submit it electronically to the department's complaint email address for nursing home complaints. Other ways to file a complaint:
+
+For elder complaints, contact the ElderCare Hotline at 1-800-356-9596.
+
+For nursing home complaints, email us at NHComplaints@adph.state.al.us; or
+
+Write a letter of complaint addressed to: ATTN: Complaint Unit, Alabama Department of Public Health, Bureau of Health Provider Standards, 201 Monroe Street, Suite 700, Montgomery, AL 36130-3017
+
+To File a Complaint for Violations of In-Person Visitation Rights
+
+If you would like to file a complaint regarding visitation rights in Alabama health care facilities, please click the appropriate link:
+
+General Acute Hospital
+
+Long Term Care Facility
+
+Skilled Nursing Facility
+
+Assisted Living Facility
+
+Specialty Care Assisted
+
+Page last updated: March 30, 2026
+
+NEED HELP?
+
+Having trouble finding what you are looking for? Use our A to Z Index.
+END SOURCE 1
+
+END OF PACKET — 1 source
