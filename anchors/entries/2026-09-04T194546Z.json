@@ -1,0 +1,16 @@
+{
+ "entry": {
+  "file_count": 120,
+  "id": "2026-09-04T194546Z",
+  "manifest_file": "manifests/2026-09-04T194546Z.txt",
+  "manifest_sha256": "dd5eac49d7ca873605f7a6fc8987fad4059b306895c9c278ad476c3d6a51d4fc",
+  "note": "north-dakota and ohio recipes; spacing corrections",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "016274498f4809e9f836b15eb530fb7b616d15d4dcc81b9a9ec1995db1014c56",
+  "repo": "transfer-safeguards",
+  "utc": "2026-09-04T19:45:46+00:00"
+ },
+ "entry_sha256": "b560ddbb1e06c2c277a5697bbcd4ebea2610cbc1b208a7de27dd7cca372fcba0"
+}
