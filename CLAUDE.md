@@ -440,3 +440,61 @@ literal asterisk inside a quotation is read as emphasis and disappears from
 the HTML. Tennessee's notice footnotes its grounds with asterisks and hit
 this; the HTML fidelity check catches it, which is how it was found. Quote
 around the asterisk, or fix the renderer if a state's text ever needs one.
+
+## The archive layer (added 2026-09-04, pending review)
+
+`tools/spn.py` requests Internet Archive Save Page Now captures for sources a
+state page links but has no `web.archive.org` link for. It reads the state
+pages themselves to decide what needs capturing, so it cannot drift from what
+is published. Read its docstring before touching it; it governs. It is a
+port of gathered work's `tools/spn.py` (2026-09-04) — an independent copy per
+this portfolio's rule against a shared library across repos, not a wrapper
+around it, so a real fix to the shared logic has to be made in every repo's
+copy by hand. `gathered work/tools/spn.py` itself is not touched by this port
+and does not change.
+
+**Not yet wired into the nightly routine.** The scheduled task that runs
+capture passes across the portfolio currently sends its entire nightly budget
+to gathered work because this repo (and its two siblings) had no equivalent
+tool. This closes that gap but needs Carrie's review before an unattended
+pass starts spending budget against it.
+
+**What counts as a capture.** Save Page Now returned success, the captured
+response was HTTP 200, and the capture played back. A stored 403 or a WAF
+interstitial is a refusal page, not evidence, and the script rejects those.
+Never record a capture the script did not confirm — a change log listing a
+capture that holds a challenge page is worse than one listing nothing.
+
+**The three states a failed source can be in**, which must be named correctly
+because they call for different things: *resting*, the ordinary outcome,
+which means seven days before it is eligible again; *blocked*, after three
+consecutive hard failures, which means held back until a person looks; and
+*not reached*, which means the pass ran out of budget before getting to it.
+Never write that a failed source is "carried to the next pass" — it is not,
+it rests a week first, and saying otherwise misstates the record.
+
+A failed source returns behind sources never attempted, so forward progress
+onto uncaptured pages is never displaced by retrying a stubborn host.
+
+**The budget is a number of captures, not attempts.** `--budget 20` works
+down the candidate list until twenty are confirmed stored, bounded by an
+attempt ceiling of three times the budget. Save Page Now caps concurrent
+sessions per account — the same Internet Archive account gathered work's
+script uses, credentials shared at `~/.config/ia/spn.env` — so a run against
+this repo competes with the other three collections for the same nightly
+session budget rather than having one of its own. Let a run finish. Do not
+run it twice in a pass, do not raise the budget, and do not request captures
+by any other means.
+
+A capture pass records captures. It does not re-verify quotations, re-fetch
+sources, change any date, touch the docket, or touch the footer's "Reviewed"
+line. If a capture reveals that a source changed, that is a note for the
+review pass, not a repair to make here.
+
+**Scope note for Carrie.** The script only scans `site/states/`, mirroring
+gathered work's institution-page scope. `site/federal.html` also links
+first-party sources (cms.gov, ecfr.gov) that sit outside that scope and
+currently get no archive coverage from this tool. Whether to widen the
+script to cover it — a small change to `scan_all`, on the model of
+sped-safeguards' two-collection version of this same script — is a judgment
+call, not something this port made unilaterally.
