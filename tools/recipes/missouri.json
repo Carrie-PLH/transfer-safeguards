@@ -1,0 +1,32 @@
+{
+  "recipe_version": 1,
+  "state": "missouri",
+  "sources": [
+    {
+      "n": 1,
+      "title": "19 CSR 30-82.050, Transfer and Discharge Procedures (excerpt from the Secretary of State's published 19 CSR 30-82)",
+      "url": "https://www.sos.mo.gov/cmsimages/adrules/csr/current/19csr/19c30-82.pdf",
+      "source_date": "rule history line ends Amended: Filed Sept. 1, 2021, effective March 30, 2022; page stamp (3/31/26)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "slice": {
+        "from": "19 CSR 30-82.020 Classification of Rules",
+        "from_occurrence": 2,
+        "to": "19 CSR 30-82.070 Alzheimer’s Demonstration Projects"
+      },
+      "notes": "Two columns, and that governs both anchors. The Secretary of State sets 19 CSR 30-82 in two columns, so -layout renders each printed line as the left column's text followed by the right column's, and a rule running down one column is broken across lines carrying unrelated text from its neighbour. The consequence here is that .050's own text does not sit between its own headings: section (2), the enumerated grounds this page quotes, renders in the right-hand column of the page whose left column is still printing .020 and .030 — above the line where the .050 heading itself appears — while .050's paragraphs (10) through (14) render below the line carrying the heading of .060. Anchoring on .050's heading was tried first and lost all six grounds; the checker caught it, which is the point of checking before promoting. So the anchors are the headings of the rules on either side of that spread, .020 and .070, and the slice is a deliberate superset: it holds .020, .030, .050 and .060 entire. A superset can only add evidence and never narrows what verifies, and in this rendering it is the only contiguous span that certainly holds all of .050. from_occurrence 2 on both skips the chapter's table of contents on page 1, which prints the same headings with dot leaders."
+    },
+    {
+      "n": 2,
+      "title": "Missouri Department of Health and Senior Services, Long-Term Care Ombudsman",
+      "url": "https://health.mo.gov/seniors/ombudsman/",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "Server-rendered; plain curl with a browser user-agent returns the whole document. Scope 'body' reproduces the standing packet, which was a tag strip over the served document and carries the department's site navigation at the head of the capture."
+    }
+  ]
+}

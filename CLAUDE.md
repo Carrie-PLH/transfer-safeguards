@@ -580,5 +580,22 @@ both occurrence keys default to 1. Rules that matter:
   captures a different span and shows a different digest. Verified against all
   twelve recipes at the time of the change.
 
-Tennessee is the first state built on it. Illinois, Missouri and Oklahoma are
-the other three this unlocks. Not yet ported to the sibling repos.
+Tennessee was the first state built on it; Missouri, Illinois and Oklahoma
+followed the same day. Ported to all three sibling repos 2026-09-04.
+**What Missouri taught the option (2026-09-04).** In a two-column render the
+reading order is the whole left column, then the whole right, so a rule's own
+text need not lie between its own headings. In 19 CSR 30-82, rule .050's
+section (2) — the enumerated grounds the page quotes — renders in the
+right-hand column of the page whose left column is still printing .020 and
+.030, *above* the line carrying the .050 heading, while .050's paragraphs (10)
+through (14) render *below* the line carrying the heading of .060. Anchoring on
+.050's own heading lost all six grounds. The checker caught it before anything
+was promoted, which is the whole argument for capturing to
+tools/packets/review/ and checking there.
+
+The fix is not a cleverer anchor. It is to anchor on the headings of the rules
+on either side of the spread and accept a superset — Missouri slices .020
+through .070 and holds four rules entire. A superset can only add evidence and
+never narrows what verifies. Where a two-column document is involved, expect
+this, and never tighten a slice to look neat: a slice that reads tidily and
+drops a column is the failure mode this whole apparatus exists to prevent.

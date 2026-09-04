@@ -1,0 +1,44 @@
+{
+  "recipe_version": 1,
+  "state": "oklahoma",
+  "sources": [
+    {
+      "n": 1,
+      "title": "Oklahoma Nursing Home Care Act, 63 O.S. §§ 1-1926 through 1-1928 (excerpt from the state's posted copy of Title 63 §§ 1-1900 et seq.)",
+      "url": "https://oklahoma.gov/content/dam/ok/en/osbeltca/documents/statutes/osdh/nursing-home-care-act-2021-gzt-from-oscn.pdf",
+      "source_date": "document foot: Unofficial Version – copied from OSCN.NET version, April 27, 2021",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "slice": {
+        "from": "§1-1926. Involuntary Transfer or Discharge of Resident – Grounds",
+        "to": "§1-1929. Rules and Regulations for Transfer of Resident by Department"
+      },
+      "notes": "Single column, so the section headings work as anchors directly and no occurrence key is needed — this posted copy carries no table of contents repeating them. The slice runs from §1-1926 to the start of §1-1929, which is the span the page reads. The running heads, the page numbers and the document's own 'Unofficial Version – copied from OSCN.NET version' foot fall inside it and are left as printed: this is the state's own posted copy and it labels itself unofficial, which the page records as a finding rather than repairing."
+    },
+    {
+      "n": 2,
+      "title": "OAC 310:675-7-5.1, Involuntary transfer or discharge (excerpt from the state's posted copy of OAC 310 chapter 675)",
+      "url": "https://oklahoma.gov/content/dam/ok/en/osbeltca/documents/rules/osdh/oac310-ch675-nursing-and-specialized-facilities-gzt-from-oar-2020.pdf",
+      "source_date": "document foot: Unofficial – copied from/linked to OAR.STATE.OK.US, September 13, 2020",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "slice": {
+        "from": "310:675-7-4. Resident transfers or discharge",
+        "to": "310:675-7-5. Complaint procedures [REVOKED]"
+      },
+      "notes": "The rule this source holds is 310:675-7-4, Resident transfers or discharge; the packet's own title for this source names 310:675-7-5.1, which is a different rule in the same chapter (Reports to state and federal agencies). The title is left as the standing packet wrote it — a packet is immutable once a page is built from it, and correcting the label here would put the recipe and the packet out of step with each other. Recorded so the next reader is not misled. Anchors are the rule heading and the heading of the rule that follows; the chapter's contents list sets its entries as 'Section 310:675-7-4', so the bare heading form matches the body and nothing else, and no occurrence key is needed. The rule's own bracketed [Source: Amended at ...] history line falls inside the slice. The document also carries a bracketed editor's remark inserted by whoever assembled it, which is reproduced as served."
+    },
+    {
+      "n": 3,
+      "title": "Oklahoma Department of Human Services, Nursing Home Transfers & Discharges (consumer leaflet, PDF)",
+      "url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/19-06_NursingHomeTransfersandDischarge_cap_03292022.pdf",
+      "source_date": "publication 19-06, file dated 03292022",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "Captured whole rather than cut to the two content pages the standing packet holds. The leaflet is a folded brochure, so the extractor's line order follows the panels rather than the reading order, and a page cut would be a judgment about which panels matter — the whole document is a superset, which can only add evidence and never narrows what verifies."
+    }
+  ]
+}
