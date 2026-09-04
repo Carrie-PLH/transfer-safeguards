@@ -5,6 +5,25 @@ import html, re, sys
 
 ROOT = Path(__file__).resolve().parents[1]
 
+_MONTHS = ("Jan", "Feb", "Mar", "Apr", "May", "Jun",
+           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+
+
+def display_date(s):
+    """Format an ISO checked date as the house display form, e.g. 'Aug 30, 2026'.
+
+    Anything that is not a bare ISO date is returned untouched, so a docket line
+    already carrying the display form (or any other wording) passes through.
+    """
+    m = re.fullmatch(r'(\d{4})-(\d{2})-(\d{2})\.?', s.strip())
+    if not m:
+        return s
+    year, month, day = int(m.group(1)), int(m.group(2)), int(m.group(3))
+    if not 1 <= month <= 12:
+        return s
+    return f"{_MONTHS[month - 1]} {day}, {year}"
+
+
 def inline(s):
     s = html.escape(s, quote=False)
     s = re.sub(r'\[([^]]+)\]\((https?://[^)]+)\)', r'<a href="\2" target="_blank" rel="noopener">\1</a>', s)
@@ -57,6 +76,9 @@ def render(slug):
                 if m: entries.append((m.group(1),m.group(2)))
                 elif line.strip(): note.append(line)
             checked_attr=' class="docket-checked"'
+            # House display format for checked dates is "Aug 30, 2026" across all four
+            # sites. The markdown docket keeps ISO; only the rendered value is formatted.
+            entries=[(k, display_date(v) if k=="Sources last checked" else v) for k,v in entries]
             dl=''.join(f'<div><dt>{inline(k)}</dt><dd{(checked_attr if k=="Sources last checked" else "")}>{inline(v)}</dd></div>' for k,v in entries)
             chunks.append(f'<section class="section reveal"><div class="section-no"></div><div><h1>{state}</h1><dl class="docket">{dl}</dl><p class="docket-note">{inline(" ".join(note))}</p></div></section>')
         else:

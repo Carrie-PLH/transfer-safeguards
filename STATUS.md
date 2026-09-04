@@ -11,54 +11,54 @@ the state's own published translation only.
 
 | State | Baseline | Full page | Spanish | Sources last checked |
 |---|:---:|:---:|:---:|---|
-| [Alabama](site/states/alabama.html) | [x] | [ ] | [ ] | 2026-09-04 |
+| [Alabama](site/states/alabama.html) | [x] | [ ] | [ ] | Sep 4, 2026 |
 | Alaska | [ ] | [ ] | [ ] |  |
 | Arizona | [ ] | [ ] | [ ] |  |
 | Arkansas | [ ] | [ ] | [ ] |  |
-| [California](site/states/california.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [Colorado](site/states/colorado.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [Connecticut](site/states/connecticut.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [Delaware](site/states/delaware.html) | [x] | [ ] | [ ] | 2026-09-03 |
+| [California](site/states/california.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [Colorado](site/states/colorado.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [Connecticut](site/states/connecticut.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [Delaware](site/states/delaware.html) | [x] | [ ] | [ ] | Sep 3, 2026 |
 | District of Columbia | [ ] | [ ] | [ ] |  |
-| [Florida](site/states/florida.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [Georgia](site/states/georgia.html) | [x] | [ ] | [ ] | 2026-08-30 |
+| [Florida](site/states/florida.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [Georgia](site/states/georgia.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
 | Hawaii | [ ] | [ ] | [ ] |  |
-| [Idaho](site/states/idaho.html) | [x] | [ ] | [ ] | 2026-09-02 |
-| [Illinois](site/states/illinois.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [Indiana](site/states/indiana.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [Iowa](site/states/iowa.html) | [x] | [ ] | [ ] | 2026-09-04 |
-| [Kansas](site/states/kansas.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [Kentucky](site/states/kentucky.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [Louisiana](site/states/louisiana.html) | [x] | [ ] | [ ] | 2026-09-04 |
-| [Maine](site/states/maine.html) | [x] | [ ] | [ ] | 2026-09-01 |
-| [Maryland](site/states/maryland.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [Massachusetts](site/states/massachusetts.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [Michigan](site/states/michigan.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [Minnesota](site/states/minnesota.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [Mississippi](site/states/mississippi.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [Missouri](site/states/missouri.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [Montana](site/states/montana.html) | [x] | [ ] | [ ] | 2026-09-03 |
-| [Nebraska](site/states/nebraska.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [Nevada](site/states/nevada.html) | [x] | [ ] | [ ] | 2026-09-01 |
-| [New Hampshire](site/states/new-hampshire.html) | [x] | [ ] | [ ] | 2026-09-01 |
-| [New Jersey](site/states/new-jersey.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [New Mexico](site/states/new-mexico.html) | [x] | [ ] | [ ] | 2026-09-01 |
-| [New York](site/states/new-york.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [North Carolina](site/states/north-carolina.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [North Dakota](site/states/north-dakota.html) | [x] | [ ] | [ ] | 2026-09-02 |
-| [Ohio](site/states/ohio.html) | [x] | [x] | [ ] | 2026-08-30 |
-| [Oklahoma](site/states/oklahoma.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [Oregon](site/states/oregon.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [Pennsylvania](site/states/pennsylvania.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [Rhode Island](site/states/rhode-island.html) | [x] | [ ] | [ ] | 2026-09-01 |
-| [South Carolina](site/states/south-carolina.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [South Dakota](site/states/south-dakota.html) | [x] | [ ] | [ ] | 2026-09-02 |
-| [Tennessee](site/states/tennessee.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [Texas](site/states/texas.html) | [x] | [x] | [ ] | 2026-08-30 |
-| [Utah](site/states/utah.html) | [x] | [ ] | [ ] | 2026-09-04 |
+| [Idaho](site/states/idaho.html) | [x] | [ ] | [ ] | Sep 2, 2026 |
+| [Illinois](site/states/illinois.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [Indiana](site/states/indiana.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [Iowa](site/states/iowa.html) | [x] | [ ] | [ ] | Sep 4, 2026 |
+| [Kansas](site/states/kansas.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [Kentucky](site/states/kentucky.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [Louisiana](site/states/louisiana.html) | [x] | [ ] | [ ] | Sep 4, 2026 |
+| [Maine](site/states/maine.html) | [x] | [ ] | [ ] | Sep 1, 2026 |
+| [Maryland](site/states/maryland.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [Massachusetts](site/states/massachusetts.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [Michigan](site/states/michigan.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [Minnesota](site/states/minnesota.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [Mississippi](site/states/mississippi.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [Missouri](site/states/missouri.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [Montana](site/states/montana.html) | [x] | [ ] | [ ] | Sep 3, 2026 |
+| [Nebraska](site/states/nebraska.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [Nevada](site/states/nevada.html) | [x] | [ ] | [ ] | Sep 1, 2026 |
+| [New Hampshire](site/states/new-hampshire.html) | [x] | [ ] | [ ] | Sep 1, 2026 |
+| [New Jersey](site/states/new-jersey.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [New Mexico](site/states/new-mexico.html) | [x] | [ ] | [ ] | Sep 1, 2026 |
+| [New York](site/states/new-york.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [North Carolina](site/states/north-carolina.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [North Dakota](site/states/north-dakota.html) | [x] | [ ] | [ ] | Sep 2, 2026 |
+| [Ohio](site/states/ohio.html) | [x] | [x] | [ ] | Aug 30, 2026 |
+| [Oklahoma](site/states/oklahoma.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [Oregon](site/states/oregon.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [Pennsylvania](site/states/pennsylvania.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [Rhode Island](site/states/rhode-island.html) | [x] | [ ] | [ ] | Sep 1, 2026 |
+| [South Carolina](site/states/south-carolina.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [South Dakota](site/states/south-dakota.html) | [x] | [ ] | [ ] | Sep 2, 2026 |
+| [Tennessee](site/states/tennessee.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [Texas](site/states/texas.html) | [x] | [x] | [ ] | Aug 30, 2026 |
+| [Utah](site/states/utah.html) | [x] | [ ] | [ ] | Sep 4, 2026 |
 | Vermont | [ ] | [ ] | [ ] |  |
-| [Virginia](site/states/virginia.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [Washington](site/states/washington.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [West Virginia](site/states/west-virginia.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [Wisconsin](site/states/wisconsin.html) | [x] | [ ] | [ ] | 2026-08-30 |
+| [Virginia](site/states/virginia.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [Washington](site/states/washington.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [West Virginia](site/states/west-virginia.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
+| [Wisconsin](site/states/wisconsin.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
 | Wyoming | [ ] | [ ] | [ ] |  |
