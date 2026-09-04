@@ -1,5 +1,44 @@
 # transfer-safeguards — operating notes
 
+## Reading a packet: use capture-core, never a fresh regex
+
+`tools/capture-core.py` holds the canonical reader. Call it:
+
+    _core.packet_sources(text)            # {n: body}, headers and notes excluded
+    _core.packet_sources(text, with_headers=True)   # {n: (header_line, body)}
+    _core.packet_header(text)             # canary, capture notes, pending list
+    _core.normalize_retrieval_dates(text) # flatten dates before comparing captures
+
+Do not write a parser for this. Every ad-hoc one written on 2026-09-03 was
+wrong, and each was wrong differently: one matched `RETRIEVED:` where packets
+write `retrieved:` and reported twenty-five unchanged jurisdictions as content
+drift; one ended a source at the next header without checking for an END SOURCE
+marker and mis-attributed a quotation to the wrong document; one ended a source
+at END SOURCE with no fallback and, in a packet having none, swallowed nine
+following sources into a supplement meant to hold one.
+
+The format varies, and not per repository, which is the trap:
+
+- **Source headers** take three shapes — `SOURCE 1` alone on its line,
+  `SOURCE 1:`, and `SOURCE 1 |`. All four collections' `check-fidelity.py`
+  already share one pattern accepting all three; capture-core adopts it verbatim.
+- **END SOURCE markers** are optional and mixed *within* a repository. Counted
+  2026-09-03: sped-safeguards 117 packets with sources, 31 with END SOURCE;
+  licensure mobility 58 and 9; gathered work 73 and none; transfer-safeguards
+  47 and 43. A block ends at its own marker when it has one and at the next
+  header when it does not.
+- **`END OF PACKET`** closes the file and is structure, not evidence.
+- **The header block** above `SOURCE 1` describes the capture. It is never
+  evidence: a capture note *mentioning* an obfuscation placeholder is not a
+  packet carrying one, and counting it as one produced a wrong portfolio-wide
+  tally on 2026-09-03.
+
+capture-core's reader was diffed against every one of the 299 packets in the
+portfolio, against each repository's own `check-fidelity.py`, and agrees on 298.
+The one difference is a template file where this reader correctly excludes
+capture notes that the older path included. Re-run that diff after any change to
+the reader.
+
 ## Cloudflare email obfuscation is not a capture limit (2026-09-03)
 
 A page that renders every email address as the placeholder `[email protected]`

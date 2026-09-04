@@ -425,31 +425,93 @@ def cell_text(c, links=False):
 # why this returns the numbers and leaves the judgement where it belongs.
 
 
-def packet_sources(text):
-    """{n: body} for every SOURCE block in a packet, headers excluded.
+# The header shape is not one shape. All four collections' check-fidelity.py
+# already agree on this pattern, and it is adopted here verbatim rather than
+# re-derived: a source header is `SOURCE n` alone on its line, or `SOURCE n:`,
+# or `SOURCE n |`. Three collections write the colon; two sped-safeguards
+# packets (nebraska, new-hampshire) write the pipe; new-mexico and the language
+# template write the bare form.
+#
+# The first draft of this function required a colon. It returned an empty dict
+# for the pipe form and dropped every source those packets hold, which the
+# self-test did not catch because the fixtures used the colon. It was found by
+# diffing this parser against the existing checkers across all 299 packets in
+# the portfolio -- which is the check worth repeating after any change here.
+SOURCE_HEADER_RE = re.compile(r'^SOURCE\s*(\d+)\s*(?:[|:]|$)', re.M)
+END_SOURCE_RE = re.compile(r'^(?:END SOURCE\b|END OF PACKET\b).*$', re.M)
+RETRIEVED_RE = re.compile(r'(retrieved:\s*)\d{4}-\d{2}-\d{2}', re.I)
 
-    Tolerant of the header shapes across the portfolio: the body is everything
-    after a `SOURCE <n>:` line up to the matching END SOURCE or the next SOURCE.
-    Capture notes and pending lists sit above SOURCE 1 and are excluded, which
-    is correct -- a packet header describes, only a source body evidences.
+
+def packet_sources(text, with_headers=False):
+    """{n: body} for every SOURCE block in a packet. The canonical reader.
+
+    Use this rather than writing a parser. Every ad-hoc one written against a
+    packet on 2026-09-03 was wrong, and each was wrong differently:
+
+      * one matched `RETRIEVED:` where the format writes `retrieved:`, and
+        reported twenty-five jurisdictions as content drift when the only
+        difference was a date;
+      * one ended a source at the next SOURCE header without checking for an
+        END SOURCE marker first, and mis-attributed a quotation to the wrong
+        document, nearly filing a drift finding against a source that had not
+        moved;
+      * one ended a source at END SOURCE without falling back, and in a packet
+        with no such markers swallowed nine following sources into a supplement
+        that was meant to hold one -- 139,022 characters instead of 3,613.
+
+    The formats are not per repo, which is the trap. Measured across all four
+    collections on 2026-09-03: sped-safeguards has 117 packets carrying SOURCE
+    headers and 31 carrying END SOURCE; licensure mobility 58 and 9; gathered
+    work 73 and none; transfer-safeguards 47 and 43. Both shapes occur inside
+    the same repo, so a reader must decide per source, not per collection.
+
+    A block therefore ends at its own END SOURCE line when one follows it before
+    the next header, and at the next header otherwise. Text before the first
+    SOURCE header -- the canary, capture notes, pending list -- is never
+    returned: a packet header describes, and only a source body evidences.
+
+    with_headers=True returns {n: (header_line, body)} for callers that need to
+    read a source's URL or retrieval date.
     """
-    out, n, buf = {}, None, []
-    for line in text.split('\n'):
-        m = re.match(r'^SOURCE (\d+):', line)
-        if m:
-            if n is not None:
-                out[n] = '\n'.join(buf)
-            n, buf = int(m.group(1)), []
-            continue
-        if n is not None and line.startswith('END SOURCE'):
-            out[n] = '\n'.join(buf)
-            n, buf = None, []
-            continue
-        if n is not None:
-            buf.append(line)
-    if n is not None:
-        out[n] = '\n'.join(buf)
+    out = {}
+    heads = list(SOURCE_HEADER_RE.finditer(text))
+    for i, m in enumerate(heads):
+        # The pattern stops at the delimiter, so the header line runs from the
+        # match to the end of that line; the body begins on the next one.
+        eol = text.find('\n', m.start())
+        eol = len(text) if eol == -1 else eol
+        header = text[m.start():eol]
+        stop = heads[i + 1].start() if i + 1 < len(heads) else len(text)
+        block = text[eol:stop]
+        e = END_SOURCE_RE.search(block)
+        if e:
+            block = block[:e.start()]
+        body = block.strip('\n')
+        out[int(m.group(1))] = (header, body) if with_headers else body
     return out
+
+
+def packet_header(text):
+    """Everything before the first SOURCE header: canary, notes, pending list.
+
+    Returned separately so a caller can read it deliberately. It is description,
+    never evidence, and must not be searched for quotations -- a capture note
+    that mentions an obfuscation placeholder is not a packet carrying one, and
+    counting it as one produced a wrong portfolio-wide tally on 2026-09-03.
+    """
+    m = SOURCE_HEADER_RE.search(text)
+    return text[:m.start()] if m else text
+
+
+def normalize_retrieval_dates(text, placeholder='retrieved: X'):
+    """Retrieval dates flattened, case-insensitively, for comparing captures.
+
+    Two captures of an unchanged source differ in exactly this one field. A
+    comparison that does not flatten it reports every source as changed; one
+    that flattens it case-sensitively reports every source in a repo using the
+    other casing as changed, which is the first bug in the list above.
+    """
+    return RETRIEVED_RE.sub(lambda m: m.group(1) + 'X', text)
 
 
 def compare_capture(old_text, new_text):
@@ -659,6 +721,67 @@ def self_test():
     check(cell_text(dup_cell, links=True) == 'mediation@dpi.nc.gov',
           'cell_text duplicated a self-naming address')
 
+
+    # packet_sources: the three ad-hoc parsers of 2026-09-03, each as a case.
+    # These are regression tests for mistakes actually made, not hypotheticals.
+    #
+    # (a) END SOURCE present -- the block must stop there, not at the next
+    #     header, or a supplement built from one source swallows the rest.
+    marked = ('CANARY\nCAPTURE NOTES: header text, never evidence\n\n'
+              'SOURCE 1: A | u | retrieved: 2026-01-01\nalpha\nEND SOURCE 1\n\n'
+              'SOURCE 2: B | u | retrieved: 2026-01-01\nbeta\nEND SOURCE 2\n')
+    m = packet_sources(marked)
+    check(m == {1: 'alpha', 2: 'beta'}, f'END SOURCE form parsed wrong: {m!r}')
+    # (b) no END SOURCE anywhere -- the block must stop at the next header.
+    plain = ('CANARY\nCAPTURE NOTES: header text\n\n'
+             'SOURCE 1: A | u | retrieved: 2026-01-01\nalpha\n\n'
+             'SOURCE 2: B | u | retrieved: 2026-01-01\nbeta\n')
+    p2 = packet_sources(plain)
+    check(p2 == {1: 'alpha', 2: 'beta'}, f'unmarked form parsed wrong: {p2!r}')
+    check('SOURCE 2' not in p2[1],
+          'a source without an END marker swallowed the one after it')
+    # (c) the pipe-delimited header shape, which two sped-safeguards packets
+    #     use. A reader assuming the colon returns {} and drops everything.
+    piped = ('SOURCE 1 | A | u | retrieved 2026-01-01\nalpha\nEND SOURCE 1\n\n'
+             'SOURCE 2 | B | u | retrieved 2026-01-01\nbeta\nEND SOURCE 2\n')
+    check(packet_sources(piped) == {1: 'alpha', 2: 'beta'},
+          'the pipe-delimited SOURCE header shape was not parsed')
+    # (c) mixed within one packet, which is the shape that actually occurs.
+    mixed = ('SOURCE 1: A | u | retrieved: 2026-01-01\nalpha\nEND SOURCE 1\n\n'
+             'SOURCE 2: B | u | retrieved: 2026-01-01\nbeta\n')
+    check(packet_sources(mixed) == {1: 'alpha', 2: 'beta'},
+          'a packet mixing both forms parsed wrong')
+    # The closing trailer is structure too, and a last source with no END
+    # SOURCE marker must not swallow it -- six supplements written on
+    # 2026-09-03 did exactly that.
+    trailer = ('SOURCE 1: A | u | retrieved: 2026-01-01\nalpha\n\n'
+               'END OF PACKET — 1 source\n')
+    check(packet_sources(trailer) == {1: 'alpha'},
+          'the END OF PACKET trailer was returned as source text')
+    # The header block is description and must never be returned as evidence.
+    check('CAPTURE NOTES' not in ''.join(packet_sources(marked).values()),
+          'packet_sources returned capture notes as source text')
+    check('CAPTURE NOTES' in packet_header(marked),
+          'packet_header lost the capture notes')
+    check(packet_header('no headers here') == 'no headers here',
+          'packet_header on a headerless packet did not return it whole')
+    check(packet_sources('nothing here') == {},
+          'packet_sources invented a source in a packet with none')
+    # with_headers exposes the header line for callers needing url or date.
+    wh = packet_sources(marked, with_headers=True)
+    check(wh[1][0].startswith('SOURCE 1:') and wh[1][1] == 'alpha',
+          'with_headers did not return (header, body)')
+    # Retrieval-date flattening is case-insensitive: the casing bug that
+    # reported twenty-five unchanged jurisdictions as content drift.
+    for form in ('retrieved: 2026-01-01', 'RETRIEVED: 2026-01-01',
+                 'Retrieved: 2026-01-01'):
+        out = normalize_retrieval_dates('x | ' + form)
+        check(out.endswith('X'), f'retrieval date not flattened for {form!r}')
+    check(normalize_retrieval_dates('retrieved: 2026-01-01').lower()
+          == normalize_retrieval_dates('RETRIEVED: 2026-01-01').lower(),
+          'two casings of the same date did not flatten to the same text')
+    check('2026-01-01' not in normalize_retrieval_dates('RETRIEVED: 2026-01-01'),
+          'an upper-case retrieval date survived flattening')
 
     # compare_capture: the four defects of 2026-09-03, each as a case.
     def _pk(*blocks):
