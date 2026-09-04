@@ -1,0 +1,52 @@
+{
+  "recipe_version": 1,
+  "state": "delaware",
+  "sources": [
+    {
+      "n": 1,
+      "title": "16 Del. Admin. Code § 3102 — Long Term Care Transfer, Discharge and Readmission Procedures",
+      "url": "https://regulations.delaware.gov/api/AdminCode/title16/3102/390cf383-7c28-4d18-a3be-494417f7c892",
+      "source_date": "16 DE Reg. 296 (09/01/12)",
+      "transport": "curl",
+      "extractor": "pdftotext-layout",
+      "filters": [
+        "strip-zero-width",
+        "strip-page-numbers",
+        "strip-running-headers",
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Despite the /api/ path this URL serves a PDF directly to plain curl (200, no browser user-agent needed) -- the endpoint is Delaware's own regulation-viewer API, not a JSON API; regulations.delaware.gov returns 405 to HEAD but 200 to GET. pdftotext -layout matches the standing packet's own extraction closely: tested against pdftotext's plain/default mode first, which loses the section-number tabular indentation ('1.0      Purpose' collapses to '1.0\\n\\nPurpose'), so layout is the correct mode for this document's numbered-section format. The standing packet strips this 5-page document's repeated letterhead ('TITLE 16 HEALTH AND SAFETY', 'DELAWARE ADMINISTRATIVE CODE', 'DEPARTMENT OF HEALTH AND SOCIAL SERVICES', 'DIVISION OF LONG TERM CARE RESIDENCE PROTECTION') more thoroughly than strip-running-headers manages on a document this short (the filter leaves the 2-line short form of the header standing on pages 2-5, only removing the fuller 4-line block from page 1) -- this is a cosmetic difference in incidental non-quoted letterhead text, not a fidelity risk, since none of the page's quotations rest on those lines. Verified byte-identical on a second capture run."
+    },
+    {
+      "n": 2,
+      "title": "Contact the Division of Health Care Quality (DHCQ)",
+      "url": "https://dhss.delaware.gov/dhcq/dhcq/contact/",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "extractor": "html-text",
+      "scope": ".entry-content",
+      "filters": [
+        "strip-zero-width",
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "WordPress page; .entry-content is the article body and excludes the site's nav, breadcrumb list and sidebar link menus, which the standing packet's own wider capture included and which contribute nothing this page quotes. Contains all three of this page's DHCQ contact facts: (302) 421-7400, the 1-877-453-0012 hotline, and the full New Castle and Kent/Sussex office addresses. Plain curl, no browser user-agent needed (200)."
+    },
+    {
+      "n": 3,
+      "title": "Long-Term Care Ombudsman Program",
+      "url": "https://dhss.delaware.gov/office-of-the-secretary/long-term-care-ombudsman-program/",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "extractor": "html-text",
+      "scope": ".entry-content",
+      "filters": [
+        "strip-zero-width",
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Same template and same scope reasoning as Source 2. Contains the 1-855-773-1002 ombudsman contact number this page quotes. Plain curl, no browser user-agent needed (200)."
+    }
+  ]
+}

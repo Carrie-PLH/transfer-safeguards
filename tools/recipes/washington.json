@@ -1,0 +1,51 @@
+{
+  "recipe_version": 1,
+  "state": "washington",
+  "sources": [
+    {
+      "n": 1,
+      "title": "RCW 74.42.450",
+      "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=74.42.450",
+      "source_date": "history line ends 2013 c 23 s 229",
+      "transport": "curl",
+      "extractor": "html-text",
+      "scope": "#contentWrapper",
+      "filters": [
+        "strip-zero-width",
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "app.leg.wa.gov's RCW template wraps the section's operative text (the numbered subsections and the bracketed history/notes line) in <div id='contentWrapper'>, which sits below the page's title/caption block and prev-next navigation and excludes both -- narrower than 'main-page-content' (a sibling container on this same page that includes the prev/next links and a 'field: Citations' metadata row neither of which this page quotes) and confirmed present in both the RCW and WAC templates this state cites, so one scope value serves both sources. Plain curl, no browser user-agent needed (200)."
+    },
+    {
+      "n": 2,
+      "title": "WAC 388-97-0120, Individual transfer and discharge rights and procedures",
+      "url": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-97-0120",
+      "source_date": "WSR 26-08-015, filed 3/20/26, effective 4/20/26",
+      "transport": "curl",
+      "extractor": "html-text",
+      "scope": "#contentWrapper",
+      "filters": [
+        "strip-zero-width",
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Same host, same #contentWrapper container as Source 1, confirmed present on this WAC-cite template too even though the two templates otherwise use different top-level wrapper classes ('main-page-content' on the RCW template is absent here). Plain curl, no browser user-agent needed (200)."
+    },
+    {
+      "n": 3,
+      "title": "Washington State Long-Term Care Ombudsman Program — home page",
+      "url": "https://www.waombudsman.org/",
+      "source_date": "none stated beyond the 2026 copyright line",
+      "transport": "curl",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": [
+        "strip-zero-width",
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "The page's own <main> element (5,960 chars) excludes the sitewide footer, where this program's phone (1-800-562-6028), fax, TTY number and street address (1200 S. 336th St, Federal Way) all sit; only the ltcop@mschelps.org address is inside <main>. body is the narrowest container that is honestly stated and holds every contact fact this page quotes -- a safe superset of the standing packet's own capture, which reads the same way (includes the same footer boilerplate: copyright line, 'Website Design by IlluminAge', social links). Plain curl, no browser user-agent needed (200)."
+    }
+  ]
+}
