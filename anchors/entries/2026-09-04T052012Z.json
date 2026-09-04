@@ -1,0 +1,16 @@
+{
+ "entry": {
+  "file_count": 64,
+  "id": "2026-09-04T052012Z",
+  "manifest_file": "manifests/2026-09-04T052012Z.txt",
+  "manifest_sha256": "b293c10f5dc4947aa128066a616a8ed4eccb9654d5a9932f72c17c29522a7c26",
+  "note": "recipe backfill: delaware, washington",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "9b031d6adea05f49dcf6fe8486c85278463a021d6aa421dd8e4d272f4fbabfe6",
+  "repo": "transfer-safeguards",
+  "utc": "2026-09-04T05:20:12+00:00"
+ },
+ "entry_sha256": "9dc17455cbf4b5487982753405a8ff8def5b32499f47f73ce53d5733833ad8a1"
+}
