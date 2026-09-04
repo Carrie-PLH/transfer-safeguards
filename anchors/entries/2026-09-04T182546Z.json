@@ -1,0 +1,16 @@
+{
+ "entry": {
+  "file_count": 87,
+  "id": "2026-09-04T182546Z",
+  "manifest_file": "manifests/2026-09-04T182546Z.txt",
+  "manifest_sha256": "0f302fb35dd2e9c9dafdee9a5a3201fc9ea7fba6d8c24eab2ca5eed8fa3e42b5",
+  "note": "recipe slicing; tennessee recipe",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "7ef9fd46c306ec2e5879f920b6a6e436b70109bf53127f611203e4297d4c9ba7",
+  "repo": "transfer-safeguards",
+  "utc": "2026-09-04T18:25:46+00:00"
+ },
+ "entry_sha256": "2f222ff3eade64ce360c12f359b1f3b3e960f1682f2073b0a436fbdde0eba39b"
+}
