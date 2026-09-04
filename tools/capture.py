@@ -431,6 +431,94 @@ def apply_filters(text, names):
     return text
 
 
+# --- slicing -----------------------------------------------------------------
+#
+# What this is for. Several states publish the provision the page quotes inside
+# a much longer document: Illinois serves the whole Nursing Home Care Act and
+# the page reads Part 4 of Article III; Missouri, Tennessee and Oklahoma each
+# print one rule inside a chapter PDF. Before this option those captures were
+# taken by hand -- pdftotext over the whole file, then a line range cut by eye
+# -- which is exactly the capture a nightly pass cannot reproduce, and which
+# put four states outside the recipe backfill.
+#
+# The trap this is built around. A long document prints its section headings
+# twice, once in the table of contents and once over the text, and a naive
+# search for the heading lands in the contents list. The slice that results
+# starts at the front matter and runs for tens of thousands of characters,
+# looking plausible and containing the right text somewhere inside it. So:
+#
+#   - Anchors match across line breaks. A heading plus the first words beneath
+#     it is the anchor the discipline asks for, and in -layout output that
+#     phrase spans a newline and a run of alignment spaces. Every run of
+#     whitespace in an anchor matches any run of whitespace in the document,
+#     which is what makes "1200-08-06-.05 ADMISSIONS, DISCHARGES, AND
+#     TRANSFERS. (1) Admissions." usable as one anchor.
+#   - Anchors must be long enough to be specific: MIN_ANCHOR characters. A
+#     short anchor is how a slice silently lands in the contents list.
+#   - `occurrence` selects among repeats when a document genuinely repeats its
+#     anchor. It is deliberately explicit: a recipe that means the second
+#     occurrence says so, rather than a default quietly picking one.
+#   - A slice that does not match is an error, never a fallback. Falling back
+#     to the whole document would produce a packet that passes fidelity (a
+#     superset always does) while silently ceasing to be the slice the recipe
+#     describes -- the packet would stop matching its own capture notes and
+#     nothing would say so.
+#
+# `to` is exclusive: the slice ends where the next provision begins, which is
+# how these cuts are described in the packets that were made by hand ("from the
+# heading of DHS 132.53(1) to the end of the served document", "from the
+# heading of 1200-08-06-.05 to the start of rule .06"). Omit `to` to run to the
+# end of the document.
+
+MIN_ANCHOR = 12
+
+
+class SliceMiss(Exception):
+    """A recipe's slice anchor was not found, or was found out of order."""
+
+
+def _anchor_re(anchor):
+    """The anchor as a regex whose whitespace is elastic. Everything else is
+    literal, so a publisher's own parentheses, periods and section symbols mean
+    themselves rather than regex operators."""
+    return re.compile(r'\s+'.join(re.escape(w) for w in anchor.split()))
+
+
+def _nth(text, anchor, occurrence, which):
+    pat = _anchor_re(anchor)
+    hits = list(pat.finditer(text))
+    if len(hits) < occurrence:
+        raise SliceMiss(
+            f'{which} anchor {anchor!r} found {len(hits)} time(s), '
+            f'needed occurrence {occurrence}')
+    return hits[occurrence - 1]
+
+
+def apply_slice(text, spec):
+    """Cut `text` to the recipe's slice. Raises SliceMiss rather than returning
+    anything approximate; see the note above for why there is no fallback."""
+    if not spec:
+        return text
+    start = _nth(text, spec['from'], spec.get('from_occurrence', 1), 'from')
+    if not spec.get('to'):
+        return text[start.start():]
+    tail = text[start.end():]
+    end = _nth(tail, spec['to'], spec.get('to_occurrence', 1), 'to')
+    return text[start.start():start.end() + end.start()]
+
+
+def slice_note(spec):
+    """How a slice is described in the packet's capture notes."""
+    bits = [f'slice from {spec["from"]!r}']
+    if spec.get('from_occurrence', 1) != 1:
+        bits.append(f'(occurrence {spec["from_occurrence"]})')
+    bits.append(f'to {spec["to"]!r}' if spec.get('to')
+                else 'to the end of the document')
+    if spec.get('to') and spec.get('to_occurrence', 1) != 1:
+        bits.append(f'(occurrence {spec["to_occurrence"]})')
+    return ' '.join(bits)
+
+
 # --- recipes -----------------------------------------------------------------
 
 def recipe_path(slug):
@@ -510,6 +598,42 @@ def lint(rec, slug=None):
                   or pg[0] < 1 or pg[1] < pg[0]):
                 errs.append(f'{w}: pages must be [first, last], 1-based and '
                             f'inclusive, with first <= last; got {pg!r}')
+        sl = s.get('slice')
+        if sl is not None:
+            if not isinstance(sl, dict):
+                errs.append(f'{w}: slice must be an object with "from" and '
+                            f'optionally "to"')
+            else:
+                unknown = set(sl) - {'from', 'to', 'from_occurrence',
+                                     'to_occurrence'}
+                if unknown:
+                    errs.append(f'{w}: slice has unknown key(s) '
+                                f'{", ".join(sorted(unknown))}')
+                for k in ('from', 'to'):
+                    v = sl.get(k)
+                    if k == 'to' and v is None:
+                        continue
+                    if not isinstance(v, str) or not v.strip():
+                        errs.append(f'{w}: slice {k} must be a non-empty string'
+                                    if k == 'from' else
+                                    f'{w}: slice to, when present, must be a '
+                                    f'non-empty string; omit it to slice to the '
+                                    f'end of the document')
+                    elif len(v.strip()) < MIN_ANCHOR:
+                        errs.append(
+                            f'{w}: slice {k} anchor is {len(v.strip())} '
+                            f'characters; at least {MIN_ANCHOR} are needed. A '
+                            f'short anchor is how a slice lands in the table of '
+                            f'contents instead of the text — anchor on the '
+                            f'heading plus the first words beneath it')
+                for k in ('from_occurrence', 'to_occurrence'):
+                    if k in sl and (not isinstance(sl[k], int)
+                                    or isinstance(sl[k], bool) or sl[k] < 1):
+                        errs.append(f'{w}: slice {k} must be a positive integer '
+                                    f'(1 is the first match)')
+                if 'to_occurrence' in sl and not sl.get('to'):
+                    errs.append(f'{w}: slice to_occurrence has no meaning '
+                                f'without a "to" anchor')
         for f in s.get('filters', []):
             if f not in FILTERS:
                 errs.append(f'{w}: unknown filter {f!r}')
@@ -538,6 +662,12 @@ def digest(rec):
             m['ca_bundle'] = s['ca_bundle']
         if s.get('pages'):
             m['pages'] = s['pages']
+        # Same opt-in rule as the fields above: a source with no slice hashes
+        # exactly as it did before slicing existed, so no capture already taken
+        # is invalidated. A recipe that changes its anchors is capturing a
+        # different span and must show a different digest.
+        if s.get('slice'):
+            m['slice'] = {k: s['slice'][k] for k in sorted(s['slice'])}
         material.append(m)
     blob = json.dumps({'v': RECIPE_VERSION, 'sources': material},
                       sort_keys=True, separators=(',', ':'))
@@ -777,6 +907,23 @@ def capture_source(src, supplied=None):
     else:
         text = raw if isinstance(raw, str) else raw.decode('utf-8', 'replace')
 
+    # Slice before the filters, because that is the order the hand captures
+    # this replaces used: extract the whole document, cut the span, then tidy.
+    # Filtering first would move the anchors — strip-page-numbers and
+    # unwrap-hard-wraps both rewrite the lines an anchor may sit across.
+    try:
+        text = apply_slice(text, src.get('slice'))
+    except SliceMiss as e:
+        raise SystemExit(
+            f'source {src["n"]}: {e}\n'
+            f'  The document was fetched and extracted; the slice is what '
+            f'failed.\n'
+            f'  Read the extraction before adjusting the anchor: a document '
+            f'that has been\n'
+            f'  reissued, repaginated or re-headed is a finding about the '
+            f'source, not a\n'
+            f'  recipe to widen until it matches again.')
+
     text = apply_filters(text, src.get('filters', []))
 
     # Whatever page breaks the filters did not consume become line breaks here.
@@ -822,6 +969,8 @@ def render_packet(rec, bodies, day, supplied_ns=()):
             bits.append(f'scope {s["scope"]}')
         if s.get('pages'):
             bits.append(f'pages {s["pages"][0]}-{s["pages"][1]}')
+        if s.get('slice'):
+            bits.append(slice_note(s['slice']))
         if s.get('ca_bundle'):
             bits.append(f'ca_bundle {s["ca_bundle"]}')
         bits.append('filters ' + (', '.join(s.get('filters', [])) or 'none'))
@@ -1191,6 +1340,88 @@ def self_test():
           'join-wrap-hyphens altered a plain line break')
     check('join-wrap-hyphens' in FILTERS,
           'join-wrap-hyphens is not registered in FILTERS')
+
+    # --- slicing. The document below is the shape the option exists for: a
+    # table of contents that prints the heading, then the text under the same
+    # heading, then the following rule.
+    doc = ('CHAPTER 1200-08-06\n'
+           'TABLE OF CONTENTS\n'
+           '1200-08-06-.05 ADMISSIONS, DISCHARGES, AND TRANSFERS.\n'
+           '1200-08-06-.06 SOMETHING ELSE.\n'
+           '\n'
+           '1200-08-06-.05 ADMISSIONS, DISCHARGES,   AND\nTRANSFERS.\n'
+           '(1) The facility shall permit each resident to remain.\n'
+           '\n'
+           '1200-08-06-.06 SOMETHING ELSE.\n'
+           '(1) Not this rule.\n')
+    head = '1200-08-06-.05 ADMISSIONS, DISCHARGES, AND TRANSFERS.'
+    body = apply_slice(doc, {'from': head, 'from_occurrence': 2,
+                             'to': '1200-08-06-.06 SOMETHING ELSE.'})
+    check(body.startswith('1200-08-06-.05'), 'slice did not start at its anchor')
+    check('remain' in body, 'slice dropped the text it exists to capture')
+    check('Not this rule' not in body, 'slice ran past its to anchor')
+    check('TABLE OF CONTENTS' not in body,
+          'slice landed in the table of contents despite from_occurrence 2')
+    # Elastic whitespace is the whole point: the anchor above is written on one
+    # line and the document breaks it across two with runs of spaces.
+    check('\n' in doc.split(head)[0] or True, 'sanity')
+    check(_anchor_re('AND TRANSFERS.').search('AND\n  TRANSFERS.') is not None,
+          'anchor whitespace is not elastic across a line break')
+    # No `to` means run to the end.
+    check(apply_slice(doc, {'from': head, 'from_occurrence': 2})
+          .endswith('Not this rule.\n'),
+          'a slice with no to anchor did not run to the end of the document')
+    # A miss raises rather than returning the whole document or an empty one.
+    try:
+        apply_slice(doc, {'from': 'A HEADING THAT IS NOT THERE AT ALL'})
+        check(False, 'a missing from anchor did not raise')
+    except SliceMiss:
+        pass
+    try:
+        apply_slice(doc, {'from': head, 'from_occurrence': 9})
+        check(False, 'an out-of-range from_occurrence did not raise')
+    except SliceMiss:
+        pass
+    # A `to` that appears only before the `from` is a miss, not a backwards
+    # slice: the tail is searched, never the whole document.
+    try:
+        apply_slice(doc, {'from': head, 'from_occurrence': 2,
+                          'to': 'TABLE OF CONTENTS'})
+        check(False, 'a to anchor behind the from anchor did not raise')
+    except SliceMiss:
+        pass
+
+    _slbase = {'recipe_version': RECIPE_VERSION, 'state': 'testland',
+               'sources': [{'n': 1, 'title': 't', 'url': 'https://x/y',
+                            'transport': 'curl', 'extractor': 'pdftotext-layout',
+                            'filters': []}]}
+    def _with_slice(sl):
+        r = json.loads(json.dumps(_slbase))
+        r['sources'][0]['slice'] = sl
+        return r
+    check(not lint(_with_slice({'from': head, 'to': 'SOMETHING ELSE HERE'}),
+                   'testland'),
+          'a well-formed slice did not lint clean')
+    check(any('at least' in e for e in lint(_with_slice({'from': 'short'}),
+                                            'testland')),
+          'lint accepted an anchor below MIN_ANCHOR')
+    check(lint(_with_slice({'to': 'a long enough anchor'}), 'testland'),
+          'lint accepted a slice with no from anchor')
+    check(any('unknown key' in e for e in
+              lint(_with_slice({'from': head, 'until': 'x'}), 'testland')),
+          'lint accepted an unknown slice key')
+    check(any('to_occurrence' in e for e in
+              lint(_with_slice({'from': head, 'to_occurrence': 2}), 'testland')),
+          'lint accepted to_occurrence without a to anchor')
+    check(any('positive integer' in e for e in
+              lint(_with_slice({'from': head, 'from_occurrence': 0}), 'testland')),
+          'lint accepted a zero occurrence')
+    # The digest moves when the span moves, and only then.
+    check(digest(_slbase) != digest(_with_slice({'from': head})),
+          'adding a slice did not change the recipe digest')
+    check(digest(_with_slice({'from': head}))
+          != digest(_with_slice({'from': head, 'from_occurrence': 2})),
+          'changing from_occurrence did not change the recipe digest')
 
     print('self-test: ' + ('all checks passed' if ok else 'FAILURES'))
     return 0 if ok else 1

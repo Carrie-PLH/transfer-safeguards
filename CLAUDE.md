@@ -533,3 +533,52 @@ the history is deep enough, prefer it and narrow this exemption.
 A marker that fails to match weakens nothing — the split returns the whole page
 as live — but it also does nothing, so the self-test pins every heading dialect
 these pages actually use, in markdown and HTML.
+
+## Recipe slicing: heading anchors, not line ranges (added 2026-09-04)
+
+Several states publish the provision a page quotes inside a much longer
+document — Illinois serves the whole Nursing Home Care Act, and Missouri,
+Tennessee and Oklahoma each print one rule inside a chapter PDF. Those captures
+used to be taken by hand: extract the whole file, then cut a line range by eye.
+A line range is exactly what a nightly pass cannot reproduce, because the
+document repaginates and the range silently moves, so those states sat outside
+the recipe backfill.
+
+`capture.py` recipes now take a per-source `slice`:
+
+```
+"slice": {"from": "<anchor>", "to": "<anchor>", "from_occurrence": 2}
+```
+
+`to` is exclusive and optional (omit it to run to the end of the document);
+both occurrence keys default to 1. Rules that matter:
+
+- **Anchors match across line breaks.** Every run of whitespace in an anchor
+  matches any run of whitespace in the document, so a heading plus the first
+  words beneath it works as one anchor even where `-layout` breaks it over two
+  lines with alignment spaces.
+- **Anchors are case-sensitive, and that is load-bearing.** Tennessee's chapter
+  prints its headings twice — title case in the table of contents on page 1,
+  capitals over the text — so the capitalised anchor matches the body and
+  nothing else, and no occurrence key was needed. Check the case before
+  reaching for `from_occurrence`.
+- **At least 12 characters** (`MIN_ANCHOR`), enforced by `--lint`. A short
+  anchor is how a slice lands in the table of contents and captures the front
+  matter instead of the rule.
+- **A miss is an error, never a fallback.** Falling back to the whole document
+  would still pass fidelity — a superset always does — while the packet quietly
+  stopped being the slice its own capture notes describe. If an anchor stops
+  matching, read the extraction: a document that has been reissued, repaginated
+  or re-headed is a finding about the source, not a recipe to widen until it
+  matches again.
+- The slice runs **after extraction and before the filters**, which is the order
+  the hand captures used. `strip-page-numbers` and `unwrap-hard-wraps` both
+  rewrite lines an anchor may sit across, so filtering first would move the
+  anchors.
+- A source with no slice hashes exactly as it did before the option existed, so
+  no capture already taken was invalidated; a recipe that changes its anchors
+  captures a different span and shows a different digest. Verified against all
+  twelve recipes at the time of the change.
+
+Tennessee is the first state built on it. Illinois, Missouri and Oklahoma are
+the other three this unlocks. Not yet ported to the sibling repos.

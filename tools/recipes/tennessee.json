@@ -1,0 +1,41 @@
+{
+  "recipe_version": 1,
+  "state": "tennessee",
+  "sources": [
+    {
+      "n": 1,
+      "title": "Bureau of TennCare, Nursing Home Notice of Involuntary Transfer or Discharge (PDF)",
+      "url": "https://www.tn.gov/content/dam/tn/tenncare/documents/NFInvoluntaryDischargeNotice.pdf",
+      "source_date": "TennCare LTSS dev. 09/2014 Rev 02/2026",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "TennCare's fillable notice form, captured whole — the document is the form. -layout keeps the underscore rules, the signature grid and the per-page footer where the form prints them, and holds the asterisked footnote about physician sign-off beside the item it marks rather than reflowing it to the foot of the text."
+    },
+    {
+      "n": 2,
+      "title": "Rules of the Tennessee Department of Health, Chapter 1200-08-06, Standards for Nursing Homes — Rule .05 Admissions, Discharges, and Transfers (excerpt)",
+      "url": "https://publications.tnsosfiles.com/rules/1200/1200-08/1200-08-06.20210818.pdf",
+      "source_date": "August, 2021 (Revised); rule history ends amendment filed April 17, 2007, effective July 1, 2007",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "slice": {
+        "from": "1200-08-06-.05 ADMISSIONS, DISCHARGES, AND TRANSFERS.",
+        "to": "1200-08-06-.06 BASIC SERVICES."
+      },
+      "notes": "The Secretary of State publishes the whole chapter in one PDF; the page reads rule .05, so the recipe cuts from that rule's heading to the start of rule .06. No occurrence is needed even though the chapter prints both headings twice: the table of contents on page 1 sets them in title case ('Admissions, Discharges, and Transfers') and the body sets them in capitals, so the anchors as written match the body and nothing else. The running heads, the page numbers and the '(Rule 1200-08-06-.05, continued)' lines fall inside the slice and are the document's own."
+    },
+    {
+      "n": 3,
+      "title": "Bureau of TennCare, Involuntary Discharge and Transfer Appeals",
+      "url": "https://www.tn.gov/tenncare/long-term-services-supports/involuntary-discharge-and-transfer-appeals.html",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "Server-rendered; plain curl with a browser user-agent returns the whole document. Scope 'body' because the page renders both a section menu and a side menu, so TennCare's navigation appears twice in the capture, exactly as the standing packet holds it."
+    }
+  ]
+}
