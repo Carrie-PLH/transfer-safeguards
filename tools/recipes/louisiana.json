@@ -1,0 +1,30 @@
+{
+  "recipe_version": 1,
+  "state": "louisiana",
+  "sources": [
+    {
+      "n": 1,
+      "title": "LAC Title 48 Part I, §9775, Transfer and/or Discharge of the Resident (excerpt from the Department of Health's published nursing facility standards)",
+      "url": "https://ldh.la.gov/assets/medicaid/hss/docs/NH/NH_Regulations/NF_regs_as_of_3-14-22.pdf",
+      "source_date": "Louisiana Administrative Code February 2022; §9775 historical note LR 42:1911 (November 2016)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "pages": [27, 28],
+      "filters": [],
+      "notes": "The 2026-08-30 capture took this excerpt by hand, cutting within pages 27 and 28 to §9775 alone. This recipe takes both printed pages whole instead, which is reproducible where a hand cut is not: the captured text is a superset of the standing one, adding the neighbouring sections that share those pages. The Administrative Code prints in two columns and pdftotext -layout renders each printed line as the left column followed by the right, so a subsection running down one column is broken across lines carrying unrelated text from its neighbour; the running heads, page numbers and the start of §9777 inside this range are the document's own and are preserved. Page numbers rather than a text slice because the range is what a reader can check against the published PDF."
+    },
+    {
+      "n": 2,
+      "title": "Louisiana Governor's Office of Elderly Affairs — Louisiana Ombudsman Program",
+      "url": "https://goea.louisiana.gov/services/louisiana-ombudsman-program/",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "Scope is the whole body, matching the 2026-08-30 capture, which kept the surrounding chrome: the office's navigation appears twice in the served page and the regional ombudsman roster is included as served. This page carries the state's ombudsman contacts behind Cloudflare email obfuscation; the 2026-08-30 capture recorded eight placeholders where addresses are published, and decode_cfemail in the shared capture reader resolves them (FA-Q-20260902-01, FA-Q-20260904-04)."
+    }
+  ]
+}

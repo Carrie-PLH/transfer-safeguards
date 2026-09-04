@@ -29,7 +29,7 @@ the state's own published translation only.
 | [Iowa](site/states/iowa.html) | [x] | [ ] | [ ] | 2026-09-04 |
 | [Kansas](site/states/kansas.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Kentucky](site/states/kentucky.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [Louisiana](site/states/louisiana.html) | [x] | [ ] | [ ] | 2026-08-30 |
+| [Louisiana](site/states/louisiana.html) | [x] | [ ] | [ ] | 2026-09-04 |
 | [Maine](site/states/maine.html) | [x] | [ ] | [ ] | 2026-09-01 |
 | [Maryland](site/states/maryland.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Massachusetts](site/states/massachusetts.html) | [x] | [ ] | [ ] | 2026-08-30 |
