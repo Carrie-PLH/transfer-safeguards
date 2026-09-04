@@ -74,3 +74,44 @@ but sit outside the 51-jurisdiction scope.)
 
 **Gate:** every jurisdiction reaches baseline before any jurisdiction
 beyond the exemplars deepens, per the charter.
+
+## Deferred, dated
+
+**Hawaii — deferred 2026-09-03.** The operative rule, Hawaii Administrative
+Rules chapter 11-94.2 ("Nursing Facilities," adopted 2022-09-16, repealing
+and replacing chapter 11-94.1), is the sole state-level publisher of the
+grounds, notice, and hearing procedure for involuntary transfer and
+discharge — the equivalent of every other state's core regulation — and it
+defeated every transport tried. The Department of Health's own PDF
+(health.hawaii.gov/opppd/files/2022/10/11-94.2-2022.pdf, HTTP 200 to curl)
+is 66 pages produced on a Xerox AltaLink copier with a text layer only on
+its one-page cover summary; `pdftotext`, `pdftotext -raw`, and `strings`
+all return nothing from the other 65 pages, and `pdffonts` shows no
+embedded font covering them — a scanned image throughout, matching the
+Alabama pattern in CLAUDE.md's capture traps, with no OCR attempted per
+PROVENANCE.md. health.hawaii.gov/opppd/hawaii-administrative-rules/
+(404s directly; a client-side app shell) and the capitol.hawaii.gov HRS
+mirror of chapter 321 (readable only via the built-in browser — curl and
+the session fetch tool both get HTTP 403 from capitol.hawaii.gov) were
+both searched for a second, text-bearing publisher of the same rule, on
+the Alabama precedent that a second agency sometimes carries as text what
+the first only scans. None exists: HRS
+chapter 321's own table of contents (capitol.hawaii.gov, read directly in
+this pass) has no patients'-rights or transfer/discharge section for
+nursing facilities — only §321-571, which addresses licensing and
+accreditation exemption, not transfer or discharge — and HB227 (2022),
+which appeared in search results as a possible codification, turned out on
+direct reading to concern unlicensed-facility referrals, unrelated to this
+page's subject. This is a transport/publisher gap, not a finding that
+Hawaii states no grounds, notice, or hearing procedure — the DOH-hosted
+scan and the third-party mirrors (Justia, elder-law summaries) agree the
+rule exists and roughly what it says, just not in a form this project can
+quote. A working session should recheck whether OPPPD has re-filed a
+text-native PDF (the pattern seen when a chapter is next amended), or
+locate the department's original digital filing with the Lieutenant
+Governor's office before the scanning pass that produced the current
+public copy. The state long-term care ombudsman contact (Executive Office
+on Aging, health.hawaii.gov/eoa) and a possible bed-hold source in HRS
+chapter 346C or 346F (Long-Term Care Financing / Nursing Facility
+Sustainability, cross-referenced from chapter 321 but not yet read) remain
+uncaptured and unevaluated pending the core rule.

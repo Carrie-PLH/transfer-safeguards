@@ -1,0 +1,757 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+
+STATE: Montana
+SLUG: montana
+ASSEMBLED: 2026-09-03
+CAPTURE NOTES: Source 1 (MCA 50-5-1104, Rights of long-term care facility residents) was retrieved by curl with a browser user-agent, HTTP 200, from leg.mt.gov, the Montana Legislature's own current Montana Code Annotated. Sources 2-4 (Administrative Rules of Montana 37.106.601, 37.5.105, and 37.5.307) sit behind rules.mt.gov, a client-side application (an "Esper" policy-library platform) that returns only a JavaScript shell to curl and to the session fetch tool; each was located by the site's own search (confirmed via its underlying API, https://rules.mt.gov/api/policy-library-public/search, reached from the rendered page) and read in a rendered browser tab with `get_page_text`, a last-resort transport per PROVENANCE.md, not independently re-verifiable by the automated pass. Source 5 (the DPHHS Long-Term Care Ombudsman Program page) was retrieved by curl with a browser user-agent; it was not Cloudflare-obfuscated.
+PENDING: Montana's own administrative rules for skilled nursing and skilled/intermediate care facilities (ARM 37.106.601) adopt the federal Conditions of Participation, 42 CFR part 483, by reference rather than restating grounds or a notice period; no separate state-specific enumeration of grounds, and no state-specific notice-content list (beyond MCA 50-5-1104's 21-day advance-notice right), was located in this pass. Any DPHHS Medicaid bed-hold provision (Administrative Rules of Montana chapter 37.40, Senior and Long Term Care Services) was not searched in this pass and belongs to a future full-page build.
+
+
+SOURCE 1: MCA 50-5-1104 — Rights of long-term care facility residents | https://leg.mt.gov/bills/mca/title_0500/chapter_0050/part_0110/section_0040/0500-0050-0110-0040.html | source's own date: Montana Code Annotated 2025 (last amended Sec. 9, Ch. 12, L. 2023) | retrieved: 2026-09-03
+50-5-1104. Rights of long-term care facility residents, MCA
+Toggle navigation
+MCA Contents
+Search
+Help
+Part Contents
+Previous Section
+Next Section
+MCA Contents
+TITLE 50
+CHAPTER 5
+Part 11
+50-5-1104 Rights of long-term care facility residents
+Montana Code Annotated 2025
+TITLE 50. HEALTH AND SAFETY
+CHAPTER 5. HOSPITALS AND RELATED FACILITIES
+Part 11. Long-Term Health Care Facilities
+Rights Of Long-Term Care Facility Residents
+50-5-1104
+. Rights of long-term care facility residents.
+(1) The state adopts by reference for all long-term care facilities the rights for long-term care facility residents applied by the federal government to facilities that provide skilled nursing care or intermediate nursing care and participate in a medicaid or medicare program (42 U.S.C. 1395i-3(a) and 1396r(a), as implemented by regulation).
+(2)	In addition to the rights adopted under subsection (1), the state adopts for all residents of long-term care facilities the following rights:
+(a)	A resident or the resident's authorized representative must be informed by the facility at least 30 days in advance of any changes in the cost or availability of services, unless to do so is beyond the facility's control.
+(b)	Regardless of the source of payment, each resident or the resident's authorized representative is entitled, upon request, to receive and examine an explanation of the resident's monthly bill.
+(c)	Residents have the right to organize, maintain, and participate in resident advisory councils. The facility shall afford reasonable privacy and facility space for the meetings of the councils.
+(d)	A resident has the right to present a grievance on the resident's own behalf or that of others to the facility or the resident advisory council. The facility shall establish written procedures for receiving, handling, and informing residents or the resident advisory council of the outcome of any grievance presented.
+(e)	A resident has the right to ask a state agency or a resident advocate for assistance in resolving grievances, free from restraint, interference, or reprisal.
+(f)	During a resident's stay in a long-term care facility, the resident retains the prerogative to exercise decisionmaking rights in all aspects of the resident's health care, including placement and treatment issues such as medication, special diets, or other medical regimens.
+(g)	The resident's authorized representative must be notified in a prompt manner of any significant accident, unexplained absence, or significant change in the resident's health status.
+(h)	A resident has the right to be free from verbal, mental, and physical abuse, neglect, or financial exploitation. Facility staff shall report to the department and the long-term care ombudsman any suspected incidents of abuse under the Montana Vulnerable Adult Prevention of Abuse Act, Title 52, chapter 3, part 8.
+(i)	Each resident has the right to privacy in the resident's room or portion of the room. If a resident is seeking privacy in the resident's room, staff members should make reasonable efforts to make their presence known when entering the room.
+(j)	In case of involuntary transfer or discharge, a resident has the right to reasonable advance notice to ensure an orderly transfer or discharge. Reasonable advance notice requires at least 21 days' written notification of any interfacility transfer or discharge except in cases of emergency or for medical reasons documented in the resident's medical record by the attending physician.
+(k)	If clothing is provided to the resident by the facility, it must be of reasonable fit.
+(l)	A resident has the right to reasonable safeguards for personal possessions brought to the facility. The facility shall provide a means for safeguarding the resident's small items of value in the resident's room or in another part of the facility where the resident must have reasonable access to the items.
+(m)	The resident has the right to have all losses or thefts of personal possessions promptly investigated by the facility. The results of the investigation must be reported to the affected resident.
+(3)	The administrator of the facility shall adopt whatever additional measures are necessary to implement the residents' rights listed in subsections (1) and (2) and meet any other requirements relating to residents' health and safety that are conditions of participation in a state or federal program of medical assistance.
+History:
+En. Sec. 4, Ch. 582, L. 1987; amd. Sec. 43, Ch. 16, L. 1991; amd. Sec. 21, Ch. 255, L. 1995; amd. Sec. 209, Ch. 42, L. 1997; amd. Sec. 9, Ch. 12, L. 2023.
+Disclaimer:
+The Internet version of the
+Montana Code Annotated is provided as a research tool to users of the Code. In case of
+inconsistencies resulting from omissions or other errors, the printed version will prevail.
+END SOURCE 1
+
+SOURCE 2: 37.106.601, Minimum Standards for a Skilled and Skilled/Intermediate Care Facility: General Requirements | https://rules.mt.gov/search?query=37.106.601 | source's own date: Effective 09/24/2022 - Present | retrieved: 2026-09-03
+Administrative Rules of Montana
+
+Montana Administrative Register
+
+Back to results
+
+Subchapter 37.106.6 Minimum Standards for Nursing Facilities
+
+37.106.601 MINIMUM STANDARDS FOR A SKILLED AND SKILLED/ INTERMEDIATE CARE FACILITY: GENERAL REQUIREMENTS
+
+Effective
+
+View in PDF
+NEW
+37.106.601 MINIMUM STANDARDS FOR A SKILLED AND SKILLED/ INTERMEDIATE CARE FACILITY: GENERAL REQUIREMENTS
+37.106.601 MINIMUM STANDARDS FOR A SKILLED AND SKILLED/ INTERMEDIATE CARE FACILITY: GENERAL
+
+REQUIREMENTS
+
+(1)
+
+A skilled nursing care facility shall comply with the Conditions of Participation for Skilled Nursing
+
+Facilities as set forth in 42 CFR subchapter G part 483. An intermediate care facility shall comply
+
+with the requirements set forth in 42 CFR subchapter G subpart I. A copy of the cited
+
+requirements may be obtained from the Department of Public Health and Human Services, Office
+
+of Inspector General, 2401 Colonial Drive, P.O. Box 202953, Helena, MT 59620-2953.
+
+Authorizing statute(s):
+
+50-5-103, 50-5-404, MCA
+
+Implementing statute(s):
+
+50-5-103, 50-5-204, 50-5-404, MCA
+
+History:
+
+NEW, 1980 MAR p. 1587, Eff. 6/13/80; TRANS, from DHES, 2002 MAR p. 185; AMD, 2022 MAR p.
+
+1876, Eff. 9/24/22.
+Collapse All
+
+Rule Version
+
+54239
+
+Active Version
+
+Effective
+
+09/24/2022 - Present
+
+Contact Information
+
+hhsadminrules@mt.gov
+
+Rule History
+
+NEW, 1980 MAR p. 1587, Eff. 6/13/80; TRANS, from DHES, 2002 MAR p. 185; AMD, 2022 MAR p. 1876, Eff. 9/24/22.
+
+Relevant MAR Notices
+
+2022 Issue 18 Pages 1786-1965
+
+2022 Issue 15 Pages 1344-1685
+
+References
+
+50-5-204, MCA Issuance and Renewal of Licenses -- Inspections
+
+50-5-103, MCA Rules and Standards -- Accreditation
+
+50-5-404, MCA Repealed
+
+Referenced by
+
+No items with references to this rule were found.
+
+END SOURCE 2
+
+SOURCE 3: 37.5.105, Nursing Facility Related Cases: Applicable Hearing Procedures | https://rules.mt.gov/search?query=37.5.105 | source's own date: Effective 06/30/2000 - Present | retrieved: 2026-09-03
+Administrative Rules of Montana
+
+Montana Administrative Register
+
+Back to results
+
+Subchapter 37.5.1 Applicable Hearing Procedures
+
+37.5.105 NURSING FACILITY RELATED CASES: APPLICABLE HEARING PROCEDURES
+
+Effective
+
+View in PDF
+NEW
+37.5.105 NURSING FACILITY RELATED CASES: APPLICABLE HEARING PROCEDURES
+37.5.105 NURSING FACILITY RELATED CASES: APPLICABLE HEARING PROCEDURES
+
+(1)
+
+Hearings contesting a transfer or discharge of a nursing facility resident by a nursing facility are
+
+available to the extent granted in 42 CFR part 431, subpart E and shall be conducted in accordance
+
+with ARM 37.5.304, 37.5.305, 37.5.307, 37.5.310, 37.5.311, 37.5.313, 37.5.316, 37.5.322, 37.5.325,
+
+37.5.328, 37.5.331, 37.5.334, and 37.5.337. A resident shall be considered a claimant for purposes
+
+of ARM 37.5.304, 37.5.305, 37.5.307, 37.5.310, 37.5.311, 37.5.313, 37.5.316, 37.5.322, 37.5.325,
+
+37.5.328, 37.5.331, 37.5.334, and 37.5.337.
+
+(a)
+
+Although the department is required by federal law to provide a hearing forum for hearings
+
+contesting a transfer or discharge of a nursing facility resident by a nursing facility, the
+
+department is not a party to the hearing. The contested action is the action of a nursing
+
+facility rather than the department. In such cases, relief may not be granted against the
+
+department.
+
+(2)
+
+Except as provided in (2)(a), department fair hearings for nursing facilities contesting a department
+
+action denying or terminating the facility's Medicaid provider agreement or imposing civil
+
+monetary penalties or other alternative remedies for noncompliance with the nursing facility
+
+participation requirements in 42 CFR part 483 are not available, because a hearing regarding the
+
+same action is available from the federal Medicare/Medicaid agency.
+
+(a)
+
+A nursing facility that participates only in the Montana Medicaid program, and not in the
+
+Medicare program, and for whom no federal appeal is available with respect to the same
+
+issue is entitled to a hearing before the department to the extent granted in 42 CFR part
+
+431, subpart D, with respect to a department action to deny or terminate participation in
+
+Medicaid or otherwise sanction the facility for noncompliance with the nursing facility
+
+participation requirements in 42 CFR part 483. To the extent a hearing is available under this
+
+rule, the hearing shall be conducted in accordance with and subject to the provisions of ARM
+
+37.5.304, 37.5.305, 37.5.307, 37.5.310, 37.5.311, 37.5.313, 37.5.316, 37.5.318, 37.5.322,
+
+37.5.325, 37.5.328, 37.5.331, 37.5.334, and 37.5.337 and 42 CFR part 431, subpart D.
+
+Authorizing statute(s):
+
+53-2-201, 53-6-113, MCA
+
+Implementing statute(s):
+
+53-6-113, MCA
+
+History:
+
+NEW, 2000 MAR p. 1653, Eff. 6/30/00.
+Collapse All
+
+Rule Version
+
+8251
+
+Active Version
+
+Effective
+
+06/30/2000 - Present
+
+Contact Information
+
+hhsadminrules@mt.gov
+
+Rule History
+
+NEW, 2000 MAR p. 1653, Eff. 6/30/00.
+
+Relevant MAR Notices
+
+2000 Issue 12 Pages 1539-1717
+
+References
+
+53-6-113, MCA Department to Adopt Rules
+
+53-2-201, MCA Powers and Duties of Department
+
+Referenced by
+
+No items with references to this rule were found.
+
+END SOURCE 3
+
+SOURCE 4: 37.5.307, Opportunity for Hearing | https://rules.mt.gov/search?query=37.5.307 | source's own date: Effective 03/27/2015 - Present | retrieved: 2026-09-03
+Administrative Rules of Montana
+
+Montana Administrative Register
+
+Back to results
+
+Subchapter 37.5.3 Formal and Informal Hearing and Appeal Procedures
+
+37.5.307 OPPORTUNITY FOR HEARING
+
+Effective
+
+View in PDF
+NEW
+37.5.307 OPPORTUNITY FOR HEARING
+37.5.307 OPPORTUNITY FOR HEARING
+
+(1)
+
+A claimant who is aggrieved by an adverse action of the department will be afforded the
+
+opportunity for a hearing as provided in this chapter.
+
+(2)
+
+A request for a hearing is any clear written expression by the claimant or an authorized
+
+representative to contest an adverse action, except that a request for hearing concerning food
+
+stamp benefits may be oral.
+
+(3)
+
+The freedom to request a hearing must not be interfered with in any way. The local office of public
+
+assistance or child care resource and referral agency will assist a claimant who seeks help in
+
+requesting a hearing.
+
+(4)
+
+A request for a hearing by a claimant must be received by the department within 90 days from the
+
+date of mailing of notice of the adverse action, except as otherwise provided in these rules.
+
+(5)
+
+A hearing request from a claimant must be received in writing within 30 days of the date of mailing
+
+of notice of the adverse action regarding:
+
+(a)
+
+a department determination of ability to pay for the cost of care in an institution under 53-1-
+
+405, MCA;
+
+(b)
+
+a nursing facility's transfer or discharge of a nursing facility resident;
+
+(c)
+
+a substantiated report of child abuse, neglect, or exploitation; or
+
+(d)
+
+a proposal by the department to file a lien under 53-6-171, MCA.
+
+(6)
+
+Except for fair hearing requests on a substantiated report, hearing requests must be mailed or
+
+delivered to the Office of Fair Hearings, P.O. Box 202953, Helena, MT 59620-2953. Requests for
+
+fair hearings on substantiated reports must be mailed to the Department of Public Health and
+
+Human Services, Office of Legal Affairs, P.O. Box 4210, Helena, MT 59620.
+
+(7)
+
+Cases in which the sole issue is one of state or federal policy may be consolidated for a single
+
+group hearing. Each claimant will be permitted to present their own case.
+
+(8)
+
+A provider other than a medical assistance provider who is aggrieved by an adverse action of the
+
+department must be granted the right to hearing as provided in this chapter, except as otherwise
+
+provided in other department rules.
+
+(a)
+
+Except as provided in (2)(b), request for a hearing from a provider must be received by the
+
+department in writing within 30 days after the date of mailing of notice of the department's
+
+adverse action.
+
+(b)
+
+A request for a hearing from a day care facility applicant, licensee, registrant, or legally
+
+unregistered provider must be received by the department in writing within ten days after
+
+the date of mailing of notice of the department's adverse action denying, suspending,
+
+canceling, reducing, modifying, or revoking a legally unregistered provider payment number
+
+or a day care license or registration certificate.
+
+(9)
+
+Medical assistance providers aggrieved by adverse department actions, other than medical
+
+assistance providers appealing eligibility determinations as a real party in interest, will be granted
+
+the right to a hearing as provided in ARM 37.5.310.
+
+(a)
+
+A medical assistance provider appealing a recipient eligibility determination as a real party in
+
+interest is entitled to a hearing according to the procedures and subject to the requirements
+
+applicable to claimants except as provided in (3)(b).
+
+(b)
+
+It is the provider's responsibility to verify that Medicaid eligibility has been established. If a
+
+medical assistance provider receives information from the department indicating that a
+
+recipient has not or may not have been determined eligible for Medicaid, as, for example, in
+
+an explanation of benefits code on a statement of remittance, the provider must take
+
+appropriate action to verify or establish eligibility. A hearing request by the medical
+
+assistance provider as a real party in interest regarding the recipient's Medicaid eligibility will
+
+not be considered timely if received by the department more than 90 days after the earlier
+
+of:
+
+(i)
+
+receipt of the information indicating that the recipient has not or may not have been
+
+determined Medicaid eligible; or
+
+(ii)
+
+adequate notice to the claimant of the adverse action.
+
+(c)
+
+A medical assistance provider is not entitled to notice from the department of an adverse
+
+action regarding a claimant's eligibility for medical assistance, except that:
+
+(i)
+
+if the medical assistance provider has submitted to the county office making the
+
+eligibility determination a written request for notice of a determination on a pending
+
+application for medical assistance, the county office must mail to the provider a copy
+
+of the same notice provided to the claimant; and
+
+(ii)
+
+if the medical assistance provider has submitted to the county office responsible to
+
+monitor and administer a recipient's ongoing eligibility a written request for notice of
+
+termination of eligibility for medical assistance, the county office must mail to the
+
+provider a copy of any notice of termination provided to the claimant.
+
+(10)
+
+There is no opportunity for hearing under this chapter on departmental activities that are not
+
+defined as an adverse action in ARM 37.5.304, unless a right to hearing under this chapter is
+
+specifically granted by other department rule. A dispute regarding a contract between the
+
+department and a provider or other person or entity is not an adverse action by the department
+
+and there is no opportunity for fair hearing concerning such disputes.
+
+Authorizing statute(s):
+
+2-4-201, 41-3-208, 41-3-1142, 52-2-111, 52-2-112, 52-2-403, 52-2-704, 52-3-304, 52-3-
+
+804, 53-2-201, 53-2-606, 53-2-803, 53-3-102, 53-4-111, 53-4-212, 53-4-403, 53-4-503, 53-5-304, 53-6-111, 53-
+
+6-113, 53-6-402, 53-7-102, 53-20-305, MCA
+
+Implementing statute(s):
+
+2-4-201, 41-3-202, 41-3-205, 41-3-1103, 52-2-603, 52-2-704, 52-2-726, 53-2-201, 53-
+
+2-306, 53-2-401, 53-2-606, 53-2-801, 53-4-112, 53-4-212, 53-4-404, 53-4-503, 53-4-513, 53-5-304, 53-6-111,
+
+53-6-113, 53-6-402, 53-20-305, MCA
+
+History:
+
+NEW, 1979 MAR p. 489, Eff. 5/25/79; AMD, 1979 MAR p. 812, Eff. 7/27/79; AMD, 1984 MAR p. 1633,
+
+Eff. 11/16/84; AMD, 1985 MAR p. 943, Eff. 7/12/85; AMD, 1992 MAR p. 1496, Eff. 7/17/92; AMD, 1993 MAR p.
+
+3069, Eff. 1/1/94; AMD, 1994 MAR p. 1744, Eff. 7/1/94; AMD, 1997 MAR p. 548, Eff. 3/25/97; AMD, 1999 MAR
+
+p. 1301, Eff. 7/1/99; TRANS & AMD, from SRS, 2000 MAR p. 1653, Eff. 6/30/00; AMD, 2001 MAR p. 1107, Eff.
+
+6/22/01; AMD, 2002 MAR p. 1553, Eff. 5/31/02; AMD, 2004 MAR p. 2409, Eff. 10/8/04; AMD, 2007 MAR p. 47,
+
+Eff. 1/12/07; AMD, 2007 MAR p. 2132, Eff. 12/21/07; AMD, 2015 MAR p. 306, Eff. 3/27/15.
+Collapse All
+
+Rule Version
+
+41323
+
+Active Version
+
+Effective
+
+03/27/2015 - Present
+
+Contact Information
+
+hhsadminrules@mt.gov
+
+END SOURCE 4
+
+SOURCE 5: Long-Term Care Ombudsman | https://dphhs.mt.gov/sltc/aging/longtermcareombudsman/ | source's own date: none stated on page | retrieved: 2026-09-03
+-->
+Long-Term Care Ombudsman
+Skip to main content
+-->
+Skip to Main
+-->
+Services
+Agencies
+ABOUT
+NEWS AND EVENTS
+CONTACT
+OFFICE LOCATIONS
+I am looking for
+Wellness and Prevention Services
+Diseases and Conditions
+Emergency Preparedness and Response
+Environmental Health
+Family Health
+Healthy Living
+Injury,  – Violence and Safety
+Injury Prevention
+Laboratory Services
+Data and Statistics
+Health Data and Statistical Reports
+DPHHS Dashboards
+A Healthier Montana
+Senior Services
+Adult Protective Services
+ADRC Resource Directory
+Aging and Disability Resource Center (ADRC)
+Aging Horizons
+Aging Services
+Area Agencies on Aging
+Assisted Living (Licensure)
+Centenarians
+Estate Planning / Legal Services
+Home and Community Based Services
+Information and Assistance/Referral
+Lifespan Respite
+Long Term Care Ombudsman
+Montana Pharmacy Assist Program
+Nursing Facilities and other Living Options
+Nutrition
+Options Counseling
+Senior and Long Term Care Division
+SHIP - State Health Insurance Assistance Program
+Health Coverage and Other Assistance
+Montana Medicaid
+Federal Marketplace
+Assistance Programs
+Child and Adult Care Food Program
+Children’s Special Health Services
+Healthy Montana Kids
+Healthy Montana Kids Plus
+Montanans with Disabilities
+Children’s Mental Health Services
+SNAP
+(Supplemental Nutritional Assistance Program)
+TANF
+(Temporary Assistance for Needy Families
+Home Energy, Water and Weatherization Assistance Programs
+WIC
+(Women, Infants and Children)
+Disability Services
+Adult Protective and Legal Services
+Aging & Disability Resource Center (ADRC)
+Americans with Disabilities Act
+Blind and Low Vision Services
+Children's Mental Health
+DDP Medicaid Waiver Overview
+Developmental Disabilities Program
+Disability Determination Services
+Disability Employment & Transitions
+Home and Community Based Services
+Independent Living Services
+Lifespan Respite
+Intensive Behavior Center
+Montana Relay
+Public Transportation Coordination
+Long Term Care Ombudsman
+Qualified Sign Language Interpreters
+Vocational Rehabilitation
+Youth Transitions
+Family Services
+Adolescent Health
+Child and Adult Care Food Program
+Child Care Providers
+Child Support Services
+Children’s Special Health Services
+Children’s Trust Fund
+Early Childhood Services Bureau
+Montanans with Disabilities
+Pregnancy and Early Childhood
+Licensing and Certification
+Certifying healthcare services
+Licensing healthcare and residential services
+Licensing childcare
+Licensing Restaurants
+Facilities
+State-Run Healthcare Facilities
+Montana State Hospital
+- Warm Springs
+Mental Health Nursing Care Center - Lewistown
+Intensive Behavioral Center - Boulder
+Montana Chemical Dependency Center - Butte
+Veterans' Homes
+Eastern Montana Veteran’s Home - Glendive
+Montana Veteran’s Home - Columbia Falls
+Southwest Montana Veteran's Home - Butte
+I am a
+DPHHS Provider
+MT Medicaid
+Childcare
+Healthcare
+DPHHS Partner
+Tribal
+Tribal Websites
+Building Healthy Systems
+A Healthier Montana
+Local
+Local Health Departments
+Building Healthy Systems
+A Healthier Montana
+Person Interested In
+Use “I am looking for” categories
+-->
+Child Support Services
+Diseases and Conditions
+Emergency Preparedness and Response
+Environmental Health
+Family Health
+Healthy Living
+Injury,  – Violence and Safety
+Injury Prevention
+Laboratory
+A-Z Index
+Covid 19 Notice Hot Topics
+-->
+DPHHS is offering one-time incentive payments to recruit employees at Montana’s state-run health care facilities. For more information go to
+Work4DPHHS.com
+-->
+Senior and Long Term Care
+Aging Services
+Long-Term Care Ombudsman
+Long-Term Care Ombudsman
+-->
+The Long-Term Care Ombudsman Program
+Long-term care ombudsmen (LTCO) help residents in long-term care living facilities understand and exercise the rights they are guaranteed by law. The sections below explain more about the Long-Term Care Ombudsman Program (LTCOP), resident rights, and how LTCOP can help.
+What is the history of this program?
+The LTCOP was established in all states under the Older Americans Act (Title VII) and works on behalf of residents in long-term care and assisted living facilities. The Montana LTCOP is authorized by, and acts in accordance with, the federal Older Americans Act (
+42 U.S.C., Section 3001 et seq.
+) and
+Title 50, Chapter 5 of the Montana Codes Annotated
+(MCA). Montana currently has over 350 long-term care living options.
+Montana uses a decentralized system to serve residents of long-term care and assisted living facilities. The state long-term care ombudsman oversees the program, while local area agencies on aging, county councils on aging, and other contracted entities employ more than 30 certified ombudsmen to advocate for residents across the state. Each ombudsman must complete and pass a 45-hour training course to become certified.
+For a detailed breakdown of how these local and state offices collaborate, please review the
+Montana Ombudsman Policies and Procedures
+.
+What can an ombudsman help me with?
+A trained ombudsman can help:
+resolve problems or complaints from people living in assisted living or long-term care facilities;
+provide information to residents about long-term care services;
+seek remedies that protect residents who speak on behalf of other residents;
+learn about resident rights and good care practices;
+advise on starting resident and family councils;
+advocate for changes to improve quality of life and care;
+individuals become involved in their community through volunteering;
+investigate instances where individuals are moved or released without proper notice or cause;
+investigate claims of physical, verbal, or emotional abuse;
+address concerns about quality of life;
+inform the public on nursing homes and assisted living facilities; and
+inform residents and the public about long-term care issues and concerns.
+Quick Links
+More about Ombudsmen
+Montana Ombudsman Directory
+Montana Ombudsman Policies and Procedures
+Long-Term Care and Assisted Living Facilities Resources
+Area Agencies on Aging
+What are my rights?
+Residents' rights are defined in the
+Nursing Home Reform Act of 1987 [42 CFR 483.10]
+and in Montana State Statutes (
+Rights of Long-Term Care Facility Residents, Title 50, Chapter 5, Part 11 MCA
+).
+Residents have rights that include, but are not limited to, the right to:
+be treated with dignity and respect;
+be fully informed, prior to admission, of their rights, available services, and all charges;
+be transferred or discharged against their wishes only for specific reasons provided by law, given at least 30 days' written notice of moves outside the facility, and be informed of their appeal rights and rights to live there again;
+be fully informed by a physician of their medical condition and be given the opportunity to participate in the planning of their medical treatment;
+be free from chemical and physical restraint;
+voice grievances without fear of reprisal;
+send and receive personal mail;
+be assured privacy for visits by their spouse, or be permitted to share a room with their spouse if they are also a resident;
+associate and communicate privately with any person of their choice;
+have access to an ombudsman;
+have records kept confidential;
+file a complaint or recommend changes in policies and services for themselves or others to the resident council, facility staff, and/or outside representatives;
+be free from restraint, interference, coercion, discrimination, or reprisal;
+be informed by the facility of the outcome of any complaints presented;
+ask a state agency or ombudsman for assistance in resolving grievances; and
+examine the results of the most recent state or federal inspection of the facility and any plan of correction.
+For More Information Contact:
+The State Long-Term Care Ombudsman
+Office on Aging, Senior and Long-Term Care Division
+(800) 332-2272
+(
+Note
+: This help line is only available during normal business hours. For all emergencies, call 911.)
+OR
+Your Regional or Local Ombudsman
+Montana Ombudsman Directory
+(800) 551-3191
+(
+Note
+: This help line is only available during normal business hours. For all emergencies, call 911.)
+Collapse Menu
+Contact Us
+Senior and Long Term Care
+PO Box 4210, Helena MT 59604
+(406) 444-4077
+Additional Information
+Aging Services
+Area Agencies on Aging
+Insurance and Medicare Programs
+Legal Services
+Caregiver Resources
+Long-Term Care Ombudsman
+Nutrition Services
+Medicaid Programs and Services
+Adult Protective Services
+Legal Assistance
+Financial Planning
+Aging in the 406
+Governor’s Conference on Aging
+Aging in the 406 Social Media
+Questions? Contact Us
+LANGUAGE ASSISTANCE
+NOTICE OF USE OF PROTECTED HEALTH INFORMATION
+LEGISLATURE
+CAREERS
+NONDISCRIMINATION NOTICE / POLICY
+CONTACT WEBMASTER
+ACCESSIBILITY, DISCLAIMER AND WEB STANDARDS
+PRIVACY & SECURITY
+ACCESSIBILITY
+Hi, I can help answer your questions!
+-->
+
+END SOURCE 5
+
+END OF PACKET — 5 sources

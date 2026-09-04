@@ -1,0 +1,525 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+
+STATE: Delaware
+SLUG: delaware
+ASSEMBLED: 2026-09-03
+CAPTURE NOTES: Source 1 (16 DE Admin. Code § 3102, Long Term Care Transfer, Discharge and Readmission Procedures) was retrieved as a PDF directly from regulations.delaware.gov's own document API — https://regulations.delaware.gov/api/AdminCode/title16/3102/390cf383-7c28-4d18-a3be-494417f7c892 — with a browser user-agent via curl, HTTP 200, and read with `pdftotext -layout`. The friendly HTML page at regulations.delaware.gov/AdminCode/title16/3102.shtml renders only a client-side application shell to curl and was not used. The GUID in the API path is an application-level identifier per PROVENANCE.md's agency-API rule; if a future capture at this URL stops returning the document, that is capture drift to be re-established, not evidence the regulation moved. The document's own closing line states its last Register citation as "16 DE Reg. 296 (09/01/12)". Sources 2 and 3 (the Division of Health Care Quality contact page and the Long-Term Care Ombudsman Program page, both dhss.delaware.gov) were retrieved by curl with a browser user-agent; neither obfuscated its contact details, so no browser rendering was needed for either.
+PENDING: The "DHSS Long Term Care Institutional Provider Specific Policy Manual" at Section 4.5, named in 16 DE Admin. Code § 3102-3.9.1.1 as the source of the state bed-hold duration, was not located at a stable first-party URL on 2026-09-03; a search-engine result pointed to a Division of Medicaid and Medical Assistance document-download endpoint (medicaidpublications.dhss.delaware.gov) that was not resolved to the specific manual chapter in this pass. This is a transport/search gap, not a finding that Delaware publishes no bed-hold duration; it belongs to section 02 of a future full-page build, not the baseline page built from this packet. Also pending: any Delaware statute establishing the Long-Term Care Ombudsman program (16 Del. C. references appear inside Source 1 but the statute itself was not separately captured), and the "Facility-Initiated Transfers and Discharges" resource materials, if any, comparable to other states' — not searched in this pass.
+
+
+SOURCE 1: 16 Del. Admin. Code § 3102 — Long Term Care Transfer, Discharge and Readmission Procedures | https://regulations.delaware.gov/api/AdminCode/title16/3102/390cf383-7c28-4d18-a3be-494417f7c892 | source's own date: 16 DE Reg. 296 (09/01/12) | retrieved: 2026-09-03
+                                      TITLE 16 HEALTH AND SAFETY                                                              1
+                                    DELAWARE ADMINISTRATIVE CODE
+                       DEPARTMENT OF HEALTH AND SOCIAL SERVICES
+                              DIVISION OF LONG TERM CARE RESIDENCE PROTECTION
+
+               3102 Long Term Care Transfer, Discharge and Readmission Procedures
+
+1.0      Purpose
+     This regulation applies to decisions by licensed facilities to transfer or discharge a resident. It prescribes the process
+for providing an impartial hearing to a resident.
+     This regulation does not extend to decisions of DHSS, or any of its Divisions, to deny, suspend, delay, reduce, or
+terminate benefits. The regulation governing appeals related to benefit eligibility are found at 16 DE Admin. Code §5000.
+Be aware that the appeal requirements are different from the requirements in this regulation.
+
+2.0     Definitions
+        “DHSS” means the Department of Health and Social Services
+        “Division” means the Division of Long Term Care Residents Protection.
+        “Legal representative” or “representative” includes a resident’s: guardian; agent pursuant to a power of
+            attorney, advanced health care directive, or similar document; or authorized representative pursuant to Title 16
+            Del.C. §§1121(34) and 1122.
+        “Party” means the resident or resident’s representative and the facility.
+        “Resident” means resident or patient.
+        “Transfer and discharge” is defined separately in Section 3.0 and 4.0.
+
+3.0     Transfer, discharge and readmission rights of residents in a certified skilled nursing facility or a certified
+nursing facility as defined in 42 CFR §483.5 or an Intermediate Care facility (ICF/MR) as defined in 42 CFR
+§440.150.
+    3.1     Transfer and discharge requirements. The facility must permit each resident to remain in the facility, and not
+            transfer or discharge the resident from the facility unless—
+        3.1.1 The transfer or discharge is necessary for the resident's welfare and the resident's needs cannot be met in
+                the facility. If the resident appeals a notice of discharge based on this section, the facility will not be cited
+                during the pendency of the appeal for housing a resident whose needs exceed the permitted level of care
+                in that facility.
+        3.1.2 The transfer or discharge is appropriate because the resident's health has improved sufficiently so the
+                resident no longer needs the services provided by the facility;
+        3.1.3 The safety of individuals in the facility is endangered;
+        3.1.4 The health of individuals in the facility would otherwise be endangered;
+        3.1.5 The resident has failed, after reasonable and appropriate notice, to pay for (or to have paid under
+                Medicare or Medicaid) a stay at the facility. For a resident who becomes eligible for Medicaid after
+                admission to a facility, the facility may charge a resident only allowable charges under Medicaid; or
+        3.1.6 The facility ceases to operate.
+    3.2     Documentation. When the facility transfers or discharges a resident under any of the circumstances specified
+            in paragraphs 3.1.1 through 3.1.5 of this section, the resident's clinical record must be documented. The
+            documentation must be made by;
+        3.2.1 The resident's physician when transfer or discharge is necessary under paragraph 3.1.1 or paragraph
+                3.1.2 of this section; and
+        3.2.2 A physician when transfer or discharge is necessary under paragraph 3.1.4 of this section.
+    3.3     Notice before transfer. Before a facility transfers or discharges a resident, the facility must—
+        3.3.1 Notify the resident and, if known, a family member or legal representative of the resident of the transfer or
+                discharge and the reasons for the move in writing and in a language and manner they understand.
+        3.3.2 Provide a copy of the notice to the Division; the State LTC ombudsman; the resident’s Delaware Medicaid
+                managed care organization (MCO), if any; any DHSS agency involved in the resident’s placement in the
+                facility, including APS; and the protection and advocacy agency as defined in Title 16 Del.C. §1102 if the
+                resident is an individual with a developmental disability or mental illness.
+2                                     TITLE 16 HEALTH AND SAFETY
+                                    DELAWARE ADMINISTRATIVE CODE
+        3.3.3 Record the reasons in the resident's clinical record; and
+        3.3.4 Include in the notice the items described in paragraph 3.5 of this section.
+    3.4     Timing of the notice.
+        3.4.1 Except as specified in paragraphs 3.4.2 and 3.8 of this section, the notice of transfer or discharge required
+                 under paragraph 3.3 of this section must be made by the facility at least 30 days before the resident is
+                 transferred or discharged.
+        3.4.2 Notice may be made as soon as practicable before transfer or discharge when:
+            3.4.2.1        The safety of individuals in the facility would be endangered under paragraph 3.1.3 of this section;
+            3.4.2.2        The health of individuals in the facility would be endangered, under paragraph 3.1.4 of this section;
+            3.4.2.3        The resident's health improves sufficiently to allow a more immediate transfer or discharge, under
+                           paragraph 3.1.2 of this section;
+            3.4.2.4        An immediate transfer or discharge is required by the resident's urgent medical needs under
+                           paragraph 3.1.1 of this section.
+    3.5     Contents of the notice. The written notice specified in paragraph 3.3 of this section must include the following:
+        3.5.1 A detailed individualized explanation of the reason(s) for the action being taken which includes, in terms
+                 understandable to the resident:
+            3.5.1.1        A statement of what action the agency intends to take;
+            3.5.1.2        The reasons for the intended action, including any information needed for the resident to
+                           determine from the notice alone the accuracy of the facility’s intended action. When the reason is
+                           non-payment, an itemized statement of the resident’s account for the preceding 12 months.
+            3.5.1.3        The specific policy or regulation supporting such action.
+        3.5.2 The effective date of transfer or discharge;
+        3.5.3 The location to which the resident will be transferred or discharged;
+        3.5.4 A statement of the resident’s right to a fair hearing as provided in this section;
+        3.5.5 The method by which the resident may request a fair hearing;
+        3.5.6 A statement that the resident may represent him or herself or may be represented by counsel or by
+                 another person.
+        3.5.7 The name, address and telephone number of the State long term care ombudsman;
+    3.6     Orientation for transfer or discharge. A facility must provide sufficient preparation and orientation to residents to
+            ensure safe and orderly transfer or discharge from the facility.
+    3.7     Notice in advance of facility closure. In the case of facility closure, the individual who is the administrator of the
+            facility must provide written notification prior to the impending closure to the Secretary, the State LTC
+            ombudsman, residents of the facility, and the legal representatives of the residents or other responsible parties,
+            as well as the plan for the transfer and adequate relocation of the residents, as required at 42 CFR §483.75(r).
+    3.8     Room changes in a composite distinct part. Room changes in a facility that is a composite distinct part (as
+            defined in 42 CFR §483.5(c)) must be limited to moves within the particular building in which the resident
+            resides, unless the resident voluntarily agrees to move to another of the composite distinct part's locations. A
+            facility’s discretion to transfer residents to another room is limited by Title 16 Del.C. §§121 (13) and (28).
+    3.9     Notice of bed-hold policy and readmission.
+        3.9.1 Notice before transfer. Before a nursing facility transfers a resident to a hospital or allows a resident to go
+                 on therapeutic leave, the nursing facility must provide written information to the resident and a family
+                 member or legal representative that specifies;
+            3.9.1.1        Notice of State bed-hold. The duration of the bed-hold policy under the State plan, if any during
+                           which the resident is permitted to return and resume residence in the nursing facility, See DHSS
+                           Long Term Care Institutional Provider Specific Policy Manual at Section 4.5; and
+            3.9.1.2        Facility policies. The nursing facility's policies regarding bed-hold periods, which must be
+                           consistent with paragraph 3.9.3 of this section, permitting a resident to return.
+        3.9.2 Bed-hold notice upon transfer. At the time of transfer of a resident for hospitalization or therapeutic leave,
+                 a nursing facility must provide to the resident and a family member or legal representative written notice
+                 which explains the bed-hold policy described in paragraph 3.9.1.1 of this section.
+        3.9.3 Permitting resident to return to facility. A nursing facility must establish and follow a written policy under
+                 which a resident, whose hospitalization or therapeutic leave exceeds the bed-hold period under the State
+                                      TITLE 16 HEALTH AND SAFETY                                                               3
+                                    DELAWARE ADMINISTRATIVE CODE
+                plan, is readmitted to the facility immediately upon the first availability of a bed in a semi-private room if the
+                resident:
+            3.9.3.1 Requires the services provided by the facility; and
+            3.9.3.2 Is eligible for Medicaid nursing facility services.
+            3.9.3.3 Additional protection for readmission is found at 16 Del.C. §1121 (18).
+    3.10    Readmission to a composite distinct part. When the nursing facility to which a resident is readmitted is a
+            composite distinct part (as defined in 42 CFR§483.5(c)), the resident must be permitted to return to an
+            available bed in the particular location of the composite distinct part in which he or she resided previously. If a
+            bed is not available in that location at the time of readmission, the resident must be given the option to return to
+            that location upon the first availability of a bed there.
+
+4.0     Transfer, discharge and readmission rights of residents of a Nursing Facility and Similar Facility as defined
+in 16 Del.C. 1102(4). See 16 Del.C. 1121.
+    4.1     “Transfer and discharge” includes movement of a resident to a location outside of the licensed facility.
+    4.2     Transfer and discharge requirements. The facility must permit each resident to remain in the facility, and not
+            transfer or discharge the resident from the facility except for:
+        4.2.1 Medical needs which cannot be met in the facility;
+        4.2.2 The resident's own welfare;
+        4.2.3 The welfare of the other individuals in the facility;
+        4.2.4 Nonpayment of justified charges, after appropriate notice;
+        4.2.5 Termination of facility operation.
+    4.3     Documentation. When the facility transfers or discharges a resident under any of the circumstances specified
+            in paragraphs 4.1.1 or 4.1.2 of this section, the resident's clinical record must be documented. The
+            documentation must be made by:
+        4.3.1 The resident's physician when transfer or discharge is necessary under paragraph 4.1.1 or paragraph
+                4.1.2 of this section; and
+        4.3.2 A physician when transfer or discharge is necessary under paragraph 4.1.3 of this section.
+    4.4     Notice before transfer. Before a facility transfers or discharges a resident, the facility must:
+        4.4.1 Notify the resident and, if known, a family member or legal representative, of the resident of the transfer or
+                discharge and the reasons for the move in writing and in a language and manner they understand.
+        4.4.2 Record the reasons in the resident's clinical record; and
+        4.4.3 Include in the notice the items described in paragraph 4.5 of this section.
+    4.5     Timing of the notice. (i) Except as specified in paragraphs 4.4.2 and 4.8 of this section, the notice of transfer or
+            discharge required under paragraph 4.3 of this section must be made by the facility at least 30 days before the
+            resident is transferred or discharged.
+        4.5.1 Notice may be made as soon as practicable before or after transfer or discharge when:
+            4.5.1.1       The welfare of individuals in the facility would be endangered under paragraph 3.1.3 of this
+                          section;
+            4.5.1.2       An immediate transfer or discharge is required by the resident's urgent medical needs, under
+                          paragraph 3.1.1. of this section; or
+    4.6     Contents of the notice. The written notice specified in paragraph 3.3 of this section must include the following:
+        4.6.1 The reason for transfer or discharge; A detailed individualized explanation of the reason(s) for the action
+                being taken which includes, in terms understandable to the resident:
+            4.6.1.1       A statement of what action the agency intends to take;
+            4.6.1.2       The reasons for the intended action, including any information needed for the resident to
+                          determine from the notice alone the accuracy of the facilities intended action. When the reason is
+                          non-payment, an itemized statement of the resident’s account for the preceding 12 months; and
+            4.6.1.3       The specific policy or regulation supporting such action.
+        4.6.2 The effective date of transfer or discharge;
+        4.6.3 The location to which the resident will be transferred or discharged;
+        4.6.4 A statement of the resident’s right to a fair hearing as provided in this section:
+4                                     TITLE 16 HEALTH AND SAFETY
+                                    DELAWARE ADMINISTRATIVE CODE
+            4.6.4.1       The method by which the resident may request a fair hearing; and
+            4.6.4.2       A statement that the resident may represent him or herself or may be represented by counsel or by
+                          another person.
+        4.6.5 The name, address and telephone number of the State long term care ombudsman;
+        4.6.6 For nursing facility residents with a developmental disability or mental illness, the mailing address and
+                 telephone number of the Delaware protection and advocacy agency as defined in Title 16 Del.C. §1102.
+    4.7     Orientation for transfer or discharge. A facility must provide sufficient preparation and orientation to residents to
+            ensure safe and orderly transfer or discharge from the facility.
+    4.8     Notice in advance of facility closure. In the case of facility closure, the individual who is the administrator of the
+            facility must provide written notification prior to the impending closure to Division, the State LTC ombudsman,
+            residents of the facility, and the legal representatives of the residents or other responsible parties, as well as
+            the plan for the transfer and adequate relocation of the residents. The notice shall be provided as far in
+            advance of closure as possible.
+    4.9     Room changes.
+        4.9.1 Room changes in a facility must be limited to moves within the particular building in which the resident
+                 resides, unless the resident voluntarily agrees to move to another location. A facility’s discretion to transfer
+                 residents to another room is limited by Title 16 Del.C. §§1121 (13) and (28).
+        4.9.2 The facility must give reasonable notice before the resident’s room or roommate is changed, except in
+                 emergencies.
+        4.9.3 The facility shall endeavor to honor roommate requests whenever possible.
+    4.10    Notice of bed-hold policy and readmission:
+        4.10.1 Notice before transfer. When a nursing facility transfers a resident out of a facility to an acute care facility it
+                 must provide written information to the resident and a family member or legal representative that specifies
+                 that the facility must accept the patient or resident back into the facility when the resident no longer needs
+                 acute care and there is space available in the facility. If no space is available, the resident shall be
+                 accepted into the next available bed.
+        4.10.2 Permitting resident to return to facility. A nursing facility must establish and follow a written policy for
+                 implementing its obligation to immediately offer the first available bed to a resident who is entitled to be
+                 readmitted to the facility when acute care is no longer required.
+
+5.0     Fair Hearing Practice and Procedures which pertain to grievances under either Section 3.0 or 4.0 of this
+regulation.
+    5.1     Right to hearing. An impartial hearing may be requested by a resident who believes a facility has erroneously
+            determined that he or she must be transferred or discharged.
+        5.1.1 The hearing request must:
+            5.1.1.1      Be in writing;
+            5.1.1.2      Be received by the facility within 30 days from the date that the discharge notice is received by the
+                         resident or the resident’s legal representative;
+            5.1.1.3      Be copied to the Division and the State LTC ombudsman.
+    5.2     DHSS may deny or dismiss a request for a hearing if:
+        5.2.1 The resident withdraws the request in writing; or
+        5.2.2 The resident or his or her legal representative fails to appear at a scheduled hearing without good cause.
+    5.3     Impartial hearing must be conducted:
+        5.3.1 At a reasonable time, date and place;
+        5.3.2 After adequate written notice of the hearing;
+        5.3.3 By an impartial fact-finder who has not been directly involved in the initial determination of the action in
+                 question;
+        5.3.4 With appropriate translation services available to parties or witnesses as needed to be provided at State
+                 expense.
+    5.4     If the hearing involves medical issues as the basis for the transfer or discharge and if the impartial fact finder
+            considers it necessary to have a medical assessment other than that of the facility involved in making the
+                                TITLE 16 HEALTH AND SAFETY                                                          5
+                              DELAWARE ADMINISTRATIVE CODE
+        transfer or discharge decision, such a medical assessment must be obtained at State expense and made part
+        of the record.
+5.5     Procedural rights. The parties must be given the opportunity to:
+    5.5.1 Examine at a reasonable time before the date of the hearing and during the hearing all documents and
+             records to be used by either party at the hearing;
+    5.5.2 Bring witnesses;
+    5.5.3 Establish all pertinent facts and circumstances;
+    5.5.4 Present an argument without undue interference; and
+    5.5.5 Question or refute any testimony or evidence, including the opportunity to confront and cross-examine
+             adverse witnesses.
+    5.5.6 Residents within the scope of 3.0 have additional rights to as provided in 42 CFR §483.10(b)(2). All
+             residents have additional rights under 16 Del.C. §1121(19).
+5.6     Hearing decisions must be based exclusively on evidence introduced at the hearing.
+5.7     The record must consist only of:
+    5.7.1 The transcript or recording of testimony and exhibits;
+    5.7.2 All papers and requests filed in the proceeding; and
+    5.7.3 The decision of the hearing officer.
+5.8     The parties must have the access to the record at a convenient place and time in order to review or to secure a
+        transcript at the party’s expense.
+5.9     The impartial decision must:
+    5.9.1 Summarize the facts; and
+    5.9.2 Identify the statutes and/or regulations pertinent to the decision
+    5.9.3 Specify the reasons for the decisions; and
+    5.9.4     Identify the supporting evidence and apply the relevant legal principles.
+5.10    The impartial fact-finder must:
+    5.10.1 Notify the parties of the decision, in writing.
+    5.10.2 Notify the parties that this is the final decision of DHSS with the right to an appeal pursuant to the
+             Administrative Procedures Act, Title 29, Chapter 101.
+16 DE Reg. 296 (09/01/12)
+END SOURCE 1
+
+SOURCE 2: Contact the Division of Health Care Quality (DHCQ) | https://dhss.delaware.gov/dhcq/dhcq/contact/ | source's own date: none stated on page | retrieved: 2026-09-03
+DHSS Sites
+>
+Division of Health Care Quality
+>
+Contact the Division of Health Care Quality (DHCQ)
+-->
+Contact the Division of Health Care Quality (DHCQ)
+Division of Health Care Quality
+Report Abuse
+Adult Abuse Registry
+About the Division of Health Care Quality
+Division of Health Care Quality
+Licensed Facilities
+Long-Term Care
+Skilled Nursing Homes
+Assisted Living Facilities
+Acute and Outpatient
+Adult Day Care Centers
+Birthing Centers
+Dialysis Centers
+Free Standing Surgical Centers
+Home Health Agencies – Aides Only
+Home Health Agencies – Skilled
+Hospice
+Hospitals
+Office-Based Surgical Facilities – Dental
+Office-Based Surgical Facilities – Other
+Personal Assistance Services Agencies
+Prescribed Pediatric Extended Care Centers
+Freestanding Emergency Centers
+Investigation
+Adult Abuse Registry
+File a Facility Complaint
+Certification
+CNA Registry
+Facility Resources
+Applications and Forms
+Background Check Center
+Blueprints
+Eagle’s Law Staffing Ratio
+Emergency Preparedness
+Incident Response Portal
+Interagency Transfer
+Licensure Renewal
+Civil Money Penalty Reinvestment Program
+Opening an Agency
+Plan of Correction
+Regulations
+How to pick a Long-Term Care Facility
+Frequently Asked Questions (FAQ)
+Glossary of Terms
+Contact the Division of Health Care Quality
+SNAP Emergency Food Benefits
+Child Welfare & Family Support
+Emergency & Transitional Housing
+Energy & Utility Assistance
+Senior Medical Patrol
+Temporary Assistance for Needy Families (TANF)
+-->
+Contact the Division of Health Care Quality (DHCQ)
+Office of Long-Term Care
+Main/New Castle County Office
+The Cambridge Building – University Office Plaza
+263 Chapman Road, Suite 200
+Newark, DE 19702-5408
+Phone:
+(302) 421-7400
+Toll-Free Hotline:
+1-877-453-0012
+Fax: (302) 421-7401
+Adult Abuse Registry
+(302) 421-7400
+Certified Nurse Aide (CNA) Registry
+(302) 421-7403
+CNA Competency Test Information
+Prometric:
+1-866-664-9504
+Complaint & Incident Reporting 24-Hour, Toll-Free
+Phone:
+1-877-453-0012
+Fax: 1-877-264-8516
+Online Complaint Form
+Criminal Background Checks & Mandatory Drug Testing
+(302) 421-7400
+Director and Deputy Director
+(302) 421-7410
+Incident and Complaint Referral Center
+(302) 421-7400
+Investigative Section
+(302) 421-7400
+Licensing and Certification Section
+(302) 421-7400
+Kent/Sussex Counties Office
+The Windsor Building
+24 NW Front Street, Suite 100
+Milford, DE 19963-1440
+Phone:
+(302) 424-8600
+Fax: (302) 424-2939
+Certified Nurse Aide (CNA) Registry
+(302) 424-8600
+Investigative Section
+(302) 424-8600
+Licensing and Certification Section
+(302) 424-8600
+Acute/Outpatient Care – Office of Health Facilities Licensing and Certification
+The Cambridge Building – University Office Plaza
+263 Chapman Road, Suite 200
+Newark, DE 19702-5408
+Phone:
+(302) 292-3930
+Toll-Free Number:
+1-800-942-7373
+Fax: (302) 292-3931
+Please send all acute care agency/facility provider correspondence to:
+DHSS_DHCQ_OHFLCFAX@DELAWARE.GOV
+.
+END SOURCE 2
+
+SOURCE 3: Long-Term Care Ombudsman Program | https://dhss.delaware.gov/office-of-the-secretary/long-term-care-ombudsman-program/ | source's own date: none stated on page | retrieved: 2026-09-03
+DHSS
+>
+Office of the Secretary
+>
+Long-Term Care Ombudsman Program
+Long-Term Care Ombudsman Program
+Office of The Secretary
+DHSS Home
+Office of the Secretary
+Office of the Secretary Administration
+Division Leadership
+About DHSS
+Delaware Health Care Commission
+Long-Term Care Ombudsman Program
+Freedom of Information Act (FOIA) Requests
+Boards and Commissions
+Regulations
+News Room
+Publications, Reports and Presentations
+Contact DHSS
+Long-Term Care Ombudsman Program
+Your Voice. Your Rights. Your Advocate.
+The Delaware Long-Term Care Ombudsman Program advocates for and protects those who live in long-term care settings, such as skilled nursing and assisted living facilities, as well as those who receive home and community-based services.
+Submit an online complaint
+Frequently Asked Questions
+What is an ombudsman?
+Ombudsman is a Swedish word that means advocate or representative of the people. The State Long-Term Care Ombudsman Program advocates for individuals residing in nursing facilities and residential care communities, such as assisted living facilities, board and care homes. Ombudsmen visit facilities regularly to listen, check on care and make sure residents are treated with respect.
+How can an Ombudsman help?
+An ombudsman advocates for quality care and act as a voice for residents when there are concerns about the quality of care or services being delivered. Your ombudsman will help you:
+Advocate for quality care
+Promote dignity and choice
+Witness advance health care directives
+Identify and resolve concerns with facility administration and staff, such as being moved with notice, medication mix-ups, slow call responses or any kind of mistreatment.
+Make sure you understand your rights and help you speak up for yourself.
+Help you file complaints and appeals with the facility, when necessary.
+Connect you with community and legal services, when needed.
+Will I be charged for ombudsman services?
+No. There is no cost for ombudsman services. The Delaware Long-Term Care Ombudsman Program is funded by the federal and state governments. Under the federal
+Older Americans Act
+, every state is required to have an Ombudsman Program that addresses complaints and advocates for improvements in the long-term care system. Each state has an Office of the State Long-Term Care Ombudsman led by a full-time State Long-Term Care Ombudsman who directs the program statewide.
+Will my conversations with the Ombudsman be kept in confidence?
+Yes. The ombudsman is your advocate. All complaints and conversations with the Long-Term Care Ombudsman are confidential.
+Does the ombudsman inspect nursing and assisted living facilities?
+No. Your ombudsman is there to support and empower you to advocate for yourself, or advocate on your behalf if you can’t. They do not inspect facilities for licensing or investigate complaints for the State. Licensing and surveys are conducted by the
+Division of Health Care Quality
+.
+An ombudsman is assigned to and regularly visits all licensed skilled nursing and assisted living facilities. This allows them to provide feedback to facility administration, showcasing strengths, and offering suggestions to improve resident satisfaction.
+Need to register a complaint?
+For complaints about a long-term care facility,
+complete this online form
+.
+Note:
+You must provide your name to submit a complaint online.
+To file an anonymous complaint about a long-term care facility, call the Long-Term Care Ombudsman Program hotline at
+1-855-773-1002
+.
+For complaints about home and community-based service providers, call the Long-Term Care Ombudsman Program hotline at
+1-855-773-1002
+.
+Know Your Rights
+Respect
+Timely, courteous and reasonable responses to requests or grievances, in writing if requested.
+Unrestricted communication with others.
+Ability to manage your own financial affairs.
+Ability to recommend changes or present grievances to the facility staff or your Ombudsman.
+Freedom from verbal, physical or mental abuse; cruel and unusual punishment; involuntary seclusion; withholding of monetary allowances; withholding of food; and deprivation of sleep.
+Notice before your room or roommate is changed, except in emergencies, and to have the facility honor your request for a room or roommate whenever possible.
+Exercise your rights as a citizen of the State and the United States of America.
+Information
+Receive, prior to or at the time of admission, a written statement of the services provided.
+Receive a written, itemized statement of charges and services.
+Receive complete and current information concerning your diagnosis, treatment, and prognosis.
+Inspect all records pertaining to you.
+The name, address and phone number of the physician responsible for your care placed by the facility at your bedside.
+Receive in writing information regarding any relationship the facility has with other health care or related institutions or service providers.
+Examine the most recent survey of the facility.
+Receive information from agencies acting as client advocates and have the opportunity to contact those agencies.
+Request the names and positions of staff members providing care to you.
+Request an organizational chart outlining the facility’s chain of command, for purposes of making requests and asserting grievances.
+Choice
+Make choices regarding activities, schedules, health care and other aspects of your life.
+Participate in an ongoing program of activities.
+Participate in social, religious and community activities.
+Dignity
+Respect and privacy.
+Freedom from restraints.
+Privacy in your room.
+Privacy during visits from your spouse.
+Retain and use your own clothing and personal possessions.
+Not have to perform a service for the facility.
+Care
+Receive considerate, respectful and appropriate care, treatment and services.
+Receive reasonable continuity of care.
+Choose a personal attending physician.
+Not be transferred or discharged from a facility except for medical reasons, your own welfare, or the welfare of other residents – or for nonpayment of justified charges. You must be given 30 days’ notice, except when the situation is deemed an emergency.
+Advance Care Planning
+Every adult over age 65—no matter how healthy and independent your currently are—should start thinking about Advance Care Planning. This includes filling out important documents called Advance Directives. These documents let your loved ones and your healthcare team know about the care you would want if serious illness or injury keeps you from making or communicating decisions for yourself.
+Advance Directive
+Creating an Advance Directive allows you to express your wishes about lifesaving treatments and procedures in the event you are too ill to communicate. It also lets you name someone to make decisions about your health care when you are not able to do so yourself. Find a copy of Delaware’s
+Advance Directive form
+here.
+Delaware Medical Orders for Scope of Treatment (DMOST)
+End-of-life directives reflecting the patient’s treatment preferences for life-sustaining treatment such as cardiopulmonary resuscitation (CPR), artificial nutrition (feeding tube), dialysis and other treatments. Written by a licensed medical provider for patients who meet certain medical requirements, DMOST orders are followed by all medical personnel in any setting, including a long-term care facility, emergency department or acute-care hospital. Find a copy of the
+DMOST form
+here.
+Volunteer as a Long-Term Care Ombudsman
+Looking for a meaningful way to make a difference in the lives of residents living in long-term care settings? Become a volunteer advocate ombudsman!
+The Delaware Long-Term Care Ombudsman Volunteer Program is an exciting opportunity for people who want to make a difference in the lives of those living in long-term care settings. Under the supervision of staff, volunteers regularly visit nursing homes and assisted living communities to advocate for residents, and respond to resident complaints.
+Who Can Volunteer?
+You are
+not
+eligible to volunteer as an Ombudsman if you (or an immediate family member):
+Have a financial interest in or compensation from a long-term care setting
+Are currently, or have been employed in a long-term care setting within the past year
+Ready to make a difference? Apply as a Volunteer Ombudsman today!
+For more information, call 1-855-773-1002 or email
+DHSS_OSEC_Ombudsman@delaware.gov
+to request a volunteer application.
+Additional Resources
+Helpful Guides and Resident Rights
+This
+fact sheet
+provides information on how the Long-Term Care Ombudsman Program advocates for residents and works to resolve concerns or complaints residents face, as well as promote change at the local, state, and national level to improve quality of life and care.
+Below are additional resources for residents and families.
+Delaware Aging and Disability Resource Center
+Guide to Choosing a Nursing Home or Other Long-Term Care Services and Supports
+Division of Health Care Quality Regulations
+Delaware Licensed Nursing Homes
+Delaware Licensed Assisted Living Facilities
+Home and Community-Based Services
+Home and Community-Based Long-Term Care Services Guide to Services for Older Delawareans and Persons with Disabilities
+Medicare.gov, Nursing Home Compare
+Administration for Community Living
+Resident Councils
+Family Councils
+National Center on Elder Abuse
+Adult Protective Services
+To report abuse, neglect, and/or exploitation of an individual living in a long-term care setting, please
+click here
+.
+For More Information
+Contact the State Long-Term Care Ombudsman:
+DHSS_OSEC_Ombudsman@Delaware.gov
+1-855-773-1002
+END SOURCE 3
+
+END OF PACKET — 3 sources
