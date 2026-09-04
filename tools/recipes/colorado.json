@@ -1,0 +1,73 @@
+{
+  "recipe_version": 1,
+  "state": "colorado",
+  "sources": [
+    {
+      "n": 1,
+      "title": "6 CCR 1011-1 Chapter 5, section 15.6 (Resident transfer, discharge or room change)",
+      "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12005&fileName=6+CCR+1011-1+Chapter+05",
+      "source_date": "Adopted by the Board of Health on April 16, 2025. Effective July 1, 2025.",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "The Secretary of State serves 6 CCR 1011-1 Chapter 5 as one generated PDF; the slice runs from section 15.6's heading to the start of 15.7. Anchors proposed mechanically by tools/propose-slice.py from the standing packet's span and confirmed by the checker.",
+      "slice": {
+        "from": "15.6 RESIDENT TRANSFER, DISCHARGE OR ROOM CHANGE",
+        "to": "15.7 RESIDENT RELOCATION If a facility intends"
+      }
+    },
+    {
+      "n": 2,
+      "title": "6 CCR 1011-1 Chapter 5, section 15.1 (Statement of rights), excerpt",
+      "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12005&fileName=6+CCR+1011-1+Chapter+05",
+      "source_date": "Adopted by the Board of Health on April 16, 2025. Effective July 1, 2025.",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "Section 15.1, the statement of rights. The slice deliberately starts at the section heading rather than at the standing packet's own first line, which began mid-sentence ('other patients. 1) If the resident has limited'): a mid-sentence anchor is one revision away from matching nothing, and starting at the heading is a superset, which can only add evidence. The end anchor is where the packet's span ends.",
+      "slice": {
+        "from": "15.1 STATEMENT OF RIGHTS",
+        "to": "the treatment of personal and medical records,"
+      }
+    },
+    {
+      "n": 3,
+      "title": "6 CCR 1011-1 Chapter 5, section 5.2 (Bed hold policies)",
+      "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12005&fileName=6+CCR+1011-1+Chapter+05",
+      "source_date": "Adopted by the Board of Health on April 16, 2025. Effective July 1, 2025.",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "Section 5.2 of the same chapter PDF, heading to the start of 5.3.",
+      "slice": {
+        "from": "5.2 BED HOLD POLICIES The facility shall develop",
+        "to": "5.3 RESIDENT IDENTIFICATION The facility shall"
+      }
+    },
+    {
+      "n": 4,
+      "title": "6 CCR 1011-1 Chapter 5, cover page and Editor's Notes",
+      "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12005&fileName=6+CCR+1011-1+Chapter+05",
+      "source_date": "Adopted by the Board of Health on April 16, 2025. Effective July 1, 2025.",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "The chapter's cover page and Editor's Notes, which is where this rule states its own adoption and effective dates.",
+      "slice": {
+        "from": "DEPARTMENT OF PUBLIC HEALTH AND ENVIRONMENT Health",
+        "to": "Health Facilities and Emergency Medical Services Division SECTION 1 -"
+      }
+    },
+    {
+      "n": 5,
+      "title": "Long-Term Care Ombudsman",
+      "url": "https://cdhs.colorado.gov/long-term-care-ombudsman",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "Server-rendered; plain curl with a browser user-agent returns the whole document. Scope 'body', matching the standing packet's tag strip over the served page."
+    }
+  ]
+}

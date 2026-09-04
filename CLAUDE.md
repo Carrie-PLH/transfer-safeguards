@@ -599,3 +599,37 @@ through .070 and holds four rules entire. A superset can only add evidence and
 never narrows what verifies. Where a two-column document is involved, expect
 this, and never tighten a slice to look neat: a slice that reads tidily and
 drops a column is the failure mode this whole apparatus exists to prevent.
+
+## Two helpers for the recipe backfill (added 2026-09-04)
+
+`tools/draft-recipe.py <slug>` writes the mechanical half of a recipe from the
+standing packet's own SOURCE headers — the source list, URLs, recorded dates,
+and an extractor guessed from the URL. Every note says DRAFT. It parses headers
+by pattern and will silently skip one it cannot parse: check that the draft has
+as many sources as the packet before working on it. South Dakota's packet
+defeated it (two headers in a shape the pattern misses), which is why that
+state is still hand-written.
+
+`tools/propose-slice.py <slug>` proposes slice anchors by fetching each source
+unsliced and locating the standing packet's own span inside it. The first line
+of the span becomes `from`, the first line after it becomes `to`, each grown
+until unique and at least 45 characters — well above the linter's floor of 12,
+because a 13-character anchor that is unique today is one revision away from
+matching somewhere else.
+
+Both are drafting aids, not authorities. The anchors they propose still have to
+be read, and two habits earned their keep on the first six states:
+
+- **Never accept a mid-sentence anchor.** Colorado's section 15.1 and Nebraska's
+  175 NAC span both began mid-sentence in the standing packet, because a hand
+  capture had cut a line range. Widen to the enclosing heading instead: a
+  superset can only add evidence, and a heading survives a revision that
+  renumbers the paragraph beneath it.
+- **Prefer an anchor that carries its own date.** Oregon's division 88 prints
+  each rule's heading with its effective or amended date, so a rule amended
+  after the capture changes its own heading and the slice fails loudly rather
+  than quietly capturing the neighbouring rule.
+
+Where the tail after a span holds nothing long enough to anchor on, omit `to`
+and run to the end of the document rather than writing a short anchor. Nebraska
+source 5 does this deliberately.

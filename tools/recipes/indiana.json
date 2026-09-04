@@ -1,0 +1,51 @@
+{
+  "recipe_version": 1,
+  "state": "indiana",
+  "sources": [
+    {
+      "n": 1,
+      "title": "410 IAC 16.2-3.1-12, Transfer and discharge rights (excerpt from the Department of Health's published Article 16.2)",
+      "url": "https://www.in.gov/health/files/A00162.pdf",
+      "source_date": "rule history line ends readopted filed Nov 13, 2019",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "The Department of Health publishes Article 16.2 as one 3.4 MB PDF; the page reads 410 IAC 16.2-3.1-12, so the slice runs from that section's heading to the start of section 13. Anchors proposed mechanically by tools/propose-slice.py from the standing packet's own span and confirmed by the checker, not read off the page by eye. The running heads and page numbers inside the range are the document's own and are left in place.",
+      "slice": {
+        "from": "410 IAC 16.2-3.1-12 Transfer and discharge rights",
+        "to": "410 IAC 16.2-3.1-13 Administration"
+      }
+    },
+    {
+      "n": 2,
+      "title": "Indiana State Department of Health, Notice of Transfer or Discharge, State Form 49669 (PDF)",
+      "url": "https://forms.in.gov/download.aspx?id=5667",
+      "source_date": "State Form 49669 (R8 / 1-19)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "A fillable state form, captured whole — the document is the form. The blank fields, the 'Reset Form' button label and the checkbox glyphs are the form's own and -layout keeps them where the form prints them."
+    },
+    {
+      "n": 3,
+      "title": "Indiana Department of Health, Notice of Transfer or Discharge Request for Hearing, State Form 49831 (PDF)",
+      "url": "https://forms.in.gov/Download.aspx?id=5668",
+      "source_date": "State Form 49831 (R8 / 4-23)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "A fillable state form, captured whole — the document is the form. The blank fields, the 'Reset Form' button label and the checkbox glyphs are the form's own and -layout keeps them where the form prints them."
+    },
+    {
+      "n": 4,
+      "title": "Indiana Long-Term Care Ombudsman, Contact information",
+      "url": "https://www.in.gov/ombudsman/long-term-care-ombudsman/contact-information/",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "Server-rendered; plain curl with a browser user-agent returns the whole document. Scope 'body' rather than a narrower selector: the page renders both a menu and a side navigation, and carries the county-by-county local ombudsman roster, all of which the standing packet holds as served."
+    }
+  ]
+}

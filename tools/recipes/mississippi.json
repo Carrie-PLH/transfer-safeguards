@@ -1,0 +1,59 @@
+{
+  "recipe_version": 1,
+  "state": "mississippi",
+  "sources": [
+    {
+      "n": 1,
+      "title": "Chapter 45, Minimum Standards for Institutions for the Aged or Infirm — Rule 45.17.2 Residents' Rights, excerpt",
+      "url": "https://msdh.ms.gov/page/resources/119.pdf",
+      "source_date": "none stated in the captured span",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "MSDH publishes Chapter 45 as one PDF and the page reads Rule 45.17.2; the slice runs from that rule's heading to the item the standing packet's span ends before. Anchors proposed mechanically by tools/propose-slice.py from the standing packet's own span, then confirmed by the checker against both forms of the page.",
+      "slice": {
+        "from": "Rule 45.17.2 Residents' Rights. The residents'",
+        "to": "7. Is free from mental and physical abuse; 25"
+      }
+    },
+    {
+      "n": 2,
+      "title": "Chapter 45, Minimum Standards for Institutions for the Aged or Infirm — opening",
+      "url": "https://msdh.ms.gov/page/resources/119.pdf",
+      "source_date": "none stated in the captured span",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "A second span of the same PDF, held as its own source because it is what carries the chapter's opening and its authority line. Two sources over one document is the standing packet's own shape and is kept.",
+      "slice": {
+        "from": "CHAPTER 45 MINIMUM STANDARDS FOR INSTITUTIONS",
+        "to": "SOURCE: Miss. Code Ann. §43-11-13 Rule 45.1.2"
+      }
+    },
+    {
+      "n": 3,
+      "title": "Title 23 Part 207, Institutional Long Term Care Services — Rule 2.20, Facility Initiated Discharges",
+      "url": "https://medicaid.ms.gov/wp-content/uploads/2026/07/Title-23-Part-207-Institutional-LTC-eff-8.1.26.pdf",
+      "source_date": "effective 8.1.26; rule history New Rule eff. 09/01/19",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "Medicaid publishes Title 23 Part 207 as one PDF; the slice runs from Rule 2.20 to the start of Chapter 3, which is where the ICF/IID rules begin and this rule ends.",
+      "slice": {
+        "from": "Rule 2.20: Facility Initiated Discharges A. A",
+        "to": "Part 207 Chapter 3: Intermediate Care Facility for Individuals with Intellectual Disabilities (ICF/IID) Rule"
+      }
+    },
+    {
+      "n": 4,
+      "title": "Long-Term Care Ombudsman",
+      "url": "https://www.mdhs.ms.gov/ombudsman/",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "Server-rendered; plain curl with a browser user-agent returns the whole document. Scope 'body' rather than a narrower selector, matching the standing packet's tag strip over the served page."
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "recipe_version": 1,
+  "state": "nebraska",
+  "sources": [
+    {
+      "n": 1,
+      "title": "Neb. Rev. Stat. 71-6022",
+      "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=71-6022",
+      "source_date": "Laws 1983, LB 235, § 15; Laws 1986, LB 782, § 5",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "The Legislature serves one statute per page with its own navigation above and below; the slice keeps the section and drops the chrome. The 'to' anchor is that navigation strip, which is stable because it names the neighbouring sections.",
+      "slice": {
+        "from": "71-6022. Transfer or discharge of resident; conditions;",
+        "to": "View Statute 71-6021 Chapter 71 Index View Statute71-6023 Frequent"
+      }
+    },
+    {
+      "n": 2,
+      "title": "Neb. Rev. Stat. 71-6023",
+      "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=71-6023",
+      "source_date": "Laws 1983, LB 235, § 16; Laws 2000, LB 819, § 125",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "The Legislature serves one statute per page with its own navigation above and below; the slice keeps the section and drops the chrome. The 'to' anchor is that navigation strip, which is stable because it names the neighbouring sections.",
+      "slice": {
+        "from": "71-6023. Involuntary transfer or discharge; notice;",
+        "to": "View Statute 71-6022 Chapter 71 Index View Statute71-6023.01 Frequent"
+      }
+    },
+    {
+      "n": 3,
+      "title": "Neb. Rev. Stat. 71-445",
+      "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=71-445",
+      "source_date": "Laws 2000, LB 819, § 45; Laws 2007, LB296, § 372; Laws 2016, LB750, § 10",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "The Legislature serves one statute per page with its own navigation above and below; the slice keeps the section and drops the chrome. The 'to' anchor is that navigation strip, which is stable because it names the neighbouring sections.",
+      "slice": {
+        "from": "71-445. Discrimination or retaliation prohibited;",
+        "to": "View Statute 71-444 Chapter 71 Index View Statute71-446 Frequent"
+      }
+    },
+    {
+      "n": 4,
+      "title": "175 NAC 12, Skilled Nursing and Nursing Facilities — resident rights, transfer and discharge",
+      "url": "https://dhhs.ne.gov/Documents/Title-175-Complete.pdf",
+      "source_date": "running head EFFECTIVE 2/27/07",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "175 NAC is published as one complete-title PDF. The slice starts at the resident rights heading rather than at the standing packet's own first line, which began mid-sentence ('rate; 2. Be fully informed of his or her rights') — a mid-sentence anchor is one revision away from matching nothing, and starting at the heading is a superset.",
+      "slice": {
+        "from": "12-006.05 Resident Rights",
+        "to": "States; 7. Voice complaints and grievances without"
+      }
+    },
+    {
+      "n": 5,
+      "title": "Long-Term Care Ombudsman",
+      "url": "https://dhhs.ne.gov/Pages/Aging-Ombudsman.aspx",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "Server-rendered. The slice drops the site chrome above the page content and runs to the end of the document: the standing packet's span ended a few words before the end, and no anchor long enough to be safe exists in what follows, so this is a deliberate superset rather than a short anchor.",
+      "slice": {
+        "from": "Page Content ​​​​​​The Long-Term Care Ombudsman"
+      }
+    }
+  ]
+}

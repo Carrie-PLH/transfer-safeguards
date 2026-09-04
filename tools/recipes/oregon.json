@@ -1,0 +1,73 @@
+{
+  "recipe_version": 1,
+  "state": "oregon",
+  "sources": [
+    {
+      "n": 1,
+      "title": "OAR 411-088-0010 and 411-088-0020, Involuntary Transfer; Basis for Involuntary Transfer",
+      "url": "https://www.oregon.gov/odhs/rules-policy/apdrules/411-088.pdf",
+      "source_date": "411-088-0010 Effective 10/1/1990; 411-088-0020 Amended 04/01/2014",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "Division 88 is published as one document and each rule carries its own effective or amended date in the heading, which makes the headings good anchors: a rule amended after this capture changes its own heading and the slice fails loudly rather than quietly capturing the wrong text. Anchors proposed mechanically by tools/propose-slice.py from the standing packet's span and confirmed by the checker.",
+      "slice": {
+        "from": "411-088-0010 Involuntary Transfer (Effective 10/1/1990) Unless",
+        "to": "behavior of a sexual nature, or verbal threats"
+      }
+    },
+    {
+      "n": 2,
+      "title": "OAR 411-088-0070, Notice Requirements",
+      "url": "https://www.oregon.gov/odhs/rules-policy/apdrules/411-088.pdf",
+      "source_date": "Amended 04/01/2014",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "Division 88 is published as one document and each rule carries its own effective or amended date in the heading, which makes the headings good anchors: a rule amended after this capture changes its own heading and the slice fails loudly rather than quietly capturing the wrong text. Anchors proposed mechanically by tools/propose-slice.py from the standing packet's span and confirmed by the checker.",
+      "slice": {
+        "from": "411-088-0070 Notice Requirements (Amended 04/01/2014) (1)",
+        "to": "411-088-0080 Informal Conference and Hearing (Amended 04/01/2014) (1)"
+      }
+    },
+    {
+      "n": 3,
+      "title": "OAR 411-088-0080, Informal Conference and Hearing",
+      "url": "https://www.oregon.gov/odhs/rules-policy/apdrules/411-088.pdf",
+      "source_date": "Amended 04/01/2014",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "Division 88 is published as one document and each rule carries its own effective or amended date in the heading, which makes the headings good anchors: a rule amended after this capture changes its own heading and the slice fails loudly rather than quietly capturing the wrong text. Anchors proposed mechanically by tools/propose-slice.py from the standing packet's span and confirmed by the checker.",
+      "slice": {
+        "from": "411-088-0080 Informal Conference and Hearing (Amended 04/01/2014) (1)",
+        "to": "(C) An expedited hearing shall be conducted within"
+      }
+    },
+    {
+      "n": 4,
+      "title": "OAR chapter 411 division 88 — contents and purpose",
+      "url": "https://www.oregon.gov/odhs/rules-policy/apdrules/411-088.pdf",
+      "source_date": "411-088-0000 Effective 10/1/1993",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "Division 88 is published as one document and each rule carries its own effective or amended date in the heading, which makes the headings good anchors: a rule amended after this capture changes its own heading and the slice fails loudly rather than quietly capturing the wrong text. Anchors proposed mechanically by tools/propose-slice.py from the standing packet's span and confirmed by the checker.",
+      "slice": {
+        "from": "OREGON DEPARTMENT OF HUMAN SERVICES AGING AND PEOPLE WITH DISABILITIES OREGON ADMINISTRATIVE RULES CHAPTER 411 DIVISION 88 NURSING FACILITIES/LICENSING - TRANSFERS Table",
+        "to": "(1) \"Hearing\" means a contested case hearing according"
+      }
+    },
+    {
+      "n": 5,
+      "title": "Contact Us",
+      "url": "http://www.oltco.org/contact-us/",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "Server-rendered; scope 'body', matching the standing packet's tag strip over the served page."
+    }
+  ]
+}
