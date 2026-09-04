@@ -1,0 +1,16 @@
+{
+ "entry": {
+  "file_count": 84,
+  "id": "2026-09-04T181742Z",
+  "manifest_file": "manifests/2026-09-04T181742Z.txt",
+  "manifest_sha256": "bb68bad423af19ca82f326be95aa3e2fa2884dbd48e49dbfedd78b746cc59d85",
+  "note": "recipe backfill: new-jersey, kentucky, north-carolina",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "9983b853bae47b974dc772eb71ec99f1964a846b6f601af13e552e9fc5c4b6bc",
+  "repo": "transfer-safeguards",
+  "utc": "2026-09-04T18:17:42+00:00"
+ },
+ "entry_sha256": "7ef9fd46c306ec2e5879f920b6a6e436b70109bf53127f611203e4297d4c9ba7"
+}
