@@ -384,9 +384,36 @@ def f_strip_running_headers(t):
     return _core.f_strip_running_headers(t)
 
 
+def f_join_wrap_hyphens(t):
+    """A hyphen the source really contains, left stranded at a line break.
+
+    "word-for-\nword" is one word in the document and three tokens after
+    whitespace is collapsed: "word-for- word". A quotation of the source's own
+    sentence then cannot be verified against it. Montana's Part B notice is the
+    case that produced this filter in sped-safeguards, where it was written.
+
+    The hyphen is kept, not deleted. That is the whole judgement in this filter,
+    and it is a judgement about a particular kind of document: one that does not
+    soft-hyphenate, so a hyphen before a line break is a hyphen the author typed.
+    Deleting it would invent "wordforword"; keeping it reproduces what the page
+    shows a reader. A source that does use typesetter hyphenation needs a
+    different answer -- pdftotext-plain -- and must not use this filter.
+
+    Registered here 2026-09-04 to bring this repo to parity with its siblings.
+    No recipe in this collection names it yet, so no capture changes: it is
+    capability, not a fix for a case found here. The pattern is byte-identical
+    to sped-safeguards' copy and is deliberately narrow -- it requires the
+    continuation letter immediately after the newline, so it does not fire on
+    pdftotext-layout output, which indents continuation lines. Widening it would
+    change what nine sped-safeguards recipes already capture, so it stays as
+    written."""
+    return re.sub(r'-\n(?=[a-z])', '-', t)
+
+
 FILTERS = {
     'normalize-apostrophes': f_normalize_apostrophes,
     'strip-running-headers': f_strip_running_headers,
+    'join-wrap-hyphens': f_join_wrap_hyphens,
     'normalize-ligatures': f_normalize_ligatures,
     'normalize-bullets': f_normalize_bullets,
     'strip-zero-width': f_strip_zero_width,
@@ -1149,6 +1176,21 @@ def self_test():
     check(re.search(r'^SOURCE 1: Notice \| https://x\.gov/n\.pdf \| ', packet, re.M),
           'source header not in the expected shape')
     check(d0 in packet, 'packet does not record its recipe digest')
+
+
+    # join-wrap-hyphens: close the break, keep the hyphen, touch nothing else.
+    # Deleting the hyphen would invent a word the source does not contain.
+    check(f_join_wrap_hyphens('word-for-\nword record') == 'word-for-word record',
+          'join-wrap-hyphens did not close a stranded hyphen')
+    check('-' in f_join_wrap_hyphens('word-for-\nword'),
+          'join-wrap-hyphens deleted the hyphen instead of keeping it')
+    check(f_join_wrap_hyphens('ends with a dash -\nThen A Capital')
+          == 'ends with a dash -\nThen A Capital',
+          'join-wrap-hyphens joined across a line starting with a capital')
+    check(f_join_wrap_hyphens('no hyphen\nhere') == 'no hyphen\nhere',
+          'join-wrap-hyphens altered a plain line break')
+    check('join-wrap-hyphens' in FILTERS,
+          'join-wrap-hyphens is not registered in FILTERS')
 
     print('self-test: ' + ('all checks passed' if ok else 'FAILURES'))
     return 0 if ok else 1
