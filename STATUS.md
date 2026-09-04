@@ -26,7 +26,7 @@ the state's own published translation only.
 | [Idaho](site/states/idaho.html) | [x] | [ ] | [ ] | 2026-09-02 |
 | [Illinois](site/states/illinois.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Indiana](site/states/indiana.html) | [x] | [ ] | [ ] | 2026-08-30 |
-| [Iowa](site/states/iowa.html) | [x] | [ ] | [ ] | 2026-08-30 |
+| [Iowa](site/states/iowa.html) | [x] | [ ] | [ ] | 2026-09-04 |
 | [Kansas](site/states/kansas.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Kentucky](site/states/kentucky.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Louisiana](site/states/louisiana.html) | [x] | [ ] | [ ] | 2026-08-30 |
