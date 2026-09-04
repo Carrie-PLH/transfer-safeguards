@@ -28,7 +28,7 @@ def paras(lines):
             while i<len(lines) and lines[i].startswith('| '):
                 rows.append([x.strip() for x in lines[i].strip('|').split('|')]); i+=1
             heads=rows[0]; body=rows[2:]
-            out.append('<div class="table-wrap"><table><thead><tr>'+''.join(f'<th>{inline(x)}</th>' for x in heads)+'</tr></thead><tbody>'+''.join('<tr>'+''.join(f'<td>{inline(x)}</td>' for x in row)+'</tr>' for row in body)+'</tbody></table></div>'); continue
+            out.append('<div class="table-scroll"><table><thead><tr>'+''.join(f'<th>{inline(x)}</th>' for x in heads)+'</tr></thead><tbody>'+''.join('<tr>'+''.join(f'<td>{inline(x)}</td>' for x in row)+'</tr>' for row in body)+'</tbody></table></div>'); continue
         if not line.strip(): flush()
         else: buf.append(line)
         i+=1

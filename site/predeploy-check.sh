@@ -316,6 +316,25 @@ else
   ok "no unpublishable files under the deploy root"
 fi
 
+
+# The shared mobile layer is generated into assets/style.css from
+# field-assembly-standard/MOBILE-LAYER.css. A hand-edit to the copy is
+# silently undone the next time the layer is applied, so the gate refuses a
+# deploy whose copy no longer matches the canonical block. The canonical repo
+# is a sibling checkout; when it is absent the check reports that rather than
+# failing, so this script still runs on a machine that has only one repo.
+ML_TOOL="../../field-assembly-standard/tools/apply-mobile-layer.py"
+if [ ! -f "$ML_TOOL" ]; then
+  ok "shared mobile layer not verified (field-assembly-standard not checked out)"
+elif python3 "$ML_TOOL" --check >/tmp/ml-check.$$ 2>&1; then
+  ok "shared mobile layer matches the canonical block"
+else
+  bad "shared mobile layer has drifted from the canonical block:"
+  sed 's/^/        /' /tmp/ml-check.$$
+  say "        re-apply with: python3 $ML_TOOL"
+fi
+rm -f /tmp/ml-check.$$
+
 echo
 if [ "$fail" -eq 0 ]; then
   say "ALL CHECKS PASSED — safe to run: npx wrangler deploy"

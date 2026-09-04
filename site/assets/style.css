@@ -91,14 +91,7 @@ body {
   .topline .wordmark img { transition: none; }
 }
 .topline nav { display: flex; gap: 1.75rem; flex-wrap: wrap; }
-/* Small screens: no hamburger — the site is deliberately JavaScript-free
-   and three links don't need concealing. Stack the masthead into two tight
-   rows instead: wordmark, then the nav as one horizontal line. */
-@media (max-width: 560px) {
-  .topline { flex-direction: column; align-items: flex-start; gap: 0.55rem; padding: 0.8rem var(--gutter); }
-  .topline .wordmark { white-space: nowrap; }
-  .topline nav { gap: 1.2rem; row-gap: 0.4rem; }
-}
+
 .topline nav a {
   font-family: var(--font-mono);
   font-size: 0.78rem;
@@ -199,9 +192,6 @@ blockquote .cite { display: block; margin-top: 0.7rem; font-size: 0.72rem; }
   text-transform: none;
 }
 
-@media (max-width: 720px) {
-  .section { grid-template-columns: 1fr; gap: 0.75rem; }
-}
 
 /* ---------- tables ---------- */
 
@@ -226,20 +216,6 @@ blockquote .cite { display: block; margin-top: 0.7rem; font-size: 0.72rem; }
 .claim-table td:first-child { color: var(--text); font-weight: 500; }
 .claim-yes { color: var(--accent); }
 
-/* A wide table scrolls inside its own container; the page body must never
-   scroll horizontally (WCAG 2.1 AA, SC 1.4.10 Reflow). The min-width:0 is
-   load-bearing: without it a grid item's automatic minimum size is its
-   min-content width, so a table's min-content pushes the whole .section
-   wider than the viewport and the page scrolls sideways instead of the
-   table. */
-.section > * { min-width: 0; }
-/* Long unbreakable tokens — board emails and license-verification URLs —
-   otherwise set a min-content floor wider than a 320px viewport and force
-   the page to scroll sideways. "anywhere" rather than "break-word" because
-   only "anywhere" is honored when the browser computes min-content sizing. */
-a, dd, td, p, li { overflow-wrap: anywhere; }
-.table-scroll { overflow-x: auto; }
-.table-scroll > table { min-width: 34rem; }
 
 /* ---------- forms & buttons ---------- */
 
@@ -443,9 +419,6 @@ a.state-pill:hover, a.state-pill:focus-visible {
   margin-top: 0.7rem;
 }
 
-@media (max-width: 560px) {
-  .docket > div { grid-template-columns: 1fr; gap: 0.25rem; }
-}
 
 /* ---------- footer ---------- */
 
@@ -519,3 +492,270 @@ a .si, .si a { color: inherit; }
 .small { font-size: 0.85rem; }
 .muted { color: var(--text-dim); }
 .mw { max-width: var(--measure); }
+
+
+/* =====================================================================
+   FIELD ASSEMBLY — SHARED MOBILE LAYER v1 (2026-09-03)
+   =====================================================================
+
+   Canonical source: field-assembly-standard/MOBILE-LAYER.css
+   Applied verbatim to the four child sites. Do not edit a copy in place —
+   edit this file and re-apply, or the four drift apart again, which is the
+   condition this block was written to end.
+
+   Breakpoints, and why these two:
+     780px — the masthead nav collapses behind a button, and .section drops
+             from its two-column (number | body) grid to one column. Above
+             this, none of the block applies.
+     560px — the docket definition rows and the remaining two-column
+             components stack. This is the width below which a label and its
+             value can no longer sit side by side without one of them
+             wrapping mid-phrase.
+
+   Everything here is scripting-free. The nav is a checkbox and a label, so
+   it works with JavaScript disabled, blocked, or broken.
+   ===================================================================== */
+
+
+/* ---------- reflow guards (all widths) ---------- */
+
+/* A grid or flex item's automatic minimum size is its min-content width. A
+   wide table or a long token therefore pushes its whole .section past the
+   viewport and the PAGE scrolls sideways instead of the component. This one
+   declaration is what keeps that from happening; it is load-bearing.
+   (WCAG 2.1 AA, SC 1.4.10 Reflow, tested at 320x256 — the equivalent of
+   1280x1024 at 400% zoom.) */
+.section > * { min-width: 0; }
+
+/* Word breaking, in two tiers.
+
+   Tier 1 — prose. "break-word" breaks a word only when that word alone
+   cannot fit on a line of its own. Ordinary sentences are never chopped.
+   This replaces a blanket `a, dd, td, p, li { overflow-wrap: anywhere }`,
+   which did stop the page scrolling sideways but also cut ordinary words
+   mid-syllable on every narrow screen, which is what the tables looked
+   broken from. */
+p, li, dd, dt, td, th, blockquote, figcaption, .lede, .mw {
+  overflow-wrap: break-word;
+}
+
+/* Tier 2 — genuinely unbreakable tokens: agency emails like
+   OECMediationFacilitation@education.ohio.gov, bare URLs, docket hashes,
+   long citation strings. These set a min-content floor wider than a 320px
+   viewport, so they get "anywhere" — the only value the browser honors
+   while computing min-content sizing. Scoped by href and by class so that
+   an ordinary link with ordinary words in it is never touched. */
+a[href^="mailto:"],
+a[href^="tel:"],
+a[href^="http"],
+a[href^="www"],
+code, samp, kbd,
+.hashline, .url, .cite {
+  overflow-wrap: anywhere;
+}
+
+/* A wide table scrolls inside its own box. The min-width is what makes the
+   columns keep their proportions instead of collapsing into the ragged
+   one-word-per-line stack that a table gets when it is squeezed. */
+.table-scroll {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+}
+.table-scroll > table { min-width: 34rem; }
+
+/* Table cells are the one place where breaking must not happen at all: a
+   column heading or a yes/no cell that wraps mid-word reads as damage. The
+   table scrolls instead. */
+.table-scroll th, .table-scroll td, .table-scroll a { overflow-wrap: normal; }
+
+/* Anything else that can carry an oversized child. */
+pre, .document { overflow-x: auto; }
+img, svg, video, iframe { max-width: 100%; }
+
+
+/* ---------- mobile nav scaffolding (all widths; inert above 780px) ------
+
+   A checkbox drives the menu. It is hidden from sight but not from the
+   accessibility tree or the keyboard — still tabbable, Space still toggles
+   it, and the label names it. Above the breakpoint the button is
+   display:none and none of this is reachable. */
+
+.nav-toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.nav-button { display: none; }
+.nav-bars {
+  display: block;
+  position: relative;
+  width: 1.05rem;
+  height: 0.7rem;
+  border-top: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+}
+.nav-bars::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  border-top: 2px solid currentColor;
+  transform: translateY(-1px);
+}
+
+
+/* ---------- 780px: the masthead collapses, sections stack ---------- */
+
+@media (max-width: 780px) {
+
+  /* The section number moves from a left rail to a line above the body. */
+  .section {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  .section-no { padding-top: 0; }
+
+  /* The nav goes behind a button. Stacked, four links cost 217px of an
+     812px screen before a reader reached the first line of the page. */
+  .topline { flex-wrap: wrap; }
+  .nav-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    min-height: 44px;
+    padding: 0 0.2rem;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    color: var(--text-dim);
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;  /* a tap on a label otherwise selects its own text */
+  }
+  .nav-toggle:focus-visible + .nav-button {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+  .topline nav {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    gap: 0;
+    padding-bottom: 0.35rem;
+  }
+  .nav-toggle:checked ~ nav { display: flex; }
+  .topline nav a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    border-top: 1px solid var(--hair);
+  }
+
+  /* The bars become a cross while the menu is open, so the button reports
+     what it will do next rather than what it did. */
+  .nav-toggle:checked ~ .nav-button .nav-bars { border-color: transparent; }
+  .nav-toggle:checked ~ .nav-button .nav-bars::before {
+    transform: translateY(-1px) rotate(45deg);
+  }
+  .nav-toggle:checked ~ .nav-button .nav-bars::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-top: 2px solid currentColor;
+    transform: translateY(-1px) rotate(-45deg);
+  }
+
+  /* A phone is where someone actually calls the office a page names, and
+     these targets were 17 to 21 pixels tall. The hit area is enlarged with
+     an overlay rather than padding: padding turned every address into its
+     own ragged line and broke the reading rhythm of a dense docket entry.
+     The overlay grows the target without moving a single word. Line-height
+     is opened alongside it so stacked links do not collide. */
+  .docket dd, .mw, .lede { line-height: 1.9; }
+  .docket dd a[href^="tel:"], .docket dd a[href^="mailto:"],
+  .mw a[href^="tel:"], .mw a[href^="mailto:"] { position: relative; }
+  .docket dd a[href^="tel:"]::after, .docket dd a[href^="mailto:"]::after,
+  .mw a[href^="tel:"]::after, .mw a[href^="mailto:"]::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 44px;
+    transform: translateY(-50%);
+  }
+
+  /* Same 44px floor for the jump list, reached the same way: the row gap
+     closes as the link boxes grow, so the block does not lengthen on the
+     screen where length is the whole problem. */
+  .jump { gap: 0 1.1rem; padding: 0.35rem 0; }
+  .jump a { display: inline-flex; align-items: center; min-height: 44px; }
+
+}
+
+
+/* ---------- 560px: the last two-column components stack ---------- */
+
+@media (max-width: 560px) {
+
+  /* Label over value rather than beside it. */
+  .docket > div { grid-template-columns: 1fr; gap: 0.25rem; }
+
+  /* The lockup and the Menu button have to share one row. At the size the
+     lockup is tuned to for a desktop masthead, the longest of the four
+     ("Room & Recourse") measured 299px of a 375px screen and pushed the
+     button onto a second line — a whole extra masthead row spent before
+     any content. Shrinking the lockup ~20% seats them side by side on a
+     320px screen and is still well above the cap-height floor. */
+  .topline { gap: 0.75rem; }
+  .topline .wordmark { min-width: 0; }
+  .topline .wordmark img { height: clamp(0.95rem, 4.6vw, 1.45rem); }
+
+  /* The gutter was tuned for a desktop margin. At this width it is taking
+     measurable reading width away from a line that has little to spare. */
+  :root { --gutter: 1.15rem; }
+
+  /* The display size clamp bottoms out too high for a 320px screen: the
+     minimum wrapped a two-word title onto three lines. */
+  h1 { font-size: clamp(1.95rem, 8.5vw, 2.6rem); }
+
+  /* Blockquote and document padding: 1.5rem a side spent nearly a fifth of
+     a 320px viewport on air. */
+  blockquote { padding: 1rem 1.1rem; }
+  .document, .sample { padding: 1.1rem; }
+
+  /* A bar chart's label column and value column stop fitting side by side
+     well before the bars stop being readable. Label above, bar below. */
+  .fpr-row { grid-template-columns: 1fr; gap: 0.3rem; align-items: stretch; }
+
+  /* A scrolling table needs to say so. The rule sits under the table and
+     the caption names the gesture; without it the second and third columns
+     are simply invisible and a reader has no reason to look for them. */
+  .table-scroll { position: relative; padding-bottom: 0.4rem; }
+  .table-scroll::after {
+    content: "Scroll the table sideways for the remaining columns.";
+    display: block;
+    padding-top: 0.6rem;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+
+  /* Buttons and inputs reach the full measure rather than sitting at a
+     width tuned for a desktop form row. */
+  input[type="email"], input[type="text"], .btn, button[type="submit"] {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* ===================== END SHARED MOBILE LAYER v1 ===================== */
