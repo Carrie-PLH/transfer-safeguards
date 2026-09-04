@@ -1,0 +1,16 @@
+{
+ "entry": {
+  "file_count": 96,
+  "id": "2026-09-04T185335Z",
+  "manifest_file": "manifests/2026-09-04T185335Z.txt",
+  "manifest_sha256": "8dc2871e2059e81c7d602846cde4fd1d50fb8b7684afbbff1a4aa0d808e6d42d",
+  "note": "recipes: missouri, illinois, oklahoma",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "2f222ff3eade64ce360c12f359b1f3b3e960f1682f2073b0a436fbdde0eba39b",
+  "repo": "transfer-safeguards",
+  "utc": "2026-09-04T18:53:35+00:00"
+ },
+ "entry_sha256": "b6a136fcca72f82505c06b8a027ee8a74c96017280fdd146c3592d99b91587c5"
+}
