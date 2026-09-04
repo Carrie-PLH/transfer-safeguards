@@ -470,11 +470,13 @@ around it, so a real fix to the shared logic has to be made in every repo's
 copy by hand. `gathered work/tools/spn.py` itself is not touched by this port
 and does not change.
 
-**Not yet wired into the nightly routine.** The scheduled task that runs
-capture passes across the portfolio currently sends its entire nightly budget
-to gathered work because this repo (and its two siblings) had no equivalent
-tool. This closes that gap but needs Carrie's review before an unattended
-pass starts spending budget against it.
+**In service since 2026-09-04**, on Carrie's decision. The nightly routine
+(`portfolio-archive-captures-and-pass-health-sped-lm-rr`) already reads all
+four collections against one shared budget of 20 confirmed captures a night,
+so this repo now competes for that budget rather than watching gathered work
+spend all of it. The backlog here is deep — 121 candidates at the moment of
+the decision — and it draws down slowly by design. A growing backlog is
+expected and is not a problem to solve.
 
 **What counts as a capture.** Save Page Now returned success, the captured
 response was HTTP 200, and the capture played back. A stored 403 or a WAF
@@ -508,13 +510,19 @@ sources, change any date, touch the docket, or touch the footer's "Reviewed"
 line. If a capture reveals that a source changed, that is a note for the
 review pass, not a repair to make here.
 
-**Scope note for Carrie.** The script only scans `site/states/`, mirroring
-gathered work's institution-page scope. `site/federal.html` also links
-first-party sources (cms.gov, ecfr.gov) that sit outside that scope and
-currently get no archive coverage from this tool. Whether to widen the
-script to cover it — a small change to `scan_all`, on the model of
-sped-safeguards' two-collection version of this same script — is a judgment
-call, not something this port made unilaterally.
+**Scope: state pages plus the federal layer** (widened 2026-09-04, same
+decision). `scan_all` reads every page under `site/states/` and also
+`site/federal.html`, under the slug `federal` — the same name the review
+rotation uses for it. The federal page publishes first-party eCFR and CMS
+sources exactly as a state page publishes its board's, and scoping the tool
+to `site/states/` alone had left those four sources with no archive coverage
+at all. The pattern follows sped-safeguards' two-collection version of this
+same script.
+
+Board & Border's copy has the identical gap and has not been widened:
+`compact.html` is its federal-layer analogue and its `spn.py` does not
+mention it. Fix that there, in that repo, when someone is next in it — this
+note is the reminder, not the authority.
 
 ## The change log is a record, not a claim (adopted 2026-09-04)
 

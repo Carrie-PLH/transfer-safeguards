@@ -169,13 +169,23 @@ def scan_page(path):
 
 def scan_all(slug=None):
     out = {}
-    for name in sorted(os.listdir(STATES)):
-        if not name.endswith(".html") or name == "index.html":
-            continue
-        this_slug = name[:-5]
+    pages = [(name[:-5], os.path.join(STATES, name))
+             for name in sorted(os.listdir(STATES))
+             if name.endswith(".html") and name != "index.html"]
+
+    # The federal layer is a published page carrying first-party sources
+    # (eCFR, CMS) exactly as a state page does, and the review rotation
+    # already treats it as one under the slug "federal". Scoping this tool to
+    # site/states/ alone left those sources with no archive coverage at all.
+    # Widened 2026-09-04 on Carrie's decision.
+    federal = os.path.join(ROOT, "site", "federal.html")
+    if os.path.exists(federal):
+        pages.append(("federal", federal))
+
+    for this_slug, path in sorted(pages):
         if slug and this_slug != slug:
             continue
-        needed, captured = scan_page(os.path.join(STATES, name))
+        needed, captured = scan_page(path)
         if needed or captured:
             out[this_slug] = {"needed": needed, "captured": len(captured)}
     return out
