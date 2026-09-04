@@ -1,0 +1,88 @@
+{
+  "recipe_version": 1,
+  "state": "vermont",
+  "sources": [
+    {
+      "n": 1,
+      "title": "33 V.S.A. chapter 73, Nursing Home Residents' Bill of Rights (§§ 7301-7306) — Vermont Statutes Online, Vermont General Assembly",
+      "url": "https://legislature.vermont.gov/statutes/fullchapter/33/073",
+      "source_date": "each section carries its own amendment history; § 7301 last amended 2021, No. 105 (Adj. Sess.), § 627, eff. July 1, 2022; § 7302 last amended 2023, No. 53, § 130, eff. June 8, 2023",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "The Legislature's full-chapter page, which prints every section of chapter 73 on one page with its history line. Captured whole rather than section by section so the grounds statement in § 7301(2)(D), the grievance and ombudsman provisions of §§ 7302-7303 and the readmission petition of § 7305 sit in one source."
+    },
+    {
+      "n": 2,
+      "title": "Licensing and Operating Rules for Nursing Homes — Vermont Agency of Human Services, Department of Disabilities, Aging and Independent Living, Division of Licensing and Protection (PDF)",
+      "url": "https://dail.vermont.gov/sites/dail/files/documents/Nursing_Home_Regulations_2018.pdf",
+      "source_date": "Revision date: June 1, 2018, as the cover states",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "filters": [],
+      "notes": "The whole rule, 1,811 rendered lines, captured entire rather than sliced: sections 3.12 (bed hold and right of return) and 3.14 (transfer and discharge, including the appeal process at 3.14 i. and the emergency exceptions at 3.14 l.) are what the page quotes, and section 19 (administrative review and appeals) is the facility-side route. The department's own regulations index at dail.vermont.gov/resources/regulations lists this file as the current nursing home rule; the Division of Licensing and Protection, which enforces it, publishes at dlp.vermont.gov and links back to it. A search-engine result also named an annotated copy at .../Nursing_Home_Regulations_ANNOTATED.pdf; that address returned 404 on 2026-09-04 and was not pursued."
+    },
+    {
+      "n": 3,
+      "title": "Nursing Home Sample Discharge-Transfer Notice — Vermont Division of Licensing and Protection (page)",
+      "url": "https://dlp.vermont.gov/nursing-home-sample-discharge-transfer-notice",
+      "source_date": "Tuesday, April 23, 2019 - 12:00, as the page dates its posting",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "The Division's page that posts the sample notice (source 4) and carries the Division's own contact block. Captured as its own source because the posting date and the Division's address and phone live here, not in the PDF."
+    },
+    {
+      "n": 4,
+      "title": "Nursing Home Transfer/Discharge Letter, sample notice — Vermont Division of Licensing and Protection (PDF)",
+      "url": "https://dlp.vermont.gov/sites/dlp/files/documents/Nursing_Home_Transfer_Discharge_Letter.pdf",
+      "source_date": "none stated in the document; posted April 23, 2019 per source 3",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "filters": [],
+      "notes": "The licensing agency's own model of the notice section 3.14 e. of the rule requires a facility to use or match. It is the only Vermont source that prints the appeal route with a named recipient, street address, telephone and email, and it says in its own words that the State uses no formal appeal form. Its first line disclaims itself as a guide; that line is captured with it."
+    },
+    {
+      "n": 5,
+      "title": "Human Services Board — Vermont Agency of Human Services",
+      "url": "https://humanservices.vermont.gov/human-services-board",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "The Board that hears the second-stage appeal under rule 3.14 i.6. Publishes its own filing route (mail, email, online form), address and telephone. The address humanservices.vermont.gov/boards-committees/human-services-board, which a search engine offered first, returns 404; this is the Agency's current page."
+    },
+    {
+      "n": 6,
+      "title": "State Long-Term Care Ombudsman Program — Adult Services Division, Vermont Department of Disabilities, Aging and Independent Living",
+      "url": "https://asd.vermont.gov/services/ltc-ombudsman-program",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "The department's own page on the program, stating that DAIL contracts with Vermont Legal Aid to operate it, and giving the department's contact block for the program. Carried beside source 7 because the two publishers do not print the same contact."
+    },
+    {
+      "n": 7,
+      "title": "Vermont Long-Term Care Ombudsman Project — Vermont Legal Aid",
+      "url": "https://www.vtlegalaid.org/legal-projects/long-term-care-ombudsman",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "The program's own page, published by the contractor that operates the Office of the State Long-Term Care Ombudsman under DAIL's designation (source 6 states the arrangement). Quoted as the program's own published contact; the department's page is quoted beside it where they differ."
+    }
+  ]
+}

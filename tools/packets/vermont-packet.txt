@@ -1,0 +1,3830 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: vermont
+ASSEMBLED: 2026-09-04
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/vermont.json (recipe digest 97fee5696430). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- SOURCE 1: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The Legislature's full-chapter page, which prints every section of chapter 73 on one page with its history line. Captured whole rather than section by section so the grounds statement in § 7301(2)(D), the grievance and ombudsman provisions of §§ 7302-7303 and the readmission petition of § 7305 sit in one source.
+- SOURCE 2: transport curl; extractor pdftotext-layout; filters none.
+  The whole rule, 1,811 rendered lines, captured entire rather than sliced: sections 3.12 (bed hold and right of return) and 3.14 (transfer and discharge, including the appeal process at 3.14 i. and the emergency exceptions at 3.14 l.) are what the page quotes, and section 19 (administrative review and appeals) is the facility-side route. The department's own regulations index at dail.vermont.gov/resources/regulations lists this file as the current nursing home rule; the Division of Licensing and Protection, which enforces it, publishes at dlp.vermont.gov and links back to it. A search-engine result also named an annotated copy at .../Nursing_Home_Regulations_ANNOTATED.pdf; that address returned 404 on 2026-09-04 and was not pursued.
+- SOURCE 3: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The Division's page that posts the sample notice (source 4) and carries the Division's own contact block. Captured as its own source because the posting date and the Division's address and phone live here, not in the PDF.
+- SOURCE 4: transport curl; extractor pdftotext-layout; filters none.
+  The licensing agency's own model of the notice section 3.14 e. of the rule requires a facility to use or match. It is the only Vermont source that prints the appeal route with a named recipient, street address, telephone and email, and it says in its own words that the State uses no formal appeal form. Its first line disclaims itself as a guide; that line is captured with it.
+- SOURCE 5: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The Board that hears the second-stage appeal under rule 3.14 i.6. Publishes its own filing route (mail, email, online form), address and telephone. The address humanservices.vermont.gov/boards-committees/human-services-board, which a search engine offered first, returns 404; this is the Agency's current page.
+- SOURCE 6: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The department's own page on the program, stating that DAIL contracts with Vermont Legal Aid to operate it, and giving the department's contact block for the program. Carried beside source 7 because the two publishers do not print the same contact.
+- SOURCE 7: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The program's own page, published by the contractor that operates the Office of the State Long-Term Care Ombudsman under DAIL's designation (source 6 states the arrangement). Quoted as the program's own published contact; the department's page is quoted beside it where they differ.
+
+SOURCE 1: 33 V.S.A. chapter 73, Nursing Home Residents' Bill of Rights (§§ 7301-7306) — Vermont Statutes Online, Vermont General Assembly | https://legislature.vermont.gov/statutes/fullchapter/33/073 | source date: each section carries its own amendment history; § 7301 last amended 2021, No. 105 (Adj. Sess.), § 627, eff. July 1, 2022; § 7302 last amended 2023, No. 53, § 130, eff. June 8, 2023 | retrieved: 2026-09-04
+Skip to content
+Skip to navigation
+Skip to subnav
+
+Searching 2025-2026 Session Return to current session
+
+Vermont General Assembly
+
+Home
+
+Bills & Resolutions
+
+Search
+
+Bill, Act & Resolution Search
+
+Bills
+
+Released for Introduction
+
+House Bills
+
+Senate Bills
+
+All Bills – Both Chambers
+
+Bills Passed
+
+Vetoed by the Governor
+
+Enacted Without Signature
+
+Bills In/Out of Committee
+
+Resolutions
+
+House Resolutions
+
+Senate Resolutions
+
+All Resolutions – Both Chambers
+
+Resolutions Adopted
+
+Acts
+
+Acts & Resolves
+
+Acts Affecting VSA Sections
+
+Research
+
+Legislative Reports & Research
+
+Committees
+
+House Committees
+
+Agriculture, Food Resiliency, & Forestry
+
+Appropriations
+
+Commerce & Economic Development
+
+Corrections & Institutions
+
+Education
+
+Energy & Digital Infrastructure
+
+Environment
+
+General & Housing
+
+Government Operations & Military Affairs
+
+Health Care
+
+House Discrimination Prevention Panel
+
+House Ethics Panel
+
+House Sexual Harassment Prevention Panel
+
+Human Services
+
+Judiciary
+
+Rules
+
+Transportation
+
+Ways & Means
+
+Senate Committees
+
+Agriculture
+
+Appropriations
+
+Economic Development, Housing & General Affairs
+
+Education
+
+Ethics
+
+Finance
+
+Government Operations
+
+Health & Welfare
+
+Institutions
+
+Judiciary
+
+Natural Resources & Energy
+
+Rules
+
+Sexual Harassment Prevention Panel
+
+Transportation
+
+Committee Types
+
+All Committees
+
+House Committees
+
+Senate Committees
+
+Joint Committees
+
+Other Committees
+
+Committees of Conference
+
+All Committee Meetings
+
+All Scheduled Committee Meetings
+
+ <li><a href="/committeeconferencemeetings/2026">All Scheduled Committees of Conference Meetings</a></li>
+
+Complete Weekly Schedule
+
+Streaming Links
+
+Accessibility
+
+Research
+
+Legislative Reports & Research
+
+Vermont Laws
+
+Statutes
+
+Vermont Statutes Online
+
+Statutes Search
+
+ Vermont Statutes at Lexis/Nexis
+
+Constitution
+
+Constitution of the State of Vermont
+
+Acts
+
+Acts & Resolves
+
+Acts Affecting VSA Sections
+
+Search
+
+Bill, Act & Resolution Search
+
+Rules
+
+State Agency Rules at Lexis/Nexis
+
+Court Rules at Lexis/Nexis
+
+Legislative Committee on Administrative Rules (LCAR)
+
+House
+
+ The House of Representatives
+
+House Overview
+
+Find Representatives
+
+All Representatives
+
+House Committees
+
+Officers
+
+Speaker of the House
+
+Clerk of the House
+
+Calendars & Journals
+
+Current House Calendar
+
+All House Calendars
+
+Current House Journal
+
+All House Journals
+
+House Bills for Introduction
+
+ <li><a target="_blank" href="/Documents/2026/Docs/JOURNAL/ja260325.pdf">Current Journal of the Joint Assembly</a></li>
+
+Journals of the Joint Assembly
+
+Rules
+
+House Rules
+
+Joint Rules
+
+Search
+
+Search House Calendars & Journals
+
+Related Information
+
+Streaming Links
+
+Senate
+
+The Senate
+
+Senate Overview
+
+Find Senators
+
+All Senators
+
+Senate Committees
+
+Officers
+
+President of the Senate (Lt. Governor)
+
+President Pro Tempore
+
+Secretary of the Senate
+
+Calendars & Journals
+
+Current Senate Calendar
+
+All Senate Calendars
+
+Addendum 1
+
+Current Senate Journal
+
+All Senate Journals
+
+Senate Bills for Introduction
+
+ <li><a target="_blank" href="/Documents/2026/Docs/JOURNAL/ja260325.pdf">Current Journal of the Joint Assembly</a></li>
+
+Journals of the Joint Assembly
+
+Rules
+
+Senate Rules
+
+Joint Rules
+
+Search
+
+Search Senate Calendars & Journals
+
+Related Information
+
+Streaming Links
+
+Joint Fiscal Office
+
+Reports & Research
+
+Reports
+
+Reports & Research Overview
+
+Find Legislative Reports
+
+Reports Required by Acts & Resolves
+
+Research
+
+Bills, Resolutions, Acts & Constitutional Proposals
+
+Witness History
+
+Subject History
+
+Committees
+
+Senate
+
+House
+
+Reapportionment
+
+PRA Exemptions
+
+PRA Exemptions in Order
+
+PRA Exemptions by Subject
+
+PRA Exemptions Subject to 1 VSA 317(d)(2)
+
+History
+
+History of the General Assembly
+
+The State House
+
+The State House
+
+Visiting the State House
+
+About the State House
+
+Hours & Directions
+
+Accessibility
+
+History
+
+History of the General Assembly
+
+Civic Education
+
+Flowchart: How a Bill Becomes Law
+
+Video: The Bill Process From Draft To Act
+
+Become a Legislative Page!
+
+School Field Trips
+
+About Legislative Committees
+
+Galleries
+
+Images of the State House
+
+Events
+
+Farmers Night Concert Series
+
+Staff & Offices
+
+House
+
+Speaker of the House
+
+Clerk of the House
+
+Senate
+
+President of the Senate (Lt. Governor)
+
+President Pro Tempore
+
+Secretary of the Senate
+
+Staff Offices
+
+Legislative Counsel
+
+Legislative Information Technology
+
+Joint Fiscal Office
+
+Sergeant at Arms
+
+Capitol Police Department
+
+Office of Human Resources
+
+Contact
+
+Questions & Comments
+
+Career Opportunities
+
+Career Opportunities
+
+Search for:
+
+ Bill or Resolution
+
+ Legislator
+
+ Committee
+
+ How to use this search
+
+Search bills:
+
+Search legislators:
+
+Search committees:
+
+Search
+
+Searching 2025-2026 Session
+
+Print
+
+The Vermont Statutes Online
+
+The Statutes below include the actions of the 2025 session of the General Assembly.
+
+NOTE: The Vermont Statutes Online is an unofficial copy of the Vermont Statutes Annotated that is provided as a convenience.
+
+Title 33: Human Services
+
+Chapter 073: Nursing Home Residents' Bill of Rights
+
+§ 7301. Nursing Home Residents’ Bill of Rights
+
+The General Assembly hereby adopts the Nursing Home Residents’ Bill of Rights as follows:
+
+(1) The governing body of the facility shall establish written policies regarding the
+ rights and responsibilities of residents and, through the administrator, is responsible
+ for development of, and adherence to, procedures implementing such policies. These
+ policies and procedures shall be made available to residents; to any guardians, next
+ of kin, sponsoring agency, or representative payees selected pursuant to subsection
+ 205(j) of the Social Security Act and 20 C.F.R. Part 404, Subpart U; and to the public.
+
+(2) The staff of the facility shall ensure that, at a minimum, each individual admitted
+ to the facility:
+
+(A) Is fully informed, as evidenced by the resident’s written acknowledgment, prior to
+ or at the time of admission and during the stay, of these rights and of all rules
+ and regulations governing resident conduct and responsibilities. Reasonable accommodation
+ shall be made to communicate the Residents’ Bill of Rights to residents with communication
+ impairments and residents who speak a language other than English.
+
+(B) Is fully informed, prior to or at the time of admission and during the stay, of services
+ available in the facility and of related charges, including any charges for services
+ not covered under Title XVIII or XIX of the Social Security Act, or not covered by
+ the facility’s basic per diem rate, including the facility’s policy on providing toiletries,
+ adult briefs, wheelchairs, and all personal care and medical items. The facility shall
+ inform residents in writing about Medicaid and Medicare eligibility and what is covered
+ under those programs, including information on resource limits and allowable uses
+ of the resident’s income for items and services not covered by Medicaid and Medicare.
+ The facility shall inform residents or their guardians or agents in writing about
+ eligibility for hospice services and the circumstances under which hospice services
+ may be available.
+
+(C) Is fully informed, by a physician, of the medical condition, and is afforded the opportunity
+ to participate in the planning of the medical treatment and to refuse to participate
+ in experimental research.
+
+(D) Is transferred or discharged only for medical reasons, or for the resident’s welfare
+ or that of other residents, or for nonpayment of the resident’s stay (except as prohibited
+ by Title XVIII or XIX of the Social Security Act), and is given reasonable advance
+ notice to ensure orderly transfer or discharge, and such actions are documented in
+ the resident’s medical record. Residents shall be notified in writing of the proposed
+ transfer or discharge and reasons for it at least 72 hours before a transfer within
+ the facility and 30 days before a discharge from the facility. In cases in which the
+ health or safety of individuals would be endangered, or an immediate transfer or discharge
+ is required by the resident’s urgent medical needs, notice shall be made as soon as
+ practicable before transfer or discharge. Notice shall explain the resident’s right
+ to appeal the proposed action under the facility’s grievance procedure and shall include
+ the address and phone number of the area ombudsman. The resident informed of this
+ right may choose to relocate before the notice period ends. The facility shall make
+ reasonable efforts to accommodate new residents without disrupting room assignments.
+
+(E) Is encouraged and assisted, throughout the resident’s period of stay, to exercise
+ the individual’s rights as a resident and as a citizen, and to this end may voice
+ grievances and recommend changes in policies and services to facility staff or to
+ outside representatives of the resident’s choice, free from restraint, interference,
+ coercion, discrimination, or reprisal.
+
+(F) May manage the resident’s personal financial affairs, or is given at least a quarterly
+ accounting of financial transactions made on the resident’s behalf should the facility
+ accept the resident’s written delegation of this responsibility to the facility for
+ any period of time in conformance with State law.
+
+(G) Is free from mental and physical abuse, and free from chemical and (except in emergencies)
+ physical restraints except as authorized in writing by a physician for a specified
+ and limited period of time, or when necessary to protect the resident from self-injury
+ or injury to others. The facility shall inform residents of its restraint policy and
+ appeal rights under the facility’s grievance procedure. The policy must include the
+ release of the restraints no less than every two hours for 10 minutes for exercise
+ or repositioning. The resident has the right to be free from any physical restraints
+ imposed or psychoactive drugs administered for purposes of discipline or convenience.
+
+(H) Is assured confidential treatment of the resident’s personal and medical records,
+ and may approve or refuse their release to any individual outside the facility, except
+ in case of the resident’s transfer to another health care institution or as required
+ by law or third-party payment contract.
+
+(I) Is treated with consideration, respect, and full recognition of the resident’s dignity
+ and individuality, including privacy in treatment and in care for the resident’s personal
+ needs.
+
+(J) Is not required to perform services for the facility that are not included for therapeutic
+ purposes in the resident’s plan of care.
+
+(K) May associate and communicate privately with persons of the resident’s choice, and
+ send and receive the resident’s personal mail unopened.
+
+(L) May meet with, and participate in activities of, social, religious, and community
+ groups at the resident’s discretion.
+
+(M) May retain and use the resident’s personal clothing and possessions as space permits,
+ unless to do so would infringe upon rights of other residents.
+
+(N) If married, is assured privacy for visits by the resident’s spouse; if both are residents
+ of the facility, they are permitted to share a room.
+
+(O) Shall have the right to choose the resident’s own personal physician and the right
+ to request a second opinion from a physician of the resident’s choice if significant
+ alternatives for care or treatment exist. If the resident requests information concerning
+ care or treatment alternatives, the resident has the right to receive such information
+ from the resident’s doctor or the administrators as appropriate.
+
+(P) To the extent permitted by law, has the right to refuse care or treatment, including
+ the right to discharge himself or herself from the facility, and to be informed of
+ the consequences of that action, and the nursing home shall be relieved of any further
+ responsibility for that refusal.
+
+(Q) Is assured reasonable access to a telephone located in a quiet area where the resident
+ can conduct a private conversation.
+
+(R) Has the right to return to the first available bed in the nursing home the resident
+ came from after hospitalization if the patient has not retained the resident’s bed
+ under subdivision (S) of this subdivision (2), provided the facility is able to meet
+ the resident’s medical needs and that the resident’s welfare or that of other residents
+ will not be adversely affected.
+
+(S) Has the right upon payment of the resident’s usual rate or, in the case of Medicaid
+ residents, the resident’s certified per diem compensation, to retain the resident’s
+ bed in the nursing home while absent from the facility due to hospitalization, provided
+ such absence does not exceed 10 successive days.
+
+(T) Is provided with professional assessment of pain and its management.
+
+(3) The staff of the facility shall ensure that the residents and their families:
+
+(A) Shall have the right to organize, maintain, and participate in either resident or
+ family councils, or both. The facility shall provide space and, if requested, assistance
+ for meetings. Council meetings shall be afforded privacy, with staff or visitors attending
+ only at the council’s invitation. The facility shall respond in writing to written
+ requests from council meetings. Resident councils and family councils shall be encouraged
+ to make recommendations regarding facility policies.
+
+(B) Shall have the right to review current and past State and federal survey and inspection
+ reports of the facility and, upon request, to receive a copy of any report from the
+ facility. Copies of reports shall be available for review at any time at one station
+ in the facility. The facility may charge a reasonable amount for more than one copy
+ per resident. (Added 1985, No. 153 (Adj. Sess.); amended 1989, No. 71, § 1; 1999, No. 91 (Adj. Sess.), § 36; 2003, No. 162 (Adj. Sess.), § 14; 2015, No. 23, § 49; 2021, No. 20, § 364; 2021, No. 105 (Adj. Sess.), § 627, eff. July 1, 2022.)
+
+§ 7302. Adoption of grievance procedure
+
+(a) [Repealed.]
+
+(b) A resident grievance mechanism plan shall include a method by which each resident
+ filing a grievance will be made aware of the State Long-Term Care Ombudsman and that
+ the Ombudsman may be contacted as an alternative or in addition to the home’s grievance
+ mechanism. As used in this section, “Ombudsman” means the State Long-Term Care Ombudsman
+ established in chapter 75 of this title pursuant to the Older Americans Act of 1965,
+ as amended.
+
+(c) The grievance mechanism within the facility will provide, at a minimum:
+
+(1) designation of employees responsible for handling and assessing the validity of a
+ grievance or recommendation;
+
+(2) a method of investigating and assessing the validity of a grievance or recommendation;
+
+(3) methods of resolving grievances; and
+
+(4) methods of recording grievances and actions taken.
+
+(d) Complaints that cannot be resolved by the grievance procedure within the facility
+ shall be referred to the Ombudsman within seven working days.
+
+(e) Within seven days of receipt of the complaint, the Ombudsman shall notify the complainant
+ and the nursing home that an investigation has been initiated and that a written report
+ will be made to the complainant and the nursing home within 14 days. (Added 1985, No. 153 (Adj. Sess.); amended 1989, No. 71, § 2; 1989, No. 219 (Adj. Sess.), § 9(a); 2005, No. 174 (Adj. Sess.), § 135; 2021, No. 20, § 365; 2023, No. 53, § 130, eff. June 8, 2023.)
+
+§ 7303. Notice to residents; posting
+
+(a) A summary of the obligations of the nursing home to residents using its facilities
+ shall be written in clear language, in easily readable print, and posted conspicuously
+ in a public place on each floor of the home. This notice shall also summarize the
+ facility’s grievance procedure and directions for contacting the Office of the State
+ Long-Term Care Ombudsman. The directions for contacting the Office of the State Long-Term
+ Care Ombudsman shall be written by the Department of Disabilities, Aging, and Independent
+ Living; shall include a description of the Ombudsman program; and shall be underscored.
+
+(b) A readable copy of this same notice shall be presented to each resident on admission
+ together with an oral explanation of the rights, grievance procedure, and directions
+ for contacting the Office of the State Long-Term Care Ombudsman. (Added 1985, No. 153 (Adj. Sess.); amended 1989, No. 71, § 3; 1989, No. 219 (Adj. Sess.), § 5; 2005, No. 174 (Adj. Sess.), § 136; 2013, No. 131 (Adj. Sess.), § 92, eff. May 20, 2014; 2021, No. 20, § 366.)
+
+§ 7304. Administrative penalty
+
+The Commissioner of Disabilities, Aging, and Independent Living may, after a hearing,
+ impose an administrative penalty of not more than $1,000.00 against any facility or
+ employee of a facility who violates a provision of this chapter. (Added 1985, No 153 (Adj. Sess.); amended 1989, No. 219 (Adj. Sess.), § 6; 2005, No. 174 (Adj. Sess.), § 137.)
+
+§ 7305. Readmission
+
+Notwithstanding any provision of this chapter to the contrary, a facility may petition
+ the Commissioner of Disabilities, Aging, and Independent Living to deny readmission
+ to the facility of any former resident returning from a period of hospitalization.
+ A petition shall be made as soon as possible after the hospitalization of the resident
+ and only shall be granted if in the judgment of the Commissioner, upon consultation
+ with the State Long-Term Care Ombudsman, the resident has exhibited a nonremedial
+ pattern of violent behavior that poses a danger to others. (Added 1985, No. 153 (Adj. Sess.); amended 1989, No. 71, § 4; 1989, No. 219 (Adj. Sess.), § 7; 2005, No. 174 (Adj. Sess.), § 138; 2021, No. 20, § 367.)
+
+§ 7306. Resident’s representative
+
+(a) Except as provided in subsection (b) of this section, the rights and obligations established
+ under this chapter shall devolve to a resident’s guardian, next of kin, sponsoring
+ agency, or representative payee (except when the facility itself is a representative
+ payee) if the resident:
+
+(1) has been adjudicated incompetent;
+
+(2) has been found by his or her physician to be medically incapable of understanding
+ or exercising the rights granted under this chapter; or
+
+(3) exhibits a communication barrier.
+
+(b) Notwithstanding the provisions of subsection (a) of this section, consent for a do-not-resuscitate
+ order or a clinician order for life-sustaining treatment shall be provided or withheld
+ only by the resident, by the resident’s guardian or agent, or by a surrogate designated
+ pursuant to 18 V.S.A. chapter 231, subchapter 2.
+
+(c)(1) A resident’s representative identified in subsections (a) and (b) of this section
+ shall make decisions for the resident by attempting to determine what the resident
+ would have wanted under the circumstances. In making the determination, the resident’s
+ representative shall consider the following:
+
+(A) the resident’s specific instructions or wishes as expressed to a spouse, adult child,
+ parent, adult sibling, adult grandchild, clergy person, health care provider, or any
+ other adult who has exhibited specific care or concern for the resident; and
+
+(B) the representative’s knowledge of the resident’s personal preferences, values, or
+ religious or moral beliefs.
+
+(2) If the resident’s representative cannot determine what the resident would have wanted
+ under the circumstances, the representative shall make a determination through an
+ assessment of the resident’s best interests. When making a decision for the resident
+ on this basis, the representative shall not authorize the provision or withholding
+ of health care on the basis of the resident’s economic status or a preexisting, long-term
+ mental or physical disability.
+
+(3) When making a determination under this section, representatives shall not consider
+ their own interests, wishes, values, or beliefs.
+
+(d) Notwithstanding the provisions of subsection (a) of this section, the facility shall
+ make every reasonable effort to communicate the rights and obligations established
+ under this chapter directly to the resident. (Added 1985, No. 153 (Adj. Sess.); amended 1989, No. 71, § 5; 1999, No. 91 (Adj. Sess.), § 37; 2013, No. 131 (Adj. Sess.), § 93, eff. May 20, 2014; 2015, No. 23, § 50; 2015, No. 136 (Adj. Sess.), § 2, eff. Jan. 1, 2018.)
+
+Statutes
+
+Vermont Statutes Online
+
+Statutes Search
+
+Vermont Statutes at Lexis/Nexis
+
+Constitution
+
+Constitution of the State of Vermont
+
+Acts
+
+Acts & Resolves
+
+Acts Affecting VSA Sections
+
+Rules
+
+State Agency Rules at Lexis/Nexis
+
+Court Rules at Lexis/Nexis
+
+Legislative Committee on Administrative Rules (LCAR)
+
+Contact
+
+Vermont State House
+
+115 State Street
+
+Montpelier, VT 05633-5301
+
+(802) 828-2228
+
+ sgtatarms@leg.state.vt.us
+
+Capitol Police Department
+
+802-828-2273
+
+Member & Staff Links
+
+Legislative Email Sign-on
+
+Legislative Human Resources
+
+Legislative Time Reporting
+
+Legislative Expense Reporting
+
+Test My MFA
+
+How to Use This Website
+
+Disclaimer
+
+State Government
+
+State of Vermont
+
+Governor
+
+Lieutenant Governor
+
+Attorney General
+
+Auditor
+
+Secretary of State
+
+Treasurer
+
+Judiciary
+
+State Agencies A-Z
+
+State Telephone Directory
+
+Noteworthy
+
+Announcements
+
+Scheduled Committee Meetings
+
+Legislative Schedule
+
+Site Resources
+
+Sitemap |
+
+ Disclaimers
+
+Questions & Comments |
+
+ Career Opportunities
+
+Requests for Proposals |
+
+ Accessibility
+
+ Comments or questions about the website? Fill out our feedback form and let us know.
+
+Developers
+
+Copyright 2026 State of Vermont. All rights reserved.
+
+Website Design & Development by Bluehouse Group
+
+ Google tag (gtag.js)
+
+SOURCE 2: Licensing and Operating Rules for Nursing Homes — Vermont Agency of Human Services, Department of Disabilities, Aging and Independent Living, Division of Licensing and Protection (PDF) | https://dail.vermont.gov/sites/dail/files/documents/Nursing_Home_Regulations_2018.pdf | source date: Revision date: June 1, 2018, as the cover states | retrieved: 2026-09-04
+LICENSING AND OPERATING
+ RULES FOR NURSING HOMES
+
+
+
+
+               Agency of Human Services
+ Department of Disabilities, Aging and Independent Living
+          Division of Licensing and Protection
+                    280 State Drive
+           Waterbury, Vermont 05671-2020
+              Telephone: (802) 241-0480
+
+
+
+
+                 Revision date: June 1, 2018
+
+
+
+This material will be made available in alternative formats upon request.
+
+                                   TABLE OF CONTENTS
+1.     GENERAL PROVISIONS ________________________________________ 1
+     1.1    Statement of Purpose and Scope______________________________________________ 1
+     1.2    Authority ________________________________________________________________ 1
+     1.3    Exception and Severability __________________________________________________ 1
+     1.4    Effective Date ____________________________________________________________ 1
+     1.5    Variances from these Rules _________________________________________________ 1
+     1.6    Definitions ______________________________________________________________ 1
+2.     NURSING HOME LICENSING _____________________________________ 4
+     2.1    Powers and Duties of Licensing Agency _______________________________________ 4
+     2.2    License Required for Operation ______________________________________________ 4
+     2.3    Application Procedures_____________________________________________________ 4
+     2.4    Inspection before Licensing _________________________________________________ 4
+     2.5    License Certificate; Posting _________________________________________________ 4
+     2.6    Licensed Capacity_________________________________________________________ 5
+     2.7    Special Care Units ________________________________________________________ 5
+     2.8    Change in Status Necessitating Discharge or Transfer of Residents __________________ 7
+     2.9    Reports to the Licensing Agency _____________________________________________ 7
+3.     RESIDENTS’ RIGHTS __________________________________________ 7
+     3.1    Nursing Home Policies and Procedures ________________________________________ 7
+     3.2    Duties of Staff ____________________________________________________________ 8
+     3.3    Rights of Resident Representatives ___________________________________________ 8
+     3.4    Confidentiality and Access to Records _________________________________________ 9
+     3.5    Information Rights ________________________________________________________ 9
+     3.6    Treatment and Experimental Research _________________________________________ 9
+     3.7    Written Information ______________________________________________________ 10
+     3.8    Advance Directives_______________________________________________________ 10
+     3.9    Right to Choose Personal Physician __________________________________________ 10
+     3.10     Management of Resident’s Personal Funds __________________________________ 10
+     3.11     Resident Work ________________________________________________________ 11
+     3.12     Bed Hold and Right of Return ____________________________________________ 11
+     3.13     Self-Administration of Drugs _____________________________________________ 11
+     3.14     Transfer and Discharge __________________________________________________ 11
+     3.15     Equal Access to Quality Care _____________________________________________ 14
+     3.16     Admissions and Payment Policy___________________________________________ 14
+     3.17     Freedom from Restraints and Abuse________________________________________ 15
+4.     QUALITY OF LIFE ___________________________________________ 16
+     4.1    Dignity ________________________________________________________________ 17
+     4.2    Privacy ________________________________________________________________ 17
+     4.3    Self-Determination and Participation _________________________________________ 17
+     4.4    Resident and Family Groups _______________________________________________ 17
+     4.5    Participation in Other Activities _____________________________________________ 18
+     4.6    Accommodation of Residents’ Needs ________________________________________ 18
+     4.7    Activities _______________________________________________________________ 18
+
+     4.8    Social Services __________________________________________________________ 18
+     4.9    Environment ____________________________________________________________ 19
+5.     RESIDENT ASSESSMENT ______________________________________ 19
+     5.1    Admission Orders ________________________________________________________ 19
+     5.2    Comprehensive Assessments _______________________________________________ 19
+     5.3    Accuracy of Assessments __________________________________________________ 20
+6.     COMPREHENSIVE CARE PLANS _________________________________ 20
+     6.1    Development of Care Plan _________________________________________________ 20
+     6.2    Procedure for Preparation of Care Plan _______________________________________ 21
+     6.3    Services Provided Under a Care Plan _________________________________________ 21
+     6.4    Discharge Summary ______________________________________________________ 21
+7.     QUALITY OF CARE __________________________________________ 21
+     7.1    Activities of Daily Living __________________________________________________ 21
+     7.2    Vision and Hearing _______________________________________________________ 22
+     7.3    Pressure Sores ___________________________________________________________ 22
+     7.4    Urinary Incontinence _____________________________________________________ 22
+     7.5    Range of Motion _________________________________________________________ 22
+     7.6    Mental and Psychosocial Functioning ________________________________________ 22
+     7.7    Naso-Gastric Tubes ______________________________________________________ 22
+     7.8    Accidents ______________________________________________________________ 23
+     7.9    Nutrition _______________________________________________________________ 23
+     7.10     Hydration ____________________________________________________________ 23
+     7.11     Special Needs _________________________________________________________ 23
+     7.12     Medication/Drugs ______________________________________________________ 23
+     7.13     Nursing Services _______________________________________________________ 24
+     7.14     Dietary Services _______________________________________________________ 25
+     7.15     Physician Services _____________________________________________________ 26
+     7.16     Specialized Rehabilitative Services ________________________________________ 26
+     7.17     Dental Services ________________________________________________________ 27
+     7.18     Pharmacy Services _____________________________________________________ 27
+     7.19     Infection Control _______________________________________________________ 28
+8.     PHYSICAL ENVIRONMENT _____________________________________ 28
+     8.1    Life Safety from Fire _____________________________________________________ 28
+     8.2    Emergency Power ________________________________________________________ 29
+     8.3    Space and Equipment _____________________________________________________ 29
+     8.4    Resident Rooms _________________________________________________________ 29
+     8.5    Toilet Facilities __________________________________________________________ 30
+     8.6    Resident Call System _____________________________________________________ 30
+     8.7    Dining and Resident Activities ______________________________________________ 30
+     8.8    Other Environmental Conditions ____________________________________________ 31
+9.     ADMINISTRATION __________________________________________ 31
+     9.1    Licensure ______________________________________________________________ 31
+     9.2    Governing Body _________________________________________________________ 31
+
+10. NURSE AIDE TRAINING _______________________________________ 31
+ 10.1   Nurse Aide Registration _________________________________________________ 31
+ 10.2   Non-Permanent Employees ______________________________________________ 32
+ 10.3   Competency __________________________________________________________ 32
+ 10.4   Registry Verification____________________________________________________ 32
+ 10.5   Required Retraining ____________________________________________________ 32
+ 10.6   Regular In-Service Education _____________________________________________ 32
+ 10.7   Proficiency of Nurse Aides _______________________________________________ 33
+ 10.8   Developmental Services _________________________________________________ 33
+11. PROFESSIONAL STAFF _______________________________________ 33
+ 11.1   Professional Qualifications _______________________________________________ 33
+ 11.2   Use of Outside Resources ________________________________________________ 33
+ 11.3   Medical Director _______________________________________________________ 33
+12. LABORATORY, RADIOLOGY, AND OTHER DIAGNOSTIC SERVICES _________ 33
+ 12.1   Laboratory Services ____________________________________________________ 33
+ 12.2   Radiology and Other Diagnostic Services ___________________________________ 34
+13. CLINICAL RECORDS _________________________________________ 34
+ 13.1   Records Maintenance and Retention _______________________________________ 34
+ 13.2   Confidentiality ________________________________________________________ 35
+ 13.3   Contents _____________________________________________________________ 35
+14. DISASTER AND EMERGENCY PREPAREDNESS _______________________ 35
+ 14.1   Written Plans__________________________________________________________ 35
+ 14.2   Employee Training _____________________________________________________ 35
+15. TRANSFER AGREEMENTS _____________________________________ 35
+ 15.1   Agreement with Hospital ________________________________________________ 35
+16. QUALITY ASSESSMENT AND ASSURANCE __________________________ 36
+ 16.1   Quality Assessment Committee ___________________________________________ 36
+ 16.2   Disclosure of Records ___________________________________________________ 36
+ 16.3   Sanctions _____________________________________________________________ 36
+17. DISCLOSURE OF OWNERSHIP ___________________________________ 36
+ 17.1   Initial Disclosure _______________________________________________________ 36
+ 17.2   On-going Disclosure ____________________________________________________ 36
+18. ENFORCEMENT ____________________________________________ 36
+ 18.1   Notice of Violation _____________________________________________________ 36
+ 18.2   Corrective Action ______________________________________________________ 37
+ 18.3   Civil Penalties _________________________________________________________ 37
+ 18.4   Criminal Penalty _______________________________________________________ 37
+19. ADMINISTRATIVE REVIEW AND APPEALS __________________________ 37
+ 19.1   Appeal to Commissioner_________________________________________________ 37
+ 19.2   Appeal to the Human Services Board _______________________________________ 38
+
+1. GENERAL PROVISIONS
+  1.1   Statement of Purpose and Scope
+        It is the purpose of these rules to implement state and federal law governing the licensing,
+        operation, and standard of care in nursing homes, also referred to in these rules as “nursing
+        facilities” or “facilities”, located in the State of Vermont. Compliance with these rules will help
+        each resident attain or maintain the highest practicable physical, mental and psychosocial well-
+        being in accordance with a comprehensive assessment and plan of care and prevailing standards
+        of care and will promote a standard of care that assures that the ability of each resident to perform
+        activities of daily living does not diminish unless the resident’s ability is diminished solely as a
+        result of a change in the resident’s clinical condition.
+  1.2   Authority
+        These rules are promulgated pursuant to 33 V.S.A. §7117 to implement the provisions of 33
+        V.S.A. Chapters 71 and 73, 18 V.S.A. Chapter 221, 18 V.S.A. Chapter 231, 42 U.S.C. §§1395I-3
+        and 1396r, and 42 C.F.R. Part 483, Subpart B.
+  1.3   Exception and Severability
+        A determination that any provision or application of any provision of these rules is invalid shall
+        not affect the validity of any other provision of these rules or its applicability.
+  1.4   Effective Date
+        These rules are effective June 1, 2018.
+  1.5   Variances from these Rules
+        a. In accordance with 33 V.S.A. §7106, the department may grant a variance from any provision
+           of these rules if it determines that:
+            1. strict compliance would impose substantial hardship on the licensee;
+            2. the licensee will otherwise meet the goal of the rule; and
+            3. a variance will not result in less protections of the health, safety and welfare of the residents.
+        b. A variance will not be granted from a rule pertaining to residents’ rights.
+        c. Separate federal variance procedures may apply for provisions of these rules also contained
+           in federal nursing facility regulations.
+        d. Variances from requirements related to fire safety and building construction standards regulated
+           by the Vermont Department of Public Safety must be requested from that Department.
+  1.6   Definitions
+        The words and phrases listed below, as used in these regulations, have the following meanings,
+        unless otherwise specifically provided:
+        a. “Advance Directive” means a written record executed pursuant to 18 V.S.A. Chapter 231,
+           which may include appointment of an agent, identification of a preferred primary care
+           clinician, instructions on health care desires or treatment goals, an anatomical gift, disposition
+           of remains, and funeral goods and services. The term includes documents designated under
+           prior law as a durable power of attorney for health care or a terminal care document.
+        b. “Agent” means an adult with capacity to whom authority to make health care decisions is
+           delegated under an advance directive, including an alternate agent if the agent is not
+           reasonably available.
+
+
+
+                                                    1
+
+c. “Capacity” means an individual’s ability to make and communicate a decision regarding the
+   issue that needs to be decided.
+     1. An individual shall be deemed to have capacity to appoint an agent if the individual has a
+        basic understanding of what it means to have another individual make health care
+        decisions for oneself and of who would be an appropriate individual to make those
+        decisions, and can identify whom the individual wants to make health care decisions for
+        the individual; and
+     2. An individual shall be deemed to have capacity to make a health care decision if the
+        individual has a basic understanding of the diagnosed condition and the benefits, risks,
+        and alternatives to the proposed health care.
+d. “Clinician order for life sustaining treatment” (COLST) means a clinician’s order or orders
+   for treatment, such as intubation, mechanical ventilation, transfer to hospital, antibiotics,
+   artificially administered nutrition, or another medical intervention. A COLST order is
+   designed for use in outpatient settings and health care facilities and may include a DNR order
+   that meets the requirements of 18 V.S.A. §9708.
+e. “Commissioner” means the Commissioner of the Department of Disabilities, Aging and
+   Independent Living.
+f.   “Department” means the Vermont Department of Disabilities, Aging and Independent Living.
+g. “Discharge” means movement of a resident out of the nursing home, without expectation that
+   the resident will return.
+h. “Do Not Resuscitate Order” (DNR) means a written order of the resident’s clinician directing
+   health care providers not to attempt resuscitation.
+i.   “DNR/COLST” means a DNR or COLST, or both.
+j.   “Facility” means a nursing home licensed or required to be licensed pursuant to the
+     provisions of 33 V.S.A. chapter 71.
+k. “Informed consent” means the consent given voluntarily by an individual with capacity, on
+   his or her own behalf or on behalf of another in the role of an agent, guardian, or surrogate in
+   the case of DNR/COLST orders, after being fully informed of the nature, benefits, risks, and
+   consequences of the proposed health care, alternative health care, and no health care.
+l.   “Interested individual” means:
+     1. the resident’s spouse, adult child, parent, adult sibling, adult grandchild, clergy person; or
+     2. any adult who has exhibited special care and concern for the resident and who is
+        personally familiar with the resident’s values.
+m. “Legal representative” means a person appointed by an individual or by a duly authorized
+   agency or court, or otherwise authorized by law to act on behalf of an individual, and
+   includes the terms “representative payee” and “guardian.”
+n. “Licensee” means the person or persons who hold a license to operate a nursing home.
+o. “Licensing agency” means the Department’s Division of Licensing and Protection Survey
+   and Certification Unit.
+p. “Life sustaining treatment” means any medical intervention, including nutrition and
+   hydration administered by medical means and antibiotics, which is intended to extend life and
+   without which the resident is likely to die.
+
+
+
+                                             2
+
+q. “Medicaid” means the medical assistance program established pursuant to Title XIX of the
+   Social Security Act.
+r.   “Medicare” means the medical insurance program established pursuant to Title XVIII of the
+     Social Security Act.
+s. “Next of Kin” means the resident’s spouse or civil union partner, an individual in a long-term
+   relationship of indefinite duration, in which the individual has demonstrated an actual
+   commitment to the resident similar to the commitment of a spouse, and in which this
+   individual and the resident consider themselves to be responsible for each other’s well-being,
+   the resident’s adult children, resident’s parents; and the resident’s adult siblings.
+t.   “Nursing home”, which is also referred to in these rules as “nursing facility” or “facility”,
+     means an institution or a distinct part of an institution (excluding intermediate care facilities
+     for individuals with intellectual disabilities) which is primarily engaged in providing to its
+     residents:
+     1. skilled nursing care and related services for residents who require medical or nursing care;
+
+     2. rehabilitation services for the rehabilitation of injured, disabled or sick persons; or
+     3. on a 24-hour basis, health related care and services to individuals who because of their
+        mental or physical condition require care and services which can be made available to
+        them only through institutional care.
+u. “Ombudsman” means the individual selected from among individuals with expertise and
+   experience in the fields of long-term care and advocacy who heads the Office of the State
+   Long-Term Care Ombudsman and is responsible personally, or through representatives of the
+   Office of the Long-Term Care Ombudsman, to fulfill the functions, responsibilities and duties
+   set forth in the Older Americans Act of 1965, as amended.
+v. “Options counseling” means providing an applicant to or resident of a nursing home with
+   complete information on all available long-term care services and benefits for which he or
+   she might be eligible and giving him or her the opportunity to make a fully informed choice
+   from among the available options and services.
+w. “Psychosocial needs” means any combination of mental health, emotional, spiritual or
+   behavioral needs, concerns or aspects of the resident’s life which are identified as important
+   to the resident.
+x. “Representative Payee” means an individual or organization certified by the Commissioner of
+   Social Security to receive benefits for or on behalf of a resident pursuant to 42 U.S.C. §1007.
+y. “Resident” means an individual admitted for care in a nursing home, and, for purposes of
+   these rules, includes, except as limited by context, any legal representative or next of kin
+   acting on behalf of the resident according to law.
+z. “Special Care Unit” means a unit located in an identified distinct part of a nursing home and
+   provides an intensity of specialized services that is not routinely available in the rest of the
+   facility.
+aa. “Surrogate” means an interested individual who provides or withholds, pursuant to 18 V.S.A.
+    Chapter 231, subchapter 2, informed consent for a DNR/COLST.
+bb. “Transfer” means movement of a resident to another bed within the same nursing home or
+    transfer to another health care setting with return anticipated.
+
+
+
+
+                                              3
+
+        cc. “Vermont Nurse Aide Registry” means the registry established and maintained by the
+            Vermont State Board of Nursing containing the names of and other information about all
+            persons who have successfully completed a competency evaluation or who have been
+            otherwise deemed competent as a nurse assistant by the Vermont State Board of Nursing.
+2. NURSING HOME LICENSING
+  2.1   Powers and Duties of Licensing Agency
+        a. Authorized staff and other representatives of the licensing agency shall at all times, and
+           without notice, have access to nursing homes, subject to the provisions of 33 V.S.A. §7108
+           and 42 C.F.R. Part 488. Any and all parts of any building used in part or in whole for the care
+           of nursing home residents shall be subject to inspections at all times.
+        b. The nursing home shall file such information, data, statistics or schedules as the licensing
+           agency may require. With the approval of the Secretary of Human Services, the licensing
+           agency shall have the power to examine the books and accounts of any nursing home.
+        c. From time to time the licensing agency may prescribe forms and may issue notices of
+           practices and procedures employed by it in carrying out its functions under these rules.
+        d. Copies of each notice of practice and procedure, form, or set of instructions issued shall be
+           provided to each nursing home. A compilation of all such documents currently in effect shall
+           be maintained in the offices of the licensing agency, pursuant 3 V.S.A. §835.
+  2.2   License Required for Operation
+        a. No person shall operate a nursing home in the State of Vermont without first obtaining a
+           license.
+        b. Nursing home licenses shall expire one year after the date of issuance and must be renewed
+           annually.
+  2.3   Application Procedures
+        Application for a license shall be made to the licensing agency upon the prescribed forms and
+        shall include the following information:
+        a. name of the licensee,
+        b. the name of the nursing home,
+        c. the address of the nursing home,
+        d. the licensed capacity of the nursing home,
+        e. the name of the administrator,
+        f.   the name of the medical director,
+        g. the name of the director of nursing, and
+        h. such other information as the licensing agency may require.
+  2.4   Inspection before Licensing
+        Before licensing a nursing home, the licensing agency shall inspect the facility.
+  2.5   License Certificate; Posting
+        a. Each license shall be issued only for the licensee and premises named in the application and
+           is not transferable or assignable.
+
+
+
+                                                    4
+
+      b. The license and supplement (if any) issued by the licensing agency shall contain the
+         information provided pursuant to subsection 2.3.
+      c. The license shall be posted in a conspicuous place on the licensed premises.
+      d. Each license certificate in the licensee’s possession is the property of the State of Vermont
+         and shall be returned to the licensing agency immediately upon the suspension or revocation
+         of the license, or if operation of the nursing home is discontinued by voluntary action of the
+         licensee.
+2.6   Licensed Capacity
+      a. The number of residents in a nursing home may not at any time exceed the licensed capacity
+         of the home as shown on the license.
+      b. Emergency. A request for temporary authority to exceed the licensed capacity may be made
+         to the licensing agency in the event of an emergency. Approval of such a request must be
+         received before any additional residents may be admitted.
+2.7   Special Care Units
+      a. The facility must obtain approval from the licensing agency prior to establishing and
+          operating a Special Care Unit. Approval will be based on a demonstration that the Unit will
+          provide specialized services to a specific population.
+      b. A request for approval must include all of the following:
+          1. A statement outlining the philosophy and purpose of the unit, including a description of
+             the form of care, treatment, program or scope of services to be provided that
+             distinguishes it as being especially applicable to or suitable for residents;
+          2. A definition of the categories of residents to be served;
+          3. A description of the organizational structure of the unit consistent with the unit’s
+             philosophy, purpose and scope of services;
+          4. A description and identification of physical environment;
+          5. The criteria for admission, continued stay and discharge which shall also include any
+             criteria used for moving residents within the facility, into or out of a unit; and
+          6. A description of unit staffing to include:
+              i.   staff qualifications;
+              ii. orientation;
+              iii. in-service education and specialized training; and
+              iv. medical management and credentialing as necessary.
+      c. In addition to the requirements set forth in 2.7 a. and b., dementia units are required to have:
+          1. Secured outdoor space and walkways that allow residents to ambulate but prevent
+             undetected egress;
+          2. High visual contrasts between floors and walls and doorways in resident use areas.
+             Except for fire exits, doors, and access ways may be designed to minimize contrast.
+          3. Non-reflective floors, walls and ceilings to minimize glare;
+          4. Adequate and even lighting which minimizes glare and shadows;
+
+
+
+                                                  5
+
+     5. Individualized identification of residents’ rooms that assists residents to recognize their
+        rooms;
+     6. A public address system, if applicable, to be used only in the event of an emergency; and
+     7. Public or shared areas of the unit (both inside and out) that are easily monitored by
+        caregiving staff.
+d. Dementia units shall meet the following staffing and staff training requirements:
+     1. Dementia units must provide initial training in addition to general nursing home training
+        to include eight hours of classroom orientation for all employees assigned to the unit and
+        an additional eight hours of clinical orientation to all nursing employees assigned to the
+        unit. The eight hours of classroom work must include:
+         i.   A general overview of Alzheimer’s disease and related dementia;
+         ii. Communication basics;
+         iii. Creating a therapeutic environment;
+         iv. Activity focused care;
+         v. Dealing with difficult behaviors; and
+         vi. Family issues.
+     2. Ongoing in-service training shall be provided to all nursing and non-nursing staff,
+        including volunteers, who have any direct contact with residents of the unit. Staff training
+        shall occur at least quarterly. The facility shall maintain records of all staff training
+        provided and the qualifications of the presenter. Training over 12 months must include
+        the following subjects:
+         i.   Alzheimer’s disease and related dementias, including but not limited to, possible
+              causes, general statistics, risk factors, diagnosis, stages and symptoms, and current
+              treatments and research trends;
+         ii. Communication, including training related to communication losses that result with
+             dementia, non-verbal techniques, techniques to enhance communication, validation
+             as an approach, and environmental factors that affect communication;
+         iii. Ways to create a therapeutic environment, including safety issues, effective strategies
+              for providing care, background noise, staff behavior, and consistency;
+         iv. Activity-focused care, including personal care, nutrition and dining, structured
+             leisure, and sexuality;
+         v. Dealing with difficult behaviors, including but not limited to, strategies to deal with
+            common behavioral issues such as wandering, sundowning, combativeness, paranoia
+            and ignoring self-care; and
+         vi. Family issues such as grief, loss education and support.
+e. Failure to provide the care, treatment, program or scope of services set forth in the request for
+   approval from the licensing agency shall constitute a violation of these rules.
+f.   Nursing homes with existing special care units shall comply with the requirements of
+     subsections b. and d. of this section on the date on which the rules take effect. Such facilities
+     shall meet the requirements of subsection c. of this section as soon as practicable, but no later
+     than six months from the effective date of the rules. Facilities that cannot come into
+
+
+
+                                             6
+
+            compliance within that time period may request a variance pursuant to section 1.5 of these
+            rules.
+  2.8   Change in Status Necessitating Discharge or Transfer of Residents
+        a. Whenever a licensee plans to discontinue all or part of its operation or change its ownership
+           or location, and such change in status would necessitate the discharge or transfer of residents,
+           the administrator shall notify the licensing agency and the Ombudsman at least 90 days prior
+           to the proposed date of the change.
+        b. For Licensees planning a change in status as described above:
+            1. All nursing home rules and regulations shall remain fully applicable until all residents
+               have been discharged or transferred.
+            2. At least 60 days prior to the date of the planned change in status, the administrator shall
+               provide the licensing agency and the Ombudsman with a written transfer plan, subject to
+               approval by the licensing agency. This plan shall include the following:
+                i.   documentation that adequate staff and resident care will be provided;
+                ii. the licensee’s arrangements to make an orderly transfer of residents and to minimize
+                    the health risks; and
+                iii. the placement action proposed to be taken for each individual resident.
+            3. The administrator, upon request, shall provide the licensing agency with any additional
+               information related to the transfer plan as well as follow-up reports regarding specific
+               placement action.
+            4. The licensee shall not admit new residents after the date of written notice required in this
+               section.
+  2.9   Reports to the Licensing Agency
+        The following reports must be filed with the licensing agency:
+        a. At any time a fire occurs in the facility, regardless of the size or damage, the licensing agency
+           and the Department of Labor and Industry must be notified by the next business day. A
+           written report must be submitted to both departments by the next business day. A copy of the
+           report shall be kept on file in the facility.
+        b. Any untimely death that occurs as a result of an untoward event, such as an accident that
+           results in hospitalization, equipment failure, use of restraint, etc., shall be reported to the
+           licensing agency by the next business day, followed by a written report that details and
+           summarizes the event.
+        c. Any unexplained or unaccounted for absence of a resident for a period of more than 30
+           minutes shall be reported promptly to the licensing agency. A written report must be
+           submitted by the close of the next business day.
+        d. Any breakdown or cessation to the facility’s physical plant that has a potential for harm to the
+           residents, such as a loss of water, power, heat or telephone communications, etc., for four
+           hours or more, shall be reported within 24 hours to the licensing agency.
+3. RESIDENTS’ RIGHTS
+  3.1   Nursing Home Policies and Procedures
+        a. The governing body of the facility shall establish written policies and procedures regarding
+           the rights and responsibilities of residents.
+
+
+                                                     7
+
+      b. Through the administrator, the governing body is responsible for on-going development of
+         and adherence to procedures implementing such policies.
+      c. The facility’s policies and procedures shall be made available upon request to:
+           1. residents or potential residents;
+           2. residents’ guardians;
+           3. residents’ agents;
+           4. residents’ next of kin;
+           5. representative payees; and
+           6. surrogates.
+3.2   Duties of Staff
+      It is the duty of all members of the nursing home staff to ensure that every resident under their
+      care is accorded all rights set out in Sections 3 and 4.
+3.3   Rights of Resident Representatives
+      a. Except as provided in subsection b. of this section, the rights and obligations established
+         under 33 V.S.A. Chapter 73 shall devolve to the following resident representatives: a
+         resident’s guardian, agent, next of kin, sponsoring agency, or representative payee (except
+         when the facility itself is a representative payee) if the resident:
+           1. has been adjudicated incompetent;
+           2.    has been found by his or her physician to be medically incapable of understanding or
+                exercising these rights; or
+           3. exhibits a non-remedial communication barrier.
+      b. Notwithstanding the provisions of subsection a. of this section, informed consent for a
+         DNR/COLST shall be provided or withheld only by the resident or the following resident
+         representative: the resident’s guardian or agent, or surrogate.
+      c. A resident representative shall make decisions for the resident by attempting to determine
+         what the resident would have wanted under the circumstances. In making this determination,
+         the resident representative shall consider the following:
+           1. the resident’s specific instructions or wishes as expressed to a spouse, adult child, parent,
+              adult sibling, adult grandchild, clergy person, health care provider, or any other adult who
+              has exhibited specific care or concern for the resident; and
+           2. the representative’s knowledge of the resident’s personal preferences, values, or religious
+              or moral beliefs.
+      d. If a resident representative cannot determine what the resident would have wanted under the
+         circumstances, the representative shall make a determination through an assessment of the
+         resident’s best interests. When making a decision for the resident on this basis, the
+         representative shall not authorize the provision or withholding of healthcare on the basis of
+         the resident’s economic status or a pre-existing long-term mental or physical disability.
+      e. When making a determination under this section, resident representatives shall not consider
+         their own interests, wishes, values, or beliefs.
+      f.   The facility shall make every reasonable effort to communicate the rights and obligations
+           established under this chapter directly to the resident.
+
+
+
+                                                  8
+
+      g. If a resident objects to a decision made on his or her behalf by the next of kin, agent,
+         representative payee, or surrogate, the nursing home shall immediately notify the
+         Ombudsman.
+      h. If the rights of a resident have devolved to another individual, the facility shall keep in the
+         resident’s file a copy of the relevant court order or other documents which provide evidence
+         of legal authority.
+3.4   Confidentiality and Access to Records
+      a. Each resident shall be assured confidential treatment of his or her personal and medical
+         records, and may approve or refuse their release to any individual outside the facility, except
+         in the case of his or her transfer to another health care institution, or as required by law or
+         third-party payment contract.
+      b. Upon an oral or written request, each resident shall be given access to all records pertaining
+         to himself or herself, including current clinical records within 24 hours (excluding weekends
+         and holidays).
+      c. After receipt of his or her records for inspection, a resident may purchase, at a cost not to
+         exceed the community standard, photocopies of the records or any portions of them, upon
+         request and 2 (two) working days advance notice to the facility.
+      d. Residents and their families shall have the right to review current and past state and federal
+         survey and inspection reports of the facility, and upon request, to receive from the facility a
+         copy of any report. Copies of reports shall be available for review at any time at one station
+         in the facility. The facility may charge an amount not to exceed the community standard for
+         more than one copy per resident.
+3.5   Information Rights
+      a. Each resident shall be fully informed, as evidenced by the resident’s written
+         acknowledgement, prior to or at the time of admission and as well as during the stay of the
+         rights set out in this section and of all rules and regulations governing resident conduct and
+         responsibilities.
+      b. The staff shall make reasonable accommodation to communicate the resident’s bill of rights
+         to residents with communication impairments and residents who speak a language other than
+         English.
+      c. Each resident shall be fully informed by a physician of his or her medical condition.
+      d. A summary of the obligations of the facility to residents shall be written in clear language, in
+         easily readable print, and posted conspicuously in a public place on each floor. Such notice
+         also shall summarize the facility’s grievance procedure and give directions for contacting the
+         ombudsman program.
+3.6   Treatment and Experimental Research
+      a. Each resident shall be afforded the opportunity to participate in the planning of his or her
+         medical treatment.
+      b. To the extent permitted by law, the resident has the right to refuse care or treatment,
+         including the right to refuse restraint and to discharge himself or herself from the facility, and
+         to be informed of the consequences of that action. The nursing home shall be relieved of any
+         further responsibility for that refusal.
+      c. Any resident may refuse to participate in experimental research.
+
+
+
+
+                                                  9
+
+3.7   Written Information
+      a. The facility must furnish a written description of the residents’ legal rights which includes:
+          1. a description of the manner of protection of personal funds under subsections 3.10 a, 3.10
+             b.1., and 3.10 b. 2. of these rules.
+          2. a posting of the names, addresses, and telephone numbers of all pertinent State client
+             advocacy groups, such as the licensing agency, the ombudsman, protection and advocacy
+             organizations and the Medicaid Provider Fraud Unit of the Office of the Attorney General.
+3.8   Advance Directives
+      a. The right to formulate an advance directive applies to each individual resident without restriction.
+      b. The facility shall maintain written policies and procedures that require the facility to inform and
+         provide written information to all adult residents concerning the right to accept or refuse medical or
+         surgical treatment and, at the individual’s option, formulate an advance directive. The facility shall
+         also maintain, and provide to all adult residents, its policy regarding advance directives.
+      c. A facility must have the capacity to administer cardiopulmonary resuscitation (CPR) to any resident
+         when necessary and in accordance with the resident’s advance directives.
+3.9   Right to Choose Personal Physician
+      The resident shall have the right to choose his or her own personal physicians, and the right to
+      request and receive a second opinion from a physician of the resident’s choice where significant
+      alternatives for care or treatment exist, or when the resident requests information concerning care
+      or treatment alternatives, the resident shall receive such information from his or her doctor or the
+      administrator, as appropriate.
+3.10 Management of Resident’s Personal Funds
+      a. Upon written authorization of a resident, the facility must hold, safeguard, manage, and
+         account for personal funds of the resident deposited with the facility, as specified in
+         subsections 3.10 b. through 3.10 f. of this section.
+      b. Deposit of funds:
+          1. Funds in excess of $50. The facility must deposit any resident’s personal funds in excess
+             of $50 in an interest-bearing account (or accounts) that is separate from any of the
+             facility’s operating accounts, and that credits all interest earned on a resident’s funds to
+             that account. (In pooled accounts, there must be a separate accounting for each resident’s
+             share.)
+          2. Funds less than $50. The facility must maintain a resident’s personal funds that do not
+             exceed $50 in a non-interest bearing account, interest-bearing account, or petty cash fund.
+      c. Accounting and records:
+          1. The facility must establish and maintain a system that assures a full and complete and
+             separate accounting, according to generally accepted accounting principles, of each
+             resident’s personal funds entrusted to the facility on the resident’s behalf.
+          2. The system must preclude any commingling of resident funds with facility funds or with
+             the funds of any person other than the resident.
+          3. The individual financial record must be available through quarterly statements and on
+             request to the resident or his or her legal representative.
+
+
+
+
+                                                 10
+
+     d. Notice of certain balances. The facility must notify each resident that receives Medicaid
+        benefits:
+          1. When the amount in the resident’s account reaches $200 or less than the SSI resource
+             limit for one person; and
+          2. That, if the amount in the account, in addition to the value of the resident’s other
+             nonexempt resources, reaches the SSI resource limit for one person; the resident may lose
+             eligibility for Medicaid or SSI.
+     e. Conveyance upon death or discharge. Upon the death or discharge of a resident with personal
+        funds deposited with the facility, the facility must convey, within 30 days, the resident’s
+        funds, and a final accounting of those funds, to the discharged resident, or the individual or
+        probate jurisdiction administering the resident’s estate.
+     f.   Assurance of financial security. The facility must purchase a surety bond, or otherwise
+          provide assurance satisfactory to the licensing agency, to assure the security of all personal
+          funds of residents deposited with the facility.
+3.11 Resident Work
+     Residents are not required to perform services for the facility that are not included for therapeutic
+     purposes in his or her plan of care.
+3.12 Bed Hold and Right of Return
+     a. After hospitalization, each resident has the right to return to the first available bed in the
+        nursing home he or she came from, if the patient has not retained his or her bed under
+        subsection 3.12 b., provided the facility is able to meet the resident’s medical needs and the
+        resident’s welfare or that of other residents will not be adversely affected.
+     b. Upon payment of his or her usual rate or, in the case of Medicaid residents, his or her
+        certified per diem compensation, each resident has the right to retain his or her bed in the
+        nursing home while absent from the facility due to hospitalization or therapeutic leave,
+        provided such absence does not exceed ten successive days. Upon admission, before a
+        nursing facility allows a resident to go on therapeutic leave and upon or as soon as practicable
+        after transfer to a hospital, a nursing facility must provide written information to the resident
+        and a family member or legal representative that specifies:
+          1. The duration of the bed-hold policy during which the resident is permitted to return and
+             resume residence in the nursing facility; and
+          2. The nursing facility’s policies regarding bed-hold periods permitting a resident to return.
+     c. A nursing facility must establish and follow a written policy under which a resident whose
+        hospitalization or therapeutic leave exceeds the bed-hold period is readmitted to the facility
+        immediately upon the first availability of a bed in a semi-private room if the resident requires
+        the services provided by the facility.
+3.13 Self-Administration of Drugs
+     An individual resident may self-administer drugs if the interdisciplinary team has determined that
+     this practice is safe.
+3.14 Transfer and Discharge
+     a. Refusal of Certain Transfers. An individual has the right to refuse a transfer to another room
+        within the institution, if the purpose of the transfer is to relocate:
+
+
+
+
+                                                 11
+
+    1. a resident of a Medicare-certified nursing facility from the distinct part of the institution
+       that is Medicare-certified to a part of the institution that is not Medicare-certified.
+    2. a resident of a non-Medicare-certified nursing facility from the distinct part of the
+       institution that is a non-Medicare-certified nursing facility to a distinct part of the
+       institution that is a Medicare-certified nursing facility.
+b. Transfer and Discharge Requirements. The facility must permit each resident to remain in the
+   room or in the facility, and not transfer or discharge the resident from the facility, unless:
+    1. the transfer or discharge is necessary for the resident’s welfare and the resident’s needs
+       cannot be met in the facility;
+    2. the transfer or discharge is appropriate because the resident’s health has improved
+       sufficiently so the resident no longer needs the services provided by the facility;
+    3. the health or safety of individuals in the facility is endangered;
+    4. the resident has failed, after reasonable and appropriate notice, to pay for (or to have paid
+       under Medicare or Medicaid) a stay at the facility. For a resident who becomes eligible
+       for Medicaid after admission to a nursing facility, the nursing facility may charge a
+       resident allowable charges under Medicaid;
+    5. the facility ceases to operate; or
+    6. the transfer or discharge is ordered by a court.
+c. Documentation. When the facility transfers or discharges a resident under any of the
+   circumstances specified in this subsection, the circumstances must be documented in the
+   resident’s clinical record. The documentation must be made by the resident’s physician when
+   transfer or discharge is necessary under subsections 3.14 b.1., 2., 3. or 4. or 3.14 l.
+d. Notice before transfer or discharge. Before a facility transfers or discharges a resident, the
+   facility must:
+    1. notify the resident and, if known, a family member or legal representative of the resident,
+       of the proposed transfer or discharge and reasons for the move. The notice shall be in
+       writing and in a language and manner they understand, and shall be given at least 72
+       hours before a transfer within the facility and 30 days before the discharge from the
+       facility.
+    2. record the reasons in the resident’s clinical record; and
+    3. include in the notice the items described in subsection 3.14 e. below.
+e. Contents of the notice. The written notice specified in this subsection shall be on a form
+   provided by the licensing agency or one that is substantially similar and must include the
+   following:
+    1. the reason for transfer or discharge;
+    2. the effective date of transfer or discharge;
+    3. the location to which the resident is being transferred or discharged;
+    4. a statement in large print or large point type that the resident has the right to appeal the
+       facility’s decision to transfer or discharge to the State, with the appropriate information
+       regarding how to do so as set forth in 3.14 h. below;
+    5. the name, address and telephone number of the State Long Term Care Ombudsman;
+
+
+
+                                            12
+
+     6. a statement that the resident may remain in place pending the appeal;
+     7. for nursing home residents with developmental disabilities, the mailing address and
+        telephone number of the Developmental Disability Law Project and that of the
+        Department’s Developmental Disabilities Services Division; and/or
+     8. for nursing facility residents with mental illness, the mailing address and telephone
+        number of Disability Rights Vermont.
+f.   Transfer or Discharge Agreement. If the resident agrees to the transfer or discharge, the
+     transfer or discharge may occur prior to the effective date of the notice.
+g. Orientation for transfer or discharge. A facility must provide sufficient preparation and
+   orientation to residents to ensure safe and orderly transfer or discharge from the facility.
+h. Discharge to community setting. No resident appropriate for nursing home care may be
+   discharged to a community setting against his or her will. A facility must document that a
+   resident who voluntarily discharged to a community setting understood fully all options for
+   care and understood fully the right to refuse such a discharge.
+i.   Appeal process. A resident has the right to appeal the facility’s decision to transfer or
+     discharge. The process for appeal is as follows:
+     1.   To appeal the decision to transfer or discharge, the resident must notify the administrator
+          of the facility or the director of the licensing agency. Upon receipt of an appeal, the
+          administrator must immediately notify the director of the licensing agency.
+     2. The request to appeal the decision may be oral or written and must be made within 10
+        business days of the receipt of the notice by the resident.
+     3. Both the facility and the resident shall provide all the materials deemed relevant to the
+        decision to transfer or discharge to the director of the licensing agency as soon as the
+        notice of appeal is filed. The resident may submit orally if unable to submit in writing.
+        Copies of all materials submitted to the licensing agency shall be provided to the resident
+        by the facility.
+     4. The director of the licensing agency will render a decision within eight business days of
+        receipt of the notice of appeal.
+     5. The notice of decision from the director will be sent to the resident and to the facility,
+        will state that the decision may be appealed to the Human Services Board, and will
+        include information on how to do so.
+     6. The resident or the facility will have 10 business days to file a request for an appeal with
+        the Human Services Board by writing to the Board. The Human Services Board will
+        conduct a de novo evidentiary hearing in accordance with 3 V.S.A. §3091.
+j.   Relocation Charges. A facility is responsible for any charges associated with disconnecting,
+     relocating or reconnecting telephones, cable television, air-conditioning or other similar costs
+     resulting from a facility’s decision to transfer the resident within the facility.
+k. Right to Redeem. When non-payment is the basis for the discharge from a facility, the
+   resident has the right to redeem up to the effective date of the discharge. If the resident
+   redeems in full, the discharge proceedings will be terminated and the resident has the right to
+   remain in the facility.
+l.   Emergency Transfer or Discharge of Residents. An emergency discharge or transfer may be
+     made with less than thirty (30) days’ notice under the following circumstances:
+
+
+
+                                             13
+
+         1. The resident’s attending physician documents in the resident’s record that the discharge
+            or transfer is an emergency measure necessary for the health and safety of the resident or
+            other residents; or
+         2. A natural disaster or emergency necessitates the evacuation of residents from the facility; or
+         3. The resident presents an immediate threat to the health or safety of self or others. In that
+            case, the licensee shall request permission from the licensing agency to discharge or
+            transfer the resident immediately. Permission from the licensing agency is not necessary
+            when the immediate threat requires intervention of the police, mental health crisis
+            personnel, or emergency medical services personnel who render the professional
+            judgment that discharge or transfer must occur immediately. In such cases, the licensing
+            agency shall be notified on the next business day; or
+         4. When ordered or permitted by a court.
+3.15 Equal Access to Quality Care
+     a. A facility must establish and maintain identical policies and practices regarding admission,
+        transfer, discharge, and the provision of services for all individuals regardless of source of
+        payment, including the Medicaid State Plan.
+     b. The facility may charge any amount for services furnished to non-Medicaid residents
+        consistent with the notice requirement in paragraph 3.16 (c.) of this section describing the
+        charges.
+3.16 Admissions and Payment Policy
+     a. A nursing home shall not:
+         1. require residents or potential residents to waive their rights to Medicare or Medicaid;
+         2. require oral or written assurance that residents or potential residents are not eligible for,
+            or will not apply for, Medicare or Medicaid benefits; or
+         3. require, request, or accept a deposit or other payment from a Medicare or Medicaid
+            beneficiary as a condition for admission, continued care, or the provision of service.
+     b. A nursing home shall not require a third-party guarantee of payment to the facility as a
+        condition of admission or expedited admission, or continued stay in the facility. However, the
+        facility may require an individual who has legal right and access to a resident’s income or
+        resources available to pay for facility care to sign a contract, without incurring personal
+        financial liability, to provide facility payment from a resident’s income or resources.
+     c. Each resident shall be fully informed, prior to or at the time of admission and during their
+        stay of services available in the facility and of related charges, including any charges for
+        services not covered under Medicare or Medicaid, or not covered by the facility's basic per
+        diem rate, including its policy on providing toiletries, adult briefs, wheelchairs, and all
+        personal care and medical items.
+     d. The facility shall inform residents in writing about Medicaid and Medicare eligibility and
+        what is covered under those programs including information on resource limits and allowable
+        uses of the resident’s income for items and services not covered by Medicaid and Medicare.
+     e. In the case of a person eligible for Medicaid, a nursing facility must not charge, solicit,
+        accept, or receive, in addition to any amount otherwise required to be paid under the State
+        Medicaid Plan, any gift, money, donation, or other consideration as a precondition of
+        admission, expedited admission or continued stay in the facility. However,
+
+
+
+                                                 14
+
+          1. a nursing facility may charge a resident who is eligible for Medicaid for items and
+             services the resident has requested and received, and that are not specified in the State
+             Medicaid Plan as included in the term "nursing facility services" so long as the facility
+             gives proper notice of the availability and cost of these services to residents and does not
+             condition the resident’s admission or continued stay on request for and receipt of such
+             additional services; and
+          2. a nursing facility may solicit, accept, or receive a charitable, religious, or philanthropic
+             contribution from an organization or from a person unrelated to a Medicaid eligible
+             resident or potential resident, but only to the extent that the contribution is not a condition
+             of admission, expedited admission, or continued stay in the facility for a Medicaid
+             eligible resident.
+     f.   The facility shall inform each resident when changes are made to the items and services
+          specified in subsections 3.16 c. and 3.16 d. above.
+     g. Anyone admitted to a nursing facility shall receive options counseling as follows:
+          1. Anyone seeking admission to a nursing home directly from home or from a residential
+             care home shall receive options counseling prior to admission to the nursing home. Upon
+             receipt of an application for admission to the nursing home, the facility shall inform the
+             individual of the requirement for options counseling. The facility shall make a written
+             referral, using a form provided by the Department, to the local options counseling agency
+             upon receipt of the application and prior to admitting the individual.
+          2. An individual who is hospitalized and seeking admission to a nursing home may be
+             discharged directly from the hospital to the nursing home. In such instances, the
+             individual shall receive options counseling no later than three (3) working days after
+             admission to the facility, unless the options counseling agency has provided options
+             counseling in the hospital. The nursing home shall make a referral in writing to the
+             options counseling agency in the area no later than one working day after agreeing to
+             admit the individual. If upon admission it is determined that the individual will remain in
+             the facility for no longer than (twenty- one (21) days, the options counseling agency may
+             elect not to conduct options counseling within three (3) working days.
+          3. If an individual needs emergency admission to a nursing home, the individual may be
+             admitted to the facility prior to receiving options counseling. Emergency is defined for
+             purposes of this section as a situation in which an individual is likely to experience death
+             or serious and permanent harm unless admitted to a nursing home.
+          4. An individual admitted to or requesting admission to a nursing home may decline options
+             counseling after contact by the options counseling agency. The decision to decline
+             options counseling must be recorded in the resident’s record.
+          5. Options counseling is not required for individuals re-admitted to the nursing home after a
+             hospital stay or other short absence, or for individuals transferred from one nursing home
+             to another or for individuals entering for a respite stay.
+          6. Options counseling shall be provided by the Department or by an organization under
+             contract with the Department.
+3.17 Freedom from Restraints and Abuse
+     a. General. Each resident shall be free from mental and physical abuse, and free from chemical
+        and (except in emergencies) physical restraints except as authorized in writing by a physician
+        for a specified and limited period of time, or when necessary to protect the resident from
+
+
+
+                                                  15
+
+             injury to himself or herself or to others, or when exercising a right to refuse treatment under
+             section 3.6.
+        b. Restraints. The resident has the right to be free from any physical or chemical restraints
+           imposed for purposes of discipline or convenience and not required to treat the resident’s
+           medical symptoms.
+             1. The facility shall inform residents of its restraint policy and appeal rights under the its
+                grievance procedure.
+             2. The policy must include the release of the restraints at intervals of every two hours or
+                less, for ten minutes for exercise and repositioning.
+        c. Abuse. A resident has the right to be free from verbal, sexual, physical and mental abuse,
+           corporal punishment, and involuntary seclusion.
+        d. Staff treatment of residents.
+             1. The facility must develop and implement written policies and procedures that prohibit
+                mistreatment, neglect, and abuse of residents and misappropriation of resident property.
+             2. The facility must not use verbal, mental, sexual or physical abuse, corporal punishment,
+                or involuntary seclusion.
+             3. A nursing home shall not employ individuals who have been:
+                 i.   found guilty of abusing, neglecting, exploiting or mistreating residents by a court of
+                      law; or
+                 ii. have had a finding entered into the Vermont Nurse Aide Registry or the Vermont
+                     Adult Abuse Registry concerning abuse, neglect, exploitation or mistreatment of
+                     residents or misappropriation of their property.
+        e. A nursing home shall report any knowledge it has of actions by a court of law against an
+           employee, which would indicate unfitness for service as a nurse aide or other facility staff to the
+           Vermont Nurse Aide Registry or the appropriate licensing authority and the licensing agency.
+           Actions by a court of law which indicate unfitness for service include a charge of abuse, neglect
+           or exploitation substantiated against an employee or conviction of an offense for actions related
+           to bodily injury, theft or misuse of funds or property, or other crimes inimical to the public
+           welfare, in any jurisdiction within or outside the state of Vermont.
+        f.   The facility must ensure that all alleged violations involving mistreatment, neglect,
+             exploitation, or abuse, including injuries of unknown source and misappropriation of resident
+             property, are reported immediately to the administrator of the facility and the licensing
+             agency, and to Adult Protective Services in accordance with 33 V.S.A. Chapter 69.
+        g. The facility must have evidence that all alleged violations are thoroughly investigated, and
+           must prevent further potential abuse while the investigation is in progress.
+        h. The results of all investigations must be reported to the administrator or his or her designated
+           representative and to the licensing agency in accordance with 33 V.S.A. Chapter 69, and, if
+           the alleged violation is verified, appropriate corrective action must be taken.
+4. QUALITY OF LIFE
+  A facility must care for its residents in a manner and in an environment that promotes maintenance or
+  enhancement of each resident’s quality of life.
+
+
+
+
+                                                     16
+
+4.1   Dignity
+      Each resident shall be treated with consideration, respect, and full recognition of his or her dignity
+      and individuality, including privacy in treatment and in care of his or her personal needs. The
+      resident shall have the exclusive right to use and enjoy his or her property, and such property shall
+      not be used by other residents or staff without the express permission of the resident.
+4.2   Privacy
+      a. The resident may associate and communicate privately with persons of his or her choice.
+      b. The resident may receive his or her personal mail unopened.
+      c. If married or in a civil union, a resident shall be assured privacy for visits; if both are residents
+         of the facility; they are permitted to share a room.
+      d. Residents shall be assured reasonable access to a telephone located in a quiet area where the
+         resident can conduct a private conversation.
+4.3   Self-Determination and Participation
+      The resident has the right to:
+      a. choose activities, schedules, and health care consistent with his or her interests, assessments
+         and plans of care;
+      b. interact with members of the community both inside and outside the facility;
+      c. make choices about aspects of his or her life in the facility that are significant to the resident;
+         and
+      d. retain and use his or her personal clothing and possessions as space permits, unless to do so
+         would infringe upon rights of other residents.
+4.4   Resident and Family Groups
+      Each resident shall be encouraged and assisted, throughout his or her period of stay, to exercise
+      his or her rights as a resident and as a citizen and to this end may voice grievances and
+      recommend changes in policies and services to facility staff or to outside representatives of his or
+      her choice, free from restraint, interference, coercion, discrimination or reprisal.
+      a. The resident has the right and the facility must provide immediate access to any resident by
+         the following: any representative of the State, the Ombudsman, and any other person of the
+         resident’s choosing.
+      b. Residents and their families shall have the right to organize, maintain, and participate in
+         either resident or family councils, or both.
+      c. A resident has the right to organize and participate in resident groups in the facility.
+      d. A resident’s family has the right to meet in the facility with the families of other residents.
+      e. The facility must provide a resident or family group, if one exists, with private space for
+         meetings.
+      f.   The facility shall provide assistance for meetings, if requested.
+      g. Staff or visitors may attend meetings only at the group’s invitation.
+      h. The facility shall respond in writing to written requests from council meetings. Resident
+         councils and family councils shall be encouraged to make recommendations regarding facility
+         policies.
+
+
+
+                                                  17
+
+      i.   The facility must provide a designated staff person responsible for providing assistance and
+           responding to written requests that result from group meetings.
+      j.   When a resident or family group exists, the facility must listen to the views and act upon the
+           grievances and recommendations of residents and families concerning proposed policy and
+           operation decisions affecting resident care and life in the facility.
+4.5   Participation in Other Activities
+      A resident has the right, at his or her discretion, to participate in social, religious and community
+      activities that do not interfere with the rights of other residents in the facility.
+4.6   Accommodation of Residents’ Needs
+      a. A resident has the right to reside and receive services in the facility with reasonable
+         accommodations of individual needs and preferences, except when the health or safety of the
+         individual or other residents would be endangered.
+      b. A resident has the right to receive notice before the resident’s room or roommate in the
+         facility is changed.
+4.7   Activities
+      a. The facility must provide for an ongoing program of activities designed to meet, in
+         accordance with the comprehensive assessment, the interests and the physical, mental, and
+         psychosocial well-being of each resident.
+      b. The activities program must be directed by a qualified professional who:
+           1. is a qualified therapeutic recreation specialist or an activities professional who
+               i.   is licensed or registered and
+               ii. is eligible for certification as a therapeutic recreation specialist or as an activities
+                   professional by a recognized accrediting body on or after October 1, 1990; or
+           2. has 2 years of experience in a social or recreational program within the last 5 years, one
+              of which was full-time in a resident activities program in a health care setting; or
+           3. is a qualified occupational therapist or occupational therapy assistant; or
+           4. has completed a training course approved by the licensing agency; or
+           5. has demonstrated the ability to provide for an ongoing program of activities designed to
+              meet, in accordance with the comprehensive assessment, the interests and the physical,
+              mental and psychosocial well-being of each resident and serves with the regularly
+              scheduled consultation of an individual who meets the qualifications outlined above.
+4.8   Social Services
+      a. The facility must provide medically-related social services to attain or maintain the highest
+         practicable physical, mental and psychosocial well-being of each resident.
+      b. A facility with more than 120 beds must employ a qualified social worker on a full-time basis.
+      c. A qualified social worker is an individual with the following qualifications:
+           1. both
+               i.   a bachelor’s degree in social work or a bachelor’s degree in a human services field
+                    including but not limited to sociology, special education, rehabilitation counseling,
+                    and psychology, and
+
+
+
+                                                    18
+
+                     ii. one year of supervised social work experience in a health care setting working
+                         directly with individuals;
+                 2. or a demonstrated ability to provide medically related social services to attain or maintain
+                    the highest practicable physical, mental, and psychosocial well-being of each resident.
+  4.9        Environment
+        A nursing home must provide:
+        a. a safe, clean, comfortable and homelike environment, allowing the resident to use his or her
+           personal belongings to the extent possible;
+        b. housekeeping and maintenance services necessary to maintain a sanitary, orderly, and
+           comfortable interior;
+        c. a clean bed and bath linens that are in good condition;
+        d. private closet space in each resident room as specified in subsection 8.4 (c.) 4.
+        e. adequate and comfortable lighting levels in all areas;
+        f.     comfortable and safe temperature levels (not lower than 71° F); and
+        g. for the maintenance of comfortable sound levels.
+5. RESIDENT ASSESSMENT
+  The facility must conduct initially and periodically a comprehensive, accurate, standardized,
+  reproducible assessment of each resident’s functional capacity.
+  5.1        Admission Orders
+             At the time each resident is admitted, the facility must have physician orders for the resident’s
+             immediate care.
+  5.2        Comprehensive Assessments
+             a. The facility must make a comprehensive assessment of the resident’s needs which
+                 1. is based on a uniform data set and instrument specified by the licensing agency; and
+                 2. describes the resident’s capability to perform daily life functions and any significant
+                    impairments in functional capacity.
+             b. The comprehensive assessment must include at least the following information:
+                 1. medically defined conditions and prior medical history;
+                 2. medical status measurement;
+                 3. physical and mental functional status;
+                 4. sensory and physical impairments;
+                 5. nutritional status and requirements;
+                 6. special treatments or procedures;
+                 7. mental and psychosocial status;
+                 8. discharge potential;
+                 9. dental condition;
+                10. activities potential;
+
+
+                                                        19
+
+             11. rehabilitation potential;
+             12. cognitive status; and
+             13. drug therapy.
+        c. Frequency. Assessments must be conducted:
+              1. no late than 14 (fourteen)days after the date of admission;
+              2. promptly after a significant change in the resident’s physical or mental condition; and
+              3. in no case less often than once every 12 (twelve) months.
+        d. Review of Assessments. The nursing home must examine each resident no less than once
+           every 3 months, and as appropriate, revise the resident’s assessment to assure the continued
+           accuracy of the assessment.
+        e. Use. The results of the assessment are used to develop, review, and revise the resident’s
+           comprehensive plan of care under Section 6 of these rules.
+        f.    Coordination. The facility must coordinate assessments with any state-required pre-admission
+              screening program to the maximum extent practicable to avoid duplicative testing and effort.
+  5.3   Accuracy of Assessments
+        a. Each assessment must be conducted or coordinated with the appropriate participation of
+           health professionals.
+        b. Each assessment must be conducted or coordinated by a registered nurse who signs and
+           certifies the completion of the assessment.
+        c. Each individual who completes a portion of the assessment must sign and certify the accuracy
+           of that portion of the assessment.
+        d. Penalty for Falsification. An individual who willfully and knowingly certifies (or causes
+           another individual to certify) a material and false statement in a resident assessment is subject
+           to civil money penalties pursuant to 42 C.F.R. Part 1003.
+        e. Use of independent assessors. If the licensing agency determines, under a survey or otherwise,
+           that there has been a knowing and willful certification of false statements under subsection 5.3 c.
+           above, the licensing agency may require (for a period specified by the licensing agency) that
+           resident assessments under this section be conducted and certified by individuals who are
+           independent of the facility and who are approved by the licensing agency.
+6. COMPREHENSIVE CARE PLANS
+  6.1   Development of Care Plan
+        a. The facility shall develop a comprehensive care plan for each resident that includes measurable
+           objectives and timetables to meet a resident’s medical, nursing and mental and psychosocial
+           needs that are identified in the comprehensive assessment. The care plan must describe the
+           following:
+              1. the services that are to be furnished to attain or maintain the resident’s highest practicable
+                 physical, mental and psychosocial well-being as required under Section 7; and
+              2. any services that would otherwise be required under Sections 3 and 4 but are not
+                 provided due to the resident’s exercise of rights, including the right to refuse treatment.
+
+
+
+
+                                                     20
+
+  6.2   Procedure for Preparation of Care Plan
+        a. A comprehensive care plan must be:
+            1. developed within seven (7) days after the completion of the comprehensive assessment;
+            2. prepared by an interdisciplinary team, which includes the attending physician, a
+               registered nurse with responsibility for the resident, and other appropriate staff in
+               disciplines as determined by the resident’s needs, and, to the extent practicable, the
+               participation of the resident, the resident’s family and/or the resident’s legal
+               representative; and
+            3. periodically reviewed and revised by a team of qualified persons after each assessment.
+  6.3   Services Provided Under a Care Plan
+        The services provided or arranged by the facility must:
+        a. meet professional standards of quality; and
+        b. be provided by qualified persons in accordance with each resident’s written plan of care.
+  6.4   Discharge Summary
+        When a discharge is anticipated, a facility must prepare for the resident a discharge summary that
+        includes:
+        a. a recapitulation of the resident’s stay;
+        b. a final summary of the resident’s status to include items in subsection 6.2 b. above, at the
+           time of the discharge that is available for release to authorized persons and agencies, with the
+           consent of the resident or legal representative; and
+        c. a post-discharge plan of care that is developed with the participation of the resident and his or
+           her family, which will assist the resident to adjust to his or her new living environment.
+7. QUALITY OF CARE
+  Each resident must receive, and the facility must provide, the necessary care and services to attain or
+  maintain the highest practicable physical, mental and psychosocial well-being, in accordance with the
+  comprehensive assessment and plan of care.
+  7.1   Activities of Daily Living
+        Based on the comprehensive assessment of a resident, the facility must ensure that:
+        a. a resident’s abilities in activities of daily living do not diminish unless circumstances of the
+           individual’s clinical condition demonstrate that diminution was unavoidable. This includes
+           the resident’s ability to:
+            1. bathe, dress, and groom;
+            2. transfer and ambulate;
+            3. toilet;
+            4. eat; and
+            5. use speech, language or other functional communication systems.
+        b. a resident is given the appropriate treatment and services to maintain or improve his or her
+           abilities specified in subsection 7.1 (a.) above; and
+
+
+
+
+                                                      21
+
+      c. a resident who is unable to carry out activities of daily living receives the necessary services
+         to maintain good nutrition, grooming, and personal and oral hygiene.
+7.2   Vision and Hearing
+      To ensure that residents receive proper treatment and assistive devices to maintain vision and
+      hearing abilities, the facility must, if necessary, assist the resident:
+      a. in making appointments; and
+      b. by arranging for transportation to and from the office of a practitioner specializing in the
+         treatment of vision or hearing impairment or the office of a professional specializing in the
+         provision of vision or hearing assistive devices.
+7.3   Pressure Sores
+      Based on the comprehensive assessment of a resident, the facility must ensure that:
+      a. a resident who enters the facility without pressure sores does not develop pressure sores
+         unless the individuals clinical condition demonstrates that they were unavoidable; and
+      b. a resident having pressure sores receives necessary treatment and services to promote
+         healing, prevent infection and prevent new sores from developing.
+7.4   Urinary Incontinence
+      Based on the resident’s comprehensive assessment, the facility must ensure that:
+      a. a resident who enters the facility without an indwelling catheter is not catheterized unless the
+         resident’s clinical condition demonstrates that catheterization was necessary; and
+      b. a resident who is incontinent of bladder receives appropriate treatment and services to
+         prevent urinary tract infections and to restore as much normal bladder function as possible.
+7.5   Range of Motion
+      Based on the comprehensive assessment of a resident, the facility must ensure that:
+      a. a resident who enters the facility without a limited range of motion does not experience
+         reduction in range of motion unless the resident’s clinical condition demonstrates that a
+         reduction in range of motion is unavoidable; and
+      b. a resident with a limited range of motion receives appropriate treatment and services to
+         increase range of motion and/or to prevent further decrease in range of motion.
+7.6   Mental and Psychosocial Functioning
+      Based on the comprehensive assessment of a resident, the facility must ensure that:
+      a. a resident who displays mental or psychosocial adjustment difficulty, receives appropriate
+         treatment and services to correct the assessed problem; and
+      b. a resident whose assessment did not reveal a mental or psychosocial adjustment difficulty
+         does not display a pattern of decreased social interaction and/or increased withdrawn, angry
+         or depressive behaviors, unless the resident’s clinical condition demonstrates that such a
+         pattern is unavoidable.
+7.7   Naso-Gastric Tubes
+      Based on the comprehensive assessment of a resident, the facility must ensure that:
+
+
+
+
+                                                 22
+
+      a. a resident who has been able to eat enough alone or with assistance is not fed by naso-gastric
+         tube unless the resident’s clinical condition demonstrates that use of a naso-gastric tube was
+         unavoidable; and
+      b. a resident who is fed by a naso-gastric or gastrostomy tube receives the appropriate treatment
+         and services to prevent aspiration, pneumonia, diarrhea, vomiting, dehydration, metabolic
+         abnormalities and nasal-pharyngeal ulcers and to restore, if possible, normal eating skills.
+7.8   Accidents
+      The facility must ensure that:
+      a. the resident’s environment remains as free of accident hazards as is possible; and
+      b. each resident receives adequate supervision and assistive devices to prevent accidents.
+7.9   Nutrition
+      Based on a resident’s comprehensive assessment, the facility must ensure that a resident:
+      a. maintains acceptable parameters of nutritional status, such as body weight and protein levels,
+         unless the resident’s clinical condition demonstrates that this is not possible; and
+      b. receives a therapeutic diet when there is a nutritional problem.
+7.10 Hydration
+      The facility must provide each resident with sufficient fluid intake to maintain proper hydration
+      and health.
+7.11 Special Needs
+      The facility must ensure that residents receive proper treatment and care for the following special
+      services:
+      a. injections;
+      b. parenteral and enteral fluids;
+      c. colostomy, ureterostomy or ileostomy care;
+      d. tracheostomy care;
+      e. tracheal suctioning;
+      f.   respiratory care;
+      g. foot care; and
+      h. prostheses.
+7.12 Medication/Drugs
+      a. General. Each resident’s drug regimen must be free from unnecessary drugs. An unnecessary
+         drug is any drug when used:
+           1. in excessive dose (including duplicate therapy); or
+           2. for excessive duration; or
+           3. without adequate monitoring; or
+           4. without adequate indications for its use; or
+           5. in the presence of adverse consequences which indicate the dose should be reduced or
+              discontinued; or
+
+
+                                                 23
+
+         6. any combinations of the reasons above.
+     b. Antipsychotic Drugs. Based on a comprehensive assessment of a resident, the facility must
+        ensure that:
+         1. residents who have not used antipsychotic drugs are not given these drugs unless
+            antipsychotic drug therapy is necessary to treat a specific condition as diagnosed and
+            documented in the clinical record; and
+         2. residents who use antipsychotic drugs receive gradual dose reductions and behavioral
+            interventions, unless clinically contraindicated, in an effort to discontinue these drugs.
+     c. Medication Errors. The facility must ensure that
+         1. it is free of medication error rates of five percent or greater; and
+         2. residents are free of any significant medication errors.
+     d. Controlled Drugs Policy. Facilities shall have policies and procedures regarding controlled
+        drugs as required in 7.18 and in state law at 18 V.S.A. §§ 4201-4255.
+7.13 Nursing Services
+     The facility must have sufficient nursing staff to provide nursing and related services to attain or
+     maintain the highest practicable physical, mental and psychosocial well-being of each resident, as
+     determined by resident assessments and individual plans of care or as specified by the licensing
+     agency.
+     a. Sufficient staff. The facility must provide services by sufficient numbers of each of the
+        following types of personnel on a (twenty-four (24)-hour basis to provide nursing care to all
+        residents in accordance with resident care plans:
+         1. licensed nurses; and
+         2. other nursing personnel.
+     b. The facility must designate a licensed nurse to serve as a charge nurse on each tour of duty.
+     c. Registered Nurse.
+         1. The facility must use the services of a registered nurse for at least eight (8) consecutive
+            hours a day, seven (7) days a week.
+         2. The facility must designate a registered nurse to serve as the director of nursing on a full-
+            time basis.
+         3. The director of nursing may serve as a charge nurse only when the facility has an average
+            daily occupancy of sixty (60) or fewer residents.
+     d. Staffing Levels. The facility shall maintain staffing levels adequate to meet resident needs.
+         1. At a minimum, nursing homes must provide:
+             i.   no fewer than three (3) hours of direct care per resident per day, on a weekly average,
+                  including nursing care, personal care and restorative nursing care, but not including
+                  administration or supervision of staff; and
+             ii. of the three hours of direct care, no fewer than two (2) hours per resident per day
+                 must be assigned to provide standard LNA care (such as personal care, assistance
+                 with ambulation, feeding, etc.) performed by LNAs or equivalent staff and not
+                 including meal preparation, physical therapy or the activities program.
+
+
+
+                                                 24
+
+          2. The facility shall provide staffing information to the licensing agency in a manner and on
+             a schedule prescribed by the licensing agency.
+7.14 Dietary Services
+     The facility must provide each resident with a nourishing, palatable, well-balanced diet that meets
+     the daily nutritional and special dietary needs of each resident.
+     a. Staffing. The facility must employ a qualified dietitian either full-time, part-time, or on a
+        consultant basis.
+          1. If a qualified dietitian is not employed full-time, the facility must designate a person to
+             serve as the director of food service who receives frequently scheduled consultation from
+             a qualified dietitian.
+          2. A qualified dietitian is one who is qualified based upon either registration by the
+             Commission on Dietetic Registration of the American Dietetic Association, or on the
+             basis of education, training or experience in identification of dietary needs, planning and
+             implementation of dietary programs.
+          3. Sufficient staff. The facility must employ sufficient support personnel competent to carry
+             out the functions of the dietary service.
+     b. Menus and nutritional adequacy. Menus must:
+          1. meet the nutritional needs of residents in accordance with the recommended dietary
+             allowances of the Food and Nutrition Board of the National Research Council, National
+             Academy of Sciences;
+          2. be prepared in advance; and
+          3. be followed.
+     c. Food. Each resident shall receive and the facility shall provide:
+          1. food prepared by methods that conserve nutritive value, flavor and appearance;
+          2. food that is palatable, attractive, and at the proper temperature;
+          3. food prepared in a form designed to meet individual needs;
+          4. substitutes offered of similar nutritive value to residents who refuse food served.
+     d. Therapeutic diets. Therapeutic diets must be prescribed by the attending physician.
+     e. Frequency of meals.
+          1. Each resident shall receive and the facility shall provide at least three meals daily, at
+             regular times comparable to normal mealtimes in the community.
+          2. There must be no more than 14 hours between a substantial evening meal and breakfast
+             the following date, except as provided in number 4. below.
+          3. The facility must offer snacks at midday and bedtime daily.
+          4. When a nourishing snack is provided at bedtime, up to 16 hours may elapse between a
+             substantial evening meal and breakfast the following day if a resident group agrees to this
+             meal span, and a nourishing snack is served.
+     f.   Assistive devices. The facility must provide special eating equipment and utensils for
+          residents who need them.
+     g. Sanitary conditions. The facility must:
+
+
+                                                 25
+
+          1. procure food from sources approved or considered satisfactory by Federal, State, or local
+             authorities;
+          2. store, prepare, distribute and serve food under sanitary conditions; and
+          3. dispose of garbage and refuse properly.
+7.15 Physician Services
+     A physician must personally approve in writing a recommendation that an individual be admitted
+     to a facility. Each resident must remain under the care of a physician.
+     a. Physician supervision. The facility must ensure that:
+          1. the medical care of each resident is supervised by a physician; and
+          2. another physician supervises the medical care of residents when their attending physician
+             is unavailable.
+     b. Physician visits. The physician must:
+          1. review the resident’s total program of care, including medications and treatments, and
+             examine the resident personally at each visit required by subsection 7.15 (c.).
+          2. write, sign and date progress notes at each visit; and
+          3. sign and date all orders.
+     c. Frequency of physician visits. The resident must be seen by a physician:
+          1. within forty-eight (48) hours prior to admission or within forty-eight (48) hours following
+             admission; and
+          2. at least every six (6) months thereafter and as the resident’s condition warrants. The
+             facility must assure that physician visits occur as clinically indicated for the resident.
+     d. Except as provided in subsection 7.15 e., all required physician visits must be made by the
+        physician personally.
+     e. After the initial visit, at the option of the physician, required six-month visits, may alternate
+        between personal visits by the physician and visits by a physician assistant, nurse practitioner
+        or clinical nurse specialist in accordance with subsection 7.15 g. below.
+     f.   Availability of physicians for emergency care. The facility must provide or arrange for the
+          provision of physician services twenty-four (24) hours a day in case of emergency.
+     g. Physician delegation of tasks. Except as specified in subsection 7.15 h., a physician may
+        delegate tasks to a physician assistant, nurse practitioner, or clinical nurse specialist who:
+          1. is licensed as such by the State;
+          2. is acting within the scope of practice as defined by State law; and
+          3. is under the supervision of the physician.
+     h. A physician may not delegate a task when these rules specify that the physician must perform
+        it personally, or when the delegation is prohibited under State law or by the facility’s own
+        policies.
+7.16 Specialized Rehabilitative Services
+     a. Provision of Services. If specialized rehabilitative services such as, but not limited to,
+        physical therapy, speech-language pathology, occupational therapy, and mental health
+
+
+
+                                                  26
+
+          rehabilitative services for mental illness and intellectual disabilities, are required in the
+          resident’s comprehensive plan of care, the facility must:
+          1. provide the required services; or
+          2. obtain the required services from an outside resource (in accordance with section 11.2)
+             from a provider of specialized rehabilitative services.
+     b. Qualifications. Specialized rehabilitative services must be provided under the written order of
+        a physician by qualified personnel.
+7.17 Dental Services
+     a. The facility must assist residents in obtaining routine and twenty-four (24) hour emergency
+        dental care.
+     b. The facility must provide or obtain from an outside resource (in accordance with section
+        11.2) the following dental services to meet the needs of each resident.
+          1. routine dental services (to the extent covered under the Medicaid State Plan); and
+          2. emergency dental services.
+     c. The facility must, if necessary, assist the resident:
+          1. in making appointments;
+          2. by arranging for transportation to and from the dentist’s office; and
+          3. by promptly referring residents with lost or damaged dentures to a dentist.
+7.18 Pharmacy Services
+     The facility must provide routine and emergency drugs and biologicals to its residents, or obtain
+     them under an agreement described in section 11.2. All drugs must be administered in
+     conformance with the requirements of 18 V.S.A. Chapter 84.
+     a. Procedures. A facility must provide pharmaceutical services (including procedures that assure
+        that accurate acquiring, receiving, dispensing, and administering of all drugs and biologicals)
+        to meet the needs of each resident.
+     b. Service consultation. The facility must employ or obtain the services of a licensed pharmacist
+        who:
+          1. provides consultation on all aspects of the provision of pharmacy services in the facility;
+          2. establishes a system of records of receipt and disposition of all controlled drugs in
+             sufficient detail to enable an accurate reconciliation; and
+          3. determines that drug records are in order and that an account of all controlled drugs is
+             maintained and periodically reconciled.
+     c. Drug regimen review. The drug regimen of each resident must be reviewed at least once a
+        month by a licensed pharmacist.
+     d. The pharmacist must report any irregularities to the attending physician and the director of
+        nursing, and these reports must be acted upon.
+     e. Labeling of drugs and biologicals. Drugs and biologicals used in the facility must be labeled
+        in accordance with currently accepted professional principles, and include the appropriate
+        accessory and cautionary instructions, with the expiration date when applicable.
+     f.   Storage of drugs and biologicals.
+
+
+
+                                                   27
+
+            1. In accordance with State and Federal laws, the facility must store all drugs and
+               biologicals in locked compartments under proper temperature controls, and permit only
+               authorized personnel to have access to the keys.
+            2. The facility must provide separately locked, permanently affixed compartments for
+               storage of controlled drugs listed in Schedule II of the Comprehensive Drug Abuse
+               Prevention and Control Act of 1970, 42 U.S.C. §812, and other drugs subject to abuse,
+               except when the facility uses single unit package drug distribution systems in which the
+               quantity stored is minimal and a missing dose can be readily detected.
+        g. This section is not intended to prohibit residents from purchasing drugs or biologicals from
+           outside sources.
+  7.19 Infection Control
+        a. The facility must establish and maintain an infection control program designed to provide a
+           safe, sanitary, and comfortable environment and to help prevent the development and
+           transmission of disease and infection.
+        b. Infection control program. The facility must establish an infection control program under
+           which it:
+            1. investigates, controls, and prevents infections in the facility;
+            2. decides what procedures such as isolation should be applied to an individual resident; and
+            3. maintains a record of incidents and corrective actions related to infections.
+        c. Preventing spread of infection.
+            1. When the infection control program determines that a resident needs isolation to prevent
+               the spread of infection, the facility must isolate the resident.
+            2. The facility must prohibit employees with a communicable disease or infected skin lesions
+               from direct contact with residents or their food, if direct contact will transmit the disease.
+            3. The facility must require staff to wash their hands after each direct resident contact for
+               which hand washing is indicated by accepted professional practice.
+        d. Linens. Personnel must handle, store, process, and transport linens so as to prevent the spread
+           of infection.
+8. PHYSICAL ENVIRONMENT
+  The facility must be designed, constructed, equipped, and maintained to protect the health and safety of
+  residents, personnel, and the public.
+  8.1   Life Safety from Fire
+        a. The facility must meet the applicable provisions of the Vermont Fire Prevention and Building
+           Code.
+        b. After consideration of state licensing agency findings, the Vermont Department of Public
+           Safety may waive specific provisions of the Vermont Fire Prevention and Building Code
+           which, if rigidly applied, would result in unreasonable hardship upon the facility, but only if
+           the waiver does not adversely affect the health and safety of residents or personnel.
+
+
+
+
+                                                   28
+
+8.2   Emergency Power
+      a. An emergency electrical power system must supply power adequate at least for lighting all
+         entrances and exits; equipment to maintain the fire detection, alarm and extinguishing
+         systems; and life support systems in the event the normal electrical supply is interrupted.
+      b. When life support systems are used, the facility must provide emergency electrical power
+         with an emergency generator (as defined in Vermont Fire Prevention and Building Code) that
+         is located on the premises.
+8.3   Space and Equipment
+      The facility must:
+      a. provide sufficient space and equipment in dining, health services, recreation and program
+         areas to enable staff to provide residents with needed services as required by these standards
+         and as identified in each residents plan of care; and
+      b. maintain all essential mechanical, electrical and patient-care equipment in safe operating
+         condition.
+8.4   Resident Rooms
+      a. Resident rooms must be designed and equipped for adequate nursing care, comfort and
+         privacy of residents.
+      b. Bedrooms must:
+          1. accommodate no more than two residents, except as provided in e. below;
+          2. measure at least eighty (80) square feet per resident in multiple resident bedrooms, and at
+             least one hundred (100) square feet in single resident rooms;
+          3. have direct access to an exit corridor;
+          4. be designed or equipped to assure full visual privacy for each resident;
+          5. in facilities initially certified after March 31, 1992, except in private rooms, have ceiling
+             suspended curtains for each bed that extend around the bed to provide total visual privacy
+             in combination with adjacent walls and curtains;
+          6. have at least one window to the outside; and
+          7. have a floor at or above grade level.
+      c. The facility must provide each resident with:
+          1. a separate bed of proper size and height for the convenience of the resident;
+          2. a clean, comfortable mattress;
+          3. bedding appropriate to the weather and climate; and
+          4. functional furniture appropriate to the resident’s needs, and individual closet space in the
+             resident’s bedroom with clothes racks and shelves accessible to the resident.
+      d. The licensing agency may permit variations in requirements specified in subsections 8.4 b. 1.
+         and 2. of this section relating to rooms in individual cases when the facility demonstrates in
+         writing that the variations:
+          1. are in accordance with the special needs of the residents; and
+          2. will not adversely affect residents’ health and safety.
+
+
+
+                                                 29
+
+      e. Resident bedrooms in existence on the effective date of this rule that are designed to
+         accommodate three or four persons may remain in operation, subject to the following
+         conditions:
+          1. At least annually, residents who reside in three- or four-bed rooms will be offered the
+             first vacant bed in a semi-private or private room (depending upon payment source) when
+             such bed becomes available and prior to admission of a new resident into such bed. The
+             resident’s patient record shall record the date on which the resident was offered the
+             opportunity to relocate to a semi-private or private room, the resident’s response and, if
+             the resident requests a transfer to a semi-private or private room, the date on which the
+             transfer occurred.
+          2. Admission of a new resident to a three- or four-bed room may occur only with the
+             resident’s or the resident’s legal representative’s consent.
+          3. Any downsizing or reduction in licensed capacity initiated by the facility must first
+             reduce the number of beds contained in three- and four-bed rooms such that these rooms
+             are converted to semi-private or private occupancy.
+          4. Proposals for new construction, expansion, renovation or substantial rehabilitation of a
+             facility requiring Certificate of Need approval pursuant to 18 V.S.A. §9434 will not be
+             approved by the licensing agency unless the construction proposal includes a plan for
+             elimination or conversion of all three- and four-bed rooms to rooms which accommodate
+             no more than 2 (two) persons.
+              i.   The terms "renovation or substantial rehabilitation" shall not be deemed to include
+                   routine maintenance or repairs due to normal wear and tear.
+              ii. "Routine maintenance or repairs" includes, but is not limited to, furnace replacement,
+                  roof replacement, rewiring, and repainting and other improvements that do not alter
+                  the appearance or layout of the facility.
+              iii. Construction that alters the appearance or layout of the facility, including relocation
+                   of walls, partitions, doors, creation or subdivision of rooms, or conversion of a
+                   portion of the facility for a different use, shall be considered “renovation or
+                   substantial rehabilitation” and not “routine maintenance or repair”.
+          5. Facilities shall provide private space for residents of three or four bedrooms to visit with
+             family, relatives, friends, clergy, etc.
+8.5   Toilet Facilities
+      Each resident room must be equipped with or located near toilet facilities.
+8.6   Resident Call System
+      The nurses’ station must be equipped to receive resident calls through a communication system from:
+      a. resident rooms; and
+      b. toilet and bathing facilities.
+8.7   Dining and Resident Activities
+      The facility must provide one or more rooms designated for resident dining and activities. These
+      rooms must:
+      a. be well lighted;
+      b. be well ventilated, with non-smoking areas identified;
+
+
+
+                                                 30
+
+        c. be adequately furnished; and
+        d. have sufficient space to accommodate all activities.
+  8.8   Other Environmental Conditions
+        The facility must provide a safe, functional, sanitary and comfortable environment for residents,
+        staff and the public. The facility must:
+        a. establish procedures to ensure that water is available to essential areas when there is a loss of
+           normal water supply;
+        b. have adequate outside ventilation by means of windows or mechanical ventilation, or a
+           combination of the two;
+        c. equip corridors with firmly secured handrails on each side; and
+        d. maintain an effective pest control program so that the facility is free of pests and rodents.
+9. ADMINISTRATION
+  The facility must be administered in a manner that enables it to use its resources effectively and
+  efficiently to attain or maintain the highest practicable physical, mental and psychosocial well being of
+  each resident.
+  9.1   Licensure
+        a. A facility must be licensed pursuant to 33 V.S.A. §§ 7103, 7105 and Section 2 of these rules.
+        b. Compliance with Federal, State and local laws and professional standards. The facility must
+           operate and provide services in compliance with all applicable Federal, State and local laws,
+           rules and codes and with accepted professional standards and principles that apply to
+           professionals providing services in such a facility.
+            1. For standards governing the facility’s water supply and sewage disposal, contact should
+               be made with the state Department of Environmental Conservation.
+            2. For standards governing construction and equipment of facilities, reference Guidelines
+               for Construction and Equipment of Hospital and Medical Facilities, current edition.
+  9.2   Governing Body
+        a. The facility must have a governing body, or designated persons functioning as a governing
+           body, that is legally responsible for establishing and implementing policies regarding the
+           management and operation of the facility; and
+        b. The governing body shall appoint the administrator who shall be:
+            1. licensed by the state of Vermont; and
+            2. responsible for the management of the facility.
+10. NURSE AIDE TRAINING
+  10.1 Nurse Aide Registration
+        General Rule. A facility must not use an individual working in the facility as a nurse aide for
+        more than four (4) months, on a full-time basis, unless that individual:
+        a. is included on the Vermont Nurse Aide Registry; and
+        b. is competent to provide nursing and nursing related services.
+
+
+
+
+                                                   31
+
+10.2 Non-Permanent Employees
+     A facility must not use on a temporary, per diem, leased or any basis other than a permanent
+     employee any individual who does not meet the requirements in Section 10. 1.
+10.3 Competency
+     A facility must not use any individual who has worked less than four (4) months as a nurse aide
+     in that facility unless the individual:
+     a. is a full-time employee enrolled in a state approved training and competency evaluation
+        program;
+     b. has demonstrated competence through satisfactory participation in a state-approved nurse
+        aide training and competency evaluation program; or
+     c. is included on the Vermont Nurse Aide Registry.
+10.4 Registry Verification
+     a. Before allowing an individual to serve as a nurse aide, a facility must receive verification
+        from the Vermont Nurse Aide Registry that the individual has met competency evaluation
+        requirement unless:
+         1. the individual is a full-time employee in a training and competency evaluation program
+            approved by the state; or
+         2. the individual can prove that he or she has recently successfully completed a training and
+            competency evaluation program or competency evaluation program approved by the state
+            and has not yet been included in the registry. Facilities must follow up to ensure that such
+            an individual actually becomes registered.
+     b. Multi-State Registry Verification. Before allowing an individual to serve as a nurse aide, a
+        facility must seek information from every State registry, established under 42 U.S.C.
+        §§1395i-3(e)(2)(A) or 1396r(e)(2)(A), which the facility believes will include information on
+        the individual.
+10.5 Required Retraining
+     If, since an individual’s most recent completion of a training and competency evaluation
+     program, there has been a continuous period of twenty-four (24) consecutive months during none
+     of which the individual provided nursing or nursing-related services for monetary compensation,
+     the individual must complete a new training and competency evaluation program or a new
+     competency evaluation program.
+10.6 Regular In-Service Education
+     a. Performance reviews. The facility must complete a performance review of every nurse aide at
+        least once every twelve (12) months, and must provide regular in-service education based on
+        the outcome of these reviews.
+     b. In-service training. The in-service training must:
+         1. be sufficient to ensure the continuing competence of nurse aides, but must be no less than
+            twelve (12) hours per year.
+         2. address areas of weakness as determined in nurse aide’s performance reviews and may
+            address special needs of residents as determined by the facility staff; and
+         3. for nurse aides providing services to individuals with cognitive impairments, also address
+            the care of the cognitively impaired.
+
+
+                                               32
+
+  10.7 Proficiency of Nurse Aides
+        The facility must ensure that nurse aides are able to demonstrate competency in skills and
+        techniques necessary to care for residents’ needs, as identified through resident assessments and
+        described in the plan of care.
+  10.8 Developmental Services
+        Individuals providing specialized services to residents with developmental disabilities do not
+        meet the definition of a nurse aide.
+11. PROFESSIONAL STAFF
+  The facility must employ on a full-time, part-time or consultant basis those professionals necessary to
+  carry out the provisions of these rules.
+  11.1 Professional Qualifications
+        Professional staff must be licensed, certified, or registered in accordance with applicable laws.
+  11.2 Use of Outside Resources
+        a. If the facility does not employ a qualified professional person to furnish a specific service to
+           be provided by the facility, the facility must have that service furnished to residents by a
+           person or agency outside the facility under an arrangement as described in 42 U.S.C.
+           §1395x(w) or an agreement as described in subsection 11. 2b.
+        b. Arrangements as described in 42 U.S.C. §1395x (w) or agreements pertaining to services
+           furnished by outside resources must specify in writing that the facility assumes responsibility
+           for:
+            1. obtaining services that meet professional standards and principles that apply to
+               professionals providing services in such a facility; and
+            2. the timeliness of the services.
+  11.3 Medical Director
+        a. The facility must designate a physician to serve as medical director.
+        b. The medical director is responsible for:
+            1. implementation of resident care policies; and
+            2. the coordination of medical care in the facility.
+12. LABORATORY, RADIOLOGY, AND OTHER DIAGNOSTIC SERVICES
+  12.1 Laboratory Services
+        a. The facility must provide or obtain laboratory services to meet the needs of its residents. The
+           facility is responsible for the quality and timeliness of the services.
+        b. If the facility provides its own laboratory services, the services must meet the applicable
+           requirements for laboratories specified in 42 C.F.R. Part 493.
+        c. If the facility provides blood bank and transfusion services, it must meet the applicable
+           requirements for laboratories specified in 42 C.F.R. Part 493.
+        d. If the laboratory chooses to refer specimens for testing to another laboratory, the referral
+           laboratory must be certified in the appropriate specialties and sub-specialties of services in
+           accordance with the requirements of 42 C.F.R. Part 493.
+
+
+
+                                                   33
+
+       e. If the facility does not provide laboratory services on site, it must have an agreement to
+          obtain these services from a laboratory that meets the applicable requirements of 42 C.F.R.
+          Part 493.
+       f.   The facility must:
+            1. provide or obtain laboratory services only when ordered by the attending physician;
+            2. promptly notify the attending physician of findings;
+            3. assist the resident in making transportation arrangements to and from the source of
+               service, if the resident needs assistance;
+            4. file in the resident’s clinical record laboratory reports that are dated and contain the name
+               and address of the testing laboratory; and
+            5. ensure that transportation costs associated with obtaining laboratory services are not
+               charged to a Medicaid recipient’s personal needs allowance.
+  12.2 Radiology and Other Diagnostic Services
+       a. The facility must provide or obtain radiology and other diagnostic services to meet the needs
+          of its residents. The facility is responsible for the quality and timeliness of the services.
+       b. If the facility provides its own diagnostic services, the services must meet the applicable
+          conditions of participation for hospitals contained in 42 C.F.R. §482.26.
+       c. If the facility does not provide its own diagnostic services, it must have an agreement to
+          obtain these services from a provider or supplier that is approved to provide these services
+          under Medicare.
+       d. The facility must:
+          1. provide or obtain radiology and other diagnostic services only when ordered by the
+             attending physician;
+            2. promptly notify the attending physician of the findings;
+            3. assist the resident in making transportation arrangements to and from the source of the
+               service, if the resident needs assistance;
+            4. file in the resident’s clinical record signed and dated reports of x-ray and other diagnostic
+               services, with the name and address of the provider of the service; and
+            5. ensure that the transportation costs associated with obtaining radiology and other
+               diagnostic services are not charged to a Medicaid recipient’s personal needs allowance.
+13. CLINICAL RECORDS
+  13.1 Records Maintenance and Retention
+       a. The facility must maintain clinical records on each resident in accordance with accepted
+          professional standards and practices that are:
+            1. complete;
+            2. accurately documented;
+            3. readily accessible; and
+          4. systematically organized.
+       b. All of an individual’s clinical records must be retained for the longer of the following time
+          periods:
+          1. eight (8) years from the date of discharge or death; or
+
+
+
+                                                   34
+
+          2. for a minor, three (3) years after a resident reaches eighteen (18) years of age.
+       c. The facility must safeguard clinical record information against loss, destruction or
+          unauthorized use.
+       d. The facility must ensure that each clinical record contains a recent photograph of the resident,
+          unless the resident objects.
+  13.2 Confidentiality
+       The facility must keep confidential all information contained in the resident’s records, regardless
+       of the form or storage method of the records, except when release is required by:
+       a. transfer to another health care institution;
+       b. law;
+       c. third party payment contract; or
+       d. the resident.
+  13.3 Contents
+       The clinical record must contain:
+       a. sufficient information to identify the resident;
+       b. a record of the resident’s assessments;
+       c. the plan of care and services provided;
+       d. the results of any preadmission screening conducted by the state; and
+       e. progress notes.
+14. DISASTER AND EMERGENCY PREPAREDNESS
+  14.1 Written Plans
+       The facility must have detailed written plans and procedures, approved by the Department of
+       Public Safety, to meet all potential emergencies and disasters, such as fire, severe weather, and
+       missing residents.
+  14.2 Employee Training
+       The facility must train all employees in emergency procedures when they begin to work in the
+       facility, periodically review the procedures with existing staff, and carry out unannounced staff
+       drills using those procedures. Procedures shall include:
+       a. At least an annual review of the facility disaster plan;
+       b. Periodic staff instruction in disaster drills and information updates;
+       c. Quarterly staff fire drills for all shifts; and
+       d. Maintenance of written records and evaluations of all drills.
+15. TRANSFER AGREEMENTS
+  15.1 Agreement with Hospital
+       The facility must have in effect a written transfer agreement with one or more hospitals approved
+       for participation under the Medicare and Medicaid programs that reasonably assures that:
+       a. residents will be transferred from the facility to the hospital, and ensured of timely admission
+          to the hospital, when transfer is medically appropriate as determined by the attending
+          physician; and
+
+
+                                                    35
+
+       b. medical and other information needed for care and treatment of residents, and, when the
+          transferring facility deems it appropriate, for determining whether such residents can be
+          adequately cared for in a less expensive setting than either the facility or the hospital, will be
+          exchanged between the institutions.
+16. QUALITY ASSESSMENT AND ASSURANCE
+  16.1 Quality Assessment Committee
+       a. A facility must maintain a quality assessment and assurance committee consisting of:
+           1. the director of nursing services;
+           2. the medical director; and
+           3. at least three (3) other members of the facility’s staff.
+       b. The quality assessment and assurance committee must:
+           1. meet at least quarterly to identify issues with respect to which quality assessment and
+              assurance activities are necessary; and
+           2. develop and implement appropriate plans of action to correct identified quality
+              deficiencies.
+  16.2 Disclosure of Records
+       The State may not require disclosure of the records of such committee except insofar as such
+       disclosure is related to the compliance of such committee with the requirements of this section.
+  16.3 Sanctions
+       Good faith attempts by the committee to identify and correct quality deficiencies cannot be used
+       as a basis for sanctions.
+17. DISCLOSURE OF OWNERSHIP
+  17.1 Initial Disclosure
+       The facility must comply with the disclosure requirements in subsection 2.5b.
+  17.2 On-going Disclosure
+       The facility must provide written notice to the state agency responsible for licensing the facility,
+       at the time of any change, if a change occurs in:
+       a. persons with an ownership or control interest of 5% or more, or who have been convicted of
+          Medicaid fraud;
+       b. the officers, directors, agents or managing employees;
+       c. the corporation, association or other company responsible for the management of the facility; or
+       d. the facility’s administrator or director of nursing.
+18. ENFORCEMENT
+  18.1 Notice of Violation
+       a. If, as a result of an inspection or investigation, the licensing agency determines that a
+          condition in a facility violates a rule or statutory provision, it shall prepare a written notice of
+          violation, which shall state the following:
+           1. A description of each condition that constitutes a violation;
+
+
+
+                                                   36
+
+            2. Each rule or statutory provision alleged to have been violated;
+            3. The date by which the violation must be corrected;
+            4. Sanctions the licensing agency may impose for failure to correct the violation or failure
+               to provide proof of correction by the date specified;
+            5. The right to appeal the notice of violation as provided in 33 V.S.A. §7118; and
+            6. The right to apply for a variance as provided in 33 V.S.A. §7106.
+        b. The licensing agency may take immediate enforcement action when necessary to eliminate a
+           condition that can reasonably be expected to cause death or serious physical harm to residents
+           or staff before it can be eliminated through the provisions of 33 V.S.A. §7111. If the licensing
+           agency takes immediate enforcement action, it shall explain its actions and the reasons
+           therefore in the notice of the violation.
+  18.2 Corrective Action
+        a. The licensing agency shall enforce these provisions to protect residents of facilities.
+        b. The licensing agency may require a facility to take corrective action to eliminate a violation
+           of a rule or state statute within a specified period of time. If the licensing agency does require
+           corrective action:
+           1. the licensing agency may, within the limits of resources available to it, provide technical
+               assistance to the facility to enable it to comply with the statutory and regulatory
+               requirements;
+           2. the facility shall provide the licensing agency with proof of correction of the violation
+               within the time specified; and
+           3. if the facility has not corrected the violation by the time specified, the licensing agency may
+               take such further action as it deems appropriate, in accordance with 33 V.S.A. §7111.
+  18.3 Civil Penalties
+          Failure to operate a nursing facility in accordance with these rules may subject a facility to
+          the penalties set out in 33 V.S.A.§§7111 and 7304, including but not limited to suspension of
+          admissions, receivership, modification, suspension, non-renewal or revocation of license, and
+          civil money penalties.
+  18.4 Criminal Penalty
+            A person who knowingly violates the licensure or confidentiality requirements of these rules
+            shall be subject to criminal penalties pursuant to 33 V.S.A. §7116.
+19. ADMINISTRATIVE REVIEW AND APPEALS
+  19.1 Appeal to Commissioner
+        a. a facility aggrieved by a decision or action of the licensing agency, including a Notice of
+           Violation, may file a request for review by the Commissioner.
+        b. a request for review must be pursued before an appeal can be taken pursuant to 33 V.S.A. §7103.
+        c. the request for review must be in writing, and filed within 15 (fifteen) days of receipt of the
+           decision or action of the licensing agency.
+        d. the request for review must be accompanied by the following:
+            1. a request for a hearing, if desired;
+            2. a clear statement of the basis for the request for review.
+
+
+
+                                                      37
+
+     e. issues not raised in the request for review shall not be raised later in this proceeding or in any
+        subsequent proceeding arising from the same action of the Division, including appeals
+        pursuant to 33 V.S.A. §7117.
+     f. the hearing, if any, shall be conducted by the Commissioner or her or his designee.
+     g. proceedings under this section are not subject to the requirements of 33 V.S.A. Chapter 25.
+19.2 Appeal to the Human Services Board
+     a. A facility aggrieved by a final decision on request for review may file a request for a fair
+        hearing before the Human Services Board pursuant to 33 V.S.A. §7118(a).
+     b. Proceedings under this subsection shall be initiated by filing a written request for a fair
+        hearing with the Human Services Board within 30 days of the date of the Final Order setting
+        out a clear statement of the basis for the appeal.
+     c. No appeal may be taken on any issue that was not previously raised in the request for review
+        pursuant to subsection 19.1.
+
+
+
+
+                                                38
+
+SOURCE 3: Nursing Home Sample Discharge-Transfer Notice — Vermont Division of Licensing and Protection (page) | https://dlp.vermont.gov/nursing-home-sample-discharge-transfer-notice | source date: Tuesday, April 23, 2019 - 12:00, as the page dates its posting | retrieved: 2026-09-04
+Skip to main content
+
+An Official Vermont Government
+ Website
+
+Disabilities, Aging and Independent Living
+
+ Division of Licensing and Protection
+
+Menu
+
+Adult Protective Services
+
+Survey and Certification
+
+Information for Consumers, Families and Caregivers
+
+Information for Facilities and Providers
+
+Find a Facility or a Provider
+
+Find a Facility by County
+
+Make a Report
+
+Languages
+
+Search
+
+Home
+
+Adult Protective Services
+
+Survey and Certification
+
+Make a Report
+
+Who We Are
+
+Contact Us
+
+Search
+
+Submit
+
+Home
+
+Nursing Home Sample Discharge-Transfer Notice
+
+Home
+
+Adult Protective Services
+
+Survey and Certification
+
+Make a Report
+
+Who We Are
+
+Contact Us
+
+Nursing Home Sample Discharge-Transfer Notice
+
+Form
+
+Tuesday, April 23, 2019 - 12:00
+
+File
+
+Nursing_Home_Transfer_Discharge_Letter.pdf
+(18.42 KB)
+
+File Format
+
+PDF
+
+Tags
+
+ Form
+
+ Nursing Homes
+
+Contact Us
+
+Division of Licensing and Protection
+
+HC 2 South, 280 State Drive
+
+Waterbury, VT 05671-2060
+
+(802) 241-0344
+
+For Telecommunications Relay Service: Dial 711
+
+Adult Protective Services Reporting Line
+
+(800) 564-1612
+
+Healthcare Organization Complaint Reporting Line
+
+(888) 700-5330
+
+Joe Nusbaum
+
+Division Director
+
+John Gordon
+
+Adult Protective Services Director
+
+Pamela Cota
+
+Survey and Certification Director
+
+This is a Division of the
+
+Department of Disabilities, Aging and Independent Living
+
+under the Agency of Human Services
+
+Performance Dashboards
+
+Agency of Human Services Results Scorecard
+
+Division of Licensing & Protection (DLP) Scorecard
+
+ return to top
+
+Return to top
+
+ end of return to top
+
+Copyright © 2026 State of Vermont All rights reserved. |
+
+Web Policies
+
+Accessibility
+
+Privacy
+
+SOURCE 4: Nursing Home Transfer/Discharge Letter, sample notice — Vermont Division of Licensing and Protection (PDF) | https://dlp.vermont.gov/sites/dlp/files/documents/Nursing_Home_Transfer_Discharge_Letter.pdf | source date: none stated in the document; posted April 23, 2019 per source 3 | retrieved: 2026-09-04
+*DISCLAIMER: This is only a guide/helpful tool. Be sure to carefully examine the regulatory
+requirements for your type of facility to ensure your notice meets applicable requirements.*
+
+Date:
+
+Resident Name:
+Address:
+
+Resident Representative:
+Address:
+
+                                Notice of [Transfer/Discharge]
+
+Dear [Resident/Resident Representative]:
+
+This letter is to notify you that we intend to [discharge/transfer] you from [this home/your
+room] on [date].
+
+The specific reasons for your [discharge/transfer] are:
+
+[Indicate resident-specific reason in detail]
+
+You are being [transferred/discharged] to the following location:
+
+[Indicate the location to which the resident is being transferred or discharged]
+
+You have the right to appeal the home’s decision to
+[discharge/transfer] you within ten (10) business days of receipt of this
+notice. You have the right to remain in the home and in your room until
+there is a final decision on your appeal. If you want to appeal, there are
+two ways to make your appeal.
+        1. You can inform the home’s Administrator directly, either verbally or in
+           writing. They will then notify the State.
+
+        2. You can contact the State directly either verbally or in writing. The State
+           of Vermont Division of Licensing and Protection is the entity that
+           receives and reviews such requests. To appeal to the State, contact:
+
+                  State Survey Agency Director, Suzanne Leavitt
+                  Division of Licensing & Protection
+                  HC 2 South 280 State Drive
+                  Waterbury, VT 05671-2060
+
+                   Telephone: (802) 241-0480
+                   Email: surveyandcertification@vermont.gov
+
+The State does not use a formal appeal form or require a formal appeal hearing request.
+
+A decision on your appeal will be made in eight (8) business days, and you will receive
+notification of the State’s decision in writing.
+
+If the decision by the Division of Licensing and Protection is unfavorable to you, you then may
+appeal that decision to the Human Services Board. The decision letter from Licensing and
+Protection will contain information on how to do this.
+
+If you do not understand this letter, have questions about this notice or would like help
+requesting an appeal, contact the Long Term Care Ombudsman:
+
+[provide name, address, telephone number and email address for the applicable State Long
+Term Care Ombudsman]
+
+For residents who have intellectual, developmental, mental health or related disabilities, you may
+contact the following agency:
+
+Disability Rights Vermont [provide the mailing address, telephone number and email
+address if applicable to this resident].
+
+Please let the home’s Administrator know if you need assistance contacting one of these
+agencies.
+
+If you do not wish to appeal this notice, you do not need to take any further action. The
+Administrator will inform you of the next steps to proceed with the [discharge/transfer].
+
+You do not have to leave [the home/your room] until the date specified in the first paragraph of
+this letter.
+
+Please let the home’s Administrator know if you have any questions.
+
+Sincerely,
+
+
+
+cc: LTC Ombudsman (required)
+   (any other applicable parties)
+
+SOURCE 5: Human Services Board — Vermont Agency of Human Services | https://humanservices.vermont.gov/human-services-board | source date: none stated on page | retrieved: 2026-09-04
+Skip to main content
+
+An Official Vermont Government
+ Website
+
+Home
+
+Human Services Board
+
+State of Vermont
+
+ Agency of Human Services
+
+Menu
+
+Home
+
+About Us
+
+About Agency of Human Services
+
+Boards, Councils & Commissions
+
+Careers & Opportunities
+
+Health Care Reform
+
+Health Care Rules
+
+Vision, Mission, Values
+
+Rules & Policies
+
+Health Insurance Portability and Accountability Act (HIPAA)
+
+Our Departments
+
+Central Office
+
+Department for Children & Families
+
+Department of Corrections
+
+Department of Health
+
+Department of Mental Health
+
+Department of Vermont Health Access
+
+Disabilities Aging and Independent Living
+
+Our Impact & Metrics
+
+Our Impact | Data & Metrics
+
+Performance Scorecards
+
+Help and Resources
+
+Programs and Services
+
+Programs and Services Overview
+
+Child & Youth Development
+
+Disability and Aging Supports
+
+Family Support
+
+Financial and Employment Security
+
+General Health Care Services
+
+Housing Stability
+
+Mental Health and Substance Use Services
+
+Public Health Services
+
+Risk Reduction and Community Justice Services
+
+State Refugee Office
+
+Help & Resources Overview
+
+Vermont Team Based Care
+
+Domestic Violence
+
+Trauma Prevention & Resilience Development
+
+Vermont Center for the Prevention and Treatment of Sexual Abuse
+
+Vermont211.org
+
+Connect with Us
+
+AHS Contact Group
+
+Contact Us!
+
+Find a Local Office
+
+Public Records & Research
+
+Press Releases
+
+Department Contact Information
+
+Contact Department for Children and Families
+
+Contact Department of Corrections
+
+Contact Department of Disabilities Aging and Independent Living
+
+Contact Vermont Department of Health
+
+Contact Department of Mental Health
+
+Contact Department of Vermont Health Access
+
+Local Help | Field Services & Districts
+
+Find Services Near Me
+
+Barre
+
+Bennington
+
+Brattleboro
+
+Burlington
+
+Hartford
+
+Middlebury
+
+Morrisville
+
+Newport
+
+Rutland
+
+Springfield
+
+St. Albans
+
+St. Johnsbury
+
+Languages
+
+Search
+
+Home
+
+About Us
+
+Rules, Policies, Procedures & Guidance Documents
+
+Our Programs & Services
+
+Vermont Team Based Care
+
+Our Impact & Performance
+
+Help and Resources
+
+Public Records & Research
+
+Connect With Us
+
+Mental Health Crisis Help
+
+Call 211 to connect to help near you!
+
+211 functions as a Vermont help and services information directory. Call or search online to find the help you need.
+
+Vermont Health Connect
+
+Search
+
+Submit
+
+Home
+
+About Us
+
+Rules, Policies, Procedures & Guidance Documents
+
+Our Programs & Services
+
+Vermont Team Based Care
+
+Our Impact & Performance
+
+Help and Resources
+
+Public Records & Research
+
+Connect With Us
+
+Mental Health Crisis Help
+
+Call 211 to connect to help near you!
+
+211 functions as a Vermont help and services information directory. Call or search online to find the help you need.
+
+Vermont Health Connect
+
+Human Services Board
+
+The Board is a citizen's panel consisting of seven members created by the legislature pursuant to 3 V.S.A., §3090. Its duties are to act as a fair hearing board for appeals brought by individuals who are aggrieved by decisions or policies of departments and programs within the Agency of Human Services.
+
+For a list of Board Members and their terms:  Human Services Board Members and Terms
+
+The Board has three hearing officers who conduct hearings on a regular basis in each district in which the Agency of Human Services maintains offices. The hearing officers issue written recommendations that include findings of fact and a proposed decision for the Board to act upon. The Board meets on a monthly basis to consider those recommendations. Parties to an appeal can attend the Board meetings and argue whether the Board should or should not adopt the hearing officers' recommendations.
+
+To Request a Fair Hearing:
+
+Downloadable Forms
+
+Fair Hearing Request Form | Word Doc
+
+Fair Hearing Request Form | PDF
+
+Fill it out, and mail or email it to us at:
+
+Human Services Board
+
+6 Baldwin Street, Suite 305
+
+Montpelier, VT 05633-4302
+
+Email: contact.hsb@vermont.gov.
+
+Online Fair Hearing Request Form
+
+Fair Hearing Rules
+
+Fair Hearing Rules
+
+Summary of Fair Hearing Process
+
+Search Fair Hearing Decisions
+
+To search Fair Hearing Decisions click on the following link: Search Fair Hearing Decisions.
+
+File a Complaint Against a Hearing Officer
+
+The Board’s Hearing Officers are bound by Vermont’s General Rule for Executive Branch Administrative Hearing Officers. Complaints against a hearing officer falling under this rule may be initiated by writing to the Human Services Board by email at contact.hsb@vermont.gov or by mail at Human Services Board, 6 Baldwin Street, Suite 305, Montpelier, VT 05633.
+
+Please call the Board at (802) 828-2536 if you have difficulty submitting a written complaint or if you have questions.
+
+Contact us at:
+
+Tags
+
+ Boards & Commissions
+
+ Help & Resources
+
+Email:
+
+Contact.hsb@vermont.gov
+
+By Mail:
+
+Human Services Board
+
+6 Baldwin Street, Suite 305
+
+Montpelier, VT 05633-4302
+
+Telephone:
+
+(802) 828-2536
+
+FAX: (802) 828-3068
+
+This information is important.  If you need help understanding it, tell us. (802) 828-2536
+
+Ova informacija je važna. Ako Vam je potrebna pomoć da je razumijete, obavijestite nas. (Bosnian)
+
+Ces informations sont importantes. Si vous avez besoin d’aide pour les comprendre, dites-le nous. (French)
+
+Iyi n'inkenuzo ngirakamaro. Tubwire, mugihe woba ushaka impfashanyo y'ugusobanukirwa. (Kirundi)
+
+Macluumaadkan waa muhiim. Haddii aad u baahan tahay  caawimaad ah fahanka macluumaadka, noo sheeg. (Somali)
+
+Esta información es importante. Si usted necesita ayuda para comprenderla, infórmenos. (Spanish)
+
+Maelezo haya ni muhimu. Ikiwa unahitaji msaada wa kuyafahamu, tueleze. (Swahili)
+
+Đây là thông tin quan trọng. Nếu quý vị cần trợ giúp để hiểu thông tin này, hay cho chúng tôi biết. (Vietnamese)
+
+هذه المعلومات مهمة.  إذا كنت تحتاج إلى مساعدة لفهمها، أخبرنا. (Arabic)
+
+यो जानकारी महत्त्वपूर्ण छ ।  यदि तपाईंलाई यसलाई बुझ्नमा मद्दत आवश्यक पर्छ भने हामीलाई भन्नुहोस् ।  (Nepali)
+
+ဤအချက်အလက်သည် အရေးကြီးပါသည်။ ၎င်းကို နားလည်ရန်အတွက် အကူအညီလိုအပ်ပါက၊ ကျွန်ုပ်တို့အား ပြောပါ။  (Burmese)
+
+Contact Information
+
+AHS Communications
+
+AHS.Communications@Vermont.gov
+
+Contact Us Form
+
+Phone:802-241-0440
+
+Mailing Address
+
+Agency of Human Services
+
+280 State Drive - Center Building
+
+Waterbury, VT, 05676
+
+Send a Request
+
+Send Website Accessibility feedback or request content in another format.
+
+Send a Public Information Request.
+
+Send a Media Request
+
+Connect With Us
+
+Facebook  Linkedin  YouTube
+
+State of Vermont Careers
+
+Job Postings for Job Seekers
+
+Employee Benefits
+
+Featured Job Videos
+
+Vermont Department of Human Resources
+
+Interpretation Services
+
+Bosanski (Bosnian)
+
+English
+
+Español (Spanish)
+
+Français (French)
+
+Kiswahili (Swahili)
+
+Soomaali (Somali)
+
+Tiếng Việt (Vietnamese)
+
+العربية (Arabic)
+
+नेपाली (Nepali)
+
+မြန်မာစာ (Burmese)
+
+ return to top
+
+Return to top
+
+ end of return to top
+
+Copyright © 2026 State of Vermont All rights reserved. |
+
+Web Policies
+
+Accessibility
+
+Privacy
+
+SOURCE 6: State Long-Term Care Ombudsman Program — Adult Services Division, Vermont Department of Disabilities, Aging and Independent Living | https://asd.vermont.gov/services/ltc-ombudsman-program | source date: none stated on page | retrieved: 2026-09-04
+Skip to main content
+
+An Official Vermont Government
+ Website
+
+Disabilities, Aging and Independent Living
+
+ Adult Services Division
+
+Menu
+
+For Consumers
+
+ARIS-Self Directed Services
+
+Brochures
+
+Get Help Now
+
+Handbooks
+
+Report a Concern
+
+For Partners
+
+Agency Certification Standards
+
+Brochures
+
+Information at a Glance
+
+Medicaid Service Rates
+
+Program Guidance Memos
+
+Program Manuals
+
+Provider Enrollment
+
+Program Regulations
+
+Report a Concern
+
+VT Medicaid Portal
+
+CFC AFC & FC Case Management Transition Resources
+
+State of Vermont Online Directory
+
+Languages
+
+Search
+
+Home
+
+Get Help Now
+
+Document Library
+
+Our Team
+
+Program Resources
+
+Reports
+
+Services
+
+Adult Day Services
+
+Adult High Technology Services
+
+Aging & Disability Resource Connections-No Wrong Door
+
+Area Agency on Aging (AAA) Older American's Act (OAA) Services
+
+Area Agency on Aging Self-Neglect Services
+
+Attendant Services Program
+
+Choices for Care Program
+
+Dementia Care & Family Caregiver Support
+
+Eldercare Clinician Program
+
+Moderate Needs Services
+
+Money Follows the Person Program
+
+Residential Options
+
+Services to Support Social Connection
+
+State Health Insurance Program
+
+State Long-Term Care Ombudsman Program
+
+Traumatic Brain Injury Program
+
+Vermont Senior Centers
+
+Veterans Independence Program
+
+Whom We Help
+
+Special Projects and Initiatives
+
+Farm to Family for Seniors
+
+Contact Us
+
+Search
+
+Submit
+
+Home
+
+Get Help Now
+
+Document Library
+
+Our Team
+
+Program Resources
+
+Reports
+
+Services
+
+Adult Day Services
+
+Adult High Technology Services
+
+Aging & Disability Resource Connections-No Wrong Door
+
+Area Agency on Aging (AAA) Older American's Act (OAA) Services
+
+Area Agency on Aging Self-Neglect Services
+
+Attendant Services Program
+
+Choices for Care Program
+
+Dementia Care & Family Caregiver Support
+
+Eldercare Clinician Program
+
+Moderate Needs Services
+
+Money Follows the Person Program
+
+Residential Options
+
+Services to Support Social Connection
+
+State Health Insurance Program
+
+State Long-Term Care Ombudsman Program
+
+Traumatic Brain Injury Program
+
+Vermont Senior Centers
+
+Veterans Independence Program
+
+Whom We Help
+
+Special Projects and Initiatives
+
+Farm to Family for Seniors
+
+Contact Us
+
+State Long-Term Care Ombudsman Program
+
+CALL:  800-889-2047
+
+DAIL contracts with Vermont Legal Aid to operate the Office of the State Long Term Care Ombudsman Program (SLTCOP). The SLTCOP is charged with protecting the safety, welfare and rights of Vermonters in nursing homes, residential care homes, and people using Choices for Care home and community-based services. An Ombudsman’s primary responsibility is to investigate and resolve complaints on behalf of individuals.  They also provide information and consultations to individuals, family members, providers, the public, and other community partners. Staff include a full time director (the State Long Term Care Ombudsman) and regional ombudsmen, located in five regional offices.  A volunteer coordinator works with twelve certified volunteers, who are assigned to specific long term care facilities throughout the state.
+
+VT Long-Term Care Ombudsman
+
+Get Help Now
+
+TAGS:
+
+Human Rights
+
+Legal Assistance
+
+Long Term Care
+
+Long Term Services and Supports
+
+Ombudsman
+
+Contact Us
+
+Angela McMann, Division Director
+
+HC 2 South, 280 State Drive
+
+Waterbury, VT 05671-2070
+
+Voice: (802) 241-0294
+
+Fax: (802) 241-0385
+
+For Telecommunications Relay Service: Dial 711
+
+This is a Division of the
+
+Department of Disabilities, Aging and Independent Living
+
+under the Agency of Human Services
+
+National Resources and Partners
+
+ACL
+
+BIAA
+
+CMS
+
+N4A
+
+NADSA
+
+NASUAD
+
+NCI
+
+USDA
+
+Vermont State Partners
+
+BIAVT
+
+SASH
+
+V4A
+
+VCIL
+
+VHCA
+
+VNA's of VT
+
+Vermont 211
+
+More Vermont Partners
+
+Performance Dashboards
+
+Agency of Human Services Results Scorecard
+
+DAIL Department Scorecard
+
+ return to top
+
+Return to top
+
+ end of return to top
+
+Copyright © 2026 State of Vermont All rights reserved. |
+
+Web Policies
+
+Accessibility
+
+Privacy
+
+SOURCE 7: Vermont Long-Term Care Ombudsman Project — Vermont Legal Aid | https://www.vtlegalaid.org/legal-projects/long-term-care-ombudsman | source date: none stated on page | retrieved: 2026-09-04
+Skip to main content
+
+ Vermont Legal Aid
+
+Main navigation
+
+About VLA
+
+Our Mission
+
+How To Get Help
+
+Get Involved
+
+Work at VLA
+
+Finances
+
+Board of Trustees
+
+Legal Projects
+
+Projects Overview
+
+Consumer + Homeowner Rights
+
+Disability Law
+
+Elder Law
+
+Health Care Advocate
+
+Housing Discrimination Law
+
+Long-Term Care Ombudsman
+
+Medical-Legal Partnership
+
+Mental Health Law
+
+Poverty Law
+
+Tenant Representation Pilot Project
+
+Victims’ Rights
+
+Community Impact
+
+Advocacy + Impact
+
+Impact Report
+
+Staff Stories
+
+News + Media
+
+News Blog
+
+Media Requests
+
+Publications
+
+Subscribe to E-News
+
+Request a Speaker
+
+VLA in the Media
+
+Annual Justice Gala
+
+Search
+
+Mobile Nav
+
+About VLA
+
+Our Mission
+
+How To Get Help
+
+Get Involved
+
+Work at VLA
+
+Finances
+
+Board of Trustees
+
+Legal Projects
+
+Projects Overview
+
+Consumer + Homeowner Rights
+
+Disability Law
+
+Elder Law
+
+Health Care Advocate
+
+Housing Discrimination Law
+
+Long-Term Care Ombudsman
+
+Medical-Legal Partnership
+
+Mental Health Law
+
+Poverty Law
+
+Tenant Representation Pilot Project
+
+Victims’ Rights
+
+Community Impact
+
+Advocacy + Impact
+
+Impact Report
+
+Staff Stories
+
+News + Media
+
+News Blog
+
+Media Requests
+
+Publications
+
+Subscribe to E-News
+
+Request a Speaker
+
+VLA in the Media
+
+Annual Justice Gala
+
+Search
+
+Get Free Legal Help
+
+Get Involved
+
+Donate
+
+Vermont Long-Term Care Ombudsman Project
+
+The Vermont Long-Term Care Ombudsman Project protects the health, welfare and rights of people who live in licensed long-term care facilities. We also help people who receive long-term care through Vermont’s Choices for Care (CFC) program.
+
+We work to empower our clients and improve their quality of life. We resolve individual concerns about long-term care. We also educate people about their rights. And we advocate for better laws and rules related to long-term care.
+
+The Long-Term Care Ombudsman Project has developed online information on long-term care topics. Access long-term care information on our VTLawHelp.org website.
+
+Video transcript  —  This video from 2017 features some former ombudsmen. They describe how our program helps Vermonters.
+
+Contact us
+
+Need help? Call us!
+
+The Vermont Long-Term Care Ombudsman Project promotes the rights of people getting long-term care services. If you have questions or concerns, contact us.
+
+Call us at 1-800-889-2047 ext. 3 or fill out our online form. We will do our best to get back to you within three business days.
+
+Annual reports
+
+Annual Report Archive
+
+More information
+
+Further Reading
+
+Volunteer as a Long-Term Care Ombudsman
+
+Downloadable Publications
+
+Vermont Long-Term Care Ombudsman Project Brochure
+
+Vermont Long-Term Care Ombudsman Project Brochure - Mandarin Chinese
+
+Vermont Long-Term Care Ombudsman Project Brochure - Nepali
+
+Vermont Long-Term Care Ombudsman Project Brochure - Somali
+
+Vermont Long-Term Care Ombudsman Project Brochure - Spanish
+
+Vermont Long-Term Care Ombudsman Project Brochure - Swahili
+
+External Resources
+
+Long-term care section of the VTLawHelp.org website
+
+Interview with Kaili Kuiper and Michelle Carter about the project
+
+VLA Stories
+
+ Meet Michelle, a VLA long-term care advocate
+
+Michelle is one of our staff members who advocate for Vermonters needing long-term care like John.
+
+John had been in a nursing home since he suffered a stroke several years ago. His balance and his strength varied from day to day.
+
+An outgoing, independent person by nature, John liked to visit with other residents, and he wanted to use the toilet in his room instead of a diaper or bedpan. His daughter called our office when John complained that the nursing home aides wouldn’t help him get out of bed.
+
+We talked to the nursing director to make her aware of the problem. The director instructed the aides to help John get out of bed when he rang his bell. With the issue resolved, there was a visible difference in John’s emotional well-being.
+
+To protect anonymity and confidentiality, some names and details in these stories have been changed.
+
+More VLA Stories
+
+Legal Projects
+
+Projects Overview
+
+Consumer + Homeowner Rights
+
+Disability Law
+
+Elder Law
+
+Health Care Advocate
+
+Housing Discrimination Law
+
+Long-Term Care Ombudsman
+
+Medical-Legal Partnership
+
+Mental Health Law
+
+Poverty Law
+
+Tenant Representation Pilot Project
+
+Victims’ Rights
+
+ASL Video With Narration
+
+العربية
+
+Bosanski
+
+မြန်မာစာ
+
+دری
+
+Español
+
+Français
+
+Ikirundi
+
+Kiswahili
+
+Mai-Mai
+
+中文
+
+नेपाली
+
+پښتو
+
+Soomaali
+
+українська мова
+
+Tiếng Việt
+
+Statewide services from four offices
+
+Burlington
+
+Montpelier
+
+Rutland
+
+Springfield
+
+Get Free Legal Help
+
+Subscribe to VLA News
+
+Diversity
+
+Privacy
+
+Accessibility
+
+© 2026 Vermont Legal Aid, Inc.
+

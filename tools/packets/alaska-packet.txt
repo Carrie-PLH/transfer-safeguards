@@ -1,0 +1,1278 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: alaska
+ASSEMBLED: 2026-09-04
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/alaska.json (recipe digest bd40de4590dd). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- SOURCE 1: transport curl; extractor html-text; scope div.statute; filters trim-lines, collapse-blank-runs.
+  Captured from the Legislature's own BASIS application endpoint rather than from its pages. The page address, akleg.gov/basis/aac.asp, is a scripted client that loads section text by GET request to this same script with media=print and a secStart/secEnd range; the request carries no session token, query hash or build identifier, so it is a stable public endpoint and is admitted as first-party under the API rule in PROVENANCE.md. This range is the whole nursing-facility article of the licensing chapter. It is captured to establish, in the state's own text, that the licensing rule states no grounds, notice period or appeal route for a facility-initiated transfer or discharge; the page records that as a finding. The endpoint returns an HTML fragment with no html or body element, a single div.statute wrapping the requested sections; the scope names that div.
+- SOURCE 2: transport curl; extractor html-text; scope div.statute; filters trim-lines, collapse-blank-runs.
+  Same endpoint and same admission as source 1. The general rights section of the licensing chapter, which applies to nursing facilities; captured for the same reason, as the second place a state-stated ground or notice period would sit if the licensing rule carried one. The endpoint returns an HTML fragment with no html or body element, a single div.statute wrapping the requested sections; the scope names that div.
+- SOURCE 3: transport curl; extractor html-text; scope div.statute; filters trim-lines, collapse-blank-runs.
+  Same endpoint and same admission as source 1. The Medicaid coverage rule for nursing facilities: 7 AAC 140.540 (transfer of recipients, ten-day written notice, hearing under 7 AAC 49), 7 AAC 140.545 (discharge of recipients, same), and 7 AAC 140.585 (payment for reserving a bed during a planned absence, and none during hospitalization). The range also carries the intervening sections on payment and personal funds; a superset only adds evidence. The endpoint returns an HTML fragment with no html or body element, a single div.statute wrapping the requested sections; the scope names that div.
+- SOURCE 4: transport curl; extractor html-text; scope div.statute; filters trim-lines, collapse-blank-runs.
+  Same endpoint and same admission as source 1. The hearing chapter that 7 AAC 140.540(c) and 140.545(b) send a recipient to: 7 AAC 49.030 (request in writing to the department within 30 days; referral to the office of administrative hearings), 7 AAC 49.060 (ten-day notice of proposed agency action) and 7 AAC 49.190 (continuation of assistance while a hearing is pending). The endpoint returns an HTML fragment with no html or body element, a single div.statute wrapping the requested sections; the scope names that div.
+- SOURCE 5: transport curl; extractor pdftotext-layout; filters none.
+  The department's own hearing-rights notice and request form, listed on its Approved SDS Forms page (source 6). It is the one Alaska source that prints where a fair hearing request is sent: a mailing address, fax, email and telephone, all routed through the department's fiscal agent. The form's columnar layout renders address, fax, email and telephone on shared lines; quotations are taken as the capture renders them.
+- SOURCE 6: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The department page that lists source 5 by name (Uni-08 Fair Hearing Rights Notice) among the division's approved forms. Captured so the form's standing as a department instrument rests on the department's own listing rather than on a file address.
+- SOURCE 7: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The program's own site. The office's contact block (street address, telephone, toll-free number, fax, email) prints here.
+- SOURCE 8: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The program's statement of where it sits in state government (the Department of Revenue, administered by the Alaska Mental Health Trust Authority), its hours, and its statement that discharge appeals are among the most common complaints it receives.
+
+SOURCE 1: 7 AAC 12.250 - 7 AAC 12.290, Article 5, Nursing Facilities — Alaska Administrative Code, Alaska State Legislature (BASIS) | https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.12.250&secEnd=7.12.290 | source date: none stated in the print rendering | retrieved: 2026-09-04
+7 AAC 12.250. Scope.
+A facility that is not an acute care hospital and that provides nursing care and related medical services over a period of 24 hours each day to individuals admitted because of illness, disease, or physical infirmity is a nursing facility, and must comply with 7 AAC 12.250 - 7 AAC 12.290.
+
+ 7 AAC 12.255. Services required.
+A nursing facility must provide nursing, pharmaceutical, either physical or occupational therapy, social work services, therapeutic recreational activities, dietetic, central supply, laundry, housekeeping, laboratory and radiological services.
+
+ 7 AAC 12.256. Admissions.
+The nursing facility must have written policies and procedures to ensure admissions of only those individuals whose needs can be met by the nursing facility directly or in cooperation with community resources.
+
+ 7 AAC 12.258. Use of restraints or psychoactive drugs.
+(a) In addition to the rights of patients specified in 7 AAC 12.890, residents of nursing facilities have the right to be free from physical restraints imposed or psychoactive drugs administered for purposes of discipline or convenience and that are not required to treat the resident's medical symptoms.
+(b) A resident's medical records must contain evidence of consultation with appropriate health professionals, such as occupational or physical therapists, in the use of less restrictive supportive devices before using physical restraints. The record must also contain evidence of an interdisciplinary team's identification of less restrictive approaches to be used before or in conjunction with the use of psychoactive drugs.
+(c) If, after a trial period of less restrictive measures, a nursing facility decides that a physical restraint or psychoactive drug would enable and promote greater functional or social independence, the nursing facility must explain the use of the restraint or psychoactive drug to the resident, before its use. If the resident has a legal representative, the explanation must also be given to the resident's legal representative, before its use. The explanation must include a description of the risks and benefits of the use of the restraint or drug.
+(d) Approval of the use of a restraint or psychoactive drug by a resident, or legal representative must precede its use, except in the case of a medical emergency in which there is a risk of harm to the resident or others. The approval, or the circumstances of the emergency, must be documented in the resident's medical records at the nursing facility.
+(e) A resident's medical records must contain evidence of an interdisciplinary team's periodic reassessment of the restraint or psychoactive drug to determine its effectiveness and appropriateness for continued use.
+(f) A nursing home must also meet the requirements at 42 C.F.R. 483.10, 483.12, 483.13, and 483.15, as amended July 1, 1991, regardless of whether the nursing home is certified to receive medicaid payments under 7 AAC 43.170.
+
+ 7 AAC 12.260. Medical director.
+A medical director who is employed by or is a consultant to the nursing facility shall
+ (1) place a resident under the care of a physician;
+ (2) ensure that the use of an investigational drug is properly supervised by a member of the medical staff, that an informed consent form provided by the sponsoring company or agency is used, and that complete records on the drug, including protocol and side effects, are maintained; and
+ (3) supervise the infection control and employee health programs.
+
+ 7 AAC 12.265. Physician services.
+(a) Physicians shall review, recap, and sign orders for nursing facility residents at least once every 60 days.
+(b) A physician shall visit nursing facility residents and make a notation in each resident's medical record of the resident's status every 30 days for the first 90 days, and after that, every 60 days. If the condition of a resident warrants more frequent visits, a physician shall visit a resident as often as necessary.
+(c) A nursing facility shall ensure that a physician personally approves a recommendation in writing that an individual be admitted. Each resident shall remain under the care of a physician and shall be provided care that is consistent with the plan of care, comprehensive assessment, and needs of the resident.
+(d) A nursing facility shall ensure that
+ (1) the medical care of each resident is supervised by a physician who assumes the principal obligation and responsibility to manage the resident's medical condition and who agrees to visit the resident as often as necessary to address the resident's medical care needs;
+ (2) another physician will supervise the medical care of the resident when the resident's attending physician is unavailable; and
+ (3) the medical director is informed of the results of all department surveys related to medical service deficiencies and is involved in resolving such problems.
+(e) A nursing facility shall ensure that the responsible physician
+ (1) participates as a member of the interdisciplinary care team in the development and review of the resident's comprehensive care plan, with the understanding that the minimum level of physician participation in interdisciplinary development and review of the care plan must be a person-to-person conference with the registered nurse who has principal responsibility for development and implementation of the resident's care plan;
+ (2) reviews the resident's total program of care, including medications and treatments, at each regularly scheduled visit;
+ (3) prepares, authenticates, and dates progress notes at each visit;
+ (4) authenticates and dates all orders; and
+ (5) provides for scheduled visits after the initial visit; the responsible physician may alternate between in-person visits and visits by a physician assistant or advanced practice registered nurse in accordance with (f) of this section.
+(f) A nursing facility may permit a physician to delegate tasks to a physician assistant who is acting within the scope of practice set out under AS 08.64 and 12 AAC 40, or to an advanced practice registered nurse who is acting under the scope of practice set out under AS 08.68 and 12 AAC 44. The nursing facility may not permit a physician to delegate a task if state or federal statutes or regulations prohibit the delegation, or if the nursing facility's own policies prohibit the delegation.
+
+ 7 AAC 12.270. Staff duties.
+(a) The nursing facility staff shall encourage and assist residents to achieve and maintain their highest level of self-care and independence. A registered nurse, in conjunction with an interdisciplinary team, shall, within 14 days of admission of a resident, ensure completion of the comprehensive resident assessment instrument approved by the department. The assessment shall be reviewed by the nurse and interdisciplinary team no less frequently than quarterly and the plan of care revised as necessary. A reassessment shall be completed, by the nurse and interdisciplinary team, after any major permanent change in condition of the resident, but no less frequently than annually.
+(b) The nursing facility staff shall give residents the necessary care to prevent pressure ulcers, contractures, and deformities.
+(c) The nursing facility staff shall implement procedures to prevent and reduce incontinence of residents. These procedures must include
+ (1) a written assessment by a registered nurse within two weeks after admission of an incontinent resident's ability to participate in a bowel or bladder training program;
+ (2) an individualized bowel or bladder training plan for each resident, as appropriate; and
+ (3) a monthly written summary of a resident's performance in the training program.
+(d) The nursing facility staff shall observe the hydration status of residents, and shall record deviations from the normal status and report the deviations to the charge nurse.
+
+ 7 AAC 12.275. Nursing and medical services.
+(a) Except as otherwise specified in this section, a nursing facility must have a registered nurse on duty seven days a week on the day shift and five days a week on the evening shift. A licensed practical nurse must be on duty during all shifts when a registered nurse is not present. A nursing facility must have telephone access to at least one registered nurse at all times and must post the names and phone numbers of those registered nurses at each nurse's station.
+(b) A nursing facility with more than 60 occupied beds must have two registered nurses on duty during the day shift and one registered nurse on duty during other shifts.
+(c) A nursing facility that shares the same building as a hospital must have a registered nurse on duty in the nursing facility seven days a week on the day shift. On the evening and night shift, a licensed practical nurse may serve as charge nurse. However, an on-duty registered nurse from the hospital must be available to make rounds at the nursing facility and to be otherwise available as needed during the evening and night shifts when a licensed practical nurse is serving as charge nurse. A nursing facility with 14 or fewer occupied beds may use an on-duty registered nurse from the hospital to meet the night shift nursing requirement set out in this subsection.
+(d) A nursing facility must have a contract for diagnostic services with a laboratory and x-ray provider approved by the department.
+(e) A nursing facility must have a contract with a licensed dentist to provide consultation and necessary dental services to residents.
+(f) In addition to the requirements of this section, a governing body of a facility must provide resources and personnel as necessary to meet resident needs under 7 AAC 12.630(b)(6).
+
+ 7 AAC 12.280. Rehabilitation services.
+(a) A nursing facility must provide a program of rehabilitative nursing care that assists each resident to achieve and maintain an optimal level of self-care and independence, as an integral part of the nursing service.
+(b) A nursing facility must provide physical, occupational, or speech rehabilitative services for a resident on a full-time, part-time, or consultant basis in accordance with the needs of the resident.
+(c) A therapist shall evaluate a resident in accordance with a physician's order. The therapist shall then establish an appropriate treatment program in coordination with medical, nursing, and other rehabilitative personnel.
+(d) The therapist shall report on the resident's progress to the attending physician within two weeks after initiation of rehabilitative services. After that report, the therapist shall reevaluate and note in the resident's medical record the resident's status and treatment plan every 30 days in the case of a resident receiving active rehabilitation and at least every 90 days for other residents.
+
+ 7 AAC 12.285. Activity program.
+A nursing facility must provide an activity program that is available to all residents and encourages each resident to attain and maintain function at the highest practicable level. The program must address the intellectual, social, spiritual, creative, cultural, and physical needs, capabilities, and interests of each resident. Also, the program must encourage self-determination and well-being of the residents. If a physician finds a resident as medically able to participate in an activity program, that finding and any conditions of the resident's participation or contra-indications to that participation must be noted in the resident's record at the nursing facility. The activity program coordinator, with an interdisciplinary team, shall develop the resident's individual activity program. The activity program coordinator shall consult as necessary with an occupational or recreational therapist, unless the activity program coordinator meets the requirements of 42 C.F.R. 483.15(f)(2), revised as of October 1, 1991.
+
+ 7 AAC 12.290. Drug regimen review.
+(a) A pharmacist must review each resident's prescribed drug regimen once every 30 days, make recommendations, note the possibilities or absence of problems irregularities, or clinically significant results or consequences with the prescribed drug regimen, and report potential problems and concerns to the physician and the director of nursing. Reports of potential problems and concerns shall be acted upon promptly. The nursing facility shall provide for more frequent drug regimen reviews by a pharmacist, if a resident's condition requires them.
+(b) A potential problem or concern reported under (a) of this section shall be reviewed in accordance with the risk management program under 7 AAC 12.860.
+
+SOURCE 2: 7 AAC 12.890, Rights of patients, clients, and residents — Alaska Administrative Code, Alaska State Legislature (BASIS) | https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.12.890&secEnd=7.12.890 | source date: none stated in the print rendering | retrieved: 2026-09-04
+7 AAC 12.890. Rights of patients, clients, and residents.
+(a) Except as otherwise provided in AS 47.30.825, a patient, client, or a nursing facility resident has rights that include the following:
+ (1) to associate and communicate privately with persons of the patient's, client's, or resident's choice;
+ (2) to have reasonable access to a telephone to make and receive confidential calls;
+ (3) to mail and receive unopened correspondence;
+ (4) to be informed of the facility's grievance procedure for handling complaints relating to patient, client, or resident care;
+ (5) to be free from physical or chemical restraints except as specified in AS 47.30.825 or 7 AAC 12.258;
+ (6) to be treated with consideration and recognition of the patient's, client's, or resident's dignity and individuality;
+ (7) to confidentiality of the patient's, client's, or resident's medical records and treatment;
+ (8) to be free from unnecessary or excessive medications;
+ (9) to private visits by the patient's, client's, or resident's spouse, and to share a room if both spouses are patients, clients, or residents in the facility, unless medical reasons or space problems require separation;
+ (10) to be informed in a language that the patient, client, or resident understands, before or at the time of admission and during the stay, of services that are available in the facility and their cost, including any costs for services or personal care items not covered by the facility's basic per diem rate or not covered under 42 U.S.C. 1395 - 1396v (Titles XVIII or XIX of the Social Security Act);
+ (11) to be informed, in a language that the patient, client, or resident understands, of the patient's, client's, or resident's medical condition by the practitioner responsible for treatment;
+ (12) to refuse to participate in experimental research, psychosurgery, lobotomy, electroconvulsive therapy, or aversive conditioning;
+ (13) to participate in the development of a plan of care, or discharge plan, and to receive instructions for self-care and treatment that include explanation of adverse symptoms and necessary precautions, as appropriate;
+ (14) to be informed, in a language that the patient, client, or resident understands, of the rights listed in this subsection and of all the rules and regulations governing patient, client, or resident conduct and responsibility;
+ (15) to be informed of the professional training and experience of the practitioner responsible for treatment;
+ (16) to be informed by a practitioner of different options to the treatment recommended by the practitioner responsible for treatment, including the risks and benefits of each option.
+(b) A written notice that sets out the rights listed in (a) of this section must be posted in a conspicuous location, and a copy must be given to a patient, a client, a resident, a family member, or the legal representative of the patient, client, or resident and, at cost, to a member of the public.
+(c) A written notice that sets out the facility procedures for receipt and safekeeping of patients', clients', or residents' money and valuables must be posted in a conspicuous location. A copy of the notice must be given to a patient, client, or resident, or to a family member or legal representative of the patient, client, or resident. If requested, a copy of the notice must be provided, at cost, to a member of the public. A receipt for safeguarded money and valuables must be provided by the facility to the patient, client, or resident at the time of admission and following changes in the facility's procedures.
+(d) A facility must establish written procedures to assure delivery of complaints by patients, clients, or residents to the facility's administration. The administration shall acknowledge receipt of a patient's, client's, or resident's complaint, and take appropriate action.
+
+SOURCE 3: 7 AAC 140.540 - 7 AAC 140.585, Nursing Facility Services (transfer, discharge, absence from nursing facility) — Alaska Administrative Code, Alaska State Legislature (BASIS) | https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.140.540&secEnd=7.140.585 | source date: none stated in the print rendering | retrieved: 2026-09-04
+7 AAC 140.540. Transfer of recipients.
+(a) No later than seven days after a nursing facility transfers a recipient to another level of care within the same facility, the nursing facility must notify the department of the transfer by submitting a current request for a level-of-care authorization on a form provided by the department.
+(b) Before a nursing facility transfers a recipient to another nursing facility or hospital, the facility shall, at least 10 days before the transfer, provide a written notice
+ (1) to the recipient;
+ (2) if applicable, to the recipient's family or guardian;
+ (3) to the attending physician;
+ (4) to the division of the department responsible for payment for health care services;
+ (5) to the division of the department responsible for senior and disabilities services, if the nursing facility is proposing the transfer; and
+ (6) to the nursing facility, if the division of the department responsible for senior and disabilities services is proposing the transfer.
+(c) A recipient who receives notice of a proposed transfer under (b) of this section may request a hearing under 7 AAC 49.
+(d) The department may withhold payment to a nursing facility if the facility fails to comply with this section.
+
+ 7 AAC 140.545. Discharge of recipients.
+(a) When a nursing facility's utilization review committee or the department determines that a recipient does not, or in the future will not, require continued nursing facility placement, the nursing facility shall provide, at least 10 days before the date of discharge, a written notice of proposed discharge
+ (1) to the recipient;
+ (2) if applicable, to the recipient's family or guardian;
+ (3) to the attending physician;
+ (4) to the division of the department responsible for payment for health care services;
+ (5) to the division of the department responsible for senior and disability services, if the nursing facility is proposing the discharge; and
+ (6) to the nursing facility, if the division of the department responsible for senior and disability services is proposing the discharge.
+(b) A recipient who receives notice of a proposed discharge under (a) of this section may request a hearing under 7 AAC 49.
+(c) The department may withhold payment to the facility, if the facility fails to comply with this section.
+
+ 7 AAC 140.550. Third-party resources.
+The department will immediately notify a nursing facility of a known third-party resource or credit available to a recipient, including the amount and source. A recipient's income, and third-party resources or credits, exclusive of the allowance under 7 AAC 100.554 and 7 AAC 100.558 for personal incidental needs, must be offset as part of the recipient's cost-of-care liability against the all-inclusive rate in accordance with 7 AAC 145.670. Third-party resources and credits that become known to the nursing facility must be reported to the department. The nursing facility is responsible for collecting those resources or credits.
+
+ 7 AAC 140.555. Days chargeable.
+The department will pay from the day of admission to a nursing facility but not for the day of discharge, transfer, or death. Transfer includes transfer from one level of care to another level of care within a single nursing facility as well as between different nursing facilities.
+
+ 7 AAC 140.560. Payment during impending decertification.
+If the department determines that a nursing facility is deficient in areas relating to recipient care and has initiated decertification proceedings, the department will not pay for services provided to a recipient admitted to the facility, or who becomes eligible for assistance, after the date the department has notified the nursing facility that the department has initiated decertification proceedings. If a nursing facility provides both intermediate care services and skilled nursing services, the department may implement this section independently for each level of certification.
+
+ 7 AAC 140.565. Payment for nursing facility transfers.
+(a) If the department determines that a nursing facility is deficient in areas related to recipient care and the facility transfers a recipient to another facility at the same level-of-care certification to avoid decertification or any other enforcement penalty, the department will recover from the facility the costs of transferring that recipient to the other facility.
+(b) If the department determines that a recipient needs a higher or lower level of care than the facility is certified to provide, the department will pay the cost of moving the recipient to a facility certified to provide a higher or lower level of care.
+
+ 7 AAC 140.570. Other payments.
+Payment by the department is payment in full for those services authorized under Medicaid. If the nursing facility obtains from another source any additional payment for the care provided to a recipient for services that have been paid for by Medicaid, the nursing facility shall refund or credit the additional payments to the department.
+
+ 7 AAC 140.575. Recipient personal funds and personal property.
+(a) A recipient has the right to manage the recipient's personal funds unless the recipient has been adjudicated incapacitated or the recipient's incapacity has been established in accordance with AS 13.26.353, or the recipient has had a full guardian appointed under AS 13.26.116 or a conservator appointed under AS 13.26.165. A recipient or a recipient's representative may delegate holding, safeguarding, accounting, or managing responsibilities to a nursing facility. If a recipient or a recipient's representative delegates holding, safeguarding, accounting, or managing responsibilities to a nursing facility, the nursing facility shall make the account required under 42 C.F.R. 483.10(c), adopted by reference in 7 AAC 160.900, available to the recipient. The account may be used to hold the recipient's personal funds, including the amount set aside for the recipient's personal needs allowance under 7 AAC 100.558. Recipient personal funds may be used to purchase personal incidental items, supplies, or services not otherwise furnished by the nursing facility or covered by Medicaid.
+(b) If a recipient delegates holding, safeguarding, accounting, or managing responsibilities to the nursing facility under (a) of this section, the nursing facility must
+ (1) have on file a copy of a written delegation;
+ (2) provide a written receipt to the recipient each time the facility receives the recipient's personal funds;
+ (3) deposit the personal funds in a bank in a separate account, apart from any other bank account or accounts of the facility; if any interest is earned on the account, the interest must be apportioned in accordance with the amount of the recipient's personal funds;
+ (4) maintain an account record for the recipient; the account record must show in detail, with supporting verification, the amount of personal funds received or disbursed on behalf of the recipient;
+ (5) without charge, provide to a recipient at least quarterly, an accounting of financial transactions made on the recipient's behalf;
+ (6) notify the recipient and the department when the recipient's accumulated personal funds exceed $1,500;
+ (7) make the recipient's personal funds available to the recipient upon request during normal banking hours;
+ (8) require a list of purchased items, including a description and price, and a receipt, for all items purchased by any person shopping for the recipient, including facility staff, an aide, a volunteer, a department employee, and a family member; and
+ (9) get permission from the recipient or the recipient's representative before withdrawing any amount from the recipient's personal funds.
+(c) Upon discharge or transfer, the nursing facility shall pay to a recipient 90 percent of the recipient's personal funds on deposit with the nursing facility in the recipient's name. No more than 30 days after discharge or transfer, the facility shall give to the recipient a final accounting of the recipient's personal funds and a check for any balance on deposit.
+(d) The nursing facility shall retain, for three years, receipts for expenditures from a recipient's personal funds, together with the recipient's account record.
+(e) Upon sale or other transfer of an ownership interest in a nursing facility or a contract to provide nursing home services in a facility, both the transferor and transferee share joint responsibility in transferring the recipient's personal funds and records in an accurate and orderly manner.
+(f) A nursing facility may not charge a Medicaid recipient for items or services if the facility does not charge all non-Medicaid recipients for those same items and services. Charges must be for direct, identifiable services or supplies furnished to an individual recipient. A periodic "flat" rate charge for routine items, including beverages or cigarettes, is not allowed. A nursing facility may only charge for a service after it has provided the service, and for an item after it has delivered it. Charges may not exceed actual cost to the nursing facility.
+(g) At a recipient's request, a nursing facility shall hold and safeguard a recipient's nonmonetary personal property. A recipient's personal property must be clearly marked with the recipient's name. The nursing facility shall keep an up-to-date record of personal property separate from the facility's inventory. If items are lost, the circumstances of disappearance shall be documented in the nursing facility's records.
+(h) The nursing facility may not charge a recipient for holding, safeguarding, accounting, or managing personal funds or personal property. The cost of accounting and handling must be included in the facility's cost of operation.
+(i) The department may withhold payment to a nursing facility if the facility fails to record properly the receipt and disposition of a recipient's personal funds or personal property.
+(j) In this section,
+ (1) "delegate" means to give legal authority to a person or an entity in writing; and
+ (2) "personal funds" means money or other liquid assets owned by a recipient that are set aside for use by or on behalf of a resident of a nursing facility.
+
+ 7 AAC 140.580. Required all-inclusive services.
+(a) A nursing facility shall provide rehabilitative nursing care, including the services of restorative aides and nurses, as part of nursing and supportive care services.
+(b) If a recipient needs nonemergency, continuous heavy use of oxygen, the nursing facility shall make it available for use at all times. The nursing facility shall submit a request for authorization, on a form provided by the department, shall provide on that form a detailed description of the recipient's need for continuous heavy use of oxygen, and shall include physician orders or physician or nursing notes. Payment will be made to the nursing facility at the facility's cost for the oxygen. The amount of oxygen given to the recipient must be accurately metered and measurable to the recipient. On the billing, the nursing facility shall note the metered amount of oxygen and dates used.
+(c) A nursing facility is responsible for transportation planning. To determine the appropriate type of carrier, the nursing facility shall consider the recipient's condition, distance to the medical facility or provider of service, and the frequency of the trip. The least expensive mode of transportation must be used consistent with these conditions.
+(d) Nonemergency, in-state transportation must receive prior authorization from the department. Emergency transportation must be reported to the department as soon as possible but not later than three working days after the transportation occurred.
+
+ 7 AAC 140.585. Absence from nursing facility.
+(a) Except as provided in (b) of this section, the department will pay for reserving a bed during a planned temporary absence of a recipient from a nursing facility if the absence is not more than 12 consecutive days and the time of departure and return of the recipient are recorded in the nursing facility's records. A planned temporary absence of not more than 12 consecutive days for which the department will pay for reserving a bed includes
+ (1) a visit with relatives and friends; and
+ (2) leave to participate in therapeutic or rehabilitative programs, including
+ (A) trial visits to alternative care settings to determine if permanent placement is feasible;
+ (B) gradually increasing lengths of visits to prepare recipients for return to their home or community; and
+ (C) an extended absence to participate in workshop evaluation for rehabilitative programs.
+(b) The department will not pay for reserving a bed during a temporary absence of more than 12 consecutive days, unless the department gives prior authorization for the absence. The department will not pay for reserving a bed if the recipient has total absences in excess of 12 days during a 12-month period, unless the department gives prior authorization for the absence. The facility must submit a request in writing and receive written approval from the department before the recipient leaves the nursing facility.
+(c) In the recipient's plan of care, the nursing facility shall document the purpose and plan of a therapeutic or rehabilitative absence.
+(d) If a recipient leaves a nursing facility for hospitalization, the department will not pay to reserve the recipient's bed at the nursing facility.
+
+SOURCE 4: 7 AAC 49.010 - 7 AAC 49.200, Hearings — Alaska Administrative Code, Alaska State Legislature (BASIS) | https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.49.010&secEnd=7.49.200 | source date: none stated in the print rendering | retrieved: 2026-09-04
+7 AAC 49.010. Hearing; special provisions.
+(a) Except as expressly stated in this chapter, hearings for recipients of financial, food, or medical assistance granted by the department in the following programs are conducted under AS 44.64.060 and 2 AAC 64.100 - 2 AAC 64.990:
+ (1) General Relief Assistance (GRA);
+ (2) General Relief Medical (GRM);
+ (3) Chronic and Acute Medical Assistance (CAMA);
+ (4) adult public assistance (APA);
+ (5) Medicaid, including personal care services and home and community-based waiver services;
+ (6) Alaska Temporary Assistance Program (ATAP);
+ (7) Women, Infant and Children (WIC);
+ (8) food stamps;
+ (9) child care assistance;
+ (10) heating assistance.
+(b) The provisions of this chapter do not apply to an administrative disqualification hearing covered under 7 C.F.R. 273.16 for an alleged intentional program violation of the food stamp program, or under 7 AAC 45.585 for an alleged intentional program violation of the Alaska Temporary Assistance Program.
+(c) Federal regulations relating to hearings within the Medicaid program under 42 C.F.R. 431.220 - 431.250 and the food stamp program under 7 C.F.R. 273.15 and 273.21(p) take precedence where inconsistent with the requirements of this chapter and 2 AAC 64.
+
+ 7 AAC 49.020. Opportunity for hearing.
+An opportunity for a hearing must be granted to a recipient whose
+ (1) request for financial, food, or medical assistance is denied or is not acted upon with reasonable promptness; or
+ (2) financial, food, or other medical assistance benefits are suspended, terminated, or reduced.
+
+ 7 AAC 49.030. Request for hearing.
+(a) Unless otherwise provided in federal law, a request for a hearing within the scope of 7 AAC 49.020 must be made to the department in writing by a recipient, or by a legal representative acting on the recipient's behalf, not later than 30 days after the date of the notice required under 7 AAC 49.060. A hearing request may be accepted after the time limit under this section only if the administrative law judge finds, based on the evidence submitted, that the request for a hearing could not be filed within the time limit.
+(b) Unless the request is denied under 7 AAC 49.080, the department will refer the matter to the office of administrative hearings (AS 44.64.010) as provided under AS 44.64.060 and 2 AAC 64.120.
+(c) Other than a care coordinator, a service provider may not request a hearing for a recipient if it concerns services by that provider or if the outcome of the hearing affects the level of paid services to that provider.
+
+ 7 AAC 49.040. Time limit on availability.
+Repealed.
+
+ 7 AAC 49.050. Notice of changes in the law.
+Repealed.
+
+ 7 AAC 49.060. Notice of proposed agency action.
+The department will give written notice to the recipient not later than 10 days before the date the department intends to take action denying, reducing, suspending, or terminating assistance, unless
+ (1) factual evidence exists of the death of the recipient;
+ (2) a recipient indicates in writing that the recipient no longer desires assistance, or gives information that requests termination or reduction of assistance and also indicates in writing that the recipient understands the consequences of reporting this information;
+ (3) a recipient has been admitted or committed to an institution in which residents are not eligible for assistance of the type the recipient has been receiving;
+ (4) the recipient's whereabouts are unknown and department mail directed to the recipient's last known address has been returned by the post office indicating no known forwarding address;
+ (5) factual evidence exists that a recipient has been accepted for assistance in another jurisdiction;
+ (6) a change in the level of medical care is prescribed by the recipient's physician;
+ (7) the notice involves an adverse determination made with regard to the preadmission screening requirements of 42 U.S.C. 1396r(e)(7) (sec. 1919(e)(7) of the Social Security Act); or
+ (8) federal regulations governing the Medicaid or food stamp programs specify shorter notice time limits or allow advance notice to be waived for certain groups of recipients.
+
+ 7 AAC 49.070. Contents of notice regarding denial, reduction, suspension, or termination of benefits.
+In a written notice provided under 7 AAC 49.060 of a department action to deny, reduce, suspend, or terminate assistance, and unless otherwise specified in applicable federal regulations, the department will state in the written notice the reasons for the proposed action, including the statute, regulation, or policy upon which that action is based. In the notice the department also will inform the recipient
+ (1) of the recipient's right to a hearing;
+ (2) how to request a hearing;
+ (3) that if requested the department will assist the recipient in making a hearing request;
+ (4) by whom the recipient may be represented or assisted; and
+ (5) the conditions, if any, under which assistance may continue if a hearing is requested.
+
+ 7 AAC 49.080. Time and place of hearing.
+Not later than 10 days after the department receives a hearing request, the department will either
+ (1) deny the request in writing for reasons allowed by law, stating the reasons as required under AS 44.64.060(b) and 2 AAC 64.130, and forward notice of that denial to the party who requested the hearing and the office of administrative hearings (AS 44.64.010); or
+ (2) grant the request and immediately refer the request for hearing to the office of administrative hearings for scheduling of a hearing or other appropriate proceeding.
+
+ 7 AAC 49.090. Group hearings.
+The administrative law judge may consolidate a series of individual requests for hearing by conducting a single group hearing if the sole issue involved is one of state or federal law or policy, or changes in state or federal law or policy. A consolidation of requests does not affect the right of a member of the group to withdraw from the group before or during the group hearing in favor of an individual hearing, and does not affect the right of each member of the group to present the member's own case or be represented by the member's authorized representative at the group hearing. The administrative law judge shall inform each individual affected by a consolidation of requests that a consolidation has been made and that the right to individual withdrawal exists.
+
+ 7 AAC 49.100. Denial or dismissal of hearings.
+The administrative law judge shall deny or dismiss a hearing request or terminate a hearing if
+ (1) the issues by which the recipient is aggrieved are not those set out in 7 AAC 49.020;
+ (2) the recipient withdraws the request in writing or orally on the record;
+ (3) the sole issue is one of state or federal law requiring automatic benefit adjustments affecting groups of recipients or all recipients, and the issue is not one of incorrect benefit computation;
+ (4) the recipient fails, without good cause as determined by the administrative law judge, to appear in person, telephonically, or by authorized representative at the scheduled hearing; or
+ (5) the appeal was untimely under 7 AAC 49.030.
+
+ 7 AAC 49.110. Assistance to clients.
+Repealed.
+
+ 7 AAC 49.115. Access to agency records.
+(a) After granting a request for a hearing under 7 AAC 49.080, the department will provide the recipient and the administrative law judge with a position statement. In the position statement the department will include a
+ (1) summary of the proposed action and the reasons for the proposed action;
+ (2) copy of each law the department is relying upon to support its proposed action; and
+ (3) copy of each document the department is relying upon to support its proposed action.
+(b) The position statement and documents relied upon by the department constitute the official agency record for purposes of the hearing.
+(c) Notwithstanding any other provision of law related to the release of records or access to records retained by the department, during a hearing under this chapter the recipient, the recipient's authorized representative, or a person who has been designated to assist the recipient may examine, at a reasonable time before the hearing, the recipient's case file. In this subsection, "recipient's case file" means the file that the department used when issuing notice to the recipient under 7 AAC 49.060.
+(d) The recipient's authorized representative or person who has been designated to assist the recipient in the administrative process may examine the records under (a) and (c) of this section only after providing the department a release from the recipient that
+ (1) is in writing;
+ (2) clearly identifies the designated person; and
+ (3) clearly identifies where to send the information.
+
+ 7 AAC 49.120. Conduct of hearings.
+During a hearing under this chapter,
+ (1) the recipient has the right to self-representation, representation by an attorney, or the assistance of an agent under a power of attorney, a guardian, a family member, a friend, or another person who may be helpful in the presentation of the case;
+ (2) the department has the right to self-representation or representation by an attorney; and
+ (3) the recipient, the department, the recipient's authorized representative, or a person who has been designated to assist the recipient has the right to
+ (A) present witnesses and documents relevant to the case;
+ (B) establish facts and advance arguments relevant to the case;
+ (C) question or refute testimony or evidence, including the opportunity to confront and cross-examine adverse witnesses; and
+ (D) request a de novo review in a hearing related to the administration of the Medicaid program.
+
+ 7 AAC 49.130. Hearing officer.
+Repealed.
+
+ 7 AAC 49.135. Burden of proof.
+For actions involving termination or reduction of benefits, the burden of proving evidence supporting the termination or reduction is on the department and is by a preponderance of evidence, unless otherwise provided by law. For a request for new or additional benefits, the burden of proof is on the applicant or recipient requesting the service, and is by a preponderance of evidence.
+
+ 7 AAC 49.140. Medical evidence in Medicaid hearings.
+In hearings brought under AS 47.07 or 7 AAC 105 - 7 AAC 160, if an administrative law judge finds that a medical assessment is necessary, the administrative law judge may order the assessment at department expense as provided in 42 C.F.R. 431.240(b). Payment at department expense will be made in accordance with Medicaid payment rates and conditions under 7 AAC 145.
+
+ 7 AAC 49.150. Hearing and final decision authority.
+(a) For hearings under this chapter, the hearing authority is with the administrative law judge
+ (1) that the office of administrative hearings (AS 44.64.010) assigns to the matter, subject to 2 AAC 64.170; and
+ (2) who conducts the hearing on behalf of the commissioner.
+(b) The administrative law judge shall hear and take all evidence in the matter. The decision-making process is subject to the procedure set out in 2 AAC 64.340.
+(c) The commissioner or a person to whom the commissioner has delegated hearing authority will issue the final decision in the matter. The final decision is the final agency action. Once the commissioner or the commissioner's delegee has issued a final decision, the department will notify the recipient of the right to seek judicial review of the final decision under Alaska Appellate Rule 602.
+
+ 7 AAC 49.160. Duties of the hearing authority.
+Repealed.
+
+ 7 AAC 49.170. Limits of the hearing authority.
+Unless the applicant or recipient has requested a de novo review under the Medicaid program, or if otherwise specified under applicable federal regulations, the scope of the administrative law judge's review is limited to ascertaining whether
+ (1) the laws and policies have been properly applied in the case according to the record as it existed at the time the initial decision was made, and as supplemented by evidence admitted in the hearing; and
+ (2) whether the computation of the benefit amount, if in dispute, is in accordance with the laws and policies in effect at the time the decision was made.
+
+ 7 AAC 49.180. Proposed and final decisions.
+Except as otherwise specified in applicable federal regulations, and unless the period is extended by mutual agreement of the recipient and the department and approved by the assigned administrative law judge, the administrative law judge shall issue the proposed decision required under AS 44.64.060(d) in time to allow the commissioner or commissioner's delegee to issue a final decision as described in 7 AAC 150(c) not later than 90 days after the date on which the department received the request for a hearing.
+
+ 7 AAC 49.190. Continuation of assistance.
+Except as otherwise specified in applicable federal regulations, a recipient of assistance other than General Relief, General Relief Medical, or Chronic and Acute Medical assistance that continues to satisfy all eligibility criteria other than those at issue in the hearing request will, upon filing that hearing request, have the assistance reinstated retroactively or continued until the date that the final decision is issued, unless the recipient informs the department that the recipient does not want to receive continuing assistance.
+
+ 7 AAC 49.200. Liability if assistance is continued.
+If a request for a hearing has caused a recipient's assistance to be reinstated or continued pending the hearing under 7 AAC 49.190, and if the final decision is that the department action at issue was correct, the administrative law judge may order the recipient to repay the assistance provided during the hearing process. Nothing in this section limits the ability of the department to seek recoupment of assistance paid as authorized under state or federal law.
+
+SOURCE 5: Uni-08, Notice of Recipient Fair Hearing Rights — Alaska Department of Health (PDF) | https://health.alaska.gov/media/obljx4in/fair-hearing-rights-notice.pdf | source date: Revised 2/1/2025, as the form's footer states | retrieved: 2026-09-04
+Department of Health
+Notice of Recipient Fair Hearing Rights
+You received a letter about a decision affecting your benefits from the Alaska Medicaid office at the Department
+of Health. If you have questions about this letter, please call the Recipient Helpline at (800) 780-9972 for
+assistance. If you disagree with the decision in this letter, you have the right to request a fair hearing. You must
+submit your request within 30 days of the date on the enclosed letter under the authority of 7 AAC 49.030.
+Per 42 CFR § 431.224 an expedited hearing may be requested if the time otherwise permitted for a hearing
+would jeopardize your life, health, or ability to attain, maintain, or regain maximum function.
+How to Request a Hearing:
+Please submit a copy of the benefit determination, completed hearing request below, and any relevant
+medical records. Also include appointing documents for any Legal Guardian(s) or Power of Attorney.
+You may submit your fair hearing request via:
+      Mailing Address               Fax                          Email or Text                           Telephone
+ Attn: Fair Hearings        (907) 644-8126          fairhearings@gainwelltechnologies.com         (907) 644-6800 or
+ P.O. Box 240808            Attn: Fair Hearings                                                   (800) 780-9972
+ Anchorage, AK 99524                                                                              Opt. 2, Opt. 3, Opt. 2
+
+Name and relationship to Medicaid Member:
+Member Name:                                                     SSN or Medicaid ID#:
+Phone Number(s):                                         Email Address:
+Mailing Address:
+What is the specific Alaska Medicaid program, service(s), or benefit determination this hearing request is for:
+
+
+
+
+Fair Hearings: Prior to the hearing, you will receive a copy of all documents the Department relied on to make this
+decision. At the hearing you may represent yourself or you may ask a relative, a friend, a Power of Attorney, or other
+spokesperson to attend with you to help you. Name, relationship, email or mailing address, and phone number of any
+other people who should receive your hearing and scheduling documents:
+
+
+
+Continuation of Benefits: If you are currently receiving benefits and you request a hearing, your benefits may be
+automatically continued while you wait for the hearing decision. If you do not want to continue to receive
+benefits while your hearing is pending, you must inform the Department that you would like your benefits to
+stop. If you continue to receive benefits and the hearing authority determines the Department was correct to
+stop or reduce your benefits, you may be required to repay the cost of those services under the authority of
+42 C.F.R. 431.230 (b), 7 AAC 49.190, and 7 AAC 49.200.
+Reporting Medical Providers: If you think that the services (or lack of services) that you received from your
+medical or dental provider are unethical you may make a complaint to the Medical Board by calling
+(907) 465-2550. If you think that your provider is billing the Medicaid program for services that they have not
+provided you with or you wish to make a complaint about this provider’s compliance with the Alaska Medicaid
+program or the manner in which they provide you with Medicaid covered services, please call (800) 256-0930.
+Legal Assistance: You may obtain legal counsel if you wish. Free legal assistance may be available through
+Alaska Legal Services at (888) 478-2572, or through the Disability Law Center at (800) 478-1234.
+                                                                                                               Revised 2/1/2025
+
+SOURCE 6: Approved SDS Forms — Division of Senior and Disabilities Services, Alaska Department of Health | https://health.alaska.gov/en/resources/approved-sds-forms/ | source date: none stated on page | retrieved: 2026-09-04
+Google Tag Manager (noscript)
+
+ End Google Tag Manager (noscript)
+
+ Quick links bar
+
+ MyAlaska
+
+ Departments
+
+State of Alaska
+Department of Health
+
+Open Navigation
+
+Search site :
+
+Clear
+
+ Desktop navigation
+
+Home
+
+Services
+
+Background Check Program
+
+Child Care
+
+Child Health & Development
+
+Chronic Diseases
+
+Denali KidCare
+
+Disability Care
+
+Division of Public Assistance (DPA) Services
+
+Employment Assistance
+
+Environmental Health
+
+Financial Assistance
+
+Health Care Coverage
+
+Health Care Facilities
+
+Infectious Diseases
+
+Injury Prevention
+
+Apply for Medicaid
+
+Mental Health
+
+Nutrition
+
+Senior Care
+
+Substance Use & Treatment
+
+Supplemental Nutrition Assistance Program (SNAP)
+
+Vital Records & Certificates
+
+Women's Health
+
+For Providers & Professionals
+
+For Providers & Clinicians
+
+For Health Care Facilities
+
+For School Professionals
+
+For Businesses
+
+Centralized Reporting: Submit A Critical Incident Report
+
+Certificates & Licensing
+
+Laboratory Test Directory
+
+Medicaid Provider Assistance
+
+Research & Statistics
+
+VacTrAK Immunization Information System
+
+Alaska State Public Health Laboratories (ASPHL)
+
+Background Check Program
+
+Grants & Contracts
+
+Divisions
+
+Office of the Commissioner
+
+Behavioral Health
+
+Finance and Management Services
+
+Health Care Services
+
+Public Assistance
+
+Public Health
+
+Senior and Disabilities Services
+
+Advisory Board on Alcoholism and Drug Abuse (ABADA)
+
+Alaska Commission on Aging
+
+Alaska Mental Health Board
+
+Governor's Council on Disabilities and Special Education
+
+Statewide Suicide Prevention Council
+
+News
+
+Help
+
+Website Help
+
+Department Contacts
+
+Got a Call or Text About a Health Survey?
+
+Adult Protective Services (APS) Report of Harm
+
+ Mobile navigation
+
+Search
+Search site :
+
+Home
+
+Services
+
+Background Check Program
+
+Child Care
+
+Child Health & Development
+
+Chronic Diseases
+
+Denali KidCare
+
+Disability Care
+
+Division of Public Assistance (DPA) Services
+
+Employment Assistance
+
+Environmental Health
+
+Financial Assistance
+
+Health Care Coverage
+
+Health Care Facilities
+
+Infectious Diseases
+
+Injury Prevention
+
+Apply for Medicaid
+
+Mental Health
+
+Nutrition
+
+Senior Care
+
+Substance Use & Treatment
+
+Supplemental Nutrition Assistance Program (SNAP)
+
+Vital Records & Certificates
+
+Women's Health
+
+For Providers & Professionals
+
+For Providers & Clinicians
+
+For Health Care Facilities
+
+For School Professionals
+
+For Businesses
+
+Centralized Reporting: Submit A Critical Incident Report
+
+Certificates & Licensing
+
+Laboratory Test Directory
+
+Medicaid Provider Assistance
+
+Research & Statistics
+
+VacTrAK Immunization Information System
+
+Alaska State Public Health Laboratories (ASPHL)
+
+Background Check Program
+
+Grants & Contracts
+
+Divisions
+
+Office of the Commissioner
+
+Behavioral Health
+
+Finance and Management Services
+
+Health Care Services
+
+Public Assistance
+
+Public Health
+
+Senior and Disabilities Services
+
+Advisory Board on Alcoholism and Drug Abuse (ABADA)
+
+Alaska Commission on Aging
+
+Alaska Mental Health Board
+
+Governor's Council on Disabilities and Special Education
+
+Statewide Suicide Prevention Council
+
+News
+
+Help
+
+Website Help
+
+Department Contacts
+
+Got a Call or Text About a Health Survey?
+
+Adult Protective Services (APS) Report of Harm
+
+ MyAlaska
+ Departments
+
+Home
+
+Resources
+
+Approved SDS Forms
+
+Approved Division of Senior and Disabilities Services (SDS) Forms
+
+Continuously updated forms for SDS
+
+Current Section
+
+Overview
+
+Most SDS Approved Forms (except for those noted with asterisks *) are fillable PDFs. Forms marked with an asterisk are Word or Excel documents.
+
+To reduce the chance of forms not working correctly, we recommend that all forms be downloaded and saved before being filled out for printing or electronic submission.
+
+For assistance with reading or completing any of these forms, please contact the Policy Unit at HSS.DSDS.Policy@alaska.gov.
+
+Specific programmatic questions about a particular form should be addressed to staff in the relevant SDS program.
+
+Reminder: Please check the SDS Approved Forms webpage frequently for the most current versions of forms, as SDS makes improvements to its program forms continuously.
+
+Approved Forms
+
+ Adult Protective Services Forms
+
+View
+
+APS-01 Report of Harm
+
+Uni-16 Authorization for Release of Information
+
+Instructions for completion of UNI-16 Authorization for Release of Information
+
+ NFLOC (ALI/APDD/CCMC) Waiver Program Forms
+
+View
+
+NFLOC-04 Application for ALI/APDD/CCMC
+
+NFLOC-04 Instructions
+
+NFLOC Provider Request Inquiry Checklist
+
+NFLOC Initial Application Checklist
+
+NFLOC Renewal Application Checklist
+
+Uni-09 Verification of Diagnosis
+
+ Community First Choice Forms
+
+View
+
+CFC-07/PCS-10 Representative Designee​
+
+CFC-06 Application for Community First Choice
+
+CFC-06 Instructions
+
+CFC Provider Request Inquiry Care Coordinator Checklist
+
+CFC Provider Request Inquiry PCS Agency Checklist
+
+CFC Initial Application Checklist
+
+CFC Renewal Application Checklist​
+
+CFC-01/PCS-03
+
+Amendment to PCS Service Plan (New 6/29/2022)
+
+CFC-02/PCS-15 Application for Community First Choice Personal Care Services When Traveling
+
+CFC-03/PCS-16 Notification of Transfer Form (revised 3/25/2022)
+
+CFC-04/PCS-07 Consumer/Legal Representative Agreement
+
+CFC-05/PCS-02 Personal Care Services/CFC Personal Care Services Request for Passive Range of Motion
+
+ Environmental Modification Forms for All Waivers
+
+View
+
+Environmental Modification Services Conditions of Participation
+
+EM-01 EMOD Review Tool (Guide for EM planning)
+
+EM-02 Property Owners Consent to Environmental Modification
+
+EM-03 Request for Cost Estimate-Bathroom Accessibility
+
+EM-04 Request for Cost Estimate-Blank
+
+EM-05 Request for Cost Estimate-Door Accessibility
+
+EM-06 Request for Cost Estimate-Elevated Toilet with Grab Bars
+
+EM-07 Request for Cost Estimate-Hand Rails and Grab Bars
+
+EM-08 Request for Cost Estimate-Ramp Access
+
+EM-09 Request for Cost Estimate-Ramp Cover
+
+EM-10 Request for Cost Estimate-Roll In Shower
+
+EM-11 Request for Cost Estimate-Stair Lift
+
+EM-12 Request for Cost Estimate-Vertical Lift
+
+EM-14 Request to Select Cost Estimate other than Lowest
+
+ General Relief Forms
+
+View
+
+GR-01 Initial Application for General Relief Assisted Living Care
+
+GR-02 Renewal Application for General Relief Assisted Living Care
+
+GR-04 GR for ALC Client Activity Form
+
+ Harmony Access Forms
+
+View
+
+Harmony Access Coordinator Agreement form
+
+Harmony Privacy and Security Agreement (Individual Provider User)
+
+ ISW/IDD Waiver Program Forms
+
+View
+
+IDD-01 Eligibility Determination and R​equest for Services Application​
+
+IDD-02 Developmental Disability Determination
+
+IDD-03 ICAP Assessment Information and Consent- (Revised 6/28/23)
+
+ISW/IDD Initial and Renewal ICAP Application Checklist
+
+IDD-04 Developmental Disabilities Registration and Review
+
+IDD-05 DDRR Standardized Criteria and Scoring Guide
+
+IDD-06 Guidelines for ICAP Process
+
+IDD-08 DHSS Table of ICAP scores
+
+IDD-10 Interim ICF/IID Level of Care- (Revised 6/28/23)
+
+ISW/IDD Initial Renewal Interim Application Checklist
+
+IDD-11 ICF/IID Level of Care Determination
+
+IDD-12 Guidelines for QDC Form
+
+IDD-13 Qualifying Diagnosis Certification Form
+
+IDD-14 Request for QDC
+
+IDD-15 Request for Exception, Day Habilitation In-Residence
+
+ Long Term Care Forms
+
+View
+
+LTC-01 Long Term Care Facility Authorization
+
+LTC-02 Pre-Admission Screening and Resident Review
+
+LTC-03 Nursing Facility Transition Grant Application
+
+ Material Improvement
+
+View
+
+MI-01 Material Improvement for ALI/APDD
+
+MI-02 Material Improvement for CCMC
+
+MI-03 Material Improvement for IDD Recipients Age 3 and Older
+
+MI-04 Material Improvement for IDD Recipients Under Age 3
+
+ PCS (Personal Care Services) Participant Application and Service Request Forms
+
+View
+
+PCA-02/CFC-05 Personal Care Services/CFC Personal Care Services Request for Passive Range of MotionPCA-03/CFC-01 PCS Amendment to Service Plan
+
+PCS-07/CFC-04 Consumer/Legal Representative Agreement
+
+PCA-08 PCA Application (revised 12/28/20)
+
+Instructions for completing PCA-08 application (revised 12/30/20)
+
+PCA-08-A PCA Renewal Application (revised 12/30/20)
+
+Instruction for completing PCA-08-A renewal application (revised 12/30/20)
+
+PCA-09 Limited Power of Attorney
+
+PCS-10 PCS Representative Des​ignee
+
+PCS-12 Request for Waiver of In-Person Review of Services
+
+PCA-13 First Aid Training Verification
+
+PCA-14 Notice of Use of Private Health Care Information
+
+PCS-15/CFC-02 Application for Personal Care Service When Traveling
+
+PCS-16/CFC-03 Notification of Transfer Form (revised 3/25/2022)
+
+PCA-17/CFC-07 Shared Agency Agreement (New 6/29/2022)
+
+Uni-07 Recipient Rights and Responsibilities
+
+Uni-09 Verification of Diagnosis
+
+UNI-11: Removed (Care Coordinators should report Recipient Change of Status using note in Harmony within the demographics tab.)
+
+Uni-12 Request for Expedited Consideration
+
+ Provider Certification Forms
+
+View
+
+Provider Certification Tools:
+
+Resume Example
+
+Organization Chart Example
+
+Cert-50 QIR Quality Improvement Report Example (New 10/2/20)
+
+Provider Certification & Compliance page (application guidance)
+
+Provider Certification Forms:
+
+Cert-01 Waiver Services Provider Certification Application (Revised 5/8/2024)
+
+Cert-02 Care Coordinator Certification Application (Revised 4/8/24)
+
+Cert-03 Worker Assurances (Revised 4/8/24)
+
+Cert-04 Notice of Appointment or Change of Program Administrator (Revised 4/10/24)
+
+Cert-05 Service Declaration: Nursing Oversight and Care Management (Revised 4/10/24)
+
+Cert-06 Service Declaration: Care Coordination Services (Revised 4/10/24)
+
+Cert-07 Service Declaration: Chore Services (Revised 4/10/24)
+
+Cert-08 Service Declaration: Adult Day Services (Revised 4/15/24)
+
+Cert-09 Service Declaration Residential Supported Living Services (Revised 4/15/24)
+
+Cert-10 Service Declaration: Day Habilitation Services (Revised 4/15/24)
+
+Cert-11 Service Declaration: Residential Habilitation Services
+
+Cert-12 Group Home Habilitation Site Information/Change of Status Report
+
+Cert-13 Family Home Habilitation Site Information/Change of Status Report
+
+Cert-14 Service Declaration: Employment Services (Revised 5/06/25)
+
+Cert-15 Service Declaration: Intensive Active Treatment Services (Revised 4/23/24)
+
+Cert-16 Service Declaration: Respite Care Services (Revised 4/15/24)
+
+Cert-17 Service Declaration: Transportation Services (Revised 4/23/24)
+
+Cert-18 Service Declaration: Meal Services (Revised 4/23/24)
+
+Cert-19 Service Declaration: Environmental Modification Services
+
+Cert-20 Care Coordinator Disclosure of Business and Familial Relationships (Revised 5/03/24)
+
+Cert-36 Personal Care Services Provider Certification Application (Revised 5/8/2024)
+
+Cert-37 Provider Certification Assurance on Policies (Revised 5/03/24)
+
+Cert-41 Provider Certification Application for Additional Service
+
+Cert-42 Report of change: Provider Agency Information
+
+Cert-44 Report of Change: Care Coordinator Information
+
+Cert-45 Out of State Attestation (New 7/22/2022)
+
+Cert-46 Care Coordination Agency Certification Conflict of Interest Attestation
+
+Cert-47 Individual Care Coordinator Conflict of Interest Assurance
+
+Cert-48 Conflict of Interest Exception Application
+
+Cert-49-A FA/CPR Waiver for First Time Personal Care Assistants
+
+Cert-49-B FA/CPR Remote Allowance for Continuing Personal Care Assistants
+
+Cert-50-QIR Quality Improvement Report Template (New 10/2/20)
+
+Cert-50-QUI Quality Improvement Report Example
+
+ TABI Forms
+
+View
+
+TABI-01 Mini-grant application
+
+TABI-02 TABI Verification of Diagnosis
+
+ Teleassessment
+
+View
+
+TELE-01 Environmental Questionnaire
+
+TELE-02 Consent for Teleassessment
+
+ Universal Program Forms
+
+View
+
+ * Uni-02 Support Plan for all Waivers and CFC (Removed 8/3/23, now done in Harmony)
+
+* Uni-03 Plan of Care Amendment all Waivers (Removed 8/3/23, now done in Harmony)
+
+* Uni-04 Application for ALI/APDD/CCMC/CFC (Removed. As of 10/01/22, use the NFLOC-04 or the CFC-06)
+
+Uni-05 Appointment for Care Coordinator/Targeted Case Management Services ​(Revised 11/2025)
+
+Uni-07 Recipient Rights and Responsibilities
+
+Uni-08 Fair Hearing Rights Notice (effective Oct. 1, 2024)
+
+Uni-09 Verification of Diagnosis
+
+UNI-10: Removed (SDS no longer approves exceptions to monthly visits by Care Coordinators.)
+
+UNI-11: Removed (Care Coordinators should report Recipient Change of Status using note in Harmony within the demographics tab.)
+
+Uni-12 Request for Expedited Consideration
+
+* Uni-14 Services Overview and Cost Sheet (all waivers) (removed 1/31/2023, now done in Harmony)
+
+* Uni-14A ISW Services Overview and Cost Sheet (removed 1/31/2023, now done in Harmony)
+
+* Uni-14B CFC Services Overview and Cost Sheet (removed 1/31/2023, now done in Harmony)
+
+Uni-15 Person Centered POC Questionnaire
+
+Uni-16 Authorization for Release of Information
+
+Instructions for completion UNI-16 Authorization for Release of Information
+
+Uni-17 ROI Revocation (revised 12/29/2020)
+
+Uni-18 NOCM Nursing Care Plan (revised 1/10/2021)
+
+Uni-19 Care Provider Training Checklist
+
+Uni-20 24-Hour Care Calendar
+
+Uni-20 24-Hour Care Calendar Instructions & Examples
+
+Resources
+
+Forms
+
+Other Related Services
+
+Related Education
+
+Contact
+
+Other related resources
+
+Related Organizations
+
+Division of Senior & Disabilities Services
+
+Provider Certification & Compliance Unit
+
+State of Alaska | Department of Health
+
+ Accessibility
+
+ Archives
+
+ Careers
+
+ State of Alaska
+
+ State Employees
+
+ Intranet
+
+ myAlaska
+
+ Departments
+
+Facebook
+
+LinkedIn
+
+YouTube
+
+X
+
+Instagram
+
+GovDelivery
+
+Department contact information
+
+3601 C Street, Suite 902
+
+Anchorage, Alaska 99503
+
+350 Main Street, Suite 404
+
+Juneau, AK 99811
+
+Sán uu dáng gíidang?
+(Xaat Kíl) Hello, how are you?
+
+ Department of Health
+
+ Department Contacts
+
+ Email the Department
+
+ Email the Webmaster
+
+Copyright © State of Alaska
+
+SOURCE 7: The Office of Long Term Care Ombudsman — home page (Alaska) | https://akoltco.org/ | source date: none stated on page | retrieved: 2026-09-04
+Skip to primary navigation
+
+ Skip to main content
+
+The Office of Long Term Care Ombudsman
+
+Advocating for the rights, dignity, and welfare of older Alaskans.
+
+About
+
+Resident Rights
+
+Assisted Living Home Rights
+
+Nursing Facility Rights
+
+File a Complaint
+
+Volunteer
+
+Resources
+
+Connect
+
+Contact Us
+
+Staff
+
+Latest Updates
+
+Coverage Area
+
+Certified Ombudsmen
+
+Advocating for the rights, dignity, and welfare of older Alaskans.
+
+What is an Ombudsman?
+
+Ombudsman (“awm’-buds’-man”) is a Swedish word meaning “representative of the people.” A long term care ombudsman represents Alaskans aged 60 and older residing in an assisted living or nursing home.
+
+What Can an Ombudsman Do?
+
+Federal and State law authorize the Ombudsman to identify, investigate and resolve complaints made by, or on behalf of, seniors in long term care facilities. State law also authorizes the Ombudsman to resolve problems relating to the “residential circumstances” of seniors who live in their own homes.
+
+Will My Name Be Kept Confidential?
+
+Yes. Federal and state law require the Ombudsman to protect your identity unless you give us consent to release your name.
+
+Can I Help The Ombudsman Keep Older Alaskans Safe?
+
+Yes. We train, certify and supervise adult volunteers throughout Alaska to provide Ombudsman services to seniors living in long term care facilities. Click on the Volunteer tab in the menu to the left to find out more.
+
+How Do I File A Complaint Or Ask For Help?
+
+Call (907) 334-4480 or 1-800-730-6393.
+
+You can also submit a complaint online.
+
+Contact Us
+
+3745 Community Park Loop, Suite 200
+
+Anchorage, Alaska 99508
+
+(907) 334-4480
+
+(800) 730-6393
+
+fax: (907) 334-4486
+
+email: akoltco@alaska.gov
+
+Certified Ombudsmen
+
+Username
+
+Password
+
+ Remember Me
+
+Lost Password
+
+© 2026 · The Office of Long Term Care Ombudsman, State of Alaska
+
+SOURCE 8: About Us — The Office of Long Term Care Ombudsman (Alaska) | https://akoltco.org/about-us/ | source date: none stated on page | retrieved: 2026-09-04
+Skip to primary navigation
+
+ Skip to main content
+
+The Office of Long Term Care Ombudsman
+
+Advocating for the rights, dignity, and welfare of older Alaskans.
+
+About
+
+Resident Rights
+
+Assisted Living Home Rights
+
+Nursing Facility Rights
+
+File a Complaint
+
+Volunteer
+
+Resources
+
+Connect
+
+Contact Us
+
+Staff
+
+Latest Updates
+
+Coverage Area
+
+Certified Ombudsmen
+
+Advocating for the rights, dignity, and welfare of older Alaskans.
+
+About Us
+
+Does every state and territory in the U.S. have an Office of the Long Term Care Ombudsman?
+
+There is Long Term Care (LTC) Ombudsman program in every state and territory.  As authorized under federal and state law, Alaska’s LTC Ombudsman program protects the rights, safety and welfare of older persons residing in assisted living and nursing homes across the state.  Alaska’s LTC Ombudsman program is in the Department of Revenue and administered by the Alaska Mental Health Trust Authority.  The office is located at 3745 Community Park Loop, Suite 200, in Anchorage.
+
+Are Alaska’s LTC Ombudsman services free?
+
+All services provided by our program are free.  Our goal is to make sure every older Alaskan residing in an assisted living or nursing home has access to LTC Ombudsman services to assist them in resolving their issues. LTC Ombudsman make unannounced visits to facilities to monitor conditions and investigate complaints made by, or on behalf of, residents.
+
+Ombudsmen can also investigate complaints from seniors living in their own homes when the complaints relate to problems affecting their residential circumstances.  We are available to provide information, referral, and consultation to seniors, their families and providers.  Contact our office Monday through Friday 8:00 a.m. to 4:30 p.m.  You can call our office at 1-800-730-6393, file a complaint online by clicking here or send us an email at akoltco@alaska.gov.  Sometimes complaints are very serious and involve abuse, neglect, exploitation or the use of undue influence to harm vulnerable seniors.  These complaints receive top priority in our program.
+
+What kinds of complaints does the Ombudsman receive?
+
+Sometimes complaints we receive are very serious and involve abuse, neglect, exploitation or the use of undue influence to harm vulnerable seniors.  These complaints receive top priority in our program.
+
+The top five complaints in nursing homes are:
+
+Discharge & Eviction
+
+Issues with guardian or legal representative
+
+Failure to respond timely to requests for assistance
+
+Less restrictive placement/housing
+
+Ability to exercise rights & personal choice
+
+The top five complaints for assisted living homes are:
+
+Discharge & Eviction
+
+Issues with guardian or legal representative
+
+Ability to exercise rights & personal choice
+
+Least restrictive setting
+
+Food service
+
+How does the Ombudsman resolve complaints?
+
+Our Ombudsmen ask the resident how they would like the complaint resolved.  If the resident is unable to communicate, we take direction for the resident’s representative or guardian.  Our goal is to resolve complaints to the satisfaction of the resident.
+
+Our goal is to resolve complaints in a collaborative manner with the staff from the facility or agency.  However, if that is not possible, we will seek other remedies to ensure that older Alaskans receive the care they need and are treated with respect.
+
+What if my complaint relates to someone who is under 60 years old?
+
+If you want to make a report of harm for someone who is under the age of 60, please contact Adult Protective Services at (907) 269-3666 or (800) 478-9996.  If they have a disability and you believe they have been discriminated against, call Disability Law Center of Alaska at (907) 565-1002 or (800) 478-1234.
+
+If you do not know where to start with resolving a problem in long term care, you are welcome to call us at (907) 334-4480 or (800) 730-6393.  We will do our best to connect you with the help you need.
+
+How Do I File A Complaint Or Ask For Help?
+
+Call (907) 334-4480 or 1-800-730-6393.
+
+You can also submit a complaint online.
+
+Contact Us
+
+3745 Community Park Loop, Suite 200
+
+Anchorage, Alaska 99508
+
+(907) 334-4480
+
+(800) 730-6393
+
+fax: (907) 334-4486
+
+email: akoltco@alaska.gov
+
+Certified Ombudsmen
+
+Username
+
+Password
+
+ Remember Me
+
+Lost Password
+
+© 2026 · The Office of Long Term Care Ombudsman, State of Alaska
+

@@ -1,0 +1,2639 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: district-of-columbia
+ASSEMBLED: 2026-09-04
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/district-of-columbia.json (recipe digest f6b61c9f4ef7). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- SOURCE 1: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The Council's own code library, published by the Open Law Library platform under code.dccouncil.gov. Section pages carry the section text, its history line and editorial notes, but no currency date; the Code's home page (source 4) states what the compilation is current through, and is captured as the version witness for sources 1, 2, 3 and 5.
+- SOURCE 2: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The notice section, which prints in full the appeal-rights statement the facility's notice must carry in 12-point type. The statement's own typography, including the phrase 'being discharge or transferred', is the Council's text and is preserved.
+- SOURCE 3: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The hearing section. Its Applicability notes, which the Council publishes beneath the text, state two different things about whether the 2018 amendment has been implemented; both are captured and the page records the discrepancy as a finding.
+- SOURCE 4: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  Version witness for the Code sections in this packet. The section pages print no currency date; this page does, and a change here is how the review pass sees that the compilation has moved.
+- SOURCE 5: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The ombudsman's statutory duties, including the duty to serve as the legal representative for residents under §§ 44-1003.02(e) and 44-1003.03(a)(1). Captured because the discharge statute names the ombudsman as a party who may contest a discharge, and this is where the Council says so from the ombudsman's side.
+- SOURCE 6: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  DC Health's page naming the prescribed notice form (source 7) and the cover letter that accompanies it (source 8). The Drupal page carries the department's whole navigation menu in its body; that is the page as served and is left in.
+- SOURCE 7: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The form DC Health prescribes under § 44-1003.02(d), embedded in the department's page at dchealth.dc.gov/page/doh-notice-discharge-transfer-or-relocation-form and served from the District government's SeamlessDocs tenant (dcgov.seamlessdocs.com). It is the department's own instrument on a hosted platform, not a third party's document; the field labels and the appeal-rights statement are in the page's markup and curl returns them. The form's own 'WHEN SHOULD YOU RECEIVE THIS NOTICE' paragraph states thirty days where § 44-1003.02(a) states 21 calendar days; both are captured and the page records the discrepancy as a finding. Signature-date pickers render as runs of month names and digits; that is the form as served.
+- SOURCE 8: transport curl; extractor pdftotext-layout; filters none.
+  The department's letter transmitting the prescribed form and stating that facilities are required to use it unaltered. Dated 2008 and still the letter the department posts beside the form; quoted with its date as the newest the department publishes.
+- SOURCE 9: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  OAH's own statement of how papers are filed (in person, by mail, by email, through its eFiling portal) with its address, telephone and filing email. Cloudflare obfuscates the email addresses on the page; the shared capture reader decodes them. OAH publishes no page specific to nursing-facility discharge cases; § 44-1003.03(b) is what places the hearing there.
+- SOURCE 10: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  OAH's description of itself and its contact block, carried beside source 9 because the two pages print the street address differently ('Suite 450N' and 'Suite 450 North').
+- SOURCE 11: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The program's own page. The Office of the D.C. Long-Term Care Ombudsman is operated by Legal Counsel for the Elderly, whose site is hosted under aarp.org; this is the office's own published contact, quoted as the program's statement. The Department of Aging and Community Living's site (dacl.dc.gov) returned 404 or 403 on every address tried for an ombudsman page on 2026-09-04, so no department-side contact is carried; the prescribed notice form (source 7) prints the department-prescribed ombudsman contact block and is quoted beside this page.
+- SOURCE 12: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The listing only. The DCMR portal serves the rule's text through an ASP.NET postback bound to a session, which curl cannot follow and a direct RuleDetail address returns 403 to; the listing names the section, its title, its effective date and its rulemaking history, and that is what is captured. The rule text itself is capture-pending and the page says so. Cloudflare obfuscates the office's email; the shared reader decodes it.
+
+SOURCE 1: D.C. Code § 44-1003.01, Grounds for involuntary discharge, transfer, or relocation by facility — Council of the District of Columbia, D.C. Law Library | https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.01 | source date: section history: Apr. 18, 1986, D.C. Law 6-108, § 301; last amended Apr. 29, 2010, D.C. Law 18-145, § 4(b); the Code's currency is stated on source 4 | retrieved: 2026-09-04
+Skip to main content
+
+Toggle mobile menu
+
+Navigation
+
+D.C. Law Library
+
+Code of the District of Columbia
+
+Title 44. Charitable and Curative Institutions.
+
+Chapter 10. Nursing Homes and Community Residence Facilities Protections.
+
+Subchapter III. Discharge, Transfer, and Relocation of Residents.
+
+§ 44–1003.01. Grounds for involuntary discharge, transfer, or relocation by facility.
+
+Code of the District of Columbia
+
+§ 44–1003.01. Grounds for involuntary discharge, transfer, or relocation by facility.
+
+(a) Unless a resident and his or her representative consent otherwise, a facility may discharge the resident, transfer the resident to another facility, or relocate the resident from one part or room of the facility to another only:
+
+(1) If essential to meet that resident’s documented health-care needs or to be in accordance with his or her prescribed level of care;
+
+(2) If essential to safeguard that resident or one or more other residents from physical or emotional injury;
+
+(3) On account of nonpayment for his or her maintenance, after reasonable and appropriate notice, except as prohibited by subsection (b) of this section and 42 U.S.C. § 1395 et seq. and 42 U.S.C. § 1396 et seq.;
+
+(4) If essential to meet the facility’s reasonable administrative needs and no practicable alternative is available; or
+
+(5) If the facility is closing or officially reducing its licensed capacity.
+
+(b) No facility that is a District Medicaid provider may discharge, transfer, or relocate a resident on account of his or her conversion from private-pay or Medicare to Medicaid status, or on account of a temporary hospitalization if payment or reimbursement for his or her bed continues to be made available.
+
+ (Apr. 18, 1986, D.C. Law 6-108, § 301, 33 DCR 1510; Apr. 29, 2010, D.C. Law 18-145, § 4(b), 57 DCR 1834.)
+
+Prior Codifications
+
+1981 Ed., § 32-1431.
+
+Section References
+
+This section is referenced in § 44-504 and § 44-1003.03.
+
+Effect of Amendments
+
+D.C. Law 18-145, in subsec. (a)(3), substituted “maintenance, after reasonable and appropriate notice,” for “maintenance,”.
+
+Emergency Legislation
+
+For temporary (90 days) amendment of this section, see § 511 of Coronavirus Support Second Congressional Review Emergency Amendment Act of 2020 (D.C. Act 23-405, Aug. 19, 2020, 67 DCR 10235).
+
+For temporary (90 days) amendment of this section, see § 511 of Coronavirus Support Congressional Review Emergency Amendment Act of 2020 (D.C. Act 23-328, June 8, 2020, 67 DCR 7598).
+
+For temporary (90 days) amendment of this section, see § 511 of Coronavirus Support Emergency Amendment Act of 2020 (D.C. Act 23-326, May 27, 2020, 67 DCR 7045).
+
+Temporary Legislation
+
+For temporary (225 days) amendment of this section, see § 511 of Coronavirus Support Temporary Amendment Act of 2020 (D.C. Law 23-130, Oct. 9, 2020, 67 DCR 8622).
+
+Previous
+
+Subchapter III. Discharge, Transfer, and Relocation of Residents.
+
+Next
+
+§ 44–1003.02. Notice to resident and resident’s representative.
+
+The codes and laws on this website are in the public domain.
+
+ Please do not scrape. Instead, bulk download the HTML or XML.
+
+Powered by the non-profit Open Law Library.
+
+Piwik analytics
+
+SOURCE 2: D.C. Code § 44-1003.02, Notice to resident and resident's representative — Council of the District of Columbia, D.C. Law Library | https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.02 | source date: section history: Apr. 18, 1986, D.C. Law 6-108, § 302; last amended Apr. 29, 2010, D.C. Law 18-145, § 4(c); the Code's currency is stated on source 4 | retrieved: 2026-09-04
+Skip to main content
+
+Toggle mobile menu
+
+Navigation
+
+D.C. Law Library
+
+Code of the District of Columbia
+
+Title 44. Charitable and Curative Institutions.
+
+Chapter 10. Nursing Homes and Community Residence Facilities Protections.
+
+Subchapter III. Discharge, Transfer, and Relocation of Residents.
+
+§ 44–1003.02. Notice to resident and resident’s representative.
+
+Code of the District of Columbia
+
+§ 44–1003.02. Notice to resident and resident’s representative.
+
+(a) Whenever a resident is to be discharged, transferred, or relocated, a facility representative shall give that resident and his or her representative both oral and written notice of the reasons for, procedures for contesting, and proposed effective date of the discharge, transfer, or relocation. Except as provided in subsection (b) of this section or unless the resident and his or her representative consent to shorter notice, the oral and written notice shall be given at least 21 calendar days before a proposed discharge or transfer from the facility, and at least 7 calendar days before a proposed relocation within the facility.
+
+(b) The time requirements for advance oral and written notice set forth in subsection (a) of this section shall not apply if:
+
+(1) A more immediate discharge, transfer, or relocation is necessitated by the resident’s urgent medical needs as explicitly delineated in the signed, written orders of an attending physician; or
+
+(2) The Long-Term Care Ombudsman determines that emergency or other compelling circumstances necessitate a more immediate discharge, transfer, or relocation, and the basis for that determination is documented in the clinical records of those discharged, transferred, or relocated.
+
+(c) Consent by a resident and his or her representative to a discharge, transfer, relocation, or abbreviated notice under this subchapter shall be valid only if knowingly and voluntarily given at the time the move is proposed.
+
+(d) The written notice required by subsection (a) of this section shall be on a form prescribed by the Mayor and shall at a minimum contain:
+
+(1) The specific reason(s), stated in detail and not in conclusory language, for the proposed discharge, transfer, or relocation;
+
+(2) The proposed effective date of the discharge, transfer, or relocation;
+
+(3) A statement in not less than 12-point type that reads:
+
+“You have a right to challenge this facility’s decision to discharge, transfer, or relocate you. If the decision is to discharge you from the facility or to transfer you to another facility and you think you should not have to leave, you or your representative have 7 days from the day you receive this notice to inform the Administrator [Residence Director, if a community residence facility] or a member of the staff that you are requesting a hearing and to complete the enclosed hearing request form and mail it in the preaddressed envelope provided. If you are mailing the hearing request form from the facility, the day you place it in the facility’s outgoing mail or give it to a member of the staff for mailing shall be considered the date of mailing for purposes of the time limit. In all other cases, the postmark date shall be considered the date of mailing. If, instead, the decision is to relocate you within the facility and you think you should not have to move to another room, you or your representative have only 5 days to do the above.
+
+“If you or your representative request a hearing, it will be held no later than 5 days after the request is received in the mail, and, in the absence of emergency or other compelling circumstances, you will not be moved before a hearing decision is rendered. If the decision is against you, in the absence of an emergency or other compelling circumstances you will have at least 5 days to prepare for your move if you are being discharge or transferred to another facility, and at least 3 days to prepare for your move if you are being relocated to another room within the facility.
+
+“To help you in your move, you will be offered counseling services by the staff, assistance by the District government if you are being discharged or transferred from the facility, and, at your request, additional support from the Long-Term Care Ombudsman program. If you have any questions at all, please do not hesitate to call one of the phone numbers listed below for assistance.”;
+
+(4) A hearing request form, together with a postage paid envelope preaddressed to the appropriate District official or agency;
+
+(5) The name, address, and telephone number of the person charged with the responsibility of supervising the discharge, transfer, or relocation;
+
+(6) The names, addresses, and telephone numbers of the Long-Term Care Ombudsman program and local legal services organizations; and
+
+(7) The location to which the resident will be transferred.
+
+(d-1) Upon oral and written notification of discharge, the nursing facility shall provide to the resident and his or her representative:
+
+(1) A current assessment of the resident’s care needs and the kind of service the resident will need upon discharge;
+
+(2) Information about the resident’s right to receive counseling that explains the resident’s options of community-based care and care in the home, including the right to request that the facility arrange a visit to at least one alternative community-based care facility; and
+
+(3) A discharge plan that:
+
+(A) Links the resident with community resources, including the DC Aging and Disability Resource Center;
+
+(B) Explains the resident’s options of community-based care and care in the home, including the right to request that the facility arrange a visit to at least one alternative community-based care facility; and
+
+(C) Sets forth an arrangement for the resident and an immediate family member or legal representative, if any, to visit at least one alternative community-based care facility, at the resident’s request.
+
+(e) Copies of the written notice required by subsection (a) of this section shall be placed in the resident’s clinical record and shall be transmitted to the Mayor’s designee and, if the resident’s care is paid in whole or in part through Medicaid, the Director of the Department of Human Services (“DHS”), and the Long-Term Care Ombudsman.
+
+(f) Whenever nonpayment is the ground for a proposed involuntary discharge or transfer, the resident shall have the right to redeem up to the time that the discharge or transfer is to be effected and, if full payment is made, shall have the right to remain in the facility.
+
+ (Apr. 18, 1986, D.C. Law 6-108, § 302, 33 DCR 1510; Mar. 16, 1989, D.C. Law 7-218, § 602(b), 36 DCR 534; Apr. 29, 2010, D.C. Law 18-145, § 4(c), 57 DCR 1834.)
+
+Prior Codifications
+
+1981 Ed., § 32-1432.
+
+Section References
+
+This section is referenced in § 7-702.04, § 44-1003.03, and § 44-1003.04.
+
+Effect of Amendments
+
+D.C. Law 18-145, in subsec. (d), deleted “and” from the end of par. (5), substituted “; and” for a period at the end of par. (6), and added par. (7); and added subsec. (d-1).
+
+Cross References
+
+Long-term care ombudsman program, ombudsman duties, see § 7-702.04.
+
+Previous
+
+§ 44–1003.01. Grounds for involuntary discharge, transfer, or relocation by facility.
+
+Next
+
+§ 44–1003.03. Hearing.
+
+The codes and laws on this website are in the public domain.
+
+ Please do not scrape. Instead, bulk download the HTML or XML.
+
+Powered by the non-profit Open Law Library.
+
+Piwik analytics
+
+SOURCE 3: D.C. Code § 44-1003.03, Hearing — Council of the District of Columbia, D.C. Law Library | https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.03 | source date: section history: Apr. 18, 1986, D.C. Law 6-108, § 303; last amended June 9, 2018, D.C. Law 22-112, § 3(b)(1); the Code's currency is stated on source 4 | retrieved: 2026-09-04
+Skip to main content
+
+Toggle mobile menu
+
+Navigation
+
+D.C. Law Library
+
+Code of the District of Columbia
+
+Title 44. Charitable and Curative Institutions.
+
+Chapter 10. Nursing Homes and Community Residence Facilities Protections.
+
+Subchapter III. Discharge, Transfer, and Relocation of Residents.
+
+§ 44–1003.03. Hearing.
+
+Code of the District of Columbia
+
+§ 44–1003.03. Hearing.
+
+(a)(1) Whenever a facility decides to involuntarily discharge, transfer, or relocate a resident, that resident, his or her representative, or the Long-Term Care Ombudsman may contest the decision by mailing a written hearing request to the Mayor and notifying the administrator or facility staff of the request:
+
+(A) Within 7 calendar days after receiving notice of a proposed discharge or transfer to another facility; or
+
+(B) Within 5 calendar days after receiving notice of a proposed relocation within the facility.
+
+(2) If the resident or resident’s representative mails the hearing request from the facility, the day he or she places it in the facility’s outgoing mail or gives it to a member of the facility staff for mailing shall be considered the date of mailing for purposes of the 7-day and 5-day time limits. In all other cases, the postmark date shall be considered the date of mailing.
+
+(3) A timely hearing request shall stay the discharge, transfer, or relocation unless a condition set forth in § 44-1003.02(b)(1) and (2) develops in the interim.
+
+(b) The Mayor shall hold a hearing at the Office of Administrative Hearings ("OAH") within 10 calendar days, and OAH shall render a decision within 21 calendar days, after a timely hearing request is received. If the resident is unable to travel to OAH due to a physical or mental disability, he or she shall be offered the opportunity to participate remotely through telephone or other means. The facility shall have the burden of proof unless the ground for the proposed discharge, transfer, or relocation is a prescribed change in the resident’s level of care, in which case the person(s) responsible for prescribing that change shall have the burden of proof and the resident shall have the right to challenge the level of care determination at the hearing. A hearing held under this section may not be used by the resident to litigate or relitigate Medicaid eligibility.
+
+(c) If the Mayor finds that the existence of a ground listed in § 44-1003.01(a) has been proven by clear and convincing evidence, the resident shall not be:
+
+(1) Discharged or transferred from the facility before the 22nd calendar day following his or her receipt of the notice required by § 44-1003.02(a) or the 5th calendar day following his or her notification of the hearing decision, whichever is later, unless a condition set forth in § 44-1003.02(b)(1) and (2) develops in the interim; or
+
+(2) Relocated within the facility before the 8th calendar day following his or her receipt of the notice required by § 44-1003.02(a) or the 3rd calendar day following his or her notification of the hearing decision, whichever is later, unless a condition set forth in § 44-1003.02(b)(1) and (2) develops in the interim.
+
+ (Apr. 18, 1986, D.C. Law 6-108, § 303, 33 DCR 1510; Mar. 16, 1989, D.C. Law 7-218, § 602(c), 36 DCR 534; June 9, 2018, D.C. Law 22-112, § 3(b)(1), 65 DCR 4600.)
+
+Prior Codifications
+
+1981 Ed., § 32-1433.
+
+Section References
+
+This section is referenced in § 7-702.04 and § 44-1003.04.
+
+Cross References
+
+Long-term care ombudsman program, ombudsman duties, see § 7-702.04.
+
+Applicability
+
+Applicability of D.C. Law 22-112: § 7147 of D.C. Law 23-16 repealed § 4 of D.C. Law 22-112. Therefore the amendment of this section by D.C. Law 22-112 has been implemented.
+
+Applicability of D.C. Law 22-112: § 4 of D.C. Law 22-112 provided that the change made to this section by § 3(b)(1) of D.C. Law 22-112 is subject to the inclusion of the law’s fiscal effect in an approved budget and financial plan. Therefore that amendment has not been implemented.
+
+Delegation of Authority
+
+Delegation of authority pursuant to D.C. Law 6-108, see Mayor’s Order 86-129, August 8, 1986.
+
+Delegation of authority pursuant to D.C. Law 6-108, “Nursing Home and Community Residence Facility Residents’ Protection Act of 1985.”, see Mayor’s Order 88-230, October 19, 1988.
+
+Previous
+
+§ 44–1003.02. Notice to resident and resident’s representative.
+
+Next
+
+§ 44–1003.04. Discussion and counseling.
+
+The codes and laws on this website are in the public domain.
+
+ Please do not scrape. Instead, bulk download the HTML or XML.
+
+Powered by the non-profit Open Law Library.
+
+Piwik analytics
+
+SOURCE 4: Code of the District of Columbia, home page — Council of the District of Columbia, D.C. Law Library (currency statement) | https://code.dccouncil.gov/us/dc/council/code | source date: carries its own 'Current through' statement | retrieved: 2026-09-04
+Skip to main content
+
+Toggle mobile menu
+
+Navigation
+
+D.C. Law Library
+
+Code of the District of Columbia
+
+Code of the District of Columbia
+
+Division I. Government of District.
+
+Title 1. Government Organization.
+§§ 1-101 – 1-1518.01
+
+Title 2. Government Administration.
+§§ 2-101 – 2-1936
+
+Title 3. District of Columbia Boards and Commissions.
+§§ 3-101 – 3-1481
+
+Title 4. Public Care Systems.
+§§ 4-105 – 4-2101
+
+Title 5. Police, Firefighters, Medical Examiner, and Forensic Sciences.
+§§ 5-101.01 – 5-1501.16
+
+Title 6. Housing and Building Restrictions and Regulations.
+§§ 6-101.01 – 6-1506
+
+Title 7. Human Health Care and Safety.
+§§ 7-101 – 7-3221
+
+Title 8. Environmental and Animal Control and Protection.
+§§ 8-101.05 – 8-2241.03
+
+Title 9. Transportation Systems.
+§§ 9-101.01 – 9-1219.01
+
+Title 10. Parks, Public Buildings, Grounds, and Space.
+§§ 10-101 – 10-2003
+
+Division II. Judiciary and Judicial Procedure.
+
+Title 11. Organization and Jurisdiction of the Courts. [Enacted title]
+§§ 11-101 – 11-2608
+
+Title 12. Right to Remedy. [Enacted title]
+§§ 12-101 – 12-311
+
+Title 13. Procedure Generally. [Enacted title]
+§§ 13-301 – 13-505
+
+Title 14. Proof. [Enacted title]
+§§ 14-101 – 14-702
+
+Title 15. Judgments and Executions; Fees and Costs. [Enacted title]
+§§ 15-101 – 15-914
+
+Title 16. Particular Actions, Proceedings and Matters. [Enacted title]
+§§ 16-101 – 16-5628
+
+Title 17. Review. [Enacted title]
+§§ 17-301 – 17-307
+
+Division III. Decedents’ Estates and Fiduciary Relations.
+
+Title 18. Wills. [Enacted title]
+§§ 18-101 – 18-1003
+
+Title 19. Descent, Distribution, and Trusts. [Enacted title]
+§§ 19-101.01 – 19-2314
+
+Title 20. Probate and Administration of Decedents’ Estates. [Enacted title]
+§§ 20-101 – 20-1305
+
+Title 21. Fiduciary Relations and Persons with Mental Illness. [Enacted title]
+§§ 21-101 – 21-2604.03
+
+Division IV. Criminal law and procedure and prisoners.
+
+Title 22. Criminal Offenses and Penalties.
+§§ 22-301 – 22-4517
+
+Title 23. Criminal Procedure. [Enacted title]
+§§ 23-101 – 23-1912
+
+Title 24. Prisoners and Their Treatment.
+§§ 24-101 – 24-1401
+
+Division V. Local Business Affairs.
+
+Title 25. Alcoholic Beverages. [Enacted title]
+§§ 25-101 – 25-1003
+
+Title 26. Banks and Other Financial Institutions.
+§§ 26-101 – 26-1401.31
+
+Title 27. Merchant’s Civil Recovery for Criminal Conduct.
+§§ 27-101 – 27-106
+
+Title 27A. Private Contractors and Subcontractors.
+§§ 27A-101 – 27A-202
+
+Title 28. Commercial Instruments and Transactions. [Enacted title]
+§§ 28:1-101 – 28-5404
+
+Title 28A. Other Consumer Protections.
+§§ 28A-101 – 28A-221
+
+Title 29. Business Organizations. [Enacted title]
+§§ 29-101.01 – 29-1304.01
+
+Title 29A. Corporations. [Repealed].
+
+Title 30. Hotels, Lodging Houses, and Short-term Rentals.
+§§ 30-101 – 30-301
+
+Title 31. Insurance and Securities.
+§§ 31-101 – 31-5608.04
+
+Title 32. Labor.
+§§ 32-101 – 32-1693.09
+
+Title 33. Partnerships. [Repealed].
+§§ 33-112.03 – 33-211.05
+
+Title 34. Public Utilities.
+§§ 34-101 – 34-2711
+
+Title 35. Railroads and Other Carriers.
+§§ 35-101 – 35-333
+
+Title 36. Trade Practices.
+§§ 36-101 – 36-641.22
+
+Title 37. Weights, Measures, Markets, and Vending.
+§§ 37-101 – 37-205.02
+
+Division VI. Education, Libraries, and Public Institutions.
+
+Title 38. Educational Institutions.
+§§ 38-101 – 38-3401
+
+Title 39. Libraries and Cultural Institutions.
+§§ 39-101 – 39-405
+
+Division VII. Property.
+
+Title 40. Liens.
+§§ 40-101 – 40-405
+
+Title 41. Personal Property.
+§§ 41-151.01 – 41-315
+
+Title 42. Real Property.
+§§ 42-111 – 42-4097
+
+Division VIII. General Laws.
+
+Title 43. Cemeteries and Crematories.
+§§ 43-101 – 43-131
+
+Title 44. Charitable and Curative Institutions.
+§§ 44-101.01 – 44-1714
+
+Title 45. Compilation and Construction of Code.
+§§ 45-102 – 45-606
+
+Title 46. Domestic Relations.
+§§ 46-101 – 46-601
+
+Title 47. Taxation, Licensing, Permits, Assessments, and Fees. [Enacted title]
+§§ 47-101 – 47-5109
+
+Title 48. Foods and Drugs.
+§§ 48-101 – 48-1213
+
+Title 49. Military.
+§§ 49-101 – 49-1101.20
+
+Title 50. Motor and Non-Motor Vehicles and Traffic.
+§§ 50-101 – 50-2708
+
+Title 51. Social Security.
+§§ 51-101 – 51-178
+
+Title 99. Reserved sections.
+§§ 47-2853.42(Perm) – 10-171.03(Perm)
+
+Publication Information
+
+Current through
+
+Aug. 20, 2026
+
+Last codified D.C. Law:
+
+Law 26-175 effective Aug. 20, 2026
+
+Last codified Emergency Law:
+
+Act 26-416 effective Aug. 13, 2026
+
+Last codified Federal Law:
+
+Public Law 115-334 approved Dec. 20, 2018
+
+The codes and laws on this website are in the public domain.
+
+ Please do not scrape. Instead, bulk download the HTML or XML.
+
+Powered by the non-profit Open Law Library.
+
+Piwik analytics
+
+SOURCE 5: D.C. Code § 7-702.04, Long-Term Care Ombudsman — Powers and duties — Council of the District of Columbia, D.C. Law Library | https://code.dccouncil.gov/us/dc/council/code/sections/7-702.04 | source date: section history: Mar. 16, 1989, D.C. Law 7-218, § 204; last amended July 3, 2018, D.C. Law 22-125, § 2(e); the Code's currency is stated on source 4 | retrieved: 2026-09-04
+Skip to main content
+
+Toggle mobile menu
+
+Navigation
+
+D.C. Law Library
+
+Code of the District of Columbia
+
+Title 7. Human Health Care and Safety.
+
+Chapter 7. Long-Term Care Ombudsman Program.
+
+Subchapter II. Establishment of a Long-Term Care Ombudsman Program.
+
+§ 7–702.04. Long-Term Care Ombudsman — Powers and duties.
+
+Code of the District of Columbia
+
+§ 7–702.04. Long-Term Care Ombudsman — Powers and duties.
+
+(a) The ombudsman shall:
+
+(1) Receive, investigate, and resolve complaints or concerns made by or on behalf of residents;
+
+(2) Promote the well-being and quality of life of each resident;
+
+(3) Encourage the development and the expansion of the activities of the program in all wards of the District, sufficient to serve the residents in those wards;
+
+(4) By January 1, 2019, and on an annual basis thereafter, submit the report described in 45 C.F.R. § 1324.13(g);
+
+(5) Enter into, as necessary, written agreements of understanding, cooperation, and collaboration with any District government agency that provides funding, oversight, or inspection of, or operates a long-term care facility;
+
+(6) Establish and implement program policies and procedures to elicit, receive, investigate, verify, refer, and resolve residents’ complaints;
+
+(7) Develop an on-going program for publicizing the program;
+
+(8) Identify, document, and address solutions to problems affecting residents;
+
+(9) Serve as the legal representative for residents, pursuant to §§ 44-1003.02(e), 44-1003.03(a)(1), and 44-1003.07(a) and (b);
+
+(10) Repealed.
+
+(11) Establish a uniform system to record data on complaints and conditions relating to long-term care services;
+
+(12) Monitor, analyze, and make recommendations regarding the development and implementation of District and federal laws, rules, regulations, and other governmental policies and actions pertaining to the health, safety, welfare, and rights of residents;
+
+(13) Make specific recommendations to the operator or agent of the operator of any long-term care facility, whenever the ombudsman believes that conditions exist that adversely affect residents' health, safety, welfare, or rights, in accordance with the disclosure requirements set forth in section 712g(d) of the Older Americans Act of 1965, approved September 30, 1992 (106 Stat. 1195; 42 U.S.C. § 3058g(d)), and 45 C.F.R. § 1324.11(e)(3));
+
+(14) Report to the appropriate enforcement agency any act of an operator of a long-term care facility or home care agency that the ombudsman believes to be a violation of an applicable federal or District law, regulation, or rule, in accordance with the disclosure requirements set forth in section 712g(d) of the Older Americans Act of 1965, approved September 30, 1992 (106 Stat. 1195; 42 U.S.C. § 3058g(d)), and 45 C.F.R. § 1324.11(e)(3);
+
+(15) Establish and conduct a training program for persons employed by or associated with the program, which shall include training in the following areas:
+
+(A) The review of medical records;
+
+(B) Regulatory requirements for long-term care facilities;
+
+(C) Confidentiality of records;
+
+(D) Techniques of complaint investigation;
+
+(E) The effects of institutionalization; and
+
+(F) The special needs of the elderly;
+
+(16) Provide ongoing support as requested by residents and family councils to protect the well-being and rights of residents;
+
+(17) Establish and maintain procedures to protect the confidentiality of the records of residents and long-term care facilities where access is authorized pursuant to § 7-703.02;
+
+(18) Prohibit any employee, designee, or representative of the program from investigating any complaint or representing the ombudsman, unless that person has received training in accordance with paragraph (15) of this subsection;
+
+(19) Designate local ombudsman programs to act on behalf of the ombudsman within specific geographical areas; and
+
+(20) Perform any other acts required by 45 C.F.R. §§ 1324.13 and 1324.19.
+
+(b) No person, agency, or long-term care facility shall obstruct the ombudsman or his or her designee from the lawful performance of any duty or the exercise of any power.
+
+ (Mar. 16, 1989, D.C. Law 7-218, § 204, 36 DCR 534; Feb. 5, 1994, D.C. Law 10-68, § 18, 40 DCR 6311; Mar. 12, 2011, D.C. Law 18-321, § 2(b), 57 DCR 12438; Mar. 14, 2012, D.C. Law 19-111, § 2(b), 59 DCR 455; Sept. 26, 2012, D.C. Law 19-171, § 54(a), 59 DCR 6190; July 3, 2018, D.C. Law 22-125, § 2(e), 65 DCR 5106.)
+
+Prior Codifications
+
+1981 Ed., § 6-3514.
+
+Section References
+
+This section is referenced in § 7-701.01 and § 7-702.06.
+
+Effect of Amendments
+
+D.C. Law 18-321 rewrote subsecs. (a)(1), (4), (6); repealed subsec. (a)(10); in subsec. (a)(11), substituted “Establish a uniform system to record data on complaints and conditions relating to long-term care services;” for “Establish a system for coordinating a uniform District-wide system to record data on complaints and conditions in long-term care facilities;”; and, in subsec. (a)(13), substituted “conditions exist that adversely affect residents’ health, safety, welfare, or rights;” for “conditions which adversely affect the health, safety, welfare, or rights of a resident exist within the long-term care facility;”.
+
+D.C. Law 19-111, in subsec. (a)(1), substituted “Receive, investigate,” for “Investigate”; and, in subsec. (a)(14), substituted “long-term care facility or home care agency” for “long-term care facility”.
+
+The 2012 amendment by D.C. Law 19-171 validated a previously made punctuation change in (a)(6).
+
+Editor's Notes
+
+Section 3 of D.C. Law 19-111 provided that the act shall apply upon the inclusion of its fiscal effect in an approved budget and financial plan. D.C. Law 19-111, § 3, was repealed by D.C. Law 19-168, § 7013.
+
+Previous
+
+§ 7–702.03. Long-Term Care Ombudsman — Training and experience.
+
+Next
+
+§ 7–702.05. Complaint investigation.
+
+The codes and laws on this website are in the public domain.
+
+ Please do not scrape. Instead, bulk download the HTML or XML.
+
+Powered by the non-profit Open Law Library.
+
+Piwik analytics
+
+SOURCE 6: Incident Report and 6-108 Discharge Transfer and Relocation Forms — DC Health | https://dchealth.dc.gov/service/incident-report-and-6-108-discharge-transfer-and-relocation-forms | source date: none stated on page | retrieved: 2026-09-04
+Skip to main content
+
+doh
+
+DC Health
+
+DC Agency Top Menu
+
+311 Online
+
+Agency Directory
+
+Online Services
+
+Accessibility
+
+Mayor Muriel Bowser
+
+ Google tag (gtag.js)
+
+Search form
+
+X
+
+Search
+
+#chat code
+<div class="chatWindow" id="header" onclick="toggle();">
+<div class="chatOpen" id="chat-header">
+<div><img alt="DC Chat logo" class="logo_img" id="logo_img" src="https://static.srv7-va.com/chat_icon.svg" />
+<p class="btntxt" tabindex="0">Let us help</p>
+</div>
+<span class="header-text" style="display: none;">DC Health Virtual Agent <img class="imagestyle" src="https://static.srv7-va.com/Arrow.png" style="display: none;width: 15px;margin-right: -15px;" /></span></div>
+
+<div class="headersection" id="chat-window" style="display: none;"><iframe class="iframeWidth" frameborder="0" id="myId" scrolling="no"></iframe></div>
+</div>
+
+script type="text/javascript">
+ let count = 0;
+ function toggle(){
+ var b=document.getElementById("chat-window");
+ var a=document.getElementById("chat-header");
+ "none"===b.style.display?(b.style.display="block",a.classList.add("chatClose"),a.classList.remove("chatOpen")):(b.style.display="none",a.classList.add("chatOpen"),a.classList.remove("chatClose"));
+ let status = b.style.display;
+ if (status === "block" && count === 0) {
+ chat();
+ } else {
+ count++;
+ }
+ }
+ function chat() {
+ document.getElementById("myId").src = "https://uidcprod.srv7-va.com/"
+ }
+</script
+
+Asthma
+
+Home
+
+Child, Adolescent and School Health
+
+Children with Special Needs
+
+Oral Health Program
+
+School Based Health Centers
+
+School Health Surveillance
+
+School Nurses
+
+Sexual Health
+
+Violence Prevention
+
+Vaccines For Children - VFC
+
+Immunization
+
+Services
+
+Animal Services
+
+Certificate of Need
+
+Childhood Lead Poisoning and Prevention
+
+Community Hygiene
+
+Community Outreach Request
+
+Data and Statistics
+
+Death with Dignity Act of 2016
+
+Emergency Medical Services
+
+Emergency Preparedness
+
+File a Complaint
+
+Food Safety and Hygiene
+
+Grant Funding
+
+Health Care Facilities
+
+Incident Report & 6-108 Transfer Forms
+
+Health Care Services
+
+HEPRA Special Events
+
+Infectious Diseases
+
+Institutional Review Board
+
+Intermediate Care Facilities Division
+
+Medical Devices
+
+Obesity
+
+Pharmaceutical Control
+
+Pregnancy Services
+
+Radiation Protection
+
+Rodent Control
+
+Sexually Transmitted Diseases
+
+WIC
+
+Newborn Screening
+
+Respiratory Diseases
+
+Healthy Housing Program
+
+Pay a Notice of Infraction (NOI) Fine
+
+Rabies Prevention
+
+Smoking Exemption
+
+Health Professionals
+
+Continuing Education
+
+Criminal Background Check
+
+Health Professional Loan Repayment
+
+License Applications
+
+Licensing Boards
+
+National Health Services Corps
+
+PDMP
+
+Primary Care Workforce Development
+
+Reports
+
+Shortage Designation
+
+Scholarship and Funding Opportunities
+
+HIV/AIDS
+
+Condoms
+
+Getting Involved
+
+HIV Services in DC
+
+Prevention, Testing and Treatment
+
+Reports and Publications
+
+What is HIV/AIDS?
+
+Resources
+
+Applications and Forms
+
+Community Providers
+
+DC Health Search
+
+Facilities Directories
+
+Meaningful Use (MU): Public Health Reporting
+
+Medical Records Fees
+
+Regulations
+
+About
+
+Center for Policy, Planning and Evaluation
+
+Community Health Administration
+
+Environmental Health Administration
+
+Health Systems and Preparedness Administration
+
+HIV/AIDS, Hepatitis, STD and TB Administration
+
+Office of Health Equity
+
+Open Government and FOIA
+
+DC Health Standard Operating Procedures
+
+Telephone Directory
+
+Director's Biography
+
+For the Press
+
+News Room
+
+Meet Our Executive Team
+
+College Internship Program
+
+Volunteer with the Medical Reserve Corps
+
+DC Health Organization Structure
+
+Vital Records
+
+Birth Certificates
+
+Death Certificates
+
+Domestic Partnership
+
+Request for Use of Data with Identifiers and Statement of Assurances
+
+DC Health
+
+Office Hours
+
+General DC Health: M-F: 8:30 am-5:30 pm / Processing Center only: M-F: 9 am-1 pm, W: 9 am-3:30 pm
+
+ Connect With Us
+
+2201 Shannon Place SE, Washington, DC 20020
+
+Phone: (202) 442-5955
+
+Fax: (202) 442-4795
+
+TTY: 711
+
+Email: doh@dc.gov
+
+Ask the Director
+
+Agency Performance
+
+Amharic (አማርኛ)
+
+Chinese (中文)
+
+French (Français)
+
+Korean (한국어)
+
+Spanish (Español)
+
+Vietnamese (Tiếng Việt)
+
+Translation Disclaimer - Google Translate
+
+ Ayanna Bennett
+
+Director of DC Health
+
+-A +A
+
+Listen
+
+Incident Report and 6-108 Discharge Transfer and Relocation Forms
+
+Discharge Transfer or Relocation
+
+6-108 Form - DOH Notice of Discharge Transfer or Relocation Form (Allow a few seconds for form to load on webpage)
+
+6-108 Letter - Cover Letter to Nursing Home Providers [PDF]
+
+Appeal Rights Form [PDF]
+
+Request for Hearing Form [PDF]
+
+Incident Report
+
+Incident Report Form (Allow a few seconds for form to load on webpage)
+
+Contact Phone:
+
+(877) 672-2174
+
+Contact Fax:
+
+(202) 727-8471
+
+Contact TTY:
+
+711
+
+Office Hours:
+
+Processing Center: M-F: 9 am-1 pm, W: 9 am-3:30 pm; Office Hours M-F: 8:15 am-4:45 pm
+
+Service Location:
+
+Health, Department of
+
+GIS Address:
+
+2201 Shannon Place SE
+
+City:
+
+Washington
+
+State:
+
+DC
+
+Zip:
+
+20020
+
+DC Health Contact Directory Use our DC Health Contact Directory to view the telephone numbers for various DC Health services.
+
+STI Testing The DC Health and Wellness Center provides free and confidential clinical services for persons over 13 years of age and older.
+
+Professional Licensing We provide licensure services for a variety of healthcare related professions. Whether applying for the first time or seeking to renew a license, DC Health offers resources and guidance to assist professionals throughout the process.
+
+Follow Us on X
+
+Facebook
+
+Mobile
+
+Maps
+
+Webcasts
+
+RSS
+
+Data
+
+Subscribe
+
+More Resources
+
+Resources
+
+District News
+
+Mayor's Public Schedule
+
+Citywide News
+
+Citywide Calendar
+
+Subscribe to Receive Emails
+
+Subscribe to Text Alerts
+
+Subscribe to Newsletters
+
+District Initiatives
+
+Green DC
+
+Age-Friendly DC
+
+Sustainable DC
+
+Connect DC
+
+Great Streets
+
+Ready DC
+
+About DC
+
+Open DC
+
+Budget
+
+Emancipation
+
+Consumer Protection
+
+Contracts
+
+Property Quest
+
+Contact Us
+
+Agency Directory
+
+Call 311
+
+Contact the Mayor
+
+Contact Agency Directors
+
+FOIA Requests
+
+Report Website Problems
+
+li><a title="Send Feedback" href="https://feedback.dc.gov">Send Feedback</a></li
+
+Service Request Center
+
+Accessibility
+
+Privacy and Security
+
+Terms and Conditions
+
+Google Translate Disclaimer
+
+About DC.Gov
+
+li class="last">&nbsp;</li
+
+ include IF Vox before closing HEAD tag
+
+SOURCE 7: DOH Notice of Discharge Transfer or Relocation Form (the 6-108 form) — DC Health, served through the District's SeamlessDocs form platform | https://dcgov.seamlessdocs.com/f/DOHNoticeofDischargeTransferorRelocationForm | source date: none stated on the form | retrieved: 2026-09-04
+Section 1 of 1 in this document
+
+DOH Notice of Discharge Transfer or Relocation Form
+
+NOTICE OF DISCHARGE OR TRANSFER FROM A FACILITY OR RELOCATION WITHIN A FACILITY
+
+=================================================================
+
+Todays Date
+
+Name of Facility
+
+Address of Facility
+
+Street Address
+
+City
+
+State
+
+Zip
+
+Facility Email Address
+
+Facility Phone Number
+
+Resident's Name
+
+Resident's Representative
+
+Representative's Email
+
+Resident's representative" means (A) Any person who is knowledgeable about a resident's circumstances and has been designated by that resident to represent him or her; (B) Any person other than a facility who has been appointed by a court, either to administer a resident's financial or personal affairs or to protect and advocate for a resident's rights; or (C) The Long-Term Care Ombudsman or his or her designee, if no person has been designated or appointed in accordance with subparagraphs (A) and (B) of this paragraph.
+
+Both DC Law 6-108 and Federal regulations require that this facility provide you with specific information, and because this facility is licensed in the District of Columbia and is a participant in the Medicare and/or Medicaid program(s), all such requirements must be met.
+
+WHO SHOULD RECEIVE THIS NOTICE: This notice must be delivered to you, the resident, and your representative.
+
+WHEN SHOULD YOU RECEIVE THIS NOTICE: You should receive this notice at least thirty (30) days prior to the date of transfer or discharge from the facility. You should receive this notice at least seven (7) days prior to a relocation within the facility.The time periods for notification may be changed by physician order, consent by the resident or the resident's representative or a determination by the Long-Term Care Ombudsman.
+
+REQUIRED CONTENTS: The following should be completed by the provider.
+
+(1) This proposed action is a
+
+a) Transfer - Hospital/Rehab facility/Nursing home
+
+b) Discharge to the community
+
+c) Relocation
+
+d) Therapeutic leave
+
+Transfer type
+
+Hospital
+
+Rehab Facility
+
+Nursing Home
+
+Other
+
+(2) Must list specific reason(s) for this action:
+
+(3) You are scheduled to be discharged, transferred or relocated on or by (date)
+
+(4) Your destination is
+
+(5) If you are being transferred to a hospital or the transfer is for therapeutic leave, attached is this facility's bed-hold policy.Your available number of bed-hold days is: *
+
+(6) The following person from the facility is responsible for supervising the discharge, transfer or relocation:
+
+7) Other pertinent information, if applicable:
+
+(8)  You may contact the DC Long-Term Care Ombudsman as follows:
+
+     Mark C. Miller, Director
+
+     DC Long-Term Care Ombudsman Program
+
+     Legal Counsel for the Elderly
+
+     601 E Street, NW, Building A-4th Floor
+
+     Washington, DC 20049
+
+     Tel. (202) 434-2190, Fax (202) 434-6595
+
+(9)  If you have a developmental disability, you may also contact:
+
+      Andrew Reese, Director
+
+      Department on Disability Services
+
+     250 E Street, SW
+
+     Washington, DC 20024
+
+     Attn: Transfer/Discharge of Resident from Nursing Home
+
+     Tel. (202) 730-1700, Fax (202) 730-1843
+
+(10) If you have a mental health issue, you may also contact:
+
+    Barbara Bazron, Director
+
+    Department of Behavioral Health
+
+    64 New York Avenue, NE, 3rd Floor
+
+    Washington, DC 20002
+
+    Attn: Transfer/Discharge of Resident from Nursing Home
+
+    Tel. (202) 673-2200, Fax (202) 673-3433
+
+(11) Please find attached a Hearing Request Form and a statement of your hearing rights, together with a postage paid envelope pre-addressed to the appropriate District official or agency.
+
+Provider's signature
+
+Full Date
+
+MonthMMJanuaryFebruaryMarchAprilMayJuneJulyAugustSeptemberOctoberNovemberDecember
+
+DayDD01020304050607080910111213141516171819202122232425262728293031
+
+YearYYYY2020202120222023202420252026202720282029203020312032203320342035203620372038203920402041204220432044204520462047204820492050
+
+Resident's signature
+
+Full Date
+
+MonthMMJanuaryFebruaryMarchAprilMayJuneJulyAugustSeptemberOctoberNovemberDecember
+
+DayDD01020304050607080910111213141516171819202122232425262728293031
+
+YearYYYY2020202120222023202420252026202720282029203020312032203320342035203620372038203920402041204220432044204520462047204820492050
+
+Resident's representative signature
+
+Full Date
+
+MonthMMJanuaryFebruaryMarchAprilMayJuneJulyAugustSeptemberOctoberNovemberDecember
+
+DayDD01020304050607080910111213141516171819202122232425262728293031
+
+YearYYYY2020202120222023202420252026202720282029203020312032203320342035203620372038203920402041204220432044204520462047204820492050
+
+Continued Compliance with DC Law 6-108 Required
+
+When a resident is transferred or discharged from a nursing facility the nursing facility is required to comply with standards set forth in the Nursing Homes and Community Residence Facilities Residents' Protection Act , DC Law 6-108 (DC Official Code § 44-1003.01 et seq.). Evidence that the resident and/or family member and/or responsible party have been given the reasons for, procedures for contesting and proposed effective date of discharge, transfer or relocation must be maintained in the resident’s record. Documents must be written in accordance with District of Columbia Official Code §44-1003.02 through §44- 1003.08.
+
+Enclosures:
+
+DC Long-Term Care Ombudsman Program
+
+Legal Counsel for the Elderly
+
+601 E Street, NW, Building A-4th Floor
+
+Washington, DC 20049
+
+Appeal Rights Request for Hearing Form:
+
+Arian R. Gibson, M.S.
+
+Senior Deputy Director
+
+Health Regulation and Licensing Administration
+
+Department of Health
+
+899 North Capitol Street, NE, 2nd Floor
+
+Washington, DC 20002
+
+Tel. (202) 724-8927, Fax (202) 724-8677
+
+Wayne Turnage, MPA, Director
+
+DC Department of Health Care Finance
+
+441 4th Street, NW, 900S
+
+Washington, DC 20001
+
+Tel. (202) 442-5988, Fax (202) 442-4790
+
+YOUR APPEALS RIGHTS
+
+In Accordance with the Nursing Home and Community Residence Facility Residents' Protection Act of 1985, DC
+
+Law 6- 108
+
+(Transfer, Discharge, Relocation)
+
+You have a right to challenge this facility's decision to discharge, transfer, or relocate you. If the decision is to discharge you from the facility or to transfer you to another facility and you think you should not have to leave, you or your representative have 7 days from the day you receive this notice to inform the Administrator [Residence Director, if a community residence facility] or a member of the staff that you are requesting a hearing and to complete the enclosed hearing request form and mail it in the preaddressed envelope provided. If you are mailing the hearing request form from the facility, the day you place it in the facility's outgoing mail or give it to a member of the staff for mailing shall be considered the date of mailing for purposes of the time limit. In all other cases, the postmark date shall be considered the date of mailing. If, instead, the decision is to relocate you within the facility and you think you should not have to move to another room, you or your representative have only 5 days to do the above.
+
+If you or your representative request a hearing, it will be held no later than 5 days after the request is received in the mail, and, in the absence of emergency or other compelling circumstances, you will not be moved before a hearing decision is rendered. If the decision is against you, in the absence of an emergency or other compelling circumstances, you will have at least 5 days to prepare for your move if you are being discharge or transferred to another facility, and at least 3 days to prepare for your move if you are being relocated to another room within the facility.
+
+To help you in your move, you will be offered counseling services by the staff, assistance by the District government if you are being discharged or transferred from the facility, and, at your request, additional support from the Long-Term Care Ombudsman program. If you have any questions at all, please do not hesitate to call one of the phone numbers listed below for assistance.
+
+Mark C. Miller, Director
+
+DC Long-Term Care Ombudsman Program
+
+Legal Counsel for the Elderly
+
+601 E Street, NW, Building A-4th Floor
+
+Washington, DC 20049
+
+Tel. (202) 434-2190, Fax (202) 434-6595
+
+Andrew Reese, Director
+
+Department on Disability Services
+
+250 E Street, SW
+
+Washington, DC 20024
+
+Attn: Transfer/Discharge of Resident from Nursing Home
+
+Tel. (202) 730-1700, Fax (202) 730-1843
+
+Barbara Bazron, Director
+
+Department of Behavioral Health
+
+64 New York Avenue, NE, 3rd Floor
+
+Washington, DC 20002
+
+Attn: Transfer/Discharge of Resident from Nursing Home
+
+Tel. (202) 673-2200, Fax (202) 673-3433
+
+Recaptcha Response
+
+Be sure to verify that you are not a robot by using the Captcha tool at the below.
+
+Having reCaptcha issues? Click here to reset the widget.
+
+disregard this
+
+ this following javascript lives in the template as much of the config is provided dynamically server-side
+
+SOURCE 8: 6-108 Cover Letter to Nursing Home Providers — DC Health, Health Regulation and Licensing Administration (PDF) | https://dchealth.dc.gov/sites/default/files/dc/sites/doh/publication/attachments/6_108%20Cover%20Letter%20to%20Nursing%20Home%20Providers.pdf | source date: December 31, 2008, as the letter is dated | retrieved: 2026-09-04
+DISTRICT OF COLUMBIA
+                                   Department of Health
+
+Health Regulation and
+Licensing Administration
+
+
+
+
+December 31, 2008
+                                           --
+                                           ***
+
+
+Dear Nursing Facility Provider:
+
+Enclosed is an updated form for use in the case of the transfer, discharge or
+relocation of a nursing facility resident. The form is based on requirements set
+out in the Nursing Home and Community Residence Facility Residents'
+Protections Act of 1985 (D.C Law 6-108; D.C Official Code § 44-1003.01 et
+seq.) ("the Act") and federal regulations on Medicaid and Medicare participation
+(F Tag 201 to 206, 42 CFR 483.12 to 42 CFR 483.12(b) (3)). The forms were
+distributed to you before but have now been updated to reflect certain changes
+in process.
+
+In accordance with D.C Official Code § 44-1003.02(d) you are required to use
+the enclosed form as notice to residents upon transfer, discharge or relocation.
+It should not be altered in any way and all requested information should be
+provided.
+
+Please note that (1) on the form you are required to describe the reason for the
+transfer, discharge or relocation in detail, in accordance with D.C Official Code
+§ 44-1432(d)(1); (2) you must include on the form the name, address and
+phone number of the person from your facility who is responsible for
+supervising the move, in accordance with D.C Official Code § 44-1432(d)(5);
+and (3) the form is invalid if a location or-destination for the resident is not
+included, in accordance with 42 CFR 483.12(a) (6) (iii). Finally, please note that
+the need for a transfer notice is triggered whenever a resident is moved to the
+hospital or any other institutional setting; the act is known as a discharge when
+the resident is moved to a non-institutional setting and the releasing facility
+ceases to be responsible for the resident's care.
+
+Failure to use the correct form may result in the issuance of a Notice of
+Infraction and the imposition of a fine in the amount of $1,000.
+
+     717 14th Street, N.W. 6th Floor, Washington, D.C. 20005 (202) 724-8800 Fax (202) 442-9431
+
+Please call Sharon Lewis, Program Manager, at 442-4737or Carmen Johnson,
+Assistant Attorney General, at 442-5888 if you need further information.
+
+Sincerely,
+
+
+
+Sharon Williams Lewis, RNC, MSA, CPM
+Program Manager
+
+Enclosures
+
+
+
+
+     717 14th Street, N.W. 6th Floor, Washington, D.C. 20005 (202) 724-8800 Fax (202) 442-9431
+
+SOURCE 9: Filings & Forms — DC Office of Administrative Hearings | https://oah.dc.gov/page/filings-forms | source date: none stated on page | retrieved: 2026-09-04
+Skip to main content
+
+oah
+
+Office of Administrative Hearings
+
+Effective August 13, 2026, OAH no longer has jurisdiction to conduct hearings for Notices of Infraction issued by the Department of For Hire Vehicles (DFHV). Jurisdiction to conduct these hearings has been transferred to the Department of Motor Vehicles (DMV). See DFHV Hearings for more information..
+
+Spanish (Español)
+
+Amharic (አማርኛ)
+
+Home
+
+Help
+
+Filings & Forms
+
+Rules & Laws
+
+About
+
+Listen
+
+Filings & Forms
+
+ Go to www.addthis.com/dashboard to customize your tools
+
+DO NOT EDIT THIS PAGE UNLESS YOU ARE AN OCTO EDITOR
+
+FORMS
+
+OAH has forms and instructions to guide you to assist in filing hearing requests, documents, and/or other written submissions (generally called “papers”).
+
+If you complete a form online, you will receive a completed, signed form to the email address you provide. You will receive a confirmation email that you completed filling the document. It is your responsibility to file all papers, including forms completed and signed online, with OAH, using the filing instructions in “How to File,” below.
+
+For the General Public
+
+Note: Using OAH’s standard forms is not required in most instances, but it is highly recommended to ensure compliance with OAH Rules.
+
+Click here for all OAH forms
+
+New Case
+
+I need to request a hearing.
+
+Open Case
+
+I have a case at OAH, and I want to file papers in my case.
+
+Closed Case
+
+I received a Final Order and want to appeal the judge’s decision.
+
+For District Agencies
+
+Pursuant to OAH Rules of Procedure 2803.5 and 2804.5, whenever a District agency files a Notice of Infraction or Notice of Violation with OAH, the District “shall file an affidavit, on a form approved by the Chief Administrative Law Judge,” verifying or attesting to certain information required to ensure service of process is accomplished in accordance with applicable law. Please Note: Some forms may require the attachment or inclusion of additional documentation or evidence.
+
+Civil Infractions Act
+
+Litter Control Administration Act
+
+HOW TO FILE
+
+Papers may be filed at OAH in person or by mail, by email, or using the OAH eFiling Portal (with the exception of Department of For-Hire Vehicle appeals).
+
+Instructions on How to Print Forms
+
+Go to the “Options” menu in the top left corner of the form.
+
+Click on “Read Agreement.” A printable version of the form will appear on screen. Print the document using the printer icon in the top right corner of the document.
+
+How to File In-Person
+
+Marion S. Barry, Jr. Building
+
+DC Office of Administrative Hearings
+
+441 Fourth Street, NW Suite 450N
+
+Washington, DC 20001
+
+Red Line - Judiciary Square Metro (“4th Street/U.S. and D.C. Courthouses” exit)
+
+How to File By Mail
+
+Clerk’s Office
+
+D.C. Office of Administrative Hearings
+
+441 Fourth Street NW, Suite 450N
+
+Washington, DC 20001
+
+How to File By Email
+
+oah.filing@dc.gov
+
+How to File Using the eFiling Portal:
+
+eFiling Portal
+
+Office Hours
+
+Monday - Friday 9:00 am to 5:00 pm,
+
+except District holidays
+
+Connect With Us
+
+One Judiciary Square
+
+441 4th Street, NW, Suite 450 North
+
+Washington, DC 20001
+
+Phone: (202) 442-9094
+
+TTY: 711
+
+Email: oah.filing@dc.gov
+
+Accessibility
+
+Privacy & Security
+
+About DC.GOV
+
+Terms & Conditions
+
+ <a href="https://www.youtube.com/watch?v=X29xly-Wa5k" title="Link to DCHR's Facebook page"><img alt="Icon for the link to OAH's YouTube page" src="/sites/default/files/dc/sites/oah/youtube-white.png" /></a> <a href="https://twitter.com/dchrDC" title="Link to DCHR's Twitter feed"><img alt="Icon for the link to DCHR's Twitter feed" src="/sites/default/files/dc/sites/DCHR/twitter.png" /></a><a href="https://instagram.com/DCHRdc" title="Link to DCHR's Instagram page"><img alt="Icon for the link to DCHR's Instagram page" src="/sites/default/files/dc/sites/DCHR/instagram.png" /></a>
+
+© 2023 District of Columbia
+
+SOURCE 10: About — DC Office of Administrative Hearings | https://oah.dc.gov/page/about | source date: none stated on page | retrieved: 2026-09-04
+Skip to main content
+
+oah
+
+Office of Administrative Hearings
+
+Effective August 13, 2026, OAH no longer has jurisdiction to conduct hearings for Notices of Infraction issued by the Department of For Hire Vehicles (DFHV). Jurisdiction to conduct these hearings has been transferred to the Department of Motor Vehicles (DMV). See DFHV Hearings for more information..
+
+Spanish (Español)
+
+Amharic (አማርኛ)
+
+Home
+
+Help
+
+Filings & Forms
+
+Rules & Laws
+
+About
+
+Listen
+
+About
+
+ Go to www.addthis.com/dashboard to customize your tools
+
+The District of Columbia Office of Administrative Hearings (OAH) is an administrative court that was created in 2001 by the Council of the District of Columbia to provide centralized adjudication services for several District agencies. OAH began formal operations in 2004. Today, there are over 30 Administrative Law Judges who decide contested cases involving more than 40 District of Columbia agencies, boards, and commissions.
+
+As an independent agency, OAH is a neutral, impartial tribunal that holds hearings and decides appeals from government decisions. OAH decides cases involving unemployment compensation, Medicaid and other public benefits, public space, rent control, professional and business licenses, and building, health, and fire code violations, among others. OAH also receives payments of fines imposed by various agencies.
+
+The Chief Administrative Law Judge oversees OAH. By statute, the Chief Judge is appointed to a six-year term by the Mayor, with confirmation by the D.C. Council.
+
+In addition to the Administrative Law Judges, there are presently more than 45 employees who provide critical support services, including customer service, data processing, case management, legal analysis and support, and operational support, such as human resources and information technology.
+
+Mission
+
+OAH strives to enhance the quality of life in our city by providing residents with a fair, efficient and effective system to manage and resolve administrative litigation arising under District of Columbia law.
+
+Office Hours and Court Closings
+
+OAH is open from 9:00 a.m. to 5:00 p.m., Monday through Friday. However, OAH is currently open for walk-in visits on a Modified Operating Schedule. The court is closed on all federal and District of Columbia holidays.
+
+D.C. Government closures and delays are posted on the D.C. Government website. Alerts will also be posted on the OAH Home page. You can also tune to local D.C. television and radio stations for information.
+
+If you have a hearing or mediation scheduled on a day when the District of Columbia Government is closed or there is a delayed opening, the following policies  apply:
+
+For DCPS Hearings:
+
+If DCPS closes for the day, then all scheduled hearings and mediations are cancelled. DCPS will issue rescheduling notices.
+
+If DCPS has a one-hour delay, then the 9:15 a.m. hearings are cancelled. DCPS will issue rescheduling notices. The 11:15 a.m. hearings will be held.
+
+If DCPS has a two-hour delay, then the 9:15 a.m. hearings are cancelled. DCPS will issue rescheduling notices. The 11:15 a.m. hearings will be held, UNLESS DCPS or the parent requests a continuance (before 11:15 a.m. and with notice to OAH before 11:15 a.m.).
+
+For all other hearings:
+
+If D.C. Government closes for the day, then all scheduled hearings and mediations are cancelled. Rescheduling notices will be issued.
+
+If the D.C. Government has a liberal or unscheduled leave policy in effect, then all scheduled hearings and mediations are cancelled. Rescheduling notices will be issued. However, if all parties appear and the assigned Administrative Law Judge is available, the Judge may choose to go ahead with the hearing.
+
+If the D.C. Government has a one- or two-hour delay for all employees to report to work, then hearings and mediations scheduled before the end of the delay are cancelled. Rescheduling notices will be issued. Hearings and mediations scheduled after the end of the delay are NOT cancelled and will go ahead as scheduled.
+
+If the D.C. Government has a liberal or unscheduled leave policy in effect together with a one- or two-hour delay, then all scheduled hearings and mediations are cancelled. Rescheduling notices will be issued.
+
+Language Access
+
+The District of Columbia protects the rights of people who speak limited or no English. OAH provides free interpretation services to members of the public who have business with OAH. Such services are available for people who visit the office, call on the telephone, or attend hearings or mediations. If you need an interpreter for a hearing or mediation, please tell us as soon as possible.
+
+Information and forms are available in the following languages:
+
+Español (Spanish)
+
+አማርኛ (Amharic)
+
+Accessibility
+
+The Office of Administrative Hearings provides access to its hearings and other proceedings through reasonable accommodations. Reasonable accommodations are available to any person with a disability, upon reasonable notice, so long as the requested accommodations do not require action which would result in a fundamental alteration in the nature of an activity or an undue financial or administrative burden.
+
+If you are requesting a reasonable accommodation for a hearing or other proceeding, please contact us at least five to seven days before the scheduled date. You may, of course, make a reasonable accommodation request at any time, but a request made less than five days before your hearing may require that your hearing be rescheduled.
+
+All hearing rooms and other facilities are wheelchair accessible.
+
+The Office of Administrative Hearings can provide free sign language services for persons who are deaf or hard-of-hearing.
+
+Documents can also be provided in braille or large print upon request.
+
+If you have concerns about OAH’s response to your accommodation request, you may file a grievance by following the OAH Grievance Procedure Under the Americans with Disabilities Act.
+
+Performance
+
+Information concerning agency performance is available at the Office of the City Administrator.
+
+Administrative Law Judges and COST
+
+The Commission on Selection and Tenure (COST) is established by law to appoint, reappoint, discipline, and remove OAH Administrative Law Judges. Notices of upcoming COST meetings are posted under “Latest News” on the OAH Home page. To view the minutes from previous COST meetings, you can visit the COST Meetings page .
+
+To be eligible for appointment, an applicant for an Administrative Law Judge position must be a member in good standing of the D.C. Bar, have at least five years of experience, including litigation experience, and possess judicial temperament, expertise, experience, and analytical and other necessary skills.
+
+You can learn more about COST and Administrative Law Judges in Title 2, Section 18A of the D.C. Code. Sections 2-1831.06 and .07 cover COST duties and membership. Sections 2-1831.08 through .11 cover the qualifications and powers of Administrative Law Judges, among other things.
+
+You can also visit the Biographies page for information about each of OAH’s current Administrative Law Judges.
+
+OAH Advisory Committee
+
+The OAH Advisory Committee is established by law to perform the following duties:
+
+Advise the Chief Administrative Law Judge in carrying out his or her duties;
+
+Identify issues of importance to Administrative Law Judges and agencies that should be addressed by the Office;
+
+Review issues and problems relating to administrative adjudication;
+
+Review and comment upon the policies and regulations proposed by the Chief Administrative Law Judge; and
+
+Make recommendations for statutory and regulatory changes that are consistent with advancing the purposes of OAH.
+
+You can learn more about the establishment and requirements of the Advisory Committee in Title 2, Chapter 18A, Section 2-1831.17 of the D.C. Code.
+
+Notices of upcoming Advisory Committee meetings are posted under “Latest News” on the OAH Home page. To view recordings of past meetings, you can visit the Advisory Committee Meetings page .
+
+Open Government
+
+D.C. is committed to a transparent, open form of government. District agency websites are required to make certain records available online to the public, if those records exist. In cases where these records exist but are not yet available online, agencies are working to provide them as soon as possible.
+
+Public Employee Salary Information
+
+OAH Budget
+
+OAH Annual Report
+
+Purchase Card Transactions
+
+Procurements and Payments
+
+Awarded Contracts
+
+OAH Performance Plans
+
+District-wide FOIA Reports
+
+Final Orders
+
+OAH launched a searchable database for Final Orders at the start of Fiscal Year 2025.  To request Final Orders issued before October 1, 2024, please email the request to oah.foia@dc.gov.
+
+<div class="answer">
+<p> From September 2017 through January 2019, OAH uploaded a&nbsp;limited number of Final Orders in the following jurisdictions to a public portal:&nbsp; Department of Public Works, Department of Housing and Community Development, Office of Planning, Fire &amp; Emergency Medical Services, Department of Health, Department of Energy and the Environment, District Department of Transportation, Department of Consumer &amp; Regulatory Affairs, Metropolitan Police Department, and Department of Small and Local Business Development. Because of confidentiality restrictions, Final Orders from certain jurisdictions were not uploaded.</p>
+
+<p><a href="https://dcgov.app.box.com/v/OAHFinalOrders"><strong>Final Orders</strong></a> (September 2017 through January 2019)</p>
+
+<p>OAH will launch a searchable database for Final Orders in Fiscal Year 2024. In the interim, please email <strong><a href="mailto:oah.foia@dc.gov">oah.foia@dc.gov</a></strong> for assistance obtaining Final Orders that are not yet posted.</p>
+
+<p></p>
+
+Party Case File Requests
+
+If a party or their representative seeks a copy of the party’s case file, or specific documents within the case file, the party or their representative should complete the Party Case File Request form and submit it by email to oah.filing@dc.gov.
+
+<p> A party or their representative&rsquo;s request for a copy of the party&rsquo;s OAH case files and orders is not treated as a FOIA request, and can be made by email to <strong><a href="mailto:oah.filing@dc.gov">oah.filing@dc.gov</a></strong>, using the <a href="/publication/party-case-file-request"><strong>Party Case File Request</strong></a>&nbsp;form.</p>
+
+<p></p>
+
+Freedom of Information Act (FOIA) Requests
+
+If you are not a party or a party's representative, please submit a FOIA request for documents from OAH case files. You can submit a FOIA request online through the D.C. FOIA Public Access Portal. Requests may also be submitted by mail or email (oah.foia@dc.gov). The outside of the envelope or the subject line of the email must state: "Freedom of Information Act Request" or "FOIA Request." Please note, however, that FOIA requests submitted online will be easier to track and process.
+
+To understand the process before making a request, please visit the D.C. Government FOIA page
+
+The FOIA Officer is the principal point of contact within OAH for advice and policy guidance on matters pertaining to the administration of FOIA. All requests are handled professionally and expeditiously.
+
+The contact information for OAH’s FOIA Officer is:
+
+Johnnie Barton
+
+Office of Administrative Hearings
+
+One Judiciary Square
+
+441 4th Street NW, Suite 450N
+
+Washington, DC 20001
+
+Phone: (202) 671-4474
+
+Email: oah.foia@dc.gov
+
+<p>If you are not a party or&nbsp;a party&#39;s representative, please submit a FOIA request for documents&nbsp;from&nbsp;OAH case files. You can submit a FOIA request online through the <strong><a href="https://myfoia.dc.gov" target="_blank">D.C. FOIA Public Access Portal</a></strong>. Requests may also be submitted by mail, fax, or email (<strong><a href="mailto:oah.foia@dc.gov" title="oah.foia@dc.gov">oah.foia@dc.gov</a></strong>). The outside of the envelope or the subject line of the fax or email must state: &quot;Freedom of Information Act Request&quot; or &quot;FOIA Request.&quot; However, please note that FOIA requests submitted online will be easier to track and process.</p>
+
+<p>To understand the process before making a request, please visit the <strong><a href="https://dc.gov/page/freedom-information-act-foia" target="_blank">D.C. Government FOIA page</a></strong>.</p>
+
+<p>The FOIA Officer is the principal contact point within OAH for advice and policy guidance on matters pertaining to FOIA administration. All requests are handled professionally and expeditiously. OAH&rsquo;s FOIA Officer&rsquo;s information:</p>
+
+<p>Johnnie Barton<br />
+Office of Administrative Hearings<br />
+One Judiciary Square<br />
+441 4th Street NW, Suite 450N<br />
+Washington, DC 20001<br />
+Phone: (202) 671-4474<br />
+Email:<strong><a href="mailto:oah.foia@dc.gov" title="oah.foia@dc.gov">oah.foia@dc.gov</a></strong><br />
+Fax: (202) 442-4789</p>
+
+<p></p>
+
+Customer Survey
+
+To improve our services, OAH is interested in your feedback. Complete the online survey if you want to give feedback after a hearing or after interacting with Customer Service or Resource Center staff. The information contained in this survey will not affect the outcome of your case and will not be identified by case number or name.
+
+Job Opportunities
+
+The Office of Administrative Hearings periodically hires for a variety of positions and has a formal legal internship program during the summer. Open positions periodically include:
+
+Administrative Law Judges
+
+The Commission on Selection and Tenure (“Commission”) appoints administrative law judges. The Mayor, the City Council, and the Chief Judge of the District of Columbia Superior Court each appoint one of the three voting members of the Commission. The requirements for appointment are set out in the Office of Administrative Hearings Establishment Act and regulations promulgated by the Commission.
+
+Attorneys
+
+The Office of the General Counsel includes attorneys who assist judges in legal analysis, research, and drafting while also providing legal support services to agency management. Attorneys must be members of the District of Columbia Bar to be eligible for hire. Paralegal positions require a college degree.
+
+Legal Support Staff
+
+Day-to-day case management and support to the judges are provided through the Clerk of the Court and the Clerk’s staff, which includes a variety of positions. They have regular, direct involvement with the public. In general, applicants must have college credits or equivalent experience. Facility in other languages is also useful.
+
+Legal Interns
+
+The Office of Administrative Hearings has a number of unpaid legal intern positions during the school year and summer. Applicants should have completed at least one semester of law school.
+
+Volunteers
+
+The Office of Administrative Hearings from time to time accepts volunteers to work for a limited number of hours per week on a variety of projects.
+
+To check for job openings at OAH and to submit an application for an open position, please visit the D.C. Department of Human Resources Careers page. Open Administrative Law Judge positions may be viewed under "Appointed Positions Excepted and Executive." All other open positions may be viewed under "Careers DC."
+
+Office Hours
+
+Monday - Friday 9:00 am to 5:00 pm,
+
+except District holidays
+
+Connect With Us
+
+One Judiciary Square
+
+441 4th Street, NW, Suite 450 North
+
+Washington, DC 20001
+
+Phone: (202) 442-9094
+
+TTY: 711
+
+Email: oah.filing@dc.gov
+
+Accessibility
+
+Privacy & Security
+
+About DC.GOV
+
+Terms & Conditions
+
+ <a href="https://www.youtube.com/watch?v=X29xly-Wa5k" title="Link to DCHR's Facebook page"><img alt="Icon for the link to OAH's YouTube page" src="/sites/default/files/dc/sites/oah/youtube-white.png" /></a> <a href="https://twitter.com/dchrDC" title="Link to DCHR's Twitter feed"><img alt="Icon for the link to DCHR's Twitter feed" src="/sites/default/files/dc/sites/DCHR/twitter.png" /></a><a href="https://instagram.com/DCHRdc" title="Link to DCHR's Instagram page"><img alt="Icon for the link to DCHR's Instagram page" src="/sites/default/files/dc/sites/DCHR/instagram.png" /></a>
+
+© 2023 District of Columbia
+
+SOURCE 11: Long-Term Care Ombudsman Program for DC Residents — Office of the D.C. Long-Term Care Ombudsman, Legal Counsel for the Elderly | https://www.aarp.org/legal-counsel-for-elderly/what-we-do/info-2017/dc-long-term-care-ombudsman.html | source date: none stated on page | retrieved: 2026-09-04
+Skip to content
+
+ SDI include (path: /content/aarpe/en/_jcr_content/everywhere-header/referencecontent.nocache.html, resourceType: aarp/components/modular/content/referenceContent)
+
+Menu
+
+Logout
+
+ start: topics
+
+Home
+
+Member Benefits
+
+Travel
+
+Gas & Auto Services
+
+Technology & Wireless
+
+Limited Time Member Offers
+
+Health & Wellness
+
+Shopping & Groceries
+
+Restaurants
+
+Insurance
+
+Entertainment
+
+Finances
+
+Home & Real Estate
+
+Community
+
+Work & Jobs
+
+Family Caregiving
+
+Advocacy
+
+Magazines & Resources
+
+(EN ESPAÑOL)
+
+Health
+
+Wellness
+
+Conditions & Treatments
+
+Drugs & Supplements
+
+Health Care & Coverage
+
+Eye Center
+
+Hearing Center
+
+Health Benefits
+
+Money
+
+Scams & Fraud
+
+Personal Finances
+
+Taxes
+
+Retirement
+
+Money Benefits
+
+Work & Jobs
+
+Job Search
+
+Careers
+
+Small Business
+
+For Employers
+
+Age Discrimination
+
+Social Security
+
+Medicare
+
+Family Caregiving
+
+Basics
+
+Care at Home
+
+Medical
+
+Financial & Legal
+
+Life Balance
+
+Community
+
+Local
+
+Travel
+
+Travel Tips
+
+Vacation Ideas
+
+Destinations
+
+Travel Benefits
+
+Entertainment & Style
+
+Movies
+
+TV
+
+Music
+
+Celebrities
+
+Beauty & Style
+
+Books
+
+Family & Relationships
+
+Personal Tech
+
+Home & Living
+
+Auto
+
+Car Buying
+
+Driver Safety
+
+Maintenance & Safety
+
+Trends & Technology
+
+Staying Sharp
+
+Podcasts
+
+Videos
+
+Games
+
+Word & Trivia
+
+Rewards
+
+Atari & Retro
+
+Mahjongg
+
+Members Only
+
+Staying Sharp
+
+ AARP In Your State
+
+ AARP In Your City
+
+ AARP Foundation
+
+ AARP Bulletin
+
+ AARP The Magazine
+
+ AARP EN ESPAÑOL
+
+ AARP 樂齡會
+
+ Privacy Policy
+
+Now Reading:
+
+Join Today, Save 25%
+JOIN NOW
+
+Membership
+My Account
+
+Just $16 a Year
+RENEW NOW
+
+Just $16 a Year
+RENEW NOW
+
+Join Today, Save 25%
+JOIN NOW
+
+Rewards for Good
+
+ Logout
+
+Search
+
+Search
+
+Legal Counsel for the Elderly
+
+What We Do
+
+Office of the D.C. Long-Term Care Ombudsman
+
+Office of the D.C. Long-Term Care Ombudsman
+
+LCE Home
+
+What We Do
+
+Getting Help
+
+Get Involved
+
+About Us
+
+Resources
+
+In the Community
+
+Donate
+
+Contact Us
+
+50th Jubilee
+
+ Rewards Badge
+
+ facebook
+
+Share with facebook
+
+ Twitter
+
+Share with twitter
+
+ linkedin
+
+Share with linkedin
+
+ email
+
+Share using email
+
+ print
+
+Print
+
+ display number of characters in component in author
+ end of author check
+
+ image is displayed on the top or bottom of component depending on author configuration
+ creditCaptionSpace value determines whether class is added to image
+ imageClass is used for styling
+ link and tracking id are determined based on author configuration
+
+ start of credit and captions
+ end of credit and caption
+
+ end of image
+ start of title
+ end of title
+ start of description and more text
+ end of description and more text
+ image is displayed on the top or bottom of component depending on author configuration
+ end of image
+ start of line separator
+ end of line separator
+
+ display number of characters in component in author
+ end of author check
+
+ image is displayed on the top or bottom of component depending on author configuration
+ creditCaptionSpace value determines whether class is added to image
+ imageClass is used for styling
+ link and tracking id are determined based on author configuration
+ end of image
+ start of title
+ end of title
+ start of description and more text
+
+The Office of the D.C. Long-Term Care Ombudsman
+
+Contact us at 202-434-2190 or email at DCOmbuds@aarp.org. Calls and emails are responded to within 24 hours or the next business day.
+
+En español | The Office of the D.C. Long-Term Care Ombudsman is an important part of Legal Counsel for the Elderly. It is an advocate and resource for persons who reside in long-term care facilities such as nursing homes, assisted living and community residence facilities. The program also provides advocacy services to individuals receiving services through the Elder and Persons with Physical Disabilities (EPD) Medicaid Waiver. Ombudsmen help residents and their families understand and exercise their rights and effectively address concerns which impact their health, safety and quality of life.  The program advocates for older adults and persons with disabilities at both the individual and systems levels by receiving, investigating and resolving complaints made by or on behalf of residents, promoting the development of resident and family councils, and informing governmental agencies, providers and the general public about issues and concerns impacting recipients of long-term care services and supports.
+
+Program History
+
+The ombudsman program concept for long-term care facilities began in 1971 when President Richard Nixon called for the establishment of independent units to investigate the poor quality in nursing homes as well as abuses of nursing home residents’ rights.
+
+In the District of Columbia, the Office of the Long-Term Care Ombudsman was established in 1975 to ensure rights of persons living in nursing homes and community residence facilities through community concern and action.
+
+The Older Americans Act Amendment of 1978 mandated the Long-Term Care Ombudsman Program for every state. The 1981 amendments to the Older American Act authorized the Long-Term Care Ombudsman Program to serve residents of community residence facilities.
+
+As of Oct. 1, 2012, the ombudsman program expanded its scope of advocacy services to include District residents receiving home and community-based services in their private homes through the D.C. Medicaid Elderly and Persons with Physical Disabilities (EPD) Waiver.
+
+ Ombudsman Services
+
+Advocate for the rights of older persons and other persons receiving long-term care services in the District of Columbia;
+
+Investigate and resolve complaints made by or on behalf of an older person or other persons receiving long-term care services;
+
+Educate and empower residents to understand and exercise their rights
+
+All confidential, resident-centered, and free of charge.
+
+Home and Community-Based Services
+
+As of Oct. 1, 2012, the ombudsman program expanded its scope of advocacy services to include District residents receiving home and community-based services in their private homes through the D.C. Medicaid Elderly and Persons with Physical Disabilities (EPD) Waiver.
+
+Volunteers/Legal Interns
+
+The ombudsman program volunteers and legal interns strengthen and augment the advocacy efforts for District residents receiving long-term care services in nursing homes, assisted living residences and community residential facilities. Trained volunteer ombudsmen regularly visit long-term care facilities, monitor conditions and care, and provide a voice for those unable to speak for themselves. Volunteers must complete a certification training program and submit to a background check.
+
+Volunteers provide assistance in the following activities and events:
+
+Resident visitation (not complaint-related visits);
+
+Work with resident and family councils;
+
+Community education;
+
+Expositions/symposiums/seminars/conferences.
+
+Contact
+
+Volunteer Opportunities: 202-434-2190
+
+Mailing Address
+
+Legal Counsel for the Elderly
+
+The Office of the D.C. Long-Term Care Ombudsman
+
+601 E St. NW
+
+Washington, DC 20049-0001
+
+Additional Resources
+
+AARP DC: 866-554-5384
+
+Adult Protective Services: 202-671-4200
+
+Aging and Disability Resource Center (ADRC): 202-724-5622
+
+D.C. Department of Health (DOH): 202-442-5955
+
+D.C. Department of Health Care Finance: 202-724-7491
+
+D.C. Department of Mental Health: 202-673-2200
+
+Department of Aging and Community Living (DACL): 202-724-5626
+
+Medicaid: 202-727-5355
+
+Medicare: 800-633-4227
+
+Social Security Administration: 800-772-1213
+
+ end of description and more text
+ image is displayed on the top or bottom of component depending on author configuration
+ end of image
+ start of line separator
+ end of line separator
+
+ Moved the following divs from the bottom and wrapped here
+
+ SDI include (path: /content/aarpe/en/home/legal-counsel-for-elderly/what-we-do/info-2017/_jcr_content/everywhere-right-rail/referencecontent_1574111165.nocache.html, resourceType: aarp/components/modular/content/referenceContent)
+
+Leaving AARP.org Website
+
+Close
+
+You are leaving AARP.org. AARP Legal Counsel for the Elderly’s online intake is hosted by LegalServer. AARP’s privacy policy continues to apply.
+
+Cancel
+Continue
+
+ start of Works and Jobs Title
+ end of WJ Title
+ image is displayed on the top or bottom of component depending on author configuration
+
+ end of image
+ start of description and more text
+
+ end of description and more text
+ image is displayed on the top or bottom of component depending on author configuration
+ end of image
+
+ SDI include (path: /content/aarpe/en/home/legal-counsel-for-elderly/what-we-do/info-2017/_jcr_content/everywhere-right-rail/referencecontent.nocache.html, resourceType: aarp/components/modular/content/referenceContent)
+
+ start of Works and Jobs Title
+ end of WJ Title
+ image is displayed on the top or bottom of component depending on author configuration
+ end of image
+ start of description and more text
+
+Connect With LCE
+
+ end of description and more text
+ image is displayed on the top or bottom of component depending on author configuration
+ end of image
+
+ SDI include (path: /content/aarpe/en/home/legal-counsel-for-elderly/what-we-do/info-2017/_jcr_content/everywhere-right-rail/referencecontent_1850799272.nocache.html, resourceType: aarp/components/modular/content/referenceContent)
+
+Connect with us on Facebook
+
+Follow us on Twitter
+
+Watch us on YouTube
+
+ Expedia Right rail widget added for travel page PROD-42206
+
+Close
+
+AARP is a nonprofit, nonpartisan organization that empowers people to choose how they live as they age.
+
+About AARP
+
+AARP Press Center
+
+Careers at AARP
+
+Membership
+
+Contact Us
+
+En Español
+
+AARP 樂齡會
+
+Veterans Resources
+
+My Community Page
+
+Help
+
+Membership
+
+Join
+
+Renew
+
+Member Benefits
+
+Print Your Card
+
+Update Your Info
+
+Cancel
+
+Gift an AARP Membership
+
+Refer a Friend
+
+Member Benefits
+
+Member Benefits
+
+Download PDF of Benefits
+
+Hot Deals
+
+Communities
+
+Asian Community
+
+Black Community
+
+Hispanic Community
+
+LGBTQ Community
+
+Native American Community
+
+Information For You
+
+Newsletters
+
+AARP In Your City
+
+AARP In Your State
+
+Driver Safety
+
+Fraud Watch Network
+
+Government Watch
+
+National Retired Teachers Association
+
+Tax Aide
+
+Where AARP Stands
+
+AARP Foundation
+
+Donate
+
+Housing
+
+Hunger
+
+Income
+
+Isolation
+
+Legal Advocacy
+
+Planned Giving
+
+For Professionals
+
+AARP International
+
+AARP Livable Communities
+
+AARP Services
+
+Advertise with AARP
+
+National Retired Teachers Association
+
+Press Center
+
+Public Policy
+
+Public Policy Institute
+
+Research
+
+Health & Wellness
+
+Conditions & Treatments
+
+Healthy Living
+
+Health Insurance
+
+Staying Sharp
+
+Social Security & Medicare
+
+Medicare Resource Center
+
+Leaving AARP.org Website
+
+Close
+
+You are leaving AARP.org and going to the website of our trusted provider. The provider’s terms, conditions and policies apply. Please return to AARP.org to learn more about other benefits.
+
+Cancel
+Continue
+
+Social Security Benefits Calculator
+
+Social Security Resource Center
+
+Family Caregiving
+
+Local Resources and Solutions
+
+Long-Term Care Calculator
+
+Work & Jobs
+
+Job Searching Tips
+
+AARP Job Board
+
+Working at 50+
+
+Start a Business
+
+AARP Skills Builder for Work ℠
+
+Take Action
+
+Be an E-Advocate
+
+Create the Good
+
+Donate
+
+Experience Corps
+
+Tools
+
+Volunteer
+
+Chapter Locator
+
+Wish of a Lifetime
+
+OATS
+
+Senior Planet
+
+AgeTech Collaborative™
+
+Have Fun
+
+Entertainment
+
+Games
+
+Sweepstakes
+
+Travel
+
+Read, Watch, Listen
+
+AARP Bookstore
+
+AARP Bulletin
+
+AARP The Magazine
+
+Blog
+
+Podcasts
+
+Videos
+
+Newsletters
+
+Sitemap
+
+AARP Privacy Hub
+
+Terms of Service
+
+Accessibility Statement
+
+AARP Rewards Terms and Conditions
+
+Copyright Information
+
+Vulnerability Disclosure Program
+
+Ad Choices
+
+Your Privacy Choices
+
+<script type="text/javascript" src='/apps/aarp/clientlibs/js/article-datalayer.js' defer></script>
+
+ <script src='/etc.clientlibs/aarp-foundation/clientlibs/leaving-aarp-overlay.min.js'></script>
+<script src='/etc.clientlibs/aarp-foundation/clientlibs/geolocator.min.js'></script>
+<script src='/etc.clientlibs/aarp/clientlibs/clientlib-base/js/history.min.js'></script>
+<script src='/etc.clientlibs/aarp/tools/components/widgetExcelImport/widgetlib.min.js'></script>
+<script src='/etc.clientlibs/aarp/tools/components/widgetExcelGeneration/widgetlib.min.js'></script>
+<script src='/etc.clientlibs/aarp/clientlibs/clientlib-base/js/Location.min.js'></script>
+<script src='/etc.clientlibs/aarp/clientlibs/clientlib-base/js/anm-scripts.min.js'></script>
+<script src='/etc.clientlibs/aarp/clientlibs/clientlib-base/js/above-the-fold-article.min.js'></script>
+<script src='/etc.clientlibs/aarp/clientlibs/clientlib-base/js/above-the-fold.min.js'></script>
+<script src='/etc.clientlibs/aarp/clientlibs/clientlib-base/js/detail-page.min.js'></script>
+
+Leaving AARP.org Website
+Cancel
+
+You are leaving AARP.org and going to the website of our trusted provider. The provider’s terms, conditions and policies apply. Please return to AARP.org to learn more about other benefits.
+
+Got it! Please don't show me this again for 90 days.
+
+Cancel
+Continue
+
+Thank You
+
+Your email address is now confirmed.
+
+You'll start receiving the latest news, benefits, events, and programs related to AARP's mission to empower people to choose how they live as they age.
+
+You can also manage your communication preferences by updating your account at anytime. You will be asked to register or log in.
+
+Continue to AARP.org
+
+Leaving AARP.org Website
+Cancel
+
+Got it! Please don't show me this again for 90 days.
+
+Cancel
+Continue
+
+Offer Details
+
+Disclosures
+
+-tab 1
+
+tab 1
+-tab 2
+
+tab 2
+
+Thank you for your interest
+
+ in volunteering!
+Close
+
+In the next 24 hours, you will receive an email to confirm your subscription to receive emails
+ related to AARP volunteering. Once you confirm that subscription, you will regularly
+ receive communications related to AARP volunteering. In the meantime, please feel free
+ to search for ways to make a difference in your community at
+ www.aarp.org/volunteer
+
+Close
+
+SOURCE 12: 29 DCMR § 950, Payment for Reserved Beds — section listing, D.C. Office of Documents and Administrative Issuances (DCMR portal) | https://dcregs.dc.gov/Common/DCMR/SectionList.aspx?SectionNumber=29-950 | source date: Effective Date: 3/9/2018, as the listing states for the most recent adopted rule | retrieved: 2026-09-04
+-----HEADER STARTS HERE----
+
+311 Online
+
+Agency Directory
+
+Online Services
+
+Accessibility
+
+Mayor Muriel Bowser
+
+Search
+
+District of Columbia Municipal Regulations and District of Columbia Register
+
+Office of the Secretary of the District of Columbia | Office of Documents and Administrative Issuances
+
+Toggle navigation
+
+<a class="navbar-brand" href="#"></a>
+
+Home
+
+About Us
+
+Contact Us
+
+Help
+
+Log in
+
+ /.navbar-collapse
+
+The Office of Documents publishes the DC Register Submission Deadline Schedule at the end of the online Register every week and on the DCRegs Home Page.
+
+-----HEADER ENDS HERE----
+
+<script src="../js/jquery-1.11.2.min.js" type="text/javascript"></script>
+
+Section: 29-950
+
+Back To Main Menu
+
+PAYMENT FOR RESERVED BEDS
+(Rename History)
+
+Title :
+ 29 PUBLIC WELFARE
+
+Chapter :
+ 29-9 MEDICAID PROGRAM
+
+Most recent version of the final adopted rule codified in the D.C. Municipal Regulations (DCMR)
+
+Effective Date :
+3/9/2018 12:00:00 AM
+
+Authority :
+An Act to enable the District of Columbia to receive federal financial assistance under Title XIX of the Social Security Act for a medical assistance program, and for other purposes, approved December 27, 1967 (81 Stat. 744; D.C. Official Code § 1-307.02 (2017 Supp.)) and Department of Health Care Finance Establishment Act of 2007, effective February 27, 2008 (D.C. Law 17-109; D.C. Official Code § 7-771.05(6) (2013 Repl.)).
+
+Source :
+Final Rulemaking published at 53 DCR 1370 (February 24, 2006); as Final Rulemaking published at 54 DCR 3879 (April 27, 2007); as amended by Final Rulemaking published at 65 DCR 2435 (March 9, 2018).
+
+Editor's Note :
+
+Rulemaking notices were published in the D.C. Register(DCR) and Adopted Rules were codified into the D.C. Municipal Regulations (DCMR)
+
+ | Notice ID | Register Category | Heading | Notice/ Adopted Section | Register Issue/ Effective Date
+
+ | N0065815 | Emergency and Proposed Rulemaking | Health Care Finance, Department of - Notice of Emergency and Proposed Rulemaking - Governing Medicaid Reimbursement for Intermediate Care Facilities for Individuals with Intellectual and Developmental Disabilities | View Text | 10/27/2017 Vol 64/43
+
+ | R0035043 | Adopted Rule | PAYMENT FOR RESERVED BEDS | View Text | Effective: 3/9/2018
+
+ | N0067817 | Final Rulemaking | Health Care Finance, Department of - Notice of Final Rulemaking - Governing Medicaid Reimbursement for Intermediate Care Facilities for Individuals with Intellectual Disabilities | View Text | 3/9/2018 Vol 65/10
+
+ | R0015746 | Adopted Rule | PAYMENT FOR RESERVED BEDS | View Text | Effective: 4/27/2007
+
+ | R0005777 | Adopted Rule | PAYMENT FOR RESERVED BEDS | View Text | Effective: 1/1/1900
+
+Other rules using the same rule number
+
+-----SECOND FOOTER STARTS HERE----
+
+ Office of Documents and Administrative Issuances
+ 899 North Capitol Street, NE, Suite 8700Washington, DC 20002
+ Phone: (202) 727-5090
+ Email: dcdocuments@dc.gov
+ © 2026
+
+About us
+
+History of the Office of Documents
+
+What We Do
+
+Hours of Operation
+
+Contact Information
+
+Resources
+
+DC Code
+
+Office of the Attorney General
+
+Council of the District of Columbia
+
+Federal Rules and Regulations
+
+Accessibility
+
+Privacy and Security
+
+Terms and Conditions
+
+About DC.Gov
+
+-----SECOND FOOTER ENDS HERE----
+

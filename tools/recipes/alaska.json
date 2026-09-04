@@ -1,0 +1,122 @@
+{
+  "recipe_version": 1,
+  "state": "alaska",
+  "sources": [
+    {
+      "n": 1,
+      "title": "7 AAC 12.250 - 7 AAC 12.290, Article 5, Nursing Facilities — Alaska Administrative Code, Alaska State Legislature (BASIS)",
+      "url": "https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.12.250&secEnd=7.12.290",
+      "source_date": "none stated in the print rendering",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "div.statute",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Captured from the Legislature's own BASIS application endpoint rather than from its pages. The page address, akleg.gov/basis/aac.asp, is a scripted client that loads section text by GET request to this same script with media=print and a secStart/secEnd range; the request carries no session token, query hash or build identifier, so it is a stable public endpoint and is admitted as first-party under the API rule in PROVENANCE.md. This range is the whole nursing-facility article of the licensing chapter. It is captured to establish, in the state's own text, that the licensing rule states no grounds, notice period or appeal route for a facility-initiated transfer or discharge; the page records that as a finding. The endpoint returns an HTML fragment with no html or body element, a single div.statute wrapping the requested sections; the scope names that div."
+    },
+    {
+      "n": 2,
+      "title": "7 AAC 12.890, Rights of patients, clients, and residents — Alaska Administrative Code, Alaska State Legislature (BASIS)",
+      "url": "https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.12.890&secEnd=7.12.890",
+      "source_date": "none stated in the print rendering",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "div.statute",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Same endpoint and same admission as source 1. The general rights section of the licensing chapter, which applies to nursing facilities; captured for the same reason, as the second place a state-stated ground or notice period would sit if the licensing rule carried one. The endpoint returns an HTML fragment with no html or body element, a single div.statute wrapping the requested sections; the scope names that div."
+    },
+    {
+      "n": 3,
+      "title": "7 AAC 140.540 - 7 AAC 140.585, Nursing Facility Services (transfer, discharge, absence from nursing facility) — Alaska Administrative Code, Alaska State Legislature (BASIS)",
+      "url": "https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.140.540&secEnd=7.140.585",
+      "source_date": "none stated in the print rendering",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "div.statute",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Same endpoint and same admission as source 1. The Medicaid coverage rule for nursing facilities: 7 AAC 140.540 (transfer of recipients, ten-day written notice, hearing under 7 AAC 49), 7 AAC 140.545 (discharge of recipients, same), and 7 AAC 140.585 (payment for reserving a bed during a planned absence, and none during hospitalization). The range also carries the intervening sections on payment and personal funds; a superset only adds evidence. The endpoint returns an HTML fragment with no html or body element, a single div.statute wrapping the requested sections; the scope names that div."
+    },
+    {
+      "n": 4,
+      "title": "7 AAC 49.010 - 7 AAC 49.200, Hearings — Alaska Administrative Code, Alaska State Legislature (BASIS)",
+      "url": "https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.49.010&secEnd=7.49.200",
+      "source_date": "none stated in the print rendering",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "div.statute",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Same endpoint and same admission as source 1. The hearing chapter that 7 AAC 140.540(c) and 140.545(b) send a recipient to: 7 AAC 49.030 (request in writing to the department within 30 days; referral to the office of administrative hearings), 7 AAC 49.060 (ten-day notice of proposed agency action) and 7 AAC 49.190 (continuation of assistance while a hearing is pending). The endpoint returns an HTML fragment with no html or body element, a single div.statute wrapping the requested sections; the scope names that div."
+    },
+    {
+      "n": 5,
+      "title": "Uni-08, Notice of Recipient Fair Hearing Rights — Alaska Department of Health (PDF)",
+      "url": "https://health.alaska.gov/media/obljx4in/fair-hearing-rights-notice.pdf",
+      "source_date": "Revised 2/1/2025, as the form's footer states",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "filters": [],
+      "notes": "The department's own hearing-rights notice and request form, listed on its Approved SDS Forms page (source 6). It is the one Alaska source that prints where a fair hearing request is sent: a mailing address, fax, email and telephone, all routed through the department's fiscal agent. The form's columnar layout renders address, fax, email and telephone on shared lines; quotations are taken as the capture renders them."
+    },
+    {
+      "n": 6,
+      "title": "Approved SDS Forms — Division of Senior and Disabilities Services, Alaska Department of Health",
+      "url": "https://health.alaska.gov/en/resources/approved-sds-forms/",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "The department page that lists source 5 by name (Uni-08 Fair Hearing Rights Notice) among the division's approved forms. Captured so the form's standing as a department instrument rests on the department's own listing rather than on a file address."
+    },
+    {
+      "n": 7,
+      "title": "The Office of Long Term Care Ombudsman — home page (Alaska)",
+      "url": "https://akoltco.org/",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "The program's own site. The office's contact block (street address, telephone, toll-free number, fax, email) prints here."
+    },
+    {
+      "n": 8,
+      "title": "About Us — The Office of Long Term Care Ombudsman (Alaska)",
+      "url": "https://akoltco.org/about-us/",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "The program's statement of where it sits in state government (the Department of Revenue, administered by the Alaska Mental Health Trust Authority), its hours, and its statement that discharge appeals are among the most common complaints it receives."
+    }
+  ]
+}

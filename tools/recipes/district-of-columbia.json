@@ -1,0 +1,149 @@
+{
+  "recipe_version": 1,
+  "state": "district-of-columbia",
+  "sources": [
+    {
+      "n": 1,
+      "title": "D.C. Code § 44-1003.01, Grounds for involuntary discharge, transfer, or relocation by facility — Council of the District of Columbia, D.C. Law Library",
+      "url": "https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.01",
+      "source_date": "section history: Apr. 18, 1986, D.C. Law 6-108, § 301; last amended Apr. 29, 2010, D.C. Law 18-145, § 4(b); the Code's currency is stated on source 4",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "The Council's own code library, published by the Open Law Library platform under code.dccouncil.gov. Section pages carry the section text, its history line and editorial notes, but no currency date; the Code's home page (source 4) states what the compilation is current through, and is captured as the version witness for sources 1, 2, 3 and 5."
+    },
+    {
+      "n": 2,
+      "title": "D.C. Code § 44-1003.02, Notice to resident and resident's representative — Council of the District of Columbia, D.C. Law Library",
+      "url": "https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.02",
+      "source_date": "section history: Apr. 18, 1986, D.C. Law 6-108, § 302; last amended Apr. 29, 2010, D.C. Law 18-145, § 4(c); the Code's currency is stated on source 4",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "The notice section, which prints in full the appeal-rights statement the facility's notice must carry in 12-point type. The statement's own typography, including the phrase 'being discharge or transferred', is the Council's text and is preserved."
+    },
+    {
+      "n": 3,
+      "title": "D.C. Code § 44-1003.03, Hearing — Council of the District of Columbia, D.C. Law Library",
+      "url": "https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.03",
+      "source_date": "section history: Apr. 18, 1986, D.C. Law 6-108, § 303; last amended June 9, 2018, D.C. Law 22-112, § 3(b)(1); the Code's currency is stated on source 4",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "The hearing section. Its Applicability notes, which the Council publishes beneath the text, state two different things about whether the 2018 amendment has been implemented; both are captured and the page records the discrepancy as a finding."
+    },
+    {
+      "n": 4,
+      "title": "Code of the District of Columbia, home page — Council of the District of Columbia, D.C. Law Library (currency statement)",
+      "url": "https://code.dccouncil.gov/us/dc/council/code",
+      "source_date": "carries its own 'Current through' statement",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "Version witness for the Code sections in this packet. The section pages print no currency date; this page does, and a change here is how the review pass sees that the compilation has moved."
+    },
+    {
+      "n": 5,
+      "title": "D.C. Code § 7-702.04, Long-Term Care Ombudsman — Powers and duties — Council of the District of Columbia, D.C. Law Library",
+      "url": "https://code.dccouncil.gov/us/dc/council/code/sections/7-702.04",
+      "source_date": "section history: Mar. 16, 1989, D.C. Law 7-218, § 204; last amended July 3, 2018, D.C. Law 22-125, § 2(e); the Code's currency is stated on source 4",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "The ombudsman's statutory duties, including the duty to serve as the legal representative for residents under §§ 44-1003.02(e) and 44-1003.03(a)(1). Captured because the discharge statute names the ombudsman as a party who may contest a discharge, and this is where the Council says so from the ombudsman's side."
+    },
+    {
+      "n": 6,
+      "title": "Incident Report and 6-108 Discharge Transfer and Relocation Forms — DC Health",
+      "url": "https://dchealth.dc.gov/service/incident-report-and-6-108-discharge-transfer-and-relocation-forms",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "DC Health's page naming the prescribed notice form (source 7) and the cover letter that accompanies it (source 8). The Drupal page carries the department's whole navigation menu in its body; that is the page as served and is left in."
+    },
+    {
+      "n": 7,
+      "title": "DOH Notice of Discharge Transfer or Relocation Form (the 6-108 form) — DC Health, served through the District's SeamlessDocs form platform",
+      "url": "https://dcgov.seamlessdocs.com/f/DOHNoticeofDischargeTransferorRelocationForm",
+      "source_date": "none stated on the form",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "The form DC Health prescribes under § 44-1003.02(d), embedded in the department's page at dchealth.dc.gov/page/doh-notice-discharge-transfer-or-relocation-form and served from the District government's SeamlessDocs tenant (dcgov.seamlessdocs.com). It is the department's own instrument on a hosted platform, not a third party's document; the field labels and the appeal-rights statement are in the page's markup and curl returns them. The form's own 'WHEN SHOULD YOU RECEIVE THIS NOTICE' paragraph states thirty days where § 44-1003.02(a) states 21 calendar days; both are captured and the page records the discrepancy as a finding. Signature-date pickers render as runs of month names and digits; that is the form as served."
+    },
+    {
+      "n": 8,
+      "title": "6-108 Cover Letter to Nursing Home Providers — DC Health, Health Regulation and Licensing Administration (PDF)",
+      "url": "https://dchealth.dc.gov/sites/default/files/dc/sites/doh/publication/attachments/6_108%20Cover%20Letter%20to%20Nursing%20Home%20Providers.pdf",
+      "source_date": "December 31, 2008, as the letter is dated",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "filters": [],
+      "notes": "The department's letter transmitting the prescribed form and stating that facilities are required to use it unaltered. Dated 2008 and still the letter the department posts beside the form; quoted with its date as the newest the department publishes."
+    },
+    {
+      "n": 9,
+      "title": "Filings & Forms — DC Office of Administrative Hearings",
+      "url": "https://oah.dc.gov/page/filings-forms",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "OAH's own statement of how papers are filed (in person, by mail, by email, through its eFiling portal) with its address, telephone and filing email. Cloudflare obfuscates the email addresses on the page; the shared capture reader decodes them. OAH publishes no page specific to nursing-facility discharge cases; § 44-1003.03(b) is what places the hearing there."
+    },
+    {
+      "n": 10,
+      "title": "About — DC Office of Administrative Hearings",
+      "url": "https://oah.dc.gov/page/about",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "OAH's description of itself and its contact block, carried beside source 9 because the two pages print the street address differently ('Suite 450N' and 'Suite 450 North')."
+    },
+    {
+      "n": 11,
+      "title": "Long-Term Care Ombudsman Program for DC Residents — Office of the D.C. Long-Term Care Ombudsman, Legal Counsel for the Elderly",
+      "url": "https://www.aarp.org/legal-counsel-for-elderly/what-we-do/info-2017/dc-long-term-care-ombudsman.html",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "The program's own page. The Office of the D.C. Long-Term Care Ombudsman is operated by Legal Counsel for the Elderly, whose site is hosted under aarp.org; this is the office's own published contact, quoted as the program's statement. The Department of Aging and Community Living's site (dacl.dc.gov) returned 404 or 403 on every address tried for an ombudsman page on 2026-09-04, so no department-side contact is carried; the prescribed notice form (source 7) prints the department-prescribed ombudsman contact block and is quoted beside this page."
+    },
+    {
+      "n": 12,
+      "title": "29 DCMR § 950, Payment for Reserved Beds — section listing, D.C. Office of Documents and Administrative Issuances (DCMR portal)",
+      "url": "https://dcregs.dc.gov/Common/DCMR/SectionList.aspx?SectionNumber=29-950",
+      "source_date": "Effective Date: 3/9/2018, as the listing states for the most recent adopted rule",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "The listing only. The DCMR portal serves the rule's text through an ASP.NET postback bound to a session, which curl cannot follow and a direct RuleDetail address returns 403 to; the listing names the section, its title, its effective date and its rulemaking history, and that is what is captured. The rule text itself is capture-pending and the page says so. Cloudflare obfuscates the office's email; the shared reader decodes it."
+    }
+  ]
+}

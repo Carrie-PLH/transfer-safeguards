@@ -727,3 +727,75 @@ Two leads remain open, both on states that have no recipe yet:
   Law, where there are no link boundaries; the space is more likely the
   document's own typesetting or a `-layout` artifact. Read the PDF before
   touching the page.
+
+## Transports learned building Vermont, the District of Columbia and Alaska (2026-09-04)
+
+All three states captured entirely by curl through recipes; none needed a
+browser or the session fetch tool. Reachable with a browser user-agent:
+legislature.vermont.gov (full-chapter statute pages), dail.vermont.gov and
+dlp.vermont.gov (PDFs and pages), humanservices.vermont.gov, asd.vermont.gov,
+vtlegalaid.org, vtmedicaid.com; code.dccouncil.gov, dchealth.dc.gov,
+oah.dc.gov, aarp.org (Legal Counsel for the Elderly), dcregs.dc.gov listings,
+dcgov.seamlessdocs.com; akleg.gov, health.alaska.gov, akoltco.org.
+
+**akleg.gov BASIS is a scripted client over a GET endpoint.** The Alaska
+Administrative Code page, akleg.gov/basis/aac.asp, renders nothing to curl,
+but the same script answers `?media=print&secStart=7.140.540&secEnd=7.140.585`
+with the requested sections as an HTML fragment: no session token, no query
+hash, so it is admitted as first-party under the API rule in PROVENANCE.md.
+Two things to know. The fragment has no `<html>` or `<body>`, only a single
+`div.statute`, so a recipe's html-text scope must name `div.statute`; `body`
+matches nothing and the source fails. And the print rendering carries no
+effective date, register number or history line, so the source's own date is
+"none stated in the print rendering" and must not be supplied from elsewhere.
+`?media=js&type=TOC&title=7.140` returns a chapter's table of contents, which is
+how the section ranges were found. The statutes side (statutes.asp) takes the
+same parameters and was not needed.
+
+**The Council's D.C. Code prints no currency date on a section page.** The
+Code's home page does ("Current through ... Law 26-175 effective Aug. 20, 2026")
+and is captured as a version witness for the sections, the way Utah carries a
+rule-metadata source. Open Law Library asks not to be scraped and to use the
+bulk download instead; a handful of section pages is not that, but a whole-title
+capture should use the bulk files.
+
+**DC Health's prescribed 6-108 notice form lives on SeamlessDocs.** The
+department page embeds `dcgov.seamlessdocs.com/f/DOHNoticeofDischargeTransferor
+RelocationForm` in an iframe; the form's labels, its appeal-rights statement
+and the department-prescribed ombudsman contact block are in the served markup
+and curl returns them. It is the department's instrument on a hosted platform,
+not a third party's document. Its own notice paragraph says thirty days where
+the statute says 21 calendar days; both are on the page as a finding.
+
+**dcregs.dc.gov serves rule text only through an ASP.NET postback.** The
+SectionList page (title, effective date, rulemaking history) is curl-able; the
+"View Text" links are `__doPostBack` calls bound to a session, and a direct
+RuleDetail address returns 403. Capture the listing and record the text as
+capture-pending, as Texas does with the TAC portal.
+
+**Hawaii is deliberately unbuilt (2026-09-04).** HAR 11-94.2, Nursing
+Facilities, adopted September 16, 2022, is published by the Department of
+Health at health.hawaii.gov/opppd/files/2022/10/11-94.2-2022.pdf as a 66-page
+scanned image whose only text layer is the cover sheet: pdftotext yields 17
+lines, and pdffonts shows fonts on the cover alone. No second first-party
+publisher of the chapter was found: the Department of Health's own
+Title 11 index links only that file, the Legislature publishes statutes and
+not administrative rules, and 11-94.1 (which text databases still carry) is
+repealed by the same instrument. OCR is not a capture. A page built without
+the operative chapter would rest on the ombudsman and Med-QUEST pages alone
+and state Hawaii's law more thinly than it is. Retry when the department posts
+a text version or a per-section publisher exists. Wyoming was also examined and
+set aside for a different reason: its licensing rules (HLS chapters 11 and 19)
+state no transfer or discharge grounds at all, which is a finding rather than a
+transport failure, and its Medicaid nursing-facility chapters on rules.wyo.gov
+were not yet reached; it is next in line.
+
+**Vermont's Medicaid hold-bed statement has moved out of the current manuals.**
+The department's current General Provider Manual, General Billing and Forms
+Manual and Nursing Facility Provider Manual (vtmedicaid.com/api/manuals is the
+index) carry no hold-bed section; a 2/1/2019 Vermont Medicaid Provider Manual
+still served at vtmedicaid.com/assets/manuals/VTMedicaidProviderManual.pdf
+carries §15.2.5 (six consecutive days) but is no longer listed. It was not
+captured; the licensing rule's own bed-hold statement (rule 3.12, ten
+successive days) is what the page carries. If a full page is built, look for
+the current DVHA statement before quoting the 2019 manual with its date.

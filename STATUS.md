@@ -7,19 +7,19 @@ present. Spanish = a translated page is published; it carries the
 docket, the hoisted rows, and the notice periods and deadlines, in
 the state's own published translation only.
 
-**Baseline: 44 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
+**Baseline: 47 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
 
 | State | Baseline | Full page | Spanish | Sources last checked |
 |---|:---:|:---:|:---:|---|
 | [Alabama](site/states/alabama.html) | [x] | [ ] | [ ] | Sep 4, 2026 |
-| Alaska | [ ] | [ ] | [ ] |  |
+| [Alaska](site/states/alaska.html) | [x] | [ ] | [ ] | Sep 4, 2026 |
 | Arizona | [ ] | [ ] | [ ] |  |
 | Arkansas | [ ] | [ ] | [ ] |  |
 | [California](site/states/california.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
 | [Colorado](site/states/colorado.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
 | [Connecticut](site/states/connecticut.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
 | [Delaware](site/states/delaware.html) | [x] | [ ] | [ ] | Sep 3, 2026 |
-| District of Columbia | [ ] | [ ] | [ ] |  |
+| [District of Columbia](site/states/district-of-columbia.html) | [x] | [ ] | [ ] | Sep 4, 2026 |
 | [Florida](site/states/florida.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
 | [Georgia](site/states/georgia.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
 | Hawaii | [ ] | [ ] | [ ] |  |
@@ -56,7 +56,7 @@ the state's own published translation only.
 | [Tennessee](site/states/tennessee.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
 | [Texas](site/states/texas.html) | [x] | [x] | [ ] | Aug 30, 2026 |
 | [Utah](site/states/utah.html) | [x] | [ ] | [ ] | Sep 4, 2026 |
-| Vermont | [ ] | [ ] | [ ] |  |
+| [Vermont](site/states/vermont.html) | [x] | [ ] | [ ] | Sep 4, 2026 |
 | [Virginia](site/states/virginia.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
 | [Washington](site/states/washington.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
 | [West Virginia](site/states/west-virginia.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
