@@ -1,0 +1,30 @@
+{
+  "recipe_version": 1,
+  "state": "alabama",
+  "sources": [
+    {
+      "n": 1,
+      "title": "Alabama Department of Senior Services, Elder Rights Guide for Older Alabamians — nursing home chapter (PDF, published on alabamapublichealth.gov)",
+      "url": "https://www.alabamapublichealth.gov/homehealth/assets/elderrightsguide.pdf",
+      "source_date": "none stated on document",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "pages": [21, 25],
+      "filters": [],
+      "notes": "The 2026-08-30 capture sliced this chapter by hand, from the heading SELECTING A NURSING HOME to the start of LONG TERM CARE INSURANCE. This recipe takes printed pages 21 to 25 instead, the range those two headings fall in, which is reproducible where a hand cut is not; the captured text is a superset of the standing one and contains it exactly. The page numbers, the text wrapped around the guide's inset illustrations, and the numbering of the rights list are the document's own."
+    },
+    {
+      "n": 2,
+      "title": "Alabama Department of Public Health, Bureau of Health Provider Standards — Filing Complaints",
+      "url": "https://www.alabamapublichealth.gov/providerstandards/complaints.html",
+      "source_date": "page states its own last-updated date",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "The 2026-08-30 capture recorded that this page refused plain curl and was taken through a rendered fetch instead. Re-tested 2026-09-04: it answers curl with a pinned browser user-agent normally, so the source is recipe-driven rather than agent-fetched from here on. That is a fact about the host's behaviour today, checked rather than assumed. The department's email obfuscation left two placeholders in the standing capture; decode_cfemail in the shared reader resolves them (FA-Q-20260902-01, FA-Q-20260904-04)."
+    }
+  ]
+}

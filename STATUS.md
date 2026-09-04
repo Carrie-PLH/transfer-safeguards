@@ -11,7 +11,7 @@ the state's own published translation only.
 
 | State | Baseline | Full page | Spanish | Sources last checked |
 |---|:---:|:---:|:---:|---|
-| [Alabama](site/states/alabama.html) | [x] | [ ] | [ ] | 2026-08-30 |
+| [Alabama](site/states/alabama.html) | [x] | [ ] | [ ] | 2026-09-04 |
 | Alaska | [ ] | [ ] | [ ] |  |
 | Arizona | [ ] | [ ] | [ ] |  |
 | Arkansas | [ ] | [ ] | [ ] |  |
