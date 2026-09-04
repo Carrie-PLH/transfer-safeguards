@@ -226,6 +226,17 @@ but this site's own hosts. Links in prose to source documents are the product
 and are never a finding. The full rule and the case are in the standard's
 CLAUDE.md.
 
+`tools/check-live.py` is the check that can see this, added 2026-09-04. It
+fetches a sample of published pages with a browser's User-Agent and Accept
+header and fails on anything *loaded* from a host this site does not own —
+script, link, img, iframe, source, video, audio, embed, object, and CSS
+`@import`/`url()`. Anchors to source documents are the product and are never a
+finding. `--all` reads every published page, `--url` takes specific ones, and
+`--self-test` exercises the parser offline. Run it after a deploy; the nightly
+QC routine also runs it in every repo it touches. A finding is not necessarily
+a mistake in the pages: the 2026-09-04 case was fixed by disabling a setting in
+the Cloudflare dashboard, with nothing to change in the repository at all.
+
 ## Fidelity before anything ships
 
 A page that has not passed `python3 tools/check-fidelity.py` against its
