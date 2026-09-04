@@ -4,7 +4,7 @@
   "sources": [
     {
       "n": 1,
-      "title": "Code of Virginia, Title 32.1, Chapter 5, Article 2 — Rights and Responsibilities of Patients in Nursing Homes (§§ 32.1-137.01 through 32.1-138.6)",
+      "title": "Code of Virginia, Title 32.1, Chapter 5, Article 2 — Rights and Responsibilities of Patients in Nursing Homes (§§ 32.1-138 through 32.1-138.5:3)",
       "url": "https://law.lis.virginia.gov/vacodefull/title32.1/chapter5/article2/",
       "source_date": "sections carry their own enactment lines; § 32.1-138.1 ends 1987, c. 221; 1993, c. 692",
       "transport": "curl",
@@ -15,7 +15,7 @@
         "trim-lines",
         "collapse-blank-runs"
       ],
-      "notes": "The standing packet's own method is 'reduced to text mechanically (tag strip over the served document)' with no scope narrower than the whole page — LIS's own site chrome (the General Assembly nav, the search-type picker) is left in as served. 'body' matches that: it is the widest legal scope and adds nothing the standing packet did not already carry. Plain curl with a browser user-agent is enough; no WAF sits in front of this host."
+      "notes": "The standing packet's own method is 'reduced to text mechanically (tag strip over the served document)' with no scope narrower than the whole page — LIS's own site chrome (the General Assembly nav, the search-type picker) is left in as served. 'body' matches that: it is the widest legal scope and adds nothing the standing packet did not already carry. Plain curl with a browser user-agent is enough; no WAF sits in front of this host. Header range corrected 2026-09-04. Packets of this state captured before that date title this source '§§ 32.1-137.01 through 32.1-138.6'. The article LIS publishes at this address runs § 32.1-138 through § 32.1-138.5:3 and has never contained a § 32.1-137.01 — verified against a fresh fetch of the same URL. The overstated range was ours and it described the capture wrongly; no page quotation was affected, because virginia.md cites only §§ 32.1-138 and 32.1-138.1, both of which the capture holds and always held. Expect this capture's length to vary by a few hundred characters between passes without the statute changing: LIS serves a footer block (Virginia Law Library, Helpful Resources, For Developers) that is present on some fetches and absent on others, and the page prints the fetch date in its own body. The 2026-09-04 capture came back 287 characters shorter than 2026-09-03 for exactly that reason, and the statutory text was identical."
     },
     {
       "n": 2,
