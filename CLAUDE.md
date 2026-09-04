@@ -209,6 +209,23 @@ only if the check passes and only if the owner asked in that session.
 Verify afterwards by fetching changed pages with `curl -sSL` rather than
 trusting the deploy log.
 
+**What `curl -sSL` does not tell you.** It confirms that a deploy published the
+bytes that were built, and it reads a page's own text. It is not evidence about
+third-party requests. Cloudflare's Web Analytics injection depends on request
+headers, and curl's defaults do not trigger it — on 2026-09-04 a RUM beacon was
+being appended to every page on two of the four sites, and curl reported them
+clean throughout, before and after the fix. The deploy gate could not see it
+either: the gate reads the HTML on disk, and the injection happens after the
+files leave the repository.
+
+So where the question is what a reader's browser actually loads, fetch with a
+browser's header set (a real User-Agent and an `Accept: text/html,...` line) and
+look for loaded resources — `script`, `link`, `img`, `iframe`, `source`,
+`video`, `audio`, `embed`, `object`, CSS `@import`/`url()` — pointing anywhere
+but this site's own hosts. Links in prose to source documents are the product
+and are never a finding. The full rule and the case are in the standard's
+CLAUDE.md.
+
 ## Fidelity before anything ships
 
 A page that has not passed `python3 tools/check-fidelity.py` against its
