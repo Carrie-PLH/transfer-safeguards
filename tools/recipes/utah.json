@@ -1,0 +1,100 @@
+{
+  "recipe_version": 1,
+  "state": "utah",
+  "sources": [
+    {
+      "n": 1,
+      "title": "R432-150, Nursing Care Facility — Utah Administrative Code",
+      "url": "https://adminrules.utah.gov/api/public/getHTML/uac-html/9635398a-ce5f-438c-8817-197550b951c7.html",
+      "source_date": "Effective Date: 02/18/2025",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "adminrules.utah.gov is a client-rendered single-page app: the rule's own address, https://adminrules.utah.gov/public/rule/R432-150/Current%20Rules, returns 404 to any direct fetch and renders only in a browser. The 2026-09-01 capture recorded that and read the rendered page by hand. This address is what the app itself fetches for the rule text, so it is first-party and curl-reachable. IT IS PINNED TO A VERSION, NOT TO THE RULE. The GUID names the current text of R432-150; an amendment produces a new GUID and this URL would keep returning the superseded rule while looking healthy, which is the exact failure this project exists to prevent. Source 8 exists to close that hole and must never be removed: it is keyed by rule number rather than by GUID, so an amendment changes it, the pass sees drift, and a session updates this GUID deliberately. Verified 2026-09-04 before re-basing: all 21 quotations this page draws from the rule appear verbatim in this text, so it is the same instrument the page was built on."
+    },
+    {
+      "n": 2,
+      "title": "Skilled nursing facility-initiated discharge appeal form — Utah Division of Aging and Adult Services (PDF)",
+      "url": "https://daas.utah.gov/wp-content/uploads/2024/07/SNF-Discharge-Appeal-Form-11.7.23.pdf",
+      "source_date": "form dated 11.7.23 in its own filename",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "filters": [],
+      "notes": "Re-based 2026-09-04. The address the 2026-09-01 capture recorded, .../SNF-Discharge-Appeal-Form.pdf, now returns an nginx 404: the department renamed the file in place, appending its own revision date, and nothing announced the move. Found again by reading the Long Term Care Ombudsman page, which still links it. Verified before re-basing: all 8 quotations this page draws from the form appear verbatim in the renamed file, so it is the same document under a new name rather than a new form."
+    },
+    {
+      "n": 3,
+      "title": "Hearings — Medicaid — Utah Department of Health and Human Services",
+      "url": "https://medicaid.utah.gov/hearings/",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "Cloudflare hides this page's contact address behind a client-side script. The 2026-09-01 capture left the placeholder text in the packet because curl cannot run it; decode_cfemail in the shared capture reader resolves it, and this source now yields utmedicaidhearings@utah.gov as the department publishes it."
+    },
+    {
+      "n": 4,
+      "title": "Medicaid Fair Hearings — Utah Department of Health and Human Services",
+      "url": "https://dhhs.utah.gov/oah/medicaid-fair-hearings/",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "The same office's contact page published on a second department domain, carried because the two are not word-for-word identical. Same Cloudflare obfuscation and same resolution as source 3."
+    },
+    {
+      "n": 5,
+      "title": "Utah Medicaid Provider Manual, Section I: General Information, chapter 5-4 Hearings and Administrative Review (PDF)",
+      "url": "https://medicaid-documents.dhhs.utah.gov/Documents/manuals/pdfs/Medicaid+Provider+Manuals/All+Providers+General+Information+Section+I/AllProvidersGeneralInfo_Section_1.pdf",
+      "source_date": "Updated July 2026, as the chapter's own footer states",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "pages": [55, 57],
+      "filters": [],
+      "notes": "The 2026-09-01 capture sliced this chapter by hand from a 139-page manual. Pages 55 to 57 are the printed range that chapter occupies and contain the standing text exactly; a range is reproducible where a hand slice is not. The chapter heading also appears on pages 4 and 134, in the table of contents and in a later cross-reference, which is why the range is pinned rather than searched for by heading."
+    },
+    {
+      "n": 6,
+      "title": "Long Term Care Ombudsman — Aging & Adult Services, Utah Department of Health and Human Services",
+      "url": "https://daas.utah.gov/long-term-care-ombudsman/",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "The 2026-09-01 capture had to render this page in a browser and read document.body.innerText, because every listed address was a Cloudflare placeholder to curl — recorded then as a last-resort transport, not independently re-verifiable by an automated pass. decode_cfemail removes that need: curl now yields the addresses the department publishes, and this source is ordinary again."
+    },
+    {
+      "n": 7,
+      "title": "Ombudsman Locations — Aging & Adult Services, Utah Department of Health and Human Services",
+      "url": "https://daas.utah.gov/ombudsman-locations-3/",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "Re-based 2026-09-04: the recorded address, /ombudsman-locations, 301-redirects here. Same browser-transport history and same resolution as source 6; the regional ombudsman roster's addresses now decode under curl."
+    },
+    {
+      "n": 8,
+      "title": "R432-150 rule metadata — Utah Office of Administrative Rules (version witness for source 1)",
+      "url": "https://adminrules.utah.gov/api/public/rule/R432-150/undefined/Current%20Rules",
+      "source_date": "carries its own effectiveDate field",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "none",
+      "filters": [],
+      "notes": "Not a source the page quotes. It exists so that source 1's GUID cannot go stale unnoticed. This address is keyed by rule number rather than by version, and returns the rule's effectiveDate together with the htmlDownload GUID that source 1 pins. If Utah amends R432-150, both fields change here, this packet changes, the review pass reports drift, and a session updates source 1's URL as a deliberate act. Without it, source 1 would keep returning a superseded rule and every check would pass. The literal 'undefined' path segment is what the department's own application sends; it is reproduced rather than corrected, because a guess at the intended value would be a different request from the one that is known to work."
+    }
+  ]
+}

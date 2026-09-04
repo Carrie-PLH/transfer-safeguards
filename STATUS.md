@@ -55,7 +55,7 @@ the state's own published translation only.
 | [South Dakota](site/states/south-dakota.html) | [x] | [ ] | [ ] | 2026-09-02 |
 | [Tennessee](site/states/tennessee.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Texas](site/states/texas.html) | [x] | [x] | [ ] | 2026-08-30 |
-| [Utah](site/states/utah.html) | [x] | [ ] | [ ] | 2026-09-01 |
+| [Utah](site/states/utah.html) | [x] | [ ] | [ ] | 2026-09-04 |
 | Vermont | [ ] | [ ] | [ ] |  |
 | [Virginia](site/states/virginia.html) | [x] | [ ] | [ ] | 2026-08-30 |
 | [Washington](site/states/washington.html) | [x] | [ ] | [ ] | 2026-08-30 |
