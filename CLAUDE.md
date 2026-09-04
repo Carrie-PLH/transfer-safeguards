@@ -115,6 +115,23 @@ corpus-wide pass and carries a self-test whose central case is a quoted
 Evidence is never touched. Packets and captures hold what the publisher
 published, spelling included.
 
+## A commit stages paths, never the working tree
+
+Stage the paths the pass wrote. Never `git add -A`, `git add .`, `git add -u`,
+`git commit -a`, or `git commit -am`. Before committing, run
+`git status --short`: if it shows anything outside the paths this pass
+produced, commit only its own paths, leave the rest untouched, and name the
+other changes in the report rather than absorbing them. A pass with nothing to
+do makes no commit, and a pass that finds modifications it did not make
+reports them rather than reverting, stashing or cleaning them.
+
+An unattended pass that stages the tree signs its name to whatever an
+interactive session had in flight, and its message then describes a fraction
+of its own diff. That is how transfer-safeguards `2a7a3c0` came to carry
+fifty-one files under a message naming two of them, on 2026-09-04. The full
+statement of the rule, and that case, are in the standard's CLAUDE.md
+(~/Projects/Field Assembly/field-assembly-standard/CLAUDE.md).
+
 ## Run host commands through Desktop Commander
 
 Anything that touches the git repository or Cloudflare should run through
