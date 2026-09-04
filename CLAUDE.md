@@ -472,7 +472,7 @@ and does not change.
 
 **In service since 2026-09-04**, on Carrie's decision. The nightly routine
 (`portfolio-archive-captures-and-pass-health-sped-lm-rr`) already reads all
-four collections against one shared budget of 20 confirmed captures a night,
+four collections against one shared budget of 30 confirmed captures a night,
 so this repo now competes for that budget rather than watching gathered work
 spend all of it. The backlog here is deep — 121 candidates at the moment of
 the decision — and it draws down slowly by design. A growing backlog is
@@ -495,7 +495,7 @@ it rests a week first, and saying otherwise misstates the record.
 A failed source returns behind sources never attempted, so forward progress
 onto uncaptured pages is never displaced by retrying a stubborn host.
 
-**The budget is a number of captures, not attempts.** `--budget 20` works
+**The budget is a number of captures, not attempts.** `--budget 30` works
 down the candidate list until twenty are confirmed stored, bounded by an
 attempt ceiling of three times the budget. Save Page Now caps concurrent
 sessions per account — the same Internet Archive account gathered work's

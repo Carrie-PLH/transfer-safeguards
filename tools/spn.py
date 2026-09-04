@@ -105,7 +105,16 @@ RETRY_AFTER_DAYS = 7
 # Failure kinds that mean the far side refused the archiver. Retrying these on a
 # nightly cadence accomplishes nothing but noise.
 HARD_FAILURES = {"error:no-request", "error:blocked", "error:forbidden",
-                 "error:too-many-daily-captures", "http-403", "http-202"}
+                 "http-403", "http-202"}
+
+# Conditions about this Internet Archive account on this night, not about the
+# source. Save Page Now enforces a daily cap per account; when it trips, every
+# source attempted afterwards fails for a reason that has nothing to do with
+# its host. Counting those as hard failures would march unrelated sources
+# toward BLOCK_AFTER, and recording them as FAILED would rest each one for
+# RETRY_AFTER_DAYS — both punishing a source for the pass's own appetite.
+# A run that meets this stops instead: see the run loop. (2026-09-04)
+ACCOUNT_LIMIT = {"error:too-many-daily-captures"}
 
 POLL_INTERVAL = 6
 POLL_LIMIT = 70          # ~7 minutes before a job is called a timeout
@@ -252,7 +261,12 @@ def note_attempt(ledger, url, slug, result, detail=""):
     rec["attempts"] = rec.get("attempts", 0) + 1
     if detail:
         rec["last_detail"] = detail
-    if result == "OK":
+    if detail in ACCOUNT_LIMIT:
+        # Not the source's doing. Record the attempt honestly, but do not let
+        # it rest the source (is_cooling reads last_result) and do not count it
+        # toward blocking.
+        rec["last_result"] = "SKIPPED"
+    elif result == "OK":
         rec["consecutive_hard_failures"] = 0
     elif detail in HARD_FAILURES:
         rec["consecutive_hard_failures"] = rec.get("consecutive_hard_failures", 0) + 1
@@ -446,6 +460,17 @@ def cmd_run(args):
             print("        -> %s" % capture_url)
         else:
             rec = note_attempt(ledger, url, slug, "FAILED", detail)
+            if detail in ACCOUNT_LIMIT:
+                save_ledger(ledger)
+                print("STOP    %-14s %-22s %s" % (slug, detail, url))
+                print("\nThe account's daily capture limit was reached. Every "
+                      "source attempted after this point would fail for a "
+                      "reason that is not about the source, so the run stops "
+                      "here. Nothing is blocked and nothing is resting on "
+                      "account of it; the remaining candidates were simply not "
+                      "reached. Do not re-run tonight, and do not raise the "
+                      "budget to compensate - the cap is the finding.")
+                break
             hard = rec.get("consecutive_hard_failures", 0)
             note = "  [blocked after %d]" % hard if hard >= BLOCK_AFTER else ""
             results["failed"].append((slug, url, detail))
