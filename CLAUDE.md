@@ -633,3 +633,44 @@ be read, and two habits earned their keep on the first six states:
 Where the tail after a span holds nothing long enough to anchor on, omit `to`
 and run to the end of the document rather than writing a short anchor. Nebraska
 source 5 does this deliberately.
+
+## Link-boundary spaces: an artifact class the pages inherited (2026-09-04)
+
+Three pages published a space the publisher does not print, each inside a
+quotation or a contact string, and each traceable to the same cause: the
+2026-08-30 captures reduced HTML to text by stripping tags, and where a
+publisher sets a section number or a phone number as a link, the strip left a
+space at the link boundary.
+
+- **Nebraska**: `the text of section 71-445 .` The Legislature's markup is
+  `section <a>71-445</a>.`
+- **Ohio**: `section 3721.08 , sections 5165.60 to 5165.89 , or section
+  5155.31`. codes.ohio.gov sets each number as a link, `section <a>3721.08</a>,`.
+- **North Dakota**: `Phone : (701) 328-2311` and `Toll Free : (800) 472-2622`
+  in the ombudsman row.
+
+All three are category (c) — our capture introduced it, the page inherited it —
+corrected forward with dated entries, no wording otherwise changed. All three
+surfaced the same way: the recipe capture stopped matching the old quotation.
+Nothing else would have found them, because the page traced perfectly against
+the packet that carried the same artifact.
+
+**The scan.** A space before `,` `.` `;` or `:` inside a quoted span on a page
+is almost never the publisher's. Run it over the live sections of every page,
+excluding the change log, which quotes superseded wording on purpose:
+
+```
+grep -n '"[^"]*[[:space:]][,.;:][[:space:]]' states/*.md
+```
+
+Two leads remain open, both on states that have no recipe yet:
+
+- **West Virginia**: `Ombudsman Supervisor and nine Regional Ombudsmen .` and
+  `Phone: (304) 558-3317 , (877) 987-3646`, both from source 4, an aspx page
+  captured by tag strip — the same class, almost certainly. Fix when the state's
+  recipe is written; it needs the `docx` extractor for sources 1 to 3 anyway.
+- **Idaho**: `section 39-1303 , Idaho Code`, which is **not** the same class and
+  must not be assumed to be. It sits in source 1, a PDF of the enrolled Session
+  Law, where there are no link boundaries; the space is more likely the
+  document's own typesetting or a `-layout` artifact. Read the PDF before
+  touching the page.

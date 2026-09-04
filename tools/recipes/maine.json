@@ -1,0 +1,83 @@
+{
+  "recipe_version": 1,
+  "state": "maine",
+  "sources": [
+    {
+      "n": 1,
+      "title": "10-144 CMR chapter 110, Regulations Governing the Licensing and Functioning of Skilled Nursing Facilities and Nursing Facilities — Section 10.Q, Transfer and Discharge Rights (Maine Department of Health and Human Services, Division of Licensing and Certification)",
+      "url": "https://www.maine.gov/sos/sites/maine.gov.sos/files/content/assets/144c110.docx",
+      "source_date": "Effective August 1, 2020",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 2,
+      "title": "10-144 CMR chapter 101, MaineCare Benefits Manual, Chapter II, Section 67, Nursing Facility Services — Sections 67.05-9 (Discharges), 67.05-10 (Quality Assurance), 67.05-11 (Prior Approval for Payment of Bed Holds During a Hospitalization), 67.05-12 (Therapeutic Leave of Absence), and 67.05-18 (Right of Appeal) (Maine Department of Health and Human Services)",
+      "url": "https://www.maine.gov/sos/sites/maine.gov.sos/files/inline-files/c2s067-LUP%2009.15.2014%20NSC.docx",
+      "source_date": "page header states \"SECTION 67 NURSING FACILITY SERVICES ESTABLISHED 7/1/91\" and \"LAST UPDATED 9/15/15\"; the file's own name carries \"LUP 09.15.2014\" — both shown as published, not reconciled",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 3,
+      "title": "Administrative Hearings — Maine Department of Health and Human Services",
+      "url": "https://www.maine.gov/dhhs/about-us/administrative-hearings",
+      "source_date": "none stated on page (footer copyright 2023)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 4,
+      "title": "Frequently Asked Questions — Administrative Hearings, Maine Department of Health and Human Services",
+      "url": "https://www.maine.gov/dhhs/about-us/administrative-hearings/faq",
+      "source_date": "none stated on page (footer copyright 2023)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 5,
+      "title": "Home page — Maine Long-Term Care Ombudsman Program",
+      "url": "https://www.maineombudsman.org/",
+      "source_date": "none stated on page (footer copyright 2026)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 6,
+      "title": "Contact, Advocacy Intake Office & Winthrop Street Headquarters — Maine Long-Term Care Ombudsman Program",
+      "url": "https://www.maineombudsman.org/contact.aspx",
+      "source_date": "none stated on page (footer copyright 2026)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 7,
+      "title": "Our Team — Maine Long-Term Care Ombudsman Program",
+      "url": "https://www.maineombudsman.org/about.aspx",
+      "source_date": "none stated on page (footer copyright 2026)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    }
+  ]
+}

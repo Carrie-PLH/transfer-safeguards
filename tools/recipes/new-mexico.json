@@ -1,0 +1,71 @@
+{
+  "recipe_version": 1,
+  "state": "new-mexico",
+  "sources": [
+    {
+      "n": 1,
+      "title": "8.370.16 NMAC, Requirements for Long Term Care Facilities (New Mexico Administrative Code), sliced to 8.370.16.1, 8.370.16.3, 8.370.16.22.K, 8.370.16.38, and 8.370.16.40",
+      "url": "https://www.srca.nm.gov/parts/title08/08.370.0016.html",
+      "source_date": "8.370.16.5 NMAC states: Effective Date: July 1, 2024, unless a different date is cited at the end of a section; the sliced sections' own closing history notes read 7/1/2024",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 2,
+      "title": "8.312.2 NMAC, Nursing Facilities (New Mexico Administrative Code), sliced to 8.312.2.16, Reserve Bed Days",
+      "url": "https://www.srca.nm.gov/parts/title08/08.312.0002.html",
+      "source_date": "section's own closing history note reads: [8.312.2.16 NMAC - Rp, 8.312.2.16 NMAC, 8/1/2014; A/E, 3/1/2025]",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 3,
+      "title": "Office of Fair Hearings — FAQ",
+      "url": "https://www.hca.nm.gov/office-of-fair-hearings-faq/",
+      "source_date": "page's own JSON-LD metadata: datePublished 2024-09-09; no dateModified value present",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 4,
+      "title": "Fair Hearing Request (form, PDF)",
+      "url": "https://www.hca.nm.gov/wp-content/uploads/Fair-Hearing-Request-Form-2024.pdf",
+      "source_date": "none stated on the form's face; the file's own PDF metadata records a creation date of 2024-11-06",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 5,
+      "title": "Ombudsman Advocacy",
+      "url": "https://www.aging.nm.gov/ombudsman/",
+      "source_date": "page's own JSON-LD metadata: dateModified 2026-07-05",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 6,
+      "title": "Contact Us",
+      "url": "https://www.aging.nm.gov/contact-us/",
+      "source_date": "page's own JSON-LD metadata: dateModified 2026-07-17",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    }
+  ]
+}

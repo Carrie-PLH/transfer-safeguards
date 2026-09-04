@@ -1,0 +1,83 @@
+{
+  "recipe_version": 1,
+  "state": "ohio",
+  "sources": [
+    {
+      "n": 1,
+      "title": "Ohio Revised Code 3721.13, Residents' rights (Legislative Service Commission)",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-3721.13",
+      "source_date": "Effective October 3, 2023",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "Captured whole. The proposer's anchors here were the site's own boilerplate — 'The Legislative Service Commission staff updates...' at the head and a Thymeleaf template fragment at the foot — which is a sign that the standing packet's span was the whole page minus chrome. Capturing the page entire is the same evidence without an anchor that breaks when the Commission edits its own footer."
+    },
+    {
+      "n": 2,
+      "title": "Ohio Revised Code 3721.16, Residents' rights concerning transfer or discharge",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-3721.16",
+      "source_date": "Effective October 3, 2023",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "Captured whole. The proposer's anchors here were the site's own boilerplate — 'The Legislative Service Commission staff updates...' at the head and a Thymeleaf template fragment at the foot — which is a sign that the standing packet's span was the whole page minus chrome. Capturing the page entire is the same evidence without an anchor that breaks when the Commission edits its own footer."
+    },
+    {
+      "n": 3,
+      "title": "Ohio Revised Code 3721.161, Hearing on proposed transfer or discharge",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-3721.161",
+      "source_date": "Effective October 3, 2023",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "Captured whole. The proposer's anchors here were the site's own boilerplate — 'The Legislative Service Commission staff updates...' at the head and a Thymeleaf template fragment at the foot — which is a sign that the standing packet's span was the whole page minus chrome. Capturing the page entire is the same evidence without an anchor that breaks when the Commission edits its own footer."
+    },
+    {
+      "n": 4,
+      "title": "Ohio Revised Code 3721.162, Conduct of hearing",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-3721.162",
+      "source_date": "Effective October 3, 2023",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "Captured whole. The proposer's anchors here were the site's own boilerplate — 'The Legislative Service Commission staff updates...' at the head and a Thymeleaf template fragment at the foot — which is a sign that the standing packet's span was the whole page minus chrome. Capturing the page entire is the same evidence without an anchor that breaks when the Commission edits its own footer."
+    },
+    {
+      "n": 5,
+      "title": "Ohio Administrative Code 3701-61-03, Notice and hearing request requirements",
+      "url": "https://codes.ohio.gov/ohio-administrative-code/rule-3701-61-03",
+      "source_date": "Effective February 1, 2024",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "Captured whole. The proposer's anchors here were the site's own boilerplate — 'The Legislative Service Commission staff updates...' at the head and a Thymeleaf template fragment at the foot — which is a sign that the standing packet's span was the whole page minus chrome. Capturing the page entire is the same evidence without an anchor that breaks when the Commission edits its own footer."
+    },
+    {
+      "n": 6,
+      "title": "Ohio Administrative Code 5160-3-16.4, Bed-hold days (Ohio Department of Medicaid rule)",
+      "url": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-3-16.4",
+      "source_date": "Effective August 17, 2017",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "Captured whole. The proposer's anchors here were the site's own boilerplate — 'The Legislative Service Commission staff updates...' at the head and a Thymeleaf template fragment at the foot — which is a sign that the standing packet's span was the whole page minus chrome. Capturing the page entire is the same evidence without an anchor that breaks when the Commission edits its own footer."
+    },
+    {
+      "n": 7,
+      "title": "Ohio Department of Aging, Long-Term Care Ombudsman — Discharge & Transfer Rights",
+      "url": "https://aging.ohio.gov/care-and-living/ombudsman/residents-rights/discharge-transfer",
+      "source_date": "February 19, 2025",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "Captured whole. The proposer's anchors here were the site's own boilerplate — 'The Legislative Service Commission staff updates...' at the head and a Thymeleaf template fragment at the foot — which is a sign that the standing packet's span was the whole page minus chrome. Capturing the page entire is the same evidence without an anchor that breaks when the Commission edits its own footer."
+    }
+  ]
+}

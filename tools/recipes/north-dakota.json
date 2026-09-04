@@ -1,0 +1,73 @@
+{
+  "recipe_version": 1,
+  "state": "north-dakota",
+  "sources": [
+    {
+      "n": 1,
+      "title": "NDAC Chapter 75-01-03, Appeals and Hearings (North Dakota Administrative Code, Title 75 — Human Services, Article 75-01, Department of Human Services — General Administration), sections 75-01-03-01 through 75-01-03-26, including 75-01-03-08.1 (Notice of facility's intention to transfer or discharge a resident)",
+      "url": "https://ndlegis.gov/information/acdata/pdf/75-01-03.pdf",
+      "source_date": "no single date for the chapter; each section carries its own History line — section 75-01-03-08.1 states \"History: Effective February 1, 1995; amended effective July 1, 1996; May 1, 2006.\"; section 75-01-03-26 (Appeals supervisor address) states \"History: Effective April 1, 2018.\"",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "Captured whole: the served document is the chapter or page the packet holds, so no slice is needed and none is written — a slice that spans the whole document is an anchor waiting to break for no gain."
+    },
+    {
+      "n": 2,
+      "title": "NDAC Chapter 75-02-06, Ratesetting for Nursing Home Care (North Dakota Administrative Code, Title 75 — Human Services, Article 75-02, Medical Services), including 75-02-06-14 (Resident days) and 75-02-06-22 (Participation requirement)",
+      "url": "https://ndlegis.gov/information/acdata/pdf/75-02-06.pdf",
+      "source_date": "no single date for the chapter; section 75-02-06-14 states \"History: Effective September 1, 1980; amended effective December 1, 1983; September 1, 1987; January 1, 1990; November 1, 1992; November 22, 1993; January 1, 1996; January 1, 1998; January 1, 1999; July 2, 2002; January 1, 2020.\"; section 75-02-06-22 states \"History: Effective January 1, 1996; amended effective January 1, 1998; January 1, 2000.\"",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "Captured whole: the served document is the chapter or page the packet holds, so no slice is needed and none is written — a slice that spans the whole document is an anchor waiting to break for no gain."
+    },
+    {
+      "n": 3,
+      "title": "North Dakota Medicaid Billing and Policy Manual — Nursing Facilities",
+      "url": "https://www.hhs.nd.gov/sites/www/files/documents/medicaid-policies/nursing-facilities.pdf",
+      "source_date": "\"Updated: April 2026\" (printed on every page)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "Captured whole: the served document is the chapter or page the packet holds, so no slice is needed and none is written — a slice that spans the whole document is an anchor waiting to break for no gain."
+    },
+    {
+      "n": 4,
+      "title": "Long-Term Care Ombudsman Program | Health and Human Services North Dakota",
+      "url": "https://www.hhs.nd.gov/adults-and-aging/human-services/adults-and-aging/long-term-care-ombudsman-program",
+      "source_date": "none stated on page (footer copyright 2026)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "Captured whole: the served document is the chapter or page the packet holds, so no slice is needed and none is written — a slice that spans the whole document is an anchor waiting to break for no gain."
+    },
+    {
+      "n": 5,
+      "title": "Long Term Care Ombudsman Program (North Dakota) — Care Choice directory listing | North Dakota Health and Human Services (Care Choice / ndcarechoice.hhs.nd.gov)",
+      "url": "https://ndcarechoice.hhs.nd.gov/index.php?option=com_cpx&task=resource.view&id=4769615&search_history_id=267327296&code=PX-1850",
+      "source_date": "none stated on the listing itself",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "A directory listing; the slice drops the surrounding search chrome. The 'to' anchor begins mid-word because the listing's own delimiter line is what follows and the proposer anchored on it as rendered; it is left as proposed rather than tidied, because a hand-adjusted anchor is a hand-read anchor.",
+      "slice": {
+        "from": "Long Term Care Ombudsman Program (North Dakota) https://www.hhs.nd.gov/adults-and-aging/human-services/adults-and-aging",
+        "to": "rvice Area (serves entire state) ***** SEND-TO-ME"
+      }
+    },
+    {
+      "n": 6,
+      "title": "Client Rights and Appeals | Health and Human Services North Dakota",
+      "url": "https://www.hhs.nd.gov/about-us/client-rights-and-appeals",
+      "source_date": "none stated on page (footer copyright 2026)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "Captured whole: the served document is the chapter or page the packet holds, so no slice is needed and none is written — a slice that spans the whole document is an anchor waiting to break for no gain."
+    }
+  ]
+}

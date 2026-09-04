@@ -1,0 +1,101 @@
+{
+  "recipe_version": 1,
+  "state": "nevada",
+  "sources": [
+    {
+      "n": 1,
+      "title": "Nevada Administrative Code, Chapter 449, Facilities for Skilled Nursing — NAC 449.74429, Transfer or discharge of patient",
+      "url": "https://www.leg.state.nv.us/NAC/NAC-449.html",
+      "source_date": "added by the Board of Health, effective 9-27-99",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 2,
+      "title": "Nevada Revised Statutes Chapter 449A, Care and Rights of Patients — NRS 449A.114, Certain facilities to notify patient and State Long-Term Care Ombudsman of intent to transfer patient and provide opportunity for patient or representative to meet with administrator; exceptions",
+      "url": "https://www.leg.state.nv.us/nrs/nrs-449a.html",
+      "source_date": "Added to NRS by 2019, 440; amended 2021, 3443; amended 2023, 718",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 3,
+      "title": "Nevada Revised Statutes Chapter 449, Medical Facilities and Other Related Entities — NRS 449.183, Facility for intermediate care, facility for skilled nursing and residential facility for groups to adopt written policy concerning readmission after temporary transfer of patient or resident",
+      "url": "https://www.leg.state.nv.us/nrs/nrs-449.html",
+      "source_date": "Added to NRS by 2011, 1063",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 4,
+      "title": "Nevada Revised Statutes Chapter 449A, Care and Rights of Patients — NRS 449A.282, Limitations on transfer or involuntary discharge; and NRS 449A.284, Notices concerning discharge of resident, excerpt (both apply on their own terms to a \"residential facility for groups,\" a facility type distinct from a facility for skilled nursing and out of this project's v1 scope; captured to document that distinction)",
+      "url": "https://www.leg.state.nv.us/nrs/nrs-449a.html",
+      "source_date": "NRS 449A.282 added to NRS by 2023, 716; NRS 449A.284 added to NRS by 2023, 717",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 5,
+      "title": "Nevada Medicaid Services Manual, Chapter 500 — Nursing Facilities, Section 503.5, Therapeutic Leave of Absence, excerpt",
+      "url": "https://www.nevadamedicaid.nv.gov/siteassets/content/resources/adminsupport/manuals/msm/c500/MSM_500_25_07_01.pdf",
+      "source_date": "effective July 1, 2025 (MTL 16/25)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 6,
+      "title": "Nevada Medicaid Services Manual, Chapter 3100 — Hearings, Sections 3100 through 3104.1B, excerpt",
+      "url": "https://www.nevadamedicaid.nv.gov/uploadedFiles/dhcfpnvgov/content/Resources/AdminSupport/Manuals/MSM/C3100/MSM_Ch_3100_18_02_23.pdf",
+      "source_date": "transmittal letter dated February 22, 2018; the Chapter 3100 landing page at nevadamedicaid.nv.gov labels this document \"Current - Effective Feb 23, 2018\"",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 7,
+      "title": "Nevada Medicaid Fair Hearing Request Form, NMO-6300 (English portion)",
+      "url": "https://www.nevadamedicaid.nv.gov/siteassets/content/providers/fair-hearings/documents/final-nmo-6300-fair-hearing-request-form-6-25.pdf",
+      "source_date": "NMO-6300 (6/25)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 8,
+      "title": "Long Term Care Ombudsman | Nevada Aging and Disability Services Division",
+      "url": "https://www.adsd.nv.gov/programs/programs-for-seniors/long-term-care-ombudsman/",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 9,
+      "title": "Nursing Home Discharges, Transfers, and Room Changes: Know Your Rights (LTC Discharges Brochure), excerpt (first page only; the brochure's inside spread runs in three interleaved newspaper columns per CLAUDE.md's two-column-PDF trap and is captured separately below exactly as pdftotext rendered it) | Nevada Aging and Disability Services Division, Long Term Care Ombudsman Program",
+      "url": "https://www.adsd.nv.gov/uploadedFiles/adsdnvgov/content/Programs/Seniors/LTCOmbudsman/LTC%20Discharges%20Brochure(2).pdf",
+      "source_date": "none stated",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "DRAFT — replace before promoting."
+    }
+  ]
+}

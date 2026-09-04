@@ -1,0 +1,127 @@
+{
+  "recipe_version": 1,
+  "state": "rhode-island",
+  "sources": [
+    {
+      "n": 1,
+      "title": "210-RICR-50-00-7, Involuntary Discharge from a Long-Term Care Facility",
+      "url": "https://rules.sos.ri.gov/regulations/part/210-50-00-7",
+      "source_date": "Regulation Effective Date 01/04/2022 (Periodic Refile; original E-SIGNED December 15, 2021)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 2,
+      "title": "210-RICR-10-05-2, Appeals Process and Procedures for EOHHS Agencies and Programs — excerpt: EHO definition, § 2.2.1(A)(4) filing procedures, and § 2.4.8 (Institutional and Community-Based Long-Term Care Resident Involuntary Discharges and Transfers) in full",
+      "url": "https://rules.sos.ri.gov/regulations/part/210-10-05-2",
+      "source_date": "Regulation Effective Date 01/04/2022 (Refile Capabilities; original E-SIGNED December 14, 2021; original signing date 09/13/2018)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 3,
+      "title": "R.I. Gen. Laws § 23-17.5-17, Transfer to another facility",
+      "url": "https://webserver.rilegislature.gov/Statutes/TITLE23/23-17.5/23-17.5-17.HTM",
+      "source_date": "History of Section — P.L. 1978, ch. 235, § 1; P.L. 2000, ch. 240, § 1; P.L. 2015, ch. 141, art. 5, § 3",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 4,
+      "title": "R.I. Gen. Laws § 23-17.5-25, Notice on bed-hold policy and readmission",
+      "url": "https://webserver.rilegislature.gov/Statutes/TITLE23/23-17.5/23-17.5-25.HTM",
+      "source_date": "History of Section — P.L. 1989, ch. 270, § 1; P.L. 2004, ch. 228, § 1; P.L. 2004, ch. 303, § 1",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 5,
+      "title": "216-RICR-40-10-1, Licensing of Nursing Facilities — § 1.15.4(S), Rights of Residents (transfer, discharge, and bed-hold)",
+      "url": "https://rules.sos.ri.gov/regulations/part/216-40-10-1",
+      "source_date": "Regulation Effective Date 05/07/2025 (Amendment; Agency Signature April 17, 2025)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 6,
+      "title": "DHS-200NF, Pre-Transfer or Pre-Discharge 30 Day Notice (Rhode Island Department of Human Services)",
+      "url": "https://eohhs.ri.gov/media/45546/download?language=en",
+      "source_date": "Rev. 11-18",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 7,
+      "title": "EOHHS Appeals Office",
+      "url": "https://eohhs.ri.gov/reference-center/eohhs-appeals-office",
+      "source_date": "page last updated on July 22nd, 2024",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 8,
+      "title": "Ombudsman Program (Rhode Island Office of Healthy Aging)",
+      "url": "https://oha.ri.gov/resources/fraud-and-abuse/ombudsman-program",
+      "source_date": "page last updated on February 25th, 2026",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 9,
+      "title": "Contact (Alliance for Better Long Term Care)",
+      "url": "https://alliancebltc.org/contact/",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 10,
+      "title": "Contact Us — Office of the RI State Long Term Care Ombudsman (Alliance for Better Long Term Care)",
+      "url": "https://alliancebltc.org/ombudsman-program/contact/",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 11,
+      "title": "Resident's Rights — Office of the RI State Long Term Care Ombudsman (Alliance for Better Long Term Care)",
+      "url": "https://alliancebltc.org/ombudsman-program/residents-rights/",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    }
+  ]
+}
