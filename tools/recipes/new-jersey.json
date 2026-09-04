@@ -1,0 +1,27 @@
+{
+  "recipe_version": 1,
+  "state": "new-jersey",
+  "sources": [
+    {
+      "n": 1,
+      "title": "New Jersey Office of the Long-Term Care Ombudsman, Notice Requirements for Transfer/Discharge of a Long-Term Care Resident (PDF)",
+      "url": "https://www.nj.gov/ooie/div-assets/docs/Notice-Requirements-for-Transfer.pdf",
+      "source_date": "none stated on document",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "Plain curl with a pinned browser user-agent reaches nj.gov; no WAF or client-side gate. -layout matches the standing packet's own extraction: the bullet glyphs at the foot of the summary do not survive and appear as leading spaces, and the block addresses keep the document's own line breaks. Both are the extraction's doing rather than the document's, and they are reproduced rather than repaired because the page quotes this capture as it stands."
+    },
+    {
+      "n": 2,
+      "title": "New Jersey Long-Term Care Ombudsman, Nursing Home Resident Rights",
+      "url": "https://www.nj.gov/ooie/resident.shtml",
+      "source_date": "Last Updated: Thursday, 05/15/25",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "Server-rendered; plain curl with a browser user-agent returns the whole document. Scope 'body' rather than a narrower selector because the standing packet was a tag strip over the served document and carries the office's site navigation and footer in the captured text, and because the page's own 'Last Updated' line — its only date — sits near the foot outside any content wrapper. A narrower scope would drop the date this packet records as the source's own."
+    }
+  ]
+}

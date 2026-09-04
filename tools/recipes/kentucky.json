@@ -1,0 +1,39 @@
+{
+  "recipe_version": 1,
+  "state": "kentucky",
+  "sources": [
+    {
+      "n": 1,
+      "title": "900 KAR 2:050, Transfer and discharge rights",
+      "url": "https://apps.legislature.ky.gov/law/kar/titles/900/002/050/",
+      "source_date": "HISTORY line ends 146 Ky.R. 1695, 2280; eff. 2-27-2020",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "Server-rendered; plain curl with a browser user-agent returns the whole document. Scope 'body' rather than a narrower selector because the Legislative Research Commission serves each regulation twice on one page — the current text, then the pre-engrossment version under an ALTERNATE VIEW heading — and the standing packet holds both as served. Narrowing to the first block would drop half of what the packet records. The site runs each subsection number straight into the text that follows it, with the paragraph break falling after the number rather than before; that is the site's own markup and survives the extractor unchanged."
+    },
+    {
+      "n": 2,
+      "title": "900 KAR 2:060, Hearings concerning transfer and discharge rights",
+      "url": "https://apps.legislature.ky.gov/law/kar/titles/900/002/060/",
+      "source_date": "see the regulation's own HISTORY line in the capture",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "Same host, same markup and the same ALTERNATE VIEW duplication as source 1; scope 'body' for the same reason."
+    },
+    {
+      "n": 3,
+      "title": "Kentucky Cabinet for Health and Family Services, Department for Aging and Independent Living — Long-Term Care Ombudsman",
+      "url": "https://www.chfs.ky.gov/agencies/dail/Pages/ltcomb.aspx",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "Server-rendered SharePoint page reached by plain curl with a browser user-agent. The page renders its site navigation twice and the standing packet carries both passes; scope 'body' reproduces that rather than narrowing to a content wrapper. This page publishes an ombudsman listing by county and no single statewide telephone contact — an absence the page records as a finding, and one a narrower scope could be mistaken for having caused."
+    }
+  ]
+}

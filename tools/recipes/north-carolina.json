@@ -1,0 +1,48 @@
+{
+  "recipe_version": 1,
+  "state": "north-carolina",
+  "sources": [
+    {
+      "n": 1,
+      "title": "N.C.G.S. § 131E-117, Declaration of patient's rights",
+      "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/PDF/BySection/Chapter_131E/GS_131E-117.pdf",
+      "source_date": "none stated on document",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "The General Assembly's single-section PDF, captured whole — no slice, because the document is the section. Plain curl with a pinned browser user-agent is enough for ncleg.gov. The Assembly prints its own hyphenation character inside section numbers and defined terms; that character is the document's and is carried through rather than folded to an ASCII hyphen."
+    },
+    {
+      "n": 2,
+      "title": "NC Medicaid, Nursing Home Notice of Transfer/Discharge, NC Medicaid-9050 (PDF)",
+      "url": "https://medicaid.ncdhhs.gov/nursing-home-transfer-dicharge-notice/download",
+      "source_date": "NC Medicaid-9050 (6/2026)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "The department's own notice form, captured whole. The blank rules, the checkbox glyphs and the form-number line are the form's own and are what the page quotes; -layout keeps the field labels beside the rules rather than reflowing them into a single column. Note the URL's own spelling, 'dicharge' — it is the department's path, not a typo to correct, and a corrected URL 404s."
+    },
+    {
+      "n": 3,
+      "title": "NC Medicaid, Appeals and Grievances — NC Medicaid Hearing Office",
+      "url": "https://medicaid.ncdhhs.gov/beneficiaries/appeals-and-grievances",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "Server-rendered; plain curl with a browser user-agent returns the whole document. Scope 'body' because the page renders its 'Skilled Nursing Facility Discharge Appeals' block twice — once collapsed in an accordion and once expanded — and the standing packet holds both as served. A narrower scope would silently drop one pass of the block the page quotes from."
+    },
+    {
+      "n": 4,
+      "title": "NCDHHS Division of Aging, Long-Term Care Ombudsman",
+      "url": "https://www.ncdhhs.gov/divisions/aging/long-term-care-ombudsman",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "Server-rendered, same transport. This page publishes no statewide telephone number for the ombudsman program — it describes a state office and sixteen regional offices housed in Area Agencies on Aging — and that absence is recorded on the page as a finding. Scope stays 'body' so a future pass cannot mistake a narrowed capture for the contact having been withdrawn."
+    }
+  ]
+}
