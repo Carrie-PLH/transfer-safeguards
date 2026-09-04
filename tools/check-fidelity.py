@@ -371,6 +371,58 @@ def check_pairing(text, quotes, index, page_state, out, fails):
     return paired
 
 
+# --- the change log is a historical record, not a claim about the source ------
+#
+# Section 04 exists to say what a source used to say. A corrected page is
+# required to quote the institution's superseded wording beside the new, so a
+# reader can see what moved; a packet holds only what the source says today. So
+# the moment that wording changes again, the historical quotation can never
+# appear in a fresh capture and this checker reports it as a fabrication. The
+# 2026-09-04 Nebraska correction hit exactly that: an honest entry quoting the
+# heading the notice runs a sentence into had its quotation marks removed to
+# pass, which is the tool editing the record.
+#
+# Adopted here 2026-09-04, for quotations only, on Carrie's decision
+# (FA-Q-20260904-05). Gathered Work has had this since 2026-09-02 and extended
+# it to contact facts as well; the contact scans in this repo deliberately keep
+# reading the whole page, because the false-lead convention that motivated the
+# wider exemption there does not exist here and a contact written only into a
+# log would become unverified for nothing.
+#
+# The durable answer is not an exemption at all. retain-packet.py now keeps
+# superseded captures, so a change-log quotation could one day be verified
+# against the retained capture it came from rather than excused. That is
+# stronger than this and is deliberately left for later: the history reaches
+# back only to 2026-08-27 here, which is not yet deep enough to check against.
+#
+# The separators below are all three heading dialects this repo actually uses
+# -- "## 04 Change log", "## 04 · Change log" and "## 04. Change log" -- plus
+# the em and en dashes the siblings use. A marker that silently fails to match
+# would not weaken the checker (the split returns the whole page as live) but it
+# would also do nothing, so the self-test pins every form.
+CHANGELOG_MARKERS = (
+    re.compile(r'<div class="section-no">0?4<'),
+    re.compile(r'<h2>\s*Revision history of this page\s*</h2>'),
+    re.compile(r'<h2>\s*Change log\s*</h2>'),
+    re.compile(r'^##\s*0?4\s*(?:[—–\-·.]\s*)?(?:Change log|Revision history)', re.M),
+    re.compile(r'^##\s*(?:Change log|Revision history of this page)\s*$', re.M),
+)
+
+
+def split_change_log(raw):
+    """(live sections, change log) — split at the earliest change-log marker.
+
+    Returns the whole page as `live` and '' as the log when no marker is found,
+    so a page shaped unlike the house template is checked exactly as strictly as
+    before rather than silently losing its quotation coverage.
+    """
+    starts = [m.start() for r in CHANGELOG_MARKERS for m in [r.search(raw)] if m]
+    if not starts:
+        return raw, ''
+    i = min(starts)
+    return raw[:i], raw[i:]
+
+
 def check(page_path, packet_path, out=print, lang='en', index_path=None):
     raw = open(page_path, encoding='utf-8').read()
     packet_paths = ([packet_path] if isinstance(packet_path, str)
@@ -407,7 +459,14 @@ def check(page_path, packet_path, out=print, lang='en', index_path=None):
     # sibling is the case. Interior whitespace is still normalized rather than
     # discarded, and the strip is at the edges only: it cannot let a changed
     # word through.
-    quotes = extract_quotes(text)
+    # Live sections only. The change log records what a source used to say and
+    # is not a claim the packet must support; see split_change_log above. The
+    # contact layers below deliberately still read the whole page.
+    live_raw, _log_raw = split_change_log(raw)
+    live_text = live_raw
+    if page_path.endswith('.html'):
+        live_text = H.unescape(re.sub(r'<[^>]+>', ' ', live_text))
+    quotes = extract_quotes(live_text)
     for q, _start, _end in quotes:
         if norm(q).strip() not in pn:
             fails.append(f'QUOTE not in packet: {q[:80]!r}')
@@ -825,6 +884,29 @@ def self_test():
                   'within 45 Days of receipt'):
         assert not ADDRESS_RE.findall(quiet), (
             f'ADDRESS_RE matched prose that is not an address: {quiet!r}')
+    # split_change_log: every heading dialect these repos actually use must
+    # split, and a fabrication placed below the marker must not be exempted by
+    # it (FA-Q-20260904-05).
+    for _h in ('## 04 Change log', '## 04 \u00b7 Change log', '## 04. Change log',
+               '## 04 \u2014 Change log', '## 04 \u2013 Change log', '## 04 - Change log',
+               '## Change log'):
+        _l, _g = split_change_log('intro "live quote"\n\n' + _h + '\n\n"old quote"')
+        assert 'live quote' in _l and 'old quote' in _g, (
+            'markdown change-log heading not split: ' + repr(_h))
+    for _h in ('<div class="section-no">04<small>Change log</small></div>',
+               '<div class="section-no">4<small>Change log</small></div>',
+               '<h2>Change log</h2>', '<h2>Revision history of this page</h2>'):
+        _l, _g = split_change_log('<p>"live quote"</p>' + _h + '<p>"old quote"</p>')
+        assert 'live quote' in _l and 'old quote' in _g, (
+            'html change-log marker not split: ' + repr(_h))
+    _l, _g = split_change_log('intro "live quote" with no log at all')
+    assert 'live quote' in _l and _g == '', (
+        'a page with no change-log marker must be checked in full')
+    _l, _g = split_change_log('<h2>Change log</h2><p>"an invented claim below the log"</p>')
+    assert 'invented claim' not in _l, (
+        'text after a change-log marker was treated as live; a fabrication '
+        'placed below the marker would go unchecked')
+
     print(f'SELF-TEST PASSED: clean page passes; all {len(expected)} fabrication modes caught; '
           'multi-packet evidence checked and enforced; both quote delimiter styles '
           'extracted (curly, ASCII, mixed, nested, apostrophe-in-curly, link-terminated); '

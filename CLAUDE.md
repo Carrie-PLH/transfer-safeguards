@@ -498,3 +498,38 @@ currently get no archive coverage from this tool. Whether to widen the
 script to cover it — a small change to `scan_all`, on the model of
 sped-safeguards' two-collection version of this same script — is a judgment
 call, not something this port made unilaterally.
+
+## The change log is a record, not a claim (adopted 2026-09-04)
+
+`check-fidelity.py` now splits section 04 out of the quotation scan.
+`split_change_log` and `CHANGELOG_MARKERS` are ported from Gathered Work, which
+has had them since 2026-09-02.
+
+The reason is a contradiction between two rules this project already held. A
+category (c) correction entry is *required* to quote the agency's superseded
+wording beside the new, so a reader can see what moved. The checker forbids
+quoting anything absent from the current packet, and a packet holds only what
+the source says today. So the second time a source moves, the required entry
+becomes unwritable. That is not a preference clash; the rules disagreed, and
+the checker won by default. The 2026-09-04 Nebraska correction was the first
+bite: an honest sentence quoting the heading the notice runs into had its
+quotation marks stripped to pass. The tool edited the record. Those marks have
+since been restored, which is the point.
+
+**Quotations only.** The phone, email and address scans still read the whole
+page here. Gathered Work extended the split to contact facts as well, because a
+change log there records rejected leads by name; that convention does not exist
+in this repo, and exempting contacts would create unverified surface to buy
+nothing. If a false-lead convention ever starts here, revisit it then.
+
+**This is not the durable answer.** `retain-packet.py` keeps superseded
+captures, so a change-log quotation could be verified against the retained
+capture it came from rather than excused. That is strictly stronger: the old
+wording stays checked, against the evidence that it was ever said. It is left
+for later because the retained history begins 2026-08-27 and is not yet deep
+enough to check against, and because it is real work rather than a flag. When
+the history is deep enough, prefer it and narrow this exemption.
+
+A marker that fails to match weakens nothing — the split returns the whole page
+as live — but it also does nothing, so the self-test pins every heading dialect
+these pages actually use, in markdown and HTML.
