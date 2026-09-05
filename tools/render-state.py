@@ -36,8 +36,15 @@ def inline(s):
     s = re.sub(r'\[([^]]+)\]\((/[^)]*)\)', r'<a href="\2">\1</a>', s)
     s = re.sub(r'\[([^]]+)\]\((?:\.\./)?([a-z0-9\-]+(?:/[a-z0-9\-]+)*)\.html\)',
                lambda m: '<a href="/%s/">%s</a>' % (m.group(2), m.group(1)), s)
-    s = re.sub(r'\*\*([^*]+)\*\*', r'<strong>\1</strong>', s)
-    s = re.sub(r'(?<!\*)\*([^*]+)\*', r'<em>\1</em>', s)
+    # Strict boundaries, adopted from the Board & Border sibling 2026-09-06:
+    # an opening marker must be followed by a non-space and a closing one
+    # preceded by a non-space. This is what keeps a quoted source's own
+    # trailing asterisks literal — California's fee schedule on the sibling
+    # prints "$225.00**" as footnote markers, and the looser pattern pairs
+    # them across table cells and falsifies the quotation. No source here
+    # trips it yet; the guard exists so the first one that does cannot.
+    s = re.sub(r'\*\*(?=\S)([^*]+?)(?<=\S)\*\*', r'<strong>\1</strong>', s)
+    s = re.sub(r'(?<!\*)\*(?=\S)([^*]+?)(?<=\S)\*(?!\*)', r'<em>\1</em>', s)
     # Backtick spans. Without this a source that uses backticks publishes them
     # as literal characters, the same way markdown links did until 2026-09-05.
     # No quoted passage in any source contains a backtick, so this cannot
