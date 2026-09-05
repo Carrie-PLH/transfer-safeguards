@@ -888,7 +888,22 @@ def render_json_lines(node, prefix=''):
 
 def extract_docx(blob, scope):
     """Paragraphs in document order, then table rows with cells pipe-joined —
-    the convention the California packet already records for its .docx source."""
+    the convention the California packet already records for its .docx source.
+
+    A pre-2007 binary .doc (Composite Document Format) is not an OOXML zip and
+    python-docx cannot open one, so it is routed to a converter instead; see
+    capture-core's legacy-.doc section for which converters and why the one
+    that ran is named. That name is printed to stderr rather than woven into
+    the packet, because the converter is an input worth recording in the
+    recipe's notes field and changing the packet's own format would re-baseline
+    every packet that already exists. A converted .doc yields prose only —
+    the table pass below has no document object to walk."""
+    # The legacy branch is taken before python-docx is imported: a converted
+    # .doc must not depend on a library that cannot read it.
+    if _core.is_legacy_doc(blob):
+        text, converter = _core.extract_legacy_doc(blob)
+        print(f'  legacy .doc converted with {converter}', file=sys.stderr)
+        return text
     import io
     import docx
     d = docx.Document(io.BytesIO(blob))

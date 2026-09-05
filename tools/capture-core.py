@@ -53,6 +53,7 @@ Exit codes: 0 clean, 1 self-test failure.
 import hashlib
 import os
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -174,6 +175,81 @@ def extract_pdf(blob, mode, pages=None, poppler_pin=DEFAULT_POPPLER_PIN,
             raise RuntimeError('pdftotext: '
                                + r.stderr.decode('utf-8', 'replace').strip())
         return r.stdout.decode('utf-8', 'replace')
+
+
+# --- legacy binary .doc --------------------------------------------------------
+#
+# Added 2026-09-05 from FA-Q-20260905-01. python-docx reads the OOXML zip
+# container and nothing else, so extract_docx raised on any pre-2007 Word
+# file. That is not a rare shape in this portfolio's sources: flrules.org,
+# Florida's official host for the Administrative Code, serves chapter 65-2
+# F.A.C. -- the Department of Children and Families' fair-hearing procedure
+# rules -- only as a legacy .doc at a stable first-party URL. The document was
+# reachable the whole time; the extractor's format vocabulary was the obstacle.
+#
+# The same reasoning that pins poppler applies here and is why the converter is
+# named in the capture notes rather than left to the environment: the same
+# bytes under a different converter produce a different body, which reads
+# downstream as source drift. textutil is first because it ships with macOS,
+# where this tooling runs, and therefore does not have to be installed to be
+# reproducible; antiword and catdoc are the portable fallbacks. Whichever ran
+# is recorded, so a body that changes because the host changed is legible as
+# that rather than as an agency rewriting a rule.
+
+CFBF_MAGIC = b'\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1'
+ZIP_MAGIC = b'PK\x03\x04'
+
+# In preference order. Each entry is (binary, argv-builder, reads-stdout).
+LEGACY_DOC_CONVERTERS = (
+    ('textutil', lambda p, out: ['textutil', '-convert', 'txt', '-encoding',
+                                 'UTF-8', '-output', out, p], False),
+    ('antiword', lambda p, out: ['antiword', '-w', '0', p], True),
+    ('catdoc', lambda p, out: ['catdoc', '-d', 'utf-8', p], True),
+)
+
+
+def is_legacy_doc(blob):
+    """True for a Composite Document Format (pre-2007 Word) file."""
+    return blob[:8] == CFBF_MAGIC
+
+
+def legacy_doc_converter():
+    """(name, path) of the first available converter, or (None, None)."""
+    for name, _argv, _stdout in LEGACY_DOC_CONVERTERS:
+        p = shutil.which(name)
+        if p:
+            return name, p
+    return None, None
+
+
+def extract_legacy_doc(blob):
+    """(text, converter-name) for a legacy binary .doc.
+
+    Returns the converter's name alongside the text so the caller can record
+    it in the packet's capture notes; a body produced by an unnamed converter
+    cannot be told apart from a body the publisher changed."""
+    name, _path = legacy_doc_converter()
+    if name is None:
+        raise RuntimeError(
+            'this is a legacy binary .doc (Composite Document Format) and no '
+            'converter is available. Install one of: '
+            + ', '.join(c[0] for c in LEGACY_DOC_CONVERTERS)
+            + ' (textutil ships with macOS).')
+    argv_for, reads_stdout = next((a, s) for n, a, s in LEGACY_DOC_CONVERTERS
+                                  if n == name)
+    with tempfile.TemporaryDirectory() as td:
+        p = os.path.join(td, 'in.doc')
+        out = os.path.join(td, 'out.txt')
+        open(p, 'wb').write(blob)
+        r = subprocess.run(argv_for(p, out), capture_output=True, timeout=300)
+        if r.returncode != 0:
+            raise RuntimeError(
+                f'{name}: ' + r.stderr.decode('utf-8', 'replace').strip())
+        if reads_stdout:
+            text = r.stdout.decode('utf-8', 'replace')
+        else:
+            text = open(out, 'rb').read().decode('utf-8', 'replace')
+    return text, name
 
 
 # --- the fetched-artifact id --------------------------------------------------
@@ -731,6 +807,40 @@ def self_test():
             '<p style="-webkit-box-display:none">also shown</p>', 'html.parser')
         c, h = strip_nonvisible_nodes(keep)
         check(h == 0, 'a visible element was matched as hidden')
+
+    # Legacy binary .doc. The magic-byte sniff is tested unconditionally; the
+    # conversion only where a converter is actually installed, so this file
+    # stays runnable on a host with none.
+    check(is_legacy_doc(CFBF_MAGIC + b'rest of the file'),
+          'a Composite Document Format header was not recognised')
+    check(not is_legacy_doc(ZIP_MAGIC + b'rest of the file'),
+          'a .docx zip container was misread as a legacy .doc')
+    check(not is_legacy_doc(b''), 'an empty blob was read as a legacy .doc')
+    check(not is_legacy_doc(b'%PDF-1.7'), 'a PDF was read as a legacy .doc')
+    conv, _p = legacy_doc_converter()
+    if conv:
+        # A minimal legacy .doc cannot be synthesised honestly in a few lines,
+        # so the fixture is written by the converter's own toolchain where that
+        # is possible (textutil round-trips), and the check is skipped where it
+        # is not. A skipped check is better than a fixture that proves the
+        # test harness rather than the extractor.
+        if conv == 'textutil' and shutil.which('textutil'):
+            with tempfile.TemporaryDirectory() as td:
+                src = os.path.join(td, 'f.txt')
+                doc = os.path.join(td, 'f.doc')
+                open(src, 'w').write('Chapter 65-2 fair hearing procedure.')
+                r = subprocess.run(
+                    ['textutil', '-convert', 'doc', '-output', doc, src],
+                    capture_output=True, timeout=120)
+                if r.returncode == 0 and os.path.exists(doc):
+                    blob = open(doc, 'rb').read()
+                    check(is_legacy_doc(blob),
+                          'textutil -convert doc did not produce a CFBF file')
+                    text, used = extract_legacy_doc(blob)
+                    check('Chapter 65-2 fair hearing procedure.' in text,
+                          'legacy .doc extraction lost the document text')
+                    check(used == conv,
+                          'extract_legacy_doc did not report the converter it ran')
 
     narrow = '\n'.join(['short line'] * 5)
     wide = '\n'.join(['a much longer line than the ones in the narrow '

@@ -82,3 +82,39 @@ touched here).
 No queue entries opened.
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-09-04.
+
+## 2026-09-05 — working session (tooling), Florida re-captured
+
+Not a review pass. Two capture.py defects the nightly passes had correctly
+declined to patch were fixed in a reviewed session (FA-Q-20260904-08,
+FA-Q-20260905-01), and Florida was re-captured to exercise both.
+
+**florida — confirmed, promoted.** Captured unattended for the first time:
+source 5 (F.A.C. chapter 65-2, served by flrules.org only as a legacy binary
+.doc) now runs through capture.py's own extractor, which sniffs the Composite
+Document Format header and converts with textutil. The hand `--supply`
+workaround recorded in the 2026-09-05 packet is retired, and the recipe's note
+for that source was rewritten to say what the tool now does. Recipe digest
+unchanged (63c0a1b05d45); notes are outside the digest.
+
+check-fidelity: 0 failures on both states/florida.md and
+site/states/florida.html against the fresh capture. Retained and promoted,
+hash 6ff0c4db9f3d5b24.
+
+The retention tool's short-packet guard fired on sources 3 and 4
+(3145 -> 2986 and 13708 -> 13576 characters) and the loss is the extract_html
+fix, not source movement: myflfamilies.com's template carries developer
+comments as markup — "Header injected", "LEFT NAV COLUMN", "MOBILE HAMBURGER
+BUTTON", "FIX: type=\"button\" + pass this for aria-expanded updates" — which
+the old walk appended as document text because bs4's Comment is a
+NavigableString subclass, plus a hidden cookie-classification block. Every
+removed line was diffed before promoting. No quotation on the page rested on
+any of it.
+
+Worth recording for the next reader: the portfolio-wide grep for the two
+residue shapes named in FA-Q-20260904-08 (Westlaw's "anchor(", cdph.ca.gov's
+SharePoint labels) found nothing in any standing packet, and Florida was
+carrying a third shape none of those markers would have caught. The grep was
+not a clean bill of health; a re-capture is.
+
+Reviewer: working session, 2026-09-05.
