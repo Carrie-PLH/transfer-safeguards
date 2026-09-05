@@ -871,3 +871,52 @@ change log says so. Arizona and Arkansas, which had been held back on the same
 "thin page" reasoning, were both captured in full the same night once their
 transports were understood, which is the other half of why Hawaii's page says
 what it cannot quote rather than staying absent.
+
+## Two 2026-08-30 California findings corrected, both about transport (2026-09-04)
+
+cdph.ca.gov and dhcs.ca.gov, recorded then as requiring the session HTTP fetch
+tool (an incomplete certificate chain to curl on the first, a 212-byte script
+shell on the second), are both plain curl-able with a browser user-agent as of
+2026-09-04 — the same transient-failure pattern already recorded here for
+Arkansas's codeofarrules.arkansas.gov. And govt.westlaw.com/calregs was not,
+as recorded then, serving rule bodies "only to a scripted client": the actual
+barrier was that DHCS's own page links two stale document GUIDs for 22 CCR
+72527 and 72520, which return "Document not found" from a live browser as
+well as from curl. The current address for any section is reachable by plain
+curl with a browser user-agent once found by browsing
+govt.westlaw.com/calregs's own table of contents (no search box, no session
+token) — see `tools/recipes/california.json` for the route and the addresses.
+Before recording a Westlaw CCR citation as capture-blocked, check whether the
+linking page's own GUID is simply out of date.
+
+## capture.py's HTML extractor reads hidden markup as document text — filed, not fixed here (2026-09-04)
+
+Found deepening California: `extract_html`'s custom walk tests only
+`isinstance(n, NavigableString)`, and bs4's `Comment` class is a subclass of
+`NavigableString`, so a comment's contents are appended exactly as a
+paragraph's would be. govt.westlaw.com's per-section template opens every
+lettered and numbered subdivision with an empty `<!--anchor-->` comment and
+marks its currentness block with a bare `<!--DHE-->`; a capture of 22 CCR
+72527 came back reading "(a)" as "anchor(a)" throughout. Separately, the
+function's own docstring has promised "hidden nodes dropped" since it was
+written, and nothing ever implemented it: a node styled `display:none` or
+`visibility:hidden`, or carrying the HTML5 `hidden` attribute, is not document
+text, and cdph.ca.gov's SharePoint template puts CMS field-name labels for
+editors — "Page Alert Details", "LetterAuthority", "LetterHightlight" (its own
+typo) — into a capture of AFL 25-17 as if CDPH had printed them.
+
+This is a real defect, not a state finding, so the nightly build routine does
+not patch it here — that rule and its reason are the routine's own, in
+`room-recourse-nightly-builds`'s instructions, not this file. California's own
+packet is unaffected: it was captured before this note was written, checked
+by hand against the live pages, and holds clean text. Filed in QUEUE.md and
+the field-assembly-standard handoff queue for a working session, which should
+drop bs4 `Comment` nodes before the extraction walk and decompose elements
+matching `display:none`/`visibility:hidden` in `style` or carrying `hidden` —
+leaving `aria-hidden` alone, since it hides a node from assistive technology
+while a sighted reader still sees it (most often a decorative icon glyph).
+`sped-safeguards`, `Licensure Mobility` and `gathered work` all carry the
+identical `isinstance(n, NavigableString)` line in their own `extract_html`
+and likely share the defect; confirmed present in the code (not exercised
+against a live comment- or hidden-node-bearing capture) in all three on
+2026-09-04.

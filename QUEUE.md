@@ -115,6 +115,66 @@ tree, and should refuse to commit when it finds modifications it did not
 make. Unassigned; nothing has been changed in the capture or review tools
 yet.
 
+## Tooling defects, dated
+
+**capture.py's HTML extractor reads hidden markup as document text — found
+2026-09-04, deepening California.** `extract_html`'s custom walk tests only
+`isinstance(n, NavigableString)`; bs4's `Comment` class is a subclass of
+`NavigableString`, so an HTML comment's contents are appended exactly as a
+paragraph's would be. govt.westlaw.com's per-section template opens every
+lettered and numbered subdivision with an empty `<!--anchor-->` comment and
+marks its currentness block with a bare `<!--DHE-->`; a capture of 22 CCR
+72527 came back reading "(a)" as "anchor(a)" throughout. Separately, the
+function's docstring has promised "hidden nodes dropped" since it was
+written and nothing ever implemented it: cdph.ca.gov's SharePoint template
+puts CMS editor field-name labels ("Page Alert Details", "LetterAuthority",
+"LetterHightlight") — each styled `display:none` — into a capture of AFL
+25-17 as if CDPH had printed them.
+
+Per this routine's own rule, the nightly build pass does not patch
+`capture.py`; a working session must. The fix: drop bs4 `Comment` nodes
+before the extraction walk, and decompose elements matching
+`display:none`/`visibility:hidden` in a `style` attribute or carrying the
+HTML5 `hidden` attribute — leaving `aria-hidden` alone, since it hides a node
+from assistive technology while a sighted reader still sees it. Add self-test
+cases exercising both (a comment beside real text; a mix of hidden and
+visible nodes) before trusting the fix. California's own page and packet are
+unaffected — captured and hand-verified against the live sources before this
+entry was written — but any recipe capturing a Westlaw-hosted CCR or a
+SharePoint-templated agency site should be treated as suspect until the fix
+lands and that recipe is re-run. `sped-safeguards`, `Licensure Mobility` and
+`gathered work` carry the identical `isinstance(n, NavigableString)` line in
+their own `capture.py`'s `extract_html` and likely share the defect (code
+confirmed present in all three 2026-09-04; not yet exercised there against a
+live comment- or hidden-node-bearing capture). Filed in the
+field-assembly-standard handoff queue the same day this entry was written.
+See CLAUDE.md for the full detail.
+
+**capture.py's `docx` extractor cannot read legacy binary `.doc` files — found
+2026-09-05, deepening Florida.** `extract_docx()` uses `python-docx`, which
+only reads the OOXML `.docx` container; it raises on the older "Word 6.0/95" /
+Composite Document Format binary `.doc` files some agencies still serve as
+their only download. flrules.org serves chapter 65-2, F.A.C. (DCF's general
+fair-hearing procedure rules) exactly this way:
+`https://flrules.org/gateway/readFile.asp?sid=0&tid=0&cno=65-2&caid=1206309&type=4&file=65-2.doc`
+— a stable, directly-linked download with no session token or query hash, so
+first-party under the API/transport rules, just not a format the extractor
+vocabulary covers. Worked around this pass without touching capture.py, using
+its own documented `--supply` path (fetch by curl exactly as capture.py's own
+transport would, convert to text externally with macOS `textutil -convert
+txt`, then `python3 tools/capture.py florida --supply 5=<file>`); the
+packet's capture notes for that source spell out what was done and warn that
+a bare re-run without a fresh `--supply` will fail loudly, not silently
+reproduce or corrupt the text. A working session should add a legacy-`.doc`
+branch to `extract_docx()` (shelling out to `textutil` on macOS, or
+`antiword`/`catdoc` elsewhere, detected the way other transports here already
+branch on host) so future recipes needing such a file don't require a hand
+`--supply` step. `sped-safeguards`, `Licensure Mobility` and `gathered work`
+all carry the identical `python-docx`-only `extract_docx()` and likely share
+the gap (code confirmed present in all three 2026-09-05, not yet exercised
+there against a live legacy-`.doc` capture). Filed in the
+field-assembly-standard handoff queue the same day.
+
 ## Deferred, dated
 
 **Hawaii — deferred 2026-09-03.** The operative rule, Hawaii Administrative

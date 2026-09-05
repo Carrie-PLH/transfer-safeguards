@@ -1,0 +1,142 @@
+{
+  "recipe_version": 1,
+  "state": "california",
+  "sources": [
+    {
+      "n": 1,
+      "title": "California Department of Public Health, All Facilities Letter AFL 25-17, SNF Discharge Notice Requirements",
+      "url": "https://www.cdph.ca.gov/Programs/CHCQ/LCP/Pages/AFL-25-17.aspx",
+      "source_date": "May 28, 2025",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "#DeltaPlaceHolderMain",
+      "filters": [
+        "strip-zero-width",
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "The 2026-08-30 standing packet recorded cdph.ca.gov as returning an incomplete certificate chain to curl and to python/certifi, and captured this source through the session's HTTP fetch tool. Retested 2026-09-04: plain curl with a browser user-agent now returns 200 with the full page, including the eight-item notice-contents list, the four 30-day exceptions and the 'basis under Title 42 CFR section 483.15(c)(1)(i)(A)-(F)' phrase the standing page quotes verbatim. Whatever blocked it on 2026-08-30 no longer does, consistent with the transient-failure pattern CLAUDE.md records for Arkansas's codeofarrules.arkansas.gov. #DeltaPlaceHolderMain is this SharePoint template's own content well, narrower than body (which also carries the site's mega-menu) and wider than any single paragraph; it includes the page's own masthead furniture ('KAREN L. SMITH, MD, MPH' over a governor line reading 'EDMUND G. BROWN JR.' above a May 28, 2025 letter) exactly as the 2026-08-30 packet recorded a similar mismatched-masthead artifact — reproduced as published, not corrected. strip-zero-width removes the SharePoint editor's own U+200B runs between paragraphs (visible as nothing to a reader); it does not touch the curly apostrophes and quotation marks the letter itself prints, which are left exactly as the publisher set them."
+    },
+    {
+      "n": 2,
+      "title": "California Department of Health Care Services, Office of Administrative Hearings and Appeals — Transfer Discharge and Refusal to Readmit Unit",
+      "url": "https://www.dhcs.ca.gov/forms-laws-publications/laws-and-regulations/transfer-discharge-and-refusal-to-readmit-unit/",
+      "source_date": "page modified 2026-07-15 (meta article:modified_time)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "main",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "The 2026-08-30 standing packet recorded dhcs.ca.gov as returning a 212-byte script shell to curl and captured this source through the session's HTTP fetch tool. Retested 2026-09-04: plain curl with a browser user-agent now returns 200 with the full rendered page (84 KB), including the OAHA phone, fax, email and e-filing-portal sentence and the same 'page modified 2026-07-15' meta value the standing packet recorded — the same document, reachable by a plainer transport. 'main' is this template's own article element and excludes the site's header and footer navigation."
+    },
+    {
+      "n": 3,
+      "title": "California Department of Aging, Long-Term Care Ombudsman (consumer page)",
+      "url": "https://aging.ca.gov/programs_and_services/long-term_care_ombudsman/",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "The 2026-08-30 standing packet was captured the same way (curl, browser user-agent) and recorded its own method as a tag strip over the <main> element; this template in fact carries no <main> tag, and '#main-content' omits the site's own top navigation ('About Us', 'Providers & Partners', ...) that the standing packet's body plainly carries ('Skip Navigation Links', 'About Us', 'Careers with CDA', ...). 'body' is the narrowest scope that is honestly stated and a safe superset of the standing packet's own text, matching the convention the Florida and New York recipes already use for this reason."
+    },
+    {
+      "n": 4,
+      "title": "California Health and Safety Code section 1599.1 (Skilled Nursing and Intermediate Care Facility Patient's Bill of Rights)",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=1599.1",
+      "source_date": "amended by Stats. 2023, Ch. 794, Sec. 3, effective January 1, 2024",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "#codeLawSectionNoHead",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Same host, method and scope as the standing packet's Source 4; re-fetched 2026-09-04 and unchanged (same closing credit line, 'Amended by Stats. 2023, Ch. 794, Sec. 3. (AB 48) Effective January 1, 2024.'). The line breaks inside sentences are leginfo's own markup."
+    },
+    {
+      "n": 5,
+      "title": "22 CCR 72527, Patients' Rights",
+      "url": "https://govt.westlaw.com/calregs/Document/IBAE556025B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default)",
+      "source_date": "last substantively amended 6-23-2011 (Register 2011, No. 25); database current through 8/28/26, Register 2026, No. 35 (both per the document's own Currentness/history text)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "#co_document",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "The 2026-08-30 standing packet recorded govt.westlaw.com/calregs as serving rule bodies only to a scripted client, returning a 4.8 KB shell with no rule text to direct capture, and left 72527 capture-pending. That test used the GUID printed on DHCS's own page (I71F6A1A0A39811E08822C131FF5E2170), which returns 'Document not found' from a real browser as well as from curl -- the GUID itself is stale, not the transport. Found again 2026-09-04 by browsing govt.westlaw.com/calregs from its own home page (Title 22 > Division 5 > Chapter 3 > Article 5, no search box or session token involved) to the section's current address, IBAE556025B6111EC9451000D3A7C4BC3, which a plain curl with a browser user-agent resolves directly with no session cookie. This is a stale-link problem, not a scripted-client-over-an-API problem, so it is captured as an ordinary curl source rather than under the agency-API rule. #co_document is the platform's own per-section container: it holds the breadcrumb, the section heading, currentness marker, full text, Credits/NOTE, HISTORY and the 'This database is current through' line, and excludes the page's site chrome and the 'Documents In Sequence' footer navigation."
+    },
+    {
+      "n": 6,
+      "title": "22 CCR 72520, Bed Hold",
+      "url": "https://govt.westlaw.com/calregs/Document/IBABCBF5E5B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default)",
+      "source_date": "last amendment 5-15-85 (Register 85, No. 21), with a clarifying sentence added afterward per History item 3 (undated in the document's own text); database current through 8/28/26, Register 2026, No. 35",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "#co_document",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Same host, method, GUID-discovery route and scope as Source 5, found the same session by the same browse path (Article 5's own section list). Also capture-pending in the 2026-08-30 standing packet under the same stale-GUID problem (DHCS's page links I7311F370D4BC11DE8879F88E8B0DAAAE, which also 'Document not found's)."
+    },
+    {
+      "n": 7,
+      "title": "22 CCR 72519, Patient Transfer",
+      "url": "https://govt.westlaw.com/calregs/Document/IBABA4E545B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default)",
+      "source_date": "no HISTORY entries printed in the document's own text (Credits/NOTE only); database current through 8/28/26, Register 2026, No. 35",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "#co_document",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Same host, method and scope as Sources 5 and 6, found the same way while reading Article 5's section list (this rule immediately precedes 72520 there). Not linked by either AFL 25-17 or the DHCS OAHA page; captured because its own text cross-references 'Section 72527(a)(5)', which after 72527's 2011 renumbering names a different right (informed consent) than the transfer/discharge right at 72527(a)(6) -- a discrepancy inside the state's own current regulations, recorded as a finding rather than corrected."
+    },
+    {
+      "n": 8,
+      "title": "22 CCR 51535.1, Bed Hold for Acute Hospitalization",
+      "url": "https://govt.westlaw.com/calregs/Document/I6300B9C25B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default)",
+      "source_date": "last operative amendment 12-24-2013, Certificate of Compliance filed 5-22-2014 (Register 2014, No. 21); database current through 8/28/26, Register 2026, No. 35",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "#co_document",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Found 2026-09-04 by following 72520(a)(2)'s own cross-reference ('Except as provided in Section 51535.1') and browsing to it (Title 22 > Division 3 > Subdivision 1 > Chapter 3 > Article 7's own section list, no search box). Same host, method and #co_document scope as Sources 5-7. This is the Medi-Cal reimbursement counterpart to 72520's licensing bed-hold rule: it states the same seven-day cap for payment purposes and adds the procedural detail (physician notice, day-of-departure/day-of-return counting, termination on death) that 72520 does not. Its own printed payment-rate table runs only through fiscal year 2006-07 despite the section's 'Currentness' marker and a 2013-2014 amendment to the same subsection; both facts are quoted rather than reconciled."
+    },
+    {
+      "n": 9,
+      "title": "Welfare and Institutions Code section 14126.029 (facility compliance with an OAHA hearing decision)",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=WIC&sectionNum=14126.029",
+      "source_date": "added by Stats. 2021, Ch. 143, Sec. 384, effective July 27, 2021; conditionally operative per section 14126.035(a) and inoperative after December 31, 2027 per section 14126.036, both per the document's own closing credit line",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "#codeLawSectionNoHead",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Same host, method and scope as Source 4. Found 2026-09-04 searching for any California statement of what happens once an OAHA hearing is decided, beyond HSC 1599.1(h)'s Medi-Cal-eligible refusal-to-readmit case; it states a facility must comply within three calendar days of service of an OAHA decision finding an improper transfer, discharge, or refusal to readmit, on pain of a per-day penalty, and applies to TDA and RTR decisions alike rather than only the RTR/Medi-Cal case. It is a post-decision compliance deadline, not a pendency statement (it does not say whether a resident stays in place while the hearing is pending), and its own closing credit line states it is conditionally operative on a skilled-nursing quality-assurance fee remaining approved by CMS and is 'Inoperative after December 31, 2027' -- both quoted rather than assessed, because whether the operative condition is currently met is not a fact this capture can verify."
+    }
+  ]
+}

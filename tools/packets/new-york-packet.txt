@@ -1,18 +1,24 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: new-york
-ASSEMBLED: 2026-09-03
+ASSEMBLED: 2026-09-04
 
 CAPTURE NOTES:
-- Captured by tools/capture.py from tools/recipes/new-york.json (recipe digest 7ca8a9110b0c). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Captured by tools/capture.py from tools/recipes/new-york.json (recipe digest 2578dffd9ed4). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
 - SOURCE 1: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
   The standing packet's own method is 'tag strip over the <main> element', but this response has no <main> tag and its id="main" div omits the page's own 'Revised: April 2022' line and site navigation that the standing packet plainly carries — the original capture must have scoped wider than that div, whatever tool produced it. 'body' is the widest legal scope and reproduces everything the standing packet holds (the nav menu, the rights list, the 'Revised' line, the footer) plus nothing narrower would have dropped; a superset is safe here per the recipe README. Plain curl with a browser user-agent returns 200 with the full server-rendered page; no WAF or JS gate sits in front of this host.
 - SOURCE 2: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
   Same host and template as Source 1; 'body' scope for the same reason, and it carries the mailing address (NYS DOH Centralized Complaint Intake Program, 875 Central Ave, Albany, NY 12206), the fax number and the complaint-intake email, none of which sit in a narrower main-content div alone on this template.
 - SOURCE 3: transport curl; extractor html-text; scope main; filters trim-lines, collapse-blank-runs.
   CLAUDE.md records aging.ny.gov as 403-to-curl from earlier PDF traps, and the standing packet was captured through a session fetch tool for the same reason on this page. Retested 2026-09-03: a plain curl with NO user-agent returns HTTP 200 with the full server-rendered document. Sending a browser user-agent string instead trips a Cloudflare interstitial ('Just a moment...') and returns HTTP 403 — the inverse of the usual pattern recorded elsewhere in CLAUDE.md, where a bare fetch is what gets refused. This host's <main> element holds the phone number, 'Claudette Royal, the New York State Ombudsman', and the rest of the page's own prose, and excludes the site's navigation chrome; no mailing address is stated on this page, so none is expected in the capture.
+- SOURCE 4: transport curl; extractor html-text; scope main; filters trim-lines, collapse-blank-runs.
+  The baseline packet (2026-08-30) recorded this regulation as capture-pending: 'the department's regulation portal returned HTTP 404 to the section path tried'. Found 2026-09-04 at regs.health.ny.gov, the Department of Health's own Drupal-based publication of Title 10 NYCRR ('New York Codes, Rules and Regulations' per its own <title>), reached by following the site's own volume/chapter/subchapter/article/part navigation from its home page (volume-c-title-10 > chapter-v-medical-facilities > subchapter-medical-facilities-minimum-standards > article-3-residential-care-facilities > part-415-nursing-homes-minimum-standards > this section) rather than by guessing a URL. Plain curl with no user-agent and with a curl user-agent both return HTTP 403; a browser user-agent returns HTTP 200 with the full server-rendered page — the same pattern CLAUDE.md already records for several other hosts. 'main' scope carries the breadcrumb, the page's own 'Section 415.3 - Residents' rights' title, its 'Effective Date 02/24/2022' block, and the full regulatory text of subdivisions (a) through (i); it excludes the site's top navigation bar and the sidebar 'UP' button, neither of which is evidence. Checked for the hidden-node and HTML-comment artifacts CLAUDE.md records for other Drupal/SharePoint templates: the only 'display:none' on this page sits inside a <noscript><style> block in <head>, outside 'main' and inside a tag this extractor already drops whole; the only HTML comment is an IE conditional comment near the end of <body>, likewise outside 'main'. Neither reaches the captured text.
+- SOURCE 5: transport curl; extractor html-text; scope main; filters trim-lines, collapse-blank-runs.
+  Found 2026-09-04 alongside source 4, on the Title 18 (Social Services / Medicaid) side of the same portal (volume-c-title-18 > subchapter-e-medical-care > article-3-policies-and-standards-governing-provision-medical-and-dental-care > part-505-medical-care > this section), pursuing the baseline packet's finding that no first-party statement of the Medicaid bed-hold period had been found. Subdivision (d), 'Reserved Bed Days', states the NF-Medicaid bed-reservation day counts the two consumer pages in sources 1-2 describe only as a 'bed-hold policy' with no number. Same transport pattern as source 4 (browser user-agent required; curl and no-user-agent both 403); same 'main' scope for the same reason; checked for the same hidden-node and comment artifacts with the same result (neither reaches 'main').
+- SOURCE 6: transport curl; extractor docx; scope paragraphs-and-tables; filters none.
+  Linked from source 2 ('Discharge Appeal template (DOCX) - Available in the following languages: ...'), recorded capture-pending at baseline. This is the English-language version; the other ten linked language versions are not captured, matching the project's Spanish-page convention of published-translations-only and this page carrying no non-English edition yet. The document is the department's own fillable notice form, citing '10 NYCRR § 415.3 and 42 CFR § 483.15' on its face; it states the same 30-day/60-day/appeal structure as sources 1-2 and adds two things neither consumer page states: a sentence that a resident who remains in the facility pending an appeal 'may be liable for the cost to stay at the facility pending the appeal if the resident loses their appeal', and the full published contact block for Disability Rights New York, the protection-and-advocacy agency 415.3(i)(1)(v)(h) requires the notice to name for residents with mental illness or developmental disabilities. The file has 10 tables, each with no cells holding text (checkbox/layout scaffolding only), so 'paragraphs-and-tables' and 'paragraphs-only' extract identically here; the wider setting is used for consistency with the California packet's convention for this extractor.
 
-SOURCE 1: New York State Department of Health, Transfer and Discharge Resident Rights | https://www.health.ny.gov/facilities/nursing/rights/transfer_discharge.htm | source date: Revised: April 2022 | retrieved: 2026-09-03
+SOURCE 1: New York State Department of Health, Transfer and Discharge Resident Rights | https://www.health.ny.gov/facilities/nursing/rights/transfer_discharge.htm | source date: Revised: April 2022 | retrieved: 2026-09-04
 Google Tag Manager (noscript)
 
  End Google Tag Manager (noscript)
@@ -443,7 +449,7 @@ BLUESKY
 
 <script type="text/javascript" src="/fonts/fontawesome-7.1.0-pp/v4-shims.min.js"></script>
 
-SOURCE 2: New York State Department of Health, Nursing Home Transfer or Discharge Appeal | https://www.health.ny.gov/facilities/nursing/rights/transfer_discharge_appeal.htm | source date: Revised: July 2026 | retrieved: 2026-09-03
+SOURCE 2: New York State Department of Health, Nursing Home Transfer or Discharge Appeal | https://www.health.ny.gov/facilities/nursing/rights/transfer_discharge_appeal.htm | source date: Revised: July 2026 | retrieved: 2026-09-04
 Google Tag Manager (noscript)
 
  End Google Tag Manager (noscript)
@@ -776,7 +782,7 @@ BLUESKY
 
 <script type="text/javascript" src="/fonts/fontawesome-7.1.0-pp/v4-shims.min.js"></script>
 
-SOURCE 3: New York State Office for the Aging, Long Term Care Ombudsman Program | https://aging.ny.gov/long-term-care-ombudsman-program | source date: none stated on page | retrieved: 2026-09-03
+SOURCE 3: New York State Office for the Aging, Long Term Care Ombudsman Program | https://aging.ny.gov/long-term-care-ombudsman-program | source date: none stated on page | retrieved: 2026-09-04
 Long Term Care Ombudsman Program
 
 An Advocate and Resource
@@ -906,4 +912,727 @@ Read the Report
 Annual Report Archives
 
 2020 LTCOP Annual Report
+
+SOURCE 4: 10 NYCRR 415.3, Residents' rights — New York Codes, Rules and Regulations | https://regs.health.ny.gov/content/section-4153-residents-rights | source date: Effective Date 02/24/2022 | retrieved: 2026-09-04
+Home
+
+Section 415.3 - Residents' rights
+
+Effective Date
+
+02/24/2022
+
+415.3 Residents' rights. (a) The facility shall ensure that all residents are afforded their right to a dignified existence, self-determination, respect, full recognition of their individuality, consideration and privacy in treatment and care for personal needs, and communication with and access to persons and services inside and outside the facility. The facility shall protect and promote the rights of each resident, and shall encourage and assist each resident in the fullest possible exercise of these rights as set forth in subdivisions (b) - (i) of this section. The facility shall also consult with residents in establishing and implementing facility policies regarding residents' rights and responsibilities.
+
+(1) The facility shall advise each member of the staff of his or her responsibility to understand, protect and promote the rights of each resident as enumerated in this section.
+
+(2) The facility shall fully inform the resident and the resident's designated representative both orally and in writing in a method of communication that the individuals understand the resident's rights and all rules and regulations governing resident conduct and responsibilities during the stay in the facility. Such notification shall be made prior to or upon admission and during the resident's stay. Receipt of such information, and any amendments to it, shall be acknowledged in writing. A summary of such information shall be provided by the Department and posted in the facility in large print and in language that is easily understood.
+
+(3) The written information provided pursuant to paragraph (2) of this subdivision shall include but not be limited to a listing of those resident rights and facility responsibilities enumerated in subdivisions (b) through (i) of this section. The facility's policies and procedures shall also be provided to the resident and the resident's designated representative upon request.
+
+(4) The facility shall communicate to the resident an explanation of his or her responsibility to obey all reasonable regulations of the facility and to respect the personal rights and private property of other residents.
+
+(5) Any written information required by this Part to be posted shall be posted conspicuously in a public place in the facility that is frequented by residents and visitors, posted at wheelchair height.
+
+(b) Admission rights. The nursing home shall protect and promote the rights of residents and potential residents by establishing and implementing policies which ensure that the facility:
+
+(1) shall not require a third party guarantee of payment to the facility as a condition of admission, or expedited admission, or continued stay in the facility;
+
+(2) shall not charge, solicit, accept or receive, in addition to any amount otherwise required to be paid by third party payors, any gift, money, donation or other consideration as a precondition of admission, expedited admission or continued stay in the facility except that arrangements for prepayment for basic services not exceeding three months shall not be precluded by this paragraph;
+
+(3) shall not require residents or potential residents to waive their rights to Medicare or Medicaid benefits;
+
+(4) shall not require oral or written assurance that residents or potential residents are not eligible for, or will not apply for, Medicare or Medicaid benefits;
+
+(5) shall obey all pertinent state and local laws which prohibit discrimination against individuals entitled to Medicaid benefits;
+
+(6) may require an individual who has legal access to a resident's income or resources available to pay for facility care, to sign a contract, without incurring personal financial liability, to provide the facility payment from the resident's income or resources;
+
+(7) may charge a resident who is eligible for Medicaid for items and services the resident has requested and received, and that are not specified at the time of admission as included in basic nursing home services, so long as the facility gives proper notice of the availability and cost of these items and services to the resident and does not condition the resident's admission or continued stay on the request for and receipt of such additional items and services; and
+
+(8) may solicit, accept or receive a charitable, religious or philanthropic contribution from an organization or from a person unrelated to the resident, or potential resident, only to the extent that the contribution is not a condition of admission, expedited admission, or continued stay in the facility.
+
+(c) Right to Information on Home and Community-Based Services. The nursing home shall ensure that all residents are provided with information on home and community-based services and community transitions programs that may be available to support the resident in returning to the community. To ensure that all residents are afforded the right to exercise their right to live in the most integrated setting, the facility shall:
+
+(1) advise all residents upon admission, of their right to live in the most integrated and least restrictive setting, with considerations for the resident’s medical, physical, and psychosocial needs;
+
+(2) provide all residents upon admission with information on home and community-based services and community transition programs;
+
+(3) refer all residents to the Local Contact Agency or a community-based provider of the resident or designated representative’s choosing whenever the resident requests information about returning to the community, or whenever the resident requests to talk to someone about returning to the community during any state or federally mandated assessment;
+
+(4) post in a public area of the facility, at wheelchair height, contact information for the Local Contact Agency;
+
+(5) have staff available to discuss options for discharge planning, with consideration for the resident’s medical, physical, and psychosocial needs; and
+
+(6) ensure that all discharge activities align with subdivision (i) of this section.
+
+(d) Protection of Legal Rights. (1) Each resident shall have the right to:
+
+(i) exercise his or her rights as a resident of the facility and as a citizen or resident of the United States and New York State including the right to vote, with access arranged by the facility and to this end may voice grievances without discrimination or reprisal for voicing the grievances, and have a right of action for damages or other relief for deprivations or infringements of his or her right to adequate and proper treatment and care established by any applicable statute, rule, regulation or contract; (ii) recommend changes in policies and services to facility staff and/or to any outside representatives, free of interference, coercion, discrimination, restraint or reprisal from the facility and to obtain prompt efforts by the facility to resolve grievances the resident may have, including those with respect to the behavior of other residents;
+
+(iii) exercise his or her individual rights or have his or her rights exercised by a person authorized by state law;
+
+(iv) inspect all records including clinical records pertaining to himself or herself within 24 hours after an oral or written request to the facility and, after receipt of such records for inspection, to purchase at a cost which is the lower of the cost incurred by the facility in production of the record or 75 cents per page, photocopies of the records or any portions of them upon request and two working days advance notice to the facility. The designated representative who has authority to make health care decisions for the resident shall likewise have access to the resident's records in accordance with this subparagraph, State law and the rights of a competent resident to deny such access. A resident or such designated representative shall not be denied access to the clinical records solely because of inability to pay.
+
+(v) examine the results of the most recent survey of the facility conducted by federal or State surveyors including any statement of deficiencies, any plan of correction in effect with respect to the facility and any enforcement actions taken by the Department of Health. The results shall also be made available by the facility for examination. They shall be made available in a place readily accessible to residents and designated representatives without staffing assistance;
+
+(vi) receive information from agencies acting as resident advocates, and be afforded the opportunity to contact these agencies;
+
+(vii) be free from verbal, sexual, mental or physical abuse, corporal punishment and involuntary seclusion, and free from chemical and physical restraints except those restraints authorized in accordance with section 415.4 of this Part;
+
+(viii) exercise his or her civil and religious liberties, including the right to independent personal decisions and knowledge of available choices, which shall not be infringed; and
+
+(ix) request, or have the resident's designated representative request, and be provided information concerning his or her specific assignment to a patient classification category as contained in Appendix 13-A of this Title, entitled, "Patient Categories and Case Mix Indices Under Resource Utilization Group (RUG-II) Classification System."
+
+(2) With respect to its responsibilities to the resident the facility shall:
+
+(i) furnish a written description of legal rights which includes:
+
+(a) a description of the manner of protecting personal funds, under subdivision (h) of section 415.26 of this Part; and
+
+(b) a statement that the resident may file a complaint with the facility or the New York State Department of Health concerning resident abuse, neglect, mistreatment and misappropriation of resident property in the facility. The statement shall include the name, address and telephone number of the office established by the
+
+Department to receive complaints and of the State Office for the Aging Ombudsmen Program;
+
+(ii) promptly notify the resident and the resident's designated representative when there is:
+
+(a) a change in room. Except when the medical condition of the resident requires an immediate room change or an emergency situation has developed, such change in room shall require prior notice and consultation with the resident as well as reasonable accommodation of any resident needs or preferences;
+
+(b) a change in roommate assignment which shall be acceptable, where possible, to all affected residents; or
+
+(c) a change in resident rights under Federal or State law or regulations as specified in this section;
+
+(iii) record and periodically update the address and phone number of the resident's designated representative;
+
+(iv) provide immediate access to any resident by the following:
+
+(a) any representative of the Secretary of Health and Human Services;
+
+(b) any representative of the Department of Health;
+
+(c) the resident's responsible physician;
+
+(d) ombudsmen who are duly certified and designated by the State Office for the Aging;
+
+(e) representatives of the Commission on Quality of Care for the Mentally Disabled which is responsible for the protection and advocacy system for developmentally disabled individuals and mentally ill individuals;
+
+(f) immediate family or other relatives of the resident, subject to the resident's right to deny or withdraw consent at any time; and
+
+(g) others who are visiting with the consent of the resident, subject to reasonable restrictions and the resident's right to deny or withdraw consent at any time;
+
+(v) post the names, addresses and telephone numbers of all pertinent state client advocacy groups and provide reasonable access to any resident by any entity or individual that provides health, social, legal or other services to the resident, subject to the resident's right to deny or withdraw consent at any time;
+
+(vi) comply with the provisions of Part 411 of this Title regarding Ombudsmen Access to Residential Health Care Facilities; and
+
+(vii) inform residents of the facility's visiting hour policies.
+
+(e) Right to Privacy. Each resident shall have the right to:
+
+(1) personal privacy and confidentiality of his or her personal and clinical records which shall reflect:
+
+(i) accommodations, medical treatment, written and telephone communications, personal care, associations and communications with persons of his or her choice, visits, and meetings of family and resident groups. Resident and family groups shall be provided with private meeting space and residents shall be given access to a private area for visits or solitude. Such requirement shall not require the facility to provide a private room for each resident; and
+
+(ii) the resident's right to approve or refuse the release of personal and clinical records to any individual outside the facility except when:
+
+(a) the resident is transferred to another health care institution; or
+
+(b) record release is required by law;
+
+(2) privacy in written communications, including the right to:
+
+(i) send and receive mail promptly that is unopened; and
+
+(ii) have access to stationery, postage and writing implements at the resident's own expense; and
+
+(3) regular access to the private use of a telephone that is wheelchair accessible and usable by hearing impaired and visually impaired residents.
+
+(f) Right to Clinical Care and Treatment. (1) Each resident shall have the right to:
+
+(i) adequate and appropriate medical care, and to be fully informed by a physician in a language or in a form that the resident can understand, using an interpreter when necessary, of his or her total health status, including but not limited to, his or her medical condition including diagnosis, prognosis and treatment plan. Residents shall have the right to ask questions and have them answered;
+
+(ii) refuse to participate in experimental research and to refuse medication and treatment after being fully informed and understanding the probable consequences of such actions;
+
+(iii) choose a personal attending physician from among those who agree to abide by all federal and state regulations and who are permitted to practice in the facility;
+
+(iv) be fully informed in advance about care and treatment and of any changes in that care or treatment that may affect the resident's well-being;
+
+(v) participate in planning care and treatment or changes in care and treatment. Residents adjudged incompetent or otherwise found to be incapacitated under the laws of the State of New York shall have such rights exercised by a designated representative who will act in their behalf in accordance with State law; and
+
+(vi) self-administer drugs if the interdisciplinary team, as defined by Section 415.11, has determined for each resident that this practice is safe.
+
+(2) With respect to its responsibilities to the resident, the facility shall:
+
+(i) inform each resident of the name, office address, phone number and specialty of the physician responsible for his or her own care.
+
+(ii) except in a medical emergency, consult with the resident immediately if the resident is competent, and notify the resident's physician and designated representative within 24 hours when there is:
+
+(a) an accident involving the resident which results in injury requiring professional intervention;
+
+(b) a significant improvement or decline in the resident's physical, mental, or psychosocial status in accordance with generally accepted standards of care and services;
+
+(c) a need to alter treatment significantly; or
+
+(d) a decision to transfer or discharge the resident from the facility as specified in subdivision (i) of this section; and
+
+(iii) provide all information a resident or the resident's designated representative when permitted by State law, may need to give informed consent for an order not to resuscitate and comply with the provisions of section 405.43 of this Subchapter regarding orders not to resuscitate. Upon resident request the facility shall furnish a copy of the pamphlet, "Do Not Resuscitate Orders - A Guide for Patients and Families".
+
+(g) Residential Rights. Each resident shall have the right to:
+
+(1) refuse to perform services for the facility. The resident may perform such services, if he or she chooses, only when:
+
+(i) there is work available in the facility that the resident is capable of safely performing;
+
+(ii) the facility has documented the need or desire for work in the plan of care;
+
+(iii) the plan specifies the nature of the services performed and whether the services are voluntary or paid;
+
+(iv) compensation for paid services is at or above prevailing rates; and
+
+(v) the resident agrees to the work arrangement described in the plan of care;
+
+(2) retain, store securely and use personal possessions, including some furnishings, and appropriate clothing, as space permits, unless to do so would infringe upon the rights or health and safety of the resident or other residents in which case the facility shall explore alternatives through discussion with the resident, the resident council or interdisciplinary care team, and provide or assist in the arrangement of storage for possessions. The resident shall have the right to locked storage space in his or her room;
+
+(3) share a room with his or her spouse, relative or partner when these residents live in the same facility and both consent to the arrangement. If a spouse, relative or partner resides in a location out of the facility, the resident shall be assured of privacy for visits;
+
+(4) participate in the established residents' council;
+
+(5) meet with, and participate in activities of social, religious and community groups at his or her discretion; and
+
+(6) receive, upon request, kosher food or food products prepared in accordance with the Hebrew orthodox religious requirements when the
+
+resident, as a matter of religious belief, desires to observe Jewish dietary laws.
+
+(h) Financial Rights. (1) Each resident shall have the right to manage his or her financial affairs or authorize in writing the facility to manage personal finances in accordance with paragraph (5) of subdivision (h) of section 415.26 of this Part. The facility may not require residents to deposit their personal funds with the facility;
+
+(2) With respect to its responsibilities to the resident, the facility shall:
+
+(i) inform each resident who is entitled to Medicaid benefits, in writing, at the time of admission to the nursing home or, when the resident becomes eligible for Medicaid of:
+
+(a) the items and services that are included in nursing home services under the State plan and for which the resident may not be charged;
+
+(b) those other items and services that the facility offers and for which the resident may be charged, and the amount of charges for those services; and
+
+(c) the clear distinction between the two lists required by clauses (a) and (b) of this subparagraph;
+
+(ii) inform each resident when changes are made to the items and services specified in clauses (a) and (b) of subparagraph (i) of this paragraph;
+
+(iii) inform each resident verbally and in writing before, or at the time of admission, and periodically when changes occur during the resident's stay, of services available in the facility and of charges for those services, including any charges for services not covered by sources of third party payment or by the facility's basic per diem rate; and
+
+(iv) prominently display in the facility written information, and provide to residents and potential residents oral and written information about how to apply for and use Medicare and Medicaid benefits, and how to receive refunds for previous payments covered by such benefits as well as a description of the requirements and procedures for establishing eligibility for Medicaid, including the right to request an assessment which will determine the extent of a couple's non-exempt resources at the time of institutionalization and attribute to the community spouse an equitable share of resources which cannot be considered available for payment toward the cost of the institutionalized spouse's medical care in his or her process of spending down to Medicaid eligibility levels.
+
+(i) Transfer and discharge rights. Transfer and discharge shall include movement of a resident to a bed outside of the certified facility whether that bed is in the same physical plant or not. Transfer and discharge shall not refer to movement of a resident to a bed within the same certified facility, and does not include transfer or discharge made in compliance with a request by the resident, the resident’s legal representative or health care agent, as evidenced by a signed and dated written statement, or those that occur due to incarceration of the resident.
+
+(1) With regard to the transfer or discharge of residents, the facility shall:
+
+(i) permit each resident to remain in the facility, and not transfer or discharge the resident from the facility unless such transfer or discharge is made in recognition of the resident's rights to receive considerate and respectful care, to receive necessary care and services, and to participate in the development of the comprehensive care plan and in recognition of the rights of other residents in the facility.
+
+(a) The resident may be transferred only when the interdisciplinary care team, in consultation with the resident or the resident's designated representative, determines that:
+
+(1) the transfer or discharge is necessary for the resident's welfare and the resident's needs cannot be met after reasonable attempts at accommodation in the facility;
+
+(2) the transfer or discharge is appropriate because the resident's health has improved sufficiently so the resident no longer needs the services provided by the facility;
+
+(3) the safety of individuals in the facility is endangered; or
+
+(4) The health of individuals in the facility is endangered;
+
+(b) Transfer and discharge shall also be permissible when the resident has failed, after reasonable and appropriate notice, to pay for (or to have paid under Medicare, Medicaid or third party insurance) a stay at the facility. For a resident who becomes eligible for Medicaid after admission to a facility, the facility may charge a resident only allowable charges under Medicaid. Such transfer or discharge shall be permissible only if a charge is not in dispute, no appeal of a denial of benefits is pending, or funds for payment are actually available and the resident refuses to cooperate with the facility in obtaining the funds.
+
+(c) Transfer or discharge shall also be permissible when the facility discontinues operation and has received approval of its plan of closure in accordance with subdivision (i) of Section 401.3 of this Subchapter.
+
+(ii) ensure complete documentation in the resident's clinical record when the facility transfers or discharges a resident under any of the circumstances specified in subparagraph (i) of this paragraph. The documentation shall be made by:
+
+(a) the resident's physician and, as appropriate, interdisciplinary care team, when transfer or discharge is necessary under subclause (1) or (2) of clause (a) of subparagraph (i) of this paragraph; and
+
+(b) a physician when transfer or discharge is necessary due to the endangerment of the health of other individuals in the facility under subclause (3) of clause (a) of subparagraph (i) of this paragraph;
+
+(iii) before it transfers or discharges a resident:
+
+(a) notify the resident and designated representative, if any, and, if known, family member of the resident of the transfer or discharge and the reasons for the move in writing and in a language and manner the resident and/or family member understand;
+
+(b) record the reasons in the resident's clinical record; and
+
+(c) include in the notice the items described in subparagraph (v) of this paragraph;
+
+(iv) provide the notice of transfer or discharge required under subparagraph (iii) of this paragraph at least 30 days before the resident is transferred or discharged, except that notice shall be given as soon as practicable before transfer or discharge, but no later than the date on which a determination was made to transfer or discharge the resident, under the following circumstances:
+
+(a) the safety of individuals in the facility would be endangered;
+
+(b) the health of individuals in the facility would be endangered;
+
+(c) the resident's health improves sufficiently to allow a more immediate transfer or discharge;
+
+(d) an immediate transfer or discharge is required by the resident's urgent medical needs;
+
+(e) the transfer or discharge is the result of a change in the level of medical care prescribed by the resident’s physician; or
+
+(f) the resident has not resided in facility for 30 days.
+
+(v) include in the written notice specified in subparagraph (iii) of this paragraph the following:
+
+(a) The reason for transfer or discharge;
+
+(b) The specific regulations that support, or the change in Federal or State law that requires, the action;
+
+(c) The effective date of transfer or discharge;
+
+(d) The location to which the resident will be transferred or discharged;
+
+(e) a statement that the resident has the right to appeal the action to the State Department of Health, which includes:
+
+(1) an explanation of the individual’s right to request an evidentiary hearing appealing the decision;
+
+(2) the method by which an appeal may be obtained;
+
+(3) in cases of an action based on a change in law, an explanation of the circumstances under which an appeal will be granted;
+
+(4) an explanation that the resident may remain in the facility (except in cases of imminent danger) pending the appeal decision if the request for an appeal is made within 15 days of the date the resident received the notice of transfer/discharge;
+
+(5) in cases of residents discharged/transferred due to imminent danger, a statement that the resident may return to the first available bed if he or she prevails at the hearing on appeal; and
+
+(6) a statement that the resident may represent him or herself or use legal counsel, a relative, a friend, or other spokesman;
+
+(f) the name, address and telephone number of the State long term care ombudsman;
+
+(g) for nursing facility residents with developmental disabilities, the mailing address and telephone number of the agency responsible for the protection and advocacy of developmentally disabled individuals established under Part C of the Developmental Disabilities Assistance and Bill of Rights Act;
+
+(h) for nursing facility residents who are mentally ill, the mailing address and telephone number of the agency responsible for the protection and advocacy of mentally ill individuals established under the Protection and Advocacy for Mentally Ill Individuals Act;
+
+(vi) provide sufficient preparation and orientation to residents to ensure safe and orderly transfer or discharge from the facility in the form of a discharge plan which addresses the medical needs of the resident and how these will be met after discharge, and provide a discharge summary pursuant to section 415.11, subdivision (d) of this Title; and
+
+(vii) permit the resident, their legal representative or health care agent the opportunity to participate in deciding where the resident will reside after discharge from the facility.
+
+(2) The department shall grant an opportunity for a hearing to any resident who requests it because he or she believes the facility has erroneously determined that he or she must be transferred or discharged in accordance with the following:
+
+(i) the resident has the right to:
+
+(a) request a hearing to appeal the transfer or discharge notice at any time within 60 days from the date the notice of transfer or discharge is received by the resident;
+
+(b) remain in the facility pending an appeal determination if the appeal request is made within 15 days of the date of receipt of the transfer or discharge notice;
+
+(c) a post-transfer/discharge appeal determination if the resident did not request an appeal determination within 15 days of the date of receipt of the transfer or discharge notice;
+
+(d) return to the facility to the first available semi-private bed if the resident wins the appeal, prior to admitting any other person to the facility; and
+
+(e) represent him or herself, or use legal counsel, a relative, a friend or other spokesman.
+
+(ii) The resident or the resident’s representative as described in (2)(i)(e) of this paragraph must be given the opportunity to:
+
+(a) examine at a reasonable time before the date of the hearing, at the facility, and during the hearing, at the place of the hearing:
+
+(1) the contents of the resident’s file including his/her medical records; and
+
+(2) all documents and records to be used by the facility at the hearing on appeal;
+
+(b) bring witnesses;
+
+(c) establish all pertinent facts and circumstances;
+
+(d) present an argument without undue interference; and
+
+(e) question or refute any testimony or evidence, including the opportunity to confront and cross-examine adverse witnesses.
+
+(iii) All hearings must be conducted in accordance with Article 3 of the State Administrative Procedure Act, and in accordance with the following:
+
+(a) the presiding officer shall have the power to obtain medical assessments and psychosocial consultations, and the authority to issue subpoenas;
+
+(b) the nursing home shall have the burden of proof that the discharge or transfer is/was necessary and the discharge plan appropriate;
+
+(c) an administrative hearing must be scheduled within 90 days from the date of the request for a hearing on appeal; and
+
+(d) the parties must be notified in writing of the decision and provided information on the right to seek review of the decision, if review is available.
+
+(3) The facility shall establish and implement a bed-hold policy and a readmission policy that reflect at least the following:
+
+(i) At the time of admission and again at the time of transfer for any reason, the facility shall verbally inform and provide written information to the resident and the designated representative that specifies:
+
+(a) the duration of the bed-hold policy during which the resident is permitted to return and resume residence in the facility; and
+
+(b) the facility's policies regarding bed-hold periods, which must be consistent with subparagraph (iii) of this paragraph, permitting a resident to return.
+
+(ii) At the time of transfer of a resident for hospitalization or for therapeutic leave, a nursing home shall provide written notice to the resident and the designated representative, which specifies the duration of the bed-hold policy described in subparagraph (i) of this paragraph.
+
+(iii) A nursing home shall establish and follow a written policy under which a resident whose hospitalization or therapeutic leave exceeds the bed hold period is readmitted to the facility immediately upon the first availability of a bed in a semi-private room if the resident:
+
+(a) requires the services provided by the facility; and
+
+(b) is eligible for Medicaid nursing home services.
+
+(iv) A nursing home shall establish and follow a written policy under which a resident who has resided in the nursing home for 30 days or more and who has been hospitalized or who has been transferred or discharged on therapeutic leave without being given a bed-hold is readmitted to the facility immediately upon the first availability of a bed in a semi-private room if the resident:
+
+(a) requires the services provided by the facility; and
+
+(b) is eligible for Medicaid nursing home services
+
+(4) With regard to the assurance of equal access to quality care, the facility shall establish and maintain identical policies and practices regarding transfer, discharge and the provision of all required services for all individuals regardless of source of payment.
+
+Section 415.3 - Residents' rights
+
+Volume
+
+SOURCE 5: 18 NYCRR 505.9, Residential health care — New York Codes, Rules and Regulations | https://regs.health.ny.gov/content/section-5059-residential-health-care | source date: Effective Date 05/29/2019 | retrieved: 2026-09-04
+Home
+
+Section 505.9 - Residential health care.
+
+Effective Date
+
+05/29/2019
+
+505.9 Residential health care. (a) Qualifications for participation.
+
+(1) In-state nursing facility care. Nursing care must be provided only in a nursing facility, as defined in the regulations of the Department of Health, which:
+
+(i) holds a current operating certificate issued by the Department of Health;
+
+(ii) qualifies as, or has an application pending to become, a provider in the Medicare program pursuant to title XVIII of the Federal Social Security Act, unless the nursing facility provides care solely to pediatric patients;
+
+(iii) meets the Federal requirements for a "nursing home facility" under title XIX of the Federal Social Security Act; and
+
+(iv) has a current effective provider agreement with the Department of Social Services.
+
+(2) Out-of-state nursing facility care. When nursing facility care is provided to a medical assistance recipient in a nursing facility located outside New York State, such nursing facility must:
+
+(i) comply with applicable licensing or approval requirements established by the officially designated standard-setting authority in the state where the care was received;
+
+(ii) qualify as, or have an application pending to become a provider in the Medicare program pursuant to title XVIII of the Federal Social Security Act, unless the nursing facility provides care solely to pediatric patients;
+
+(iii) meet the Federal requirements for a "nursing facility" under title XIX of the Federal Social Security Act; and
+
+(iv) have a current provider agreement with the officially designated standard-setting authorities of the state in which the facility is located.
+
+(3) Out-of-state facilities lacking title XVIII certification. Medical assistance payments are available solely for those recipients admitted to and retained in nursing facility beds certified for participation in title XVIII of the Federal Social Security Act.
+
+(4) In-state intermediate facility care for the mentally retarded. In-state intermediate facility care for the mentally retarded must be provided only in intermediate care facilities for the mentally retarded that:
+
+(i) have valid operating licenses issued by the Office of Mental Retardation and Developmental Disabilities (OMRDD) under article 31 of the Mental Hygiene Law;
+
+(ii) have valid provider agreements with the Department of Social Services; and
+
+(iii) have been certified as intermediate care facilities for the mentally retarded by the OMRDD.
+
+(5) Out-of-state intermediate facility care for the mentally retarded. When intermediate facility care for the mentally retarded is provided to MA recipients in intermediate care facilities for the mentally retarded located in other states, payment must be made only for care provided by out-of-state facilities that:
+
+(i) comply with applicable licensing requirements established by the officially designated standard-setting authorities of the states in which the facilities are located;
+
+(ii) have valid provider agreements with the officially designated standard-setting authorities of the states in which the facilities are located; and
+
+(iii) are certified as intermediate care facilities for the mentally retarded by the officially designated standard-setting authorities of the states in which the facilities are located.
+
+(b) Prior approval and prior authorization of level of care. (1) Prior approval of level of care.
+
+(i) Prior approval of the level of care when required by the Commissioner of the Department of Health, or his or her designee, is required before services provided in a nursing facility (NF) or intermediate care facility for the mentally retarded (ICF/MR) can be reimbursed under the MA Program.
+
+(ii) Prior approval of level of care will be granted in accordance with patient assessment criteria and standards promulgated or approved by the Commissioner of the Department of Health or his or her designee.
+
+(iii) Reviews of medical necessity must be made in accordance with standards promulgated or approved by the Commissioner of Health or his or her designees.
+
+(2) Prior authorization. Prior authorization by a local social services official for care in an NF or ICF/MR is required pursuant to Part 540 of this Title. In no case can prior authorization exceed the maximum eligibility period permitted by regulations of the Department of Social Services. Failure by an NF or ICF/MR to comply with the requirements of this subdivision may result in retroactive denial of authorization by the local social services official. In addition, if the Commissioner of Health, or his or her designee, determines that a recipient received a level of care that was not medically necessary, authorization will be retroactively rescinded.
+
+(c) Maximum reimbursable rate. The maximum reimbursable rate for payments made for nursing facility care provided in a nursing facility located in the State of New York will be at the rate approved by the Director of the Budget.
+
+(d) Reserved Bed Days. (1) The department will pay the medical institutions listed in paragraph (3) of this subdivision to reserve a bed for an MA recipient temporarily hospitalized or on leave of absence from the institution for one or more reserved bed days; however, the department will not pay to reserve an NF bed for a recipient 21 years of age or older who is temporarily hospitalized unless such recipient is receiving hospice services within the NF. A reserved bed day is a day for which the department pays a medical institution to reserve an MA recipient's bed while he or she is temporarily hospitalized or on leave of absence from the institution. The recipient must be absent from the institution overnight for the day to be considered a reserved bed day. A recipient is considered to be absent overnight when he or she is absent later than the time at which the institution normally conducts its patient census. The day the recipient departs for temporary hospitalization or the leave of absence begins is counted as a reserved bed day. The day the recipient returns is not counted as a reserved bed day.
+
+(2) Payments necessary to reserve an NF bed for an MA recipient under 21 years of ago who is temporarily hospitalized or on leave of absence, as permitted by this section, will be made at the reserved bed rate established for the facility by the Commissioner of the Department of Health and approved by the Director of the Budget. Payments necessary to reserve a NF bed for an MA recipient 21 years of age or older, as permitted by this section, shall be made at 95 percent of the Medicaid rate otherwise payable to the facility with regard to such days of care in the case of a leave of absence, and at 50 percent of the Medicaid rate otherwise payable to the facility with regard to such days of care in the case of the temporary hospitalization of a recipient receiving hospice services within the facility. Payments to reserve a bed in any other medical facility listed in paragraph (3) of this subdivision, as permitted by this section, will be at the full rate established for the facility.
+
+(3) Medical institutions which may receive payments for reserved bed days are:
+
+(i) an NF;
+
+(ii) an ICF/MR;
+
+(iii) a specialty hospital as defined in 14 NYCRR Part 680;
+
+(iv) a psychiatric facility, including a residential treatment facility for children and youth (RTF);
+
+(v) a rehabilitation facility;
+
+(vi) a psychiatric or rehabilitation unit of a general hospital; or
+
+(vii) a hospice for individuals residing in NFs who are in receipt of hospice services.
+
+(4) General rules regarding payment for reserved bed days. (i) Payment for reserved bed days will be made in accordance with paragraphs
+
+(1) and (2) of this subdivision.
+
+(ii) Payment for bed reservations that are terminated will be from the date the recipient was admitted to the hospital through the date the hospital notified the institution of the circumstances that resulted in the termination.
+
+(iii) No payment will be made for periods when recipients are absent from the institution as a direct result of a labor dispute in the institution.
+
+(iv) No payment will be made for reserved bed days when a recipient's primary third-party resource is Medicare unless the recipient has been a patient in an NF for at least 30 days immediately before the hospitalization which resulted in the recipient's current Medicare coverage.
+
+(v) NFs, ICFs/MR, specialty hospitals and RTFs must indicate on billing claims that authorization to claim reimbursement for reserved bed days has been obtained when necessary according to paragraph (7) of this subdivision.
+
+(5) Length of stay and vacancy rate requirements.
+
+(i) Applicability to NFs, ICF/MRs and specialty hospitals. The department will pay an institution for a recipient's reserved bed days when:
+
+(a) the recipient has been a patient in the institution for at least 30 days since the date of his or her initial admission; and
+
+(b) the part of the institution to which the recipient will return has a vacancy rate of no more than 5 percent on the first day the recipient is hospitalized or on leave of absence. When computing vacancy rates, an institution must disregard beds that have been reserved for other patients/residents. ICFs/MR with more than 30 beds are exempt from this vacancy rate requirement.
+
+(ii) Applicability to RTFs. The department will pay an RTF for a recipient's reserved bed days when:
+
+(a) the recipient has been institutionalized for at least 15 consecutive days. The appropriate regional office of the Office of Mental Health (OMH) may waive this length-of-stay requirement for a recipient temporarily hospitalized for emergency psychiatric or medical care; and
+
+(b) the part of the RTF to which the recipient will return has a vacancy rate of not more than five percent or two vacant beds, whichever is greater, on the first day the recipient is hospitalized or on leave of absence. When computing a vacancy rate, the RTF must disregard beds that have been reserved for other patients.
+
+(iii) Applicability to psychiatric facilities and psychiatric units of general hospitals. The department will pay a facility for a recipient's reserved bed days when the recipient has been institutionalized for at least 15 consecutive days. There is no vacancy rate requirement for these psychiatric facilities or units.
+
+(iv) Applicability to rehabilitation facilities or rehabilitation units of general hospitals. The department will pay a facility for a recipient's reserved bed days when the recipient has been institutionalized for at least 30 consecutive days. There is no vacancy rate requirement for rehabilitation facilities or units.
+
+(6) Reserving beds for recipients who are temporarily hospitalized. ICFs/MR, RTFs and specialty hospitals, as a condition of participation in the MA program, must make, extend and terminate bed reservations for MA recipients who are temporarily absent from such institutions for hospitalization as provided in subparagraphs (i) through (iv) of this paragraph.  NFs must, as a condition of participation in the MA program, make, extend and terminate bed reservations for MA recipients who are either under 21 years of age, or receiving hospice services within the facility and temporarily absent from such institutions for hospitalization as provided in subparagraphs (i) through (iv) of this paragraph.
+
+(i) Reserving a recipient's bed. The institution must reserve a recipient's bed when the recipient is hospitalized and expected to return to the institution in 15 or fewer days, subject to the limitations set forth in this paragraph. Unless medically contraindicated, the institution must reserve the same bed and room the recipient occupied before being hospitalized. When an institution reserves a recipient's bed, it must notify the hospital by telephone and in writing, according to department instructions, that:
+
+(a) the recipient's bed has been reserved;
+
+(b) the hospital discharge planning coordinator must notify the institution by telephone of any changes in the recipient's condition during the period that the recipient's bed is reserved; and
+
+(c) the hospital discharge planning coordinator must notify the institution of the recipient's planned discharge date by the morning of the 4th day of hospital care. The hospital discharge planning coordinator must also notify the institution by telephone if the recipient's planned discharge date must be adjusted after the 3rd and before the 16th day of hospital care because his or her condition has changed or additional medical information has become available. The hospital discharge planning coordinator must confirm in writing all bed reservation telephone communications.
+
+(ii) When a recipient's bed will not be reserved. Under certain circumstances a recipient's bed will not be reserved. The institution must notify the hospital where the recipient is admitted that it is not reserving the recipient's bed. The institution must make appropriate notes on the recipient's transfer records or telephone the hospital within 24 hours after the recipient has been admitted if the recipient's bed will not be reserved. The institution also must document its decision not to reserve the bed. If a bed is not reserved, the recipient must be given priority in readmission to the institution over persons referred to the institution for their first admissions. An NF, ICF/MR, RTF or specialty hospital cannot reserve a recipient's bed when:
+
+(a) it is clear when the recipient is hospitalized that he or she will not return to the institution within 15 days or fewer;
+
+(b) after hospitalization, the recipient will need a level of care the institution does not provide; or
+
+(c) the recipient does not want to return to the institution.
+
+(iii) Extending bed reservation. An NF, ICF/MR, RTF or specialty hospital must extend the bed reservation of a hospitalized recipient under the following circumstances:
+
+(a) if an extension will permit the recipient to return to the institution within 20 days of his or her admission to the hospital, the bed reservation must be extended up to 5 days beyond the 15-day limit; or
+
+(b) if an extension will permit a recipient hospitalized for acute psychiatric care to return to the RTF within 30 days of his or her admission to the hospital, the RTF must extend the recipient's reservation up to 15 days beyond the 15-day limit.
+
+(iv) Terminating bed reservations. (a) An NF, ICF/MR, RTF and specialty hospital must terminate a recipient's bed reservation when:
+
+(1) the planned discharge date determined by the hospital by the morning of the 4th day of hospital care is more than 15 days from the day the recipient was admitted; or
+
+(2) the hospital adjusted the recipient's planned discharge date between the morning of the 4th day of hospital care and the 16th day of hospital care and the new discharge date will not permit the recipient to return to the institution within 20 days of the hospital admission date, except as provided in clause (b) of this subparagraph.
+
+(b) An RTF must terminate a recipient's bed reservation if the recipient was hospitalized for acute psychiatric care, the recipient's planned discharge date was changed between the morning of the 4th day and 16th day of hospital care and the new discharge date will not permit the recipient to return to the institution within 30 days of the hospital admission date.
+
+(c) The hospital discharge coordinator must provide the institution with appropriate documentation regarding circumstances which caused the discharge date to be changed.
+
+(7) Reserving beds for recipients who are on leave of absence.
+
+(i) A recipient is on leave of absence when he or she is absent from the medical institution overnight to visit friends or relatives or to participate in a medically acceptable therapeutic or rehabilitative plan of care.
+
+(ii) An NF, ICF/MR, RTF and specialty hospital must, as a condition of participation in the MA program, reserve beds as follows:
+
+(a) Reserving the recipient's bed. A medical institution must reserve a recipient's bed when his or her plan of care provides for leaves of absence. Unless medically contraindicated, the institution must reserve the same bed and room the recipient occupied before the leave of absence. If a bed may not be reserved for a recipient under this paragraph, the institution must give priority to the recipient's readmission, over individuals referred for their first admissions.
+
+(b) Prior authorization for payment of leave of absence reserved bed days:
+
+(1) is not required for the first 18 of a recipient's reserved bed days during any 12-month period;
+
+(2) is required if a recipient's reserved bed days are more than 18 days in any 12-month period, except for a recipient in an RTF, ICF/MR or specialty hospital. The medical institution must request prior authorization from the recipient's social services district's MA professional director. Prior authorization will be granted only if the 18-day limit interferes with a physician's ability to prescribe an appropriate therapeutic or rehabilitative plan for the recipient; and
+
+(3) is required for a recipient's reserved bed days in an RTF which exceed 75 days in any 12-month period or four days per single leave. The RTF must request prior authorization from the appropriate regional office of the OMH for payment of the excess reserved bed days. The request for prior authorization must be:
+
+(i) supported by verification from a physician;
+
+(ii) consistent with the RTF's written policy; and
+
+(iii) approved by the appropriate regional office of the OMH.
+
+(c) An ICF/MR or a specialty hospital may request payment without prior authorization for an unlimited number of reserved bed days in any 12-month period.
+
+(iii) For a recipient in a rehabilitation or psychiatric facility other than an RTF, or in the psychiatric or rehabilitation unit of a general hospital, the facility or unit must assure that leaves of absence are consistent with the institution's written policy on the use of leaves for therapy only, and limited to two days for any single leave, unless the recipient's social services district's MA professional director has approved an exception to this limitation prior to the leave.
+
+(iv) Other payment standards for leave of absence reserved bed days.
+
+(a) When a recipient incurs expenses, such as room and board, while on leave of absence, and the institution's per diem rate already reimburses the institution for these expenses, the institution must pay the cost. The recipient's social services district must give prior approval for an exception to this requirement. The social services district must ensure that costs included in the institution's per diem rate are reconciled with the institution's claim for payment of reserved bed days.
+
+(b) No payment for reserved bed days will be made if a recipient returns to the institution from a leave of absence and is then discharged within 24 hours. Prior approval by the recipient's social services district's MA professional director, or for a recipient in an RTF, by the Commissioner of the OMH or his or her designee, or, for recipients in ICFs/MR or specialty hospitals, by the Commissioner of the OPWDD or his or her designee, must be obtained for an exception to this provision.
+
+(v) An NF may not reserve a bed under this paragraph for a recipient who is temporarily receiving care in a hospital.
+
+(vi) A bed reservation under this paragraph must be terminated when the institution is informed that the recipient will not return from leave to the institution.
+
+(vii) When a recipient has been a patient in more than one medical institution within any 12-month period, the institution where the recipient is currently a patient must determine the number of paid leave of absence days in other institutions. Such institution must assure that the recipient's total number of leave days during the previous 12-month period does not exceed 18 days, unless prior authorization for extra days has been received or the 180-day limit is inapplicable. When a recipient is transferred to another inpatient institution, a copy of his or her absence register must be included in the transfer records.
+
+(8) Prior authorization for payment for reserved bed days.
+
+(i) Prior authorization for payment of reserved bed days is not required when a recipient is hospitalized for 15 or fewer days and returns immediately to the institution.
+
+(ii) Prior authorization for payment of reserved bed days is required when:
+
+(a) a recipient is hospitalized for 15 or fewer days and returns to an institution which has been identified by the social services district, the Office of Health Systems Management of the Department of Health, the OMRDD or the OMH as having deviated from this subdivision's standards. The social services district must require such institution to request prior authorization for payment; or
+
+(b) a recipient is hospitalized for 15 or fewer days and does not return from the hospital immediately following the time for which the bed was reserved; or
+
+(c) a recipient, who based on available medical information was expected to be hospitalized for 15 days or fewer, is hospitalized for more than 15 days. If prior authorization is obtained, payment will be made for the recipient's reserved bed days up to 20 days per hospital stay, or up to 30 days per hospital stay for a recipient in an RTF who was hospitalized for acute psychiatric care.
+
+(iii) Prior authorization for payment must be requested as follows:
+
+(a) NFs must request prior authorization from the recipient's social services district's MA professional director. The social services district must approve or disapprove in writing all or part of the request within five business days of its receipt. Requests will be disapproved under the following circumstances:
+
+(1) when the hospitalization is clearly inappropriate, based on available medical documentation;
+
+(2) when the recipient, at the time of hospitalization, could not reasonably have been expected to return to the institution within 15 or fewer days; or
+
+(3) when the hospital changed the recipient's planned discharge date between the morning of the 4th day of hospital care and the 16th day of hospital care, and the new date would not permit the recipient to return to the institution within 20 days of the date of hospital admission, or the new date would not permit the recipient to return to the institution within 30 days of hospital admission for a recipient in an RTF who was hospitalized for acute psychiatric care. In this instance, prior authorization will be granted from the date of admission up to and including the date the institution was notified of the change in planned discharge date.
+
+(b) For ICFs/MR and specialty hospitals, the social services district must accept a prior authorization that has been approved by the Commissioner of the OMRDD or his or her designee.
+
+(c) For RTFs the social services district must accept an authorization that has been approved by the Commissioner of the OMH or his or her designee.
+
+(iv) Special bed reservation limits may be established on an individual case basis for a recipient in an ICF/MR, specialty hospital or RTF when the recipient's hospital stay would be longer than allowable limits. Such reservations must be approved by the State Commissioner of Social Services.
+
+(9) Absence registers and other reports. (i) Each medical inpatient institution that is an MA provider must maintain an absence register for each recipient who is absent after the institution's normal census-taking hour.
+
+(ii) Medical institutions and agencies exercising prior approval authority must make adequate records available to federal and State auditors to verify the number and nature of reservations authorized under this section.
+
+(iii) Medical institutions must record reserved bed days and overnight absences on any financial and statistical reports that require patient day information.
+
+(e) Required training of nurse aides.
+
+(1) Policy. Consistent with the regulations of the Department of Health (10 NYCRR Part 414), on and after January 1, 1990, residential health care facilities must use nurse aides who meet the following standards:
+
+(i) if used on a full-time basis, nurse aides must have completed a training and competency evaluation program or a competency evaluation program approved by the Department of Health and have been determined to be competent to provide nursing or nursing-related services according to the Department of Health's regulations; and
+
+(ii) if used on a temporary, per diem, leased or any other basis, nurse aides must have completed a training and competency evaluation program or a competency evaluation program approved by the Department of Health.
+
+(2) Employment, training and evaluation of nurse aides.
+
+(i) Residential health care facilities must comply with the regulations of the department of Health (10 NYCRR Part 414) regarding the employment, training and evaluation of nurse aides.
+
+(ii) Before a residential health care facility employs a nurse aide, it must consult the State Nurse Aide Registry to determine whether such registry contains the name of the nurse aide.
+
+(f) Payment for required training and competency evaluation of nurse aides.
+
+(1) Policy. The department will pay residential health care facilities for the training and competency evaluation of nurse aides as administrative costs under the Medical Assistance program. Payment will be limited to the actual costs which residential health care facilities incur, up to a maximum payment established by the department. The department will consult with the Department of Health when developing the maximum payment permitted under this subdivision.
+
+(2) Maximum payments for costs of training and competency evaluation of nurse aides. In determining the amount of payment to be made to residential health care facilities for the costs of training and competency evaluation of nurse aides, actual costs claimed by such facilities will be subject to a maximum payment for training and competency evaluation as follows:
+
+(i) Training. A maximum payment established by the department for each region listed in subdivision (g) of this section, based upon regional variations in nurse aide training costs.
+
+(ii) Competency Evaluation. A total of $165.00 per individual for competency testing for up to three tests; or a maximum of $25.00 for each individual who was employed as a nurse aide as of June 10, 1989, and who has been deemed to have met the requirement of completing an approved nurse aide training program and passing the competency evaluation examinations, or for whom the requirement has been waived by the Department of Health.
+
+(3) Claims for payment. A residential health care facility must submit a voucher to the department detailing its actual expenditures for the training and competency evaluation of nurse aides not less than 30 days after the end of each calendar quarter. Each such voucher must include:
+
+(i) the residential health care facility's name and provider number;
+
+(ii) the times, dates and places of the training and/or evaluation;
+
+(iii) the name and address of the approved program that provided the training or evaluation;
+
+(iv) the names and other individual identifying information of employees who were trained or evaluated;
+
+(v) the actual costs incurred for training and evaluation; and
+
+(vi) the residential health care facility's regional code.
+
+(4) Payment for costs of required training and competency evaluation of nurse aides expended before July 1, 1990. The department and the Department of Health will reconcile all payments for the training and competency evaluation of nurse aides included in the residential health care facilities' per diem Medical Assistance rates prior to July 1, 1990, with actual expenditures reported by facilities for that period in accordance with the following procedure:
+
+(i) The Department of Health will provide reconciliation forms to all residential health care facilities. Residential health care facilities must report on these forms their actual costs incurred and expended before July 1, 1990, for required training and competency evaluation of nurse aides. Residential health care facilities must return completed forms to the Department of Health certifying their actual costs for the period.
+
+(ii) The department will consider the actual costs reported to be administrative costs under the Medical Assistance program. Payment for these costs will be limited to the actual, documented expenditures by residential health care facilities, subject to the maximum payments developed by the department. Payments which were included in the residential health care facilities' per diem rates for such period for training and evaluation will be deducted from reported costs. If reported costs exceed the payments received as part of the residential health care facilities' rate, facilities will be required to submit vouchers, as specified in paragraph (3) of this subdivision, to claim any underpayments for the period. If the reported costs are less than the payments received as part of the residential health care facilities' rates, facilities' future Medical Assistance payments will be offset to recover the overpayments.
+
+(g) Regional Ceiling: Region Counties in Region Regional Caps Albany Albany, Columbia, Greene, $450
+
+Montgomery, Rensselaer, Saratoga, Schenectady, Schoharie, Fulton Binghamton Broome, Tioga $450 Erie Cattaraugus, Chautauqua, Erie, $475
+
+Niagara, Orleans Elmira Chemung, Steuben, Schuyler $558 Glens Falls Essex, Warren, Washington $450 Long Island Nassau, Suffolk $483 Orange Chenango, Delaware, Orange, Otsego, $567
+
+Sullivan, Ulster New York City Bronx, Kings, Queens, Richmond, $450
+
+New York Poughkeepsie Dutchess, Putnam $450 Rochester Livingston, Monroe, Ontario, Wayne $589 Central Rural Cayuga, Cortland, Seneca, Tompkins, $450
+
+Yates Syracuse Madison, Onondaga $501 Utica Herkimer, Jefferson, Lewis, Oneida, $450
+
+Oswego Westchester Rockland, Westchester $450 Northern Rural Clinton, Franklin, Hamilton, $450
+
+St. Lawrence Western Rural Allegany, Genesee, Wyoming $450
+
+Section 505.9 - Residential health care.
+
+Statutory Authority
+
+Social Services Law, Sections 363-a and 365-a(2)
+
+Volume
+
+SOURCE 6: Transfer/Discharge Notice template (DOCX) — New York State Department of Health | https://www.health.ny.gov/facilities/nursing/rights/docs/discharge_notice_template.docx | source date: none stated in the document | retrieved: 2026-09-04
+TRANSFER/DISCHARGE NOTICE
+
+Date: 
+
+Resident: 
+
+Designated Representative: 
+
+This is to inform you that the interdisciplinary team has determined that you will be discharged on  to: 
+
+In accordance with 10 NYCRR § 415.3 and 42 CFR § 483.15, this transfer/discharge notice is being issued because: 
+
+ The resident’s needs cannot be met after reasonable attempts at accommodation in the facility as evidenced by: 
+
+ The resident's health has improved sufficiently so the resident no longer needs the services provided by the facility as evidenced by: 
+
+ The safety of individuals in the facility would be endangered, as evidenced by: 
+
+ The health of individuals in the facility would be endangered, as evidenced by: 
+
+ the resident has failed, after reasonable and appropriate notice, to pay for (or to have paid under Medicare, Medicaid, or third-party insurance) a stay at the facility, charges are not in dispute, no appeal of a denial of benefits is pending, or funds for payment are available and the resident refuses to cooperate with the facility in obtaining funds as evidenced by: 
+
+ the facility is discontinuing operation and has received approval of its plan of closure from the New York State Department of Health.
+
+APPEAL & HEARING RIGHTS
+If you do not agree with the proposed transfer/discharge, you have the right to appeal the action and request an evidentiary hearing. You may file a request for an appeal and hearing by contacting the New York State Department of Health (NYSDOH) in one of the following manners:   
+
+Phone: Call the NYSDOH Nursing Home Complaint Hotline at 1-888-201-4563.
+Internet: Complete and submit the online Nursing Home Complaint form found at https://apps.health.ny.gov/surveyd8/nursing-home-complaint-form.
+Mail: Complete and mail a paper Nursing Home Complaint Form to the following address: 
+NYS DOH Centralized Complaint Intake Program 
+875 Central Ave. 
+Albany, NY 12206	
+Email: Complete and email a scanned copy of a Nursing Home Complaint Form to nhintake@health.ny.gov. 
+
+The Nursing Home Complaint form is available online at https://www.health.ny.gov/forms/doh-5022.pdf. 	
+All appeal requests must be submitted within sixty (60) days from the date a resident receives a notice of transfer/discharge.
+
+If a request for an appeal is filed with NYSDOH prior to the resident’s transfer/discharge from the facility, the resident may remain in the facility (excluding cases of transfer/discharge due to imminent danger) pending an appeal hearing decision. It should be noted that any resident choosing to remain at a facility pending appeal may be liable for the cost to stay at the facility pending the appeal if the resident loses their appeal.
+
+A post-discharge/transfer hearing will be held when a request for an appeal and hearing is filed with the NYSDOH after the resident is transferred/discharged from the facility. In these cases or cases involving a transfer/discharge due to imminent danger, the resident has the right to return to the next available semiprivate bed in the facility if the resident prevails/wins at the hearing on appeal. 
+
+At the evidentiary hearing, the resident may represent themselves, or use legal counsel, a relative, a friend, or any other spokesmen. 
+
+In cases of an action based on a change in law, the resident will be provided an explanation of the circumstances under which an appeal will be granted.  
+ 
+ADVOCACY CONTACTS
+Local New York State Long Term Care Ombudsman:
+Name: 
+Address: 
+Phone: 
+
+Disability Rights New York:
+For nursing facility residents with mental illness or developmental disabilities.
+Address: 279 Troy Road, Suite 9, PMB 236, Rensselaer, NY 12144
+Email: Mail@DRNY.org
+Online: https://www.drny.org/intake.php
+Phone: 518-432-7861
+Toll Free: 1-800-993-8982
+
+Legal Services Agencies and Community Resources Providing Resident Advocacy Services Guide:
+https://www.health.ny.gov/facilities/nursing/docs/community_resource_guide.pdf
+
+Resident Signature: 
+Date: 
+
+Resident Representative Signature: 
+Date: 
+
+Facility Representative Signature and Title:  
+Date: 
+
+Designated Representative Verbally Informed on: 
+
+Document Mailed to Designated Representative on:  
+
+Document Mailed to NYS Ombudsman on:  
+
+Document Mailed to Family Member on:
 

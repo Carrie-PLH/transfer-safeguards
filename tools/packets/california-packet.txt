@@ -1,68 +1,105 @@
-CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
-STATE: California
-SLUG: california
-ASSEMBLED: 2026-08-30
-CAPTURE NOTES: www.cdph.ca.gov and www.dhcs.ca.gov refuse non-browser fetches (cdph.ca.gov returns an incomplete certificate chain to curl and to python/certifi; dhcs.ca.gov returns a 212-byte script shell), so Sources 1 and 2 were retrieved through the session's HTTP fetch tool, which renders the served document to text, and copied to file without retyping; bullet glyphs, typographic apostrophes and quotation marks are the publisher's own as the extractor rendered them, and the site chrome (navigation, translation menu, footer) is omitted. Source 3 was retrieved by curl with a browser user-agent and reduced to text mechanically (tag strip over the <main> element). Source 4 was retrieved by curl from leginfo.legislature.ca.gov and reduced to text mechanically (tag strip over the codeLawSectionNoHead element); the line breaks inside sentences are leginfo's own markup.
-PENDING: The full texts of 22 CCR 72527 (Patients' Rights) and 22 CCR 72520 (Bed Hold) — California publishes its regulations through govt.westlaw.com/calregs, which serves rule bodies only to a scripted client and returns a 4.8 KB shell with no rule text to direct capture; both rules are named and linked by Sources 1 and 2 but their text is not captured. A first-party statement of the Medi-Cal bed-hold payment policy was searched (cdph.ca.gov All Facilities Letters, dhcs.ca.gov laws and regulations, the DHCS Transfer Discharge and Refusal to Readmit Unit page) and not captured beyond the reference in Source 2 and the readmission-appeal statement in Source 4. No enumerated list of permissible grounds for involuntary transfer or discharge was found in any captured California source; Source 1 states the notice must give the reason "including the basis under Title 42 CFR section 483.15(c)(1)(i)(A)-(F)" and points to the federal enumeration rather than restating one.
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
-SOURCE 1: California Department of Public Health, All Facilities Letter AFL 25-17, SNF Discharge Notice Requirements | https://www.cdph.ca.gov/Programs/CHCQ/LCP/Pages/AFL-25-17.aspx | source's own date: May 28, 2025 | retrieved: 2026-08-30
-Skip Navigation LinksAFL-25-17
+STATE: california
+ASSEMBLED: 2026-09-04
 
-State of Cal Logo
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/california.json (recipe digest d54553fc0578). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- SOURCE 1: transport curl; extractor html-text; scope #DeltaPlaceHolderMain; filters strip-zero-width, trim-lines, collapse-blank-runs.
+  The 2026-08-30 standing packet recorded cdph.ca.gov as returning an incomplete certificate chain to curl and to python/certifi, and captured this source through the session's HTTP fetch tool. Retested 2026-09-04: plain curl with a browser user-agent now returns 200 with the full page, including the eight-item notice-contents list, the four 30-day exceptions and the 'basis under Title 42 CFR section 483.15(c)(1)(i)(A)-(F)' phrase the standing page quotes verbatim. Whatever blocked it on 2026-08-30 no longer does, consistent with the transient-failure pattern CLAUDE.md records for Arkansas's codeofarrules.arkansas.gov. #DeltaPlaceHolderMain is this SharePoint template's own content well, narrower than body (which also carries the site's mega-menu) and wider than any single paragraph; it includes the page's own masthead furniture ('KAREN L. SMITH, MD, MPH' over a governor line reading 'EDMUND G. BROWN JR.' above a May 28, 2025 letter) exactly as the 2026-08-30 packet recorded a similar mismatched-masthead artifact — reproduced as published, not corrected. strip-zero-width removes the SharePoint editor's own U+200B runs between paragraphs (visible as nothing to a reader); it does not touch the curly apostrophes and quotation marks the letter itself prints, which are left exactly as the publisher set them.
+- SOURCE 2: transport curl; extractor html-text; scope main; filters trim-lines, collapse-blank-runs.
+  The 2026-08-30 standing packet recorded dhcs.ca.gov as returning a 212-byte script shell to curl and captured this source through the session's HTTP fetch tool. Retested 2026-09-04: plain curl with a browser user-agent now returns 200 with the full rendered page (84 KB), including the OAHA phone, fax, email and e-filing-portal sentence and the same 'page modified 2026-07-15' meta value the standing packet recorded — the same document, reachable by a plainer transport. 'main' is this template's own article element and excludes the site's header and footer navigation.
+- SOURCE 3: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The 2026-08-30 standing packet was captured the same way (curl, browser user-agent) and recorded its own method as a tag strip over the <main> element; this template in fact carries no <main> tag, and '#main-content' omits the site's own top navigation ('About Us', 'Providers & Partners', ...) that the standing packet's body plainly carries ('Skip Navigation Links', 'About Us', 'Careers with CDA', ...). 'body' is the narrowest scope that is honestly stated and a safe superset of the standing packet's own text, matching the convention the Florida and New York recipes already use for this reason.
+- SOURCE 4: transport curl; extractor html-text; scope #codeLawSectionNoHead; filters trim-lines, collapse-blank-runs.
+  Same host, method and scope as the standing packet's Source 4; re-fetched 2026-09-04 and unchanged (same closing credit line, 'Amended by Stats. 2023, Ch. 794, Sec. 3. (AB 48) Effective January 1, 2024.'). The line breaks inside sentences are leginfo's own markup.
+- SOURCE 5: transport curl; extractor html-text; scope #co_document; filters trim-lines, collapse-blank-runs.
+  The 2026-08-30 standing packet recorded govt.westlaw.com/calregs as serving rule bodies only to a scripted client, returning a 4.8 KB shell with no rule text to direct capture, and left 72527 capture-pending. That test used the GUID printed on DHCS's own page (I71F6A1A0A39811E08822C131FF5E2170), which returns 'Document not found' from a real browser as well as from curl -- the GUID itself is stale, not the transport. Found again 2026-09-04 by browsing govt.westlaw.com/calregs from its own home page (Title 22 > Division 5 > Chapter 3 > Article 5, no search box or session token involved) to the section's current address, IBAE556025B6111EC9451000D3A7C4BC3, which a plain curl with a browser user-agent resolves directly with no session cookie. This is a stale-link problem, not a scripted-client-over-an-API problem, so it is captured as an ordinary curl source rather than under the agency-API rule. #co_document is the platform's own per-section container: it holds the breadcrumb, the section heading, currentness marker, full text, Credits/NOTE, HISTORY and the 'This database is current through' line, and excludes the page's site chrome and the 'Documents In Sequence' footer navigation.
+- SOURCE 6: transport curl; extractor html-text; scope #co_document; filters trim-lines, collapse-blank-runs.
+  Same host, method, GUID-discovery route and scope as Source 5, found the same session by the same browse path (Article 5's own section list). Also capture-pending in the 2026-08-30 standing packet under the same stale-GUID problem (DHCS's page links I7311F370D4BC11DE8879F88E8B0DAAAE, which also 'Document not found's).
+- SOURCE 7: transport curl; extractor html-text; scope #co_document; filters trim-lines, collapse-blank-runs.
+  Same host, method and scope as Sources 5 and 6, found the same way while reading Article 5's section list (this rule immediately precedes 72520 there). Not linked by either AFL 25-17 or the DHCS OAHA page; captured because its own text cross-references 'Section 72527(a)(5)', which after 72527's 2011 renumbering names a different right (informed consent) than the transfer/discharge right at 72527(a)(6) -- a discrepancy inside the state's own current regulations, recorded as a finding rather than corrected.
+- SOURCE 8: transport curl; extractor html-text; scope #co_document; filters trim-lines, collapse-blank-runs.
+  Found 2026-09-04 by following 72520(a)(2)'s own cross-reference ('Except as provided in Section 51535.1') and browsing to it (Title 22 > Division 3 > Subdivision 1 > Chapter 3 > Article 7's own section list, no search box). Same host, method and #co_document scope as Sources 5-7. This is the Medi-Cal reimbursement counterpart to 72520's licensing bed-hold rule: it states the same seven-day cap for payment purposes and adds the procedural detail (physician notice, day-of-departure/day-of-return counting, termination on death) that 72520 does not. Its own printed payment-rate table runs only through fiscal year 2006-07 despite the section's 'Currentness' marker and a 2013-2014 amendment to the same subsection; both facts are quoted rather than reconciled.
+- SOURCE 9: transport curl; extractor html-text; scope #codeLawSectionNoHead; filters trim-lines, collapse-blank-runs.
+  Same host, method and scope as Source 4. Found 2026-09-04 searching for any California statement of what happens once an OAHA hearing is decided, beyond HSC 1599.1(h)'s Medi-Cal-eligible refusal-to-readmit case; it states a facility must comply within three calendar days of service of an OAHA decision finding an improper transfer, discharge, or refusal to readmit, on pain of a per-day penalty, and applies to TDA and RTR decisions alike rather than only the RTR/Medi-Cal case. It is a post-decision compliance deadline, not a pendency statement (it does not say whether a resident stays in place while the hearing is pending), and its own closing credit line states it is conditionally operative on a skilled-nursing quality-assurance fee remaining approved by CMS and is 'Inoperative after December 31, 2027' -- both quoted rather than assessed, because whether the operative condition is currently met is not a fact this capture can verify.
+
+SOURCE 1: California Department of Public Health, All Facilities Letter AFL 25-17, SNF Discharge Notice Requirements | https://www.cdph.ca.gov/Programs/CHCQ/LCP/Pages/AFL-25-17.aspx | source date: May 28, 2025 | retrieved: 2026-09-04
+KAREN L. SMITH, MD, MPH
+
+Director and State Public Health Officer
+
 EDMUND G. BROWN JR.
-Governor
+
+ Governor
 
 Health and Human Services Agency
-California Department of Public Health
 
+ California Department of Public Health
 
-AFL 25-17
-May 28, 2025
+ AFL 25-17
 
+ May 28, 2025
 
 TO:
-Skilled Nursing Facilities (SNFs)
+
+ Skilled Nursing Facilities (SNFs)
 
 SUBJECT:
-SNF Discharge Notice Requirements
 
+ SNF Discharge Notice Requirements
 
-AUTHORITY:     Health and Safety Code (HSC) section 1599.1(i)
-                                Title 42 Code of Federal Regulations (CFR) section 483.15
-                                Title 22 California Code of Regulations (CCR) section 72527
+AUTHORITY:     Health and Safety Code (HSC) section 1599.1(i)
 
+                                Title 42 Code of Federal Regulations (CFR) section 483.15
+
+                                Title 22 California Code of Regulations (CCR) section 72527
 
 All Facilities Letter (AFL) Summary
 
-  • This AFL reminds skilled nursing facilities (SNFs) of the transfer and discharge notice requirements, as specified in Title 42 CFR section 483.15(c).
-  • Transfer and discharge notices must be in writing and in a language and manner the resident and resident representative(s) understand.
-  • Noncompliance with transfer and discharge requirements will be cited as a deficiency and may result in a citation and/or civil action.
+This AFL reminds skilled nursing facilities (SNFs) of the transfer and discharge notice requirements, as specified in Title 42 CFR section 483.15(c).
+
+Transfer and discharge notices must be in writing and in a language and manner the resident and resident representative(s) understand.
+
+Noncompliance with transfer and discharge requirements will be cited as a deficiency and may result in a citation and/or civil action.
 
 Background
 
-Title 42 CFR section 483.15(c)(3)-(6) provides the notice requirements for facility-initiated transfers and discharges, including discharges that occur while the resident remains in the hospital after an emergency transfer. HSC section 1599.1(i) requires SNFs to comply with Title 42 CFR section 483.15, regardless of a resident’s payment source or the Medi-Cal or Medicare certification status of the SNF in which the resident resides, except that a noncertified facility is not obligated to provide notice of Medicaid or Medicare benefits, covered services, or eligibility procedures.
+Title 42 CFR section 483.15(c)(3)-(6) provides the notice requirements for facility-initiated transfers and discharges, including discharges that occur while the resident remains in the hospital after an emergency transfer. HSC section 1599.1(i) requires SNFs to comply with Title 42 CFR section 483.15, regardless of a resident's payment source or the Medi-Cal or Medicare certification status of the SNF in which the resident resides, except that a noncertified facility is not obligated to provide notice of Medicaid or Medicare benefits, covered services, or eligibility procedures.
 
 Notice Before Transfer or Discharge
 
-Pursuant to Title 42 CFR section 483.15(c)(3), before a SNF transfers or discharges a resident, the SNF must:
+Pursuant to Title 42 CFR
+section 483.15(c)(3), before a SNF transfers or discharges a resident, the SNF must:
 
-  • Notify the resident and the resident’s representative(s) of the transfer or discharge and the reasons for the move in writing and in a language and manner they understand.
-  • Send a copy of the notice of transfer or discharge to the representative of the Office of the State Long-Term Care (LTC) Ombudsman.
-  • Record the reasons for the transfer or discharge in the resident’s medical record, in accordance with Title 42 CFR section 483.15(c)(2).
-  • Include in the notice all items required in Title 42 CFR section 483.15(c)(5) – see  “Contents of the Notice" section below.
+Notify the resident and the resident's representative(s) of the transfer or discharge and the reasons for the move in writing and in a language and manner they understand.
+
+Send a copy of the notice of transfer or discharge to the representative of the Office of the State Long-Term Care (LTC) Ombudsman.
+
+Record the reasons for the transfer or discharge in the resident's medical record, in accordance with Title 42 CFR section 483.15(c)(2).
+
+Include in the notice all items required in Title
+42 CFR section 483.15(c)(5) – see  “Contents of the Notice" section below.
 
 Contents of the Notice
 
-The facility’s notice must include all of the following at the time notice is provided:
+The facility's notice must include all of the following at the time notice is provided:
 
-  • The specific reason for the transfer or discharge, including the basis under Title 42 CFR section 483.15(c)(1)(i)(A)-(F).
-  • The effective date of transfer or discharge.
-  • The specific location (such as the name of the new provider or description and/or address if the location is a residence) to which the resident is to be transferred or discharged.
-  • An explanation of the right to appeal the transfer or discharge to the State (Department of Health Care Services (DHCS), Office of Administrative Hearings and Appeals (OAHA)).
-  • The name, address (mail and email), and telephone number of the state entity which receives such appeal hearing requests (DHCS OAHA, Transfer Discharge and Refusal to Readmit Unit).
-  • Information on how to obtain an appeal form.
-  • Information on obtaining assistance in completing and submitting the appeal hearing request.
-  • The name, address (mailing and email), and phone number of the representative of the Office of the State LTC Ombudsman.
+The specific reason for the transfer or discharge, including the basis under Title 42 CFR section 483.15(c)(1)(i)(A)-(F).
+
+The effective date of transfer or discharge.
+
+The specific location (such as the name of the new provider or description and/or address if the location is a residence) to which the resident is to be transferred or discharged.
+
+An explanation of the right to appeal the transfer or discharge to the State (Department of Health Care Services (DHCS), Office of Administrative Hearings and Appeals (OAHA)).
+
+The name, address (mail and email), and telephone number of the state entity which receives such appeal hearing requests (DHCS OAHA, Transfer Discharge and Refusal to Readmit Unit).
+
+Information on how to obtain an appeal form.
+
+Information on obtaining assistance in completing and submitting the appeal hearing request.
+
+The name, address (mailing and email), and phone number of the representative of the Office of the State LTC Ombudsman.
 
 For nursing facility residents with intellectual and developmental disabilities (or related disabilities) or with mental illness (or related disabilities), the notice must include the name, mailing and e-mail addresses, and phone number of the agency responsible for the protection and advocacy for these populations (Disability Rights California, Get Help Webpage).
 
@@ -70,16 +107,19 @@ Timing of The Notice
 
 Notice must be provided at least 30 days prior to the transfer or discharge of the resident. Exceptions to the 30-day requirement apply when the transfer or discharge is affected because:
 
-  • The health and/or safety of individuals in the facility would be endangered due to the clinical or behavioral status of the resident.
-  • The resident’s health improves sufficiently to allow a more immediate transfer or discharge.
-  • An immediate transfer or discharge is required by the resident’s urgent medical needs; or
-  • A resident has not resided in the facility for 30 days.
+The health and/or safety of individuals in the facility would be endangered due to the clinical or behavioral status of the resident.
 
-In these exceptional cases, the notice must be provided to the resident, resident’s representative(s) if appropriate, and LTC ombudsman as soon as practicable before the transfer or discharge.
+The resident's health improves sufficiently to allow a more immediate transfer or discharge.
 
-The information in this AFL is a brief summary of the laws and regulations governing the rights of resident and the resident’s representative(s) on receiving a notification of transfer or discharge from a SNF. SNFs are responsible for complying with all applicable laws. Consequences of not complying will result in a deficiency that can lead to a citation and/or civil action against the licensee of the SNF.
+An immediate transfer or discharge is required by the resident's urgent medical needs; or
 
-For more information regarding rights, admission, and transfer and discharge requirements, refer to the California Standard Admission Agreement (PDF) and the applicable state and federal requirements referenced above.
+A resident has not resided in the facility for 30 days.
+
+In these exceptional cases, the notice must be provided to the resident, resident's representative(s) if appropriate, and LTC ombudsman as soon as practicable before the transfer or discharge.
+
+The information in this AFL is a brief summary of the laws and regulations governing the rights of resident and the resident's representative(s) on receiving a notification of transfer or discharge from a SNF. SNFs are responsible for complying with all applicable laws. Consequences of not complying will result in a deficiency that can lead to a citation and/or civil action against the licensee of the SNF.
+
+For more information regarding rights, admission, and transfer and discharge requirements, refer to the California Standard Admission Agreement (PDF) and the applicable state and federal requirements referenced above.
 
 If you have questions, please contact your respective district office.
 
@@ -91,310 +131,718 @@ Mandi Posner
 
 Deputy Director
 
-END SOURCE 1
+ Center for Health Care Quality, MS 0512 . P.O. Box 997377 . Sacramento, CA
+ 95899-7377
 
-SOURCE 2: California Department of Health Care Services, Office of Administrative Hearings and Appeals — Transfer Discharge and Refusal to Readmit Unit | https://www.dhcs.ca.gov/forms-laws-publications/laws-and-regulations/transfer-discharge-and-refusal-to-readmit-unit/ | source's own date: page modified 2026-07-15 (meta article:modified_time) | retrieved: 2026-08-30
+ (916) 324-6630 . (916) 324-4820 FAX
+
+ Department Website (cdph.ca.gov)
+
+Page Last Updated :
+
+SOURCE 2: California Department of Health Care Services, Office of Administrative Hearings and Appeals — Transfer Discharge and Refusal to Readmit Unit | https://www.dhcs.ca.gov/forms-laws-publications/laws-and-regulations/transfer-discharge-and-refusal-to-readmit-unit/ | source date: page modified 2026-07-15 (meta article:modified_time) | retrieved: 2026-09-04
+Home Forms, Laws, and Publications  Laws and Regulations Transfer Discharge and Refusal to Readmit Unit
+
 Transfer Discharge and Refusal to Readmit Unit
 
-The Office of Administrative Hearings and Appeals (OAHA) is responsible for adjudicating appeals of residents who face a facility-initiated transfer or discharge from their nursing facility, or whose nursing facility has refused to readmit the resident following a period of hospitalization or therapeutic leave.
+The Office of Administrative Hearings and Appeals (OAHA) is responsible for adjudicating appeals of residents who face a facility-initiated transfer or discharge from their nursing facility, or whose nursing facility has refused to readmit the resident following a period of hospitalization or therapeutic leave.
 
 Transfer or Discharge Appeals (TDA)
 
-Under federal and state law, when a nursing facility initiates the transfer or discharge of a nursing home resident, the resident has established rights that must be addressed in order to ensure that the discharge is fair and appropriate. An essential component to these rights is the right to request a hearing. Only the resident or a resident’s authorized representative may request a transfer/discharge hearing. Residents desiring a hearing should submit a request as soon as possible in order for a decision in the matter to be rendered before the proposed date of discharge.
+Under federal and state law, when a nursing facility initiates the transfer or discharge of a nursing home resident, the resident has established rights that must be addressed in order to ensure that the discharge is fair and appropriate.   An essential component to these rights is the right to request a hearing.  Only the resident or a resident’s authorized representative may request a transfer/discharge hearing.  Residents desiring a hearing should submit a request as soon as possible in order for a decision in the matter to be rendered before the proposed date of discharge.
 
 Resources
 
-- 42 Code of Federal Regulations part 483.15 - Admission, transfer and discharge rights
-- 42 Code of Federal Regulations part 483.21(c) - Discharge Planning
-- California Code of Regulations, title 22, section 72527 - Patients’ Rights
-- Directory of Local Ombudsman Programs
+42 Code of Federal Regulations part 483.15 – Admission, transfer and discharge rights
+
+42 Code of Federal Regulations part 483.21(c) – Discharge Planning
+
+California Code of Regulations, title 22, section 72527 – Patients’ Rights
+
+Directory of Local Ombudsman Programs
 
 Refusal to Readmit (RTR) Appeals
 
-Under federal and state law, when a resident is transferred to the hospital or approved for therapeutic leave, they have a right to return to the nursing facility after they are hospitalized or when the period of therapeutic leave has concluded. When the resident is hospitalized and the nursing facility refuses to readmit the resident, the resident may request a hearing. Only the resident or a resident’s authorized representative may request a RTR hearing. Preferably, an RTR hearing request is submitted to OAHA while the resident is still hospitalized. OAHA conducts RTR hearings only for those residents who wish to return to their nursing facility.
+Under federal and state law, when a resident is transferred to the hospital or approved for therapeutic leave, they have a right to return to the nursing facility after they are hospitalized or when the period of therapeutic leave has concluded.  When the resident is hospitalized and the nursing facility refuses to readmit the resident, the resident may request a hearing.  Only the resident or a resident’s authorized representative may request a RTR hearing.  Preferably, an RTR hearing request is submitted to OAHA while the resident is still hospitalized. OAHA conducts RTR hearings only for those residents who wish to return to their nursing facility.
 
 Resources
 
-- 42 Code of Federal Regulations part 483.15 - Admission, transfer and discharge rights
-- 42 Code of Federal Regulations part 483.21(c) - Discharge Planning
-- California Code of Regulations, title 22, section 72520 - Bed Hold
-- California Code of Regulations, title 22, section 72527 - Patients’ Rights
-- California Health and Safety Code section 1599.1
-- Directory of Local Ombudsman Programs
+42 Code of Federal Regulations part 483.15 – Admission, transfer and discharge rights
 
-TDA and RTR Hearings
+42 Code of Federal Regulations part 483.21(c) – Discharge Planning
 
-OAHA’s hearing officers conduct the TDA and RTR hearings. Generally, the hearing is held via telephone. The resident or his/her authorized representative must be present at the hearing.
+California Code of Regulations, title 22, section 72520 – Bed Hold
 
-The hearing officer controls the course of the proceedings, digitally records the hearing, and takes sworn testimony from participants who are in attendance. The burden of proof is on the nursing facility to present evidence to support that its action is appropriate and in compliance with prevailing federal and state law. The resident or his/her representative will have the opportunity to present testimony, including from witnesses that they compel to appear at the hearing. Only testimony that is relevant to the action will be allowed, at the hearing officer’s discretion. After conclusion of the hearing, the hearing officer writes the final administrative decision of the Department, known as a Decision & Order. The Decision & Order will either “grant,” “deny,” or “dismiss” the residents’ appeal and outline the remedy that has been ordered. RTR hearings that are granted in favor of the resident will require the facility to submit a Certification of Compliance with the Department of Health Care Services.
+California Code of Regulations, title 22, section 72527 – Patients’ Rights
+
+California Health and Safety Code section 1599.1
+
+Directory of Local Ombudsman Programs
+
+TDA and RTR Hearings
+
+OAHA’s hearing officers conduct the TDA and RTR hearings.  Generally, the hearing is held via telephone. The resident or his/her authorized representative must be present at the hearing.
+
+The hearing officer controls the course of the proceedings, digitally records the hearing, and takes sworn testimony from participants who are in attendance.  The burden of proof is on the nursing facility to present evidence to support that its action is appropriate and in compliance with prevailing federal and state law.  The resident or his/her representative will have the opportunity to present testimony, including from witnesses that they compel to appear at the hearing.  Only testimony that is relevant to the action will be allowed, at the hearing officer’s discretion.   After conclusion of the hearing, the hearing officer writes the final administrative decision of the Department, known as a Decision & Order.  The Decision & Order will either “grant,” “deny,” or “dismiss” the residents’ appeal and outline the remedy that has been ordered. RTR hearings that are granted in favor of the resident will require the facility to submit a Certification of Compliance with the Department of Health Care Services.
 
 Resources
 
-- 42 Code of Federal Regulations (CFR), Section 431. Subpart E - Fair Hearings for Applicants and Recipients
-- 42 Code of Federal Regulations part 435.923 - Authorized Representatives
-- Certification of Compliance
+42 Code of Federal Regulations (CFR), Section 431. Subpart E – Fair Hearings for Applicants and Recipients
 
-Requesting a Hearing
+42 Code of Federal Regulations part 435.923 – Authorized Representatives
 
-When submitting a hearing request, an OAHA representative will ask you a series of questions. To avoid unnecessary delay, please have the following information available before making your request:
+Certification of Compliance
 
-- Full name and date of birth of the affected resident
-- The name of the resident’s nursing facility and address (if you have it)
-- The name of the hospital if the resident is currently an inpatient
-- If filing an appeal on behalf of a resident, be prepared to provide your contact information and information to demonstrate that you are authorized to make the hearing request. For example, the resident asked you to request the hearing on his or her behalf, or you have a Durable Power of Attorney for the resident’s health care.
-- For TDA requests, it is preferable to have the written Notice of Transfer/Discharge available at the time of your call. If the SNF did not provide you with a written notice, ask them to do so.
-- For RTR requests, provide the date of your transfer from the nursing facility to the hospital and the date(s) that the nursing facility refused to readmit you.
+Requesting a Hearing
 
-A hearing request is complete when all the necessary information is received. OAHA will notify the resident and the nursing facility in writing of the time, date, and location of the hearing.
+When submitting a hearing request, an OAHA representative will ask you a series of questions.  To avoid unnecessary delay, please have the following information available before making your request:
 
-To request a hearing, residents or their authorized representative can contact OAHA via telephone at (916) 445-9775, fax at (916) 440-5105, or email at OAHAefax@dhcs.ca.gov, or by using the OAHA E-Filing Portal (https://oaha.mes.dhcs.ca.gov/).
+Full name and date of birth of the affected resident
 
-END SOURCE 2
+The name of the resident’s nursing facility and address (if you have it)
 
-SOURCE 3: California Department of Aging, Long-Term Care Ombudsman (consumer page) | https://aging.ca.gov/programs_and_services/long-term_care_ombudsman/ | source's own date: none stated on page | retrieved: 2026-08-30
-Long-Term Care Ombudsman - Consumer | California Department of Aging - State of California
+The name of the hospital if the resident is currently an inpatient
 
- ×
+If filing an appeal on behalf of a resident, be prepared to provide your contact information and information to demonstrate that you are authorized to make the hearing request. For example, the resident asked you to request the hearing on his or her behalf, or you have a Durable Power of Attorney for the resident’s health care.
 
- Excessive Heat Warning
+For TDA requests, it is preferable to have the written Notice of Transfer/Discharge available at the time of your call.  If the SNF did not provide you with a written notice, ask them to do so.
 
- California is experiencing significant and rapid increases in temperature.
+For RTR requests, provide the date of your transfer from the nursing facility to the hospital and the date(s) that the nursing facility refused to readmit you.
 
- Visit the Emergency Resources page to find cooling centers, safety tips, and other emergency resources.
+A hearing request is complete when all the necessary information is received.  OAHA will notify the resident and the nursing facility in writing of the time, date, and location of the hearing.
 
- Skip to Main Content
+To request a hearing, residents or their authorized representative can contact OAHA via telephone at (916) 445-9775, fax at (916) 440-5105, or email at OAHAefax@dhcs.ca.gov, or by using the OAHA E-Filing Portal.
 
- ×
+SOURCE 3: California Department of Aging, Long-Term Care Ombudsman (consumer page) | https://aging.ca.gov/programs_and_services/long-term_care_ombudsman/ | source date: none stated on page | retrieved: 2026-09-04
+Skip to Main Content
 
- Saving your location allows us to provide you with more relevant information.
+×
 
- Set Location
+Saving your location allows us to provide you with more relevant information.
 
- return to homepage
+Set Location
 
- department of aging facebook
+return to homepage
 
- department of aging instagram
+department of aging facebook
 
- department of aging twitter
+department of aging instagram
 
- department of aging youtube channed
+department of aging twitter
 
- Email california department of aging
+department of aging youtube channed
 
- Settings
--->
- Change Text Size T T T
+Email california department of aging
 
- ×
+Change Text Size T T T
 
- Default
+×
 
- High Contrast
+Default
 
- Reset
+High Contrast
 
- Increase Font SizeFont 
+Reset
 
- Decrease Font SizeFont 
+Increase Font SizeFont
 
- -->
- -->
+Decrease Font SizeFont
 
- -->
+Menu
 
- Menu
- Menu-->
+Search
 
- Search
+About Us
 
- About Us
+Providers & Partners
 
- Providers & Partners
+Careers with CDA
 
- Careers with CDA
+Newsroom
 
- Newsroom
+Contact Us
 
- Contact Us
+Search
 
- Search
+How Do I?
 
- How Do I?
+Get home delivered meals
 
- Get home delivered meals
+Find a nutrition or exercise class
 
- Find a nutrition or exercise class
+Digital Resources
 
- Digital Resources
+Apply for Medi-Cal
 
- Apply for Medi-Cal
+Get help with Medicare
 
- Get help with Medicare
+Determine the best housing option for me
 
- Determine the best housing option for me
+Get help with my landlord
 
- Get help with my landlord
+Get legal assistance
 
- Get legal assistance
+Make home modifications so that I can safely stay in my current home
 
- Make home modifications so that I can safely stay in my current home
+Get help dealing with memory problems
 
- Get help dealing with memory problems
+Learn more about hearing, vision, and speech assistive technology
 
- Learn more about hearing, vision, and speech assistive technology
+Get transportation to appointments
 
- Get transportation to appointments
+Learn more about safe senior driving
 
- Learn more about safe senior driving
+Get paid to take care of a family member
 
- Get paid to take care of a family member
+Open an Adult Day Care Center
 
- Open an Adult Day Care Center
+Report elder abuse or neglect
 
- Report elder abuse or neglect
+Outside California
 
- Outside California
+ Call 1-800-677-1116
 
- Call 1-800-677-1116 
+Eldercare Locator
 
- Eldercare Locator
+For information on services for seniors or adults with disabilities who live outside California.
 
- For information on services for seniors or adults with disabilities who live outside California.
-
- State Health Insurance Assistance Programs (SHIP)
+State Health Insurance Assistance Programs (SHIP)
 
  For one-on-one insurance counseling and assistance to Medicare beneficiaries, their families, friends, and caregivers.
 
- Long-Term Care Ombudsman
+Long-Term Care Ombudsman
 
- How To Find Services In My Area
+How To Find Services In My Area
 
- You can locate a local Ombudsman office in your area by selecting your county on the Find Services in My County page of this website.
+You can locate a local Ombudsman office in your area by selecting your county on the Find Services in My County page of this website.
 
- Additionally, all long-term care facilities are required to post, in a visible location, the phone number for the local Ombudsman office and the Statewide Ombudsman Hotline number 1-800-231-4024. The Ombudsman Hotline is available 24 hours a day, 7 days a week to take calls and refer complaints from residents in long-term care facilities.
+Additionally, all long-term care facilities are required to post, in a visible location, the phone number for the local Ombudsman office and the Statewide Ombudsman Hotline number 1-800-231-4024. The Ombudsman Hotline is available 24 hours a day, 7 days a week to take calls and refer complaints from residents in long-term care facilities.
 
- What Services Are Available
+What Services Are Available
 
- Long-Term Care Ombudsman representatives assist residents in long-term care facilities with issues related to day-to-day care, health, safety, and personal preferences. Problems can include, but are not limited to:
+Long-Term Care Ombudsman representatives assist residents in long-term care facilities with issues related to day-to-day care, health, safety, and personal preferences. Problems can include, but are not limited to:
 
- Violation of residents' rights or dignity
+Violation of residents' rights or dignity
 
- Physical, verbal, mental, or financial abuse
+Physical, verbal, mental, or financial abuse
 
- Poor quality of care
+Poor quality of care
 
- Dietary concerns
+Dietary concerns
 
- Medical care, therapy, and rehabilitation issues
+Medical care, therapy, and rehabilitation issues
 
- Medicare and Medi-Cal benefit issues
+Medicare and Medi-Cal benefit issues
 
- Improper transfer or discharge of a resident
+Improper transfer or discharge of a resident
 
- Inappropriate use of chemical or physical restraints
+Inappropriate use of chemical or physical restraints
 
- An Ombudsman:
+An Ombudsman:
 
- Will follow your wishes
- Ombudsman representatives follow the expressed wishes of residents or, in cases where residents cannot indicate their choices, the expressed wishes of their representatives.
+Will follow your wishes
 
- Receives extensive training
- Every new Ombudsman representative completes a minimum of 36 hours of training as well as a supervised internship. After being certified, Ombudsman representatives must complete a minimum of 18 hours of ongoing education each year.
+Ombudsman representatives follow the expressed wishes of residents or, in cases where residents cannot indicate their choices, the expressed wishes of their representatives.
 
- Is usually a volunteer
- nearly 80 percent of California's State-certified Ombudsman representatives are volunteers.
+Receives extensive training
 
- Reviews and investigates reports of abuse or neglect in long-term care facilities
+Every new Ombudsman representative completes a minimum of 36 hours of training as well as a supervised internship. After being certified, Ombudsman representatives must complete a minimum of 18 hours of ongoing education each year.
 
- All Ombudsman services are provided for free and all complaints are confidential.
+Is usually a volunteer
 
- Who Can Get These Services
+nearly 80 percent of California's State-certified Ombudsman representatives are volunteers.
 
- All residents of Long-Term Care facilities regardless of age.
+Reviews and investigates reports of abuse or neglect in long-term care facilities
 
- Residents' Rights
+All Ombudsman services are provided for free and all complaints are confidential.
 
- Learn more about Long-Term Care facility Residents' Rights.
+Who Can Get These Services
 
- Program Data
+All residents of Long-Term Care facilities regardless of age.
+
+Residents' Rights
+
+Learn more about Long-Term Care facility Residents' Rights.
+
+Program Data
 
  For past and current program data visit the Data and Reports sections of the website.
 
- Volunteer to be a Long-Term Care Ombudsman
+Volunteer to be a Long-Term Care Ombudsman
 
- Learn more about the volunteer opportunities as a Long-Term Care Ombudsman.
+Learn more about the volunteer opportunities as a Long-Term Care Ombudsman.
 
- Back to Top
+Back to Top
 
- Conditions of Use
+Conditions of Use
 
- Privacy Policy
+Privacy Policy
 
- Accessibility
+Accessibility
 
- Get Free Reader
+Get Free Reader
 
- CDA Forms
+CDA Forms
 
- Program Memos
+Program Memos
 
- department of aging facebook
+department of aging facebook
 
- department of aging instagram
+department of aging instagram
 
- department of aging twitter
+department of aging twitter
 
- navigate to linkin login
+navigate to linkin login
 
- department of aging youtube channed
+department of aging youtube channed
 
  Copyright ©
  State of California
-END SOURCE 3
 
-SOURCE 4: California Health and Safety Code section 1599.1 (Skilled Nursing and Intermediate Care Facility Patient's Bill of Rights) | https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=1599.1 | source's own date: amended by Stats. 2023, Ch. 794, Sec. 3 | retrieved: 2026-08-30
-id="codeLawSectionNoHead">Health and Safety Code - HSC
+SOURCE 4: California Health and Safety Code section 1599.1 (Skilled Nursing and Intermediate Care Facility Patient's Bill of Rights) | https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=1599.1 | source date: amended by Stats. 2023, Ch. 794, Sec. 3, effective January 1, 2024 | retrieved: 2026-09-04
+Health and Safety Code - HSC
 
 DIVISION 2. LICENSING PROVISIONS [1200 - 1796.88]
   ( Division 2 enacted by Stats. 1939, Ch. 60. )
-  
+
 CHAPTER 3.9. Skilled Nursing and Intermediate Care Facility Patient’s Bill of Rights [1599 - 1599.4]
   ( Chapter 3.9 added by Stats. 1979, Ch. 893. )
 
-  1599.1.  
+1599.1.
+
 Written policies regarding the rights of residents shall be established and shall be made available to the resident, to any guardian, next of kin, sponsoring agency or representative payee, and to the public. Those policies and procedures shall ensure that each resident admitted to the facility has the following rights and is notified of the following facility obligations, in addition to those specified by regulation:
+
 (a) The facility shall employ an adequate number of qualified personnel to carry out all of the functions of the facility.
+
 (b) Each resident shall show evidence of good personal hygiene and be given care to prevent bedsores, and
  measures shall be used to prevent and reduce incontinence for each resident.
+
 (c) The facility shall provide food of the quality and quantity to meet the residents’ needs in accordance with physicians’ orders.
+
 (d) The facility shall provide an activity program staffed and equipped to meet the needs and interests of each resident and to encourage self-care and resumption of normal activities. Residents shall be encouraged to participate in activities suited to their individual needs.
+
 (e) The facility shall be clean, sanitary, and in good repair at all times.
+
 (f) A nurses’ call system shall be maintained in operating order in all nursing units and provide
  visible and audible signal communication between nursing personnel and residents. Extension cords to each resident’s bed shall be readily accessible to residents at all times.
+
 (g) (1) If a facility has a significant beneficial interest in an
  ancillary health service provider or if a facility knows that an ancillary health service provider has a significant beneficial interest in the facility, as provided by subdivision (a) of Section 1323, or if the facility has a significant beneficial interest in another facility, as provided by subdivision (c) of Section 1323, the facility shall disclose that interest in writing to the resident, or the resident’s representative, and advise the resident, or the resident’s representative, that the resident may choose to have another ancillary health service provider, or facility, as the case may be, provide any supplies or services ordered by a member of the medical staff of the facility.
+
 (2) A facility is not required to make any disclosures required by this subdivision to a resident, or the resident’s representative, if the
  resident is enrolled in an organization or entity that provides or arranges for the provision of health care services in exchange for a prepaid capitation payment or premium.
+
 (h) (1) If a resident of a long-term health care facility has been hospitalized in an acute care hospital and asserts their rights to readmission pursuant to bed hold provisions, or readmission rights of either state or federal law, and the facility refuses to readmit them, the resident may appeal the facility’s refusal.
+
 (2) The refusal of the facility, as described in this subdivision, shall be treated as if it were an involuntary transfer under federal law, and the rights and procedures that apply to appeals of transfers and discharges of nursing facility residents shall apply to the resident’s
  appeal under this subdivision.
+
 (3) If the resident appeals pursuant to this subdivision, and the resident is eligible under the Medi-Cal program, the resident shall remain in the hospital and the hospital may be reimbursed at the administrative day rate, pending the final determination of the hearing officer, unless the resident agrees to placement in another facility.
+
 (4) If the resident appeals pursuant to this subdivision, and the resident is not eligible under the Medi-Cal program, the resident shall remain in the hospital if other payment is available, pending the final determination of the hearing officer, unless the resident agrees to placement in another facility.
+
 (5) If the resident is not eligible for
  participation in the Medi-Cal program and has no other source of payment, the hearing and final determination shall be made within 48 hours.
+
 (i) (1) Sections 483.10, 483.12, 483.15, and 483.24 of Title 42 of the Code of Federal Regulations in effect on July 13, 2017, shall apply to each skilled nursing facility and intermediate care facility, regardless of a resident’s payment source or the Medi-Cal or Medicare certification status of the skilled nursing facility or intermediate care facility in which the resident resides, except that a noncertified facility is not obligated to provide notice of Medicaid or Medicare benefits, covered services, or eligibility procedures.
+
 (2) Sections 483.10, 483.12, 483.15, and 483.24 of Title 42 of the Code of Federal Regulations in effect on July 13, 2017, shall apply to each hospice facility, regardless of a resident’s payment source or the Medi-Cal or Medicare certification status of the hospice facility in which the resident resides, except that a noncertified facility is not obligated to provide notice of Medicaid or Medicare benefits, covered services, or eligibility procedures and a hospice facility is not obligated to comply with the provisions of subdivision (f) of Section 483.15 of Title 42 of the Code of Federal Regulations.
+
 (3) All residents of skilled nursing facilities, intermediate care
  facilities, and hospice facilities have the right to appeal an involuntary transfer or discharge through the appeal process provided under Section 483.204 of Title 42 of the Code of Federal Regulations, regardless of a resident’s payment source or the Medi-Cal or Medicare certification status of the skilled nursing facility, intermediate care facility, or hospice facility in which the resident resides.
+
 (j) In addition to other rights to provide or withhold informed consent to a proposed treatment or procedure, a resident shall have the right to receive the information that is material to an individual’s informed consent decision concerning whether to accept or refuse the administration of psychotherapeutic drugs pursuant to
  Sections 72528 and 73524 of Title 22 of the California Code of Regulations. The disclosure of material information for administration of psychotherapeutic drugs shall also include the disclosures required by Section 1599.15.
+
 (k) A resident shall have the right to be free from psychotherapeutic drugs used for the purpose of resident discipline or convenience. The resident shall have the right to be free from psychotherapeutic drugs used as a chemical restraint, except in an emergency as described in subdivision (e) of Section 72528 of, or subdivision (e) of Section 73524 of, Title 22 of the
  California Code of Regulations.
  If a chemical restraint is administered during that emergency, that drug shall be only a drug that is required to treat the unanticipated condition, after being deemed the least intrusive treatment alternative for the resident, and used only for a specified and limited period of time. As used in this section, “chemical restraint” means a drug used to control behavior and used in a manner not required to treat the resident’s medical symptoms.
+
 (l) “Resident” shall have the same
  meaning as provided in Section 1599.15.
 (Amended by Stats. 2023, Ch. 794, Sec. 3. (AB 48) Effective January 1, 2024.)
-END SOURCE 4
 
-END OF PACKET — 4 sources
+SOURCE 5: 22 CCR 72527, Patients' Rights | https://govt.westlaw.com/calregs/Document/IBAE556025B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default) | source date: last substantively amended 6-23-2011 (Register 2011, No. 25); database current through 8/28/26, Register 2026, No. 35 (both per the document's own Currentness/history text) | retrieved: 2026-09-04
+Barclays California Code of Regulations
+
+Title 22. Social Security
+ Division 5. Licensing and Certification of Health Facilities, Home Health Agencies, Clinics, and Referral Agencies (Refs & Annos)
+ Chapter 3. Skilled Nursing Facilities
+ Article 5. Administration
+
+22 CCR § 72527
+
+§ 72527. Patients' Rights.
+
+Currentness
+
+(a) Patients have the rights enumerated in this section and the facility shall ensure that these rights are not violated. The facility shall establish and implement written policies and procedures which include these rights and shall make a copy of these policies available to the patient and to any representative of the patient. The policies shall be accessible to the public upon request. Patients shall have the right:
+
+(1) To be fully informed, as evidenced by the patient's written acknowledgement prior to or at the time of admission and during stay, of these rights and of all rules and regulations governing patient conduct.
+
+(2) To be fully informed, prior to or at the time of admission and during stay, of services available in the facility and of related charges, including any charges for services not covered by the facility's basic per diem rate or not covered under Titles XVIII or XIX of the Social Security Act.
+
+(3) To be fully informed by a physician of his or her total health status and to be afforded the opportunity to participate on an immediate and ongoing basis in the total plan of care including the identification of medical, nursing and psychosocial needs and the planning of related services.
+
+(4) To consent to or to refuse any treatment or procedure or participation in experimental research.
+
+(5) To receive all information that is material to an individual patient's decision concerning whether to accept or refuse any proposed treatment or procedure. The disclosure of material information for administration of psychotherapeutic drugs or physical restraints or the prolonged use of a device that may lead to the inability to regain use of a normal bodily function shall include the disclosure of information listed in Section 72528(b).
+
+(6) To be transferred or discharged only for medical reasons, or the patient's welfare or that of other patients or for nonpayment for his or her stay and to be given reasonable advance notice to ensure orderly transfer or discharge. Such actions shall be documented in the patient's health record.
+
+(7) To be encouraged and assisted throughout the period of stay to exercise rights as a patient and as a citizen, and to this end to voice grievances and recommend changes in policies and services to facility staff and/or outside representatives of the patient's choice, free from restraint, interference, coercion, discrimination or reprisal.
+
+(8) To be free from discrimination based on sex, race, color, religion, ancestry, national origin, sexual orientation, disability, medical condition, marital status, or registered domestic partner status.
+
+(9) To manage personal financial affairs, or to be given at least a quarterly accounting of financial transactions made on the patient's behalf should the facility accept written delegation of this responsibility subject to the provisions of Section 72529.
+
+(10) To be free from mental and physical abuse.
+
+(11) To be assured confidential treatment of financial and health records and to approve or refuse their release, except as authorized by law.
+
+(12) To be treated with consideration, respect and full recognition of dignity and individuality, including privacy in treatment and in care of personal needs.
+
+(13) Not to be required to perform services for the facility that are not included for therapeutic purposes in the patient's plan of care.
+
+(14) To associate and communicate privately with persons of the patient's choice, and to send and receive personal mail unopened.
+
+(15) To meet with others and participate in activities of social, religious and community groups.
+
+(16) To retain and use personal clothing and possessions as space permits, unless to do so would infringe upon the health, safety or rights of the patient or other patients.
+
+(17) If married or registered as a domestic partner, to be assured privacy for visits by the patient's spouse or registered domestic partner and if both are patients in the facility, to be permitted to share a room.
+
+(18) To have daily visiting hours established.
+
+(19) To have visits from members of the clergy at any time at the request of the patient or the patient's representative.
+
+(20) To have visits from persons of the patient's choosing at any time if the patient is critically ill, unless medically contraindicated.
+
+(21) To be allowed privacy for visits with family, friends, clergy, social workers or for professional or business purposes.
+
+(22) To have reasonable access to telephones and to make and receive confidential calls.
+
+(23) To be free from any requirement to purchase drugs or rent or purchase medical supplies or equipment from any particular source in accordance with the provisions of Section 1320 of the Health and Safety Code.
+
+(24) To be free from psychotherapeutic drugs and physical restraints used for the purpose of patient discipline or staff convenience and to be free from psychotherapeutic drugs used as a chemical restraint as defined in Section 72018, except in an emergency which threatens to bring immediate injury to the patient or others. If a chemical restraint is administered during an emergency, such medication shall be only that which is required to treat the emergency condition and shall be provided in ways that are least restrictive of the personal liberty of the patient and used only for a specified and limited period of time.
+
+(25) Other rights as specified in Health and Safety Code, Section 1599.1.
+
+(26) Other rights as specified in Welfare and Institutions Code, Sections 5325 and 5325.1, for persons admitted for psychiatric evaluations or treatment.
+
+(27) Other rights as specified in Welfare and Institutions Code Sections 4502, 4503 and 4505 for patients who are developmentally disabled as defined in Section 4512 of the Welfare and Institutions Code.
+
+(b) A patient's rights, as set forth above, may only be denied or limited if such denial or limitation is otherwise authorized by law. Reasons for denial or limitation of such rights shall be documented in the patient's health record.
+
+(c) If a patient lacks the ability to understand these rights and the nature and consequences of proposed treatment, the patient's representative shall have the rights specified in this section to the extent the right may devolve to another, unless the representative's authority is otherwise limited. The patient's incapacity shall be determined by a court in accordance with state law or by the patient's physician unless the physician's determination is disputed by the patient or patient's representative.
+
+(d) Persons who may act as the patient's representative include a conservator, as authorized by Parts 3 and 4 of Division 4 of the Probate Code (commencing with Section 1800), a person designated as attorney in fact in the patient's valid Durable Power of Attorney for Health Care, patient's next of kin, other appropriate surrogate decisionmaker designated consistent with statutory and case law, a person appointed by a court authorizing treatment pursuant to Part 7 (commencing with Section 3200) of Division 4 of the Probate Code, or, if the patient is a minor, a person lawfully authorized to represent the minor.
+
+(e) Patients' rights policies and procedures established under this section concerning consent, informed consent and refusal of treatments or procedures shall include, but not be limited to the following:
+
+(1) How the facility will verify that informed consent was obtained or a treatment or procedure was refused pertaining to the administration of psychotherapeutic drugs or physical restraints or the prolonged use of a device that may lead to the inability of the patient to regain the use of a normal bodily function.
+
+(2) How the facility, in consultation with the patient's physician, will identify consistent with current statutory case law, who may serve as a patient's representative when an incapacitated patient has no conservator or attorney in fact under a valid Durable Power of Attorney for Health Care.
+
+Credits
+
+Note: Authority cited: Sections 1275 and 131200, Health and Safety Code. Reference: Section 51, Civil Code; Sections 297 and 297.5, Family Code; Sections 1276, 1320, 1599, 1599.1, 1599.2, 1599.3, 131050, 131051 and 131052, Health and Safety Code; and Cobbs v. Grant (1972) 8 Cal.3d 229.
+
+History
+
+1. Amendment of subsections (a) and (b), repealer of subsection (c), and new subsections (c), (d), and (e) filed 5-27-92; operative 5-27-92 (Register 92, No. 22).
+
+2. Change without regulatory effect amending adopting subsection (a)(8), renumbering subsections and amending newly designated subsection (a)(17), subsection (d) and Note filed 6-23-2011 pursuant to section 100, title 1, California Code of Regulations (Register 2011, No. 25).
+
+This database is current through 8/28/26 Register 2026, No. 35.
+
+Cal. Admin. Code tit. 22, § 72527, 22 CA ADC § 72527
+
+End of Document
+
+SOURCE 6: 22 CCR 72520, Bed Hold | https://govt.westlaw.com/calregs/Document/IBABCBF5E5B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default) | source date: last amendment 5-15-85 (Register 85, No. 21), with a clarifying sentence added afterward per History item 3 (undated in the document's own text); database current through 8/28/26, Register 2026, No. 35 | retrieved: 2026-09-04
+Barclays California Code of Regulations
+
+Title 22. Social Security
+ Division 5. Licensing and Certification of Health Facilities, Home Health Agencies, Clinics, and Referral Agencies (Refs & Annos)
+ Chapter 3. Skilled Nursing Facilities
+ Article 5. Administration
+
+22 CCR § 72520
+
+§ 72520. Bed Hold.
+
+Currentness
+
+(a) If a patient of a skilled nursing facility is transferred to a general acute care hospital as defined in Section 1250(a) of the Health and Safety Code, the skilled nursing facility shall afford the patient a bed hold of seven (7) days, which may be exercised by the patient or the patient's representative.
+
+(1) Upon transfer to a general acute care hospital, the patient or the patient's representative shall notify the skilled nursing facility within twenty-four (24) hours after being informed of the right to have the bed held, if the patient desires the bed hold.
+
+(2) Except as provided in Section 51535.1, Title 22, California Administrative Code, any patient who exercises the bedhold option shall be liable to pay reasonable charges, not to exceed the patient's daily rate for care in the facility, for bed hold days.
+
+(3) If the patient's attending physician notifies the skilled nursing facility in writing that the patient's stay in the general acute care hospital is expected to exceed seven (7) days, the skilled nursing facility shall not be required to maintain the bed hold.
+
+(b) Upon admission of the patient to the skilled nursing facility and upon transfer of the patient of a skilled nursing facility to a general acute care hospital, the skilled nursing facility shall inform the patient, or the patient's representative, in writing of the right to exercise this bed hold provision. No later than June 1, 1985, every skilled nursing facility shall inform each current patient or patient's representative in writing of the right to exercise the bed hold provision. Each notice shall include information that a non-Medi-Cal eligible patient will be liable for the cost of the bed hold days, and that insurance may or may not cover such costs.
+
+(c) A licensee who fails to meet these requirements shall offer to the patient the next available bed appropriate for the patient's needs. This requirement shall be in addition to any other remedies provided by law.
+
+The provisions of this section do not apply to patients covered only by Medicare, Title XVIII benefits pursuant to Code of Federal Regulations, Title 42, Subsection 489.22(d)(1).
+
+Credits
+
+Note: Authority cited: Sections 208(a), 1275 and 1276, Health and Safety Code. Reference: Sections 1275 and 1276, Health and Safety Code; and 42 CFR 489.22 (d)(1).
+
+History
+
+1. New section filed 12-17-84 as an emergency; effective upon filing (Register 85, No. 1). A Certificate of Compliance must be transmitted to OAL within 120 days or emergency language will be repealed on 4-16-85.
+
+2. Certificate of Compliance including amendment of subsection (b) transmitted to OAL 4-11-85 and filed 5-15-85 (Register 85, No. 21).
+
+3. Last sentence added to clarify that Section 72520 as originally adopted was not applicable to patients covered only by Medicare, Title XVIII benefits. (See 42 CFR 489.22(d)(1).)
+
+This database is current through 8/28/26 Register 2026, No. 35.
+
+Cal. Admin. Code tit. 22, § 72520, 22 CA ADC § 72520
+
+End of Document
+
+SOURCE 7: 22 CCR 72519, Patient Transfer | https://govt.westlaw.com/calregs/Document/IBABA4E545B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default) | source date: no HISTORY entries printed in the document's own text (Credits/NOTE only); database current through 8/28/26, Register 2026, No. 35 | retrieved: 2026-09-04
+Barclays California Code of Regulations
+
+Title 22. Social Security
+ Division 5. Licensing and Certification of Health Facilities, Home Health Agencies, Clinics, and Referral Agencies (Refs & Annos)
+ Chapter 3. Skilled Nursing Facilities
+ Article 5. Administration
+
+22 CCR § 72519
+
+§ 72519. Patient Transfer.
+
+Currentness
+
+(a) The licensee shall maintain written transfer agreements with other nearby health facilities to make the services of those facilities accessible and to facilitate the transfer of patients. Complete and accurate patient information, in sufficient detail to provide for continuity of care shall be transferred with the patient at time of transfer.
+
+(b) When a patient is transferred to another facility, the following shall be entered in the patient health record:
+
+(1) The date, time, condition of the patient and a written statement of the reason for the transfer.
+
+(2) Informed written or telephone acknowledgement of the patient, patient's guardian or authorized representative except in an emergency or as provided in Section 72527(a)(5).
+
+Credits
+
+Note: Authority cited: Sections 208(a) and 1275, Health and Safety Code. Reference: Section 1276, Health and Safety Code.
+
+This database is current through 8/28/26 Register 2026, No. 35.
+
+Cal. Admin. Code tit. 22, § 72519, 22 CA ADC § 72519
+
+End of Document
+
+SOURCE 8: 22 CCR 51535.1, Bed Hold for Acute Hospitalization | https://govt.westlaw.com/calregs/Document/I6300B9C25B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default) | source date: last operative amendment 12-24-2013, Certificate of Compliance filed 5-22-2014 (Register 2014, No. 21); database current through 8/28/26, Register 2026, No. 35 | retrieved: 2026-09-04
+Barclays California Code of Regulations
+
+Title 22. Social Security
+ Division 3. Health Care Services
+ Subdivision 1. California Medical Assistance Program (Refs & Annos)
+ Chapter 3. Health Care Services
+ Article 7. Payment for Services and Supplies
+
+22 CCR § 51535.1
+
+§ 51535.1. Bed Hold for Acute Hospitalization.
+
+Currentness
+
+(a) Payment shall be made to skilled nursing facilities, swing bed facilities, intermediate care facilities, intermediate care facilities for the developmentally disabled, intermediate care facilities for the developmentally disabled habilitative, and intermediate care facilities for the developmentally disabled-nursing for bed hold days for any beneficiary who exercises the bed hold option provided by Title 22, California Code of Regulations, Sections 72520, 73504, 76506 and 76909.1.
+
+(b) Payment for bed hold days shall be limited to a maximum of seven days for each period of acute hospitalization.
+
+(c) The following requirements shall be met:
+
+(1) Acute hospitalization for the beneficiary shall be ordered by the attending physician.
+
+(2) The facility shall hold a bed vacant during the entire bed hold period except when notified, in writing by the attending physician that the patient requires more than seven days of hospitalization. If so notified, the facility is no longer required to hold the bed available and shall not bill Medi-Cal for any remaining days of bed hold.
+
+(3) The day of departure shall be counted as one day of bed hold and the day of return shall be counted as one day of inpatient care.
+
+(4) Bed hold shall be terminated and payment shall not be made on the day of death of the beneficiary.
+
+(5) Facility claims shall identify the inclusive dates of bed hold.
+
+(6) A new treatment authorization request shall be required, as specified in section 51335(b)(3), for Medicare-eligible beneficiaries who have returned from a Medicare-qualifying stay in an acute care hospital.
+
+(7) The beneficiary's records maintained in the facility shall show the name and address of the acute care hospital to which the beneficiary has been admitted.
+
+(d) Payment to skilled nursing facilities, swing bed facilities, intermediate care facilities for the developmentally disabled, intermediate care facilities for the developmentally disabled-habilitative, and intermediate care facilities for the developmentally disabled-nursing for beneficiaries who are on bed hold for acute hospitalization shall be at the appropriate facility daily rate less the amount specified in the chart below for raw food costs, except for state operated institutions.
+
+Bed Hold Effective Rate Year
+
+ | 2004-05 | 2005-06 | 2006-07
+
+ | $5.07 | $5.18 | $5.30
+
+Credits
+
+Note: Authority cited: Sections 10725, 14105, 14108, 14108.1, 14108.2, 14109.5 and 14124.5, Welfare and Institutions Code; and Sections 20 and 1275.3, Health and Safety Code. Reference: Sections 14087.3, 14108, 14108.1, 14108.2, 14110.1, 14123 and 14132.22, Welfare and Institutions Code; Section 1275.3, Health and Safety Code; Statutes of 2004, Chapter 208, Items 4260-101-0001 and 4260-101-0890; Statutes of 2005, Chapter 38, Items 4260-101-0001 and 4260-101-0890; and Statutes of 2006, Chapter 48, Items 4260-101-0001 and 4260-101-0890.
+
+History
+
+1. Amendment refiled by the Department of Health Services with the Secretary of State on 5-30-89 as an emergency pursuant to Health and Safety Code section 1275.3; operative 5-30-89. Submitted to OAL for printing only pursuant to Government Code section 11343.8 (Register 89, No. 23). For prior history, see Register 89, No. 1.
+
+2. Amendment filed 8-7-89 as an emergency; operative 8-7-89 (Register 89, No. 32). A Certificate of Compliance must be transmitted to OAL within 120 days or emergency language will be repealed on 12-5-89.
+
+3. Certificate of Compliance as to 5-30-89 order transmitted to OAL 9-27-89 and filed 10-26-89 (Register 89, No. 44).
+
+4. Certificate of Compliance as to 8-7-89 transmitted to OAL 12-1-89 and filed 1-2-90 (Register 90, No. 2).
+
+5. Amendment filed 12-10-90 as an emergency; operative 12-10-90 (Register 91, No. 6). A Certificate of Compliance must be transmitted to OAL by 4-9-91, or emergency language will be repealed by operation of law on the following day.
+
+6. Certificate of Compliance as to 12-10-90 order transmitted to OAL 4-8-91 and filed 5-8-91 (Register 91, No. 24).
+
+7. Amendment of subsection (d) and Note filed 8-12-91 as an emergency; operative 8-12-91 (Register 92, No. 6). A Certificate of Compliance must be transmitted to OAL 12-10-91 or emergency language will be repealed by operation of law on the following day.
+
+8. Certificate of Compliance as to 8-12-91 order transmitted to OAL 12-9-91 and filed 1-2-92 (Register 92, No. 18).
+
+9. Amendment of subsection (d) and Note filed 12-3-92 as an emergency; operative 12-3-92 (Register 92, No. 49). A Certificate of Compliance must be transmitted to OAL 4-2-93 or emergency language will be repealed by operation of law on the following day.
+
+10. Certificate of Compliance as to 12-3-92 order transmitted to OAL 4-2-93 and filed 5-14-93 (Register 93, No. 20).
+
+11. Amendment of subsection (d) and Note filed 8-24-93 as an emergency; operative 8-24-93 (Register 93, No. 35). A Certificate of Compliance must be transmitted to OAL by 12-22-93 or emergency language will be repealed by operation of law on the following day.
+
+12. Amendment of subsection (d) and Note refiled 12-20-93 as an emergency; operative 12-20-93 (Register 93, No. 52). A Certificate of Compliance must be transmitted to OAL by 4-21-94 or emergency language will be repealed by operation of law on the following day.
+
+13. Certificate of Compliance as to 12-20-93 order transmitted to OAL 3-22-94 and filed 4-28-94 (Register 94, No. 17).
+
+14. Amendment of subsection (d) and Note filed 8-31-94 as an emergency; operative 8-31-94 (Register 94, No. 35). A Certificate of Compliance must be transmitted to OAL by 12-29-94 or emergency language will be repealed by operation of law on the following day.
+
+15. Amendment of subsection (d) and Note refiled 1-3-95 as an emergency; operative 1-3-95 (Register 95, No. 1). A Certificate of Compliance must be transmitted to OAL 5-3-95 or emergency language will be repealed by operation of law on the following day.
+
+16. Certificate of Compliance as to 1-3-95 order transmitted to OAL 4-27-95 and filed 6-9-95 (Register 95, No. 23).
+
+17. Amendment of section heading, subsections (b), (b)(1)-(2), (b)(7) and (d), new subsection (e) and amendment of Note filed 4-1-96 as an emergency; operative 4-1-96 (Register 96, No. 14). A Certificate of Compliance must be transmitted to OAL by 9-30-96 pursuant to Welfare and Institutions Code section 14132.22 or emergency language will be repealed by operation of law on the following day.
+
+18. Editorial correction of History 17 (Register 96, No. 35).
+
+19. Amendment of section heading, subsections (b), (b)(1)-(2), (b)(7) and (d), new subsection (e) and amendment of Note refiled 8-28-96 as an emergency; operative 9-30-96 (Register 96, No. 35). A Certificate of Compliance must be transmitted to OAL by 1-28-97 or emergency language will be repealed by operation of law on the following day.
+
+20. Amendment of subsection (d) and Note filed 9-19-96 as an emergency; operative 9-19-96 (Register 96, No. 38). A Certificate of Compliance must be transmitted to OAL by 1-17-97 or emergency language will be repealed by operation of law on the following day.
+
+21. Certificate of Compliance as to 9-19-96 order transmitted to OAL 1-17-97 and filed 3-3-97 (Register 97, No. 10).
+
+22. Certificate of Compliance as to 8-28-96 order transmitted to OAL 1-23-97 and filed 3-10-97 (Register 97, No. 11).
+
+23. Amendment of subsection (d) and Note filed 12-31-97 as an emergency; operative 12-31-97 (Register 98, No. 1). A Certificate of Compliance must be transmitted to OAL by 4-30-98 or emergency language will be repealed by operation of law on the following day.
+
+24. Editorial correction of History 23 (Register 98, No. 24).
+
+25. Certificate of Compliance as to 12-31-97 order transmitted to OAL 4-27-98 and filed 6-9-98 (Register 98, No. 24).
+
+26. Amendment of subsection (d) and Note filed 10-29-98 as an emergency; operative 10-29-98 (Register 98, No. 44). A Certificate of Compliance must be transmitted to OAL by 2-26-99 or emergency language will be repealed by operation of law on the following day.
+
+27. Certificate of Compliance as to 10-29-98 order transmitted to OAL 2-26-99 and filed 4-8-99 (Register 99, No. 15).
+
+28. Amendment of subsection (d) and amendment of Note filed 11-3-99 as an emergency; operative 11-3-99 (Register 99, No. 45). A Certificate of Compliance must be transmitted to OAL by 3-2-2000 or emergency language will be repealed by operation of law on the following day.
+
+29. Certificate of Compliance as to 11-3-99 order transmitted to OAL 3-1-2000 and filed 4-6-2000 (Register 2000, No. 14).
+
+30. Amendment of subsection (d) and amendment of Note filed 11-17-2000 as an emergency; operative 11-17-2000 (Register 2000, No. 46). A Certificate of Compliance must be transmitted to OAL by 3-19-2001 or emergency language will be repealed by operation of law on the following day.
+
+31. Certificate of Compliance as to 11-17-2000 order transmitted to OAL 3-8-2001 and filed 4-19-2001 (Register 2001, No. 16).
+
+32. Amendment of section heading, subsection (d) and Note filed 1-27-2003 as an emergency; operative 8-1-2001 pursuant to Statutes of 2002, Chapter 16, Items 4260-101-0001 and 4260-101-0890 (Register 2003, No. 5). A Certificate of Compliance must be transmitted to OAL by 5-27-2003 or emergency language will be repealed by operation of law on the following day.
+
+33. Amendment of section heading, subsection (d) and Note refiled 5-22-2003 as an emergency; operative 5-22-2003 (Register 2003, No. 21). A Certificate of Compliance must be transmitted to OAL by 9-19-2003 or emergency language will be repealed by operation of law on the following day.
+
+34. Certificate of Compliance as to 5-22-2003 order transmitted to OAL 9-18-2003 and filed 10-16-2003 (Register 2003, No. 42).
+
+35. Amendment of subsection (d) and amendment of Note filed 8-24-2005 as a deemed emergency pursuant to Welfare and Institutions Code section 14105(a); operative 8-24-2005 for dates of service 8-1-2002 through 7-31-2003 pursuant to Statutes of 2002, Chapter 379, Items 4260-101-0001 and 4260-101-0890 (Register 2005, No. 34). A Certificate of Compliance must be transmitted to OAL by 12-23-2005 or emergency language will be repealed by operation of law on the following day.
+
+36. Certificate of Compliance as to 8-24-2005 order transmitted to OAL 12-22-2005 and filed 1-23-2006 (Register 2006, No. 4).
+
+37. Change without regulatory effect amending subsections (a), (b), (c)(1)-(2) and (c)(7), repealing subsection (e) and amending Note filed 6-12-2006 pursuant to section 100, title 1, California Code of Regulations (Register 2006, No. 24).
+
+38. Amendment of subsection (d) and amendment of Note filed 6-24-2010 as an emergency; operative 6-24-2010 (Register 2010, No. 26). A Certificate of Compliance must be transmitted to OAL by 12-21-2010 or emergency language will be repealed by operation of law on the following day.
+
+39. Certificate of Compliance as to 6-24-2010 order transmitted to OAL 11-29-2010 and filed 1-10-2011 (Register 2011, No. 2).
+
+40. Amendment of subsection (d) and Note filed 12-24-2013 as an emergency; operative 12-24-2013 (Register 2013, No. 52). A Certificate of Compliance must be transmitted to OAL by 6-23-2014 or emergency language will be repealed by operation of law on the following day.
+
+41. Certificate of Compliance as to 12-24-2013 order transmitted to OAL 4-15-2014 and filed 5-22-2014 (Register 2014, No. 21).
+
+This database is current through 8/28/26 Register 2026, No. 35.
+
+Cal. Admin. Code tit. 22, § 51535.1, 22 CA ADC § 51535.1
+
+End of Document
+
+SOURCE 9: Welfare and Institutions Code section 14126.029 (facility compliance with an OAHA hearing decision) | https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=WIC&sectionNum=14126.029 | source date: added by Stats. 2021, Ch. 143, Sec. 384, effective July 27, 2021; conditionally operative per section 14126.035(a) and inoperative after December 31, 2027 per section 14126.036, both per the document's own closing credit line | retrieved: 2026-09-04
+Welfare and Institutions Code - WIC
+
+DIVISION 9. PUBLIC SOCIAL SERVICES [10000 - 18999.98]
+  ( Division 9 added by Stats. 1965, Ch. 1784. )
+
+PART 3. AID AND MEDICAL ASSISTANCE [11000 - 15771]
+  ( Part 3 added by Stats. 1965, Ch. 1784. )
+
+CHAPTER 7. Basic Health Care [14000 - 14199.97]
+  ( Chapter 7 added by Stats. 1965, 2nd Ex. Sess., Ch. 4. )
+
+ARTICLE 3.8. Medi-Cal Long-Term Care Reimbursement Act [14126 - 14126.036]
+  ( Article 3.8 repealed and added by Stats. 2004, Ch. 875, Sec. 5. )
+
+14126.029.
+
+(a) For purposes of this section, the following definitions apply:
+
+(1) “Long-term health care facility” means a skilled nursing facility or nursing facility as those terms are defined in paragraph (1) of subdivision (c) and subdivision (k) of Section 1250 of the Health and Safety Code, respectively.
+
+(2) “Timely” means within three calendar days of a long-term health care facility being served a hearing decision.
+
+(b) A long-term health care facility shall timely comply with a hearing decision, as issued by the department’s Office of Administrative
+ Hearings and Appeals pursuant to Section 1396r(e)(3) of Title 42 of the United States Code and Section 1599.1 of the Health and Safety Code, that finds that the long-term health care facility improperly transferred, discharged, or refused to readmit a resident.
+
+(c) (1) Notwithstanding any other law, and in addition to any other remedial action available to the department, if a long-term health care facility fails to timely comply with a hearing decision issued by the department’s Office of Administrative Hearings and Appeals, the department may assess penalties pursuant to this subdivision.
+
+(2) Commencing on the fourth calendar day after the date of service of the hearing decision, the department may assess a penalty of seven hundred fifty dollars
+ ($750) for each calendar day the facility fails to comply with the hearing decision.
+
+(3) For each individual hearing decision, the department shall not assess aggregate penalties that exceed seventy-five thousand dollars ($75,000).
+
+(d) To demonstrate compliance with a hearing decision, a long-term health care facility shall file a certification of compliance with the department within three calendar days of the date the hearing decision is served on that facility, in a form and manner as established by the department. The certification shall specify the date of service of the hearing decision and the date on which the resident was readmitted or the facility otherwise complied with the hearing decision. The department shall make a certificate of compliance available on its internet
+ website.
+
+(e) A long-term health care facility’s failure to timely comply with the hearing decision, including, but not limited to, a failure to file the certification of compliance within three calendar days of service of the hearing decision, as described in subdivision (d), shall subject that facility to the issuance of penalties as specified in subdivision (c), except as provided in subdivision (g).
+
+(f) (1) Notwithstanding any other law, the amount of the assessed penalties, as calculated pursuant to subdivision (c), for a long-term health care facility may be deducted by the department from any Medi-Cal payments to that facility until the penalties are paid in full. If the department deducts the penalties from the Medi-Cal payments to the facility, the
+ department shall provide prior written notice to the facility, and, in taking into account the financial condition of the facility, may apply that deduction over a period of time.
+
+(2) Notwithstanding any other law, if there is a merger, acquisition, or change of ownership involving a long-term health care facility that has outstanding penalties pursuant to this section, the successor long-term health care facility shall be responsible for paying to the department the full amount of outstanding penalties attributable to the facility for which it was assessed, upon the effective date of that transaction.
+
+(g) The department may waive all or a portion of the penalties assessed under this section if a facility petitions for a waiver and the department determines, in its sole
+ discretion, that the petitioning facility meets both of the following:
+
+(1) The facility complied with the hearing decision or otherwise demonstrated to the department’s satisfaction that sufficient corrective action has been taken to remediate the underlying improper conduct.
+
+(2) The facility demonstrated to the department’s satisfaction that imposing the full amount of penalties under this section has a high likelihood of creating an undue financial hardship for that facility or creates a significant difficulty in providing services to Medi-Cal beneficiaries.
+
+(h) Any penalties collected by the department pursuant to this section shall be deposited into the General Fund, and, upon appropriation by the Legislature, shall be
+ used to improve quality of long-term care services under the Medi-Cal program, and to fund the department’s administrative costs associated with the hearings conducted pursuant to Section 1396r(e)(3) of Title 42 of the United States Code and Section 1599.1 of the Health and Safety Code for purposes of implementing this section.
+
+(i) Any penalty the department assesses on a long-term health care facility pursuant to this section is appealable only to the superior court of the county where the facility is located.
+
+(j) Any penalty issued pursuant to this section shall not prohibit any state or federal enforcement action, including, but not limited to, an enforcement action by the State Department of Public Health, for a violation of improper transfer or discharge or failure to readmit
+ requirements.
+
+(k) Notwithstanding the rulemaking provisions of Chapter 3.5 (commencing Section 11340) of Part 1 of Division 3 of Title 2 of the Government Code, the department may implement, interpret, or make specific this section, in whole or in part, by means of information notices, provider bulletins, or other similar instructions, without taking any further regulatory action.
+
+(l) The department shall seek any federal approvals it deems necessary to implement this section. This section shall be implemented only to the extent that any necessary federal approvals are obtained and federal financial participation is not jeopardized.
+
+(m) In the event that the long-term health care facility seeks judicial review of the
+ hearing decision and the hearing decision is reversed through such review, the department, after being provided a copy of the final judicial order by the facility, shall refund to the facility any penalties paid by the facility associated with the reversed hearing decision.
+
+(n) (1) A hearing decision for a hearing described in subdivision (b) shall be made by a hearing officer trained to consider and apply the procedural and substantive requirements of all applicable federal and state laws and regulations governing the transfer and discharge process.
+
+(2) A hearing described in subdivision (b) shall afford the resident and facility due process, including, but not limited to, allowing the direct and cross-examination of witnesses under oath, allowing the
+ presentation of documents as exhibits, and making a recording of all sessions of the proceedings of sufficient quality to allow for the preparation of a written transcript.
+(Added by Stats. 2021, Ch. 143, Sec. 384. (AB 133) Effective July 27, 2021. Conditionally inoperative as provided in subd. (a) of Section 14126.035. Inoperative after December 31, 2027, pursuant to Section 14126.036.)
+

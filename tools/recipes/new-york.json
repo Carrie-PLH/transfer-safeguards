@@ -45,6 +45,48 @@
         "collapse-blank-runs"
       ],
       "notes": "CLAUDE.md records aging.ny.gov as 403-to-curl from earlier PDF traps, and the standing packet was captured through a session fetch tool for the same reason on this page. Retested 2026-09-03: a plain curl with NO user-agent returns HTTP 200 with the full server-rendered document. Sending a browser user-agent string instead trips a Cloudflare interstitial ('Just a moment...') and returns HTTP 403 — the inverse of the usual pattern recorded elsewhere in CLAUDE.md, where a bare fetch is what gets refused. This host's <main> element holds the phone number, 'Claudette Royal, the New York State Ombudsman', and the rest of the page's own prose, and excludes the site's navigation chrome; no mailing address is stated on this page, so none is expected in the capture."
+    },
+    {
+      "n": 4,
+      "title": "10 NYCRR 415.3, Residents' rights — New York Codes, Rules and Regulations",
+      "url": "https://regs.health.ny.gov/content/section-4153-residents-rights",
+      "source_date": "Effective Date 02/24/2022",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "main",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "The baseline packet (2026-08-30) recorded this regulation as capture-pending: 'the department's regulation portal returned HTTP 404 to the section path tried'. Found 2026-09-04 at regs.health.ny.gov, the Department of Health's own Drupal-based publication of Title 10 NYCRR ('New York Codes, Rules and Regulations' per its own <title>), reached by following the site's own volume/chapter/subchapter/article/part navigation from its home page (volume-c-title-10 > chapter-v-medical-facilities > subchapter-medical-facilities-minimum-standards > article-3-residential-care-facilities > part-415-nursing-homes-minimum-standards > this section) rather than by guessing a URL. Plain curl with no user-agent and with a curl user-agent both return HTTP 403; a browser user-agent returns HTTP 200 with the full server-rendered page — the same pattern CLAUDE.md already records for several other hosts. 'main' scope carries the breadcrumb, the page's own 'Section 415.3 - Residents' rights' title, its 'Effective Date 02/24/2022' block, and the full regulatory text of subdivisions (a) through (i); it excludes the site's top navigation bar and the sidebar 'UP' button, neither of which is evidence. Checked for the hidden-node and HTML-comment artifacts CLAUDE.md records for other Drupal/SharePoint templates: the only 'display:none' on this page sits inside a <noscript><style> block in <head>, outside 'main' and inside a tag this extractor already drops whole; the only HTML comment is an IE conditional comment near the end of <body>, likewise outside 'main'. Neither reaches the captured text."
+    },
+    {
+      "n": 5,
+      "title": "18 NYCRR 505.9, Residential health care — New York Codes, Rules and Regulations",
+      "url": "https://regs.health.ny.gov/content/section-5059-residential-health-care",
+      "source_date": "Effective Date 05/29/2019",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "main",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Found 2026-09-04 alongside source 4, on the Title 18 (Social Services / Medicaid) side of the same portal (volume-c-title-18 > subchapter-e-medical-care > article-3-policies-and-standards-governing-provision-medical-and-dental-care > part-505-medical-care > this section), pursuing the baseline packet's finding that no first-party statement of the Medicaid bed-hold period had been found. Subdivision (d), 'Reserved Bed Days', states the NF-Medicaid bed-reservation day counts the two consumer pages in sources 1-2 describe only as a 'bed-hold policy' with no number. Same transport pattern as source 4 (browser user-agent required; curl and no-user-agent both 403); same 'main' scope for the same reason; checked for the same hidden-node and comment artifacts with the same result (neither reaches 'main')."
+    },
+    {
+      "n": 6,
+      "title": "Transfer/Discharge Notice template (DOCX) — New York State Department of Health",
+      "url": "https://www.health.ny.gov/facilities/nursing/rights/docs/discharge_notice_template.docx",
+      "source_date": "none stated in the document",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "docx",
+      "scope": "paragraphs-and-tables",
+      "filters": [],
+      "notes": "Linked from source 2 ('Discharge Appeal template (DOCX) - Available in the following languages: ...'), recorded capture-pending at baseline. This is the English-language version; the other ten linked language versions are not captured, matching the project's Spanish-page convention of published-translations-only and this page carrying no non-English edition yet. The document is the department's own fillable notice form, citing '10 NYCRR § 415.3 and 42 CFR § 483.15' on its face; it states the same 30-day/60-day/appeal structure as sources 1-2 and adds two things neither consumer page states: a sentence that a resident who remains in the facility pending an appeal 'may be liable for the cost to stay at the facility pending the appeal if the resident loses their appeal', and the full published contact block for Disability Rights New York, the protection-and-advocacy agency 415.3(i)(1)(v)(h) requires the notice to name for residents with mental illness or developmental disabilities. The file has 10 tables, each with no cells holding text (checkbox/layout scaffolding only), so 'paragraphs-and-tables' and 'paragraphs-only' extract identically here; the wider setting is used for consistency with the California packet's convention for this extractor."
     }
   ]
 }

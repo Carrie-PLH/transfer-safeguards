@@ -61,6 +61,36 @@
         "collapse-blank-runs"
       ],
       "notes": "Also recorded in the standing packet as defeating plain curl and captured through a session reader; retested 2026-09-03, plain curl with a browser user-agent returns 200 with the full Divi-theme page (the '14 district offices' line, the toll-free ombudsman number 1-888-831-0404, the Winewood Boulevard address and the 'medical reasons, the welfare of other residents or nonpayment of a bill' rights language all present). The page carries about 331 KB of markup but only ~16.6 KB of body text once script/style nodes are dropped, so 'body' is not the wide net it looks like; the resident-rights accordion content sits well outside any <main> or <article> wrapper this template exposes, so body is the narrowest honestly-stated scope, and again a safe superset of the standing packet's curated excerpt."
+    },
+    {
+      "n": 5,
+      "title": "Florida Administrative Code Chapter 65-2, Rules of Practice and Procedure (Department of Children and Families)",
+      "url": "https://flrules.org/gateway/readFile.asp?sid=0&tid=0&cno=65-2&caid=1206309&type=4&file=65-2.doc",
+      "source_date": "most sections effective 4/2/2018 (per each rule's own History line on flrules.org; 65-2.058 effective 12/11/2006 and 65-2.060 effective 10/30/2000 are not amended by the 2018 rulemaking)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "docx",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Captured to resolve the department's fair-hearing procedural rule that s. 400.0255(15)(b) points to ('equivalent to the procedures used for fair hearings for other Medicaid cases, chapter 10-2, part VI, Florida Administrative Code'): each rule in the current chapter carries a History line reading 'Formerly 10-2.xx, 10-2.0xx', so chapter 65-2 is chapter 10-2 under its current number, though the current chapter prints no 'Part' subdivisions and this page cannot confirm which rules made up 'Part VI' specifically -- recorded as a finding, not resolved. flrules.org (Florida's official Administrative Code publisher) serves this chapter's full current text only as a single legacy binary Word file (Composite Document Format / 'Word 6.0/95', per the `file` command), not as a .docx, PDF, or HTML rendering -- checked: the chapter's own listing page offers no other format, and every individual rule's own readFile.asp link is the same legacy .doc format. tools/capture.py's docx extractor is python-docx, which reads only the OOXML .docx container and raises on this file (a compound binary document, not a zip). curl fetches the exact bytes fine (no WAF, no session token, no query hash in the URL -- it is a stable, directly-linked download) but capture.py has no extractor in its closed vocabulary for a legacy binary .doc, so the fetched bytes cannot be turned into text by anything already in the tool. Per this pass's constraint against modifying tools/capture.py, the file was fetched with curl exactly as capture.py's own fetch_curl would fetch it, then converted to plain text outside capture.py with the macOS `textutil -convert txt` utility (not python-docx, and not one of capture.py's own extractors), and handed to capture.py with `--supply 5=<converted file>`. THE EXTRACTOR FIELD ABOVE IS DECLARATIVE ONLY: because the supplied text is a Python str and this source's declared extractor is one of the ones capture.py treats as needing a binary decode, capture.py's own logic (capture_source(), the 'a supplied agent fetch is already text' branch) takes the supplied text as already-extracted and does not attempt to run python-docx on it. The auto-generated annotation on this source elsewhere in these capture notes reads '(fetched by the session reader and supplied)' -- that phrase is capture.py's own fixed wording for any supplied source and is not fully accurate here: the FETCH was plain curl, identical to what capture.py would do unattended; only the DOC-TO-TEXT CONVERSION was performed outside capture.py, because of the missing legacy-.doc extractor. Re-running `python3 tools/capture.py florida` without a fresh --supply for source 5 will fail loudly with a python-docx exception on this file's binary header, not silently reproduce or corrupt this text -- this is a genuine tools/capture.py gap (no extractor for the legacy binary .doc format), reported for the tool to gain one, or for this source to be re-based on an OOXML or PDF republication if flrules.org ever offers one for this chapter."
+    },
+    {
+      "n": 6,
+      "title": "Florida Medicaid Nursing Facility Services Coverage Policy, Rule 59G-4.200, F.A.C. (Agency for Health Care Administration)",
+      "url": "https://ahca.myflorida.com/content/download/27067/file/59G-4.200.pdf",
+      "source_date": "May 2016",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "filters": [
+        "strip-running-headers",
+        "strip-page-numbers",
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Found from ahca.myflorida.com's own 'Adopted Rules and Service Specific Policies' listing page (medicaid/rules/adopted-rules-service-specific-policies.html), which links this PDF as '59G-4.200 Nursing Facility Services Coverage Policy'; the document's own section 1.2 states its legal authority as 'Rule 59G-4.200, F.A.C.' among others. This is AHCA's own first-party statement of the Medicaid bed-hold ('leave days') policy the licensure statute (400.0255(6), 400.022(1)(u)) refers to without stating a Medicaid-specific day count of its own: section 4.2.1, 'Leave Days', states 'Florida Medicaid reimburses for leave days when the recipient is expected to return to the facility, as follows: Hospitalization -- 8 days per medically necessary hospital stay; Therapeutic leave -- 16 days per state fiscal year.' This 8-day figure differs from 400.022(1)(u)'s own 'up to 15 days' for a Title XIX (Medicaid) resident's hospitalization bed reservation; both are quoted on the page as published by their own publishers and are not reconciled. Single-column PDF, seven pages, no WAF encountered; plain curl with a browser user-agent returns 200 directly."
     }
   ]
 }
