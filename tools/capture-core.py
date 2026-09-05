@@ -328,6 +328,19 @@ def f_strip_running_headers(t):
         s = line.strip()
         if not edge:
             return False
+        # Measured with internal whitespace runs collapsed, the same
+        # normalization key() uses to decide identity. pdftotext -layout
+        # reproduces a head's justification as spaces, so a three-part head
+        # -- document number left, date centred, "Page N of M" right -- is
+        # padded out past the body column and disqualified by a test meant to
+        # separate short heads from long prose. Texas is the case
+        # (FA-Q-20260905-03): "PL 2022-25 (NF)   September 29, 2022   Page 2
+        # of 8" measures 77 to 86 characters against a body column of 65, so
+        # the header survived every filter and split a quoted sentence across
+        # a page break. Collapsed, it is 45 characters and reads as what it
+        # is. Measuring the padding was always measuring the typesetting
+        # rather than the line.
+        s = ' '.join(s.split())
         return (s and len(s) < width and len(s) >= RUNHEAD_BREAK_MIN_CHARS
                 and re.search(r'[A-Za-z]', s))
 
@@ -880,6 +893,27 @@ def self_test():
           'strip-running-headers ate a repeated contact block in mid-page')
     check(kept.count('Texas Education Agency') == 4,
           'strip-running-headers ate a repeated agency name in mid-page')
+
+    # A right-justified three-part head, the shape pdftotext -layout produces
+    # and the one that defeated the old length test. The head measures 77-86
+    # characters as printed and 45 with its padding collapsed, against a body
+    # column this fixture sets near 65 -- so it is only a candidate under the
+    # collapsed measure. FA-Q-20260905-03; the document is HHSC PL 2022-25 and
+    # the cost was a quoted sentence split across a page break.
+    body = ('the notice must be given to the resident and to the resident '
+            'representative\nin writing and in a language the resident '
+            'understands, and a copy filed\n')
+    padded = ''.join(
+        f'\x0cPL 2022-25 (NF)                  September 29, 2022'
+        f'                    Page {n} of 8\n' + body for n in (2, 3, 4, 5))
+    check(max(len(l) for l in padded.split('\n') if 'PL 2022-25' in l) > 75,
+          'the padded-head fixture is not actually padded past the body column')
+    ph = f_strip_running_headers(padded)
+    check('PL 2022-25' not in ph,
+          'a right-justified running head survived; its padding is being '
+          'measured instead of its text')
+    check(ph.count('the notice must be given') == 4,
+          'stripping the padded head took body text with it')
 
     twice = '\x0cHeading here again\nbody\n\x0cHeading here again\nbody\n'
     check(f_strip_running_headers(twice).count('Heading here again') == 2,
