@@ -47,6 +47,11 @@ person's work, so coverage failures are reported and never repaired.
     python3 tools/sync-checked-dates.py --self-test
 
 Run from the project root.
+
+Siblings: licensure mobility carries the other copy of this tool; known
+deliberate differences are recorded in
+~/Projects/Field Assembly/field-assembly-standard/TOOLS.md. Update that
+register when this copy gains or loses a capability.
 """
 
 import json
