@@ -1,0 +1,216 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: texas-moved
+ASSEMBLED: 2026-09-05
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/texas-moved.json (recipe digest a58682330184). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- SOURCE 1: transport curl; extractor html-text; scope #main; filters trim-lines, collapse-blank-runs.
+  Supplement captured 2026-09-05 for the drift the nightly review recorded as FA-Q-20260905-04. The standing packet's URL, https://www.hhs.texas.gov/handbooks/fair-fraud-hearings-handbook/1300-notice, now returns HTTP 403 to every fetch; HHSC's Forms and Handbooks system has moved to fhb.hhs.texas.gov, which a browser user-agent reaches over plain curl. The handbook has also been revised from Revision 23-1 (Effective July 31, 2023) to Revision 25-3 (Effective May 15, 2025), and section 1323's quotation of 26 TAC Section 554.502 changed wording in four places the page quoted: 'or individuals in the facility' is now 'or person in the facility'; 'assistance in completing the form' is now 'assistance completing the form'; 'the fair hearing request' is now 'the appeal hearing request'; and 'the name, address, email address, and telephone number of the managing local ombudsman' is now 'the name, address, email address and phone number of the managing local ombudsman' (Oxford comma dropped, 'telephone' to 'phone'). This is a supplement rather than a rebuilt main packet because three of the main recipe's five sources need an agent transport this session could not complete mechanically -- see the page's 2026-09-05 change-log entry.
+- SOURCE 2: transport curl; extractor html-text; scope #main; filters trim-lines, collapse-blank-runs.
+  Supplement captured 2026-09-05, same finding as source 1. The standing packet's URL, https://apps.hhs.texas.gov/news_info/ombudsman/, now answers 'You do not have permission to view this directory or page.' to every transport tried; the program has moved to its own site at ltco.texas.gov, found because other pages under the old path still 301-redirect there. The sentence the page quoted has changed shape, not only its punctuation: the old page read 'Call 1-800-252-2412 to speak with an LTC ombudsman in your area.' as a complete sentence, and the new page reads 'Call 800-252-2412 to speak with an LTC ombudsman in your area, email our office, or look for an LTC ombudsman in your area.' -- the same number without its '1-' prefix, inside a longer sentence, so the page's quoted span had to be re-cut as well as re-worded. 'Services are free, confidential and available statewide.' survives verbatim.
+
+SOURCE 1: Texas HHSC, Fair and Fraud Hearings Handbook, 1300 Notice | https://fhb.hhs.texas.gov/handbooks/fair-fraud-hearings-handbook/1300-notice | source date: Revision 25-3, Effective May 15, 2025 | retrieved: 2026-09-05
+1300, Notice
+
+Printer-friendly version
+
+Body
+
+Revision 25-3; Effective May 15, 2025
+
+1310 Notice of Proposed Adverse Action
+
+Revision 25-3; Effective May 15, 2025
+
+1 TAC Section 357.11
+
+Whenever an adverse action is taken, agencies are required to send an adequate notice to the client. The HHS agency follows notice requirements in the appropriate state or federal law or regulations for the individual program.
+
+A notice must:
+
+be sent to the client when a denial or reduction in services or eligibility action is taken.
+
+advise the client of:
+
+the right to a fair hearing;
+
+how to appeal;
+
+the right to be represented by others, including legal counsel;
+
+available legal services in the community; and
+
+an explanation of the circumstances when continued benefits may apply.
+
+1320 Content of Notice
+
+Revision 23-1; Effective July 31, 2023
+
+Notice requirements vary for different programs. Notice requirements for the various programs are listed below.
+
+1321 Medicaid
+
+Revision 23-1; Effective July 31, 2023
+
+According to 42 CFR Section 431.210, relating to notice requirements for Medicaid-funded programs, “a notice required under §431.206(c)(2), (c)(3), or (c)(4) of this subpart must contain:
+
+a statement of what action the agency, skilled nursing facility or nursing facility intends to take and the effective date of such action;
+
+a clear statement of the specific reasons supporting the intended action;
+
+the specific regulations that support, or the change in federal or state law that requires, the action;
+
+an explanation of:
+
+the individual's right to request an evidentiary hearing if one is available, or a state agency hearing; or
+
+in cases of an action based on a change in law, the circumstances under which a hearing will be granted;
+
+an explanation of the circumstances under which Medicaid is continued if a hearing is requested."
+
+1322 Alberto N. Settlement
+
+Revision 23-1; Effective July 31, 2023
+
+In addition, in cases involving denials or reductions of services provided to Medicaid clients under age 21, the Alberto N. settlement requires an explanation of why the request for services was denied and where appropriate, how to obtain services through other programs.
+
+1323 Nursing Facility Discharge
+
+Revision 25-3; Effective May 15, 2025
+
+26 TAC Section 554.502 specifies requirements for the notice on a nursing facility discharge action:
+
+Contents of the notice. For nursing facilities, the written notice specified in subsection (d) of this section must include the following:
+
+the reason for transfer or discharge;
+
+the effective date of transfer or discharge;
+
+the location to which the resident is transferred or discharged;
+
+a statement of the resident’s appeal rights, including:
+
+the resident has the right to appeal the action as outlined in HHSC's Fair and Fraud Hearings Handbook by requesting a hearing within 90 days after the date of the notice;
+
+if the resident requests the hearing before the discharge date, the resident has the right to remain in the facility until the hearing officer makes a final determination unless failure to transfer or discharge would endanger the health or safety of the resident or person in the facility. The facility must document the danger failure to discharge would present; and
+
+information on how to obtain an appeal form and assistance completing the form and submitting the appeal hearing request;
+
+the name, address, email address and phone number of the managing local ombudsman and the toll-free number of the Ombudsman Program;
+
+in the case of a resident with mental illness, the address, email address and phone number of the state mental health authority; and
+
+in the case of a resident with an intellectual or developmental disability, the authority for individuals with intellectual and developmental disabilities, and the phone number, address and email address of the agency responsible for the protection and advocacy of people with intellectual and developmental disabilities.
+
+1324 SNAP
+
+Revision 23-1; Effective July 31, 2023
+
+According to 7 CFR Section 273.13, relating to notices required for SNAP, "The notice of adverse action shall be considered adequate if it explains in easily understandable language:
+
+the proposed action;
+
+the reason for the proposed action;
+
+the household's right to request a fair hearing;
+
+the telephone number of the SNAP office (toll-free number or a number where collect calls will be accepted for households outside the local calling area) and, if possible,
+
+the name of the person to contact for additional information;
+
+the availability of continued benefits; and
+
+the liability of the household for any over issuances received while awaiting a fair hearing if the hearing official's decision is adverse to the household. If there is an individual or organization available that provides free legal representation, the notice shall also advise the household of the availability of the service."
+
+1325 TANF
+
+Revision 23-1; Effective July 31, 2023
+
+According to 45 CFR Section 206.10 (4), adequate notice shall be sent to applicants and recipients to indicate that assistance has been authorized (including the amount of financial assistance) or that it has been denied or terminated. Under this requirement, adequate notice means:
+
+a written notice that contains a statement of the action taken;
+
+the reasons for and specific regulations supporting such action; and
+
+an explanation of the individual's right to request a hearing.
+
+1330 Agency Action Notice Issues
+
+Revision 23-1; Effective July 31, 2023
+
+1331 When Appellant Raises a Notice Issue
+
+Revision 23-1; Effective July 31, 2023
+
+The appellant has the right to receive adequate notice. If the appellant raises an issue at the hearing questioning the sufficiency of the notice, or if the hearings officer identifies an issue with the notice, the hearings officer must address the issue on the record at that time.
+
+If the hearings officer determines that the notice is not adequate, the hearings officer must instruct the agency representative to prepare a new notice and provide it to the appellant. After the new notice is provided, the hearings officer will reconvene the hearing.
+
+If the hearings officer determines that the notice is adequate, they will inform all parties and proceed with the hearing.
+
+If the hearings officer requires additional time or escalation of the notice to determine if it is sufficient or not, the hearings officer can recess the hearing and escalate the notice to their management. Once a response has been received regarding the adequacy of the notice, the hearings officer will reconvene the hearing and provide a response.
+
+Nursing Facility Discharge
+
+Notices are of particular importance in nursing facility discharge hearings. Regardless of the issue listed as the basis for appeal, the hearings officer must also address adequacy of the notice to show that it complies with policy. In these hearings, if the notice issue is not raised by the appellant, the hearings officer must develop the record to include information to determine the legal adequacy of the notice.
+
+1340 Receipt of Agency Notices
+
+Revision 23-1; Effective July 31, 2023
+
+An appellant may testify at the hearing that an agency notice, such as an appointment notice or a request for additional information, was not received.
+
+The hearings officer should address this issue by asking questions and taking testimony from both the appellant or the appellant’s representative and the agency representative.
+
+If a letter is sent and not returned, the sender may presume the letter was received.
+
+The decision should include findings of fact regarding the determinations used in reaching the decision on whether the agency notice letter was received.
+
+SOURCE 2: Texas State Long-Term Care Ombudsman (formerly Texas HHS, Office of the Long-Term Care Ombudsman) | https://ltco.texas.gov | source date: none stated on page | retrieved: 2026-09-05
+Homepage
+
+What We Do
+
+Protect the rights of assisted living and nursing facility residents.
+
+Contact Us
+
+Call 800-252-2412 to speak with an LTC ombudsman in your area, email our office, or look for an LTC ombudsman in your area.
+
+Find an LTC Ombudsman
+
+Long-term care (LTC) ombudsmen are advocates for residents' rights. They protect the quality of life and quality of care of anybody who lives in a nursing facility or assisted living facility.
+
+Ombudsmen can be volunteers or paid staff of agencies who are independent of any long-term care facility. Services are free, confidential and available statewide.
+
+If you have concerns about the care of a person with a developmental disability who lives in a state supported living center, visit the Office of the Independent Ombudsman for State Supported Living Centers website.
+
+If you have concerns about health and human services that are not related to a person living in a nursing facility or assisted living facility, contact the HHS Office of the Ombudsman.
+
+What Does an LTC Ombudsman Do?
+
+Some ways LTC ombudsmen help nursing facility and assisted living residents:
+
+Listen to residents and family members when they have concerns or issues.
+
+Tell residents about their rights.
+
+Protect resident health, safety, welfare and rights.
+
+Help families learn about long-term care and how to pay for it.
+
+Solve problems to a resident’s satisfaction.
+
+Ensure state regulations and laws protect residents.
+
+Learn More About LTC Ombudsmen
+
+How Do I Become a Volunteer Ombudsman?
+
+People who live in nursing facilities and assisted living facilities may have little or no contact with the outside world. Many feel they lack control over their lives. A volunteer LTC ombudsman who visits regularly can be the highlight of a resident's day and ensure residents get the best care possible.
+
+If you have a passion for helping others, a caring spirit and a willingness to learn, we need you! Become an ombudsman and help improve the quality of life and care for residents in a facility near you. We provide training, tools and ongoing support.
+
+Become a Volunteer Ombudsman
+

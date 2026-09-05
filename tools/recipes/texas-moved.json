@@ -1,0 +1,36 @@
+{
+  "recipe_version": 1,
+  "state": "texas-moved",
+  "sources": [
+    {
+      "n": 1,
+      "title": "Texas HHSC, Fair and Fraud Hearings Handbook, 1300 Notice",
+      "url": "https://fhb.hhs.texas.gov/handbooks/fair-fraud-hearings-handbook/1300-notice",
+      "source_date": "Revision 25-3, Effective May 15, 2025",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "#main",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Supplement captured 2026-09-05 for the drift the nightly review recorded as FA-Q-20260905-04. The standing packet's URL, https://www.hhs.texas.gov/handbooks/fair-fraud-hearings-handbook/1300-notice, now returns HTTP 403 to every fetch; HHSC's Forms and Handbooks system has moved to fhb.hhs.texas.gov, which a browser user-agent reaches over plain curl. The handbook has also been revised from Revision 23-1 (Effective July 31, 2023) to Revision 25-3 (Effective May 15, 2025), and section 1323's quotation of 26 TAC Section 554.502 changed wording in three places the page quoted: 'or individuals in the facility' is now 'or person in the facility'; 'assistance in completing the form' is now 'assistance completing the form'; and 'the name, address, email address, and telephone number of the managing local ombudsman' is now 'the name, address, email address and phone number of the managing local ombudsman' (Oxford comma dropped, 'telephone' to 'phone'). Worth recording so a later reader does not chase it: the handbook said 'the appeal hearing request' in Revision 23-1 too, and the page's 'submitting the fair hearing request' is quoted from PL 2022-25, not from the handbook, so it is unaffected by this revision. This is a supplement rather than a rebuilt main packet because three of the main recipe's five sources need an agent transport this session could not complete mechanically -- see the page's 2026-09-05 change-log entry."
+    },
+    {
+      "n": 2,
+      "title": "Texas State Long-Term Care Ombudsman (formerly Texas HHS, Office of the Long-Term Care Ombudsman)",
+      "url": "https://ltco.texas.gov",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "#main",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Supplement captured 2026-09-05, same finding as source 1. The standing packet's URL, https://apps.hhs.texas.gov/news_info/ombudsman/, now answers 'You do not have permission to view this directory or page.' to every transport tried; the program has moved to its own site at ltco.texas.gov, found because other pages under the old path still 301-redirect there. The sentence the page quoted has changed shape, not only its punctuation: the old page read 'Call 1-800-252-2412 to speak with an LTC ombudsman in your area.' as a complete sentence, and the new page reads 'Call 800-252-2412 to speak with an LTC ombudsman in your area, email our office, or look for an LTC ombudsman in your area.' -- the same number without its '1-' prefix, inside a longer sentence, so the page's quoted span had to be re-cut as well as re-worded. 'Services are free, confidential and available statewide.' survives verbatim."
+    }
+  ]
+}

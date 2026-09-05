@@ -1,0 +1,16 @@
+{
+ "entry": {
+  "file_count": 135,
+  "id": "2026-09-05T174059Z",
+  "manifest_file": "manifests/2026-09-05T174059Z.txt",
+  "manifest_sha256": "2484a55120636d3553f11b145de13db421d3c7945ff2e97b51157f4a76ef7682",
+  "note": "texas rebuild on moved sources",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "8b8bc78d732192a7c93f8fb5540849e50f0d705ba472b91ea039502e85ebf152",
+  "repo": "transfer-safeguards",
+  "utc": "2026-09-05T17:40:59+00:00"
+ },
+ "entry_sha256": "922e0be141895213e78422162bfd8f2636235c4d50365c9474d7fc189b6fdf53"
+}
