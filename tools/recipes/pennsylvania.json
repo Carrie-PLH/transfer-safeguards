@@ -1,0 +1,65 @@
+{
+  "recipe_version": 1,
+  "state": "pennsylvania",
+  "sources": [
+    {
+      "n": 1,
+      "title": "Pennsylvania Department of Human Services, Long-Term Care Handbook, 423.6 Changes in Residence/Discharge/Transfers",
+      "url": "http://services.dpw.state.pa.us/oimpolicymanuals/ltc/423_Residence/423_6_Discharge_and_Transfer_from_an_LTC_Facility_or_HCBS.htm",
+      "source_date": "Updated June 11, 2025, Replacing August 22, 2019",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Plain curl with a browser user-agent returns HTTP 200 (verified 2026-09-05); no WAF or session gate on this legacy services.dpw.state.pa.us host. This is an old, chrome-free handbook page with no <main> or <article> container, so body is the same 'tag strip over the whole served document' the standing packet's own capture notes describe for this source -- not a narrower named container withheld, there simply is not one. Content unchanged from the 2026-08-30 capture: same 'Updated June 11, 2025, Replacing August 22, 2019' date line, verified present verbatim in this capture."
+    },
+    {
+      "n": 2,
+      "title": "Pennsylvania Department of Health, Involuntary Discharge and Transfer Notices — When and what to send to the PA Long-Term Care Ombudsman Office (State Office)",
+      "url": "https://sais.health.pa.gov/CommonPOC/content/FacilityWeb/attachment.asp?messageid=3521&filename=Involuntary+Discharge+Notice+Protocol.pdf&attachmentnumber=1",
+      "source_date": "none stated on document",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Plain curl with a browser user-agent returns HTTP 200 and the same 114,852-byte PDF (verified 2026-09-05); no session gate on sais.health.pa.gov for this attachment endpoint. Single page, so no running-header or page-number filter is needed. As the standing packet's own notes already say, this is a decision-flow diagram: pdftotext-layout's column order does not follow the diagram's visual reading order, and the publisher's own typographic errors ('reprentative', 'resident-initated') stand as printed, unchanged from the 2026-08-30 capture."
+    },
+    {
+      "n": 3,
+      "title": "Commonwealth of Pennsylvania, Department of Aging — Request Assistance from a Long-Term Care Ombudsman",
+      "url": "https://www.pa.gov/services/aging/request-assistance-from-a-long-term-care-ombudsman",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "The standing packet's notes say this source was retrieved through the session's HTTP fetch tool because of an earlier belief this pa.gov template needed a rendering client; retested 2026-09-05, plain curl with a browser user-agent returns HTTP 200 with the full AEM page, phone number, and email address, so a session reader is no longer needed here (the same transient-block pattern CLAUDE.md already records for Arkansas's codeofarrules.arkansas.gov and California's cdph.ca.gov/dhcs.ca.gov). This AEM template's own #content region is too narrow -- it holds only the page's teaser banner (title and first paragraph) and cuts the 'By Phone' / 'By Email' contact block and the phone number the page quotes, confirmed by testing scope #content against this exact document. No other named container wraps the fuller content either, so body is the narrowest honestly-stated scope, and it is a superset of the standing packet's curated excerpt. Content unchanged: '717-783-8975' and 'LTC-Ombudsman@pa.gov' both verified present verbatim."
+    },
+    {
+      "n": 4,
+      "title": "28 Pa. Code § 201.29 (Resident rights)",
+      "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/028/chapter201/s201.29.html&d=reduce",
+      "source_date": "site states the Code reflects changes effective through 56 Pa.B. 4026 (July 4, 2026)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Plain curl with a browser user-agent returns HTTP 200 (verified 2026-09-05). body scope, matching the standing packet's own 'tag strip over the whole served document' method for this source: the page's #maincontent div holds the rule text but not the site-wide banner stating which Pa.B. edition the Code reflects, and that banner is the only place this source's own currency date is stated, so body is required to capture both in one source rather than losing the date to a narrower scope. SOURCE'S OWN DATE HAS ADVANCED since the 2026-08-30 capture: the banner then read 'changes effective through 56 Pa.B. 3438 (June 6, 2026)' and now reads 'changes effective through 56 Pa.B. 4026 (July 4, 2026)' -- the site's own rolling currency statement moved forward, as expected of a 'current through' marker; the rule text of § 201.29 itself is unchanged (same subsections (a) through (o), same Authority and Source history lines ending '...amended December 23, 2022, effective July 1, 2023, 52 Pa.B. 8098'), confirmed by diffing this capture's body against the standing packet's source 4 body."
+    }
+  ]
+}

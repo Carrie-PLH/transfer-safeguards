@@ -1,0 +1,79 @@
+{
+  "recipe_version": 1,
+  "state": "texas",
+  "sources": [
+    {
+      "n": 1,
+      "title": "Texas HHSC, Long-Term Care Regulation Provider Letter PL 2022-25, Nursing Facility Resident Discharge and Appeal",
+      "url": "https://www.hhs.texas.gov/sites/default/files/documents/pl2022-25.pdf",
+      "source_date": "September 29, 2022",
+      "transport": "chrome",
+      "extractor": "pdftotext-layout",
+      "filters": [
+        "strip-running-headers",
+        "strip-page-numbers",
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Filters added 2026-09-05 after the first capture split 'NFs are' from 'encouraged to send it no less than five business days before the hearing date' across a page break (the running header 'PL 2022-25 (NF)  September 29, 2022  Page 7 of 8' and two bare footnote-marker lines, '12' and '13', sat between them) -- a recipe defect (category a: the recipe read the source differently from the original hand capture, which rendered the sentence as one unbroken run), not a change in the document. strip-running-headers and strip-page-numbers remove exactly that interleaved material; the footnote text itself ('1 TAC Chapter 357, Subchapter A.', etc.) is not a bare digit or a running head and survives untouched, as do the other footnote citations the page quotes from this same document. hhs.texas.gov returns HTTP 403 to every direct fetch of this PDF -- confirmed 2026-09-05 from both the sandbox and the host Mac, with a browser user-agent, with and without --http1.1, and with browser-shaped Accept/Accept-Language headers. A Chrome session already on an hhs.texas.gov page can fetch the same URL same-origin (fetch() returns 200 with the full 171,752-byte PDF) even though top-level navigation to the PDF and curl from any origin cannot. THE EXTRACTOR FIELD ABOVE IS DECLARATIVE ONLY, per the convention florida.json source 5 established: the fetched PDF bytes were converted to text outside capture.py, with the exact command capture.py's own extract_pdf would run (`pdftotext -layout -enc UTF-8`, poppler 26.07.0, matching POPPLER_PIN on both the sandbox and the host) rather than via a different tool, so the declared extractor stays true to what actually produced the text; only the FETCH ran outside capture.py, because hhs.texas.gov refuses it entirely as a non-browser client and this is one of the two agent transports capture.py's own docstring anticipates for exactly this case. Re-running `python3 tools/capture.py texas` without a fresh --supply for source 1 fails loudly with NeedsAgentFetch, not silently reproduce or corrupt this text. Content unchanged from the 2026-08-30 hand capture: same 8-page document, same September 29, 2022 date, same section and footnote numbering, verified by diffing this extraction against the standing packet's source 1 body."
+    },
+    {
+      "n": 2,
+      "title": "Texas HHSC, Fair and Fraud Hearings Handbook, 1300 Notice",
+      "url": "https://fhb.hhs.texas.gov/handbooks/fair-fraud-hearings-handbook/1300-notice",
+      "source_date": "Revision 25-3, Effective May 15, 2025",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "#main",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "URL CHANGED since the 2026-08-30 capture: the standing packet's URL, https://www.hhs.texas.gov/handbooks/fair-fraud-hearings-handbook/1300-notice, now returns HTTP 403 to every fetch (confirmed 2026-09-05, sandbox and host, curl and a live Chrome session alike -- this is a genuine host block, not a UA problem). HHSC's Forms and Handbooks system has moved to its own subdomain, fhb.hhs.texas.gov, plain curl-able with a browser user-agent (verified 2026-09-05, HTTP 200); a Chrome navigation to the old URL redirects there automatically (location.href resolves to the same fhb.hhs.texas.gov address), which is how the new address was found. #main (id=main, class=c-main) is the Drupal template's content region and excludes the site's nav/header/footer chrome; it is the narrowest scope that holds the whole handbook section including its own revision-history lines. CONTENT HAS ALSO DRIFTED: the handbook has been revised past the standing packet's Revision 23-1 (Effective July 31, 2023) to Revision 25-3 (Effective May 15, 2025). Section 1323's quotation of 26 TAC Section 554.502 now reads 'or person in the facility' where the packet's Revision 23-1 text and the published page both read 'or individuals in the facility', and 'assistance completing the form' where the page reads 'assistance in completing the form' -- verbatim wording changes, not extraction artifacts, confirmed by reading this capture's own text. Recorded as drift; the page is not edited by this pass."
+    },
+    {
+      "n": 3,
+      "title": "Texas State Long-Term Care Ombudsman (formerly Texas HHS, Office of the Long-Term Care Ombudsman)",
+      "url": "https://ltco.texas.gov",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "#main",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "URL CHANGED since the 2026-08-30 capture: the standing packet's URL, https://apps.hhs.texas.gov/news_info/ombudsman/, now returns 'You do not have permission to view this directory or page.' to every fetch (confirmed 2026-09-05, sandbox curl, host curl, and a live Chrome session -- identical refusal from all three, so this is the host's own response, not a fetcher block). The Long-Term Care Ombudsman program has moved off the apps.hhs.texas.gov directory entirely, to its own site at ltco.texas.gov: other pages under the old apps.hhs.texas.gov/news_info/ombudsman/ path (e.g. how_it_works.html) still 301-redirect there with a tracking query string (utm_source=appsltco-domain&utm_medium=old-url), which is how the new site was found, but the bare directory the packet's URL names has no such redirect and instead serves the permission-denied response above. ltco.texas.gov itself (the home page) is plain curl-able with a browser user-agent (verified 2026-09-05, HTTP 200) and is the closest current equivalent of the packet's captured page: it restates the program's mission, the toll-free number, and 'free, confidential and available statewide' almost verbatim. #main (id=main, class=c-main) is this template's content region, same convention as Source 2, minus the nav/header/menu chrome. CONTENT HAS ALSO DRIFTED: the packet quotes 'Call 1-800-252-2412 to speak with an LTC ombudsman in your area.' with a leading '1-'; the current home page states the same number as 'Call 800-252-2412 to speak with an LTC ombudsman in your area.', without it. Recorded as drift; the page is not edited by this pass."
+    },
+    {
+      "n": 4,
+      "title": "Texas Secretary of State, TAC portal — 26 TAC §554.502, Transfer and Discharge in Medicaid-certified Facilities (record 203098)",
+      "url": "https://texas-sos.appianportalsgov.com/rules-and-meetings?recordId=203098&interface=VIEW_TAC_SUMMARY",
+      "source_date": "Chapter Review Date 03/11/2024",
+      "transport": "chrome",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "SITE REDESIGNED since the 2026-08-30 capture. The standing packet's URL carried a queryAsDate parameter set to the capture date (08/30/2026) and an interface=VIEW_TAC_SUMMARY parameter that then rendered one page listing all five rules of Subchapter F (§554.501-505) with §554.502 and §554.503 each called out by their own Chapter Review Date line. The same interface parameter today (queryAsDate omitted -- the app supplies today's date itself and the rendered fields do not change when a different queryAsDate is passed, confirmed 2026-09-05) renders a single-rule card instead: Title 26 / Part 1 / Chapter 554 / Subchapter F / one Rule number and title / Previous Rule and Next Rule links / one Chapter Review Date. Reaching the same two rules the standing packet named therefore takes two record IDs, this one (203098, §554.502) and 203099 (§554.503, Source 5 below), not the combined view the original capture used -- the chapter and subchapter facts, and the review date (03/11/2024, unchanged), are otherwise identical. Still a client-rendered Appian portal: plain curl to this URL returns HTTP 200 but only the empty application shell (confirmed 2026-09-05), no rule content, so a live Chrome render is still required, exactly as the standing packet's own capture notes said in 2026-08-30. The rendered card also embeds two same-origin iframes (a differently-domained appianportalsgov-dynamic.com host) that appear to hold much longer content behind them -- one measuring 42200px tall on this record -- which would be the actual rule body text the standing packet's PENDING list still calls capture-blocked; this capture does not open them, stays within the same scope the original packet used (the outer page's own header fields, not rule body text), and notes the iframes as an unresolved lead for a future session rather than a widening of this recipe's scope. body scope: the outer document has no narrower named container around these fields; iframe contents are separate documents and do not appear in this document's own HTML text regardless of scope, so body captures exactly the header fields and nothing from inside the iframes. Supplied via --supply because Appian's client-rendered output is not curl-reachable; the raw HTML supplied is exactly what document.documentElement.outerHTML returned from a live Chrome navigation to this URL on 2026-09-05 (verified byte-for-byte against a SHA-256 taken independently of the transcription, sha256 e8eb7712f8bf3dedd373d2fdae34d73634145e1a47918b9854e56861933a6da0), with script tags (holding a page-load timestamp and a per-load nonce, both of which would otherwise make every capture of this source unreproducible) and the href query strings on the Previous/Next Rule links (which embed the fetch date) excluded, because capture.py's own html-text extractor drops script tags entirely and never reads attribute values as text -- confirmed by inspecting extract_html before relying on it. Re-running `python3 tools/capture.py texas --source 4` without a fresh --supply fails loudly with NeedsAgentFetch."
+    },
+    {
+      "n": 5,
+      "title": "Texas Secretary of State, TAC portal — 26 TAC §554.503, Notice of Bed-Hold Policy and Return To Medicaid-certified Facilities (record 203099)",
+      "url": "https://texas-sos.appianportalsgov.com/rules-and-meetings?recordId=203099&interface=VIEW_TAC_SUMMARY",
+      "source_date": "Chapter Review Date 03/11/2024",
+      "transport": "chrome",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "The other half of the standing packet's Source 4, split for the reason Source 4's notes above explain in full: the portal now renders one rule per record ID instead of a Subchapter F summary, so §554.502 and §554.503 need two captures where the 2026-08-30 packet used one. Same transport, scope and reasoning as Source 4. Supplied via --supply; the raw HTML is exactly what document.documentElement.outerHTML returned from a live Chrome navigation to this URL on 2026-09-05, verified self-consistent (four concatenated copies fetched in one call were byte-identical to each other before being split back apart) since this Appian app's outerHTML was observed to vary by a couple of characters between successive fetches of the SAME record in this same session -- almost certainly a transient ARIA live-region or scroll-detector artifact rather than a change in the rendered rule content, since the visible fields (rule number, title, review date) were identical every time this record was viewed. This capture uses the one saved snapshot for both verification runs, consistent with capture.py's own documented design for agent-mediated sources: the fetch itself is not reproducible by a subprocess, but the extractor, scope and filters downstream of it are, and that is what the byte-identical check is verifying here. Re-running `python3 tools/capture.py texas --source 5` without a fresh --supply fails loudly with NeedsAgentFetch."
+    }
+  ]
+}
