@@ -853,3 +853,21 @@ first words beneath it, as the recipe does for the Health Facilities Act.
 **Hawaii remains unbuilt** after a second look: the Department of Health's
 11-94.2 file is still the only publisher, still a scanned image, and the
 Lieutenant Governor's rules page links back to the department.
+
+## Hawaii: a rule present but unquotable (built 2026-09-04, owner's decision)
+
+Hawaii was built as a baseline page with its operative rule, HAR 11-94.2,
+recorded as capture-blocked: the Department of Health publishes it only as a
+scanned image, no second publisher exists, and OCR is not a capture. The page
+quotes the file's cover sheet (the one page with a text layer), the department's
+Title 11 index row, the ombudsman program and the Med-QUEST appeals route, and
+links the scan for a reader to open. The docket uses "Not quotable from the
+sources reviewed" for the grounds and notice rows, deliberately distinct from
+"Not stated in the sources reviewed": the first says we cannot verify text the
+state publishes, the second says the state publishes none. Do not collapse the
+two. When the department posts a text version (a request for one is drafted),
+re-base source 2 of tools/recipes/hawaii.json to it and rebuild the page; the
+change log says so. Arizona and Arkansas, which had been held back on the same
+"thin page" reasoning, were both captured in full the same night once their
+transports were understood, which is the other half of why Hawaii's page says
+what it cannot quote rather than staying absent.

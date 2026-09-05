@@ -1,0 +1,64 @@
+{
+  "recipe_version": 1,
+  "state": "hawaii",
+  "sources": [
+    {
+      "n": 1,
+      "title": "Department of Health Administrative Rules, Title 11 (index) — Hawaii Department of Health, Office of Planning, Policy and Program Development",
+      "url": "https://health.hawaii.gov/opppd/department-of-health-administrative-rules-title-11/",
+      "source_date": "none stated for the page; each chapter row carries the chapter's own adoption or amendment date",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "The department's own index of every Title 11 chapter, with the responsible office, contact and date for each. Its row for 11-94.2 (Nursing Facilities, Office of Health Care Assurance, 09/16/22) is the department's statement that the chapter exists, when it was adopted and who administers it, and the row links source 2. Captured because the chapter itself cannot be quoted (see source 2) and this page can. Cloudflare obfuscates the contact emails on the page; the shared capture reader decodes them."
+    },
+    {
+      "n": 2,
+      "title": "Repeal of Chapter 11-94.1 and Adoption of Chapter 11-94.2, Nursing Facilities, Hawaii Administrative Rules — Hawaii Department of Health (PDF; text layer covers the cover sheet only)",
+      "url": "https://health.hawaii.gov/opppd/files/2022/10/11-94.2-2022.pdf",
+      "source_date": "September 16, 2022, as the cover sheet states",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "filters": [],
+      "notes": "THE OPERATIVE RULE, AND IT CANNOT BE QUOTED. The file is 66 pages; only the cover sheet has a text layer (pdffonts lists fonts on that page alone, and pdftotext yields seventeen lines), and the remaining pages, including the chapter's admission, transfer and discharge section, are a scanned image. What this capture holds is the department's own cover statement: the repeal of 11-94.1, the adoption of 11-94.2, and the date. That is quotable; nothing beneath it is. OCR is not a capture under PROVENANCE.md and is not used. No second publisher exists: the department's Title 11 index (source 1) links only this file, the Lieutenant Governor's rules page links back to the department, and the Legislature publishes statutes, not administrative rules. The page records the chapter as capture-blocked and links this file so a reader can read the scan, which a person can do and this discipline cannot. If the department posts a text version, this source is re-based to it and the page rebuilt."
+    },
+    {
+      "n": 3,
+      "title": "Long-Term Care Ombudsman Program — Executive Office on Aging, Hawaii Department of Health",
+      "url": "https://health.hawaii.gov/eoa/home/long-term-care-ombudsman/",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "The program's own page on the department's site: its statement of what it does and its contact (an Oahu telephone number and an email, the email Cloudflare-obfuscated and decoded by the shared reader). The page prints no street address for the program; the department's Info Line appears in the site footer."
+    },
+    {
+      "n": 4,
+      "title": "Grievance and Appeals — Med-QUEST Division, Hawaii Department of Human Services (Hawaii Medicaid)",
+      "url": "https://medquest.hawaii.gov/en/members-applicants/rights-and-responsibilities/grievance-appeals.html",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "The Medicaid agency's page on appeals. It addresses eligibility determinations and health-plan actions, states the ninety-day window and the ways a hearing may be requested, and prints the division's addresses and telephone numbers; it does not mention nursing facilities or a facility's transfer or discharge decision, and the page says so. The page embeds its own content a second time as a JSON string inside a data attribute, which a body capture carries as escaped markup; the rendered copy is what is quoted."
+    },
+    {
+      "n": 5,
+      "title": "DHS 1161, Request for a Hearing (Rev. 12/18) — Med-QUEST Division, Hawaii Department of Human Services (PDF)",
+      "url": "https://medquest.hawaii.gov/content/dam/formsanddocuments/client-forms/1161-request-for-a-hearing/DHS_1161_Rev_1218_Fillable.pdf/jcr:content?process=&submitUrl=&type=pdf",
+      "source_date": "Rev. 12/18, as the form's footer states",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "filters": [],
+      "notes": "The department's hearing request form, linked from source 4. Its checkboxes name the actions it is for (denials, terminations, spenddown and cost-share changes, health-plan denials) and its aid-paid-pending paragraph states the ten- and fifteen-day windows. Nothing on it names a nursing facility's transfer or discharge. The address is the site's content-repository path for the file, as the page links it."
+    }
+  ]
+}

@@ -7,7 +7,7 @@ present. Spanish = a translated page is published; it carries the
 docket, the hoisted rows, and the notice periods and deadlines, in
 the state's own published translation only.
 
-**Baseline: 50 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
+**Baseline: 51 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
 
 | State | Baseline | Full page | Spanish | Sources last checked |
 |---|:---:|:---:|:---:|---|
@@ -22,7 +22,7 @@ the state's own published translation only.
 | [District of Columbia](site/states/district-of-columbia.html) | [x] | [ ] | [ ] | Sep 4, 2026 |
 | [Florida](site/states/florida.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
 | [Georgia](site/states/georgia.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
-| Hawaii | [ ] | [ ] | [ ] |  |
+| [Hawaii](site/states/hawaii.html) | [x] | [ ] | [ ] | Sep 4, 2026 |
 | [Idaho](site/states/idaho.html) | [x] | [ ] | [ ] | Sep 2, 2026 |
 | [Illinois](site/states/illinois.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
 | [Indiana](site/states/indiana.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
