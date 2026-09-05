@@ -7,14 +7,14 @@ present. Spanish = a translated page is published; it carries the
 docket, the hoisted rows, and the notice periods and deadlines, in
 the state's own published translation only.
 
-**Baseline: 47 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
+**Baseline: 50 of 51 · Full pages: 2 of 51 · Spanish: 0 of 51 · Federal layer: built**
 
 | State | Baseline | Full page | Spanish | Sources last checked |
 |---|:---:|:---:|:---:|---|
 | [Alabama](site/states/alabama.html) | [x] | [ ] | [ ] | Sep 4, 2026 |
 | [Alaska](site/states/alaska.html) | [x] | [ ] | [ ] | Sep 4, 2026 |
-| Arizona | [ ] | [ ] | [ ] |  |
-| Arkansas | [ ] | [ ] | [ ] |  |
+| [Arizona](site/states/arizona.html) | [x] | [ ] | [ ] | Sep 4, 2026 |
+| [Arkansas](site/states/arkansas.html) | [x] | [ ] | [ ] | Sep 4, 2026 |
 | [California](site/states/california.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
 | [Colorado](site/states/colorado.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
 | [Connecticut](site/states/connecticut.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
@@ -61,4 +61,4 @@ the state's own published translation only.
 | [Washington](site/states/washington.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
 | [West Virginia](site/states/west-virginia.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
 | [Wisconsin](site/states/wisconsin.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
-| Wyoming | [ ] | [ ] | [ ] |  |
+| [Wyoming](site/states/wyoming.html) | [x] | [ ] | [ ] | Sep 4, 2026 |

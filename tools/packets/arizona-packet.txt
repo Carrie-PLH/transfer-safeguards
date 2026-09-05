@@ -1,0 +1,2226 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: arizona
+ASSEMBLED: 2026-09-04
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/arizona.json (recipe digest ac7e57b789e8). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- SOURCE 1: transport curl; extractor pdftotext-raw; pages 96-97; http_version 1.1; filters none.
+  The Secretary of State's chapter file is 10.3 MB and 343 pages; R9-10-408 occupies printed pages 94-95, which are PDF pages 96-97. apps.azsos.gov returns 403 to every HTTP/2 request curl makes, whatever the headers, and 200 to the same request over HTTP/1.1; that is what http_version 1.1 is for, and it is why two earlier sessions recorded this host as unreachable to curl. The chapter is set in two columns, so pdftotext-raw is used rather than -layout: raw mode follows the content stream, which for this file is column order, and the section reads top to bottom. The typesetting hyphenates words at line ends (nurs-ing, physi-cian); those hyphens are the document's and are left as extracted, so a quotation must either stop at a line break or carry the break as two spans. The two pages also carry the tail of R9-10-407 and the head of R9-10-409; a superset only adds evidence.
+- SOURCE 2: transport curl; extractor pdftotext-layout; filters none.
+  AHCCCS's own form for an appeal of a transfer or discharge from a nursing facility, which names the Office of the General Counsel as the office that receives it and prints that office's address, telephone and a dedicated email address. It is the one Arizona source that ties a resident's discharge appeal to a named office.
+- SOURCE 3: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  AHCCCS's general appeals page, carried for its statement that appeals are made in writing to the Office of the General Counsel and for that office's address as the agency prints it on a page rather than a form. It does not mention nursing facility discharges by name; source 2 does.
+- SOURCE 4: transport curl; extractor html-text; scope body; http_version 1.1; filters trim-lines, collapse-blank-runs.
+  The program's own page: the state office's address, telephone and email (Cloudflare-obfuscated on the page; decoded by the shared capture reader) and the eight regional programs with their numbers. des.az.gov, like apps.azsos.gov, answers curl's HTTP/2 requests with a Cloudflare challenge page and its HTTP/1.1 requests with the page itself; http_version 1.1 is what makes it reproducible. A capture that comes back a few kilobytes long and titled 'Just a moment...' is the challenge page, not the source, and must be treated as a failed fetch.
+
+SOURCE 1: R9-10-408, Transfer; Discharge — Arizona Administrative Code, Title 9, Chapter 10 (Department of Health Services, Health Care Institutions: Licensing), Article 4, Nursing Care Institutions — Arizona Secretary of State (PDF, pages 96-97 of the chapter) | https://apps.azsos.gov/public_services/Title_09/9-10.pdf | source date: Supp. 26-1, March 31, 2026, as the running head of every page states; the section's Historical Note records its last amendment effective October 1, 2019 (Supp. 19-3) | retrieved: 2026-09-04
+9 A.A.C. 10 Arizona Administrative Code
+TITLE 9. HEALTH SERVICES
+CHAPTER 10. DEPARTMENT OF HEALTH SERVICES - HEALTH CARE INSTITUTIONS: LICENSING
+Page 94 Supp. 26-1 March 31, 2026
+Amended by exempt rulemaking at 19A.A.R. 3334,
+effective October 1, 2013 (Supp. 13-4).Amended by
+exempt rulemaking at 20A.A.R. 1409, pursuant to Laws
+2013, Ch. 10, § 13; effective July 1, 2014 (Supp. 14-2).
+Amended by final expedited rulemaking at 26A.A.R.
+3041, with an immediate effective date of November 3,
+2020 (Supp. 20-4).Amended by final rulemaking at 31
+A.A.R. 2457 (July 25, 2025), effectiveAugust 30, 2025
+(Supp. 25-3).
+R9-10-407. Admission
+An administrator shall ensure that:
+1. Aresident is admitted only on a physician’s order;
+2. The physician’s admitting order includes the nursing care
+institution services required to meet the immediate needs
+of a resident, such as medication and food services;
+3. At the time of a resident’s admission, a registered nurse
+conducts or coordinates an initial assessment on a resi-
+dent to ensure the resident’s immediate needs for nursing
+care institution services are met;
+4. Aresident’s needs do not exceed the medical services and
+nursing services available at the nursing care institution
+as established in the nursing care institution’s scope of
+services;
+5. Before or at the time of admission, a resident or the resi-
+dent’s representative:
+a. Receives a documented agreement with the nursing
+care institution that includes rates and charges,
+b. Is informed of third-party coverage for rates and
+charges,
+c. Is informed of the nursing care institution’s refund
+policy, and
+d. Receives written information concerning the nursing
+care institution’s policies and procedures related to a
+resident’s health care directives;
+6. Within 30 calendar days before admission or 10 working
+days after admission, a medical history and physical
+examination is completed on a resident by:
+a. Aphysician, or
+b. A physician assistant or a registered nurse practi-
+tioner designated by the attending physician;
+7. Except as specified in subsection (8), a resident provides
+evidence of freedom from infectious tuberculosis:
+a. Before or within seven calendar days after the resi-
+dent’s admission, and
+b. As specified in R9-10-113;
+8. Aresident who transfers from a nursing care institution to
+another nursing care institution is not required to be
+rescreened for tuberculosis as specified in R9-10-113 if:
+a. Fewer than 12 months have passed since the resident
+was screened for tuberculosis, and
+b. The documentation of freedom from infectious
+tuberculosis required in subsection (7) accompanies
+the resident at the time of transfer; and
+9. Compliance with the requirements in subsection (6) is
+documented in the resident’s medical record.
+Historical Note
+New Section R9-10-407 made by exempt rulemaking at
+19A.A.R. 2015, effective October 1, 2013 (Supp. 13-2).
+Amended by exempt rulemaking at 19A.A.R. 3334,
+effective October 1, 2013 (Supp. 13-4).Amended by
+exempt rulemaking at 20A.A.R. 1409, pursuant to Laws
+2013, Ch. 10, § 13; effective July 1, 2014 (Supp. 14-2).
+Amended by final expedited rulemaking at 28A.A.R.
+1113 (May 27, 2022), with an immediateeffective dateof
+May 4, 2022 (Supp. 22-2).
+R9-10-408. Transfer; Discharge
+A. An administrator shall ensure that:
+1. A resident is transferred or discharged if:
+a. The nursing care institution is not authorized or not
+able to meet the needs of the resident, or
+b. The resident’s behavior is a threat to the health or
+safety of the resident or other individuals at the nurs-
+ing care institution; and
+2. Documentation of a resident’s transfer or discharge
+includes:
+a. The date of the transfer or discharge;
+b. The reason for the transfer or discharge;
+c. A 30-day written notice except:
+i. In an emergency, or
+ii. If the resident no longer requires nursing care
+institution services as determined by a physi-
+cian or the physician’s designee;
+d. A notation by a physician or the physician’s desig-
+nee if the transfer or discharge is due to any of the
+reasons listed in subsection (A)(1); and
+e. If applicable, actions taken by a personnel member
+to protect the resident or other individuals if the resi-
+dent’s behavior is a threat to the health and safety of
+the resident or other individuals in the nursing care
+institution.
+B. An administrator may transfer or discharge a resident for fail-
+ure to pay for residency if:
+1. The resident or resident’s representative receives a 30-
+day written notice of transfer or discharge, and
+2. The 30-day written notice includes an explanation of the
+resident’s right to appeal the transfer or discharge.
+C. Except for a transfer of a resident due to an emergency, an
+administrator shall ensure that:
+1. A personnel member coordinates the transfer and the ser-
+vices provided to the resident;
+2. According to policies and procedures:
+a. An evaluation of the resident is conducted before the
+transfer;
+b. Information from the resident’s medical record,
+including orders that are in effect at the time of the
+transfer, is provided to a receiving health care insti-
+tution; and
+c. A personnel member explains risks and benefits of
+the transfer to the resident or the resident’s represen-
+tative; and
+3. Documentation in the resident’s medical record includes:
+a. Communication with an individual at a receiving
+health care institution;
+b. The date and time of the transfer;
+c. The mode of transportation; and
+d. If applicable, the name of the personnel member
+accompanying the resident during a transfer.
+D. Except in an emergency, a director of nursing shall ensure that
+before a resident is discharged:
+1. Written follow-up instructions are developed with the res-
+ident or the resident’s representative that includes:
+a. Information necessary to meet the resident’s need
+for medical services and nursing services; and
+b. The state long-term care ombudsman’s name,
+address, and telephone number;
+2. A copy of the written follow-up instructions is provided
+to the resident or the resident’s representative; and
+March 31, 2026 Supp. 26-1 Page 95
+Arizona Administrative Code 9 A.A.C. 10
+TITLE 9. HEALTH SERVICES
+CHAPTER 10. DEPARTMENT OF HEALTH SERVICES - HEALTH CARE INSTITUTIONS: LICENSING
+3. A discharge summary is developed by a personnel mem-
+ber and authenticated by the resident’s attending physi-
+cian or designee and includes:
+a. The resident’s medical condition at the time of trans-
+fer or discharge,
+b. The resident’s medical and psychosocial history,
+c. The date of the transfer or discharge, and
+d. The location of the resident after discharge.
+Historical Note
+New Section R9-10-408 made by exempt rulemaking at
+19A.A.R. 2015, effective October 1, 2013 (Supp. 13-2).
+Amended by exempt rulemaking at 20A.A.R. 1409, pur-
+suant to Laws 2013, Ch. 10, § 13; effective July 1, 2014
+(Supp. 14-2).Amended by final rulemaking at 25A.A.R.
+1583, effective October 1, 2019 (Supp. 19-3).
+R9-10-409. Transport
+A. Except as provided in subsection (B), an administrator shall
+ensure that:
+1. A personnel member coordinates the transport and the
+services provided to the resident;
+2. According to policies and procedures:
+a. An evaluation of the resident is conducted before
+and after the transport,
+b. Information from the resident’s medical record is
+provided to a receiving health care institution, and
+c. A personnel member explains risks and benefits of
+the transport to the resident or the resident’s repre-
+sentative; and
+3. Documentation in the resident’s medical record includes:
+a. Communication with an individual at a receiving
+health care institution;
+b. The date and time of the transport;
+c. The mode of transportation; and
+d. If applicable, the name of the personnel member
+accompanying the resident during a transport.
+B. Subsection (A) does not apply to:
+1. Transportation to a location other than a licensed health
+care institution,
+2. Transportation provided for a resident by the resident or
+the resident’s representative,
+3. Transportation provided by an outside entity that was
+arranged for a resident by the resident or the resident’s
+representative, or
+4. A transport to another licensed health care institution in
+an emergency.
+Historical Note
+New Section R9-10-409 made by exempt rulemaking at
+19A.A.R. 2015, effective October 1, 2013 (Supp. 13-2).
+Amended by exempt rulemaking at 20A.A.R. 1409, pur-
+suant to Laws 2013, Ch. 10, § 13; effective July 1, 2014
+(Supp. 14-2).Amended by final rulemaking at 25A.A.R.
+1583, effective October 1, 2019 (Supp. 19-3).
+R9-10-410. Resident Rights
+A. An administrator shall ensure that:
+1. The requirements in subsection (B) and the resident rights
+in subsection (C) are conspicuously posted on the prem-
+ises;
+2. At the time of admission, a resident or the resident’s rep-
+resentative receives a written copy of the requirements in
+subsection (B) and the resident rights in subsection (C);
+and
+3. Policies and procedures include:
+a. How and when a resident or the resident’s represen-
+tative is informed of resident rights in subsection
+(C), and
+b. Where resident rights are posted as required in sub-
+section (A)(1).
+B. An administrator shall ensure that:
+1. A resident has privacy in:
+a. Treatment,
+b. Bathing and toileting,
+c. Room accommodations, and
+d. A visit or meeting with another resident or an indi-
+vidual;
+2. A resident is treated with dignity, respect, and consider-
+ation;
+3. A resident is not subjected to:
+a. Abuse;
+b. Neglect;
+c. Exploitation;
+d. Coercion;
+e. Manipulation;
+f. Sexual abuse;
+g. Sexual assault;
+h. Seclusion;
+i. Restraint;
+j. Retaliation for submitting a complaint to the Depart-
+ment or another entity; or
+k. Misappropriation of personal and private property
+by a nursing care institution’s personnel members,
+employees, volunteers, or students; and
+4. A resident or the resident’s representative:
+a. Except in an emergency, either consents to or refuses
+treatment;
+b. May refuse or withdraw consent for treatment before
+treatment is initiated;
+c. Except in an emergency, is informed of proposed
+alternatives to psychotropic medication or a surgical
+procedure and the associated risks and possible com-
+plications of the psychotropic medication or surgical
+procedure;
+d. Is informed of the following:
+i. The health care institution’s policy on health
+care directives, and
+ii. The resident complaint process;
+e. Consents to photographs of the resident before the
+resident is photographed, except that the resident
+may be photographed when admitted to a nursing
+care institution for identification and administrative
+purposes;
+f. May manage the resident’s financial affairs;
+g. May review the nursing care institution’s current
+license survey report and, if applicable, plan of cor-
+rection in effect;
+h. Has access to and may communicate with any indi-
+vidual, organization, or agency;
+i. May participate in a resident group;
+j. May review the resident’s financial records within
+two working days and medical record within one
+working day after theresident’sor the resident’s rep-
+resentative’s request;
+k. May obtain a copy of the resident’s financial records
+and medical record within two working days after
+the resident’s request and in compliance withA.R.S.
+§ 12-2295;
+
+SOURCE 2: Appeal of a Discharge Form — Arizona Health Care Cost Containment System (AHCCCS), Office of the General Counsel (PDF) | https://www.azahcccs.gov/shared/Downloads/GrievanceAndAppeals/NFAppealOfADischargeForm.pdf | source date: none stated on the form | retrieved: 2026-09-04
+Appeal of a Discharge Form
+The following information is necessary to file an appeal of transfer or discharge from a
+registered nursing facility. Please attach discharge paperwork from the nursing facility
+when submitting this form to the Office of the General Counsel.
+
+Name of Member transferred/discharged:
+
+Name of Legal Representative (If Applicable):
+
+AHCCCS ID # (if applicable):
+
+Phone Number of Member/Representative:
+
+Address of Member:
+
+
+
+
+Registered Nursing Facility responsible for transfer/discharge:
+
+
+
+
+Address of Facility:
+
+
+
+
+Phone Number of Facility:
+
+Facility Point of Contact:
+
+If you have any questions or concerns regarding this form, please contact:
+
+   Address:    Office of the General Counsel
+               Arizona Health Care Cost Containment System Administration (AHCCCS)
+               150 N. 18th Ave., MD 15013
+               Phoenix, AZ 85007
+   Phone:      602-417-4232
+   Email:      NFdischarges@azahcccs.gov
+
+SOURCE 3: Grievance And Appeals — AHCCCS, member rights and responsibilities | https://www.azahcccs.gov/Members/GetCovered/RightsAndResponsibilities/grievanceandappeals.html | source date: none stated on page | retrieved: 2026-09-04
+﻿html
+ Azure Migration - Commented GTM Section
+ Google Tag Manager (noscript)
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLV7D6T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+ End Google Tag Manager (noscript)
+ Global site tag (gtag.js) - Google Analytics 4 implementation
+
+ End Google Analytics 4 implementation
+
+ header
+ Skip to Main Content
+
+ Default sorting by Relevance
+
+ Advanced search
+
+<div>
+ <img src='/img/twitter.png'/>
+ <img src='/img/wordpress.png'/>
+ </div>
+
+ Navigation
+
+ Brand and toggle get grouped for better mobile display
+
+ Toggle navigation
+ <a class="navbar-brand" href="#">Start Bootstrap</a>
+
+ Collect the nav links, forms, and other content for toggling
+
+ HOME
+
+ AHCCCS INFO
+
+ About Us
+
+ Acronyms
+
+ AHCCCS Programs
+
+ Awards & Studies
+
+<li><a href="/AHCCCS/AboutUs/directorbiography.html">Director's Biography</a></li>
+
+ News & Press Releases
+
+ Community Presentations
+
+ Strategic Plan
+
+ Public Notices
+
+ Private Sector Partners
+
+ Program Planning
+
+ Healthcare Advocacy
+
+ Office of Human Rights
+
+ Office of Individual and Family Affairs
+
+ Resources for Foster/Kinship/Adoptive Families
+
+ Initiatives
+
+ Accessing Behavioral Health Services in Schools
+
+ AHCCCS Complete Care
+
+ AHCCCS Whole Person Care Initiative (WPCI)
+
+ Arizona Olmstead Plan
+
+ Care Coordination & Integration
+
+ Differential Adjusted Payments (DAP)
+
+ Electronic Visit Verification
+
+ H.R. 1 (One Big Beautiful Bill Act)
+
+ Housing Programs
+
+ <li><a href="/AHCCCS/Initiatives/HEC/">Health Equity Committee</a></li>
+
+ Health Information Technology (HIT)
+
+ MES Modernization Program
+
+ Payment Modernization
+
+ Rural Health Transformation Program
+
+ Targeted Investments
+
+ Telehealth Services
+
+ Committees and Workgroups
+
+ Transparency
+
+ MEMBERS/APPLICANTS
+
+ For Applicants
+
+ Who Can Apply
+
+ How to Apply for Medical Assistance
+
+ Potential Costs
+
+ Arizona Long Term Care System (ALTCS)
+
+For Existing Members
+
+ Renewing Coverage & Reporting Changes
+
+Report Concerns About Quality of Care Received
+
+ For Both Applicants and Existing Members
+
+ Covered Services
+
+ Behavioral Health Services
+
+ Difficulty of Care
+
+ Eligibility Information
+
+ Pharmacy
+
+ Health Plan Enrollment and Changes
+
+Online Provider Directory
+
+ What You Need to Know
+
+ Resources
+
+ Unauthorized Marketplace Plan Enrollment
+
+ PLANS/PROVIDERS
+
+ AHCCCS Online
+
+ AHCCCS Provider Enrollment Portal (APEP)
+
+ AHCCCS Solutions Center
+
+ QM Portal
+
+ Health Plans
+
+ Minimum Subcontract Provisions
+
+ Reporting Third-Party Liability
+
+ ALTCS Electronic Member Change Request (EMCR)
+
+ Solicitations & Contracts
+
+ Encounters
+
+ Reinsurance
+
+ Quality Assessment and Performance Improvement Strategy
+
+ Technical Consortium and Workgroups
+
+ Fee-For-Service Health Plans
+
+ Prior Authorization
+
+ Claims
+
+ Programs and Populations
+
+ Medicare Savings Programs
+
+ Guides - Manuals - Policies
+
+ AHCCCS Provider Connect
+
+ Other Provider Programs and Initiatives
+
+ ASAM CONTINUUM Implementation
+
+ CRS Referrals
+
+ Differential Adjusted Payment (DAP)
+
+ Direct Care Workers
+
+ Doula Providers
+
+ Emergency Triage, Treat and Transport (ET3)
+
+ Free Standing Emergency Department
+
+ ID.me Identity Verification
+
+ Licensed Health Aides
+
+ Nursing Facility Information
+
+ Payment Error Rate Measurement (PERM)
+
+ Pre-Admission Screening and Resident Review (PASRR)
+
+ Provider Website
+
+ ROPA
+
+ Self Directed Attendant Care
+
+ Treat & Refer
+
+ Provider Survey
+
+ Non-Emergency Medical Transportation
+
+ Rates and Billing
+
+ Managed Care
+
+ Fee-for-Service
+
+ Copayments
+
+ FQHC & RHC
+
+ Hospital Assessment
+
+ Hospital Presumptive Eligibility
+
+ Hospital Reimbursement
+
+ Nursing Facility Assessment
+
+ Health Plan Compliance Concerns
+
+ Medical Coding Resources
+
+ Pharmacy
+
+ Targeted Investments
+
+ Demographics, Social Determinants and Outcomes
+
+ Promoting Interoperability Program
+
+ AMERICAN INDIANS
+
+ Tribal Relations
+
+ Tribal Consultations
+
+ Tribal Liaison
+
+ Tribal Resources
+
+ Traditional Healing
+
+ FAQs
+
+ Tribal Court Procedures for Involuntary Commitment
+
+ American Indian Health Program
+
+ Integration
+
+ Technical Assistance and Training
+
+ American Indian Medical Home
+
+ American Indian Health Facilities
+
+ Applicants
+
+ Members
+
+ Provider Resources
+
+ IHS/638 Quarterly Meeting Handouts
+
+ Tribal Arizona Long Term Care System
+
+ Tribal ALTCS Digital Tool Box
+
+ Subscribe to Tribal ALTCS News
+
+ Claims Resolution Resources
+
+ Fee-for-Service (FFS) Health Plans
+
+ FFS Rates and Billing
+
+ Pharmacy
+
+ Guides - Manuals - Policies
+
+ RESOURCES
+
+ Oversight of Health Plans
+
+ Administrative Actions
+
+ Contracted Health Plan Audited Financial Statements
+
+ Change in Ownership Activities
+
+ Operational Reviews
+
+ Quality and Performance Improvement
+
+ Request to Lift Enrollment CAP
+
+ System Of Care
+
+ Governmental Oversight
+
+ Federal and State Requirements
+
+ Legislative Sessions
+
+ Waiver
+
+ State Plans
+
+ Budget Proposals
+
+ County Acute Care Contributions
+
+ Health Plan Report Card
+
+ Voter Registration Forms and Information
+
+ Reports
+
+ Dashboards
+
+ Reports to CMS
+
+ Reports to the Legislature
+
+ Population Reports
+
+ Enrollment Reports by Health Plan
+
+ Financial Reports
+
+ Solicitations & Contracts
+
+ Solicitations, Contracts & Purchasing
+
+ Open Solicitations
+
+ Closed Solicitations
+
+ Contract Amendments
+
+ Medicare D-SNP Agreements
+
+ Bidders Library
+
+ Vendor Registration
+
+ Public Health
+
+ COVID-19 Information
+
+ Mpox Virus and Vaccination Information
+
+ Guides - Manuals - Policies
+
+ Training
+
+ Fee-for-Service Provider Training
+
+ MCO Provider Training
+
+ Grants
+
+ Federal Funding Accountability and Transparency Act
+
+ Current Grants
+
+ Electronic Data Interchange (EDI)
+
+ EDI Technical Documents
+
+ EDI Testing
+
+ EDI Change Notices
+
+ Community Partner Assistor Organization (CP-AO)
+
+ Pharmacy
+
+ FRAUD PREVENTION
+
+ Program Integrity
+
+ About OIG
+
+ Report Fraud
+
+ Provider Self-Disclosure
+
+ Provider Suspensions & Terminations
+
+ OIG in the News
+
+ Recovery Audit Program
+
+ State Exclusion List
+
+ Unauthorize Marketplace Plan Enrollment
+
+ CRISIS SERVICES
+
+Search Bar
+ <form class="navbar-form navbar-right" role="search">
+ <div class="input-group">
+ <input type="text" class="form-control" placeholder="Search this site">
+ <span class="input-group-btn">
+ <button type="submit" class="btn btn-default">
+ <span class="glyphicon glyphicon-search"></span>
+ </button>
+ </span>
+ </div>
+ </form>
+End Search Bar
+<script>
+ (function() {
+ var cx = '011986694886584059706:jxqckkrww_s';
+ var gcse = document.createElement('script');
+ gcse.type = 'text/javascript';
+ gcse.async = true;
+ gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+ '//cse.google.com/cse.js?cx=' + cx;
+ var s = document.getElementsByTagName('script')[0];
+ s.parentNode.insertBefore(gcse, s);
+ })();
+ </script>
+ <gcse:searchbox-only></gcse:searchbox-only>
+
+ /.navbar-collapse
+
+ /.container
+
+ alert
+<div class="alert alert-warning" aria-live="polite">
+ <p class="text-center"><strong>Posted on 3/14/2025 @ 10:23AM </strong></p>
+ <p class="text-center">AHCCCS has received confirmation that its mainframe system connectivity is fully restored. Thank you for your patience. </p>
+ </div>
+
+Breadcrumb
+<div class="container">
+ <script src="/js/breadcrumb.js"></script>
+</div>
+
+ InstanceBeginEditable name="body"
+Start Breadcrumb
+
+Home
+
+Members & Applicants
+
+This Page
+
+End Breadcrumb
+
+Side Navigation
+
+ Members/Applicants
+
+ For Applicants
+
+Home
+
+Who Can Apply
+
+How to Apply for Medical Assistance
+
+Potential Costs
+
+Arizona Long Term Care System (ALTCS)
+
+ For Existing Members
+
+Home
+
+Renewing Coverage & Reporting Changes
+
+Covered Services
+
+ Behavioral Health Service
+
+Home
+
+ Autism Spectrum Disorder (ASD)
+
+ Court-Ordered Evaluation and Court-Ordered Treatment
+
+ IMDs in Arizona
+
+ Substance Use Disorder and Treatment
+
+ Provider Training and Resources and Guidance
+
+ Addressing the Increase of Syphilis in Arizona
+
+ Grant Information
+
+ Opioid Treatment Program (OTP) Requirements
+
+ Opioid Treatment Program Reports new location
+
+ Preventing an Overdose (Mixing Medications)
+
+<li class="list-group-item"> <a href="/AHCCCS/Downloads/SubstanceUseTreatmentOptions.pdf">Substance Use Treatment </a> </li>
+
+ Opioid Use Disorder and Treatment
+
+ Accessing and Locating Treatment
+
+ Annual Opioid Data Report
+
+ Recognizing and Understanding Opioid Dependence
+
+ Medication for Opioid Use Disorder
+
+ Pregnancy and Opioid Use Disorder
+
+ Recognizing and Responding to an Opioid Overdose
+
+ Medications to Reverse Overdose
+
+ Reporting without Stigma
+
+ SMI Designation & Service
+
+ Statewide Community Residential Treatment Plan
+
+ Suicide Prevention
+
+ Suicide Prevention Training for Schools
+
+Difficulty of Care
+
+Eligibility Information
+
+Pharmacy
+
+ Health Plan Enrollment and Changes
+
+Home
+
+How to Enroll with a Health Plan
+
+How to Change a Health Plan
+
+Available Health Plans
+
+Unauthorized Marketplace Plan Enrollment
+
+Frequently Asked Questions (FAQs)
+
+Online Provider Directory
+
+ What You Need to Know
+
+Home
+
+ Rights & Responsibilities
+
+Grievance and Appeals
+
+HIPPA
+
+Nondiscrimination Notice
+
+ Resources
+
+Home
+
+Available Health Plans
+
+AHCCCS Connect
+
+Eligibility Policy Manual
+
+AHCCCS Publications
+
+ Member Resources
+
+ AHCCCS Eligibility Documents
+
+ AIHP
+
+ Self Directed Attendant Care
+
+Member News
+
+End Navigation
+
+ Start main content
+Start Grievance And Appeals
+
+Grievance And Appeals
+
+All applicants, members, or their authorized representatives, including those enrolled in an AHCCCS Health Plan or fee-for-service program may file a grievance or appeal a decision. Representatives must be authorized by the member in writing.
+
+ What is a Grievance
+
+ Applicants, members, and/or their authorized representatives can file a grievance when they have a complaint about anything that does not involve appealing a decision, such as a denial or discontinuance of services or benefits.
+
+Examples
+
+General Complaints
+
+Environmental hazard conditions at a doctor's office (dirt or clutter, unsanitary practices, overcrowded waiting areas)
+
+Impoliteness or rudeness of providers (doctors, doctor's office staff, hospital personnel, etc.)
+
+Impoliteness or rudeness of office staff (eligibility offices, AHCCCS Offices, Department of Economic Security Offices, Department of Health Services Offices, etc.)
+
+ What is an Appeal
+
+ An appeal is a request from an applicant, member, provider, health plan, or other approved entity to reconsider or change a decision, also known as an action.
+
+An action includes any denial, reduction, suspension, or termination of a service or benefit, or a failure to act in a timely manner.
+
+Examples
+
+Denial of request for surgery
+
+Denial of a request for a wheelchair
+
+Denial of basic health care services
+
+Denial or discontinuance of AHCCCS eligibility
+
+ How Applicants Can File a Grievance/Appeal
+
+ Applicants have the right to make a complaint, file a grievance, or appeal a decision.
+
+Type | How to File | Examples | Definition
+
+Grievance or Complaint | Contact the office manager where the occurrence took place. | General Complaints Environmental conditions (dirt or clutter, unsanitary practices, overcrowded waiting areas) Impoliteness or rudeness of providers (doctors, doctor's office staff, hospital personnel, etc.) Impoliteness or rudeness of office staff (eligibility offices, AHCCCS Offices, Department of Economic Security Offices, or Department of Health Services Offices) | A grievance is a complaint an individual wants to make; including applicants and/or their caregiver (ex. parent, loved one, or client). Applicants and/or caregivers can file a grievance when they have a complaint about anything that does not involve appealing a decision such as denied services or benefits.
+
+Appeal | If benefits or services were denied, and you want to appeal your eligibility denial, you must appeal orally or in writing to the agency that made the determination or decision. (DES or AHCCCS) | Denied services Denied benefits | An appeal is a request for someone or an organization to reconsider or change a decision, often called an "action".
+
+ How Members with an SMI Can File a Grievance/Appeal
+
+SMI Grievance/Request For Investigation
+
+ Any person may file an SMI grievance or request an investigation alleging that a rights violation or a condition requiring investigation has occurred or currently exists. (Please note: allegations about the need for, or appropriateness of behavioral health services should not be considered an SMI grievance, but should be addressed through the appeal process described below.) The request may be verbal or written and must be initiated no later than one year after the date of the alleged rights violation or condition requiring investigation. Forms for filing are available at AHCCCS, the Arizona State Hospital, the T/RBHAs, case management sites and at all provider sites.
+
+ Allegations of rights violations by a TRBHA or their providers or SMI grievances/requests for investigation related to physical or sexual abuse or death will be addressed by AHCCCS. All other SMI grievances/requests for investigation must be filed with and addressed by the appropriate RBHA. Within 7 days of the date received, you will be sent an acknowledgment letter and, if appropriate, an investigator will be assigned to research the matter. When a decision is reached, you will receive a written response.
+
+SMI Appeal
+
+ Any person, age 18 or older, his or her guardian, or designated representative, may file an appeal related to services applied for, or services the person is receiving. Matters of appeal are generally related to: a denial of services; disagreement with the findings of an evaluation or assessment; any part of the Individual Service Plan; the Individual Treatment and Discharge Plan; recommended services or actual services provided; barriers or unreasonable delay in accessing services under Title XIX; and fee assessments. Appeals must be filed with the RBHA (or AHCCCS for the TRBHAs) and must be initiated no later than 60 days after the decision or action being appealed. Appeal forms are available at AHCCCS, the T/RBHAs, case management sites and at all provider sites.
+
+ The RBHA (or AHCCCS for TRBHA appeals) will attempt to resolve all appeals within seven days through an informal process. If the problem cannot be resolved, the matter will be forwarded for further appeal. If the RBHA will not accept your appeal or dismisses your appeal without consideration of the merits, you may request an Administrative Review by AHCCCS of that decision.
+
+ For SMI grievances/requests for investigation and appeals, to the greatest extent possible, please include:
+
+Name of person filing the SMI grievance/request for investigation or appeal
+
+Name of the person receiving services, if different.
+
+Mailing address and phone number.
+
+Date of issue being appealed or incident requiring investigation.
+
+Brief description of issue or incident.
+
+Resolution or solution desired.
+
+ For either process above, you may represent yourself, designate a representative, or use legal counsel. You may contact the State Protection and Advocacy System, the Arizona Center for Disability Law 1-800-922-1447 in Tucson and 1-800- 927-2260 in Phoenix. You may also contact the Office of Human Rights at (602) 364-4585, or 1-800-421-2124 for assistance. If your complaint relates to a licensed behavioral health agency, you may file a complaint online using the Licensing Services Online Complaint Form, or you can contact the Arizona Department of Health Services, Bureau of Behavioral Health Facilities Licensing by calling 602-542-1025.
+
+ How Applicants seeking an SMI eligibility determination can file a Grievance/Appeal
+
+Individuals who are seeking an initial SMI eligibility determination, or who are seeking to remove an existing SMI eligibility determination, have the right to file a grievance or an appeal. Solari is responsible for making SMI eligibility determinations. If you need help or have questions about SMI eligibility, you may contact Solari by calling 602-845-3594..
+
+Process to File an Appeal
+
+If you disagree with a determination related to your eligibility for SMI services, and you want to file an appeal, you must file your appeal with Solari within 60 days of the decision date.
+
+An appeal may be filed verbally or in writing.
+
+Online appeal form located at https://community.solari-inc.org/appeal-form/.
+
+A verbal appeal can be filed by calling 602-845-3594 or 1-855-832-2866.
+
+A written appeal can be filed by mail to:
+
+Attn: Solari Compliance Department
+
+ 1275 W. Washington St. Ste. 210
+
+ Tempe, Arizona 85288
+
+In the event an appeal is filed, a member who is designated SMI may choose to continue to receive services throughout the appeal process.
+
+Process to File a Grievance or Make a Complaint
+
+You may file a grievance/complaint with Solari verbally or in writing.
+
+Verbal grievances/complaints can be made by calling 1-844-852- 4287.
+
+Written grievance/complaints can be made by email at: Compliance@solari-inc.org.
+
+Or by standard mail to:
+
+ Attn: Solari Compliance Department
+
+ 1275 W. Washington St. Ste. 210
+
+ Tempe, Arizona 85288
+
+For further information related to SMI determinations, please visit https://community.solari-inc.org/eligibility-and-care-services/. Refer to process and timeline at https://community.solari-inc.org/eligibility-and-care-services/timeline-steps/.
+
+As outlined in the Intergovernmental Agreements (IGAs), TRBHAs may establish their own mechanisms for determining member SMI eligibility for utilization of block grant funding. In these instances, the TRBHA may opt out of using the statewide determination entity, Solari, for the eligibility assessment, determination, and appeal processes. Consult with the identified TRBHA program for further assistance and information:
+
+Gila River TRBHA: www.grhc.org/bhs, 1-888-484-8526 ext. 7100
+
+Navajo Nation TRBHA: www.nndbmhs.org, 1-866-841-0277
+
+Pascua-Yaqui TRBHA: www.pascuayaqui-nsn.gov/index.php/centered-spirit, 520-879-6060
+
+White Mountain Apache TRBHA: www.wmabhs.org, 928-338-4811
+
+ How Health Plan Members Can File a Grievance/Appeal
+
+ Enrolled AHCCCS Members have the right to make a complaint, file a grievance or appeal a decision.
+
+Member's Process to File a Grievance or Appeal
+
+Enrolled Members must contact their health plan's Grievance and Appeals Department or call their health plan's customer service line. Detailed instructions for filing grievances and appeals may also be found in the member handbook provided by the health plan.
+
+AHCCCS Health Plans
+
+Time to Resolve
+
+The health plan can answer questions about the time it will take to resolve the appeal.
+
+Request an Expedited Appeal
+
+A request for an expedited appeal can be made if the member or doctor feels that the person's health will be in serious jeopardy (serious harm to life or health or ability to attain, maintain or regain maximum function) by waiting 30 days for a decision from the health plan. If the appeal is expedited, the health plan should resolve appeal within three working days, absent an extension.
+
+Continuing Services During an Appeal
+
+Members currently receiving services or benefits may be able to continue to receive them during the appeal process. If services were reduced, suspended or terminated, a request to continue receiving services during the appeal may be made.
+
+The appeal must be filed before the day the reduction, suspension or termination is to take effect. If there is less than 10 days between the notice date and the effective date on the notice, the request for continued services must be filed within 10 days from the notice date. If the appeal is denied, the member may have to pay for the services received during the appeal process.
+
+For further information, contact the health plan or call the Office Of The General Counsel.
+
+Call:
+
+Within Maricopa County 602-417-4232
+
+Statewide 1-800-654-8713 ext. 74232
+
+Request a Hearing (after an unfavorable appeal)
+
+If the member disagrees with the health plan's decision after the appeal, a State Fair Hearing can be requested. (A state fair hearing occurs where the appeal is presented before an administrative law judge).
+
+The health plan's decision on a grievance is final.
+
+ How Fee-For-Service Members Can File a Grievance/Appeal
+
+ Members not enrolled in an AHCCCS Health Plan, including those who receive benefits through fee-for-service and/or those enrolled in the American Indian Health Plan (AIHP), have the right to file a grievance, make a complaint, or file an appeal.
+
+Process to File a Grievance or Make a Complaint
+
+To file a grievance or make a complaint, please call AHCCCS Office of the General Counsel:
+
+Call:
+
+Within Maricopa County 602-417-4232
+
+Statewide 1-800-654-8713 ext. 74232
+
+Process to File an Appeal
+
+All appeals need to be in writing. Eligibility appeals must be sent to the agency that made the determination (AHCCCS or DES). Appeals related to denials, discontinuances, or reductions in medical services must be sent to the AHCCCS Office of the General Counsel.
+
+To request an appeal, write the AHCCCS Office of the General Counsel:
+
+ Office Of The General Counsel
+
+ Arizona Health Care Cost Containment System Administration (AHCCCS)
+
+ 150 N. 18th Ave., MD-15013
+
+ Phoenix, AZ 85007
+
+ FAX: 602-253-9115
+
+Request an Expedited Appeal
+
+A request for an expedited appeal can be made if the member or doctor feels that the person's health will be in serious jeopardy (serious harm to life or health or ability to attain, maintain or regain maximum function) by waiting 30 days for a decision. If the appeal is expedited, AHCCCS should resolve the appeal within three working days, absent an extension.
+
+Continuing Services During an Appeal
+
+Members currently receiving services or benefits may be able to continue to receive them during the appeal process. If services or benefits were reduced, suspended or terminated, a request to continue receiving services during the appeal may be made. The appeal must be filed before the day the reduction, suspension or termination is to take effect. If there is less than 10 days between the notice date and the effective date on the notice, the request for continued services must be filed within 10 days from the notice date. If the appeal is denied, the member may have to pay for the services received during the appeal process.
+
+For further information, contact the Office of the General Counsel.
+
+Request a Hearing (after an unfavorable appeal)
+
+If the AHCCCS decision on the appeal is unfavorable, a hearing referred to as a State Fair Hearing, where the appeal is presented before an administrative law judge, may be requested. A written request for a state fair hearing must be filed with the Office of the General Counsel.
+
+ How a Nursing Facility Resident Can File an Appeal of a Transfer or Discharge
+
+Per 42 CFR § 483.15(c)(3), prior to the transfer or discharge, nursing homes must provide written notification to the resident and the resident’s representative(s). Residents can only be discharged due to one of the reasons included in 483.15(c)(1)(i).
+
+Appeal of Transfer/Discharge Form
+
+§ 483.15 Admission, transfer, and discharge rights.
+
+Transfer and discharge -
+
+Facility requirements –
+
+The facility must permit each resident to remain in the facility, and not transfer or discharge the resident from the facility unless -
+
+The transfer or discharge is necessary for the resident's welfare and the resident's needs cannot be met in the facility;
+
+The transfer or discharge is appropriate because the resident's health has improved sufficiently so the resident no longer needs the services provided by the facility;
+
+The safety of individuals in the facility is endangered due to the clinical or behavioral status of the resident;
+
+The health of individuals in the facility would otherwise be endangered;
+
+The resident has failed, after reasonable and appropriate notice, to pay for (or to have paid under Medicare or Medicaid) a stay at the facility. Non-payment applies if the resident does not submit the necessary paperwork for third party payment or after the third party, including Medicare or Medicaid, denies the claim and the resident refuses to pay for his or her stay. For a resident who becomes eligible for Medicaid after admission to a facility, the facility may charge a resident only allowable charges under Medicaid; or
+
+The facility ceases to operate.
+
+ The facility may not transfer or discharge the resident while the appeal is pending, pursuant to § 431.230 of this chapter, when a resident exercises his or her right to appeal a transfer or discharge notice from the facility pursuant to § 431.220(a)(3) of this chapter, unless the failure to discharge or transfer would endanger the health or safety of the resident or other individuals in the facility. The facility must document the danger that failure to transfer or discharge would pose.
+
+To obtain an appeal form, for assistance in completing an appeal, or to submit an appeal, please contact:
+
+Address: | Office of the General Counsel Arizona Health Care Cost Containment System Administration (AHCCCS) 150 N. 18th Ave., MD-15013 Phoenix, AZ 85007
+
+Phone: | 602-417-4232
+
+Email: | NFdischarges@azahcccs.gov
+
+Revised 11/06/2023
+End Grievance And Appeals
+
+End main content InstanceEndEditable
+
+html
+
+ Start AVA chat
+
+ +
+
+Hi! I'm AVA, the AHCCCS Virtual Assistant.
+
+ Click me for assistance.
+
+ To handle keyboard operations Remove OnClick from below chat_on div
+
+ AVA
+
+ To handle keyboard operations Add id="close" in below img tag
+
+ To handle keyboard operations Remove OnClick from below chat_off div
+
+ <div class="redHeader"></div>
+
+ End AVA chat
+ Archive
+
+ Can't find what you're looking for? Please visit the AHCCCS Document Archive.
+
+ Footer
+
+ AHCCCS
+
+ 150 N. 18th Ave.
+
+ Phoenix, AZ 85007
+
+Find Us On Google Maps
+
+ Phone: 602-417-4000
+
+ Toll Free: 1-800-654-8713
+
+ For Members
+
+How to Apply
+
+Covered Services
+
+Pay Your Premium
+
+Health Insurance for Children
+
+ For Providers
+
+Provider Enrollment
+
+AHCCCSOnline Website
+
+Policy Manuals
+
+Fee-for-Service Fee Schedules
+
+ About
+
+Contact Us
+
+Subscribe to Newsletters
+
+Careers (opens in new window)
+
+News & Press Releases
+
+   AHCCCS Facebook page
+ <img src="/img/twitter.png" alt="AHCCCS Twitter" />
+   AHCCCS Instagram
+ <img src="/img/instagram.png" alt="AHCCCS Twitter" />
+   AHCCCS Twitter
+ <a href="https://blogs.azahcccs.gov/" target="_blank" rel="noreferrer">
+ <i class="fa-brands fa-wordpress" style="font-size: 2em"></i>&nbsp;
+ <img src="/img/wordpress.png" alt="AHCCCS Wordpress Blog"/>
+ </a>
+   AHCCCS on LinkedIn
+ <img src="/img/twitter.png" alt="AHCCCS Twitter" />
+ AHCCCS YouTube page
+ <img src="/img/twitter.png" alt="AHCCCS Twitter" />
+
+ Contact Webmaster | Web Privacy Policy | Web Accessibility Policy
+
+ © Copyright
+
+ AHCCCS
+
+Back To Top
+ jQuery
+
+ Bootstrap Core JavaScript
+
+ Sliver
+
+ Bootstrap Accessibility JavaScript
+ <script src="/js/bootstrap-accessibility.js"></script>
+
+ Script for TypeHead.js
+
+ Script to Activate the Carousel
+
+Back to top plugin
+
+Begin Google Translate
+
+End Google Translate
+Being Google Analytics
+
+End Google Analytics
+ Code for getting scrolling to work properly because of the main menu being fixed in Chrome/Firefox
+
+ Script for AVA Chat
+
+ InstanceBeginEditable name="pageScripts"
+
+ InstanceEndEditable
+
+SOURCE 4: Long-Term Care Ombudsman — Arizona Department of Economic Security | https://des.az.gov/LTCOP | source date: none stated on page | retrieved: 2026-09-04
+Skip to main content
+
+State of Arizona
+
+Visit OpenBooks
+
+Ombudsman Citizens Aide
+
+Register to Vote
+
+Arizona Department of Economic Security
+
+Your Partner for a Stronger Arizona
+
+Search form
+
+Search
+
+ Select LanguageEnglishAfrikaansAlbanianAmharicArabicArmenianAzerbaijaniBasqueBelarusianBengaliBosnianBulgarianCatalanCebuanoChichewaChinese (Simplified)Chinese (Traditional)CorsicanCroatianCzechDanishDutchEsperantoEstonianFilipinoFinnishFrenchFrisianGalicianGeorgianGermanGreekGujaratiHaitian CreoleHausaHawaiianHebrewHindiHmongHungarianIcelandicIgboIndonesianIrishItalianJapaneseJavaneseKannadaKazakhKhmerKoreanKurdish (Kurmanji)KyrgyzLaoLatinLatvianLithuanianLuxembourgishMacedonianMalagasyMalayMalayalamMalteseMaoriMarathiMongolianMyanmar (Burmese)NepaliNorwegianPashtoPersianPolishPortuguesePunjabiRomanianRussianSamoanScottish GaelicSerbianSesothoShonaSindhiSinhalaSlovakSlovenianSomaliSpanishSudaneseSwahiliSwedishTajikTamilTeluguThaiTurkishUkrainianUrduUzbekVietnameseWelshXhosaYiddishYorubaZulu
+
+Facebook
+Instagram
+YouTube
+LinkedIn
+
+Main menu
+
+About DES
+
+Overview of DES Services
+
+Michael Wisehart, Director
+
+Organizational Chart
+
+Five-Year Strategic Plan
+
+Strategic Planning Frequently Asked Questions
+
+Five-Year Strategic Plan Contact
+
+Services Provided by DES
+
+Contact DES
+
+Director's Office
+
+DES Program and Services Contact Numbers
+
+Governor's Councils Contact Numbers
+
+Report Abuse
+
+Office of Equal Opportunity
+
+Client Advocates and Ombudsman
+
+Website Feedback
+
+Budget Information
+
+Events Calendar
+
+DES Public Events Submission Form
+
+Community Engagement
+
+Community Engagement Team
+
+Contact Community Engagement
+
+Tribal Relations
+
+Overview
+
+Staff
+
+Tribal Consultations and Reports
+
+DES Tribal Maps
+
+Resources
+
+Request Assistance
+
+Tribal Land Address Verification
+
+Public Meetings
+
+DES Hall of Fame
+
+Services
+
+Basic Needs
+
+Adult Protective Services
+
+File an APS Report Online (English)
+
+File an APS Report Online (Spanish)
+
+Adult Abuse
+
+Mandated Reporters
+
+APS Registry
+
+Employers
+
+APS Improvements
+
+Arizona APS Statutes
+
+Arizona APS Definitions
+
+APS Documents
+
+Request APS Records
+
+APS Data Dashboard
+
+Training, Education, and Community Engagement
+
+Food Assistance
+
+Nutrition Assistance
+
+How to Apply for Nutrition Assistance
+
+Documents Needed to Apply for Nutrition Assistance
+
+MyFamilyBenefits Frequently Asked Questions (FAQ)
+
+Frequently Asked Questions
+
+Change Report for Nutrition, Cash, and Medical Assistance Benefits
+
+Electronic Benefits Transfer (EBT) Card
+
+Health-e-Arizona Plus Application
+
+Publications for Nutrition, Cash, and Medical Assistance Benefits
+
+Work Requirements for Able-Bodied Adults Without Dependents
+
+Double Up Food Bucks
+
+Student Eligibility for SNAP
+
+How to Support Health in your Home
+
+Hunger Relief Programs
+
+Arizona Commodity Senior Food Program
+
+Congregate and Home-delivered Meals
+
+The Emergency Food Assistance Program (TEFAP)
+
+Senior Farmers Markets Nutrition Program (SFMNP)
+
+WIC Farmers Markets Nutrition Program (FMNP)
+
+Other Food Programs
+
+SUN Bucks Summer Electronic Benefit Transfer (Summer EBT)
+
+Information for DES Partners
+
+Cash and Nutrition Assistance Policy Manual
+
+Other Resources
+
+DES Hunger Advisory Council
+
+Disaster Nutrition Assistance Program
+
+Appeals
+
+Contact DES
+
+Customer Bill of Rights
+
+Limited English Proficiency
+
+Office of Program Evaluation
+
+USDA Programs Nondiscrimination Statements
+
+Medical Assistance
+
+How to Apply for Medical Assistance
+
+Frequently Asked Questions
+
+Refugee Resettlement
+
+Arizona Refugee Resettlement Program Resources
+
+Arizona Refugee Resettlement - FAQ
+
+Arizona Refugee Resettlement Program - Contract Information
+
+Shelter and Housing
+
+Arizona Rental Assistance Program
+
+Homeless Services
+
+Short-Term Crisis Services
+
+Community Action Agencies
+
+Low Income Household Water Assistance Program
+
+Low Income Home Energy Assistance Program
+
+Domestic Violence Support
+
+Domestic Violence Contracts Directory
+
+Sexual Violence Support
+
+Child and Family
+
+Cash Assistance
+
+Frequently Asked Questions
+
+Applications & Forms
+
+Income Eligibility Guidelines
+
+Personal Responsibility Agreement
+
+Grant Diversion Program
+
+State Assistance
+
+Child Care
+
+Find a DES Child Care Office
+
+Apply for Child Care Assistance
+
+Become a Child Care Provider
+
+Become a DES Certified Family Child Care Provider
+
+DES Contracted Child Care Provider Resources
+
+Non-Certified Relative Provider
+
+Child Care Electronic System (CCES)
+
+File a Complaint on a DES Child Care Provider
+
+Professional Development
+
+Navigating Health and Safety Training
+
+Preventing and Reducing Suspensions and Expulsions in Early Care
+
+Child Care and Development Fund State Plan
+
+Contact Child Care
+
+Child Support Services
+
+Apply for Child Support
+
+Child Support Recipients
+
+Electronic Payment Card (EPC)
+
+Pay Child Support
+
+Resources
+
+Employers
+
+Wanted - Child Support Evaders
+
+Unclaimed Funds
+
+Contact Child Support Services
+
+AZ Child Support Portal
+
+Online Services
+
+Community Resources
+
+Disabilities
+
+Developmental Disabilities
+
+Members and Families
+
+Determine Eligibility
+
+Providers and Vendors
+
+Licensing and Certification
+
+Initiatives and Results
+
+DDD Health Plans Information
+
+Policy and Rules
+
+Public Councils and Committees
+
+Contact DDD
+
+How To Print Page Content
+
+Language Assistance
+
+Job Openings
+
+Early Intervention
+
+AzEIP at a Glance
+
+Apply for AzEIP Services
+
+Find Service-Providing Agencies
+
+Families
+
+Receiving AzEIP Services
+
+Community Programs
+
+AzEIP Videos
+
+Agencies
+
+I-TEAMS
+
+Resources and Tools for Providers
+
+Training
+
+Stakeholders and Advocates
+
+ICC for Infants and Toddlers
+
+Comprehensive System of Personnel Development (CSPD)
+
+Reports
+
+AzEIP Community Resource Guide
+
+Policies and Procedures
+
+Contact AzEIP
+
+Join an Early Intervention Team!
+
+Achieving a Better Life Experience
+
+Older Adults
+
+Home and Community Based Services
+
+Abuse in Later Life Grant
+
+Healthy Living
+
+Medicare Assistance
+
+Legal Services Assistance
+
+Family Caregiver Support
+
+Long-Term Care Ombudsman
+
+Publications on Aging
+
+Alerts
+
+Policy Manual
+
+Aging and Disability Services Policy Chapter 1000
+
+Aging and Disability Services Policy Chapter 2000
+
+Aging and Disability Services Policy Chapter 3000
+
+Aging and Disability Services Policy Chapter 4000
+
+World Elder Abuse Awareness Day Conference
+
+Employment
+
+Job Seekers
+
+Trade Adjustment Assistance
+
+Migrant and Seasonal Farm Workers
+
+SNAP CAN Employment
+
+SNAP Participants
+
+SNAP CAN Providers
+
+SNAP CAN Provider Tool
+
+TANF Jobs Program
+
+Grant Funding Disclosures
+
+Reentry Services
+
+Employer Resources
+
+Foreign Labor Certification Program
+
+Work Opportunity Tax Credit
+
+Rapid Response – Workforce Reduction Support
+
+Apprenticeship
+
+Become an Apprentice
+
+Find an Apprenticeship Program
+
+Offer an Apprenticeship Program
+
+Registered Apprenticeship Monthly Office Hours
+
+Registered Apprenticeship Public Information Disclosure
+
+Registered Apprenticeship Success Stories
+
+Arizona Apprenticeship Advisory Committee
+
+State Apprenticeship Expansion
+
+Apprenticeship Certificate Registry
+
+Unemployment - Individual
+
+Apply for UI Benefits
+
+File Your Weekly UI Claims
+
+ID.me Identity Verification
+
+A Better Way to Access UI Services
+
+Overpayments
+
+Understanding UI Overpayments
+
+Waivers
+
+Paying Back
+
+Find Help with Your Overpayment
+
+Frequently Asked Questions about Overpayments
+
+Reemployment Services and Eligibility Assessment (RESEA)
+
+Disaster Unemployment Assistance
+
+ARIZONA@WORK Employment Resources
+
+Income Tax Information
+
+Eligibility for Unemployment Benefits
+
+Work Search and Your Eligibility for Unemployment Benefits
+
+How Do I and Frequently Asked Questions
+
+Forms & Pamphlets
+
+Contact Arizona UI
+
+Contact AZ Unemployment Insurance Client Advocate Via Email
+
+UI Benefit Fraud
+
+UI Benefit Fraud Convictions
+
+UI Benefits (Compensation) Fraud
+
+Weekly UI Benefit Claims Reported Earnings
+
+How To File An Appeal For UI Benefits
+
+FAQs about Hearing and Appeal Process
+
+Legal Representation
+
+The UI Benefits Appeals Process - Helpful Videos
+
+UI Data Dashboard
+
+Working with a Disability
+
+Vocational Rehabilitation
+
+Collaboration with the DDD
+
+Pre-Employment Transition Services (Pre-ETS)
+
+Business Enterprise Program
+
+Facilities List
+
+Independent Living Older Blind (ILOB) Program
+
+Governor's Council on Blindness and Low Vision
+
+State Rehabilitation Council
+
+Governor's Council on Spinal and Head Injuries
+
+Additional Rehabilitation Resources
+
+Contact Information
+
+Employment Service/Related Law Complaint
+
+Unemployment - Employer
+
+Applying for an Unemployment Insurance Tax Account Number
+
+Report Changes to Your Business
+
+Reporting Wages and Paying Unemployment Insurance Taxes
+
+Employment Taxes - Calculating Unemployment Taxes
+
+Unemployment Insurance Tax Forms
+
+Unemployment Insurance Tax Frequently Asked Questions
+
+Request UI Records
+
+Employer Handbook/ Unemployment Tax
+
+Employer Handbook/ Unemployment Benefit Claims
+
+AZ Unemployment Insurance Tax Survey
+
+Contact the Unemployment Tax Office
+
+Arizona Shared Work Program
+
+Case Management System for Unemployment Benefits
+
+Overpayments (Credits) and Refunds
+
+Senior Community Service Employment Program
+
+Veterans
+
+Workforce Innovation and Opportunity Act (WIOA)
+
+About WIOA
+
+WIOA Resources
+
+WIOA Allocations Information
+
+Title I-B Policy and Procedure Manual
+
+WIOA Plans, Reports, and Waivers
+
+WIOA - Equal Opportunity
+
+Contact WIOA
+
+Eligible Training Provider List
+
+Arizona State Monitor Advocate
+
+How do I?
+
+Do Business with DES?
+
+Procurement Frequently Asked Questions
+
+Arizona Taxonomy of Human Services Contracts
+
+Taxonomy Frequently Asked Questions
+
+Request a Vendor Meeting
+
+Learn about HIPAA?
+
+HIPAA Privacy
+
+Useful HIPAA Web Sites
+
+HIPAA Frequently Asked Questions (FAQ)
+
+Contact HIPAA
+
+Request Assistance?
+
+Mission of Heart
+
+Contact Ombudsman
+
+Frequently Asked Questions
+
+Submit a Request for Assistance
+
+Additional Resources
+
+Request DES Public Records?
+
+Submit Website Feedback?
+
+Work for DES?
+
+ADA Disability Rights/Reasonable Accommodations
+
+FAQs about Reasonable Modifications
+
+Volunteer?
+
+About Volunteer Services
+
+Open Volunteer Opportunities
+
+Volunteer Questions & Answers
+
+Volunteer Online Application
+
+File a Discrimination Complaint
+
+Report Developmental Disabilities Fraud, Waste and Abuse
+
+Register to Vote
+
+Documents Center
+
+Reports
+
+Forms
+
+Policies and Procedures
+
+Flyers and Pamphlets
+
+DES Rules
+
+DES Rulemaking Activities
+
+Submit Comments on DES Rules
+
+Request for Notification of Rulemaking Activity
+
+Contact DES Rules Team
+
+Department of Economic Security Substantive Policy Statement Directory
+
+Media Center
+
+Featured Content
+
+Press Releases
+
+Office Locator
+
+Report Fraud
+
+About OIG
+
+Report Suspected Fraud
+
+Home
+
+Services
+
+Older Adults
+
+Long-Term Care Ombudsman
+
+Older Adults
+
+Home and Community Based Services
+
+Abuse in Later Life Grant
+
+Healthy Living
+
+Medicare Assistance
+
+Legal Services Assistance
+
+Family Caregiver Support
+
+Long-Term Care Ombudsman
+
+Publications on Aging
+
+Alerts
+
+Policy Manual
+
+Aging and Disability Services Policy Chapter 1000
+
+Aging and Disability Services Policy Chapter 2000
+
+Aging and Disability Services Policy Chapter 3000
+
+Aging and Disability Services Policy Chapter 4000
+
+World Elder Abuse Awareness Day Conference
+
+ Long-Term Care Ombudsman
+
+ BEGIN ANNOUNCEMENTS
+
+Announcement
+
+The Long-Term Care Ombudsman Program Annual Report for Fiscal Year 2025 is now available!
+
+ END ANNOUNCEMENTS
+The Long-Term Care Ombudsman Program (LTCOP) grew out of efforts by both federal and state governments to respond to widely reported concerns that our most frail and vulnerable citizens (those living in long-term care facilities) were subject to abuse, neglect and substandard care. These residents also lacked the ability to exercise their rights or voice complaints about their circumstances. The primary purpose of the Long-Term Care Ombudsman Program is to identify, investigate and resolve complaints made by or on behalf of residents of nursing homes, assisted living facilities, and adult foster care homes.
+
+The LTCOP will make every reasonable effort to assist, advocate, and intervene on behalf of the resident. When investigating complaints, the program will respect the resident, maintain their confidentiality, and will focus complaint resolution on the resident’s wishes.
+
+In addition to identifying, investigating and resolving complaints, the LTCOP:
+
+Educates residents, families, facility staff and the community about long term care issues and services
+
+Promotes and advocates for residents’ rights
+
+Assists residents in obtaining needed services
+
+Works with and supports family and resident councils
+
+Contact Your Local Long-Term Care Ombudsman Program
+
+If you have a complaint, concern or would like more information, the Ombudsman Program is available to assist you. Contact your local LTCOP at:
+
+Maricopa County
+
+Region 1
+
+Area Agency on Aging, Region One
+
+(602) 264-4357
+
+Pima County
+
+Region 2
+
+Pima Council on Aging
+
+(520) 790-7262
+
+Yavapai, Coconino, Navajo, Apache Counties
+
+Region 3
+
+Northern Arizona Council on Aging
+
+(NACOG Aging)
+
+Central Intake number:
+
+(877) 521- 3500
+
+Mohave, La Paz, Yuma Counties
+
+Region 4
+
+Western Arizona Council on Aging
+
+(928) 217-7114
+
+Pinal and Gila Counties
+
+Region 5
+
+Central Arizona Aging
+
+(520) 836-2758
+
+Cochise, Graham, Greenlee, Santa Cruz Counties
+
+Region 6
+
+Southeastern Arizona Governments Organization
+
+(520) 432-2528, extension 206
+
+Navajo Nation
+
+Region 7
+
+Navajo Area Agency on Aging
+
+(602) 542-6454 or (602) 542-6432
+
+Inter-Tribal Council of Arizona
+
+Region 8
+
+21 Tribal Nations
+
+(800) 591-9370
+
+For program information, contact:
+
+Office of Arizona State Long-Term Care Ombudsman Program
+
+1789 W. Jefferson Street, Mail Drop 6288
+
+Phoenix, Arizona 85007
+
+Phone: (602) 542-6454 extension 9
+
+Email:ltcop@azdes.gov
+
+Additional Resources
+
+Review nursing home and assisted living survey information and ratings.
+
+Legal Services Assistance
+
+Aging and Disability Resources AZ Links
+
+Arizona Department of Health Services, Public Health Licensing
+
+Licenses and monitors health and child care facilities and providers throughout Arizona. Licensing inspections, on-site surveys, and complaint investigations are conducted to promote quality care and safety and ensure that performance standards are met for facility operation and maintenance.
+
+Review nursing home and assisted living survey information and ratings.
+
+Adult Protective Services
+
+The issues of abuse, neglect and exploitation of long-term care residents are of critical importance and should be reported and investigated promptly. The state agency given the responsibility to receive and investigate incidents of abuse, neglect, or exploitation of incapacitated or vulnerable adults is Adult Protective Services. They may be contacted at: APS reporting hotline 877-767-2385
+
+Resources and Publications for Providers
+
+Forms
+
+Conflict of Interest
+
+Manuals
+
+The Long-Term Care Ombudsman Manuals are reference guides for regional staff. They use the manuals during training of new staff and volunteers, and as a guide during their Ombudsman duties. They contain general information regarding the role of the Ombudsman, as well as applicable state and federal policy and law.
+
+Long-Term Care Ombudsman Manual
+
+Long-Term Care Ombudsman Volunteer Manual
+
+Policy and Procedures
+
+Long-Term Care Ombudsman Policy
+
+Reports
+
+Long-Term Care Ombudsman Program Annual Report
+
+Surveys and Ratings
+
+Nursing home and assisted living surveys and ratings.
+
+Arizona State Resources
+
+AZ.Gov
+
+AZ Governor
+
+Voter Registration
+
+OpenBooks
+
+Arizona State Jobs
+
+AZ Developmental Disabilities Planning Council
+
+DES Resources
+
+Contact DES
+
+Find Your Local Office
+
+Report Suspected Fraud
+
+Documents Center
+
+Complaints or Feedback
+
+Public Meetings
+
+Request DES Records
+
+Doing Business with DES
+
+Equal Opportunity
+
+Limited English Proficiency Information
+
+ADA Disability Rights/Reasonable Accommodations
+
+Pursuant to Title VI of the Civil Rights Act of 1964, the Americans with Disabilities Act (ADA) and other nondiscrimination laws and authorities, ADES does not discriminate on the basis of race, color, national origin, sex, age, or disability. Persons that require a reasonable modification based on language or disability should submit a request as early as possible to ensure the State has an opportunity to address the modification. The process for requesting a reasonable modification can be found at Equal Opportunity and Reasonable Modification
+
+© Copyright 2026 DES
+
+Website Policies, Disclaimers and Privacy
+
+DES Non-Discrimination Policy
+
+Sitemap
+
+ Back to Top
+

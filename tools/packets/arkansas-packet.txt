@@ -1,0 +1,916 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: arkansas
+ASSEMBLED: 2026-09-04
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/arkansas.json (recipe digest 6b3471c34a8f). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- SOURCE 1: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The official Code of Arkansas Rules, which the site itself states became the official version on January 1, 2025. Its section pages are server-rendered and curl-able with a browser user-agent, which was not so on 2026-08-30 when this host failed TLS to curl from both the sandbox and the Mac; the failure did not recur on 2026-09-04 and is recorded as transient. The address carries the site's internal numeric identifiers (titleID 20, chapterID 38, subChapterID 50, partID 1233, subPartID 7678, sectionID 50213), taken from the site's own tree-view JSON at /Home/GetRulesTreeViewData; they are database keys, not session tokens, and the same address has answered across the session. The page prints the rule text twice, once rendered and once as escaped HTML inside a hidden field; both are in the body and the rendered copy is what the page quotes. The rule's own heading reads '6 CAR § 400-2505' where the page title and citation read '20 CAR § 400-2505'; that is the publisher's text and is recorded as a finding.
+- SOURCE 2: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  Same publisher and same address shape as source 1. Paragraph (7)(B) states a ten-day written notification of transfer, where § 400-2505(b) states a minimum of thirty days; both are in the same current Part and the page records the discrepancy as a finding.
+- SOURCE 3: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  Same publisher and same address shape as source 1. Captured as the residents'-rights section adjacent to § 400-2505, so the page's reading of Subpart 25 rests on more than one section.
+- SOURCE 4: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The program's own site, on a dhs.arkansas.gov subdomain, served by a hosted site builder but curl-able. Its text names the State Ombudsman, the coordinator and the regional ombudsmen by region and offers a county search, and prints no telephone number, street address or email in the served text; the contacts sit behind the search widget. The page records that as what the program publishes, not as a capture failure. humanservices.arkansas.gov, the department's main site, returns a bare nginx 403 to curl with every header set tried, over HTTP/1.1 and HTTP/2 alike; the department's File an Appeal page is carried in a supplemental packet captured by browser, marked not re-verifiable.
+
+SOURCE 1: 20 CAR § 400-2505, Transfer or discharge — Code of Arkansas Rules, Title 20, Chapter X (Office of Long-Term Care), Subchapter A, Part 400, Rules for Nursing Homes, Subpart 25, Residents' Rights — Arkansas Secretary of State | https://codeofarrules.arkansas.gov/Rules/Rule?levelType=section&titleID=20&chapterID=38&subChapterID=50&partID=1233&subPartID=7678&sectionID=50213 | source date: the site's footer states 'Last Updated' with a date and that the Code is updated weekly; no per-section date is printed | retrieved: 2026-09-04
+Code of Arkansas Rules
+
+Search |
+ Emergency Rules |
+ Contact
+
+QUICK FIND
+
+Title:
+
+Chapter:
+
+Subchapter:
+
+Part:
+
+Subpart:
+
+Section:
+
+Appendix:
+
+»
+
+ /
+ Title 20
+  /  Chapter X
+  /  Subchapter A
+  /  Part 400
+  /  Subpart 25
+
+ PREVIOUS
+NEXT
+
+20 CAR § 400-2505. Transfer or discharge
+
+Content
+
+<li class="nav-item">
+ <a class="nav-link" id="rules-tabs-general-tab" data-toggle="pill" href="#rules-tabs-general" role="tab" aria-controls="rules-tabs-general" aria-selected="true">General Info</a>
+ </li>
+
+Notes
+
+        6 CAR § 400-2505. Transfer or discharge.
+
+        (a)(1) A resident may be transferred or discharged only for:
+
+                        (A) Medical reasons;
+
+                        (B) His or her welfare or the welfare of other residents;
+
+                        (C) The resident presents a danger to the safety or health of other residents;
+
+                        (D) Because the resident no longer needs the services provided by the facility;
+
+                        (E) Nonpayment for his or her stay; or
+
+                        (F) The facility ceases operation.
+
+                (2) The resident shall be given reasonable written notice to ensure orderly transfer or discharge.
+
+                (3)(A) The term "transfer" applies to the movement of the resident from facility to another facility.
+
+                        (B) "Medical reasons" for transfer or discharge:
+
+                                (i) Shall be based on the resident's needs; and
+
+                                (ii)(a) Are to be determined and documented by a physician.
+
+                                        (b) That documentation shall become a part of the resident's permanent medical record.
+
+                        (C) "Reasonable notice of transfer or discharge" means the decision to transfer or discharge a resident:
+
+                                (i) Shall be discussed with the resident; and
+
+                                (ii) The resident will be told the reason or reasons and alternatives available.
+
+        (b) A minimum of thirty (30) days written notice must be given.
+
+        (c) Transfer for the welfare of the resident or other residents may be affected immediately if such action is documented in the medical record.
+
+        (d)(1) An appeals process for residents objecting to transfer or discharge shall be developed by the facility, in accordance with Arkansas Code § 20-10-1005, as amended.
+
+                (2) The process shall include:
+
+                        (A)(i) The written notice of transfer or discharge shall state the reason for the proposed transfer or discharge.
+
+                                (ii) The notice shall inform the resident that they have the right to appeal the decision to the Secretary of the Department of Human Services within seven (7) calendar days.
+
+                                (iii) The resident must be assisted by the facility in filing the written objection to transfer or discharge;
+
+                        (B) Within fourteen (14) days of the filing of the written objections a hearing will be scheduled; and
+
+                        (C) A final determination in the matter will be rendered within seven (7) days of the hearing.
+
+        (e) The facility shall provide preparation and orientation to residents designed to ensure a safe and orderly transfer or discharge.
+
+ <style type="text/css">
+ .cs2D51A1C7{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:1.65}
+ .csFEE11B1A{color:#000000;background-color:transparent;font-family:Tahoma,Arial;font-size:12pt;font-weight:bold;font-style:normal;}
+ .csD549619A{color:#000000;background-color:transparent;font-family:Tahoma,Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+ .cs9FBC7E9B{color:#000000;background-color:transparent;font-family:Tahoma,Arial;font-size:12pt;font-weight:normal;font-style:italic;}
+ </style>
+
+ <p class="cs2D51A1C7"><span class="csFEE11B1A">        6 CAR &sect; 400-2505. Transfer or discharge.</span></p><p class="cs2D51A1C7"><span class="csD549619A">        (a)(1) A resident may be transferred or discharged only for:</span></p><p class="cs2D51A1C7"><span class="csD549619A">                        (A) Medical reasons;</span></p><p class="cs2D51A1C7"><span class="csD549619A">                        (B) His or her welfare or the welfare of other residents;</span></p><p class="cs2D51A1C7"><span class="csD549619A">                        (C) The resident presents a danger to the safety or health of other residents;</span></p><p class="cs2D51A1C7"><span class="csD549619A">                        (D) Because the resident no longer needs the services provided by the facility;</span></p><p class="cs2D51A1C7"><span class="csD549619A">                        (E) Nonpayment for his or her stay; or</span></p><p class="cs2D51A1C7"><span class="csD549619A">                        (F) The facility ceases operation.</span></p><p class="cs2D51A1C7"><span class="csD549619A">                (2) The resident shall be given reasonable written notice to ensure orderly transfer or discharge.</span></p><p class="cs2D51A1C7"><span class="csD549619A">                (3)(A) The term &quot;transfer&quot; applies to the movement of the resident from facility to another facility.</span></p><p class="cs2D51A1C7"><span class="csD549619A">                        (B) &quot;Medical reasons&quot; for transfer or discharge: </span></p><p class="cs2D51A1C7"><span class="csD549619A">                                (i) Shall be based on the resident&#39;s needs; and </span></p><p class="cs2D51A1C7"><span class="csD549619A">                                (ii)</span><span class="cs9FBC7E9B">(a)</span><span class="csD549619A"> Are to be determined and documented by a physician. </span></p><p class="cs2D51A1C7"><span class="csD549619A">                                        </span><span class="cs9FBC7E9B">(b)</span><span class="csD549619A"> That documentation shall become a part of the resident&#39;s permanent medical record.</span></p><p class="cs2D51A1C7"><span class="csD549619A">                        (C) &quot;Reasonable notice of transfer or discharge&quot; means the decision to transfer or discharge a resident: </span></p><p class="cs2D51A1C7"><span class="csD549619A">                                (i) Shall be discussed with the resident; and </span></p><p class="cs2D51A1C7"><span class="csD549619A">                                (ii) The resident will be told the reason or reasons and alternatives available. </span></p><p class="cs2D51A1C7"><span class="csD549619A">        (b) A minimum of thirty (30) days written notice must be given. </span></p><p class="cs2D51A1C7"><span class="csD549619A">        (c) Transfer for the welfare of the resident or other residents may be affected immediately if such action is documented in the medical record.</span></p><p class="cs2D51A1C7"><span class="csD549619A">        (d)(1) An appeals process for residents objecting to transfer or discharge shall be developed by the facility, in accordance with Arkansas Code &sect; 20-10-1005, as amended. </span></p><p class="cs2D51A1C7"><span class="csD549619A">                (2) The process shall include:</span></p><p class="cs2D51A1C7"><span class="csD549619A">                        (A)(i) The written notice of transfer or discharge shall state the reason for the proposed transfer or discharge. </span></p><p class="cs2D51A1C7"><span class="csD549619A">                                (ii) The notice shall inform the resident that they have the right to appeal the decision to the Secretary of the Department of Human Services within seven (7) calendar days. </span></p><p class="cs2D51A1C7"><span class="csD549619A">                                (iii) The resident must be assisted by the facility in filing the written objection to transfer or discharge;</span></p><p class="cs2D51A1C7"><span class="csD549619A">                        (B) Within fourteen (14) days of the filing of the written objections a hearing will be scheduled; and</span></p><p class="cs2D51A1C7"><span class="csD549619A">                        (C) A final determination in the matter will be rendered within seven (7) days of the hearing.</span></p><p class="cs2D51A1C7"><span class="csD549619A">        (e) The facility shall provide preparation and orientation to residents designed to ensure a safe and orderly transfer or discharge.</span></p>
+
+<div class="tab-pane fade" id="rules-tabs-general" role="tabpanel" aria-labelledby="rules-tabs-section-general-tab">
+ Section Details
+ </div>
+
+Section Notes
+
+No notes are currently available.
+
+Authorities:
+
+Arkansas Code § 20-10-203; Arkansas Code § 20-10-216; Arkansas Code § 20-10-224
+
+ Code of Arkansas Rules
+
+ Pursuant to Arkansas Code § 25-15-218, the Code of Arkansas Rules is a codification of the general and permanent rules of Arkansas agencies. This online searchable database constitutes the official version of the Code of Arkansas Rules and became effective on January 1, 2025. It is updated on a weekly basis and may not reflect recent rulemaking. Please check with the respective agency for information on recent rulemaking.
+
+DISCLAIMER: The inclusion of a rule in the Code of Arkansas Rules shall not be construed to represent an expression that the rule is consistent with state or federal law or legislative intent.
+
+Search |
+ Emergency Rules |
+ Contact
+
+Last Updated: 8/31/2026 12:18:25 PM
+
+ © 2026 - Arkansas State Government
+
+ REQUIRED SCRIPTS
+
+SOURCE 2: 20 CAR § 400-411, Admission, transfer, and discharge policies — Code of Arkansas Rules, Part 400, Rules for Nursing Homes, Subpart 4 — Arkansas Secretary of State | https://codeofarrules.arkansas.gov/Rules/Rule?levelType=section&titleID=20&chapterID=38&subChapterID=50&partID=1233&subPartID=7657&sectionID=50037 | source date: the site's footer states 'Last Updated' with a date; no per-section date is printed | retrieved: 2026-09-04
+Code of Arkansas Rules
+
+Search |
+ Emergency Rules |
+ Contact
+
+QUICK FIND
+
+Title:
+
+Chapter:
+
+Subchapter:
+
+Part:
+
+Subpart:
+
+Section:
+
+Appendix:
+
+»
+
+ /
+ Title 20
+  /  Chapter X
+  /  Subchapter A
+  /  Part 400
+  /  Subpart 4
+
+ PREVIOUS
+NEXT
+
+20 CAR § 400-411. Admission, transfer, and discharge policies
+
+Content
+
+<li class="nav-item">
+ <a class="nav-link" id="rules-tabs-general-tab" data-toggle="pill" href="#rules-tabs-general" role="tab" aria-controls="rules-tabs-general" aria-selected="true">General Info</a>
+ </li>
+
+Notes
+
+        20 CAR § 400-411. Admission, transfer, and discharge policies.
+
+        These policies shall include, at a minimum, the following:
+
+                (1) Patients shall be admitted to the facility only on the recommendation of a physician licensed to practice medicine in the State of Arkansas;
+
+                (2)(A) All persons admitted to a nursing home shall have a history and physical examination at the time of admission or within seventy-two (72) hours following admission unless such examination was performed within fifteen (15) days prior to admission.
+
+                        (B) A copy of the hospital history, physical, and discharge summary (after completion) will satisfy the requirement if the history and physical was completed within thirty (30) days.
+
+                        (C) The examination will be:
+
+                                (i) For medical evaluation purposes; and
+
+                                (ii) To determine if the patient is free from communicable diseases;
+
+                (3)(A) Recording shall be made of initial examination and all subsequent examinations, including:
+
+                                (i) Findings;
+
+                                (ii) Recommendations; and
+
+                                (iii) Progress notes.
+
+                        (B) Hospital discharge summaries are to be obtained after each hospitalization;
+
+                (4)(A) Patients who are not receiving public assistance from the Division of Provider Services and Quality Assurance shall be classified on admission and subsequently reclassified by the attending physician as skilled care, intermediate care, or minimum care patients, and a report shall be kept in the home and available to the division.
+
+                        (B) The classification shall be based upon the division criterion;
+
+                (5) Only those persons are accepted whose needs can be met by the facility directly or in cooperation with the community resources or other providers of care with which it is affiliated or has contracts;
+
+                (6) As changes occur in their physical or mental condition necessitating service or care which cannot be adequately provided by the facility, residents shall be transferred promptly to facilities which can provide appropriate care; and
+
+                (7)(A) Except in the case of an emergency or voluntarily discharge, the resident, responsible party, attending physician, and the responsible agency, if any, are consulted in advance of the transfer or discharge of any resident.
+
+                        (B) The resident or responsible party will be provided written notification of his or her transfer ten (10) days prior to the transfer.
+
+ <style type="text/css">
+ .cs2D51A1C7{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:1.65}
+ .csD549619A{color:#000000;background-color:transparent;font-family:Tahoma,Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+ .csFEE11B1A{color:#000000;background-color:transparent;font-family:Tahoma,Arial;font-size:12pt;font-weight:bold;font-style:normal;}
+ </style>
+
+ <p class="cs2D51A1C7"><a name="_bookmark35"></a><span class="csD549619A">        </span><span class="csFEE11B1A">20 CAR &sect; 400-411. Admission, transfer, and discharge policies. </span></p><p class="cs2D51A1C7"><span class="csD549619A">        These policies shall include, at a minimum, the following:</span></p><p class="cs2D51A1C7"><span class="csD549619A">                (1) Patients shall be admitted to the facility only on the recommendation of a physician licensed to practice medicine in the State of Arkansas;</span></p><p class="cs2D51A1C7"><span class="csD549619A">                (2)(A) All persons admitted to a nursing home shall have a history and physical examination at the time of admission or within seventy-two (72) hours following admission unless such examination was performed within fifteen (15) days prior to admission. </span></p><p class="cs2D51A1C7"><span class="csD549619A">                        (B) A copy of the hospital history, physical, and discharge summary (after completion) will satisfy the requirement if the history and physical was completed within thirty (30) days. </span></p><p class="cs2D51A1C7"><span class="csD549619A">                        (C) The examination will be: </span></p><p class="cs2D51A1C7"><span class="csD549619A">                                (i) For medical evaluation purposes; and </span></p><p class="cs2D51A1C7"><span class="csD549619A">                                (ii) To determine if the patient is free from communicable diseases;</span></p><p class="cs2D51A1C7"><span class="csD549619A">                (3)(A) Recording shall be made of initial examination and all subsequent examinations, including: </span></p><p class="cs2D51A1C7"><span class="csD549619A">                                (i) Findings; </span></p><p class="cs2D51A1C7"><span class="csD549619A">                                (ii) Recommendations; and </span></p><p class="cs2D51A1C7"><span class="csD549619A">                                (iii) Progress notes. </span></p><p class="cs2D51A1C7"><span class="csD549619A">                        (B) Hospital discharge summaries are to be obtained after each hospitalization;</span></p><p class="cs2D51A1C7"><span class="csD549619A">                (4)(A) Patients who are not receiving public assistance from the Division of Provider Services and Quality Assurance shall be classified on admission and subsequently reclassified by the attending physician as skilled care, intermediate care, or minimum care patients, and a report shall be kept in the home and available to the division. </span></p><p class="cs2D51A1C7"><span class="csD549619A">                        (B) The classification shall be based upon the division criterion;</span></p><p class="cs2D51A1C7"><span class="csD549619A">                (5) Only those persons are accepted whose needs can be met by the facility directly or in cooperation with the community resources or other providers of care with which it is affiliated or has contracts;</span></p><p class="cs2D51A1C7"><span class="csD549619A">                (6) As changes occur in their physical or mental condition necessitating service or care which cannot be adequately provided by the facility, residents shall be transferred promptly to facilities which can provide appropriate care; and</span></p><p class="cs2D51A1C7"><span class="csD549619A">                (7)(A) Except in the case of an emergency or voluntarily discharge, the resident, responsible party, attending physician, and the responsible agency, if any, are consulted in advance of the transfer or discharge of any resident. </span></p><p class="cs2D51A1C7"><span class="csD549619A">                        (B) The resident or responsible party will be provided written notification of his or her transfer ten (10) days prior to the transfer.</span></p>
+
+<div class="tab-pane fade" id="rules-tabs-general" role="tabpanel" aria-labelledby="rules-tabs-section-general-tab">
+ Section Details
+ </div>
+
+Section Notes
+
+No notes are currently available.
+
+Authorities:
+
+Arkansas Code § 20-10-203; Arkansas Code § 20-10-216; Arkansas Code § 20-10-224
+
+ Code of Arkansas Rules
+
+ Pursuant to Arkansas Code § 25-15-218, the Code of Arkansas Rules is a codification of the general and permanent rules of Arkansas agencies. This online searchable database constitutes the official version of the Code of Arkansas Rules and became effective on January 1, 2025. It is updated on a weekly basis and may not reflect recent rulemaking. Please check with the respective agency for information on recent rulemaking.
+
+DISCLAIMER: The inclusion of a rule in the Code of Arkansas Rules shall not be construed to represent an expression that the rule is consistent with state or federal law or legislative intent.
+
+Search |
+ Emergency Rules |
+ Contact
+
+Last Updated: 8/31/2026 12:18:25 PM
+
+ © 2026 - Arkansas State Government
+
+ REQUIRED SCRIPTS
+
+SOURCE 3: 20 CAR § 400-2507, Exercise of rights — Code of Arkansas Rules, Part 400, Rules for Nursing Homes, Subpart 25 — Arkansas Secretary of State | https://codeofarrules.arkansas.gov/Rules/Rule?levelType=section&titleID=20&chapterID=38&subChapterID=50&partID=1233&subPartID=7678&sectionID=50215 | source date: the site's footer states 'Last Updated' with a date; no per-section date is printed | retrieved: 2026-09-04
+Code of Arkansas Rules
+
+Search |
+ Emergency Rules |
+ Contact
+
+QUICK FIND
+
+Title:
+
+Chapter:
+
+Subchapter:
+
+Part:
+
+Subpart:
+
+Section:
+
+Appendix:
+
+»
+
+ /
+ Title 20
+  /  Chapter X
+  /  Subchapter A
+  /  Part 400
+  /  Subpart 25
+
+ PREVIOUS
+NEXT
+
+20 CAR § 400-2507. Exercise of rights
+
+Content
+
+<li class="nav-item">
+ <a class="nav-link" id="rules-tabs-general-tab" data-toggle="pill" href="#rules-tabs-general" role="tab" aria-controls="rules-tabs-general" aria-selected="true">General Info</a>
+ </li>
+
+Notes
+
+        20 CAR § 400-2507. Exercise of rights.
+
+        (a)(1) Each resident admitted to the facility will be encouraged and assisted to exercise all constitutional and legal rights as a resident and as a citizen including the right to vote, and the facility shall make reasonable accommodations to ensure free exercise of these rights.
+
+                (2) Residents may voice grievances or recommend changes in policies or services to facility staff or to outside representatives of their choice, free from:
+
+                        (A) Restraint;
+
+                        (B) Coercion;
+
+                        (C) Discrimination; or
+
+                        (D) Reprisal.
+
+        (b) Residents shall have the right to free exercise of religion including the right to rely on spiritual means for treatment.
+
+ <style type="text/css">
+ .cs2D51A1C7{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:1.65}
+ .csD549619A{color:#000000;background-color:transparent;font-family:Tahoma,Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+ .csFEE11B1A{color:#000000;background-color:transparent;font-family:Tahoma,Arial;font-size:12pt;font-weight:bold;font-style:normal;}
+ </style>
+
+ <p class="cs2D51A1C7"><span class="csD549619A">        </span><span class="csFEE11B1A">20 CAR &sect; 400-2507. Exercise of rights.</span></p><p class="cs2D51A1C7"><span class="csD549619A">        (a)(1) Each resident admitted to the facility will be encouraged and assisted to exercise all constitutional and legal rights as a resident and as a citizen including the right to vote, and the facility shall make reasonable accommodations to ensure free exercise of these rights. </span></p><p class="cs2D51A1C7"><span class="csD549619A">                (2) Residents may voice grievances or recommend changes in policies or services to facility staff or to outside representatives of their choice, free from: </span></p><p class="cs2D51A1C7"><span class="csD549619A">                        (A) Restraint; &nbsp;</span></p><p class="cs2D51A1C7"><span class="csD549619A">                        (B) Coercion; &nbsp;</span></p><p class="cs2D51A1C7"><span class="csD549619A">                        (C) Discrimination; or </span></p><p class="cs2D51A1C7"><span class="csD549619A">                        (D) Reprisal.</span></p><p class="cs2D51A1C7"><span class="csD549619A">        (b) Residents shall have the right to free exercise of religion including the right to rely on spiritual means for treatment.</span></p>
+
+<div class="tab-pane fade" id="rules-tabs-general" role="tabpanel" aria-labelledby="rules-tabs-section-general-tab">
+ Section Details
+ </div>
+
+Section Notes
+
+No notes are currently available.
+
+Authorities:
+
+Arkansas Code § 20-10-203; Arkansas Code § 20-10-216; Arkansas Code § 20-10-224
+
+ Code of Arkansas Rules
+
+ Pursuant to Arkansas Code § 25-15-218, the Code of Arkansas Rules is a codification of the general and permanent rules of Arkansas agencies. This online searchable database constitutes the official version of the Code of Arkansas Rules and became effective on January 1, 2025. It is updated on a weekly basis and may not reflect recent rulemaking. Please check with the respective agency for information on recent rulemaking.
+
+DISCLAIMER: The inclusion of a rule in the Code of Arkansas Rules shall not be construed to represent an expression that the rule is consistent with state or federal law or legislative intent.
+
+Search |
+ Emergency Rules |
+ Contact
+
+Last Updated: 8/31/2026 12:18:25 PM
+
+ © 2026 - Arkansas State Government
+
+ REQUIRED SCRIPTS
+
+SOURCE 4: Arkansas Long-Term Care Ombudsman — Office of Long-Term Care Ombudsman, Arkansas Department of Human Services (program site) | https://arombudsman.dhs.arkansas.gov/ | source date: none stated on page beyond a copyright line | retrieved: 2026-09-04
+pageHtmlEmbeds.bodyStart start
+
+pageHtmlEmbeds.bodyStart end
+
+ domStoreHtml
+
+top of page
+
+$
+
+Who are the Ombudsman in my area?
+
+Back Home
+
+More
+
+Use tab to navigate through the menu items.
+/$$
+
+/$
+
+$
+$
+
+Top of Page
+
+What is
+
+What are
+
+Who is
+
+Meet
+
+Map
+
+/$
+/$
+$
+
+$
+
+$
+
+$
+
+$
+
+/$
+
+/$
+
+/$
+
+Home
+
+/$$
+
+$
+
+$
+
+$
+What is a Long-Term Care Ombudsman?
+/$$
+What are the Resident Rights?
+/$$
+Who is my Long Term Care Ombudsman?
+/$$
+Become a Volunteer Ombudsman!
+/$$
+
+Our
+
+Mission
+
+/$$
+
+/$$
+
+The mission of the Arkansas Ombudsman Program is to ensure that long-term facility residents have the right to live their lives with dignity and feel free to voice complaints or concerns without fear of retaliation.
+
+The Ombudsman strives to be a trusted advocate for all residents by educating them regarding their rights, investigation of complaints and empowering residents to speak for themselves. The Ombudsman provides support for those who feel they do not have a voice.
+
+/$
+
+/$
+
+/$
+
+/$$
+
+What is
+$
+
+$
+
+$
+
+What is a Long-Term Care Ombudsman?
+
+​
+
+A Long-Term Care Ombudsman (LTCO) is a resident advocate making sure residents at long-term care facilities have a good quality of life and get the care they need and deserve. The Ombudsman does this in several different ways by:
+
+​
+
+Investigating and resolving complaints to the residents’ satisfaction
+
+Providing information like community resources, staff training, and Residents’ Rights to families, staff, and the resident.
+
+Advocating for changes to improve residents’ care and quality of life
+
+Empowering residents and promoting self-advocacy
+
+Promoting the Residents' Rights guaranteed to residents under federal and state law and regulations
+
+​​
+
+The LTCO is knowledgeable when it comes to state and federal regulations and will refer to relevant regulations as they advocate for residents. The LTCO coordinates efforts with other agencies and organizations to ensure the best quality of care and quality of life for residents.
+
+The LTCO reviews and investigates complaint allegations including abuse, neglect, and exploitation made by or on behalf of residents. Federal law gives each nursing home resident the right to quality of care and quality of life. This includes freedom from neglect, abuse, exploitation, and misappropriation of property. During these investigations, the LTCO cannot share information with anyone without a resident’s consent.
+
+Note: The LTCO does not regulate or inspect facilities, is not Adult Protective Services (APS), and cannot provide direct care for residents.
+
+/$
+
+/$
+
+/$
+
+/$$
+
+What are
+$
+
+$
+
+$
+
+What are the Residents Rights?
+
+Residents of nursing homes have rights guaranteed by the federal Nursing Home Reform Act. This law requires nursing homes to “promote and protect the rights of each resident”, while stressing individual dignity and self-determination.
+
+/$$
+
+$
+
+$
+
+Right to a Dignified Existence
+
+/$
+
+/$$
+
+$
+
+/$$
+
+Right to a dignified existence: This includes equal access to quality care and the right to be treated with respect and dignity. This means being free from abuse and neglect and being able to exercise rights without any interference. Residents are also allowed to keep their personal belongings secure and use them as much as possible.
+
+/$
+
+/$
+
+/$$
+
+$
+
+$
+
+Rights During Discharge or Transfer
+
+/$
+
+/$$
+
+$
+
+/$$
+
+Rights during discharge or transfer: This includes the right to appeal a proposed transfer or discharge and not be discharged while an appeal is pending. Residents must get a 30-day written notice of discharge or transfer which includes the reason, date of change, the location, appeal rights, and how to file an appeal along with the name and contact information of the LTCO. Residents must also have the right to go through preparation and orientation to ensure a safe and orderly discharged or transfer and receive a notice of the right to return to the facility after being hospitalized or after therapeutic leave.
+
+/$
+
+/$
+
+/$$
+
+$
+
+$
+
+Right to Self-Determination
+
+/$
+
+/$$
+
+$
+
+/$$
+
+Right to self-determination: This includes the right to refuse, request, or discontinue treatment, as a well as the right to reasonable accommodation of needs and preferences. It also includes the right to choose which doctor a resident wants to see, choose what activities to take part in, and organize and participate in resident and family groups, among other things.
+
+/$
+
+/$
+
+/$$
+
+$
+
+$
+
+Right to be Fully Informed
+
+/$
+
+/$$
+
+$
+
+/$$
+
+Right to be fully informed: This includes the right to know the type of care a resident is receiving, including the benefits and risks of proposed treatments. This also means the resident has the right to know of any changes to their health care plan, residents’ rights, state survey reports, written notice before a change in room or roommate, and notices and information written in a language they can understand.
+
+/$
+
+/$
+
+/$$
+
+$
+
+$
+
+Right of Access
+
+/$
+
+/$$
+
+$
+
+/$$
+
+Right of access: This includes the right to access individuals, services, community members, and activities inside and outside the facility and be allowed to decide who gets to visit and as well as refuse any visitors. This right also gives residents a chance to access medical and personal records, take part in social, religious, and community activities. They also can meet with their personal physician, representatives from the state survey agency, and LTCO program.
+
+/$
+
+/$
+
+/$$
+
+$
+
+$
+
+Rights Regarding Financial Affairs
+
+/$
+
+/$$
+
+$
+
+/$$
+
+Rights regarding financial affairs: This includes the right to manage personal financial affairs, and get information about available services and how much each one will cost. Residents are allowed personal funds of more than $100 ($50 if their care is funded by Medicaid) deposited by the facility in an interest-bearing account, access to financial statements upon request and not be charged for services covered by Medicaid or Medicare.
+
+/$
+
+/$
+
+/$$
+
+$
+
+$
+
+Right to Raise Grievances
+
+/$
+
+/$$
+
+$
+
+/$$
+
+Right to raise grievances: This includes the right to file a complaint with the LTCO program or the state survey agency and present grievances without discrimination or the fear of retaliation. Residents can also prompt efforts by the facility to resolve grievances and provide a written decision upon request..
+
+/$
+
+/$
+
+/$$
+
+$
+
+$
+
+Right to Privacy
+
+/$
+
+/$$
+
+$
+
+/$$
+
+Right to privacy: This includes the right to privacy regarding personal, financial, and medical affairs. Residents also have a right to private and unrestricted communication with anyone they want to talk to. This right also extends to privacy during treatment and care of personal needs.
+
+/$
+
+/$
+
+/$
+
+/$
+
+/$
+
+/$$
+
+$
+
+$
+
+$
+
+Who is my Long-Term Care Ombudsman?
+
+/$$
+
+You can search for your local LTC Ombudsman in the table below:
+
+/$$
+
+Search for your county:
+
+/$$
+
+/$
+
+/$
+
+/$
+
+Who is
+
+/$$
+
+$
+
+$
+
+$
+
+Meet the Office of Long-Term Care Ombudsman Staff
+
+/$$
+
+Marissa Gilcrease
+
+Region I A
+
+press to zoom
+
+Vacant
+
+Region I B
+
+press to zoom
+
+Melissa Martin
+
+Region II
+
+press to zoom
+
+Elvin Smith
+
+Region III
+
+press to zoom
+
+Brenda Brown
+
+Region IV
+
+press to zoom
+
+Regina Joyner
+
+Region V
+
+press to zoom
+
+Monica Tyler
+
+Region V
+
+press to zoom
+
+LeeAnne Levering
+
+Region VI (South)
+
+press to zoom
+
+Stacy Pearson
+
+Region VI (North)
+
+press to zoom
+
+James Lollies
+
+Region VII
+
+press to zoom
+
+LaDonna Trammell
+
+Region VIII
+
+press to zoom
+
+Mandy Mercer
+
+Ombudsman Coordinator
+
+press to zoom
+
+Charlotte Sudmeyer
+
+State Ombudsman
+
+press to zoom
+
+/$
+
+/$
+
+/$
+
+Meet
+
+/$$
+
+$
+
+Map of which counties each region serves
+
+/$
+
+Map
+$
+
+/$
+
+/$$
+
+$
+
+$
+
+$
+
+Ombudsman Policies Document and Annual Report. Copyright © 2021 Office of Long-Term Care Ombudsman. All Rights Reserved.
+
+/$
+
+/$
+
+/$
+
+/$
+
+/$
+
+$
+$
+
+/$
+/$
+
+$
+
+Copyright © 2019 Office of Long-Term Care Ombudsman. All Rights Reserved.
+
+/$
+
+bottom of page
+
+ Polyfills check
+
+ initCustomElements # 1
+
+ preloading pre-scripts
+
+ sentryOnLoad Setup Script
+
+ Sentry Loader Script
+
+ Sentry's makeMultiplexedTransport
+
+ Sentry's moduleMetadataIntegration
+
+ Add the rest of the ViewerModel
+
+ renderIndicator
+ versionIndicator
+ used platform apis start
+
+ used platform apis end
+ Business Manager
+ initCustomElements #2
+
+ react
+
+ react-dom
+
+ lodash script
+
+ initial scripts
+
+ scriptTagsToPreload
+ Old Browsers Deprecation
+
+ bi
+
+ bi
+
+pageHtmlEmbeds.bodyEnd start
+
+pageHtmlEmbeds.bodyEnd end
+ warmup data start
+
+ warmup data end
+ presets polyfill
+ detect browser zoom
+

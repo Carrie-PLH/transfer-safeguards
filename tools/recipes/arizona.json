@@ -1,0 +1,55 @@
+{
+  "recipe_version": 1,
+  "state": "arizona",
+  "sources": [
+    {
+      "n": 1,
+      "title": "R9-10-408, Transfer; Discharge — Arizona Administrative Code, Title 9, Chapter 10 (Department of Health Services, Health Care Institutions: Licensing), Article 4, Nursing Care Institutions — Arizona Secretary of State (PDF, pages 96-97 of the chapter)",
+      "url": "https://apps.azsos.gov/public_services/Title_09/9-10.pdf",
+      "source_date": "Supp. 26-1, March 31, 2026, as the running head of every page states; the section's Historical Note records its last amendment effective October 1, 2019 (Supp. 19-3)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "http_version": "1.1",
+      "extractor": "pdftotext-raw",
+      "pages": [96, 97],
+      "filters": [],
+      "notes": "The Secretary of State's chapter file is 10.3 MB and 343 pages; R9-10-408 occupies printed pages 94-95, which are PDF pages 96-97. apps.azsos.gov returns 403 to every HTTP/2 request curl makes, whatever the headers, and 200 to the same request over HTTP/1.1; that is what http_version 1.1 is for, and it is why two earlier sessions recorded this host as unreachable to curl. The chapter is set in two columns, so pdftotext-raw is used rather than -layout: raw mode follows the content stream, which for this file is column order, and the section reads top to bottom. The typesetting hyphenates words at line ends (nurs-ing, physi-cian); those hyphens are the document's and are left as extracted, so a quotation must either stop at a line break or carry the break as two spans. The two pages also carry the tail of R9-10-407 and the head of R9-10-409; a superset only adds evidence."
+    },
+    {
+      "n": 2,
+      "title": "Appeal of a Discharge Form — Arizona Health Care Cost Containment System (AHCCCS), Office of the General Counsel (PDF)",
+      "url": "https://www.azahcccs.gov/shared/Downloads/GrievanceAndAppeals/NFAppealOfADischargeForm.pdf",
+      "source_date": "none stated on the form",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "filters": [],
+      "notes": "AHCCCS's own form for an appeal of a transfer or discharge from a nursing facility, which names the Office of the General Counsel as the office that receives it and prints that office's address, telephone and a dedicated email address. It is the one Arizona source that ties a resident's discharge appeal to a named office."
+    },
+    {
+      "n": 3,
+      "title": "Grievance And Appeals — AHCCCS, member rights and responsibilities",
+      "url": "https://www.azahcccs.gov/Members/GetCovered/RightsAndResponsibilities/grievanceandappeals.html",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "AHCCCS's general appeals page, carried for its statement that appeals are made in writing to the Office of the General Counsel and for that office's address as the agency prints it on a page rather than a form. It does not mention nursing facility discharges by name; source 2 does."
+    },
+    {
+      "n": 4,
+      "title": "Long-Term Care Ombudsman — Arizona Department of Economic Security",
+      "url": "https://des.az.gov/LTCOP",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "http_version": "1.1",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "The program's own page: the state office's address, telephone and email (Cloudflare-obfuscated on the page; decoded by the shared capture reader) and the eight regional programs with their numbers. des.az.gov, like apps.azsos.gov, answers curl's HTTP/2 requests with a Cloudflare challenge page and its HTTP/1.1 requests with the page itself; http_version 1.1 is what makes it reproducible. A capture that comes back a few kilobytes long and titled 'Just a moment...' is the challenge page, not the source, and must be treated as a failed fetch."
+    }
+  ]
+}

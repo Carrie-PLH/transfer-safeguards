@@ -1,0 +1,3007 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: wyoming
+ASSEMBLED: 2026-09-04
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/wyoming.json (recipe digest 22f532dbc2fe). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- SOURCE 1: transport curl; extractor pdftotext-layout; filters none.
+  The department's posted copy of the current program-administration rule for nursing care facilities, as filed with the Secretary of State. Captured whole. It is the rule a state-stated ground, notice period or resident appeal route would sit in if Wyoming's licensing law carried one; it carries none, and the page records that as a finding. What it does carry and the page quotes: residents' rights (Section 19), referral of unresolved grievances to the Long-Term Care Ombudsman (Section 21), and a hearing route that exists for facilities only (Section 22).
+- SOURCE 2: transport curl; extractor pdftotext-layout; filters none.
+  The licensure chapter, captured whole so the absence finding names both chapters the department publishes for nursing care facilities. Its only use of the word transfer concerns the license itself.
+- SOURCE 3: transport curl; extractor pdftotext-layout; slice from '35-2-901.     Definitions; applicability of provisions.\n    (a)     As used in this act:' to 'ARTICLE 10 - DESIGNATION OF HOSPITALS'; filters none.
+  The whole of title 35 is a 2.9 MB PDF; the slice is article 9, the Health Facilities Act under which the department licenses nursing care facilities, from the body heading of 35-2-901 (anchored with the first words beneath it, so the table of contents cannot match) to the heading of article 10. Captured to establish that the statute, like the rules, states no grounds, notice or resident appeal for a facility-initiated transfer or discharge.
+- SOURCE 4: transport curl; extractor pdftotext-layout; filters none.
+  The Medicaid rule under which the department decides whether a resident meets nursing facility level of care. Section 6 gives the individual a notice of adverse action and an administrative hearing under Chapter 4 when that determination goes against them; it is the one Wyoming rule that ties a resident-side hearing to continued nursing facility placement, and the page quotes it for exactly that and no more.
+- SOURCE 5: transport curl; extractor pdftotext-layout; filters none.
+  The hearing rule Chapter 22 sends a client to: Section 7 states the ways and the twenty-business-day period in which a client requests a hearing, and Section 8 the department's handling. The rule names the Department as recipient and states no street address, email address or form; the page records that.
+- SOURCE 6: transport curl; extractor pdftotext-layout; slice from '18.4.4 Pre-Admission Screening and Resident Review\nThe Pre-Admission Screening and Resident Review (PASRR) process' to '18.6 Billing Requirements\nWyoming Medicaid requires'; filters none.
+  A 373-page manual; the slice runs from the body heading of 18.4.4 (anchored with its first sentence so the two table-of-contents entries cannot match) to the body heading of 18.6. It holds the manual's statement that Medicaid does not cover reserve bed days (18.5.1) and its statement that an adverse resident-review determination carries a right of appeal for the resident. The address carries the manual's version in its filename, so a new version is a new address: when the review pass reports it gone, look for the current file on wyomingmedicaid.com's Provider Manuals page rather than treating the manual as withdrawn.
+- SOURCE 7: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The program's own page on the department's site: the State Long-Term Care Ombudsman's address and telephone, the two regional ombudsmen employed by the contractor (Wyoming Senior Citizens, Inc.) with their numbers and emails, and the statement of how the program is arranged.
+
+SOURCE 1: Chapter 11, Program Administration of Nursing Care Facilities — Wyoming Department of Health, Aging Division (Wyoming Administrative Rules, reference 048.0003.11.07012020) (PDF) | https://health.wyo.gov/wp-content/uploads/2020/07/FILED-RULES-17704-EFFECT-07-01-2020.pdf | source date: Effective Date: 07/01/2020 to Current, as the Secretary of State's cover sheet states | retrieved: 2026-09-04
+Wyoming Administrative Rules
+
+
+Health, Department of
+Aging Division
+
+Chapter 11: Program Administration of Nursing Care Facilities
+
+
+   Effective Date:     07/01/2020 to Current
+
+   Rule Type:          Current Rules & Regulations
+
+   Reference Number: 048.0003.11.07012020
+
+
+
+
+Generated 07/07/2020
+
+                                           Chapter 11
+
+                     Program Administration of Nursing Care Facilities
+
+
+       Section 1.      Authority. These rules are promulgated by the Department of Health
+pursuant to the Health Facilities Act at W.S. §9-2-1204 et seq. and the Wyoming Administrative
+Procedures Act at W.S. §16-3-101 et seq.
+
+       Section 2.    Purpose. These rules have been adopted for the day-to-day operation
+of Nursing Care Facilities.
+
+       Section 3.     Severability. If any portion of these rules is found to be invalid or
+unenforceable, the remainder shall continue in effect.
+
+       Section 4.     Definitions.
+
+       (a)    Except as otherwise specified, the terminology used in these rules is the standard
+terminology and has the standard meaning used in healthcare, including nursing care facilities.
+
+       (b)     The following definitions shall apply in the interpretation and enforcement of
+these Rules.
+
+               (i)     “Certified Occupational Therapist Assistant (COTA)” means a person
+licensed in Wyoming to assist in the practice of occupational therapy, and who works under the
+supervision of a Registered Occupational Therapist.
+
+              (ii)    “Chief Administrative Officer” means the Director, Department of Health
+per W.S. §9-2-101(e), or the designated licensure representative.
+
+              (iii)  “CNA” means a person who is certified to practice as a Certified
+Nursing Assistant by the Wyoming Board of Nursing.
+
+                (iv)   “Complaint” means a formal allegation of injustice or perceived harm
+referred to an outside party or agency.
+
+               (v)    “Complaint Investigations” means those investigations required to be
+performed by the Long Term Care Ombudsman as established in W.S. §9-2-1301 through 1309 or
+by the State Survey Agency as per the Agreement between the Secretary of the U.S. Department
+of Health and Human Services and the State of Wyoming dated June 18, 1985.
+
+               (vi)   “Consultant Dietitian” means a dietitian who provides dietary consultation
+on a frequent and regularly scheduled basis.
+
+              (vii) “Dietitian” means a person who is registered by the American Dietetic
+Association and provides nutritional and dietary services.
+
+
+
+                                               11-1
+
+               (viii) “Dietetic Service Supervisor” means an individual who has at least a high
+school education or equivalent and has completed courses in food service supervision, but is not
+a Registered Dietitian.
+
+               (ix)    “Facility” means a Nursing Care Facility.
+
+               (x)     “Governing Body” means the individual(s), group, or corporation that has
+the ultimate authority and responsibility for establishing resident care policies, personnel policies,
+and shall designate a Wyoming licensed Nursing Home Administrator for the Nursing Care
+Facility.
+
+              (xi)    “Grievance” means a concern of inequitable or inaccurate action that is
+handled through the facility’s internal grievance procedure.
+
+                (xii) “Health Care Services” includes but is not limited to nursing, physical
+therapy, speech pathology, occupational therapy, respiratory therapy, social work, certified nurse
+assistant services, and dietary services. All staff shall be certified, licensed or registered in
+accordance with Wyoming State Statutes.
+
+              (xiii) “License” means the authority granted by the Licensing Division to
+operate a Nursing Care Facility.
+
+             (xiv) “Licensee” means any person, association, partnership, or corporation
+holding a Wyoming Nursing Care Facility license.
+
+               (xv)    “Licensing Division” means the Department of Health, Office of Health
+Quality.
+
+               (xvi) “Licensed Practical Nurse (LPN)” means a person who is licensed to
+practice as a Licensed Practical Nurse by the Wyoming Board of Nursing pursuant to W.S. §33-
+21-120.
+
+               (xvii) “Nosocomial Infection” means an infection acquired in the Nursing Care
+Facility.
+
+                (xviii) “Nursing Care Facility” means an institution which is a skilled nursing
+facility (SNF) or a nursing facility (NF) which is currently licensed and meets the requirements
+of these rules and regulations.
+
+               (xix) “Nursing Home Administrator” means a person who operates, manages,
+supervises, or is in charge of a Nursing Care Facility; and is licensed by the Wyoming Board of
+Nursing Home Administrators.
+
+            (xx) “Occupational Therapist” means a person who is licensed by the
+Wyoming Board of Occupational Therapy to practice as a Registered Occupational Therapist
+
+
+
+                                                11-2
+
+pursuant to W.S. §33-40-102(a)(iv).
+
+              (xxi) “Ombudsman” means the Long Term Care Ombudsman as established in
+W.S. §9-2-1301 through 9-2-1309.
+
+              (xxii) “Pharmacist” means a person who is licensed by the Wyoming Board of
+Pharmacy to practice pharmacy.
+
+             (xxiii) “Physical Therapy Assistant” means a person who is licensed by the
+Wyoming Board of Physical Therapy to practice as a Physical Therapy Assistant pursuant to
+W.S. §33-25-101(a)(ii).
+
+               (xxiv) “Physical Therapy” means the evaluation, instruction or treatment of a
+human being to prevent, correct, alleviate or limit physical disability due to injury, disease or any
+other physical or mental condition by the utilization of physical measures and rehabilitative
+procedures including training in functional activities and the performance and interpretation of
+tests and measurements of body functions as an aid in the examination, evaluation or treatment of
+any human condition for the purpose of correcting or alleviating an individual physical or mental
+disability. Physical therapy is provided by a Physical Therapist or by a Physical Therapy Assistant
+under the supervision of a Physical Therapist.
+
+                (xxv) “Physical Therapist” means a person who is licensed to practice physical
+therapy in the State of Wyoming pursuant to W.S. §33-25-101(a)(v).
+
+               (xxvi) “Program Administration” means the rules and regulations promulgated
+by the Department of Health as developed by the Program Division for the day-to-day operation
+of a nursing care facility.
+
+                 (xxvii) “Program Division” means the Department of Health, Aging Division.
+
+              (xxviii) “Registered Nurse (RN)” means a person who is a graduate of an
+approved school of professional nursing, who is currently licensed to practice as a Registered
+Nurse by the Wyoming Board of Nursing pursuant to W.S.§33-21-120 et. seq.
+
+               (xxix) “Respiratory Care” means the health specialty responsible for the
+treatment, management, diagnostic testing, control, and care of residents with deficiencies and
+abnormalities associated with the cardiopulmonary system.
+
+                 (xxx) “Resident” means an individual residing in and receiving care in a Nursing
+Care Facility.
+
+                (xxxi) “Social Services” means those services provided according to the
+resident’s plan of care by a Social Worker, or by a Social Service Associate with appropriate
+supervision as required by the Wyoming Mental Health Professions Licensing Board.
+
+                        (A)    “Social Worker” means a person who is licensed to practice as a
+
+
+
+                                                11-3
+
+Clinical Social Worker (LCSW) or certified to practice as a Social Worker (CSW) by the
+Wyoming Mental Health Professions Licensing Board.
+
+                         (B)   “Social Service Associate” means a person who has a degree in
+social work or closely related field and has at least one (1) year of social services experience in a
+health care setting; or,
+
+                               (I)      A person who has at least two (2) years of experience in
+social services in a health care setting and receives regular consultation from a social worker or
+recognized social service agency.
+
+             (xxxii) “Speech Language Pathologist” means a person who is licensed in the
+State of Wyoming to practice speech language pathology.
+
+                (xxxiii) “Speech Pathology” means the application of principles, methods, and
+procedures for the measurement, testing, evaluation, prediction, counseling, instruction,
+habilitation or rehabilitation related to the development and disorders of speech, voice, or
+language for the purpose of preventing, evaluating, modifying, or ameliorating such disorders
+and conditions in individuals or groups or individuals.
+
+              (xxxiv) “State Survey Agency” means the Department of Health, Office of Health
+Quality which has the primary responsibility to determine whether or not health care
+providers/suppliers meet federal certification standards to participate in the Medicaid and/or
+Medicare programs as per the Agreement between the Secretary of the U.S. Department of
+Health and Human Services and the State of Wyoming dated June 18, 1985.
+
+                (xxxv) “Survey” means an on-site evaluation conducted by the Survey Division or
+its designated representative to determine compliance with State rules and regulations for
+Nursing Care Facilities.
+
+               (xxxvi) “Survey Division” means the Department of Health, Office of Health
+Quality.
+
+              (xxxvii) “Therapy Service” includes physical therapy, occupational therapy,
+and speech language therapy.
+
+       Section 5.      Organization and Administration.
+
+        (a)     Governing Body. The Nursing Care Facility shall have a governing body which
+has the legal authority and responsibility to operate the Nursing Care Facility. The governing
+body shall:
+
+               (i)    Appoint a full-time, on premise, administrator qualified by education,
+training and experience as established by the Wyoming Board of Nursing Home Administrators.
+
+                       (A)     The administrator shall have a current license as a Wyoming
+
+
+
+                                                11-4
+
+Licensed Nursing Home Administrator.
+
+           (ii)   Temporary License. A temporary license may be granted by the
+Wyoming Board of Nursing Home Administrators:
+
+                    (A)    To fill a position of Nursing Home Administrator that
+unexpectedly becomes vacant;
+
+                       (B)    For a period not to exceed six (6) months;
+
+                       (C)    After consideration by the Board of Nursing Home Administrators
+on an individual basis; and
+
+                     (D)      To an individual who does not meet all the licensing requirements
+under the Act, but who is of good character and meets the educational requirements as stated.
+
+                (iii)  A temporary license may be renewed for good cause for one (1) time if
+requested thirty (30) days prior to the termination of the initial temporary license.
+
+               (iv)    The administrator of a hospital with a connecting nursing care wing can
+serve as the administrator and shall be licensed as a Wyoming Nursing Home Administrator.
+
+                (v)    The administrator shall enforce the rules and regulations relative to the
+level of health care and safety of residents and for the protection of their personal and property
+rights.
+
+               (vi)   The administrator shall plan, organize, and direct those responsibilities
+delegated to him by the governing body or its equivalent.
+
+               (vii) An employee of the facility shall be authorized in writing to act on the
+administrator’s behalf during his/her absence.
+
+        (b)    Personnel policies and procedures. The governing body or its equivalent,
+through the Nursing Home Administrator, shall be responsible for implementing and maintaining
+written personnel policies and procedures that support sound resident care and personnel
+practices.
+
+               (i)      Personnel records for each employee shall be current and available and
+shall contain sufficient information to support placement in the position assigned.
+
+                        (A)      References from former employers and evidence of current
+certification, licensure, or registration.
+
+                       (B)    An evaluation of the employees work performance shall be done
+yearly.
+
+
+
+                                                11-5
+
+               (ii)    Written employee policies shall be available covering job descriptions,
+functions and special procedures.
+
+             (iii)   Written policies shall be in effect to ensure that newly hired and current
+employees do not spread a communicable disease that could be transmitted through usual job
+duties.
+
+                 (iv)   Written policies shall ensure a safe and sanitary environment for residents
+and personnel.
+
+                    (A)     Tuberculin testing shall be accomplished for each employee upon
+employment and before resident contact begins and annually thereafter.
+
+                       (B)    Employees having known positive skin tests shall provide a
+certificate of noninfectiousness from a physician, recommendations, if any, for treatment, and
+evidence that they have complied with such recommendations.
+
+                      (C)      Individuals providing documentation of negative skin tests
+administered within the last year need no physician follow-up at this time.
+
+                       (D)      Individuals never having had a skin test or who do not have
+written proof of skin test results, shall have an intradermal Mantoux using 5TU PPD. This shall
+be accomplished via the two (2) step procedure. If the first test is negative and the employee is
+asymptomatic, the employee may engage in resident contact prior to the results of the second
+skin test.
+
+                               (I)     A negative reaction requires no follow up by a physician at
+this time.
+
+                                (II)    A positive reaction (10mm induration using 5TU PPD)
+requires a referral to a physician for x-ray and certification of noninfectiousness and appropriate
+treatment if needed. Follow-up shall comply with the recommendations of the attending
+physician.
+
+                      (E)    If symptoms occur, a new certificate of noninfectiousness is
+required from the physician.
+
+       (c)    Resident Care Policies. The Nursing Care Facility shall have written policies to
+govern nursing care and related medical or other services provided.
+
+               (i)     The policies shall be available to admitting physicians, sponsoring
+agencies, residents and the public.
+
+                 (ii)   The policies shall reflect awareness of and provision for meeting the total
+
+
+
+                                                11-6
+
+medical and psycho-social needs of the residents.
+
+               (iii)     The policies shall include provisions to protect residents’ personal and
+property rights.
+
+                (iv)    Medical records and minutes of staff and committee meetings shall reflect
+that resident care is being rendered in accordance with the written resident care policies.
+
+               (v)     The medical director or director of nursing shall be designated in writing to
+be responsible for the execution of resident care policies.
+
+                      (A)     If the director of nursing is delegated the responsibility for day-to-
+day execution of resident care policies, the medical director shall serve as the advisory physician
+from whom the director of nursing receives medical guidance.
+
+                (vi)     Policies shall state if specialized rehabilitative services are provided by or
+available in the facility. Residents who require rehabilitative services not offered by the facility
+shall not be admitted.
+
+                      (A)   Specialized rehabilitative services include physical therapy, speech
+and hearing therapy and occupational therapy.
+
+               (vii) The facility shall have individualized means of resident identification
+other than the resident’s medical record.
+
+                (viii)   There shall be an administrative policy relative to resident smoking.
+
+               (ix)    The individual in charge of the facility on each work shift shall have in
+his/her possession, or be able to immediately obtain, keys to all doors pertaining to resident care
+and safety.
+
+                         (A)    No resident shall be locked in his/her room.
+
+              (x)     The facility shall cooperate in submitting periodic reports requested by
+the Licensing Division.
+
+        Section 6.       Physical Environment.
+
+       (a)     The building(s) of the Nursing Care Facility shall be constructed, arranged and
+maintained to ensure the health and welfare of all residents.
+
+               (i)     An employee shall be designated responsible for services and for the
+establishment of policies and procedures in each of the following areas:
+
+                         (A)    Plant maintenance;
+
+
+
+                                                 11-7
+
+                      (B)     Laundry operations; and
+
+                      (C)     General housekeeping.
+
+               (ii)   There shall be written rules and regulations governing the handling and
+storing of oxygen, and maintenance of oxygen equipment. Only labeled Medical Grade USP
+Oxygen shall be used.
+
+                (iii)  Approved incineration facilities shall be provided and maintained or
+other approved procedures shall be used for disposal of resident wastes, as well as sanitary
+disposal of all other wastes.
+
+                      (A)    These facilities, location and methods shall be in accordance with
+recommendations of the Centers for Disease Control and Prevention, the National Institutes of
+Health and in compliance with air pollution standards.
+
+              (iv)   The facility shall ensure hot water temperatures are adjusted for resident
+comfort and safety. The water temperature for showers and baths must not exceed 120 degrees
+Fahrenheit. Hand wash sinks must not exceed 110 degrees Fahrenheit.
+
+                (v)     The water source of an emergency potable supply shall be identified and
+shall be sufficient in volume to meet facility needs.
+
+       (b)     Sanitary Environment. The Nursing Care Facility shall establish policies and
+procedures for investigating, controlling and preventing infections.
+
+                (i)    Policies, procedures, and techniques shall be regularly reviewed,
+particularly those concerning food service, laundry practices, and the disposal of environmental
+and resident wastes.
+
+               (ii)  A facility policy shall be developed for reporting and monitoring
+employees with an infection that could be transmitted through usual job duties to residents, their
+food or laundry.
+
+                (iii)   The facility shall report the required diseases/conditions to the Wyoming
+Department of Health, Epidemiology Unit as per W.S. §35-4-107. In addition, those conditions
+classified as nosocomial where two (2) or more persons, either residents or employees, are
+affected shall be reported immediately to the State Health Officer, the County Health Officer, and
+the Licensing Division. The Nursing Care Facility Administrator or his/her designated
+representative shall furnish all available pertinent information related to such disease or
+condition to the Licensing Division.
+
+                (iv)    Inservice education shall be provided for all employees. This shall include
+the practice of aseptic techniques, such as: handwashing/universal precautions, proper grooming,
+masking and gowning procedures (for isolation), disinfection and sterilizing techniques, and the
+
+
+
+                                               11-8
+
+handling and storage of resident care equipment and supplies plus decontamination methods.
+
+                       (A)     Continuing education shall be provided to all employees on the
+cause, effect, transmission, prevention and elimination of infections.
+
+                (v)    Animals, birds, and other pets shall be allowed in the Nursing Care
+Facility with the approval of the resident council and:
+
+                       (A)     The pet has had an examination prior to entering the Nursing Care
+Facility and annually thereafter, or more frequently if required by the pet’s health condition;
+
+                       (B)    The pet’s vaccinations are current;
+
+                      (C)     The pet is not allowed in the residents’ dining room during dining
+hours or in any food preparation area; and,
+
+                       (D)     Someone must be designated as the primary caretaker of the pet,
+other than a resident of the facility.
+
+                     (E)     Aquariums and enclosed aviaries are excluded from the above
+requirements provided they are properly secured and are maintained in an approved sanitary
+manner. Aquariums must be protected to prevent spillage or breakage.
+
+              (vi)    Humidifiers and all oxygen equipment shall be maintained according
+to the manufacturer’s recommendations and acceptable standards of practice.
+
+       (c)     Dietary Facilities. Food shall be stored, prepared, distributed, and served under
+proper sanitary conditions.
+
+                 (i)     Non-dietary personnel shall be excluded from the dietary area and the
+traffic pattern shall be strictly controlled;
+
+               (ii)    Employees shall not eat or use tobacco products in any food preparation
+area;
+
+                 (iii)  A written policy shall be developed and adhered to for the cleaning and
+sanitizing of all ice machines; and
+
+                (iv)  Equipment and work areas shall be clean and orderly. Effective
+procedures for cleaning all equipment and work areas shall be followed consistently to safeguard
+residents’ health.
+
+        (d)    Laundry.
+
+              (i)     All soiled linens shall be transported in closed bags. Isolation linen shall
+be handled according to current acceptable standards of practice.
+
+
+                                               11-9
+
+               (ii)    There shall be separate carts (with a positive designation) or methods for
+transportation of clean and soiled linen. Carts for clean linen transport shall be labeled, cleaned
+and sanitized daily prior to such usage.
+
+       (e)     General Facilities.
+
+            (i)    Sewage disposal, when not on a municipal system, shall be approved by
+the Wyoming Department of Environmental Quality.
+
+           (ii)   Water supply, when not on a municipal system, shall be approved by the
+Wyoming Department of Environmental Quality.
+
+              (iii)  Measures shall be taken to prevent and control insects, rodents and other
+environmental hazards affecting the residents and the premises.
+
+       Section 7.      Housekeeping, Laundry, and Maintenance Services.
+
+        (a)     Housekeeping and Maintenance Services. Sufficient numbers of adequately
+trained housekeeping and maintenance personnel shall be available to maintain the interior and
+exterior of the facility in a safe, clean, orderly and attractive manner.
+
+             (i)       Personnel shall follow approved practices and procedures and use
+approved products.
+
+               (ii)    The facility shall be free from offensive odors, accumulations of dirt,
+rubbish, and dust.
+
+               (iii)   Janitor closets shall be kept locked.
+
+               (iv)    Floors shall be cleaned regularly by approved methods.
+
+                       (A)     Polishes on floors shall provide a nonslip finish; throw or scatter
+rugs shall be prohibited, unless they have been tested by the facility and found to be non-skid,
+and are safe for resident use.
+
+                       (B)     Household straw brooms shall be used only at entrances and exits
+of the building.
+
+                     (C)    Cleaning procedures shall include frequent water changes and the
+use of an approved chemical disinfectant for medical facilities.
+
+               (v)    Deodorizers or aerosol air fresheners shall not be used except in
+extraordinary circumstances. Routine usage of these items shall be prohibited to cover up poor
+cleaning practices.
+
+
+                                               11-10
+
+               (vi)    The grounds shall be kept free from refuse and litter. Areas around
+buildings, sidewalks, gardens and patios shall be kept clear of dense undergrowth.
+
+        (b)     Linens. The facility shall have available at all times, a quantity of linens essential
+for the proper care and comfort of residents.
+
+               (i)     Clean linens and clothing shall be stored in clean, dry, dust-free areas.
+
+               (ii)    Soiled linens shall be stored in separate well-ventilated areas, and shall not
+be permitted to accumulate in the facility. Soiled linens and clothing shall be stored separately
+from non-soiled articles in suitable bags or containers.
+
+              (iii)   Soiled linens shall not be sorted, laundered, rinsed, or stored in
+bathrooms, resident rooms, kitchens, food storage areas or general storage areas.
+
+               (iv)    If linens are commercially laundered, approved methods shall be used by
+such laundry. Approved methods shall include controlled temperatures, rinse cycles, souring
+processes, ironing, and protection of the processed linens. Proof of this compliance shall be
+provided upon request by the Licensing Division.
+
+                        (A)    All linens shall be totally laundered in accordance with the
+recommendations of the National Institute of Laundering. (Permanent press linens shall be
+subjected to all requirements as listed in (iv).
+
+               (v)     Resident clothing shall not be laundered with the facility’s linen.
+
+       Section 8.      Physician Services.
+
+       (a)    There shall be available to the facility, prior to or at the time of admission, resident
+information which includes current medical findings, diagnoses, and orders from a physician for
+the immediate care of the resident.
+
+               (i)     If the resident information is not immediately available, the facility shall be
+responsible for contacting a physician to obtain temporary medical orders.
+
+        (b)     Emergency Care of Residents. The facility shall arrange for necessary medical
+care in case of emergency.
+
+              (i)   There shall be established procedures to be followed in an emergency,
+which cover immediate care of the resident, persons to be notified, and reports to be prepared.
+
+               (ii)    A list of physicians to be called in case the resident’s physician or his
+designated substitute cannot be found shall be posted at every nursing station. Such roster shall
+include telephone numbers of the physicians.
+
+
+
+
+                                                11-11
+
+       Section 9.      Nursing Services.
+
+       (a)     The facility shall have sufficient nursing staff to meet the needs of the residents.
+
+               (i)     Director of Nursing Services. The facility shall designate a Registered
+Nurse to be a full-time director of nursing services, and he/she shall have experience in areas
+such as nursing service administration, rehabilitation nursing, psychiatric or geriatric nursing.
+The director of nursing services shall be responsible for:
+
+                       (A)    Developing policies and procedures for the nursing department,
+participating in the implementation of resident care policies and bringing patient care problems
+requiring changes in policy to the attention of the administrator.
+
+                      (B)    Recommending to the administrator the number and levels of
+nursing personnel to be employed, participating in their recruitment and selection, and
+recommending termination of employment when necessary.
+
+                        (C)    Staffing, assigning, supervising and evaluating the performance of
+all levels of nursing personnel.
+
+                       (D)     Participating in planning and budgeting for nursing service.
+
+                      (E)     Establishing written procedures to ensure that nursing personnel,
+for whom licensure or certification is required, have a valid and current license or certification to
+practice in Wyoming. Documentation shall be by a photostatic copy of each license or
+certificate.
+
+                      (F)     Insuring daily nursing rounds are conducted to ensure each
+resident receives adequate care to meet his/her needs.
+
+               (ii)    Twenty-four (24) Hour Nursing Service.
+
+                      (A)     Duties assigned nursing personnel shall be consistent with their
+education, experience, licensure and/or certification. Nursing personnel includes Registered
+Nurses, Licensed Practical Nurses, and Certified Nursing Assistants.
+
+                       (B)    Full-time or part-time members of the nursing staff shall be
+primarily engaged in providing nursing services and only in rare and exceptional circumstances
+shall be involved in food preparation, housekeeping, laundry or maintenance services. Proper
+infection control procedures shall be adhered to at all times.
+
+                       (C)    Time schedules for each nursing station shall be planned in
+advance and shall indicate the name and classification of nursing personnel working on each unit
+for each tour of duty.
+
+                       (D)     A person employed in the facility to give nursing care shall be at
+
+
+
+                                                11-12
+
+least sixteen (16) years of age.
+
+                (iii)  Restorative Nursing Care. There shall be an active program of restorative
+nursing care directed towards assisting each resident to achieve and maintain his/her highest level
+of self care and independence. This program shall include:
+
+                       (A)     Maintaining good body alignment and proper positioning of the
+bedfast resident, wheelchair resident and the resident in a chair;
+
+                       (B)    Encouraging and assisting dependent residents, as appropriate, to
+change position at least every two (2) hours, day and night, to stimulate circulation and prevent
+decubitus and deformities;
+
+                       (C)    Making every effort to keep residents active and out of bed for
+reasonable periods of time, except when contraindicated by physician’s orders, and encouraging
+residents to achieve independence in activities of daily living by teaching self care, transfer, and
+ambulation activities; and
+
+                      (D)     Assisting residents to carry out the prescribed therapy regimen
+between visits of the physical, occupational, and speech therapists.
+
+              (iv)    Dietary Supervision. Nursing personnel shall be aware of the dietary
+needs, food and fluid intake of residents.
+
+                        (A)        Nursing personnel shall determine that residents are served diets as
+prescribed.
+
+                        (B)        Residents needing help in eating shall be assisted promptly upon
+receipt of meals.
+
+                      (C)     Adaptive self-help devices shall be provided to contribute to the
+resident’s independence in eating.
+
+                      (D)    Food and fluid intake of residents shall be observed and deviations
+from normal shall be reported to the charge nurse.
+
+                       (E)     Nursing personnel who participate in food delivery to residents and
+feeding of residents shall observe strict hygienic practices.
+
+              (v)     Staff Development. There shall be a continuing staff development
+program for all nursing personnel in addition to a thorough job orientation for new personnel.
+
+                       (A)    Planned staff development shall be held at least monthly to review
+and evaluate the quality of nursing care, to teach nursing techniques and procedures, to discuss
+nursing problems and ways of improving nursing service, and to review and interpret
+
+
+
+                                                   11-13
+
+administrative and nursing policies.
+
+                               (I)    Minutes of all meetings and a list of personnel attending
+shall be maintained in sufficient detail to document proceedings and actions, and shall be
+available to all staff members.
+
+                        (B)    All nursing personnel shall be instructed and supervised in the
+care of emotionally challenged and cognitively impaired residents and trained to understand the
+social aspects of resident care.
+
+                       (C)    Skill training shall include demonstration, practice and
+supervision of nursing procedures applicable in the individual facility. It shall also include
+restorative nursing procedures. Documentation shall be maintained on all skill training given to
+an employee and retained in his/her personnel files.
+
+                       (D)      Orientation of new personnel shall include a review and practice of
+the procedures to be followed for evacuating residents in emergencies, and the policies and
+procedures of the facility. Documentation shall be maintained on all individuals and kept in
+their respective personnel file.
+
+               (vi)    Administration of Drugs. Drugs shall be administered in compliance
+with federal and state laws, and in accordance with accepted professional principles.
+
+                     (A)   Drugs shall be administered only by licensed nursing personnel in
+accordance with the Wyoming Nurse Practice Act.
+
+                        (B)     Drugs prescribed for one (1) resident shall not be administered to
+any other resident.
+
+                        (C)     Current information on the clinical use of drugs shall be readily
+available at the nurses’ station.
+
+                      (D)     Drugs shall be released to residents upon discharge for temporary
+outside visits. A notation of such drugs taken with the resident shall be entered in the resident’s
+clinical record.
+
+                (vii) Storage of Drugs and Biologicals. Drugs and biologicals shall be stored
+in locked rooms, cabinets, or carts. Procedures for storing and disposing of medications at the
+nurses’ station shall be established in consultation with the pharmacist.
+
+                     (A)     Drugs for external use and poisons shall be kept separate from
+other medications and under lock.
+
+                       (B)      Antiseptics, disinfectants, and germicides shall be issued in
+containers that bear clear, legible, distinctive labels that identify the contents, strength and shall
+include instructions for use.
+
+
+
+                                                 11-14
+
+                        (C)     The refrigerator in which drugs and biologicals are stored shall
+not be accessible to residents, shall be used only for the storage of drugs and biologicals, and
+shall be in a locked refrigerator or a locked box in a refrigerator or in a protected area. The
+refrigerator shall be maintained at the proper temperature.
+
+                      (D)    An emergency medical kit approved by the Pharmaceutical
+Committee shall be readily available.
+
+               (viii)   Director of Nursing.
+
+                        (A)    Hospital - Nursing Wings.
+
+                               (I)     A nursing wing with a total occupancy of sixty (60)
+residents or less shall be allowed to share the director of nursing with the hospital.
+
+                                     (1.)   The director of nursing shall not act in a charge
+nurse capacity except on rare occasions with extraordinary circumstances.
+
+                       (B)     A nursing wing with a total occupancy of over sixty (60) residents
+shall be allowed to share the director of nursing with the hospital.
+
+                              (I)    An assistant or supervisor shall be employed for the
+nursing wing and shall not function as a charge nurse except on rare occasions with extraordinary
+circumstances. The assistant or supervisor shall be responsible to the hospital director of
+nursing.
+
+                        (C)    Free-standing Nursing Care Facilities.
+
+                                 (I)    The director of nursing shall not function as a charge nurse,
+in facilities over sixty (60) beds except in rare instances with extraordinary circumstances.
+
+               (ix)     Staffing.
+
+                      (A)     Each nursing station shall be staffed with a Registered Nurse or
+qualified Licensed Practical Nurse, who is the charge nurse on the day tour of duty seven (7)
+days a week.
+
+                             (I)     All other tours of duty shall be staffed with a Registered
+Nurse or a Licensed Practical Nurse.
+
+                        (B)    Each nursing station shall be staffed separately and shall have a
+separate staffing pattern.
+
+                        (C)    Each nursing station shall be staffed with sufficient non-licensed
+
+
+
+                                                11-15
+
+nursing personnel to give adequate nursing care to the residents twenty-four (24) hours a day,
+seven (7) days a week.
+
+                        (D)    Each facility shall have awake and on duty sufficient nursing
+personnel for the night tour of duty. Additional staff may be needed, depending on condition of
+residents, and to assure resident safety in case of fire or disaster.
+
+               (x)     Nursing Care Hours (minimum).
+
+                        (A)    Nursing care hours shall be two and one quarter (2.25) hours for
+each skilled resident in a Nursing Care Facility in each twenty-four (24) hour period, seven (7)
+days a week, and one and one half (1.50) for each resident who is not skilled in each twenty-four
+(24) hour period, seven (7) days a week.
+
+       Section 10.     Discharge Planning.
+
+       (a)     The facility shall maintain a centralized, coordinated program to ensure that
+each resident has a planned program of continuing care which meets the post discharge needs.
+
+                (i)     The administrator shall delegate responsibility for discharge planning, in
+writing, to one (1) or more members of the facility’s staff, with consultation, if necessary, or
+arrange for this service to be provided by a health, social or welfare agency.
+
+               (ii)    The facility shall have in operation an organized discharge planning
+program.
+
+                        (A)     This program shall include the resident, physician(s), nurses, social
+services personnel, dietitian, and therapists to identify problems and goals thus preparing the
+resident for the next level of care and arranging for placement in the appropriate care
+environment.
+
+               (iii)   The facility shall maintain written discharge planning procedures which
+describe:
+
+                       (A)     How the discharge coordinator will function, and his/her authority
+and relationship with the facility’s staff.
+
+                     (B)     The time period in which each resident’s need for discharge
+planning is determined (preferably within seven (7) days after the day of admission).
+
+                       (C)     The maximum time period after which a reevaluation of each
+resident’s discharge plan is made.
+
+                      (D)      Local resources available to the facility, the resident, and the
+attending physician to assist in developing and implementing individual discharge plans.
+
+
+
+
+                                                11-16
+
+                     (E)    Provisions for periodic review and reevaluation of the facility’s
+discharge planning program.
+
+       Section 11.     Dietetic Services.
+
+       (a)     The facility shall provide dietetic services that meet the nutritional needs of
+residents according to the science of nutrition. The dietetic service shall operate with safe food
+handling practices from receipt through service in accordance with the most current edition of
+the FOOD CODE from the U. S. Department of Health and Human Services, Public Health
+Service, Food and Drug Administration.
+
+               (i)     Dietary Supervision. Overall supervisory responsibility for the dietetic
+service shall be assigned to a full-time qualified dietetic supervisor.
+
+                       (A)      If the qualified supervisor is not a Registered Dietitian, she/he shall
+be a graduate of a dietetic technician program approved by the American Dietetic Association or
+a dietary managers’ educational program approved by the Certifying Board for Dietary
+Managers. Training and experience in food service supervision and nutrition equivalent in
+content to the approved educational programs are acceptable.
+
+                        (B)     Visits of the consultant dietitian shall be scheduled to assure that
+the professional dietetic service needs of the facility are met. These visits shall be:
+
+                              (I)    For at least eight (8) hours every other week, so that
+adequate time is allowed for observation of more than one (1) meal per visit; or,
+
+                              (II)   For at least four (4) hours every week so that adequate
+time is allowed to observe the preparation and serving of food at meal time. The weekly
+visits shall be scheduled to allow for observation of different meals.
+
+                               (III)   Visits shall not be limited to evenings and weekends only.
+
+                      (C)     Reports of the consultant dietitian shall be made verbally and in
+writing to the Administrator or his/her designee. The reports shall be kept on file with notations
+made of actions taken by the facility. The report shall include dates, length of time on-site,
+functions performed and recommendations.
+
+                      (D)     The consultant or staff dietitian shall develop written plans and
+conduct or supervise inservice programs for dietary personnel on a monthly basis.
+
+                      (E)    The consultant or staff dietitian shall participate in the
+development of policies and procedures, as well as the development or approval of all menus.
+
+                      (F)     The consultant dietitian is to provide assistance and advice, as
+needed, regarding the dietary department budget.
+
+
+
+
+                                                11-17
+
+                    (G)      The consultant or staff dietitian shall maintain interdisciplinary
+communication and act as the dietetic service’s chief liaison to the medical and nursing staffs.
+
+                         (H)    The dietetic supervisor shall be responsible for department
+orientation, training, scheduling, and work assignments for all dietetic service personnel.
+
+                       (I)     The dietetic supervisor shall be responsible for menu planning,
+ordering or recommending the purchase of supplies, monitoring the department budget, controlling
+costs, maintaining associated records, etc.
+
+                      (J)    The dietetic supervisor shall be responsible for the development of
+policies and procedures. These polices shall be maintained in a manual and reviewed at least
+annually. Reviews and revisions shall be dated and signed by the supervisor and the consultant
+or staff dietitian.
+
+                      (K)    If the dietetic supervisor also has responsibility for cooking,
+adequate time shall be allowed for supervisory management.
+
+               (ii)     Hygiene of Dietary Department. Food service personnel shall be in good
+health and shall practice safe food handling techniques in accordance with the current edition of
+FOOD CODE published by the U. S. Department of Health and Human Services, Public Health
+Services, Food and Drug Administration.
+
+                      (A)     Personnel having a communicable disease that can be expected to
+be transmitted through food shall not be permitted to work until the disease is no longer
+communicable or medical clearance is received from a physician or an advanced practitioner.
+
+       Section 12.     Specialized Rehabilitative Services.
+
+       (a)    Facilities admitting patients in need of specialized rehabilitative services shall
+provide such services by qualified personnel.
+
+             (i)      Rehabilitative care initiated in the hospital shall be continued immediately
+upon admission to the facility.
+
+               (ii)    The facility that does not employ qualified personnel to provide a
+specialized service shall have a written agreement with the outside resource.
+
+                (iii)  Facilities that do not provide specialized rehabilitative services shall not
+admit or retain residents in need of specialized rehabilitative services.
+
+               (iv)   A report on the resident’s progress shall be communicated to the attending
+physician within two (2) weeks of the initiation of the specialized rehabilitative service.
+
+                (v)     The resident’s progress shall be reviewed regularly thereafter and the plan
+of rehabilitative care shall be reevaluated at least every thirty (30) days by the physician and
+
+
+
+                                                11-18
+
+therapist.
+
+               (vi)    Safe and adequate space and equipment shall be available if the facility
+provides specialized rehabilitative services.
+
+        Section 13.   Pharmaceutical Services.
+
+        (a)     The Nursing Care Facility shall provide appropriate methods and procedures for
+the dispensing and administering of drugs and biologicals. Whether drugs and biologicals are
+obtained from community pharmacists or stocked by the facility, the facility shall be responsible
+for providing such drugs and biologicals for its residents and for ensuring that pharmaceutical
+services are provided in accordance with acceptable professional principles and appropriate
+federal, state and local laws.
+
+               (i)    Supervision of Services. The pharmaceutical services shall be under the
+general supervision of a licensed pharmacist.
+
+                        (A)    The pharmacist, if not a full-time employee, shall devote a
+sufficient number of hours, based upon the needs of the facility, during regularly scheduled visits
+to carry out his/her responsibilities.
+
+               (ii)   Pharmaceutical Services Committee.
+
+                        (A)    Pharmaceutical Services committee or its equivalent shall be
+responsible for developing policies and procedures for safe and effective drug therapy,
+distribution, control and use.
+
+                              (I)     The committee shall be comprised of at least the
+pharmacist, the director of nursing service, the administrator and one (1) physician.
+
+                             (II)   The committee shall oversee the pharmaceutical service
+in the facility, make recommendations for improvement and monitor the service to ensure
+accuracy and adequacy.
+
+                                 (III) The committee shall meet at least quarterly and document
+its activities, findings and recommendations.
+
+                      (B)    The pharmacist shall submit a written report at least quarterly to
+the pharmaceutical services committee on the status of the facility’s pharmaceutical services and
+staff performance.
+
+        Section 14.   Dental Services.
+
+       (a)     The facility shall have an advisory dentist who shall provide consultation, develop
+and participate in inservice education, and recommend policies concerning oral hygiene. Records
+
+
+
+                                              11-19
+
+of in-service education meetings shall be in writing.
+
+      (b)    Nursing personnel shall assist the resident to carry out the dentist’s
+recommendations.
+
+      (c)     All dental examinations and dental treatments shall be entered on a dental record
+and made a part of the resident’s medical record.
+
+       (d)     Oral hygiene shall be a part of each resident’s care daily.
+
+       Section 15.     Social Services.
+
+        (a)     The medically related social and emotional needs of the resident shall be
+identified and services shall be provided to meet them, either by qualified staff (a social worker or
+social service associate), or through written procedures for referral to appropriate social
+agencies.
+
+               (i)     Facilities shall offer social services regardless of the size of the facility.
+
+                       (A)     An individual on the facility staff shall be designated in writing to
+maintain liaison with social, health and community agencies.
+
+                     (B)     As appropriate, there shall be arrangements with qualified social
+workers or recognized social agencies for consultation and assistance on a regularly scheduled
+basis.
+
+                (ii)   Current records and pertinent social data concerning personal and family
+problems medically related to the resident’s illness and care shall be maintained in each
+resident’s record by the social service personnel.
+
+                       (A)    Up-to-date progress notes of relevant psycho-social issues and
+interventions shall be maintained in each resident’s record by social service personnel.
+
+                (iii)   Policies and procedures shall be established for ensuring confidentiality
+of residents’ social information.
+
+               (iv)   There shall be space provided to ensure privacy for interviews by social
+service personnel with the resident.
+
+               (v)      Provision shall be made for in-service training to facility staff directed
+toward understanding emotional problems and social needs of residents and the means of taking
+appropriate action in relation to them, and the necessity of confidentiality.
+
+                (vi)      Arrangements shall be made promptly when financial assistance is
+indicated or personal finances are depleted, i.e., private paying residents no longer able to pay
+for care in the facility.
+
+
+                                                11-20
+
+       Section 16.    Medical Records.
+
+        (a)  Maintenance of Clinical Records. The facility shall maintain a separate and
+complete medical record for each resident admitted with all entries kept current, dated and
+signed.
+
+               (i)    The medical record shall include:
+
+                       (A)     Identification and summary sheet(s) including resident’s name,
+social security number, marital status, age, sex, home address, and religion; name, address, and
+telephone number of referral agency (including hospital from which admitted), personal
+physician, dentist, and next of kin or other responsible person; admitting diagnoses, final
+diagnoses, category of care, condition on discharge and disposition, source of payment, and any
+other information needed to meet State requirements.
+
+                     (B)      Initial medical evaluation including medical history, physical ex-
+amination and diagnosis.
+
+                         (C)   Authentication of hospital diagnoses, in the form of a hospital
+discharge summary, or a written report from the physician who attended the resident in the
+hospital, or a transfer form used under a transfer agreement.
+
+                       (D)    Physician’s orders, including all medications, treatments, diet,
+rehabilitative and special medical procedures required for the safety and well-being of the
+resident.
+
+                       (E)     Physician’s progress notes describing significant changes in the
+resident’s condition, dictated or written at the time of each visit.
+
+                      (F)     Nurses’ notes which shall include but not be limited to the
+following:
+
+                              (I)     Concise and accurate record of nursing care administered.
+
+                              (II)   Record of pertinent observation of the resident including
+psycho-social as well as physical manifestations.
+
+                             (III) Name, dosage and time of administration of medications
+and treatments, route of administration except if by oral medication.
+
+                               (IV) Record of type of restraint and time of application and
+removal. The time of application and removal shall be necessary for all restraints prescribed by
+the physician for the support and protection of the resident.
+
+                      (G)     Medication and treatment record including all medications,
+
+
+
+                                              11-21
+
+treatments and special procedures performed for the safety and well-being of the resident.
+
+                                (I)      Laboratory and x-ray reports.
+
+                                (II)     Consultation reports.
+
+                                (III)    Dental reports.
+
+                                (IV)     Social service notes.
+
+                                (V)      Resident care referral reports.
+
+                                (VI)     Activity reports.
+
+          (b)    Retention of Records.
+
+                (i)     The facility shall have policies providing for the retention and safe-
+keeping of residents’ medical records by the governing body for the required period of time in the
+event that the facility discontinues operation.
+
+             (ii)    A copy of the resident’s clinical record or an abstract thereof shall
+accompany the resident who is transferred to another facility.
+
+       (c)      Staff Responsibility. An employee of the facility shall be assigned the
+responsibility for assuring that records are maintained, completed, and preserved if the facility
+does not have a full or part time medical record librarian.
+
+               (i)    The designated individual shall be trained by and receive regular
+consultation from a person skilled in record maintenance and preservation.
+
+          Section 17.   Residents Activities.
+
+       (a)      Resident Activity Program. An on-going program of meaningful activities ap-
+propriate to the needs and interests of residents shall be provided.
+
+              (i)    The program shall be designed to promote opportunities for residents to
+engage in normal pursuits, including religious activities of their choice, if any.
+
+               (ii)    Activities shall be designed to promote the physical, social and mental
+well-being of each resident.
+
+             (iii)    The facility shall make available adequate space and a variety of sup- plies
+and equipment to satisfy the individual interests of residents.
+
+                 (iv)   Residents shall not be required to participate in activities if they do not
+desire.
+
+
+                                                 11-22
+
+        Section 18.      Transfer Agreement.
+
+        (a)     Resident Transfer. The transfer agreement shall provide reasonable assurance
+that the transfer of residents will be effected between the hospital and the facility whenever such
+transfer is medically appropriate as determined by the attending physician.
+
+              (i)      The agreement shall be with hospitals close enough to the facility to
+make the transfer of residents feasible.
+
+        (b)     Where the transfer agreement specifies restrictions with respect to the types of
+services available in the hospital or the facility and/or the types of residents or health conditions
+that will not be accepted by the hospital or the facility, or includes any other criteria relating to the
+transfer of residents (such as priorities for persons on waiting lists), such restrictions or criteria
+shall be the same as those applied by the hospital or facility.
+
+        (c)     Execution of Agreement. The transfer agreement shall be in writing and shall be
+signed by individuals authorized to execute such agreements on behalf of the facilities, or, in case
+the two (2) facilities are under common control, there shall be a written policy or order signed by
+the person or body which controls them.
+
+                (i)    The terms of the transfer agreement shall be established jointly by both
+facilities when the hospital and the facility are not under common control.
+
+                 (ii)    Each facility participating in the agreement shall retain a current copy of
+the agreement.
+
+       (d)      Specification of Responsibilities. The transfer agreement shall specify the
+responsibilities each facility assumes in the transfer of residents and information between the
+hospital and the facility.
+
+                (i)    The agreement shall establish responsibility for notifying the other facility
+promptly of the impending transfer of a resident, arranging for appropriate and safe
+transportation, and arranging for the care of residents during the transfer.
+
+        Section 19.      Grievances and Complaints.
+
+        (a)      Every resident in a Nursing Care Facility shall have the right to:
+
+               (i)     Upon admission, review the Nursing Care Facility grievances and com-
+plaint process and receive updated information at six (6) month intervals.
+
+               (ii)    Voice grievances and complaints on behalf of themselves or others without
+discrimination or reprisal.
+
+                 (iii)   Have available in a conspicuous place telephone numbers and addresses of
+
+
+
+                                                 11-23
+
+the Long-Term Care Ombudsman, Protection and Advocacy, the local Department of Family
+Services Adult Protection office, the Medicaid Fraud Control Unit, the Wyoming State Survey
+Agency, and the facility’s grievance/complaint representative.
+
+       Section 20.     Grievance Investigations.
+
+        (a)     Each Nursing Care Facility shall establish a system of reviewing allegations of
+violations of residents’ rights and develop internal operating procedures for reporting and
+resolution.
+
+                (i)      In order to ensure that residents continue to be aware of these rights and
+responsibilities, a written copy is to be prominently posted in a location that is available to all
+residents.
+
+               (ii)   Prompt efforts must be demonstrated by the facility to resolve grievances
+the resident may have, including those with respect to the behavior of other residents and the
+services provided by the facility.
+
+       Section 21.     Complaint Investigations.
+
+      (a)   Residents’ unresolved grievances and/or complaints shall be referred to the
+Long-Term Care Ombudsman.
+
+       (b)     The Office of the Ombudsman shall complete all complaint investigations within an
+appropriate time frame depending upon the seriousness of the allegations.
+
+       (c)    Written reports of investigations and the status of resolutions completed by the
+Nursing Care Facility shall be provided by the Long-Term Care Ombudsman to the Licensing
+Division within thirty (30) days after the completion of the investigation.
+
+Exception: Those complaints or problems reported directly to the State Survey Agency or referred
+by the Long-Term Care Ombudsman to the State Survey Agency shall be investigated by the
+State Survey Agency as per the Agreement between the Secretary of the U.S. Department of
+Health and Human Services and the State of Wyoming dated June 18, 1985.
+
+       Section 22.     Hearings.
+
+       (a)      The Program Division Administrator shall present the preliminary decisions and
+reasons to the parties concerned and provide an opportunity for resolution. Any request for a
+hearing by the facility shall adhere to the time frames of (b) below.
+
+        (b)     Any Nursing Care Facility aggrieved by a decision of the Program Division may
+request a hearing by submitting a written request to the Program Division within ten (10) days of
+the date of the adverse action at 6101 Yellowstone Road, North Building, Room 259B, Cheyenne,
+WY 82002.
+
+
+
+                                                11-24
+
+         (c)   In matters concerned with the spread of communicable disease, the Wyoming
+State Health Officer shall present the preliminary decisions and reasons to the parties concerned
+and provide an opportunity for a hearing. Any request for a hearing by the facility shall adhere
+to the time frames of (b) above.
+
+       (d)    Hearings requested under the terms of these rules and regulations shall be held by
+the Program Division in accordance with the provisions of the Wyoming Administrative
+Procedures Act at W.S. §16-3-101 et. seq.
+
+        Section 23. Licensure. Shall be in accordance with the current Rules and Regulations
+for Licensure of Nursing Care Facilities adopted by the Department of Health.
+
+
+
+
+                                              11-25
+
+SOURCE 2: Chapter 19, Licensure of Nursing Care Facilities — Wyoming Department of Health, Healthcare Licensing and Surveys (PDF) | https://health.wyo.gov/wp-content/uploads/2016/11/HLS-Rule-Ch-19-Nursing-Care-Facilities.pdf | source date: none stated in the document beyond its adoption; the department's rules page lists it as effective 06-26-2000 | retrieved: 2026-09-04
+Wyoming Administrative Rules
+
+
+Health, Department of
+Health Quality
+
+Chapter 19: Licensure of Nursing Care Facilities
+
+
+   Effective Date:     06/26/2000 to Current
+
+   Rule Type:          Current Rules & Regulations
+
+   Reference Number: 048.0026.19.06262000
+
+
+
+
+Generated 11/07/2016
+
+                                 RULES AND REGULATIONS
+                        FOR LICENSURE OF NURSING CARE FACILITIES
+
+                                             CHAPTER 19
+
+       Section 1. Authority. These rules are promulgated by the Department of Health pursuant to the
+Health Facilities Act at W.S. §35-2-901 et seq. and the Wyoming Administrative Procedures Act At
+W.S. §16-3-101 et seq.
+
+       Section 2. Purpose. These rules have been adopted to protect the health, safety and welfare of
+residents and employees in Nursing Care Facilities.
+
+      Section 3. Severability. If any portion of these rules is found to be invalid or unenforceable, the
+remainder shall continue in effect.
+
+        Section 4. Definitions.
+
+        The following definitions shall apply in the interpretation and enforcement of these rules. Where
+the context in which words are used in these rules indicates that such is the intent, words in the singular
+number shall include the plural and vice versa. Throughout these rules gender pronouns are used
+interchangeable. The drafters have attempted to utilize each gender pronoun in equal numbers, in
+random distribution. Words in each gender shall include individuals of the other gender.
+
+        For purpose of these regulations, the following shall apply:
+
+        (a)     “Acceptable Plan of Correction” means the Licensing Division approved the Nursing
+Care Facility’s plan to correct the deficiencies identified during an on-site survey conducted by the
+Survey Division or its designated representative. The plan of correction shall be a written document and
+shall provide, but not be limited to, the following information.
+
+                (i)      Who is responsible for the correction.
+
+                (ii)     What was done or will be done to correct the problem.
+
+                (iii)    Who will monitor to ensure that the situation does not reoccur.
+
+               (iv)     An appropriate date, not to exceed sixty (60) days after the last day of survey, for
+the correction of deficiencies.
+
+       (b)     “Chief Administrative Officer” means the Director, Department of Health per W.S. §9-
+2-101(e), or the designated licensure representative.
+
+       (c)     “Complaint Investigations” means those investigations required to be performed by the
+Long Term Care Ombudsman as established in W.S. §9-2-1301 through 1309 or by the State Survey
+Agency as per the agreement between the Secretary of the U.S. Department of Health and Human
+Services and the State of Wyoming dated June 18, 1985.
+
+       (d)     “License” means the authority granted by the Licensing Division to operate a Nursing
+Care Facility.
+
+       (e)      “Licensee” means any person, association, partnership, or corporation holding a Nursing
+Care Facility license.
+
+       (f)     “Licensing Division” means the Department of Health, Office of Health Quality.
+
+       (g)    “LSC” means NFPA 101 Life Safety Code cited in the Department of Health, Chapter III
+Construction Rules for Health Facilities.
+
+       (h)     “NEC” means the National Electrical Code.
+
+       (i)     “NFPA” means the National Fire Protection Association.
+
+        (j)    “Nursing Care Facility” means an institution which is a skilled nursing facility (SNF) or
+a nursing facility (NF) which is currently licensed and meets the requirements of these rules and
+regulations.
+
+       (k)    “Ombudsman” means the Long Term Care Ombudsman as established in W.S. §9-2-
+1301 through 9-2-1309.
+
+       (l)     “Program Administration” means the rules and regulations promulgated by the
+Department of Health as developed by the Program Division for the day-to-day operation of a Nursing
+Care Facility.
+
+       (m)     “Program Division” means the Department of Health, Aging Division.
+
+       (n)    “Quality Management Program” means a program developed and implemented by the
+Nursing Care Facility to evaluate and improve resident care and services.
+
+        (o)      “State Survey Agency” means the Department of Health, Office of Health Quality which
+has the primary responsibility to determine whether health care providers/suppliers do or do not meet
+federal certification standards to participate in the Medicaid or Medicare programs as per the agreements
+between the Secretary of the U.S. Department of Health and Human Services and the State of Wyoming
+dated June 18, 1985.
+
+       (p)      “Survey” means an on-site evaluation conducted by the Survey Division or its designated
+representative to determine compliance with State rules and regulations for Nursing Care Facilities.
+
+       (q)     “Survey Division” means the Department of Health, Office of Health Quality or its
+designated representative.
+
+         Section 5. Licensure. Applicants must demonstrate full compliance with paragraphs (a) and (b)
+of this section.
+
+        (a)     Licensing Procedure.
+
+                (i)     For an initial license to be issued, the Licensing Division shall receive:
+
+                        (A)     A completed application form as supplied by the Licensing Division.
+
+                        (B)    Each completed application shall be accompanied by the required
+licensure fee identified in Chapter 1, Rules and Regulations for Health Care Facilities Licensure Fees.
+The check or money order shall be made payable to the Treasurer, State of Wyoming.
+
+                      (C)    Applicant shall demonstrate full compliance with the licensure
+requirements in paragraph (b) of this section.
+
+               (ii)   For renewal of a full license for one year beginning July 1st, and unless
+suspended or revoked, expiring on June 30th of the following year, the Licensing Division shall receive:
+
+                        (A)    A completed application form by the date stated in the application cover
+letter supplied by the Licensing Division; and
+
+                        (B)     The license fee as required in paragraph (a)(i)(B) of this section.
+
+        (b)     Requirements for Licensure. The Licensing Division shall consider:
+
+                (i)     Initial and annual renewal licensure survey deficiencies cited by the Survey
+Division;
+
+                (ii)    Life Safety Code deficiencies cited by the Survey Division;
+
+                (iii)   Complaint investigations and resolutions;
+
+               (iv)    Compliance with all laws and standards relating to communicable and reportable
+diseases as required by the Department of Health State Health Officer and Public Health Division; and
+
+                (v)     The effectiveness of the quality management program.
+
+        (c) Transfer of License.
+
+               (i)    No license granted shall be assigned or transferred by the licensee without prior
+approval of the Licensing Division.
+
+                       (A)      Requests to assign or transfer a Nursing Care Facility license shall be
+submitted in writing by the licensee to the Licensing Division at least thirty (30) days prior to the planned
+date of assignment or transfer.
+
+                       (B)     Any license approved for assignment or transfer by the Licensing
+Division shall be subject to the plan of correction for licensure submitted by the previous owner.
+
+                (ii)   If the Nursing Care Facility’s name is changed, the Licensing Division shall be
+advised in writing, before the name is changed, by the current licensee and a new license will be issued
+upon the receipt of an application and licensure fee.
+
+       (d)     Conditions for Denying, Revoking, or Suspending a License.
+
+               (i)     Denial, revocation, or suspension of a license may occur for noncompliance with
+any provisions of these licensure rules.
+
+       (e)     Suspension of Admissions.
+
+              (i)     The Licensing Division may suspend new admissions or re-admissions to the
+Nursing Care Facility when conditions are such that resident needs cannot be met. Conditions in a
+Nursing Care Facility shall not jeopardize the resident’s health or safety.
+
+       (f)     Monitor.
+
+                (i)    The Licensing Division may place a Department of Health
+approved monitor at the owner’s expense when conditions are such that residents’ needs are not being
+met by the Nursing Care Facility. The monitor shall insure that neither the health nor the safety of the
+resident is jeopardized.
+
+       (g)     Hearings.
+
+                (i)    Any Nursing Care Facility aggrieved by a decision of the Licensing Division may
+request a hearing by submitting a written request to the Licensing Division within ten (10) days of receipt
+of the adverse action.
+
+               (ii)   Except in matters concerned with the spread of communicable disease, the
+Licensure Division (Nurse Administrator or designated representative) shall present the preliminary
+decisions and reasons for the decision to the parties concerned and shall provide an opportunity for a
+hearing. Any request for hearing shall adhere to the time frames of (i) above.
+
+                (iii)   In matters concerned with the spread of communicable disease, the Wyoming
+State Health Officer or designated representative shall present the preliminary decisions and reasons for
+the decision to the parties concerned and shall provide an opportunity for a hearing. Any request for a
+hearing shall adhere to the time frames in (i) above.
+
+              (iv)    Hearings requested under the terms of these licensure rules shall be held in
+accordance with the provisions of the Wyoming Administrative Procedures Act.
+
+       (h)     Posting of License.
+
+               (i)     The current license issued by the Licensing Division shall be displayed in a
+public area within the Nursing Care Facility.
+
+       (i)     Surveys for Licensure.
+
+               (i)     The Survey Division or its designated representative shall perform initial and
+periodic surveys for the renewal of licensure.
+
+                      (A)     These surveys shall be based on the current Licensure and Program
+Administration Rules and Regulations for Nursing Care Facilities as promulgated by the Wyoming
+Department of Health. If there are conflicts between the Licensure and Program Administration Rules,
+the Licensure Rules take precedence.
+
+                       (B)      The Survey Division shall provide, within ten (10) working days after the
+last day of survey, copies of its cited deficiencies to the Nursing Care Facility and Program Division.
+
+                         (C)     The Nursing Care Facility shall provide an acceptable plan of correction
+for all cited deficiencies, within ten (10) working days after receipt of the deficiencies, to the Licensing
+Division.
+
+                (ii)    At the time of survey, all records, including resident medical records, pertaining
+to matters involved in the survey shall be made available to members of the survey team in their assigned
+disciplines.
+
+       (j)     Voluntary Closure.
+
+              (i)     If a Nursing Care Facility voluntarily ceases to operate, it shall notify the
+Licensing Division in writing at least thirty (30) working days prior to the closure.
+
+               (ii)     The first working day after closure, the Nursing Care Facility’s license shall be
+hand carried to or sent by certified mail to the Office of Health Quality; 2020 Carey Avenue, Eighth
+Floor; Cheyenne, WY 82002.
+
+                (iii) Personnel, financial and client medical records shall be maintained by the
+licensee for a minimum of six (6) years after the month of closure.
+
+       Section 6. Disaster Plan.
+
+        (a)   All Nursing Care Facilities shall develop and adopt a written disaster preparedness plan
+in accordance with the Chapter 11, “Health Care Emergency Preparedness”, of NFPA 99, Standard for
+Health Care Facilities.
+
+       Section 7. Construction/Remodeling. Department of Health Chapter III, Construction Rules for
+Health Facilities apply.
+
+       Section 8. Life Safety and Electrical Safety. Department of Health Chapter III, Construction
+Rules for Health Facilities apply.
+
+                (i)    Nursing Care Facilities operating prior to the effective date of these rules, shall
+meet the Life Safety Code of the National Fire Protection Association that was in effect at the time the
+facility was licensed as a Nursing Care Facility.
+
+SOURCE 3: W.S. 35-2-901 through 35-2-914, Health Facilities Act (Title 35, chapter 2, article 9) — Wyoming Legislature, Wyoming Statutes (PDF, title 35) | https://wyoleg.gov/statutes/compress/title35.pdf | source date: none stated in the extracted article; the title PDF is the Legislature's current compilation | retrieved: 2026-09-04
+35-2-901.     Definitions; applicability of provisions.
+
+    (a)     As used in this act:
+
+            (i)    "Acute care" means short term care provided in a
+hospital;
+
+          (ii) "Ambulatory surgical center" means a facility
+which provides surgical treatment to patients not requiring
+hospitalization and is not part of a hospital or offices of
+private physicians, dentists or podiatrists. "Ambulatory
+surgical center" shall include any surgical abortion facility as
+defined by W.S. 35-6-201(a)(x);
+
+          (iii) "Birthing center" means a facility which
+operates for the primary purpose of performing deliveries and is
+not part of a hospital;
+
+          (iv) "Boarding home" means a dwelling or rooming
+house operated by any person, firm or corporation engaged in the
+business of operating a home for the purpose of letting rooms
+for rent and providing meals and personal daily living care, but
+not habilitative or nursing care, for persons not related to the
+owner. Boarding home does not include a lodging facility or an
+apartment in which only room and board is provided;
+
+            (v)    Repealed by Laws 2025, ch. 102, § 2.
+
+            (vi)   "Department" means the department of health;
+
+          (vii) "Division" means the designated division within
+the department of health;
+
+          (viii) "Freestanding diagnostic testing center" means
+a mobile or permanent facility which provides diagnostic testing
+but not treatment and is not part of the private offices of
+health care professionals operating within the scope of their
+licenses;
+
+            (ix)   Repealed By Laws 1999, ch. 119, § 2.
+
+          (x) "Health care facility" means any ambulatory
+surgical center, assisted living facility, adult day care
+facility, adult foster care home, alternative eldercare home,
+birthing center, boarding home, freestanding diagnostic testing
+center, home health agency, hospice, hospital, freestanding
+emergency center, intermediate care facility for people with
+intellectual disability, medical assistance facility, nursing
+
+care facility, rehabilitation facility and renal dialysis
+center;
+
+          (xi) "Home health agency" means an agency primarily
+engaged in arranging and directly providing nursing or other
+health care services to persons at their residence;
+
+          (xii) "Hospice" means a program of care for the
+terminally ill and their families given in a home or health
+facility which provides medical, palliative, psychological,
+spiritual and supportive care and treatment. Hospice care may
+include short-term respite care for non-hospice patients, if the
+primary activity of the hospice is the provision of hospice
+services to terminally ill individuals and provided that the
+respite care is paid by the patient or by a private third party
+payor and not through any governmental third party payment
+program;
+
+          (xiii) "Hospital" means an institution or a unit in
+an institution providing one (1) or more of the following to
+patients by or under the supervision of an organized medical
+staff:
+
+               (A) Diagnostic and therapeutic services for
+medical diagnosis, treatment and care of injured, disabled or
+sick persons;
+
+               (B) Rehabilitation services for the
+rehabilitation of injured, disabled or sick persons;
+
+              (C)   Acute care;
+
+              (D)   Psychiatric care;
+
+              (E)   Swing beds.
+
+          (xiv) "Intermediate care facility for people with
+intellectual disability" means a facility which provides on a
+regular basis health related care and training to persons with
+intellectual disabilities or persons with related conditions,
+who do not require the degree of care and treatment of a
+hospital or nursing facility and services above the need of a
+boarding home. The term also means "intermediate care facility
+for the mentally retarded" or "ICFMR" or "ICFs/MR" as those
+terms are used in federal law and in other laws, rules and
+regulations;
+
+          (xv) "Medical assistance facility" means a facility
+which provides inpatient care to ill or injured persons prior to
+their transportation to a hospital or provides inpatient care to
+persons needing that care for a period of no longer than sixty
+(60) hours and is located more than thirty (30) miles from the
+nearest Wyoming hospital;
+
+          (xvi) "Nursing care facility" means a facility
+providing assisted living care, nursing care, rehabilitative and
+other related services;
+
+          (xvii) "Physician" means a doctor of medicine or
+osteopathy licensed to practice medicine or surgery under state
+law;
+
+          (xviii) "Psychiatric care" means the in-patient care
+and treatment of persons with a mental diagnosis;
+
+          (xix) "Rehabilitation facility" means an outpatient
+or residential facility which is operated for the primary
+purpose of assisting the rehabilitation of disabled persons
+including persons with acquired brain injury by providing
+comprehensive medical evaluations and services, psychological
+and social services, or vocational evaluations and training or
+any combination of these services and in which the major portion
+of the services is furnished within the facility;
+
+          (xx) "Renal dialysis center" means a freestanding
+facility for treatment of kidney diseases;
+
+          (xxi) "Swing bed" means a special designation for a
+hospital which has a program to provide specialized in-patient
+long term care. Any medical-surgical bed in a hospital can be
+designated as a swing bed;
+
+          (xxii) "Assisted living facility" means a dwelling
+operated by any person, firm or corporation engaged in providing
+limited nursing care, personal care and boarding home care, but
+not habilitative care, for persons not related to the owner of
+the facility. This definition may include facilities with
+secured units and facilities dedicated to the special care and
+services for people with Alzheimer's disease or other dementia
+conditions;
+
+          (xxiii) "Adult day care facility" means any facility
+not otherwise certified by the department of health, engaged in
+the business of providing activities of daily living support and
+
+supervision services programming based on a social model, to
+four (4) or more persons eighteen (18) years of age or older
+with physical or mental disabilities;
+
+          (xxiv) "Adult foster care home" means a home where
+care is provided for up to five (5) adults who are not related
+to the provider by blood, marriage or adoption, except in
+special circumstances, in need of long term care in a home like
+atmosphere. "Adult foster care home" does not include any
+residential facility otherwise licensed or funded by the state
+of Wyoming. The homes shall be regulated in accordance with this
+act and with the Wyoming Long Term Care Choices Act, which shall
+govern in case of conflict with this act;
+
+          (xxv) "Alternative eldercare home" means a facility
+as defined in W.S. 42-6-102(a)(iii). The homes shall be
+regulated in accordance with this act and with the Wyoming Long
+Term Care Choices Act which shall govern in case of conflict
+with this act;
+
+          (xxvi) "Freestanding emergency center" means a
+facility that provides services twenty-four (24) hours a day,
+seven (7) days a week for life threatening emergency medical
+conditions and is at a location separate from a hospital;
+
+           (xxvii)     "This act" means W.S. 35-2-901 through 35-2-
+914.
+
+     (b) This act does not apply to hospitals or any other
+facility or agency operated by the federal government which
+would otherwise be required to be licensed under this act or to
+any person providing health care services within the scope of
+his license in a private office.
+
+       35-2-902.   License required.
+
+No person shall establish any health care facility in this state
+without a valid license issued pursuant to this act.
+
+     35-2-903. Application for license; submission of evidence
+prerequisite to issuance.
+
+     (a) An applicant for a license under this act shall file a
+sworn application with the division on a form provided by the
+division. The form shall request the following information:
+
+           (i)     The applicant's name;
+
+          (ii)   The type of health care facility to be operated;
+
+          (iii) A description of and the location of the
+facility buildings;
+
+          (iv)   The name of the person in charge of the health
+care facility;
+
+          (v) Whether the applicant has had a license to
+operate a health care facility or agency providing health care
+services in this or any other state denied, suspended, revoked
+or otherwise terminated for cause and the specific reasons for
+such action. Evidence that the facility subject to the
+application is currently in compliance with all applicable
+statutes, rules and regulations is required;
+
+          (vi) Evidence that the applicant is capable of
+complying with applicable rules and regulations;
+
+          (vii) Such other information as the division may
+require pursuant to rules promulgated under this act.
+
+     (b) An application by other than an individual shall be
+made by two (2) officers of the organization or by its managing
+agents.
+
+     35-2-904. Issuance of license; fee; duration; renewal;
+transferability; provisional licenses; procedures.
+
+    (a)   The division shall issue a license under this act:
+
+          (i) If the applicant is in compliance with this act
+and in substantial compliance with the rules and regulations
+promulgated pursuant to this act; and
+
+          (ii) Upon payment of a license fee for each health
+care facility as specified in subsection (g) of this section.
+The department may adopt rules which provide for reasonable fees
+for health care facilities not specified in subsection (g) of
+this section in amounts not to exceed five hundred dollars
+($500.00) designed to recover administrative and operational
+expenses of the department in conducting its licensure program
+under this article for those facilities.
+
+     (b) Licenses are issued for a period of one (1) year
+beginning on July 1 of the year of issuance and ending on June
+
+30 of the succeeding year. The full fee is due whether the
+license is issued for the entire year or for part of the year.
+
+     (c) Licenses are renewed annually upon payment of the
+license fee unless suspended or revoked pursuant to W.S.
+35-2-905.
+
+     (d) Fees collected under this act shall be deposited in
+the general fund.
+
+    (e)    Licenses are not assignable or transferable.
+
+     (f) Applicants not complying with this act and not
+substantially complying with the rules and regulations
+promulgated pursuant to this act may be granted a provisional
+license subject to restrictions imposed by the division if the
+operation of the facility will not endanger the health, safety
+and welfare of patients. All applicants found in noncompliance
+shall be notified of the reason for noncompliance.
+
+     (g)   Health care facilities shall be assessed the following
+fees:
+
+           (i)    Adult day care facility . . . . . . $250.00;
+
+           (ii)    Adult foster care home . . . . . . $250.00;
+
+           (iii)   Ambulatory surgical center . . . $500.00;
+
+           (iv)    Assisted living facility:
+
+               (A) For a facility with a bed capacity of at
+least one (1) but not more than twenty-five (25) . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . .$250.00;
+
+               (B) For a facility with a bed capacity of more
+than twenty-five (25) but not more than fifty (50) . . . . . . .
+. . . . . . . . . . . . . . . . . . . . $500.00;
+
+               (C) For a facility with a bed capacity of more
+than fifty (50) . . . . . . . . . . . . . . $1,000.00.
+
+           (v)    Birthing center . . . . . . . . . . $500.00;
+
+          (vi) Boarding home in an amount established by the
+department within this range . . . . . $500.00-$750.00;
+
+         (vii)    Critical access hospital . . . .   $500.00;
+
+         (viii)    Renal dialysis center . . . . .   $500.00;
+
+          (ix) Freestanding diagnostic testing center . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . . $500.00;
+
+         (x)    Freestanding emergency center . . . $500.00;
+
+         (xi)    Home health agency . . . . . . . . $150.00;
+
+         (xii)    Hospice facility . . . . . . . .   $250.00;
+
+         (xiii)    Hospital . . . . . . . . . . . $1,000.00;
+
+          (xiv) Intermediate care facility for people with
+intellectual disability . . . . . . . . . . . . . $250.00;
+
+         (xv)    Medical assistance facility . . .   $250.00;
+
+         (xvi)    Nursing care facility:
+
+               (A) For a facility with a bed capacity of at
+least one (1) but not more than twenty-five (25) . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . . $250.00;
+
+               (B) For a facility with a bed capacity of more
+than twenty-five (25) but not more than fifty (50) . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . . $500.00;
+
+               (C) For a facility with a bed capacity of more
+than fifty (50) . . . . . . . . . . . . . . . . $1,000.00.
+
+         (xvii)    Psychiatric hospital . . . . . $1,000.00;
+
+         (xviii)    Rehabilitation facility . . . . $500.00;
+
+         (xix)    Rehabilitation hospital . . . . . $500.00.
+
+     (h) In addition to the fees imposed under subsection (g)
+of this section, if a licensed health care facility changes its
+name, location or number of beds, the facility shall pay a fee
+in the amount of two hundred fifty dollars ($250.00) for a
+revised license.
+
+    35-2-905.    Conditions, monitoring or revoking a license.
+
+     (a) The division may place conditions upon a license,
+install a division approved monitor or manager at the owner's or
+operator's expense, suspend admissions, or deny, suspend or
+revoke a license issued under this act if a licensee:
+
+          (i) Violates any provision of this act or the rules
+and regulations promulgated pursuant to this act;
+
+          (ii) Permits, aids or abets the commission of any
+illegal act by a licensee;
+
+          (iii) Conducts practices detrimental to the health,
+safety or welfare of the patients of the licensee;
+
+         (iv)   Repealed By Laws 2008, Ch. 116, § 2.
+
+          (v) Fails to pay a nursing care facility assessment
+and the department determines to suspend or revoke the license
+as provided in W.S. 42-8-107(b)(ii);
+
+          (vi) Violates any provision of W.S. 35-2-1501 through
+35-2-1507. This paragraph is repealed effective July 1, 2029.
+
+     (b) No license issued pursuant to this act shall be
+suspended or revoked or have conditions placed upon it or
+admissions suspended nor shall the division install an approved
+monitor or manager without notice to the licensee and an
+opportunity for a hearing under W.S. 16-3-101 through 16-3-115.
+
+     (c) If the division suspends the admission of new patients
+to a health care facility, the health care facility shall be
+provided an opportunity to abate the condition or conditions
+prior to suspension of admissions. If the conditions leading to
+the suspension of new admissions continue unabated beyond the
+period allowed for abatement, the division may continue the
+suspension of new admissions, or suspend or revoke the license.
+
+     (d) Any hearing held by the division under this section
+shall be held in the city or town in which the facility is
+located, or in the closest city or town with appropriate
+facilities for a hearing.
+
+     (e) If the division finds that conditions in a health care
+facility are in violation of this act and rules and regulations
+adopted under this act to the extent that there exists a
+substantial and immediate threat to the health or safety of
+patients, it may summarily suspend the license of that facility
+
+and take action necessary to protect the health and safety of
+patients. In cases of suspension under this subsection, the
+licensee shall be afforded an opportunity for a hearing within
+ten (10) days after the suspension.
+
+     (f) If a license is revoked pursuant to this act, an
+application for a new license may be made to the division only
+after the conditions upon which revocation was based have been
+corrected and evidence of this fact has been furnished to the
+division. A new license shall be granted only if the applicant
+is in compliance with all provisions of this act and rules and
+regulations promulgated pursuant to this act.
+
+     35-2-906.   Construction and expansion of facilities;
+exemption.
+
+     (a) A licensee who contemplates construction of or
+alteration or addition to a health care facility shall submit
+plans and specifications to the division for preliminary
+inspection and approval prior to commencing construction.
+Significant changes to the original plans must also be submitted
+and approved prior to implementation. The plans and any changes
+shall indicate any increase in the number of beds. Information
+submitted pursuant to this subsection shall be used by the
+division only for purposes of health care and life safety
+compliance determinations.
+
+    (b)   Repealed by Laws 2025, ch. 102, § 2.
+
+    (c)   Repealed by Laws 2025, ch. 102, § 2.
+
+    (d)   Repealed By Laws 2002, Ch. 87, § 2.
+
+    (e)   Repealed By Laws 2002, Ch. 87, § 2.
+
+    (f)   Repealed by Laws 2025, ch. 102, § 2.
+
+    (g)   Repealed by Laws 2025, ch. 102, § 2.
+
+     35-2-907. Inspection of licensed establishments;
+exceptions; assisted living facility inspection procedure.
+
+     (a) Except as otherwise provided in this section every
+licensed health care facility shall be periodically inspected by
+the division under rules and regulations promulgated by the
+department. A licensed health care facility which has been
+accredited by a nationally recognized accrediting body approved
+
+by federal regulations shall be granted a license renewal
+without further inspection. Inspection reports shall be
+prepared on forms prescribed by the division. Licensees
+accredited by the nationally recognized accrediting body shall
+submit the inspection report pursuant to its accreditation. If
+the standards of the nationally recognized accrediting body fail
+to meet or exceed the state standards for licensure, the
+division may inspect the licensed facility with regard to those
+matters which did not meet state standards.
+
+     (b) Except as required in administrative and judicial
+proceedings, information obtained from licensees under this act
+is subject to public disclosure only after deletion of
+information which reveals the identity of patients, persons who
+file complaints with the division and employees of the health
+care facility.
+
+    (c)   The division shall:
+
+          (i) Provide for the selection of an inspector to
+inspect and evaluate an applicant for an assisted living
+facility;
+
+          (ii) Approve and establish a fee to be paid by the
+applicant to the selected inspector. The division shall notify
+the applicant of the inspection fee prior to the inspection and
+evaluation;
+
+          (iii) Act on the application within thirty (30) days
+after receiving a report from the selected inspector on the
+inspection and evaluation of the applicant.
+
+    35-2-908.   Rules and regulations.
+
+The department shall promulgate and enforce reasonable rules and
+regulations necessary to protect the health, safety and welfare
+of patients of health care facilities licensed under this act.
+
+    35-2-909.   Penalties for violations.
+
+Except for violations otherwise punishable as a felony under the
+laws of this state, any person establishing or operating a
+facility or providing a service without first obtaining a
+license as required in this act is guilty of a misdemeanor
+punishable by a fine of not to exceed seven hundred fifty
+dollars ($750.00), by imprisonment for not more than six (6)
+
+months, or both. Each calendar week or portion thereof during
+which a violation continues is a separate offense.
+
+     35-2-910. Quality management functions for health care
+facilities; confidentiality; immunity; whistle blowing; peer
+review.
+
+     (a) Each licensee shall implement a quality management
+function to evaluate and improve patient and resident care and
+services in accordance with rules and regulations promulgated by
+the division. Quality management information relating to the
+evaluation or improvement of the quality of health care services
+is confidential. Any person who in good faith and within the
+scope of the functions of a quality management program
+participates in the reporting, collection, evaluation, or use of
+quality management information or performs other functions as
+part of a quality management program with regard to a specific
+circumstance shall be immune from suit in any civil action based
+on such functions brought by a health care provider or person to
+whom the quality information pertains. In no event shall this
+immunity apply to any negligent or intentional act or omission
+in the provision of care.
+
+     (b) Health care facilities subject to or licensed pursuant
+to this act shall not harass, threaten discipline or in any
+manner discriminate against any resident, patient or employee of
+any health care facility for reporting to the division a
+violation of any state or federal law or rule and regulation.
+Any employee found to have knowingly made a false report to the
+division shall be subject to disciplinary action by the
+employing health care facility, including but not limited to,
+dismissal.
+
+     (c) No hospital shall be issued a license or have its
+license renewed unless it provides for the review of
+professional practices in the hospital for the purpose of
+reducing morbidity and mortality and for the improvement of the
+care of patients in the hospital. This review shall include,
+but not be limited to:
+
+          (i) The quality and necessity of the care provided to
+patients as rendered in the hospital;
+
+          (ii) The prevention of complications and deaths
+occurring in the hospital;
+
+          (iii) The review of medical treatments and diagnostic
+and surgical procedures in order to ensure safe and adequate
+treatment of patients in the hospital; and
+
+          (iv) The evaluation of medical and health care
+services and the qualifications and professional competence of
+persons performing or seeking to perform those services.
+
+     (d) The review required in subsection (c) of this section
+shall be performed according to the decision of a hospital's
+governing board by:
+
+          (i) A peer review committee appointed by the
+organized medical staff of the hospital;
+
+         (ii)    A state, local or specialty medical society; or
+
+          (iii) Any other organization of physicians
+established pursuant to state or federal law and engaged by the
+hospital for the purposes of subsection (c) of this section.
+
+     35-2-911.   Nonbinding functional assessments.
+
+The department may, with the consent of the person seeking
+admission into a nursing care facility or his representative,
+conduct a nonbinding functional assessment for that person at
+the state's expense.
+
+     35-2-912.   Repealed by the terms of Laws 2005, Ch. 243, §
+1.
+
+     35-2-913.   Exceptions.
+
+     (a) No freestanding emergency center shall require
+separate licensure under this act when operated by the provider
+based emergency department of a Wyoming licensed hospital.
+
+     (b) On and before June 30, 2025, freestanding emergency
+centers operated by a hospital district or rural health care
+district shall not require licensure under this act provided a
+hospital transfer agreement is in place.
+
+     (c) Any freestanding emergency center shall accept
+patients regardless of age, Medicare, Medicaid or other
+insurance status or ability to pay. A freestanding emergency
+center not owned by a Wyoming hospital shall have an appropriate
+hospital transfer agreement in place.
+
+     (d) A license to operate a freestanding emergency center
+shall not be construed as a license to operate a hospital and
+shall not allow any freestanding emergency center to hold a
+patient within its facility for more than twenty-four (24) hours
+unless an emergency arises that prevents the safe transport of
+the patient.
+
+    35-2-914.    Visitation rights.
+
+     (a) A health care facility, as defined by W.S. 35-2-
+901(a)(x), that provides twenty-four (24) hour per day care
+shall allow visitation for a person receiving care in that
+facility. The visitation required under this section shall not
+apply to persons involuntarily detained under W.S. 25-10-109 or
+25-10-110 or adults who have been charged with or convicted of a
+crime and are in the custody of the state or a local
+jurisdiction.
+
+     (b) A health care facility subject to subsection (a) of
+this section may impose and enforce restrictions on visitation
+that limit the number or age of visitors, limit the location or
+time of visitation, require protective equipment or impose
+requirements otherwise required under W.S. 35-1-240 or by the
+centers for Medicaid and Medicare services, the centers for
+disease control or the joint commission on the accreditation of
+healthcare organizations. Visitation may be further restricted
+or limited under this section when the health care facility
+determines a restriction or limitation is necessary due to a
+court order, violent or disruptive behavior or reasonable
+suspicion of abuse or neglect against a person receiving care in
+the facility. A health care facility shall provide a written
+copy of its visitation policy upon request and shall visibly
+post in the facility one (1) copy of the most current visitation
+restrictions imposed in accordance with this subsection. The
+health care facility shall allow the person receiving care or
+that person's representative to designate persons as visitors or
+to prohibit some or all visitation under this section.
+
+SOURCE 4: Chapter 22, Determination of Nursing Facility Level of Care — Wyoming Department of Health, Medicaid (Wyoming Administrative Rules) (PDF) | https://health.wyo.gov/wp-content/uploads/2021/10/Chapter-22-active-100521.pdf | source date: Effective Date: 10/05/2021 to Current, as the cover sheet states | retrieved: 2026-09-04
+Wyoming Administrative Rules
+
+
+Health, Department of
+Medicaid
+
+Chapter 22: Determination of Nursing Facility Level of Care
+
+
+   Effective Date:     10/05/2021 to Current
+
+   Rule Type:          Current Rules & Regulations
+
+   Reference Number: 048.0037.22.10052021
+
+
+
+
+Generated 10/08/2021
+
+                                         CHAPTER 22
+                       Determination of Nursing Facility Level of Care
+       Section 1.   Authority. This Chapter is promulgated by the Department of Health
+pursuant to the Wyoming Medical Assistance and Services Act at Wyoming Statutes §§ 42-4-
+104(a)(iv).
+       Section 2.     Purpose and Applicability.
+         (a)     The methods and standards established in this Chapter shall be used to determine
+whether an individual requires, or continues to require the level of care provided, in a nursing
+facility or in consideration of eligibility for applicable home and community-based waiver
+programs.
+       (b)     The Department may issue manuals and bulletins to interpret the provisions of
+this Chapter. Such manuals and bulletins shall be consistent with and reflect the policies
+contained in this Chapter. The provisions contained in manuals or bulletins shall clarify
+information provided in this rule but shall not override or supersede it.
+        Section 3.    Definitions. Except as otherwise specified in Chapter 1 or as defined
+herein, the terminology used in this Chapter is the standard terminology and has the standard
+meaning used in health care, Medicaid, and Medicare.
+       (a)     “Nursing Facility Level of Care Determination.” A determination as to whether an
+individual requires or continues to require the level of care provided in a nursing facility.
+        (b)     “Level of Care Assessment.” An assessment of an individual’s current functional
+status used by the Department in making nursing facility level of care determinations.
+        (c)    “Level of Care Assessor.” A registered nurse licensed to practice in the State of
+Wyoming and qualified by the Department or its agent as having successfully completed all
+requisite education and training to conduct a level of care assessment.
+       Section 4.     General Provisions.
+        (a)     A determination indicating a need for nursing facility level of care shall not
+constitute a determination of eligibility or a guarantee of reimbursement for Wyoming Medicaid
+services. Individuals shall meet any additional eligibility criteria for the applicable Wyoming
+Medicaid services and programs.
+        (b)     The level of care assessment conducted pursuant to this Chapter is not intended to
+serve as an instrument for the identification, diagnosis, or treatment of any disease or medical
+condition.
+       (c)    The Department is the sole entity authorized to make nursing facility level of care
+determinations for the purposes established by this Chapter.
+       (d)    The Department shall establish the procedures, instruments, methods, and criteria
+by which a level of care assessment is conducted.
+                                               22-1
+
+               (i)     The Department shall make nursing facility level of care determinations
+based solely on the results of a level of care assessment conducted by a qualified level of care
+assessor.
+              (ii)     The Department shall make nursing facility level of care determinations
+and provide notification in accordance with its established timelines and procedures.
+       Section 5.      Requests for Determination of Nursing Facility Level of Care.
+       (a)    Any individual may request a nursing facility level of care determination on his or
+her own behalf.
+       (b)    A guardian or legal representative may request a nursing facility level of care
+determination on behalf of an individual for whom legal decision-making authority has been
+conferred.
+       (c)     Employees of a nursing facility, hospital, or any other such healthcare or social
+services provider may request a nursing facility level of care determination on behalf of any
+individual for whom that organization has the responsibility for the provision or coordination of
+healthcare services.
+        (d)   The Department shall approve only those requests for a nursing facility level of
+care determination which meet all of the following criteria:
+              (i)     The request is complete and is submitted in accordance with the
+Department’s established procedures;
+             (ii)      The individual to be assessed is a resident of, or intends to reside in, the
+State of Wyoming;
+               (iii)   The individual to be assessed demonstrates a reasonable indication of need
+for long-term care services as determined by any initial screening criteria established by the
+Department;
+                 (iv)   The individual to be assessed is currently receiving, or has expressed
+interest in, a long-term care service or program which requires a nursing facility level of care
+determination; and
+               (v)    The individual to be assessed is a current Wyoming Medicaid recipient,
+has submitted an application for Wyoming Medicaid, or has been identified by a Preadmission
+Screening and Resident Review (PASRR) Level I Screening to require a PASRR Level II
+screening pursuant to Chapter 19.
+       Section 6.      Requests for Reconsideration and Administrative Hearings.
+         (a)     The individual for whom the determination was made, or his or her guardian or
+legal representative, if applicable, may request reconsideration of the Department’s nursing
+facility level of care determination.
+
+
+                                                22-2
+
+                (i)     Reconsideration requests are an opportunity for alternative dispute
+resolution, are not a prerequisite to request an administrative hearing, and shall not impede the
+individual’s right to request an administrative hearing in accordance with Chapter 4.
+       (b)    The Department shall approve only those reconsideration requests which are
+submitted in writing within twenty (20) business days of the notice of adverse action and in
+accordance with the Department’s established procedures.
+        (c)     For approved reconsideration requests, the Department or its agent shall review
+the level of care assessment results to determine whether its procedures, instruments, methods,
+and criteria were applied appropriately, and the Department shall:
+                (i)     Require a second level of care assessment be conducted by a different
+level of care assessor; or
+               (ii)    Affirm the Department’s nursing facility level of care determination and
+provide the individual a notice of adverse action and the right to request an administrative
+hearing in accordance with Chapter 4.
+       (d)     When a second level of care assessment is required, the Department shall make a
+reconsideration determination based solely upon the results of the second level of care
+assessment.
+        (e)    In accordance with Chapter 4, the Department shall provide notice of adverse
+action and the right to request an administrative hearing to any individual whose Medicaid
+service coverage or eligibility is denied, reduced, terminated, or suspended as a result of its
+reconsideration determination.
+
+
+
+
+                                               22-3
+
+SOURCE 5: Chapter 4, Medicaid Administrative Hearings — Wyoming Department of Health, Medicaid (Wyoming Administrative Rules, reference 048.0037.4.03242020) (PDF) | https://health.wyo.gov/wp-content/uploads/2024/04/WYDOH-Medicaid-Chapter-4.pdf | source date: Effective Date: 03/24/2020 to Current, as the cover sheet states | retrieved: 2026-09-04
+Wyoming Administrative Rules
+
+
+Health, Department of
+Medicaid
+
+Chapter 4: Medicaid Administrative Hearings
+
+
+   Effective Date:     03/24/2020 to Current
+
+   Rule Type:          Current Rules & Regulations
+
+   Reference Number: 048.0037.4.03242020
+
+
+
+
+Generated 04/29/2024
+
+                                        CHAPTER 4
+                              Medicaid Administrative Hearings
+
+       Section 1. Authority. This Chapter is promulgated by the Department of
+Health pursuant to the Medical Assistance and Services Act at Wyoming Statute § 42-4-101, et
+seq.
+
+       Section 2.      Purpose and Applicability.
+
+       (a)    This Chapter shall apply to all contested cases involving Medicaid in
+accordance with Medicaid rules, except as otherwise specified in the Department's Medicaid
+rules.
+
+       (b)    The Department may issue manuals and bulletins to interpret this Chapter.
+The provisions contained in manuals or bulletins shall be subordinate to this Chapter.
+
+       Section 3.     Definitions. Except as otherwise specified in Chapter 1 of the
+Wyoming Department of Health’s Medicaid Rules, the terminology used in this Chapter is the
+standard terminology and has the standard meaning used in health care, Medicaid, and
+Medicare.
+
+       Section 4.      Right to Hearing.
+
+       (a)    An applicant has a right to a hearing if their application is denied or not
+acted upon within the time frames specified by the Department.
+
+       (b)     A client has a right to a hearing if eligibility or services are denied, reduced,
+terminated or suspended.
+
+        (c)     A provider has a right to a hearing regarding an adverse action following the
+request for reconsideration as specified in Chapter 16 of the Wyoming Department of Health’s
+Medicaid Rules.
+
+       (d)     Pharmaceutical manufacturers shall have the same rights to a hearing as
+providers.
+
+       Section 5.      Notice of Right to Hearing and Adverse Action.
+
+       (a)      Applicants and clients. The Department shall provide notice at the time of any
+adverse action. The notice shall include:
+
+               (i)     An explanation of:
+
+                       (A)    The individual's right to request a hearing; or
+
+                       (B)    An explanation of circumstances where a hearing will be granted
+
+
+
+                                               4-1
+
+based on a change in the law.
+
+               (ii)    The method for requesting a hearing;
+
+                (iii)  The individual’s right to be represented by a legally authorized
+representative, including a lawyer admitted to practice in Wyoming, a relative, friend or other
+spokesperson;
+
+                (iv)   Notice that the individual shall notify the Department in writing that
+they will be represented;
+
+               (v)     The intended action;
+
+               (vi)    The effective date of the intended action;
+
+               (vii)   The reason(s) for the intended action;
+
+                (viii) The specific regulations that support, or the change in federal or state
+law that requires the action;
+
+             (ix)   Where applicable, an explanation of the circumstances under which
+benefits may be continued if a hearing is requested pursuant to 42 C.F.R. § 431.231.
+
+       (b)      Providers. The Department shall notify a provider of the right to a hearing
+following the request for reconsideration, at the time of the notice of adverse action, except
+when issuing a notice of claims payment or denial. The notice shall include:
+
+               (i)     A statement of the intended action;
+
+               (ii)    The effective date of the intended action;
+
+               (iii)   The reason(s) for the intended action;
+
+                (iv)    The specific regulations that support, or the change in federal or state
+law that requires the action;
+
+               (v)     The right to representation by a lawyer admitted to practice in
+Wyoming.
+
+        Section 6.     Time of Notice.
+
+        (a)    Applicants. The Department shall mail the notice after a final determination is
+made.
+
+       (b)     Clients. The Department shall mail notice of adverse action at least ten (10)
+business days before the effective date, except:
+
+
+
+                                               4-2
+
+                 (i)    The Department may mail notice, not less than five (5) business days
+before the effective date if, the circumstance indicate probable fraud by a client, and if possible,
+there are facts that have been verified through secondary sources.
+
+               (ii)      The Department may mail notice not later than the effective date if:
+
+                         (A)    The Department has been notified that a client is deceased;
+
+                         (B)    The Department receives a clear written statement signed by a
+client that:
+
+                                (I)    The client no longer wishes to receive services; or
+
+                               (II)  Provides information which requires termination or
+reduction of services. The statement must also include that the client understands that by
+providing the Department with the information, immediate termination or reduction of the
+client’s services will result;
+
+                        (C)     The client has been admitted to an institution where the client is
+ineligible under the plan for further services.
+
+                        (D)    The client’s whereabouts are unknown and the Department’s
+mail is returned, indicating there is no forwarding address;
+
+                       (E)    The Department establishes that the client has been
+accepted for benefits by another local jurisdiction, state, territory or commonwealth;
+
+                         (F)    A change in the level of medical care is prescribed by the
+client’s physician; or
+
+                     (G)     The notice involves an adverse determination based on
+preadmission screening requirements for individuals with mental illness or intellectual
+disability.
+
+        (c)    Providers.
+
+              (i)    The Department shall notify a provider of the denial or reduction of
+payments after the denial or reduction.
+
+               (ii)    The Department shall notify a provider of a termination, suspension or
+other adverse action in accordance with Chapter 16 of the Wyoming Department of Health’s
+Medicaid Rules.
+
+        Section 7.       Request for Hearing.
+
+        (a)    A client’s request for a hearing shall be submitted electronically via email to the
+
+
+                                                4-3
+
+Department, made verbally to the Department, mailed to the Department via certified mail,
+return receipt requested, or personally delivered to the Department within twenty (20) business
+days after the mailing of the notice of adverse action.
+
+       (b)     A provider’s request for a hearing shall be mailed via certified mail, return
+receipt requested, or personally delivered to the Department within twenty (20) business
+days after the mailing of the notice of adverse action.
+
+               (i)     A provider's request for hearing shall state with specificity the reasons
+for the request. Failure to provide a statement of reasons shall result in the dismissal of
+the request with prejudice.
+
+       Section 8.      Procedure after Request for Hearing.
+
+       (a)     The Department shall evaluate the request and, within ten (10) business days
+following the receipt of the request notify the requesting party in writing whether the request
+has been accepted or rejected.
+
+       (b)     Denial of hearing.
+
+               (i)    The Department may deny a request for hearing if the action complained
+of is not an adverse action as defined, or the request does not meet the requirements of this
+Chapter.
+
+               (ii)    A denial of a request for hearing is a final decision of the Department.
+
+       Section 9.      Maintaining Services Pending Appeal.
+
+        (a)     If the Department mails the required notice and the client requests a hearing
+before the effective date of the action, the Department may not terminate or reduce services
+until the final decision is rendered after the hearing unless:
+
+                (i)    The Hearing Officer determines at the hearing that the sole issue is one
+of federal or state law or policy; and
+
+               (ii)    The Department promptly informs the client in writing that services
+are to be terminated or reduced pending the final decision.
+
+       (b)     If the adverse action is affirmed, the Department may institute recovery
+procedures against the client to recoup the cost of any services or goods furnished to the client,
+to the extent they were furnished solely by reason of this section, and may recover any
+overpayments made to a provider pursuant to 42 C.F.R. § 431.230(b).
+
+        (c)    The Department shall reinstate and continue services until a decision is
+rendered if the action resulted from other than the application of federal or state law or
+policy pursuant to 42 C.F.R. § 431.231(c)(3).
+
+
+
+                                               4-4
+
+       Section 10. Hearing Procedures. In addition to the specific Sections to follow, all
+contested case hearings shall be conducted in accordance with the Office of Administrative
+Hearings Rules, specifically Chapter 2 of the Uniform Rules for Contested Case Practice and
+Procedure.
+
+        Section 11. Timing of Hearing. A hearing shall be held within forty (40) days of the
+request for hearing unless otherwise provided by law, by agreement of the parties, or if a
+contestant requests a continuance.
+
+       Section 12.     Representation.
+
+       (a)      Any applicant, client, or provider has the right to represent themselves, to
+be represented by a lawyer admitted to practice in Wyoming, or, by an authorized
+representative, if the contestant is an applicant or client.
+
+                (i)    The contestant shall notify the Department in writing if the contestant
+intends to be represented for the hearing.
+
+                (ii)   A non-lawyer authorized to represent an applicant or client may
+advocate for the applicant or client in a representative capacity, draft pleadings or other
+documents. However, this section does not authorize a person, who is not a lawyer admitted
+to practice in Wyoming, to provide legal advice or services, or represent any person before the
+courts of the State of Wyoming.
+
+       (b)     A provider which is a corporation, professional corporation, limited liability
+company, partnership, governmental entity, or any other legal entity, may appear and be
+represented by a lawyer admitted to practice in Wyoming.
+
+        (c)    If the contestant is represented by an attorney, payment of attorney's fees and
+costs associated with the representation are the responsibility of the contestant.
+
+       Section 13.     Decisions.
+
+        (a)     The hearing officer shall make proposed findings of fact and conclusions of
+law within twenty (20) business days of the close of the hearing and forward them to the
+Director for t h e final decision. This time may be extended if the parties or other interested
+persons are to submit briefs; but may not be extended by more than ten (10) working days,
+unless the parties stipulate, in writing or on the record at the hearing, to a later date.
+
+               (i)     Within ten (10) business days of the close of the hearing, or such
+additional time as the hearing officer may allow, each party shall be allowed to file with the
+hearing officer any proposed findings of fact and conclusions of law, together with a
+supporting brief. Such proposals and briefs shall be served on all other parties.
+
+               (ii)    Within ten (10) business days after the issuance of the hearing
+
+
+                                                4-5
+
+officers proposed findings of fact and conclusions of law, any of the parties may submit
+exceptions. Such exceptions shall be filed with the Director and served on all other
+parties.
+
+       (b)     Within ten (10) business days after the period for submitting exceptions, the
+Director shall make and enter into the record the final decision. The final decision shall be
+served on all parties to the proceedings.
+
+       Section 14. Appeals. Appeals from a final decision of the Department shall be in
+accordance with W.S. § 16-3-114 through 16-3-115, and Rule 12 of the Wyoming Rules of
+Appellate Procedure.
+
+       Section 15.     Transcripts and Record.
+
+        (a)    When a contested case is set for hearing, the Department shall assign a
+docket number to the case and enter the case with its number and date of filing on a
+docket. The Department shall maintain a separate file for each docketed case in which all
+pleadings, transcriptions, correspondence, papers, and exhibits for that case shall be
+maintained. All items shall have noted thereon the assigned docket number and the date of
+filing.
+
+        (b)     All contested case hearing proceedings shall be recorded, electronically,
+through the use of a qualified court reporter, or any other appropriate means determined
+by the agency or the hearing officer. Transcriptions of oral proceedings or written
+transcripts of a witness's testimony may be obtained by contestant from the Department upon
+payment of the cost.
+
+               (i)     In a nonpublic investigatory proceeding, requests for copies or
+transcripts may be limited to testimony of the requesting party.
+
+               (ii)   Where a contestant can demonstrate indigence and cannot effectively
+perfect his or her appeal without a transcript, the Department may waive the payment of the
+fee.
+
+       (c)     A stipulation resolving the matter shall not be part of the record unless otherwise
+agree by the parties.
+
+       Section 16.     Incorporation by Reference.
+
+       (a)     For any code, standard, rule, or regulation incorporated by reference in these rules:
+
+                 (i)    The Department of Health has determined that incorporation of the full
+text in these rules would be cumbersome or inefficient given the length or nature of the rules.
+
+                 (ii)   The incorporation by reference does not include any later amendments or
+editions of the incorporated matter beyond the applicable date identified in this section; and
+
+
+
+                                               4-6
+
+              (iii)  The incorporated code, standard, rule, or regulation is maintained at the
+Department of Health and is available for public inspection and copying at cost at the same
+location.
+
+               (iv)   The Department incorporates the administrative practice and procedure
+rules found in Chapter 2 of the Uniform Rules for Contested Case Practice and Procedure
+adopted by the Office of Administrative Hearings and effective July 20, 2017 found at:
+http//soswy.state.wy.us/Rules/RULES/9644.pdfhttps://rules.wyo.gov, Reference Number
+270.0001.2.07202017.
+
+
+
+
+                                               4-7
+
+SOURCE 6: Institutional Provider Manual, chapter 18, Skilled Nursing Facility and Swing Bed Services (sections 18.4.4 through 18.5.1) — Wyoming Medicaid, Wyoming Department of Health, Division of Healthcare Financing, published through its fiscal agent (PDF) | https://wyomingmedicaid.com/portal/References/latestproviderfiles/BMS_Acentra%20Health_Institutional%20Provider%20Manual_N_2026.07.01_v19.0.pdf | source date: version 19.0, effective 2026.07.01, as the file's own name and running foot state | retrieved: 2026-09-04
+18.4.4 Pre-Admission Screening and Resident Review
+The Pre-Admission Screening and Resident Review (PASRR) process encompasses PASRR Level 1 and
+Level II.
+Federal law requires all individuals, regardless of payment source, who apply for admissions to a
+Medicaid Nursing Home Facility on or after January 1, 1989, must be screened prior to admission for
+mental illness (MI) and intellectual disabilities (ID).
+PASRR Level I: The purpose of the Level I is to screen for potential diagnosis of mental illness or
+intellectual disabilities. Such a determination will result in a referral for a Level II.
+Routine annual Level I screenings are no longer required by Medicaid. If the Level I does not result in a
+referral to Level II, it need never be performed again unless a significant change in the resident’s
+condition indicates that a Level II evaluation is needed or if there is a transfer to another facility.
+Mental status changes that result in a new diagnosis or that trigger a significant change to the total
+score on the Brief Interview for Mental Status (BIMS) or the Patient Health Questionnaire (PHQ9) on the
+Minimum Data Set (MDS) would result in a significant change of condition.
+Please refer to http://pasrrassist.org/resources/mds-30/what-considered-significant-change-condition
+for more information on significant changes of condition.
+PASRR Level II: The purpose of the Level II is to more accurately identify mental illness or intellectually
+disabled and assess whether the individual needs specialized services and nursing facility level of care.
+
+                   Dementia, including Alzheimer’s disease and other dementias, is
+                   excluded from the definition of serious mental illness for PASRR
+                   purposes unless there is a behavioral component. An individual is
+                   considered to have dementia if he or she has a primary diagnosis of
+                   dementia as described in the DSM (current edition), or a non-primary
+                   diagnosis of dementia unless the primary diagnosis is a major mental
+                   disorder as defined above. A primary diagnosis of a serious mental
+                   illness supersedes a secondary diagnosis of dementia and the
+                   individual must be referred for a Level II evaluation.
+
+    •   Individuals for whom respite care is provided (under HCBS Waiver) in a nursing facility must be
+        treated like any other nursing facility admission, therefore, all PASRR and LT101 requirements
+        apply prior to admission.
+
+    •   Any individual whose PASRR Level I screening indicates the presence or probability of mental
+        illness or intellectual disabilities must be referred to the State. This authority has been
+        delegated by contract to Telligen (see Section 2.1 Quick Reference).
+
+
+
+BMS_Acentra Health_Institutional Provider Manual_N_2026.07.01_v19.0                     Chapter 18– Page 290
+
+    •   A PASRR Level II determination must be completed prior to admission to be appropriate for
+        nursing facility payment.
+    •   If the individual is appropriate for nursing facility placement, the need for specialized services
+        will be determined.
+        o   If an individual seeking admission to a nursing facility has Mental Illness or Intellectual
+            Disabilities and is found to be inappropriate for nursing facility placement, the nursing
+            facility may not admit the individual.
+        o   If an individual already residing in a nursing facility has Mental Illness or Intellectual
+            Disabilities and is found to be inappropriate for nursing facility placement, the Provider must
+            cooperatively arrange with the state for the resident’s orderly discharge from the facility.
+        o   Adverse determinations carry the right of appeal for the resident.
+
+                  PASRR is not a requirement for CHOW (Change of Ownership)
+                  completion. However, the skilled nursing facility will want to ensure
+                  that the admitted residents that need a PASRR evaluation have one on
+                  file and all residents are evaluated as appropriate.
+
+
+18.4.4.1 Transfer
+A PASRR Level I and PASRR Level II is required upon transfer from one facility to another facility.
+    •   In the case of a transfer of a resident with Intellectual Disabilities or Mental Illness from the
+        nursing facility to a hospital or to another nursing facility the transferring nursing facility is
+        responsible for ensuring the completion and copies of the most recent PASRR Level I, Level II (if
+        applicable) and Resident Review reports accompany the transferring resident.
+
+18.4.4.2 Categorical Determinations that do Not Require a Level II Prior to
+        Admission
+Pursuant to Federal guidelines, the Division of Healthcare Financing has defined certain categories of
+conditions that automatically constitute appropriateness for nursing facility placement. The State may
+override the categorical determination and refer the individual for a Level II where appropriate.
+
+    •   Categorical 4: Appropriate for nursing facility placement due to terminal illness – Verified in
+        writing by a physician. This constitutes a Level II determination of “appropriate specialized
+        services not required”.
+
+    •   Categorical 5: Appropriate for nursing facility placement due to severe medical conditions – This
+        determination may only be applied to an individual with Mental Illness or Intellectual Disabilities
+        who is comatose, ventilator dependent, functions at the brain stem level, OR has a diagnosis
+        such as COPD, severe Parkinson’s disease, amyotrophic lateral sclerosis, congestive heart failure
+        (CHF), cardiovascular accident (CVA), Huntington’s Disease, quadriplegia, advanced multiple
+        sclerosis, muscular dystrophy, end stage renal disease (ESRD), severe diabetic neuropathy or
+
+
+BMS_Acentra Health_Institutional Provider Manual_N_2026.07.01_v19.0                     Chapter 18– Page 291
+
+        refractory anemia. The condition must result in a level of impairment so severe that the
+        individual could not be expected to benefit from specialized services. This constitutes a Level II
+        determination of “appropriate, specialized services not required”.
+    •   Categorical 6: Convalescent care for an acute physical illness – This determination applies only
+        to an individual with Mental Illness or Intellectual Disabilities who has an acute physical illness
+        which required hospitalization; AND does not meet all the criteria for an exempt hospital
+        discharge. This categorical determination is limited to 120 days. When it becomes apparent the
+        individual will require nursing facility placement longer than 120 days, the nursing facility must
+        complete a new PASRR Level I and the Level II prior to the end of the 120 days. A Level II
+        determination must be rendered before permanent nursing facility placement can be made.
+
+    •   Categorical 7: Provisional placements – Pending further assessment in cases of delirium, where
+        an accurate diagnosis cannot be made until the delirium clears, or for respite of caregivers. This
+        categorical determination is limited to 14 days. If it becomes apparent the individual will require
+        nursing facility placement longer than 14 days, a new PASRR Level I and Level II must be
+        completed prior to the end of the 14 days. A Level II determination must be rendered before
+        permanent nursing facility placement can be made.
+    •   Categorical 8: Emergency placement – For an individual with Mental Illness or Intellectual
+        Disabilities for the individual’s protection. This categorical determination is limited to seven (7)
+        days, at which time the nursing facility must complete a new PASRR Level I and Level II prior to
+        the end of the 7 days. The determination must be rendered before permanent nursing facility
+        placement can be made.
+
+18.5 Medicaid Reimbursement
+Medicaid will not reimburse a nursing facility for services provided to any individual who has not been
+screened for the PASRR Level I, and if needed a PASRR Level II.
+
+    •   Payment will commence as of the Level I date or admission date, whichever is later.
+
+    •   No retroactive payment will be made.
+
+                  Refer to the Provider Training and Tutorials posted on the Medicaid
+                  website for instructions on how to enter the PASRR Level I on the
+                  Provider Portal.
+
+Medicaid will not reimburse a nursing facility for services provided to any individual with MI or ID who is
+admitted prior to completion of a PASRR Level II.
+
+    •   Payment will commence upon the date of determination of appropriate placement.
+
+    •   No retroactive payment will be made.
+
+    •   The nursing facility may be subject to withdrawal of Medicaid certification if such a person is
+        admitted to the facility before a Level II determination is rendered.
+
+
+BMS_Acentra Health_Institutional Provider Manual_N_2026.07.01_v19.0                      Chapter 18– Page 292
+
+Medicaid will not reimburse a nursing facility for services provided to any individual who has previously
+been found to be inappropriate for nursing facility placement due to the need for specialized services.
+
+      •   Any individual who has received such a determination must be re-evaluated and determined to
+          be appropriate before any placement will be allowed.
+      •   Date of admission is covered
+
+      •   Medicaid does not pay for date of death (Do not deduct one [1] day from R & B units and value
+          code 80 count)
+
+      •   Medicaid does not pay for date of discharge (Do not deduct one [1] day from R & B units and
+          value code 80 count)
+      •   Reserve bed days and leave days are not covered by Medicaid - use value code 81 to report days
+
+18.5.1 Reserve Bed Days
+Reserve bed days during a resident's temporary absence are not covered unless the resident is absent
+from the facility for less than 24 hours. In these instances, the absence is to be billed to Medicaid as a
+normal covered day.
+For days the resident is absent from the facility for 24 hours or more, bill these as non-covered days,
+using value code 81. Value codes and accommodation units must total the number of days within the
+coverage period.
+A Provider may bill a Member or the Member's responsible party for reserved bed days if the facility has
+informed them in writing of their financial responsibility before services are rendered.
+
+SOURCE 7: Wyoming Long-Term Care Ombudsman Program — Wyoming Department of Health | https://health.wyo.gov/admin/long-term-care-ombudsman-program/ | source date: none stated on page | retrieved: 2026-09-04
+Skip to Main Content
+
+ #et-info
+
+ .container
+
+ #top-header
+
+Divisions
+
+Administration And Support
+
+About WDH
+
+Opioid Settlement Funds
+
+Human Resources
+
+Background Screening
+
+Office of Privacy, Security and Contracts
+
+Fiscal Services
+
+Policy, Research And Evaluation
+
+Institutional Review Board
+
+Wyoming’s Volunteer Health Services Program
+
+Wyoming Long-Term Care Ombudsman Program
+
+Vital Records Services
+
+Wyoming’s Rural Health Transformation Program
+
+Aging
+
+Community Living
+
+Healthcare Licensing and Surveys
+
+Wyoming Pioneer Home
+
+Wyoming Retirement Center
+
+Wyoming Senior Services Board
+
+Veterans’ Home Of Wyoming
+
+Behavioral Health
+
+Mental Health and Substance Use Treatment Services
+
+Early Intervention and Education Program
+
+Wyoming State Hospital
+
+Wyoming Life Resource Center
+
+Healthcare Financing
+
+Apply for Medicaid or Kid Care CHIP
+
+Wyoming Medicaid
+
+Home and Community-Based Services
+
+Kid Care CHIP
+
+Medication Donation Program
+
+Program Integrity: Report Fraud, Waste and Abuse
+
+WINGS Project
+
+Wyoming Health Information (WYFI)
+
+Wyoming Adult Hearing Aid Program
+
+Public Health
+
+Infectious Disease Epidemiology
+
+Communicable Diseases
+
+Public Health Laboratory
+
+Chronic Disease And Maternal Child Health Epidemiology
+
+Emergency Medical Services
+
+Public Health Preparedness and Response
+
+Rural And Frontier Health
+
+Cancer and Chronic Disease Prevention Unit
+
+Community Prevention Unit
+
+Immunization Unit
+
+Maternal and Child Health
+
+Public Health Nursing
+
+Women, Infants and Children
+
+Operations
+
+News
+
+Contact Us
+
+Search for:
+
+Select Page
+
+ #et-top-navigation
+
+ .container
+
+Search
+
+ #main-header
+
+ fullwidth header: background from .division-header in CSS (not header_color inline)
+
+ division logo
+
+ division header
+ division description text
+
+Wyoming Long-Term Care Ombudsman Program
+
+The Wyoming Long-Term Care Ombudsman Program acts on behalf of recipients of long-term care services in Wyoming to advocate for adequacy of care received, quality of life, and preserve recipients' independence, dignity, rights, autonomy, and freedom of choice.
+
+ division contact info: dl/dt/dd = term + details (not a document heading)
+
+Contact Info:
+
+Patricia Hall
+
+State Long-Term Care Ombudsman
+
+2300 Capitol Avenue
+
+Hathaway Building 4th Floor
+
+Cheyenne, WY  82002
+
+Phone 307-287-7757
+
+Email Us
+
+ breadcrumb
+
+Home » Administration And Support » Wyoming Long-Term Care Ombudsman Program
+
+ page title
+ main
+
+Skip to Page Content
+ sidebar
+
+Wyoming Long-Term Care Ombudsman Programa
+
+Long-Term Care Documents and Resources
+
+Ombudsman Questions and Answers
+
+ page
+
+Wyoming Long-Term Care Ombudsman Program
+
+Ombudsman – A Swedish word, meaning legal representative, an ombudsman is a person who investigates and attempts to resolve complaints and problems.
+
+The Wyoming Department of Health employs a state long-term care ombudsman and contracts with a private, nonprofit organization to employ three regional long-term care ombudsman representatives.  Wyoming Senior Citizens, Inc. (WSCI) currently provides long-term care ombudsman service across the state.  More information about WSCI can be found at www.wyomingseniors.com.
+
+Big Horn, Washakie, Park, Hot Springs, Teton, Fremont, Sublette, Lincoln, Uinta
+
+Ember Lucas, Regional Ombudsman
+
+106 E. Adams Ave
+
+Riverton, WY  82501
+
+Phone 307-856-6880 or toll free 1-800-856-4398
+
+Email ember.lucas@wyo.gov
+
+Sheridan, Johnson, Natrona, Campbell, Converse
+
+       Corycia “Rissa” Kassim, Regional Ombudsman
+
+       951 Werner Court, Suite 295
+
+       Casper, WY  82061
+
+       Phone: 307-235-5959 or toll free 1-877-634-1006
+
+       Email corycia.stanley@wyo.gov
+
+Crook, Weston, Niobrara, Goshen, Platte, Laramie, Albany, Carbon, Sweetwater
+
+      Nicholas Wiseman, Regional Ombudsman
+
+      3120 Old Faithful Road, Suite 200
+
+      Cheyenne, WY  82001
+
+      Phone 307-634-1010 or toll free 1-877-634-1005
+
+      Email: nicholas.wiseman@wyo.gov
+
+Contact Us
+
+(307) 777-7656
+
+(866) 571-0944
+
+Privacy Policy
+
+Notice of Privacy Practices
+
+Non-Discrimination Notice
+
+Map Disclaimer
+
+Firearm Notice
+
+Wyoming.gov
+
+Citizen
+
+Business
+
+Government
+
+Visitor
+
+ .container
+
+© 2026, Wyoming Department of Health. All rights reserved.
+
+ #main-footer
+ #et-main-area
+
+ #page-container
+
+ Google Tag Manager (noscript) snippet added by Site Kit
+
+ End Google Tag Manager (noscript) snippet added by Site Kit
+

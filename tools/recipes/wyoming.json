@@ -1,0 +1,86 @@
+{
+  "recipe_version": 1,
+  "state": "wyoming",
+  "sources": [
+    {
+      "n": 1,
+      "title": "Chapter 11, Program Administration of Nursing Care Facilities — Wyoming Department of Health, Aging Division (Wyoming Administrative Rules, reference 048.0003.11.07012020) (PDF)",
+      "url": "https://health.wyo.gov/wp-content/uploads/2020/07/FILED-RULES-17704-EFFECT-07-01-2020.pdf",
+      "source_date": "Effective Date: 07/01/2020 to Current, as the Secretary of State's cover sheet states",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "filters": [],
+      "notes": "The department's posted copy of the current program-administration rule for nursing care facilities, as filed with the Secretary of State. Captured whole. It is the rule a state-stated ground, notice period or resident appeal route would sit in if Wyoming's licensing law carried one; it carries none, and the page records that as a finding. What it does carry and the page quotes: residents' rights (Section 19), referral of unresolved grievances to the Long-Term Care Ombudsman (Section 21), and a hearing route that exists for facilities only (Section 22)."
+    },
+    {
+      "n": 2,
+      "title": "Chapter 19, Licensure of Nursing Care Facilities — Wyoming Department of Health, Healthcare Licensing and Surveys (PDF)",
+      "url": "https://health.wyo.gov/wp-content/uploads/2016/11/HLS-Rule-Ch-19-Nursing-Care-Facilities.pdf",
+      "source_date": "none stated in the document beyond its adoption; the department's rules page lists it as effective 06-26-2000",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "filters": [],
+      "notes": "The licensure chapter, captured whole so the absence finding names both chapters the department publishes for nursing care facilities. Its only use of the word transfer concerns the license itself."
+    },
+    {
+      "n": 3,
+      "title": "W.S. 35-2-901 through 35-2-914, Health Facilities Act (Title 35, chapter 2, article 9) — Wyoming Legislature, Wyoming Statutes (PDF, title 35)",
+      "url": "https://wyoleg.gov/statutes/compress/title35.pdf",
+      "source_date": "none stated in the extracted article; the title PDF is the Legislature's current compilation",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "slice": {"from": "35-2-901.     Definitions; applicability of provisions.\n    (a)     As used in this act:", "to": "ARTICLE 10 - DESIGNATION OF HOSPITALS"},
+      "filters": [],
+      "notes": "The whole of title 35 is a 2.9 MB PDF; the slice is article 9, the Health Facilities Act under which the department licenses nursing care facilities, from the body heading of 35-2-901 (anchored with the first words beneath it, so the table of contents cannot match) to the heading of article 10. Captured to establish that the statute, like the rules, states no grounds, notice or resident appeal for a facility-initiated transfer or discharge."
+    },
+    {
+      "n": 4,
+      "title": "Chapter 22, Determination of Nursing Facility Level of Care — Wyoming Department of Health, Medicaid (Wyoming Administrative Rules) (PDF)",
+      "url": "https://health.wyo.gov/wp-content/uploads/2021/10/Chapter-22-active-100521.pdf",
+      "source_date": "Effective Date: 10/05/2021 to Current, as the cover sheet states",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "filters": [],
+      "notes": "The Medicaid rule under which the department decides whether a resident meets nursing facility level of care. Section 6 gives the individual a notice of adverse action and an administrative hearing under Chapter 4 when that determination goes against them; it is the one Wyoming rule that ties a resident-side hearing to continued nursing facility placement, and the page quotes it for exactly that and no more."
+    },
+    {
+      "n": 5,
+      "title": "Chapter 4, Medicaid Administrative Hearings — Wyoming Department of Health, Medicaid (Wyoming Administrative Rules, reference 048.0037.4.03242020) (PDF)",
+      "url": "https://health.wyo.gov/wp-content/uploads/2024/04/WYDOH-Medicaid-Chapter-4.pdf",
+      "source_date": "Effective Date: 03/24/2020 to Current, as the cover sheet states",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "filters": [],
+      "notes": "The hearing rule Chapter 22 sends a client to: Section 7 states the ways and the twenty-business-day period in which a client requests a hearing, and Section 8 the department's handling. The rule names the Department as recipient and states no street address, email address or form; the page records that."
+    },
+    {
+      "n": 6,
+      "title": "Institutional Provider Manual, chapter 18, Skilled Nursing Facility and Swing Bed Services (sections 18.4.4 through 18.5.1) — Wyoming Medicaid, Wyoming Department of Health, Division of Healthcare Financing, published through its fiscal agent (PDF)",
+      "url": "https://wyomingmedicaid.com/portal/References/latestproviderfiles/BMS_Acentra%20Health_Institutional%20Provider%20Manual_N_2026.07.01_v19.0.pdf",
+      "source_date": "version 19.0, effective 2026.07.01, as the file's own name and running foot state",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "slice": {"from": "18.4.4 Pre-Admission Screening and Resident Review\nThe Pre-Admission Screening and Resident Review (PASRR) process", "to": "18.6 Billing Requirements\nWyoming Medicaid requires"},
+      "filters": [],
+      "notes": "A 373-page manual; the slice runs from the body heading of 18.4.4 (anchored with its first sentence so the two table-of-contents entries cannot match) to the body heading of 18.6. It holds the manual's statement that Medicaid does not cover reserve bed days (18.5.1) and its statement that an adverse resident-review determination carries a right of appeal for the resident. The address carries the manual's version in its filename, so a new version is a new address: when the review pass reports it gone, look for the current file on wyomingmedicaid.com's Provider Manuals page rather than treating the manual as withdrawn."
+    },
+    {
+      "n": 7,
+      "title": "Wyoming Long-Term Care Ombudsman Program — Wyoming Department of Health",
+      "url": "https://health.wyo.gov/admin/long-term-care-ombudsman-program/",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "The program's own page on the department's site: the State Long-Term Care Ombudsman's address and telephone, the two regional ombudsmen employed by the contractor (Wyoming Senior Citizens, Inc.) with their numbers and emails, and the statement of how the program is arranged."
+    }
+  ]
+}

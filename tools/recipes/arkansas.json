@@ -1,0 +1,54 @@
+{
+  "recipe_version": 1,
+  "state": "arkansas",
+  "sources": [
+    {
+      "n": 1,
+      "title": "20 CAR § 400-2505, Transfer or discharge — Code of Arkansas Rules, Title 20, Chapter X (Office of Long-Term Care), Subchapter A, Part 400, Rules for Nursing Homes, Subpart 25, Residents' Rights — Arkansas Secretary of State",
+      "url": "https://codeofarrules.arkansas.gov/Rules/Rule?levelType=section&titleID=20&chapterID=38&subChapterID=50&partID=1233&subPartID=7678&sectionID=50213",
+      "source_date": "the site's footer states 'Last Updated' with a date and that the Code is updated weekly; no per-section date is printed",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "The official Code of Arkansas Rules, which the site itself states became the official version on January 1, 2025. Its section pages are server-rendered and curl-able with a browser user-agent, which was not so on 2026-08-30 when this host failed TLS to curl from both the sandbox and the Mac; the failure did not recur on 2026-09-04 and is recorded as transient. The address carries the site's internal numeric identifiers (titleID 20, chapterID 38, subChapterID 50, partID 1233, subPartID 7678, sectionID 50213), taken from the site's own tree-view JSON at /Home/GetRulesTreeViewData; they are database keys, not session tokens, and the same address has answered across the session. The page prints the rule text twice, once rendered and once as escaped HTML inside a hidden field; both are in the body and the rendered copy is what the page quotes. The rule's own heading reads '6 CAR § 400-2505' where the page title and citation read '20 CAR § 400-2505'; that is the publisher's text and is recorded as a finding."
+    },
+    {
+      "n": 2,
+      "title": "20 CAR § 400-411, Admission, transfer, and discharge policies — Code of Arkansas Rules, Part 400, Rules for Nursing Homes, Subpart 4 — Arkansas Secretary of State",
+      "url": "https://codeofarrules.arkansas.gov/Rules/Rule?levelType=section&titleID=20&chapterID=38&subChapterID=50&partID=1233&subPartID=7657&sectionID=50037",
+      "source_date": "the site's footer states 'Last Updated' with a date; no per-section date is printed",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "Same publisher and same address shape as source 1. Paragraph (7)(B) states a ten-day written notification of transfer, where § 400-2505(b) states a minimum of thirty days; both are in the same current Part and the page records the discrepancy as a finding."
+    },
+    {
+      "n": 3,
+      "title": "20 CAR § 400-2507, Exercise of rights — Code of Arkansas Rules, Part 400, Rules for Nursing Homes, Subpart 25 — Arkansas Secretary of State",
+      "url": "https://codeofarrules.arkansas.gov/Rules/Rule?levelType=section&titleID=20&chapterID=38&subChapterID=50&partID=1233&subPartID=7678&sectionID=50215",
+      "source_date": "the site's footer states 'Last Updated' with a date; no per-section date is printed",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "Same publisher and same address shape as source 1. Captured as the residents'-rights section adjacent to § 400-2505, so the page's reading of Subpart 25 rests on more than one section."
+    },
+    {
+      "n": 4,
+      "title": "Arkansas Long-Term Care Ombudsman — Office of Long-Term Care Ombudsman, Arkansas Department of Human Services (program site)",
+      "url": "https://arombudsman.dhs.arkansas.gov/",
+      "source_date": "none stated on page beyond a copyright line",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "The program's own site, on a dhs.arkansas.gov subdomain, served by a hosted site builder but curl-able. Its text names the State Ombudsman, the coordinator and the regional ombudsmen by region and offers a county search, and prints no telephone number, street address or email in the served text; the contacts sit behind the search widget. The page records that as what the program publishes, not as a capture failure. humanservices.arkansas.gov, the department's main site, returns a bare nginx 403 to curl with every header set tried, over HTTP/1.1 and HTTP/2 alike; the department's File an Appeal page is carried in a supplemental packet captured by browser, marked not re-verifiable."
+    }
+  ]
+}

@@ -799,3 +799,57 @@ carries §15.2.5 (six consecutive days) but is no longer listed. It was not
 captured; the licensing rule's own bed-hold statement (rule 3.12, ten
 successive days) is what the page carries. If a full page is built, look for
 the current DVHA statement before quoting the 2019 manual with its date.
+
+## A 403 to curl can be a refusal of HTTP/2, not of curl (2026-09-04)
+
+Arizona was recorded as unreachable on 2026-08-30 because apps.azsos.gov (the
+Administrative Code PDFs) returned 403 to curl with every header set tried. The
+headers were never the problem. The host refuses every HTTP/2 request curl
+makes and serves the identical request over HTTP/1.1: `curl --http1.1` alone,
+no Referer, no Accept, no Sec-Fetch headers, returns the 10 MB chapter file.
+des.az.gov (the ombudsman program) does the same thing with a Cloudflare
+challenge page instead of a 403: HTTP/2 gets "Just a moment...", HTTP/1.1 gets
+the page. The refusal is keyed to the protocol negotiation (most likely a TLS
+fingerprint check that only runs on the h2 path), so bisect on `--http1.1`
+before concluding a host is unreachable, and before reaching for a browser.
+
+`capture.py` now takes `"http_version": "1.1"` per source, curl only, pinned to
+that one value, opt-in and digest-stable when unset (self-test added). The
+packet's capture notes print it. A capture that comes back a few KB long with
+"Just a moment..." in it is a challenge page, not the source, and is a failed
+fetch.
+
+Two more things from the same pass. **Two-column AAC PDFs read correctly in
+`pdftotext -raw`**, which follows the content stream and, for the Arizona
+chapter file, yields column order; `-layout` interleaves the columns as it does
+for Missouri and Louisiana. Check both before choosing. And the AAC file
+hyphenates at line ends (nurs-ing, physi-cian): those are the typesetter's
+hyphens, so `join-wrap-hyphens` must NOT be used on it (it would produce
+"nurs-ing"); quotations stop at the break or carry it as two spans.
+
+**Arkansas.** codeofarrules.arkansas.gov, which failed TLS to curl on
+2026-08-30, answered normally on 2026-09-04; treat that failure as transient. It
+is a server-rendered ASP.NET site whose section addresses carry database keys
+(titleID, chapterID, subChapterID, partID, subPartID, sectionID) discoverable
+from `/Home/GetRulesTreeViewData?levelType=<title|chapter|subchapter|part|
+subpart|section>&titleID=..&chapterID=..&subchapterID=..&partID=..&subpartID=..`,
+which returns JSON; the keys are stable, not session-bound. Rule pages print the
+text twice, rendered and as escaped HTML in a hidden field; both land in a body
+capture. humanservices.arkansas.gov (the department's main site) returns a bare
+nginx 403 to curl on every path, over HTTP/1.1 and HTTP/2, with or without
+headers, and the session fetch tool returns only its menus; its pages are
+readable only in a browser, and Arkansas carries one such page in a supplemental
+packet marked not re-verifiable. arombudsman.dhs.arkansas.gov is curl-able but
+prints no contact in its text — the numbers sit behind a county-search widget —
+and that is recorded on the page as what the program publishes.
+
+**Wyoming.** Its Medicaid rules on health.wyo.gov are listed on the HCBS
+"Services & Regulations" page, not on a Medicaid rules page (those addresses
+404); rules.wyo.gov, the Secretary of State's portal, serves its search only
+through ASP.NET postbacks. wyoleg.gov serves the statutes as one PDF per title
+(title35.pdf is 2.9 MB); slice on the body heading of the first section with its
+first words beneath it, as the recipe does for the Health Facilities Act.
+
+**Hawaii remains unbuilt** after a second look: the Department of Health's
+11-94.2 file is still the only publisher, still a scanned image, and the
+Lieutenant Governor's rules page links back to the department.

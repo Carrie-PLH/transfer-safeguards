@@ -1,0 +1,141 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: arkansas
+SLUG: arkansas
+ASSEMBLED: 2026-09-04
+SUPPLEMENT: dhs — the Department of Human Services' File an Appeal page, which names the Office of Appeals and Hearings and prints its filing address and email.
+
+CAPTURE NOTES:
+- SOURCE 1: transport browser (the session's built-in browser, document.body.innerText, sliced from the breadcrumb "Home > Contact Us > File an Appeal" to the footer's "Learn About Programs"); extractor none; filters none. humanservices.arkansas.gov returns a bare nginx 403 to curl on every path tried, over HTTP/1.1 and HTTP/2, with and without a browser user-agent, Accept and Accept-Language headers; the session fetch tool returns the site's navigation menus twice and none of the page body. A browser rendering was the only transport that produced the page, and this capture is therefore a last-resort transport under PROVENANCE.md: NOT RE-VERIFIABLE BY THE AUTOMATED PASS, and the review pass must not read a failed curl as evidence that the page moved. The page's dropdown headings and their bodies were all present in the rendered text; nothing was expanded by hand. The page nowhere mentions nursing facilities, transfers or discharges: it is carried for the office's address and email only, and the page says so.
+- PENDING: a department page that names the Office of Appeals and Hearings as the office that hears a nursing home resident's objection to transfer or discharge under 20 CAR § 400-2505(d); the Office of Appeals and Hearings' own page (rendered on 2026-09-04, it carries no filing address and was not captured); Arkansas Code § 20-10-1005, which the rule cites, on the Legislature's code site.
+
+SOURCE 1: File an Appeal — Arkansas Department of Human Services | https://humanservices.arkansas.gov/contact-us/file-an-appeal/ | source's own date: none stated on page | retrieved: 2026-09-04
+Home > Contact Us > File an Appeal
+
+File An Appeal
+
+If you disagree with a decision DHS has made about your benefits, your status as a provider, or a true finding in a maltreatment investigation, you may appeal by requesting an administrative hearing and following the steps below for your situation. In the drop down menu you will find examples of adverse actions that you can request a hearing for and how to go about doing so.
+
+Dropdown
+DHS Decided That I Am Not Eligible For Health Care (Medicaid) Benefits.
+
+You should have gotten a letter called a Notice of Action that told you about this decision To appeal by requesting an administrative hearing, you must:
+
+Complete and return the back side of the Notice of Action OR
+Make the request by letter. You can use this form to make a request. Our county staff can help you fill out this form, if you need it.
+
+The DHS Office of Appeals and Hearings must get your request for a hearing within 30 calendar days of the date on the letter or your request will be denied. You may email your request to DHS.Appeals@dhs.arkansas.gov or
+
+You may send your request by mail to:
+
+Department of Human Services
+Office of Appeals and Hearings
+P.O. Box 1437, Slot S101
+Little Rock, Arkansas 72203-1437
+
+Medicaid Or ARKids First Will Not Pay For A Service I Got From My Health Care Provider.
+
+You should get a letter letting you know that payment for the services has been denied. If you disagree and want to appeal, you must send a letter to DHS asking for an administrative hearing. If DHS does not get your request letter on time, your request will be denied. You can use this form to make a request.
+
+You may email your request to DHS.Appeals@dhs.arkansas.gov or
+You may send your request by mail to:
+
+Department of Human Services
+Office of Appeals and Hearings
+P.O. Box 1437, Slot S101
+Little Rock, Arkansas 72203-1437
+
+DHS Decided That I Am Not Eligible For SNAP Benefits.
+
+To appeal, you must send a letter to DHS requesting an administrative hearing. You should have gotten a letter that told you about this decision. You must send your request for a hearing within 90 calendar days of the date on the letter or your request will be denied. You can use this form to make a request.
+
+You may email your request to DHS.Appeals@dhs.arkansas.gov or
+You may send your request by mail to:
+
+Department of Human Services
+Office of Appeals and Hearings
+P.O. Box 1437, Slot S101
+Little Rock, Arkansas 72203-1437
+
+DHS Decided That I Am Not Eligible For TEA Benefits.
+
+To appeal, you must send a letter to DHS requesting an administrative hearing. You should have gotten a letter that told you about this decision. You must send your request for a hearing within 30 calendar days of the date on the letter or your request will be denied. You can use this form to make a request.
+
+You may email your request to DHS.Appeals@dhs.arkansas.gov or
+You may send your request by mail to:
+
+Department of Human Services
+Office of Appeals and Hearings
+P.O. Box 1437, Slot S101
+Little Rock, Arkansas 72203-1437
+
+I Got Medicaid, TEA, Or SNAP Benefits, But Now My Case Is Being Closed.
+
+To appeal, you must send a letter to DHS requesting an administrative hearing. You should have gotten a letter that told you about this decision. You must send your request for a hearing letter within 30 calendar days of the date on the letter (90 days for SNAP) or your request will be denied. You can use this form to make a request.
+
+You may email your request to DHS.Appeals@dhs.arkansas.gov or
+You may send your request by mail to:
+
+Department of Human Services
+Office of Appeals and Hearings
+P.O. Box 1437, Slot S101
+Little Rock, Arkansas 72203-1437
+
+A Child Maltreatment Investigation Had A “True Finding” That Would Place Me On The Child Maltreatment Registry.
+
+You must ask for an administrative hearing to contest the finding within 30 calendar days of getting a notice about the true findings in the child maltreatment investigation.
+
+You may email your request to DHS.Appeals@dhs.arkansas.gov or
+You may send your request by mail to:
+
+Department of Human Services
+Office of Appeals and Hearings
+P.O. Box 1437, Slot S101
+Little Rock, Arkansas 72203-1437
+
+The Appeals & Hearing Section will send you a letter about the hearing, including the time, date and place of the hearing. The name of the hearing officer will also be included. Hearings are held by telephone if neither you nor DHS requests the hearing to be in person. If the hearing is held in person, it will be held in a DHS office closest to where you live, unless the Administrative Law Judge decides the hearing should be held by videoconference.
+
+An Adult Maltreatment Investigation Had A “True Finding” That Would Place Me On The Adult Maltreatment Registry.
+
+If you disagree with a true finding, you can ask for a hearing to appeal the finding. You must ask for the administrative hearing within 30 calendar days of getting a notice about the true findings in the adult maltreatment investigation.
+
+You may email your request to DHS.Appeals@dhs.arkansas.gov or
+You may send your request by mail to:
+
+Department of Human Services
+Office of Appeals and Hearings
+P.O. Box 1437, Slot S101
+Little Rock, Arkansas 72203-1437
+
+My Child Care License Has Been Suspended Or Revoked.
+
+You should have gotten a letter – called a Notice of Adverse Action. To request a hearing to appeal the action, you need to send a written request for a hearing to the Licensing Specialist or Licensing Supervisor within 10 days of the date on the notice of adverse action.
+
+If you appeal timely, a hearing will be scheduled with the Child Care Appeal Review Panel in Little Rock. You may be represented by an attorney at the appeal hearing and would have an opportunity to present evidence as to why this action should not have been taken.
+
+Requests to appeal adverse licensing actions must be mailed within ten (10) calendar days of the receipt of the notice of the adverse action. Requests to appeal licensing actions, other than adverse, must be mailed within twenty (20) calendar days from receipt of the notification of the action.
+
+Medicaid Denied A Claim For Services That I Provided To A Medicaid Client.
+
+Medicaid providers may request a fair hearing on any decision or action by the Department of Human Services or its reviewers or contractors that adversely affects a Medicaid provider or client in regard to receipt of and payment for Medicaid claims and services including but not limited to decisions as to:
+
+Appropriate level of care or coding,
+Medical necessity,
+Prior authorization,
+Concurrent reviews,
+Retrospective reviews,
+Least restrictive setting
+Desk audits,
+Field audits and onsite audits, and
+Inspections.
+
+Medicaid Provider Fair Hearing requests must be sent to Arkansas Department of Health, within 30 calendar days of the date on the notice of adverse action.
+
+You may send your request by mail to:
+
+Medicaid Provider Appeals Office
+4815 West Markham Street – Slot 31
+Little Rock, AR 72205
+END SOURCE 1
+
+END OF PACKET — 1 sources

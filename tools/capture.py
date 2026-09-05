@@ -143,6 +143,17 @@ USER_AGENTS = {
                 "Safari/537.36"),
 }
 
+# Opt-in per source (`"http_version": "1.1"`), curl only, pinned to one value.
+# apps.azsos.gov (the Arizona Administrative Code PDFs) returns 403 to every
+# HTTP/2 request curl makes, whatever the user-agent, Accept, Referer or
+# Sec-Fetch headers, and 200 to the identical request over HTTP/1.1 — the
+# refusal is keyed to the protocol negotiation, not to the headers. Found
+# 2026-09-04 after two sessions had recorded the host as unreachable to curl.
+# Pinned to "1.1" only, for the same reason USER_AGENTS is pinned: a value a
+# recipe can vary is a value that will vary, and this one changes the bytes on
+# the wire, not the document.
+HTTP_VERSIONS = ("1.1",)
+
 # Some agencies serve their leaf certificate without the intermediate that signs
 # it. A browser papers over this by caching intermediates or following the
 # certificate's AIA extension; curl does neither, and the fetch dies with
@@ -578,6 +589,11 @@ def lint(rec, slug=None):
                         f'one of {", ".join(sorted(USER_AGENTS))}')
         if s.get('user_agent') and s.get('transport') != 'curl':
             errs.append(f'{w}: user_agent applies to the curl transport only')
+        if s.get('http_version') and s['http_version'] not in HTTP_VERSIONS:
+            errs.append(f'{w}: unknown http_version {s["http_version"]!r}; '
+                        f'one of {", ".join(HTTP_VERSIONS)}')
+        if s.get('http_version') and s.get('transport') != 'curl':
+            errs.append(f'{w}: http_version applies to the curl transport only')
         if s.get('compressed') is not None and not isinstance(s['compressed'], bool):
             errs.append(f'{w}: compressed must be true or false')
         if s.get('compressed') is False and s.get('transport') != 'curl':
@@ -658,6 +674,8 @@ def digest(rec):
             m['user_agent'] = s['user_agent']
         if s.get('compressed') is False:
             m['compressed'] = False
+        if s.get('http_version'):
+            m['http_version'] = s['http_version']
         if s.get('ca_bundle'):
             m['ca_bundle'] = s['ca_bundle']
         if s.get('pages'):
@@ -677,9 +695,10 @@ def digest(rec):
 # --- transports and extractors ----------------------------------------------
 
 def fetch_curl(url, binary, user_agent='none', ca_bundle=None,
-               compressed=True):
+               compressed=True, http_version=None):
     ua = USER_AGENTS[user_agent]
     args = ['curl'] + curl_args(compressed) + (['-A', ua] if ua else []) \
+        + (['--http1.1'] if http_version == '1.1' else []) \
         + (['--cacert', ca_bundle_path(ca_bundle)] if ca_bundle else []) \
         + ['-w', '%{http_code}', '-o', '-', url]
     r = subprocess.run(args, capture_output=True, timeout=180)
@@ -889,7 +908,8 @@ def capture_source(src, supplied=None):
         raw = fetch_curl(src['url'], binary=needs_binary,
                          user_agent=src.get('user_agent', 'none'),
                          compressed=src.get('compressed', True),
-                         ca_bundle=src.get('ca_bundle'))
+                         ca_bundle=src.get('ca_bundle'),
+                         http_version=src.get('http_version'))
 
     if isinstance(raw, str) and needs_binary:
         # A supplied agent fetch is already text; the extractor has effectively
@@ -973,6 +993,8 @@ def render_packet(rec, bodies, day, supplied_ns=()):
             bits.append(slice_note(s['slice']))
         if s.get('ca_bundle'):
             bits.append(f'ca_bundle {s["ca_bundle"]}')
+        if s.get('http_version'):
+            bits.append(f'http_version {s["http_version"]}')
         bits.append('filters ' + (', '.join(s.get('filters', [])) or 'none'))
         supp = ' (fetched by the session reader and supplied)' \
             if s['n'] in supplied_ns else ''
@@ -1113,6 +1135,23 @@ def self_test():
           'lint accepted user_agent on a non-curl transport')
     check(USER_AGENTS['none'] is None and 'Mozilla' in USER_AGENTS['browser'],
           'user-agent table is not what the recipes expect')
+
+    # http_version: same opt-in shape. Unset must not move the digest; "1.1"
+    # must; anything else, or any non-curl transport, must fail lint.
+    hv_set = copy.deepcopy(ua_none)
+    hv_set['sources'][0]['http_version'] = '1.1'
+    check(digest(ua_none) != digest(hv_set),
+          'setting http_version did not move the digest')
+    check(not any('http_version' in e for e in lint(hv_set, 'testland')),
+          'lint rejected http_version "1.1" on a curl source')
+    hv_bad = copy.deepcopy(ua_none)
+    hv_bad['sources'][0]['http_version'] = '2'
+    check(any('http_version' in e for e in lint(hv_bad, 'testland')),
+          'lint accepted an unknown http_version')
+    hv_wrong = copy.deepcopy(hv_set)
+    hv_wrong['sources'][0]['transport'] = 'chrome'
+    check(any('curl transport only' in e for e in lint(hv_wrong, 'testland')),
+          'lint accepted http_version on a non-curl transport')
 
     # ca_bundle: same opt-in shape, and it must name a file that exists. A
     # recipe pointing at a missing bundle would otherwise fail at fetch time
