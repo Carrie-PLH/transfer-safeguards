@@ -334,6 +334,70 @@ def decode_cfemail_nodes(soup):
     return n
 
 
+# --- nodes a reader never sees -------------------------------------------------
+#
+# Promoted here 2026-09-05 from FA-Q-20260904-08, which the Room & Recourse
+# nightly build pass opened after finding both halves of this live, on two
+# different agencies, in one night. The rule the two share is the one the
+# extractors already claim to follow: a capture holds what the publisher
+# published, and neither of these was published.
+#
+# Comments. Every extract_html in this portfolio walks its tree testing
+# `isinstance(n, NavigableString)`, and bs4's Comment is a subclass of
+# NavigableString -- so a comment's contents are appended exactly as a
+# paragraph's are. govt.westlaw.com, California's official CCR host, opens
+# every lettered subdivision with an empty <!--anchor--> and marks its
+# currentness block with a bare <!--DHE-->; a capture of 22 CCR 72527 came
+# back reading "(a)" as "anchor(a)" throughout. The subdivision letters are
+# what a quotation of a regulation rests on.
+#
+# Hidden nodes. The extractors' docstrings have promised "hidden nodes
+# dropped" since they were written and nothing ever implemented it.
+# cdph.ca.gov's SharePoint template carries CMS field-name labels for its own
+# editors -- "Page Alert Details", "LetterAuthority", "LetterHightlight" (the
+# source's own typo) -- each in a display:none div a browser never paints. A
+# capture of AFL 25-17 put all three in the packet as if the department had
+# printed them.
+#
+# aria-hidden is deliberately left alone. It hides a node from assistive
+# technology while a sighted reader still sees it, which is the opposite
+# case and most often a decorative glyph sitting inside text that matters.
+
+
+HIDDEN_STYLE_RE = re.compile(
+    r'(?:^|;)\s*(?:display\s*:\s*none|visibility\s*:\s*hidden)\b',
+    re.IGNORECASE)
+
+
+def strip_nonvisible_nodes(soup):
+    """Drop comments and hidden elements from a parsed document, in place.
+
+    Takes the parsed document rather than markup, for the reason
+    decode_cfemail_nodes does: callers differ in how they build the soup and
+    what they do with it afterwards. Returns (comments, hidden) so a caller
+    that wants to report what it removed can.
+
+    Called before any text walk. A comment removed after the walk has already
+    reached the packet."""
+    from bs4 import Comment
+    comments = 0
+    for c in soup.find_all(string=lambda s: isinstance(s, Comment)):
+        c.extract()
+        comments += 1
+    hidden = 0
+    # Collected before any decompose, then filtered: a hidden div inside a
+    # hidden section is matched twice, and decomposing an element whose
+    # ancestor is already gone raises. `decomposed` is bs4's own flag for a
+    # node that has been torn down.
+    marked = soup.find_all(style=HIDDEN_STYLE_RE) + soup.find_all(hidden=True)
+    for bad in marked:
+        if getattr(bad, 'decomposed', False):
+            continue
+        bad.decompose()
+        hidden += 1
+    return comments, hidden
+
+
 # --- table-cell link targets ---------------------------------------------------
 #
 # These three operate on already-parsed bs4 Tag/anchor objects; this module
@@ -616,6 +680,57 @@ def self_test():
               'a malformed data-cfemail was counted as decoded')
         check(bad.get_text().strip() == 'x',
               'a malformed data-cfemail raised or was rewritten')
+
+        # Nodes a reader never sees. The comment vector is Westlaw's, the
+        # shape that made 22 CCR 72527 read "anchor(a)"; the hidden vector is
+        # cdph.ca.gov's SharePoint editor labels, typo included.
+        wl = BeautifulSoup(
+            '<main><!--anchor--><p>(a) Patients have the rights.</p>'
+            '<!--DHE--></main>', 'html.parser')
+        c, h = strip_nonvisible_nodes(wl)
+        txt = wl.get_text()
+        check(c == 2, 'strip_nonvisible_nodes did not report both comments')
+        check(h == 0, 'a document with no hidden node reported one')
+        check('anchor' not in txt and 'DHE' not in txt,
+              'a comment reached the extracted text')
+        check('(a) Patients have the rights.' in txt,
+              'stripping comments took the paragraph beside them')
+
+        sp = BeautifulSoup(
+            '<main>'
+            '<div style="display:none">Page Alert Details</div>'
+            '<div style="COLOR:red;VISIBILITY:HIDDEN">LetterAuthority</div>'
+            '<div hidden>LetterHightlight</div>'
+            '<span aria-hidden="true">*</span>'
+            '<p>AFL 25-17 is in effect.</p></main>', 'html.parser')
+        c, h = strip_nonvisible_nodes(sp)
+        txt = sp.get_text()
+        check(h == 3, f'expected 3 hidden nodes dropped, got {h}')
+        check('Page Alert Details' not in txt and 'LetterAuthority' not in txt
+              and 'LetterHightlight' not in txt,
+              'an editor-only hidden node reached the extracted text')
+        check('*' in txt, 'aria-hidden was dropped; it hides from assistive '
+                          'technology, not from a reader')
+        check('AFL 25-17 is in effect.' in txt,
+              'stripping hidden nodes took visible text with them')
+
+        # display:none inside a hidden section: matched twice, decomposed once.
+        nest = BeautifulSoup(
+            '<div style="display:none"><p style="display:none">x</p></div>'
+            '<p>kept</p>', 'html.parser')
+        c, h = strip_nonvisible_nodes(nest)
+        check(h == 1, f'a nested hidden node was double-counted or raised ({h})')
+        check(nest.get_text().strip() == 'kept',
+              'the nested hidden block survived')
+
+        # A property whose name merely ends in display, and a value that is
+        # not none, must both survive -- the regex anchors on a property
+        # boundary for this reason.
+        keep = BeautifulSoup(
+            '<p style="display:block">shown</p>'
+            '<p style="-webkit-box-display:none">also shown</p>', 'html.parser')
+        c, h = strip_nonvisible_nodes(keep)
+        check(h == 0, 'a visible element was matched as hidden')
 
     narrow = '\n'.join(['short line'] * 5)
     wide = '\n'.join(['a much longer line than the ones in the narrow '

@@ -761,6 +761,12 @@ def extract_html(text, scope):
     soup = BeautifulSoup(text, 'html.parser')
     for bad in soup(['script', 'style', 'noscript', 'svg']):
         bad.decompose()
+    # Comments and hidden elements, before any walk of the tree. bs4's Comment
+    # is a NavigableString subclass, so walk() below appends a comment exactly
+    # as it appends a paragraph; and the docstring's promise of "hidden nodes
+    # dropped" was never implemented until this call. See FA-Q-20260904-08 and
+    # capture-core's own commentary for the two agencies that exposed both.
+    _core.strip_nonvisible_nodes(soup)
     # Cloudflare-obfuscated addresses are decoded before anything else reads the
     # document, because the plaintext is already in the served bytes and a
     # capture that keeps the placeholder cannot vouch for a contact the
