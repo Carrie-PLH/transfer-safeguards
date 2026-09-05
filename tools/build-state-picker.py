@@ -99,7 +99,7 @@ def render_picker(meta, base):
             checked = rec.get("checked") if rec else None
             title = f"{name} — sources last checked {checked}" if checked else name
             parts.append(
-                f'<a class="state-pill" href="{base}{slug}.html" title="{html.escape(title)}">'
+                f'<a class="state-pill" href="/states/{slug}/" title="{html.escape(title)}">'
                 f'{abbr}<span class="sr-only">{html.escape(name)}</span></a>'
             )
         else:

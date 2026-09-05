@@ -371,6 +371,127 @@ else
 fi
 rm -f /tmp/ml-check.$$
 
+# Every internal href/src is root-absolute. _redirects 301s each page to a
+# trailing-slash URL (/states/alabama/), which moves the browser's base path
+# one level deeper than the file's own directory. Any relative ref then
+# resolves to the wrong place and 404s — on 2026-09-05 that took the
+# stylesheet, the favicons and the whole nav off every page but the homepage,
+# on all four sites at once. Absolute paths are correct under either URL
+# shape, so the gate refuses a deploy that reintroduces a relative one.
+if python3 - "." >/tmp/abs-links.$$ 2>&1 <<'PYGATE'
+import os, re, sys
+scan = sys.argv[1]
+skip = ("http://", "https://", "//", "/", "#", "mailto:", "tel:", "data:", "javascript:")
+attr = re.compile(r'\b(?:href|src)="([^"]*)"')
+bad = []
+for dirpath, _d, files in os.walk(scan):
+    for fn in files:
+        if not fn.endswith(".html"):
+            continue
+        full = os.path.join(dirpath, fn)
+        with open(full, encoding="utf-8", errors="replace") as fh:
+            for ref in attr.findall(fh.read()):
+                if ref and not ref.startswith(skip):
+                    bad.append((os.path.relpath(full, scan), ref))
+for rel, ref in bad[:40]:
+    print("%s  ->  %s" % (rel, ref))
+if len(bad) > 40:
+    print("... and %d more" % (len(bad) - 40))
+sys.exit(1 if bad else 0)
+PYGATE
+then
+  ok "every internal href/src is root-absolute"
+else
+  bad "relative href/src found — these break under the trailing-slash redirects:"
+  sed 's/^/        /' /tmp/abs-links.$$
+fi
+rm -f /tmp/abs-links.$$
+
+
+# No raw markdown left in rendered prose. The renderers convert markdown
+# links, but until 2026-09-05 only http(s) ones — every internal and mailto
+# link fell through and published as literal "[text](target)". 66 had. A
+# reader sees the brackets; the link does not work. Cheap to check, so check.
+if python3 - "." >/tmp/md-leak.$$ 2>&1 <<'PYGATE'
+import os, re, sys
+scan = sys.argv[1]
+pat = re.compile(r'\[[^\]\n]{2,80}\]\([^)\n]{1,80}\)')
+bad = []
+for dirpath, _d, files in os.walk(scan):
+    if os.sep + "assets" in dirpath:
+        continue  # vendored JS legitimately contains this shape
+    for fn in files:
+        if not fn.endswith(".html"):
+            continue
+        full = os.path.join(dirpath, fn)
+        with open(full, encoding="utf-8", errors="replace") as fh:
+            for hit in pat.findall(fh.read()):
+                bad.append((os.path.relpath(full, scan), hit))
+for rel, hit in bad[:30]:
+    print("%s  ->  %s" % (rel, hit))
+if len(bad) > 30:
+    print("... and %d more" % (len(bad) - 30))
+sys.exit(1 if bad else 0)
+PYGATE
+then
+  ok "no unconverted markdown links in rendered prose"
+else
+  bad "literal markdown links found in published prose:"
+  sed 's/^/        /' /tmp/md-leak.$$
+fi
+rm -f /tmp/md-leak.$$
+
+
+# Every state page equals a fresh render of its Markdown source. Until
+# 2026-09-05 the pages and their sources drifted in both directions: four
+# pages carried hand edits the renderer could not reproduce, and two sources
+# carried corrections that had never been rendered. Neither side was
+# canonical, so re-rendering a page could silently revert published work and
+# leaving it alone could silently withhold a correction. This gate makes the
+# source canonical and says so mechanically: render every page into a scratch
+# tree and compare. A page that differs means someone hand-edited HTML — put
+# the change in the .md and re-render.
+if python3 - >/tmp/parity.$$ 2>&1 <<'PYGATE'
+import pathlib, subprocess, sys, tempfile, shutil, os
+root = pathlib.Path(__file__).resolve().parent if "__file__" in dir() else pathlib.Path(".").resolve()
+repo = pathlib.Path(os.getcwd()).parent          # site/ -> repo root
+states_md = repo / "states"
+live = repo / "site" / "states"
+tmp = pathlib.Path(tempfile.mkdtemp(prefix="parity-"))
+try:
+    shutil.copytree(repo / "tools", tmp / "tools", dirs_exist_ok=True,
+                    ignore=shutil.ignore_patterns("packets", "certs", ".venv", "__pycache__"))
+    shutil.copytree(states_md, tmp / "states", dirs_exist_ok=True)
+    (tmp / "site" / "states").mkdir(parents=True, exist_ok=True)
+    bad = []
+    for md in sorted(states_md.glob("*.md")):
+        if md.stem == "README":
+            continue
+        r = subprocess.run([sys.executable, str(tmp / "tools" / "render-state.py"), md.stem],
+                           cwd=tmp, capture_output=True, text=True)
+        out = tmp / "site" / "states" / (md.stem + ".html")
+        page = live / (md.stem + ".html")
+        if r.returncode != 0 or not out.exists():
+            bad.append((md.stem, "render failed: " + (r.stderr or "").strip()[:120])); continue
+        if not page.exists():
+            bad.append((md.stem, "source has no published page")); continue
+        if out.read_text() != page.read_text():
+            bad.append((md.stem, "page differs from a fresh render of its source"))
+    for stem, why in bad:
+        print("%-22s %s" % (stem, why))
+    sys.exit(1 if bad else 0)
+finally:
+    shutil.rmtree(tmp, ignore_errors=True)
+PYGATE
+then
+  ok "every state page matches a fresh render of its source"
+else
+  bad "page/source drift — the .md is canonical, so re-render rather than hand-edit:"
+  sed 's/^/        /' /tmp/parity.$$
+fi
+rm -f /tmp/parity.$$
+
+
 echo
 if [ "$fail" -eq 0 ]; then
   say "ALL CHECKS PASSED — safe to run: npx wrangler deploy"

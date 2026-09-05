@@ -27,8 +27,22 @@ def display_date(s):
 def inline(s):
     s = html.escape(s, quote=False)
     s = re.sub(r'\[([^]]+)\]\((https?://[^)]+)\)', r'<a href="\2" target="_blank" rel="noopener">\1</a>', s)
+    # Same-site and mailto targets. Before this, only http(s) markdown links
+    # were converted and every other form fell through to the page as literal
+    # "[text](target)" — 66 of them were published that way. Internal targets
+    # are canonicalised to the root-absolute trailing-slash URL the site
+    # actually serves, since a relative one breaks under the redirects.
+    s = re.sub(r'\[([^]]+)\]\((mailto:[^)]+)\)', r'<a href="\2">\1</a>', s)
+    s = re.sub(r'\[([^]]+)\]\((/[^)]*)\)', r'<a href="\2">\1</a>', s)
+    s = re.sub(r'\[([^]]+)\]\((?:\.\./)?([a-z0-9\-]+(?:/[a-z0-9\-]+)*)\.html\)',
+               lambda m: '<a href="/%s/">%s</a>' % (m.group(2), m.group(1)), s)
     s = re.sub(r'\*\*([^*]+)\*\*', r'<strong>\1</strong>', s)
     s = re.sub(r'(?<!\*)\*([^*]+)\*', r'<em>\1</em>', s)
+    # Backtick spans. Without this a source that uses backticks publishes them
+    # as literal characters, the same way markdown links did until 2026-09-05.
+    # No quoted passage in any source contains a backtick, so this cannot
+    # reach inside quoted material and disturb quotation fidelity.
+    s = re.sub(r'`([^`\n]+)`', r'<code>\1</code>', s)
     return s
 
 def paras(lines):
@@ -86,16 +100,18 @@ def render(slug):
             else:
                 m=re.match(r'(\d+) — (.*)',title); no=f'{m.group(1)}<small>{m.group(2)}</small>'; cls='section'; heading=m.group(2)
             chunks.append(f'<section class="{cls}"><div class="section-no">{no}</div><div><h2>{heading}</h2>{paras(body)}</div></section>')
-    up = '' if federal else '../'
-    states_href = 'states/index.html' if federal else 'index.html'
-    federal_href = 'federal.html' if federal else '../federal.html'
+    # Root-absolute canonical URLs. _redirects 301s every page to a
+    # trailing-slash URL, which shifts the base path a level deeper and breaks
+    # any relative ref. Absolute paths are correct under either URL shape.
+    states_href = '/states/'
+    federal_href = '/federal/'
     if federal:
         desc = 'The federal floor for nursing-home involuntary transfer and discharge — 42 CFR 483.15(c), 42 CFR part 431 subpart E, and CMS guidance — quoted and linked to first-party sources.'
         limits = 'Reference information, not legal or medical advice. Independent of every facility and operator, of CMS and every state agency, and of the ombudsman programs.'
     else:
         desc = f'{state} nursing-home involuntary transfer and discharge procedure, quoted and linked to first-party sources.'
         limits = f'Reference information, not legal or medical advice. Independent of every facility and operator, of CMS and every {state} state agency, and of the ombudsman programs.'
-    doc=f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{state} — nursing-home transfer and discharge safeguards — Room &amp; Recourse</title><meta name="description" content="{desc}"><link rel="icon" href="{up}assets/favicon.ico" sizes="any"><link rel="icon" href="{up}assets/favicon-32.png" type="image/png" sizes="32x32"><link rel="icon" href="{up}assets/favicon-16.png" type="image/png" sizes="16x16"><link rel="apple-touch-icon" href="{up}assets/apple-touch-icon.png"><link rel="stylesheet" href="{up}assets/style.css"></head><body><a class="skip-link" href="#main">Skip to content</a><header class="topline"><a class="wordmark" href="{up}index.html">ROOM &amp; RECOURSE</a><nav><a href="{states_href}">States</a><a href="{federal_href}">The federal floor</a><a href="{up}about.html">About</a></nav></header><main id="main">{''.join(chunks)}</main><footer class="colophon"><div class="rows"><div><p class="mark">ROOM &amp; RECOURSE</p><p style="margin-top:0.85rem;">A project of <a href="https://fieldassembly.net" target="_blank" rel="noopener">Field Assembly LLC</a>. Kept to <a href="https://fieldassembly.net/standard.html" target="_blank" rel="noopener">the published record standard</a>.</p><p><a href="mailto:hello@fieldassembly.net">hello@fieldassembly.net</a></p><p><a href="{up}legal/privacy.html">Privacy</a> &middot; <a href="{up}legal/terms.html">Terms</a></p></div><div><p class="foot-label">The limits</p><p>{limits}</p></div></div></footer></body></html>'''
+    doc=f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{state} — nursing-home transfer and discharge safeguards — Room &amp; Recourse</title><meta name="description" content="{desc}"><link rel="icon" href="/assets/favicon.ico" sizes="any"><link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32"><link rel="icon" href="/assets/favicon-16.png" type="image/png" sizes="16x16"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"><link rel="stylesheet" href="/assets/style.css"></head><body><a class="skip-link" href="#main">Skip to content</a><header class="topline"><a class="wordmark" href="/">ROOM &amp; RECOURSE</a><input class="nav-toggle" type="checkbox" id="nav-toggle"><label class="nav-button" for="nav-toggle"><span class="nav-bars"></span>Menu</label><nav><a href="{states_href}">States</a><a href="{federal_href}">The federal floor</a><a href="/about/">About</a></nav></header><main id="main">{''.join(chunks)}</main><footer class="colophon"><div class="rows"><div><p class="mark">ROOM &amp; RECOURSE</p><p style="margin-top:0.85rem;">A project of <a href="https://fieldassembly.net" target="_blank" rel="noopener">Field Assembly LLC</a>. Kept to <a href="https://fieldassembly.net/standard.html" target="_blank" rel="noopener">the published record standard</a>.</p><p><a href="mailto:hello@fieldassembly.net">hello@fieldassembly.net</a></p><p><a href="/legal/privacy/">Privacy</a> &middot; <a href="/legal/terms/">Terms</a></p></div><div><p class="foot-label">The limits</p><p>{limits}</p></div></div></footer></body></html>'''
     out = (ROOT/'site'/'federal.html') if federal else (ROOT/'site'/'states'/f'{slug}.html')
     out.write_text(doc)
 

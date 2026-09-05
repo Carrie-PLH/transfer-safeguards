@@ -1,0 +1,1079 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: florida
+ASSEMBLED: 2026-09-05
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/florida.json (recipe digest 63c0a1b05d45). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- SOURCE 1: transport curl; extractor html-text; scope #statutes; filters trim-lines, collapse-blank-runs.
+  Matches the standing packet's own method, 'tag strip over the statute's Section div, ending at the History line': div#statutes holds exactly the section heading through the History line and excludes the search box and site chrome around it. Plain curl with a browser user-agent returns 200; no WAF sits in front of Online Sunshine, consistent with CLAUDE.md's note that leg.state.fl.us is curl-able with a browser user-agent. Typographic quotation marks and apostrophes are the publisher's own and are left untouched.
+- SOURCE 2: transport curl; extractor html-text; scope #statutes; filters trim-lines, collapse-blank-runs.
+  Same host and template as Source 1; div#statutes for the same reason.
+- SOURCE 3: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The standing packet says this host 'refuses or defeats plain curl' and was captured through a session fetch tool; retested 2026-09-03, plain curl with a browser user-agent now returns 200 with the full page, including the hearing office's address (2415 North Monroe Street), phone (850) 488-1429 and the 'individual or family“s eligibility' string the standing packet quotes verbatim. Whatever blocked it on 2026-08-30 no longer does, or never did with this header. The page's own <main id="main-content"> element is empty in the served markup — the card content the page displays sits directly in <body>, several containers below main — so 'body' is the narrowest scope that is honestly stated and complete; it is also a superset of the standing packet's hand-curated excerpt, which the recipe README treats as safe.
+- SOURCE 4: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  Also recorded in the standing packet as defeating plain curl and captured through a session reader; retested 2026-09-03, plain curl with a browser user-agent returns 200 with the full Divi-theme page (the '14 district offices' line, the toll-free ombudsman number 1-888-831-0404, the Winewood Boulevard address and the 'medical reasons, the welfare of other residents or nonpayment of a bill' rights language all present). The page carries about 331 KB of markup but only ~16.6 KB of body text once script/style nodes are dropped, so 'body' is not the wide net it looks like; the resident-rights accordion content sits well outside any <main> or <article> wrapper this template exposes, so body is the narrowest honestly-stated scope, and again a safe superset of the standing packet's curated excerpt.
+- SOURCE 5: transport curl; extractor docx; filters trim-lines, collapse-blank-runs.
+  Captured to resolve the department's fair-hearing procedural rule that s. 400.0255(15)(b) points to ('equivalent to the procedures used for fair hearings for other Medicaid cases, chapter 10-2, part VI, Florida Administrative Code'): each rule in the current chapter carries a History line reading 'Formerly 10-2.xx, 10-2.0xx', so chapter 65-2 is chapter 10-2 under its current number, though the current chapter prints no 'Part' subdivisions and this page cannot confirm which rules made up 'Part VI' specifically -- recorded as a finding, not resolved. flrules.org (Florida's official Administrative Code publisher) serves this chapter's full current text only as a single legacy binary Word file (Composite Document Format / 'Word 6.0/95', per the `file` command), not as a .docx, PDF, or HTML rendering -- checked: the chapter's own listing page offers no other format, and every individual rule's own readFile.asp link is the same legacy .doc. The docx extractor reads that format as of 2026-09-05: capture.py sniffs the Composite Document Format header and converts with textutil rather than python-docx, which reads only the OOXML zip container (FA-Q-20260905-01). The converter is an input to the captured text in the same way the pinned poppler build is, and capture.py names the one that ran on stderr -- this source's text was produced by textutil. Until that landed, the file was fetched by curl and converted outside the tool with `textutil -convert txt`, then handed in with `--supply 5=<file>`; that workaround is retired and this source now captures unattended.
+- SOURCE 6: transport curl; extractor pdftotext-layout; filters strip-running-headers, strip-page-numbers, trim-lines, collapse-blank-runs.
+  Found from ahca.myflorida.com's own 'Adopted Rules and Service Specific Policies' listing page (medicaid/rules/adopted-rules-service-specific-policies.html), which links this PDF as '59G-4.200 Nursing Facility Services Coverage Policy'; the document's own section 1.2 states its legal authority as 'Rule 59G-4.200, F.A.C.' among others. This is AHCA's own first-party statement of the Medicaid bed-hold ('leave days') policy the licensure statute (400.0255(6), 400.022(1)(u)) refers to without stating a Medicaid-specific day count of its own: section 4.2.1, 'Leave Days', states 'Florida Medicaid reimburses for leave days when the recipient is expected to return to the facility, as follows: Hospitalization -- 8 days per medically necessary hospital stay; Therapeutic leave -- 16 days per state fiscal year.' This 8-day figure differs from 400.022(1)(u)'s own 'up to 15 days' for a Title XIX (Medicaid) resident's hospitalization bed reservation; both are quoted on the page as published by their own publishers and are not reconciled. Single-column PDF, seven pages, no WAF encountered; plain curl with a browser user-agent returns 200 directly.
+
+SOURCE 1: Florida Statutes s. 400.0255, Resident transfer or discharge; requirements and procedures; hearings | http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0400/Sections/0400.0255.html | source date: History line ends s. 22, ch. 2015-31 | retrieved: 2026-09-05
+html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"F.S. 400.0255
+400.0255 Resident transfer or discharge; requirements and procedures; hearings.—
+(1) As used in this section, the term:
+(a) “Discharge” means to move a resident to a noninstitutional setting when the releasing facility ceases to be responsible for the resident’s care.
+
+(b) “Transfer” means to move a resident from the facility to another legally responsible institutional setting.
+
+(2) Each facility licensed under this part must comply with subsection (9) and s. 400.022(1)(p) when deciding to discharge or transfer a resident.
+
+(3) When a discharge or transfer is initiated by the nursing home, the nursing home administrator employed by the nursing home that is discharging or transferring the resident, or an individual employed by the nursing home who is designated by the nursing home administrator to act on behalf of the administration, must sign the notice of discharge or transfer. Any notice indicating a medical reason for transfer or discharge must either be signed by the resident’s attending physician or the medical director of the facility, or include an attached written order for the discharge or transfer. The notice or the order must be signed by the resident’s physician, medical director, treating physician, nurse practitioner, or physician assistant.
+
+(4)(a) Each facility must notify the agency of any proposed discharge or transfer of a resident when such discharge or transfer is necessitated by changes in the physical plant of the facility that make the facility unsafe for the resident.
+
+(b) Upon receipt of such a notice, the agency shall conduct an onsite inspection of the facility to verify the necessity of the discharge or transfer.
+
+(5) A resident of any Medicaid or Medicare certified facility may challenge a decision by the facility to discharge or transfer the resident.
+
+(6) A facility that has been reimbursed for reserving a bed and, for reasons other than those permitted under this section, refuses to readmit a resident within the prescribed timeframe shall refund the bed reservation payment.
+
+(7) At least 30 days prior to any proposed transfer or discharge, a facility must provide advance notice of the proposed transfer or discharge to the resident and, if known, to a family member or the resident’s legal guardian or representative, except, in the following circumstances, the facility shall give notice as soon as practicable before the transfer or discharge:
+(a) The transfer or discharge is necessary for the resident’s welfare and the resident’s needs cannot be met in the facility, and the circumstances are documented in the resident’s medical records by the resident’s physician; or
+
+(b) The health or safety of other residents or facility employees would be endangered, and the circumstances are documented in the resident’s medical records by the resident’s physician or the medical director if the resident’s physician is not available.
+
+(8) The notice required by subsection (7) must be in writing and must contain all information required by state and federal law, rules, or regulations applicable to Medicaid or Medicare cases. The agency shall develop a standard document to be used by all facilities licensed under this part for purposes of notifying residents of a discharge or transfer. Such document must include a means for a resident to request the local long-term care ombudsman council to review the notice and request information about or assistance with initiating a fair hearing with the department’s Office of Appeals Hearings. In addition to any other pertinent information included, the form shall specify the reason allowed under federal or state law that the resident is being discharged or transferred, with an explanation to support this action. Further, the form must state the effective date of the discharge or transfer and the location to which the resident is being discharged or transferred. The form must clearly describe the resident’s appeal rights and the procedures for filing an appeal, including the right to request the local ombudsman council review the notice of discharge or transfer. A copy of the notice must be placed in the resident’s clinical record, and a copy must be transmitted to the resident’s legal guardian or representative and to the local ombudsman council within 5 business days after signature by the resident or resident designee.
+
+(9) A resident may request that the State Long-Term Care Ombudsman Program or local ombudsman council review any notice of discharge or transfer given to the resident. When requested by a resident to review a notice of discharge or transfer, the local ombudsman council shall do so within 7 days after receipt of the request. The nursing home administrator, or the administrator’s designee, must forward the request for review contained in the notice to the State Long-Term Care Ombudsman Program or local ombudsman council within 24 hours after such request is submitted. Failure to forward the request within 24 hours after the request is submitted shall toll the running of the 30-day advance notice period until the request has been forwarded.
+
+(10)(a) A resident is entitled to a fair hearing to challenge a facility’s proposed transfer or discharge. The resident, or the resident’s legal representative or designee, may request a hearing at any time within 90 days after the resident’s receipt of the facility’s notice of the proposed discharge or transfer.
+
+(b) If a resident requests a hearing within 10 days after receiving the notice from the facility, the request shall stay the proposed transfer or discharge pending a hearing decision. The facility may not take action, and the resident may remain in the facility, until the outcome of the initial fair hearing, which must be completed within 90 days after receipt of a request for a fair hearing.
+
+(c) If the resident fails to request a hearing within 10 days after receipt of the facility notice of the proposed discharge or transfer, the facility may transfer or discharge the resident after 30 days from the date the resident received the notice.
+
+(11) Notwithstanding paragraph (10)(b), an emergency discharge or transfer may be implemented as necessary pursuant to state or federal law during the time after the notice is given and before the time a hearing decision is rendered. Notice of an emergency discharge or transfer to the resident, the resident’s legal guardian or representative, and the State Long-Term Care Ombudsman Program or the local ombudsman council if requested pursuant to subsection (9) must be by telephone or in person. This notice shall be given before the transfer, if possible, or as soon thereafter as practicable. The State Long-Term Care Ombudsman Program or a local ombudsman council conducting a review under this subsection shall do so within 24 hours after receipt of the request. The resident’s file must be documented to show who was contacted, whether the contact was by telephone or in person, and the date and time of the contact. If the notice is not given in writing, written notice meeting the requirements of subsection (8) must be given the next working day.
+
+(12) After receipt of any notice required under this section, the State Long-Term Care Ombudsman Program or local ombudsman council may request a private informal conversation with a resident to whom the notice is directed, and, if known, a family member or the resident’s legal guardian or designee, to ensure that the facility is proceeding with the discharge or transfer in accordance with this section. If requested, the State Long-Term Care Ombudsman Program or the local ombudsman council shall assist the resident with filing an appeal of the proposed discharge or transfer.
+
+(13) The following persons must be present at all hearings authorized under this section:
+(a) The resident, or the resident’s legal representative or designee.
+
+(b) The facility administrator, or the facility’s legal representative or designee.
+
+A representative of the State Long-Term Care Ombudsman Program or the local long-term care ombudsman council may be present at all hearings authorized by this section.
+
+(14) In any hearing under this section, the following information concerning the parties shall be confidential and exempt from s. 119.07(1):
+(a) Names and addresses.
+
+(b) Medical services provided.
+
+(c) Social and economic conditions or circumstances.
+
+(d) Evaluation of personal information.
+
+(e) Medical data, including diagnosis and past history of disease or disability.
+
+(f) Any information received verifying income eligibility and amount of medical assistance payments. Income information received from the Social Security Administration or the Internal Revenue Service must be safeguarded according to the requirements of the agency that furnished the data.
+
+The exemption created by this subsection does not prohibit access to such information by the State Long-Term Care Ombudsman Program or a local long-term care ombudsman council upon request, by a reviewing court if such information is required to be part of the record upon subsequent review, or as specified in s. 24(a), Art. I of the State Constitution.
+
+(15)(a) The department’s Office of Appeals Hearings shall conduct hearings under this section. The office shall notify the facility of a resident’s request for a hearing.
+
+(b) The department shall, by rule, establish procedures to be used for fair hearings requested by residents. These procedures shall be equivalent to the procedures used for fair hearings for other Medicaid cases, chapter 10-2, part VI, Florida Administrative Code. The burden of proof must be clear and convincing evidence. A hearing decision must be rendered within 90 days after receipt of the request for hearing.
+
+(c) If the hearing decision is favorable to the resident who has been transferred or discharged, the resident must be readmitted to the facility’s first available bed.
+
+(d) The decision of the hearing officer shall be final. Any aggrieved party may appeal the decision to the district court of appeal in the appellate district where the facility is located. Review procedures shall be conducted in accordance with the Florida Rules of Appellate Procedure.
+
+(16) The department may adopt rules necessary to administer this section.
+
+(17) The provisions of this section apply to transfers or discharges that are initiated by the nursing home facility, and not by the resident or by the resident’s physician or legal guardian or representative.
+
+History.—s. 6, ch. 93-217; s. 4, ch. 95-407; s. 34, ch. 96-169; s. 227, ch. 96-406; s. 8, ch. 99-394; s. 138, ch. 2000-349; s. 3, ch. 2000-350; s. 58, ch. 2000-367; ss. 13, 53, ch. 2001-45; s. 22, ch. 2015-31.
+
+SOURCE 2: Florida Statutes s. 400.022, Residents' rights | http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0400/Sections/0400.022.html | source date: History line ends s. 1, ch. 2023-307 | retrieved: 2026-09-05
+html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"F.S. 400.022
+400.022 Residents’ rights.—
+(1) All licensees of nursing home facilities shall adopt and make public a statement of the rights and responsibilities of the residents of such facilities and shall treat such residents in accordance with the provisions of that statement. The statement shall assure each resident the following:
+(a) The right to civil and religious liberties, including knowledge of available choices and the right to independent personal decision, which will not be infringed upon, and the right to encouragement and assistance from the staff of the facility in the fullest possible exercise of these rights.
+
+(b) The right to private and uncensored communication, including, but not limited to, receiving and sending unopened correspondence, access to a telephone, visiting with any person of the resident’s choice during visiting hours, and overnight visitation outside the facility with family and friends in accordance with facility policies, physician orders, and Title XVIII (Medicare) and Title XIX (Medicaid) of the Social Security Act regulations, without the resident’s losing his or her bed. Facility visiting hours shall be flexible, taking into consideration special circumstances such as, but not limited to, out-of-town visitors and working relatives or friends. Unless otherwise indicated in the resident care plan, the licensee shall, with the consent of the resident and in accordance with policies approved by the agency, permit recognized volunteer groups, representatives of community-based legal, social, mental health, and leisure programs, and members of the clergy access to the facility during visiting hours for the purpose of visiting with and providing services to any resident.
+
+(c) Any entity or individual that provides health, social, legal, or other services to a resident has the right to have reasonable access to the resident. The resident has the right to deny or withdraw consent to access at any time by any entity or individual. Notwithstanding the visiting policy of the facility, the following individuals must be permitted immediate access to the resident:
+1. Any representative of the federal or state government, including, but not limited to, representatives of the Department of Children and Families, the Department of Health, the Agency for Health Care Administration, the Office of the Attorney General, and the Department of Elderly Affairs; any law enforcement officer; any representative of the State Long-Term Care Ombudsman Program; and the resident’s individual physician.
+
+2. Subject to the resident’s right to deny or withdraw consent, immediate family or other relatives of the resident.
+
+The facility must allow representatives of the State Long-Term Care Ombudsman Program to examine a resident’s clinical records with the permission of the resident or the resident’s legal representative and consistent with state law.
+
+(d) The right to present grievances on behalf of himself or herself or others to the staff or administrator of the facility, to governmental officials, or to any other person; to recommend changes in policies and services to facility personnel; and to join with other residents or individuals within or outside the facility to work for improvements in resident care, free from restraint, interference, coercion, discrimination, or reprisal. This right includes access to ombudsmen and advocates and the right to be a member of, to be active in, and to associate with advocacy or special interest groups. The right also includes the right to prompt efforts by the facility to resolve resident grievances, including grievances with respect to the behavior of other residents.
+
+(e) The right to organize and participate in resident groups in the facility and the right to have the resident’s family meet in the facility with the families of other residents.
+
+(f) The right to participate in social, religious, and community activities that do not interfere with the rights of other residents.
+
+(g) The right to examine, upon reasonable request, the results of the most recent inspection of the facility conducted by a federal or state agency and any plan of correction in effect with respect to the facility.
+
+(h) The right to manage his or her own financial affairs or to delegate such responsibility to the licensee, but only to the extent of the funds held in trust by the licensee for the resident. A quarterly accounting of any transactions made on behalf of the resident shall be furnished to the resident or the person responsible for the resident. The facility may not require a resident to deposit personal funds with the facility. However, upon written authorization of a resident, the facility must hold, safeguard, manage, and account for the personal funds of the resident deposited with the facility as follows:
+1. The facility must establish and maintain a system that ensures a full, complete, and separate accounting, according to generally accepted accounting principles, of each resident’s personal funds entrusted to the facility on the resident’s behalf.
+
+2. The accounting system established and maintained by the facility must preclude any commingling of resident funds with facility funds or with the funds of any person other than another resident.
+
+3. A quarterly accounting of any transaction made on behalf of the resident shall be furnished to the resident or the person responsible for the resident.
+
+4. Upon the death of a resident with personal funds deposited with the facility, the facility must convey within 30 days the resident’s funds, including interest, and a final accounting of those funds, to the individual or probate jurisdiction administering the resident’s estate, or, if a personal representative has not been appointed within 30 days, to the resident’s spouse or adult next of kin named in the beneficiary designation form provided for in s. 400.162(6).
+
+5. The facility may not impose a charge against the personal funds of a resident for any item or service for which payment is made under Title XVIII or Title XIX of the Social Security Act.
+
+(i) The right to be fully informed, in writing and orally, prior to or at the time of admission and during his or her stay, of services available in the facility and of related charges for such services, including any charges for services not covered under Title XVIII or Title XIX of the Social Security Act or not covered by the basic per diem rates and of bed reservation and refund policies of the facility.
+
+(j) The right to be adequately informed of his or her medical condition and proposed treatment, unless the resident is determined to be unable to provide informed consent under Florida law, or the right to be fully informed in advance of any nonemergency changes in care or treatment that may affect the resident’s well-being; and, except with respect to a resident adjudged incompetent, the right to participate in the planning of all medical treatment, including the right to refuse medication and treatment, unless otherwise indicated by the resident’s physician; and to know the consequences of such actions.
+
+(k) The right to refuse medication or treatment and to be informed of the consequences of such decisions, unless determined unable to provide informed consent under state law. When the resident refuses medication or treatment, the nursing home facility must notify the resident or the resident’s legal representative of the consequences of such decision and must document the resident’s decision in his or her medical record. The nursing home facility must continue to provide other services the resident agrees to in accordance with the resident’s care plan.
+
+(l) The right to receive adequate and appropriate health care and protective and support services, including social services; mental health services, if available; planned recreational activities; and therapeutic and rehabilitative services consistent with the resident care plan, with established and recognized practice standards within the community, and with rules as adopted by the agency.
+
+(m) The right to have privacy in treatment and in caring for personal needs; to close room doors and to have facility personnel knock before entering the room, except in the case of an emergency or unless medically contraindicated; and to security in storing and using personal possessions. Privacy of the resident’s body shall be maintained during, but not limited to, toileting, bathing, and other activities of personal hygiene, except as needed for resident safety or assistance. Residents’ personal and medical records shall be confidential and exempt from the provisions of s. 119.07(1).
+
+(n) The right to be treated courteously, fairly, and with the fullest measure of dignity and to receive a written statement and an oral explanation of the services provided by the licensee, including those required to be offered on an as-needed basis.
+
+(o) The right to be free from mental and physical abuse, sexual abuse, neglect, exploitation, corporal punishment, extended involuntary seclusion, and physical and chemical restraints, except those restraints authorized in writing by a physician for a specified and limited period of time or as are necessitated by an emergency. In case of an emergency, restraint may be applied only by a qualified licensed nurse who shall set forth in writing the circumstances requiring the use of restraint, and, in the case of use of a chemical restraint, a physician shall be consulted immediately thereafter. Restraints may not be used in lieu of staff supervision or merely for staff convenience, for punishment, or for reasons other than resident protection or safety. For purposes of this paragraph, the terms “sexual abuse,” “neglect,” and “exploitation” have the same meanings as provided in 42 C.F.R. s. 483.5.
+
+(p) The right to be transferred or discharged only for medical reasons or for the welfare of other residents, and the right to be given reasonable advance notice of no less than 30 days of any involuntary transfer or discharge, except in the case of an emergency as determined by a licensed professional on the staff of the nursing home, or in the case of conflicting rules and regulations which govern Title XVIII or Title XIX of the Social Security Act. For nonpayment of a bill for care received, the resident shall be given 30 days’ advance notice. A licensee certified to provide services under Title XIX of the Social Security Act may not transfer or discharge a resident solely because the source of payment for care changes. Admission to a nursing home facility operated by a licensee certified to provide services under Title XIX of the Social Security Act may not be conditioned upon a waiver of such right, and any document or provision in a document which purports to waive or preclude such right is void and unenforceable. Any licensee certified to provide services under Title XIX of the Social Security Act that obtains or attempts to obtain such a waiver from a resident or potential resident shall be construed to have violated the resident’s rights as established herein and is subject to disciplinary action as provided in subsection (3). The resident and the family or representative of the resident shall be consulted in choosing another facility.
+
+(q) The right to freedom of choice in selecting a personal physician; to obtain pharmaceutical supplies and services from a pharmacy of the resident’s choice, at the resident’s own expense or through Title XIX of the Social Security Act; and to obtain information about, and to participate in, community-based activities programs, unless medically contraindicated as documented by a physician in the resident’s medical record. If a resident chooses to use a community pharmacy and the facility in which the resident resides uses a unit-dose system, the pharmacy selected by the resident shall be one that provides a compatible unit-dose system, provides service delivery, and stocks the drugs normally used by long-term care residents. If a resident chooses to use a community pharmacy and the facility in which the resident resides does not use a unit-dose system, the pharmacy selected by the resident shall be one that provides service delivery and stocks the drugs normally used by long-term care residents.
+
+(r) The right to retain and use personal clothing and possessions as space permits, unless to do so would infringe upon the rights of other residents or unless medically contraindicated as documented in the resident’s medical record by a physician. If clothing is provided to the resident by the licensee, it shall be of reasonable fit.
+
+(s) The right to have copies of the rules and regulations of the facility and an explanation of the responsibility of the resident to obey all reasonable rules and regulations of the facility and to respect the personal rights and private property of the other residents.
+
+(t) The right to receive notice before the room of the resident in the facility is changed.
+
+(u) The right to be informed of the bed reservation policy for a hospitalization. The nursing home shall inform a private-pay resident and his or her responsible party that his or her bed will be reserved for any single hospitalization for a period up to 30 days provided the nursing home receives reimbursement. Any resident who is a recipient of assistance under Title XIX of the Social Security Act, or the resident’s designee or legal representative, shall be informed by the licensee that his or her bed will be reserved for any single hospitalization for the length of time for which Title XIX reimbursement is available, up to 15 days; but that the bed will not be reserved if it is medically determined by the agency that the resident will not need it or will not be able to return to the nursing home, or if the agency determines that the nursing home’s occupancy rate ensures the availability of a bed for the resident. Notice shall be provided within 24 hours of the hospitalization.
+
+(v) For residents of Medicaid or Medicare certified facilities, the right to challenge a decision by the facility to discharge or transfer the resident, as required under 42 C.F.R. s. 483.12.
+
+(2) The licensee for each nursing home shall orally inform the resident of the resident’s rights and provide a copy of the statement required by subsection (1) to each resident or the resident’s legal representative at or before the resident’s admission to a facility. The licensee shall provide a copy of the resident’s rights to each staff member of the facility. Each such licensee shall prepare a written plan and provide appropriate staff training to implement the provisions of this section. The written statement of rights must include a statement that a resident may file a complaint with the agency or state or local ombudsman council. The statement must be in boldfaced type and include the telephone number and e-mail address of the State Long-Term Care Ombudsman Program and the telephone numbers of the local ombudsman council and the Elder Abuse Hotline operated by the Department of Children and Families.
+
+(3) Any violation of the resident’s rights set forth in this section constitutes grounds for action by the agency under s. 400.102, s. 400.121, or part II of chapter 408. In order to determine whether the licensee is adequately protecting residents’ rights, the licensure inspection of the facility must include private informal conversations with a sample of residents to discuss residents’ experiences within the facility with respect to rights specified in this section and general compliance with standards and consultation with the State Long-Term Care Ombudsman Program.
+
+(4) Any person who submits or reports a complaint concerning a suspected violation of the resident’s rights or concerning services or conditions in a facility or who testifies in any administrative or judicial proceeding arising from such complaint shall have immunity from any criminal or civil liability therefor, unless that person has acted in bad faith, with malicious purpose, or if the court finds that there was a complete absence of a justiciable issue of either law or fact raised by the losing party.
+
+History.—s. 8, ch. 76-201; s. 1, ch. 77-174; ss. 1, 9, ch. 79-268; ss. 2, 18, ch. 80-186; s. 2, ch. 81-318; ss. 11, 19, ch. 82-148; ss. 5, 79, 83, ch. 83-181; s. 1, ch. 84-144; s. 15, ch. 90-347; s. 30, ch. 93-177; ss. 3, 49, ch. 93-217; s. 764, ch. 95-148; s. 226, ch. 96-406; s. 118, ch. 99-8; s. 5, ch. 99-394; ss. 70, 137, ch. 2000-349; s. 57, ch. 2000-367; s. 33, ch. 2001-62; s. 56, ch. 2007-230; s. 123, ch. 2014-19; s. 43, ch. 2015-2; s. 21, ch. 2015-31; s. 48, ch. 2016-10; s. 1, ch. 2023-307.
+
+SOURCE 3: Florida Department of Children and Families, Office of Inspector General — Appeal Hearings | https://www.myflfamilies.com/about/office-inspector-general/appeal-hearings | source date: page modified 2026-04-08 (meta article:modified_time) | retrieved: 2026-09-05
+Skip to main content
+
+Appeal Hearings
+
+Appeal Hearings
+
+Home | About | Additional Services & Offices | Office of the Inspector General | Appeal Hearings
+
+ ☰ Menu
+
+Office of the Inspector General
+About the Office of Inspector General
+Accreditation
+Appeal Hearings
+Authorities and Resources
+Frequently Asked Questions
+How to Request a Public Assistance Hearing
+Self-Help Forms
+
+ Community Alliances
+
+ Contact Information
+Internal and Single Audit
+Investigations
+Publications and Reports
+
+Overview
+
+The Appeal Hearings Section conducts administrative fair hearings for applicants and recipients of public assistance and child welfare programs, disqualification hearings, and nursing home discharge hearings on behalf of the Florida Department of Children and Families (DCF). The office also conducts hearings for applicants and recipients of the Medicaid Waiver Program for the Agency for Persons with Disabilities (APD) and limited hearings for the Department of Revenue, the Department of Health (DOH), and the Department of Elder Affairs (DOEA). The parties to the appeal include a petitioner, who requested the appeal, and a respondent, who is responding to the hearing request. Most hearings are conducted telephonically; however, federal regulations give applicants and recipients a right to an in-person hearing. The purpose of a fair hearing is to afford due process in accordance with the U.S. Constitution. The goal of this section in fulfilling DCF's mission is to ensure that administrative hearings are conducted timely, fairly, professionally, and objectively, thereby resulting in quality decisions that are consistent with the laws and regulations.
+
+DCF is required to provide an opportunity for an administrative hearing to any applicant or recipient when its action, intended action, or failure to act would adversely affect the individual or family"s eligibility for an amount or type of public assistance benefits; or when action on a claim for such assistance or services is unreasonably delayed. A request for a public assistance fair hearing can be made at a local DCF office, the Customer Call Center (CCC), or directly to the Appeal Hearings Section. There is a time limit in which an appeal can be made, depending on program rules. For the Supplemental Nutrition Assistance Program (SNAP), Cash Assistance, and Medicaid programs, a fair hearing must be requested within 90 days of the Notice of Case Action.
+
+The section reports directly to the Inspector General and employs dedicated full-time hearing officers to conduct hearings; this ensures independence and complies with federal regulations requiring a hearing officer to be a headquarters-level employee. Each hearing officer is a trained, knowledgeable, independent, and neutral adjudicator who had no involvement in the initial determination. The hearing officer makes a written decision on the appeal based on the evidence developed on the record and the program rules and regulations. The written decision is in the form of a Final Order issued to all the parties within federally established deadlines. If the final decision is unfavorable to the non-agency party, an appeal may be requested within a limited time to the appropriate District Court of Appeals (DCA).
+
+Headquarters
+
+Office of Inspector General
+
+ Appeal Hearings Section
+
+ 2415 North Monroe Street
+
+ Suite 400-I
+
+ Tallahassee, Florida 32303-4190
+
+ Phone: (850) 488-1429
+
+Regional Offices
+
+Tallahassee (North)
+
+Orlando (Central)
+
+Tampa (Sun Coast)
+
+Fort Lauderdale (Southeast)
+
+Miami (Southern)
+
+SOURCE 4: Florida Department of Elder Affairs, Long-Term Care Ombudsman Program | https://elderaffairs.org/programs-and-services/long-term-care-ombudsman-program/ | source date: none stated on page | retrieved: 2026-09-05
+About Us
+
+Resources
+
+Programs and Services
+
+News & Events
+
+News
+
+Press Releases
+
+Aging Outlook
+
+Public Meetings
+
+Ombudsman Public Meetings
+
+Public and Professional Guardians Public Meetings
+
+Alzheimer’s Disease Advisory Committee (ADAC)
+
+Public Notices
+
+Contact Us
+
+Search for:
+
+Long-Term Care Ombudsman Program
+
+Information For
+
+Select a section...Program InformationResourcesFile a ComplaintResidents' RightsVolunteer Information
+
+Mission Statement
+
+The mission of the Florida Long-Term Care Ombudsman Program is to improve the quality of life for all Florida long-term care residents by advocating for and protecting their health, safety, welfare and rights.
+
+Program Information
+
+The Long-Term Care Ombudsman Program (LTCOP) is a statewide, volunteer-based system of local units that act as advocates for residents of long-term care facilities. The LTCOP was established by Title VII of the federal Older Americans Act and its operation is governed by state statute, part I of Chapter 400, Florida Statutes. Through 14 district offices that together cover the entire state, volunteers work with staff to identify, investigate, and resolve complaints made by, or on behalf of, residents of nursing homes, assisted living facilities, adult family-care homes, and continuing care retirement communities.
+
+In addition to investigating and resolving complaints, the LTCOP performs the following services or activities:
+
+Monitoring of and commenting on the development and implementation of federal, state, and local laws, regulations, and policies regarding health, safety, and welfare of residents in long-term care facilities.
+
+Conducting routine access visits of long-term care facilities.
+
+Aiding the development of resident and family councils.
+
+Resources
+
+File a Complaint
+
+Notices of Public Meetings
+
+Publications
+
+Ombudsman News & Events
+
+Contact Us
+
+Get Disaster Preparedness Resources
+
+Request an Ombudsman for In-Service Training
+
+Florida's Long-Term Care Ombudsman Training Portal
+
+Volunteer
+
+Residents' Rights
+
+For Residents of Nursing Homes
+
+According to Section 400.022, Florida Statutes:
+
+Nursing home facilities shall adopt and make public a statement of the rights and responsibilities of the residents and shall treat such residents in accordance with the provisions of that statement. Each resident shall have the right to:
+
+Civil and religious liberties.
+
+Private and uncensored communication.
+
+Visitation by any individual providing health, social, legal, or other services and the right to deny or withdraw consent at any time.
+
+Present grievances and recommend changes in policies and services free from restraint, interference, coercion, discrimination, or reprisal. Includes the right to have access to the ombudsmen and other advocacy groups.
+
+Organize and participate in resident groups.
+
+Participate in social, religious, and community activities that do not interfere with the rights of others.
+
+Examine results of recent facility inspections by federal and state agencies including the plan of correction if applicable.
+
+Manage his/her own financial affairs. A quarterly accounting will be furnished to resident or legal representative.
+
+Be fully informed, in writing and orally, of services available at the facility and of related charges for such services.
+
+Refuse medication and treatment and to know the consequences.
+
+Receive adequate and appropriate health care, protective and support services within established and recognized standards.
+
+Privacy in treatment and in caring for personal needs.
+
+Be informed of medical condition and proposed treatment and be allowed participation in planning.
+
+Be treated courteously, fairly, and with the fullest measure of dignity.
+
+Be free from mental and physical abuse, corporal punishment, extended involuntary seclusion, and from physical and chemical restraints except those ordered by resident’s physician.
+
+Be transferred or discharged only for medical reasons, the welfare of other residents or nonpayment of a bill.
+
+Receive a thirty (30) day written notice of discharge or relocation, and challenge such notice.
+
+Choose physician and pharmacy.
+
+Retain and use personal clothing and possessions.
+
+Have copies of rules and regulations of the facility.
+
+Notification prior to room change.
+
+Information concerning bed-hold policy for hospitalization.
+
+Also, federal law prevents nursing homes from discharging (removing) or transferring (moving to another facility) a resident except for the following reasons:
+
+The resident’s welfare cannot be met at the facility.
+
+The resident’s health has improved sufficiently so the resident no longer needs the services provided by the facility.
+
+The health or safety of individuals is endangered.
+
+The resident has failed, after reasonable and appropriate notice, to pay or have paid under Medicare or Medicaid for residence at the facility.
+
+The facility closes.
+
+A nursing home must give residents 30 days written notice prior to discharge or transfer. A resident who thinks the above rights have been violated must request a hearing in writing within 90 days by sending the form given to them by the facility to: Office of Appeals Hearings, 1317 Winewood Boulevard, Building 5, Room 203, Tallahassee, FL 32399-0700. (Telephone: 1-850-488-1429)
+
+Requesting a hearing within 10 days stops the removal of the resident until the hearing process is completed. A nursing home resident may request assistance from the Long-Term Care Ombudsman Program by calling toll-free 1-888-831-0404.
+
+For Residents of Assisted Living Facilities and Adult Family Care Homes
+
+According to Section 429.28 and 429.85, Florida Statutes:
+
+No resident of a facility shall be deprived of any civil or legal rights, benefits, or privileges guaranteed by law, the Constitution of the State of Florida, or the Constitution of the United States as a resident of a facility. Every resident shall have the right to:
+
+Live in a safe and decent living environment, free from abuse and neglect.
+
+Be treated with consideration, respect and with due recognition of personal dignity, individuality, and the need for privacy.
+
+Retain and use his/her own clothes and other personal property.
+
+Unrestricted private communication including receiving and sending unopened correspondence, access to a telephone, and visiting with any person of his or her choice, at any time between the hours of 9 a.m. and 9 p.m. at a minimum.
+
+Participate in and benefit from community services and activities to achieve the highest possible level of independence, autonomy, and interaction with the community.
+
+Manage his/her own financial affairs unless the resident (or the resident’s legal representative) authorizes the administrator of the facility to provide safekeeping for funds.
+
+Share a room with spouse if both are residents of the facility.
+
+Reasonable opportunity to exercise and to go outdoors at regular and frequent intervals.
+
+Adequate and appropriate health care consistent with established and recognized standards.
+
+Exercise civil and religious liberties including personal decisions. No religious beliefs, practices, nor attendance at religious services, shall be imposed on any resident.
+
+Thirty (30) days notice to AFCH residents and forty-five (45) day notice to ALF residents of relocation or termination of residency except in cases of emergency.
+
+Present grievances and recommend changes in policies, procedures, and services to the staff of the facility without restraint, interference, coercion, discrimination, or reprisal. This right includes access to ombudsmen volunteers and advocates and the right to be a member of, to be active in, and to associate with advocacy or special interest groups.
+
+(ALF) Be free from physical and chemical restraints other than those prescribed by the resident’s physician. The use of physical restraints shall be limited to half-bedrails and only upon the written order of the resident’s physician and the consent of the resident or the resident’s legal representative. [S. 429.41(1)(k)].
+
+(AFCH) Be free from chemical and physical restraints. [S. 429.85(1)(k)].
+
+Also, every assisted living facility resident shall have the right to at least 45 days’ notice of relocation or termination of residency from the facility unless, for medical reasons, the resident is certified by a physician to require an emergency relocation to a facility providing a more skilled level of care or the resident engages in a pattern of conduct that is harmful or offensive to other residents. In the case of a resident who has been adjudicated mentally incapacitated, the guardian shall be given at least 45 days’ notice of a non-emergency relocation or residency termination. Reasons for relocation shall be set forth in writing. In order for a facility to terminate the residency of an individual without notice as provided herein, the facility shall show good cause in a court of competent jurisdiction.
+
+Every adult family care home resident shall have the right to at least 30 days’ notice of relocation or termination of residency from the home unless, for medical reasons, the resident is certified by a physician to require an emergency relocation to a facility providing a more skilled level of care or the resident engages in a pattern of conduct that is harmful or offensive to other residents. If a resident has been adjudicated mentally incompetent, the resident’s guardian must be given at least 30 days’ notice, except in an emergency, of the relocation of a resident or the termination of a residency. The reasons for relocating a resident must be set forth in writing.
+
+An assisted living facility resident or adult family care home resident may request assistance from the Long-Term Care Ombudsman Program by calling toll-free 1-888-831-0404.
+
+Publications
+
+Six Reasons for a Facility-Initiated Discharge
+
+Six Reasons for a Facility-Initiated Discharge - Spanish
+
+Bill of Rights of Nursing Homes - Creole
+
+Bill of Righs of Adult Living Facilities - Creole
+
+Bill of Rights of Adult Family Care Homes - Creole
+
+Transfer and Discharge Booklets - English
+
+Transfer and Discharge Booklets - Spanish
+
+Volunteer Information
+
+Outlook Email Open Email | Get Care Database Access Get Care | Training & Resources View Resources
+
+Potential Volunteers FAQ
+
+Considering becoming an ombudsman? Below are some of the most frequently asked questions. Click on a question to see the answer.
+
+What exactly is an “ombudsman”?
+
+An ombudsman is a person who investigates and attempts to resolve complaints and problems. Our ombudsmen are advocates for people who live in nursing homes, assisted living facilities and adult family care homes. The vulnerable individuals in these facilities often have no one to speak for them or keep an eye on the level and quality of care they receive. Ombudsmen are there to serve as the voice of a resident when no one else is willing or able.
+
+What sets us apart is that our sole focus is on the resident. Where other groups are bound by regulations, we can get creative. We can be consistent. We can visit as often as we like and build impactful relationships that get real results.
+
+So, ombudsmen are mediators?
+
+Ombudsmen are first and foremost advocates. Ombudsmen are not in place to attempt a compromise between a long-term care facility and a family member, caregiver, guardian or resident. An ombudsman’s job is to be biased in favor of residents, and the ombudsman will do his or her best to resolve a complaint or case to the full satisfaction of the residents involved.
+
+What kind of skills or background should an ombudsman have?
+
+While volunteer ombudsmen come from a variety of backgrounds, the only special requirements are compassion and a willingness to help others. The Ombudsman Program provides the necessary training to becoming an ombudsman. Seasoned ombudsmen as well as District Ombudsman Managers are always available to answer questions and provide assistance.
+
+How much time will I be expected to volunteer monthly?
+
+Ombudsmen are asked to commit to 15-20 hours of ombudsman work per month and to attend the monthly ombudsman council meeting in his or her area.
+
+What training will I need?
+
+After completing the necessary paperwork, potential ombudsmen attend three sessions of classroom training and three sessions of field training. Trainings are usually provided by the District Ombudsman Manager, State Trainer or a seasoned ombudsman volunteer.
+
+Will I have to get a background check?
+
+Yes. In order to ensure the safety of the residents they will work with, all potential ombudsmen must undergo a Level 2 background screening prior to attending training.
+
+Will I be reimbursed for the miles I drive and meals I eat while doing ombudsman work?
+
+As representatives of the State of Florida, ombudsmen receive reimbursement at the current state rate. Ombudsmen also receive reimbursement for meals while doing ombudsman work. The full set of State of Florida policies for reimbursement will be outlined for you during the training process.
+
+Where are the facilities that I will visit? How far will I have to drive?
+
+Only as far as you want. Most ombudsmen prefer to visit facilities close to home, and the Ombudsman Program is able to accommodate this. Sometimes you may be asked to travel a little further, but the decision is ultimately your own.
+
+Where are the monthly meetings located?
+
+Ombudsman council meetings are usually held at the local Ombudsman Program office (when space permits), or at a nearby public venue.
+
+I work at a long-term care facility. Can I still be an ombudsman?
+
+Ombudsman volunteers may not be currently employed by or receiving any form of payment (including retirement benefits) from a long-term care facility in Florida or any other state.
+
+I have a family member in a long-term care facility. Can I still be an ombudsman?
+
+Yes. However, your visits to any facility in which your loved ones reside should remain strictly personal and as a private citizen, not as an ombudsman performing ombudsman advocacy duties.
+
+I work full time. Can I still be an ombudsman?
+
+While many ombudsman volunteers also hold full-time jobs, all volunteers are asked to agree to a minimum of 15-20 hours per month of ombudsman work, including attendance at each monthly council meeting.
+
+How do I apply?
+
+Link to application here
+
+Still have questions? Send us an email.
+
+Request an Ombudsman for In-Service Training
+
+I am (check one): StaffResidentFamily Member of a Resident
+
+Check which in-service or training you are requesting: Resident’s RightsInformation on the Long-Term Care Ombudsman ProgramOther
+
+Submit
+
+Florida Department of Elder Affairs
+
+4040 Esplanade Way
+
+Tallahassee, FL 32399-7000
+
+information@elderaffairs.org
+
+Phone: | 850-414-2000
+
+Fax: | 850-414-2004
+
+TDD: | 850-414-2001
+
+About Us
+
+Department Overview
+
+Office of the Secretary
+
+Agency Clerk
+
+Resources
+
+Resource Guide
+
+Aging & Disability Resource Centers (ADRCs)
+
+Partners
+
+Reports
+
+Forms
+
+Programs & Services
+
+Housing
+
+Food & Nutrition
+
+Transportation
+
+Health & Wellness
+
+Health Insurance
+
+Senior Employment
+
+Caregiving
+
+Elder Protection
+
+Elder Law
+
+News & Events
+
+Press Releases
+
+Public Meeting Notices
+
+Public Records Requests
+
+Contact
+
+Contact Us
+
+Join Our Team
+
+Copyright © DOEA. All rights reserved.
+
+HIPAA - Notice of Privacy Practices for Protected Health Information
+
+Background Screening
+
+Florida Care Provider Background Screening Clearinghouse Portal
+
+Close
+
+Customize
+Reject All
+Accept All
+
+Powered by
+
+✖
+
+►
+Necessary Cookies
+
+Always Active
+
+ Necessary cookies enable essential site features like secure log-ins and consent preference adjustments. They do not store personal data.
+
+None
+
+►
+Functional Cookies
+Remark
+
+ Functional cookies support features like content sharing on social media, collecting feedback, and enabling third-party tools.
+
+None
+
+►
+Analytical Cookies
+Remark
+
+ Analytical cookies track visitor interactions, providing insights on metrics like visitor count, bounce rate, and traffic sources.
+
+None
+
+►
+Advertisement Cookies
+Remark
+
+ Advertisement cookies deliver personalized ads based on your previous visits and analyze the effectiveness of ad campaigns.
+
+None
+
+Reject All
+Save My Preferences
+Accept All
+
+Powered by
+
+SOURCE 5: Florida Administrative Code Chapter 65-2, Rules of Practice and Procedure (Department of Children and Families) | https://flrules.org/gateway/readFile.asp?sid=0&tid=0&cno=65-2&caid=1206309&type=4&file=65-2.doc | source date: most sections effective 4/2/2018 (per each rule's own History line on flrules.org; 65-2.058 effective 12/11/2006 and 65-2.060 effective 10/30/2000 are not amended by the 2018 rulemaking) | retrieved: 2026-09-05
+CHAPTER 65-2
+RULES OF PRACTICE AND PROCEDURE
+65-2.042 	Applicant/Recipient Fair Hearings
+65-2.043 	Hearings Request and Notification of Right to Hearings
+65-2.044 	Right to Request a Hearing
+65-2.045 	Hearings Request
+65-2.046 	Time Limits in Which to Request a Hearing
+65-2.047 	Preliminary or Procedural Matters
+65-2.048 	Action to Reduce or Discontinue Assistance or Service
+65-2.049 	Hearing Request Procedures
+65-2.050 	Transportation
+65-2.056 	Basis of Hearings
+65-2.057 	Conduct of Hearing
+65-2.058 	Appearances
+65-2.059 	Continuances
+65-2.060 	Evidence
+65-2.061 	Failure to Appear
+65-2.066 	Final Orders
+65-2.068 	TANF Overpayment Hearings
+65-2.069 	Intentional Program Violation Disqualification Hearings
+65-2.042 Applicant/Recipient Fair Hearings.
+The Department of Children and Families, hereinafter referred to as Department, is required to provide notice and an opportunity of a hearing to any applicant or recipient when the Department’s action, intended action or failure to act would adversely affect the individual’s or family’s eligibility for an amount or type of financial assistance, medical assistance, social services, Temporary Assistance of Needy Families (TANF), or Supplemental Nutrition Assistance Program (SNAP) benefits, or where action on a claim for such assistance or services is unreasonably delayed.
+(1) The hearings covered by Rule 65-2.042, F.A.C., et seq., are those within the Department of Children and Families in the execution of those social and economic programs administered by the former Division of Family Services of the Department of Health and Rehabilitative Services prior to the reorganization effected by Chapter 75-48, Laws of Florida.
+(2) Parties in any Section 120.569, F.S., proceedings are agencies and appellants. Party includes the Agency.
+(3) Hearing officer shall mean the individual presiding over the hearing. The hearings will be conducted by a hearing officer from the Office of Appeal Hearings, which is within the Office of Inspector General.
+(4) All parties shall be entitled to receive notice of hearings, conferences and decisions of the Department and those other rights afforded by Chapter 120, F.S.
+(5) When staff personnel and others appear as witnesses, the staff and others shall be sworn and subject to examination and cross-examination.
+(6) These hearings are conducted in accordance with Rule 65-2.042, F.A.C., et seq., and the Uniform Rules of Procedure, Chapter 28-106, F.A.C. The Department has been granted exceptions to complying with certain Uniform Rules by the Administration Commission.
+(a) An exception was granted for Rule 28-106.104, F.A.C., Filing. The Department relies upon Rule 65-2.045, F.A.C., Hearings Request.
+(b) An exception was granted for Rule 28-106.105, F.A.C., Appearances. The Department relies upon Rule 65-2.058, F.A.C., Appearances.
+(c) An exception was granted for Rule 28-106.106, F.A.C., Who May Appear; Criteria for Qualified Representatives. The Department relies upon Rule 65-2.058, F.A.C., Appearances.
+(d) An exception was granted for Rule 28-106.107, F.A.C., Standards of Conduct for Qualified Representatives. The Department relies upon Rule 65-2.058, F.A.C., Appearances.
+(e) An exception was granted to Rule 28-106.109, F.A.C., Notice to Interested Parties. There is no substitute for this rule.
+(f) An exception was granted to Rule 28-106.111, F.A.C., Point of Entry into Proceedings and Mediation. The Department relies upon Rule 65-2.043, F.A.C., Hearing Request and Notification of Right to Hearings.
+(g) An exception was granted for Rule 28-106.201, F.A.C., Initiation of Proceeding. The Department relies upon Rule 65-2.043, F.A.C., Hearing Request and Notification of Right to Hearings.
+(h) An exception was granted to Rule 28-106.210, F.A.C., Continuances. The Department relies upon Rule 65-2.059, F.A.C., Continuances.
+Rulemaking Authority 409.285 FS. Law Implemented 409.285 FS. History–New 5-17-78, Formerly 10-2.42, 10-2.042, Amended 10-30-00, 4-2-18.
+65-2.043 Hearings Request and Notification of Right to Hearings.
+(1) Every applicant or recipient shall be informed in writing at the time of application and at the time of any action on his/her claim, of the right to a hearing, the method of obtaining this hearing, and that he/she may present his/her case or have legal counsel or an authorized representative present it.
+(2) In cases of intended action to discontinue, terminate, or reduce assistance, the Department shall give timely and adequate notice.
+(3) In Supplemental Nutrition Assistance Program (SNAP) cases:
+(a) The notice of adverse action shall be considered timely if the advance notice period provides at least 10 days from the date the notice is mailed to the date upon which it becomes effective. Also, if the advance notice period ends on a weekend or holiday, and a request for a fair hearing is received the day after the weekend or holiday, the Department shall consider the request timely.
+(b) The notice shall be considered adequate if it explains in easily understandable language: the proposed action; the reason for the proposed action; the household right to request a fair hearing; the telephone number and if possible name of the person to contact for additional information; the availability of continued benefits; and the liability of the household for any overissuance received while awaiting a fair hearing if the decision is adverse to the household. If there is an organization that provides free legal representation, the notice shall also advise the household of the availability of the service.
+(c) Individual notice of case actions are not required when:
+1. The Department initiates a mass change based on the following: Federal adjustments to eligibility standards, allotments, and deductions, state adjustments to utility standards; mass changes in public assistance; and mass changes in Federal benefits.
+2. The Department receives a written statement from the household or the authorized representative which either states that SNAP benefits are no longer desired or which acknowledges that information the household has provided will result in a reduction of benefits and waives the right to notice of adverse action.
+3. The Department determines that all of the members of the household have died.
+4. The household has been receiving an increased allotment to restore benefits, the restoration is complete, and the household was previously notified in writing of when the increased allotment would terminate.
+5. The household’s allotment varies from month to month with the certification period to take into account changes which were anticipated at the time of certification and the household was so notified at the time of certification.
+6. The household applied jointly for public assistance and SNAP benefits pending approval of the public assistance grant and was notified at the time of certification that SNAP benefits would be reduced upon approval of the public assistance grant.
+7. A household member is disqualified for fraud in accordance with Federal Regulation, or the benefits of the remaining household members are reduced or terminated to reflect the disqualification of that household member.
+8. The household contains a member subject to a lockout or strike and, for purposes of receiving a longer certification period than is otherwise allowed for such households, signs a waiver of his/her right to notice of adverse action to enable the Department to reduce or terminate benefits when the lockout or strike is settled and the household has begun receiving income from employment again.
+9. The Department determines that the household has moved from the project area.
+(4) In all other cases, “timely” means that the notice is mailed at least 10 days before the date of action, that is, the date upon which the action would become effective. “Adequate” means a written notice that includes a statement of what action the agency intends to take, the reasons for the intended agency action, explanation of the individual’s right to request an evidentiary hearing (if provided) and a state agency hearing, and the circumstances under which assistance is continued if a hearing is requested. The specific regulations supporting the action must be included for Medicaid actions.
+(5) The Department shall dispense with timely notice but shall send adequate notice to be received no later than the effective date of the action when:
+(a) The Department has factual information confirming the death of a recipient or of the Temporary Assistance of Needy Families (TANF) payee when there is no relative available to serve as new payee;
+(b) The Department receives a clear written statement signed by a recipient that he or she no longer wishes to receive assistance, or that gives information which requires termination or reduction of assistance, and the recipient has indicated, in writing, that he understands that this must be the consequence of supplying such information;
+(c) The recipient has been admitted or committed to an institution, and further payments to that individual do not qualify for Federal financial participation under the State plan;
+(d) The recipient has been placed in skilled nursing care, intermediate care or long-term hospitalization;
+(e) The claimant’s whereabouts are unknown and Department mail directed to him has been returned by the post office indicating no known forwarding address. The claimant’s check must, however, be made available to him/her if his/her whereabouts become known during the payment period covered by a returned check;
+(f) A recipient has been accepted for assistance in a new jurisdiction and that fact has been established by the jurisdiction previously providing assistance;
+(g) A TANF child is removed from the home as a result of a judicial determination, or voluntarily placed in foster care by his/her legal guardian;
+(h) A change in level of medical care is prescribed by the recipient patient’s physician;
+(i) A special allowance granted for a specific period is terminated and the recipient has been informed in writing at the time of initiation that the allowance shall automatically terminate at the end of the specified period.
+Rulemaking Authority 409.285 FS. Law Implemented 409.285 FS. History–New 5-17-78, Amended 3-1-79, Formerly 10-2.43, Amended 4-28-86, Formerly 10-2.043, Amended 10-30-00, 4-2-18.
+65-2.044 Right to Request a Hearing.
+Any applicant/recipient dissatisfied with the Department’s action or failure to act has a right to request a hearing. He/she may do so when it is believed that:
+(1) Opportunity to make application has been denied.
+(2) The application has been rejected.
+(3) The application has not been acted upon within a reasonable length of time.
+(4) The benefits have been modified or discontinued.
+(5) Reconsideration of the assistance/service benefits is refused or delayed.
+(6) Opportunity has not been given to make a choice of service.
+(7) Any other Department action or inaction relating to public assistance eligibility is incorrect.
+Rulemaking Authority 409.285 FS. Law Implemented 409.285 FS. History–New 5-17-78, Formerly 10-2.44, 10-2.044, Amended 4-2-18.
+65-2.045 Hearings Request.
+(1) A request for hearing is defined as any clear written or oral statement to the Department that the applicant/recipient or his/her authorized representative wants an opportunity to present the case to a higher authority. The freedom to make such a request shall not be limited or interfered with in any way.
+(2) The date of the request is the date it is received by the Department.
+(3) A request for hearing may be made by the applicant/recipient or someone on his/her behalf. However, if the appeal is filed by someone other than the applicant/recipient, attorney, legal guardian, spouse, next of kin, the grantee relative in cash assistance, or a person allowed by the Department as an authorized representative to participate in the eligibility determination, the person making the appeal must have written authorization of the applicant/recipient. Such written authorization must accompany the hearing request. Should the request be filed without the written authorization, the authorization must be provided in response to a request from the Department or hearing officer, prior to the appeal going forward. Without prior proper written authorization, the Department will treat a request for hearing as being made by someone not authorized to do so. Therefore, the appeal will be dismissed.
+(4) The request shall be in written form when made by someone other than the applicant/recipient.
+(5) In appeals related to the Supplemental Nutrition Assistance Program (SNAP) program the Department upon request shall make available without charge the specific materials necessary for a household, or its representative, to determine whether a hearing should be requested or to prepare for a hearing. Upon request, the Department shall also help the household with its hearing request. If there is an individual or organization available that provides free legal representation, the household shall also be informed of the availability of that service.
+Rulemaking Authority 409.285 FS. Law Implemented 409.285 FS. History–New 5-17-78, Amended 3-1-79, Formerly 10-2.45, 10-2.045, Amended 1-8-07, 4-2-18.
+65-2.046 Time Limits in Which to Request a Hearing.
+(1) The appellant or authorized representative must exercise the right to appeal within 90 calendar days in all programs except the Road to Independence (RTI) Program under Section 409.1451(4), F.S., and the Adoption Subsidy Program under Sections 120.569 and 120.57, F.S. The right to appeal under the RTI Program must be exercised within 30 calendar days from the date of receipt of the notice of adverse action pursuant to paragraph 65C-42.004(3)(a), F.A.C. The right to appeal under the Adoption Subsidy Program must be exercised within 21 calendar days from the receipt of the notice of adverse action pursuant to subsection 65C-16.013(2), F.A.C. Additionally, in the Supplemental Nutrition Assistance Program (SNAP), a household may request a fair hearing at any time within a certification period to dispute its current level of benefits. The 30-day time period under the RTI Program begins on the date the written notification is received. The 90-day time period for all other programs begins with the date following:
+(a) The date on the written notification of the decision on an application.
+(b) The date on the written notification of reduction or termination of program benefits.
+(c) The date of the Department’s written notification of denial or a request or other action which aggrieves the petitioner when that denial or action is other than an application decision or a decision to reduce or terminate program benefits.
+(2) The time limitation does not apply when the Department fails to send a required notification, fails to take action of a specific request or denies a request without informing the appellant. If the notice is not mailed on the day it is dated, the time period commences on the date it is mailed.
+Rulemaking Authority 409.285 FS. Law Implemented 409.285 FS. History–New 5-17-78, Amended 3-1-79, Formerly 10-2.46, 10-2.046, Amended 4-2-18.
+65-2.047 Preliminary or Procedural Matters.
+Only the hearing officer may rule on preliminary or procedural matters relevant to the hearing.
+Rulemaking Authority 409.285 FS. Law Implemented 409.285 FS. History–New 5-17-78, Formerly 10-2.47, Amended 4-28-86, Formerly 10-2.047, Amended 10-30-00, 4-2-18.
+65-2.048 Action to Reduce or Discontinue Assistance or Service.
+(1) In all programs other than the Supplemental Nutrition Assistance Program (SNAP), a hearing request filed within ten (10) days after the date of mailing or hand delivery of the notice either orally or written, requires that assistance be continued at the current level until the final written decision of the hearings officer is rendered; unless, a change affecting the appellant’s grant occurs while the hearing decision is pending and the recipient fails to request a hearing after notice of the change.
+(2) In the SNAP program if a household requests a fair hearing, a continuation of benefits within the period provided by the notice of Adverse Action, as set forth in subsection 65-2.043(3), F.A.C., and if certification period has not expired, the household’s participation in the program shall be continued on the basis authorized immediately prior to the Adverse Action, unless the household specifically waives continuation of benefits. A form for requesting a fair hearing shall contain space for the household to indicate whether or not continued benefits are requested. If the form does not positively indicate that the household has waived continuation of benefits, the Department shall assume that continuation of benefits is desired and the benefits shall be issued accordingly. If the Department’s action is upheld by the hearing decision, a claim against the household shall be established for all over issuances. If a hearing request is not made within the period provided by the notice of Adverse Action, benefits shall be reduced or terminated as provided in the notice. However, if the household establishes that its failure to make the request within the advance notice period was for good cause, the Department shall reinstate the benefits to the prior basis. When benefits are reduced or terminated due to a mass change, participation on the prior basis shall be reinstated only if the issue being contested is that SNAP eligibility or benefits were improperly completed or that federal law or policy is being misapplied or misinterpreted by the Department.
+Once reinstated or continued, benefits shall not be reduced or terminated prior to the receipt of the hearing decision unless:
+(a) The certification period expires. The household may reapply and may be determined eligible for a new certification period with benefit amount as determined by the Department.
+(b) The hearing officer makes a preliminary determination, in writing and at the hearing that the sole issue is one of federal law, regulation, or policy and that the household’s claim that the Department improperly computed the benefits or misapplied or misinterpreted such law, regulation or policy is invalid.
+(c) A change affecting the household’s eligibility or basis of issuance occurs while the hearing decision is pending and the household fails to request a hearing after the subsequent notice of adverse action.
+(d) A mass change affecting the household’s eligibility or basis of issuance occurs while the hearing is pending.
+The Department shall promptly notify the household in writing if benefits are reduced or terminated pending the hearing decision.
+Rulemaking Authority 409.285 FS. Law Implemented 409.285 FS. History–New 5-17-78, Amended 3-1-79, Formerly 10-2.48, 10-2.048, Amended 4-2-18.
+65-2.049 Hearing Request Procedures.
+(1) Any hearing request, submitted to the Department, written or oral, must be sent by the Department to the Office of Appeal Hearings within three (3) working days, excluding holidays and weekends, along with a statement of the matters asserted by the Department and a copy of the Notice of Case Action when such Notice exists. This must include a reference to the particular section of the statutes or rules involved and be submitted with the hearing request. If it is an oral request, the Request for Hearing Form must be completed by Department staff, omitting the signature of the appellant.
+(2) Upon receipt of the Request for Hearing, a supervisory review is mandated. The supervisory review or interview may satisfy the appellant regarding his/her case so that a request for hearing is withdrawn. Should an error be discovered during this process, immediate action shall be taken to rectify it, and the appellant shall be so advised.
+(3) The Office of Appeal Hearings shall also be notified immediately when the review results in a change of status of the case. If the appellant is satisfied with the adjustment and/or explanation made by the Department representative, the appellant will be given the opportunity to withdraw the request. If the appellant chooses to withdraw the appeal, he/she will be requested to make a written statement to this effect, stating the reason for withdrawal. However, if the appellant declines to make a written statement, the Department representative shall immediately notify the Office of Appeal Hearings, in writing, of the appellant’s decision.
+Rulemaking Authority 409.285 FS. Law Implemented 409.285 FS. History–New 5-17-78, Formerly 10-2.49, 10-2.049, Amended 4-2-18.
+65-2.050 Transportation.
+The Department has the responsibility of assuring that the appellant has transportation to the hearing if requested. This rule applies only to Department public assistance cases.
+Rulemaking Authority 409.285 FS. Law Implemented 409.285 FS. History–New 5-17-78, Formerly 10-2.50, 10-2.050, Amended 4-2-18.
+65-2.056 Basis of Hearings.
+The hearing shall include consideration of:
+(1) Any Department action, or failure to act with reasonable promptness, on a claim of financial assistance, social services, medical assistance, Temporary Assistance of Needy Families (TANF), or Supplemental Nutrition Assistance Program (SNAP) benefits, which includes delay in reaching a decision on eligibility in both initial and subsequent determination, or in making a payment, the amount of payment, change in payments, refusal to consider a request for or undue delay in making an adjustment in payment, and discontinuance, termination or reduction of such assistance.
+(2) The hearing officer must determine whether the Department’s decision on eligibility or procedural compliance was correct at the time the decision was made. The hearings are de novo hearings, in that, either party may present new or additional evidence not previously considered by the Department in making its decision.
+Rulemaking Authority 409.285 FS. Law Implemented 409.285 FS. History–New 5-18-78, Formerly 10-2.56, 10-2.056, Amended 12-11-06, 4-2-18.
+65-2.057 Conduct of Hearing.
+The hearing is a formal proceeding and shall be conducted pursuant to these rules. At the request of the petitioner, the hearing may be conducted as an informal proceeding pursuant to Section 120.57(2), F.S.
+(1) For programs other than Supplemental Nutrition Assistance Program (SNAP) the appellant, or his/her representative, shall have adequate opportunity to examine the contents of the case file and all documents and records to be used by the Department at the hearing at a reasonable time before the date of the hearing, as well as during the hearing. In the SNAP program, the household must be given the opportunity to examine all documents and records to be used at the hearing at a reasonable time before the date of the hearing as well as during the hearing pursuant to 7 C.F.R. 273.15(p). The contents of the case file including the application form and documents of verification used by the Department to establish the household’s ineligibility or eligibility and benefit amount shall be made available, provided that confidential information is protected from release. If requested, the Department shall provide free copies of the relevant portions of the case file to the household or its representative. Confidential information that is protected from release and other documents or records which the household will not otherwise have an opportunity to contest or challenge shall not be introduced at the hearing or affect the hearing official’s decision.
+(2) The appellant, or his/her representative, shall have adequate opportunity to bring witnesses.
+(3) Each party shall have the right: to present evidence relevant to the issue; to cross-examine opposing witnesses on any matter relevant to the issue; to impeach any witness, regardless of which party first called him to testify; and to rebut the evidence presented against him/her, through the introduction of rebuttal evidence.
+(4) Oral evidence shall be taken only on oath or affirmation.
+(5) Opening and closing statements may be presented.
+(6) To the extent that the rules of discovery in the Florida Rules of Civil Procedure are not inconsistent with Chapter 120 F.S., the rules of discovery of the Florida Rules of Civil Procedure shall be applicable. The hearings officer may issue appropriate orders to effectuate the purposes of discovery and to prevent delay.
+(7) All motions shall be in writing unless made on the record during the hearing and shall fully state the action requested and the grounds relied on. The original written motion shall be filed with the hearings officer. The hearings officer shall conduct such proceedings and make such orders as it deems necessary to dispose of issues raised by the motion. All motions shall be accompanied by a written memorandum stating the grounds upon which such motion is based unless the party is not represented by counsel. All other parties to the action may, within seven (7) days of service, file written memorandum in opposition to such motion. Motions shall be decided on the basis of the pleadings, unless the hearings officer orders a hearing to resolve the issues.
+(8) Oral and written communications from the general public may be received by the hearings officer, provided that such communication shall be subject to cross-examination, challenge and rebuttal.
+(9) Federal regulations require that public assistance records shall be confidential as set forth in subsections 65A-1.204(2) and (3), F.A.C. Hearings conducted pursuant to these rules are only open to a party or witness, except as provided in federal regulation.
+(10) A hearings officer shall not grant a motion for rehearing or reconsideration.
+(11) The hearing officer shall insure that all relevant issues are considered.
+(12) The hearing officer shall request, receive and make part of the record information determined necessary to decide the issues being raised.
+(13) Hearing requests from households, such as migrant farm workers, shall be processed faster than others if necessary to enable them to receive a decision before they leave the area.
+(14) Federal regulations require that public assistance records shall be confidential as set forth in subsections 65A-1.204(2) and (3), F.A.C. Hearings conducted pursuant to these rules are only open to a party or witness, except as provided in federal regulation.
+Rulemaking Authority 409.285 FS. Law Implemented 409.285 FS. History–New 5-17-78, Amended 3-1-79, Formerly 10-2.57, 10-2.057, Amended 1-8-07, 4-2-18.
+65-2.058 Appearances.
+(1) A person may be represented by an attorney, or other qualified representative or may appear on their own behalf.
+(2) The hearing shall be attended by a representative of the Department.
+Rulemaking Authority 409.285 FS. Law Implemented 409.285 FS. History–New 5-17-78, Amended 3-1-79, Formerly 10-2.58, 10-2.058, Amended 12-11-06.
+65-2.059 Continuances.
+(1) The hearings officer may grant a continuance of the hearing pursuant to Rule 28-106.210, F.A.C., or upon stipulation of all parties of record and the consent of the hearings officer.
+(2) In appeals related to the Supplemental Nutrition Assistance Program (SNAP), the household may request and is entitled to receive a postponement of the scheduled hearing. The postponement shall not exceed 30 days and the time limit for action on the decision may be extended for as many days as the hearing is postponed.
+Rulemaking Authority 409.285 FS. Law Implemented 409.285 FS. History–New 5-17-78, Amended 3-1-79, Formerly 10-2.59, 10-2.059, Amended 4-2-18.
+65-2.060 Evidence.
+(1) The burden of proof, except where otherwise required by statutes, is on the party asserting the affirmative of an issue. The burden is upon the Department when the Department takes action which would reduce or terminate the benefits or payments being received by the recipient. The burden is upon the petitioner if an application for benefits or payments is denied. The party having the burden shall establish his/her position, by a preponderance of evidence, to the satisfaction of the hearing officer.
+(2) When the hearing involves medical issues such as those concerning a diagnosis, an examining physician’s report, or a Medical Review Team’s decision, if the hearing officer considers it necessary, a medical assessment other than that of the person or persons involved in making the original decision shall be obtained at agency expense and made a part of the record.
+Rulemaking Authority 409.285 FS. Law Implemented 409.285 FS. History–New 5-17-78, Formerly 10-2.60, 10-2.060, Amended 10-30-00.
+65-2.061 Failure to Appear.
+Abandonment may be deemed to have occurred if the appellant, without good cause therefor, fails to appear by himself/herself or an authorized representative at the hearing scheduled for such appellant. If good cause is shown, the appeal will no longer be considered abandoned and the hearing will be reset. The hearing officer shall determine whether or not good cause existed for the non-appearance of the appellant or authorized representative upon receipt of written or oral explanation from the appellant, the appellant’s authorized representative or Department representative. Written explanation for failure to appear must be received by the Office of Appeal Hearings within 60 calendar days from the date of the hearing when the appellant alleges nonreceipt of the notice of hearing or 30 calendar days from the date of the hearing for all other reasons.
+Rulemaking Authority 409.285 FS. Law Implemented 409.285 FS. History–New 5-17-78, Formerly 10-2.61, 10-2.061, Amended 4-2-18.
+65-2.066 Final Orders.
+(1) Orders issued by the hearings officers of the Office of Appeal Hearings of the Department of Children and Families are final orders and shall be implemented immediately.
+(2) The Final Order shall be based exclusively on evidence and other materials introduced at the hearing or material submitted after the hearing upon agreement of all parties.
+(3) The Final Order shall be in writing and include a caption, time and place of the hearing, statement of issues, findings of fact and conclusions of law. These orders will adhere to the requirements of the Florida Administrative Procedures Act, Chapter 120, F.S.
+(4) The Final Order issued by the hearings officer shall be dated and mailed at the time it is signed and the period allowed for judicial review will run from this date.
+(5) The Final Order shall be rendered within 90 days of request for all programs except Supplemental Nutrition Assistance Program (SNAP), in which case it shall be rendered in 60 days.
+(6) The Final Order shall authorize corrective action retroactively to the date the incorrect action was taken.
+(7) The Final Order shall include notice of a right to a judicial review.
+Rulemaking Authority 409.285 FS. Law Implemented 409.285 FS. History–New 5-17-78, Formerly 10-2.66, 10-2.066, Amended 4-2-18.
+65-2.068 TANF Overpayment Hearings.
+(1) Federal Regulation 45 C.F.R. 233.20(a)(13) requires the Department to recover overpayments of the Temporary Assistance of Needy Families (TANF) Program. Rule 65A-1.900, F.A.C., provides the method and procedures to be used by the Department to implement 45 C.F.R. 233.20(a)(13).
+(2) The Department must notify a person who has been paid benefits to which he/she was not entitled. The notice shall include the amount of overpayment, the dates of overpayment, the reason overpayment occurred, and a statement that action will be taken to recover this overpayment by a reduction in the TANF grant, or through court action. The notice shall include the person’s right to request a hearing if he/she disagrees with the Department’s determination that an overpayment occurred or if he/she disagrees with the amount of overpayment.
+(3) The hearings will meet the requirements of 45 C.F.R. 205.10 and Section 120.569, F.S. The hearing will be conducted in accordance with Rule 65-2.042, F.A.C., et seq.
+(4) The hearing officer shall enter an Order upon completion of the hearing process. This Order shall be final and binding upon the Department and appealable by the person to the appropriate District Court of Appeal.
+Rulemaking Authority 409.285 FS. Law Implemented 409.285 FS. History–New 4-5-83, Formerly 10-2.68, Amended 4-28-86, Formerly 10-2.068, Amended 4-2-18.
+65-2.069 Intentional Program Violation Disqualification Hearings.
+(1) The hearings officer of the Office of Appeal Hearings shall conduct intentional program violation disqualification hearings. These hearings shall be conducted in accordance with regulations published by the United States Department of Agriculture, Food and Nutrition Service in 7 C.F.R. 273.16.
+(2) The provision for an individual to waive an intentional program violation disqualification hearing is an option of the Food Stamp Act of 1977, 7 U.S.C. 2011 et seq., as amended, and included in 7 C.F.R. 273.16.
+Rulemaking Authority 409.285 FS. Law Implemented 409.285 FS. History–New 7-16-80, Formerly 10-2.69, Amended 4-28-86, 1-5-93, Formerly 10-2.069, Amended 4-2-18.
+
+SOURCE 6: Florida Medicaid Nursing Facility Services Coverage Policy, Rule 59G-4.200, F.A.C. (Agency for Health Care Administration) | https://ahca.myflorida.com/content/download/27067/file/59G-4.200.pdf | source date: May 2016 | retrieved: 2026-09-05
+Florida
+Medicaid
+
+Nursing Facility Services Coverage Policy
+       Agency for Health Care Administration
+                     May 2016
+
+                                                          Table of Contents
+1.0   Introduction ...................................................................................................................................... 1
+      1.1 Description ................................................................................................................................. 1
+      1.2 Legal Authority ........................................................................................................................... 1
+      1.3 Definitions .................................................................................................................................. 1
+
+2.0   Eligible Recipient ............................................................................................................................. 2
+      2.1 General Criteria ......................................................................................................................... 2
+      2.2 Who Can Receive ...................................................................................................................... 2
+      2.3 Coinsurance, Copayment, or Deductible ................................................................................... 2
+      2.4 Patient Responsibility ................................................................................................................ 2
+
+3.0   Eligible Provider .............................................................................................................................. 2
+      3.1 General Criteria ......................................................................................................................... 2
+      3.2 Who Can Provide ...................................................................................................................... 3
+
+4.0   Coverage Information...................................................................................................................... 3
+      4.1 General Criteria ......................................................................................................................... 3
+      4.2 Specific Criteria ......................................................................................................................... 3
+      4.3 Early and Periodic Screening, Diagnosis, and Treatment ......................................................... 4
+
+5.0   Exclusion .......................................................................................................................................... 4
+      5.1 General Non-Covered Criteria ................................................................................................... 4
+      5.2 Specific Non-Covered Criteria ................................................................................................... 4
+
+6.0   Documentation ................................................................................................................................. 4
+      6.1 General Criteria ......................................................................................................................... 4
+      6.2 Specific Criteria ......................................................................................................................... 4
+
+7.0   Authorization .................................................................................................................................... 4
+      7.1 General Criteria ......................................................................................................................... 4
+      7.2 Specific Criteria ......................................................................................................................... 4
+
+8.0   Reimbursement ................................................................................................................................ 5
+      8.1 General Criteria ......................................................................................................................... 5
+      8.2 Specific Criteria ......................................................................................................................... 5
+      8.3 Claim Type................................................................................................................................. 5
+      8.4 Billing Code, Modifier, and Billing Unit ...................................................................................... 5
+      8.5 Diagnosis Codes ....................................................................................................................... 5
+      8.6 Rate ........................................................................................................................................... 5
+
+May 2016                                                                   i
+
+1.0   Introduction
+      1.1   Description
+            Nursing facility services provide 24-hour medical and nursing care in a residential setting,
+            institution, or a distinct part of an institution.
+            1.1.1   Florida Medicaid Policies
+                    This policy is intended for use by nursing facility providers that render services to
+                    eligible Florida Medicaid recipients. It must be used in conjunction with Florida
+                    Medicaid’s general policies (as defined in section 1.3) and any applicable service-
+                    specific and claim reimbursement policies with which providers must comply.
+                    Note: All Florida Medicaid policies are promulgated in Rule Division 59G, Florida
+                    Administrative Code (F.A.C.). Coverage policies are available on the Agency for
+                    Health Care Administration’s (AHCA) Web site at
+                    http://ahca.myflorida.com/Medicaid/review/index.shtml.
+            1.1.2   Statewide Medicaid Managed Care Plans
+                    This Florida Medicaid policy provides the minimum service requirements for all
+                    providers of nursing facility services. This includes providers who contract with
+                    Florida Medicaid managed care plans (i.e., provider service networks and health
+                    maintenance organizations). Providers must comply with the service coverage
+                    requirements outlined in this policy, unless otherwise specified in the Agency for
+                    Health Care Administration’s (AHCA) contract with the Florida Medicaid managed
+                    care plan. The provision of services to recipients in a Florida Medicaid managed care
+                    plan must not be subject to more stringent service coverage limits than specified in
+                    Florida Medicaid policies.
+
+      1.2   Legal Authority
+            Nursing facility services are authorized by the following:
+               Title 42, Code of Federal Regulations (CFR), Chapter IV, Subpart B, Part 483
+               Sections 409.905 and 409.908, Florida Statutes (F.S.)
+               Rule 59G-4.200, F.A.C.
+
+      1.3   Definitions
+            The following definitions are applicable to this policy. For additional definitions that are
+            applicable to all sections of Rule Division 59G, F.A.C., please refer to the Florida Medicaid
+            definitions policy.
+            1.3.1   Claim Reimbursement Policy
+                    A policy document that provides instructions on how to bill for services.
+            1.3.2   Coverage and Limitations Handbook or Coverage Policy
+                    A policy document that contains coverage information about a Florida Medicaid
+                    service.
+            1.3.3   General Policies
+                    A collective term for Florida Medicaid policy documents found in Rule Chapter 59G-1
+                    containing information that applies to all providers (unless otherwise specified)
+                    rendering services to recipients.
+            1.3.4   Institutional Care Program
+                    The Institutional Care Program (ICP) is an eligibility category that covers individuals
+                    who meet the eligibility requirements for Florida Medicaid services in a skilled nursing
+                    facility or swing bed, intermediate care facility (ICF), state mental health hospital, or
+                    hospice.
+
+            1.3.5   Leave Days
+                    When a recipient leaves the facility overnight for hospitalization or therapeutic leave.
+            1.3.6   Medically Necessary/Medical Necessity
+                    As defined in Rule 59G-1.010, F.A.C.
+            1.3.7   Patient Responsibility
+                    The portion of a Florida Medicaid recipient’s monthly income, as determined by the
+                    Department of Children and Families (DCF), that the recipient is responsible to pay
+                    an ICF, nursing facility, state mental health hospital, or hospice.
+            1.3.8   Provider
+                    The term used to describe any entity, facility, person, or group that has been
+                    approved for enrollment or registered with Florida Medicaid.
+            1.3.9   Recipient
+                    For the purpose of this coverage policy, the term used to describe an individual
+                    enrolled in Florida Medicaid (including managed care plan enrollees).
+            1.3.10 Resident Rights
+                   Additional rights afforded to nursing facility residents in accordance with section
+                   400.022, F.S.
+            1.3.11 Therapeutic Leave
+                   A non-medical visit outside the facility, used for overnight visits with family or friends.
+
+2.0   Eligible Recipient
+      2.1   General Criteria
+            An eligible recipient must be enrolled in the Florida Medicaid program on the date of service
+            and meet the criteria provided in this policy.
+            Provider(s) must verify each recipient’s eligibility each time a service is rendered.
+
+      2.2   Who Can Receive
+            Florida Medicaid recipients requiring medically necessary nursing facility services who:
+               Have a level of care determined by the Comprehensive Assessment and Review for
+                Long-Term Care Services (CARES) if ages 21 years and older, or the Children’s
+                Multidisciplinary Assessment Team (CMAT), if under the age of 21 years
+               Meet the requirements for the ICP
+               Have a Pre-Admission Screening and Resident Review completed in accordance with
+                Rule 59G-1.040, F.A.C.
+               Have a completed Medical Certification for Medicaid Long-term Care Services and
+                Patient Transfer Form, as incorporated by reference in Rule 59G-1.045, F.A.C.
+            Some services may be subject to additional coverage criteria as specified in section 4.0.
+
+      2.3   Coinsurance, Copayment, or Deductible
+            There is no coinsurance, copayment, or deductible for this service.
+
+      2.4   Patient Responsibility
+            Providers may not change a recipient’s patient responsibility without DCF approval.
+
+3.0   Eligible Provider
+      3.1   General Criteria
+            Providers must be at least one of the following to be reimbursed for services rendered to
+            eligible recipients:
+
+                   Enrolled directly with Florida Medicaid if providing services through a fee-for-service
+                    delivery system
+                   Enrolled directly or registered with Florida Medicaid if providing services through a
+                    managed care plan
+
+      3.2    Who Can Provide
+                   Nursing facilities licensed in accordance with Chapter 400, Part II, F.S.
+                   Rural hospital swing bed facilities licensed in accordance with Chapter 395, Part I, F.S.
+                   Hospital-based skilled nursing facilities licensed in accordance with Chapter 395, Part I,
+                    F.S.
+
+4.0   Coverage Information
+      4.1   General Criteria
+            Florida Medicaid reimburses for services that meet all of the following:
+                   Are determined medically necessary
+                   Do not duplicate another service
+                   Meet the criteria as specified in this policy
+
+      4.2   Specific Criteria
+            Florida Medicaid reimburses for 365/6 days of all-inclusive nursing facility services, per year,
+            per recipient when the following occurs in accordance with 42 CFR 483.440:
+                   Services are prescribed by a physician licensed in the state of Florida
+                   Recipient occupies a Medicaid-certified bed (unless the recipient is covered by Medicare
+                    Part B, in which case, a Medicare-certified bed is allowable)
+            Providers must provide or arrange for the provision of necessary care and services required
+            for each recipient to attain, or maintain, the highest practicable physical, mental, and
+            psychosocial well-being, in accordance with 42 CFR 483, Subpart B and section 400.022,
+            F.S. Services include the following as applicable:
+                   On-site physician services
+                   Person-centered care planning
+                   Room and board
+                   All general nursing services, including restorative nursing
+                   Personal hygiene care
+                   Personal hygiene items, including incontinence supplies
+                   Laundry services
+                   Dressing and skin care items
+                   Medical supplies and equipment
+                   Non-prescription (over-the-counter) drugs, biologicals, and emergency drugs
+                   Dietary services, including therapeutic diets and special dietary supplements used for
+                    oral or tube feeding
+                   Rehabilitative services, including physical, speech, and occupational therapies
+                   Social services
+                   Activity services
+
+            4.2.1       Leave Days
+                        Florida Medicaid reimburses for leave days when the recipient is expected to return
+                        to the facility, as follows:
+                           Hospitalization – 8 days per medically necessary hospital stay
+                           Therapeutic leave – 16 days per state fiscal year
+
+                    Providers must notify recipients and their representatives of the leave policy in writing
+                    upon admission and upon a recipient leaving the facility on hospital or therapeutic
+                    leave.
+
+      4.3   Early and Periodic Screening, Diagnosis, and Treatment
+            As required by federal law, Florida Medicaid provides services to eligible recipients under the
+            age of 21 years, if such services are medically necessary to correct or ameliorate a defect, a
+            condition, or a physical or mental illness. Included are diagnostic services, treatment,
+            equipment, supplies, and other measures described in section 1905(a) of the SSA, codified in
+            Title 42 of the United States Code 1396d(a). As such, services for recipients under the age of
+            21 years exceeding the coverage described within this policy or the associated fee schedule
+            may be approved, if medically necessary. For more information, please refer to Florida
+            Medicaid’s authorization requirements policy.
+
+5.0   Exclusion
+      5.1   General Non-Covered Criteria
+            Services related to this policy are not reimbursed when any of the following apply:
+               The service does not meet the medical necessity criteria listed in section 1.0.
+               The recipient does not meet the eligibility requirements listed in section 2.0.
+               The service unnecessarily duplicates another provider’s service.
+
+      5.2   Specific Non-Covered Criteria
+            Florida Medicaid does not reimburse for the following:
+               Services when a recipient is enrolled in a Home Community-Based Service Waiver
+                (except for recipients enrolled in the Statewide Medicaid Managed Care Long-term Care
+                program)
+               Leave days once a facility receives notice that a recipient will not return to the facility
+               Leave days when at least 95 percent (raw number, cannot be rounded up) of the facility’s
+                Medicaid-certified beds were not filled during the previous quarter. This is calculated
+                using the occupancy rate that is sent monthly to AHCA, Division of Health Quality
+                Assurance. Providers may use the average occupancy of the last calendar, fiscal, or
+                rolling quarter to calculate the occupancy rate
+
+6.0   Documentation
+      6.1   General Criteria
+            For information on general documentation requirements, please refer to Florida Medicaid’s
+            recordkeeping and documentation policy.
+
+      6.2   Specific Criteria
+            Providers must maintain a completed Medical Certification for Medicaid Long-term Care
+            Services and Patient Transfer Form in the recipient’s file, as incorporated by reference in
+            Rule 59G-1.045, F.A.C.
+
+7.0   Authorization
+      7.1   General Criteria
+            The authorization information described below is applicable to the fee-for-service delivery
+            system, unless otherwise specified. For more information on general authorization
+            requirements, please refer to Florida Medicaid’s authorization requirements policy.
+
+      7.2   Specific Criteria
+            There are no specific authorization criteria for this service.
+
+8.0   Reimbursement
+      8.1   General Criteria
+            The reimbursement information below is applicable to the fee-for-service delivery system,
+            unless otherwise specified.
+
+      8.2   Specific Criteria
+                    Billing During Emergencies or Disasters
+                    If a provider evacuates a recipient to another facility without discharging the recipient,
+                    the originating facility may continue to claim for reimbursement and must pay the
+                    receiving facility for its services.
+                    Certified Nursing Assistant Training Expenses Reimbursement
+                    Medicare and Medicaid-certified providers may submit the completed Nurse Aide
+                    Training and Competency Evaluation Program Invoice to the following address to
+                    request reimbursement for allowable certified nursing assistant training expenses in
+                    accordance with 42 CFR 483.152:
+                    Agency for Health Care Administration
+                    Field Office 7
+                    400 W. Robinson Street, Suite S309
+                    Orlando, FL 32801
+                    Note: The invoice is available on the AHCA Web site at
+                    http://ahca.myflorida.com/Medicaid/review/index.shtml.
+                    Discharge Claims
+                    Providers must include the date of discharge and the patient discharge code on the
+                    claim form when a recipient is formally discharged to the community.
+
+      8.3   Claim Type
+            Institutional (837I/UB-04)
+
+      8.4   Billing Code, Modifier, and Billing Unit
+            Providers must report the most current and appropriate billing code(s), modifier(s), and billing
+            unit(s) for the service rendered, as incorporated by reference in Rule 59G-4.002, F.A.C.
+
+      8.5   Diagnosis Codes
+            There are no specific diagnosis codes for this service.
+
+      8.6   Rate
+            For per diem rates, see http://ahca.myflorida.com/Medicaid/Finance/finance/index.shtml.
+            8.6.1   Supplemental Payment of Recipients Under the Age of 21 Years
+                    Florida Medicaid reimburses providers at an enhanced rate for recipients under the
+                    age of 21 years who are determined by the CMAT to meet the criteria to receive
+                    supplemental payment in accordance with Rule 59G-4.290, F.A.C.
+
