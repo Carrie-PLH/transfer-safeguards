@@ -317,6 +317,42 @@ else
 fi
 
 
+# 13 — the sitemap, robots.txt and _redirects are current.
+#
+# Every sitemap in this portfolio was hand-written or crawler-generated until
+# 2026-09-05, and every one had drifted: this site published 58 pages and
+# offered 42 of them. Nothing said so, because nothing was asking. The three
+# files are now derived from the file tree by tools/generate-sitemap.py, and
+# this gate re-derives them and refuses a deploy whose committed copies differ from
+# what the tree implies — the same shape as check 11, and for the same reason:
+# a generated file that can be edited by hand will be.
+#
+# Same shape as the state-picker check: regenerate in place, then fail if
+# anything moved. A sitemap change is a published-surface change and must not
+# be deployed unseen, but making a person run the generator by hand before
+# every deploy is how a gate earns its way into being skipped. Regenerating
+# and then failing keeps both: the work is done for you, and the diff still
+# has to be read and committed before anything ships.
+#
+# Tripwire: delete a line from sitemap.xml -> must FAIL; regenerate -> pass.
+before=$(shasum sitemap.xml robots.txt _redirects 2>/dev/null | shasum)
+if [ ! -f ../tools/generate-sitemap.py ]; then
+  bad "tools/generate-sitemap.py is missing; the sitemap cannot be verified"
+else
+  out=$(python3 ../tools/generate-sitemap.py 2>&1); rc=$?
+  after=$(shasum sitemap.xml robots.txt _redirects 2>/dev/null | shasum)
+  if [ "$rc" -ne 0 ]; then
+    bad "the sitemap generator failed:"
+    printf '%s\n' "$out" | sed 's/^/        /'
+  elif [ "$before" = "$after" ]; then
+    ok "$(printf '%s' "$out" | head -1)"
+  else
+    bad "the sitemap was stale and has been regenerated — review the diff to sitemap.xml, robots.txt and _redirects, commit it, then re-run this check"
+    printf '%s\n' "$out" | sed 's/^/        /'
+  fi
+fi
+
+
 # The shared mobile layer is generated into assets/style.css from
 # field-assembly-standard/MOBILE-LAYER.css. A hand-edit to the copy is
 # silently undone the next time the layer is applied, so the gate refuses a

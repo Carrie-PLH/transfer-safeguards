@@ -1,215 +1,283 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="https://www.xml-sitemaps.com/css/sitemap.css"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-       <loc>https://roomandrecourse.com/</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>1.0000</priority>
+    <loc>https://roomandrecourse.com/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <priority>1.0</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/federal</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/about/</loc>
+    <lastmod>2026-09-03</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/about</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/federal/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/alabama</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/legal/privacy/</loc>
+    <lastmod>2026-09-03</lastmod>
+    <priority>0.3</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/california</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/legal/terms/</loc>
+    <lastmod>2026-09-03</lastmod>
+    <priority>0.3</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/colorado</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/alabama/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/connecticut</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/alaska/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/florida</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/arizona/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/georgia</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/arkansas/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/illinois</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/california/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/indiana</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/colorado/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/iowa</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/connecticut/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/kansas</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/delaware/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/kentucky</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/district-of-columbia/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/louisiana</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/florida/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/maryland</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/georgia/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/massachusetts</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/hawaii/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/michigan</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/idaho/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/minnesota</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/illinois/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/mississippi</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/indiana/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/missouri</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/iowa/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/nebraska</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/kansas/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/nevada</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/kentucky/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/new-hampshire</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/louisiana/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/new-jersey</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/maine/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/new-york</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/maryland/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/north-carolina</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/massachusetts/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/ohio</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/michigan/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/oklahoma</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/minnesota/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/oregon</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/mississippi/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/pennsylvania</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/missouri/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/rhode-island</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/montana/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/south-carolina</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/nebraska/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/tennessee</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/nevada/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/texas</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/new-hampshire/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/virginia</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/new-jersey/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/washington</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/new-mexico/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/west-virginia</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/new-york/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/states/wisconsin</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/north-carolina/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/legal/privacy</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/north-dakota/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://roomandrecourse.com/legal/terms</loc>
-       <lastmod>2026-09-01T20:03:50+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://roomandrecourse.com/states/ohio/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roomandrecourse.com/states/oklahoma/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roomandrecourse.com/states/oregon/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roomandrecourse.com/states/pennsylvania/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roomandrecourse.com/states/rhode-island/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roomandrecourse.com/states/south-carolina/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roomandrecourse.com/states/south-dakota/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roomandrecourse.com/states/tennessee/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roomandrecourse.com/states/utah/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roomandrecourse.com/states/vermont/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roomandrecourse.com/states/virginia/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roomandrecourse.com/states/washington/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roomandrecourse.com/states/west-virginia/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roomandrecourse.com/states/wisconsin/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roomandrecourse.com/states/wyoming/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.6</priority>
   </url>
 </urlset>

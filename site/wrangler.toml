@@ -32,7 +32,16 @@ routes = [
 workers_dev = false
 preview_urls = false
 
+# html_handling was "auto-trailing-slash" (the platform default) until
+# 2026-09-05. Auto is not one rule but two: an individual file is served
+# without a trailing slash (/states/ohio) and a folder index with one
+# (/states/), so the canonical form of a URL depends on how the page happens
+# to be stored. A sitemap has to encode that, and the sitemaps in this
+# portfolio encoded it wrongly — they published .html URLs, which Cloudflare
+# then 307'd, leaving both forms live as indexing candidates. Forcing the
+# slash makes one rule for every page, which is what tools/generate-sitemap.py
+# writes and what site/_redirects makes permanent with 301s.
 [assets]
 directory = "."
-html_handling = "auto-trailing-slash"
+html_handling = "force-trailing-slash"
 not_found_handling = "404-page"

@@ -201,6 +201,34 @@ write whole files); avoid sandbox-side in-place edits of tracked files.
   commit anchors/; `upgrade` a day later; never edit anything under
   anchors/.
 
+## The sitemap is generated, and the gate regenerates it
+
+`tools/generate-sitemap.py` derives `site/sitemap.xml`,
+`site/robots.txt` and `site/_redirects` from the published file tree. Do
+not hand-edit any of the three: the next run overwrites them.
+
+Run it after any change to the published pages — a new page, a rename, a
+review pass that commits a bumped checked date — and commit the result with
+the change that caused it. `lastmod` is the file's git commit date, so a
+commit that touches a page changes what the sitemap should say about it.
+
+The deploy gate (check 13) runs the generator itself and then fails if
+anything moved, the same shape as the state-picker check. So a forgotten
+regeneration costs one failed run rather than a stale sitemap: read the diff,
+commit it, re-run. It is not a reason to skip running the tool first — a gate
+that always fails once is a gate people learn to ignore.
+
+What it excludes, and why the list is short. `404.html` by name; any page
+declaring `noindex`, because a page asking not to be indexed and a sitemap
+offering it for indexing are contradictory signals and the page's own
+declaration wins; and any state recorded as drift, read from
+`tools/check-all.py` so no page can be exempted by editing a list here.
+States recorded as `accepted` stay in — accepted is a finished page with a
+permanent, documented mismatch, not a page waiting on a rebuild.
+
+Added 2026-09-05, after every sitemap in the portfolio was found to have
+drifted: this site published 58 pages and offered 42 of them.
+
 ## Deploy only when asked, and only on a passing check
 
 Once the worker exists, the gate follows the siblings:
