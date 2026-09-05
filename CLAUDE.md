@@ -411,11 +411,21 @@ PROVENANCE.md.
 
 ## One authority for the checked date, and two surfaces nothing generates
 
-A state's "sources last checked" date is published in three places and only one
-of them is authoritative: `<dd class="docket-checked">` on
-`site/states/<slug>.html`. The STATES JSON island in `site/index.html` (which
-feeds the pill tooltip through `build-state-picker.py`) and the last cell of
-each row in `site/states/index.html` are both derived from it.
+A state's "sources last checked" date is published in four places and only one
+of them is authoritative: since 2026-09-05 (FA-D-20260905-02, in the Record
+Standard's DECISIONS.md) that is the `**Sources last checked.**` line in
+`states/<slug>.md`, as the Markdown is canonical for every fact a page
+publishes. The page's `<dd class="docket-checked">` is derived by
+`render-state.py` (which converts the .md's ISO date to the display form) and
+kept honest by the deploy gate's parity check; the STATES JSON island in
+`site/index.html` (which feeds the pill tooltip through
+`build-state-picker.py`) and the last cell of each row in
+`site/states/index.html` are derived by the sync script. A review pass that
+confirms a state updates the .md, re-renders through `render-state.py`, and
+runs the sync — it never edits the HTML page. Before 2026-09-05 the page held
+the authority role, which is the design under which a review pass edits
+generated output and the parity gate then correctly fails the next deploy;
+Board & Border hit exactly that and the decision is portfolio-scope.
 
 Neither derived surface has a generator behind it, and on 2026-09-01 that
 showed: `site/states/index.html` held two table rows — Ohio and Texas, the
@@ -435,8 +445,9 @@ live while check 10 passes. Check 11 runs the generator and fails if it changed
 anything.
 
 Two properties of check 10 matter, and the second is the one the sibling's
-version does not have. The page is the authority and the script rewrites dates
-only, never the status prose — the table sentence and the JSON blurb are
+version does not have. The Markdown is the authority and the script rewrites
+dates only (never a page — a stale page is re-rendered instead), never the
+status prose — the table sentence and the JSON blurb are
 independently written, answer different questions in different places, and
 regenerating one from the other would silently rewrite published descriptions.
 And a *missing* row fails, not only a stale one: a check that verified the rows
@@ -948,3 +959,17 @@ identical `isinstance(n, NavigableString)` line in their own `extract_html`
 and likely share the defect; confirmed present in the code (not exercised
 against a live comment- or hidden-node-bearing capture) in all three on
 2026-09-04.
+## Decision requests
+
+When you need a decision from me, present the reasonable options in recommended
+order whenever possible.
+
+1. Put your recommended path first.
+2. Rank the remaining options in descending order of preference.
+3. Give a brief reason for the ranking and identify any material tradeoff.
+4. Do not present options as equally weighted when you have enough information
+   to make a recommendation.
+5. If one option is clearly preferable, say so.
+
+Ask an open-ended question only when the available choices genuinely cannot be
+defined in advance.

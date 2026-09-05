@@ -1,17 +1,24 @@
 #!/usr/bin/env python3
 """Every published state page must appear on both index surfaces, with its own date.
 
-The date a state's sources were last checked is published in three places, and
-only one of them is authoritative:
+The date a state's sources were last checked is published in four places, and
+only one of them is authoritative — since 2026-09-05 (FA-D-20260905-02) that
+is the Markdown source, as it is for every other published fact:
 
-  1. site/states/<slug>.html   <dd class="docket-checked">   AUTHORITY
-  2. site/index.html           STATES JSON "checked"          derived
-  3. site/states/index.html    the table row's last cell      derived
+  1. states/<slug>.md          **Sources last checked.** (ISO)  AUTHORITY
+  2. site/states/<slug>.html   <dd class="docket-checked">      derived (render-state.py, display form)
+  3. site/index.html           STATES JSON "checked"            derived (this script)
+  4. site/states/index.html    the table row's last cell        derived (this script)
 
-(1) is what the page itself asserts and what a review pass updates when it
-confirms a state. (2) feeds the pill tooltip through
-tools/build-state-picker.py. (3) is hand-written prose with a date embedded in
-it, and has no generator behind it.
+A review pass that confirms a state updates the .md and re-renders the page
+through tools/render-state.py; it never edits the HTML. (2) is kept honest by
+the deploy gate's parity check, and this script's --check reports a stale page
+without ever writing one. (3) feeds the pill tooltip through
+tools/build-state-picker.py. (4) is hand-written prose with a date embedded in
+it, and has no generator behind it. Before 2026-09-05 this docstring declared
+the rendered page the authority and nothing wrote back to the Markdown — the
+design under which a review pass edits generated output and the parity gate
+then correctly fails the next deploy.
 
 Adapted from Board & Border's tools/sync-checked-dates.py on 2026-09-01, with
 one thing added that the sibling's version does not do, and that its absence
@@ -56,16 +63,48 @@ SITE_STATES = ROOT / "site" / "states"
 # date from the last. The middle cell is prose and is never captured for
 # rewriting — only spanned.
 ROW = re.compile(
-    r'(<tr><td><a href="([a-z\-]+)\.html">.*?</td><td>)([^<]*)(</td></tr>)', re.S
+    r'(<tr><td><a href="(?:/states/)?([a-z\-]+)(?:\.html|/)">.*?</td><td>)([^<]*)(</td></tr>)', re.S
 )
 JSON_BLOCK = re.compile(
     r'(<script type="application/json" id="state-index">\s*)(\[.*?\])(\s*</script>)', re.S
 )
 CHECKED = re.compile(r'class="docket-checked">([^<]+)<')
+MD_CHECKED = re.compile(r'\*\*Sources last checked\.\*\*\s*(.+)')
+
+STATES_MD = ROOT / "states"
+
+# House display form, duplicated from render-state.py deliberately: each
+# repository carries its own copy of shared logic, per the portfolio rule
+# against a shared library across repos.
+_MONTHS = ("Jan", "Feb", "Mar", "Apr", "May", "Jun",
+           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 
 
-def authority(site_states=None):
-    """slug -> the date the page itself publishes."""
+def display_date(s):
+    m = re.fullmatch(r'(\d{4})-(\d{2})-(\d{2})', s.strip())
+    if not m:
+        return s.strip()
+    year, month, day = int(m.group(1)), int(m.group(2)), int(m.group(3))
+    if not 1 <= month <= 12:
+        return s.strip()
+    return f"{_MONTHS[month - 1]} {day}, {year}"
+
+
+def authority(states_md=None):
+    """slug -> the date the Markdown source declares, in display form."""
+    states_md = states_md or STATES_MD
+    out = {}
+    for f in sorted(states_md.glob("*.md")):
+        if f.stem == "README":
+            continue
+        m = MD_CHECKED.search(f.read_text(encoding="utf-8"))
+        if m:
+            out[f.stem] = display_date(m.group(1))
+    return out
+
+
+def page_dates(site_states=None):
+    """slug -> the date the rendered page publishes (derived; report-only)."""
     site_states = site_states or SITE_STATES
     out = {}
     for f in sorted(site_states.glob("*.html")):
@@ -117,15 +156,26 @@ def main(argv):
             missing.append(("json", slug))
     # And the reverse: a row for a page that is not published.
     for slug in sorted(in_table - set(pages)):
-        missing.append(("table", slug + " (no such published page)"))
+        missing.append(("table", slug + " (no such source)"))
     for slug in sorted(in_json - set(pages)):
-        missing.append(("json", slug + " (no such published page)"))
+        missing.append(("json", slug + " (no such source)"))
+    # A source with no rendered page at all.
+    rendered = page_dates()
+    for slug in sorted(set(pages) - set(rendered)):
+        missing.append(("page", slug + " (source has no published page)"))
 
     for where, slug in missing:
         print(f"MISSING {where:<6} {slug}")
 
     # --- dates
     drift = []
+
+    # The rendered page is derived by render-state.py; report a stale one but
+    # never write it — the fix is a re-render, and the parity gate enforces it.
+    for slug, want in pages.items():
+        cur = rendered.get(slug)
+        if cur is not None and cur != want:
+            drift.append(("page", slug, cur, want))
 
     def fix_row(m):
         head, slug, cur, tail = m.group(1), m.group(2), m.group(3), m.group(4)
@@ -154,27 +204,36 @@ def main(argv):
     for where, slug, cur, want in drift:
         print(f"{where:<6} {slug:<22} {cur} -> {want}")
 
+    page_drift = [d for d in drift if d[0] == "page"]
+
     if not drift and not missing:
-        print(f"every published page has a row and a record, and the checked "
-              f"dates agree across all three places ({len(pages)} pages).")
+        print(f"every source has a page, a row and a record, and the checked "
+              f"dates agree across all four places ({len(pages)} sources).")
         return 0
 
     if missing:
-        print(f"\n{len(missing)} index entr(ies) missing. A row carries a sentence "
+        print(f"\n{len(missing)} entr(ies) missing. A row carries a sentence "
               f"written from that state's own page and is not generated — write it "
               f"in site/states/index.html and site/index.html by hand.")
         return 1
 
     if check_only:
-        print(f"\n{len(drift)} derived date(s) disagree with the page. "
-              f"Run: python3 tools/sync-checked-dates.py")
+        print(f"\n{len(drift)} derived date(s) disagree with the Markdown. "
+              f"Run: python3 tools/sync-checked-dates.py"
+              + (" — and re-render any 'page' rows through tools/render-state.py"
+                 if page_drift else ""))
         return 1
 
     if idx_new != idx:
         STATES_INDEX.write_text(idx_new, encoding="utf-8")
     if home_new != home:
         HOME.write_text(home_new, encoding="utf-8")
-    print(f"\n{len(drift)} derived date(s) corrected from the pages.")
+    fixed = len(drift) - len(page_drift)
+    print(f"\n{fixed} derived date(s) corrected from the Markdown.")
+    if page_drift:
+        print(f"{len(page_drift)} page(s) disagree with their source and must be "
+              f"re-rendered through tools/render-state.py — this script never edits pages.")
+        return 1
     return 0
 
 
@@ -184,7 +243,7 @@ def self_test():
     import tempfile
     ok = True
 
-    row = ('<tr><td><a href="ohio.html">Ohio</a></td><td>Eight grounds; thirty '
+    row = ('<tr><td><a href="/states/ohio/">Ohio</a></td><td>Eight grounds; thirty '
            'days’ notice — an em dash, and a "quoted" phrase</td>'
            '<td>2026-08-01</td></tr>')
     m = ROW.search(row)
@@ -199,17 +258,30 @@ def self_test():
 
     # a table cell containing a tag would break the [^<]* date capture; the
     # date cell is a bare date by construction and this pins it.
-    if ROW.search('<tr><td><a href="ohio.html">Ohio</a></td><td>x</td>'
+    if ROW.search('<tr><td><a href="/states/ohio/">Ohio</a></td><td>x</td>'
                   '<td><b>2026-08-30</b></td></tr>'):
         print("FAIL: a marked-up date cell should not parse as a date"); ok = False
 
+    if display_date("2026-08-30") != "Aug 30, 2026":
+        print("FAIL: display_date did not convert an ISO date"); ok = False
+    if display_date("Aug 30, 2026") != "Aug 30, 2026":
+        print("FAIL: display_date rewrote a non-ISO date"); ok = False
+
     with tempfile.TemporaryDirectory() as d:
         p = pathlib.Path(d)
-        (p / "ohio.html").write_text('<dd class="docket-checked">2026-08-30</dd>')
-        (p / "index.html").write_text("not a state page")
+        (p / "ohio.md").write_text("# Ohio\n\n**Sources last checked.** 2026-08-30\n")
+        (p / "README.md").write_text("not a state source")
         got = authority(p)
-        if got != {"ohio": "2026-08-30"}:
+        if got != {"ohio": "Aug 30, 2026"}:
             print(f"FAIL: authority() returned {got}"); ok = False
+
+    with tempfile.TemporaryDirectory() as d:
+        p = pathlib.Path(d)
+        (p / "ohio.html").write_text('<dd class="docket-checked">Aug 30, 2026</dd>')
+        (p / "index.html").write_text("not a state page")
+        got = page_dates(p)
+        if got != {"ohio": "Aug 30, 2026"}:
+            print(f"FAIL: page_dates() returned {got}"); ok = False
 
     covered = table_rows(row)
     if "texas" in covered:
