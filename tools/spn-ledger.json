@@ -1,0 +1,352 @@
+{
+  "sources": {
+    "https://admincode.legislature.state.al.us/administrative-code/420-5-10": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906124329/https://admincode.legislature.state.al.us/administrative-code/420-5-10",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T124403Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "alabama"
+    },
+    "https://aging.ca.gov/programs_and_services/long-term_care_ombudsman/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906131018/https://aging.ca.gov/programs_and_services/long-term_care_ombudsman/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T131038Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "california"
+    },
+    "https://akoltco.org/": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-09-06T124806Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "alaska"
+    },
+    "https://akoltco.org/about-us/": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-09-06T124843Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "alaska"
+    },
+    "https://apps.azsos.gov/public_services/Title_09/9-10.pdf": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-09-06T125919Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "arizona"
+    },
+    "https://arombudsman.dhs.arkansas.gov/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906130416/https://arombudsman.dhs.arkansas.gov/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T130443Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "arkansas"
+    },
+    "https://cdhs.colorado.gov/long-term-care-ombudsman": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-09-06T132309Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "colorado"
+    },
+    "https://code.dccouncil.gov/us/dc/council/code": {
+      "attempts": 1,
+      "last_attempt": "2026-09-06T133243Z",
+      "last_detail": "error:not-found",
+      "last_result": "FAILED",
+      "page": "district-of-columbia"
+    },
+    "https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.01": {
+      "attempts": 1,
+      "last_attempt": "2026-09-06T133431Z",
+      "last_detail": "error:not-found",
+      "last_result": "FAILED",
+      "page": "district-of-columbia"
+    },
+    "https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.02": {
+      "attempts": 1,
+      "last_attempt": "2026-09-06T133525Z",
+      "last_detail": "error:not-found",
+      "last_result": "FAILED",
+      "page": "district-of-columbia"
+    },
+    "https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.03": {
+      "attempts": 1,
+      "last_attempt": "2026-09-06T133548Z",
+      "last_detail": "error:not-found",
+      "last_result": "FAILED",
+      "page": "district-of-columbia"
+    },
+    "https://code.dccouncil.gov/us/dc/council/code/sections/7-702.04": {
+      "attempts": 1,
+      "last_attempt": "2026-09-06T133827Z",
+      "last_detail": "error:not-found",
+      "last_result": "FAILED",
+      "page": "district-of-columbia"
+    },
+    "https://codeofarrules.arkansas.gov/Rules/Rule?levelType=section&titleID=20&chapterID=38&subChapterID=50&partID=1233&subPartID=7657&sectionID=50037": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906130629/https://codeofarrules.arkansas.gov/Rules/Rule?levelType=section&titleID=20&chapterID=38&subChapterID=50&partID=1233&subPartID=7657&sectionID=50037",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T130707Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "arkansas"
+    },
+    "https://codeofarrules.arkansas.gov/Rules/Rule?levelType=section&titleID=20&chapterID=38&subChapterID=50&partID=1233&subPartID=7678&sectionID=50213": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906130723/https://codeofarrules.arkansas.gov/Rules/Rule?levelType=section&titleID=20&chapterID=38&subChapterID=50&partID=1233&subPartID=7678&sectionID=50213",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T130739Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "arkansas"
+    },
+    "https://codeofarrules.arkansas.gov/Rules/Rule?levelType=section&titleID=20&chapterID=38&subChapterID=50&partID=1233&subPartID=7678&sectionID=50215": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906130818/https://codeofarrules.arkansas.gov/Rules/Rule?levelType=section&titleID=20&chapterID=38&subChapterID=50&partID=1233&subPartID=7678&sectionID=50215",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T130833Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "arkansas"
+    },
+    "https://des.az.gov/LTCOP": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-09-06T130007Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "arizona"
+    },
+    "https://dhss.delaware.gov/dhcq/dhcq/contact/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906133015/https://dhss.delaware.gov/dhcq/dhcq/contact/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T133039Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "delaware"
+    },
+    "https://dhss.delaware.gov/office-of-the-secretary/long-term-care-ombudsman-program/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906133119/https://dhss.delaware.gov/office-of-the-secretary/long-term-care-ombudsman-program/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T133139Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "delaware"
+    },
+    "https://govt.westlaw.com/calregs/Document/I6300B9C25B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-09-06T131137Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "california"
+    },
+    "https://govt.westlaw.com/calregs/Document/IBABA4E545B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-09-06T131246Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "california"
+    },
+    "https://govt.westlaw.com/calregs/Document/IBABCBF5E5B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-09-06T131532Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "california"
+    },
+    "https://govt.westlaw.com/calregs/Document/IBAE556025B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-09-06T131646Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "california"
+    },
+    "https://health.alaska.gov/en/resources/approved-sds-forms/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906125033/https://health.alaska.gov/en/resources/approved-sds-forms/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T125050Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "alaska"
+    },
+    "https://health.alaska.gov/media/obljx4in/fair-hearing-rights-notice.pdf": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906125109/https://health.alaska.gov/media/obljx4in/fair-hearing-rights-notice.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T125135Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "alaska"
+    },
+    "https://humanservices.arkansas.gov/contact-us/file-an-appeal/": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-09-06T130901Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "arkansas"
+    },
+    "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=1599.1": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906131705/https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=1599.1",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T131735Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "california"
+    },
+    "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=WIC&sectionNum=14126.029": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906131908/https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=WIC&sectionNum=14126.029",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T131930Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "california"
+    },
+    "https://portal.ct.gov/ltcop/content/contact-us/contact": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906132738/https://portal.ct.gov/ltcop/content/contact-us/contact",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T132800Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "connecticut"
+    },
+    "https://regulations.delaware.gov/api/AdminCode/title16/3102/390cf383-7c28-4d18-a3be-494417f7c892": {
+      "attempts": 1,
+      "last_attempt": "2026-09-06T133206Z",
+      "last_detail": "error:no-captures",
+      "last_result": "FAILED",
+      "page": "delaware"
+    },
+    "https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.12.250&secEnd=7.12.290": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906125156/https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.12.250&secEnd=7.12.290",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T125208Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "alaska"
+    },
+    "https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.12.890&secEnd=7.12.890": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906125322/https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.12.890&secEnd=7.12.890",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T125338Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "alaska"
+    },
+    "https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.140.540&secEnd=7.140.585": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906125606/https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.140.540&secEnd=7.140.585",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T125617Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "alaska"
+    },
+    "https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.49.010&secEnd=7.49.200": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906125709/https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.49.010&secEnd=7.49.200",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T125735Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "alaska"
+    },
+    "https://www.alabamapublichealth.gov/homehealth/assets/elderrightsguide.pdf": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906124432/https://www.alabamapublichealth.gov/homehealth/assets/elderrightsguide.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T124454Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "alabama"
+    },
+    "https://www.alabamapublichealth.gov/providerstandards/complaints.html": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906124542/https://www.alabamapublichealth.gov/providerstandards/complaints.html",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T124633Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "alabama"
+    },
+    "https://www.azahcccs.gov/Members/GetCovered/RightsAndResponsibilities/grievanceandappeals.html": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906130156/https://www.azahcccs.gov/Members/GetCovered/RightsAndResponsibilities/grievanceandappeals.html",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T130256Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "arizona"
+    },
+    "https://www.azahcccs.gov/shared/Downloads/GrievanceAndAppeals/NFAppealOfADischargeForm.pdf": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906130309/https://www.azahcccs.gov/shared/Downloads/GrievanceAndAppeals/NFAppealOfADischargeForm.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T130318Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "arizona"
+    },
+    "https://www.cdph.ca.gov/Programs/CHCQ/LCP/Pages/AFL-25-17.aspx": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906131958/https://www.cdph.ca.gov/Programs/CHCQ/LCP/Pages/AFL-25-17.aspx",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T132026Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "california"
+    },
+    "https://www.cga.ct.gov/current/pub/chap_368v.htm#sec_19a-535": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906132935/https://www.cga.ct.gov/current/pub/chap_368v.htm#sec_19a-535",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T132953Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "connecticut"
+    },
+    "https://www.dhcs.ca.gov/forms-laws-publications/laws-and-regulations/transfer-discharge-and-refusal-to-readmit-unit/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906132050/https://www.dhcs.ca.gov/forms-laws-publications/laws-and-regulations/transfer-discharge-and-refusal-to-readmit-unit/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T132112Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "california"
+    },
+    "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12005&fileName=6+CCR+1011-1+Chapter+05": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906132430/https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12005&fileName=6+CCR+1011-1+Chapter+05",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T132448Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "colorado"
+    }
+  },
+  "updated": "2026-09-06T133827Z"
+}
