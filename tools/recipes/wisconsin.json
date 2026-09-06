@@ -1,0 +1,36 @@
+{
+  "recipe_version": 1,
+  "state": "wisconsin",
+  "sources": [
+    {
+      "n": 1,
+      "title": "Wisconsin Administrative Code, DHS 132.53, Transfer and discharge (chapter DHS 132, subchapter V)",
+      "url": "https://docs.legis.wisconsin.gov/code/admin_code/dhs/110/132/V/53",
+      "source_date": "the site states the code is published under s. 35.93, Stats., and updated on the first day of each month",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "The standing packet's own method is curl with a browser user-agent, reduced to text mechanically (tag strip), sliced from the heading of DHS 132.53(1) to the end of the served document; the Legislature runs each provision's citation into the text with the paragraph letter or number doubled ('DHS 132.53(2)(a)1.1.'), which is the site's own markup and is left as extracted. 'body' matches the standing packet's scope: the reader controls and the standing publication line at the foot are part of the served page and are left in, same as the standing capture."
+    },
+    {
+      "n": 2,
+      "title": "Wisconsin Board on Aging and Long Term Care — home page (Ombudsman Program)",
+      "url": "https://boaltc.wi.gov/Pages/Home.aspx",
+      "source_date": "none stated on page beyond the February 25 domain-change notice",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "The 2026-08-30 standing packet used the session HTTP fetch tool for this SharePoint page; tested 2026-09-06 with plain curl and a browser user-agent, it now returns HTTP 200 with the page's own text (title, ombudsman-program copy, the domain-change notice) present in the response body, so this recipe uses curl rather than a session transport. Page furniture (SharePoint nav, menu) is left in as 'body' produces it, matching the standing packet's own choice not to hand-trim site chrome."
+    }
+  ]
+}

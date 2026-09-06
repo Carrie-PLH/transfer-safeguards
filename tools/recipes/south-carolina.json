@@ -1,0 +1,40 @@
+{
+  "recipe_version": 1,
+  "state": "south-carolina",
+  "sources": [
+    {
+      "n": 1,
+      "title": "South Carolina Code of Laws, Title 44 Chapter 81 — Bill of Rights for Residents of Long-Term Care Facilities",
+      "url": "https://www.scstatehouse.gov/code/t44c081.php",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "slice": {
+        "from": "CHAPTER 81 Bill of Rights for Residents of Long-Term Care Facilities",
+        "to": "South Carolina Legislative Services Agency"
+      },
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "The served page opens with a long run of client-side search/print JavaScript before the chapter text begins and closes with the Legislative Services Agency's own address block; the standing packet's own method was 'sliced from the first section heading of chapter 81 to the end of section 44-81-70' after a tag strip. This recipe anchors one heading earlier, at the chapter's own title line rather than SECTION 44-81-10's heading, because the chapter title is unique on the page and at least as stable, and a wider slice can only add evidence. `to` excludes the Legislative Services Agency footer. Both anchors confirmed unique (count 1) on a fresh fetch 2026-09-06."
+    },
+    {
+      "n": 2,
+      "title": "South Carolina Department on Aging — Long Term Care Ombudsman Program",
+      "url": "https://aging.sc.gov/programs-initiatives/long-term-care-ombudsman-program",
+      "source_date": "none stated on page; footer carries Copyright © 2026",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "The 2026-08-30 standing packet used the session HTTP fetch tool, which trimmed the department's navigation, programme lists and resource links; tested 2026-09-06 with plain curl and a browser user-agent, the page returns HTTP 200. A narrower scope was tried first: the page's `<main id=\"main-content\">` landmark reaches the program copy but not the office's fax number and street address, which the theme prints in a separate global `#block-footercontactblock` footer widget rather than inside `main`. `body` is used instead so the packet can vouch for those contact facts too, matching this project's rule to find the contact facts before settling the scope; the department's site navigation is left in as 'body' produces it, the same choice this project already makes for other states' unscoped html-text sources (e.g. virginia)."
+    }
+  ]
+}
