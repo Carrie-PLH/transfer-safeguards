@@ -1,0 +1,16 @@
+{
+ "entry": {
+  "file_count": 143,
+  "id": "2026-09-06T122850Z",
+  "manifest_file": "manifests/2026-09-06T122850Z.txt",
+  "manifest_sha256": "a0e8f0a231cd8da2b543704db8fc850d83da36c982e24859f693135ae2948434",
+  "note": "Reviewed 2026-09-06: Pennsylvania, Illinois, New Jersey",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "989c26c000acad078cb20405ff38ffdef65ee19812986b2fb4ac60e04d407541",
+  "repo": "transfer-safeguards",
+  "utc": "2026-09-06T12:28:50+00:00"
+ },
+ "entry_sha256": "aa32e0f0f8ea50a05f7828f5696d1986bc6902dc52d8044dfb605e8efe052904"
+}
