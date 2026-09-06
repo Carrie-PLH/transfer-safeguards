@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: illinois
-ASSEMBLED: 2026-09-04
+ASSEMBLED: 2026-09-06
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/illinois.json (recipe digest 28f20d3e7dc5). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -12,7 +12,7 @@ CAPTURE NOTES:
 - SOURCE 3: transport curl; extractor html-text; scope body; filters none.
   Server-rendered; plain curl with a browser user-agent returns the whole document. Scope 'body' reproduces the standing packet, which carries the department's site navigation as the extractor produced it.
 
-SOURCE 1: 210 ILCS 45, Nursing Home Care Act, Article III Part 4 — Discharge and Transfer | https://www.ilga.gov/legislation/ILCS/details?MajorTopic=REGULATION&Chapter=HEALTH+FACILITIES+AND+REGULATION&ActName=Nursing+Home+Care+Act.&ActID=1225&ChapterID=21&ChapAct=210+ILCS+45/&SeqStart=17400000&SeqEnd=19900000&Print=True | source date: sections carry their own Source lines; the newest is P.A. 104-191, eff. 1-1-26 | retrieved: 2026-09-04
+SOURCE 1: 210 ILCS 45, Nursing Home Care Act, Article III Part 4 — Discharge and Transfer | https://www.ilga.gov/legislation/ILCS/details?MajorTopic=REGULATION&Chapter=HEALTH+FACILITIES+AND+REGULATION&ActName=Nursing+Home+Care+Act.&ActID=1225&ChapterID=21&ChapAct=210+ILCS+45/&SeqStart=17400000&SeqEnd=19900000&Print=True | source date: sections carry their own Source lines; the newest is P.A. 104-191, eff. 1-1-26 | retrieved: 2026-09-06
 (210 ILCS 45/Art. III Pt. 4 heading) PART 4. DISCHARGE AND TRANSFER
 
  
@@ -214,7 +214,7 @@ ending prior to the full 100-day benefit period, the facility provides notice to
 
 (210 ILCS 45/3-423) (from Ch. 111 1/2, par. 4153-423) Sec. 3-423. The administrator of a facility licensed under this Act shall give 60 days notice prior to voluntarily closing a facility or closing any part of a facility, or prior to closing any part of a facility if closing such part will require the transfer or discharge of more than 10% of the residents. Such notice shall be given to the Department, to the Office of State Long Term Care Ombudsman, to any resident who must be transferred or discharged, to the resident's representative, and to a member of the resident's family, where practicable. If the Department suspends, revokes, or denies renewal of the facility's license, then notice shall be given no later than the date specified by the Department. Notice shall state the proposed date of closing and the reason for closing. The facility shall submit a closure plan to the Department for approval which shall address the process for the safe and orderly transfer of residents. The approved plan shall be included in the notice. The facility shall offer to assist the resident in securing an alternative placement and shall advise the resident on available alternatives. Where the resident is unable to choose an alternate placement and is not under guardianship, the Department shall be notified of the need for relocation assistance. A facility closing in its entirety shall not admit any new residents on or after the date written notice is submitted to the Department under this Section. The facility shall comply with all applicable laws and regulations until the date of closing, including those related to transfer or discharge of residents. The Department may place a relocation team in the facility as provided under Section 3-419. (Source: P.A. 98-834, eff. 8-1-14.)
 
-SOURCE 2: Illinois Department of Public Health, Notice of Involuntary Transfer or Discharge and Opportunity for Hearing for Nursing Home Residents (form, PDF) | https://dph.illinois.gov/content/dam/soi/en/web/idph/forms/topics-services/health-care-regulation/nursing-homes/itd-form.pdf | source date: Printed by Authority of the State of Illinois 6/26, IOCI 26-25 | retrieved: 2026-09-04
+SOURCE 2: Illinois Department of Public Health, Notice of Involuntary Transfer or Discharge and Opportunity for Hearing for Nursing Home Residents (form, PDF) | https://dph.illinois.gov/content/dam/soi/en/web/idph/forms/topics-services/health-care-regulation/nursing-homes/itd-form.pdf | source date: Printed by Authority of the State of Illinois 6/26, IOCI 26-25 | retrieved: 2026-09-06
 Notice of Involuntary Transfer or Discharge and
                                                       Opportunity for Hearing for Nursing Home Residents
                                                                                               (for Assisted Living forms, visit www.dph.illinois.gov)
@@ -453,7 +453,7 @@ Page 6 of 7                                    Printed by Authority of the State
               535 W. Jefferson St., Springfield, IL 62761; Email: DPH.AdminHearings@illinois.gov; or fax: 630-954-3502.
 Page 7 of 7                                    Printed by Authority of the State of Illinois   6/26                         IOCI 26-25
 
-SOURCE 3: Illinois Department on Aging, Contact Information: Office of the State Long-Term Care Ombudsman | https://ilaging.illinois.gov/programs/ltcombudsman/contact-information--office-of-the-state-long-term-care-ombudsma.html | source date: none stated on page | retrieved: 2026-09-04
+SOURCE 3: Illinois Department on Aging, Contact Information: Office of the State Long-Term Care Ombudsman | https://ilaging.illinois.gov/programs/ltcombudsman/contact-information--office-of-the-state-long-term-care-ombudsma.html | source date: none stated on page | retrieved: 2026-09-06
 Skip to main content
 
 
@@ -565,7 +565,7 @@ Skip to main content
 
 
 
- Set background color from color picker 
+
 
 
 

@@ -1,0 +1,16 @@
+{
+ "entry": {
+  "file_count": 143,
+  "id": "2026-09-06T120419Z",
+  "manifest_file": "manifests/2026-09-06T120419Z.txt",
+  "manifest_sha256": "589bc82266fc17e1386ee78f4f1f9b3496de09e07e9d675e6e3418bfd2aeb5d7",
+  "note": "Nightly deepen: Pennsylvania, Illinois, New Jersey to full pages",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "922e0be141895213e78422162bfd8f2636235c4d50365c9474d7fc189b6fdf53",
+  "repo": "transfer-safeguards",
+  "utc": "2026-09-06T12:04:19+00:00"
+ },
+ "entry_sha256": "989c26c000acad078cb20405ff38ffdef65ee19812986b2fb4ac60e04d407541"
+}

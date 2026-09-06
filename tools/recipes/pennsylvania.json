@@ -60,6 +60,40 @@
         "collapse-blank-runs"
       ],
       "notes": "Plain curl with a browser user-agent returns HTTP 200 (verified 2026-09-05). body scope, matching the standing packet's own 'tag strip over the whole served document' method for this source: the page's #maincontent div holds the rule text but not the site-wide banner stating which Pa.B. edition the Code reflects, and that banner is the only place this source's own currency date is stated, so body is required to capture both in one source rather than losing the date to a narrower scope. SOURCE'S OWN DATE HAS ADVANCED since the 2026-08-30 capture: the banner then read 'changes effective through 56 Pa.B. 3438 (June 6, 2026)' and now reads 'changes effective through 56 Pa.B. 4026 (July 4, 2026)' -- the site's own rolling currency statement moved forward, as expected of a 'current through' marker; the rule text of § 201.29 itself is unchanged (same subsections (a) through (o), same Authority and Source history lines ending '...amended December 23, 2022, effective July 1, 2023, 52 Pa.B. 8098'), confirmed by diffing this capture's body against the standing packet's source 4 body."
+    },
+    {
+      "n": 5,
+      "title": "28 Pa. Code § 201.2 (Requirements)",
+      "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/028/chapter201/s201.2.html&d=reduce",
+      "source_date": "site states the Code reflects changes effective through 56 Pa.B. 4026 (July 4, 2026)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Added 2026-09-06, deepening the page to full: this section is the Commonwealth's own statement of where its licensing regulation for long-term care nursing facilities gets its substance, needed for the notice's-required-contents row of section 02, since no captured Pennsylvania source separately enumerates what a discharge notice itself must contain. Plain curl with a browser user-agent returns HTTP 200, same host and template as source 4 (§ 201.29), so the same body scope applies for the same reason: #maincontent holds the rule text but not the site-wide banner naming the Pa.B. edition the Code reflects, and that banner is this source's only stated date."
+    },
+    {
+      "n": 6,
+      "title": "55 Pa. Code § 275.4(a)(3)(v)(C) (Procedures — an appeal received from a proposed action)",
+      "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/055/chapter275/s275.4.html&d=reduce",
+      "source_date": "site states the Code reflects changes effective through 56 Pa.B. 4026 (July 4, 2026)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "slice": {
+        "from": "An appeal received from a proposed action.",
+        "to": "(D) An appeal received from a food stamp written notice."
+      },
+      "notes": "Added 2026-09-06, deepening the page to full: 55 Pa. Code Chapter 275 is the Department of Human Services' general fair-hearing procedure, already cited by the handbook (source 1) for the four items an appeal request must contain; this slice is the chapter's own pendency provision -- clause (C)(I) states that when a hearing is requested within the specified time period, assistance is continued pending the hearing decision unless waived. Section 275.4 in full is a long, general-assistance procedural section (food stamps, cash grants, medical assistance alike) running well past this page's scope, so the slice is bounded to clause (C), the one that states the pendency rule, rather than capturing the whole section; the heading text of the next lettered clause, (D), is used as the exclusive upper bound. Same host and body-scope reasoning as sources 4 and 5. This provision is stated for Medical Assistance generally, not for nursing-facility discharge appeals specifically, and the page records that scope rather than assuming it reaches this page's subject."
     }
   ]
 }
