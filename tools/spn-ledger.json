@@ -121,6 +121,42 @@
       "last_result": "OK",
       "page": "arkansas"
     },
+    "https://dcgov.seamlessdocs.com/f/DOHNoticeofDischargeTransferorRelocationForm": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906133949/https://dcgov.seamlessdocs.com/f/DOHNoticeofDischargeTransferorRelocationForm",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T134005Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "district-of-columbia"
+    },
+    "https://dchealth.dc.gov/service/incident-report-and-6-108-discharge-transfer-and-relocation-forms": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906134022/https://dchealth.dc.gov/service/incident-report-and-6-108-discharge-transfer-and-relocation-forms",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T134038Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "district-of-columbia"
+    },
+    "https://dchealth.dc.gov/sites/default/files/dc/sites/doh/publication/attachments/6_108%20Cover%20Letter%20to%20Nursing%20Home%20Providers.pdf": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906134102/https://dchealth.dc.gov/sites/default/files/dc/sites/doh/publication/attachments/6_108%20Cover%20Letter%20to%20Nursing%20Home%20Providers.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T134106Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "district-of-columbia"
+    },
+    "https://dcregs.dc.gov/Common/DCMR/SectionList.aspx?SectionNumber=29-950": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906134129/https://dcregs.dc.gov/Common/DCMR/SectionList.aspx?SectionNumber=29-950",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T134145Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "district-of-columbia"
+    },
     "https://des.az.gov/LTCOP": {
       "attempts": 1,
       "consecutive_hard_failures": 1,
@@ -222,6 +258,22 @@
       "last_detail": "ok",
       "last_result": "OK",
       "page": "california"
+    },
+    "https://oah.dc.gov/page/about": {
+      "attempts": 1,
+      "last_attempt": "2026-09-06T134207Z",
+      "last_detail": "error:no-captures",
+      "last_result": "FAILED",
+      "page": "district-of-columbia"
+    },
+    "https://oah.dc.gov/page/filings-forms": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20260906134223/https://oah.dc.gov/page/filings-forms",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-09-06T134241Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "district-of-columbia"
     },
     "https://portal.ct.gov/ltcop/content/contact-us/contact": {
       "attempts": 1,
@@ -348,5 +400,5 @@
       "page": "colorado"
     }
   },
-  "updated": "2026-09-06T133827Z"
+  "updated": "2026-09-06T134241Z"
 }
