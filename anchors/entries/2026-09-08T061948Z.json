@@ -1,0 +1,16 @@
+{
+ "entry": {
+  "file_count": 149,
+  "id": "2026-09-08T061948Z",
+  "manifest_file": "manifests/2026-09-08T061948Z.txt",
+  "manifest_sha256": "b5844c3247b3b1f2205b43b134dd7f83fd28d585d0bb27922e2290e53b622130",
+  "note": "recipe backfill: connecticut, west-virginia",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "aa32e0f0f8ea50a05f7828f5696d1986bc6902dc52d8044dfb605e8efe052904",
+  "repo": "transfer-safeguards",
+  "utc": "2026-09-08T06:19:48+00:00"
+ },
+ "entry_sha256": "b7e34b43388cc7c96ffa2dc69e3205bec04dac74fd8f801098ad2508cc038156"
+}
