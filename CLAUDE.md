@@ -1,5 +1,25 @@
 # transfer-safeguards — operating notes
 
+## Before reporting on the state of anything, read the repository
+
+Concurrent sessions and unattended routines both write here, so any session's
+memory of this portfolio — including this session's, ten minutes from now — is
+stale by default. Run:
+
+    python3 ../field-assembly-standard/tools/portfolio-status.py
+
+It prints, from disk and from the live sites: each repo's last commit and
+working-tree state, whether the deployed site matches the local one, open queue
+items, handoffs that have not been marked completed, and the most recent
+decision IDs. `--gates` runs each predeploy gate; `--parity` counts page/source
+parity where a renderer exists. Report what it prints, not what you recall.
+
+Before opening a question that could already have been settled, grep
+`field-assembly-standard/DECISIONS.md` for it. On 2026-09-07 a session spent an
+hour describing Board & Border as broken two days after the cure shipped, and
+asked the owner to re-decide a question recorded as FA-D-20260905-02. Every
+artifact needed to avoid that was on disk and none of them was read.
+
 ## Reading a packet: use capture-core, never a fresh regex
 
 `tools/capture-core.py` holds the canonical reader. Call it:

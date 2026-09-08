@@ -1,0 +1,28 @@
+{
+  "recipe_version": 1,
+  "state": "georgia",
+  "sources": [
+    {
+      "n": 1,
+      "title": "Georgia Rules and Regulations, Subject 111-8-50, Long-Term Care Facilities: Residents' Bill of Rights (Department of Community Health)",
+      "url": "https://rules.sos.ga.gov/gac/111-8-50",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "The standing packet's capture note says \"rules.sos.ga.gov returns HTTP 403 to curl\" and Source 1 was therefore taken through the session fetch tool on 2026-08-30. That conclusion was about a header, not about curl. Bisected 2026-09-08: this host refuses a Chrome user-agent below roughly version 127 and serves the full 122,226-byte page to everything else. Chrome/120 -> 403; Chrome/127 (the string capture.py pins for \"browser\") -> 200; Chrome/128, /130, /140, curl's own default UA, an unrecognised UA of \"x\", and no User-Agent header at all -> 200. Neither HTTP/1.1 nor a full browser header set (Accept, Accept-Language, Sec-Fetch-*, Upgrade-Insecure-Requests) changes the outcome either way, so this is not the HTTP/2 refusal documented for apps.azsos.gov, and no agent transport is required. The recipe's pinned browser user-agent sits above the cutoff and captures unattended today; if capture.py's USER_AGENTS[\"browser\"] is ever pinned backwards this source starts 403ing, which is the one way this recipe can break for a reason that is not the source moving.\n\nThe recipe capture is a substantive superset of the 2026-08-30 hand capture, not merely a re-rendering of it: 11,246 words against 8,857. The session fetch tool rendered the rule's nested lists as markdown tables and dropped the sub-items nested inside table cells, so the standing packet is missing the (a)/(b) and (1)/(2) material under at least sixteen subsections -- including 111-8-50-.11(2)(a), the physician's determination \"that failure to transfer the resident will result in injury or illness to the resident or others\". The character count nevertheless falls (86,962 -> 69,616) because the markdown table pipe and dash scaffolding it replaces is larger than the text it lost. The only material the recipe drops is the fetch tool's own preamble (title, URL, Content-Type, YAML front matter), which is the reader's metadata and never the publisher's text.\n\nbody scope: the Secretary of State's template wraps the rule text in no named container -- the subject heading, every rule heading and every paragraph sit directly under a plain div chain -- so body is the narrowest honestly-stated scope, and it matches what the standing packet held (the whole subject as served, including the rule index at the foot).\n\nOne artifact, recorded rather than filtered: where this publisher sets a code citation as a link followed immediately by an italic \"et seq.\" with no separating character, tag strip joins them -- \"O.C.G.A. § 50-13-1et seq.\" and two occurrences of \"31-8-100et seq.\". This is the link-boundary class CLAUDE.md describes for Nebraska, Ohio and North Dakota, inverted: the publisher's markup has no space there, so the run-together is faithful to the bytes and a space would be our invention. Ten other \"et seq.\" citations in the same document do carry the publisher's own space. No quotation on either Georgia page rests on any of the three, checked 2026-09-08."
+    },
+    {
+      "n": 2,
+      "title": "Georgia Department of Human Services, Division of Aging Services — Long-Term Care Ombudsman Program",
+      "url": "https://aging.georgia.gov/programs-and-services/long-term-care-ombudsman-program",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "Plain curl with the pinned browser user-agent returns 200 and the full Divi-style page, as the standing packet already recorded for this source; unchanged 2026-09-08. body scope because the division's page puts the ombudsman contact block outside any <main> or <article> wrapper this template exposes -- the same reasoning florida.json sources 3 and 4 record. The ombudsman program's own contact facts the pages depend on (georgiaombudsman.org, 1-866-552-4464) are both present.\n\nAgainst the 2026-08-30 hand capture this capture drops the georgia.gov network's \"The .gov means it's official\" interstitial, a \"Language\" icon label, a \"Close\" control and a footer logo alt string -- site chrome the standing packet's note says was \"left in the captured text as the extractor produced it\" -- and gains one stray \"xml version=1.0 encoding=UTF-8?\" line from an inline SVG's declaration. No published quotation or contact fact rests on any of it."
+    }
+  ]
+}

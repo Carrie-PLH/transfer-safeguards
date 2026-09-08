@@ -1,5 +1,12 @@
 # Handoff — the states index: 34 missing table rows, and the footer question
 
+> **COMPLETED. Do not run this.** Verified 2026-09-07: `site/states/index.html`
+> carries 51 rows against 51 published pages, the gap of 34 is closed, and the
+> deploy gate now fails on any published page without a row or a STATES JSON
+> record (`tools/sync-checked-dates.py`, check 10 in `site/predeploy-check.sh`).
+> `--selftest` passes. Kept as the record of the diagnosis; the prompt below is
+> historical.
+
 Written 2026-09-01. Paste the section below into a fresh Claude Code session
 in `~/Projects/Field Assembly/transfer-safeguards`.
 

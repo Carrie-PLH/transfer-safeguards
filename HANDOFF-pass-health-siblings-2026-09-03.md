@@ -1,5 +1,11 @@
 # Handoff — port the pass-health cursor distinction to the sibling collections
 
+> **COMPLETED. Do not run this.** Verified 2026-09-07: both siblings that carry
+> `tools/pass-health.py` — sped-safeguards and licensure mobility — hold the
+> cursor distinction between a rotation that lost its place and one that never
+> started. `gathered work` has no `pass-health.py` and needed nothing, as the
+> prompt anticipated. Kept as the record; the prompt below is historical.
+
 Paste the block below into a new session. Everything it needs is either in the
 prompt or reachable from the reference commit it names; it does not depend on
 this conversation.

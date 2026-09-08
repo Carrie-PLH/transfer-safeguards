@@ -118,3 +118,108 @@ carrying a third shape none of those markers would have caught. The grep was
 not a clean bill of health; a re-capture is.
 
 Reviewer: working session, 2026-09-05.
+
+## 2026-09-08 — recipe backfill: georgia (oldest hand-captured state)
+
+Working session, not a rotation pass; the review cursor was not touched.
+Georgia was taken first because it is the oldest hand-captured state
+(2026-08-30) and CLAUDE.md's backfill guidance starts with the oldest.
+
+**The blocker in the handoff did not exist.** The task was framed as
+"rules.sos.ga.gov returns HTTP 403 to curl, so the drafted recipe's `curl`
+transport will not work — change it to `web_fetch`." That reproduces, but
+only against a user-agent this project does not send. The host refuses a
+Chrome user-agent below roughly version 127 and serves the full page to
+everything else. Bisected: Chrome/110 and /120 → 403; Chrome/127 — which
+is exactly the string `capture.py` pins for `"user_agent": "browser"` —
+/128, /130, /135, /140, curl's own default UA, an unrecognised UA of `"x"`,
+and no User-Agent header at all → 200 with all 122,226 bytes. Neither
+`--http1.1` nor a full browser header set changes the outcome in either
+direction, so this is not the HTTP/2 refusal recorded for apps.azsos.gov.
+The 2026-08-30 note "returns HTTP 403 to curl" was true of the request that
+was made and false of the host; no transport change was needed and none was
+made. Both sources capture unattended by plain curl.
+
+Worth generalising: a "403 to curl" in a 2026-08-30 capture note is a claim
+about one header set, and CLAUDE.md's transport list carries several of them.
+Bisect the user-agent — including *upward*, against a stale-browser WAF rule —
+before reaching for an agent transport, alongside the existing advice to
+bisect on `--http1.1`.
+
+**georgia — rebuild, promoted.** Recipe digest 8ce6b626783f, hash
+5a522ba5f3d3df33, two sources, both `curl` + `html-text` + `body`, no
+filters. Lint clean; two consecutive captures byte-identical (and a third
+after the notes were rewritten, confirming notes stay outside the digest and
+outside the body hash); `check-fidelity` 0 failures against both
+`states/georgia.md` and `site/states/georgia.html`, before and after
+promotion. `check-all.py`: 102 pages across 52 states, no unexplained
+failures.
+
+**The recipe capture is a substantive superset of the hand capture, which is
+the finding.** 11,246 words against 8,857 — the recipe *recovers* rule text
+the standing packet never held. The session fetch tool rendered Subject
+111-8-50's nested lists as markdown tables and silently dropped the
+sub-items nested inside the table cells, so the 2026-08-30 packet is missing
+the (a)/(b) and (1)/(2) material under at least sixteen subsections,
+including 111-8-50-.11(2)(a) — the physician's determination "that failure
+to transfer the resident will result in injury or illness to the resident or
+others". The packet's character count nonetheless *falls* (86,962 → 69,616),
+because the markdown pipe-and-dash scaffolding removed is bulkier than the
+text recovered, which is why a size delta alone would have read this
+backfill as a loss. Every differing span was diffed at word level, ignoring
+table scaffolding, before promoting. The only material dropped is the fetch
+tool's own preamble (title, URL, Content-Type, YAML front matter) and, in
+source 2, the georgia.gov "The .gov means it's official" interstitial and
+three chrome labels; one stray `xml version="1.0"` line from an inline SVG
+declaration is gained. No published quotation or contact fact rested on any
+of it.
+
+This is a new argument for the backfill beyond reproducibility: a markdown
+table renderer standing between a publisher and a packet can drop list
+structure without warning, and the states captured that way on 2026-08-30 —
+per their own capture notes — are the ones to re-read first.
+
+One artifact recorded and deliberately not filtered: where this publisher
+sets a code citation as a link immediately followed by an italic "et seq."
+with no separating character, tag strip joins them ("O.C.G.A. § 50-13-1et
+seq.", and two occurrences of "31-8-100et seq."). This is the link-boundary
+class CLAUDE.md records for Nebraska, Ohio and North Dakota, inverted — the
+publisher's markup has no space there, so the run-together is faithful and a
+space would be our invention. Ten other "et seq." citations in the same
+document carry the publisher's own space. No page quotes any of the three.
+
+**Sibling check, per the handoff.** Idaho is not a 2026-08-30 state — its
+packet is 2026-09-02 — and all three of its curl-captured hosts
+(aging.idaho.gov, healthandwelfare.idaho.gov, oah.idaho.gov) answer 200 with
+content today; its one agent-fetched source is a legislature.idaho.gov PDF,
+not retested here. Kansas and Maryland are 2026-08-30, and neither is ready
+to backfill:
+
+- **Kansas — two blockers, one of them movement.** `www.ksrevisor.org`
+  (source 1, K.S.A. 39-936) now 301-redirects to `ksrevisor.gov`; the
+  redirect target serves the statute, but the publisher's domain has moved
+  and that is a source-movement finding for an owner session, not something
+  a recipe should paper over by following the redirect silently.
+  `www.ombudsman.ks.gov` (source 3) returns 403 to *every* curl variant
+  tried — no UA, the pinned browser UA, Chrome/140, curl's default, and
+  `--http1.1` — so unlike Georgia this one is a real refusal and needs a
+  browser or agent transport. The KAR PDF on sos.ks.gov (10.9 MB) fetches
+  fine.
+- **Maryland — one blocker, one movement.** `mgaleg.maryland.gov` (source 1)
+  still returns only site chrome to curl: fetched and re-checked this pass,
+  the 63,847-byte response contains zero occurrences of "19-345" or
+  "involuntary", exactly as the 2026-08-30 note said, so the scripted-client
+  blocker is unchanged and that source still needs an agent transport.
+  Separately, `dsd.maryland.gov` (source 2, COMAR 10.07.09) now
+  301-redirects to `regs.maryland.gov`, which serves the regulations —
+  again publisher movement to be recorded before a recipe is written.
+
+Both states' redirects were followed and confirmed to serve real content, so
+neither is a dead link; both are recorded here as findings rather than
+repaired, because a moved publisher is the owner's call through
+`rr-state-page`, not a backfill session's.
+
+No page content was touched and no checked date was changed by this entry.
+No queue entries opened.
+
+Reviewer: working session, 2026-09-08.
