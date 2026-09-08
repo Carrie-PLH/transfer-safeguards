@@ -1,0 +1,37 @@
+{
+  "recipe_version": 1,
+  "state": "connecticut",
+  "sources": [
+    {
+      "n": 1,
+      "title": "Connecticut General Statutes § 19a-535, Transfer or discharge of residents. Notice. Plan required. Appeal. Hearing. Involuntary transfer, discharge reporting (chapter 368v)",
+      "url": "https://www.cga.ct.gov/current/pub/chap_368v.htm#sec_19a-535",
+      "source_date": "public-act citation line ends P.A. 23-48, S. 1, 3",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "slice": {
+        "from": "Sec. 19a-535. (Formerly Sec. 19-616). Transfer or discharge of residents.",
+        "to": "Sec. 19a-535a.",
+        "from_occurrence": 2
+      },
+      "notes": "The standing packet (2026-08-30) recorded this source as unreachable to curl (certificate verification failure) and to the session HTTP fetch tool, and was captured through a browser instead, marked not re-verifiable by an automated pass. Retested 2026-09-08: plain curl with a browser user-agent now returns HTTP 200 with the real statute text (951 KB) -- the same transient-failure pattern already documented elsewhere in this portfolio for codeofarrules.arkansas.gov and cdph.ca.gov/dhcs.ca.gov. body scope pulls the whole chapter 368v page (all sections of the chapter); chap_368v.htm prints each section heading twice -- once in the chapter's table of contents, once over the section's own text -- so the slice takes the *second* occurrence of the section heading (from_occurrence: 2), per this project's standing rule to anchor on the body occurrence, not the table of contents. The 'to' anchor (the next section's heading, 19a-535a) is a superset of the original hand-cut boundary: it also picks up the section's own History annotation note and a cross-reference to Sec. 17b-454, which the standing packet's PENDING list says were captured in the browser but not carried into the packet -- this recipe closes that gap rather than reproducing the narrower cut."
+    },
+    {
+      "n": 2,
+      "title": "Connecticut Long Term Care Ombudsman Program — Contact Information",
+      "url": "https://portal.ct.gov/ltcop/content/contact-us/contact",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "slice": {
+        "from": "To contact the Ombudsman",
+        "to": "View the map of regional ombudsmen and the towns they serve"
+      },
+      "notes": "body scope alone pulls the site's full nav and footer chrome around a short contact block; this slice narrows to the contact block itself (phone, fax, email) plus the two links that follow it."
+    }
+  ]
+}

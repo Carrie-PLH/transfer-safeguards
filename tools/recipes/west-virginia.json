@@ -1,0 +1,63 @@
+{
+  "recipe_version": 1,
+  "state": "west-virginia",
+  "sources": [
+    {
+      "n": 1,
+      "title": "64 CSR 13, Nursing Home Licensure Rule — section 4.13, transfer and discharge",
+      "url": "https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=8271&Format=WORD",
+      "source_date": "none stated in the captured span",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "docx",
+      "slice": {
+        "from": "4.12.b.1.  If a former resident wishes to return",
+        "to": "4.14.b.  For all persons, regardless of source"
+      },
+      "notes": "Legacy pre-2007 Composite Document Format .doc; readfile.aspx's Format=HTML/PDF/TEXT variants all return an identical 60-page scanned image with no text layer, so this Word download is the only machine-readable copy the state publishes. capture.py converts it with textutil (macOS built-in, tried first by capture-core's converter list); the original 2026-08-30 hand capture used libreoffice --headless --convert-to txt instead, and the two converters format the same bytes slightly differently, so anchors here were re-derived against a fresh textutil conversion rather than reused verbatim from the standing packet. Section 4.13 (Admission, Transfer and Discharge) is a single contiguous span in the source document; this slice widens one section either side of it (4.12 and 4.14) to hold whole sections rather than cut mid-provision."
+    },
+    {
+      "n": 2,
+      "title": "64 CSR 13, Nursing Home Licensure Rule — definitions, excerpt",
+      "url": "https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=8271&Format=WORD",
+      "source_date": "none stated in the captured span",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "docx",
+      "slice": {
+        "from": "2.35.  Nursing Personnel. --  The director of nursing,",
+        "to": "2.51.  Transfer. --  Moving the resident from the"
+      },
+      "notes": "Same document as source 1 (textutil conversion); this slice holds section 2 definitions 2.35 through 2.50, matching the standing packet's own boundary (which also stops before 2.51, Transfer)."
+    },
+    {
+      "n": 3,
+      "title": "64 CSR 13, Nursing Home Licensure Rule — opening",
+      "url": "https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=8271&Format=WORD",
+      "source_date": "none stated in the captured span",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "docx",
+      "slice": {
+        "from": "TITLE 64\nLEGISLATIVE RULES\nWEST VIRGINIA DIVISION OF HEALTH",
+        "to": "1.3.  Filing Date."
+      },
+      "notes": "Same document as sources 1-2. This is the very start of the file, where textutil's conversion prepends a literal, unevaluated Word field code (' SEQ CHAPTER \\h \\r 1') immediately before 'TITLE 64' -- a rendering difference from the original libreoffice-based hand capture, not a change to the document. The from-anchor starts at 'TITLE 64' so the field-code text falls outside the slice; this discards the artifact rather than reproducing it. propose-slice.py could not auto-derive this anchor (the packet's own leading BOM character broke its exact-substring search against the fresh conversion), so it was set by hand after inspecting both extractions directly."
+    },
+    {
+      "n": 4,
+      "title": "Long-Term Care Ombudsman Program",
+      "url": "http://www.wvseniorservices.gov/StayingSafe/LongTermCareOmbudsmanProgram/tabid/81/Default.aspx",
+      "source_date": "Updated 3/25/24",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "slice": {
+        "from": "Long-Term Care Ombudsman Program The country's",
+        "to": "Navigation Areas"
+      },
+      "notes": "tabid/81/Default.aspx (DotNetNuke). body scope alone pulls the full page chrome (repeated nav menu, footer) around the article; this slice narrows to the article plus the Bureau's mailing/location address block, phone, fax and hours that follow it, cutting before the page's second full nav-menu dump (headed 'Navigation Areas'). tools/propose-slice.py's own auto-proposed to-anchor and occurrence (occurrence 3 of a different, longer needle) did not reproduce under a direct capture.py run -- only one occurrence existed after the from-anchor -- so this anchor was chosen by hand after inspecting the extraction directly; the standing hand-cut packet's own source 4 body runs further, into the nav menu, and is truncated mid-word, which this slice does not try to reproduce. Curl over plain http, as the standing packet's capture notes record; https also resolves but was not tested against this recipe."
+    }
+  ]
+}
