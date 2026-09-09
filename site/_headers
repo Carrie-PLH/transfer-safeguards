@@ -1,0 +1,27 @@
+# Cache policy. Hand-written; generate-sitemap.py does not touch this file.
+#
+# The stylesheet and the icons are not content-hashed, so a long max-age would
+# strand a repeat visitor on a stale copy after a deploy. These values are the
+# staleness each file can carry:
+#
+#   style.css   one day. It changes when the shared mobile layer changes,
+#               which is rare, and a day is the longest a reader should be
+#               shown last week's layout.
+#   icons, art  thirty days. A favicon or wordmark that changes gets a new
+#               name, or waits.
+#
+# Everything not listed keeps the default (max-age=0, must-revalidate), which
+# is what an HTML page should have: the pages carry dated quotations, and a
+# reader must never be served yesterday's text from their own cache.
+
+/assets/*.css
+  Cache-Control: public, max-age=86400
+
+/assets/*.svg
+  Cache-Control: public, max-age=2592000
+
+/assets/*.png
+  Cache-Control: public, max-age=2592000
+
+/assets/*.ico
+  Cache-Control: public, max-age=2592000
