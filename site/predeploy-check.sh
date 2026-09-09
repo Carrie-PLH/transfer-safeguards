@@ -2,7 +2,8 @@
 # transfer-safeguards — pre-deploy invariants check (internal, never deployed)
 # Run from site/ before `npx wrangler deploy`. Exit 0 = safe to deploy.
 # Adapted from the Gathered Work check. Verifies, mechanically:
-#   1. No reviewer placeholders remain in any deployable HTML file.
+#   1. No reviewer placeholders remain in any deployable HTML file, and no
+#      change-log entry still carries an unresolved review-pending status.
 #   2. Zero third-party requests: no loaded resource (script, stylesheet,
 #      image, font, iframe, media) points off-domain. Ordinary <a href>
 #      links to sources are allowed and expected.
@@ -35,14 +36,37 @@ HTML0() { find . -name '*.html' -not -path './.wrangler/*' -not -path './node_mo
 HTML=$(find . -name '*.html' -not -path './.wrangler/*' -not -path './node_modules/*')
 PAGES=$(printf '%s\n' "$HTML" | grep -c '')
 
-# 1 — reviewer placeholders (bracketed template wordings only; the standing
-# "review pending before publication" change-log line is legitimate content)
+# 1 — reviewer placeholders (bracketed template wordings, e.g. "[named human
+# reviewer]" or "[pending review before publication]" left over from a draft).
 RPLACE='\[named human reviewer|\[pending review before publication|\[reviewer'
 if grep -lE "$RPLACE" $HTML >/dev/null 2>&1; then
   bad "reviewer placeholder still present in:"
   grep -lE "$RPLACE" $HTML | sed 's/^/        /'
 else
   ok "no reviewer placeholders"
+fi
+
+# 1b — unresolved review status. Carrie's workflow is review, then request
+# commit and deploy — by the time a page is live, "review pending" should
+# never still be the true state. Until 2026-09-09 this check treated the
+# standing "review pending before publication" change-log line as legitimate
+# content on the theory that it only needed to be resolved before publication
+# — but nothing else enforced that, and it deployed live on 19 pages, some
+# under a slightly drifted wording ("review pending for this entry"). The
+# fix belongs in the reviewer line itself (rr-state-page: flip it to
+# "reviewed <date>" once Carrie has actually reviewed the entry), not in this
+# gate — this check exists so a page can no longer ship without that having
+# happened. Matched case-insensitively and independent of exact wording,
+# because the failure mode here was a synonym slipping past an exact string.
+#
+# Tripwire before trusting any change to this, in both directions:
+#   inject <p>Reviewer: Carrie Schluter (review pending).</p>  -> must FAIL
+#   inject <p>Reviewer: Carrie Schluter, reviewed 2026-09-09.</p> -> must pass
+if grep -liE 'review[- ]pending' $HTML >/dev/null 2>&1; then
+  bad "unresolved review-pending status still present in:"
+  grep -liE 'review[- ]pending' $HTML | sed 's/^/        /'
+else
+  ok "no unresolved review-pending status"
 fi
 
 # 2 — external loaded resources. Loads from the site's own domain are
