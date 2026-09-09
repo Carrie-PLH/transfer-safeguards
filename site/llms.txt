@@ -1,0 +1,25 @@
+# Room & Recourse
+
+> Nursing-home involuntary transfer and discharge, one page per state. Each page quotes the state's own published rules — the permitted grounds, the notice owed, the office that hears the appeal, bed-hold, and the long-term-care ombudsman — with the quotation dated and linked to the original.
+
+Room & Recourse is a reference work published by Field Assembly LLC. It covers 51 jurisdictions: the 50 states and the District of Columbia, plus a page on the federal floor that applies everywhere. Pages are built from first-party sources only: state agencies, state regulations, CMS, and the federal regulations themselves. Where a state does not publish something, the absence is recorded on the page as a finding rather than filled from another source.
+
+Every quotation carries two dates: when the source was published or last revised, and when it was captured. Corrections are made on the record. This is reference information, not legal advice, and the site is independent of every agency it quotes.
+
+## Core pages
+
+- [Home](https://roomandrecourse.com/): what the site covers and how to use it.
+- [States](https://roomandrecourse.com/states/): the index of all 51 jurisdiction pages, each with the grounds, the notice, the hearing office, bed-hold, and the ombudsman.
+- [The federal floor](https://roomandrecourse.com/federal/): 42 CFR 483.15(c), 42 CFR part 431 subpart E, and CMS guidance — the minimum that applies in every state.
+- [About](https://roomandrecourse.com/about/): how the pages are built, what sources are used, and the boundaries the site keeps.
+
+## Jurisdiction pages
+
+Each state page lives at `https://roomandrecourse.com/states/<state-name>/`, using the lowercase hyphenated state name — for example `/states/new-york/` or `/states/district-of-columbia/`. The complete list is in the [sitemap](https://roomandrecourse.com/sitemap.xml).
+
+## Optional
+
+- [Privacy](https://roomandrecourse.com/legal/privacy/)
+- [Terms](https://roomandrecourse.com/legal/terms/)
+- [Field Assembly](https://fieldassembly.net): the publisher.
+- [The record standard](https://fieldassembly.net/standard): the commitments every Field Assembly reference work is kept to.

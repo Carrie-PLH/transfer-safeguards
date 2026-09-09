@@ -576,19 +576,14 @@ img, svg, video, iframe { max-width: 100%; }
 
 /* ---------- mobile nav scaffolding (all widths; inert above 780px) ------
 
-   A checkbox drives the menu. It is hidden from sight but not from the
-   accessibility tree or the keyboard — still tabbable, Space still toggles
-   it, and the label names it. Above the breakpoint the button is
-   display:none and none of this is reachable. */
+   A checkbox drives the menu. Above the breakpoint there is no menu to
+   drive, so the checkbox is display:none and leaves the accessibility tree
+   with it — an opacity:0 control with a display:none label is a form
+   element with no accessible name, which is what axe reports. Below the
+   breakpoint it is hidden from sight only: still tabbable, Space still
+   toggles it, and both its aria-label and its label name it. */
 
-.nav-toggle {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: 0;
-  opacity: 0;
-  pointer-events: none;
-}
+.nav-toggle { display: none; }
 .nav-button { display: none; }
 .nav-bars {
   display: block;
@@ -623,6 +618,18 @@ img, svg, video, iframe { max-width: 100%; }
   /* The nav goes behind a button. Stacked, four links cost 217px of an
      812px screen before a reader reached the first line of the page. */
   .topline { flex-wrap: wrap; }
+
+  /* The checkbox comes back below the breakpoint: out of sight, in the
+     accessibility tree, tabbable, and named. */
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
   .nav-button {
     display: inline-flex;
     align-items: center;
