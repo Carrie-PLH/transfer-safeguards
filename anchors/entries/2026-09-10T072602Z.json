@@ -1,0 +1,16 @@
+{
+ "entry": {
+  "file_count": 153,
+  "id": "2026-09-10T072602Z",
+  "manifest_file": "manifests/2026-09-10T072602Z.txt",
+  "manifest_sha256": "222567154f74a35f1f73c6feac4048ea6f8fb01e60cf6137456ced77e95038d9",
+  "note": "recipe backfill: michigan",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "b7e34b43388cc7c96ffa2dc69e3205bec04dac74fd8f801098ad2508cc038156",
+  "repo": "transfer-safeguards",
+  "utc": "2026-09-10T07:26:02+00:00"
+ },
+ "entry_sha256": "39d5cacc6544db78358170b04c74479b964e0e43d88847a9a95fdfa655726534"
+}
