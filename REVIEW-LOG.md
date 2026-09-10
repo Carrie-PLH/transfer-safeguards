@@ -223,3 +223,62 @@ No page content was touched and no checked date was changed by this entry.
 No queue entries opened.
 
 Reviewer: working session, 2026-09-08.
+
+## 2026-09-10 — recipe backfill: michigan (Room & Recourse exception)
+
+Scheduled pass (portfolio-nightly-qc-review). Before this pass, tools/recipes/
+held 43 recipes against 51 published state pages (idaho, kansas, maryland,
+massachusetts, michigan, minnesota, montana, new-hampshire and south-dakota
+had none), so the Room & Recourse exception in the pass's own instructions
+applies: this repo's slot was spent writing a capture recipe rather than
+running a review lap. This repo has no separate review cursor of its own in
+the rotation sense the sibling collections use (see CLAUDE.md); nothing else
+here was touched.
+
+**Michigan — recipe written and verified.** Both sources are PDFs published
+directly by michigan.gov/lara (a form, LARA-BCHS-ITD-100, and a 2013
+guidance memo reproducing the statute); neither touches legislature.mi.gov,
+which the repo's CLAUDE.md already documents as unreachable (incomplete
+certificate chain to curl, empty body to the session fetch tool) — the
+standing packet's own PENDING note says the Legislature's text was never
+reached and the department's reproduction in source 2 is what the page
+rests on, so this recipe does not change what is or is not captured, only
+whether the existing sources can be re-fetched automatically. Both retrieved
+by curl with a browser user-agent and extracted with pdftotext -layout,
+matching the 2026-08-30 hand capture's own recorded method exactly.
+Deliberately no strip-page-numbers filter: source 1's per-page footer
+("LARA-BCHS-ITD-100 (07/26/2024)", "Authority: P.A. 368 of 1978 as
+amended", "Page N of 7") is the form's own printed text per the standing
+packet's capture notes, not a page-number artifact, and stripping it would
+silently narrow what the packet holds. No slice on either source; both are
+captured whole, as the standing packet already does. All five verification
+steps passed: lint clean (digest 2605acca1508), two consecutive captures
+byte-identical, zero failures against both states/michigan.md and
+site/states/michigan.html. Retained as a rebuild (hash fe4a0985d72a3568) and
+promoted. The state's checked date was left untouched — this pass backfilled
+the recipe, it did not re-verify or re-date the page, which is the sibling
+collections' own distinction between a recipe-backfill pass and a review
+pass.
+
+A second recipe was not attempted this pass. Idaho was the next candidate by
+the same "oldest hand-captured, most drift-risk" reasoning the sibling
+collections use, but its standing packet (2026-09-02) merges six separate
+per-section statute pages under one SOURCE number and excerpts a single
+853,225-byte PDF chapter as four non-contiguous spans chosen editorially
+(cover page, general provisions, one definition subsection, and the Nursing
+Facilities sub-area) — materially more complex than a source-per-URL,
+whole-or-sliced recipe, and a rushed attempt risks writing a recipe that
+enters nightly rotation reading the wrong content. Stopping after one recipe
+for cause, per the pass's own instructions. Kansas, Maryland, Minnesota and
+Montana are plausible next candidates (single-source-per-URL, no known
+browser-only transport, per this repo's own CLAUDE.md transport notes);
+Massachusetts and New Hampshire are documented as needing a browser
+transport (mass.gov, dhhs.nh.gov) and South Dakota's core sources come from
+a JSON API whose extracted "Html" field this repo's capture.py has no
+extractor for (only pdftotext-*, html-text, next-data, docx and none are
+implemented) — writing one would be a tooling change, which an unattended
+pass may not make.
+
+No queue entries opened.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-09-10.

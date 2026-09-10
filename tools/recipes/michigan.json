@@ -1,0 +1,28 @@
+{
+  "recipe_version": 1,
+  "state": "michigan",
+  "sources": [
+    {
+      "n": 1,
+      "title": "Michigan Department of Licensing and Regulatory Affairs, Bureau of Community and Health Systems — Notice of Involuntary Transfer or Discharge and Facility-Initiated Discharge for Nursing Homes, LARA-BCHS-ITD-100 (PDF)",
+      "url": "https://www.michigan.gov/lara/-/media/Project/Websites/lara/bchs/Folder2/LARA-BCHS-ITD-100-07262024.pdf",
+      "source_date": "LARA-BCHS-ITD-100 (07/26/2024)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "Fillable form. Retrieved by curl with a browser user-agent and extracted with pdftotext -layout, matching the 2026-08-30 hand capture's own recorded method. Deliberately no strip-page-numbers filter: the per-page footer ('LARA-BCHS-ITD-100 (07/26/2024)', 'Authority: P.A. 368 of 1978 as amended', 'Page N of 7') is the form's own printed text, not a page-number artifact to discard, per the standing packet's capture notes. The two-column layout of the state and federal reason lists is the form's own arrangement; the extractor renders it as interleaved lines, which is the form as printed, not a capture defect."
+    },
+    {
+      "n": 2,
+      "title": "Michigan Department of Licensing and Regulatory Affairs — Guidance in the Preparation of a Notice of an Involuntary Transfer or Discharge (PDF)",
+      "url": "https://www.michigan.gov/-/media/Project/Websites/lara/healthsystemslicensing/Folder9/bhs_GUIDANCE_for_Inv_Transfer.pdf",
+      "source_date": "September 12, 2013",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "Retrieved and extracted the same way as source 1. Reproduces the statute inside the department's own guidance; the indentation, the running foot ('Guidance in the Preparation of a Notice of an Involuntary Transfer or Discharge', 'September 12, 2013') and the department-name substitutions inside the quoted statute are the guidance document's own, per the standing packet's capture notes — none of that is stripped."
+    }
+  ]
+}
