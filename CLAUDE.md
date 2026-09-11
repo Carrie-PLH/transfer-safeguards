@@ -285,6 +285,19 @@ QC routine also runs it in every repo it touches. A finding is not necessarily
 a mistake in the pages: the 2026-09-04 case was fixed by disabling a setting in
 the Cloudflare dashboard, with nothing to change in the repository at all.
 
+## IndexNow (added 2026-09-11)
+
+After an attended deploy, submit the changed URLs to IndexNow:
+
+    python3 ../field-assembly-standard/tools/indexnow-ping.py
+
+from the repo root (`--dry-run` to preview). The tool diffs the generated
+sitemap against `tools/indexnow-ledger.json` and submits only added, changed,
+or deleted URLs; commit the ledger it rewrites with the pass that deployed.
+The key it submits is read from the served key file at the site root, so the
+two cannot disagree. Adopted FA-D-20260911-01; the tool's docstring governs.
+Scheduled passes do not deploy and therefore never run this.
+
 ## Fidelity before anything ships
 
 A page that has not passed `python3 tools/check-fidelity.py` against its
