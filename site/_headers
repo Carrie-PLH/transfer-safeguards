@@ -31,3 +31,17 @@
 # (Pages adds the charset itself), so it is set here. Added 2026-09-11.
 /.well-known/security.txt
   Content-Type: text/plain; charset=utf-8
+
+# Response headers every page carries. Added 2026-09-11. None of these
+# changes what the site does; each closes a class of scanner finding at no
+# cost. nosniff stops a browser second-guessing a content type. DENY stops
+# the pages being framed inside someone else's site. The referrer policy
+# sends only the origin to other sites a reader follows a link to. The
+# permissions policy turns off browser features no page here uses. A
+# Content-Security-Policy is deliberately not here: it needs per-site
+# testing and a report-only period first, and is its own decision.
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
