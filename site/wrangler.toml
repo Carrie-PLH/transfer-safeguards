@@ -25,6 +25,11 @@ compatibility_date = "2026-08-30"
 # Deviation from the sibling pattern, owner-approved 2026-08-30: the custom
 # domain is bound here rather than in the dashboard, so the binding is in
 # the record. www and the no-mail DNS hardening still live in the dashboard.
+# www was not bound until 2026-09-11: the hostname had no DNS record at all
+# (found while adding security.txt across the portfolio). Fixed that day in
+# the dashboard per the sibling pattern — proxied A record on 192.0.2.1 and a
+# redirect rule, 301 to the apex, path and query string preserved. Verified:
+# https://www.roomandrecourse.com/states/maine/ -> 301 to the apex path.
 routes = [
   { pattern = "roomandrecourse.com", custom_domain = true }
 ]
