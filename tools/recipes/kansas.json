@@ -1,0 +1,38 @@
+{
+  "recipe_version": 1,
+  "state": "kansas",
+  "sources": [
+    {
+      "n": 1,
+      "title": "K.S.A. 39-936",
+      "url": "https://www.ksrevisor.org/statutes/chapters/ch39/039_009_0036.html",
+      "source_date": "history line ends L. 2024, ch. 103, § 3; July 1",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 2,
+      "title": "Kansas Administrative Regulations 2022, Book 2 — article 28-39 entries for 28-39-145 through 28-39-149",
+      "url": "https://sos.ks.gov/publications/KAR/2022/2022_KAR_Volumes_Book_2.pdf",
+      "source_date": "2022 volumes",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 3,
+      "title": "Involuntary Discharge",
+      "url": "https://www.ombudsman.ks.gov/helpful-resources/issues-of-interest/involuntary-discharge",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    }
+  ]
+}
