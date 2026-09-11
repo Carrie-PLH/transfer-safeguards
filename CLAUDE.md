@@ -252,8 +252,10 @@ drifted: this site published 58 pages and offered 42 of them.
 ## Deploy only when asked, and only on a passing check
 
 Once the worker exists, the gate follows the siblings:
-`bash site/predeploy-check.sh && (cd site && npx wrangler deploy)` — deploy
-only if the check passes and only if the owner asked in that session.
+`bash deploy.sh` — it runs the gate, the wrangler deploy from `site/`, and
+the IndexNow ping in order (added 2026-09-11), so the ping cannot be
+forgotten. Deploy only if the check passes and only if the owner asked in
+that session.
 Verify afterwards by fetching changed pages with `curl -sSL` rather than
 trusting the deploy log.
 
@@ -287,15 +289,16 @@ the Cloudflare dashboard, with nothing to change in the repository at all.
 
 ## IndexNow (added 2026-09-11)
 
-After an attended deploy, submit the changed URLs to IndexNow:
-
-    python3 ../field-assembly-standard/tools/indexnow-ping.py
-
-from the repo root (`--dry-run` to preview). The tool diffs the generated
+`deploy.sh` runs this step itself, after a passing gate and a successful
+publish — asking for a deploy means running `bash deploy.sh`, so nobody has
+to remember the ping. The tool
+(`../field-assembly-standard/tools/indexnow-ping.py`) diffs the generated
 sitemap against `tools/indexnow-ledger.json` and submits only added, changed,
-or deleted URLs; commit the ledger it rewrites with the pass that deployed.
-The key it submits is read from the served key file at the site root, so the
-two cannot disagree. Adopted FA-D-20260911-01; the tool's docstring governs.
+or deleted URLs; the script commits the rewritten ledger (that path only) and
+the session pushes it with its other commits. The key submitted is read from
+the served key file at the site root, so the two cannot disagree. Run the
+tool by hand (`--dry-run` to preview) only to rerun a ping that failed after
+a successful publish. Adopted FA-D-20260911-01; the tool's docstring governs.
 Scheduled passes do not deploy and therefore never run this.
 
 ## Fidelity before anything ships
