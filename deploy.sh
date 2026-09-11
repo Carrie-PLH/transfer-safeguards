@@ -13,6 +13,12 @@ cd "$(dirname "$0")"
 
 bash site/predeploy-check.sh
 
+# security.txt must be RFC 9116-valid and not expiring (FA-D-20260911-05).
+# Refuses when Expires is past or within 60 days; the fix is
+#   python3 ../field-assembly-standard/tools/securitytxt-check.py --renew
+# in every site repo, committed with the deploy.
+python3 ../field-assembly-standard/tools/securitytxt-check.py
+
 (cd site && npx wrangler deploy)
 
 # IndexNow: submit what this deploy changed (FA-D-20260911-01). set -e means
