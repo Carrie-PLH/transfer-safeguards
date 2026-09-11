@@ -1,0 +1,8 @@
+# roomandrecourse.com is published by Field Assembly LLC. Security contact (RFC 9116).
+# Policy, scope, and what to expect: https://fieldassembly.net/legal/vulnerability-disclosure
+# No bug bounty program. Reports are reviewed as circumstances permit.
+Contact: mailto:hello@fieldassembly.net
+Expires: 2027-09-01T00:00:00.000Z
+Policy: https://fieldassembly.net/legal/vulnerability-disclosure
+Canonical: https://roomandrecourse.com/.well-known/security.txt
+Preferred-Languages: en
