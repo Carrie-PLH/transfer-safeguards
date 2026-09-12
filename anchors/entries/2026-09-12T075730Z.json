@@ -1,0 +1,16 @@
+{
+ "entry": {
+  "file_count": 155,
+  "id": "2026-09-12T075730Z",
+  "manifest_file": "manifests/2026-09-12T075730Z.txt",
+  "manifest_sha256": "cdb0cade6f8c5b786aec32e8fa8d3f3d1fbd82f4e5ccff373662507cf1cd6471",
+  "note": "recipe backfill: montana",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "39d5cacc6544db78358170b04c74479b964e0e43d88847a9a95fdfa655726534",
+  "repo": "transfer-safeguards",
+  "utc": "2026-09-12T07:57:30+00:00"
+ },
+ "entry_sha256": "f261f5c772e78ece248d5e024a9883573093b76008b4d92da513a66ac10bb761"
+}
