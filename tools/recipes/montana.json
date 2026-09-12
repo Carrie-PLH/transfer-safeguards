@@ -1,0 +1,75 @@
+{
+  "recipe_version": 1,
+  "state": "montana",
+  "sources": [
+    {
+      "n": 1,
+      "title": "MCA 50-5-1104 \u2014 Rights of long-term care facility residents",
+      "url": "https://leg.mt.gov/bills/mca/title_0500/chapter_0050/part_0110/section_0040/0500-0050-0110-0040.html",
+      "source_date": "Montana Code Annotated 2025 (last amended Sec. 9, Ch. 12, L. 2023)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Plain curl with a browser user-agent reaches this cleanly, HTTP 200. body: the page has no main/#content/article landmark; the whole document is one short section page and body carries only the MCA site chrome (Toggle navigation, MCA Contents, Search, Help, Part/Previous/Next Section links) plus the section text and its own disclaimer, matching the standing packet's body closely."
+    },
+    {
+      "n": 2,
+      "title": "37.106.601, Minimum Standards for a Skilled and Skilled/Intermediate Care Facility: General Requirements",
+      "url": "https://rules.mt.gov/browse/collections/aec52c46-128e-4279-9068-8af5d5432d74/policies/8d6002f2-7e61-46b9-a8d1-d2915232080b",
+      "source_date": "Effective 09/24/2022 - Present",
+      "transport": "chrome",
+      "extractor": "none",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "rules.mt.gov (the Esper policy-library platform) serves only a client-side application shell to curl -- confirmed 2026-09-12, HTTP 200 but zero rule-number occurrences in the raw response, no __NEXT_DATA__ or other JSON island. The standing packet's own URL (a /search?query= address) is a search results page, not a fetchable document; the rule text lives at this permalink, found via the site's own search and confirmed to render the requested rule. The trailing path segment (8d6002f2-...) is this platform's own rule-version identifier -- an application-level UUID per PROVENANCE.md's API-source rule -- and can change if the site is redeployed or the rule is re-versioned; a broken link here is capture drift to re-establish via the site's search, never evidence the rule was withdrawn. Read with the browser tool's get_page_text (raw visible text, not an AI summary) and supplied with extractor none because the reader has already flattened the page -- same convention as Florida. Verified byte-identical across two independent navigations 2026-09-12. Supplied text is trimmed of the global site footer (Home | Contact Us | ADA Notice & Accommodations | Accessibility | Privacy & Security | Disclaimer | Support | Powered by), which is common to every page on the site and carries no rule content, matching how the standing packet was trimmed."
+    },
+    {
+      "n": 3,
+      "title": "37.5.105, Nursing Facility Related Cases: Applicable Hearing Procedures",
+      "url": "https://rules.mt.gov/browse/collections/aec52c46-128e-4279-9068-8af5d5432d74/policies/adebcd91-e84e-42fa-a58a-711b9e4e9514",
+      "source_date": "Effective 06/30/2000 - Present",
+      "transport": "chrome",
+      "extractor": "none",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Same platform and same reasoning as source 2: rules.mt.gov serves no rule text to curl. Permalink found via the site's own search for 37.5.105 (first and only exact-title match); the trailing UUID is an application-level identifier per PROVENANCE.md, not a stable citation, and a broken link is capture drift, not evidence of withdrawal. Read with get_page_text, extractor none, verified byte-identical across two independent navigations 2026-09-12. Global site footer trimmed from the supplied text, as with source 2."
+    },
+    {
+      "n": 4,
+      "title": "37.5.307, Opportunity for Hearing",
+      "url": "https://rules.mt.gov/browse/collections/aec52c46-128e-4279-9068-8af5d5432d74/policies/71e66051-684a-4882-b57b-5ff6c1491f68",
+      "source_date": "Effective 03/27/2015 - Present",
+      "transport": "chrome",
+      "extractor": "none",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Same platform and same reasoning as sources 2-3. Permalink found via the site's own search for 37.5.307, the first of 94 loosely-matched results and the only one titled 37.5.307 itself; the trailing UUID is an application-level identifier per PROVENANCE.md, not a stable citation, and a broken link is capture drift, not evidence of withdrawal. Read with get_page_text, extractor none, verified byte-identical across two independent navigations 2026-09-12. Global site footer trimmed from the supplied text, as with sources 2-3."
+    },
+    {
+      "n": 5,
+      "title": "Long-Term Care Ombudsman",
+      "url": "https://dphhs.mt.gov/sltc/aging/longtermcareombudsman/",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Plain curl with a browser user-agent reaches this cleanly, HTTP 200; not Cloudflare-obfuscated. body: no main/#content/article landmark; the department's full site-wide navigation (Services, Agencies, About, News and Events, Contact, Office Locations, the entire Senior Services menu tree) precedes the page's own content, matching the standing packet's body, which already carries the same chrome."
+    }
+  ]
+}
