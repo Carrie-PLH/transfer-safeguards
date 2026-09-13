@@ -46,6 +46,20 @@
       "extractor": "html-text",
       "scope": "body",
       "notes": "Server-rendered; plain curl with a browser user-agent returns the whole document. Scope 'body' rather than a narrower selector: the page renders both a menu and a side navigation, and carries the county-by-county local ombudsman roster, all of which the standing packet holds as served."
+    },
+    {
+      "n": 5,
+      "title": "Indiana Health Coverage Programs, Provider Reference Module — Long-Term Care Facility Services, \"Leave Days in a Nursing Facility\" (PDF)",
+      "url": "https://www.in.gov/medicaid/providers/files/modules/long-term-care.pdf",
+      "source_date": "Library Reference Number: PROMOD00037; Published: May 12, 2026; policies and procedures as of Aug. 1, 2025; Version: 8.0",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "IHCP's own 42-page module PDF; the bed-hold statement sits under the heading 'Leave Days in a Nursing Facility' in Section 2: Nursing Facilities. The heading text recurs in the table of contents, so both anchors are widened past the heading into the first words of the body paragraph beneath it to land past the contents listing rather than using from_occurrence.",
+      "slice": {
+        "from": "Leave Days in a Nursing Facility\nThe IHCP does not reimburse for bed-hold days",
+        "to": "Transportation for NF Residents\nNursing facilities (provider specialties 030 and 032)"
+      }
     }
   ]
 }

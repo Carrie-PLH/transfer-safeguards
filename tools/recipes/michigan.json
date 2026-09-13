@@ -23,6 +23,26 @@
       "extractor": "pdftotext-layout",
       "filters": ["trim-lines", "collapse-blank-runs"],
       "notes": "Retrieved and extracted the same way as source 1. Reproduces the statute inside the department's own guidance; the indentation, the running foot ('Guidance in the Preparation of a Notice of an Involuntary Transfer or Discharge', 'September 12, 2013') and the department-name substitutions inside the quoted statute are the guidance document's own, per the standing packet's capture notes — none of that is stripped."
+    },
+    {
+      "n": 3,
+      "title": "Michigan Department of Community Health, Medicaid Provider Bulletin MSA 04-20, \"Hospital Leave Days\" (PDF)",
+      "url": "https://www.michigan.gov/-/media/Project/Websites/mdhhs/Folder1/Folder31/MSA_04-20.pdf",
+      "source_date": "Issued: December 1, 2004; Effective: January 1, 2005",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "A one-page provider bulletin, captured whole — no slice, the document is the bulletin. Sets the 98-percent-occupancy condition on Medicaid paying to hold a bed during a hospital leave; no more current statement of this rule was located on michigan.gov, whose Medicaid Provider Manual pages are a JavaScript-driven document library rather than a per-chapter address this project's bounded transports could fetch, so this bulletin is quoted as the newest version located from this publisher, per the manual-maintenance line on its own last page directing providers to retain it 'until the Michigan Medicaid Provider Manual is updated.'"
+    },
+    {
+      "n": 4,
+      "title": "Michigan Department of Community Health, Medicaid Provider Bulletin, Long Term Care Facilities 00-05, \"Nursing Facility Leave Days\" (PDF)",
+      "url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Assistance-Programs/Medicaid-BPHASA/Other-Prov-Specific-Page-Docs/LTC_00-05_9045_7.pdf",
+      "source_date": "Issued: January 1, 2001; Effective: December 1, 2000",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "A three-page provider bulletin, captured whole — no slice. States the ten-day hospital-leave hold and the 18-day therapeutic-leave allowance under a 365-day period; same publisher-currency caveat as source 3, and this bulletin is likewise the newest version located from this publisher for these two leave-day rules."
     }
   ]
 }

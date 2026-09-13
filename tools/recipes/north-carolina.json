@@ -43,6 +43,34 @@
       "extractor": "html-text",
       "scope": "body",
       "notes": "Server-rendered, same transport. This page publishes no statewide telephone number for the ombudsman program — it describes a state office and sixteen regional offices housed in Area Agencies on Aging — and that absence is recorded on the page as a finding. Scope stays 'body' so a future pass cannot mistake a narrowed capture for the contact having been withdrawn."
+    },
+    {
+      "n": 5,
+      "title": "NC Medicaid, Nursing Facilities Clinical Coverage Policy No. 2B-1, Subsection 5.7 \"Therapeutic Leave\" (PDF)",
+      "url": "https://medicaid.ncdhhs.gov/documents/files/2b1/open",
+      "source_date": "Amended Date: October 1, 2015",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "NC Medicaid's own clinical coverage policy for nursing facilities; subsection numbers repeat between the table of contents and the body, so both anchors are widened into the first words of body text to skip past the contents listing rather than using from_occurrence.",
+      "slice": {
+        "from": "5.7     Therapeutic Leave\nTherapeutic leave must be provided",
+        "to": "5.8     Nursing Facility Transitions Program\nThe Olmstead Act mandates"
+      }
+    },
+    {
+      "n": 6,
+      "title": "NC Medicaid, Nursing Facilities Clinical Coverage Policy No. 2B-1, Subsection 7.4 \"Bed Holds\" (PDF)",
+      "url": "https://medicaid.ncdhhs.gov/documents/files/2b1/open",
+      "source_date": "Amended Date: October 1, 2015",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "Same document and transport as source 5, a second slice for the non-adjacent Bed Holds subsection. Same table-of-contents collision, same fix.",
+      "slice": {
+        "from": "7.4     Bed Holds\nIn accordance with 42 CFR 483.12(b)",
+        "to": "7.5     Private Rooms\nIn accordance with 42 CFR 483.10(c)(8)(ii)(k)"
+      }
     }
   ]
 }
