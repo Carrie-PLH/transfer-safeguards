@@ -1,0 +1,78 @@
+{
+  "recipe_version": 1,
+  "state": "maryland",
+  "sources": [
+    {
+      "n": 1,
+      "title": "Maryland Code, Health-General § 19-345 (Involuntary transfer or discharge)",
+      "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=ghg&section=19-345&enactments=false",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "#StatuteText",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "The standing packet's 2026-08-30 capture note says curl returns only site chrome with no statute text here and that this source needed the session's fetch tool. Re-tested 2026-09-13: plain curl with a browser user-agent now returns the full statute text inside div#StatuteText -- a fact about the site today, checked rather than assumed, the same kind of correction recorded for two California sources on 2026-08-30. #StatuteText carries the section text plus 'Previous'/'Next' pager links the standing packet's hand capture omitted; the quoted text itself is unaffected, and is a subset of what this scope captures."
+    },
+    {
+      "n": 2,
+      "title": "COMAR 10.07.09.10, Resident Transfers and Discharges",
+      "url": "https://dsd.maryland.gov/regulations/Pages/10.07.09.10.aspx",
+      "source_date": "chapter administrative history: Regulations .01—.20 adopted effective April 22, 1996; Regulation .12A amended effective August 24, 2009",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "main",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "dsd.maryland.gov redirects (301) to the Library of Maryland Regulations at regs.maryland.gov/us/md/exec/comar/10.07.09.10; capture.py's curl follows redirects by default (-L in CURL_ARGS). The standing packet's Source 2 concatenates four regulations (.10 through .13) fetched separately under one SOURCE header; this recipe keeps them as four separate sources (n=2 through 5) instead, since a recipe source is one URL per fetch -- the same text ends up in the packet either way, and check-fidelity.py matches quoted spans against the whole packet body regardless of source numbering. main#area__content holds the regulation text plus the chapter breadcrumb and a short site-chrome header; no other landmark separates them on this template."
+    },
+    {
+      "n": 3,
+      "title": "COMAR 10.07.09.11, Involuntary Discharge or Transfer of a Resident",
+      "url": "https://dsd.maryland.gov/regulations/Pages/10.07.09.11.aspx",
+      "source_date": "chapter administrative history: Regulations .01—.20 adopted effective April 22, 1996; Regulation .12A amended effective August 24, 2009",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "main",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "Same platform, redirect and scope reasoning as source 2 (regulation .10)."
+    },
+    {
+      "n": 4,
+      "title": "COMAR 10.07.09.12, Resident Relocation and Bed Hold",
+      "url": "https://dsd.maryland.gov/regulations/Pages/10.07.09.12.aspx",
+      "source_date": "chapter administrative history: Regulations .01—.20 adopted effective April 22, 1996; Regulation .12A amended effective August 24, 2009",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "main",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "Same platform, redirect and scope reasoning as source 2 (regulation .10)."
+    },
+    {
+      "n": 5,
+      "title": "COMAR 10.07.09.13, Hearings for Transfers and Discharges, and Establishment of an Escrow Account",
+      "url": "https://dsd.maryland.gov/regulations/Pages/10.07.09.13.aspx",
+      "source_date": "chapter administrative history: Regulations .01—.20 adopted effective April 22, 1996; Regulation .12A amended effective August 24, 2009",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "main",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "Same platform, redirect and scope reasoning as source 2 (regulation .10)."
+    },
+    {
+      "n": 6,
+      "title": "Maryland Department of Aging — Long-Term Care Ombudsman",
+      "url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "main",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "301-redirects to aging.maryland.gov/programs-and-services/long-term-care-ombudsman; followed by curl's default -L. main#main-content carries the department's own section menu twice (it precedes and follows the page's own content on this template), matching the duplication already present in the standing packet's capture note for this source."
+    }
+  ]
+}
