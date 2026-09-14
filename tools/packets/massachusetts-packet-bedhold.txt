@@ -1,0 +1,195 @@
+CANARY: captured source packet — the text under each SOURCE header is the publisher's own, appended mechanically; do not edit, retype, or annotate inside source bodies.
+STATE: Massachusetts
+SLUG: massachusetts
+ASSEMBLED: 2026-09-14
+SUPPLEMENT TO: massachusetts-packet.txt and massachusetts-packet-regs.txt — this packet holds the MassHealth bed-hold provision neither prior packet captured.
+CAPTURE NOTES: mass.gov returns HTTP 403 to curl and to the WebFetch tool for this document (confirmed again 2026-09-14; both curl with a browser user-agent and WebFetch return 403 on https://www.mass.gov/doc/long-term-care-services-1/download), so this capture was taken with the built-in browser tool: the regulation's listing page (https://www.mass.gov/regulations/130-CMR-456000-long-term-care-services, which does return 200 to a plain browser navigation) was opened, and the PDF was retrieved with an in-page same-origin `fetch()` call against the download URL, base64-encoded in the page's own JavaScript context, and decoded back to bytes outside the browser. The resulting file is byte-for-byte the same 130 CMR 456.000 Nursing Facility Manual PDF the standing packet's Source 1 already quotes from 456.701 through 456.705 (same Transmittal Letter NF-64, dated 09/08/25) — this packet quotes a different, earlier section of the identical document, 456.425 through 456.433, which states the MassHealth bed-hold and leave-of-absence provisions the standing packets recorded as uncaptured ("any first-party statement of a MassHealth bed-hold period"). Extracted from the fetched PDF with pdftotext -layout; single-column throughout, so -layout and -raw agree. The Nursing Facility Manual's own running page furniture — "Commonwealth of Massachusetts / MassHealth / Provider Manual Series", the subchapter title, the page number, "Transmittal Letter NF-64" and the date "09/08/25" — falls inside the quoted range at each page break and is left in place as the document prints it, matching how the standing packet's Source 1 handles the same furniture.
+NOT AUTOMATICALLY RE-VERIFIABLE: this capture was taken by hand through the browser tool, the same limitation PROVENANCE.md records for every Massachusetts source to date. No capture.py recipe exists for this state because mass.gov blocks every scripted transport (curl and WebFetch both return 403); a future automated pass cannot re-run this capture and must repeat the same browser-fetch procedure, or use the built-in browser's own text extraction on the same PDF, and should diff the result against this packet before promoting anything.
+PENDING: 130 CMR 610.000, MassHealth's Fair Hearing Rules, still uncaptured (as in massachusetts-packet-regs.txt). The address a hearing request is sent to is still not stated in the regulation itself. 130 CMR 456.434 through 456.450 are reserved in the document (no text) and are correctly absent, not missed.
+
+SOURCE 1: 130 CMR 456.425 through 456.433 (Medical Leave of Absence: introduction, conditions of payment, payment, readmission, failure to readmit; Nonmedical Leave of Absence: introduction, limitations, conditions for payment, payment) — excerpt from the Nursing Facility Manual PDF the Commonwealth posts as 130 CMR 456.000 | https://www.mass.gov/doc/long-term-care-services-1/download | source's own date: regulation page date 09/08/2025; document Transmittal Letter NF-64, dated 09/08/25 | retrieved: 2026-09-14
+456.425: Medical Leave of Absence (MLOA): Introduction
+
+       (A) MassHealth pays a nursing facility to reserve a bed for up to 20 consecutive days for
+       a member who is on a medical leave of absence from the nursing facility, if all the
+       conditions of 130 CMR 456.426 and 456.427 are met.
+
+       (B) In accordance with federal law, nursing facilities must establish and follow a written
+       policy regarding their bed-hold periods, which must be consistent with the MassHealth bed-
+       hold policy.
+
+       (C) Following a medical leave of absence of 20 days or fewer, the nursing facility must allow
+       the member to return to the nursing facility and resume residence unless the member no longer
+       requires the services provided by the nursing facility.
+
+       (D) When a member’s hospitalization exceeds 20 days or does not meet the requirements of
+       130 CMR 456.426, the nursing facility must immediately readmit the member to the facility,
+       to the next available bed in a semiprivate room, unless the member no longer requires the
+       services provided by the nursing facility.
+
+456.426: Medical Leave of Absence: Conditions of Payment
+
+       (A) When a member is transferred from a nursing facility to a hospital, the nursing facility must
+           (1) provide the member and the member’s authorized or legal representative with notice of
+           the facility’s bed-hold policy, including the member’s right to return and resume residence
+           in the facility;
+          (2) provide the member and the member’s authorized or legal representative with notice of
+          the transfer that complies with the requirements set forth in 130 CMR 456.701 and 456.702;
+          (3) document the date and time of the transfer in the member’s record;
+          (4) automatically reserve the same bed and room occupied by the member at the time the
+           absence began for the member until the close of business on the second working day of the
+           member’s hospital stay;
+          (5) contact the admitting hospital and obtain the estimated length of stay by the close of
+           business on the second working day of the member’s hospital stay and document the
+           estimated length of stay in the member’s medical record;
+          (6) if the estimated length of stay is 20 consecutive days or fewer, reserve the same bed and
+           room occupied by the member at the time the absence began for the balance of the actual
+           length of stay not to exceed 20 consecutive days from the date of admission to the hospital;
+          (7) ensure that for each day that a bed is reserved the bed is not occupied; and
+          (8) if the hospital advises the nursing facility that the estimated length of stay exceeds 20
+           consecutive days, the nursing facility cannot bill MassHealth for a medical leave of absence
+           from the date of such notification by the hospital.
+     Commonwealth of Massachusetts                   Subchapter Number and Title                    Page
+             MassHealth                                 1. Program Regulations
+                                                                                                    4-16
+        Provider Manual Series                            (130 CMR 456.000)
+
+                                                            Transmittal Letter                      Date
+           Nursing Facility Manual
+                                                                   NF-64                          09/08/25
+
+
+       (B) Notwithstanding 130 CMR 456.426(A), MassHealth does not pay a nursing facility
+       for reserving a bed for a member
+            (1) after the second working day of the member’s stay if the nursing facility has failed to
+            obtain the estimate of the length of stay from the hospital;
+            (2) if the member has notified the nursing facility in writing that the member does not wish to
+            return to the facility;
+            (3) for any consecutive medical leave of absence day in excess of the 20 days from the date
+            of transfer from the nursing facility;
+            (4) the day on which a member is transferred back to a nursing facility or is discharged from
+            the hospital to a non-institutional setting; and
+            (5) for any MLOA in cases where the member is transferred from a nursing facility to a
+            hospital and transferred back to the nursing facility on the same calendar day.
+
+       (C) When a member is transferred from one inpatient hospital to another inpatient hospital
+       during the medical leave of absence, the nursing facility must continue to reserve for the member
+       the same bed and room occupied by the member at the time the absence began for up to the 20th
+       day of the member's absence from the nursing facility as long as the member continues to
+       require a medical leave of absence and the conditions in 130 CMR 456.426(A) are met. A
+       transfer from one hospital to another continues the 20-day period initiated on the first day the
+       member originally was transferred from the nursing facility for the original medical leave of
+       absence and does not initiate another 20-day period.
+
+456.427: Medical Leave of Absence: Payment
+
+       (A) For billing and payment purposes, the day on which a member is transferred from a nursing
+       facility to a hospital for an inpatient or observation stay is the first day of the medical leave of
+       absence from the nursing facility. The day on which a member is transferred back to a nursing
+       facility or is discharged from the hospital to a noninstitutional setting is not a medical leave of
+       absence day.
+
+       (B) MassHealth will only pay a nursing facility for medical leave of absence days at the leave
+       of absence rate specified by 101 CMR 206.06: Adjustments to Standard Nursing Facility Rates
+       et seq.
+
+456.428: Medical Leave of Absence: Readmission
+
+           Members who have been authorized for payment of nursing facility services who are
+       admitted to a hospital from a nursing facility may be readmitted to the same facility without a
+       new authorization except when a hospitalization exceeds six months. When a hospitalization
+       exceeds six months, the nursing facility must request a new authorization for nursing facility
+       services before readmitting the member pursuant to 130 CMR 456.407.
+     Commonwealth of Massachusetts                    Subchapter Number and Title                    Page
+             MassHealth                                  1. Program Regulations
+                                                                                                     4-17
+        Provider Manual Series                             (130 CMR 456.000)
+
+                                                            Transmittal Letter                       Date
+           Nursing Facility Manual
+                                                                   NF-64                           09/08/25
+
+
+456.429: Medical Leave of Absence: Failure to Readmit
+
+       (A) When a nursing facility is notified that the member is ready to return to the facility, the
+       nursing facility must readmit the member following a medical leave of absence. If the nursing
+       facility does not allow the member to be readmitted following hospitalization or other medical
+       leave of absence, the nursing facility’s failure to readmit the member is deemed a transfer or
+       discharge. If the nursing facility does not readmit, it must provide the member and the
+       member’s authorized or legal representative with a notice explaining its decision not to readmit
+       the member at the time such determination is made. The notice must comply with the
+       requirements set forth in 130 CMR 456.701.
+
+       (B) A nursing facility that fails to readmit a member who requires nursing facility services
+       or otherwise violates these provisions may be subject to overpayment or sanction action
+       under 130 CMR 450.000: Administrative and Billing Regulations.
+
+456.430: Nonmedical Leave of Absence (NMLOA): Introduction
+
+           MassHealth seeks the fullest integration possible of members into the community.
+       Wherever possible, coordinated support services will be arranged so a member may return to
+       the community. To prevent members from becoming isolated in nursing facilities MassHealth
+       will pay the nursing facility to reserve a bed for a member when the member is temporarily
+       absent from the facility for nonmedical reasons subject to the requirements set forth in 130
+       CMR 456.431 and 456.432.
+
+456.431: Nonmedical Leave of Absence: Limitations
+
+           MassHealth pays for temporary absences for nonmedical leave for members in nursing
+       facilities for up to a total of ten days per 12-month period starting with the first day of the
+       nonmedical leave. For the purpose of NMLOA, a day is defined as a continuous 24-hour
+       period. Absences from the nursing facility of less than 24 hours do not constitute a day of
+       absence.
+     Commonwealth of Massachusetts                 Subchapter Number and Title                  Page
+             MassHealth                               1. Program Regulations
+                                                                                                4-18
+        Provider Manual Series                          (130 CMR 456.000)
+
+                                                          Transmittal Letter                    Date
+           Nursing Facility Manual
+                                                                NF-64                         09/08/25
+
+
+456.432: Nonmedical Leave of Absence: Conditions for Payment
+
+       (A) For the facility to obtain payment for a nonmedical absence, the following conditions
+       must be met.
+          (1) The member must request the nonmedical leave.
+          (2) A written authorization from the attending physician or PCP must be on file in the
+          member’s medical record.
+          (3) During the period of absence, the nursing facility must hold the same bed and room
+          occupied by the member at the time the absence began and must not admit any other resident in
+          the member's place.
+          (4) The member's medical record maintained by the facility must document
+               (a) the home address, telephone number, and relationship of the person responsible
+               for the member while the member is absent from the facility;
+               (b) the duration of absence;
+               (c) the physician or PCP's authorization for the absence; and
+               (d) the member's condition before and after the absence from the facility.
+
+       (B) If the member does not return to the facility, for the purpose of payment, MassHealth
+       considers the member to be voluntarily discharged as of the first day of unauthorized absence.
+       The facility cannot bill MassHealth for any days of unauthorized absence. A voluntary discharge
+       is not a discharge under 130 CMR 456.701 through 456.703 or 130 CMR 610.028: Notice
+       Requirements Regarding Actions Initiated by a Nursing Facility through 610.030: Stay of a
+       Transfer or Discharge from a Nursing Facility Pending Appeal.
+
+456.433: Nonmedical Leave of Absence: Payment
+
+           MassHealth will only pay the nursing facility for nonmedical leave of absence days at the
+       leave of absence rate specified by 101 CMR 206.06: Adjustments to Standard Nursing
+       Facility Rates et seq.
+
+(130 CMR 456.434 through 456.450 Reserved)
+     Commonwealth of Massachusetts                   Subchapter Number and Title                   Page
+             MassHealth                                 1. Program Regulations
+                                                                                                   4-19
+        Provider Manual Series                            (130 CMR 456.000)
+
+                                                           Transmittal Letter                      Date
+            Nursing Facility Manual
+                                                                  NF-64                          09/08/25
+END SOURCE 1
+
+END OF PACKET — 1 sources

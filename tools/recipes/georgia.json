@@ -23,6 +23,28 @@
       "extractor": "html-text",
       "scope": "body",
       "notes": "Plain curl with the pinned browser user-agent returns 200 and the full Divi-style page, as the standing packet already recorded for this source; unchanged 2026-09-08. body scope because the division's page puts the ombudsman contact block outside any <main> or <article> wrapper this template exposes -- the same reasoning florida.json sources 3 and 4 record. The ombudsman program's own contact facts the pages depend on (georgiaombudsman.org, 1-866-552-4464) are both present.\n\nAgainst the 2026-08-30 hand capture this capture drops the georgia.gov network's \"The .gov means it's official\" interstitial, a \"Language\" icon label, a \"Close\" control and a footer logo alt string -- site chrome the standing packet's note says was \"left in the captured text as the extractor produced it\" -- and gains one stray \"xml version=1.0 encoding=UTF-8?\" line from an inline SVG's declaration. No published quotation or contact fact rests on any of it."
+    },
+    {
+      "n": 3,
+      "title": "Georgia Department of Community Health, HFRD Laws & Regulations (Healthcare Facility Regulation Division, Legal Services unit contact for a long-term care discharge appeal)",
+      "url": "https://dch.georgia.gov/divisionsoffices/hfrd/hfrd-laws-regulations",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "main.content-page__main",
+      "notes": "Added 2026-09-14, deepening Georgia to a full page: this is the Department's own statement of where a long-term care discharge appeal is filed, missing from the 2026-08-30 baseline (\"no postal address, email or form is stated in the rule, and none was captured elsewhere\"). Plain curl with the pinned browser user-agent returns 200. scope main.content-page__main is the narrowest named container: the template's <main> carries only this page's own text (the Legal Services unit's paragraph, its three request lines, and the licensed-facility-type index below them), none of the site header/footer chrome.\n\nThe three request lines are set as Cloudflare-obfuscated mailto links (data-cfemail), the same mechanism CLAUDE.md documents for Maryland and the District of Columbia: a raw fetch without the decode reads \"[email protected]\" for all three, which is not an absence, only an undecoded capture. capture.py's extract_html calls decode_cfemail_nodes before the scope walk, so this capture holds the plaintext addresses as served: hfrd.legal@dch.ga.gov (adverse-action hearings), ltc.discharge@dch.ga.gov (long-term care discharge appeals -- the address this page quotes), and HFRDOPENRECORDS@dch.ga.gov (open records, not quoted here)."
+    },
+    {
+      "n": 4,
+      "title": "Georgia Department of Human Services, Division of Family and Children Services, Medicaid Policy Manual, 2582 Temporary Absence from Nursing Home",
+      "url": "https://pamms.dhs.ga.gov/dfcs/medicaid/2582/",
+      "source_date": "Effective Date: February 2020 (page also states \"Updated or Reviewed in MT: MT-58\")",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "article.doc",
+      "notes": "Added 2026-09-14, deepening Georgia to a full page: the state's own Medicaid bed-hold statement, uncaptured at baseline (\"No first-party statement of a Georgia Medicaid bed-hold period was captured\"). Plain curl with the pinned browser user-agent returns 200. This page is one policy of DHS's Antora-built PAMMS manual site; scope article.doc is the template's own per-page content container and holds exactly this policy's text (title, metadata block, Requirements, Basic Considerations, the Chart 2582.1 table, and Procedures), excluding the manual's chapter-tree sidebar navigation that surrounds it in the full document. The manual's own vocabulary is Medicaid, not the department's usual bed-hold phrasing elsewhere in this project's pages: it calls the facility a \"nursing home (NH),\" the beneficiary an \"A/R\" or \"recipient,\" and the payment continuation a \"vendor payment,\" and states the hospital bed-hold period as \"up to a maximum of seven days per hospitalization,\" separately from an eight-day-per-calendar-year home-visit allowance in the same chart."
     }
   ]
 }

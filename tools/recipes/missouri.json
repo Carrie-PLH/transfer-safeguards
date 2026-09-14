@@ -27,6 +27,21 @@
       "extractor": "html-text",
       "scope": "body",
       "notes": "Server-rendered; plain curl with a browser user-agent returns the whole document. Scope 'body' reproduces the standing packet, which was a tag strip over the served document and carries the department's site navigation at the head of the capture."
+    },
+    {
+      "n": 3,
+      "title": "MO HealthNet Nursing Home Provider Manual, section 2.11 Program Policies (Therapeutic Home Reserve Days, Hospital Reserve Days, and Bed-Hold Policy)",
+      "url": "https://mydss.mo.gov/sites/mydss/files/media/pdf/2024/01/Nursing-Home-Manual-01-09-24.pdf",
+      "source_date": "Nursing Home Manual – 01/08/2024 (running header on every page); file dated 01-09-24 in its published filename",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "slice": {
+        "from": "2.11 Program Policies",
+        "from_occurrence": 2,
+        "to": "2.12 Included Services, Items and Supplies"
+      },
+      "notes": "Added 2026-09-14, deepening Missouri to a full page: the state Medicaid bed-hold statement, uncaptured at baseline (\"No first-party statement of a Missouri Medicaid bed-hold period was captured\"). The direct file path is a plain static asset -- no query hash, session token, or viewer wrapper -- found by following the 'Section 5' / 'Nursing Home Provider Manual' links off dss.mo.gov's Nursing Home Facility Claims FAQs page, which point at the same file. Plain curl with a browser user-agent returns 200; single-column layout, so pdftotext-layout and -raw agree.\n\nfrom_occurrence 2 on the opening anchor skips the manual's own table of contents on page 1, which prints every section heading with dot leaders and a page number exactly as the body does. The closing anchor needs no occurrence key: apply_slice searches for it only in the tail *after* the from-match, and the table of contents sits before that point, so the body's one occurrence of the 2.12 heading is the only one left to find -- unlike the from anchor, which has to skip past the table of contents in the full document. (Tried to_occurrence 2 first, matching how the from anchor was written; capture.py refused it because counted from the tail there is only one, which is the correct reading of the option, not a bug.) The slice is bounded by the headings on either side of the material this page quotes (2.11 Program Policies through the start of 2.12) rather than by any internal subheading, because 2.11 is one continuous run of prose -- Reimbursement, then the therapeutic-home and hospital-reserve-day provisions, then the Bed-Hold Policy paragraph itself -- with no page break or heading marking where the bed-hold material specifically begins; anchoring tighter would risk losing the surrounding conditions (the 97% occupancy test, the three-day hospital-stay cap, and the choice between the two readmission routes) that qualify it. The slice therefore holds the whole of section 2.11 entire, a superset of what is quoted, which can only add evidence."
     }
   ]
 }
