@@ -1,0 +1,70 @@
+{
+  "recipe_version": 1,
+  "state": "idaho",
+  "sources": [
+    {
+      "n": 1,
+      "title": "Idaho Session Laws 2025, chapter 122 (Senate Bill No. 1015, Sixty-eighth Legislature, First Regular Session, as enacted) — \"RELATING TO HOSPITALS AND HOME HEALTH AGENCIES\"",
+      "url": "https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2025/legislation/S1015.pdf",
+      "source_date": "the bill's own SECTION 46 declares an emergency and states the act \"shall be in full force and effect on and after July 1, 2025\"; enacted as 2025 Session Laws chapter 122 per the History lines on the codified sections in Source 2",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 3,
+      "title": "IDAPA 16.03.26, \"Medicaid Plan Benefits\" (Idaho Department of Health and Welfare, Division of Medicaid) — excerpt: cover page, rules 000-003, the chapter's \"Facility\" definition, and the complete Nursing Facilities (NF) sub-area, sections 470-499",
+      "url": "https://adminrules.idaho.gov/rules/current/16/160326.pdf",
+      "source_date": "each rule paragraph in the source is dated \"(7-1-26)\" (i.e. effective July 1, 2026), the chapter's own per-paragraph amendment-date convention",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 4,
+      "title": "Appeals and Fair Hearings",
+      "url": "https://healthandwelfare.idaho.gov/appeals-and-fair-hearings",
+      "source_date": "\"Page last updated: 6-15-2026\"",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 5,
+      "title": "About Common Case Types",
+      "url": "https://oah.idaho.gov/about-common-case-types/",
+      "source_date": "\"ver: 4.1.9 | last updated: August 12, 2025 at 11:08 am\"",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 6,
+      "title": "Long-Term Care Ombudsman Program",
+      "url": "https://aging.idaho.gov/ombudsman-program/",
+      "source_date": "\"ver: 4.1.9 | last updated: December 2, 2025 at 11:24 am\"",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    },
+    {
+      "n": 7,
+      "title": "Our Staff (\"Stay Safe\" tab, naming the Idaho Long-Term Care Ombudsman)",
+      "url": "https://aging.idaho.gov/about-us/our-staff/",
+      "source_date": "\"ver: 4.1.9 | last updated: July 14, 2025 at 06:37 pm\"",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "DRAFT — replace before promoting."
+    }
+  ]
+}
