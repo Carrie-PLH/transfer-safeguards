@@ -1,0 +1,39 @@
+{
+  "recipe_version": 1,
+  "state": "minnesota",
+  "sources": [
+    {
+      "n": 1,
+      "title": "Minnesota Statutes § 144.651, Health Care Bill of Rights — subdivision 29, Transfers and discharges (excerpt)",
+      "url": "https://www.revisor.mn.gov/statutes/cite/144.651",
+      "source_date": "see the section's own history notes in the Revisor's page",
+      "transport": "curl",
+      "extractor": "html-text",
+      "scope": "#xtend",
+      "filters": ["pipe-table-cells", "trim-lines"],
+      "notes": "Plain curl, no user-agent needed (200 with no UA, tested 2026-09-15). #xtend.statute is the Revisor template's own statute wrapper: narrower than main#legContainerMain, which also carries the breadcrumb, doc_nav prev/next links and the Resources sidebar card. #xtend holds every subdivision (1 through 29) plus the section's History block, so the captured text is a superset of the quoted subd. 29 -- that is expected, not a scope defect."
+    },
+    {
+      "n": 2,
+      "title": "Minnesota Statutes § 144A.135, Transfer and discharge appeals",
+      "url": "https://www.revisor.mn.gov/statutes/cite/144A.135",
+      "source_date": "History line begins 1989 c 282 art 3 s 26",
+      "transport": "curl",
+      "extractor": "html-text",
+      "scope": "#xtend",
+      "filters": ["pipe-table-cells", "trim-lines"],
+      "notes": "Same template and same scope reasoning as source 1. Plain curl, no user-agent needed."
+    },
+    {
+      "n": 3,
+      "title": "Minnesota Office of Ombudsman for Long-Term Care",
+      "url": "https://mn.gov/ooltc/",
+      "source_date": "page modified 2025-04-21 (meta dc.modified)",
+      "transport": "chrome",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["pipe-table-cells", "trim-lines"],
+      "notes": "mn.gov sits behind Radware/ShieldSquare bot management (validate.perfdrive.com 302 challenge) -- curl gets a 302 to the challenge URL with or without a browser user-agent and cookie jar reuse across two requests, tested 2026-09-15. A real browser session (Claude Browser pane) reaches the page directly with no interstitial, so the block is a client-fingerprint check a genuine browser passes honestly rather than a request this project should script around; same category as Florida's session-reader sources. scope is body rather than a narrower selector because the two facts the page states -- the OOLTC description under div#content, and the mailing address/phone '540 Cedar Street / St. Paul, MN 55101 / 1-800-657-3591' under footer div.contact-info -- are siblings under body with no smaller common ancestor, and html-text takes one CSS selector (soup.select_one), not a list; the mailing address is the case PROVENANCE.md/CLAUDE.md calls out (Georgia's footer addressLink precedent) where the recipe must reach whatever node the agency puts the contact in."
+    }
+  ]
+}
