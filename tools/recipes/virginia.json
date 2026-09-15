@@ -41,6 +41,16 @@
         "collapse-blank-runs"
       ],
       "notes": "Matches the standing packet's own 'tag strip over the served document' method: 'body' scope, no narrowing, so the page's navigation and footer are carried exactly as the standing packet already carries them. Plain curl with a browser user-agent is enough."
+    },
+    {
+      "n": 4,
+      "title": "Virginia Department of Medical Assistance Services, Nursing Home Manual, Chapter VII — Residents' Rights and Responsibilities (PDF)",
+      "url": "https://vamedicaid.dmas.virginia.gov/sites/default/files/2022-10/Chapter-7%20Residents%20Rights%20and%20Responsibilities%20(Nursing%20Facilities).pdf",
+      "source_date": "Page Revision Date 4/15/2000 (page footer, as currently served)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "Added 2026-09-15, deepening the state to a full page. This is the current file DMAS serves at this address (uploaded to the site 2022-10 per the URL path) and it is the only Chapter VII on file; DMAS has renamed and updated other Nursing Facility Provider Manual chapters (II, IV, V) since 2022 but has not reissued this one, so the page's own footer date (4/15/2000) is carried as the source's own date, distinct from the retrieval date, per the stale-source rule in the rr-state-page skill. The document restates the federal 42 CFR 483.15(c) six-ground list and the federal notice-contents and bed-hold provisions for the benefit of Virginia nursing homes, immediately followed by its own 'In addition to the federal requirements above' section quoting § 32.1-138 and § 32.1-138.1 of the Code of Virginia. Both lists are captured verbatim; the page does not merge them into one list of Virginia grounds — see the change log finding. A later, unrelated section of the same PDF (page 21 in the served file, under DMAS-122 patient-pay adjustments) states DMAS will not pay to hold a bed during a hospital admission; that sentence is captured in the same source body and presented as a second, distinct statement rather than reconciled with the bed-hold-notice section earlier in the document."
     }
   ]
 }

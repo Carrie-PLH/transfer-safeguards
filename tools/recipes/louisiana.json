@@ -25,6 +25,32 @@
       "scope": "body",
       "filters": ["trim-lines", "collapse-blank-runs"],
       "notes": "Scope is the whole body, matching the 2026-08-30 capture, which kept the surrounding chrome: the office's navigation appears twice in the served page and the regional ombudsman roster is included as served. This page carries the state's ombudsman contacts behind Cloudflare email obfuscation; the 2026-08-30 capture recorded eight placeholders where addresses are published, and decode_cfemail in the shared capture reader resolves them (FA-Q-20260902-01, FA-Q-20260904-04)."
+    },
+    {
+      "n": 3,
+      "title": "Louisiana Division of Administrative Law — Areas of Law: Health",
+      "url": "https://www.adminlaw.la.gov/areas-of-law/health.html",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "Added 2026-09-15, deepening the state to a full page: the Division's own statement of the address, phone and fax the rule (LAC 48:I.9775.E) requires the facility's notice to carry, closing the gap the baseline page's hearing-office row and change log finding (1) recorded. The page states its 'Medicaid Recipient/Applicant Fair Hearings' route (form or mail to the HH Section post office box, fax number, typically-30-day filing window) for actions terminating, suspending, or reducing 'Medicaid eligibility or covered services'; it does not separately name a nursing facility involuntary transfer/discharge appeal under §9775.E, so this page quotes the general route and states that the page does not confirm it governs a §9775.E appeal specifically — see the change log. Plain curl with a browser user-agent returns the whole document; scope 'body' carries the site's own navigation as served."
+    },
+    {
+      "n": 4,
+      "title": "Louisiana Medicaid State Plan, Attachment 4.19-C — Methods for Payment for Reserving Beds During a Beneficiary's Absence from an Inpatient Facility (excerpt)",
+      "url": "https://ldh.la.gov/assets/medicaid/StatePlan/Sec4/Attachment4.19C.pdf",
+      "source_date": "TN: 24-0008, Approval Date: May 29, 2024, Effective Date: February 20, 2024",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "slice": {
+        "from": "II. Leave Days for Residents of Nursing Facilities",
+        "to": "TN: 24-0008 Approval Date: May 29, 2024"
+      },
+      "notes": "Added 2026-09-15, deepening the state to a full page. The slice covers only section II (nursing facility leave/bed-hold days), stopping at the page footer that closes it; section I (ICF/IID) precedes it and is out of scope, and the pages after this excerpt (evacuation-related bed-hold provisions, further back in the same attachment) are a poor scan with visible OCR corruption in the served PDF -- letters dropped, ligatures fused ('ofabsence', 'retum'), diacritics inserted into plain English words -- and are not captured as quotable text for that reason; the ordinary hospital/home leave-day policy this page needs sits entirely in the clean section captured here. 'TN: 24-0008 Approval Date: May 29, 2024' is the transmittal footer text and appears twice in the document with different internal spacing (once after section I, once after section II, whitespace-normalized alike); the slice's 'to' anchor matches the first occurrence after 'from', which is section II's own footer, by construction of the search order rather than an explicit occurrence key."
     }
   ]
 }

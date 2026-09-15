@@ -36,6 +36,20 @@
       "extractor": "html-text",
       "scope": "body",
       "notes": "Server-rendered; plain curl with a browser user-agent returns the whole document. Scope 'body' because the page renders both a section menu and a side menu, so TennCare's navigation appears twice in the capture, exactly as the standing packet holds it."
+    },
+    {
+      "n": 4,
+      "title": "Rules of the Division of TennCare, Chapter 1200-13-02, Nursing Facility Provider Reimbursement — Rule .16 Bed Holds (excerpt)",
+      "url": "https://publications.tnsosfiles.com/rules/1200/1200-13/1200-13-02.20260629.pdf",
+      "source_date": "June, 2026 (Revised); rule .16's own administrative history ends 'Original rules filed May 1, 2018; effective July 30, 2018.'",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "slice": {
+        "from": "1200-13-02-.16 BED HOLDS.",
+        "to": "1200-13-02-.17 OTHER REIMBURSEMENT ISSUES."
+      },
+      "notes": "Added 2026-09-15, deepening the state to a full page, following the same Secretary of State chapter-PDF pattern already used for source 2. The chapter's table of contents sets the rule title case ('Bed Holds'); the body sets it in capitals ('BED HOLDS'), so the anchor as written matches only the body and no occurrence key is needed, the same reasoning already recorded for source 2's slice. The rule is one sentence: it states Tennessee eliminated Medicaid bed-hold reimbursement effective July 1, 2018, and states nothing about the notice a facility gives before a hospital transfer or therapeutic leave, which the sources reviewed do not otherwise address."
     }
   ]
 }

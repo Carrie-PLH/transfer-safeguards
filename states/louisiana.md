@@ -6,30 +6,102 @@
 
 **Notice stated in the sources.** §9775.C.3: the notice of transfer or "discharge shall be made by the nursing facility at least 30" "days before the resident is transferred or discharged;". Notice "may be made as soon as practicable before" transfer or discharge in four stated circumstances, the last being that "a resident has not resided in the nursing facility" "for 30 days;". A note attached to the same subsection states a shorter period for one class of facility: in facilities not certified under Title XVIII or Title XIX, the "advance notice period may be shortened to fifteen days for" "nonpayment of a bill for a stay at the nursing facility." The notice's required contents are listed, including "The address, phone number" "and hours of operation of the Division of Administrative" "Law or its successor;" and the state long-term care ombudsman's name, address and telephone number. Before the move the facility must also "notify the resident, and if known, a family member" or legal representative of the transfer or "discharge and the reasons for the move in writing and in a" "language and manner easily understood;".
 
-**Hearing office in these sources.** The Division of Administrative Law. §9775.E states that the resident, or a legal representative or designated "contact, if known and available, has the right to appeal any" "transfer or discharge to the Division of Administrative Law," "which shall provide a fair hearing in all such appeals." No address, telephone number, filing route or deadline for that appeal appears in the captured sources — the rule requires the facility's own notice to carry the division's address, phone and hours, but the division's own published contact was not captured. Not stated in the sources reviewed.
+**Hearing office in these sources.** The Division of Administrative Law. §9775.E states that the resident, or a legal representative or designated "contact, if known and available, has the right to appeal any" "transfer or discharge to the Division of Administrative Law," "which shall provide a fair hearing in all such appeals." The Division's own website publishes an address, phone and fax for its general Medicaid fair-hearing route (see section 02); it does not separately name a nursing facility transfer/discharge appeal under §9775.E.
 
 **Ombudsman in these sources.** The Louisiana Ombudsman Program, in the Governor's Office of Elderly Affairs. The office publishes a regional roster and a state number: "If calling from outside Louisiana, you may need to use the non-toll-free phone numbers or contact the State Office via its toll-free number: (866) 632-0922. The State Office will ask the local office to contact you." The state office publishes an address beside those numbers: "StateOmbudsman@la.gov". It states: "Ombudsmen services are confidential and free of charge." The rule writes the program into the process: "the nursing facility shall transmit a copy of the" "involuntary transfer/discharge notice to the local long-term" "care ombudsman program."
 
-**Sources last checked.** 2026-09-04
+**Sources last checked.** 2026-09-15
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 
 ## Lede
 
-This page assembles what Louisiana's own publishers state about involuntary transfer and discharge from a nursing facility. It is a baseline page: the docket rows and the source map are built; the grounds section and the published-process section are not yet written, as the change log records. The fullest single source is §9775 of the nursing facility licensing standards, LAC Title 48 Part I, which states the grounds, the thirty-day notice, the notice's required contents and the appeal. Louisiana's vocabulary is *transfer and/or discharge*, and the rule separates a *voluntary* move from an *involuntary* one before stating anything else; the appeal is a *fair hearing* before the Division of Administrative Law, a central adjudicator outside both the health department and the Medicaid agency.
+This page assembles what Louisiana's own publishers state about involuntary transfer and discharge from a nursing facility. The fullest single source is §9775 of the nursing facility licensing standards, LAC Title 48 Part I, which states the grounds, the thirty-day notice, the notice's required contents and the appeal, read with the Division of Administrative Law's own health-hearings page and the Medicaid State Plan's bed-hold attachment. Louisiana's vocabulary is *transfer and/or discharge*, and the rule separates a *voluntary* move from an *involuntary* one before stating anything else; the appeal is a *fair hearing* before the Division of Administrative Law, a central adjudicator outside both the health department and the Medicaid agency.
 
-That division is where this page runs out of sources: the rule sends residents there, and requires the facility's notice to print its address, phone and hours, but the division's own statement of the route was not captured, so the hearing row states the absence. The federal floor for Medicare/Medicaid-certified facilities is assembled separately on [the federal page](../federal.html); nothing here fills a gap from federal law or another state. Confirm applicability with the agencies named in the sources: whether any provision applies to a particular facility, resident, or notice is for the hearing office to determine. Deadlines and periods on this page are quoted from the sources, not calculated for any case.
+Four publishers hold it: the Department of Health's licensing standards state the grounds and the notice, the Division of Administrative Law hears the appeal and publishes its own general Medicaid fair-hearing route, the Medicaid State Plan states the nursing-facility leave-day (bed-hold) policy, and the Governor's Office of Elderly Affairs houses the ombudsman. The federal floor for Medicare/Medicaid-certified facilities is assembled separately on [the federal page](../federal.html); nothing here fills a gap from federal law or another state. Confirm applicability with the agencies named in the sources: whether any provision applies to a particular facility, resident, or notice is for the hearing office to determine. Deadlines and periods on this page are quoted from the sources, not calculated for any case.
+
+## 01 — The grounds, as Louisiana describes them
+
+LAC 48:I.9775.B: "B. Involuntary Transfer or Discharge. The nursing" "facility shall permit each resident to remain in the nursing" "facility, and shall not transfer or discharge the resident from" "the nursing facility unless:"
+
+1. "the transfer or discharge is necessary for the" "resident’s welfare and/or the resident’s needs cannot be met" in the nursing facility.
+
+2. "the transfer or discharge is appropriate because the" resident's health "has improved sufficiently such that the" resident "no longer needs the services provided by the nursing" facility.
+
+3. "the safety and health of individuals in the nursing" "facility is endangered by the resident to be transferred or" discharged.
+
+4. "the resident has failed, after reasonable and" "appropriate notice, to pay for services rendered by the" nursing facility.
+
+5. "the nursing facility ceases to operate."
+
+The rule prints in two columns in the Department's published PDF, and the extractor renders each printed line as one column's text followed by the other's; the quotations above are contiguous spans of the capture as rendered, each confined to one printed line's own column, and several are quoted as adjacent spans for that reason, per CLAUDE.md's capture notes for this state.
+
+## 02 — The published process
+
+### Requesting the hearing
+
+§9775.E: the resident, or a legal representative or designated "contact, if known and available, has the right to appeal any" "transfer or discharge to the Division of Administrative Law," "which shall provide a fair hearing in all such appeals."
+
+The Division of Administrative Law's own "Health" area-of-law page states a general Medicaid fair-hearing route, under the heading "Medicaid Recipient/Applicant Fair Hearings": "every applicant for and enrollee of Louisiana Medicaid benefits, has the right to appeal any action or decision by LDH, and has the right to a fair hearing in the presence of an impartial hearing officer at DAL." "Applicants/recipients must timely request a fair hearing, typically within 30 days of the date of the decision notice issued by LDH." The filing route: "To request a recipient/applicant fair hearing, please submit a Recipient/Applicant Appeal Request Form online or mail a request to: Division of Administrative Law, ATTN: HH Section, P.O. Box 4189, Baton Rouge, LA 70821." "The request may also be faxed to (225) 219-9823." The Division's own address for its Health area of law, printed at the foot of the same page, is "1020 FLORIDA STREET" "BATON ROUGE," "LA" "70802", phone "225.342.1800", fax "225.342.1812". The page defines "Agency action" for that route as "a termination, suspension or reduction of Medicaid eligibility or covered services." This page does not state that the "Medicaid Recipient/Applicant Fair Hearings" route is the same route that governs a §9775.E nursing facility transfer or discharge appeal, as opposed to being a distinct, unpublished route; the Division's page does not separately name a nursing-facility transfer/discharge appeal. This is recorded as a finding rather than resolved.
+
+### The notice's required contents
+
+§9775.C.5: "The written notice to the" resident "and/or resident’s representative (if applicable) of" "involuntary discharge or transfer shall include the following" "information:"
+
+a. "the reason for transfer or discharge;"
+
+b. "the effective date of transfer or discharge;"
+
+c. "the location to which the resident is to be" the resident "transferred or discharged;"
+
+d. "a statement that the resident has the right to" "appeal the action to the state. The address, phone number" "and hours of operation of the Division of Administrative" "Law or its successor;"
+
+e. "the name, address and telephone number of the" state "long term care ombudsman;"
+
+f. "for nursing facility residents with developmental" "disabilities, the mailing address and telephone number of the" "agency responsible for the protection and advocacy of" "individuals with developmental disabilities; and"
+
+g. "for nursing facility residents with mental illness," "the mailing address and telephone number of the agency" "responsible for the protection and advocacy of individuals" "with mental illness established under the Protection and" "Advocacy for Mentally Ill Individuals Act;"
+
+Before the move, §9775.C also requires the facility to "notify the resident, and if known, a family member" or legal representative of the transfer or "discharge and the reasons for the move in writing and in a" "language and manner easily understood;" and to "record the reasons in the resident’s clinical record". §9775.C.6: "the nursing facility shall transmit a copy of the" "involuntary transfer/discharge notice to the local long-term" "care ombudsman program."
+
+### Bed-hold and return
+
+The Medicaid State Plan's Attachment 4.19-C states the nursing-facility leave-day policy, under the heading "Leave Days for Residents of Nursing Facilities": "For each Medicaid beneficiary, nursing facilities shall be reimbursed for up to seven hospital leave" "of absence days per occurrence per year, and 15 home leave of absence days per year when" "permitted by the beneficiary's plan of care. These days are recomputed annually beginning on" "January 1 of each year." The reimbursement rate is stated separately from the day count: "The reimbursement for hospital leave of absence days is 75 percent of the applicable per diem rate." Different, occupancy-dependent rates are stated for facilities under and over 90 percent occupancy.
+
+No first-party source reviewed states a facility's notice duty specific to a bed-hold period, or a readmission or first-available-bed provision distinct from the ordinary leave-day count above; §9775 states none, and the State Plan attachment's own further provisions on bed reservation during a declared evacuation were not captured as quotable text because the served PDF is degraded past that point — see the change log. The absence of a stated notice or readmission provision is recorded at that scope rather than filled from federal law.
+
+*The three rows above hoist the questions a facility's counsel answers in the first fifteen minutes. They are quotations from Louisiana's published sources, not a determination that any of them applies to any situation.*
+
+### Notice periods and deadlines, as stated in the sources
+
+All quoted; none calculated.
+
+Thirty days' advance notice — §9775.C.3: the notice of transfer or "discharge shall be made by the nursing facility at least 30" "days before the resident is transferred or discharged;".
+
+Fifteen days for nonpayment, in facilities not certified under Title XVIII or Title XIX — the note attached to the same subsection: the "advance notice period may be shortened to fifteen days for" "nonpayment of a bill for a stay at the nursing facility."
+
+Thirty days' residency exception — among the four stated circumstances allowing notice "may be made as soon as practicable before" transfer or discharge, the last is that "a resident has not resided in the nursing facility" "for 30 days;".
+
+Thirty days, general Medicaid fair-hearing deadline — the Division of Administrative Law's page, quoted in full above: "Applicants/recipients must timely request a fair hearing, typically within 30 days of the date of the decision notice issued by LDH." Stated for the Division's general Medicaid recipient/applicant fair-hearing route; this page does not state that it is the deadline for a §9775.E nursing facility transfer or discharge appeal specifically.
+
+Seven hospital / fifteen home leave days per year — the Medicaid State Plan's Attachment 4.19-C, quoted in full above, for nursing facility bed-hold reimbursement.
+
+What any of these periods means for a particular case is for the hearing office to determine.
 
 ## 03 — Source map
 
 | Document | Publisher and location | Source's own date | Retrieved |
 | --- | --- | --- | --- |
-| LAC 48:I.9775, Transfer and/or Discharge of the Resident (excerpt from the published nursing facility standards) | [Louisiana Department of Health (PDF)](https://ldh.la.gov/assets/medicaid/hss/docs/NH/NH_Regulations/NF_regs_as_of_3-14-22.pdf) | Louisiana Administrative Code February 2022; §9775 note LR 42:1911 (November 2016) | 2026-08-30 |
-| Louisiana Ombudsman Program | [Governor's Office of Elderly Affairs](https://goea.louisiana.gov/services/louisiana-ombudsman-program/) | none stated on page | 2026-08-30 |
+| LAC 48:I.9775, Transfer and/or Discharge of the Resident (excerpt from the published nursing facility standards) | [Louisiana Department of Health (PDF)](https://ldh.la.gov/assets/medicaid/hss/docs/NH/NH_Regulations/NF_regs_as_of_3-14-22.pdf) | Louisiana Administrative Code February 2022; §9775 note LR 42:1911 (November 2016) | 2026-09-15 |
+| Louisiana Ombudsman Program | [Governor's Office of Elderly Affairs](https://goea.louisiana.gov/services/louisiana-ombudsman-program/) | none stated on page | 2026-09-15 |
+| Division of Administrative Law — Areas of Law: Health | [Louisiana Division of Administrative Law](https://www.adminlaw.la.gov/areas-of-law/health.html) | none stated on page | 2026-09-15 |
+| Louisiana Medicaid State Plan, Attachment 4.19-C — Methods for Payment for Reserving Beds During a Beneficiary's Absence from an Inpatient Facility (excerpt) | [Louisiana Department of Health (PDF)](https://ldh.la.gov/assets/medicaid/StatePlan/Sec4/Attachment4.19C.pdf) | TN: 24-0008, Approval Date: May 29, 2024, Effective Date: February 20, 2024 | 2026-09-15 |
 
-Captured: both, in tools/packets/louisiana-packet.txt. Pending: a Division of Administrative Law statement of the appeal route, R.S. 40:2010.6 et seq., and any statement of a bed-hold period — per the packet's pending list.
+Captured: all four, in tools/packets/louisiana-packet.txt. Pending: R.S. 40:2010.6 et seq. (the statement of rights and responsibilities cross-referenced at §9777), and a first-party statement confirming whether the Division's general Medicaid fair-hearing route governs a §9775.E nursing facility appeal specifically — per the packet's pending list.
 
 ## 04 — Change log
+
+**2026-09-15 — Deepened to a full page.** Captured, by curl with a browser user-agent through the existing recipe (tools/recipes/louisiana.json, recipe 733a555d0a54): a third source, the Division of Administrative Law's "Health" area-of-law page, and a fourth, the Medicaid State Plan's Attachment 4.19-C, sliced to its clean nursing-facility leave-day section. Sources 1 and 2 were recaptured unchanged through the standing recipe; source 2's capture dropped only page-chrome noise (an accessibility-toolbar widget, a holiday-closure banner, script comments), not content. Wrote section 01 (the grounds, as Louisiana describes them) and section 02 (the published process: requesting the hearing, the notice's required contents, bed-hold and return, and the notice-periods register). Findings, continuing the baseline page's numbering: (1) Louisiana routes these appeals to the Division of Administrative Law, and the Division's own website states a general "Medicaid Recipient/Applicant Fair Hearings" route (address, fax, a form, and a filing window "typically within 30 days") for actions terminating, suspending, or reducing Medicaid eligibility or covered services; the Division's page does not separately name a §9775.E nursing facility transfer/discharge appeal, so this page does not assume the general route's deadline or filing address govern that appeal specifically. (2) The rule states two different advance-notice periods: thirty days generally, and a note allowing fifteen days for nonpayment in facilities not certified under Title XVIII or Title XIX. Both are quoted as published. (3) The Administrative Code prints in two columns and the extractor interleaves them, so quotations on this page are contiguous spans of the capture as rendered, not of the printed column; each was verified against the packet mechanically, and several passages are quoted as two or more adjacent spans for that reason. (4) The rule's grounds list is five items, not six: Louisiana states safety and health of individuals in the facility as a single ground where the federal enumeration states two. Both stand as published, and the federal list stays on the federal page. (5) The Governor's Office of Elderly Affairs publishes a regional roster with a state office number for callers outside Louisiana; the roster's email addresses were obfuscated by the site itself and appeared in the capture as "[email protected]", the placeholder text Cloudflare serves in place of an address. Recovered 2026-09-04; see that entry. (6) New: the Medicaid State Plan's Attachment 4.19-C states nursing facilities are reimbursed for "up to seven hospital leave of absence days per occurrence per year, and 15 home leave of absence days per year." No first-party source states a bed-hold notice duty or a readmission/first-available-bed provision beyond that leave-day count. (7) New: the same State Plan attachment's further provisions on bed reservation during a declared evacuation, later in the same PDF, are served as a poor scan with visible OCR corruption — dropped letters, fused ligatures ("ofabsence", "retum"), diacritics inserted into plain English words — and were not captured as quotable text for that reason; only the clean leave-day section (section II of the attachment) is quoted. Capture-pending: R.S. 40:2010.6 et seq. and confirmation of the fair-hearing route's applicability to §9775.E appeals, per the source map. Recipe: tools/recipes/louisiana.json extended with sources 3 and 4; digest changed from 863e50b3acab to 733a555d0a54. Internet Archive: not yet submitted for the new sources. Reviewer: Carrie Schluter (review pending for this entry). Corrections: hello@fieldassembly.net.
 
 2026-09-04 — Ombudsman addresses recovered; a capture recipe written. This state had no capture recipe, so its packet could not be re-taken and the eight Cloudflare placeholders finding (5) recorded stood as the standing evidence behind this page. A recipe now exists (tools/recipes/louisiana.json) and the packet was rebuilt under decode_cfemail. The eight placeholders resolve to seven addresses the office publishes: the State Long-Term Care Ombudsman at StateOmbudsman@la.gov, printed twice, and six regional ombudsman contacts on the roster. The docket now carries the state office's address beside the numbers it already showed. The addresses were always published; the earlier capture recorded what the tool could read, not what the office stated. Findings: (7) source 1 is now captured as printed pages 27 and 28 of the Department of Health's PDF rather than by the hand cut the 2026-08-30 capture made within those pages, because a page range is reproducible where a hand cut is not; the captured text is a superset of the standing one, adding the neighbouring sections that share those pages, and no quotation on this page changed. (8) Finding (5) above has had its quotation marks removed around the placeholder text. The words are unchanged and the record stands; this repo's checker reads any quoted span as a claim the packet must support, and a change log that records what a capture used to show cannot satisfy that once the capture is repaired. That tension is open as FA-Q-20260904-05 and is not settled here. Reviewer: Carrie Schluter, reviewed 2026-09-04. Corrections: hello@fieldassembly.net.
 
