@@ -175,6 +175,24 @@ the gap (code confirmed present in all three 2026-09-05, not yet exercised
 there against a live legacy-`.doc` capture). Filed in the
 field-assembly-standard handoff queue the same day.
 
+**site/states/georgia.html has drifted from a fresh render of its own
+source — found 2026-09-15, running the deploy gate after deepening
+Louisiana, Tennessee and Virginia.** `bash site/predeploy-check.sh`'s
+page/source drift check reports `georgia page differs from a fresh render
+of its source` and named no other page. Not investigated further this
+pass: Georgia was not one of the three states worked, investigating it
+would have widened this pass beyond its assignment, and a page/source
+diff was, once produced to characterize the finding, reverted unread
+past its first screen rather than kept — `git status` confirmed the
+revert left the working tree clean. A working session should re-render
+`states/georgia.md` with `tools/render-state.py georgia`, diff the result
+against the committed `site/states/georgia.html`, and either commit the
+re-render (if the source is unchanged and the drift is stale output) or
+work out why the two disagree (if `render-state.py` or `georgia.md` changed
+in a way that makes re-rendering unsafe to do blindly). Whether this is a
+tooling defect or a stale render was not determined, so it is filed here
+rather than in the tooling-defects section or the standard's handoff queue.
+
 ## Deferred, dated
 
 **Hawaii — deferred 2026-09-03.** The operative rule, Hawaii Administrative
