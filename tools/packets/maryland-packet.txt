@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: maryland
-ASSEMBLED: 2026-09-13
+ASSEMBLED: 2026-09-16
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/maryland.json (recipe digest 094cd75387b1). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -18,7 +18,7 @@ CAPTURE NOTES:
 - SOURCE 6: transport curl; extractor html-text; scope main; filters trim-lines, collapse-blank-runs.
   301-redirects to aging.maryland.gov/programs-and-services/long-term-care-ombudsman; followed by curl's default -L. main#main-content carries the department's own section menu twice (it precedes and follows the page's own content on this template), matching the duplication already present in the standing packet's capture note for this source.
 
-SOURCE 1: Maryland Code, Health-General § 19-345 (Involuntary transfer or discharge) | https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=ghg&section=19-345&enactments=false | source date: none stated on page | retrieved: 2026-09-13
+SOURCE 1: Maryland Code, Health-General § 19-345 (Involuntary transfer or discharge) | https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=ghg&section=19-345&enactments=false | source date: none stated on page | retrieved: 2026-09-16
 Article - Health - General
 
 PreviousNext
@@ -49,7 +49,7 @@ PreviousNext
 
 PreviousNext
 
-SOURCE 2: COMAR 10.07.09.10, Resident Transfers and Discharges | https://dsd.maryland.gov/regulations/Pages/10.07.09.10.aspx | source date: chapter administrative history: Regulations .01—.20 adopted effective April 22, 1996; Regulation .12A amended effective August 24, 2009 | retrieved: 2026-09-13
+SOURCE 2: COMAR 10.07.09.10, Resident Transfers and Discharges | https://dsd.maryland.gov/regulations/Pages/10.07.09.10.aspx | source date: chapter administrative history: Regulations .01—.20 adopted effective April 22, 1996; Regulation .12A amended effective August 24, 2009 | retrieved: 2026-09-16
 Code of Maryland Regulations
 
 .10 Resident Transfers and Discharges.
@@ -122,7 +122,7 @@ Cross References
 
 10.07.09.13A
 
-SOURCE 3: COMAR 10.07.09.11, Involuntary Discharge or Transfer of a Resident | https://dsd.maryland.gov/regulations/Pages/10.07.09.11.aspx | source date: chapter administrative history: Regulations .01—.20 adopted effective April 22, 1996; Regulation .12A amended effective August 24, 2009 | retrieved: 2026-09-13
+SOURCE 3: COMAR 10.07.09.11, Involuntary Discharge or Transfer of a Resident | https://dsd.maryland.gov/regulations/Pages/10.07.09.11.aspx | source date: chapter administrative history: Regulations .01—.20 adopted effective April 22, 1996; Regulation .12A amended effective August 24, 2009 | retrieved: 2026-09-16
 Code of Maryland Regulations
 
 .11 Involuntary Discharge or Transfer of a Resident.
@@ -203,7 +203,7 @@ Cross References
 
 10.07.09.13B(1)
 
-SOURCE 4: COMAR 10.07.09.12, Resident Relocation and Bed Hold | https://dsd.maryland.gov/regulations/Pages/10.07.09.12.aspx | source date: chapter administrative history: Regulations .01—.20 adopted effective April 22, 1996; Regulation .12A amended effective August 24, 2009 | retrieved: 2026-09-13
+SOURCE 4: COMAR 10.07.09.12, Resident Relocation and Bed Hold | https://dsd.maryland.gov/regulations/Pages/10.07.09.12.aspx | source date: chapter administrative history: Regulations .01—.20 adopted effective April 22, 1996; Regulation .12A amended effective August 24, 2009 | retrieved: 2026-09-16
 Code of Maryland Regulations
 
 .12 Resident Relocation and Bed Hold.
@@ -242,7 +242,7 @@ Cross References
 
 10.07.09.02B(14)(b)
 
-SOURCE 5: COMAR 10.07.09.13, Hearings for Transfers and Discharges, and Establishment of an Escrow Account | https://dsd.maryland.gov/regulations/Pages/10.07.09.13.aspx | source date: chapter administrative history: Regulations .01—.20 adopted effective April 22, 1996; Regulation .12A amended effective August 24, 2009 | retrieved: 2026-09-13
+SOURCE 5: COMAR 10.07.09.13, Hearings for Transfers and Discharges, and Establishment of an Escrow Account | https://dsd.maryland.gov/regulations/Pages/10.07.09.13.aspx | source date: chapter administrative history: Regulations .01—.20 adopted effective April 22, 1996; Regulation .12A amended effective August 24, 2009 | retrieved: 2026-09-16
 Code of Maryland Regulations
 
 .13 Hearings for Transfers and Discharges, and Establishment of an Escrow Account.
@@ -277,7 +277,7 @@ Cross References
 
 10.07.09.10D(2)
 
-SOURCE 6: Maryland Department of Aging — Long-Term Care Ombudsman | https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx | source date: none stated on page | retrieved: 2026-09-13
+SOURCE 6: Maryland Department of Aging — Long-Term Care Ombudsman | https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx | source date: none stated on page | retrieved: 2026-09-16
 Home
 
 Programs and Services

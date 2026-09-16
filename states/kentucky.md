@@ -10,26 +10,108 @@
 
 **Ombudsman in these sources.** The Office of the State Long Term Care Ombudsman, in the Department for Aging and Independent Living: "The Kentucky Long-Term Care Ombudsman program advocates for residents of nursing homes, personal care homes and family care homes, improving care and encouraging positive change at all levels." The Cabinet publishes an ombudsman listing by county rather than a statewide telephone number on the page reviewed, and states the program "oversees 15 district programs affiliated with Area Agencies on Aging and Independent Living" and "does not charge for services."
 
-**Sources last checked.** 2026-08-30
+**Sources last checked.** 2026-09-16
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 
 ## Lede
 
-This page assembles what Kentucky's own publishers state about involuntary transfer and discharge from a long-term care facility. It is a baseline page: the docket rows and the source map are built; the grounds section and the published-process section are not yet written, as the change log records. The fullest single source is 900 KAR 2:050, "Transfer and discharge rights", read with its companion 900 KAR 2:060, which governs the hearing. Kentucky's vocabulary is *transfer or discharge*, defined together and reaching some moves within the same building; the appeal goes to the Cabinet for Health and Family Services, which appoints a hearing officer.
+This page assembles what Kentucky's own publishers state about involuntary transfer and discharge from a long-term care facility. The fullest single source is 900 KAR 2:050, "Transfer and discharge rights", read with its companion 900 KAR 2:060, which governs the hearing. Kentucky's vocabulary is *transfer or discharge*, defined together and reaching some moves within the same building; the appeal goes to the Cabinet for Health and Family Services, which appoints a hearing officer.
 
 Two things stand out for a reader. The appeal window is fifteen days from receipt of the notice — half the notice period itself, and the shortest deadline in this index after North Carolina's eleven. And Kentucky states, unusually plainly, which moves carry no appeal right at all. The federal floor for Medicare/Medicaid-certified facilities is assembled separately on [the federal page](../federal.html); nothing here fills a gap from federal law or another state. Confirm applicability with the agencies named in the sources: whether any provision applies to a particular facility, resident, or notice is for the hearing office to determine. Deadlines and periods on this page are quoted from the sources, not calculated for any case.
+
+## 01 — The grounds, as Kentucky describes them
+
+900 KAR 2:050, Section 2(1) states, in the regulation's own order ([Legislative Research Commission](https://apps.legislature.ky.gov/law/kar/titles/900/002/050/), retrieved 2026-09-16): "The facility shall permit each resident to remain in the facility, and shall not transfer or discharge the resident from the facility unless:"
+
+(a) "The transfer or discharge is necessary for the resident's welfare and the resident's needs cannot be met in the facility;"
+
+(b) "The transfer or discharge is appropriate because the resident's health has improved sufficiently so the resident no longer needs the services provided by the facility;"
+
+(c) "The safety of individuals in the facility is endangered;"
+
+(d) "The health of individuals in the facility would otherwise be endangered;"
+
+(e) "The resident has failed, after reasonable and appropriate notice, to pay for (or to have paid under Medicare, Medicaid, or state supplementation) a stay at the facility; or"
+
+(f) "The facility ceases to operate."
+
+Section 2(2) requires documentation of the reason: "Before a facility transfers or discharges a resident under any of the circumstances specified in subsection (1)(a) through (f) of this section, the reasons for the transfer or discharge shall be documented in the resident's clinical record." It must be made by "The resident's physician if transfer or discharge is necessary under subsection (1)(a) or (b) of this section; and" "A physician if transfer or discharge is necessary under subsection (1)(c) or (d) of this section."
+
+Section 1 defines the reach of the terms: "\"Discharge\" or \"transfer\" means:" "Relocation of a resident from a long-term care facility to a noninstitutional setting or another health facility as defined by KRS 216B.015(13); or" "Any intrafacility relocation of a resident, except between beds within the same distinct Medicare or Medicaid certified or noncertified part of the facility." Section 3(3) states a related limit on what may be appealed, quoted in full in section 02: "A resident, responsible party, responsible family member, or guardian has no appeal rights if the resident is moved from a certified bed into another certified bed of the same certification in the same facility."
+
+## 02 — The published process
+
+### Requesting the hearing
+
+900 KAR 2:050, Section 3(5)(a): "A resident, responsible party, responsible family member, or guardian may appeal any discharge or appealable transfer to the cabinet." Section 3(5)(b): "The resident, responsible party, responsible family member, or guardian shall inform the cabinet in writing of his or her intent to appeal within fifteen (15) days from receipt of notice of the facility's intent to transfer or discharge and include:" "A copy of the notice of the facility's intent to transfer or discharge the resident; and" "If not included on the notice, the name and address of the facility." No office, postal address, email address or form for that filing is stated in the sources reviewed; the notice itself must carry "The name, address (mailing and email), and telephone number of the cabinet office responsible for receiving requests for appeal;" per Section 2(5)(e), but no first-party page publishing that office's contact was captured. Section 3(5)(c): "Hearing procedures for appeals shall be followed, as established in 900 KAR 2:060."
+
+Section 3 states what may be appealed and what may not. Subsection (1): "A resident, responsible party, responsible family member, or guardian may appeal any discharge." Subsection (2): a transfer may be appealed if the resident is transferred from "A certified bed into a noncertified bed; or" "A bed in a certified entity to a bed in an entity that is certified as a different provider." Subsection (3): "A resident, responsible party, responsible family member, or guardian has no appeal rights if the resident is moved from a certified bed into another certified bed of the same certification in the same facility." Subsection (4): "A resident, responsible party, responsible family member, or guardian may request that the cabinet review any proposed transfer or discharge. The cabinet shall investigate the proposed transfer or discharge to ascertain whether there has been a violation of the resident's transfer or discharge rights."
+
+900 KAR 2:060, Section 2(1): "Upon receipt of notice of appeal in accordance with 900 KAR 2:050 or 900 KAR 2:020, Section 2(1) and (2), the secretary of the cabinet shall appoint a hearing officer and a hearing shall occur within thirty (30) days." Section 2(2): "Notice of hearing shall be mailed to the facility and resident not less than ten (10) days prior to the commencement of the hearing." Section 2(8): "The hearing officer's decision shall be the final determination of the cabinet. The cabinet shall forward the decision to the resident and facility within ten (10) days of the receipt of the hearing officer's decision." No pendency provision — whether the resident stays in the facility while an appeal is considered — is stated in either regulation.
+
+### The notice's required contents
+
+900 KAR 2:050, Section 2(5): "Contents of the notice. The written notice specified in subsection (3) of this section shall include the following:"
+
+(a) "The reason for transfer or discharge;"
+
+(b) "The effective date of transfer or discharge;"
+
+(c) "The location to which the resident is transferred or discharged;"
+
+(d) "A statement that the resident, responsible party, responsible family member, or guardian has the right to appeal the action to the cabinet;"
+
+(e) "The name, address (mailing and email), and telephone number of the cabinet office responsible for receiving requests for appeal;"
+
+(f) "Information on how to obtain assistance with submitting a request for appeal;"
+
+(g) "The name, address (mailing and email), and telephone number of the state long-term care ombudsman; and"
+
+(h) "For a nursing facility resident with a developmental disability or mental illness, the mailing and email address and telephone number of Kentucky Protection and Advocacy."
+
+Before any move, Section 2(3): "Before a facility transfers or discharges a resident, the facility shall:" "Notify the resident and the responsible party, responsible family member, or guardian, in writing, of the transfer or discharge and the reasons for the relocation in a language and manner they understand;" "Record the reasons in the resident's clinical record; and" "Include in the notice the items described in subsection (5) of this section."
+
+### Bed-hold and return
+
+900 KAR 2:050, Section 2(7)(a): "Notice before transfer. Before a facility transfers a resident to a hospital or allows a resident to go on therapeutic leave, the facility shall provide written information to the resident, responsible party, responsible family member, or legal guardian that specifies the following:" "The duration of the bed-hold policy, which shall be requested if available under the Medicaid state plan and provider agreement, during which a resident who receives Medicaid or has a pending application for Medicaid benefits is permitted to return and resume residence in the facility;" "The facility's policies regarding bed-hold periods, which shall be consistent with paragraph (c) of this subsection, permitting a resident to return; and" "For a resident who does not receive or does not have an application pending for Medicaid, the facility's established policy governing readmission." Section 2(7)(b): "Upon transfer of a resident to a hospital or for therapeutic leave, a long-term care facility shall provide written notice to the resident, responsible party, responsible family member, or legal guardian. The notice shall specify the duration of the bed-hold policy described in paragraph (a) of this subsection."
+
+On return, Section 2(7)(c): "A long-term care facility shall establish and follow a written policy under which a resident whose hospitalization or therapeutic leave exceeds the bed-hold period under the Medicaid state plan, is notified and readmitted to the facility immediately upon the first availability of a bed in a semiprivate room if the resident:" "Chooses to be readmitted;" "Requires the services provided by the facility; and" "Is eligible for Medicaid nursing facility services and the facility is certified to participate in Title XVIII, 42 U.S.C. 1395, or Title XIX, 42 U.S.C. 1396, of the Social Security Act." Section 2(8): "Equal access to quality care. A facility shall establish and maintain identical policies and practices regarding transfer, discharge, and the provision of service under the Medicaid state plan for all individuals regardless of source of payment."
+
+The regulation names "the Medicaid state plan and provider agreement" as the source of the bed-hold period's own length but does not itself state a number of days, and no first-party statement of that period from the Cabinet for Health and Family Services' Medicaid materials was located. That absence is stated rather than filled from another source or another state.
+
+*The three rows above hoist the questions a facility's counsel answers in the first fifteen minutes. They are quotations from Kentucky's published sources, not a determination that any of them applies to any situation.*
+
+### Notice periods and deadlines, as stated in the sources
+
+All quoted; none calculated.
+
+Thirty days' advance notice — 900 KAR 2:050, Section 2(4)(a): "Except as specified in paragraph (b) of this subsection, the notice of transfer or discharge required under subsection (3) of this section shall be made by the facility at least thirty (30) days before the resident is transferred or discharged."
+
+As soon as practicable, five stated circumstances — Section 2(4)(b): "Notice may be made as soon as practicable before transfer or discharge if:" "An immediate transfer or discharge is required by the resident's urgent medical needs, under subsection (1)(a) of this section;" "The resident's health improves sufficiently to allow a more immediate transfer or discharge, under subsection (1)(b) of this section;" "The safety of individuals in the facility would be endangered, under subsection (1)(c) of this section;" "The health of individuals in the facility would be endangered, under subsection (1)(d) of this section; or" "The resident has not resided in the facility for thirty (30) days."
+
+Fifteen days to appeal — Section 3(5)(b), quoted in full above.
+
+Thirty days to the hearing — 900 KAR 2:060, Section 2(1), quoted in full above.
+
+Ten days' notice of the hearing — Section 2(2): "Notice of hearing shall be mailed to the facility and resident not less than ten (10) days prior to the commencement of the hearing."
+
+Ten days to forward the decision — Section 2(8), quoted in full above.
+
+What any of these periods means for a particular case is for the cabinet or hearing officer to determine.
 
 ## 03 — Source map
 
 | Document | Publisher and location | Source's own date | Retrieved |
 | --- | --- | --- | --- |
-| 900 KAR 2:050, Transfer and discharge rights | [Legislative Research Commission](https://apps.legislature.ky.gov/law/kar/titles/900/002/050/) | HISTORY ends 146 Ky.R. 1695, 2280; eff. 2-27-2020 | 2026-08-30 |
-| 900 KAR 2:060, Hearings concerning transfer and discharge rights | [Legislative Research Commission](https://apps.legislature.ky.gov/law/kar/titles/900/002/060/) | see the regulation's own HISTORY line | 2026-08-30 |
-| Long-Term Care Ombudsman | [Cabinet for Health and Family Services, DAIL](https://www.chfs.ky.gov/agencies/dail/Pages/ltcomb.aspx) | none stated on page | 2026-08-30 |
+| 900 KAR 2:050, Transfer and discharge rights | [Legislative Research Commission](https://apps.legislature.ky.gov/law/kar/titles/900/002/050/) | HISTORY ends 146 Ky.R. 1695, 2280; eff. 2-27-2020 | 2026-09-16 |
+| 900 KAR 2:060, Hearings concerning transfer and discharge rights | [Legislative Research Commission](https://apps.legislature.ky.gov/law/kar/titles/900/002/060/) | see the regulation's own HISTORY line | 2026-09-16 |
+| Long-Term Care Ombudsman | [Cabinet for Health and Family Services, DAIL](https://www.chfs.ky.gov/agencies/dail/Pages/ltcomb.aspx) | none stated on page | 2026-09-16 |
 
-Captured: all three, in tools/packets/kentucky-packet.txt. Pending: KRS 216.515, a published filing address for the appeal, a statewide ombudsman contact, and any statement of the bed-hold period — per the packet's pending list.
+Captured: all three, in tools/packets/kentucky-packet.txt (recipe tools/recipes/kentucky.json, digest 7e78656624fa). Pending: KRS 216.515 itself (not separately captured; quoted only as cross-referenced by the regulations), the cabinet office's own published filing address for an appeal (Section 2(5)(e) requires the notice to carry it, but no first-party cabinet page stating it was captured), a statewide ombudsman contact, and a first-party Medicaid statement of the bed-hold period's own length — per the packet's pending list.
 
 ## 04 — Change log
+
+2026-09-16 — Deepened to a full page. Recaptured the existing recipe (tools/recipes/kentucky.json, digest 7e78656624fa, unchanged): all three sources reproduce, with only the retrieval date changing and a handful of unrelated site-chrome and script lines (both apps.legislature.ky.gov regulation pages, and the chfs.ky.gov ombudsman page's own navigation duplication) trimmed by the current templates — no quoted text is affected. Wrote section 01 (the grounds, in the regulation's own order) and section 02 (requesting the hearing, the notice's required contents in full, bed-hold and return, and the notice-periods register), reusing evidence already standing in the packet — no new source was needed for any of the three hoisted rows, all already fully captured in 900 KAR 2:050 and 2:060. A search for a first-party statement of the actual bed-hold period Section 2(7) attributes to "the Medicaid state plan and provider agreement" did not succeed within this pass's bounds and is recorded as pending rather than pursued into the Cabinet's separate Medicaid regulations. Findings, continuing the existing numbering: (7) neither 900 KAR 2:050 nor 900 KAR 2:060 states a pendency provision — whether a resident stays in the facility while an appeal is considered — and that absence is stated on the page rather than inferred. (8) Section 3 states three distinct appeal postures in the same subsection: any discharge may be appealed, a transfer may be appealed only if it crosses a certified/noncertified line or between differently certified entities, and a same-certification intrafacility transfer carries no appeal right at all — all three quoted in full. (9) 900 KAR 2:060's Section 1 defines "hearing officer" and "resident" for that regulation's own purposes, distinct from 900 KAR 2:050's Section 1 definitions; neither page borrows the other's definitions. Capture pending: per the source map. Internet Archive: not yet submitted for this pass. Reviewer: Carrie Schluter (review pending for this entry). Corrections: hello@fieldassembly.net.
 
 2026-08-30 — Baseline page built from the first Kentucky packet: docket, lede, source map, change log. Not yet captured or written: section 01 (the grounds, as Kentucky describes them) and section 02 (the published process, including the notice's required contents in full, bed-hold and return, and the notice-periods register). Findings: (1) The appeal window is fifteen days from receipt, against a thirty-day notice period; both are quoted as published and neither is calculated against the other. (2) The regulation directs the appeal to "the cabinet" in writing but names no office, address, email or form, and 900 KAR 2:060 describes the hearing without stating where the appeal is sent; the absence is stated rather than filled. (3) Kentucky's definition of transfer or discharge reaches intrafacility relocation except between beds within the same distinct certified or noncertified part of the facility, and Section 3 separately states that a move from one certified bed to another of the same certification in the same facility carries no appeal right. Both are quoted. (4) The regulation requires the facility to state the Medicaid bed-hold duration to the resident but does not itself state a period, and no Medicaid statement of the period was captured. (5) The Cabinet's ombudsman page publishes a county listing rather than a statewide telephone number, so the ombudsman row states what the page publishes. (6) The Legislative Research Commission's pages serve each regulation twice — the current text and an "ALTERNATE VIEW" of the pre-engrossment version — and both are in the capture as served; quotations on this page are from the current text. Capture pending: per the source map. Internet Archive: not yet submitted. Reviewer: Carrie Schluter, reviewed 2026-08-30. Corrections: hello@fieldassembly.net.

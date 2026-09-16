@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: kentucky
-ASSEMBLED: 2026-09-04
+ASSEMBLED: 2026-09-16
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/kentucky.json (recipe digest 7e78656624fa). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -12,7 +12,7 @@ CAPTURE NOTES:
 - SOURCE 3: transport curl; extractor html-text; scope body; filters none.
   Server-rendered SharePoint page reached by plain curl with a browser user-agent. The page renders its site navigation twice and the standing packet carries both passes; scope 'body' reproduces that rather than narrowing to a content wrapper. This page publishes an ombudsman listing by county and no single statewide telephone contact — an absence the page records as a finding, and one a narrower scope could be mistaken for having caused.
 
-SOURCE 1: 900 KAR 2:050, Transfer and discharge rights | https://apps.legislature.ky.gov/law/kar/titles/900/002/050/ | source date: HISTORY line ends 146 Ky.R. 1695, 2280; eff. 2-27-2020 | retrieved: 2026-09-04
+SOURCE 1: 900 KAR 2:050, Transfer and discharge rights | https://apps.legislature.ky.gov/law/kar/titles/900/002/050/ | source date: HISTORY line ends 146 Ky.R. 1695, 2280; eff. 2-27-2020 | retrieved: 2026-09-16
 •
 
 Kentucky
@@ -236,9 +236,9 @@ This is how this document appeared before it was engrossed.
 
 
 
- Not Current Overlay 
 
- Shown in Emergency Regulations Shown for Amendments Actual Regulation Body 
+
+
 
 900 KAR 2:050.Transfer and discharge rights.
 
@@ -516,11 +516,11 @@ Hearing procedures for appeals shall be followed, as established in 900 KAR 2:06
 (6)
 Penalties. The cabinet shall enforce the provision of this administrative regulation pursuant to KRS 216.555, 216.557, and 216.560.
 
- History 
-HISTORY: (18 Ky.R. 1729; Am. 2343; 2823; eff. 3-7-1992; TAm eff. 10-10-2010; 41 Ky.R. 2133; 2551; eff. 6-17-2015; 146 Ky.R. 1695, 2280; eff. 2-27-2020.)
- Addendum Forms (Trailing Info) 
 
- Shown in Emergency Regulations Shown for Amendments Actual Regulation Body 
+HISTORY: (18 Ky.R. 1729; Am. 2343; 2823; eff. 3-7-1992; TAm eff. 10-10-2010; 41 Ky.R. 2133; 2551; eff. 6-17-2015; 146 Ky.R. 1695, 2280; eff. 2-27-2020.)
+
+
+
 
 900 KAR 2:050.Transfer and discharge rights.
 
@@ -798,9 +798,9 @@ Hearing procedures for appeals shall be followed, as established in 900 KAR 2:06
 (6)
 Penalties. The cabinet shall enforce the provision of this administrative regulation pursuant to KRS 216.555, 216.557, and 216.560.
 
- History 
+
 HISTORY: (18 Ky.R. 1729; Am. 2343; 2823; eff. 3-7-1992; TAm eff. 10-10-2010; 41 Ky.R. 2133; 2551; eff. 6-17-2015; 146 Ky.R. 1695, 2280; eff. 2-27-2020.)
- Addendum Forms (Trailing Info) 
+
 
 
 
@@ -873,7 +873,7 @@ Disclaimer
 
 Accessibility
 
-SOURCE 2: 900 KAR 2:060, Hearings concerning transfer and discharge rights | https://apps.legislature.ky.gov/law/kar/titles/900/002/060/ | source date: see the regulation's own HISTORY line in the capture | retrieved: 2026-09-04
+SOURCE 2: 900 KAR 2:060, Hearings concerning transfer and discharge rights | https://apps.legislature.ky.gov/law/kar/titles/900/002/060/ | source date: see the regulation's own HISTORY line in the capture | retrieved: 2026-09-16
 •
 
 Kentucky
@@ -1097,9 +1097,9 @@ This is how this document appeared before it was engrossed.
 
 
 
- Not Current Overlay 
 
- Shown in Emergency Regulations Shown for Amendments Actual Regulation Body 
+
+
 
 900 KAR 2:060.Hearings concerning transfer and discharge rights.
 
@@ -1225,13 +1225,13 @@ no hearing officer shall participate in any hearing involving a facility with wh
 (10)
 A judicial review may be accorded the resident or facility as specified in KRS 216.570.
 
- History 
+
 HISTORY: (18 Ky.R. 1731; 2345; 2824; eff. 3-7-1992; eff. 3-22-2019; Crt eff. 12-29-2025.)
- Addendum 
 
- Forms (Trailing Info) 
 
- Shown in Emergency Regulations Shown for Amendments Actual Regulation Body 
+
+
+
 
 900 KAR 2:060.Hearings concerning transfer and discharge rights.
 
@@ -1357,11 +1357,11 @@ no hearing officer shall participate in any hearing involving a facility with wh
 (10)
 A judicial review may be accorded the resident or facility as specified in KRS 216.570.
 
- History 
-HISTORY: (18 Ky.R. 1731; 2345; 2824; eff. 3-7-1992; eff. 3-22-2019; Crt eff. 12-29-2025.)
- Addendum 
 
- Forms (Trailing Info) 
+HISTORY: (18 Ky.R. 1731; 2345; 2824; eff. 3-7-1992; eff. 3-22-2019; Crt eff. 12-29-2025.)
+
+
+
 
 
 
@@ -1434,13 +1434,13 @@ Disclaimer
 
 Accessibility
 
-SOURCE 3: Kentucky Cabinet for Health and Family Services, Department for Aging and Independent Living — Long-Term Care Ombudsman | https://www.chfs.ky.gov/agencies/dail/Pages/ltcomb.aspx | source date: none stated on page | retrieved: 2026-09-04
+SOURCE 3: Kentucky Cabinet for Health and Family Services, Department for Aging and Independent Living — Long-Term Care Ombudsman | https://www.chfs.ky.gov/agencies/dail/Pages/ltcomb.aspx | source date: none stated on page | retrieved: 2026-09-16
 Skip to main navigationSkip to main content
- SharePoint Ribbon End SharePoint Ribbon 
- Kentucky.gov Portal Bar 
 
 
- Agency Header 
+
+
+
 
 
 
@@ -1605,9 +1605,9 @@ Employment
 
 
 
- /.navbar-collapse 
 
- /.container 
+
+
 
 
 
@@ -1801,8 +1801,6 @@ Long-Term Care Ombudsman
 
 
 
-Main Content
-
 
 ​​​​​The Kentucky Long-Term Care Ombudsman program advocates for residents of nursing homes, personal care homes and family care homes, improving care and encouraging positive change at all levels.
 
@@ -1934,9 +1932,6 @@ Standard Operating Procedures
 
 
 
-Relative Content
-
-
 ​LTCO Regions
 
 
@@ -1969,7 +1964,7 @@ Additional Information
 
 
 Resources
- start first list group 
+
 
 Caring Conversations Workbook
 
@@ -1979,11 +1974,11 @@ Residents Rights Booklet
 
 Underperforming Facilities
 
- end previous list group empty
+
 
 
 Helpful Links
- start new list group 
+
 
 CHFS OIG Facilities Directories
 
@@ -2013,7 +2008,7 @@ U.S. Centers for Medicare and Medicaid Services
 
 U.S. Social Security Administration (SSA)
 
- end last list group empty
+
 
 
 
@@ -2202,48 +2197,4 @@ Disclaimer
 
 
 Accessibility
-
-
-
-
-
-
-
-
-
-
-
- Hidden Placeholders 
-
-
-
-
-
-
-
-
- where the old enterprise loader used to go 
-
-
- additional js for top navigation and off canvas 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js" type="text/javascript"></script>
-
-<script src="https://secure.kentucky.gov/enterprise/scripts/plugins/smartmenus/jquery.smartmenus.bootstrap.min.js" type="text/javascript"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Suppress Chrome/ActiveX prompt
 

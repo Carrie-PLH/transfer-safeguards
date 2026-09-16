@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: alabama
-ASSEMBLED: 2026-09-04
+ASSEMBLED: 2026-09-16
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/alabama.json (recipe digest 8736087ebf91). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -10,7 +10,7 @@ CAPTURE NOTES:
 - SOURCE 2: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
   The 2026-08-30 capture recorded that this page refused plain curl and was taken through a rendered fetch instead. Re-tested 2026-09-04: it answers curl with a pinned browser user-agent normally, so the source is recipe-driven rather than agent-fetched from here on. That is a fact about the host's behaviour today, checked rather than assumed. The department's email obfuscation left two placeholders in the standing capture; decode_cfemail in the shared reader resolves them (FA-Q-20260902-01, FA-Q-20260904-04).
 
-SOURCE 1: Alabama Department of Senior Services, Elder Rights Guide for Older Alabamians — nursing home chapter (PDF, published on alabamapublichealth.gov) | https://www.alabamapublichealth.gov/homehealth/assets/elderrightsguide.pdf | source date: none stated on document | retrieved: 2026-09-04
+SOURCE 1: Alabama Department of Senior Services, Elder Rights Guide for Older Alabamians — nursing home chapter (PDF, published on alabamapublichealth.gov) | https://www.alabamapublichealth.gov/homehealth/assets/elderrightsguide.pdf | source date: none stated on document | retrieved: 2026-09-16
 CHAPTER 4:
 LONG TERM CARE
 
@@ -252,7 +252,7 @@ protected.
 
                                             -23-
 
-SOURCE 2: Alabama Department of Public Health, Bureau of Health Provider Standards — Filing Complaints | https://www.alabamapublichealth.gov/providerstandards/complaints.html | source date: page states its own last-updated date | retrieved: 2026-09-04
+SOURCE 2: Alabama Department of Public Health, Bureau of Health Provider Standards — Filing Complaints | https://www.alabamapublichealth.gov/providerstandards/complaints.html | source date: page states its own last-updated date | retrieved: 2026-09-16
 Skip to Main Content
 
 Alabama Public Health
@@ -514,17 +514,7 @@ Z
 
 Having trouble finding what you are looking for? Use our A to Z Index or Contact Us.
 
-<div class="input-group-append search-label">
- <span class="input-group-text">
- <button id="searchButton" class="ss360-n-button" aria-label="Search" value="Search" style="font-size: 12px; cursor: pointer; background-color:#1E9DD0;outline:none; color:white;">Search</button>
- </span>
- </div>
-
 Close Search
-
-<section class="page-section page-section-banner bg-img mb-0" style="background-image:url('')" title="photos of healthcare providers and patients">
-
-<div class="page-section banner-site-title m-0 bg-img" style="background-image:url('../images/headers/providerstandards.jpg');box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);" >
 
  Bureau of Health Provider Standards
 

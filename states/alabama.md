@@ -10,15 +10,81 @@
 
 **Ombudsman in these sources.** The Long Term Care Ombudsman program: "The Alabama Department of Senior Services administers a Long Term Care Ombudsman" program "that provides services to protect individuals residing in nursing facilities, assisted living facilities, specialty care facilities and boarding homes." The guide publishes one contact route: "Call" "1-800-AGELINE to reach your local Ombudsman." — a word, not a digit string, as the guide prints it. The rule requires the facility's own notice to carry the state ombudsman's name, address and telephone number.
 
-**Sources last checked.** 2026-09-04
+**Sources last checked.** 2026-09-16
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 
 ## Lede
 
-This page assembles what Alabama's own publishers state about involuntary transfer and discharge from a nursing facility. It is a baseline page: the docket rows and the source map are built; the grounds section and the published-process section are not yet written, as the change log records. The fullest single source is Rule 420-5-10-.06 of the Rules of the Alabama State Board of Health, "Admission, Transfer, Transport And Discharge Rights", which states the grounds, the thirty-day notice and its exceptions, the notice's required contents, the bed-hold notice and the readmission duty. Alabama's vocabulary is *transfer and discharge*, defined by where the bed is rather than by the building: a move to a bed outside the certified facility counts even when it is in the same physical plant, and a move within the certified facility does not.
+This page assembles what Alabama's own publishers state about involuntary transfer and discharge from a nursing facility. The fullest single source is Rule 420-5-10-.06 of the Rules of the Alabama State Board of Health, "Admission, Transfer, Transport And Discharge Rights", which states the grounds, the thirty-day notice and its exceptions, the notice's required contents, the bed-hold notice and the readmission duty. Alabama's vocabulary is *transfer and discharge*, defined by where the bed is rather than by the building: a move to a bed outside the certified facility counts even when it is in the same physical plant, and a move within the certified facility does not.
 
 The rule also carries a provision no other state in this index has: a resident who cannot ride upright, or who needs observation or treatment en route, may be transported only by a licensed ambulance service operator, with "upright position" defined as "no more than 20 degrees from vertical." What the rule does not carry is where an appeal goes. It requires the notice to state the right "to appeal the action to the State" and stops there. The federal floor for Medicare/Medicaid-certified facilities is assembled separately on [the federal page](../federal.html); nothing here fills a gap from federal law or another state. Confirm applicability with the agencies named in the sources: whether any provision applies to a particular facility, resident, or notice is for the hearing office to determine. Deadlines and periods on this page are quoted from the sources, not calculated for any case.
+
+## 01 — The grounds, as Alabama describes them
+
+Rule 420-5-10-.06(1)(b) states, in the rule's own order ([Alabama Administrative Code, captured from the code site's API](https://admincode.legislature.state.al.us/administrative-code/420-5-10), retrieved 2026-08-30): "The facility must permit each resident to remain in the facility, and not transfer or discharge the resident from the facility unless--"
+
+1. "The transfer or discharge is necessary for the resident's welfare and the resident's needs cannot be met in the facility;"
+
+2. "The transfer or discharge is appropriate because the resident's health has improved sufficiently so the resident no longer needs the services provided by the facility;"
+
+3. "The safety of individuals in the facility is endangered;"
+
+4. "The health of individuals in the facility would otherwise be endangered;"
+
+5. "The resident has failed, after reasonable and appropriate notice, to pay for (or to have paid under Medicare or Medicaid) a stay at the facility. For a resident who becomes eligible for Medicaid after admission to a nursing facility, the nursing facility may charge a resident only allowable charges under Medicaid; or"
+
+6. "The facility ceases to operate."
+
+The rule states the reach of the term at 420-5-10-.06(1)(a): "Transfer and discharge includes movement of a resident to a bed outside of the certified facility whether that bed is in the same physical plant or not. Transfer and discharge does not refer to movement of a resident to a bed within the same certified facility." It requires documentation of the reason at (1)(c): the resident's clinical record must be documented, by "The resident's physician when transfer or discharge is necessary under paragraph (1)(b)1 or paragraph (1)(b)2 of this section; and" by "A physician when transfer or discharge is necessary under paragraph (1)(b)4 of this section."
+
+## 02 — The published process
+
+### Requesting the hearing
+
+Not stated in the sources reviewed. Rule 420-5-10-.06(1)(f)4 requires the notice to carry "A statement that the resident has the right to appeal the action to the State;" and names no office, address, form or deadline for that appeal. Rule 420-5-10-.05(3)(g)3 requires the facility to give residents "A posting of names, addresses, and telephone numbers of all pertinent State client advocacy groups such as the State survey and certification agency, the State licensure office, the State ombudsman program, the protection and advocacy network, and the Medicaid fraud control unit" — but states no appeal route of its own; and rule 420-5-10-.02, also searched, provides hearings for licensees rather than residents. No pendency provision — whether a resident stays in the facility while an appeal is pending — is stated in any of these three rules.
+
+What the Department of Public Health publishes separately is a complaint route to the survey agency, which is a different thing from an appeal of a discharge decision: "If you have a complaint about the care of a resident in a nursing home located in Alabama, the Alabama State Survey Agency has the regulatory responsibility for all nursing homes in the state." — with the "ElderCare Hotline at 1-800-356-9596.", an email route ("For nursing home complaints, email us at NHComplaints@adph.state.al.us"), and a written route to "ATTN: Complaint Unit, Alabama Department of Public Health, Bureau of Health Provider Standards, 201 Monroe Street, Suite 700, Montgomery, AL 36130-3017". This page does not present any of that as an appeal of a discharge, because no captured source says it is.
+
+### The notice's required contents
+
+Rule 420-5-10-.06(1)(d): "Before a facility transfers or discharges a resident, the facility must--" "Notify the resident and, if known, a family members or legal representative of the resident of the transfer or discharge and the reasons for the move in writing and in a language and manner they understand." Also: "Record the reasons in the resident's clinical record; and" "Include in the notice the items described in paragraph (f)l of this section." (The rule's own text reads "a family members" and "(f)l"; both stand as served.)
+
+Rule 420-5-10-.06(1)(f): "Contents of the notice. The written notice specified in paragraph (d) of this section must include the following:"
+
+1. "The reason for transfer or discharge;"
+
+2. "The effective date of transfer or discharge;"
+
+3. "The location to which the resident is transferred or discharged;"
+
+4. "A statement that the resident has the right to appeal the action to the State;"
+
+5. "The name, address and telephone number of the State long term care ombudsman;"
+
+6. "For nursing facility residents with developmental disabilities, or are mentally ill, the mailing address and telephone number of the Alabama Developmental Disabilities Advocacy Program (ADDAP) at the University of Alabama School of Law; and"
+
+### Bed-hold and return
+
+Rule 420-5-10-.06(2)(a): "Before a nursing facility transfers a resident to a hospital or allows a resident to go on therapeutic leave, the nursing facility must provide written information to the resident and a family member or legal representative that specifies--" "The duration of the bed-hold policy under the State plan, if any, during which the resident is permitted to return and resume residence in the nursing facility; and" "The nursing facility's policies regarding bed-hold periods, which must be consistent with paragraph (2)(c) of this section, permitting a resident to return." At transfer, (2)(b): "At the time of a transfer of a resident for hospitalization or therapeutic leave, a nursing facility must provide to the resident and a family member or legal representative written notice which specifies the duration of the bed hold policy described in paragraph (2)(a)1 and 2 of this section."
+
+On return, (2)(c): "A nursing facility must establish and follow a written policy under which a resident whose hospitalization or therapeutic leave exceeds the bed-hold period under the State plan, is readmitted to the facility immediately upon the first availability of a bed in a semi-private room if the resident--" "Requires the services provided by the facility; and" "Is eligible for Medicaid nursing facility services."
+
+The rule names "the State plan" as the source of the bed-hold period's length but does not itself state a number of days. A search for that period in the Alabama Medicaid Agency's own materials did not succeed: the Alabama Administrative Code site's public API, used to capture Rule 420-5-10 itself, answers a request for a Medicaid chapter's listing with an error naming a persisted-query identifier this project does not hold (the site registers a distinct identifier per query type, and only the identifier for a single rule's own text, not a chapter listing, has been established for this project); and the Alabama Medicaid Agency's own provider-manuals page returned a short, script-rendered shell to a plain fetch with no manual text in it. That absence is stated rather than filled from another source or another state.
+
+*The three rows above hoist the questions a facility's counsel answers in the first fifteen minutes. They are quotations from Alabama's published sources, not a determination that any of them applies to any situation.*
+
+### Notice periods and deadlines, as stated in the sources
+
+All quoted; none calculated.
+
+Thirty days' advance notice — Rule 420-5-10-.06(1)(e): "Except when specified in paragraph (e)1 of this section, the notice of transfer or discharge required under paragraph (d) 1 of this section must be made by the facility at least 30 days before the resident is transferred or discharged."
+
+As soon as practicable, five stated circumstances — (1)(e)1: "Notice may be made as soon as practicable before transfer or discharge when--" "The safety of individuals in the facility would be endangered, under paragraph (1) (b)3 of this section." "The health of individuals in the facility would be endangered, under (1)(b)4 of this section." "The resident's health improves sufficiently to allow a more immediate transfer or discharge, under paragraph (1)(b)2 of this section;" "An immediate transfer or discharge is required by the resident's urgent medical needs, under paragraph (1)(b)1 of this section; or" "A resident has not resided in the facility for 30 days."
+
+No stated deadline to appeal, and no stated period during which the facility must hold off — the appeal route itself is not stated in the sources reviewed, see above.
+
+What any of these periods means for a particular case is for the hearing office or relevant state process to determine.
 
 ## 03 — Source map
 
@@ -26,13 +92,14 @@ The rule also carries a provision no other state in this index has: a resident w
 | --- | --- | --- | --- |
 | Rule 420-5-10-.06, Admission, Transfer, Transport And Discharge Rights | [Alabama Administrative Code (captured from the code site's API)](https://admincode.legislature.state.al.us/administrative-code/420-5-10) | Amended: Filed June 23, 2004; effective July 28, 2004 | 2026-08-30 |
 | Rule 420-5-10-.05, Resident Rights | [Alabama Administrative Code (captured from the code site's API)](https://admincode.legislature.state.al.us/administrative-code/420-5-10) | see the rule's own history line | 2026-08-30 |
-| Elder Rights Guide for Older Alabamians, nursing home chapter (PDF) | [Alabama Department of Senior Services, published on alabamapublichealth.gov](https://www.alabamapublichealth.gov/homehealth/assets/elderrightsguide.pdf) | none stated on document | 2026-08-30 |
-| Filing Complaints | [ADPH, Bureau of Health Provider Standards](https://www.alabamapublichealth.gov/providerstandards/complaints.html) | Page last updated: March 30, 2026 | 2026-08-30 |
-| Filing Complaints — re-captured with email decoding | [ADPH, Bureau of Health Provider Standards](https://www.alabamapublichealth.gov/providerstandards/complaints.html) | Page last updated: March 30, 2026 | 2026-09-03 |
+| Elder Rights Guide for Older Alabamians, nursing home chapter (PDF) | [Alabama Department of Senior Services, published on alabamapublichealth.gov](https://www.alabamapublichealth.gov/homehealth/assets/elderrightsguide.pdf) | none stated on document | 2026-09-16 |
+| Filing Complaints | [ADPH, Bureau of Health Provider Standards](https://www.alabamapublichealth.gov/providerstandards/complaints.html) | Page last updated: March 30, 2026 | 2026-09-16 |
 
-Captured: all four, in tools/packets/alabama-packet.txt and tools/packets/alabama-packet-rule.txt. Pending: any published appeal route and deadline, the Department of Senior Services' own ombudsman page, and any statement of the bed-hold period — per the packets' pending lists.
+Captured: all four, in tools/packets/alabama-packet.txt (recipe tools/recipes/alabama.json, digest 8736087ebf91) and tools/packets/alabama-packet-rule.txt. Pending: any published appeal route and deadline, a first-party Alabama Medicaid statement of the bed-hold period's own length, and the Department of Senior Services' own ombudsman page (a statewide telephone number beyond the Elder Rights Guide's "1-800-AGELINE") — per the packets' pending lists.
 
 ## 04 — Change log
+
+2026-09-16 — Deepened to a full page. Recaptured the existing recipe (tools/recipes/alabama.json, digest 8736087ebf91, unchanged): both sources reproduce, with only the retrieval date changing and a handful of unrelated site-chrome lines (a search-box widget, an empty banner-image section) dropped from the complaints page's own template — no quoted text is affected. The rule packet (tools/packets/alabama-packet-rule.txt) is unchanged and was not re-fetched; it remains the immutable evidence built from on 2026-08-30. Wrote section 01 (the grounds, in the rule's own order) and section 02 (requesting the hearing, the notice's required contents in full, bed-hold and return, and the notice-periods register), reusing evidence already standing in the two packets — no new source was needed for the notice-contents or hearing-office rows, both already fully captured. One new search was made for section 02's bed-hold row: for a first-party statement of the actual bed-hold period Rule 420-5-10-.06(2)(c) attributes to "the State plan," the Alabama Administrative Code's own public API (the same site and mechanism used for the operative rule) was asked for a Medicaid chapter listing and returned only an error naming a persisted-query identifier this project does not hold — the identifier already in hand from the 2026-08-30 capture is registered to a single rule's own text, not a chapter listing, and finding the correct identifier for a different query would require inspecting the site's client-side code rather than using a documented transport — and the Alabama Medicaid Agency's own provider-manuals page returned a short, script-rendered shell with no manual text to a plain fetch. Both are recorded as an absence at that scope rather than pursued further. Findings, continuing the existing numbering: (5) the rule's own list of notice contents at (1)(f) numbers six items ending in "; and" after the sixth, with no seventh item printed — the publisher's own numbering, reproduced as served. (6) no pendency provision (whether a resident stays in the facility while an appeal is considered) is stated in rules .02, .05 or .06, consistent with the absence of any stated hearing office to appeal to. Capture pending: per the source map. Internet Archive: not yet submitted for this pass. Reviewer: Carrie Schluter (review pending for this entry). Corrections: hello@fieldassembly.net.
 
 2026-09-04 — A capture recipe written; the standing packet now carries the addresses. This state had no recipe, so the 2026-09-03 recovery had to be written into a supplement (tools/packets/alabama-packet-complaints.txt) rather than into the packet itself. A recipe now exists (tools/recipes/alabama.json) and the standing packet was rebuilt under it: the two Cloudflare placeholders are gone and NHComplaints@adph.state.al.us, ALFComplaints@adph.state.al.us and ACCComplaints@adph.state.al.us are in the packet the page rests on. Nothing on this page changed — the addresses were already published from the supplement, which stays in the record as the capture that first recovered them, no longer load-bearing. Findings: (3) source 1 is now captured as printed pages 21 to 25 of the Elder Rights Guide rather than by the hand cut the 2026-08-30 capture made between its headings; the range is reproducible where a hand cut is not, the captured text contains the standing text exactly, and no quotation changed. (4) the complaints page refused plain curl in August and was taken through a rendered fetch then; re-tested today it answers curl with a pinned browser user-agent normally, so it is recipe-driven from here on. That is a fact about the host's behaviour today, checked rather than assumed. Reviewer: Carrie Schluter, reviewed 2026-09-04. Corrections: hello@fieldassembly.net.
 
