@@ -32,6 +32,33 @@
         "to": "View the map of regional ombudsmen and the towns they serve"
       },
       "notes": "body scope alone pulls the site's full nav and footer chrome around a short contact block; this slice narrows to the contact block itself (phone, fax, email) plus the two links that follow it."
+    },
+    {
+      "n": 3,
+      "title": "Connecticut General Statutes § 19a-537, Nursing home responsibilities re reservation of beds. Reimbursement. Readmission (chapter 368v)",
+      "url": "https://www.cga.ct.gov/current/pub/chap_368v.htm#sec_19a-537",
+      "source_date": "public-act citation line ends P.A. 22-58, S. 4",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "slice": {
+        "from": "Sec. 19a-537. (Formerly Sec. 19-617a).",
+        "to": "Sec. 19a-537a.",
+        "from_occurrence": 2
+      },
+      "notes": "Same page, template and transport as source 1 -- chap_368v.htm prints every section heading twice (chapter table of contents, then the section's own text), so from_occurrence: 2 lands the slice in the body, per this project's standing rule. The 'to' anchor's default occurrence (1) is correct here because it counts within the tail *after* the from-match, per capture.py's apply_slice, and the chapter's table of contents (which holds the only other 'Sec. 19a-537a.' heading) sits before that point, not after. This is Connecticut's bed-hold and readmission statute: subsection (b) the reservation duty, (c) the 15-day self-pay hold, (d) the Medicaid reimbursement conditions (up to 7 days plus 8 additional, and 21 home-leave days), (e) the first-available-bed obligation once the hold period is exceeded, and (f)-(i) a second, separate hearing route for a refused readmission, distinct from section 19a-535's transfer/discharge hearing."
+    },
+    {
+      "n": 4,
+      "title": "Connecticut Department of Social Services — Office of Legal Counsel, Regulations and Administrative Hearings (OLCRAH), Contact",
+      "url": "https://portal.ct.gov/dss/the-office-of-legal-counsel-regulations-and-administrative-hearings/office-of-legal-counsel-regulations-and-administrative-hearings---olcrah/contact",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "extractor": "html-text",
+      "scope": "main",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "Plain curl, no user-agent needed (200 with no UA, tested 2026-09-17). This is the departmental page the statute's notice provision points to without naming: the mailing address ('DSS-OLCRAH, 55 Farmington Avenue, Hartford CT 06105'), the OLCRAH email (olcrah.DSS@ct.gov), and the Administrative Hearings telephone numbers. A companion page at the same host, .../requesting-a-hearing, states the filing mechanics (Hearing Request Form, or a signed letter) and the two clocks already quoted from the statute; only the Contact page's mailing address and email are quoted here to avoid restating the statute's own words as a second source's."
     }
   ]
 }

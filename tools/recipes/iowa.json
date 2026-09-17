@@ -26,6 +26,20 @@
         "collapse-blank-runs"
       ],
       "notes": "Plain curl with a browser user-agent returns the full server-rendered page; no client-side gate. Scope 'main' holds the page's own on-page table of contents plus the body copy and excludes the site-wide header/footer chrome. Wider than the standing packet's own hand-curated excerpt, which is safe: a superset can only add evidence, never narrow what verifies. The department's own Cloudflare-style email obfuscation renders literally as the placeholder text \"[email protected]\" rather than the decoded address, matching how the standing packet already carries it — this page's markup does not use the data-cfemail attribute capture.py's decoder targets, so nothing is silently changed here."
+    },
+    {
+      "n": 3,
+      "title": "441 Iowa Administrative Code chapter 81 (Human Services — Nursing Facilities), rule 81.8(249A), Payment procedures (PDF)",
+      "url": "https://www.legis.iowa.gov/docs/iac/chapter/05-13-2026.441.81.pdf",
+      "source_date": "[ARC 9279C, IAB 5/14/25, effective 7/1/25]",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "slice": {
+        "from": "441—81.8(249A) Payment procedures.",
+        "to": "441—81.9(249A) Billing procedures."
+      },
+      "notes": "Same host and PDF-running-head pattern as source 1's single-rule PDF, but this is the whole-chapter PDF (441 IAC ch. 81 is Iowa Medicaid's nursing-facility payment chapter) because no single-rule PDF address exists for 81.8 the way it does for 481-58.40. Single column throughout -- unlike Missouri's or Arizona's two-column AAC/CSR renders -- so -layout preserves reading order with no interleaving; verified 2026-09-17 by reading the full extraction start to finish. Rule 81.8 states the Medicaid bed-hold: payment approved 'for periods the resident is absent overnight for purpose of visitation or vacation' up to 18 days per calendar year (81.8(3)\"d\"), and up to 10 days per calendar month for a hospitalization absence (81.8(3)\"e\"), with payment withheld unless the resident was a private-pay resident before the hospitalization and returns as a resident. Both anchors are single-occurrence in the chapter PDF (grep-verified against the plain extraction, no table-of-contents duplicate to bisect against, unlike Ohio's or Missouri's captures)."
     }
   ]
 }

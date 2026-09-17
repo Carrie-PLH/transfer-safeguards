@@ -4,7 +4,7 @@ STATE: minnesota
 ASSEMBLED: 2026-09-17
 
 CAPTURE NOTES:
-- Captured by tools/capture.py from tools/recipes/minnesota.json (recipe digest 58989314ea0a). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Captured by tools/capture.py from tools/recipes/minnesota.json (recipe digest c57bb0902505). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
 - SOURCE 1: transport curl; extractor html-text; scope #xtend; filters pipe-table-cells, trim-lines.
   Plain curl, no user-agent needed (200 with no UA, tested 2026-09-15). #xtend.statute is the Revisor template's own statute wrapper: narrower than main#legContainerMain, which also carries the breadcrumb, doc_nav prev/next links and the Resources sidebar card. #xtend holds every subdivision (1 through 29) plus the section's History block, so the captured text is a superset of the quoted subd. 29 -- that is expected, not a scope defect.
 - SOURCE 2: transport curl; extractor html-text; scope #xtend; filters pipe-table-cells, trim-lines.
@@ -15,8 +15,6 @@ CAPTURE NOTES:
   health.state.mn.us returns HTTP 403 to curl's bare user-agent and 200 to a browser string, tested 2026-09-17; user_agent: browser. This is the department's own statement of the filing route for the hearing row: an online 'HRD Appeals Submission Form', the 30-day filing window, the 14-calendar-day hearing timing at the resident's facility, and the pendency protection -- all absent from the two statutes alone. section#page-content is the Drupal theme's content wrapper; it duplicates a 'Contact Info' sidebar block twice (a responsive-breakpoint artifact, two copies of the same short block for two CSS states), which is harmless to fidelity since the quoted prose itself appears once, contiguously.
 - SOURCE 5: transport curl; extractor html-text; scope #xtend; filters pipe-table-cells, trim-lines.
   Same Revisor template, scope, and transport reasoning as sources 1 and 2. Plain curl, no user-agent needed, tested 2026-09-17. This is Minnesota's own Medicaid bed-hold/leave-day rule -- 'A reserved bed must be held for a recipient on hospital leave or therapeutic leave', with payment limited to 18 leave days per calendar year for hospital leave and separate per-facility-type limits for therapeutic leave. It states nothing about readmission after the limit is exceeded; that absence is recorded rather than filled.
-- SOURCE 6: transport curl; extractor html-text; scope #xtend; filters pipe-table-cells, trim-lines.
-  Same Revisor template, scope, and transport reasoning as sources 1, 2 and 5. Plain curl, no user-agent needed, tested 2026-09-17. Captured to support the section 01 finding that Minnesota Rules chapter 4658 -- the state's nursing-home rule chapter, capture-pending since the baseline build -- does not enumerate transfer/discharge grounds anywhere in the chapter: the one part titled for the subject, 4658.0465, is a clinical-record documentation rule (what a discharge summary must contain, and that it be sent to a receiving facility), not a grounds provision. The chapter's other parts were read against the Revisor's own rule-listing page (https://www.revisor.mn.gov/rules/4658/, not itself captured as a source because nothing on the page quotes it) and none is titled or worded as a grounds provision either; that page's part titles are checked, not quoted.
 
 SOURCE 1: Minnesota Statutes § 144.651, Health Care Bill of Rights — subdivision 29, Transfers and discharges (excerpt) | https://www.revisor.mn.gov/statutes/cite/144.651 | source date: see the section's own history notes in the Revisor's page | retrieved: 2026-09-17
 144.651 HEALTH CARE BILL OF RIGHTS.
@@ -1226,79 +1224,4 @@ Published Electronically:
 
 
  October 21, 2014
-
-SOURCE 6: Minnesota Rules 4658.0465, Transfer, discharge, and death | https://www.revisor.mn.gov/rules/4658.0465/ | source date: Published Electronically: October 11, 2007 | retrieved: 2026-09-17
-4658.0465 TRANSFER, DISCHARGE, AND DEATH.
-
-
-
-§
-
-Subpart 1.
-
-
-Discharge summary at death.
-
-
-When a resident dies, the nursing home must compile a discharge summary that includes the date, time, and cause of death.
-
-
-
-
-
-§
-
-Subp. 2.
-
-
-Other discharge.
-
-
-When a resident is transferred or discharged for any reason other than death, the nursing home must compile a discharge summary that includes the date and time of transfer or discharge, reason for transfer or discharge, transfer or discharge diagnoses, and condition.
-
-
-
-
-
-§
-
-Subp. 3.
-
-
-Transfer or discharge to another facility.
-
-
-When a resident is transferred or discharged to another health care facility or program, the nursing home must send the discharge summary compiled according to subpart 2, and pertinent information about the resident's immediate care and sufficient information to ensure continuity of care prior to or at the time of the transfer or discharge to the other health care facility or program. Additional information not necessary for the resident's immediate care may be sent to the new health care facility or program at the time of or after the transfer or discharge.
-
-
-
-
-
-
-
-
-Statutory Authority:
-
-
-MS s 144A.04; 144A.08; 256B.431
-
-
-
-
-
-
-History:
-
-
-20 SR 303
-
-
-
-
-
-
-Published Electronically:
-
-
- October 11, 2007
 

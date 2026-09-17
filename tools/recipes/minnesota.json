@@ -34,6 +34,40 @@
       "scope": "body",
       "filters": ["pipe-table-cells", "trim-lines"],
       "notes": "mn.gov sits behind Radware/ShieldSquare bot management (validate.perfdrive.com 302 challenge) -- curl gets a 302 to the challenge URL with or without a browser user-agent and cookie jar reuse across two requests, tested 2026-09-15. A real browser session (Claude Browser pane) reaches the page directly with no interstitial, so the block is a client-fingerprint check a genuine browser passes honestly rather than a request this project should script around; same category as Florida's session-reader sources. scope is body rather than a narrower selector because the two facts the page states -- the OOLTC description under div#content, and the mailing address/phone '540 Cedar Street / St. Paul, MN 55101 / 1-800-657-3591' under footer div.contact-info -- are siblings under body with no smaller common ancestor, and html-text takes one CSS selector (soup.select_one), not a list; the mailing address is the case PROVENANCE.md/CLAUDE.md calls out (Georgia's footer addressLink precedent) where the recipe must reach whatever node the agency puts the contact in."
+    },
+    {
+      "n": 4,
+      "title": "Minnesota Department of Health — Nursing Home Discharge Appeals",
+      "url": "https://www.health.state.mn.us/facilities/regulation/ohfc/appeals/nhda.html",
+      "source_date": "Last Updated: 06/25/2026 (page footer)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "section#page-content",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "health.state.mn.us returns HTTP 403 to curl's bare user-agent and 200 to a browser string, tested 2026-09-17; user_agent: browser. This is the department's own statement of the filing route for the hearing row: an online 'HRD Appeals Submission Form', the 30-day filing window, the 14-calendar-day hearing timing at the resident's facility, and the pendency protection -- all absent from the two statutes alone. section#page-content is the Drupal theme's content wrapper; it duplicates a 'Contact Info' sidebar block twice (a responsive-breakpoint artifact, two copies of the same short block for two CSS states), which is harmless to fidelity since the quoted prose itself appears once, contiguously."
+    },
+    {
+      "n": 5,
+      "title": "Minnesota Rules 9505.0415, Long-term care facilities; leave days",
+      "url": "https://www.revisor.mn.gov/rules/9505.0415/",
+      "source_date": "Published Electronically: October 21, 2014",
+      "transport": "curl",
+      "extractor": "html-text",
+      "scope": "#xtend",
+      "filters": ["pipe-table-cells", "trim-lines"],
+      "notes": "Same Revisor template, scope, and transport reasoning as sources 1 and 2. Plain curl, no user-agent needed, tested 2026-09-17. This is Minnesota's own Medicaid bed-hold/leave-day rule -- 'A reserved bed must be held for a recipient on hospital leave or therapeutic leave', with payment limited to 18 leave days per calendar year for hospital leave and separate per-facility-type limits for therapeutic leave. It states nothing about readmission after the limit is exceeded; that absence is recorded rather than filled."
+    },
+    {
+      "n": 6,
+      "title": "Minnesota Rules 4658.0465, Transfer, discharge, and death",
+      "url": "https://www.revisor.mn.gov/rules/4658.0465/",
+      "source_date": "Published Electronically: October 11, 2007",
+      "transport": "curl",
+      "extractor": "html-text",
+      "scope": "#xtend",
+      "filters": ["pipe-table-cells", "trim-lines"],
+      "notes": "Same Revisor template, scope, and transport reasoning as sources 1, 2 and 5. Plain curl, no user-agent needed, tested 2026-09-17. Captured to support the section 01 finding that Minnesota Rules chapter 4658 -- the state's nursing-home rule chapter, capture-pending since the baseline build -- does not enumerate transfer/discharge grounds anywhere in the chapter: the one part titled for the subject, 4658.0465, is a clinical-record documentation rule (what a discharge summary must contain, and that it be sent to a receiving facility), not a grounds provision. The chapter's other parts were read against the Revisor's own rule-listing page (https://www.revisor.mn.gov/rules/4658/, not itself captured as a source because nothing on the page quotes it) and none is titled or worded as a grounds provision either; that page's part titles are checked, not quoted."
     }
   ]
 }

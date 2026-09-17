@@ -10,26 +10,103 @@
 
 **Ombudsman in these sources.** The Office of the State Long-Term Care Ombudsman, which "offers free, confidential advocacy for Iowans living in nursing facilities, assisted living programs, residential care facilities, and elder group homes." Its published contact: "Toll-Free: 866-236-1430", "Email: sltco@hhs.iowa.gov" and "321 E. 12th Street, 2nd Floor Des Moines, IA 50319". The mailbox is obfuscated in the site's own markup and reached a reader not running scripts as placeholder text rather than as an address; it is quoted here from a capture that decodes the obfuscation. On this subject the office states: "Residents have important rights during transfers or discharges. This includes receiving written notice and having the opportunity to appeal."
 
-**Sources last checked.** 2026-09-04
+**Sources last checked.** 2026-09-17
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 
 ## Lede
 
-This page assembles what Iowa's own publishers state about involuntary transfer and discharge from a nursing facility. It is a baseline page: the docket rows and the source map are built; the grounds section and the published-process section are not yet written, as the change log records. The fullest single source is 481 IAC 58.40(135C), which states the grounds, the thirty-day notice, the notice's required contents, the emergency route, and — printed in full inside the rule, as the text a facility must put on the notice — the appeal instructions with a telephone number and a postal address. Iowa's vocabulary is *involuntary discharge or transfer*; the appeal is a hearing before the state inspections agency.
+This page assembles what Iowa's own publishers state about involuntary transfer and discharge from a nursing facility. The fullest single source is 481 IAC 58.40(135C), which states the grounds, the thirty-day notice, the notice's required contents, the emergency route, the hearing procedure, and — printed in full inside the rule, as the text a facility must put on the notice — the appeal instructions with a telephone number and a postal address. A second rule, 441 IAC 81.8(249A), the Medicaid nursing-facility payment chapter, states the bed-hold periods. Iowa's vocabulary is *involuntary discharge or transfer*; the appeal is a hearing before the state inspections agency, Iowa's Department of Inspections and Appeals.
 
-The appeal window is seven days after receiving the notice, the shortest in this index. Read with what follows it — a hearing within fourteen days, no transfer before a final decision, and, if the resident loses, no transfer before the later of thirty days from the notice or five days from the decision — Iowa states more of the sequence on the face of the notice than any state built so far. The federal floor for Medicare/Medicaid-certified facilities is assembled separately on [the federal page](../federal.html); nothing here fills a gap from federal law or another state. Confirm applicability with the agencies named in the sources: whether any provision applies to a particular facility, resident, or notice is for the hearing office to determine. Deadlines and periods on this page are quoted from the sources, not calculated for any case.
+The appeal window is seven days after receiving the notice, the shortest in this index. Read with what follows it — a hearing within fourteen days, no transfer before a final decision, and, if the resident loses, no transfer before the later of thirty days from the notice or five days from the decision — Iowa states more of the sequence on the face of the notice than any other state built so far. The federal floor for Medicare/Medicaid-certified facilities is assembled separately on [the federal page](../federal.html); nothing here fills a gap from federal law or another state. Confirm applicability with the agencies named in the sources: whether any provision applies to a particular facility, resident, or notice is for the hearing office to determine. Deadlines and periods on this page are quoted from the sources, not calculated for any case.
+
+## 01 — The grounds, as Iowa describes them
+
+481 IAC 58.40(1), "Involuntary discharge or transfer permitted" ([Iowa Legislature, Iowa Administrative Code (PDF)](https://www.legis.iowa.gov/docs/iac/rule/481.58.40.pdf), retrieved 2026-09-17), states that "A facility may involuntarily discharge or transfer a resident for only one of the following reasons:", in the rule's own order:
+
+a. "Medical reasons;"
+
+b. "The resident's welfare or that of other residents;"
+
+c. "Nonpayment for the resident's stay, as described in the contract for the resident's stay;"
+
+d. "Due to action pursuant to Iowa Code chapter 229;"
+
+e. "By reason of negative action by the Iowa department of human services; or"
+
+f. "By reason of negative action by the quality improvement organization (QIO)."
+
+Three subrules elaborate three of the six. On medical reasons, 58.40(2): "Medical reasons for transfer or discharge shall be based on the resident's needs and shall be determined and documented in the resident's record by the primary care provider. Transfer or discharge may be required in order to provide a different level of care to the resident." On welfare, 58.40(3): "Welfare of a resident or that of other residents refers to a resident's social, emotional, or physical well-being. A resident may be transferred or discharged because the resident's behavior poses a continuing threat to the resident (e.g., suicidal) or to the well-being of other residents or staff (e.g., the resident's behavior is incompatible with other residents' needs and rights). Written documentation that the resident's continued presence in the facility would adversely affect the resident's own welfare or that of other residents shall be made by the administrator or designee and shall include specific information to support this determination." And on nonpayment, 58.40(8): "If nonpayment is the basis for involuntary transfer or discharge, the resident shall have the right to make full payment up to the date that the discharge or transfer is to be made and then shall have the right to remain in the facility."
+
+A prohibition sits beside the grounds rather than among them, 58.40(4): "A resident shall not be transferred or discharged solely because the cost of the resident's care is being paid under Iowa Code chapter 249A or because the resident's source of payment is changing from private support to payment under Iowa Code chapter 249A."
+
+The rule's paragraphs carry parenthesised class citations — "(I, II, III)", "(II)" — which are the department's own violation-class markers; they are reproduced where they fall inside quoted text and are not explained further by any source captured for this page.
+
+## 02 — The published process
+
+### Requesting the hearing
+
+481 IAC 58.40(7)(a): "Request for hearing. (1) The resident must request a hearing within 7 days of receipt of the written notice. (2) The request must be made to the department, either in writing or verbally." Paragraph (b): "The hearing shall be held no later than 14 days after the department's receipt of the request unless either party requests an extension due to emergency circumstances." The pendency statement is paragraph (c): "Except in the case of an emergency discharge or transfer, a request for a hearing shall stay a transfer or discharge pending a final decision, including the exhaustion of all appeals."
+
+On who decides and who carries the burden, paragraph (d): "The hearing shall be heard by a department of inspections and appeals administrative law judge pursuant to Iowa Code chapter 17A and 7—Chapter 2506. The hearing shall be public unless the resident or resident's legal representative requests in writing that the hearing be closed. In a determination as to" — the rule's own page break falls here — "whether a transfer or discharge is authorized, the burden of proof by a preponderance of the evidence rests on the party requesting the transfer or discharge." On timing after the request, paragraph (e): "Notice of the date, time, and place of the hearing shall be sent by certified mail or delivered in person to the facility, the resident, the responsible party, and the office of the long-term care ombudsman not later than 5 full business days after the department's receipt of the request." And on the decision, paragraph (f): "The administrative law judge's written decision shall be mailed by certified mail to the facility, resident, responsible party, and the office of the long-term care ombudsman within 10 working days after the hearing has been concluded."
+
+Where the discharge is grounded in a state or QIO determination rather than the facility's own judgment, the route diverges, paragraph (g): "If the basis for an involuntary transfer or discharge is the result of a negative action by the Iowa department of human services or the QIO, an appeal shall be filed with those agencies as appropriate. Continued payment shall be consistent with rules of those agencies." No street address or form for the standard written request is stated beyond the rule's own contact line, quoted in full in the docket and in the notice text below.
+
+### The notice's required contents
+
+58.40(5): "Involuntary transfer or discharge of a resident from a facility shall be preceded by a written notice to the resident and the responsible party." Paragraph (a) lists the contents: "The stated reason for the proposed transfer or discharge.", "The effective date of the proposed transfer or discharge.", and "A statement, in not less than 12-point type, that reads as follows:" — the full text quoted in the docket and in the notice-periods register below. Paragraph (b) states the distribution: "The notice shall be personally delivered to the resident and a copy placed in the resident's record. A copy shall also be transmitted to the department; the resident's responsible party; the resident's primary care provider; the person or agency responsible for the resident's placement, maintenance, and care in the facility; and the department on aging's office of the long-term care ombudsman. The notice shall indicate that copies have been transmitted to the required parties by using the abbreviation "cc:" and listing the names of all parties to whom copies were sent."
+
+The emergency track carries its own, differently worded notice statement, 58.40(6): "In the case of an emergency transfer or discharge, the resident must be given a written notice prior to or within 48 hours following the transfer or discharge." That notice's own 12-point-type statement differs from the standard one in a way that matters to a reader: "You have a right to appeal the facility's decision to transfer or discharge you on an emergency basis. If you think you should not have to leave this facility, you may request a hearing, in writing or verbally, with the Iowa department of inspections and appeals (hereinafter referred to as “department”) within 7 days after receiving this notice. You have a right to be represented at the hearing by an attorney or any other individual of your choice. If you request a hearing, it will be held no later than 14 days after the department's receipt of your request. You may be transferred or discharged before the hearing is held or before a final decision is rendered. If you win the hearing, you have the right to be transferred back into the facility." Unlike the standard track, a timely emergency-track request does not state a stay: the resident "may be transferred or discharged before the hearing is held or before a final decision is rendered." A resident who wins is stated to have "the right to be transferred back into the facility" — a right of return, rather than the standard track's right against being moved at all.
+
+### Bed-hold and return
+
+441 IAC 81.8(249A), "Payment procedures" ([Iowa Legislature, Iowa Administrative Code, chapter 81 (PDF)](https://www.legis.iowa.gov/docs/iac/chapter/05-13-2026.441.81.pdf), "[ARC 9279C, IAB 5/14/25, effective 7/1/25]", retrieved 2026-09-17), is Iowa's Medicaid nursing-facility payment rule, and states the bed-hold periods 481 IAC 58.40 does not. Subrule 81.8(3) states, among the "Periods authorized for payment": "d. Payment will be approved for periods the resident is absent overnight for purpose of visitation or vacation. The facility will be paid to hold the bed for a period not to exceed 18 days in any calendar year. Additional days shall be based upon a recommendation by the resident's physician in the plan of care that additional days would be rehabilitative." And for a hospital absence: "e. Payment will be approved for a period not to exceed 10 days in any calendar month when the resident is absent due to hospitalization. Medicaid payment to the facility may not be initiated while a resident is on reserve bed days unless the person was residing in the facility as a private pay resident prior to the hospitalization and returns to the facility as a resident."
+
+The Medicaid rule states nothing about a resident's right to return to a particular bed once a leave-day limit is exceeded, and 481 IAC 58.40 states nothing about bed-hold at all; both absences are stated rather than filled from the other. Iowa's transfer-and-discharge rule does state a general planning duty relevant to any move, 58.40(10)(e): "The health care facility that receives a resident who has been involuntarily transferred shall immediately formulate and implement a plan of care which takes into account possible adverse effects the transfer may cause." At 58.40(9), within 48 hours of an involuntary-transfer notice "the facility shall discuss the involuntary transfer or discharge with the resident, the resident's responsible party, and the person or agency responsible for the resident's placement, maintenance, and care in the facility" — neither of which is a bed-hold or readmission statement.
+
+*The three rows above hoist the questions a facility's counsel answers in the first fifteen minutes. They are quotations from Iowa's published sources, not a determination that any of them applies to any situation.*
+
+### Notice periods and deadlines, as stated in the sources
+
+All quoted; none calculated.
+
+Thirty days' advance notice — 58.40(5)c: "The notice required by paragraph 58.40(5)"a" shall be provided at least 30 days in advance of the proposed transfer or discharge unless one of the following occurs:" — an emergency mandated by the resident's health care needs, the resident's or responsible party's subsequent agreement, or a final, nonappealable DHS or QIO decision.
+
+Forty-eight hours for the emergency notice — 58.40(6), quoted in full above.
+
+Seven days to request the hearing — 58.40(7)(a)(1), quoted in full above; the same period is printed on the face of the standard and emergency notices.
+
+Fourteen days to the hearing — 58.40(7)(b), quoted in full above.
+
+Five full business days to notice of the hearing's date, time, and place — 58.40(7)(e), quoted in full above.
+
+Ten working days to the decision after the hearing concludes — 58.40(7)(f), quoted in full above.
+
+Thirty days from the original notice, or five days from a final decision, whichever is later, if the resident loses the standard-track hearing — the notice statement quoted in full in the docket.
+
+Sixty days for an orderly transfer of residents on a facility's voluntary closure — 58.40(11): "In the case of the voluntary closure of a facility, a period of 60 days must be allowed for an orderly transfer of residents to other facilities."
+
+Eighteen days per calendar year of Medicaid bed-hold for visitation or vacation, and ten days per calendar month for hospitalization — 441 IAC 81.8(3)"d" and "e", quoted in full above.
+
+What any of these periods means for a particular case is for the hearing office to determine.
 
 ## 03 — Source map
 
 | Document | Publisher and location | Source's own date | Retrieved |
 | --- | --- | --- | --- |
-| 481 IAC 58.40(135C), Involuntary discharge or transfer (PDF) | [Iowa Legislature, Iowa Administrative Code](https://www.legis.iowa.gov/docs/iac/rule/481.58.40.pdf) | none stated beyond the chapter running head | 2026-08-30 |
-| Office of the State Long-Term Care Ombudsman | [Iowa Department of Health and Human Services](https://hhs.iowa.gov/family-community/aging-services/ltc-ombudsman) | page updated 2026-08-13 | 2026-08-30 |
+| 481 IAC 58.40(135C), Involuntary discharge or transfer (PDF) | [Iowa Legislature, Iowa Administrative Code](https://www.legis.iowa.gov/docs/iac/rule/481.58.40.pdf) | rule history: ARC 1752C (eff. 1/14/15), ARC 3523C (eff. 1/24/18), ARC 7033C (eff. 7/5/23); editorial change, IAC Supplement 8/5/26 | 2026-09-17 |
+| Office of the State Long-Term Care Ombudsman | [Iowa Department of Health and Human Services](https://hhs.iowa.gov/family-community/aging-services/ltc-ombudsman) | page updated 2026-08-13 | 2026-09-17 |
+| 441 IAC 81.8(249A), Payment procedures (chapter 81, PDF) | [Iowa Legislature, Iowa Administrative Code](https://www.legis.iowa.gov/docs/iac/chapter/05-13-2026.441.81.pdf) | ARC 9279C, IAB 5/14/25, effective 7/1/25 | 2026-09-17 |
 
-Captured: both, in tools/packets/iowa-packet.txt. Pending: Iowa Code § 135C.14, a current statement of the appeal route under the state's reorganised agencies, the Involuntary Discharge Brochure, and any statement of a bed-hold period — per the packet's pending list.
+Captured: all three, in tools/packets/iowa-packet.txt. Pending: Iowa Code § 135C.14, a current statement of the appeal route under the state's reorganised agencies, and the Involuntary Discharge Brochure named on the ombudsman's page but not itself captured — per the packet's pending list.
 
 ## 04 — Change log
+
+2026-09-17 — Deepened from baseline to full page. Findings (8) through (10) continue the earlier entries' numbering.
+
+Newly captured: 441 IAC 81.8(249A), "Payment procedures" (source 3), Iowa's Medicaid nursing-facility payment chapter, which states the bed-hold periods the transfer-and-discharge rule does not. Captured by plain curl with a browser user-agent, from the whole-chapter PDF at legis.iowa.gov (no single-rule PDF address exists for 81.8 the way it does for 481-58.40); the chapter renders single-column throughout, so `pdftotext -layout` preserves reading order with no interleaving, unlike Missouri's or Arizona's two-column renders. Sources 1 and 2 were re-captured unchanged from their existing recipe entries.
+
+Findings: (8) 481 IAC 58.40's own history line, printed at the end of the rule text and previously described on this page as "none stated on document beyond the IAC chapter running head," in fact states four effective dates across three rulemakings plus an editorial change dated 8/5/26; the source map is corrected to state them rather than the absence. This text was already inside the standing packet's source 1 at every prior capture; it went unquoted because no one had read to the end of the PDF extraction, not because the source changed. (9) Iowa's emergency-transfer track (58.40(6)) carries a materially different appeal statement from the standard track: a timely request does not stay the move (the resident "may be transferred or discharged before the hearing is held or before a final decision is rendered"), and a resident who wins is stated to have "the right to be transferred back into the facility" rather than a right against being moved in the first place. Both tracks share the same seven-day request window and fourteen-day hearing deadline. (10) The Medicaid bed-hold rule (441 IAC 81.8(3)) states two different limits by absence type — 18 days per calendar year for visitation or vacation, 10 days per calendar month for hospitalization, the latter conditioned on private-pay status before the hospitalization — and states nothing about a resident's right to a particular bed once either limit is exceeded; 481 IAC 58.40 states nothing about bed-hold at all. Both absences are stated rather than filled from the other, and neither is filled from the federal page. Recipe: tools/recipes/iowa.json extended with source 3 (existing sources 1-2 unchanged); recipe digest db5675492fce. Markdown and HTML fidelity: zero failures against the three-source packet. Capture pending: per the source map. Internet Archive: not yet submitted for the new source. Reviewer: Carrie Schluter (review pending for this entry).
 
 2026-09-04 — Ombudsman mailbox recovered; sources re-checked. Both sources were re-fetched and the packet rebuilt under decode_cfemail, added to the shared capture reader on 2026-09-03. The Office of the State Long-Term Care Ombudsman's email address, which the earlier capture recorded only as Cloudflare's placeholder text, decodes and is now quoted in the ombudsman row beside the telephone number and postal address it is published with: "Email: sltco@hhs.iowa.gov". The site states it at four points; it is one address, not four. The address was always published — the earlier capture recorded what the tool saw rather than what the office stated. Findings: (7) nothing else in either source changed; the only differences in the rebuilt packet are the decoded address, retrieval dates, and capture-header metadata, and no quotation on this page changed. Both the markdown and the HTML check at zero failures against the rebuilt packet. Section 01 and section 02 remain unwritten, as the 2026-08-30 entry records. Internet Archive: not yet submitted. Reviewer: Carrie Schluter, reviewed 2026-09-04. Corrections: hello@fieldassembly.net.
 
