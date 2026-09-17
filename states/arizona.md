@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The program's own page: "Office of Arizona State Long-Term Care Ombudsman Program" "1789 W. Jefferson Street, Mail Drop 6288" "Phoenix, Arizona 85007" "Phone: (602) 542-6454 extension 9" "Email:ltcop@azdes.gov". The page routes complaints to eight regional programs by county — for Maricopa County, "Area Agency on Aging, Region One" "(602) 264-4357"; for Pima County, "Pima Council on Aging" "(520) 790-7262" — and lists the rest.
 
-**Sources last checked.** 2026-09-04
+**Sources last checked.** 2026-09-17
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

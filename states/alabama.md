@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Long Term Care Ombudsman program: "The Alabama Department of Senior Services administers a Long Term Care Ombudsman" program "that provides services to protect individuals residing in nursing facilities, assisted living facilities, specialty care facilities and boarding homes." The guide publishes one contact route: "Call" "1-800-AGELINE to reach your local Ombudsman." — a word, not a digit string, as the guide prints it. The rule requires the facility's own notice to carry the state ombudsman's name, address and telephone number.
 
-**Sources last checked.** 2026-09-16
+**Sources last checked.** 2026-09-17
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

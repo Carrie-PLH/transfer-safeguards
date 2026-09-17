@@ -282,3 +282,63 @@ pass may not make.
 No queue entries opened.
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-09-10.
+
+## 2026-09-17 — rotation pass: alabama, alaska, arizona (all confirmed)
+
+Run to close the gap the portfolio QC backstop reported for this collection: the
+2026-09-17 nightly pass covered sped-safeguards, gathered work and licensure
+mobility and did not reach transfer-safeguards, whose last entry here was
+2026-09-10. Recipe backfill was not attempted; the three states still without
+recipes already carry their blockers in the portfolio queue (FA-Q-20260917-04
+for massachusetts, FA-Q-20260917-03 for south-dakota, which also records the
+new-hampshire transport refusal), and re-reporting them would have duplicated
+entries opened the same day. The rotation was taken instead, from the cursor at
+alabama.
+
+**The alabama drift that prompted this pass was not drift.** The backstop report
+recorded twenty-plus quotation failures against the standing packet and read
+them as movement since capture. They reproduce exactly when `check-fidelity.py`
+is given the main packet alone — forty-six failures, every one of them a
+quotation from the CMS transfer and discharge rule plus the
+`admincode.legislature.state.al.us` hostname — and they vanish when
+`alabama-packet-rule.txt` and `alabama-packet-complaints.txt` are passed with
+it. This page depends on two supplements and is the only page in this
+rotation that does; the report also dated the baseline to 2026-08-30 where the
+standing packet read `ASSEMBLED: 2026-09-16`. Nothing had moved. This is the
+false-drift case the reviewer skill warns about, and it cost a page its checked
+date for a week.
+
+Captures were taken with `tools/capture.py` from each state's recipe on the host
+carrying the pinned poppler 26.07.0. The sandbox shell available to an
+unattended session carries poppler 22.02.0 and `capture.py` correctly refuses
+PDF extraction under it, so any pass that touches a PDF-sourced packet has to
+run on the pinned host — alabama source 1, alaska source 5 and arizona sources 1
+and 2 are all PDFs, so all three states in this rotation are affected.
+
+Results. alabama confirmed, hash 6f01a0d2a3b1603e, 2 sources, recipe
+8736087ebf91. alaska confirmed, hash 07e3ac276d05bdec, 8 sources, recipe
+bd40de4590dd. arizona confirmed, hash dbff48a8feff9d3c, 4 sources, recipe
+ac7e57b789e8. All six surfaces — three `states/<slug>.md` and three
+`site/states/<slug>.html` — returned zero failures against the fresh captures,
+and returned zero again after the checked dates were advanced and the pages
+re-derived through `render-state.py` and `sync-checked-dates.py`.
+
+Source headers moved only in their retrieval dates. No URL redirected, no source
+stated a new date, and nothing in this rotation looks like replacement rather
+than revision: arizona source 1 still reads Supp. 26-1, March 31, 2026 with its
+Historical Note recording the October 1, 2019 amendment, and alaska source 5
+still reads Revised 2/1/2025. No `superseded` entry is warranted.
+
+One finding worth recording. `retain-packet.py` flagged alabama source 2 as
+carrying less text than the previous capture, 5,416 characters down to 4,848.
+The difference is markup residue — `div`, `section` and `button` fragments that
+leaked into the 2026-09-04 capture of the Filing Complaints page and are now
+dropped before extraction — and not a word of published content. It is the
+extractor change made under FA-Q-20260904-08, which is closed. The recipe digest
+did not move across it, because the digest covers the recipe file and not the
+extractor build; DECISIONS.md already treats that class of change as
+digest-inert and settled, so this is recorded here rather than raised again.
+
+Cursor advanced from alabama to arkansas. No queue entries opened or bumped.
+
+Reviewer: session pass recovering the 2026-09-17 portfolio QC gap.

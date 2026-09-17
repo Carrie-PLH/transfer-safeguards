@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Office of Long Term Care Ombudsman, on its own site: "Call (907) 334-4480 or 1-800-730-6393." "3745 Community Park Loop, Suite 200" "Anchorage, Alaska 99508" "fax: (907) 334-4486" "email: akoltco@alaska.gov". The office states that "Alaska’s LTC Ombudsman program is in the Department of Revenue and administered by the Alaska Mental Health Trust Authority."
 
-**Sources last checked.** 2026-09-04
+**Sources last checked.** 2026-09-17
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

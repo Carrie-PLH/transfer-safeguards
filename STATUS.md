@@ -11,9 +11,9 @@ the state's own published translation only.
 
 | State | Baseline | Full page | Spanish | Sources last checked |
 |---|:---:|:---:|:---:|---|
-| [Alabama](site/states/alabama.html) | [x] | [x] | [ ] | Sep 16, 2026 |
-| [Alaska](site/states/alaska.html) | [x] | [ ] | [ ] | Sep 4, 2026 |
-| [Arizona](site/states/arizona.html) | [x] | [ ] | [ ] | Sep 4, 2026 |
+| [Alabama](site/states/alabama.html) | [x] | [x] | [ ] | Sep 17, 2026 |
+| [Alaska](site/states/alaska.html) | [x] | [ ] | [ ] | Sep 17, 2026 |
+| [Arizona](site/states/arizona.html) | [x] | [ ] | [ ] | Sep 17, 2026 |
 | [Arkansas](site/states/arkansas.html) | [x] | [ ] | [ ] | Sep 4, 2026 |
 | [California](site/states/california.html) | [x] | [x] | [ ] | Sep 4, 2026 |
 | [Colorado](site/states/colorado.html) | [x] | [ ] | [ ] | Aug 30, 2026 |
