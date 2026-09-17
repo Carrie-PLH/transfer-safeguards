@@ -458,6 +458,44 @@ HIDDEN_STYLE_RE = re.compile(
     re.IGNORECASE)
 
 
+# A disclosure panel is hidden because it starts closed, not because the
+# publisher meant it unread. Liberty is the case that forced the distinction
+# (2026-09-13): its CRC-attendance, grade-notation, appeal-window and
+# appeal-finality language sits in
+# <div role="region" class="accordion_object_collapsible_content"
+#      style="display:none"> under headers carrying aria-expanded="false".
+# Dropping those took the page's #main text from 14,432 characters to 2,654 and
+# made four published quotations untraceable - and worse, could have let a page
+# record "not stated in the sources reviewed" about something the institution
+# does state, one click away.
+#
+# The counter-case has to keep working, which is why this is narrow rather than
+# a blanket "keep hidden nodes". SJSU's student-conduct page carries
+# <div id="hidden" style="display:none;"> holding an OmniUpdate direct-edit
+# link, and dropping that is what let a review catch the page dating a source
+# from a CMS edit marker no reader can see. That div has no role, no disclosure
+# class and no aria-labelledby, so it still goes.
+#
+# Kept: role="region"; a class naming a disclosure widget; aria-labelledby,
+# which is how a panel points back at its own trigger. Everything else marked
+# hidden is still removed.
+DISCLOSURE_CLASS_RE = re.compile(
+    r'accordion|collaps|tab-pane|tabpanel|disclosure|expander|toggle-content',
+    re.IGNORECASE)
+
+
+def looks_like_disclosure_panel(tag):
+    """True when a hidden element is a collapsed panel rather than chrome."""
+    if (tag.get('role') or '').strip().lower() == 'region':
+        return True
+    if tag.get('aria-labelledby'):
+        return True
+    cls = tag.get('class') or []
+    if isinstance(cls, str):
+        cls = [cls]
+    return bool(DISCLOSURE_CLASS_RE.search(' '.join(cls)))
+
+
 def strip_nonvisible_nodes(soup):
     """Drop comments and hidden elements from a parsed document, in place.
 
@@ -465,6 +503,10 @@ def strip_nonvisible_nodes(soup):
     decode_cfemail_nodes does: callers differ in how they build the soup and
     what they do with it afterwards. Returns (comments, hidden) so a caller
     that wants to report what it removed can.
+
+    Content hidden only because a disclosure widget starts collapsed is kept;
+    see looks_like_disclosure_panel above for what that means and why the rule
+    is narrow.
 
     Called before any text walk. A comment removed after the walk has already
     reached the packet."""
@@ -481,6 +523,8 @@ def strip_nonvisible_nodes(soup):
     marked = soup.find_all(style=HIDDEN_STYLE_RE) + soup.find_all(hidden=True)
     for bad in marked:
         if getattr(bad, 'decomposed', False):
+            continue
+        if looks_like_disclosure_panel(bad):
             continue
         bad.decompose()
         hidden += 1
@@ -820,6 +864,36 @@ def self_test():
             '<p style="-webkit-box-display:none">also shown</p>', 'html.parser')
         c, h = strip_nonvisible_nodes(keep)
         check(h == 0, 'a visible element was matched as hidden')
+
+        # A collapsed disclosure panel is kept; a hidden CMS edit link is not.
+        # Both halves are pinned because the second is what lets a review catch
+        # a page dating a source from a marker no reader sees (sjsu,
+        # FA-Q-20260912-08), and the first is what stopped a page's published
+        # appeal provisions from vanishing out of its own packet (liberty,
+        # FA-Q-20260913-06).
+        panel = BeautifulSoup(
+            '<main id="main"><div class="accordion_object_collapsible_content" '
+            'role="region" style="display:none">Appeal window of 7 calendar '
+            'days.</div>'
+            '<div id="hidden" style="display:none;">'
+            '<a href="https://a.cms.example/edit">Last Updated Aug 16, 2026</a>'
+            '</div></main>', 'html.parser')
+        c, h = strip_nonvisible_nodes(panel)
+        text = panel.get_text(' ', strip=True)
+        check('Appeal window of 7 calendar days.' in text,
+              'a collapsed accordion panel was dropped as non-visible')
+        check('Last Updated Aug 16, 2026' not in text,
+              'a hidden CMS edit link survived the non-visible strip')
+        check(h == 1, f'expected one hidden element removed, removed {h}')
+
+        # The rule reads the element, not its text: a hidden div with no
+        # disclosure marking goes even when it holds prose.
+        plain = BeautifulSoup(
+            '<div style="display:none">Some prose nobody can see.</div>',
+            'html.parser')
+        strip_nonvisible_nodes(plain)
+        check('Some prose nobody can see.' not in plain.get_text(' ', strip=True),
+              'an unmarked hidden div was kept')
 
     # Legacy binary .doc. The magic-byte sniff is tested unconditionally; the
     # conversion only where a converter is actually installed, so this file
