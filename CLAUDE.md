@@ -97,6 +97,32 @@ readers are families trying to complain about a facility.
 
 If a packet holds `[email protected]`, the capture is stale, not the source.
 
+## The capture host is the Mac, not whatever shell you are in
+
+`capture.py` pins the poppler and pdfplumber builds (FA-Q-20260903-06), because
+the build is an input to the extracted text: the same PDF under a different
+poppler produces a different body, and that difference reads downstream as
+source drift. The pin makes a capture stop rather than produce a body nobody
+can reproduce. That part works and is not the thing to be careful about.
+
+The thing to be careful about is which machine you are on. A Cowork session's
+device shell is a Linux VM with the repo mounted, and it is **not** the Mac the
+routines run on: on 2026-09-17 it carried poppler 22.02.0 where the pinned
+build is 26.07.0, and a review pass learned this one source at a time, after
+the fetching, from a per-source failure line. Two repos also need their own
+interpreter rather than the system one — `tools/.venv/bin/python` — and
+`capture.py` will fail in that shell for a reason that has nothing to do with
+the source.
+
+So before any capture work, in the interpreter you actually intend to use:
+
+    python3 tools/capture.py --preflight
+
+It checks both pins against what this repo's recipes actually reach for, prints
+one line each, and exits nonzero with the reason if the host cannot reproduce
+this repo's captures. It fetches nothing, so it costs a second. Run the capture
+on the Mac through Desktop Commander when it fails.
+
 ## Doctrine — the long-horizon frame (read before optimizing anything)
 
 Field Assembly is privately funded institution-building, not a startup. The

@@ -1487,6 +1487,67 @@ def self_test():
     return 0 if ok else 1
 
 
+def cmd_preflight():
+    """Say whether this host can extract what this repo's recipes need.
+
+    The pins exist so a capture stops rather than silently producing a body
+    nobody can reproduce (FA-Q-20260903-06), and they work. What they did not
+    do is say so early: a session on the wrong host learned it one source at a
+    time, after the fetching, from a per-source failure line -- which on
+    2026-09-17 is exactly how a review pass discovered that a Cowork session's
+    device shell is not the Mac the pinned poppler is installed on.
+
+    So this runs the same two checks before anything is fetched, and reports
+    against what the recipes here actually use: a repo whose recipes never
+    reach for pdfplumber is not blocked by pdfplumber being absent.
+
+    Exit 0 when every extractor this repo needs is available, 1 when one is
+    not, naming which and what the pin is.
+    """
+    import glob as _glob
+    import json as _json
+    extractors = set()
+    for path in sorted(_glob.glob(os.path.join(RECIPES, '*.json'))):
+        try:
+            with open(path, encoding='utf-8') as fh:
+                data = _json.load(fh)
+        except Exception as e:
+            print(f'preflight: cannot read {path}: {e}', file=sys.stderr)
+            return 1
+        for src in (data.get('sources') or []):
+            if isinstance(src, dict) and src.get('extractor'):
+                extractors.add(str(src['extractor']))
+
+    needs = [
+        ('poppler', POPPLER_PIN, require_poppler,
+         any(e.startswith('pdftotext') for e in extractors)),
+        ('pdfplumber', PDFPLUMBER_PIN, require_pdfplumber,
+         any('pdfplumber' in e for e in extractors)),
+    ]
+    failed = False
+    for name, pin, check, needed in needs:
+        if not needed:
+            print(f'  {name:<11} not needed — no recipe here uses it')
+            continue
+        try:
+            got = check()
+        except Exception as e:
+            failed = True
+            print(f'  {name:<11} FAIL — {e}')
+        else:
+            print(f'  {name:<11} ok — {got} (pinned {pin})')
+    if failed:
+        print('\npreflight failed: this host cannot reproduce this repo\'s '
+              'captures. Run the capture where the pinned build is installed '
+              'rather than here; a Cowork session\'s device shell and the '
+              'machine the routines run on are not the same host.',
+              file=sys.stderr)
+        return 1
+    print('\npreflight ok: every extractor this repo\'s recipes use is '
+          'available at its pin.')
+    return 0
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(add_help=True, description=__doc__.split('\n')[0])
     p.add_argument('slug', nargs='?')
@@ -1497,10 +1558,13 @@ def main(argv=None):
     p.add_argument('--lint', action='store_true')
     p.add_argument('--digest', action='store_true')
     p.add_argument('--self-test', action='store_true')
+    p.add_argument('--preflight', action='store_true')
     a = p.parse_args(argv)
 
     if a.self_test:
         return self_test()
+    if a.preflight:
+        return cmd_preflight()
     if a.lint:
         return cmd_lint(a)
     if a.digest:
