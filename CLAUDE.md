@@ -14,6 +14,17 @@ items, handoffs that have not been marked completed, and the most recent
 decision IDs. `--gates` runs each predeploy gate; `--parity` counts page/source
 parity where a renderer exists. Report what it prints, not what you recall.
 
+It also lists pages whose reviewer line still says the review has not happened.
+Those pages block that repo's deploy: the gate refuses to publish them. When
+the owner asks for a deploy across all repos, run
+
+    python3 ../field-assembly-standard/tools/deploy-all.py
+
+which reports those pages first, then deploys and pushes every repo that is
+clear, and names the ones it held back. Do not hand-run deploy.sh repo by repo
+for a portfolio-wide deploy; a silent no-op across four repos is what this
+tool exists to prevent.
+
 Before opening a question that could already have been settled, grep
 `field-assembly-standard/DECISIONS.md` for it. On 2026-09-07 a session spent an
 hour describing Board & Border as broken two days after the cure shipped, and
