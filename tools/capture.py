@@ -1506,6 +1506,22 @@ def cmd_preflight():
     """
     import glob as _glob
     import json as _json
+
+    # Blame the interpreter before blaming the host. Every repo here runs its
+    # captures under tools/.venv, and a missing pdfplumber or curl_cffi under
+    # bare python3 is not a fact about this machine -- it is the wrong
+    # interpreter, and reporting it as a pin failure sends a session looking
+    # for a host problem that does not exist. Said first, and only when the
+    # venv is actually there, so a genuinely absent venv still reads as one.
+    venv = os.path.join(os.path.dirname(os.path.abspath(__file__)), '.venv')
+    if os.path.isdir(venv) and os.path.realpath(sys.prefix) != \
+            os.path.realpath(venv):
+        print(f'  interpreter WRONG — running under prefix {sys.prefix}')
+        print(f'               this repo captures under {venv}')
+        print('               re-run: tools/.venv/bin/python tools/capture.py '
+              '--preflight')
+        return 1
+
     extractors = set()
     for path in sorted(_glob.glob(os.path.join(RECIPES, '*.json'))):
         try:

@@ -114,9 +114,10 @@ interpreter rather than the system one — `tools/.venv/bin/python` — and
 `capture.py` will fail in that shell for a reason that has nothing to do with
 the source.
 
-So before any capture work, in the interpreter you actually intend to use:
+So before any capture work, run it — under this repo's own interpreter, which
+is the venv and not the system python3:
 
-    python3 tools/capture.py --preflight
+    tools/.venv/bin/python tools/capture.py --preflight
 
 It checks both pins against what this repo's recipes actually reach for, prints
 one line each, and exits nonzero with the reason if the host cannot reproduce
