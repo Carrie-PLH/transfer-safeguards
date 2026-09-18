@@ -599,7 +599,7 @@ the HTML. Tennessee's notice footnotes its grounds with asterisks and hit
 this; the HTML fidelity check catches it, which is how it was found. Quote
 around the asterisk, or fix the renderer if a state's text ever needs one.
 
-## The archive layer (added 2026-09-04, pending review)
+## The archive layer (added 2026-09-04, reviewed 2026-09-18)
 
 `tools/spn.py` requests Internet Archive Save Page Now captures for sources a
 state page links but has no `web.archive.org` link for. It reads the state
