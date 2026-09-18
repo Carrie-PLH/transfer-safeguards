@@ -31,6 +31,21 @@
         "collapse-blank-runs"
       ],
       "notes": "The 2026-08-30 standing packet used the session HTTP fetch tool for this SharePoint page; tested 2026-09-06 with plain curl and a browser user-agent, it now returns HTTP 200 with the page's own text (title, ombudsman-program copy, the domain-change notice) present in the response body, so this recipe uses curl rather than a session transport. Page furniture (SharePoint nav, menu) is left in as 'body' produces it, matching the standing packet's own choice not to hand-trim site chrome."
+    },
+    {
+      "n": 3,
+      "title": "Wisconsin Administrative Code, DHS 107.09, Skilled nursing home and intermediate care facility services (chapter DHS 107, Medical Assistance)",
+      "url": "https://docs.legis.wisconsin.gov/code/admin_code/dhs/101/107/09",
+      "source_date": "the site states the code is published under s. 35.93, Stats., and updated on the first day of each month",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Added 2026-09-18, deepening the page. DHS 132.53's own note twice points to 's. DHS 107.09 (4) (j)' as the medical-assistance bedhold rule; this source captures the whole of DHS 107.09 by the same curl-with-browser-user-agent method as source 1, so the page can quote the current state of that cross-reference rather than assert it from the note alone. Same transport and extraction as source 1; no slice, because the absence being captured is structural (the subsection the note names is not present in the section as currently published) rather than a span within a longer document."
     }
   ]
 }

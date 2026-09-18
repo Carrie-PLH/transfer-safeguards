@@ -35,6 +35,21 @@
         "collapse-blank-runs"
       ],
       "notes": "The 2026-08-30 standing packet used the session HTTP fetch tool, which trimmed the department's navigation, programme lists and resource links; tested 2026-09-06 with plain curl and a browser user-agent, the page returns HTTP 200. A narrower scope was tried first: the page's `<main id=\"main-content\">` landmark reaches the program copy but not the office's fax number and street address, which the theme prints in a separate global `#block-footercontactblock` footer widget rather than inside `main`. `body` is used instead so the packet can vouch for those contact facts too, matching this project's rule to find the contact facts before settling the scope; the department's site navigation is left in as 'body' produces it, the same choice this project already makes for other states' unscoped html-text sources (e.g. virginia)."
+    },
+    {
+      "n": 3,
+      "title": "File an Appeal (South Carolina Department of Health and Human Services, Office of Appeals and Hearings)",
+      "url": "https://www.scdhhs.gov/appeals/file-appeal",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Added 2026-09-18, deepening the page, to answer section 02's hearing-office row: found by search rather than by following a link from an already-captured source, because the 2026-08-30 packet's two sources (Chapter 81 and the ombudsman program page) name no state forum and the department's own appeals apparatus sits on a different subdomain neither source links. `#main-content` on this page's template is an empty skip-link anchor with no text of its own (confirmed by inspection), so, as with source 2, 'body' is used to reach the actual content, which on this page includes an inline FAQ accordion; the department's site navigation is left in as 'body' produces it. The page states this apparatus is South Carolina's general Medicaid fair-hearing forum (an appeal of eligibility, benefit, and provider determinations across the agency, an MCO, or a nursing home), not a route created specifically for nursing-home transfer or discharge; its own 'When can I appeal?' list names 'You receive notice that the nursing home where you reside plans to discharge or transfer you against your wishes.' as one of the enumerated situations, which is the first-party statement this page's hearing-office row rests on."
     }
   ]
 }

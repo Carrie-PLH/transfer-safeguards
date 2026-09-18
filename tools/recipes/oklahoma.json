@@ -39,6 +39,21 @@
       "user_agent": "browser",
       "extractor": "pdftotext-layout",
       "notes": "Captured whole rather than cut to the two content pages the standing packet holds. The leaflet is a folded brochure, so the extractor's line order follows the panels rather than the reading order, and a page cut would be a judgment about which panels matter — the whole document is a superset, which can only add evidence and never narrows what verifies."
+    },
+    {
+      "n": 4,
+      "title": "OAC 317:30-5-126, Therapeutic leave and hospital leave (Oklahoma Health Care Authority's posted copy of its own rule)",
+      "url": "https://oklahoma.gov/ohca/policies-and-rules/xpolicy/medical-providers-fee-for-service/individual-providers-and-specialties/long-term-care-facilities/therapeutic-leave-and-hospital-leave.html",
+      "source_date": "page states [Revised 09-01-15]; the page's own disclaimer calls this copy unofficial and names the Secretary of State's Office of Administrative Rules as the official publisher of Title 317",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "#text-522564591e",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Added 2026-09-18, deepening the page, to answer section 02's bed-hold row with the Medicaid payment agency's own rule rather than the Department of Health's readmission provision alone. The rule text on this OHCA policy page sits inside one component, id='text-522564591e' on this build; the scope selector targets that element directly rather than 'body', because 'body' on this page's template pulls in the full site navigation, program menus and footer, none of which bears on the rule. The same text also appears, HTML-escaped, inside a client-side analytics data-layer attribute earlier in the document; that occurrence is not what this scope selector reads and is not the evidence — the rendered element is. If a future recapture reports the selector as absent, the component id has likely changed on a template update, which is capture drift to be re-established (find the new id for the rule heading's containing element), not evidence that the rule moved."
     }
   ]
 }
