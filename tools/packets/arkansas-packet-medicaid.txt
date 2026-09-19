@@ -1,0 +1,114 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: arkansas
+SLUG: arkansas
+ASSEMBLED: 2026-09-19
+SUPPLEMENT: medicaid — the Department of Human Services' Medical Assistance Program Manual Of Cost Reimbursement Rules For Long Term Care Facilities, Chapter 6, the document's own bed-hold (leave of absence) payment provision.
+
+CAPTURE NOTES:
+- SOURCE 1: transport WebFetch (the session's web-fetch tool), which returned the publisher's PDF bytes; extractor pdftotext -layout (poppler 26.07.0, this repository's pinned build); filters none; scope the title page (for the document's own dating) plus Chapter 6 of the manual (pages 6-1 to 6-2 as paginated in the document), which is the manual's last chapter and runs to the end of the document — the title page and Chapter 6 are not contiguous in the source and are each carried whole rather than spliced with any connecting text. humanservices.arkansas.gov returns a bare nginx 403 to curl on this file, over both HTTP/1.1 and HTTP/2, with and without a browser user-agent — the same host behavior already recorded in CLAUDE.md and the standing Arkansas packet for the department's File an Appeal page. The session's web-fetch tool retrieved the PDF where curl could not; this capture is therefore a last-resort transport under PROVENANCE.md: NOT RE-VERIFIABLE BY THE AUTOMATED PASS. The full document (introduction through chapter 6) was read in the same fetch before this supplement was cut down to the title page and Chapter 6; Chapter 6 is the manual's only chapter naming a leave-of-absence or reserved-bed provision, and no other chapter states one.
+- PENDING: a Department of Human Services or Division of Medical Services statement addressing readmission of a resident after a paid leave of absence ends (the manual's chapter 6 states the paid-leave allowance and the census coding for it, but no return/readmission provision was found in this document); confirmation of whether a newer revision of the manual has issued since the captured 08/01/2022 revision.
+
+SOURCE 1: Medical Assistance Program Manual Of Cost Reimbursement Rules For Long Term Care Facilities, title page and Chapter 6 (Instructions For Daily Midnight Census) — Arkansas Department of Human Services, Division of Medical Services | https://humanservices.arkansas.gov/wp-content/uploads/Medical-Assistance-Program-Manual-of-Cost-Reimbursement-Rules-for-Long-Term-Care-Facilities-8.1.2022.pdf | source's own date: "(July 1, 1999)" "(Last Revised 08/01/2022)" | retrieved: 2026-09-19
+DEPARTMENT OF HUMAN SERVICES
+
+
+    Medical Assistance Program
+ Manual Of Cost Reimbursement Rules
+                 For
+     Long Term Care Facilities
+
+
+             (July 1, 1999)
+       (Last Revised 08/01/2022)
+
+CHAPTER 6 - INSTRUCTIONS FOR DAILY MIDNIGHT CENSUS
+
+
+6-1   Daily Midnight Census
+
+      Long Term Care Facilities are required to maintain a daily midnight census of residents
+      in their facility. Resident day information must be accumulated in a clear, accurate and
+      auditable format. Resident day information is an important component of the cost
+      reporting process. The daily midnight census documents resident day information stated
+      on the facility's cost report. This information must be retained by the facility for no less
+      than five years following the date cost reports are submitted to the Division of Medical
+      Services. Facilities that do not maintain accurate and auditable census information are
+      in violation of their provider agreement and may be subject to civil penalty.
+
+      The codes and form located in Section V of the Arkansas Medicaid Provider Manuals,
+      provide an easily understood method for accumulating daily census information. The
+      provider may utilize the codes and form or may construct their own form which contains
+      all elements of the referenced form. The codes and form can be found by clicking the
+      hyperlink, "Section V".
+
+      An actual physical census of a facility's residents should be conducted each midnight and
+      recorded on the daily census form. This ensures that the day of admission is included as
+      a resident day while the day of discharge is not.
+
+      Facilities that certify that occupancy levels are eighty-five percent (85%) or greater will
+      be paid up to five (5) consecutive days for a leave of absence (LOA) to the hospital. The
+      date on which the provider must meet occupancy requirements depends on their billing
+      method. Providers billing on a TAD must certify eighty-five percent (85%) occupancy
+      on the last day of the month the LOA occurred. Providers billing on an electronic billing
+      system must certify eighty-five percent (85%) occupancy for the last day of the month
+      previous to the LOA.
+
+      Facilities may bill for up to fourteen consecutive days for therapeutic home visits
+      regardless of the occupancy rate.
+
+      LOA days paid for both hospital and therapeutic home visits must be properly identified
+      on the daily census. These days are included in resident day totals for cost reporting
+      purposes.
+
+
+
+
+                                               6-1
+                 CODES FOR COMPLETING DAILY MIDNIGHT CENSUS
+
+
+Resident Name:       Enter Resident Roll
+
+Pay Status:          M      = Medicaid
+                     E      = Medicare
+                     V      = Veteran's Administration
+                     P      = Private Pay
+                     O      = Other Third Party
+
+Census Codes:        LEVEL OF CARE
+                     S      = Skilled
+                     A      = Intermediate I
+                     B      = Intermediate II
+                     C      = Intermediate III
+                     D      = ICF/IID
+
+Present         =    Identify the RESIDENT as being present by placing
+                     the appropriate level of care designation for each day
+                     on the census roll sheet.
+
+H               =    Paid Hospital Leave, Bed Reserved. Place an H for each
+                     day on the census roll sheet in addition to the level of
+                     care when a resident is in the hospital and the day is a paid
+                     day.
+
+T               =    Paid Therapeutic Home Leave, Bed Reserved. Place a T for
+                     each day on the census roll sheet in addition to the level of
+                     care when a resident is on Therapeutic Home Leave and the
+                     day is a paid day.
+
+________             Deceased               ________
+
+________             Transferred            ________
+
+________             Discharged             ________
+
+X               =    Non-Paid Leave
+
+
+
+
+                                              6-2
+END SOURCE 1
+
+END OF PACKET — 1 sources

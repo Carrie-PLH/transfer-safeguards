@@ -68,6 +68,20 @@
       "extractor": "html-text",
       "scope": "body",
       "notes": "Server-rendered; plain curl with a browser user-agent returns the whole document. Scope 'body', matching the standing packet's tag strip over the served page."
+    },
+    {
+      "n": 6,
+      "title": "10 CCR 2505-10 8.400, sections 8.482.42-8.482.44 (Additional Payments; Medical Leave From Nursing Facility; Room Reservations for Non-Medical and/or Programmatic Leave) — Medical Services Board, Department of Health Care Policy and Financing",
+      "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12655&fileName=10+CCR+2505-10+8.400",
+      "source_date": "current version effective 08/14/2026 (PDF), per the rule's own DisplayRule listing at https://www.sos.state.co.us/CCR/DisplayRule.do?action=ruleinfo&ruleId=2921&deptID=7&agencyID=69&deptName=Department+of+Health+Care+Policy+and+Financing&agencyName=Medical+Services+Board+(Volume+8%3B+Medical+Assistance,+Children's+Health+Plan)&seriesNum=10+CCR+2505-10+8.400",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "The Secretary of State serves 10 CCR 2505-10 8.400 (Medical Assistance, Section 8.400, Long Term Care, Nursing Facility Care, Adult Day Care Services) as one generated PDF, the same GenerateRulePdf.do mechanism as sources 1-4, addressed by its own ruleVersionId (12655 for the version effective 08/14/2026, current as of this capture). This is the Medicaid room-reservation ('bed hold') provision the baseline page's 2026-08-30 change log recorded as capture-pending. The slice runs from section 8.482.42's heading through the end of section 8.482.44, which is the rule's last paragraph before section 8.482.45 (Enforcement by the Department); the slice is a superset of the single payment-charge provision needed, kept whole because 8.482.42, .43 and .44 cross-reference each other by section number throughout and none reads independently.",
+      "slice": {
+        "from": "8.482.42     ADDITIONAL PAYMENTS",
+        "to": "8.482.45      ENFORCEMENT BY THE DEPARTMENT"
+      }
     }
   ]
 }

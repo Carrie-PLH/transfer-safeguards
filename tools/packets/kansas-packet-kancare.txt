@@ -1,0 +1,157 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: kansas
+SLUG: kansas
+ASSEMBLED: 2026-09-19
+SUPPLEMENT: kancare — KanCare's own "State Fair Hearings" page, the one first-party Kansas hearing apparatus located this pass. It covers Medicaid eligibility decisions and managed-care-organization service decisions; whether it is the forum for a nursing facility's own involuntary transfer or discharge decision is not stated on the page and is not asserted here.
+
+CAPTURE NOTES:
+- SOURCE 1: transport browser (the session's built-in browser, get_page_text on the rendered page); extractor none; filters none. Plain curl and the session's other fetch tool both return HTTP 403 (an Akamai edge block) for kancare.ks.gov; the built-in browser rendered the page normally. The page carries two accordions, "Eligibility State Fair Hearings" (Medicaid eligibility and HCBS-waiver-eligibility decisions, processed by the Office of Administrative Hearings) and "KanCare State Fair Hearings" (managed-care-organization healthcare service decisions, same office). Both are captured in full below because the page does not itself say which, if either, covers a nursing facility's transfer or discharge decision, and a reader should be able to see the whole of what is published rather than a pre-selected half. Neither accordion mentions nursing facilities, transfer, or discharge by name anywhere in its text.
+- PENDING: a first-party Kansas statement, if one exists, naming the forum for an appeal of a nursing facility's own involuntary transfer or discharge decision specifically (as distinct from a Medicaid eligibility or MCO service decision); a first-party Kansas Medicaid nursing facility bed-hold or leave-day provision — the Kansas Medical Assistance Program's own Nursing Facility fee-for-service provider manual appears (via search engine results only, not directly captured) to address this at portal.kmap-state-ks.us, but that host sits behind an Oracle Access Manager single-sign-on redirect that returned session-bound tokens to every transport tried this pass (curl following redirects, the session's web-fetch tool, and the built-in browser navigating directly to the PDF address, which the browser answered with a file-download prompt rather than a renderable page); no source-body text was obtained, so nothing from that manual is quoted anywhere on this page.
+
+SOURCE 1: State Fair Hearings — KanCare (Kansas Department of Health and Environment / Kansas Department for Aging and Disability Services) | https://www.kancare.ks.gov/members/help-resources/appeals-fair-hearings/state-fair-hearings | source's own date: none stated on page | retrieved: 2026-09-19
+Title: State Fair Hearings | KanCare
+URL: https://kancare.ks.gov
+
+Members » Help & Resources » Appeals & Fair Hearings
+
+State Fair Hearings
+
+Eligibility State Fair Hearings
+
+The eligibility state fair hearing is processed by the Office of Administrative Hearings (OAH). It is an opportunity for the applicant/member to speak about the eligibility decision made by the Medicaid agency. Eligibility state fair hearings include the opportunity to speak about the HCBS waiver eligibility decision made by the Department on Aging and Disability (KDADS). The member and either the Medicaid agency or KDADS meet before an impartial administrative law judge. He or she will issue an initial order based upon what is presented by you and the Medicaid agency or by you and KDADS at the hearing. An eligibility state fair hearing can be requested regarding any negative eligibility decision or if the application process is delayed.
+
+What is an eligibility state fair hearing?
+
+An eligibility state fair hearing can be requested regarding any eligibility decision made by the Medicaid agency or if the application process is delayed. The eligibility state fair hearing is processed by the Office of Administrative Hearings (OAH) with the State of Kansas. It is similar to a trial in court with witnesses and exhibits. It is an opportunity for the applicant/member and the Medicaid agency to speak to an impartial Administrative Law Judge about the eligibility decision made by the Medicaid agency. The OAH judge conducts the hearing. The judge does not represent you or the Medicaid agency. He or she will make a decision based upon what is presented by you and the Medicaid agency at the hearing. OAH will send a notice of hearing with the date and time of the hearing at least 10 days before the hearing. The hearing is recorded. The recording will become part of the official record of your case. Hearings are conducted by telephone and also at OAH.
+
+May I review the information relied upon by the Medicaid agency in making the decision about my eligibility?
+
+Yes. You or your representative may review the information prior to the hearing date.
+
+How do I submit a state fair hearing request regarding an eligibility decision?
+
+The applicant, member or their authorized representative's state fair hearing request may be submitted by telephone or in writing.
+
+Eligibility State Fair Hearing Request Form
+
+To submit an eligibility state fair hearing request by telephone call:
+
+Call Center Phone Number: 1-800-792-4884
+TDD/TTY Phone Number: 1-800-792-4292
+The call center staff will complete the state fair hearing request form for you if your request is made by telephone.
+
+To submit an eligibility state fair hearing request by fax send to:
+
+(785) 296-4848 (Requests greater than 20 pages cannot be faxed).
+
+To submit an eligibility state fair hearing request by mail send to:
+
+Office of Administrative Hearings
+1020 S. Kansas Ave.
+Topeka, KS 66612
+
+To submit a withdrawal go to:
+
+Withdrawal of State Fair Hearing Request
+
+Is there a deadline for filing an eligibility state fair hearing?
+
+Yes, the eligibility state fair hearing request must be filed within 33 calendar days from the date on the notice regarding your eligibility.
+
+Can my coverage be continued until the hearing decision?
+
+Your coverage will be continued if you ask for a hearing either before the effective date of the eligibility decision or within 15 calendar days from the date of the notice, whichever is later.
+
+What is the process once an eligibility state fair hearing request has been submitted?
+
+The Medicaid agency or KDADS will submit documents related to the eligibility decision to OAH prior to the state fair hearing. You may also submit documents to OAH prior to the state fair hearing. OAH will schedule a state fair hearing about your eligibility decision within one or two months of the date of your state fair hearing request. OAH must reach its decision usually within 30 calendar days of the state fair hearing date.
+
+If you ask for an expedited (fast) state fair hearing due to an urgent medical need, you must submit medical documents at the same time that you ask for a fast state fair hearing. The Medicaid Agency or KDADS will review medical documents and approve or deny your request. If approved, the hearing will be scheduled as soon as possible. If denied, your hearing request will be processed in the usual amount of time.
+
+What documents do I need to submit with my request for a fair hearing?
+
+At the time you request the fair hearing and also prior to the fair hearing, you may provide information that shows why you believe that the state or state worker did not follow the rules in processing your application or renewal.
+
+What will I need for my eligibility state fair hearing?
+
+The Medicaid agency will send you an agency summary. It outlines the facts of your case. You will need the agency summary during the hearing.
+
+May I bring an attorney or other representative to the hearing?
+
+You may have an attorney represent you at the hearing. The attorney will be at your expense. If you hire an attorney, he or she must be licensed in Kansas. You may have a non-attorney represent you at the hearing. If you want someone to represent you, you will need to fill out the medical representative authorization form. That form may be found at the link below under Release of Information. You will need to submit it with your state fair hearing request.
+
+Policy Appendix Page
+
+Two legal assistance organizations that may provide help with a state fair hearing at no or low cost are:
+
+Kansas Legal Services
+Toll Free Phone: 1-800-723-6953 (application line)
+
+Kansas Disability Rights Center
+Toll Free Phone: 1-877-776-1541
+
+May I have witnesses at the hearing?
+
+Yes. You may have witnesses testify on your behalf at the hearing. If you need a subpoena issued that requires the subpoenaed person to participate in the hearing, you must ask the judge in writing to issue a subpoena for that person. You must ask the judge at least seven days before the hearing. You will be responsible for giving the subpoena to the witness. You will also be responsible for paying for any costs associated with the witness participating in the hearing.
+
+If I don't like the judge's decision, what is the next step?
+
+You may ask the State Appeals Committee to review the judge's decision. You must send your request in writing addressed to the State Appeals Committee. Your request should be mailed to the address in the judge's decision. You must ask for the review by the State Appeals Committee within 18 days of the judge's decision of the judge mailed the decision to you. You must ask for the review within 15 days if the judge sent the decision to you electronically. There will not be another hearing. The State Appeals Committee will review the judge's decision and issue a decision.
+
+If I don't like the State Appeal Committee's decision, what is the next step?
+
+You may file a Petition for Review with the district court. You must file the district court Petition in the county where the decision was issued.
+
+How do I withdraw my request for a state fair hearing?
+
+Please download and complete the Withdrawal of State Fair Hearing Request form below. The completed form can be faxed to (785)-296-4848.
+
+Withdrawal of State Fair Hearing Request
+
+Other eligibility state fair hearing information
+
+The most frequent mistake made by individus during the process of preparing is failing to read the notices and documents issued as part of the state fair hearing process. The notices and documents will have deadlines. Read everything you receive very carefully.
+
+KanCare State Fair Hearings
+
+The KanCare state fair hearing is processed by the Office of Administrative Hearings (OAH). It is an opportunity for the member to speak about the healthcare service decision made by one of the Medicaid agency's managed care organizations (MCO), Aetna, Sunflower, or United Healthcare. The member, representatives from Aetna, Sunflower or United Healthcare, and a representative from the Medicaid agency or KDADS meet before an impartial administrative law judge. He or she will issue an initial order based upon what is presented by you and the Medicaid agency or by you and KDADS at the hearing. This process is for KanCare members who have already completed the appeal process with Aetna, Sunflower, or United Healthcare.
+
+What is a managed care state fair hearing?
+
+The KanCare state fair hearing is processed by the Office of Administrative Hearings (OAH). It is an opportunity for the member to speak about the healthcare service decision made by one of the Medicaid agency's managed care organizations (MCO), Healthy Blue, Sunflower, or United Healthcare. The member, representatives from Healthy Blue, Sunflower or United Healthcare, and a representative from the Medicaid agency or KDADS meet before an impartial administrative law judge. He or she will issue an initial order based upon what is presented by you and the Medicaid agency or by you and KDADS at the hearing. This process is for KanCare members who have already completed the appeal process with Healthy Blue, Sunflower, or United Healthcare.
+
+How do I submit a managed care state fair hearing request regarding a managed care decision?
+
+The member or member's authorized representative's state fair hearing request must be submitted in writing.
+
+To submit a managed care state fair hearing by fax send to:
+
+(785) 296-4848 (Requests greater than 20 pages cannot be faxed)
+
+To submit a managed care state fair hearing by mail send to:
+
+Office of Administrative Hearings
+1020 S. Kansas Ave.
+Topeka, KS 66612
+
+A managed care state fair hearing request form:
+
+KanCare Member Request for Medicaid Fair Hearing
+
+Notice of Withdrawal of Appeal
+
+Is there a deadline for filing a managed care state fair hearing?
+
+Yes, the member or member's representative must submit a request for a state fair hearing within 123 calendar days from the date of the notice of the appeal resolution determination.
+
+The member has another opportunity to submit a request for a state fair hearing if the healthcare service decision was reviewed by the External Independent Third-Party Reviewer. The member must submit the request for a state fair hearing within 33 calendar days of the date of the notice containing the decision by the external independent third-party reviewer.
+
+What happens once a managed care state fair hearing request has been submitted?
+
+The MCO will submit documents related to the decision about your services to OAH prior to the state fair hearing. You may also submit documents to OAH prior to the state fair hearing. OAH will schedule a state fair hearing about the MCO's decision within one or two months of the date of your state fair hearing request. OAH must reach its decision usually within 30 calendar days of the state fair hearing date.
+
+If you asked for an expedited (fast) appeal with the MCO, and the MCO approved the request and made a decision about your appeal within 72 hours, then you may ask for a fast state fair hearing due to an urgent medical need. OAH will schedule a state fair hearing and make a decision within 3 business days following receipt of your request for a fast state fair hearing.
+END SOURCE 1
+
+END OF PACKET — 1 sources
