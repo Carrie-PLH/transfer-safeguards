@@ -4,7 +4,7 @@ STATE: washington
 ASSEMBLED: 2026-09-21
 
 CAPTURE NOTES:
-- Captured by tools/capture.py from tools/recipes/washington.json (recipe digest 92618e36b910). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Captured by tools/capture.py from tools/recipes/washington.json (recipe digest 4c3ec6ac0c47). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
 - SOURCE 1: transport curl; extractor html-text; scope #contentWrapper; filters strip-zero-width, trim-lines, collapse-blank-runs.
   app.leg.wa.gov's RCW template wraps the section's operative text (the numbered subsections and the bracketed history/notes line) in <div id='contentWrapper'>, which sits below the page's title/caption block and prev-next navigation and excludes both -- narrower than 'main-page-content' (a sibling container on this same page that includes the prev/next links and a 'field: Citations' metadata row neither of which this page quotes) and confirmed present in both the RCW and WAC templates this state cites, so one scope value serves both sources. Plain curl, no browser user-agent needed (200).
 - SOURCE 2: transport curl; extractor html-text; scope #contentWrapper; filters strip-zero-width, trim-lines, collapse-blank-runs.
@@ -19,8 +19,6 @@ CAPTURE NOTES:
   Added deepening the page to full: the Office of Administrative Hearings' own address and phone, for the hearing right RCW 74.42.450(5)-(6) attaches to a department discharge decision. Same #contentWrapper container as sources 1-2.
 - SOURCE 7: transport curl; extractor html-text; scope #contentWrapper; filters strip-zero-width, trim-lines, collapse-blank-runs.
   Added deepening the page to full: the chapter's own filing route (written or oral, and where to send a written request). Same #contentWrapper container as sources 1-2.
-- SOURCE 8: transport curl; extractor html-text; scope #contentWrapper; filters strip-zero-width, trim-lines, collapse-blank-runs.
-  Added deepening the page to full: this section states that the filing deadline varies by DSHS program and are the one place the chapter states a specific number (ninety days, for public assistance cases under RCW 74.08.080), which this page cites only to show that number is scoped away from nursing-facility discharge, not carried as this state's discharge-appeal deadline. Same #contentWrapper container as sources 1-2.
 
 SOURCE 1: RCW 74.42.450 | https://app.leg.wa.gov/RCW/default.aspx?cite=74.42.450 | source date: history line ends 2013 c 23 s 229 | retrieved: 2026-09-21
 (1) The facility shall admit as residents only those individuals whose needs can be met by:
@@ -463,21 +461,4 @@ SOURCE 7: WAC 388-02-0100, How do you request a hearing? | https://app.leg.wa.go
 (3) You may send a written request by mail, delivery service, personal service, or by fax if you mail a copy the same day. You should send written requests to the location on the notice or to OAH at the location specified in WAC 388-02-0025(2).
 
 [Statutory Authority: RCW 34.05.020. WSR 00-18-059, § 388-02-0100, filed 9/1/00, effective 10/2/00.]
-
-SOURCE 8: WAC 388-02-0085, Do you have a right to a hearing? | https://app.leg.wa.gov/WAC/default.aspx?cite=388-02-0085 | source date: no per-section date beyond the chapter's own filing history | retrieved: 2026-09-21
-(1) You have a right to a hearing only if a law or DSHS rule gives you that right. If you are not sure, you should request a hearing to protect your right.
-
-(2) Some DSHS programs may require you to go through an informal administrative process before you can request or have a hearing. The notice of DSHS action sent to you should include information about this requirement if it applies.
-
-(3) You have a limited time to request a hearing. The deadline for your request varies by the DSHS program involved. You should submit your request right away to protect your right to a hearing, even if you are also trying to resolve your dispute informally. For public assistance cases, if an applicant or recipient does not file a request for a hearing within 90 calendar days after receiving notice of an aggrieving decision, the request may still be filed within one year of the aggrieving decision upon a showing of good cause. For purposes of public assistance cases, as defined in RCW 74.08.080, good cause for not requesting a hearing before the deadline may include, but is not limited to: military deployment, medical reasons, housing instability, language barriers, or domestic violence.
-
-(4) If you request a hearing, one is scheduled.
-
-(5) If DSHS or the ALJ questions your right to a hearing, the ALJ decides whether you have that right.
-
-(6) If the ALJ decides you do not have a right to a hearing, your request is dismissed.
-
-(7) If the ALJ decides you do have a right to a hearing, the hearing proceeds.
-
-[Statutory Authority: RCW 34.05.220, 43.17.060, 43.20A.075, and 74.08.080(2). WSR 24-06-040, § 388-02-0085, filed 2/29/24, effective 4/1/24. Statutory Authority: RCW 34.05.020. WSR 00-18-059, § 388-02-0085, filed 9/1/00, effective 10/2/00.]
 

@@ -54,6 +54,50 @@
       "extractor": "html-text",
       "scope": "body",
       "notes": "Server-rendered; plain curl with a browser user-agent returns the whole document. Scope 'body' rather than a narrower selector, matching the standing packet's tag strip over the served page."
+    },
+    {
+      "n": 5,
+      "title": "Title 23 Part 207, Institutional Long Term Care Services — Rule 2.8, Temporary Leave",
+      "url": "https://medicaid.ms.gov/wp-content/uploads/2026/07/Title-23-Part-207-Institutional-LTC-eff-8.1.26.pdf",
+      "source_date": "effective 8.1.26; rule history Revised eff. 11/01/2019",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "Added deepening the page to full: the Division of Medicaid's bed-hold provision, in the same Part 207 PDF as source 3 but not inside its Rule 2.20 slice. The slice runs from Rule 2.8's own heading to the next rule's heading.",
+      "slice": {
+        "from": "Rule 2.8: Temporary Leave A. The Division of Medicaid defines temporary leave",
+        "to": "Rule 2.9: Resident Assessment Instrument (RAI)"
+      }
+    },
+    {
+      "n": 6,
+      "title": "Title 23 Part 300, Appeals — Rule 2.3 through Rule 2.9, Beneficiary Hearing Rights and Requests",
+      "url": "https://medicaid.ms.gov/wp-content/uploads/2025/07/Title-23-Part-300-Appeals-eff.-7.1.2025.pdf",
+      "source_date": "effective 7.1.2025",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "Added deepening the page to full: Part 300 is the Division of Medicaid's general appeals and fair-hearing rule, and Rule 2.3.A.4 names beneficiaries facing a nursing-facility transfer or discharge as one of the categories it covers, which is what makes this the hearing-office source the Rule 2.20 notice's own appeal-rights line points to without naming. Part 300 prints its own table of contents on pages 1-2, so the from anchor takes from_occurrence 2 to land in the body rather than the contents list (the trap CLAUDE.md names for long documents); the to anchor needs no occurrence key because the slice search only runs over the text after that body heading, where the contents-list hit has already passed. The slice runs Rule 2.3 through Rule 2.9 (appeal rights, hearing types, filing routes, the 30-day time limit, and the 90-day decision timeframe), stopping before Rule 2.10, which turns to hearing logistics outside this page's scope.",
+      "slice": {
+        "from": "Rule 2.3: Appeal Rights of Applicants and Beneficiaries",
+        "from_occurrence": 2,
+        "to": "Rule 2.10: Scheduling the Hearing"
+      }
+    },
+    {
+      "n": 7,
+      "title": "Title 23 Part 300, Appeals — Rule 2.21, Continuation of Benefits",
+      "url": "https://medicaid.ms.gov/wp-content/uploads/2025/07/Title-23-Part-300-Appeals-eff.-7.1.2025.pdf",
+      "source_date": "effective 7.1.2025",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "Added deepening the page to full: the pendency provision, held apart from source 6 because it sits eleven rules later in the same PDF and the intervening rules (waiver and local-hearing logistics) are outside this page's scope. Same table-of-contents trap as source 6: the from anchor takes from_occurrence 2 and the to anchor needs none, for the same reason. The slice runs from Rule 2.21's own heading to the next rule's heading.",
+      "slice": {
+        "from": "Rule 2.21: Continuation of Benefits",
+        "from_occurrence": 2,
+        "to": "Rule 2.22: Appeals for Waiver Beneficiaries Receiving Medicaid Services"
+      }
     }
   ]
 }

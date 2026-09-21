@@ -50,6 +50,23 @@
       "scope": "body",
       "filters": ["trim-lines", "collapse-blank-runs"],
       "notes": "The program's own page: the state office's address, telephone and email (Cloudflare-obfuscated on the page; decoded by the shared capture reader) and the eight regional programs with their numbers. des.az.gov, like apps.azsos.gov, answers curl's HTTP/2 requests with a Cloudflare challenge page and its HTTP/1.1 requests with the page itself; http_version 1.1 is what makes it reproducible. A capture that comes back a few kilobytes long and titled 'Just a moment...' is the challenge page, not the source, and must be treated as a failed fetch."
+    },
+    {
+      "n": 5,
+      "title": "R9-28-204, Institutional Services — Arizona Administrative Code, Title 9, Chapter 28 (AHCCCS Arizona Long-Term Care System), Article 2 — Arizona Secretary of State (PDF, page 10 of the chapter)",
+      "url": "https://apps.azsos.gov/public_services/Title_09/9-28.pdf",
+      "source_date": "Supp. 26-2, June 30, 2026, as the running head states; the section's Historical Note records its last amendment effective October 8, 2013 (Supp. 13-3)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "http_version": "1.1",
+      "extractor": "pdftotext-raw",
+      "pages": [10, 11],
+      "filters": [],
+      "notes": "Added deepening the page to full: R9-28-204(D)(3) is Arizona ALTCS's bed-hold rule -- located via a general search after the standing packet's own note that AMPM Policy 1240-A (direct care services) does not address bed-hold; it does not. This chapter shares apps.azsos.gov with source 1 and needs the same http_version 1.1 pin the same host already requires. R9-10-204's own printed page (page 9 of the chapter) spans two PDF pages (10 and 11) because of the running head between them, and the section's Historical Note sits on the second; pdftotext-raw is used for the same two-column reason as source 1, confirmed against this span specifically (raw mode reproduces the printed reading order; -layout interleaves this span with a neighboring column exactly as it does for source 1).",
+      "slice": {
+        "from": "R9-28-204. Institutional Services",
+        "to": "R9-28-205. Home and Community Based Services (HCBS)"
+      }
     }
   ]
 }

@@ -46,6 +46,81 @@
         "collapse-blank-runs"
       ],
       "notes": "The page's own <main> element (5,960 chars) excludes the sitewide footer, where this program's phone (1-800-562-6028), fax, TTY number and street address (1200 S. 336th St, Federal Way) all sit; only the ltcop@mschelps.org address is inside <main>. body is the narrowest container that is honestly stated and holds every contact fact this page quotes -- a safe superset of the standing packet's own capture, which reads the same way (includes the same footer boilerplate: copyright line, 'Website Design by IlluminAge', social links). Plain curl, no browser user-agent needed (200)."
+    },
+    {
+      "n": 4,
+      "title": "WAC 388-97-0160, Discharge or leave of a nursing facility resident",
+      "url": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-97-0160",
+      "source_date": "WSR 08-20-062, filed 9/24/08, effective 11/1/08",
+      "transport": "curl",
+      "extractor": "html-text",
+      "scope": "#contentWrapper",
+      "filters": [
+        "strip-zero-width",
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Added deepening the page to full: WAC 388-97-0120(4)(b) names this section as the state's own source for the social/therapeutic bed-hold day count, and this is Washington's only located first-party statement of a number rather than a duty to have a policy. Same #contentWrapper container and plain curl already confirmed on this host for sources 1-2."
+    },
+    {
+      "n": 5,
+      "title": "WAC 388-02-0005, What is the purpose and scope of this chapter?",
+      "url": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-02-0005",
+      "source_date": "no per-section date beyond the chapter's own filing history",
+      "transport": "curl",
+      "extractor": "html-text",
+      "scope": "#contentWrapper",
+      "filters": [
+        "strip-zero-width",
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Added deepening the page to full: chapter 388-02 is DSHS's general hearing-procedure chapter (\"Regulates all hearings involving DSHS\"), reached because RCW 74.42.450(5) requires a department discharge notice to carry a hearing-request form and names no office of its own; this section states the chapter's own scope, including that a specific DSHS program's hearing rules prevail over it where one exists. Same #contentWrapper container as sources 1-2."
+    },
+    {
+      "n": 6,
+      "title": "WAC 388-02-0025, Where is the office of administrative hearings located?",
+      "url": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-02-0025",
+      "source_date": "no per-section date beyond the chapter's own filing history",
+      "transport": "curl",
+      "extractor": "html-text",
+      "scope": "#contentWrapper",
+      "filters": [
+        "strip-zero-width",
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Added deepening the page to full: the Office of Administrative Hearings' own address and phone, for the hearing right RCW 74.42.450(5)-(6) attaches to a department discharge decision. Same #contentWrapper container as sources 1-2."
+    },
+    {
+      "n": 7,
+      "title": "WAC 388-02-0100, How do you request a hearing?",
+      "url": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-02-0100",
+      "source_date": "no per-section date beyond the chapter's own filing history",
+      "transport": "curl",
+      "extractor": "html-text",
+      "scope": "#contentWrapper",
+      "filters": [
+        "strip-zero-width",
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Added deepening the page to full: the chapter's own filing route (written or oral, and where to send a written request). Same #contentWrapper container as sources 1-2."
+    },
+    {
+      "n": 8,
+      "title": "WAC 388-02-0085, Do you have a right to a hearing?",
+      "url": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-02-0085",
+      "source_date": "no per-section date beyond the chapter's own filing history",
+      "transport": "curl",
+      "extractor": "html-text",
+      "scope": "#contentWrapper",
+      "filters": [
+        "strip-zero-width",
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Added deepening the page to full: this section states that the filing deadline varies by DSHS program and are the one place the chapter states a specific number (ninety days, for public assistance cases under RCW 74.08.080), which this page cites only to show that number is scoped away from nursing-facility discharge, not carried as this state's discharge-appeal deadline. Same #contentWrapper container as sources 1-2."
     }
   ]
 }
