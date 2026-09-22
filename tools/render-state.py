@@ -74,6 +74,27 @@ def paras(lines):
         i+=1
     flush(); return ''.join(out)
 
+def describe(sections, fallback):
+    """Meta description from the page's own Lede: its opening, plain text,
+    cut at a word boundary near 160 characters (FA-D-20260922-05). The Lede
+    is the page's summary in the page's words; the fallback is used only
+    when a page has no Lede."""
+    body = [l for t, b in sections if t.split(' {')[0] == 'Lede' for l in b if l.strip()]
+    t = ' '.join(x.strip() for x in body)
+    t = re.sub(r'\[([^\]]+)\]\([^)]*\)', r'\1', t)   # [text](url) -> text
+    t = re.sub(r'(\*\*|\*|__|_|`)(.+?)\1', r'\2', t)    # emphasis and code
+    t = re.sub(r'\s+', ' ', t).strip()
+    if not t:
+        return fallback
+    # Every Lede opens 'This page assembles ...'; the snippet reads better
+    # starting at what it assembles, and the 160 characters go further.
+    if t.startswith('This page assembles '):
+        t = t[len('This page assembles '):]
+        t = t[0].upper() + t[1:]
+    if len(t) > 160:
+        t = t[:157].rsplit(' ', 1)[0].rstrip(' ,;:(') + '\u2026'
+    return html.escape(html.unescape(t), quote=True)
+
 def render(slug):
     # The federal layer page lives at the repo root (federal.md) and renders
     # to site/federal.html; state pages live in states/ and render to
@@ -127,7 +148,7 @@ def render(slug):
         desc = 'The federal floor for nursing-home involuntary transfer and discharge — 42 CFR 483.15(c), 42 CFR part 431 subpart E, and CMS guidance — quoted and linked to first-party sources.'
         limits = 'Reference information, not legal or medical advice. Independent of every facility and operator, of CMS and every state agency, and of the ombudsman programs.'
     else:
-        desc = f'{state} nursing-home involuntary transfer and discharge procedure, quoted and linked to first-party sources.'
+        desc = describe(sections, f'{state} nursing-home involuntary transfer and discharge procedure, quoted and linked to first-party sources.')
         limits = f'Reference information, not legal or medical advice. Independent of every facility and operator, of CMS and every {state} state agency, and of the ombudsman programs.'
     doc=f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{title}</title><link rel="canonical" href="{canonical}"><meta name="description" content="{desc}"><link rel="icon" href="/assets/favicon.ico" sizes="any"><link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32"><link rel="icon" href="/assets/favicon-16.png" type="image/png" sizes="16x16"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"><link rel="stylesheet" href="/assets/style.css"></head><body><a class="skip-link" href="#main">Skip to content</a><header class="topline"><a class="wordmark" href="/">ROOM &amp; RECOURSE</a><input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Menu"><label class="nav-button" for="nav-toggle"><span class="nav-bars"></span>Menu</label><nav><a href="{states_href}">States</a><a href="{federal_href}">The federal floor</a><a href="/about/">About</a></nav></header><main id="main">{''.join(chunks)}</main><footer class="colophon"><div class="rows"><div><p class="mark">ROOM &amp; RECOURSE</p><p style="margin-top:0.85rem;">A project of <a href="https://fieldassembly.net" target="_blank" rel="noopener">Field Assembly LLC</a>. Kept to <a href="https://fieldassembly.net/standard.html" target="_blank" rel="noopener">the published record standard</a>.</p><p>Free permanently &mdash; no accounts, no ads, no analytics. Every quotation above carries a capture date that can be verified independently &mdash; <a href="https://fieldassembly.net/permanence" target="_blank" rel="noopener">how we've bound ourselves</a>.</p><p><a href="mailto:hello@fieldassembly.net">hello@fieldassembly.net</a></p><p><a href="/legal/privacy/">Privacy</a> &middot; <a href="/legal/terms/">Terms</a></p></div><div><p class="foot-label">The limits</p><p>{limits}</p></div></div></footer></body></html>'''
     out = (ROOT/'site'/'federal.html') if federal else (ROOT/'site'/'states'/f'{slug}.html')
