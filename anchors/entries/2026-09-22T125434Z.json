@@ -1,0 +1,15 @@
+{
+ "entry": {
+  "file_count": 194,
+  "id": "2026-09-22T125434Z",
+  "manifest_file": "manifests/2026-09-22T125434Z.txt",
+  "manifest_sha256": "b300278a4516fed6589651f3ec5552d9c1ca63471c9ce17f34d576631f4156ae",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "ecbe7f66669ff86c6fd1cb4dfa02006a88cd805b9697ecc797511ce583118f2c",
+  "repo": "transfer-safeguards",
+  "utc": "2026-09-22T12:54:34+00:00"
+ },
+ "entry_sha256": "6a17c8d333d141e628e249eaaa681767c4f41d37d54a63d65b04bd08578587e9"
+}
