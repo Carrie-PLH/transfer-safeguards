@@ -1,0 +1,71 @@
+{
+  "recipe_version": 1,
+  "state": "south-dakota",
+  "sources": [
+    {
+      "n": 1,
+      "title": "ARSD chapter 44:73:11, Residents' Rights (South Dakota Administrative Rules, Title 44 — Department of Health, Article 44:73, Nursing Facilities)",
+      "url": "https://sdlegislature.gov/api/Rules/44%3A73",
+      "source_date": "no single date for the chapter; each section carries its own \"Source:\" line — § 44:73:11:14 (Admission, transfer, and discharge policies) states \"Source: 19 SDR 95, effective January 7, 1993; 22 SDR 70, effective November 10. 1995; transferred from § 44:04:17:14, 42 SDR 51, effective October 13, 2015; 51 SDR 53, effective November 11, 2024.\"",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "json-doc",
+      "scope": "Html",
+      "slice": {
+        "from": "CHAPTER 44:73:11 RESIDENT'S RIGHTS",
+        "to": "CHAPTER 44:73:12"
+      },
+      "notes": "sdlegislature.gov serves only a client-side application shell to curl on the rule pages and on their Word and printer-friendly links; the application itself reads this same-origin JSON endpoint, which returns the whole article (all twelve chapters of 44:73, about 224,000 characters extracted) with the rule text as a Microsoft Word HTML export in the 'Html' field. No query hash or session token in the address, so it is a stable public endpoint (PROVENANCE.md API rule), and it answers plain curl as well as a browser user-agent (tested 2026-09-22). The human-readable page the state page links is https://sdlegislature.gov/Rules/Administrative/44:73. json-doc parses the body as JSON and runs the 'Html' string through the ordinary html-text extraction, which drops the embedded <style> blocks and the Word document-properties XML (revision tokens such as 'lrpr14533', ISO timestamps) that the 2026-09-02 hand capture reproduced as text; those tokens were never quoted. The extraction also puts a space at tag boundaries the hand capture's tag strip closed up (the contents list reads 'Section 44:73:11:01', not 'Section44:73:11:01'); neither difference touches a quoted span. Sliced on the chapter, as the hand capture was: from chapter 44:73:11's own heading to chapter 44:73:12's. Each heading occurs once in the extraction (the article prints no chapter-level contents list with these strings), checked 2026-09-22."
+    },
+    {
+      "n": 2,
+      "title": "ARSD chapter 67:17:02, Fair Hearings (South Dakota Administrative Rules, Title 67 — Department of Social Services), sections 67:17:02:01 through 67:17:02:04",
+      "url": "https://sdlegislature.gov/api/Rules/67%3A17%3A02",
+      "source_date": "no single date for the chapter; § 67:17:02:03 (Hearing requests) states \"Source: SL 1975, ch 16, § 1; transferred from § 67:12:03:03, 2 SDR 71, effective April 29, 1976; 7 SDR 66, 7 SDR 89, effective July 1, 1981; 35 SDR 166, effective December 24, 2008; 52 SDR 33, effective September 29, 2025.\"",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "json-doc",
+      "scope": "Html",
+      "slice": {
+        "from": "CHAPTER 67:17:02 FAIR HEARINGS",
+        "to": "Rule 67:17:02:04.01"
+      },
+      "notes": "sdlegislature.gov serves only a client-side application shell to curl on the rule pages and on their Word and printer-friendly links; the application itself reads this same-origin JSON endpoint, which returns the whole chapter with the rule text as a Microsoft Word HTML export in the 'Html' field. No query hash or session token in the address, so it is a stable public endpoint (PROVENANCE.md API rule), and it answers plain curl as well as a browser user-agent (tested 2026-09-22). The human-readable page the state page links is https://sdlegislature.gov/Rules/Administrative/67:17:02. json-doc parses the body as JSON and runs the 'Html' string through the ordinary html-text extraction, which drops the embedded <style> blocks and the Word document-properties XML (revision tokens such as 'lrpr14533', ISO timestamps) that the 2026-09-02 hand capture reproduced as text; those tokens were never quoted. The extraction also puts a space at tag boundaries the hand capture's tag strip closed up (the contents list reads 'Section 44:73:11:01', not 'Section44:73:11:01'); neither difference touches a quoted span. Sliced as the hand capture was: from the chapter's own heading to the running head 'Rule 67:17:02:04.01' of the next (repealed) section. The bare number 67:17:02:04.01 occurs three times (contents list, running head, section text); the 'Rule ' running head occurs once, which is why the to-anchor carries it."
+    },
+    {
+      "n": 3,
+      "title": "Fair Hearings — South Dakota Department of Social Services",
+      "url": "https://dss.sd.gov/keyresources/adminhearings/fairhearing.aspx",
+      "source_date": "none stated on page (footer copyright 2020)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "#leftcolumn",
+      "notes": "Server-rendered ASP.NET page, curl-able with a browser user-agent. Scope #leftcolumn is the page's own body copy and holds every fact the state page takes from it (the Office of Administrative Hearings address, 605.773.6851, admhrngs@state.sd.us, the SDCL 1-26 and ARSD 67:17 references); it excludes the site navigation, the language menu and the footer, which the hand capture also trimmed. The footer's department switchboard (605.773.3165) is therefore no longer in the packet; the state page does not publish it."
+    },
+    {
+      "n": 4,
+      "title": "Ombudsman Program — South Dakota Department of Human Services",
+      "url": "https://dhs.sd.gov/en/ltss/ombudsman-program",
+      "source_date": "none stated on page",
+      "transport": "chrome",
+      "extractor": "none",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "dhs.sd.gov is a client-rendered application: curl (browser user-agent) receives an empty #root and the page content only as escaped HTML inside a window.INITIAL_STATE script assignment, which is neither a __NEXT_DATA__ island (next-data) nor a bare JSON body (json-doc). The application's own content endpoint (/api/cms/page/...) requires a tenantId request header and returns 404 without it, and a recipe cannot set headers. So the transport is the session browser, as it was for the 2026-09-02 hand capture. Supply document.querySelector('main').innerText from the rendered page (the same text the browser tool's get_page_text returns, headed by its <main> element), unedited: it carries the breadcrumb, the in-page contents list and a trailing 'Skip to menu' link that the hand capture trimmed, and they are left in rather than hand-trimmed, because a hand-trimmed supply is a hand capture. Transferred to the Mac through escaped JSON and checked by SHA-256 against the in-page digest; two independent navigations on 2026-09-22 gave the identical digest (627f20aa9ca8...). The page's non-breaking spaces (after 'By phone:', 'By email:' and before the ZIP code) are the publisher's and are kept."
+    },
+    {
+      "n": 5,
+      "title": "Long-Term Care Ombudsman Program | South Dakota Department of Human Services — Dakota at Home directory listing",
+      "url": "https://dakotaathome.sd.gov/search/c5a84daf-cd8f-5ac5-bad2-b72b20ac7b97",
+      "source_date": "\"Last Assured 11/20/2025\"",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "main",
+      "notes": "The 2026-09-02 hand capture recorded this listing as a client-side shell to curl; on 2026-09-22 it is server-rendered and curl with a browser user-agent returns the listing text, including 'Last Assured 11/20/2025', the address, hours, 833-663-9673 and LTCO@state.sd.us, inside main#main-content. The trailing path segment is the directory's own resource UUID, an application-level identifier: a broken link here is capture drift to re-establish through the directory's search, not evidence the program is gone. Some adjacent elements render run together in extraction ('PrintShareFavorite', and the 'What's Here' taxonomy links); that is the markup's own element adjacency, not text, and no quoted span crosses it."
+    }
+  ]
+}
