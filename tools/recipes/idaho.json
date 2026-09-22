@@ -10,7 +10,25 @@
       "transport": "curl",
       "user_agent": "browser",
       "extractor": "pdftotext-layout",
-      "notes": "DRAFT — replace before promoting."
+      "notes": "The enrolled Senate Bill 1015 PDF, captured whole as the hand capture was (pdftotext -layout, appended in full): the served document is the source the packet holds, so no slice. The 2026-09-02 capture came through the session fetch tool; plain curl with a browser user-agent reaches it (2026-09-22)."
+    },
+    {
+      "n": 2,
+      "title": "Idaho Code Title 39, Chapter 13 (Hospitals), sections 39-1301 (Definitions), 39-1302 (Streamlined Facilities Licensing and Inspection Act — Short Title), 39-1303 (Licensure), 39-1304 (Denial or Revocation), 39-1305 (Inspections), and 39-1309 (Deemed Status of Hospice Agency)",
+      "urls": [
+        "https://legislature.idaho.gov/statutesrules/idstat/Title39/T39CH13/SECT39-1301/",
+        "https://legislature.idaho.gov/statutesrules/idstat/Title39/T39CH13/SECT39-1302/",
+        "https://legislature.idaho.gov/statutesrules/idstat/Title39/T39CH13/SECT39-1303/",
+        "https://legislature.idaho.gov/statutesrules/idstat/Title39/T39CH13/SECT39-1304/",
+        "https://legislature.idaho.gov/statutesrules/idstat/Title39/T39CH13/SECT39-1305/",
+        "https://legislature.idaho.gov/statutesrules/idstat/Title39/T39CH13/SECT39-1309/"
+      ],
+      "source_date": "each section carries its own History line: 39-1301 \"[39-1301, added 2025, ch. 122, sec. 20, p. 634.]\"; 39-1302 \"[39-1302, added 2025, ch. 122, sec. 21, p. 634.]\"; 39-1303 \"[39-1303, added 2025, ch. 122, sec. 22, p. 635.]\"; 39-1304 \"[39-1304, added 2025, ch. 122, sec. 23, p. 635.]\"; 39-1305 \"[(39-1305) 39-1309, added 1947, ch. 133, sec. 9, p. 324; am. and redesig. 2025, ch. 122, sec. 24, p. 635.]\"; 39-1309 \"[(39-1309) 39-1301C, added 2010, ch. 84, sec. 2, p. 164; am. and redesig. 2025, ch. 122, sec. 28, p. 637.]\"",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "div.pgbrk",
+      "notes": "One packet source published as six pages, one per Idaho Code section, in the order the standing packet holds them (FA-D-20260922-02, which added `urls` for this source rather than renumbering the page's citations). Each page is extracted on its own under div.pgbrk, the Legislature's own container for the section text (heading, body and History line; the site navigation sits outside it), and the six are joined under capture.py's page markers. Sections 39-1306 to 39-1308 are not captured, per the packet's pending list (license enforcement only). The Legislature sets section cross-references as links, so a cross-reference such as '39-1309' arrives on its own line, as it did in the hand capture."
     },
     {
       "n": 3,
@@ -20,7 +38,11 @@
       "transport": "curl",
       "user_agent": "browser",
       "extractor": "pdftotext-layout",
-      "notes": "DRAFT — replace before promoting."
+      "slice": {
+        "from": "IDAPA 16 – IDAHO DEPARTMENT OF HEALTH AND WELFARE Division of Medicaid",
+        "to": "500. (RESERVED) 501. ICF/IID: PARTICIPANT ELIGIBILITY."
+      },
+      "notes": "A 190-page chapter. The standing packet held four discontiguous excerpts (cover page, rules 000-003, the section 010 'Facility' definition, and rules 470-499, the complete Nursing Facilities sub-area); a slice takes one span, so this captures the contiguous superset from the cover page's first line to the end of rule 496-499, stopping at rule 500's capitalised body heading. A superset can only add evidence. The to-anchor carries rule 501's heading too, so that it matches the body and never the title-case table of contents ('500. (Reserved)'). The chapter dates each paragraph '(7-1-26)'; a rule amended later changes those dates in place, which reads as drift."
     },
     {
       "n": 4,
@@ -30,8 +52,8 @@
       "transport": "curl",
       "user_agent": "browser",
       "extractor": "html-text",
-      "scope": "body",
-      "notes": "DRAFT — replace before promoting."
+      "scope": "main",
+      "notes": "aging.idaho.gov and oah.idaho.gov are WordPress sites and healthandwelfare.idaho.gov a Drupal site, all server-rendered and curl-able with a browser user-agent (2026-09-22). Scope main is the page's content region; site navigation and footer are outside it."
     },
     {
       "n": 5,
@@ -42,7 +64,7 @@
       "user_agent": "browser",
       "extractor": "html-text",
       "scope": "body",
-      "notes": "DRAFT — replace before promoting."
+      "notes": "aging.idaho.gov and oah.idaho.gov are WordPress sites and healthandwelfare.idaho.gov a Drupal site, all server-rendered and curl-able with a browser user-agent (2026-09-22). Scope body: the 'ver: 4.1.9 | last updated' line the source date quotes, and the office's address and phone, are in the site footer, outside main."
     },
     {
       "n": 6,
@@ -53,7 +75,7 @@
       "user_agent": "browser",
       "extractor": "html-text",
       "scope": "body",
-      "notes": "DRAFT — replace before promoting."
+      "notes": "aging.idaho.gov and oah.idaho.gov are WordPress sites and healthandwelfare.idaho.gov a Drupal site, all server-rendered and curl-able with a browser user-agent (2026-09-22). Scope body: the Commission's address and phone numbers and the 'last updated' line are in the site footer, outside main."
     },
     {
       "n": 7,
@@ -64,7 +86,7 @@
       "user_agent": "browser",
       "extractor": "html-text",
       "scope": "body",
-      "notes": "DRAFT — replace before promoting."
+      "notes": "aging.idaho.gov and oah.idaho.gov are WordPress sites and healthandwelfare.idaho.gov a Drupal site, all server-rendered and curl-able with a browser user-agent (2026-09-22). Scope body, for the same footer reason as source 6. The ombudsman's entry sits under the page's 'Stay Safe' tab; the tabs are server-rendered, all present in the markup, and hidden by script and styling only after load, so the static extraction holds every tab's text."
     }
   ]
 }
