@@ -342,3 +342,40 @@ digest-inert and settled, so this is recorded here rather than raised again.
 Cursor advanced from alabama to arkansas. No queue entries opened or bumped.
 
 Reviewer: session pass recovering the 2026-09-17 portfolio QC gap.
+
+## 2026-09-22 — recipe backfill attempted: massachusetts, new-hampshire (Room & Recourse exception, scheduled)
+
+Scheduled pass (portfolio-nightly-qc-review). 51 published state pages
+against 49 recipe files (48 states plus texas-moved), so the Room & Recourse
+exception applies: this repo's slot was spent on recipe construction rather
+than a review lap. States without a recipe: massachusetts, new-hampshire,
+south-dakota. Up to two attempted, per the exception's cap.
+
+**Massachusetts — not written.** All three standing-packet sources are on
+mass.gov, which returns HTTP 403 to curl (plain and browser user-agent),
+reconfirmed today. This matches the repo's own prior finding
+(FA-Q-20260917-04, first opened 2026-09-17): the WebFetch session reader also
+fails, and the two PDF-derived supplement sources cannot be reliably
+extracted through any transport this pass may use unattended. Bumped
+FA-Q-20260917-04 rather than repeating the full investigation. No recipe
+file was written or retained; states/massachusetts.md untouched.
+
+**New Hampshire — not written.** Sources 1-3 (gc.nh.gov RSA text, curl) and
+the three dhhs.nh.gov sources 4-6 (needing chrome transport, per
+FA-Q-20260919-02's still-open extraction-adjacency question) tested as
+expected. Sources 7-9 — three excerpts of one PDF at nhmmis.nh.gov — were
+recorded capturable via curl as of FA-Q-20260919-02 (2026-09-19); today the
+same URL returns an Incapsula bot-mitigation challenge page instead of the
+PDF, confirmed with and without a persisted cookie jar. This is a new
+regression, not the previously-logged span-adjacency problem, and is
+recorded separately as FA-Q-20260922-01. A recipe naming fewer sources than
+the standing packet would be a different packet wearing the old one's name,
+so nothing was written; states/new-hampshire.md untouched.
+
+South Dakota was not attempted this pass (already covered by
+FA-Q-20260917-03 and FA-Q-20260919-01, the JSON-API extractor gap).
+
+No published page changed. Review cursor untouched. Queue: bumped
+FA-Q-20260917-04 (occurrence 2); opened FA-Q-20260922-01.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-09-22.
