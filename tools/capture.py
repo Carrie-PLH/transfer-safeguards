@@ -95,7 +95,7 @@ AGENT_TRANSPORTS = ("web_fetch", "chrome")
 TRANSPORTS = LOCAL_TRANSPORTS + AGENT_TRANSPORTS
 
 EXTRACTORS = ("pdftotext-raw", "pdftotext-layout", "pdfplumber",
-              "html-text", "next-data", "docx", "none")
+              "html-text", "next-data", "json-doc", "docx", "none")
 
 # Opt-in per source (`"compressed": false`), not global, and default on so that
 # omitting it fetches exactly as before this option existed.
@@ -570,18 +570,20 @@ def lint(rec, slug=None):
         if s.get('extractor') == 'html-text' and not s.get('scope'):
             errs.append(f'{w}: html-text needs a scope selector; use "body" for '
                         f'the whole document rather than leaving it unstated')
-        if s.get('extractor') == 'next-data':
-            sc = s.get('scope')
+        if s.get('extractor') in ('next-data', 'json-doc'):
+            ex, sc = s['extractor'], s.get('scope')
+            where = ('inside the island' if ex == 'next-data'
+                     else 'inside the response body')
             if not sc:
-                errs.append(f'{w}: next-data needs a scope giving the dotted JSON '
-                            f'path to the page content inside the island')
+                errs.append(f'{w}: {ex} needs a scope giving the dotted JSON '
+                            f'path to the page content {where}')
             elif not (isinstance(sc, str)
                       or (isinstance(sc, list) and sc
                           and all(isinstance(x, str) for x in sc))):
-                errs.append(f'{w}: next-data scope must be a path or a '
+                errs.append(f'{w}: {ex} scope must be a path or a '
                             f'non-empty list of paths')
         if s.get('scope') and s.get('extractor') not in ('html-text', 'next-data',
-                                                         'docx'):
+                                                         'json-doc', 'docx'):
             errs.append(f'{w}: scope has no meaning for extractor '
                         f'{s.get("extractor")!r}')
         if s.get('user_agent') and s['user_agent'] not in USER_AGENTS:
@@ -840,11 +842,52 @@ def extract_next_data(text, path):
     m = NEXT_DATA_RE.search(text)
     if not m:
         raise RuntimeError('no __NEXT_DATA__ island in this response')
-    island = json.loads(m.group(1))
+    return resolve_json_paths(json.loads(m.group(1)), path)
+
+
+def extract_json_doc(text, path):
+    """Document text out of a bare JSON response body.
+
+    The next-data extractor above assumes the JSON arrives wrapped in a Next.js
+    island inside an HTML page. Some publishers skip the page: South Dakota's
+    legislature serves its administrative rules from an API that answers with
+    JSON directly, the rule text sitting in an `Html` field, while the human
+    site at the same address is a Vue application that renders nothing without
+    JavaScript. The content was never in the HTML to be extracted, and it was
+    never behind a browser either — it was one address over, in a form that
+    needs no rendering at all.
+
+    That distinction is why this is a separate extractor rather than a looser
+    next-data. next-data's failure message — no island in this response — is a
+    true and useful diagnosis of an HTML page; silently accepting a bare body
+    there would turn a real capture failure into a quiet success against
+    whatever else parsed. The two shapes are different facts about a publisher
+    and are worth failing differently.
+
+    `scope` takes the same dotted-path vocabulary, and the same rule applies: a
+    path landing on a string is treated as HTML and goes through the ordinary
+    text extraction, so table cells still arrive pipe-delimited.
+
+    Ported 2026-09-22 from licensure mobility's capture.py (FA-Q-20260906-03),
+    less the `links` pass-through, which this repo's extract_html does not
+    take."""
+    try:
+        root = json.loads(text)
+    except json.JSONDecodeError as e:
+        raise RuntimeError(f'response body is not JSON: {e}')
+    return resolve_json_paths(root, path)
+
+
+def resolve_json_paths(root, path):
+    """One or more dotted paths into parsed JSON, concatenated in the order given.
+
+    Shared by next-data and json-doc so that the two extractors cannot drift
+    apart in how they read a path — the difference between them is where the
+    JSON came from, and that is the only difference worth having."""
     paths = [path] if isinstance(path, str) else list(path)
     out = []
     for p in paths:
-        node = island
+        node = root
         for step in PATH_STEP_RE.finditer(p):
             key, idx = step.group(1), step.group(2)
             try:
@@ -945,6 +988,8 @@ def capture_source(src, supplied=None):
         text = extract_html(raw, src['scope'])
     elif extractor == 'next-data':
         text = extract_next_data(raw, src['scope'])
+    elif extractor == 'json-doc':
+        text = extract_json_doc(raw, src['scope'])
     else:
         text = raw if isinstance(raw, str) else raw.decode('utf-8', 'replace')
 
@@ -1297,6 +1342,40 @@ def self_test():
     check('phone: 404-656-3963' in both,
           'structured contacts were not rendered as key: value lines')
 
+    # A publisher can skip the page entirely and answer with JSON. South
+    # Dakota's legislature serves its administrative rules that way while the
+    # human site at the same address renders nothing without JavaScript, so the
+    # rule text is reachable with no browser and no island.
+    bare = ('{"Article":"44:73","Catchline":"Nursing facilities",'
+            '"Html":"<div><p>44:73:11:14. Admission, transfer, and discharge '
+            'policies. Each facility shall have written policies.</p></div>"}')
+    got = extract_json_doc(bare, 'Html')
+    check('Admission, transfer, and discharge policies' in got,
+          'json-doc did not reach the rule text in a bare JSON body')
+    check(extract_json_doc(bare, 'Catchline').strip() == 'Nursing facilities',
+          'json-doc did not resolve a plain string field')
+    try:
+        extract_json_doc(bare, 'Absent')
+        check(False, 'json-doc accepted a path that does not resolve')
+    except RuntimeError:
+        pass
+    # The two JSON extractors diagnose different publishers, so an HTML page
+    # handed to json-doc must fail as "not JSON" rather than passing quietly
+    # against whatever else happens to parse.
+    try:
+        extract_json_doc(island, 'props.page.content')
+        check(False, 'json-doc accepted an HTML page as a JSON body')
+    except RuntimeError as e:
+        check('not JSON' in str(e),
+              'json-doc failed on an HTML page for the wrong reason')
+    # And the island extractor must keep its own diagnosis for a bare body.
+    try:
+        extract_next_data(bare, 'Html')
+        check(False, 'next-data accepted a bare JSON body')
+    except RuntimeError as e:
+        check('__NEXT_DATA__' in str(e),
+              'next-data failed on a bare JSON body for the wrong reason')
+
 
     # Per-source --compressed opt-out, 2026-09-03. The guarantee that makes it
     # safe to add: a recipe that does not mention it fetches, and digests,
@@ -1360,6 +1439,12 @@ def self_test():
     no_scope = json.loads(json.dumps(good))
     no_scope['sources'][0]['extractor'] = 'html-text'
     check(lint(no_scope, 'testland'), 'lint missed html-text without a scope')
+    jd = json.loads(json.dumps(good))
+    jd['sources'][0]['extractor'] = 'json-doc'
+    check(any('json-doc needs a scope' in e for e in lint(jd, 'testland')),
+          'lint missed json-doc without a scope')
+    jd['sources'][0]['scope'] = 'Html'
+    check(lint(jd, 'testland') == [], 'lint rejected a valid json-doc source')
 
     # The digest must track capture-determining fields and nothing else.
     d0 = digest(good)
