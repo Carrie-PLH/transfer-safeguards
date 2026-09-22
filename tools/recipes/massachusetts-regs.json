@@ -1,0 +1,34 @@
+{
+  "recipe_version": 1,
+  "state": "massachusetts-regs",
+  "sources": [
+    {
+      "n": 1,
+      "title": "130 CMR 456.701 through 456.705 (transfers and discharges initiated by a nursing facility, notice time frames, fair hearing time frames, stay pending appeal, scheduling) — excerpt from the Nursing Facility Manual PDF the Commonwealth posts as 130 CMR 456.000",
+      "url": "https://www.mass.gov/doc/long-term-care-services-1/download",
+      "source_date": "regulation page date 09/08/2025; document Transmittal Letter NF-64, dated 09/08/25",
+      "transport": "curl",
+      "extractor": "pdftotext-layout",
+      "slice": {
+        "from": "456.701: Notice Requirements for Transfers and Discharges Initiated by a Nursing Facility (A) A resident may be transferred",
+        "to": "REGULATORY AUTHORITY 130 CMR 456.000: M.G.L."
+      },
+      "filters": [],
+      "notes": "Recipe written 2026-09-22 (FA-Q-20260917-04), supplement recipe for tools/packets/massachusetts-packet-regs.txt. mass.gov serves the 465,227-byte PDF to plain curl with no user-agent option (sha256 f90c639146d9f2411d6d973fd48639a8836ee2b6e3e7fe0d3741d4f26bf22150 on 2026-09-22); a browser user-agent gets 403, and back-to-back fetches drew a 3,365-byte 403 now and then, so pace re-runs. If curl is refused again this source becomes chrome + attended: true, supplied with --supply-file. Sliced from 456.701's body heading plus its first words (the table of contents prints the heading followed by leader dots, so the anchor cannot land there) to the REGULATORY AUTHORITY line that follows 456.705 at the end of the document; the slice therefore also carries the page furniture after 456.705(C) (the running block, Transmittal Letter NF-64, 09/08/25), as the hand capture kept it at each page break. pdftotext -layout: the manual is single-column, so -layout and -raw agree on reading order. The standing packet was rendered by the session fetch tool, so line breaks differ. mass.gov burst behaviour, observed 2026-09-22: its edge answers several requests in quick succession with a 3,365-byte HTTP 403 (distinct from the 14 KB 403 a browser user-agent gets), and a pause of about 30-40 seconds clears it; five URLs fetched back to back drew it on the 4th and 5th, and two captures 8 seconds apart drew it again. capture.py treats any non-200 as a failed source (exit 1), never a short packet, and curl's --retry does not retry a 403. So a nightly that reaches this recipe right after another mass.gov fetch may fail a source; re-run it after a pause before recording anything, and capture the three massachusetts recipes at least 30 seconds apart."
+    },
+    {
+      "n": 2,
+      "title": "MassHealth, regulation page for 130 CMR 456.000: Long Term Care Services (the page carrying the posted PDF)",
+      "url": "https://www.mass.gov/regulations/130-CMR-456000-long-term-care-services",
+      "source_date": "Date: 09/08/2025",
+      "transport": "curl",
+      "extractor": "html-text",
+      "scope": "#main-content",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Recipe written 2026-09-22. Plain curl, no user-agent option (a browser user-agent gets 403). #main-content holds the page's metadata, its 'Date: 09/08/2025' line and the download links' labels; the page carries no rule text (CLAUDE.md, Capture traps)."
+    }
+  ]
+}

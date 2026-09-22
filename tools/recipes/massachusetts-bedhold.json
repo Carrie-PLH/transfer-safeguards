@@ -1,0 +1,20 @@
+{
+  "recipe_version": 1,
+  "state": "massachusetts-bedhold",
+  "sources": [
+    {
+      "n": 1,
+      "title": "130 CMR 456.425 through 456.433 (Medical Leave of Absence: introduction, conditions of payment, payment, readmission, failure to readmit; Nonmedical Leave of Absence: introduction, limitations, conditions for payment, payment) — excerpt from the Nursing Facility Manual PDF the Commonwealth posts as 130 CMR 456.000",
+      "url": "https://www.mass.gov/doc/long-term-care-services-1/download",
+      "source_date": "regulation page date 09/08/2025; document Transmittal Letter NF-64, dated 09/08/25",
+      "transport": "curl",
+      "extractor": "pdftotext-layout",
+      "slice": {
+        "from": "456.425: Medical Leave of Absence (MLOA): Introduction (A) MassHealth pays",
+        "to": "(130 CMR 456.434 through 456.450 Reserved)"
+      },
+      "filters": [],
+      "notes": "Recipe written 2026-09-22 (FA-Q-20260917-04), supplement recipe for tools/packets/massachusetts-packet-bedhold.txt. The same PDF as massachusetts-regs source 1 (see its notes for the curl finding: no user-agent option, browser user-agent 403s, pace re-runs; if refused again, chrome + attended: true and --supply-file). Sliced from 456.425's body heading plus its first words (the contents list prints the heading with leader dots) to the '(130 CMR 456.434 through 456.450 Reserved)' line, exclusive; the 'to' anchor is searched after the 'from' match, so the contents-list copy of that line cannot end the slice. pdftotext -layout, as the 2026-09-14 hand capture used; the running page furniture inside the range is kept as the document prints it. mass.gov burst behaviour, observed 2026-09-22: its edge answers several requests in quick succession with a 3,365-byte HTTP 403 (distinct from the 14 KB 403 a browser user-agent gets), and a pause of about 30-40 seconds clears it; five URLs fetched back to back drew it on the 4th and 5th, and two captures 8 seconds apart drew it again. capture.py treats any non-200 as a failed source (exit 1), never a short packet, and curl's --retry does not retry a 403. So a nightly that reaches this recipe right after another mass.gov fetch may fail a source; re-run it after a pause before recording anything, and capture the three massachusetts recipes at least 30 seconds apart."
+    }
+  ]
+}
