@@ -264,6 +264,102 @@ def unligate(s):
 
 
 norm = lambda s: re.sub(r'\s+', ' ', unligate(s))
+
+
+# Stripped-address fallback (FA-Q-20260919-02, owner decision 2026-09-22).
+#
+# Some publishers build a contact address from adjacent inline fields with no
+# separator in the markup: dhhs.nh.gov prints "Brown Building", "129 Pleasant
+# Street", "Concord", "NH", "03301" as five <span>s with nothing between them,
+# so every faithful capture reads "Brown Building129 Pleasant StreetConcordNH
+# 03301". ADDRESS_RE cannot find a street address that runs straight into the
+# next word, so a page naming that office's address failed even though the
+# publisher prints it. The fallback: only when the ordinary match fails, compare
+# the page's address with all whitespace removed against the source bodies with
+# all whitespace removed, after the same normalization (ligatures, case).
+#
+# Narrow on purpose. ADDRESS only -- quotations, phones and emails never get it,
+# because a quotation must be the publisher's characters and the page's commas
+# are not in the markup. The stripped address must be at least
+# STRIPPED_ADDR_MIN characters and contain a digit, and a match may not sit
+# inside a longer number (a digit immediately before an address that starts
+# with one, or after one that ends with one), so "129 Pleasant Street" cannot
+# pass on "1129 Pleasant Street". Commas need no folding: ADDRESS_RE stops at
+# the street type and its words exclude commas, so an extracted address never
+# carries one.
+STRIPPED_ADDR_MIN = 12
+
+
+_STRIP_CACHE = [None, '']
+
+
+def _stripped(s):
+    """`s` normalized, lowercased and with all whitespace removed; the last
+    result is kept, since one check() asks for the same bodies per address."""
+    if _STRIP_CACHE[0] is not s:
+        _STRIP_CACHE[0], _STRIP_CACHE[1] = s, re.sub(r'\s+', '', norm(s)).lower()
+    return _STRIP_CACHE[1]
+
+
+def address_in_stripped(addr, bodies):
+    """True if `addr` (already normalized and lowercased, as the ADDRESS layer
+    holds it) occurs in `bodies` once all whitespace is removed from both."""
+    s = re.sub(r'\s+', '', addr)
+    if len(s) < STRIPPED_ADDR_MIN or not re.search(r'\d', s):
+        return False
+    hay = _stripped(bodies)
+    for m in re.finditer(re.escape(s), hay):
+        if s[0].isdigit() and m.start() > 0 and hay[m.start() - 1].isdigit():
+            continue
+        if s[-1].isdigit() and m.end() < len(hay) and hay[m.end()].isdigit():
+            continue
+        return True
+    return False
+
+
+def _self_test_stripped_address():
+    """Failures (empty list = pass) for the stripped-address fallback."""
+    import tempfile, os
+    out = []
+    run_together = 'Brown Building129 Pleasant StreetConcordNH03301'
+    if not address_in_stripped('129 pleasant street', run_together):
+        out.append('stripped: the run-together NH address did not match')
+    if address_in_stripped('128 pleasant street', run_together):
+        out.append('stripped: a wrong street number matched')
+    if address_in_stripped('29 pleasant street', run_together):
+        out.append('stripped: a number inside a longer number matched')
+    if address_in_stripped('9 elm st', 'Office9 Elm StConcord'):
+        out.append('stripped: an address under the length floor matched')
+    if address_in_stripped('p.o. box 12345', 'Write to P.O. Box 123456 today'):
+        out.append('stripped: a box number inside a longer number matched')
+    with tempfile.TemporaryDirectory() as d:
+        pk = os.path.join(d, 'packet.txt')
+        open(pk, 'w', encoding='utf-8').write(
+            'SOURCE 1: Ombudsman | https://agency.example.gov/o | retrieved: 2026-09-22\n'
+            'Address:\n' + run_together + '\nPhone: 603-271-4375\n')
+        cases = (
+            ('ok.md', 'Mailing address Brown Building, 129 Pleasant Street, '
+                      'Concord, NH 03301.\n', None),
+            ('num.md', 'Mailing address 128 Pleasant Street, Concord, NH 03301.\n',
+             'ADDRESS'),
+            ('quote.md', 'Its contact: "Brown Building, 129 Pleasant Street, '
+                         'Concord, NH 03301".\n', 'QUOTE'),
+            ('phone.md', 'Call 603-271-4376 or write to 129 Pleasant Street.\n',
+             'PHONE'),
+        )
+        for name, body, want in cases:
+            p = os.path.join(d, name)
+            open(p, 'w', encoding='utf-8').write(body)
+            sink = []
+            rc = check(p, pk, out=sink.append)
+            tags = {l.split(' ')[0] for l in sink if l.split(' ')[0].isupper()}
+            if want is None and rc != 0:
+                out.append(f'stripped: {name} failed: ' + '; '.join(sink))
+            if want is not None and want not in tags:
+                out.append(f'stripped: {name} did not fail {want}: ' + '; '.join(sink))
+            if want in ('QUOTE', 'PHONE') and 'ADDRESS' in tags:
+                out.append(f'stripped: {name} raised ADDRESS for a real address')
+    return out
 digits = lambda s: re.sub(r'\D', '', s)
 
 
@@ -509,7 +605,7 @@ def check(page_path, packet_path, out=print, lang='en', index_path=None):
     packet_addrs = {norm(a).lower().rstrip('.,')
                     for a in ADDRESS_RE.findall(bodies)}
     for a in sorted({norm(x).lower().rstrip('.,') for x in ADDRESS_RE.findall(text)}):
-        if a not in packet_addrs:
+        if a not in packet_addrs and not address_in_stripped(a, bodies):
             fails.append(f'ADDRESS not in packet: {a[:60]}')
 
     # 2c. external hostnames
@@ -907,6 +1003,8 @@ def self_test():
         'text after a change-log marker was treated as live; a fabrication '
         'placed below the marker would go unchecked')
 
+    _sa = _self_test_stripped_address()
+    assert not _sa, 'stripped-address self-test: ' + '; '.join(_sa)
     print(f'SELF-TEST PASSED: clean page passes; all {len(expected)} fabrication modes caught; '
           'multi-packet evidence checked and enforced; both quote delimiter styles '
           'extracted (curly, ASCII, mixed, nested, apostrophe-in-curly, link-terminated); '

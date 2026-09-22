@@ -599,6 +599,24 @@ the HTML. Tennessee's notice footnotes its grounds with asterisks and hit
 this; the HTML fidelity check catches it, which is how it was found. Quote
 around the asterisk, or fix the renderer if a state's text ever needs one.
 
+## Stripped-address fallback in check-fidelity (added 2026-09-22)
+
+The ADDRESS layer now tries a second comparison only when the ordinary one
+fails: the page's extracted street address with all whitespace removed, against
+the source bodies with all whitespace removed, after the checker's usual
+normalization (FA-Q-20260919-02; owner decision 2026-09-22). It exists for
+publishers whose markup runs address fields together -- dhhs.nh.gov prints
+"Brown Building129 Pleasant StreetConcordNH03301" as five adjacent spans --
+where the extraction pattern cannot find a street address that runs into the
+next word. It is ADDRESS only: quotations, phones and emails never get it, so a
+page still may not quote punctuation the markup lacks (FA-D-20260922-04). The
+stripped address must be 12 or more characters and contain a digit, and a match
+inside a longer number does not count. Commas need no folding: the extracted
+address stops at the street type and never carries one. Identical block in all
+four repos' `tools/check-fidelity.py` (`address_in_stripped`, with its own
+self-test); ported the same day with a before/after run over every page, in
+which no page's result changed.
+
 ## The archive layer (added 2026-09-04, reviewed 2026-09-18)
 
 `tools/spn.py` requests Internet Archive Save Page Now captures for sources a
