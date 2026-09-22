@@ -47,13 +47,18 @@ Usage:
     python3 tools/capture.py <slug>                     capture every source
     python3 tools/capture.py <slug> --source 2          one source only
     python3 tools/capture.py <slug> --supply 2=raw.txt  hand it an agent fetch
+    python3 tools/capture.py <slug> --supply-file 2=doc.pdf --supply-sha256 2=<hex>
+                                                        hand it bytes from an
+                                                        attended session
     python3 tools/capture.py <slug> --out capture.txt   default: stdout
     python3 tools/capture.py --lint [<slug>]            validate recipes
     python3 tools/capture.py --digest <slug>            recipe digest
     python3 tools/capture.py --self-test
 
 Exit codes: 0 clean, 1 capture failure, 2 usage or recipe error,
-            3 a recipe needs an agent fetch that was not supplied.
+            3 a recipe needs an agent fetch that was not supplied,
+            4 an "attended" source was not supplied (ATTENDED-ONLY).
+            Precedence when several apply: 1, then 3, then 4.
 """
 
 import argparse
@@ -560,9 +565,29 @@ def lint(rec, slug=None):
         w = f'source {s.get("n", i)}'
         if s.get('n') != i:
             errs.append(f'{w}: sources must be numbered 1..n in order')
-        for k in ('title', 'url', 'transport', 'extractor'):
+        for k in ('title', 'transport', 'extractor'):
             if not s.get(k):
                 errs.append(f'{w}: missing {k}')
+        if 'urls' in s:
+            us = s['urls']
+            if 'url' in s:
+                errs.append(f'{w}: url and urls are mutually exclusive; a '
+                            f'multi-page source lists every page in urls')
+            if (not isinstance(us, list) or len(us) < 2
+                    or not all(isinstance(u, str) and u.strip() for u in us)):
+                errs.append(f'{w}: urls must be a list of at least two '
+                            f'non-empty strings (one page takes url)')
+            elif len(set(us)) != len(us):
+                errs.append(f'{w}: urls lists the same page twice')
+            if s.get('transport') != 'curl':
+                errs.append(f'{w}: urls applies to the curl transport only')
+            if s.get('attended'):
+                errs.append(f'{w}: urls cannot be attended; a joined source '
+                            f'has no single file to supply')
+        elif not s.get('url'):
+            errs.append(f'{w}: missing url')
+        if 'attended' in s and not isinstance(s['attended'], bool):
+            errs.append(f'{w}: attended must be true or false')
         if s.get('transport') and s['transport'] not in TRANSPORTS:
             errs.append(f'{w}: unknown transport {s["transport"]!r}')
         if s.get('extractor') and s['extractor'] not in EXTRACTORS:
@@ -672,6 +697,11 @@ def digest(rec):
     for s in rec['sources']:
         m = {k: s.get(k) for k in ('n', 'url', 'transport', 'extractor', 'scope')}
         m['filters'] = list(s.get('filters', []))
+        # Opt-in like every field below: a single-url source hashes exactly as
+        # before `urls` existed. The list is ordered, and its order is part of
+        # what is captured. `attended` is deliberately absent (see its note).
+        if s.get('urls'):
+            m['urls'] = list(s['urls'])
         if s.get('user_agent') and s['user_agent'] != 'none':
             m['user_agent'] = s['user_agent']
         if s.get('compressed') is False:
@@ -958,40 +988,181 @@ def extract_docx(blob, scope):
     return '\n'.join(out)
 
 
-def capture_source(src, supplied=None):
-    """One source, from recipe to filtered text."""
-    transport, extractor = src['transport'], src['extractor']
-    needs_binary = extractor in ('pdftotext-raw', 'pdftotext-layout',
-                                 'pdfplumber', 'docx')
+PDF_EXTRACTORS = ('pdftotext-raw', 'pdftotext-layout', 'pdfplumber')
+BINARY_EXTRACTORS = PDF_EXTRACTORS + ('docx',)
 
-    if supplied is not None:
+
+# --- multi-URL sources (FA-D-20260922-02) --------------------------------------
+#
+# A packet source can be one document served as several pages: Idaho's source 2
+# is six statute sections, one legislature.idaho.gov page each, captured and cited
+# as one source. The owner's decision was to extend the recipe rather than
+# renumber published citations, so a source may carry `urls` (a list, fetched in
+# the declared order) instead of `url`. Each page is fetched and extracted on its
+# own -- an html-text scope selects within one document, so concatenating raw
+# HTML would silently keep only the first page -- and the extracted texts are
+# joined with a fixed marker line naming the page. The slice and the filters then
+# run once, over the joined text, exactly as they would over a single document.
+#
+# The marker is fixed and carries the URL so a reader of the packet can see
+# which page a passage came from; it is structure, not evidence, in the same way
+# a SOURCE header is. curl only: a joined source has no single thing a session
+# reader could supply.
+URLS_MARKER = '=== page {k} of {total} of this source: {url} ==='
+
+
+def source_urls(src):
+    """The address(es) a source is fetched from, in order."""
+    return list(src['urls']) if src.get('urls') else [src['url']]
+
+
+def join_url_bodies(pairs):
+    """[(url, extracted text), ...] -> one text, each page under its marker."""
+    total = len(pairs)
+    return '\n\n'.join(
+        URLS_MARKER.format(k=k, total=total, url=url) + '\n' + body.strip('\n')
+        for k, (url, body) in enumerate(pairs, 1))
+
+
+# --- attended sources and binary supply (FA-D-20260922-01) ---------------------
+#
+# Some sources can only be obtained by a real browser: mass.gov's PDFs (403 to
+# curl), the nhmmis.nh.gov manual when its Incapsula WAF challenges, azbn.gov.
+# Relaying such bytes back through a tool-call return corrupts them silently: on
+# 2026-09-15 a 19,631-byte PDF came back as 19,148 bytes of base64 that decoded
+# cleanly (FA-Q-20260915-01). The owner's decision puts the attended step at the
+# transport and never at the extraction: an attended session puts the file on
+# disk (a browser download the owner approves, or the owner saving it), and
+# --supply-file hands capture.py the BYTES, which then run through exactly the
+# extractor a curl fetch would have fed -- the pinned pdftotext modes, pdfplumber,
+# docx, or the HTML/JSON extractors after the same utf-8 decode fetch_curl does.
+#
+# A byte supply must be vouched for, because the failure it exists to prevent is
+# silent. The caller passes the SHA-256 of the bytes as the reader saw them
+# (--supply-sha256 N=<hex>): computed in the browser over the response it
+# received, or by the owner over the file the browser saved. A mismatch is a
+# failed source. For the PDF extractors the file must also open with a %PDF-
+# header, close with a %%EOF trailer, and pass a pdftotext probe with exit 0 --
+# truncation, the one corruption actually observed, fails all three.
+#
+# A recipe marks such a source `"attended": true`. An unattended run without a
+# supply then reports it ATTENDED-ONLY and exits ATTENDED_EXIT (4), distinct
+# from a capture failure (1) and from a session-reader fetch not supplied (3),
+# so a nightly pass can tell "this needs Carrie" from "this broke". `attended`
+# is not in the digest: who obtained the bytes does not change them, and the
+# packet notes record the supply and its hash.
+ATTENDED_EXIT = 4
+SHA256_RE = re.compile(r'[0-9a-f]{64}')
+PDF_HEAD_WINDOW = 1024   # the PDF spec tolerates junk before %PDF- within 1 KB
+PDF_TAIL_WINDOW = 1024   # and trailing bytes after %%EOF
+
+
+class SupplyFileError(RuntimeError):
+    """A --supply-file is not the bytes its recorded hash vouches for, or is
+    not a whole document of the kind its extractor reads."""
+
+
+class AttendedOnly(Exception):
+    def __init__(self, src):
+        self.src = src
+        super().__init__(f'source {src["n"]} is attended-only')
+
+
+def verify_supplied_bytes(blob, expected_sha256, extractor):
+    """Raise SupplyFileError unless `blob` is exactly the vouched-for bytes and,
+    for a PDF extractor, a structurally whole PDF that pdftotext reads with exit
+    0. Returns the SHA-256 on success, for the packet notes."""
+    exp = (expected_sha256 or '').strip().lower()
+    if not SHA256_RE.fullmatch(exp):
+        raise SupplyFileError(
+            f'expected SHA-256 must be 64 hex characters, got {expected_sha256!r}')
+    got = hashlib.sha256(blob).hexdigest()
+    if got != exp:
+        raise SupplyFileError(
+            f'SHA-256 mismatch: the file ({len(blob)} bytes) hashes to {got}, '
+            f'the reader recorded {exp}. The file is not the bytes the reader '
+            f'saw -- re-obtain it; never re-hash the file to make this pass')
+    if extractor in PDF_EXTRACTORS:
+        if b'%PDF-' not in blob[:PDF_HEAD_WINDOW]:
+            raise SupplyFileError(
+                f'no %PDF- header in the first {PDF_HEAD_WINDOW} bytes: not a PDF '
+                f'(a WAF challenge page or an HTML error saved as .pdf looks '
+                f'like this)')
+        if b'%%EOF' not in blob[-PDF_TAIL_WINDOW:]:
+            raise SupplyFileError(
+                f'no %%EOF trailer in the last {PDF_TAIL_WINDOW} bytes: the PDF '
+                f'is truncated')
+        require_poppler()
+        import tempfile
+        with tempfile.TemporaryDirectory() as td:
+            p = os.path.join(td, 'probe.pdf')
+            open(p, 'wb').write(blob)
+            r = subprocess.run(['pdftotext'] + PDFTOTEXT_LAYOUT + [p, '-'],
+                               capture_output=True, timeout=300)
+        if r.returncode != 0:
+            raise SupplyFileError(
+                f'pdftotext exited {r.returncode} on the supplied PDF: '
+                f'{r.stderr.decode("utf-8", "replace").strip()}')
+    return got
+
+
+def _extract(raw, src):
+    """Bytes (or a fetched/decoded text) to text, by the source's extractor."""
+    extractor = src['extractor']
+    if extractor in PDF_EXTRACTORS:
+        return extract_pdf(raw, extractor, src.get('pages'))
+    if extractor == 'docx':
+        return extract_docx(raw, src.get('scope') or 'paragraphs-and-tables')
+    if extractor == 'html-text':
+        return extract_html(raw, src['scope'])
+    if extractor == 'next-data':
+        return extract_next_data(raw, src['scope'])
+    if extractor == 'json-doc':
+        return extract_json_doc(raw, src['scope'])
+    return raw if isinstance(raw, str) else raw.decode('utf-8', 'replace')
+
+
+def _fetch(src, url, needs_binary):
+    return fetch_curl(url, binary=needs_binary,
+                      user_agent=src.get('user_agent', 'none'),
+                      compressed=src.get('compressed', True),
+                      ca_bundle=src.get('ca_bundle'),
+                      http_version=src.get('http_version'))
+
+
+def capture_source(src, supplied=None):
+    """One source, from recipe to filtered text.
+
+    `supplied` is a str from --supply (a session reader's text, handled as it
+    always has been) or bytes from --supply-file (already verified by the
+    caller), which are treated exactly as a curl fetch's bytes would be."""
+    transport, extractor = src['transport'], src['extractor']
+    needs_binary = extractor in BINARY_EXTRACTORS
+
+    if isinstance(supplied, bytes):
+        raw = supplied if needs_binary else supplied.decode('utf-8', 'replace')
+    elif supplied is not None:
         raw = supplied
+    elif src.get('attended'):
+        raise AttendedOnly(src)
     elif transport in AGENT_TRANSPORTS:
         raise NeedsAgentFetch(src)
+    elif src.get('urls'):
+        raw = None
+        text = join_url_bodies([(u, _extract(_fetch(src, u, needs_binary), src))
+                                for u in src['urls']])
     else:
-        raw = fetch_curl(src['url'], binary=needs_binary,
-                         user_agent=src.get('user_agent', 'none'),
-                         compressed=src.get('compressed', True),
-                         ca_bundle=src.get('ca_bundle'),
-                         http_version=src.get('http_version'))
+        raw = _fetch(src, src['url'], needs_binary)
 
-    if isinstance(raw, str) and needs_binary:
+    if raw is None:
+        pass    # a multi-URL source, extracted page by page above
+    elif isinstance(raw, str) and needs_binary:
         # A supplied agent fetch is already text; the extractor has effectively
         # been run by the reader. Say so in the packet rather than pretending
         # this file's extractor produced it.
         text = raw
-    elif extractor in ('pdftotext-raw', 'pdftotext-layout', 'pdfplumber'):
-        text = extract_pdf(raw, extractor, src.get('pages'))
-    elif extractor == 'docx':
-        text = extract_docx(raw, src.get('scope') or 'paragraphs-and-tables')
-    elif extractor == 'html-text':
-        text = extract_html(raw, src['scope'])
-    elif extractor == 'next-data':
-        text = extract_next_data(raw, src['scope'])
-    elif extractor == 'json-doc':
-        text = extract_json_doc(raw, src['scope'])
     else:
-        text = raw if isinstance(raw, str) else raw.decode('utf-8', 'replace')
+        text = _extract(raw, src)
 
     # Slice before the filters, because that is the order the hand captures
     # this replaces used: extract the whole document, cut the span, then tidy.
@@ -1041,7 +1212,10 @@ CANARY = ('FIRST LINE OF PACKET — if you cannot see this sentence, '
           'output only the words PACKET TRUNCATED')
 
 
-def render_packet(rec, bodies, day, supplied_ns=()):
+def render_packet(rec, bodies, day, supplied_ns=(), supplied_files=None):
+    """The packet text. `supplied_ns`: sources given as text by --supply.
+    `supplied_files`: {n: sha256} for sources given as bytes by --supply-file."""
+    supplied_files = supplied_files or {}
     d = digest(rec)
     lines = [CANARY, '', f'STATE: {rec["state"]}', f'ASSEMBLED: {day}', '',
              'CAPTURE NOTES:',
@@ -1061,9 +1235,19 @@ def render_packet(rec, bodies, day, supplied_ns=()):
             bits.append(f'ca_bundle {s["ca_bundle"]}')
         if s.get('http_version'):
             bits.append(f'http_version {s["http_version"]}')
+        if s.get('urls'):
+            bits.append(f'{len(s["urls"])} pages joined in declared order')
+        if s.get('attended'):
+            bits.append('attended')
         bits.append('filters ' + (', '.join(s.get('filters', [])) or 'none'))
-        supp = ' (fetched by the session reader and supplied)' \
-            if s['n'] in supplied_ns else ''
+        if s['n'] in supplied_files:
+            supp = (f' (bytes obtained in an attended session and supplied from '
+                    f'a file, sha256 {supplied_files[s["n"]]}, read by the '
+                    f'extractor named here)')
+        elif s['n'] in supplied_ns:
+            supp = ' (fetched by the session reader and supplied)'
+        else:
+            supp = ''
         lines.append(f'- SOURCE {s["n"]}: ' + '; '.join(bits) + supp + '.')
         if s.get('notes'):
             lines.append(f'  {s["notes"]}')
@@ -1072,7 +1256,7 @@ def render_packet(rec, bodies, day, supplied_ns=()):
         if s['n'] not in bodies:
             continue
         lines.append(
-            f'SOURCE {s["n"]}: {s["title"]} | {s["url"]} | '
+            f'SOURCE {s["n"]}: {s["title"]} | {" ; ".join(source_urls(s))} | '
             f'source date: {s.get("source_date") or "none published"} | '
             f'retrieved: {day}')
         lines.append(bodies[s['n']].strip())
@@ -1098,21 +1282,84 @@ def cmd_capture(args):
             return 2
         supplied[int(n)] = open(path, encoding='utf-8').read()
 
+    # Binary supply (FA-D-20260922-01). Parsed and cross-checked here, verified
+    # per source below so a bad file fails its own source loudly.
+    file_paths, file_shas = {}, {}
+    for flag, spec_list, into in (('--supply-file', args.supply_file, file_paths),
+                                  ('--supply-sha256', args.supply_sha256,
+                                   file_shas)):
+        for spec in spec_list or []:
+            n, _, val = spec.partition('=')
+            if not val or not n.strip().isdigit():
+                print(f'{flag} wants N={"PATH" if into is file_paths else "HEX"}, '
+                      f'got {spec!r}', file=sys.stderr)
+                return 2
+            into[int(n)] = val
+    by_n = {s['n']: s for s in rec['sources']}
+    for n in sorted(set(file_paths) | set(file_shas)):
+        if n not in file_shas:
+            print(f'--supply-file {n}= needs --supply-sha256 {n}=<hex>: a byte '
+                  f'supply is only accepted against the SHA-256 the reader '
+                  f'recorded', file=sys.stderr)
+            return 2
+        if n not in file_paths:
+            print(f'--supply-sha256 {n}= given without --supply-file {n}=',
+                  file=sys.stderr)
+            return 2
+        if n in supplied:
+            print(f'source {n} given both --supply and --supply-file',
+                  file=sys.stderr)
+            return 2
+        if n not in by_n:
+            print(f'--supply-file names source {n}, which is not in the recipe',
+                  file=sys.stderr)
+            return 2
+    for n, t in supplied.items():
+        s = by_n.get(n)
+        if s and s.get('attended') and s['extractor'] in BINARY_EXTRACTORS:
+            print(f'source {n} is attended and read by {s["extractor"]}: supply '
+                  f'its bytes with --supply-file, not its text with --supply',
+                  file=sys.stderr)
+            return 2
+
     wanted = [s for s in rec['sources']
               if args.source is None or s['n'] == args.source]
     if not wanted:
         print(f'no source {args.source} in {args.slug}', file=sys.stderr)
         return 2
 
-    bodies, pending, failed = {}, [], []
+    bodies, pending, attended, failed, file_hashes = {}, [], [], [], {}
     for s in wanted:
         try:
-            bodies[s['n']] = capture_source(s, supplied.get(s['n']))
+            given = supplied.get(s['n'])
+            if s['n'] in file_paths:
+                with open(file_paths[s['n']], 'rb') as fh:
+                    given = fh.read()
+                file_hashes[s['n']] = verify_supplied_bytes(
+                    given, file_shas[s['n']], s['extractor'])
+            bodies[s['n']] = capture_source(s, given)
+        except AttendedOnly:
+            attended.append(s)
         except NeedsAgentFetch:
             pending.append(s)
         except Exception as e:
             failed.append((s, e))
             print(f'SOURCE {s["n"]} failed: {e}', file=sys.stderr)
+
+    if attended:
+        print('', file=sys.stderr)
+        print('ATTENDED-ONLY: these sources are obtained in an attended session '
+              '(a browser download the owner approves, or the owner saving the '
+              'file) and are not fetched by an unattended run. Save the bytes, '
+              'record their SHA-256 as the reader saw them, and re-run with '
+              '--supply-file and --supply-sha256:', file=sys.stderr)
+        for s in attended:
+            print(f'  SOURCE {s["n"]}  ATTENDED-ONLY  {s["transport"]}  '
+                  f'{" ; ".join(source_urls(s))}', file=sys.stderr)
+        print('  e.g. tools/.venv/bin/python tools/capture.py %s %s' % (
+            args.slug, ' '.join(f'--supply-file {s["n"]}=<file> '
+                                f'--supply-sha256 {s["n"]}=<hex>'
+                                for s in attended)), file=sys.stderr)
 
     if pending:
         print('', file=sys.stderr)
@@ -1120,7 +1367,7 @@ def cmd_capture(args):
               'Fetch each URL with the named reader, save the text, and re-run '
               'with --supply:', file=sys.stderr)
         for s in pending:
-            print(f'  SOURCE {s["n"]}  {s["transport"]}  {s["url"]}',
+            print(f'  SOURCE {s["n"]}  {s["transport"]}  {" ; ".join(source_urls(s))}',
                   file=sys.stderr)
         print('  e.g. python3 tools/capture.py %s %s' % (
             args.slug, ' '.join(f'--supply {s["n"]}=/tmp/s{s["n"]}.txt'
@@ -1128,7 +1375,8 @@ def cmd_capture(args):
 
     if bodies:
         out = render_packet(rec, bodies, args.date or date.today().isoformat(),
-                            supplied_ns=set(supplied))
+                            supplied_ns=set(supplied),
+                            supplied_files=file_hashes)
         if args.out:
             open(args.out, 'w', encoding='utf-8').write(out)
             print(f'wrote {args.out} · {len(bodies)} source(s) · '
@@ -1136,7 +1384,14 @@ def cmd_capture(args):
         else:
             sys.stdout.write(out)
 
-    return 1 if failed else (3 if pending else 0)
+    # Precedence: a failure outranks everything; a session-reader fetch not
+    # supplied (3) outranks an attended-only source (4), because the former is
+    # work any session can do and the latter needs the owner.
+    if failed:
+        return 1
+    if pending:
+        return 3
+    return ATTENDED_EXIT if attended else 0
 
 
 def cmd_lint(args):
@@ -1156,10 +1411,13 @@ def cmd_lint(args):
         else:
             rec = load_recipe(slug)
             agent = sum(1 for s in rec['sources']
-                        if s['transport'] in AGENT_TRANSPORTS)
+                        if s['transport'] in AGENT_TRANSPORTS
+                        and not s.get('attended'))
+            attended = sum(1 for s in rec['sources'] if s.get('attended'))
             print(f'{slug}: ok · {len(rec["sources"])} source(s) · '
                   f'digest {digest(rec)}'
-                  + (f' · {agent} need a session reader' if agent else ''))
+                  + (f' · {agent} need a session reader' if agent else '')
+                  + (f' · {attended} attended-only' if attended else ''))
     print(f'{len(slugs) - bad}/{len(slugs)} recipe(s) clean')
     return 1 if bad else 0
 
@@ -1568,8 +1826,221 @@ def self_test():
           != digest(_with_slice({'from': head, 'from_occurrence': 2})),
           'changing from_occurrence did not change the recipe digest')
 
+    _self_test_supply_file(check)
+    _self_test_urls(check)
+
     print('self-test: ' + ('all checks passed' if ok else 'FAILURES'))
     return 0 if ok else 1
+
+
+def _minimal_pdf(text):
+    """A one-page PDF drawing `text`, with a correct xref, built in memory so
+    the self-test needs no fixture file."""
+    stream = f'BT /F1 12 Tf 72 720 Td ({text}) Tj ET'.encode('latin-1')
+    objs = [b'<< /Type /Catalog /Pages 2 0 R >>',
+            b'<< /Type /Pages /Kids [3 0 R] /Count 1 >>',
+            b'<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] '
+            b'/Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>',
+            b'<< /Length ' + str(len(stream)).encode() + b' >>\nstream\n'
+            + stream + b'\nendstream',
+            b'<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>']
+    out, offsets = bytearray(b'%PDF-1.4\n'), []
+    for i, o in enumerate(objs, 1):
+        offsets.append(len(out))
+        out += f'{i} 0 obj\n'.encode() + o + b'\nendobj\n'
+    xref = len(out)
+    out += f'xref\n0 {len(objs) + 1}\n0000000000 65535 f \n'.encode()
+    for off in offsets:
+        out += f'{off:010d} 00000 n \n'.encode()
+    out += (f'trailer\n<< /Size {len(objs) + 1} /Root 1 0 R >>\n'
+            f'startxref\n{xref}\n%%EOF\n').encode()
+    return bytes(out)
+
+
+def _self_test_supply_file(check):
+    """--supply-file and `attended` (FA-D-20260922-01), both directions."""
+    import tempfile
+    global RECIPES
+    pdf = _minimal_pdf('Hello supply file')
+    sha = hashlib.sha256(pdf).hexdigest()
+    src = {'n': 1, 'title': 'T', 'url': 'https://x.gov/a.pdf',
+           'transport': 'chrome', 'extractor': 'pdftotext-layout',
+           'attended': True}
+
+    # A byte-identical round trip through disk passes and reaches the pinned
+    # extractor, exactly as a curl fetch's bytes would.
+    with tempfile.TemporaryDirectory() as td:
+        p = os.path.join(td, 'rt.pdf')
+        open(p, 'wb').write(pdf)
+        back = open(p, 'rb').read()
+    check(back == pdf, 'round trip through disk changed the bytes')
+    try:
+        check(verify_supplied_bytes(back, sha, 'pdftotext-layout') == sha,
+              'verify did not return the SHA-256 it checked')
+        check('Hello supply file' in capture_source(src, back),
+              'supplied PDF bytes did not reach the pinned extractor')
+    except Exception as e:
+        check(False, f'a byte-identical supply failed: {e}')
+
+    # Truncation, the corruption actually observed, fails loudly both ways:
+    # against the reader's hash, and even against a hash of the truncated file.
+    cut = pdf[:len(pdf) // 2]
+    for exp, needle, what in ((sha, 'SHA-256 mismatch', 'the reader hash'),
+                              (hashlib.sha256(cut).hexdigest(), '%%EOF',
+                               'its own hash')):
+        try:
+            verify_supplied_bytes(cut, exp, 'pdftotext-layout')
+            check(False, f'a truncated PDF passed against {what}')
+        except SupplyFileError as e:
+            check(needle in str(e),
+                  f'truncated PDF against {what} failed for the wrong reason: {e}')
+    page = b'<html><body>Just a moment...</body></html>'
+    try:
+        verify_supplied_bytes(page, hashlib.sha256(page).hexdigest(), 'pdfplumber')
+        check(False, 'an HTML page passed as a PDF')
+    except SupplyFileError as e:
+        check('%PDF-' in str(e), f'HTML-as-PDF failed for the wrong reason: {e}')
+    try:
+        verify_supplied_bytes(pdf, 'abc', 'pdftotext-layout')
+        check(False, 'a malformed expected hash was accepted')
+    except SupplyFileError:
+        pass
+    # Non-PDF extractors get only the hash check, then the curl decode path.
+    html = '<html><body><main>Café hours</main></body></html>'.encode('utf-8')
+    check(verify_supplied_bytes(html, hashlib.sha256(html).hexdigest(),
+                                'html-text') == hashlib.sha256(html).hexdigest(),
+          'a hash-matching HTML supply was refused')
+    check('Café hours' in capture_source(
+        {'n': 1, 'title': 'T', 'url': 'u', 'transport': 'chrome',
+         'extractor': 'html-text', 'scope': 'main'}, html),
+          'supplied HTML bytes were not decoded as a curl fetch is')
+
+    # attended: lint, digest, and the unattended outcome.
+    rec = {'recipe_version': RECIPE_VERSION, 'state': 'testland',
+           'sources': [dict(src)]}
+    check(lint(rec, 'testland') == [], 'lint rejected a valid attended source')
+    bad = json.loads(json.dumps(rec))
+    bad['sources'][0]['attended'] = 'yes'
+    check(any('attended must be' in e for e in lint(bad, 'testland')),
+          'lint accepted a non-boolean attended')
+    plain = json.loads(json.dumps(rec))
+    del plain['sources'][0]['attended']
+    check(digest(plain) == digest(rec), 'attended moved the recipe digest')
+    try:
+        capture_source(src)
+        check(False, 'an unsupplied attended source did not stop')
+    except AttendedOnly:
+        pass
+    try:
+        capture_source({k: v for k, v in src.items() if k != 'attended'})
+        check(False, 'an unsupplied chrome source did not stop')
+    except NeedsAgentFetch:
+        pass
+
+    # End to end through the CLI: exit 4 unattended, 0 supplied, 2 without a
+    # hash, 1 with a wrong hash; --supply text behaviour untouched.
+    saved = RECIPES
+    try:
+        with tempfile.TemporaryDirectory() as td:
+            RECIPES = td
+            json.dump(rec, open(os.path.join(td, 'testland.json'), 'w'))
+            fp, out = os.path.join(td, 'a.pdf'), os.path.join(td, 'out.txt')
+            open(fp, 'wb').write(pdf)
+            import contextlib
+            import io
+            quiet = io.StringIO()
+            with contextlib.redirect_stderr(quiet):
+                r_att = main(['testland', '--out', out])
+                r_ok = main(['testland', '--out', out, '--supply-file', f'1={fp}',
+                             '--supply-sha256', f'1={sha}'])
+                body = open(out, encoding='utf-8').read()
+                r_nohash = main(['testland', '--supply-file', f'1={fp}'])
+                r_wrong = main(['testland', '--out', out, '--supply-file',
+                                f'1={fp}', '--supply-sha256', f'1={"0" * 64}'])
+                tp = os.path.join(td, 't.txt')
+                open(tp, 'w').write('already extracted text')
+                r_text = main(['testland', '--supply', f'1={tp}'])
+            check(r_att == ATTENDED_EXIT, f'unattended run exited {r_att}, not 4')
+            check('ATTENDED-ONLY' in quiet.getvalue(),
+                  'unattended run did not say ATTENDED-ONLY')
+            check(r_ok == 0 and 'Hello supply file' in body
+                  and f'sha256 {sha}' in body,
+                  'a verified --supply-file capture did not complete and record '
+                  'its hash')
+            check(r_nohash == 2, '--supply-file without --supply-sha256 was run')
+            check(r_wrong == 1, 'a wrong --supply-sha256 did not fail the source')
+            check(r_text == 2, 'an attended PDF source accepted a text --supply')
+    finally:
+        RECIPES = saved
+
+
+def _self_test_urls(check):
+    """`urls` on a recipe source (FA-D-20260922-02)."""
+    global _fetch
+    base = {'recipe_version': RECIPE_VERSION, 'state': 'testland', 'sources': [
+        {'n': 1, 'title': 'Code sections', 'transport': 'curl',
+         'extractor': 'html-text', 'scope': 'main',
+         'urls': ['https://x.gov/s1/', 'https://x.gov/s2/', 'https://x.gov/s3/']}]}
+    check(lint(base, 'testland') == [], 'lint rejected a valid urls source')
+    both = json.loads(json.dumps(base))
+    both['sources'][0]['url'] = 'https://x.gov/s1/'
+    check(any('mutually exclusive' in e for e in lint(both, 'testland')),
+          'lint accepted url and urls together')
+    one = json.loads(json.dumps(base))
+    one['sources'][0]['urls'] = ['https://x.gov/s1/']
+    check(any('at least two' in e for e in lint(one, 'testland')),
+          'lint accepted a one-item urls list')
+    dup = json.loads(json.dumps(base))
+    dup['sources'][0]['urls'][2] = 'https://x.gov/s1/'
+    check(any('twice' in e for e in lint(dup, 'testland')),
+          'lint accepted a repeated page')
+    agent = json.loads(json.dumps(base))
+    agent['sources'][0]['transport'] = 'chrome'
+    check(any('curl transport only' in e for e in lint(agent, 'testland')),
+          'lint accepted urls on a session-reader transport')
+    neither = json.loads(json.dumps(base))
+    del neither['sources'][0]['urls']
+    check(any('missing url' in e for e in lint(neither, 'testland')),
+          'lint accepted a source with neither url nor urls')
+    # The digest covers the list, in order; a single-url source is unaffected
+    # (the existing digest tests above pin that no single-url digest moved).
+    swapped = json.loads(json.dumps(base))
+    u = swapped['sources'][0]['urls']
+    u[0], u[1] = u[1], u[0]
+    check(digest(swapped) != digest(base), 'digest ignored the order of urls')
+    fewer = json.loads(json.dumps(base))
+    fewer['sources'][0]['urls'].pop()
+    check(digest(fewer) != digest(base), 'digest ignored a dropped page')
+
+    # Fetched in declared order, each page extracted on its own (so the scope
+    # applies per page), joined under fixed markers; slice runs on the join.
+    pages = {f'https://x.gov/s{i}/':
+             f'<html><body><nav>menu</nav><main>Section {i} text.</main></body></html>'
+             for i in (1, 2, 3)}
+    seen = []
+    saved = _fetch
+    try:
+        def fake(src, url, needs_binary):
+            seen.append(url)
+            return pages[url]
+        _fetch = fake
+        got = capture_source(base['sources'][0])
+        sl = dict(base['sources'][0])
+        sl['slice'] = {'from': 'Section 2 text.', 'to': 'Section 3 text.'}
+        got_sl = capture_source(sl)
+    finally:
+        _fetch = saved
+    check(seen[:3] == base['sources'][0]['urls'], 'urls were not fetched in order')
+    check('menu' not in got, 'the scope was not applied page by page')
+    check(got.index('Section 1') < got.index('Section 2') < got.index('Section 3'),
+          'joined pages are out of order')
+    check(URLS_MARKER.format(k=2, total=3, url='https://x.gov/s2/') in got,
+          'a page is missing its marker line')
+    check(got_sl.startswith('Section 2 text.') and 'Section 3' not in got_sl,
+          'a slice over a joined source did not cut the joined text')
+    hdr = render_packet(base, {1: got}, '2026-09-22').split('SOURCE 1: ')[-1]
+    check(' ; '.join(base['sources'][0]['urls']) in hdr.split('\n')[0],
+          'the SOURCE header does not list every page')
 
 
 def cmd_preflight():
@@ -1654,6 +2125,10 @@ def main(argv=None):
     p.add_argument('slug', nargs='?')
     p.add_argument('--source', type=int)
     p.add_argument('--supply', action='append', metavar='N=PATH')
+    p.add_argument('--supply-file', action='append', metavar='N=PATH',
+                   help='bytes for source N, read by its own extractor')
+    p.add_argument('--supply-sha256', action='append', metavar='N=HEX',
+                   help='SHA-256 of those bytes as the reader saw them')
     p.add_argument('--out')
     p.add_argument('--date')
     p.add_argument('--lint', action='store_true')

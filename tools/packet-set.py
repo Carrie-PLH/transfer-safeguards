@@ -43,7 +43,10 @@ Usage:
     python3 tools/packet-set.py <slug>                     packets, one per line
     python3 tools/packet-set.py <slug> --review <capture>  capture replaces main
     python3 tools/packet-set.py <slug> --lang es           the Spanish set
-    python3 tools/packet-set.py <slug> --args              one space-joined line
+    python3 tools/packet-set.py <slug> --args              REFUSED (exit 2): see
+                                                           ARGS_REFUSAL; split the
+                                                           one-per-line output on
+                                                           newlines instead
     python3 tools/packet-set.py --all                      every slug, one per line
     python3 tools/packet-set.py --ages [--older-than N]    supplement ages
     python3 tools/packet-set.py <slug> --kinds               supplement kinds
@@ -174,7 +177,9 @@ def self_test():
     global PACKETS
     keep = PACKETS
     failures = []
-    d = tempfile.mkdtemp()
+    # The directory name carries a space on purpose: every real path here sits
+    # under "Field Assembly", and --args broke on exactly that.
+    d = tempfile.mkdtemp(prefix='field assembly ')
     try:
         PACKETS = d
         def touch(name, body="STATE: x\nASSEMBLY DATE: 2026-08-01\n"):
@@ -245,6 +250,22 @@ def self_test():
         undated = [r for r in ages() if r[1].endswith('undated.txt')]
         if not undated or undated[0][3] is not None:
             failures.append('undated supplement not reported as undated')
+
+        # Paths with a space: the one-per-line output splits back into exactly
+        # the set on newlines, and --args refuses rather than emit a line that
+        # $(...) would mangle (FA-Q-20260913-01).
+        import contextlib, io
+        out, err = io.StringIO(), io.StringIO()
+        with contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
+            rc = main(['packet-set.py', 'testland'])
+            rc_args = main(['packet-set.py', 'testland', '--args'])
+        lines = out.getvalue().splitlines()
+        if rc != 0 or lines != packet_set('testland'):
+            failures.append(f'one-per-line output did not round-trip: {lines}')
+        if not all(' ' in p for p in lines):
+            failures.append('self-test paths lost their space; the case is untested')
+        if rc_args != 2 or '${(@f)' not in err.getvalue():
+            failures.append('--args did not refuse with the newline-split idiom')
     finally:
         PACKETS = keep
         shutil.rmtree(d, ignore_errors=True)
@@ -280,6 +301,9 @@ def main(argv):
         return 0
     if a.self_test:
         return self_test()
+    if a.args:
+        print(f'refusing: {ARGS_REFUSAL}', file=sys.stderr)
+        return 2
     if a.all:
         for s in all_slugs():
             print(s)
@@ -332,8 +356,28 @@ def main(argv):
         for p in missing:
             print(f'missing packet: {p}', file=sys.stderr)
         return 1
-    print(' '.join(paths) if a.args else '\n'.join(paths))
+    print('\n'.join(paths))
     return 0
+
+
+# --args used to print the set as one space-joined line for `$(...)`. No
+# single-line form survives unquoted command substitution when a path holds a
+# space, and every path here does: the portfolio lives under "Field Assembly",
+# and packet_set() returns absolute paths. bash splits inside the directory
+# name; zsh does not split at all and passes the whole line as one filename;
+# zsh's ${=...} splits inside the name again. check-fidelity then fails with
+# FileNotFoundError, or -- worse -- a session "fixes" the invocation by hand
+# and checks against the wrong set (FA-Q-20260913-01). So --args refuses, and
+# names the idiom that does work: the one-per-line output split on newlines.
+ARGS_REFUSAL = (
+    '--args is withdrawn: no single-line form survives unquoted $(...) under a '
+    'path containing a space ("Field Assembly"). Use the one-per-line output, '
+    'split on newlines only:\n'
+    '  zsh:  python3 tools/check-fidelity.py <page> '
+    '${(@f)"$(python3 tools/packet-set.py <slug> --review <capture>)"}\n'
+    '  bash (3.2-safe): IFS=$\'\\n\' read -r -d \'\' -a P < <(python3 '
+    'tools/packet-set.py <slug> --review <capture>); '
+    'python3 tools/check-fidelity.py <page> "${P[@]}"')
 
 
 if __name__ == '__main__':

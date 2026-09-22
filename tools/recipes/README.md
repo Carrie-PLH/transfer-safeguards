@@ -60,15 +60,17 @@ always be traced to the recipe that produced it.
 Top level: `recipe_version` must be `1`; `state` must equal the file's slug
 (lint checks it); `sources` is a non-empty list.
 
-Per source, required: `n`, `title`, `url`, `transport`, `extractor`. Sources are
+Per source, required: `n`, `title`, `url` (or `urls`), `transport`,
+`extractor`. Sources are
 numbered `1..n` in order and must match the standing packet's numbering and
 titles — the sources are whatever the standing packet says they are.
 
 Per source, optional: `source_date`, `scope`, `filters`, `notes`, `slice`,
-`pages`, `user_agent`, `http_version`, `compressed`, `ca_bundle`. Each is
-described below. Nothing else is read.
+`pages`, `user_agent`, `http_version`, `compressed`, `ca_bundle`, `attended`.
+Each is described below. Nothing else is read.
 
-`title`, `url` and `source_date` populate the SOURCE header line the packet
+`title`, `url` (or every entry of `urls`, joined with ` ; `) and
+`source_date` populate the SOURCE header line the packet
 prints (`SOURCE n: <title> | <url> | source date: <source_date> | retrieved:
 <day>`); an absent `source_date` prints as "none published". `url` is the
 address actually fetched, so for an API source it is the API address, and the
@@ -102,6 +104,70 @@ script fetches, because the content may sit one address over as plain JSON
 a host refuses curl (Arizona). Prefer `curl` wherever it works: a source
 reachable only through a session reader moves whenever that reader's extraction
 changes, with no source change behind it.
+
+## urls — one source served as several pages (added 2026-09-22)
+
+A packet source can be one document published as several pages: Idaho's
+source 2 is six Idaho Code sections, one legislature.idaho.gov page each, cited
+on the page as one source. FA-D-20260922-02 extends the recipe rather than
+renumbering published citations:
+
+```json
+"urls": ["https://.../SECT39-1301/", "https://.../SECT39-1302/"]
+```
+
+- `urls` replaces `url`; lint rejects a source carrying both, a list shorter
+  than two, a page listed twice, and `urls` on any transport but `curl` or on
+  an `attended` source (a joined source has no single thing to supply).
+- Pages are fetched in the declared order. Each is extracted on its own, so an
+  html-text `scope` applies within each page; concatenating raw HTML would keep
+  only the first page's match.
+- The extracted pages are joined, each under a fixed marker line
+  `=== page k of N of this source: <url> ===`. The marker is structure, like a
+  SOURCE header; never quote it.
+- `slice` and `filters` then run once over the joined text.
+- The list, in order, joins the digest; a single-`url` source hashes as before.
+
+## Attended sources and byte supply (added 2026-09-22)
+
+Some sources can only be obtained by a real browser, and when the extractor
+needs the raw bytes (a PDF, a DOCX) the session cannot relay them through a
+tool-call return: on 2026-09-15 a 19,631-byte mass.gov PDF came back as 19,148
+bytes of base64 that decoded without error (FA-Q-20260915-01). FA-D-20260922-01
+puts the human step at the transport and never at the extraction:
+
+- **`"attended": true`** marks a source whose bytes are obtained in an attended
+  session — a browser download the owner approves, or the owner saving the
+  file. An unattended run does not fetch it: it prints `ATTENDED-ONLY` for that
+  source and exits **4**, distinct from a capture failure (1) and from a
+  session-reader fetch not supplied (3). The other sources still capture and the
+  packet is still written; do not promote it, because it is short. `transport`
+  still records how the bytes are obtained (`chrome` for a browser download).
+  `attended` is not in the digest: who fetched the bytes does not change them.
+- **`--supply-file N=PATH --supply-sha256 N=HEX`** hands `capture.py` the bytes
+  from disk. They go through exactly the path a curl fetch's bytes would: the
+  pinned pdftotext modes, pdfplumber or docx for binary extractors, and the
+  same UTF-8 decode curl uses for html-text, next-data, json-doc and none. The
+  packet notes record `sha256 <hex>` for the source.
+- The SHA-256 is **required** and must be computed where the bytes were
+  obtained — in the browser over the response it received
+  (`crypto.subtle.digest`), or by the owner over the file the browser saved
+  (`shasum -a 256`). Never hash the relayed file to make a check pass; a
+  mismatch means the file is not what the reader saw, so re-obtain it.
+- For the PDF extractors the file must also carry `%PDF-` in its first 1 KB and
+  `%%EOF` in its last 1 KB, and a pdftotext probe must exit 0. Truncation, the
+  one corruption actually observed, fails all three.
+- A text `--supply` is refused (exit 2) for an attended source read by a binary
+  extractor, and a source cannot be given both `--supply` and `--supply-file`.
+  `--supply` itself is unchanged: a session reader's text for a chrome or
+  web_fetch source, used as extracted text for a binary extractor (Florida) or
+  run through html-text/none as before.
+
+What an attended session does, per source: obtain the file through the browser
+with the owner's approval; record the SHA-256 from the reader side; run
+`tools/.venv/bin/python tools/capture.py <slug> --supply-file N=<file>
+--supply-sha256 N=<hex> --out tools/packets/review/<slug>-<day>.txt` (with
+`--supply` for any chrome text sources); then the verification below.
 
 ## extractor — how bytes become text
 
@@ -246,7 +312,8 @@ source, and is a failed fetch. `capture.py` fails on any status other than 200.
 
 `--digest <slug>` prints a 12-hex hash over `n`, `url`, `transport`,
 `extractor`, `scope`, `filters`, and the optional fields above when set, plus
-`slice` and `pages`. Title, `source_date` and `notes` are excluded: a digest
+`urls`, `slice` and `pages`. Title, `source_date`, `notes` and `attended` are
+excluded: a digest
 that moves when prose moves teaches people to ignore it. The packet's capture
 notes record it, and `retain-packet.py` refuses a `--transport` naming a digest
 the capture does not declare.
@@ -259,6 +326,8 @@ Run under the repo's venv, not bare `python3`:
 tools/.venv/bin/python tools/capture.py <slug>                     capture every source
 tools/.venv/bin/python tools/capture.py <slug> --source 2          one source only
 tools/.venv/bin/python tools/capture.py <slug> --supply 2=raw.txt  hand it a session fetch
+tools/.venv/bin/python tools/capture.py <slug> --supply-file 2=doc.pdf --supply-sha256 2=<hex>
+                                                            hand it bytes from an attended session
 tools/.venv/bin/python tools/capture.py <slug> --out capture.txt   default: stdout
 tools/.venv/bin/python tools/capture.py <slug> --date YYYY-MM-DD   the ASSEMBLED/retrieved day
 tools/.venv/bin/python tools/capture.py --lint [<slug>]            validate recipes
@@ -268,7 +337,8 @@ tools/.venv/bin/python tools/capture.py --preflight                pins vs. this
 ```
 
 Exit codes: 0 clean, 1 capture failure, 2 usage or recipe error, 3 a source
-needs a session fetch that was not supplied.
+needs a session fetch that was not supplied, 4 an `attended` source was not
+supplied (ATTENDED-ONLY). When several apply: 1, then 3, then 4.
 
 ## Verifying a new recipe
 
@@ -279,12 +349,16 @@ The five steps, all passing, before a recipe is kept (the sibling CLAUDE.md
 tools/.venv/bin/python tools/capture.py --lint <slug>
 tools/.venv/bin/python tools/capture.py <slug> --out tools/packets/review/<slug>-<day>.txt
 tools/.venv/bin/python tools/capture.py <slug> --out <scratch>/<slug>-again.txt     # byte-identical
-python3 tools/check-fidelity.py states/<slug>.md $(python3 tools/packet-set.py <slug> --review tools/packets/review/<slug>-<day>.txt --args)
-python3 tools/check-fidelity.py site/states/<slug>.html $(python3 tools/packet-set.py <slug> --review tools/packets/review/<slug>-<day>.txt --args)
+python3 tools/check-fidelity.py states/<slug>.md ${(@f)"$(python3 tools/packet-set.py <slug> --review tools/packets/review/<slug>-<day>.txt)"}
+python3 tools/check-fidelity.py site/states/<slug>.html ${(@f)"$(python3 tools/packet-set.py <slug> --review tools/packets/review/<slug>-<day>.txt)"}
 ```
 
-Use relative paths: the portfolio path contains a space, and an absolute path
-through `$( )` splits. For a supplied source, the second run proves nothing
+That is zsh, the Mac's shell: `${(@f)...}` splits the one-per-line output on
+newlines only. packet-set prints absolute paths under "Field Assembly", so any
+split on spaces breaks them; `packet-set.py --args` is withdrawn and exits 2
+for that reason (FA-Q-20260913-01). In bash 3.2:
+`IFS=$'\n' read -r -d '' -a P < <(python3 tools/packet-set.py <slug> --review <capture>)`
+then pass `"${P[@]}"`. For a supplied source, the second run proves nothing
 about the supply; take the supply twice from independent navigations and
 compare hashes, and say so in `notes`. Then retain and promote:
 
@@ -319,6 +393,7 @@ the `curl-cffi` transport and its `impersonate`, `warm` and `pace` fields and
 `crawl_delay` (Board & Border); the `pdftotext-plain` extractor (both); the
 `links` field on `html-text`/`next-data` (both); and `body_url` with the
 `document` scope (Rules & Record). Present here and in neither sibling:
-`http_version`. `json-doc` was
+`http_version`, `urls`, `attended`, and `--supply-file`/`--supply-sha256`
+(written here first on 2026-09-22 to be ported verbatim, FA-D-20260922-01/-02). `json-doc` was
 ported from Board & Border on 2026-09-22 without its `links` pass-through;
 gathered work and Rules & Record do not have it.

@@ -800,6 +800,40 @@ Where the tail after a span holds nothing long enough to anchor on, omit `to`
 and run to the end of the document rather than writing a short anchor. Nebraska
 source 5 does this deliberately.
 
+## Attended sources, byte supply, multi-page sources (added 2026-09-22)
+
+Three capture.py additions, each an owner decision; `tools/recipes/README.md`
+documents them in full and the code comments carry the reasoning.
+
+**`"attended": true` and `--supply-file` (FA-D-20260922-01).** A source only a
+real browser can reach, whose extractor needs the raw bytes (mass.gov's PDFs,
+the nhmmis.nh.gov manual when its WAF challenges), is marked attended. An
+unattended run prints `ATTENDED-ONLY` for it and exits **4** — not 1, which is a
+broken capture, and not 3, which any session with a browser can supply. A
+nightly pass that sees 4 reports the source for an attended session and does
+not promote the short packet. The attended session saves the file with the
+owner's approval, records its SHA-256 on the reader side, and runs
+`capture.py <slug> --supply-file N=<file> --supply-sha256 N=<hex>`; the bytes then
+go through the pinned extractor exactly as curl's would. Never relay a binary
+through a tool-call return (FA-Q-20260915-01: 483 bytes vanished silently), and
+never hash the relayed file to make the check pass. PDFs must also carry
+`%PDF-` and `%%EOF` and pass a pdftotext probe. `--supply` (text) is unchanged.
+
+**`urls` (FA-D-20260922-02).** A source published as several pages takes a
+`urls` list instead of `url`; the pages are fetched in order, extracted one by
+one, and joined under `=== page k of N of this source: <url> ===` markers
+before slice and filters run. Idaho source 2 (six Idaho Code sections) is the
+case. When a tool cannot express a packet as it stands, extend the tool; do not
+renumber published citations.
+
+**`packet-set.py --args` is withdrawn (FA-Q-20260913-01)** and exits 2. Its
+paths are absolute and sit under "Field Assembly", so no single line survives
+unquoted `$(...)`. Split the one-per-line output on newlines only:
+
+    python3 tools/check-fidelity.py states/<slug>.md ${(@f)"$(python3 tools/packet-set.py <slug> --review <capture>)"}
+
+(zsh; in bash 3.2, `IFS=$'\n' read -r -d '' -a P < <(...)` then `"${P[@]}"`).
+
 ## Link-boundary spaces: an artifact class the pages inherited (2026-09-04)
 
 Three pages published a space the publisher does not print, each inside a
