@@ -58,6 +58,21 @@
         "to": "Navigation Areas"
       },
       "notes": "tabid/81/Default.aspx (DotNetNuke). body scope alone pulls the full page chrome (repeated nav menu, footer) around the article; this slice narrows to the article plus the Bureau's mailing/location address block, phone, fax and hours that follow it, cutting before the page's second full nav-menu dump (headed 'Navigation Areas'). tools/propose-slice.py's own auto-proposed to-anchor and occurrence (occurrence 3 of a different, longer needle) did not reproduce under a direct capture.py run -- only one occurrence existed after the from-anchor -- so this anchor was chosen by hand after inspecting the extraction directly; the standing hand-cut packet's own source 4 body runs further, into the nav menu, and is truncated mid-word, which this slice does not try to reproduce. Curl over plain http, as the standing packet's capture notes record; https also resolves but was not tested against this recipe."
+    },
+    {
+      "n": 5,
+      "title": "BMS Provider Manual, Chapter 514 Nursing Facility Services — transfer/discharge policy and bed reservation",
+      "url": "https://bms.wv.gov/media/40026/download?inline=",
+      "source_date": "Effective: 10/1/2024",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "West Virginia's Medicaid provider manual, published by the Bureau for Medical Services, restates the transfer/discharge policy in its own words (514.8.2) and states the state's Medicaid bed-hold rule (514.8.3), which no licensure source captured as sources 1-3 states. The heading text '514.8.2 Transfer and Discharge Policies' and '514.8.4 Medical Leave of Absence' each appear twice -- once in the table of contents, once at the real heading -- so from_occurrence 2 is used to land on the body; the 'to' anchor's own occurrence count restarts after the 'from' match, so the single body occurrence of the 514.8.4 heading needs no occurrence override. This document's page break carries a six-line footer/header block (a 'BMS Provider Manual / Page NN / Chapter 514... / Effective: 10/1/2024' line pair, a three-line DISCLAIMER paragraph, and a 'CHAPTER 514 NURSING FACILITY SERVICES' banner) -- taller than strip-running-headers' two-line edge window reaches, so that filter (tried, and left off this source since it changed nothing) cannot drop it. The boilerplate survives in the packet between provisions; every quotation in this page's markdown was chosen to fall within a single printed page rather than crossing one of these breaks. See this state's change log and QUEUE.md.",
+      "slice": {
+        "from": "514.8.2 Transfer and Discharge Policies",
+        "from_occurrence": 2,
+        "to": "514.8.4 Medical Leave of Absence"
+      }
     }
   ]
 }

@@ -193,6 +193,26 @@ in a way that makes re-rendering unsafe to do blindly). Whether this is a
 tooling defect or a stale render was not determined, so it is filed here
 rather than in the tooling-defects section or the standard's handoff queue.
 
+**capture.py's strip-running-headers filter cannot reach a tall page-break block —
+found 2026-09-22, deepening West Virginia.** The filter only tests lines within
+`RUNHEAD_EDGE_LINES` (2) non-blank lines of a page's edge. West Virginia's
+BMS Provider Manual (Chapter 514) prints a six-line footer/header at every page
+break — a two-line "BMS Provider Manual / Page NN ... Effective: 10/1/2024"
+block, a three-line DISCLAIMER paragraph, and a "CHAPTER 514 NURSING FACILITY
+SERVICES" banner — and the two lines actually worth dropping (the manual/page
+line and the chapter/date line) sit four and five lines deep, outside the
+filter's reach; the filter ran, correctly located the page breaks, and dropped
+nothing. Not a blocker: the state's page (`tools/recipes/west-virginia.json`,
+source 5) was built by choosing every quotation to fall within a single
+printed page rather than crossing a break, the same discipline already used
+for Missouri's two-column PDF. Recorded here rather than in the tooling-defects
+section above because it did not prevent the page from being built faithfully
+— it is a limit to know about, not a fix owed before the next capture. A
+working session widening `RUNHEAD_EDGE_LINES` (or making it document-relative,
+since a taller footer implies a taller eligible edge) should re-run the filter
+self-test and re-verify every recipe already naming `strip-running-headers`
+before trusting the change.
+
 ## Deferred, dated
 
 **Hawaii — deferred 2026-09-03.** The operative rule, Hawaii Administrative

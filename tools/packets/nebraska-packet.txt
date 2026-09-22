@@ -1,10 +1,10 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: nebraska
-ASSEMBLED: 2026-09-04
+ASSEMBLED: 2026-09-22
 
 CAPTURE NOTES:
-- Captured by tools/capture.py from tools/recipes/nebraska.json (recipe digest 55ac7b0dc353). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Captured by tools/capture.py from tools/recipes/nebraska.json (recipe digest 27b925a0693b). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
 - SOURCE 1: transport curl; extractor html-text; scope body; slice from '71-6022. Transfer or discharge of resident; conditions;' to 'View Statute 71-6021 Chapter 71 Index View Statute71-6023 Frequent'; filters none.
   The Legislature serves one statute per page with its own navigation above and below; the slice keeps the section and drops the chrome. The 'to' anchor is that navigation strip, which is stable because it names the neighbouring sections.
 - SOURCE 2: transport curl; extractor html-text; scope body; slice from '71-6023. Involuntary transfer or discharge; notice;' to 'View Statute 71-6022 Chapter 71 Index View Statute71-6023.01 Frequent'; filters none.
@@ -13,10 +13,20 @@ CAPTURE NOTES:
   The Legislature serves one statute per page with its own navigation above and below; the slice keeps the section and drops the chrome. The 'to' anchor is that navigation strip, which is stable because it names the neighbouring sections.
 - SOURCE 4: transport curl; extractor pdftotext-layout; slice from '12-006.05 Resident Rights' to 'States; 7. Voice complaints and grievances without'; filters none.
   175 NAC is published as one complete-title PDF. The slice starts at the resident rights heading rather than at the standing packet's own first line, which began mid-sentence ('rate; 2. Be fully informed of his or her rights') — a mid-sentence anchor is one revision away from matching nothing, and starting at the heading is a superset.
-- SOURCE 5: transport curl; extractor html-text; scope body; slice from 'Page Content \u200b\u200b\u200b\u200b\u200b\u200bThe Long-Term Care Ombudsman' to the end of the document; filters none.
-  Server-rendered. The slice drops the site chrome above the page content and runs to the end of the document: the standing packet's span ended a few words before the end, and no anchor long enough to be safe exists in what follows, so this is a deliberate superset rather than a short anchor.
+- SOURCE 5: transport curl; extractor html-text; scope body; slice from 'The Long-Term Care Ombudsman (LTCO)' to the end of the document; filters none.
+  Server-rendered. The slice drops the site chrome above the page content and runs to the end of the document: the standing packet's span ended a few words before the end, and no anchor long enough to be safe exists in what follows, so this is a deliberate superset rather than a short anchor. Anchor corrected 2026-09-22: the page's hidden 'Page Content' field label, previously part of this anchor, no longer appears in the extraction (the page's own markup changed; capture.py was not touched) -- see this state's change log.
+- SOURCE 6: transport curl; extractor pdftotext-layout; slice from '007.12 BED-HOLDING POLICIES FOR HOSPITAL AND THERAPEUTIC LEAVE' to '007.22 PRIOR AUTHORIZATION.'; filters none.
+  471 NAC is Nebraska Medicaid's own nursing-facility regulation, distinct from the 175 NAC licensure chapter already captured as source 4; the department's own Title 471 index page (dhhs.ne.gov/Pages/Title-471.aspx) lists Chapter 12 as 'Amended 6/26/2021', matching this document's running head. This slice runs from the bed-holding policy through the appeals-of-discharge section, a single contiguous span in the source.
+- SOURCE 7: transport curl; extractor pdftotext-layout; slice from '007.25(K) PAYMENT FOR BED-HOLDING.' to '(5) The discharge potential.'; filters none.
+  Same document as source 6; the payment-side bed-holding rule (day limits and conditions) sits later in the chapter, under the specific-payments section, so it is a separate slice rather than a wider span of source 6.
+- SOURCE 8: transport curl; extractor pdftotext-layout; slice from '2-001.02 Right to Appeal: Every applicant for or recipient' to '2-002 Client Responsibilities: Each applicant for, or client of'; filters none.
+  471 NAC 12-007.21 (source 6) directs a discharge/transfer appeal to be conducted under 465 NAC 2 and 6; this is the compiled Title 465 manual PDF linked from dhhs.ne.gov/Pages/Title-465.aspx (source 10). The running head on this chapter reads REV. AUGUST 21, 1995 throughout, while that index page states Chapter 2 was 'Amended 9/17/2024' -- a discrepancy this recipe does not resolve; the change log records it. This slice holds the right-to-appeal provision and its subsections on time limits, filing and notice.
+- SOURCE 9: transport curl; extractor pdftotext-layout; slice from '6-004 Commencement of a Contested Case:' to '6-004.02 Parties to a Contested Case:'; filters none.
+  Same document as source 8; the commencement-of-a-contested-case provision sits far later in the compiled manual, so it is captured as a separate slice. Same dating discrepancy against dhhs.ne.gov/Pages/Title-465.aspx as source 8 (that page states Chapter 6 was 'Amended 9/17/2024').
+- SOURCE 10: transport curl; extractor html-text; scope body; slice from "View Title 465 on the Secretary of State's website." to 'Rules & Regulations Page'; filters none.
+  Server-rendered SharePoint page listing each Title 465 chapter with its own most-recent-amendment date, captured to support the dating discrepancy recorded against sources 8 and 9 (the compiled manual PDF's own running heads read 1995 for the same chapters).
 
-SOURCE 1: Neb. Rev. Stat. 71-6022 | https://nebraskalegislature.gov/laws/statutes.php?statute=71-6022 | source date: Laws 1983, LB 235, § 15; Laws 1986, LB 782, § 5 | retrieved: 2026-09-04
+SOURCE 1: Neb. Rev. Stat. 71-6022 | https://nebraskalegislature.gov/laws/statutes.php?statute=71-6022 | source date: Laws 1983, LB 235, § 15; Laws 1986, LB 782, § 5 | retrieved: 2026-09-22
 71-6022.
  
 
@@ -42,7 +52,7 @@ Laws 1983, LB 235, § 15;
 
 Laws 1986, LB 782, § 5.
 
-SOURCE 2: Neb. Rev. Stat. 71-6023 | https://nebraskalegislature.gov/laws/statutes.php?statute=71-6023 | source date: Laws 1983, LB 235, § 16; Laws 2000, LB 819, § 125 | retrieved: 2026-09-04
+SOURCE 2: Neb. Rev. Stat. 71-6023 | https://nebraskalegislature.gov/laws/statutes.php?statute=71-6023 | source date: Laws 1983, LB 235, § 16; Laws 2000, LB 819, § 125 | retrieved: 2026-09-22
 71-6023.
  
 
@@ -77,7 +87,7 @@ Laws 1983, LB 235, § 16;
 
 Laws 2000, LB 819, § 125.
 
-SOURCE 3: Neb. Rev. Stat. 71-445 | https://nebraskalegislature.gov/laws/statutes.php?statute=71-445 | source date: Laws 2000, LB 819, § 45; Laws 2007, LB296, § 372; Laws 2016, LB750, § 10 | retrieved: 2026-09-04
+SOURCE 3: Neb. Rev. Stat. 71-445 | https://nebraskalegislature.gov/laws/statutes.php?statute=71-445 | source date: Laws 2000, LB 819, § 45; Laws 2007, LB296, § 372; Laws 2016, LB750, § 10 | retrieved: 2026-09-22
 71-445.
  
 
@@ -133,7 +143,7 @@ Annotations
 
 The State has not waived its sovereign immunity for claims arising under the Health Care Facility Licensure Act. Baker-Heser v. State, 309 Neb. 979, 963 N.W.2d 59 (2021).
 
-SOURCE 4: 175 NAC 12, Skilled Nursing and Nursing Facilities — resident rights, transfer and discharge | https://dhhs.ne.gov/Documents/Title-175-Complete.pdf | source date: running head EFFECTIVE 2/27/07 | retrieved: 2026-09-04
+SOURCE 4: 175 NAC 12, Skilled Nursing and Nursing Facilities — resident rights, transfer and discharge | https://dhhs.ne.gov/Documents/Title-175-Complete.pdf | source date: running head EFFECTIVE 2/27/07 | retrieved: 2026-09-22
 12-006.05 Resident Rights                                          30
       12-006.06 Complaints and Grievances                                33
 
@@ -1861,11 +1871,8 @@ EFFECTIVE          NEBRASKA HEALTH AND HUMAN SERVICES                           
 
         6.    Exercise rights as a resident of the facility and as a citizen of the United
 
-SOURCE 5: Long-Term Care Ombudsman | https://dhhs.ne.gov/Pages/Aging-Ombudsman.aspx | source date: none stated on page | retrieved: 2026-09-04
-Page Content
-
-
-​​​​​​The Long-Term Care Ombudsman (LTCO) works with nursing home and assisted living residents. They help answer resident concerns and complaints. The LTCO advocates for resident rights and their well-being.
+SOURCE 5: Long-Term Care Ombudsman | https://dhhs.ne.gov/Pages/Aging-Ombudsman.aspx | source date: none stated on page | retrieved: 2026-09-22
+The Long-Term Care Ombudsman (LTCO) works with nursing home and assisted living residents. They help answer resident concerns and complaints. The LTCO advocates for resident rights and their well-being.
 
 
 
@@ -2077,19 +2084,7 @@ A sample Five Wishes plan.
 
 
 
-
-
  ​
-
-
-
-
-
-
-
-
-/PAGEWATCH
-
 
 
 
@@ -2410,4 +2405,266 @@ Contact Us
 
 
  Helping People Live Better Lives
+
+SOURCE 6: 471 NAC 12, Nursing Facility Regulations — bed-holding, discharge and appeals | http://govdocs.nebraska.gov/epubs/H8900/R471.0012-2021.pdf | source date: running head EFFECTIVE 06-26-2021 | retrieved: 2026-09-22
+007.12 BED-HOLDING POLICIES FOR HOSPITAL AND THERAPEUTIC LEAVE. The
+  facility must develop policies as defined in 42 CFR 483.15(d).
+
+  007.13 INITIAL NOTICE OF BED-HOLDING POLICIES. The facility must provide written
+  information to the client and a family member or legal representative that specifies:
+      (A) The duration of the bed-hold policy during which the client is permitted to return and
+          resume residence in the facility; and
+      (B) The facility's policies regarding bed-hold periods which must be consistent with 42
+          CFR 483.15(d).
+
+  007.14 NOTICE UPON TRANSFER. At the time of transfer, the facility must provide written
+  notice to the client and a family member or legal representative which specifies the duration
+  of the bed-hold policy.
+
+  007.15 PERMITTING THE CLIENT TO RETURN TO THE FACILITY. The facility must
+  establish and follow a written policy under which a client whose leave exceeds the bed-hold
+  period is re-admitted to the facility immediately upon availability of a bed if the client:
+      (A) Requires the services provided by the facility; and
+      (B) Is eligible for Medicaid nursing facility services.
+
+  007.16 FACILITY-TO-FACILITY TRANSFER. To transfer any Medicaid client from one facility
+  to another, the transferring facility must:
+      (A) Obtain physician's written order for transfer;
+      (B) Obtain written consent from the client, his or her family, or guardian;
+      (C) Notify the Department that handles the client's case in writing, stating:
+          (i) The reason for transfer;
+          (ii) The name of facility to which the client is being transferred; and
+          (iii) The date of transfer;
+      (D) Transfer the following to the receiving facility:
+          (i) Necessary medical, social, and Preadmission Screening and Resident Review
+                (PASRR) information;
+          (ii) Any non-standard wheelchair and wheelchair accessories, options, or
+                components, including power operated vehicles;
+          (iii) Any augmentative communication devices with related equipment and software;
+          (iv) Supports; and
+          (v) Custom fitted or custom fabricated items; and
+      (E) Document transfer information in the client's record and discharge summary.
+
+
+
+
+                                             26
+
+EFFECTIVE                  NEBRASKA DEPARTMENT OF
+06-26-2021                 HEALTH AND HUMAN SERVICES                                   471 NAC 12
+
+  007.17 DISCHARGES. At the time of or no later than 48 hours after a client is discharged or
+  expires, the facility must notify the Department that handles the client's case of:
+     (A) Date of discharge and the place to which the client was discharged; or
+     (B) Date of death.
+
+  007.18 DISCHARGE PLANNING. Before a client's discharge or deinstitutionalization, the
+  facility staff must document in the medical record the actual implementation date of the
+  discharge plan. Each nursing facility must maintain written discharge planning procedures for
+  all Medicaid clients that describe:
+      (A) Which staff member of the facility has operational responsibility for discharge
+            planning;
+      (B) The manner in, and methods by, which the staff member will function, including
+            authority and relationship with the facility's staff;
+      (C) The time period in which each client's need for discharge planning will be determined,
+            which period may not be later than seven days after the day of admission;
+      (D) The maximum time period after which the interdisciplinary team reevaluates each
+            client's discharge plan;
+      (E) The resources available to the facility, the client, and the attending physician to assist
+            in developing and implementing individual discharge plans; and
+      (F) The provisions for periodic review and reevaluation of the facility's discharge planning
+            program.
+
+  007.19 INAPPROPRIATE LEVEL OF CARE (LOC). If it is determined that the client's present
+  level of care is inappropriate:
+      (A) The present facility must provide services to meet the needs of the client and must
+           refer to appropriate agencies for services until an appropriate living situation is
+           available;
+      (B) The facility must document that other alternatives were explored and the responses;
+      (C) The facility must make documentation of active exploration for appropriate living
+           situations available to the Department or their agent;
+      (D) The facility must work cooperatively with the preadmission screening and resident
+           review referral (PASRR) process.
+
+  007.20 AT THE TIME OF DISCHARGE. At the time of the client's discharge, the facility must:
+     (A) Provide any information about the discharged client that will ensure the optimal
+         continuity of care to those persons responsible for the individual's post-discharge
+         care.
+     (B) Include current information on diagnosis, prior treatment, rehabilitation potential,
+         physician advice concerning immediate care, and pertinent social information.
+     (C) Discharge the following items specifically purchased for and used by the client with
+         the client:
+        (i) Any non-standard wheelchair and wheelchair accessories, options, and
+              components, including power operated vehicles;
+        (ii) Any augmentative communication devices with related equipment and software;
+        (iii) Supports; and
+        (iv) Custom fitted or custom fabricated items.
+
+
+
+
+                                               27
+
+EFFECTIVE                  NEBRASKA DEPARTMENT OF
+06-26-2021                 HEALTH AND HUMAN SERVICES                                   471 NAC 12
+
+  007.21 APPEALS OF DISCHARGES, TRANSFERS, AND PREADMISSION SCREENING
+  AND RESIDENT REVIEW (PASRR) DETERMINATIONS. A resident of a skilled nursing
+  facility (SNF) or a nursing facility (NF) who receives a notice from the skilled nursing facility
+  (SNF) or nursing facility (NF) of the intent to discharge or transfer the resident may appeal to
+  the Department of Health and Human Services for a hearing on this notice. The appeal and
+  hearing must be conducted under 465 NAC 2 and 6. An individual who is adversely affected
+  by any Preadmission Screening and Resident Review (PASRR) determination may appeal to
+  the Department of Health and Human Services for a hearing on the decision. The individual
+  or legal representative will be instructed to contact the Department or contractor for
+  information on appeals and to forward a written request for an appeal to the Department within
+  90 days of the date of the Preadmission Screening and Resident Review (PASRR)
+  determination notice. The appeal and hearing must be conducted under 465 NAC 2.
+
+SOURCE 7: 471 NAC 12, Nursing Facility Regulations — payment for bed-holding | http://govdocs.nebraska.gov/epubs/H8900/R471.0012-2021.pdf | source date: running head EFFECTIVE 06-26-2021 | retrieved: 2026-09-22
+007.25(K) PAYMENT FOR BED-HOLDING. The Department makes payments to reserve
+     a bed in a nursing facility (NF) during a client's absence due to hospitalization for an acute
+     condition and for therapeutically-indicated home visits. Therapeutically-indicated home
+     visits are overnight visits with relatives and friends or visits to participate in therapeutic or
+     rehabilitative programs. Payment for bed-holding is subject to the following conditions:
+          (1) A held bed must be vacant and counted in the census. The census must not
+              exceed licensed capacity;
+          (2) Hospital bed-holding is limited to reimbursement for 15 days per hospitalization.
+              Hospital bed-holding does not apply if the transfer is to the following: nursing
+              facility, hospital nursing facility, swing-bed, a Medicare-covered special needs
+              facility stay, or to hospitalization following a Medicare-covered special needs
+              facility stay;
+          (3) Therapeutic leave bed-holding is limited to reimbursement for 18 days per calendar
+              year. Bed-holding days are prorated when a client is a resident for a partial year;
+          (4) A transfer from one facility to another does not begin a new 18-day period;
+          (5) The client's comprehensive care plan must provide for therapeutic leave;
+          (6) Facility staff must work with the client, the client's family, or guardian to plan the
+              use of the allowed 18 days of therapeutic leave for the calendar year; and
+          (7) Qualifying hospital and therapeutic leave days will be reimbursed at the facility’s
+              bed-hold rate.
+
+         007.25(K)(i) SPECIAL LIMITS. When the limitation for therapeutic leave interferes
+         with an approved therapeutic or rehabilitation program, the facility may submit a
+         request for special limits of up to an additional six days per calendar year to Medicaid.
+         Requests for special limits must include:
+             (1) The number of leave days requested;
+             (2) The need for additional therapeutic bed-holding days;
+             (3) The physician's orders;
+             (4) The comprehensive plan of care; and
+
+
+
+                                                31
+
+EFFECTIVE                  NEBRASKA DEPARTMENT OF
+06-26-2021                 HEALTH AND HUMAN SERVICES                                    471 NAC 12
+
+SOURCE 8: 465 NAC 2, Grievances and Fair Hearings — right to appeal | https://dhhs.ne.gov/Documents/Title-465-Complete.pdf | source date: running head REV. AUGUST 21, 1995 | retrieved: 2026-09-22
+2-001.02 Right to Appeal: Every applicant for or recipient of assistance or services provided
+     through the Nebraska Department of Social Services has the right to appeal any action,
+     inaction, or failure to act with reasonable promptness with regard to the assistance or services.
+      The individual may appeal because -
+
+          1.   His/her application for financial or medical assistance or services is denied;
+          2.   His/her application for financial or medical assistance or services is not acted upon
+               with reasonable promptness;
+          3.   His/her assistance is suspended;
+          4.   His/her assistance or services are reduced;
+          5.   His/her assistance or services are terminated;
+          6.   His/her form of payment or services is changed to be more restrictive; or
+          7.   S/he thinks the staff's action was erroneous.
+
+     Exception: The client is not entitled to a fair hearing when either state or federal law requires
+     automatic case adjustments for classes of clients unless the reason for an individual appeal is
+     incorrect eligibility determination.
+
+REV. AUGUST 21, 1995               NEBRASKA DEPARTMENT OF                          INTRODUCTION
+MANUAL LETTER # 61-95              SOCIAL SERVICES MANUAL                        465 NAC 2-001.02A
+
+
+         2-001.02A Appeal Time Limits: The applicant or client must request a fair hearing within
+         90 days following the date the notice of adverse action is mailed. If an applicant wishes to
+         appeal due to inaction, s/he must request a fair hearing within 90 days of the date the
+         application was signed.
+
+         If the client submits a request for a hearing within ten days following the date the notice is
+         mailed, the staff shall not take the adverse action until a fair hearing decision is rendered.
+
+         If the client submits a request for a hearing within ten days following the date the notice is
+         mailed, the client must be allowed an opportunity to decline receipt of continued
+         assistance pending the appeal decision.
+
+         2-001.02B Filing an Appeal: See 465 NAC 6-004.01.
+
+         2-001.02C Notice to the Petitioner: Upon receiving a request for an appeal, the Director
+         acknowledges the appeal by sending a letter to the petitioner, stating that the appeal has
+         been received and informing him/her -
+
+              1.   Of the time and the place the hearing will be held on his/her appeal; or
+              2.   That the basis of the appeal is inappropriate or that the appeal request has
+                   been received after the deadline for appealing an action. (See 465 NAC
+                   2-001.02A regarding appeal time limits.)
+
+         The hearing must be scheduled not less than one week nor more than six weeks from the
+         date of the request, unless the time is waived by the petitioner. (See 468 NAC 6-012.01
+         Emergency Assistance appeals.) The letter must include a detailed explanation of the
+         petitioner's rights and duties at the hearing (see 465 NAC 6-000).
+
+SOURCE 9: 465 NAC 6, Practice and Procedure for Hearings in Contested Cases — filing | https://dhhs.ne.gov/Documents/Title-465-Complete.pdf | source date: running head AUGUST 21, 1995 | retrieved: 2026-09-22
+6-004 Commencement of a Contested Case:
+
+    6-004.01 Filing of Petition and Request for Hearing: The contested case begins with the filing
+    of a petition and request for hearing, if applicable, with the Department. The petition is the
+    initial document filed by or with the Department that sets forth a claim and request for
+    Department action or appeal from Department action or inaction. Form DA-6, "Notice and
+    Petition for Fair Hearing," is available for filing an appeal to anyone who requests it at any office
+    of the Department. (The Food Stamp Program uses notices with a tear-off section which may
+    be used instead of Form DA-6.) Staff shall make every effort to help an individual who wishes
+    to file an appeal. An individual's request for a hearing may also be made in the form of an
+    simple letter or written request to the Department, provided the request identifies the basis for
+    appeal.
+
+    The individual's request for a hearing is made to the Director of the Department of Social
+    Services and forwarded to the attention of the Legal Services Division.
+
+SOURCE 10: Title 465 Regulations of General Application (chapter index) | https://dhhs.ne.gov/Pages/Title-465.aspx | source date: none stated on page | retrieved: 2026-09-22
+View Title 465 on the Secretary of State's website.
+
+
+
+​Title 465 Appendix 
+
+Chapter 1        Repealed 9/17/2024
+
+General Information
+
+Chapter 2        Amended 9/17/2024
+
+Grievances and Fair Hearings
+
+
+
+Chapter 3        Amended 9/17/2024​
+
+Procedures for Negotiated Rulemaking
+
+Chapter 4        Amended 8/21/1995
+
+Petitioning for Rule Making 
+
+Chapter 5        Amended 9/17/2024
+
+Request for a Declaratory Order
+
+Chapter 6        Amended 9/17/2024
+
+Practice and Procedure for Hearings in Contested Cases Before the Department
+
+
+
+ 
+
+
+
+Useful Links
 

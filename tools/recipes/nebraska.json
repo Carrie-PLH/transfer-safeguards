@@ -70,9 +70,80 @@
       "user_agent": "browser",
       "extractor": "html-text",
       "scope": "body",
-      "notes": "Server-rendered. The slice drops the site chrome above the page content and runs to the end of the document: the standing packet's span ended a few words before the end, and no anchor long enough to be safe exists in what follows, so this is a deliberate superset rather than a short anchor.",
+      "notes": "Server-rendered. The slice drops the site chrome above the page content and runs to the end of the document: the standing packet's span ended a few words before the end, and no anchor long enough to be safe exists in what follows, so this is a deliberate superset rather than a short anchor. Anchor corrected 2026-09-22: the page's hidden 'Page Content' field label, previously part of this anchor, no longer appears in the extraction (the page's own markup changed; capture.py was not touched) -- see this state's change log.",
       "slice": {
-        "from": "Page Content ​​​​​​The Long-Term Care Ombudsman"
+        "from": "The Long-Term Care Ombudsman (LTCO)"
+      }
+    },
+    {
+      "n": 6,
+      "title": "471 NAC 12, Nursing Facility Regulations — bed-holding, discharge and appeals",
+      "url": "http://govdocs.nebraska.gov/epubs/H8900/R471.0012-2021.pdf",
+      "source_date": "running head EFFECTIVE 06-26-2021",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "471 NAC is Nebraska Medicaid's own nursing-facility regulation, distinct from the 175 NAC licensure chapter already captured as source 4; the department's own Title 471 index page (dhhs.ne.gov/Pages/Title-471.aspx) lists Chapter 12 as 'Amended 6/26/2021', matching this document's running head. This slice runs from the bed-holding policy through the appeals-of-discharge section, a single contiguous span in the source.",
+      "slice": {
+        "from": "007.12 BED-HOLDING POLICIES FOR HOSPITAL AND THERAPEUTIC LEAVE",
+        "to": "007.22 PRIOR AUTHORIZATION."
+      }
+    },
+    {
+      "n": 7,
+      "title": "471 NAC 12, Nursing Facility Regulations — payment for bed-holding",
+      "url": "http://govdocs.nebraska.gov/epubs/H8900/R471.0012-2021.pdf",
+      "source_date": "running head EFFECTIVE 06-26-2021",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "Same document as source 6; the payment-side bed-holding rule (day limits and conditions) sits later in the chapter, under the specific-payments section, so it is a separate slice rather than a wider span of source 6.",
+      "slice": {
+        "from": "007.25(K) PAYMENT FOR BED-HOLDING.",
+        "to": "(5) The discharge potential."
+      }
+    },
+    {
+      "n": 8,
+      "title": "465 NAC 2, Grievances and Fair Hearings — right to appeal",
+      "url": "https://dhhs.ne.gov/Documents/Title-465-Complete.pdf",
+      "source_date": "running head REV. AUGUST 21, 1995",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "471 NAC 12-007.21 (source 6) directs a discharge/transfer appeal to be conducted under 465 NAC 2 and 6; this is the compiled Title 465 manual PDF linked from dhhs.ne.gov/Pages/Title-465.aspx (source 10). The running head on this chapter reads REV. AUGUST 21, 1995 throughout, while that index page states Chapter 2 was 'Amended 9/17/2024' -- a discrepancy this recipe does not resolve; the change log records it. This slice holds the right-to-appeal provision and its subsections on time limits, filing and notice.",
+      "slice": {
+        "from": "2-001.02 Right to Appeal: Every applicant for or recipient",
+        "to": "2-002 Client Responsibilities: Each applicant for, or client of"
+      }
+    },
+    {
+      "n": 9,
+      "title": "465 NAC 6, Practice and Procedure for Hearings in Contested Cases — filing",
+      "url": "https://dhhs.ne.gov/Documents/Title-465-Complete.pdf",
+      "source_date": "running head AUGUST 21, 1995",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "Same document as source 8; the commencement-of-a-contested-case provision sits far later in the compiled manual, so it is captured as a separate slice. Same dating discrepancy against dhhs.ne.gov/Pages/Title-465.aspx as source 8 (that page states Chapter 6 was 'Amended 9/17/2024').",
+      "slice": {
+        "from": "6-004 Commencement of a Contested Case:",
+        "to": "6-004.02 Parties to a Contested Case:"
+      }
+    },
+    {
+      "n": 10,
+      "title": "Title 465 Regulations of General Application (chapter index)",
+      "url": "https://dhhs.ne.gov/Pages/Title-465.aspx",
+      "source_date": "none stated on page",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "notes": "Server-rendered SharePoint page listing each Title 465 chapter with its own most-recent-amendment date, captured to support the dating discrepancy recorded against sources 8 and 9 (the compiled manual PDF's own running heads read 1995 for the same chapters).",
+      "slice": {
+        "from": "View Title 465 on the Secretary of State's website.",
+        "to": "Rules & Regulations Page"
       }
     }
   ]

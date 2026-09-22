@@ -68,6 +68,34 @@
       "extractor": "html-text",
       "scope": "body",
       "notes": "Server-rendered; scope 'body', matching the standing packet's tag strip over the served page."
+    },
+    {
+      "n": 6,
+      "title": "OAR 411-088-0050 and 411-088-0060, Right to Return from Hospital; Right to Readmission",
+      "url": "https://www.oregon.gov/odhs/rules-policy/apdrules/411-088.pdf",
+      "source_date": "411-088-0050 Amended 08/10/2015; 411-088-0060 Amended 08/10/2015",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "Same document as sources 1-4; this is the division's bed-hold and readmission pair, pending since baseline. Each heading appears twice (table of contents, then the body), so from_occurrence 2 lands on the body; the 'to' anchor's own occurrence resets after the 'from' match, so the single body occurrence of the 411-088-0070 heading needs no override.",
+      "slice": {
+        "from": "411-088-0050 Right to Return from Hospital (Amended 08/10/2015)",
+        "from_occurrence": 2,
+        "to": "411-088-0070 Notice Requirements (Amended 04/01/2014)"
+      }
+    },
+    {
+      "n": 7,
+      "title": "Form 0509, Notice of Involuntary Transfer — hearing rights and filing instructions",
+      "url": "https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/se0509.pdf",
+      "source_date": "100-898600 APD 0509 (02/2026)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "The department's own standard notice form, named by OAR 411-088-0070(4) (source 2) as the form that must be used for a Notice of Transfer. The rule text captured as source 3 names an office and a filing period without a street address; this form supplies both -- a street address, email and fax for the Nursing Facility Licensing Unit -- and states the filing period as calendar days where OAR 411-088-0080 states it as business days, a discrepancy this recipe does not resolve. Slice runs from the 'Your Hearing Rights' heading to the end of the document.",
+      "slice": {
+        "from": "Your Hearing Rights"
+      }
     }
   ]
 }

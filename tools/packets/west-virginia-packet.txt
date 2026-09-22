@@ -1,10 +1,10 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: west-virginia
-ASSEMBLED: 2026-09-08
+ASSEMBLED: 2026-09-22
 
 CAPTURE NOTES:
-- Captured by tools/capture.py from tools/recipes/west-virginia.json (recipe digest 675d6481ad30). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Captured by tools/capture.py from tools/recipes/west-virginia.json (recipe digest ab565978ba2b). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
 - SOURCE 1: transport curl; extractor docx; slice from '4.12.b.1.  If a former resident wishes to return' to '4.14.b.  For all persons, regardless of source'; filters none.
   Legacy pre-2007 Composite Document Format .doc; readfile.aspx's Format=HTML/PDF/TEXT variants all return an identical 60-page scanned image with no text layer, so this Word download is the only machine-readable copy the state publishes. capture.py converts it with textutil (macOS built-in, tried first by capture-core's converter list); the original 2026-08-30 hand capture used libreoffice --headless --convert-to txt instead, and the two converters format the same bytes slightly differently, so anchors here were re-derived against a fresh textutil conversion rather than reused verbatim from the standing packet. Section 4.13 (Admission, Transfer and Discharge) is a single contiguous span in the source document; this slice widens one section either side of it (4.12 and 4.14) to hold whole sections rather than cut mid-provision.
 - SOURCE 2: transport curl; extractor docx; slice from '2.35.  Nursing Personnel. --  The director of nursing,' to '2.51.  Transfer. --  Moving the resident from the'; filters none.
@@ -13,8 +13,10 @@ CAPTURE NOTES:
   Same document as sources 1-2. This is the very start of the file, where textutil's conversion prepends a literal, unevaluated Word field code (' SEQ CHAPTER \h \r 1') immediately before 'TITLE 64' -- a rendering difference from the original libreoffice-based hand capture, not a change to the document. The from-anchor starts at 'TITLE 64' so the field-code text falls outside the slice; this discards the artifact rather than reproducing it. propose-slice.py could not auto-derive this anchor (the packet's own leading BOM character broke its exact-substring search against the fresh conversion), so it was set by hand after inspecting both extractions directly.
 - SOURCE 4: transport curl; extractor html-text; scope body; slice from "Long-Term Care Ombudsman Program The country's" to 'Navigation Areas'; filters none.
   tabid/81/Default.aspx (DotNetNuke). body scope alone pulls the full page chrome (repeated nav menu, footer) around the article; this slice narrows to the article plus the Bureau's mailing/location address block, phone, fax and hours that follow it, cutting before the page's second full nav-menu dump (headed 'Navigation Areas'). tools/propose-slice.py's own auto-proposed to-anchor and occurrence (occurrence 3 of a different, longer needle) did not reproduce under a direct capture.py run -- only one occurrence existed after the from-anchor -- so this anchor was chosen by hand after inspecting the extraction directly; the standing hand-cut packet's own source 4 body runs further, into the nav menu, and is truncated mid-word, which this slice does not try to reproduce. Curl over plain http, as the standing packet's capture notes record; https also resolves but was not tested against this recipe.
+- SOURCE 5: transport curl; extractor pdftotext-layout; slice from '514.8.2 Transfer and Discharge Policies' (occurrence 2) to '514.8.4 Medical Leave of Absence'; filters none.
+  West Virginia's Medicaid provider manual, published by the Bureau for Medical Services, restates the transfer/discharge policy in its own words (514.8.2) and states the state's Medicaid bed-hold rule (514.8.3), which no licensure source captured as sources 1-3 states. The heading text '514.8.2 Transfer and Discharge Policies' and '514.8.4 Medical Leave of Absence' each appear twice -- once in the table of contents, once at the real heading -- so from_occurrence 2 is used to land on the body; the 'to' anchor's own occurrence count restarts after the 'from' match, so the single body occurrence of the 514.8.4 heading needs no occurrence override. This document's page break carries a six-line footer/header block (a 'BMS Provider Manual / Page NN / Chapter 514... / Effective: 10/1/2024' line pair, a three-line DISCLAIMER paragraph, and a 'CHAPTER 514 NURSING FACILITY SERVICES' banner) -- taller than strip-running-headers' two-line edge window reaches, so that filter (tried, and left off this source since it changed nothing) cannot drop it. The boilerplate survives in the packet between provisions; every quotation in this page's markdown was chosen to fall within a single printed page rather than crossing one of these breaks. See this state's change log and QUEUE.md.
 
-SOURCE 1: 64 CSR 13, Nursing Home Licensure Rule — section 4.13, transfer and discharge | https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=8271&Format=WORD | source date: none stated in the captured span | retrieved: 2026-09-08
+SOURCE 1: 64 CSR 13, Nursing Home Licensure Rule — section 4.13, transfer and discharge | https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=8271&Format=WORD | source date: none stated in the captured span | retrieved: 2026-09-22
 4.12.b.1.  If a former resident wishes to return to the nursing home and meets the requirements for coverage under the Medicare program, the resident may be placed in a bed certified to participate in that program. 
 
 			4.12.b.2.  If the nursing home is not certified under the Medicare program and the resident chooses placement in a nursing home providing Medicare coverage, the resident may be placed on a waiting list for readmission to the nursing home after Medicare coverage has ceased if the nursing home can provide the necessary services to the former resident. 
@@ -105,7 +107,7 @@ SOURCE 1: 64 CSR 13, Nursing Home Licensure Rule — section 4.13, transfer and 
 
 				4.14.a.2.B.  That requires the care to be provided if the nursing home participates in a financial program requiring the admittance or continued residence of the person.
 
-SOURCE 2: 64 CSR 13, Nursing Home Licensure Rule — definitions, excerpt | https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=8271&Format=WORD | source date: none stated in the captured span | retrieved: 2026-09-08
+SOURCE 2: 64 CSR 13, Nursing Home Licensure Rule — definitions, excerpt | https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=8271&Format=WORD | source date: none stated in the captured span | retrieved: 2026-09-22
 2.35.  Nursing Personnel. -- The director of nursing, the charge nurse and all employees under the direct supervision of the director of nursing or charge nurse who attend to resident-oriented nursing functions, including registered professional nurses, licensed practical nurses and nursing aides, but excluding employees engaged in administration, dietetics, social services, activities staff, housekeeping, laundry and maintenance.
 
 	2.36.  Ombudsman. -- Any person or organization designated by the State Long Term Care Ombudsman as part of the West Virginia Long-Term Care Ombudsman Program.
@@ -138,7 +140,7 @@ SOURCE 2: 64 CSR 13, Nursing Home Licensure Rule — definitions, excerpt | http
 
 	2.50.  Standard Quality of Care. -- Substantial compliance with this rule.
 
-SOURCE 3: 64 CSR 13, Nursing Home Licensure Rule — opening | https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=8271&Format=WORD | source date: none stated in the captured span | retrieved: 2026-09-08
+SOURCE 3: 64 CSR 13, Nursing Home Licensure Rule — opening | https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=8271&Format=WORD | source date: none stated in the captured span | retrieved: 2026-09-22
 TITLE 64
 LEGISLATIVE RULES
 WEST VIRGINIA DIVISION OF HEALTH
@@ -154,7 +156,7 @@ NURSING HOME LICENSURE RULE
 
 	1.2.  Authority.  --  W. Va. Code §§16-1-4 and 16-5C-5.
 
-SOURCE 4: Long-Term Care Ombudsman Program | http://www.wvseniorservices.gov/StayingSafe/LongTermCareOmbudsmanProgram/tabid/81/Default.aspx | source date: Updated 3/25/24 | retrieved: 2026-09-08
+SOURCE 4: Long-Term Care Ombudsman Program | http://www.wvseniorservices.gov/StayingSafe/LongTermCareOmbudsmanProgram/tabid/81/Default.aspx | source date: Updated 3/25/24 | retrieved: 2026-09-22
 Long-Term Care Ombudsman Program
 
 
@@ -229,4 +231,149 @@ Copyright (c) 2026 West Virginia Bureau of Senior Services
 
 
 Login
+
+SOURCE 5: BMS Provider Manual, Chapter 514 Nursing Facility Services — transfer/discharge policy and bed reservation | https://bms.wv.gov/media/40026/download?inline= | source date: Effective: 10/1/2024 | retrieved: 2026-09-22
+514.8.2 Transfer and Discharge Policies
+According to 42 CFR 483.15, transfer and discharge of an individual includes movement of a resident to a
+bed outside of the Medicaid-certified portion of the facility, whether that bed is in the same physical plant
+or not. Transfer and discharge do not refer to movement of a resident to a bed within the Medicaid-
+certified portion of the facility.
+
+The administrator or designee must permit each resident to remain in the facility, and not be transferredor
+discharged from the facility unless one of the following conditions is met:
+    •   The transfer or discharge is necessary for the resident’s welfare when the needs of the resident
+        cannot be met in the facility; or
+    •   The transfer or discharge is appropriate because the health of the resident has improved
+        sufficiently that the individual no longer meets the medical criteria for nursing facility services; or
+    •   The safety of individuals in the facility is endangered; or
+    •   The health of individuals in the nursing facility would otherwise be endangered; or
+
+
+BMS Provider Manual                                                                                      Page 31
+Chapter 514 Nursing Facility Services                                                        Effective: 10/1/2024
+
+ DISCLAIMER: This chapter does not address all the complexities of Medicaid policies and procedures and must be
+   supplemented with all State and Federal Laws and Regulations. Contact BMS Fiscal Agent for coverage, prior
+               authorization requirements, service limitations, and other practitioner information.
+
+                        CHAPTER 514 NURSING FACILITY SERVICES
+
+    •   The resident has failed, after reasonable and appropriate notice, to pay for (or to have paid under
+        Medicaid) a stay at the nursing facility, including but not limited to, the amount of money
+        determined by the financial eligibility evaluation as co-payment for the provision of nursing facility
+        services; or
+    •   The facility ceases to operate.
+
+Documentation must be recorded in the resident’s medical record by a physician of the specific reason
+requiring the transfer or discharge. Discharge documentation is required regardless of the reason for
+discharge.
+
+Before the nursing facility transfers or discharges a resident, the administrator or designee must notify the
+resident and/or the responsible party verbally and in writing, in an accessible format that is
+understandable to the parties, of the intent and reason for transfer or discharge. The same information
+must be recorded in the resident’s medical record and a copy of this written notice must be sent to the
+State Long-Term Care Ombudsman or their designee. The notice of transfer or discharge must be
+provided at least 30 days prior to the anticipated move to ensure a safe and orderly discharge to a setting
+appropriate to the individual’s needs.
+
+Waiver of this 30-day requirement may be appropriate if the safety of individuals in the facility would be
+endangered, the immediate transfer is required by the resident’s urgent medical needs, or a resident has
+not resided in the nursing facility for 30 days.
+
+The written notice must include the following:
+    •   The effective date of the transfer or discharge;
+    •   Reason for the discharge;
+    •   The location or person(s) to whom the resident is transferred or discharged;
+    •   A statement that the resident has the right to appeal the action to the State Board of Review,
+        during this time of appeal, the resident/member may choose to stay in the facility;
+    •   The name, address, and telephone number of the State long-term care ombudsman; and
+    •   For nursing facility residents with developmental disabilities, the mailing address and
+        telephonenumber of the agency responsible for the protection and advocacy of
+        developmentally disabledand mentally ill individuals.
+
+It is the responsibility of the nursing facility to notify the local the State office when a Medicaid member is
+admitted to the facility and when a member discharges from the facility in order for the facility and
+member to receive the appropriate Medicaid benefit.
+
+514.8.3 Bed Reservation
+For rate periods through September 30, 2024, a nursing facility may receive Medicaid per diem
+reimbursement to reserve a resident’s bed (bed hold) during his/her temporary absence from the facility.
+This is paid at the facility’s established Medicaid baserate.
+
+The facility’s occupancy must be 95% or greater as of midnight on the day immediately before the time
+that the resident leaves and there must be a current waiting list for admission to the nursing facility. The
+midnight census must be obtained daily and kept either in hard copy or electronic format and must
+
+BMS Provider Manual                                                                                      Page 32
+Chapter 514 Nursing Facility Services                                                        Effective: 10/1/2024
+
+ DISCLAIMER: This chapter does not address all the complexities of Medicaid policies and procedures and must be
+   supplemented with all State and Federal Laws and Regulations. Contact BMS Fiscal Agent for coverage, prior
+               authorization requirements, service limitations, and other practitioner information.
+
+                        CHAPTER 514 NURSING FACILITY SERVICES
+
+contain, at a minimum, the names and ID numbers for each resident. A waiting list for admission must be
+maintained either in hard copy or electronic format by day and must contain, at a minimum, the names,
+addresses and contact numbers of the individuals on the waiting list and must be available immediately
+upon request by the State.
+
+A day of leave is defined as a continuous 24-hour period. At the time the resident leaves the facility, the
+primary payer for services must be Medicaid. Bed reservation days may be for acute care hospitalization
+or a therapeutic leave.
+
+The resident whose bed is reserved is to be accepted by the facility immediately upon discharge from the
+hospital or return from therapeutic leave. Placement is to be in the same bed and living space occupied
+by the resident prior to the hospital or therapeutic leave of absence unless the resident’s physical
+condition upon returning to the facility prohibits access to the bed previously occupied. If the nursing
+facility discharges a resident and return is not anticipated, as indicated on the MDS, the facility cannot
+charge the State for a Medicaid bed hold.
+
+When all hospital or therapeutic days have been used by a Medicaid resident, a facility may charge a
+resident to reserve a bed only when there are no vacancies and there is a current waiting list. Familiesthat
+are willing and able are free to pay these charges, and the amount paid is not considered as a resource
+or income for Medicaid purposes.
+
+Personal needs allowance may be used to reserve a bed only with the resident/member or responsible
+party’s written consent. The resident’s contribution to the cost of care (resource) may not be used to pay
+to reserve a bed. After a hospitalization or a leave of absence for which there was no bed hold, a former
+resident has the right to be re-admitted to the first available bed in a semi-private room in the nursing
+facility from which he or she came if the resident requires the services provided by the nursing facility and
+has not been out of the facility for more than 30 days.
+
+For rate periods beginning October 1, 2024, a nursing facility may receive Medicaid per diem
+reimbursement to reserve a resident’s bed (bed hold) during his/her temporary absence from the facility,
+for a maximum of 18 days (for all types of leave). This is paid at the facility’s non-acuity adjusted
+reimbursement rate.
+
+A day of leave is defined as a continuous 24-hour period. At the time the resident leaves the facility, the
+primary payer for services must be Medicaid. Bed reservation days may be for acute care hospitalization
+or a therapeutic leave.
+
+The resident whose bed is reserved is to be accepted by the facility immediately upon return from leave.
+Placement is to be in the same bed and living space occupied by the resident prior to the leave of
+absence unless the resident’s physical condition upon returning to the facility prohibits access to the bed
+previously occupied. If the nursing facility discharges a resident and return is not anticipated, as indicated
+on the MDS, the facility cannot charge the State for a Medicaid bed hold.
+
+When all leave days have been used by a Medicaid resident, a facility may charge a resident to reserve a
+bed only when there are no vacancies and there is a current waiting list. Families thatare willing and able
+are free to pay these charges, and the amount paid is not considered as a resource or income for
+Medicaid purposes.
+
+BMS Provider Manual                                                                                     Page 33
+Chapter 514 Nursing Facility Services                                                       Effective: 10/1/2024
+
+ DISCLAIMER: This chapter does not address all the complexities of Medicaid policies and procedures and must be
+   supplemented with all State and Federal Laws and Regulations. Contact BMS Fiscal Agent for coverage, prior
+               authorization requirements, service limitations, and other practitioner information.
+
+                        CHAPTER 514 NURSING FACILITY SERVICES
+
+Personal needs allowance may be used to reserve a bed only with the resident/member or responsible
+party’s written consent. The resident’s contribution to the cost of care (resource) may not be used to pay
+to reserve a bed. After a hospitalization or a leave of absence for which there was no bed hold, a former
+resident has the right to be re-admitted to the first available bed in a semi-private room in the nursing
+facility from which he or she came if the resident requires the services provided by the nursing facility and
+has not been out of the facility for more than 30 days.
 
