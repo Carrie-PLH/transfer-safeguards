@@ -393,6 +393,21 @@ else
   sed 's/^/        /' /tmp/ml-check.$$
   say "        re-apply with: python3 $ML_TOOL"
 fi
+
+# Search-facing head: one canonical link per indexable page and the state /
+# institution title pattern, both owned by the shared tool (FA-D-20260922-05).
+# A page copied from an older page arrives with the old title and no
+# canonical; this refuses it until the tool has been re-applied.
+SEO_TOOL="../../field-assembly-standard/tools/apply-seo-head.py"
+if [ ! -f "$SEO_TOOL" ]; then
+  ok "seo head not verified (field-assembly-standard not checked out)"
+elif python3 "$SEO_TOOL" --check --site "transfer-safeguards" >/tmp/seo-check.$$ 2>&1; then
+  ok "canonical links and title pattern hold on every page"
+else
+  bad "canonical link or title pattern missing on:"
+  grep -v '^seo head:' /tmp/seo-check.$$ | sed 's/^/        /'
+  say "        re-apply with: python3 $SEO_TOOL --site \"transfer-safeguards\""
+fi
 rm -f /tmp/ml-check.$$
 
 # Every internal href/src is root-absolute. _redirects 301s each page to a
