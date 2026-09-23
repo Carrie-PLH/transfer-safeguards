@@ -10,31 +10,91 @@
 
 **Ombudsman in these sources.** New Hampshire's Long-Term Care Ombudsman "receives, services, investigates and resolves complaints or problems concerning residents of long-term health care facilities." Its stated mission: "The Office of the Long Term Care Ombudsman shall represent the interests and concerns of elders residing in New Hampshire's long term care facilities and advocate on their behalf to ensure full realization of their rights to receive quality care and services and to experience an optimal quality of life." Its published contact: mailing address Brown Building, 129 Pleasant Street, Concord, NH 03301 (the department's contact page prints the building, street, city, state and ZIP code as five separate fields with no punctuation between them; the commas here are this page's, so the address is given as a cited contact, not a quotation); "OLTCO@dhhs.nh.gov"; phone "(603) 271-4375" (also published elsewhere on the department's site as "603-271-4375"); alternate phone "(800) 442-5640" (also published as "1-800-442-5640"); fax "(603) 271-5574" (also published as "603-271-5574").
 
-**Sources last checked.** 2026-09-01
+**Sources last checked.** 2026-09-23
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 
 ## Lede
 
-This page assembles what New Hampshire's own publishers state about transfer and discharge from a nursing facility. It is a baseline page: the docket rows and the source map are built; the grounds section and the published-process section are not yet written, as the change log records. New Hampshire's fullest single source is its own transfer-and-discharge statute, RSA 151:26 (Transfer or Discharge of Patients), amended most recently by 2013, 265:9, eff. Jan. 1, 2014 per its own source note; it sits inside Chapter 151, Residential Care and Health Facility Licensing, alongside RSA 151:21 (the grounds, stated as a patient right) and RSA 151:25 (bed-hold during a temporary absence). New Hampshire's own vocabulary is *transfer or discharge*, used throughout its statute.
+This page assembles what New Hampshire's own publishers state about transfer and discharge from a nursing facility. New Hampshire's fullest single source is its own transfer-and-discharge statute, RSA 151:26 (Transfer or Discharge of Patients), amended most recently by 2013, 265:9, eff. Jan. 1, 2014 per its own source note; it sits inside Chapter 151, Residential Care and Health Facility Licensing, alongside RSA 151:21 (the grounds, stated as a patient right) and RSA 151:25 (bed-hold during a temporary absence). New Hampshire's own vocabulary is *transfer or discharge*, used throughout its statute.
 
 RSA 151:26 is unusually explicit for a licensure statute: it states the notice's five required contents in full, states a 30-day period with four named exceptions, quotes the appeal-rights sentence the notice itself must carry word for word, and separately gives a patient the right to petition superior or probate court to enjoin a transfer or discharge, with that petition itself staying the move. It also names one appeal route DHHS provides — "an administrative hearing before the department of health and human services" — without naming the office, form, or deadline for it. New Hampshire's Medicaid provider manual confirms and cross-references the same bed-hold rule stated in RSA 151:25, and separately states a Medicaid-specific 30-reserved-bed-day annual cap for therapeutic leave, and a distinct 14-day facility-to-state notice for a resident's transition to a community setting — a different notice, to a different recipient, than the resident notice RSA 151:26 requires. The federal floor for Medicare/Medicaid-certified facilities is assembled separately on [the federal page](../federal.html); nothing here fills a gap from federal law or another state. Confirm applicability with the agencies named in the sources: whether any provision applies to a particular facility, resident, or notice is for the hearing office to determine. Deadlines and periods on this page are quoted from the sources, not calculated for any case.
+
+## 01 — The grounds, as New Hampshire describes them
+
+RSA 151:21, V states that "The patient shall be transferred or discharged after appropriate discharge planning only for" one of four reasons, in the statute's own order ([gc.nh.gov](https://gc.nh.gov/rsa/html/XI/151/151-21.htm), source note listing amending sessions through 2025, 287:11, 12, eff. July 1, 2025, retrieved 2026-09-22):
+
+"medical reasons," "for the patient's welfare or that of other patients," "if the facility ceases to operate," or "for nonpayment for the patient's stay," each "except as prohibited by Title XVIII or XIX of the Social Security Act."
+
+The same paragraph adds: "No patient shall be involuntarily discharged from a facility because the patient becomes eligible for medicaid as a source of payment."
+
+RSA 151:26 I cross-references this same list directly rather than restating it: "A facility subject to RSA 151:21 shall not transfer or discharge a patient except for those reasons listed under RSA 151:21, V." ([gc.nh.gov](https://gc.nh.gov/rsa/html/XI/151/151-26.htm), retrieved 2026-09-22)
+
+RSA 151:26 V narrows what the section's own notice and hearing provisions cover: "transfer" or "discharge" "shall not include transfers or discharges initiated at the request of the patient or his or her legal guardian, except that transfer or discharge of a resident from a nursing home certified under federal law even if initiated at the request of the resident or his or her legal guardian shall be subject to all federal notice requirements."
+
+## 02 — The published process
+
+### Requesting the hearing
+
+Two routes appear in New Hampshire's sources, stated separately, and no captured source cross-references one to the other. RSA 151:26 IV states the court route directly: "Upon notice, a patient may petition the superior or probate court to enjoin the facility's decision to transfer or discharge. This petition shall stay any transfer or discharge pending a decision." The notice itself must carry the same route in the statement it is required to print: "You have a right to appeal the facility's decision to transfer or discharge you. If you think you should not have to leave this facility, you may file an appeal in superior or probate court."
+
+For a resident of a skilled nursing facility or nursing facility certified under Title XVIII or Title XIX of the Social Security Act, that statement "shall inform the patient of his or her right to request an administrative hearing before the department of health and human services." RSA 151:26 does not itself name the office, a form, or a filing deadline for that administrative hearing.
+
+DHHS's own Administrative Appeals Unit (AAU) publishes a general appeals process: "Any individual or organization dissatisfied with any matter within the jurisdiction of DHHS may request an administrative appeal hearing." Its stated filing routes are "Dropped off or mailed to your local District Office;" "Mailed to the Administrative Appeals Unit; or" "Emailed to the Administrative Appeals Unit at dhhs.aau@dhhs.nh.gov." Its stated deadline: "Generally, you must file an appeal within 30 days from the date on the Notice of Decision". No source captured for this page names the Administrative Appeals Unit, or any other office, as the body that hears an RSA 151:26 administrative hearing specifically — see the change log.
+
+### The notice's required contents
+
+RSA 151:26 II(a): transfer or discharge of a patient "shall in all instances be preceded by written notice which shall contain the following": "(1) The reason for the proposed transfer or discharge;" "(2) The effective date of the proposed transfer or discharge;" "(3) The location to which the patient is transferred or discharged;" "(4) The name, address and telephone number of the long-term care ombudsman, established under RSA 161-F:10, and the name, address, and telephone number of the federally-designated protection and advocacy agency for individuals with disabilities;" and, fifth, a statement which the statute requires to read: "You have a right to appeal the facility's decision to transfer or discharge you. If you think you should not have to leave this facility, you may file an appeal in superior or probate court." For a resident of a skilled nursing facility or nursing facility certified under Title XVIII or Title XIX, "the statement shall inform the patient of his or her right to request an administrative hearing before the department of health and human services."
+
+The same paragraph requires distribution beyond the resident: "A copy of the notice shall be placed in the patient's clinical record and a copy shall be transmitted to the patient, the patient's personal representative, legal guardian, the long-term care ombudsman, established under RSA 161-F:10, and the federally-designated protection and advocacy agency for individuals with disabilities."
+
+### Bed-hold and return
+
+RSA 151:25 states New Hampshire's licensure bed-hold rule in two parts. For an absence for emergency medical treatment: "the facility shall hold the bed open for the patient for 10 calendar days, if there is a reasonable expectation that the patient will return within 10 days and if the facility receives payment for the period of absence, provided that no town, city, county, or state funds shall be used for such payment." Separately, "Temporary absences for therapeutic reasons shall be limited to 10 days a year." Where "a patient's absence is longer than 10 days, or the facility has not received payment for the period of absence, the patient shall have the option to return to the facility for the next available bed."
+
+New Hampshire's Medicaid provider manual cross-references the same statute for its own policy requirement: a facility "shall establish and follow a written policy regarding bed-hold periods which is consistent with RSA 151:25 and which indicates when a facility has not received payment for a period of temporary absence or when the absence is longer than 10 days". The manual restates the return right in its own words — "The resident shall have the option to return to the facility to the next available bed" — and adds a priority rule the statute does not state: "If more than one person has a right of readmission, vacancies shall be allocated on a first request made, first request honored basis, and without regard to the source of payment."
+
+Separate from the resident's right to return, the manual states a Medicaid billing limit for therapeutic leave: "the facility may bill for reserved bed days pursuant to 42 CFR 447.40, subject to" conditions including that "The facility may not bill for more than 30 reserved bed days per resident per state fiscal year". A nursing facility must also notify the Bureau of Elderly and Adult Services of a change in a resident's status, including "Transition to a community setting" — an event the same section separately states "shall require notification no later than 14 days prior to the discharge date from the facility" — a facility-to-state notice, on a different deadline, than the resident notice RSA 151:26 requires.
+
+*The three rows above hoist the questions a facility's counsel answers in the first fifteen minutes. They are quotations from New Hampshire's published sources, not a determination that any of them applies to any situation.*
+
+### Notice periods and deadlines, as stated in the sources
+
+All quoted; none calculated.
+
+Thirty days' advance notice — RSA 151:26 II(a): "written notice of transfer or discharge shall be given at least 30 days before the resident is transferred or discharged." Except as specified in paragraph II(b), notice instead "shall be given as soon as practicable before transfer or discharge" in four stated circumstances.
+
+Ten calendar days' bed-hold for emergency medical treatment — RSA 151:25 I, quoted in full above.
+
+Ten days a year for therapeutic absences — RSA 151:25 I: "Temporary absences for therapeutic reasons shall be limited to 10 days a year."
+
+Thirty reserved bed days per state fiscal year — the Medicaid provider manual, Section 10 (Payment Policies), quoted in full above.
+
+Fourteen days' notice before a transition to a community setting — the Medicaid provider manual, Section 2 (Provider Participation & Ongoing Responsibilities), quoted in full above.
+
+Five business days for the general change-of-status notice — the Medicaid provider manual, Section 2: the Change of Status/Transfer/Discharge Form "shall include the source of facility reimbursement and be submitted within 5 business days of the change," except for the community-setting transition above.
+
+Thirty days to file a general DHHS administrative appeal — the Administrative Appeals Unit's own page: "Generally, you must file an appeal within 30 days from the date on the Notice of Decision" — stated of DHHS appeals generally; no captured source ties this deadline to a hearing requested under RSA 151:26.
+
+What any of these periods means for a particular case is for the hearing office or relevant court to determine.
 
 ## 03 — Source map
 
 | Document | Publisher and location | Source's own date | Retrieved |
 | --- | --- | --- | --- |
-| RSA 151:21, Patients' Bill of Rights | [New Hampshire General Court](https://gc.nh.gov/rsa/html/XI/151/151-21.htm) | none stated on the page; amending sessions through 2025, 287:11, 12, eff. July 1, 2025 | 2026-09-01 |
-| RSA 151:25, Temporary Absence | [New Hampshire General Court](https://gc.nh.gov/rsa/html/XI/151/151-25.htm) | none stated on the page; amending sessions through 2013, 265:8, eff. Jan. 1, 2014 | 2026-09-01 |
-| RSA 151:26, Transfer or Discharge of Patients | [New Hampshire General Court](https://gc.nh.gov/rsa/html/XI/151/151-26.htm) | none stated on the page; amending sessions through 2013, 265:9, eff. Jan. 1, 2014 | 2026-09-01 |
-| Long-Term Care Ombudsman | [New Hampshire Department of Health and Human Services](https://www.dhhs.nh.gov/about-dhhs/long-term-care-ombudsman) | none stated on the page body; a linked document is dated 03/08/2022 | 2026-09-01 |
-| Long-Term Care Ombudsman (OLTC), contact page | [New Hampshire Department of Health and Human Services](https://www.dhhs.nh.gov/long-term-care-ombudsman-oltc) | none stated on the page | 2026-09-01 |
-| Administrative Appeals | [New Hampshire Department of Health and Human Services](https://www.dhhs.nh.gov/doing-business-dhhs/legal-services/administrative-appeals) | none stated on the page | 2026-09-01 |
-| Nursing Facilities and Swing Bed Hospitals Provider Manual, Volume II | [NH Medicaid (nhmmis.nh.gov, PDF)](https://nhmmis.nh.gov/portals/wps/wcm/connect/07669c79-1c8c-4fae-b94e-5a367379f968/NH+Medicaid+Final++Nursing+Facility+Manual+7-14-2020.pdf?MOD=AJPERES&CVID=ninzmzW) | cover page reads September, 2020; running page footer throughout reads December 2017 (internally inconsistent) | 2026-09-01 |
+| RSA 151:21, Patients' Bill of Rights | [New Hampshire General Court](https://gc.nh.gov/rsa/html/XI/151/151-21.htm) | none stated on the page; amending sessions through 2025, 287:11, 12, eff. July 1, 2025 | 2026-09-22 |
+| RSA 151:25, Temporary Absence | [New Hampshire General Court](https://gc.nh.gov/rsa/html/XI/151/151-25.htm) | none stated on the page; amending sessions through 2013, 265:8, eff. Jan. 1, 2014 | 2026-09-22 |
+| RSA 151:26, Transfer or Discharge of Patients | [New Hampshire General Court](https://gc.nh.gov/rsa/html/XI/151/151-26.htm) | none stated on the page; amending sessions through 2013, 265:9, eff. Jan. 1, 2014 | 2026-09-22 |
+| Long-Term Care Ombudsman | [New Hampshire Department of Health and Human Services](https://www.dhhs.nh.gov/about-dhhs/long-term-care-ombudsman) | none stated on the page body; a linked document is dated 03/08/2022 | 2026-09-22 |
+| Long-Term Care Ombudsman (OLTC), contact page | [New Hampshire Department of Health and Human Services](https://www.dhhs.nh.gov/long-term-care-ombudsman-oltc) | none stated on the page | 2026-09-22 |
+| Administrative Appeals | [New Hampshire Department of Health and Human Services](https://www.dhhs.nh.gov/doing-business-dhhs/legal-services/administrative-appeals) | none stated on the page | 2026-09-22 |
+| Nursing Facilities and Swing Bed Hospitals Provider Manual, Volume II | [NH Medicaid (nhmmis.nh.gov, PDF)](https://nhmmis.nh.gov/portals/wps/wcm/connect/07669c79-1c8c-4fae-b94e-5a367379f968/NH+Medicaid+Final++Nursing+Facility+Manual+7-14-2020.pdf?MOD=AJPERES&CVID=ninzmzW) | cover page reads September, 2020; running page footer throughout reads December 2017 (internally inconsistent) | 2026-09-22 |
 
-Captured: all seven documents (nine source excerpts), in tools/packets/new-hampshire-packet.txt. Pending: He-P 803 (New Hampshire Nursing Home Rules), He-E 802 (Nursing Facility Services), and RSA 161-F:10/161-F:12, per the packet's pending list.
+Captured: all seven documents (nine source excerpts), in tools/packets/new-hampshire-packet.txt (recipe digest 55e50782350a, captured 2026-09-22). Pending: He-P 803 (New Hampshire Nursing Home Rules), He-E 802 (Nursing Facility Services), and RSA 161-F:10/161-F:12.
 
 ## 04 — Change log
+
+2026-09-23 — Deepened to a full page: sections 01 (the grounds, as New Hampshire describes them) and 02 (the published process — requesting the hearing, the notice's required contents, bed-hold and return, and the notice-periods register) are now written. No new sources were fetched this pass; the full page is built entirely from the standing packet (recipe digest 55e50782350a, captured 2026-09-22, promoted 2026-09-22), which already carried the section-02 evidence — RSA 151:25 (bed-hold), RSA 151:26 in full (notice contents and the court-petition route), and the Medicaid provider manual's bed-hold, billing-cap, and change-of-status provisions — alongside the section-01 grounds text (RSA 151:21, V). Findings (1) through (7), recorded 2026-09-01, stand unchanged; the source map's "Retrieved" dates are brought forward from 2026-09-01 to 2026-09-22 to match the packet actually in use, per the standing rule that a page may not assert what no packet holds. (8) Section 02's "Requesting the hearing" preserves finding (1) rather than resolving it: New Hampshire states two appeal routes — a superior- or probate-court petition under RSA 151:26 IV, which itself stays the transfer or discharge, and a right to "request an administrative hearing before the department of health and human services" for a certified facility's resident — and no captured source cross-references the second route to DHHS's Administrative Appeals Unit, the only DHHS hearing body captured, by name; both are quoted as published, reconciled nowhere. Capture-pending: He-P 803, He-E 802, and RSA 161-F:10/161-F:12, unchanged from 2026-09-01 — He-P 803 and He-E 802 remain behind the 403 recorded in CLAUDE.md's New Hampshire transport note. Internet Archive: not yet submitted for this pass. Reviewer: Carrie Schluter (review pending for this entry). Corrections: hello@fieldassembly.net.
 
 2026-09-22 — Presentation correction: the ombudsman's mailing address was set as a quotation, "Brown Building, 129 Pleasant Street, Concord, NH 03301", but the department's contact page does not print those commas. Its markup carries the building, street, city, state and ZIP code as five adjacent fields with nothing between them, and the page's styling alone separates them on screen; the commas came from the 2026-09-01 capture, which joined the fields with ", " by hand (its capture notes say so). A quotation is the publisher's own characters, so the address is now given as a cited contact fact with a note that the commas are ours, per the owner's decision FA-D-20260922-04. The address itself is unchanged, and no other wording changed. Reviewer: Carrie Schluter, reviewed 2026-09-22. Corrections: hello@fieldassembly.net.
 
