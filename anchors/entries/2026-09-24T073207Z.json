@@ -1,0 +1,16 @@
+{
+ "entry": {
+  "file_count": 214,
+  "id": "2026-09-24T073207Z",
+  "manifest_file": "manifests/2026-09-24T073207Z.txt",
+  "manifest_sha256": "47ec3f151776d5375d16fc3e5fd64acea5f08340cb089047ebe519ec3edaa399",
+  "note": "rotation pass: arkansas, california, colorado",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "cc3b536733401e05c823585a25afd5d83f71ead877c97f2ea4705b7387b77e12",
+  "repo": "transfer-safeguards",
+  "utc": "2026-09-24T07:32:07+00:00"
+ },
+ "entry_sha256": "1fd70f1dca2c2408582b108d08cb5143eaa32ad577e1e0386030ca61883bb8ab"
+}
