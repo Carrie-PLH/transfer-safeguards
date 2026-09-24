@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Long-Term Care Ombudsman Program, administered by the California Department of Aging. As published on the program's own consumer page: facilities are required to post "the phone number for the local Ombudsman office and the Statewide Ombudsman Hotline number 1-800-231-4024. The Ombudsman Hotline is available 24 hours a day, 7 days a week to take calls and refer complaints from residents in long-term care facilities." The page states local offices are found "by selecting your county on the Find Services in My County page of this website."
 
-**Sources last checked.** 2026-09-04
+**Sources last checked.** 2026-09-24
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

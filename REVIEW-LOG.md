@@ -379,3 +379,44 @@ No published page changed. Review cursor untouched. Queue: bumped
 FA-Q-20260917-04 (occurrence 2); opened FA-Q-20260922-01.
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-09-22.
+
+## 2026-09-24 — rotation pass: arkansas, california, colorado (all confirmed, scheduled)
+
+Room & Recourse recipe exception checked first, per the nightly routine: 51
+state pages, 51 recipe files present with no gaps (verified per-slug, not by
+count alone) — every page already has a recipe, so the exception is
+permanently satisfied and this collection received normal QC review this
+pass.
+
+Cursor read at arkansas; batch was arkansas, california, colorado (next two
+alphabetically).
+
+- arkansas: CONFIRMED. Retained (promoted), hash 27b3b461cec13246, 4
+  sources. Evidence set included both supplements
+  (arkansas-packet-dhs.txt, arkansas-packet-medicaid.txt). Zero fidelity
+  failures, md + html. Checked date -> 2026-09-24.
+- california: CONFIRMED. Retained (promoted), hash d31e53886792b6d4, 9
+  sources. Source 2 (dhcs.ca.gov, OAHA Transfer Discharge and Refusal to
+  Readmit Unit) returned an Incapsula bot-mitigation challenge page to
+  curl+browser-UA (200, 948 bytes, no `<main>` element) rather than the
+  document; a documented alternate transport, the built-in browser, reached
+  the real page (rendered `<main>`, matching the standing packet's content)
+  and was supplied to capture.py with `--supply 2=<path>`. Source 7 (22 CCR
+  72519, govt.westlaw.com) timed out on the first attempt and succeeded on
+  an immediate retry — recorded as a transient timeout, not a transport
+  block. Both fidelity checks (md + html) passed with 0 failures against
+  the resulting 9-source capture. Checked date -> 2026-09-24.
+- colorado: CONFIRMED. Unchanged since 2026-09-19 capture (byte-identical),
+  hash 5df7e0e75286512c. Zero fidelity failures, md + html. Checked date ->
+  2026-09-24.
+
+Source headers moved only in retrieval dates on all three pages; nothing
+reads as instrument replacement. No `superseded` entry warranted.
+
+Cursor advanced: arkansas -> connecticut. No queue entries opened or
+bumped for this collection.
+
+sync-checked-dates.py: 6 derived dates corrected (table + json, 3 states).
+build-status.py: baseline 51/51, full 38/51, es 0/51.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-09-24.

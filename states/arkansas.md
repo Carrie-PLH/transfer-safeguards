@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The program's own site, arombudsman.dhs.arkansas.gov, names "Charlotte Sudmeyer" "State Ombudsman" and "Mandy Mercer" "Ombudsman Coordinator", lists regional ombudsmen by region, and offers a county search ("You can search for your local LTC Ombudsman in the table below:"). It prints no telephone number, street address or email address in its text; the contacts sit behind the search. That is what the program publishes on the page captured, and no other first-party page reachable on 2026-09-04 prints the office's number (see change log).
 
-**Sources last checked.** 2026-09-19
+**Sources last checked.** 2026-09-24
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

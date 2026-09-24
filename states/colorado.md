@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Long-Term Care Ombudsman Program, in the Colorado Department of Human Services, which publishes: "To speak with a long-term care ombudsman, visit the Colorado Long-Term Care Program website or call 303.862.3524." The department's own address is "1575 Sherman St. Denver, CO 80203" with "303-866-5700". The rule writes the office into the process: for a certified facility, a copy of the notice, including the appeal rights and ombudsman contact information, "shall also be sent to the state and local Long-Term Care Ombudsman at the same time it is sent to the resident or as soon as the determination is made that the transfer or discharge is involuntary."
 
-**Sources last checked.** 2026-09-19
+**Sources last checked.** 2026-09-24
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 
