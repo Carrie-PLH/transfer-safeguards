@@ -9,9 +9,9 @@
       "source_date": "Effective August 1, 2020",
       "transport": "curl",
       "user_agent": "browser",
-      "extractor": "html-text",
-      "scope": "body",
-      "notes": "DRAFT — replace before promoting."
+      "extractor": "docx",
+      "scope": "paragraphs-and-tables",
+      "notes": "Fixed 2026-09-24, deepening the page to full: the auto-drafted recipe (never actually exercised — every source still carried its draft-recipe.py placeholder note) named extractor html-text/scope body for a .docx URL, which cannot work and errors 'scope selector matched nothing: body' on any real run. The 2026-09-01 change log already states the true transport: retrieved as a .docx file and converted to text with python-docx. Corrected to match. Re-run and diffed against the standing packet after the fix: source 1's text is unchanged (whitespace only), so this is a recipe-definition fix, not new evidence."
     },
     {
       "n": 2,
@@ -20,9 +20,9 @@
       "source_date": "page header states \"SECTION 67 NURSING FACILITY SERVICES ESTABLISHED 7/1/91\" and \"LAST UPDATED 9/15/15\"; the file's own name carries \"LUP 09.15.2014\" — both shown as published, not reconciled",
       "transport": "curl",
       "user_agent": "browser",
-      "extractor": "html-text",
-      "scope": "body",
-      "notes": "DRAFT — replace before promoting."
+      "extractor": "docx",
+      "scope": "paragraphs-and-tables",
+      "notes": "Fixed 2026-09-24, same defect and same fix as source 1: extractor corrected from html-text/body to docx/paragraphs-and-tables, matching the true transport the 2026-09-01 change log already documents. Re-run and diffed against the standing packet after the fix: unchanged apart from whitespace."
     },
     {
       "n": 3,

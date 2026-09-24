@@ -53,7 +53,7 @@
       "n": 5,
       "title": "Utah Medicaid Provider Manual, Section I: General Information, chapter 5-4 Hearings and Administrative Review (PDF)",
       "url": "https://medicaid-documents.dhhs.utah.gov/Documents/manuals/pdfs/Medicaid+Provider+Manuals/All+Providers+General+Information+Section+I/AllProvidersGeneralInfo_Section_1.pdf",
-      "source_date": "Updated July 2026, as the chapter's own footer states",
+      "source_date": "Updated September 2026, as the chapter's own footer states (was Updated July 2026 as of the 2026-09-04 capture)",
       "transport": "curl",
       "user_agent": "browser",
       "extractor": "pdftotext-layout",
@@ -95,6 +95,52 @@
       "extractor": "none",
       "filters": [],
       "notes": "Not a source the page quotes. It exists so that source 1's GUID cannot go stale unnoticed. This address is keyed by rule number rather than by version, and returns the rule's effectiveDate together with the htmlDownload GUID that source 1 pins. If Utah amends R432-150, both fields change here, this packet changes, the review pass reports drift, and a session updates source 1's URL as a deliberate act. Without it, source 1 would keep returning a superseded rule and every check would pass. The literal 'undefined' path segment is what the department's own application sends; it is reproduced rather than corrected, because a guess at the intended value would be a different request from the one that is known to work."
+    },
+    {
+      "n": 9,
+      "title": "R410-14, Administrative Hearing Procedures — Utah Administrative Code",
+      "url": "https://adminrules.utah.gov/api/public/getHTML/uac-html/73994768-4705-4e78-bf9e-3167834a0136.html",
+      "source_date": "Effective Date: 09/19/2025",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "Added 2026-09-24, deepening the page to full: the Medicaid Provider Manual (source 5) itself names this rule as the one setting forth Medicaid hearing procedures ('Utah Administrative Code R410-14 et seq. sets forth the administrative hearing procedures for Medicaid hearings'), and R410-14-2(2)(d) defines a nursing facility's own determination to transfer or discharge a resident as an 'action' this rule governs, and R410-14-23 names SNF hearings expressly. It is the same adminrules.utah.gov client-rendered application as source 1, reached the same way: this address is what the app itself fetches for the rule text and is first-party and curl-reachable, but IT IS PINNED TO A VERSION, NOT TO THE RULE, for the same reason source 1 is. Source 10 is this source's version witness and must never be removed for the same reason source 8 must not be removed for source 1."
+    },
+    {
+      "n": 10,
+      "title": "R410-14 rule metadata — Utah Office of Administrative Rules (version witness for source 9)",
+      "url": "https://adminrules.utah.gov/api/public/rule/R410-14/undefined/Current%20Rules",
+      "source_date": "carries its own effectiveDate field",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "none",
+      "filters": [],
+      "notes": "Not a source the page quotes. Same role for source 9 that source 8 holds for source 1: keyed by rule number rather than by version, so an amendment to R410-14 changes this packet and the review pass reports drift rather than silently continuing to quote a superseded rule."
+    },
+    {
+      "n": 11,
+      "title": "R414-504, Nursing Facility Payments — Utah Administrative Code",
+      "url": "https://adminrules.utah.gov/api/public/getHTML/uac-html/285f3d84-7c8f-42a0-bf1f-cca3a6c68d83.html",
+      "source_date": "Effective Date: 07/02/2025",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "body",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "Added 2026-09-24, deepening the page to full: this is Utah Medicaid's nursing-facility payment rule, searched for a state-wide bed-hold day count after R432-150-20(9) (source 1) proved to require only a facility's own written bed-hold policy with no state-set duration. This rule addresses case-mix reimbursement and reserved/swing beds by payment category (R414-504-3(9)) but states no bed-hold or reserved-bed day count either; it supports the page's stated absence rather than a quotation of a period. Same client-rendered application and same version-pinning caveat as sources 1 and 9; source 12 is its version witness."
+    },
+    {
+      "n": 12,
+      "title": "R414-504 rule metadata — Utah Office of Administrative Rules (version witness for source 11)",
+      "url": "https://adminrules.utah.gov/api/public/rule/R414-504/undefined/Current%20Rules",
+      "source_date": "carries its own effectiveDate field",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "none",
+      "filters": [],
+      "notes": "Not a source the page quotes. Same role for source 11 that source 8 holds for source 1."
     }
   ]
 }

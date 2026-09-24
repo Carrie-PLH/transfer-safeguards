@@ -2134,7 +2134,7 @@ Call or text 988
 
 Translate ❯
 
-SOURCE 5: Utah Medicaid Provider Manual, Section I: General Information, chapter 5-4 Hearings and Administrative Review (PDF) | https://medicaid-documents.dhhs.utah.gov/Documents/manuals/pdfs/Medicaid+Provider+Manuals/All+Providers+General+Information+Section+I/AllProvidersGeneralInfo_Section_1.pdf | source date: Updated September 2026, as the chapter's own footer states (was Updated July 2026 as of the 2026-09-04 capture) | retrieved: 2026-09-24
+SOURCE 5: Utah Medicaid Provider Manual, Section I: General Information, chapter 5-4 Hearings and Administrative Review (PDF) | https://medicaid-documents.dhhs.utah.gov/Documents/manuals/pdfs/Medicaid+Provider+Manuals/All+Providers+General+Information+Section+I/AllProvidersGeneralInfo_Section_1.pdf | source date: Updated July 2026, as the chapter's own footer states | retrieved: 2026-09-24
 55                                                                   Updated September 2026
 
 

@@ -213,6 +213,97 @@ since a taller footer implies a taller eligible edge) should re-run the filter
 self-test and re-verify every recipe already naming `strip-running-headers`
 before trusting the change.
 
+**capture.py's curl transport decodes every fetch as UTF-8, ignoring a
+page's own declared charset — found 2026-09-24, deepening New Mexico.**
+`fetch_curl` (tools/capture.py, `return blob if binary else
+blob.decode('utf-8', 'replace')`) always decodes non-binary fetches as UTF-8
+with errors replaced by U+FFFD, regardless of the response's own
+`Content-Type` charset. srca.nm.gov, the New Mexico State Records Center and
+Archives — the state's official NMAC publisher, and the site the New Mexico
+recipe's sources 1 and 2 both name — serves `text/html; charset=windows-1252`
+Word-generated exports whose mso-tab-count spacing runs are literal `\xa0`
+(non-breaking space) bytes repeated, not ASCII whitespace. Decoded as UTF-8,
+long `\xa0` runs are not valid continuation sequences and each one becomes a
+replacement character, so a re-run of `tools/recipes/new-mexico.json`
+produced a packet reading "8.370.16.40���������BEDHOLD:" throughout — every
+tab-spaced heading and subsection marker in sources 1 and 2 corrupted —
+where the standing packet, captured 2026-09-01, read clean ("8.370.16.40
+BEDHOLD:"). This is a decode-only defect: the bytes curl received were
+identical both times (verified by hand, decoding the same fetch as
+windows-1252 instead of UTF-8 reproduces the clean text exactly), so it is
+not source drift and not something `check-fidelity.py` would have caught
+differently — the corrupted text would have failed every quotation check
+loudly, not silently, but only because these two sources happen to be quoted
+already; a source added to a packet for the first time under this bug would
+capture corrupted text as if it were clean. Worked around this pass without
+touching capture.py: fetched sources 1 and 2 by hand with curl, decoded the
+bytes as windows-1252 explicitly, wrote the result as UTF-8, and supplied
+that text with `capture.py new-mexico --supply 1=<file> --supply 2=<file>`,
+which runs it through the recipe's own `html-text` extractor and filters
+exactly as a direct fetch's bytes would. The resulting packet was diffed
+against the standing 2026-09-01 packet and, apart from extraction
+whitespace, the two agree: no source drift, only a decode-corrected capture,
+retained via `tools/retain-packet.py --result confirmed`. A working session
+should make `fetch_curl` read the response's `Content-Type` charset
+parameter (falling back to UTF-8 only when none is stated, as most of this
+project's sources already do) before decoding, add a self-test fetching a
+fixture served with a non-UTF-8 charset, and re-run every recipe that
+fetches HTML to confirm no other packet in this project already carries this
+corruption silently — most sources are ASCII-only or UTF-8-served and would
+show no symptom either way, which is exactly why this went undetected until
+a Word-exported, windows-1252-served page was recaptured. `sped-safeguards`,
+`Licensure Mobility` and `gathered work` share `capture.py`'s lineage and
+should be checked for the identical `fetch_curl` decode, though not yet
+exercised there against a live non-UTF-8 fetch. Filed in the
+field-assembly-standard handoff queue the same day this entry was written.
+
+**Maine's recipe was never finished, and the pinned venv cannot run its own
+docx extractor — found 2026-09-24, deepening Maine.** `tools/recipes/maine.json`
+carried `"notes": "DRAFT — replace before promoting."` on all seven sources,
+the literal placeholder `tools/draft-recipe.py` writes, and nobody had
+replaced it. Two separate defects were hiding under that placeholder.
+First, sources 1 and 2 (both .docx files from maine.gov/sos) were declared
+with `"extractor": "html-text", "scope": "body"` — a scope selector that
+cannot match anything in a Word document — so any real run of the recipe
+failed immediately (`SOURCE 1 failed: scope selector matched nothing: 'body'`)
+and had clearly never been exercised end to end; the 2026-09-01 change log
+already documented the true transport (python-docx, read directly) but the
+recipe was never brought into line with it. Fixed this pass: both sources
+now declare `"extractor": "docx", "scope": "paragraphs-and-tables"`, matching
+what actually happened at capture time. Second, fixing the extractor exposed
+that this venv — `tools/.venv`, the one `capture.py --preflight` pins — has
+no `docx` package installed at all (`pip list` shows only beautifulsoup4,
+pip, soupsieve, typing_extensions); `tools/recipes/florida.json`,
+`new-york.json` and `west-virginia.json` declare the same `docx` extractor
+and fail the identical way, so this is not new to Maine. `--preflight` checks
+poppler and pdfplumber pins only and says nothing about `docx`, so a session
+trusting a clean preflight has no warning before hitting this. Third, even
+with a working extractor, the recipe has no `slice` for sources 1 or 2:
+14.Q's own title says "Section 10.Q, Transfer and Discharge Rights," but the
+recipe fetches and would keep the entire chapter 110 and the entire
+MaineCare Benefits Manual Chapter II Section 67 — hundreds of thousands of
+characters against the few thousand the standing 2026-09-01 packet actually
+holds, which was sliced by hand. None of this is new evidence to capture; it
+is the recipe never having been finished after `draft-recipe.py` wrote its
+first pass. Worked around without an automated recapture: fetched both
+.docx files by hand, extracted them with a system Python that has `python-docx`
+installed (paragraphs then pipe-joined table rows, the same convention
+`extract_docx` uses), and confirmed every quotation this page draws from
+sources 1 and 2 — grounds, notice, the hearing office and its pendency
+provision, and the bed-hold day count — is present verbatim in the fresh
+full-document text; no drift, only a recipe that cannot yet reproduce the
+packet automatically. The standing packet is untouched. A working session
+should add `python-docx` to `tools/.venv`'s pinned dependencies (and to
+`--preflight`'s checks), write the `slice` anchors for sources 1 and 2 per
+the heading-anchor convention in CLAUDE.md, and re-run the recipe end to end
+before removing its DRAFT notes. `tools/recipes/kansas.json`, `nevada.json`
+and `rhode-island.json` carry the same leftover "DRAFT — replace before
+promoting" notes on some or all sources despite being full pages already;
+not investigated this pass, and worth a portfolio-wide check of whether
+`draft-recipe.py`'s stub note is being cleared reliably once a recipe is
+actually verified. Filed in the field-assembly-standard handoff queue the
+same day.
+
 ## Deferred, dated
 
 **Hawaii — deferred 2026-09-03.** The operative rule, Hawaii Administrative
