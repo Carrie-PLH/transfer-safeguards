@@ -537,6 +537,11 @@ def check(page_path, packet_path, out=print, lang='en', index_path=None):
     # 0. the packet itself must be source text, not source text plus commentary
     check_packet_annotations(packet, out, fails)
 
+    # The search block (apply-seo-head.py) restates the title and description
+    # as tags and JSON; it quotes nothing from a source and is masked out of
+    # the page before any layer below reads it.
+    raw = re.sub(r'<!-- search-head -->.*?<!-- /search-head -->', ' ', raw, flags=re.S)
+
     # hrefs from raw text (before tag stripping)
     hrefs = [a or b for a, b in HREF_RE.findall(raw)]
 

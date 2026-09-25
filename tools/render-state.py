@@ -153,6 +153,20 @@ def render(slug):
     doc=f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{title}</title><link rel="canonical" href="{canonical}"><meta name="description" content="{desc}"><link rel="icon" href="/assets/favicon.ico" sizes="any"><link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32"><link rel="icon" href="/assets/favicon-16.png" type="image/png" sizes="16x16"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"><link rel="stylesheet" href="/assets/style.css"></head><body><a class="skip-link" href="#main">Skip to content</a><header class="topline"><a class="wordmark" href="/">ROOM &amp; RECOURSE</a><input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Menu"><label class="nav-button" for="nav-toggle"><span class="nav-bars"></span>Menu</label><nav><a href="{states_href}">States</a><a href="{federal_href}">The federal floor</a><a href="/about/">About</a></nav></header><main id="main">{''.join(chunks)}</main><footer class="colophon"><div class="rows"><div><p class="mark">ROOM &amp; RECOURSE</p><p style="margin-top:0.85rem;">A project of <a href="https://fieldassembly.net" target="_blank" rel="noopener">Field Assembly LLC</a>. Kept to <a href="https://fieldassembly.net/standard.html" target="_blank" rel="noopener">the published record standard</a>.</p><p>Free permanently &mdash; no accounts, no ads, no analytics. Every quotation above carries a capture date that can be verified independently &mdash; <a href="https://fieldassembly.net/permanence" target="_blank" rel="noopener">how we've bound ourselves</a>.</p><p><a href="mailto:hello@fieldassembly.net">hello@fieldassembly.net</a></p><p><a href="/legal/privacy/">Privacy</a> &middot; <a href="/legal/terms/">Terms</a></p></div><div><p class="foot-label">The limits</p><p>{limits}</p></div></div></footer></body></html>'''
     out = (ROOT/'site'/'federal.html') if federal else (ROOT/'site'/'states'/f'{slug}.html')
     out.write_text(doc)
+    apply_search_head(out.relative_to(ROOT/'site').as_posix(), out)
+
+
+# The search block (Open Graph, Twitter, JSON-LD) is owned by the shared
+# tool field-assembly-standard/tools/apply-seo-head.py, which the deploy gate
+# also runs on a fresh render before comparing. Applied here when the
+# sibling checkout is present so a re-render leaves the page deploy-ready;
+# absent (the gate's scratch tree), the gate applies it itself.
+SEO_TOOL = ROOT.parent / 'field-assembly-standard' / 'tools' / 'apply-seo-head.py'
+def apply_search_head(rel, path):
+    if SEO_TOOL.exists():
+        import subprocess
+        subprocess.run([sys.executable, str(SEO_TOOL), '--site', 'transfer-safeguards', '--rel', rel, '--file', str(path)],
+                       check=True, capture_output=True)
 
 if __name__=='__main__':
     for arg in sys.argv[1:]: render(arg)

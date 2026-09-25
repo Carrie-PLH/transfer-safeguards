@@ -512,6 +512,10 @@ try:
         page = live / (md.stem + ".html")
         if r.returncode != 0 or not out.exists():
             bad.append((md.stem, "render failed: " + (r.stderr or "").strip()[:120])); continue
+        seo = repo.parent / "field-assembly-standard" / "tools" / "apply-seo-head.py"
+        if seo.exists():   # the search block is the shared tool's, applied to the fresh render too
+            subprocess.run([sys.executable, str(seo), "--site", "transfer-safeguards", "--rel", "states/" + md.stem + ".html", "--file", str(out)],
+                           check=True, capture_output=True)
         if not page.exists():
             bad.append((md.stem, "source has no published page")); continue
         if out.read_text() != page.read_text():
