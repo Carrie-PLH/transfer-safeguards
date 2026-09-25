@@ -420,3 +420,16 @@ sync-checked-dates.py: 6 derived dates corrected (table + json, 3 states).
 build-status.py: baseline 51/51, full 38/51, es 0/51.
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-09-24.
+
+## 2026-09-25 — owner review recorded: idaho, north-dakota, south-dakota
+
+Carrie Schluter reviewed the three pages deepened to full pages on 2026-09-25
+and confirmed them for publication. Each page's change-log reviewer line
+moved from "Reviewer: Carrie Schluter (review pending for this entry)." to
+"Reviewer: Carrie Schluter, reviewed 2026-09-25." in the working markdown,
+re-rendered through render-state.py. No page content, quotation, docket row,
+source map, packet, or checked date was altered. check-all.py afterward: 102
+pages across 52 states, no unexplained failures. build-status.py: baseline
+51/51, full 44/51. Sitemap lastmod refreshed by the predeploy gate.
+
+Reviewer: owner, attended session, 2026-09-25.
