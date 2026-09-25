@@ -57,7 +57,7 @@ the state's own published translation only.
 | [Texas](site/states/texas.html) | [x] | [x] | [ ] | Sep 5, 2026 |
 | [Utah](site/states/utah.html) | [x] | [x] | [ ] | Sep 24, 2026 |
 | [Vermont](site/states/vermont.html) | [x] | [ ] | [ ] | Sep 4, 2026 |
-| [Virginia](site/states/virginia.html) | [x] | [x] | [ ] | Sep 15, 2026 |
+| [Virginia](site/states/virginia.html) | [x] | [x] | [ ] | Sep 25, 2026 |
 | [Washington](site/states/washington.html) | [x] | [x] | [ ] | Sep 21, 2026 |
 | [West Virginia](site/states/west-virginia.html) | [x] | [x] | [ ] | Sep 22, 2026 |
 | [Wisconsin](site/states/wisconsin.html) | [x] | [x] | [ ] | Sep 18, 2026 |

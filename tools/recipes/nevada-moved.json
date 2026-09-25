@@ -1,0 +1,16 @@
+{
+  "recipe_version": 1,
+  "state": "nevada-moved",
+  "sources": [
+    {
+      "n": 1,
+      "title": "Nursing Home Discharges, Transfers, and Room Changes: Know Your Rights (LTC Discharges Brochure) — Nevada Aging and Disability Services Division, Long Term Care Ombudsman Program",
+      "url": "https://www.adsd.nv.gov/siteassets/content/programs/seniors/ltcombudsman/LTC_Discharges_Brochure_2.pdf",
+      "source_date": "none stated (PDF metadata: created 2019-12-27, modified 2020-11-23)",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "notes": "Supplement captured 2026-09-25 for the dead reader link on the Nevada page. The standing packet's source 9 address, https://www.adsd.nv.gov/uploadedFiles/adsdnvgov/content/Programs/Seniors/LTCOmbudsman/LTC%20Discharges%20Brochure(2).pdf, now answers HTTP 301 to this address (ADSD moved its uploaded files under /siteassets/); the division's own Long Term Care Ombudsman page still links the old address, which redirects here. The link published on roomandrecourse.com was also broken for a second, unrelated reason: tools/render-state.py ends a markdown link target at its first ')', so the published href stopped at 'Brochure(2' and returned 404. The brochure's text is unchanged: pdftotext -layout of this file matches the standing packet's source 9 body line for line, apart from trailing whitespace and the page-break form feed. This supplement exists so the reader-facing address the page now links is itself captured evidence."
+    }
+  ]
+}

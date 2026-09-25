@@ -433,3 +433,53 @@ pages across 52 states, no unexplained failures. build-status.py: baseline
 51/51, full 44/51. Sitemap lastmod refreshed by the predeploy gate.
 
 Reviewer: owner, attended session, 2026-09-25.
+
+## 2026-09-25 — dead-link repair: nevada, virginia, utah (attended, owner-named)
+
+Three pages were reported with dead official-source links (404 to a cloud
+crawler and to curl on the Mac). Named pages, not a rotation pass; the cursor
+was not read or advanced.
+
+Root cause for nevada and virginia was ours, not the publishers':
+tools/render-state.py's markdown-link pattern ends a URL at its first ')', so
+a source address containing parentheses published truncated
+('...Brochure(2', '...(Nursing%20Facilities') and 404'd. The markdown held the
+correct addresses throughout. Renderer not changed in this pass (it would
+re-render california, whose five westlaw.com links carry the same defect);
+flagged for the owner.
+
+- virginia: CONFIRMED. All four sources recaptured through the recipe
+  (c974353f8613); retained and promoted, hash 009508ab6c25a644. Source 4 (the
+  DMAS Nursing Home Manual chapter behind the dead link) is byte-identical in
+  extraction to 2026-09-15 and serves 200 at its unchanged address. Source 1
+  lost only the law.lis.virginia.gov site footer (24713 -> 24426 chars), no
+  statutory text. Zero failures md + html. Source-map link re-encoded with
+  %28/%29; checked date -> 2026-09-25; change-log correction entry added,
+  reviewer line pending.
+- nevada: source 9 only (the ombudsman discharge brochure). Besides the
+  truncation, ADSD moved the file: the old address 301s to
+  /siteassets/content/programs/seniors/ltcombudsman/LTC_Discharges_Brochure_2.pdf.
+  Captured there through a new supplement recipe
+  (tools/recipes/nevada-moved.json, 121c322ec6d0) into
+  tools/packets/nevada-packet-moved.txt, following the texas-moved precedent.
+  Text unchanged; tripwire run: the page checked against sources 1-8 alone
+  fails 12 spans (5 quotes, 3 phones, 4 addresses), and with the supplement
+  added passes at zero. Source map relinked; checked date unchanged (the main
+  packet was not re-fetched); change-log correction entry added, reviewer
+  line pending. The main recipe remains an unpromoted draft.
+- utah: NO CHANGE. Not dead. adminrules.utah.gov's rule addresses 404 with
+  an empty body only to clients that do not send `Accept: text/html`; with a
+  browser's Accept header they return 200 with the application shell, which
+  loads the rule from the public API (reachable; not rendered in a browser in
+  this pass). The rule-metadata API's own `linkToRule` field gives exactly the
+  addresses the page links. The three version witnesses still carry the
+  pinned GUIDs, so no rule was amended. Recorded 2026-09-04 in the page's own
+  change log as a false dead-link report; this is the same false positive.
+
+California, same session: the renderer fix (tools/render-state.py accepts one
+level of parentheses in an address) repairs the five govt.westlaw.com links
+that had the same fault; the page was re-rendered and carries its own dated
+correction entry. No source was re-captured.
+
+Reviewer: attended session, 2026-09-25; the three correction entries were
+reviewed by Carrie Schluter on 2026-09-25.

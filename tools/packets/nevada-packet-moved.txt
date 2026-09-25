@@ -1,0 +1,111 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: nevada-moved
+ASSEMBLED: 2026-09-25
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/nevada-moved.json (recipe digest 121c322ec6d0). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- SOURCE 1: transport curl; extractor pdftotext-layout; filters none.
+  Supplement captured 2026-09-25 for the dead reader link on the Nevada page. The standing packet's source 9 address, https://www.adsd.nv.gov/uploadedFiles/adsdnvgov/content/Programs/Seniors/LTCOmbudsman/LTC%20Discharges%20Brochure(2).pdf, now answers HTTP 301 to this address (ADSD moved its uploaded files under /siteassets/); the division's own Long Term Care Ombudsman page still links the old address, which redirects here. The link published on roomandrecourse.com was also broken for a second, unrelated reason: tools/render-state.py ends a markdown link target at its first ')', so the published href stopped at 'Brochure(2' and returned 404. The brochure's text is unchanged: pdftotext -layout of this file matches the standing packet's source 9 body line for line, apart from trailing whitespace and the page-break form feed. This supplement exists so the reader-facing address the page now links is itself captured evidence.
+
+SOURCE 1: Nursing Home Discharges, Transfers, and Room Changes: Know Your Rights (LTC Discharges Brochure) — Nevada Aging and Disability Services Division, Long Term Care Ombudsman Program | https://www.adsd.nv.gov/siteassets/content/programs/seniors/ltcombudsman/LTC_Discharges_Brochure_2.pdf | source date: none stated (PDF metadata: created 2019-12-27, modified 2020-11-23) | retrieved: 2026-09-25
+Long Term Care
+    Ombudsman Program                          For more information please
+                                                      contact your
+        Mission Statement                         local Long Term Care
+                                                      Ombudsman:
+   To empower residents and advo-
+    cate for the protection of residents’                Carson City
+    health, safety, welfare, and rights             3416 Goni Rd. Suite 132
+                                                     Carson City, NV 89706
+   To promote or support resident                      (775) 687-4210
+    councils, family councils, and com-
+                                                             Elko
+    munity groups
+                                                 1010 Ruby Vista Dr. Suite 104
+                                                       Elko, NV 89801
+   To represent the interests of resi-
+    dents before governmental agen-
+    cies
+                                                       (775) 738-1966
+                                                          Las Vegas
+                                                                                       Nursing Home
+   To analyze, comment on, and moni-
+                                                     3320 W. Sahara Ave
+                                                     Las Vegas, NV 89104
+                                                                                        Discharges,
+    tor laws, regulations, and policies
+    pertinent to long term care residents
+                                                        (702) 486-3545                 Transfers, and
+                                                            Reno
+                                                  9670 Gateway Dr. Suite 100          Room Changes:
+                                                       Reno, NV 89521
+                                                       (775) 687-0800                    Know Your
+                                                                                           Rights
+
+
+
+
+                                            To report concerns about long term care
+                                                    facilities please call the
+                                                     Ombudsman Helpline:
+
+                                                        1-888-282-1155
+
+             Discharges                                            Transfers                                      Room Changes
+According to Nevada Revised Statute 449            A nursing facility must give you, your guardian,     Under the Code of Federal Regulations 483.10(b)
+                                                                                                        (11) residents have an absolute right to refuse to
+and Code of Federal Regulations 483.12             conservator or legally liable relative a written
+                                                                                                        accept:
+the only legitimate reasons to be dis-             notice with at least 30 days notice before a
+                                                                                                        • a transfer from the portion of a nursing home
+charged from a Nursing Home are as fol-            resident is transferred or discharged. In order
+                                                                                                            designated as the Medicare wing to any other
+lows:                                              to ensure that the resident has been made
+                                                                                                            portion of the home ;
+                                                   aware of their rights and afforded the oppor-
+•   Transfer or discharge is necessary to                                                               •   a transfer from the portion of a nursing home
+                                                   tunity to appeal the nursing home must comply
+    meet the resident’s welfare; and the res-                                                               designated as the Medicaid wing to any other
+                                                   with all of the following notice requirements:
+    ident’s welfare cannot be met in the fa-                                                                portion of the home
+    cility; (i.e. resident requires hospitaliza-                                                        Room-to-room transfers are permitted only in fol-
+                                                   •   The reason for transfer/ discharge.              lowing instances:
+    tion)                                          •   The date of the proposed transfer/
+                                                                                                        •   If it is necessary to promote the resident’s well
+•   Resident is well enough to be dis-                 discharge.
+                                                                                                        -being. (i.e. infection control or need for special-
+    charged to a lower level of care and no        •   The location to which the nursing facility       ized equipment that cannot be accommodated in
+    longer needs Nursing Home placement;               proposes transfer/ discharge                     current room)
+                                                   •   Resident’s right to a hearing to appeal the
+                                                                                                        •   If roommates are incompatible causing risk.
+•   The resident has become a danger to                 transfer/discharge.
+                                                                                                        •   If a temporary transfer is needed to make re-
+    themselves or others in the facility;          •   The procedures you must follow to request
+                                                                                                        pairs or renovations. The resident has the right to
+                                                       a hearing.
+•   The resident’s health status is a danger                                                            return as soon as the repairs or renovations are
+                                                   •   The date by which you must request a
+    to others in the facility; (i.e. infectious                                                         completed.
+                                                       hearing in order to prevent the transfer/
+    disease)                                                                                            • If the transfer is necessary to permit the ad-
+                                                       discharge.
+                                                                                                        mission of a resident of the opposite sex.
+•   The resident has failed to pay their bill      •   Resident’s right to representation at the
+                                                       hearing.                                         • If the resident no longer needs specialized
+    after reasonable and appropriate notice;                                                            medical equipment that cannot be moved from the
+    or                                             •   If a resident is being transferred to a hospi-
+                                                                                                        resident’s room, or another resident needs access
+                                                       tal; information regarding holding your bed
+                                                                                                        to that equipment.
+•   The facility ceases to operate.                    and readmission to the facility.
+                                                   •   Contact information for the Long-term Care       •   If the resident no longer needs the specialized
+The need for all discharges must be appro-                                                              services or programming that is the focus of the
+                                                       Ombudsman .
+priately documented by physicians and clin-                                                             area of the facility in which the patient is located.
+ical staff. Moreover the facility is responsi-                                                          •   If facility wants to transfer a Medicaid recipient
+ble to arrange for safe and appropriate dis-                                                            from a private room to a non-private room.
+charge.                                                                                                 •   If a temporary transfer is necessary because
+                                                                                                        of an emergency. (i.e. infection control, environ-
+                                                                                                        mental emergency)
+

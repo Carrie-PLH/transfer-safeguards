@@ -765,4 +765,48 @@ img, svg, video, iframe { max-width: 100%; }
   }
 }
 
+/* ---- Print (2026-09-25) ----------------------------------------------
+   These pages get carried into IEP meetings, discharge appeals, conduct
+   hearings and board offices. On paper: black on white, no navigation or
+   controls, collapsed sections open, and every outside link followed by
+   its address so a printed source can still be looked up. Colours are the
+   black and white keywords rather than tokens: print is black on white
+   (21:1) by construction, and no screen token is reused. */
+@media print {
+  @page { margin: 1.8cm 1.6cm; }
+  :root { color-scheme: light; --gutter: 0; --pad-x: 0; --measure: none; }
+  *, *::before, *::after {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  html, body { background: white !important; font-size: 11pt; }
+  header nav, .nav-toggle, .nav-button, label[for="nav-toggle"], .skip-link,
+  nav.jump, .sf-nav, footer nav, button, input, select, textarea { display: none !important; }
+  header img { filter: brightness(0) !important; }
+  header svg { display: none !important; }
+  /* The screen layout's gutters and side columns waste paper: run the text
+     the full width of the page and put section labels above their section. */
+  main, main section, main article, main .section > div, main [class*="prose"],
+  main [class*="lede"], main p, main ul, main ol, main table, main blockquote {
+    max-width: none !important;
+  }
+  main .section, main section { display: block !important; padding-left: 0 !important; padding-right: 0 !important;
+    margin-left: 0 !important; margin-right: 0 !important; }
+  main .section-no { display: block !important; margin: 0 0 0.3em !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  details::details-content { content-visibility: visible; display: block; }
+  details > summary { list-style: none; font-weight: 600; }
+  main a { text-decoration: underline; }
+  main a[href^="http"]::after {
+    content: " <" attr(href) ">";
+    font-size: 0.8em;
+    word-break: break-all;
+  }
+  h1, h2, h3, h4 { break-after: avoid; }
+  blockquote, figure, tr, li, pre { break-inside: avoid; }
+  hr, [class*="hair"], table, th, td { border-color: currentColor !important; }
+}
+
 /* ===================== END SHARED MOBILE LAYER v1 ===================== */

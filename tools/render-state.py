@@ -26,7 +26,9 @@ def display_date(s):
 
 def inline(s):
     s = html.escape(s, quote=False)
-    s = re.sub(r'\[([^]]+)\]\((https?://[^)]+)\)', r'<a href="\2" target="_blank" rel="noopener">\1</a>', s)
+    # An address may carry one level of parentheses (westlaw's contextData=(sc.Default),
+    # a PDF named "Brochure(2).pdf"); [^)]+ cut such links at the first ")" (2026-09-25).
+    s = re.sub(r'\[([^]]+)\]\((https?://(?:[^()\s]|\([^()\s]*\))+)\)', r'<a href="\2" target="_blank" rel="noopener">\1</a>', s)
     # Same-site and mailto targets. Before this, only http(s) markdown links
     # were converted and every other form fell through to the page as literal
     # "[text](target)" — 66 of them were published that way. Internal targets
