@@ -66,6 +66,21 @@
       "extractor": "html-text",
       "scope": "main",
       "notes": "The 2026-09-02 hand capture recorded this listing as a client-side shell to curl; on 2026-09-22 it is server-rendered and curl with a browser user-agent returns the listing text, including 'Last Assured 11/20/2025', the address, hours, 833-663-9673 and LTCO@state.sd.us, inside main#main-content. The trailing path segment is the directory's own resource UUID, an application-level identifier: a broken link here is capture drift to re-establish through the directory's search, not evidence the program is gone. Some adjacent elements render run together in extraction ('PrintShareFavorite', and the 'What's Here' taxonomy links); that is the markup's own element adjacency, not text, and no quoted span crosses it."
+    },
+    {
+      "n": 6,
+      "title": "South Dakota Medicaid Billing and Policy Manual — Skilled Nursing Facility and Nursing Facility Services (PDF)",
+      "url": "https://dss.sd.gov/docs/medicaid/providers/billingmanuals/Institutional/Skilled_Nursing_Facilities_and_Nursing_Facilities.pdf",
+      "source_date": "Every page header states \"UPDATED\" / \"July 24\"; PDF document properties (Creator: Microsoft Word for Microsoft 365) give CreationDate and ModDate both 2024-07-26T15:00:26-04:00.",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "slice": {
+        "from": "Nursing Facility Leave Days",
+        "to": "Out-of-State Services"
+      },
+      "filters": [],
+      "notes": "Linked from the department's Medicaid Provider Billing Manuals index (dss.sd.gov/medicaid/providers/billingmanuals/default.aspx, 200 to curl with a browser user-agent) as the skilled-nursing/nursing-facility manual. The direct PDF address carries no session token or query hash, so it is a stable, directly-linked download (PROVENANCE.md transport rule), and answers plain curl with a browser user-agent. 12 pages, no scanned image — pdftotext -layout reproduces the running text cleanly (single-column). Sliced from the 'Nursing Facility Leave Days' heading (Covered Services and Limits section) to the next heading, 'Out-of-State Services'; this is the only span stating the reserve-bed-day and therapeutic-leave-day limits. Both anchors occur once in the extracted text (checked 2026-09-24). A second, shorter 'Reserved Bed Days' passage appears later in the manual's Payment section (page 8) restating that a reserved bed is reimbursed at up to 100% of the per diem rate 'in accordance with the criteria in the Covered Services and Limits section' — i.e. it cross-references rather than restates the day limits captured here, so it was not separately sliced."
     }
   ]
 }

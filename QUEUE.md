@@ -304,6 +304,21 @@ not investigated this pass, and worth a portfolio-wide check of whether
 actually verified. Filed in the field-assembly-standard handoff queue the
 same day.
 
+## Recipe maintenance, dated
+
+**north-dakota, source 5 — stale slice anchor, found 2026-09-25 deepening North Dakota.**
+`tools/recipes/north-dakota.json` source 5 (the Care Choice directory listing for the
+Long-Term Care Ombudsman Program) slices to a "to" anchor ending `SEND-TO-ME`; a
+recapture run on 2026-09-25 reports the anchor matches zero times and stops. Read
+by hand (curl, browser user-agent): the listing still serves the same content —
+address, phone, fax — so this is a page-markup change (a hidden or
+differently-rendered "send to phone" widget), not a source finding. Deepening North
+Dakota needed no new evidence from this source, so the existing slice was left
+untouched rather than hand-adjusted, per the rule that a miss in an existing recipe
+is a finding to read, not a fallback to widen blindly under this pass's scope. A
+working session should read the live markup at the recipe's URL and pick a new,
+unique "to" anchor at or after the address/phone block.
+
 ## Deferred, dated
 
 **Hawaii — deferred 2026-09-03.** The operative rule, Hawaii Administrative

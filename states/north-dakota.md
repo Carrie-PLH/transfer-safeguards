@@ -10,13 +10,105 @@
 
 **Ombudsman in these sources.** The North Dakota Long-Term Care Ombudsman Program's own page states of itself: "North Dakota's Long-Term Care Ombudsman Program speaks on behalf of people living in assisted living homes, basic care homes, hospital swing beds, transitional cal units or nursing homes." Its own published contact carries no street address, only "Calling toll-free (855) 462-5465, select option 3, or (701) 328-4617." and "Sending an encrypted email to dhsagingombud@nd.gov". The department's own Care Choice provider directory instead lists a street address for the same program: "1237 W Divide Ave Ste 6" "Bismarck, 58501", alongside the same phone numbers and a fax number the program's own page does not print, "(701) 328-0389" — both shown as published, not reconciled.
 
-**Sources last checked.** 2026-09-02
+**Sources last checked.** 2026-09-25
 
 Reproduced from the agencies' own pages and documents quoted below, potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 
 ## Lede
 
-This page assembles what North Dakota's own publishers state about involuntary transfer and discharge from a nursing facility. It is a baseline page: the docket rows and the source map are built; the grounds section and the published-process section are not yet written, as the change log records. The fullest single source is NDAC 75-01-03-08.1, Notice of facility's intention to transfer or discharge a resident, part of the Department of Human Services' own Appeals and Hearings chapter — last amended May 1, 2006 — which states the permissible grounds, the thirty-day notice and its exceptions, the notice's required contents, and the resident's right to a fair hearing before the same department, all in one section, under North Dakota's own vocabulary of *transfer* and *discharge*. Bed-hold sits with a second chapter of the same title, NDAC 75-02-06 (Ratesetting for Nursing Home Care), and with the department's own current Medicaid Billing and Policy Manual for nursing facilities; the Long-Term Care Ombudsman Program's contact sits on the department's adult-and-aging program pages. Three documents, one department, before this state's own rule is even fully read. The federal floor for Medicare/Medicaid-certified facilities is assembled separately on [the federal page](../federal.html); nothing here fills a gap from federal law or another state. Confirm applicability with the agencies named in the sources: whether any provision applies to a particular facility, resident, or notice is for the hearing office to determine. Deadlines and periods on this page are quoted from the sources, not calculated for any case.
+This page assembles what North Dakota's own publishers state about involuntary transfer and discharge from a nursing facility. The fullest single source is NDAC 75-01-03-08.1, Notice of facility's intention to transfer or discharge a resident, part of the Department of Human Services' own Appeals and Hearings chapter — last amended May 1, 2006 — which states the permissible grounds, the thirty-day notice and its exceptions, the notice's required contents, and the resident's right to a fair hearing before the same department, all in one section, under North Dakota's own vocabulary of *transfer* and *discharge*. Bed-hold sits with a second chapter of the same title, NDAC 75-02-06 (Ratesetting for Nursing Home Care), and with the department's own current Medicaid Billing and Policy Manual for nursing facilities; the Long-Term Care Ombudsman Program's contact sits on the department's adult-and-aging program pages. Three documents, one department, before this state's own rule is even fully read. The federal floor for Medicare/Medicaid-certified facilities is assembled separately on [the federal page](../federal.html); nothing here fills a gap from federal law or another state. Confirm applicability with the agencies named in the sources: whether any provision applies to a particular facility, resident, or notice is for the hearing office to determine. Deadlines and periods on this page are quoted from the sources, not calculated for any case.
+
+## 01 — The grounds, as North Dakota describes them
+
+NDAC 75-01-03-08.1(7): "A facility may not discharge or transfer a resident unless:" ([North Dakota Legislative Branch](https://ndlegis.gov/information/acdata/pdf/75-01-03.pdf), effective May 1, 2006, retrieved 2026-09-25):
+
+a. "The resident has an urgent medical need, which cannot be met in the facility;"
+
+b. "The resident's physical condition endangers or poses a threat to the health or safety of the resident or other persons in the facility;"
+
+c. "In cases involving a mental condition or behavioral problem, the behavior of the resident creates a serious and immediate threat to the resident or other residents or persons in the facility and all reasonable alternatives to transfer or discharge, consistent with the attending physician's orders, have been attempted and documented in the resident's medical record;"
+
+d. "The resident's health has improved sufficiently so the resident no longer needs the services provided by the facility;"
+
+e. "The resident was accepted by the facility for the purpose of receiving specialized services and has fully benefited from those services or can no longer benefit from those services, provided that the purpose of the admission and the expected length of stay were agreed to, in writing, by or on behalf of the resident, prior to admission;"
+
+f. "The resident's health or safety is at risk because the facility cannot reasonably accommodate the needs of the resident;"
+
+g. "A public official with jurisdiction over matters of health or safety, in the performance of official duties, determines the health or safety of the resident is endangered by continued residence in the facility;"
+
+h. "The facility's license is revoked, suspended, or not renewed, or the facility's participation in Medicare or Medicaid is terminated;"
+
+i. "The facility intends to cease operations; or"
+
+j. "The resident fails to pay, or to arrange for payment of, charges based on the daily rate established under chapter 75-02-06, provided that no involuntary transfer or discharge may be based on a failure to pay charges for private rooms, holding a bed for a period in excess of the covered bed hold period set forth in section 75-02-06-14, special services not included in the daily rate, or Medicare part B coinsurance and deductible."
+
+The rule letters these bases (a) through (j) itself, in this order, reproduced here unchanged.
+
+## 02 — The published process
+
+### Requesting the hearing
+
+NDAC 75-01-03-03(2): "An opportunity for a fair hearing is available to any resident who believes a facility has erroneously determined that the resident must be transferred or discharged." The filing address, NDAC 75-01-03-26: "Appeals Supervisor" "North Dakota Department of Human Services" "State Capitol - Judicial Wing" "600 East Boulevard Avenue - Department 325" "Bismarck, North Dakota 58505-0250". The deadline, NDAC 75-01-03-08.1(5): "A resident has no appeal rights if the transfer or discharge has taken place and the resident did not appeal within thirty days after the date of issuance of a notice that meets the requirements of subsection 3." The same subsection states which moves carry appeal rights at all: "A resident has appeal rights when the resident is transferred from a certified bed to a noncertified bed or from a bed in a certified facility to a bed in a facility certified as a different provider. A resident has no appeal rights when the resident is moved from one bed in a certified facility to another bed in the same certified facility."
+
+The pendency provision, NDAC 75-01-03-08.1(6): "If a resident with appeal rights files an appeal before the effective date of the transfer or discharge, the resident shall not be transferred or discharged:" "In the case of a discharge for nonpayment of facility charges, earlier than the date a hearing officer recommends a decision that the charges were due and unpaid at the time the facility issued a notice of discharge; and" "In all other cases, until the fair hearing decision is rendered."
+
+Once a hearing is requested, the rule places a duty on the facility that names the same office: NDAC 75-01-03-09.1(1): "Upon receipt of notice of a request for fair hearing, the nursing facility, no later than the fifth day after receiving the request, shall provide the appeals supervisor with all information pertinent to the request." The department's current Client Rights and Appeals page confirms the same office handles this appeal in practice — "The Appeals Supervisor also processes other kinds of appeals including foster care and daycare licensing, child abuse and neglect assessments, nursing home transfers and discharges, and rate setting." — while giving a different name, address, and phone for the office than the rule's own: "Appeals Supervisor, Legal Division" "Department of Health and Human Services" "600 E Boulevard Ave. Dept. 325" "Bismarck, N.D. 58505-0250" "Phone: (701) 328-2311" "Toll Free: (800) 472-2622". Both addresses are quoted as published and not reconciled; see the docket and the change log.
+
+### The notice's required contents
+
+NDAC 75-01-03-08.1(3): "The notice provided by the facility must contain:"
+
+a. "A statement that the facility intends to transfer or discharge the resident, as the case may be;"
+
+b. "The reason for the transfer or discharge;"
+
+c. "The effective date of the transfer or discharge;"
+
+d. "The location to which the resident is to be transferred or discharged;"
+
+e. "The specific provision of subsection 7 authorizing the transfer or discharge, or the change in federal or state law requiring the action;"
+
+f. "A statement that the resident has the right to appeal the intended transfer or discharge to the department, and the mailing address to which an appeal must be sent;"
+
+g. "The name, address, and telephone number of the state long-term care ombudsman;"
+
+h. "If the resident is developmentally disabled or mentally ill, the address and telephone number of the committee on protection and advocacy office that serves the area in which the resident resides;"
+
+i. "If the Medicaid program is paying for some or all of the cost of services furnished to the resident by the facility, a statement that those Medicaid payments will continue until after the hearing unless:" (1) "The sole issue at the hearing is one of state or federal law or policy and the resident is so informed in writing; or" (2) "Some change in circumstances affects the resident's eligibility for Medicaid benefits and the resident is so notified in writing."
+
+j. "A statement that the transfer or discharge will be delayed, if a request for fair hearing is filed before the effective date of the transfer or discharge:" (1) "In the case of a discharge for nonpayment of facility charges, at least until the hearing officer recommends a decision that the charges were due and unpaid at the time the facility issued a notice of discharge; and" (2) "In all other cases, until the fair hearing decision is rendered."
+
+k. "A statement that the resident may represent himself or herself at the hearing or may use legal counsel, a relative, a friend, or other spokesperson."
+
+Subsection 4 excuses the facility from issuing this notice at all when the resident gives a signed written statement of non-objection or otherwise indicates understanding that a transfer or discharge will result; for five other stated circumstances, including "The safety of individuals in the facility would be endangered" and "The resident has not resided in the facility for thirty days", the facility must still issue a notice meeting these contents, but "as soon as practicable before an involuntary transfer or discharge" rather than thirty days ahead.
+
+### Bed-hold and return
+
+NDAC 75-02-06-14(3): "A maximum of fifteen days per occurrence may be allowed for payment by the medical assistance program for hospital leave. The payment rate for allowed hospital leave days may not exceed the established rate for group PA1 under the reduced physical functioning category. Hospital days in excess of fifteen consecutive days not billable to the medical assistance program are not resident days unless any payment is sought as provided for in subdivision c of subsection 1 of section 75-02-06-22."
+
+NDAC 75-02-06-14(4): "A maximum of twenty-four therapeutic leave days per individual per rate year may be allowed for payment by the medical assistance program. The payment rate for allowed therapeutic" — a page break interrupts the sentence here in the captured PDF — "leave days may not exceed the established rate for group PA1 under the reduced physical functioning category. Therapeutic leave days in excess of twenty-four per year are not resident days unless any payment is sought as provided for in subdivision c of subsection 1 of section 75-02-06-22."
+
+The department's current Medicaid Billing and Policy Manual for nursing facilities (Updated: April 2026) states the hospital-leave limit the same way it appears in the rule — "ND Medicaid will cover a maximum of 15 days per occurrence for hospital leave" — but a different number for therapeutic leave: "ND Medicaid will cover a maximum of 30 therapeutic leave days per resident per rate year." Both are quoted as published and not reconciled; see the change log.
+
+*The three rows above hoist the questions a facility's counsel answers in the first fifteen minutes and a resident's family almost never finds alone. They are quotations from North Dakota's published sources, not a determination that any of them applies to any situation.*
+
+### Notice periods and deadlines, as stated in the sources
+
+All quoted; none calculated.
+
+Thirty days' advance notice — NDAC 75-01-03-08.1(2): "a facility shall issue a written notice of involuntary transfer or discharge, which meets the requirements of subsection 3, at least thirty days before the date of intended transfer or discharge. The first day of that thirty-day period is the day after the date of issuance."
+
+Faster notice for five stated circumstances — NDAC 75-01-03-08.1(4)(b): a facility "must issue a notice that meets the requirements of subsection 3, as soon as practicable before an involuntary transfer or discharge", including where "The safety of individuals in the facility would be endangered" or "The resident has not resided in the facility for thirty days."
+
+Thirty days to appeal — NDAC 75-01-03-08.1(5), quoted in full above.
+
+Five days for the facility to forward the hearing file — NDAC 75-01-03-09.1(1), quoted in full above.
+
+Fifteen days per occurrence of Medicaid hospital-leave payment — NDAC 75-02-06-14(3), quoted in full above.
+
+Twenty-four days, or thirty by the department's current manual, of Medicaid therapeutic-leave payment per rate year — NDAC 75-02-06-14(4) and the Medicaid Billing and Policy Manual, both quoted in full above; not reconciled.
+
+What any of these periods means for a particular case is for the hearing office to determine.
 
 ## 03 — Source map
 
@@ -32,6 +124,8 @@ This page assembles what North Dakota's own publishers state about involuntary t
 Captured: all six, in tools/packets/north-dakota-packet.txt. Pending: the North Dakota Century Code sections cited by the captured rules as "Law Implemented" (NDCC 50-06-05.1 for chapter 75-01-03; NDCC 50-24.1-04 and 50-24.4-02 for chapter 75-02-06), not independently captured; NDAC chapter 33-07-03.2 (Nursing Facilities licensing), checked and found to add nothing to the docket beyond chapter 75-01-03's own definitions, and not captured as a full source on that basis; SFN 162 (Request for Hearing) and DN 263 (Rights to a Hearing), the two forms the Client Rights and Appeals page names; the State Long-Term Care Ombudsman's individual name and title; and Internet Archive submission — per the packet's pending list.
 
 ## 04 — Change log
+
+2026-09-25 — Deepened to a full page: section 01 (the grounds, as North Dakota describes them) and section 02 (the published process, including the notice's required contents in full, bed-hold and return, and the notice-periods register) written for the first time, drawing entirely on the six sources already captured for the baseline page — no new source was needed. Recapture-verification run through the standing recipe (tools/recipes/north-dakota.json, digest f409b1713df0, unchanged): sources 1, 2, and 3 (the two NDAC PDF chapters and the Medicaid Billing and Policy Manual) reproduced byte-for-byte; sources 4 and 6 (the Long-Term Care Ombudsman Program page and the Client Rights and Appeals page) reproduced every quotation this page draws from them, inside a page now carrying substantially more surrounding site-navigation text than the 2026-09-02 capture — a site-wide template change, not a content change, and no quoted span falls in the added text. Source 5's recipe slice ("to" anchor ending "SEND-TO-ME") no longer matches the live Care Choice listing's markup and the recipe run stops there; fetched by hand (curl, browser user agent) to check it, the listing's own content — the "1237 W Divide Ave Ste 6" address, "(701) 328-0389" fax, "(701) 328-4617" main, and "(855) 462-5465 ext. 3" toll-free, already quoted on this page — is unchanged. Per this project's rule that a miss is a finding about the source rather than a recipe to widen until it matches again, and because deepening this page needed no new evidence from source 5, the recipe's existing source 5 definition was left untouched rather than hand-adjusted this pass; noted in QUEUE.md for a working session to re-establish the anchor. The standing packet is therefore unchanged and unpromoted this pass. Findings, continuing the numbering already in this log: (5) NDAC 75-01-03-09.1(1) requires the nursing facility, within five days of a hearing request, to forward the file to "the appeals supervisor" — the same office named, under two different addresses, in finding (2) below and in the docket. (6) NDAC 75-01-03-03(2) and 75-01-03-08.1(3)(f) both tie the fair-hearing right expressly to a facility's transfer-or-discharge decision, unlike some states' rules, where a nursing facility's own decision and a department's general fair-hearing apparatus are published separately with no first-party document connecting them. Capture pending: per the source map. Internet Archive: not yet submitted. Reviewer: Carrie Schluter (review pending for this entry). Corrections: hello@fieldassembly.net.
 
 2026-09-04 — Contact correction: two spaces this page supplied. The ombudsman row published “Phone : (701) 328-2311” and “Toll Free : (800) 472-2622”, each with a space before the colon that the directory does not print. The space was inserted at a markup boundary by the 2026-08-30 capture's tag strip, not by the publisher: a fresh recipe-driven capture of the same listing renders both as “Phone: (701) 328-2311” and “Toll Free: (800) 472-2622”. The error was ours and the page inherited it from our own capture. The numbers themselves are unchanged and correct. Found while writing this state's capture recipe. Reviewer: Carrie Schluter, reviewed 2026-09-04. Corrections: hello@fieldassembly.net.
 
