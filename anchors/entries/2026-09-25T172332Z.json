@@ -1,0 +1,16 @@
+{
+ "entry": {
+  "file_count": 222,
+  "id": "2026-09-25T172332Z",
+  "manifest_file": "manifests/2026-09-25T172332Z.txt",
+  "manifest_sha256": "4e1f346df4d3bebcf656a3256d4348a130e719f63d3207fb75b994733a20e7a7",
+  "note": "2026-09-25 attended dead-link review, reviewed by Carrie",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "c741d6b004df3a84983dd066c1b6c89b4bc2e71644aae11039f6180582498b49",
+  "repo": "transfer-safeguards",
+  "utc": "2026-09-25T17:23:32+00:00"
+ },
+ "entry_sha256": "611feff13241cf628e4af07ef95c0d756f1c41cc36decccbfd47376fe17c7d81"
+}
