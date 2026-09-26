@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: vermont
-ASSEMBLED: 2026-09-04
+ASSEMBLED: 2026-09-26
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/vermont.json (recipe digest 97fee5696430). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -20,7 +20,7 @@ CAPTURE NOTES:
 - SOURCE 7: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
   The program's own page, published by the contractor that operates the Office of the State Long-Term Care Ombudsman under DAIL's designation (source 6 states the arrangement). Quoted as the program's own published contact; the department's page is quoted beside it where they differ.
 
-SOURCE 1: 33 V.S.A. chapter 73, Nursing Home Residents' Bill of Rights (§§ 7301-7306) — Vermont Statutes Online, Vermont General Assembly | https://legislature.vermont.gov/statutes/fullchapter/33/073 | source date: each section carries its own amendment history; § 7301 last amended 2021, No. 105 (Adj. Sess.), § 627, eff. July 1, 2022; § 7302 last amended 2023, No. 53, § 130, eff. June 8, 2023 | retrieved: 2026-09-04
+SOURCE 1: 33 V.S.A. chapter 73, Nursing Home Residents' Bill of Rights (§§ 7301-7306) — Vermont Statutes Online, Vermont General Assembly | https://legislature.vermont.gov/statutes/fullchapter/33/073 | source date: each section carries its own amendment history; § 7301 last amended 2021, No. 105 (Adj. Sess.), § 627, eff. July 1, 2022; § 7302 last amended 2023, No. 53, § 130, eff. June 8, 2023 | retrieved: 2026-09-26
 Skip to content
 Skip to navigation
 Skip to subnav
@@ -163,8 +163,6 @@ All Committee Meetings
 
 All Scheduled Committee Meetings
 
- <li><a href="/committeeconferencemeetings/2026">All Scheduled Committees of Conference Meetings</a></li>
-
 Complete Weekly Schedule
 
 Streaming Links
@@ -237,8 +235,6 @@ All House Journals
 
 House Bills for Introduction
 
- <li><a target="_blank" href="/Documents/2026/Docs/JOURNAL/ja260325.pdf">Current Journal of the Joint Assembly</a></li>
-
 Journals of the Joint Assembly
 
 Rules
@@ -288,8 +284,6 @@ Current Senate Journal
 All Senate Journals
 
 Senate Bills for Introduction
-
- <li><a target="_blank" href="/Documents/2026/Docs/JOURNAL/ja260325.pdf">Current Journal of the Joint Assembly</a></li>
 
 Journals of the Joint Assembly
 
@@ -804,9 +798,7 @@ Copyright 2026 State of Vermont. All rights reserved.
 
 Website Design & Development by Bluehouse Group
 
- Google tag (gtag.js)
-
-SOURCE 2: Licensing and Operating Rules for Nursing Homes — Vermont Agency of Human Services, Department of Disabilities, Aging and Independent Living, Division of Licensing and Protection (PDF) | https://dail.vermont.gov/sites/dail/files/documents/Nursing_Home_Regulations_2018.pdf | source date: Revision date: June 1, 2018, as the cover states | retrieved: 2026-09-04
+SOURCE 2: Licensing and Operating Rules for Nursing Homes — Vermont Agency of Human Services, Department of Disabilities, Aging and Independent Living, Division of Licensing and Protection (PDF) | https://dail.vermont.gov/sites/dail/files/documents/Nursing_Home_Regulations_2018.pdf | source date: Revision date: June 1, 2018, as the cover states | retrieved: 2026-09-26
 LICENSING AND OPERATING
  RULES FOR NURSING HOMES
 
@@ -2660,7 +2652,7 @@ l.   Emergency Transfer or Discharge of Residents. An emergency discharge or tra
 
                                                 38
 
-SOURCE 3: Nursing Home Sample Discharge-Transfer Notice — Vermont Division of Licensing and Protection (page) | https://dlp.vermont.gov/nursing-home-sample-discharge-transfer-notice | source date: Tuesday, April 23, 2019 - 12:00, as the page dates its posting | retrieved: 2026-09-04
+SOURCE 3: Nursing Home Sample Discharge-Transfer Notice — Vermont Division of Licensing and Protection (page) | https://dlp.vermont.gov/nursing-home-sample-discharge-transfer-notice | source date: Tuesday, April 23, 2019 - 12:00, as the page dates its posting | retrieved: 2026-09-26
 Skip to main content
 
 An Official Vermont Government
@@ -2675,14 +2667,6 @@ Menu
 Adult Protective Services
 
 Survey and Certification
-
-Information for Consumers, Families and Caregivers
-
-Information for Facilities and Providers
-
-Find a Facility or a Provider
-
-Find a Facility by County
 
 Make a Report
 
@@ -2787,11 +2771,7 @@ Agency of Human Services Results Scorecard
 
 Division of Licensing & Protection (DLP) Scorecard
 
- return to top
-
 Return to top
-
- end of return to top
 
 Copyright © 2026 State of Vermont All rights reserved. |
 
@@ -2801,7 +2781,7 @@ Accessibility
 
 Privacy
 
-SOURCE 4: Nursing Home Transfer/Discharge Letter, sample notice — Vermont Division of Licensing and Protection (PDF) | https://dlp.vermont.gov/sites/dlp/files/documents/Nursing_Home_Transfer_Discharge_Letter.pdf | source date: none stated in the document; posted April 23, 2019 per source 3 | retrieved: 2026-09-04
+SOURCE 4: Nursing Home Transfer/Discharge Letter, sample notice — Vermont Division of Licensing and Protection (PDF) | https://dlp.vermont.gov/sites/dlp/files/documents/Nursing_Home_Transfer_Discharge_Letter.pdf | source date: none stated in the document; posted April 23, 2019 per source 3 | retrieved: 2026-09-26
 *DISCLAIMER: This is only a guide/helpful tool. Be sure to carefully examine the regulatory
 requirements for your type of facility to ensure your notice meets applicable requirements.*
 
@@ -2887,7 +2867,7 @@ Sincerely,
 cc: LTC Ombudsman (required)
    (any other applicable parties)
 
-SOURCE 5: Human Services Board — Vermont Agency of Human Services | https://humanservices.vermont.gov/human-services-board | source date: none stated on page | retrieved: 2026-09-04
+SOURCE 5: Human Services Board — Vermont Agency of Human Services | https://humanservices.vermont.gov/human-services-board | source date: none stated on page | retrieved: 2026-09-26
 Skip to main content
 
 An Official Vermont Government
@@ -2907,135 +2887,13 @@ Home
 
 About Us
 
-About Agency of Human Services
-
-Boards, Councils & Commissions
-
-Careers & Opportunities
-
-Health Care Reform
-
-Health Care Rules
-
-Vision, Mission, Values
-
-Rules & Policies
-
-Health Insurance Portability and Accountability Act (HIPAA)
-
-Our Departments
-
-Central Office
-
-Department for Children & Families
-
-Department of Corrections
-
-Department of Health
-
-Department of Mental Health
-
-Department of Vermont Health Access
-
-Disabilities Aging and Independent Living
-
 Our Impact & Metrics
-
-Our Impact | Data & Metrics
-
-Performance Scorecards
 
 Help and Resources
 
-Programs and Services
-
-Programs and Services Overview
-
-Child & Youth Development
-
-Disability and Aging Supports
-
-Family Support
-
-Financial and Employment Security
-
-General Health Care Services
-
-Housing Stability
-
-Mental Health and Substance Use Services
-
-Public Health Services
-
-Risk Reduction and Community Justice Services
-
-State Refugee Office
-
-Help & Resources Overview
-
-Vermont Team Based Care
-
-Domestic Violence
-
-Trauma Prevention & Resilience Development
-
-Vermont Center for the Prevention and Treatment of Sexual Abuse
-
-Vermont211.org
-
 Connect with Us
 
-AHS Contact Group
-
-Contact Us!
-
-Find a Local Office
-
-Public Records & Research
-
-Press Releases
-
-Department Contact Information
-
-Contact Department for Children and Families
-
-Contact Department of Corrections
-
-Contact Department of Disabilities Aging and Independent Living
-
-Contact Vermont Department of Health
-
-Contact Department of Mental Health
-
-Contact Department of Vermont Health Access
-
 Local Help | Field Services & Districts
-
-Find Services Near Me
-
-Barre
-
-Bennington
-
-Brattleboro
-
-Burlington
-
-Hartford
-
-Middlebury
-
-Morrisville
-
-Newport
-
-Rutland
-
-Springfield
-
-St. Albans
-
-St. Johnsbury
 
 Languages
 
@@ -3251,11 +3109,7 @@ Tiếng Việt (Vietnamese)
 
 မြန်မာစာ (Burmese)
 
- return to top
-
 Return to top
-
- end of return to top
 
 Copyright © 2026 State of Vermont All rights reserved. |
 
@@ -3265,7 +3119,7 @@ Accessibility
 
 Privacy
 
-SOURCE 6: State Long-Term Care Ombudsman Program — Adult Services Division, Vermont Department of Disabilities, Aging and Independent Living | https://asd.vermont.gov/services/ltc-ombudsman-program | source date: none stated on page | retrieved: 2026-09-04
+SOURCE 6: State Long-Term Care Ombudsman Program — Adult Services Division, Vermont Department of Disabilities, Aging and Independent Living | https://asd.vermont.gov/services/ltc-ombudsman-program | source date: none stated on page | retrieved: 2026-09-26
 Skip to main content
 
 An Official Vermont Government
@@ -3279,39 +3133,7 @@ Menu
 
 For Consumers
 
-ARIS-Self Directed Services
-
-Brochures
-
-Get Help Now
-
-Handbooks
-
-Report a Concern
-
 For Partners
-
-Agency Certification Standards
-
-Brochures
-
-Information at a Glance
-
-Medicaid Service Rates
-
-Program Guidance Memos
-
-Program Manuals
-
-Provider Enrollment
-
-Program Regulations
-
-Report a Concern
-
-VT Medicaid Portal
-
-CFC AFC & FC Case Management Transition Resources
 
 State of Vermont Online Directory
 
@@ -3523,11 +3345,7 @@ Agency of Human Services Results Scorecard
 
 DAIL Department Scorecard
 
- return to top
-
 Return to top
-
- end of return to top
 
 Copyright © 2026 State of Vermont All rights reserved. |
 
@@ -3537,7 +3355,7 @@ Accessibility
 
 Privacy
 
-SOURCE 7: Vermont Long-Term Care Ombudsman Project — Vermont Legal Aid | https://www.vtlegalaid.org/legal-projects/long-term-care-ombudsman | source date: none stated on page | retrieved: 2026-09-04
+SOURCE 7: Vermont Long-Term Care Ombudsman Project — Vermont Legal Aid | https://www.vtlegalaid.org/legal-projects/long-term-care-ombudsman | source date: none stated on page | retrieved: 2026-09-26
 Skip to main content
 
  Vermont Legal Aid

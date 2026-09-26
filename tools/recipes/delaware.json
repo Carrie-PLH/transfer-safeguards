@@ -47,6 +47,27 @@
         "collapse-blank-runs"
       ],
       "notes": "Same template and same scope reasoning as Source 2. Contains the 1-855-773-1002 ombudsman contact number this page quotes. Plain curl, no browser user-agent needed (200)."
+    },
+    {
+      "n": 4,
+      "title": "DHSS Long Term Care Institutional Provider Specific Policy Manual, Section 4.5, Temporary Absences for Hospitalization",
+      "url": "https://medicaidpublications.dhss.delaware.gov/docs/DesktopModules/Bring2mind/DMX/API/Entries/Download?Command=Core_Download&EntryId=900&language=en-US&PortalId=0&TabId=94",
+      "source_date": "Revision Table: 02/01/2023 (manual-wide); Section 4.5 last revised 9/1/2016",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "pdftotext-layout",
+      "slice": {
+        "from": "4.5 Temporary Absences for Hospitalization",
+        "from_occurrence": 2,
+        "to": "4.6 Temporary Absence for Other Reasons"
+      },
+      "filters": [
+        "strip-page-numbers",
+        "strip-running-headers",
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "16 Del. Admin. Code 3102-3.9.1.1 (Source 1) points to this manual by name and section number for the state bed-hold duration ('See DHSS Long Term Care Institutional Provider Specific Policy Manual at Section 4.5'). Located by EntryId probing on medicaidpublications.dhss.delaware.gov's DNN download endpoint (a plain GET, no session token or query hash beyond the numeric EntryId and fixed portal/tab parameters that do not vary by document): EntryId 900 returns Content-Disposition filename \"Long Term Care Provider Specific.pdf\" and its own running header reads \"Long Term Care Institutional / Provider Specific Policy Manual\", matching the regulation's citation exactly (EntryId 898, tried first on the same host, is a different manual, \"Long Term Care Community Services Provider Specific\"). Plain curl with a browser user-agent returns HTTP 200 with Content-Type application/pdf; no browser render needed. from_occurrence 2: the heading '4.5 Temporary Absences for Hospitalization' appears once in the manual's own table of contents and once at the body heading two pages later; occurrence 2 lands on the body heading (verified: the revision-table's row for 9/1/2016, 'Updated Temporary Absences for Hospitalization policy for...', has 'Updated' between '4.5' and 'Temporary' and so does not match this anchor -- only the TOC and the body heading do). 'to' defaults to occurrence 1 because apply_slice searches for it only in the text after the 'from' match ends, and the sibling TOC line for '4.6 Temporary Absence for Other Reasons' falls before that point, not after it -- the body heading two pages on is therefore the first (and only) match remaining. The slice keeps 4.5.1, 4.5.1.1 and 4.5.2, 4.5.2.1 whole -- the 7-day (nursing facility) and 14-day (ICF/IID) bed-hold periods -- and stops before 4.6, which is unrelated (leave for reasons other than hospitalization)."
     }
   ]
 }

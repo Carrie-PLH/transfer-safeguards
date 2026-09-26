@@ -70,6 +70,19 @@
         "collapse-blank-runs"
       ],
       "notes": "Plain curl with a browser user-agent reaches this cleanly, HTTP 200; not Cloudflare-obfuscated. body: no main/#content/article landmark; the department's full site-wide navigation (Services, Agencies, About, News and Events, Contact, Office Locations, the entire Senior Services menu tree) precedes the page's own content, matching the standing packet's body, which already carries the same chrome."
+    },
+    {
+      "n": 6,
+      "title": "37.40.338, Bed Hold Payments",
+      "url": "https://rules.mt.gov/browse/collections/aec52c46-128e-4279-9068-8af5d5432d74/policies/cad14ad9-fc5b-4382-9f22-9659b92adef9",
+      "source_date": "Effective 02/11/2000 - Present",
+      "transport": "chrome",
+      "extractor": "none",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Located via rules.mt.gov's own search for 'bed hold' (first result, exact title match, of 1000 loosely-ranked hits) while deepening the state's baseline page, which had recorded any DPHHS Medicaid bed-hold provision as pending. Same platform and same reasoning as sources 2-4: rules.mt.gov serves no rule text to curl (confirmed 2026-09-26, HTTP 200 but an empty application shell); the trailing UUID is an application-level identifier per PROVENANCE.md, not a stable citation, and a broken link is capture drift to re-establish via the site's search, not evidence of withdrawal. Read with get_page_text, extractor none, verified byte-identical across two independent navigations 2026-09-26. Global site footer trimmed from the supplied text, as with sources 2-4. The rule states no fixed day count for a hospital-absence bed-hold at all -- payment continues only while the facility is full with a waiting list and the department has given written approval, with no outer day limit stated -- and a separate, explicit cap (72 consecutive hours per absence, 24 days per rate year) for therapeutic home visits, a different kind of absence from hospitalization. This is Montana's Medicaid bed-hold policy as published, not a hospitalization day-count comparable to the fixed figures other states publish."
     }
   ]
 }

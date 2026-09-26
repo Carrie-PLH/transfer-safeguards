@@ -7,7 +7,7 @@ present. Spanish = a translated page is published; it carries the
 docket, the hoisted rows, and the notice periods and deadlines, in
 the state's own published translation only.
 
-**Baseline: 51 of 51 · Full pages: 44 of 51 · Spanish: 0 of 51 · Federal layer: built**
+**Baseline: 51 of 51 · Full pages: 47 of 51 · Spanish: 0 of 51 · Federal layer: built**
 
 | State | Baseline | Full page | Spanish | Sources last checked |
 |---|:---:|:---:|:---:|---|
@@ -18,7 +18,7 @@ the state's own published translation only.
 | [California](site/states/california.html) | [x] | [x] | [ ] | Sep 24, 2026 |
 | [Colorado](site/states/colorado.html) | [x] | [x] | [ ] | Sep 24, 2026 |
 | [Connecticut](site/states/connecticut.html) | [x] | [x] | [ ] | Sep 26, 2026 |
-| [Delaware](site/states/delaware.html) | [x] | [ ] | [ ] | Sep 26, 2026 |
+| [Delaware](site/states/delaware.html) | [x] | [x] | [ ] | Sep 26, 2026 |
 | [District of Columbia](site/states/district-of-columbia.html) | [x] | [ ] | [ ] | Sep 26, 2026 |
 | [Florida](site/states/florida.html) | [x] | [x] | [ ] | Sep 5, 2026 |
 | [Georgia](site/states/georgia.html) | [x] | [x] | [ ] | Sep 14, 2026 |
@@ -37,7 +37,7 @@ the state's own published translation only.
 | [Minnesota](site/states/minnesota.html) | [x] | [x] | [ ] | Sep 17, 2026 |
 | [Mississippi](site/states/mississippi.html) | [x] | [x] | [ ] | Sep 21, 2026 |
 | [Missouri](site/states/missouri.html) | [x] | [x] | [ ] | Sep 14, 2026 |
-| [Montana](site/states/montana.html) | [x] | [ ] | [ ] | Sep 3, 2026 |
+| [Montana](site/states/montana.html) | [x] | [x] | [ ] | Sep 3, 2026 |
 | [Nebraska](site/states/nebraska.html) | [x] | [x] | [ ] | Sep 22, 2026 |
 | [Nevada](site/states/nevada.html) | [x] | [x] | [ ] | Sep 23, 2026 |
 | [New Hampshire](site/states/new-hampshire.html) | [x] | [x] | [ ] | Sep 23, 2026 |
@@ -56,7 +56,7 @@ the state's own published translation only.
 | [Tennessee](site/states/tennessee.html) | [x] | [x] | [ ] | Sep 15, 2026 |
 | [Texas](site/states/texas.html) | [x] | [x] | [ ] | Sep 5, 2026 |
 | [Utah](site/states/utah.html) | [x] | [x] | [ ] | Sep 24, 2026 |
-| [Vermont](site/states/vermont.html) | [x] | [ ] | [ ] | Sep 4, 2026 |
+| [Vermont](site/states/vermont.html) | [x] | [x] | [ ] | Sep 26, 2026 |
 | [Virginia](site/states/virginia.html) | [x] | [x] | [ ] | Sep 25, 2026 |
 | [Washington](site/states/washington.html) | [x] | [x] | [ ] | Sep 21, 2026 |
 | [West Virginia](site/states/west-virginia.html) | [x] | [x] | [ ] | Sep 22, 2026 |
