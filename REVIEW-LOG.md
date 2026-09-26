@@ -483,3 +483,32 @@ correction entry. No source was re-captured.
 
 Reviewer: attended session, 2026-09-25; the three correction entries were
 reviewed by Carrie Schluter on 2026-09-25.
+
+## 2026-09-26 — rotation pass: connecticut, delaware, district-of-columbia (all confirmed)
+
+Cursor was at connecticut. Took connecticut, delaware, district-of-columbia
+(all have recipes, no supplements).
+
+**Connecticut — confirmed.** Recipe capture (digest 5f9a18903066), 4 sources.
+Zero failures on both pages. Retained — unchanged since 2026-09-17.txt (hash
+71b82a37828a13ea). Promoted. Checked date -> 2026-09-26.
+
+**Delaware — confirmed.** Recipe capture (digest b4683a863dc0), 3 sources.
+Zero failures on both pages. Retained — unchanged since 2026-09-04.txt (hash
+e1fa5277c73f0d37). Promoted. Checked date -> 2026-09-26.
+
+**District of Columbia — confirmed.** Recipe capture (digest f6b61c9f4ef7),
+12 sources. Zero failures on both pages. Retained (hash 1420837cda707789),
+no size or header movement flagged. Promoted. Checked date -> 2026-09-26.
+
+Cursor advanced to federal.
+
+No queue entries opened. build-status.py: baseline 51/51, full 44/51 (the
+existing backfill gap, unaffected by this pass). check-all.py: 102 pages
+across 52 states, no unexplained failures. site/predeploy-check.sh: passed
+after a stale-state-picker self-heal (index.html and states/index.html
+regenerated). check-live.py: 5 pages sampled, nothing loaded from any other
+host.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-09-26. No human
+review is claimed for this entry.

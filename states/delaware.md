@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The regulation requires every transfer or discharge notice to carry "The name, address and telephone number of the State long term care ombudsman;" (§ 3102-3.5.7). The program's own page: "The Delaware Long-Term Care Ombudsman Program advocates for and protects those who live in long-term care settings, such as skilled nursing and assisted living facilities, as well as those who receive home and community-based services." Its published contact: "Contact the State Long-Term Care Ombudsman:" "DHSS_OSEC_Ombudsman@Delaware.gov" "1-855-773-1002". Elsewhere on the same page the address is printed in a different case: "email" "DHSS_OSEC_Ombudsman@delaware.gov" — both quoted as published, not reconciled.
 
-**Sources last checked.** 2026-09-03
+**Sources last checked.** 2026-09-26
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

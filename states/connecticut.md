@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The State Long-Term Care Ombudsman. The program publishes: "Toll-free: 1-866-388-1888", "Main office: 860-424-5200", "Fax: 860-772-1704" and "Email: ltcop@ct.gov", and directs readers to a list and map of regional ombudsmen. The statute writes the office into the process twice — the notice must carry its name, mailing address and telephone number, and the facility must report every involuntary transfer or discharge to the State Ombudsman, including "on an Internet web site portal maintained by the State Ombudsman".
 
-**Sources last checked.** 2026-09-17
+**Sources last checked.** 2026-09-26
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

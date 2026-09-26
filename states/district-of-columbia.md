@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The program's own page: "The Office of the D.C. Long-Term Care Ombudsman" "Contact us at 202-434-2190 or email at DCOmbuds@aarp.org. Calls and emails are responded to within 24 hours or the next business day." and "Legal Counsel for the Elderly" "The Office of the D.C. Long-Term Care Ombudsman" "601 E St. NW" "Washington, DC 20049-0001". The contact block DC Health's prescribed form requires the facility to print: "DC Long-Term Care Ombudsman Program" "Legal Counsel for the Elderly" "601 E Street, NW, Building A-4th Floor" "Washington, DC 20049" "Tel. (202) 434-2190, Fax (202) 434-6595". By statute the ombudsman shall "Serve as the legal representative for residents, pursuant to §§ 44-1003.02(e), 44-1003.03(a)(1), and 44-1003.07(a) and (b);" (§ 7-702.04(a)(9)).
 
-**Sources last checked.** 2026-09-04
+**Sources last checked.** 2026-09-26
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 
