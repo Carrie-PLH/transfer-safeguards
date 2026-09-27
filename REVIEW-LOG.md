@@ -566,3 +566,16 @@ than silently absorbed.
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-09-27. No human
 review is claimed for this entry.
+
+## 2026-09-27 — owner review recorded: alaska, delaware, district-of-columbia, montana, vermont, wyoming
+
+Carrie Schluter reviewed the six pages deepened to full pages on 2026-09-26
+(delaware, montana, vermont) and 2026-09-27 (alaska, district-of-columbia,
+wyoming) and confirmed them for publication. Each page's change-log reviewer
+line moved from "Reviewer: Carrie Schluter (review pending for this entry)."
+to "Reviewer: Carrie Schluter, reviewed 2026-09-27." in the working markdown,
+re-rendered through render-state.py. No page content, quotation, docket row,
+source map, packet, or checked date was altered. Sitemap lastmod refreshed
+by generate-sitemap.py.
+
+Reviewer: owner, attended session, 2026-09-27.
