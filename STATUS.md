@@ -7,19 +7,19 @@ present. Spanish = a translated page is published; it carries the
 docket, the hoisted rows, and the notice periods and deadlines, in
 the state's own published translation only.
 
-**Baseline: 51 of 51 · Full pages: 47 of 51 · Spanish: 0 of 51 · Federal layer: built**
+**Baseline: 51 of 51 · Full pages: 50 of 51 · Spanish: 0 of 51 · Federal layer: built**
 
 | State | Baseline | Full page | Spanish | Sources last checked |
 |---|:---:|:---:|:---:|---|
 | [Alabama](site/states/alabama.html) | [x] | [x] | [ ] | Sep 17, 2026 |
-| [Alaska](site/states/alaska.html) | [x] | [ ] | [ ] | Sep 17, 2026 |
+| [Alaska](site/states/alaska.html) | [x] | [x] | [ ] | Sep 27, 2026 |
 | [Arizona](site/states/arizona.html) | [x] | [x] | [ ] | Sep 21, 2026 |
 | [Arkansas](site/states/arkansas.html) | [x] | [x] | [ ] | Sep 24, 2026 |
 | [California](site/states/california.html) | [x] | [x] | [ ] | Sep 24, 2026 |
 | [Colorado](site/states/colorado.html) | [x] | [x] | [ ] | Sep 24, 2026 |
 | [Connecticut](site/states/connecticut.html) | [x] | [x] | [ ] | Sep 26, 2026 |
 | [Delaware](site/states/delaware.html) | [x] | [x] | [ ] | Sep 26, 2026 |
-| [District of Columbia](site/states/district-of-columbia.html) | [x] | [ ] | [ ] | Sep 26, 2026 |
+| [District of Columbia](site/states/district-of-columbia.html) | [x] | [x] | [ ] | Sep 27, 2026 |
 | [Florida](site/states/florida.html) | [x] | [x] | [ ] | Sep 27, 2026 |
 | [Georgia](site/states/georgia.html) | [x] | [x] | [ ] | Sep 27, 2026 |
 | [Hawaii](site/states/hawaii.html) | [x] | [ ] | [ ] | Sep 4, 2026 |
@@ -61,4 +61,4 @@ the state's own published translation only.
 | [Washington](site/states/washington.html) | [x] | [x] | [ ] | Sep 21, 2026 |
 | [West Virginia](site/states/west-virginia.html) | [x] | [x] | [ ] | Sep 22, 2026 |
 | [Wisconsin](site/states/wisconsin.html) | [x] | [x] | [ ] | Sep 18, 2026 |
-| [Wyoming](site/states/wyoming.html) | [x] | [ ] | [ ] | Sep 4, 2026 |
+| [Wyoming](site/states/wyoming.html) | [x] | [x] | [ ] | Sep 27, 2026 |
