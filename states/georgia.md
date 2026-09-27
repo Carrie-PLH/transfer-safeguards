@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Office of the State Long-Term Care Ombudsman, "administratively attached to the Department of Human Services' Division of Aging Services (DAS)." The division publishes the contact as: "For more information, go to georgiaombudsman.org or call 1-866-552-4464 and select option "5."" The transfer rule writes the program into the notice: if the resident so desires, "the facility shall also send a copy of such notice to the community ombudsman, or state ombudsman if there is no community ombudsman."
 
-**Sources last checked.** 2026-09-14
+**Sources last checked.** 2026-09-27
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

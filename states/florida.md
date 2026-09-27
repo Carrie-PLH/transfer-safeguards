@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Florida Long-Term Care Ombudsman Program, in the Department of Elder Affairs — "a statewide, volunteer-based system of local units that act as advocates for residents of long-term care facilities", operating "Through 14 district offices that together cover the entire state". As published on the program's own page: a resident "may request assistance from the Long-Term Care Ombudsman Program by calling toll-free 1-888-831-0404." The statute gives the council a role in the notice itself: on request, "the local ombudsman council shall do so within 7 days after receipt of the request."
 
-**Sources last checked.** 2026-09-05
+**Sources last checked.** 2026-09-27
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

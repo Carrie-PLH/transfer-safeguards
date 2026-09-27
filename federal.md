@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The federal sources publish no contact. 42 CFR 483.15(c)(3)(i): "The facility must send a copy of the notice to a representative of the Office of the State Long-Term Care Ombudsman." Each state page carries its own program's published contact.
 
-**Sources last checked.** 2026-08-30
+**Sources last checked.** 2026-09-27
 
 Reproduced from the federal publisher's own regulations and guidance quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 
