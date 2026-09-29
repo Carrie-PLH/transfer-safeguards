@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Office of the State Long-Term Care Ombudsman, in the Illinois Department on Aging. The department's contact page publishes the "State Long-Term Care Ombudsman" as "Kelly Richards" at "Illinois Department on Aging" "555 W. Monroe St., 15th Floor" "Chicago, IL 60661" "(312) 814-1203", with the "IDoA Senior HelpLine:" at "1-800-252-8966". The department's notice form routes residents the same way: to reach a local representative "you" "may call the Illinois Department on Aging, Senior Helpline, toll-free at 800-252-8966 or write to the Illinois Department on" "Aging, One Natural Resources Way, Suite 100, Springfield, IL 62702-1271."
 
-**Sources last checked.** 2026-09-06
+**Sources last checked.** 2026-09-29
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

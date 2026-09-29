@@ -579,3 +579,47 @@ source map, packet, or checked date was altered. Sitemap lastmod refreshed
 by generate-sitemap.py.
 
 Reviewer: owner, attended session, 2026-09-27.
+
+## 2026-09-29 — rotation pass: hawaii, idaho, illinois, indiana, iowa (all confirmed)
+
+Cursor was at hawaii. Took hawaii, idaho, illinois, indiana, iowa (all have
+recipes, no supplements).
+
+**Hawaii — confirmed.** Recipe capture (digest 637d9ea53696), 5 sources.
+Zero failures on both pages. Retained (hash 4871fc306be27ede). Promoted.
+Checked date -> 2026-09-29.
+
+**Idaho — confirmed.** Recipe capture (digest e26e6d38077c), 7 sources.
+Source 2 (the six Idaho Code sections, fetched as a `urls` list) failed its
+first attempt with "curl: (56) Recv failure: Connection reset by peer"; a
+second attempt on the same transport succeeded — a transient network
+failure, not a source or recipe problem. Zero failures on both pages.
+Retained — unchanged since 2026-09-22.txt (hash 5517b2d203cffff0). Promoted.
+Checked date -> 2026-09-29.
+
+**Illinois — confirmed.** Recipe capture (digest 28f20d3e7dc5), 3 sources.
+Zero failures on both pages. Retained — unchanged since 2026-09-06.txt (hash
+4e2390b7ef60d815). Promoted. Checked date -> 2026-09-29.
+
+**Indiana — confirmed.** Recipe capture (digest 00175a9654b0), 5 sources.
+Source 4 read 206 chars shorter than the prior capture (whitespace
+collapsed; fetch differed too). Zero failures on both pages — recorded as
+retained textual movement, not drift. Retained (hash 72d4adf139a271c8).
+Promoted. Checked date -> 2026-09-29.
+
+**Iowa — confirmed.** Recipe capture (digest db5675492fce), 3 sources. Zero
+failures on both pages. Retained (hash ce5d7559ef7c4671). Promoted. Checked
+date -> 2026-09-29.
+
+Cursor advanced to kansas.
+
+No queue entries opened. build-status.py: baseline 51/51, full 50/51 (the
+existing Hawaii backfill gap — its operative rule is a scanned PDF with no
+text layer, recorded "Not quotable from the sources reviewed" by owner
+decision 2026-09-04; unaffected by this pass). check-all.py: 102 pages
+across 52 states, no unexplained failures. site/predeploy-check.sh: all
+checks passed. check-live.py: 5 pages sampled, nothing loaded from any other
+host.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-09-29. No human
+review is claimed for this entry.

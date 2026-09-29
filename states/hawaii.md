@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The program's own page, on the Executive Office on Aging's site: "If you need information or assistance in the following areas, please contact the LTCO at 586-7268 (Oahu) or by email at john.mcdermott@doh.hawaii.gov." and, for volunteering, "please call the Executive Office on Aging at 586-0100 (Oahu)." The page prints no street address for the program and no toll-free number; the site's footer prints the department's "Info Line 808-586-4400".
 
-**Sources last checked.** 2026-09-04
+**Sources last checked.** 2026-09-29
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Office of the State Long-Term Care Ombudsman, which "offers free, confidential advocacy for Iowans living in nursing facilities, assisted living programs, residential care facilities, and elder group homes." Its published contact: "Toll-Free: 866-236-1430", "Email: sltco@hhs.iowa.gov" and "321 E. 12th Street, 2nd Floor Des Moines, IA 50319". The mailbox is obfuscated in the site's own markup and reached a reader not running scripts as placeholder text rather than as an address; it is quoted here from a capture that decodes the obfuscation. On this subject the office states: "Residents have important rights during transfers or discharges. This includes receiving written notice and having the opportunity to appeal."
 
-**Sources last checked.** 2026-09-17
+**Sources last checked.** 2026-09-29
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

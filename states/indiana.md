@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Office of the Long Term Care Ombudsman, which publishes its own contact as "Office of the Long Term Care Ombudsman" "402 West Washington Street, Room W451" "Post Office Box 7083, MS 27" "Indianapolis, Indiana 46207-7083", with "Information/complaint line: 800-622-4484 or 317-232-7134", "Fax number: 317-972-3285" and "Email: LongTermCareOmbudsman@ombudsman.IN.gov". The department's notice form publishes a different address for the same office, under the heading "State Long Term Care (LTC) Ombudsman", naming the "Family and Social Services Administration" at "P.O. Box 7083, 402 W. Washington St." and "IGC South, Room W451 – MS 27"; both are shown here as published.
 
-**Sources last checked.** 2026-09-13
+**Sources last checked.** 2026-09-29
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

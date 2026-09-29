@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Idaho Long-Term Care Ombudsman Program, housed at the Idaho Commission on Aging, states of itself: "However to ensure that we still have our rights, Idaho's Long-Term Care Ombudsmen are available to protect our health, safety, and welfare, when residing in a facility." Its stated duties: "Advocate for the rights of residents", "Investigate complaints", "Provide consultations", "Visit each facility at least once per quarter". The Commission's own staff page names "Fanny Rodriguez-Melnikovsky" as "Idaho Long-Term Care Ombudsman". The Commission's own published agency contact: "Idaho Commission on Aging" "6305 W Overland Rd Ste 110" "Boise, ID 83709" "(208) 334-3833" "(877) 471-2777" "(208) 334-3033". The same staff page's own "Stay Safe" program contact block instead prints "(208) 555-5678" as the number to call for the Ombudsman's team — a number following the same templated pattern (555-1234, 555-3456, 555-5678, 555-9012) shared identically across all four of the Commission's program teams, unlike any individual staff member's own published number on the same page; shown as published, not reconciled or asserted to be a working number.
 
-**Sources last checked.** 2026-09-25
+**Sources last checked.** 2026-09-29
 
 Reproduced from the agencies' own pages and documents quoted below, potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 
