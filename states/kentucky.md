@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Office of the State Long Term Care Ombudsman, in the Department for Aging and Independent Living: "The Kentucky Long-Term Care Ombudsman program advocates for residents of nursing homes, personal care homes and family care homes, improving care and encouraging positive change at all levels." The Cabinet publishes an ombudsman listing by county rather than a statewide telephone number on the page reviewed, and states the program "oversees 15 district programs affiliated with Area Agencies on Aging and Independent Living" and "does not charge for services."
 
-**Sources last checked.** 2026-09-16
+**Sources last checked.** 2026-10-01
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

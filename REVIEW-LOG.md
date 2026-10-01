@@ -623,3 +623,57 @@ host.
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-09-29. No human
 review is claimed for this entry.
+
+## 2026-10-01 — nightly review: kansas, kentucky, louisiana (scheduled)
+
+Cursor at kansas. Selected kansas, kentucky, louisiana (next two
+alphabetically).
+
+- kansas: RECIPE BACKFILL REQUIRED, not reviewed. tools/recipes/kansas.json
+  is a DRAFT recipe (every source note reads "DRAFT — replace before
+  promoting"), never verified or promoted — no packet history exists for
+  this state. Captured anyway to check current reachability: 2 of 3 sources
+  returned content; SOURCE 3 (ombudsman.ks.gov/helpful-resources/
+  issues-of-interest/involuntary-discharge) returned HTTP 403, consistent
+  with the 2026-09-08 working session's finding that this host refuses every
+  curl variant tried (no UA, pinned browser UA, Chrome/140, curl default,
+  --http1.1) and needs a browser or agent transport. Fidelity was not run
+  against an unverified DRAFT recipe. No page content touched, no checked
+  date changed. This is recipe-backfill work (`lm-recipe-backfill`-style),
+  out of scope for this review pass; a working session should finish and
+  verify the recipe (including a working transport for source 3) before
+  kansas re-enters ordinary rotation review.
+- kentucky: CONFIRMED. Recipe capture (digest 7e78656624fa), 3 sources, no
+  supplements. Zero failures on both pages. Retained (hash
+  501579dcf548fa4b), promoted. Retention tool flagged all three sources as
+  shorter than the previous capture (18364->18229, 10383->10168,
+  6475->5889 chars, whitespace collapsed); fidelity still passed with zero
+  failures on the fresh text, recorded as retained textual movement that did
+  not move any published fact, not independently re-analyzed. Checked date
+  -> 2026-10-01 (md canonical, re-rendered, synced to table and JSON).
+- louisiana: UNREACHABLE. Recipe capture, 2 of 3 sources. SOURCE 3
+  (adminlaw.la.gov/areas-of-law/health.html) returned HTTP 403 to the
+  documented transport (curl with browser user-agent); no alternate
+  transport is documented for this source. No capture retained (incomplete
+  evidence), checked date untouched. First pass through this skill for
+  louisiana (prior packet history is from working-session rebuilds on
+  2026-09-04 and 2026-09-15, not an automated review pass). Not queued (one
+  unreachable pass).
+
+Cursor advanced: kansas -> maine (past louisiana, the third selected unit).
+
+sync-checked-dates.py: 2 derived dates corrected (table + json, kentucky).
+build-status.py: baseline 51/51, full 50/51 (pre-existing Hawaii backfill
+gap, unaffected). build-state-picker.py: 51/51 regenerated. check-all.py:
+102 pages across 52 states, no unexplained failures. site/predeploy-check.sh:
+ALL CHECKS PASSED. check-live.py: 5 pages sampled, nothing loaded from any
+other host.
+
+Not actioned this pass: the Field Assembly portfolio footer-credit line
+("Built by Reassembly") is not present on this site's pages, and
+roomandrecourse.com is not yet on the portfolio CLAUDE.md's "Done" list.
+Same gap found this pass in sped-safeguards and licensure mobility; see the
+portfolio-level report for the consolidated finding.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-10-01. No human
+review is claimed for this entry.
