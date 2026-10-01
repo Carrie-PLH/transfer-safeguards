@@ -1,0 +1,16 @@
+{
+ "entry": {
+  "file_count": 254,
+  "id": "2026-10-01T073016Z",
+  "manifest_file": "manifests/2026-10-01T073016Z.txt",
+  "manifest_sha256": "b9500eafbb3e9744919a95d9da0f2fab12bf0e753a1cd07f1d8258f46bd96d4d",
+  "note": "nightly review: kansas, kentucky, louisiana",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "7b777c119e6fb9c9b310923df907a0a9e8bc71a59b22402e232b11e634647fca",
+  "repo": "transfer-safeguards",
+  "utc": "2026-10-01T07:30:16+00:00"
+ },
+ "entry_sha256": "b9e3eb5d18c4ce5a0d4820695df19e10c0ec4ba31859cc5b493db76506e9ddf2"
+}
