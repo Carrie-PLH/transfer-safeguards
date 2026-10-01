@@ -1,5 +1,12 @@
 # Handoff — publish the first Room & Recourse change-record issue
 
+> **COMPLETED. Do not run this.** Verified 2026-10-01: /changes/ is live at
+> roomandrecourse.com with the September 2026 issue (commit 25a935b, owner
+> review 2026-10-01), and the Built by Reassembly credit is on all 59 pages,
+> enforced by predeploy check 7b. The handoff's lists were incomplete: the
+> issue carries fifteen corrections, not seven, and Texas's Sep 5 handbook
+> revision as a state change. See QUEUE.md, 2026-10-01.
+
 Written 2026-10-01. Paste the section below into a Claude Code session running
 on the Mac, in `~/Projects/Field Assembly/transfer-safeguards`.
 
