@@ -200,6 +200,19 @@ else
   ok "colophon footer on all $PAGES pages"
 fi
 
+# 7b — the "Built by Reassembly" footer credit (portfolio rule 2026-09-29, root
+# CLAUDE.md), on every page. The state pages and federal.html carry it from
+# tools/render-state.py; the hand-built pages carry it by hand, so a new page
+# copied from an older one is the way it goes missing.
+# Tripwire: delete the line from about.html -> must FAIL; restore -> pass.
+nocredit=$(HTML0 | xargs -0 grep -L 'Built by <a href="https://reassembly.fieldassembly.net/"' 2>/dev/null || true)
+if [ -n "$nocredit" ]; then
+  bad "page(s) missing the Built by Reassembly footer credit:"
+  printf '%s\n' "$nocredit" | sed 's/^/        /'
+else
+  ok "footer credit on all $PAGES pages"
+fi
+
 # 8 — skip link and its target (WCAG 2.4.1), on every page
 noskip=$(HTML0 | xargs -0 grep -L 'class="skip-link"' 2>/dev/null || true)
 nomain=$(HTML0 | xargs -0 grep -L 'id="main"' 2>/dev/null || true)

@@ -58,7 +58,11 @@ import os
 import re
 import sys
 
+# reassembly.fieldassembly.net is the "Built by Reassembly" footer credit
+# (portfolio rule 2026-09-29, enforced by predeploy check 7b); it is the
+# site's own family, not a source, and it will never appear in a packet.
 ALLOW_HOSTS = {"fieldassembly.net", "www.fieldassembly.net",
+                "reassembly.fieldassembly.net",
                 "roomandrecourse.com", "www.roomandrecourse.com"}
 ALLOW_EMAILS = {"hello@fieldassembly.net"}
 

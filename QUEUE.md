@@ -304,6 +304,23 @@ not investigated this pass, and worth a portfolio-wide check of whether
 actually verified. Filed in the field-assembly-standard handoff queue the
 same day.
 
+**2026-10-01 — record-digest.py cannot see a correction that predates the
+retention series.** Writing the first change-record issue (site/changes.html)
+found fifteen September corrections, all reviewer-confirmed in their pages'
+change logs, and the digest reported none of them. Not a defect in what the
+tool does: it diffs retained capture pairs, and every corrected state's
+`tools/packets/history/<slug>/manifest.jsonl` held one capture, dated at or
+after the correction, so there was no pair to diff. Texas's real Sep 5
+revision reached the digest only as "no superseded capture recorded" for
+the same reason. The issue was written from the change logs instead. A
+working session could have the digest also report "first capture, but the
+page's own change log records a correction or a source move dated in this
+window", which needs it to read section 04 of `states/<slug>.md` — it reads
+no page prose today. Also note when sweeping change logs by hand: entries are
+written both as `2026-09-05 — ...` and as `**2026-09-25 — ...**`; a grep for
+the first form alone misses the second (it missed Virginia's and California's
+Sep 25 corrections and three Sep 15 deepenings on the first pass).
+
 ## Recipe maintenance, dated
 
 **north-dakota, source 5 — stale slice anchor, found 2026-09-25 deepening North Dakota.**
