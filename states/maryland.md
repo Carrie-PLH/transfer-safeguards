@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Maryland Long-Term Care Ombudsman Program, in the Maryland Department of Aging: "The Maryland Long-Term Care Ombudsman Program advocates for the health, safety, well-being, and rights of residents in assisted living and nursing homes." No statewide telephone number for the program is published on the page reviewed. The regulation requires the facility's notice to carry "The name, address, and telephone number of the State's Office on Aging and local office on aging long-term care ombudsman;".
 
-**Sources last checked.** 2026-09-16
+**Sources last checked.** 2026-10-03
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

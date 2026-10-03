@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Long-Term Care Ombudsman, in the Executive Office of Aging & Independence. The Commonwealth publishes "Long-Term Care Ombudsman and Assisted Living Ombudsman: 617-222-7495" and a general program line, "Contact an Ombudsman Program: (617) 727-7750/711 MassRelay/TTY", with the office at "One Ashburton Place, 10th floor, Boston, MA 02108" and MassOptions at "800-243-4636". The regulation requires the facility's own notice to carry "the name, address, and telephone number of the local long-term-care ombudsman office;".
 
-**Sources last checked.** 2026-09-14
+**Sources last checked.** 2026-10-03
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 
