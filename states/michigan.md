@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Michigan Long Term Care Ombudsman. The department prints the program's contact on the notice itself: "Michigan Long Term Care Ombudsman" at "15851 South US 27, Suite 73" "Lansing, MI 48912", "Email: MLTCOP@meji.org" and "Toll Free: 1-866-485-9393". The form also requires that a copy of every notice go to the program: "Michigan Long Term Care Ombudsman at MLTCOP@meji.org."
 
-**Sources last checked.** 2026-09-13
+**Sources last checked.** 2026-10-04
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

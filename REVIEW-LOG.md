@@ -736,3 +736,36 @@ still not on the portfolio CLAUDE.md's "Done" list — same gap recorded
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-10-03. No human
 review is claimed for this entry.
+
+2026-10-04 — nightly review (portfolio-nightly-qc-review). Cursor was
+`michigan`; batch michigan, minnesota, mississippi. Recipe-exception check run
+first: 55 recipes against 52 state pages, so every page already has one;
+reviewed normally.
+
+- michigan: CONFIRMED. Recipe 508f3660fd67, 4 sources, 0 failures md + html.
+  Retained unchanged since 2026-09-13 (hash bb9c7d582cde5789), promoted.
+  Checked date -> 2026-10-04.
+- minnesota: CONFIRMED. Recipe 58989314ea0a, 6 sources, 0 failures md + html.
+  Source 3 (mn.gov/ooltc/, behind Radware/ShieldSquare bot management per the
+  recipe's own notes) returned capture.py exit 3 on plain curl; fetched
+  through the Claude Browser pane as the recipe notes prescribe (no
+  interstitial), saved, and supplied with `--supply 3=`. Retained a changed
+  body (hash f44aadc6e1181510), promoted; no source-header movement. Checked
+  date -> 2026-10-04.
+- mississippi: CONFIRMED. Recipe ca85686f9a9a, 7 sources, 0 failures md +
+  html. Retained unchanged since 2026-09-21-b (hash 67519e8b2595adc4),
+  promoted. Checked date -> 2026-10-04.
+
+Cursor advanced michigan -> missouri (past mississippi, the third selected
+unit).
+
+sync-checked-dates.py: 6 derived dates corrected (table + json, michigan,
+minnesota, mississippi). build-status.py: baseline 51/51, full 50/51
+(pre-existing Hawaii backfill gap, unaffected). check-all.py: 102 pages / 52
+states, no unexplained failures. retain-packet.py --verify: 0 failures across
+102 entries. generate-sitemap.py: 57 URLs (texas excluded, pre-existing
+recorded drift, unaffected by this pass). check-live.py: 5 pages sampled,
+nothing loaded from any other host. No deploy.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-10-04. No human
+review is claimed for this entry.

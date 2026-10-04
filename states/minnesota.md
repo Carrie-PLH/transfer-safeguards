@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Office of Ombudsman for Long-Term Care, "an independent state agency that serves people needing or receiving long-term care through complaint investigation, advocacy, and education." Its published contact: "The Office of Ombudsman for Long-Term Care 540 Cedar Street St. Paul, MN 55101 1-800-657-3591". The appeals statute names the office expressly: "Nothing in this section limits the right of a resident or the resident's representative to request or receive assistance from the Office of Ombudsman for Long-Term Care or the Office of Health Facility Complaints with respect to an intended discharge or transfer."
 
-**Sources last checked.** 2026-09-17
+**Sources last checked.** 2026-10-04
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

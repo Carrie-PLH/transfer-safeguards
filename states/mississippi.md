@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The State Long-Term Care Ombudsman, in the Department of Human Services, which lists "Discharge and eviction" among what the ombudsman can help with and states that residents have the right to "Appeal a discharge or transfer." Its published contact: "Call the Mississippi statewide Long-Term Ombudsman Help Line: 1-888-844-0041." The programme also states the notice rule in its own words — "The notice must be given at least 30 days before the planned discharge date." — and that the facility "must give a written notice to you, your representative and the Ombudsman program."
 
-**Sources last checked.** 2026-09-21
+**Sources last checked.** 2026-10-04
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 
