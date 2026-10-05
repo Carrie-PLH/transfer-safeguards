@@ -484,6 +484,18 @@ DISCLOSURE_CLASS_RE = re.compile(
     re.IGNORECASE)
 
 
+# The document itself is never removed as hidden. Some CMS templates ship
+# <body style="visibility: hidden;"> and reveal the page from a script once it
+# has loaded, to avoid a flash of unstyled content; every reader sees the whole
+# page. University of Nevada, Reno is the case (2026-09-26, FA-Q-20260926-01):
+# all eleven www.unr.edu bodies carry it, and the body also holds the recipe's
+# scope id, so stripping it emptied the document and every selector "matched
+# nothing". Exempting <html> and <body> changes no capture that worked before:
+# with either removed, no selector could match and the capture failed outright.
+# Hidden elements inside the document are still judged by the rules above.
+DOCUMENT_ROOTS = frozenset({'html', 'body'})
+
+
 def looks_like_disclosure_panel(tag):
     """True when a hidden element is a collapsed panel rather than chrome."""
     if (tag.get('role') or '').strip().lower() == 'region':
@@ -523,6 +535,8 @@ def strip_nonvisible_nodes(soup):
     marked = soup.find_all(style=HIDDEN_STYLE_RE) + soup.find_all(hidden=True)
     for bad in marked:
         if getattr(bad, 'decomposed', False):
+            continue
+        if bad.name in DOCUMENT_ROOTS:
             continue
         if looks_like_disclosure_panel(bad):
             continue
@@ -884,6 +898,23 @@ def self_test():
               'a collapsed accordion panel was dropped as non-visible')
         check('Last Updated Aug 16, 2026' not in text,
               'a hidden CMS edit link survived the non-visible strip')
+        check(h == 1, f'expected one hidden element removed, removed {h}')
+
+        # A body hidden until a script reveals it is the whole page, not a
+        # hidden element (unr, FA-Q-20260926-01); a hidden div inside it still
+        # goes.
+        veiled = BeautifulSoup(
+            '<html><body id="x262009" style="visibility: hidden;">'
+            '<p>Dean of Students</p>'
+            '<div style="display:none">edit marker</div></body></html>',
+            'html.parser')
+        c, h = strip_nonvisible_nodes(veiled)
+        check(veiled.select_one('#x262009') is not None,
+              'a script-revealed body was removed as hidden')
+        check('Dean of Students' in veiled.get_text(' ', strip=True),
+              'the text of a script-revealed body was dropped')
+        check('edit marker' not in veiled.get_text(' ', strip=True),
+              'a hidden div inside a script-revealed body survived')
         check(h == 1, f'expected one hidden element removed, removed {h}')
 
         # The rule reads the element, not its text: a hidden div with no
