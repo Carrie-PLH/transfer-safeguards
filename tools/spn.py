@@ -2,8 +2,9 @@
 """Internet Archive Save Page Now capture worker for Room & Recourse.
 
 Requests captures for state-page sources that have none, and reports what
-happened. It never edits a page: writing the change-log entry is a judgement
-call and stays with the session that runs this.
+happened. Since 2026-10-06 it also records each confirmed capture in the page's
+own change log (`record`, called by `run`); see "Recording a capture on
+the page" below.
 
 Ported from gathered work/tools/spn.py (2026-09-04). That script is the
 original and governs the shared doctrine below; this is an independent copy
@@ -25,8 +26,10 @@ why this script exists at all.
 Usage
 -----
     python3 tools/spn.py plan   [--budget N] [--max-attempts M] [--slug SLUG] [--retry-blocked]
-    python3 tools/spn.py run    [--budget N] [--max-attempts M] [--slug SLUG] [--retry-blocked]
+    python3 tools/spn.py run    [--budget N] [--max-attempts M] [--slug SLUG] [--retry-blocked] [--no-record]
+    python3 tools/spn.py record [--slug SLUG] [--dry-run]
     python3 tools/spn.py status [--slug SLUG]
+    python3 tools/spn.py --self-test
 
 --budget is a target number of *captures*, not attempts. A run keeps working
 down the candidate list until that many sources are confirmed stored, so a
@@ -60,6 +63,36 @@ A capture is only ever reported OK when Save Page Now reports status "success"
 AND the captured response was HTTP 200. A stored 403 or a WAF interstitial is a
 refusal page wearing a capture's clothes; recording one as evidence would be
 worse than recording nothing.
+
+Recording a capture on the page (2026-10-06)
+--------------------------------------------
+Carrie decided on 2026-10-06, for every collection, that the pass writes the
+change-log entry itself: in gathered work no session had been writing them,
+and 594 confirmed captures sat in the ledger with nothing on the page. The
+wording is fixed, so nothing about the entry needs a judgement; what stays
+with a person is reviewing, which the entry never claims.
+
+`record` writes, for every page with ledger-confirmed captures the page does
+not yet link, one dated entry in this repo's own change-log dialect (the
+REPO-SPECIFIC block below says where it goes and what it looks like). `run`
+calls it at the end of a pass for the pages it captured on, so a night's
+captures and their entries land together; `--no-record` leaves the
+ledger-only behaviour for a session that wants to write the entry by hand.
+
+The entry says what it is: an automated capture pass, no human review
+claimed, nothing above it changed. It names each source by the page's own
+link text and links the capture. It never carries a reviewer's name, never
+touches a date, a quotation or the docket, and never rewrites an earlier
+entry -- a build entry's "Internet Archive captures: to be added." stays as
+history.
+
+A page whose change log is not found exactly once where this tool expects
+it is skipped and reported, never guessed at. `record` is idempotent: a
+capture already linked from the page is not a candidate, so running it
+twice writes nothing the second time. The entry is dated with the UTC date,
+the same clock the ledger stamps attempts with. The paths it writes (the
+markdown and the page) are printed so the committing session can stage
+them by path, as the portfolio's commit rule requires.
 """
 
 import argparse
@@ -355,6 +388,208 @@ def playback_ok(capture_url):
     return False
 
 
+
+# --------------------------------------------------------------------------
+# recording captures on the page (ported from gathered work/tools/spn.py,
+# 2026-10-06; the dialect-specific parts are marked REPO-SPECIFIC below)
+
+def html_escape(text, quote=False):
+    text = text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+    return text.replace('"', "&quot;") if quote else text
+
+
+def html_unescape(text):
+    return (text.replace("&amp;", "&").replace("&lt;", "<").replace("&gt;", ">")
+                .replace("&quot;", '"').replace("&#39;", "'").replace("&rsquo;", "\u2019")
+                .replace("&rarr;", "\u2192"))
+
+
+def source_name(page_text, url):
+    """What the page itself calls this source: its link text, preferring a
+    descriptive name over the bare host/path shorthand some pages also use.
+    Falls back to the URL without scheme. Nothing is fetched."""
+    hrefs = re.findall(r'<a href="%s"[^>]*>(.*?)</a>'
+                       % re.escape(html_escape(url)), page_text, flags=re.S)
+    names = []
+    for raw in hrefs:
+        name = html_unescape(re.sub(r"<[^>]+>", "", raw)).strip()
+        if name and name not in names:
+            names.append(name)
+    bare = re.sub(r"^https?://(www\.)?", "", url)
+    host = bare.split("/")[0]
+    for name in names:
+        if name != bare and not name.startswith(host + " ") \
+                and not name.startswith(host + "/"):
+            return name
+    return names[0] if names else bare
+
+
+def display_date(iso):
+    """2026-10-06 -> 'Oct 6, 2026', the house display form."""
+    y, m, d = iso.split("-")
+    months = ("Jan", "Feb", "Mar", "Apr", "May", "Jun",
+              "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+    return "%s %d, %s" % (months[int(m) - 1], int(d), y)
+
+
+def entry_body(dates, today):
+    """The prose every dialect shares: what the pass was, what it did not
+    touch, and how each capture was confirmed. Returns text up to and
+    including 'Captures added: '."""
+    dates = sorted(dates)
+    if dates == [today]:
+        lead = ("Captures requested this date by an automated capture pass; "
+                "no human review is claimed for this entry.")
+    elif len(dates) == 1:
+        lead = ("Captures requested on %s by an automated capture pass and "
+                "recorded this date; no human review is claimed for this entry."
+                % dates[0])
+    else:
+        lead = ("Captures requested by automated capture passes between %s and "
+                "%s and recorded this date; no human review is claimed for this "
+                "entry." % (dates[0], dates[-1]))
+    return (lead + " No quotation, date, finding or link above was changed by "
+            "it. Each capture below was requested through Save Page Now and "
+            "then confirmed to play back. Captures added: ")
+
+
+def items_md(page_text, captures):
+    return "; ".join("%s \u2192 [%s](%s)" % (source_name(page_text, url), cap, cap)
+                     for _, url, cap in sorted(captures))
+
+
+def items_html(page_text, captures):
+    return "; ".join('%s \u2192 <a href="%s" target="_blank" rel="noopener">%s</a>'
+                     % (html_escape(source_name(page_text, url)),
+                        html_escape(cap, quote=True), html_escape(cap))
+                     for _, url, cap in sorted(captures))
+
+
+def unrecorded(ledger, slugs=None):
+    """{slug: [(requested_date, source_url, capture_url), ...]} for every
+    ledger-confirmed capture its page does not yet link. The page is the
+    record, so this is exactly scan_page's `needed` intersected with OK."""
+    out = {}
+    for slug, info in scan_all().items():
+        if slugs is not None and slug not in slugs:
+            continue
+        needed = set(info["needed"])
+        rows = []
+        for url, rec in ledger["sources"].items():
+            if rec.get("page") == slug and rec.get("last_result") == "OK" \
+                    and rec.get("capture") and url in needed:
+                rows.append((rec.get("last_attempt", "")[:10], url, rec["capture"]))
+        if rows:
+            out[slug] = rows
+    return out
+
+
+def record_pages(ledger, slugs=None, dry_run=False, today=None):
+    """Write the entries. Returns (written_paths, skipped) where skipped is a
+    list of (slug, reason). A page is skipped, never guessed at, when its
+    change log is not where this tool expects it."""
+    today = today or datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    written, skipped = [], []
+    for slug, rows in sorted(unrecorded(ledger, slugs).items()):
+        html_path, md_path = page_paths(slug)
+        if not (os.path.exists(html_path) and os.path.exists(md_path)):
+            skipped.append((slug, "page or markdown source missing"))
+            continue
+        with open(html_path, encoding="utf-8") as fh:
+            page = fh.read()
+        with open(md_path, encoding="utf-8") as fh:
+            md = fh.read()
+        dates = {d for d, _, _ in rows}
+        new_md = insert_md(md, md_entry(page, rows, dates, today))
+        if new_md is None:
+            skipped.append((slug, "markdown change log not found exactly once "
+                            "where expected -- write this one by hand"))
+            continue
+        new_html = produce_html(page, rows, dates, today)
+        if new_html is None:
+            skipped.append((slug, "page change log not found exactly once "
+                            "where expected -- write this one by hand"))
+            continue
+        print("%-7s %-24s %d capture(s)" % ("WOULD" if dry_run else "RECORD",
+                                           slug, len(rows)))
+        if dry_run:
+            continue
+        with open(md_path, "w", encoding="utf-8") as fh:
+            fh.write(new_md)
+        if new_html is RERENDER:
+            rerender(slug)
+        else:
+            with open(html_path, "w", encoding="utf-8") as fh:
+                fh.write(new_html)
+        with open(html_path, encoding="utf-8") as fh:
+            check = fh.read()
+        missing = [cap for _, _, cap in rows
+                   if cap not in check and html_escape(cap) not in check]
+        if missing:
+            skipped.append((slug, "entry written to %s but %d capture link(s) "
+                            "are not on the rendered page -- inspect before "
+                            "committing" % (os.path.relpath(md_path, ROOT), len(missing))))
+        written.extend([os.path.relpath(md_path, ROOT), os.path.relpath(html_path, ROOT)])
+    return written, skipped
+
+
+def report_recording(written, skipped, dry_run=False):
+    for slug, reason in skipped:
+        print("SKIPPED %-24s %s" % (slug, reason))
+    if dry_run:
+        print("\nDry run: nothing written.")
+    elif written:
+        print("\nRecorded on %d page(s). Stage these paths with the ledger:"
+              % (len(written) // 2))
+        for path in written:
+            print("  %s" % path)
+    else:
+        print("\nNothing to record: every confirmed capture is already on its page.")
+
+
+RERENDER = object()
+
+
+# REPO-SPECIFIC (Room & Recourse). states/<slug>.md (and federal.md for the
+# federal layer) is canonical and the page is a pure product of
+# tools/render-state.py, enforced by the deploy gate's parity check. So the
+# entry goes into the markdown and the page is re-rendered, never edited.
+# The log is "## 04 -- Change log", NEWEST entry first, so a new entry goes
+# directly under the heading. Entries open with the ISO date and an em dash;
+# an automated entry carries no reviewer line and no corrections trailer,
+# matching the nightly review's own entries.
+
+MD_DIR = os.path.join(ROOT, "states")
+RENDER = os.path.join(ROOT, "tools", "render-state.py")
+LOG_HEADING = "## 04 \u2014 Change log\n\n"
+
+
+def page_paths(slug):
+    if slug == "federal":
+        return (os.path.join(ROOT, "site", "federal.html"), os.path.join(ROOT, "federal.md"))
+    return (os.path.join(STATES, slug + ".html"), os.path.join(MD_DIR, slug + ".md"))
+
+
+def md_entry(page, rows, dates, today):
+    return ("%s \u2014 Internet Archive captures recorded. %s%s."
+            % (today, entry_body(dates, today), items_md(page, rows)))
+
+
+def insert_md(md, entry):
+    if md.count(LOG_HEADING) != 1:
+        return None
+    return md.replace(LOG_HEADING, LOG_HEADING + entry + "\n\n")
+
+
+def produce_html(page, rows, dates, today):
+    return RERENDER
+
+
+def rerender(slug):
+    import subprocess
+    subprocess.run([sys.executable, RENDER, slug], check=True)
+
+
 # --------------------------------------------------------------------------
 # commands
 
@@ -490,23 +725,159 @@ def cmd_run(args):
         else:
             print("Candidate list exhausted at %d capture(s); nothing further "
                   "was available to attempt." % len(results["ok"]))
-    print("\nPages to record:")
     pages = sorted({slug for slug, _, _ in results["ok"]})
-    for slug in pages:
-        print("  %s" % slug)
     if not pages:
-        print("  (none)")
-    print("\nCaptures are NOT yet recorded on any page. Write the change-log "
-          "entries from the results above.")
+        return
+    if args.no_record:
+        print("\n--no-record: captures are in the ledger but NOT on any page. "
+              "Run `spn.py record` or write the entries by hand for: %s"
+              % ", ".join(pages))
+        return
+    print("\nRecording tonight's captures on their pages:")
+    written, skipped = record_pages(ledger, set(pages))
+    report_recording(written, skipped)
+
+
+def cmd_record(args):
+    ledger = load_ledger()
+    slugs = {args.slug} if args.slug else None
+    written, skipped = record_pages(ledger, slugs, dry_run=args.dry_run)
+    report_recording(written, skipped, dry_run=args.dry_run)
+
+
+SAMPLE_SLUG = "x"
+SAMPLE_PAGE = '<p class="mw">Sources: <a href="https://x.gov/a?b=1&amp;c=2">Policy A</a>, <a href="https://x.gov/b">x.gov/b</a>, <a href="https://x.gov/b">Guide &amp; Notes</a>, <a href="https://web.archive.org/web/20260101000000/https://x.gov/done">done</a>, <a href="https://x.gov/done">Done page</a>.</p>\n'
+SAMPLE_MD = '# X\n\n## Docket\n\n**Sources last checked.** 2026-09-01\n\n## 04 — Change log\n\n2026-09-16 — Deepened. Text.\n\n2026-09-01 — Baseline page built. Internet Archive: not yet submitted. Reviewer: Carrie Schluter, reviewed 2026-09-01. Corrections: hello@fieldassembly.net.\n'
+SAMPLE_MD_BAD = '# X\n\n## Docket\n\nText.\n\n## 04 — Change log\n\n## 04 — Change log\n\n'
+
+
+def REPO_CHECKS(check, page, rows, entry, new_md):
+    check(entry.startswith("2026-10-06 \u2014 Internet Archive captures recorded. "), "md ISO em-dash form")
+    check("Corrections" not in entry, "no trailer on an automated entry")
+    check(new_md.index(entry) < new_md.index("2026-09-16"), "md entry newest-first, under the heading")
+    check(new_md.count(LOG_HEADING) == 1 and LOG_HEADING + entry + "\n\n2026-09-16" in new_md, "md spacing")
+    check(page_paths("federal")[1].endswith("federal.md") and page_paths("federal")[0].endswith(os.path.join("site", "federal.html")), "federal paths")
+    check(produce_html(page, rows, {"2026-10-01"}, "2026-10-06") is RERENDER, "page is re-rendered, not edited")
+
+
+_SAVED = {}
+
+def _fake_render(slug):
+    # Stands in for render-state.py: the page is the links plus the markdown
+    # change log's capture links, which is all the post-check reads.
+    html_path, md_path = page_paths(slug)
+    md = open(md_path, encoding="utf-8").read()
+    caps = re.findall(r"\((https://web\.archive\.org/web/[^)]+)\)", md)
+    body = SAMPLE_PAGE + "".join('<a href="%s">c</a>' % html_escape(c, quote=True) for c in caps)
+    open(html_path, "w", encoding="utf-8").write(body)
+
+
+def SETUP_TREE(tmp, page, md):
+    global STATES, MD_DIR, rerender
+    _SAVED.update(STATES=STATES, MD_DIR=MD_DIR, rerender=rerender)
+    STATES = os.path.join(tmp, "site", "states"); MD_DIR = os.path.join(tmp, "states")
+    os.makedirs(STATES); os.makedirs(MD_DIR)
+    open(os.path.join(STATES, "x.html"), "w", encoding="utf-8").write(page)
+    open(os.path.join(MD_DIR, "x.md"), "w", encoding="utf-8").write(md)
+    rerender = _fake_render
+
+
+def RESTORE_TREE():
+    global STATES, MD_DIR, rerender
+    STATES, MD_DIR, rerender = _SAVED["STATES"], _SAVED["MD_DIR"], _SAVED["rerender"]
+
+
+# --------------------------------------------------------------------------
+# self-test: the recording path against a throwaway tree (no network)
+
+def self_test():
+    import shutil
+    import tempfile
+    checks = 0
+
+    def check(cond, what):
+        nonlocal checks
+        checks += 1
+        if not cond:
+            sys.exit("self-test FAILED: %s" % what)
+
+    page = SAMPLE_PAGE
+    rows = [("2026-10-01", "https://x.gov/a?b=1&c=2",
+             "https://web.archive.org/web/20261001010000/https://x.gov/a?b=1&c=2"),
+            ("2026-10-03", "https://x.gov/b",
+             "https://web.archive.org/web/20261003010000/https://x.gov/b")]
+    check(source_name(page, "https://x.gov/a?b=1&c=2") == "Policy A", "name: plain")
+    check(source_name(page, "https://x.gov/b") == "Guide & Notes", "name: prefer descriptive")
+    check(source_name(page, "https://x.gov/nolink") == "x.gov/nolink", "name: fallback")
+    check(display_date("2026-10-06") == "Oct 6, 2026", "display date")
+    b1 = entry_body({"2026-10-06"}, "2026-10-06")
+    check(b1.startswith("Captures requested this date by an automated capture pass;"), "body: today")
+    b2 = entry_body({"2026-10-03"}, "2026-10-06")
+    check(b2.startswith("Captures requested on 2026-10-03 by an automated capture pass and recorded this date;"), "body: one date")
+    b3 = entry_body({"2026-10-01", "2026-10-03"}, "2026-10-06")
+    check("between 2026-10-01 and 2026-10-03 and recorded this date;" in b3, "body: range")
+    md_items = items_md(page, rows)
+    check("Policy A \u2192 [https://web.archive.org/web/20261001010000/https://x.gov/a?b=1&c=2](https://web.archive.org/web/20261001010000/https://x.gov/a?b=1&c=2)" in md_items, "md items")
+    check("Guide & Notes \u2192 [" in md_items, "md items: unescaped text")
+    h_items = items_html(page, rows)
+    check('Guide &amp; Notes \u2192 <a href="https://web.archive.org/web/20261003010000/https://x.gov/b" target="_blank" rel="noopener">' in h_items, "html items escaped")
+
+    entry = md_entry(page, rows, {"2026-10-01", "2026-10-03"}, "2026-10-06")
+    check("Reviewer" not in entry and "Carrie" not in entry, "no reviewer name")
+    check("no human review is claimed" in entry, "entry says automated")
+    new_md = insert_md(SAMPLE_MD, entry)
+    check(new_md is not None and entry in new_md, "md insertion")
+    check(new_md.replace(entry + "\n\n", "").replace("\n\n" + entry + "\n", "\n") == SAMPLE_MD, "md history untouched")
+    check(insert_md(SAMPLE_MD_BAD, entry) is None, "md skip when log not found once")
+    REPO_CHECKS(check, page, rows, entry, new_md)
+
+    # End to end against a throwaway tree: write, verify, idempotent.
+    tmp = tempfile.mkdtemp()
+    try:
+        SETUP_TREE(tmp, page, SAMPLE_MD)
+        ledger = {"sources": {u: {"page": SAMPLE_SLUG, "last_result": "OK",
+                                  "last_attempt": d + "T010000Z", "capture": c}
+                              for d, u, c in rows}}
+        ledger["sources"]["https://x.gov/failed"] = {"page": SAMPLE_SLUG, "last_result": "FAILED",
+                                                     "last_attempt": "2026-10-03T010000Z"}
+        need = unrecorded(ledger)
+        check(sorted(need) == [SAMPLE_SLUG] and len(need[SAMPLE_SLUG]) == 2, "unrecorded: OK only, unlinked only")
+        html_path, md_path = page_paths(SAMPLE_SLUG)
+        before_md = open(md_path, encoding="utf-8").read()
+        written, skipped = record_pages(ledger, dry_run=True, today="2026-10-06")
+        check(written == [] and open(md_path, encoding="utf-8").read() == before_md, "dry run writes nothing")
+        written, skipped = record_pages(ledger, today="2026-10-06")
+        check(skipped == [], "no skips: %r" % skipped)
+        check(len(written) == 2 and written[0].endswith(".md") and written[1].endswith(".html"), "written paths")
+        after_html = open(html_path, encoding="utf-8").read()
+        check(all(c in after_html or html_escape(c) in after_html for _, _, c in rows), "captures linked on page")
+        check(unrecorded(ledger) == {}, "idempotent: nothing left")
+        written, skipped = record_pages(ledger, today="2026-10-06")
+        check(written == [] and skipped == [], "idempotent: second run writes nothing")
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+        RESTORE_TREE()
+    print("self-test: %d checks passed" % checks)
 
 
 def main():
+    if sys.argv[1:] == ["--self-test"]:
+        self_test()
+        return
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     sub = parser.add_subparsers(dest="command", required=True)
-    for name, handler in (("plan", cmd_plan), ("run", cmd_run), ("status", cmd_status)):
+    for name, handler in (("plan", cmd_plan), ("run", cmd_run),
+                          ("record", cmd_record), ("status", cmd_status)):
         sp = sub.add_parser(name)
         sp.add_argument("--slug", help="limit to one state page")
-        if name != "status":
+        if name == "run":
+            sp.add_argument("--no-record", action="store_true",
+                            help="leave tonight's captures in the ledger only; "
+                                 "do not write the change-log entries")
+        if name == "record":
+            sp.add_argument("--dry-run", action="store_true",
+                            help="show which pages would get an entry; write nothing")
+        if name in ("plan", "run"):
             sp.add_argument("--budget", type=int, default=20,
                             help="captures to obtain, not sources to attempt "
                                  "(default 20)")

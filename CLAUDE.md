@@ -664,6 +664,18 @@ session budget rather than having one of its own. Let a run finish. Do not
 run it twice in a pass, do not raise the budget, and do not request captures
 by any other means.
 
+**The pass writes the change-log entry itself (owner decision, 2026-10-06,
+portfolio-wide).** `spn.py run` ends by calling `spn.py record`, which writes
+one dated automated-pass entry per page for the captures it confirmed —
+placed at the top of section 04 of `states/<slug>.md` (or `federal.md`),
+newest first, after which the page is re-rendered through `render-state.py`,
+never edited — and prints the
+paths it wrote for path-limited staging. `record` alone sweeps anything the
+ledger holds that a page does not yet link; `record --dry-run` previews; a
+page whose change log is not where the tool expects it is skipped and named
+for a person to write by hand. The entry names no reviewer and claims no
+review. The backlog at the time (30 captures on 9 pages) was written the same day.
+
 A capture pass records captures. It does not re-verify quotations, re-fetch
 sources, change any date, touch the docket, or touch the footer's "Reviewed"
 line. If a capture reveals that a source changed, that is a note for the
