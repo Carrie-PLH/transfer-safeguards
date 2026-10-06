@@ -61,8 +61,12 @@ import sys
 # reassembly.fieldassembly.net is the "Built by Reassembly" footer credit
 # (portfolio rule 2026-09-29, enforced by predeploy check 7b); it is the
 # site's own family, not a source, and it will never appear in a packet.
+# web.archive.org is where a change-log capture entry points (spn.py record,
+# 2026-10-06). It is the archive's own host, never a contact fact a reader
+# would act on, and by nature it appears in no packet: the capture link is
+# evidence that the source was archived, not a claim the packet must support.
 ALLOW_HOSTS = {"fieldassembly.net", "www.fieldassembly.net",
-                "reassembly.fieldassembly.net",
+                "reassembly.fieldassembly.net", "web.archive.org",
                 "roomandrecourse.com", "www.roomandrecourse.com"}
 ALLOW_EMAILS = {"hello@fieldassembly.net"}
 
