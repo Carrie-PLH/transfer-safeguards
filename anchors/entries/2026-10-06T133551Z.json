@@ -1,0 +1,16 @@
+{
+ "entry": {
+  "file_count": 279,
+  "id": "2026-10-06T133551Z",
+  "manifest_file": "manifests/2026-10-06T133551Z.txt",
+  "manifest_sha256": "2983485b583a5c0bd82ef4a61fa9454daaab5e6ef71b42d3f8b4d61a290921d3",
+  "note": "kansas recipe",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "4b6f004b7c8a2c674b2b9ae8e9eb05a3b6f64f2b5de609f2af30ed0dc2c42d78",
+  "repo": "transfer-safeguards",
+  "utc": "2026-10-06T13:35:51+00:00"
+ },
+ "entry_sha256": "942ca321a4c993b0067b1b425c8afb7c9c1ec1061f3e29cec5e068b1ea98bef2"
+}
