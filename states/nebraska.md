@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Long-Term Care Ombudsman, in the Department of Health and Human Services, which "works with nursing home and assisted living residents. They help answer resident concerns and complaints. The LTCO advocates for resident rights and their well-being." Its published contact: "Email: DHHS.LTCOmbudsman@nebraska.gov Call: (800) 942-7830". Neither statute requires the notice to carry the ombudsman's contacts.
 
-**Sources last checked.** 2026-09-22
+**Sources last checked.** 2026-10-06
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

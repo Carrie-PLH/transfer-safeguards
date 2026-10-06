@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Long-Term Care Ombudsman Program's own page: "Long-term care ombudsmen (LTCO) help residents in long-term care living facilities understand and exercise the rights they are guaranteed by law." Its published contact: "The State Long-Term Care Ombudsman" "Office on Aging, Senior and Long-Term Care Division" "(800) 332-2272" — a help line the page notes "is only available during normal business hours. For all emergencies, call 911." — and, separately, "Your Regional or Local Ombudsman" "(800) 551-3191" via the "Montana Ombudsman Directory". The division's own postal address, given at the foot of the same page: "Senior and Long Term Care" "PO Box 4210, Helena MT 59604" "(406) 444-4077".
 
-**Sources last checked.** 2026-09-03
+**Sources last checked.** 2026-10-06
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

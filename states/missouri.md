@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Office of the State Long-Term Care Ombudsman, in the Division of Senior and Disability Services. The department publishes the office's contact as "912 Wildwood Dr." "PO Box 570" "Jefferson City, MO 65102-0570", "LTCOmbudsman@health.mo.gov" and "800-309-3282". The program itself is regional: coordinators "work in local programs run by the Area Agencies on Aging (AAAs) or their service partners."
 
-**Sources last checked.** 2026-09-14
+**Sources last checked.** 2026-10-06
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

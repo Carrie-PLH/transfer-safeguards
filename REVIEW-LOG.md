@@ -769,3 +769,65 @@ nothing loaded from any other host. No deploy.
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-10-04. No human
 review is claimed for this entry.
+
+2026-10-06 — nightly review (portfolio-nightly-qc-review). Cursor was
+`missouri`; batch missouri, montana, nebraska, nevada, new-hampshire.
+Recipe-exception check run first: 55 recipes against 52 state pages, so
+every page already has one; reviewed normally.
+
+- missouri: CONFIRMED. Recipe 9d0acc95d4b4, 3 sources, 0 failures md + html.
+  Retained (hash 2b6f8901aad9ddaa; source 2 somewhat shorter, whitespace-
+  collapsed), promoted. Checked date -> 2026-10-06.
+- montana: CONFIRMED. Recipe a5a560fac077, 6 sources, 0 failures md + html.
+  Sources 2-4 and 6 (rules.mt.gov, chrome transport per the recipe) fetched
+  through the Claude Browser pane with get_page_text, trimmed of the site's
+  global footer per the recipe notes, and supplied with `--supply`. Source 6
+  (37.40.338, Bed Hold Payments) is newly added to the recipe since the
+  standing packet was last retained (the baseline page had recorded this
+  provision as pending); retain-packet.py reported it as a new source header
+  rather than a replaced one. Retained (hash e0d210dc7d0234ad), promoted.
+  Checked date -> 2026-10-06.
+- nebraska: CONFIRMED. Recipe 27b925a0693b, 10 sources, 0 failures md + html.
+  retain-packet.py reported five "new" source headers relative to the prior
+  retained capture (NAC and NAC chapters already covered under different
+  packet slots) — net additions, not replacements; nothing removed or
+  retitled. Retained (hash ec919800fe41653b), promoted. Checked date ->
+  2026-10-06.
+- nevada: DRIFT. 2 failures, identical on md and html: `QUOTE not in packet:
+  'patients welfare'` and `QUOTE not in packet: 'The facility can no longer
+  provide for the needs of the patient and the transfer'`. Source: NAC
+  449.74429(1)(a), leg.state.nv.us/nac/NAC-449.html, recipe 1a04d9e0d0e9. The
+  page's 2026-09-01 change-log finding (3)
+  specifically preserved the regulation's own missing apostrophe in
+  "patients welfare" as a deliberate verbatim transcription; the fresh
+  capture now reads "patient's welfare" WITH an apostrophe, and the rest of
+  the subsection is byte-identical — the Legislative Counsel Bureau appears
+  to have corrected its own typo. Main capture retained without promotion
+  (hash 6ebc1ab6b6c8abcf); the `moved` supplement (the LTC discharges
+  brochure, tools/packets/nevada-packet-moved.txt) was unaffected and
+  re-confirmed separately (hash 9588b06441731293), promoted. Checked date
+  NOT advanced. Queue FA-Q-20261006-02 opened (drift) for the owner to
+  decide whether to update the two quoted spans and retract the 2026-09-01
+  finding.
+- new-hampshire: CONFIRMED. Recipe 55e50782350a, 9 sources, 0 failures md +
+  html. Sources 4-6 (www.dhhs.nh.gov, chrome transport, 403s curl per
+  CLAUDE.md) fetched through the Claude Browser pane with
+  `document.querySelector('main').innerText` exactly as the recipe notes
+  specify (menu labels and the trailing "Escape Site" link left in,
+  unedited), and supplied with `--supply`. Retained unchanged since
+  2026-09-22 (hash 82bcd4a036e9c300), promoted. Checked date -> 2026-10-06.
+
+Cursor advanced missouri -> new-jersey (past new-hampshire, the fifth
+selected unit; nevada's drift does not hold the cursor back).
+
+sync-checked-dates.py: 8 derived dates corrected (table + json; missouri,
+montana, nebraska, new-hampshire — nevada correctly excluded). build-
+state-picker.py: 51/51 published. build-status.py: baseline 51/51, full
+50/51 (nevada's new drift). check-all.py: 102 pages / 52 states, no
+unexplained failures. retain-packet.py --verify: 0 failures across 108
+manifest entries. generate-sitemap.py: 56 URLs (nevada and texas excluded,
+both recorded drift). check-live.py: 5 pages sampled, nothing loaded from
+any other host. No deploy.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-10-06. No human
+review is claimed for this entry.

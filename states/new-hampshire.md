@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** New Hampshire's Long-Term Care Ombudsman "receives, services, investigates and resolves complaints or problems concerning residents of long-term health care facilities." Its stated mission: "The Office of the Long Term Care Ombudsman shall represent the interests and concerns of elders residing in New Hampshire's long term care facilities and advocate on their behalf to ensure full realization of their rights to receive quality care and services and to experience an optimal quality of life." Its published contact: mailing address Brown Building, 129 Pleasant Street, Concord, NH 03301 (the department's contact page prints the building, street, city, state and ZIP code as five separate fields with no punctuation between them; the commas here are this page's, so the address is given as a cited contact, not a quotation); "OLTCO@dhhs.nh.gov"; phone "(603) 271-4375" (also published elsewhere on the department's site as "603-271-4375"); alternate phone "(800) 442-5640" (also published as "1-800-442-5640"); fax "(603) 271-5574" (also published as "603-271-5574").
 
-**Sources last checked.** 2026-09-23
+**Sources last checked.** 2026-10-06
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 
