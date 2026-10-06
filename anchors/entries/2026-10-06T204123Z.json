@@ -1,0 +1,16 @@
+{
+ "entry": {
+  "file_count": 279,
+  "id": "2026-10-06T204123Z",
+  "manifest_file": "manifests/2026-10-06T204123Z.txt",
+  "manifest_sha256": "25379a3c72367255ec317f42538119106c5651a901c18d164d93a15d0b526bb9",
+  "note": "archive captures recorded on pages; spn.py record step",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "942ca321a4c993b0067b1b425c8afb7c9c1ec1061f3e29cec5e068b1ea98bef2",
+  "repo": "transfer-safeguards",
+  "utc": "2026-10-06T20:41:23+00:00"
+ },
+ "entry_sha256": "273910956be00c1f0e8cc5e775b767f5ba5cef28abfaccb99688dfed01e97953"
+}
