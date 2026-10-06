@@ -11,7 +11,12 @@
       "user_agent": "browser",
       "extractor": "html-text",
       "scope": "body",
-      "notes": "DRAFT — replace before promoting."
+      "notes": "Sliced to NAC 449.74429, the section the page quotes. leg.state.nv.us serves Windows-1252 with no charset declared (possessive apostrophe = byte 0x92), hence encoding cp1252; decoded as UTF-8 it became U+FFFD, and the 2026-09-01 hand capture dropped it (FA-Q-20261006-02).",
+      "encoding": "cp1252",
+      "slice": {
+        "from": "NAC 449.74429 Transfer or discharge of patient.",
+        "to": "NAC 449.74431 Summary of discharge."
+      }
     },
     {
       "n": 2,
@@ -22,7 +27,13 @@
       "user_agent": "browser",
       "extractor": "html-text",
       "scope": "body",
-      "notes": "DRAFT — replace before promoting."
+      "notes": "Sliced from NRS 449A.114 (body occurrence 2; occurrence 1 is the table of contents) to the next section the page does not quote. Windows-1252, see source 1.",
+      "encoding": "cp1252",
+      "slice": {
+        "from": "NRS 449A.114 Certain facilities to notify patient and State Long-Term Care Ombudsman of intent to transfer patient and provide opportunity for patient or representative to meet with administrator; exceptions.",
+        "from_occurrence": 2,
+        "to": "NRS 449A.153 “Hospital care” defined."
+      }
     },
     {
       "n": 3,
@@ -33,7 +44,13 @@
       "user_agent": "browser",
       "extractor": "html-text",
       "scope": "body",
-      "notes": "DRAFT — replace before promoting."
+      "notes": "Sliced to NRS 449.183 (body occurrence 2; occurrence 1 is the table of contents). Windows-1252, see source 1.",
+      "encoding": "cp1252",
+      "slice": {
+        "from": "NRS 449.183 Facility for intermediate care, facility for skilled nursing and residential facility for groups to adopt written policy concerning readmission after temporary transfer of patient or resident.",
+        "from_occurrence": 2,
+        "to": "NRS 449.184 Operator of residential facility for groups"
+      }
     },
     {
       "n": 4,
@@ -44,7 +61,13 @@
       "user_agent": "browser",
       "extractor": "html-text",
       "scope": "body",
-      "notes": "DRAFT — replace before promoting."
+      "notes": "Sliced from NRS 449A.282 (body occurrence 2; occurrence 1 is the table of contents) through 449A.286, to the caregiver-designation heading. Windows-1252, see source 1.",
+      "encoding": "cp1252",
+      "slice": {
+        "from": "NRS 449A.282 Limitations on transfer or involuntary discharge; opportunity to cure delinquency; duty to attempt to resolve circumstances with potential to result in involuntary discharge.",
+        "from_occurrence": 2,
+        "to": "DESIGNATION OF CAREGIVERS NRS 449A.300 Definitions."
+      }
     },
     {
       "n": 5,
@@ -54,7 +77,11 @@
       "transport": "curl",
       "user_agent": "browser",
       "extractor": "pdftotext-layout",
-      "notes": "DRAFT — replace before promoting."
+      "notes": "Sliced to Medicaid Services Manual 503.5, therapeutic leave of absence, ending at the 503.6 heading.",
+      "slice": {
+        "from": "503.5 THERAPEUTIC LEAVE OF ABSENCE Therapeutic",
+        "to": "503.6 PATIENT INCOME CHANGES AND PATIENT LIABILITY"
+      }
     },
     {
       "n": 6,
@@ -64,7 +91,10 @@
       "transport": "curl",
       "user_agent": "browser",
       "extractor": "pdftotext-layout",
-      "notes": "DRAFT — replace before promoting."
+      "notes": "From Chapter 3100 to the end of the document (the document is the Fair Hearing chapter).",
+      "slice": {
+        "from": "3100 INTRODUCTION The Division of Health Care"
+      }
     },
     {
       "n": 7,
@@ -74,7 +104,10 @@
       "transport": "curl",
       "user_agent": "browser",
       "extractor": "pdftotext-layout",
-      "notes": "DRAFT — replace before promoting."
+      "notes": "From the 'Requesting a Fair Hearing' block to the end of the document.",
+      "slice": {
+        "from": "REQUESTING A FAIR HEARING • If you disagree with"
+      }
     },
     {
       "n": 8,
@@ -85,7 +118,11 @@
       "user_agent": "browser",
       "extractor": "html-text",
       "scope": "body",
-      "notes": "DRAFT — replace before promoting."
+      "notes": "From the program description through the site footer, ending before the rotating State Animal / State Bird sidebar widget that follows the footer and changes on every load. The footer carries a Carson City address that is a recorded finding on the page.",
+      "slice": {
+        "from": "The Nevada State Long Term Care Ombudsman Program",
+        "to": "Nevada Digital Accessibility Website"
+      }
     },
     {
       "n": 9,
@@ -95,7 +132,10 @@
       "transport": "curl",
       "user_agent": "browser",
       "extractor": "pdftotext-layout",
-      "notes": "DRAFT — replace before promoting."
+      "notes": "From the program heading to the end of the brochure.",
+      "slice": {
+        "from": "Long Term Care Ombudsman Program For more information"
+      }
     }
   ]
 }

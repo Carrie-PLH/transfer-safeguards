@@ -148,6 +148,15 @@ USER_AGENTS = {
                 "Safari/537.36"),
 }
 
+# Opt-in per source (`"encoding": "cp1252"`), curl only, text extractors only,
+# pinned to one value. www.leg.state.nv.us serves NAC and NRS as Windows-1252
+# with no charset declared: the possessive apostrophe is the single byte 0x92.
+# Decoded as UTF-8 with replacement it becomes U+FFFD, and the 2026-09-01
+# capture dropped it altogether, which the Nevada page then recorded as the
+# rule's own typo ("patients welfare") — a capture error, not a finding
+# (FA-Q-20261006-02). Unset, a source decodes as UTF-8 exactly as before.
+ENCODINGS = ('cp1252',)
+
 # Opt-in per source (`"http_version": "1.1"`), curl only, pinned to one value.
 # apps.azsos.gov (the Arizona Administrative Code PDFs) returns 403 to every
 # HTTP/2 request curl makes, whatever the user-agent, Accept, Referer or
@@ -621,6 +630,14 @@ def lint(rec, slug=None):
                         f'one of {", ".join(HTTP_VERSIONS)}')
         if s.get('http_version') and s.get('transport') != 'curl':
             errs.append(f'{w}: http_version applies to the curl transport only')
+        if s.get('encoding') and s['encoding'] not in ENCODINGS:
+            errs.append(f'{w}: unknown encoding {s["encoding"]!r}; '
+                        f'one of {", ".join(ENCODINGS)}')
+        if s.get('encoding') and s.get('transport') != 'curl':
+            errs.append(f'{w}: encoding applies to the curl transport only')
+        if s.get('encoding') and s.get('extractor') in PDF_EXTRACTORS + ('docx',):
+            errs.append(f'{w}: encoding applies to text extractors, not '
+                        f'{s.get("extractor")!r}')
         if s.get('compressed') is not None and not isinstance(s['compressed'], bool):
             errs.append(f'{w}: compressed must be true or false')
         if s.get('compressed') is False and s.get('transport') != 'curl':
@@ -708,6 +725,8 @@ def digest(rec):
             m['compressed'] = False
         if s.get('http_version'):
             m['http_version'] = s['http_version']
+        if s.get('encoding'):
+            m['encoding'] = s['encoding']
         if s.get('ca_bundle'):
             m['ca_bundle'] = s['ca_bundle']
         if s.get('pages'):
@@ -727,7 +746,7 @@ def digest(rec):
 # --- transports and extractors ----------------------------------------------
 
 def fetch_curl(url, binary, user_agent='none', ca_bundle=None,
-               compressed=True, http_version=None):
+               compressed=True, http_version=None, encoding=None):
     ua = USER_AGENTS[user_agent]
     args = ['curl'] + curl_args(compressed) + (['-A', ua] if ua else []) \
         + (['--http1.1'] if http_version == '1.1' else []) \
@@ -740,7 +759,7 @@ def fetch_curl(url, binary, user_agent='none', ca_bundle=None,
     blob, code = r.stdout[:-3], r.stdout[-3:].decode('ascii', 'replace')
     if code != '200':
         raise RuntimeError(f'HTTP {code}')
-    return blob if binary else blob.decode('utf-8', 'replace')
+    return blob if binary else blob.decode(encoding or 'utf-8', 'replace')
 
 
 def extract_pdf(blob, mode, pages=None):
@@ -1127,7 +1146,8 @@ def _fetch(src, url, needs_binary):
                       user_agent=src.get('user_agent', 'none'),
                       compressed=src.get('compressed', True),
                       ca_bundle=src.get('ca_bundle'),
-                      http_version=src.get('http_version'))
+                      http_version=src.get('http_version'),
+                      encoding=src.get('encoding'))
 
 
 def capture_source(src, supplied=None):
@@ -1235,6 +1255,8 @@ def render_packet(rec, bodies, day, supplied_ns=(), supplied_files=None):
             bits.append(f'ca_bundle {s["ca_bundle"]}')
         if s.get('http_version'):
             bits.append(f'http_version {s["http_version"]}')
+        if s.get('encoding'):
+            bits.append(f'encoding {s["encoding"]}')
         if s.get('urls'):
             bits.append(f'{len(s["urls"])} pages joined in declared order')
         if s.get('attended'):
@@ -1476,6 +1498,32 @@ def self_test():
     hv_wrong['sources'][0]['transport'] = 'chrome'
     check(any('curl transport only' in e for e in lint(hv_wrong, 'testland')),
           'lint accepted http_version on a non-curl transport')
+
+    # encoding: same opt-in shape. Unset must not move the digest; "cp1252"
+    # must; anything else, or any non-curl transport, must fail lint. The
+    # decode itself is checked on the byte that started this: 0x92.
+    en_base = copy.deepcopy(ua_none)
+    en_base['sources'][0].update({'extractor': 'html-text', 'scope': 'body'})
+    en_set = copy.deepcopy(en_base)
+    en_set['sources'][0]['encoding'] = 'cp1252'
+    check(digest(en_base) != digest(en_set),
+          'setting encoding did not move the digest')
+    check(not any('encoding' in e for e in lint(en_set, 'testland')),
+          'lint rejected encoding "cp1252" on a curl source')
+    en_bad = copy.deepcopy(en_base)
+    en_bad['sources'][0]['encoding'] = 'latin-9'
+    check(any('encoding' in e for e in lint(en_bad, 'testland')),
+          'lint accepted an unknown encoding')
+    en_wrong = copy.deepcopy(en_set)
+    en_wrong['sources'][0]['transport'] = 'chrome'
+    check(any('curl transport only' in e for e in lint(en_wrong, 'testland')),
+          'lint accepted encoding on a non-curl transport')
+    en_pdf = copy.deepcopy(ua_none)
+    en_pdf['sources'][0]['encoding'] = 'cp1252'
+    check(any('text extractors' in e for e in lint(en_pdf, 'testland')),
+          'lint accepted encoding on a PDF extractor')
+    check(b'patient\x92s'.decode('cp1252', 'replace') == 'patient\u2019s',
+          'cp1252 did not decode 0x92 to a right single quotation mark')
 
     # ca_bundle: same opt-in shape, and it must name a file that exists. A
     # recipe pointing at a missing bundle would otherwise fail at fetch time

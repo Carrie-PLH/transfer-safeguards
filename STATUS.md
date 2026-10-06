@@ -39,7 +39,7 @@ the state's own published translation only.
 | [Missouri](site/states/missouri.html) | [x] | [x] | [ ] | Oct 6, 2026 |
 | [Montana](site/states/montana.html) | [x] | [x] | [ ] | Oct 6, 2026 |
 | [Nebraska](site/states/nebraska.html) | [x] | [x] | [ ] | Oct 6, 2026 |
-| [Nevada](site/states/nevada.html) | [x] | [x] | [ ] | Sep 23, 2026 |
+| [Nevada](site/states/nevada.html) | [x] | [x] | [ ] | Oct 6, 2026 |
 | [New Hampshire](site/states/new-hampshire.html) | [x] | [x] | [ ] | Oct 6, 2026 |
 | [New Jersey](site/states/new-jersey.html) | [x] | [x] | [ ] | Sep 6, 2026 |
 | [New Mexico](site/states/new-mexico.html) | [x] | [x] | [ ] | Sep 24, 2026 |

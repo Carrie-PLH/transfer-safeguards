@@ -831,3 +831,25 @@ any other host. No deploy.
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-10-06. No human
 review is claimed for this entry.
+
+## 2026-10-06 — nevada corrected from drift handoff FA-Q-20261006-02 (attended)
+
+The "apostrophe appeared in NAC 449.74429" drift was a capture error, not a
+change by the Legislative Counsel Bureau: leg.state.nv.us serves NAC/NRS as
+Windows-1252 with no charset (possessive apostrophe = byte 0x92). The
+2026-09-01 hand capture dropped it, so the page's finding (3) recorded a typo
+that was never in the rule; the recipe's UTF-8 decode turned it into U+FFFD.
+Fixes: tools/capture.py gained an opt-in `encoding: "cp1252"` source key
+(digest-stable unset, lint rules, self-test); nevada.json sources 1-4 set to
+it, and all nine sources sliced to the sections the page quotes (the recipe
+was an unsliced auto-draft; source 8 ends before the rotating State
+Animal/Bird sidebar widget that made consecutive captures differ). Two
+consecutive recipe captures byte-identical (recipe dc167f8f2e6b). Page:
+section-01 and docket quotations now "patient's welfare" as the source
+prints it; finding (3) retracted in a new 2026-10-06 change-log entry (the
+Medicaid manual's own omission stands). 0 failures md + html against the new
+capture plus the moved supplement. Retained --result rebuild (hash
+f1ddda5550295eca) and promoted; checked date 2026-10-06; check-all 102 pages
+clean; capture.py --self-test clean. Reviewer line on the new entry is the
+placeholder, so the predeploy gate holds nevada until Carrie reviews. No
+deploy.
