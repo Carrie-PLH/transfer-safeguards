@@ -853,3 +853,26 @@ f1ddda5550295eca) and promoted; checked date 2026-10-06; check-all 102 pages
 clean; capture.py --self-test clean. Reviewer line on the new entry is the
 placeholder, so the predeploy gate holds nevada until Carrie reviews. No
 deploy.
+
+## 2026-10-06 — kansas recipe backfill (attended, from the 2026-10-01 handoff item 3)
+
+tools/recipes/kansas.json was a draft (every note "DRAFT — replace before
+promoting"; no packet history; skipped by every nightly since 2026-09-08).
+Finished and verified: source 1 repointed to ksrevisor.gov after the owner
+chose to follow the move and record it (www.ksrevisor.org answers 301 to the
+same path, observed 2026-10-06), sliced from the statute's own heading;
+source 2 (KAR 2022 Book 2, 10.9 MB, pdftotext -layout) sliced on regulation
+headings 28-39-145 through the 28-39-150 heading, where the hand capture's
+anchors were mid-sentence line cuts; source 3 (ombudsman.ks.gov, HTTP 403 to
+every curl variant, still) set to transport chrome / extractor none, supplied
+from the built-in browser pane's document.body.innerText, unedited. Lint clean
+(digest 405261adf039); two consecutive captures byte-identical (source 3
+supplied identically); 0 failures md + html against the new capture plus the
+KanCare supplement. Source 3's body wording matches the 2026-08-30 capture
+line for line (only the old page-title line differs: the session fetch tool
+added it, innerText does not). Retained --result rebuild (hash
+7906ea4dc3be37f7), promoted; checked date 2026-10-06; page edits limited to
+the source-movement link and retrieval dates plus a dated change-log entry
+(reviewer placeholder, so the gate holds kansas until review). check-all: 102
+pages clean. Kansas re-enters ordinary rotation review, with the standing note
+that source 3 needs the browser pane each time. No deploy.

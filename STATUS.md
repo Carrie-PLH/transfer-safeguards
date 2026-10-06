@@ -27,7 +27,7 @@ the state's own published translation only.
 | [Illinois](site/states/illinois.html) | [x] | [x] | [ ] | Sep 29, 2026 |
 | [Indiana](site/states/indiana.html) | [x] | [x] | [ ] | Sep 29, 2026 |
 | [Iowa](site/states/iowa.html) | [x] | [x] | [ ] | Sep 29, 2026 |
-| [Kansas](site/states/kansas.html) | [x] | [x] | [ ] | Sep 19, 2026 |
+| [Kansas](site/states/kansas.html) | [x] | [x] | [ ] | Oct 6, 2026 |
 | [Kentucky](site/states/kentucky.html) | [x] | [x] | [ ] | Oct 1, 2026 |
 | [Louisiana](site/states/louisiana.html) | [x] | [x] | [ ] | Sep 15, 2026 |
 | [Maine](site/states/maine.html) | [x] | [x] | [ ] | Sep 24, 2026 |
