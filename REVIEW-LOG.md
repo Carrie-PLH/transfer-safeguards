@@ -914,3 +914,33 @@ and checked date untouched.
 sync-checked-dates.py corrected 2 derived dates (table + JSON, new-jersey
 only). build-status.py re-run. No drift queue entries — the two blocked
 pages are tooling findings, not source movement.
+
+## 2026-10-08 — Texas: main packet rebuilt (attended), drift cleared
+
+Owner-requested rebuild through `rr-state-page`, not a rotation pass; the
+cursor is unchanged. Clears the 2026-09-05 drift entry in
+`tools/packets/history/texas/manifest.jsonl`.
+
+**Texas — rebuild.** All five sources of `tools/recipes/texas.json` captured in
+one pass (recipe 1b5ccae65f20), two runs byte-identical. Sources 2-3
+(fhb.hhs.texas.gov, ltco.texas.gov) by curl from the host. Source 1
+(PL 2022-25): hhs.texas.gov still returns 403 to host curl (browser UA,
+HTTP/2 and --http1.1). Carrie approved the browser download in chat on
+2026-10-08 under FA-D-20260922-01; an attended session saved the PDF and it
+was supplied with `--supply-file` / `--supply-sha256`
+52226df72a4ae311e6551180c9f3bc3a646e7d12c4c1b2ce2ffec8b67ea973b5 (computed
+reader-side in the browser, matched by `shasum -a 256` over the saved file;
+`%PDF-`/`%%EOF` present). Source 1 is now marked `"attended": true`. Sources
+4-5 (TAC portal records 203098, 203099): outerHTML supplied from the built-in
+browser, each checked against a browser-side SHA-256 (in recipe notes).
+
+Sources 2-5 match the 2026-09-05 capture exactly; source 1 differs only by
+the running page headers the recipe's filters strip (11663 -> 11404 chars).
+Fidelity 0 failures, markdown and HTML. Retained `--result rebuild`, hash
+491e9860ceac2ad3, promoted. Page edits: retrieval dates, source map (two TAC
+records listed separately; "first and third rows" corrected to "second and
+third rows"), checked date 2026-10-08, new 2026-10-08 change-log entry.
+Reviewer line reads "review pending before publication": Carrie has not yet
+reviewed this entry, so the gate's review-pending check fails for texas until
+she does. Still capture-pending: rule texts of 26 TAC 554.502 and 554.503.
+No push, no deploy.

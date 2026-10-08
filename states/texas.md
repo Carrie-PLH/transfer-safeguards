@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Texas State Long-Term Care Ombudsman, which since the 2026-08-30 capture publishes at its own site rather than inside the Texas HHS directory. As published on the program's own page: "Call 800-252-2412 to speak with an LTC ombudsman in your area". The program states its services "are free, confidential and available statewide."
 
-**Sources last checked.** 2026-09-05
+**Sources last checked.** 2026-10-08
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 
@@ -22,7 +22,7 @@ The federal floor for Medicare/Medicaid-certified facilities is assembled separa
 
 ## 01 — The grounds, as Texas describes them
 
-PL 2022-25, section 2.1, "Reasons for Discharge Permitted by Rule" ([hhs.texas.gov, PDF](https://www.hhs.texas.gov/sites/default/files/documents/pl2022-25.pdf), September 29, 2022, retrieved 2026-08-30), states that the facility "must allow a resident to remain in the facility and may not involuntarily discharge the resident unless", in the letter's own order:
+PL 2022-25, section 2.1, "Reasons for Discharge Permitted by Rule" ([hhs.texas.gov, PDF](https://www.hhs.texas.gov/sites/default/files/documents/pl2022-25.pdf), September 29, 2022, retrieved 2026-10-08), states that the facility "must allow a resident to remain in the facility and may not involuntarily discharge the resident unless", in the letter's own order:
 
 "the transfer or discharge is necessary for the resident's welfare, and the resident's needs cannot be met in the facility;"
 
@@ -74,14 +74,25 @@ What any of these periods means for a particular case is for the hearing office 
 
 | Document | Publisher and location | Source's own date | Retrieved |
 | --- | --- | --- | --- |
-| Provider Letter PL 2022-25, Nursing Facility Resident Discharge and Appeal | [HHSC (PDF)](https://www.hhs.texas.gov/sites/default/files/documents/pl2022-25.pdf) | September 29, 2022 | 2026-08-30 |
-| Fair and Fraud Hearings Handbook, 1300 Notice | [HHSC](https://fhb.hhs.texas.gov/handbooks/fair-fraud-hearings-handbook/1300-notice) | Revision 25-3, Effective May 15, 2025 | 2026-09-05 |
-| Texas State Long-Term Care Ombudsman | [ltco.texas.gov](https://ltco.texas.gov) | none stated on page | 2026-09-05 |
-| 26 TAC Chapter 554, Subchapter F rule listing | [Texas SOS TAC portal](https://texas-sos.appianportalsgov.com/rules-and-meetings?recordId=203098&queryAsDate=08%2F30%2F2026&interface=VIEW_TAC_SUMMARY) | Chapter Review Date 03/11/2024 | 2026-08-30 |
+| Provider Letter PL 2022-25, Nursing Facility Resident Discharge and Appeal | [HHSC (PDF)](https://www.hhs.texas.gov/sites/default/files/documents/pl2022-25.pdf) | September 29, 2022 | 2026-10-08 |
+| Fair and Fraud Hearings Handbook, 1300 Notice | [HHSC](https://fhb.hhs.texas.gov/handbooks/fair-fraud-hearings-handbook/1300-notice) | Revision 25-3, Effective May 15, 2025 | 2026-10-08 |
+| Texas State Long-Term Care Ombudsman | [ltco.texas.gov](https://ltco.texas.gov) | none stated on page | 2026-10-08 |
+| 26 TAC §554.502 rule listing (record 203098) | [Texas SOS TAC portal](https://texas-sos.appianportalsgov.com/rules-and-meetings?recordId=203098&interface=VIEW_TAC_SUMMARY) | Chapter Review Date 03/11/2024 | 2026-10-08 |
+| 26 TAC §554.503 rule listing (record 203099) | [Texas SOS TAC portal](https://texas-sos.appianportalsgov.com/rules-and-meetings?recordId=203099&interface=VIEW_TAC_SUMMARY) | Chapter Review Date 03/11/2024 | 2026-10-08 |
 
-Captured: PL 2022-25 and the TAC portal listing in tools/packets/texas-packet.txt (2026-08-30); the handbook and the ombudsman program at their moved addresses in tools/packets/texas-packet-moved.txt (2026-09-05). The two addresses in the first and third rows are the ones each publisher served on the retrieval date shown; the handbook's 2026-08-30 address now returns HTTP 403 and the ombudsman program's returns a permission error, both recorded in the 2026-09-05 change-log entry rather than corrected away. Pending: the full rule texts of 26 TAC 554.502 and 554.503 from the Secretary of State's portal, and any first-party Medicaid bed-hold payment statement — per the packet's pending list.
+Captured: all five sources in tools/packets/texas-packet.txt, rebuilt from the recipe on 2026-10-08; the handbook and the ombudsman program also in tools/packets/texas-packet-moved.txt (2026-09-05), identical in text. The two addresses in the second and third rows are the ones each publisher served on the retrieval date shown; the handbook's 2026-08-30 address now returns HTTP 403 and the ombudsman program's returns a permission error, both recorded in the 2026-09-05 change-log entry rather than corrected away. Pending: the full rule texts of 26 TAC 554.502 and 554.503 from the Secretary of State's portal, and any first-party Medicaid bed-hold payment statement.
 
 ## 04 — Change log
+
+2026-10-08 — Main packet rebuilt; no quoted text changed. The 2026-09-05 entry below left tools/packets/texas-packet.txt unrebuilt, because three of its five sources needed a browser transport that session could not complete. This pass rebuilt it from tools/recipes/texas.json in one capture of all five sources.
+
+How each source was obtained. The handbook (fhb.hhs.texas.gov) and the ombudsman program (ltco.texas.gov) were fetched by curl from the host. hhs.texas.gov still refuses PL 2022-25 to curl from the host with a browser user-agent, over HTTP/2 and HTTP/1.1; the PDF was obtained in an attended browser session with Carrie Schluter's approval, saved to disk, and supplied to the recipe's own pinned extractor by its SHA-256, which the browser computed and the saved file matched. The recipe now marks that source attended. The Secretary of State's two TAC portal records were rendered in a live browser and their markup supplied as before.
+
+What the capture shows. The handbook, the ombudsman page and both TAC portal records match the 2026-09-05 capture exactly. PL 2022-25 is the same 8-page document dated September 29, 2022; its text differs from the 2026-09-05 capture only by the removal of the letter's running page headers, which the recipe's filters strip by design. Every quotation on the page verifies against the rebuilt packet, in markdown and HTML.
+
+Edits. Retrieval dates in sections 01 and 03 now read 2026-10-08. The source map lists the two TAC portal records separately, at addresses without the dated query parameter the portal no longer uses, and its note on moved addresses now says second and third rows, correcting an earlier "first and third".
+
+Findings: (1) A source the host cannot fetch is not thereby a changed source. PL 2022-25 was served at the same size (171,752 bytes) recorded on 2026-09-05, with a server modification date of October 12, 2022. (2) Still capture-pending: the rule texts of 26 TAC 554.502 and 554.503. The portal renders them inside a frame on a separate host that this recipe does not open, and the page continues to carry 554.502's notice-contents text through HHSC's handbook. Reviewer: Carrie Schluter; review pending before publication. Corrections: hello@fieldassembly.net.
 
 2026-09-05 — Two of this page's four sources moved and one of them was revised; the page now quotes the revised text. The 2026-09-05 nightly review recorded the finding (portfolio queue FA-Q-20260905-04) and, correctly, changed nothing.
 

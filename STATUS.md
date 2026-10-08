@@ -54,7 +54,7 @@ the state's own published translation only.
 | [South Carolina](site/states/south-carolina.html) | [x] | [x] | [ ] | Sep 18, 2026 |
 | [South Dakota](site/states/south-dakota.html) | [x] | [x] | [ ] | Sep 25, 2026 |
 | [Tennessee](site/states/tennessee.html) | [x] | [x] | [ ] | Sep 15, 2026 |
-| [Texas](site/states/texas.html) | [x] | [x] | [ ] | Sep 5, 2026 |
+| [Texas](site/states/texas.html) | [x] | [x] | [ ] | Oct 8, 2026 |
 | [Utah](site/states/utah.html) | [x] | [x] | [ ] | Sep 24, 2026 |
 | [Vermont](site/states/vermont.html) | [x] | [x] | [ ] | Sep 26, 2026 |
 | [Virginia](site/states/virginia.html) | [x] | [x] | [ ] | Sep 25, 2026 |
