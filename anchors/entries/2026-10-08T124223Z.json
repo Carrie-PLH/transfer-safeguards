@@ -1,0 +1,16 @@
+{
+ "entry": {
+  "file_count": 288,
+  "id": "2026-10-08T124223Z",
+  "manifest_file": "manifests/2026-10-08T124223Z.txt",
+  "manifest_sha256": "ead29d0883c7f95375d34196b980bc710f796c5f5dd6bd61c993ccb93cb4754f",
+  "note": "attended session 2026-10-08: maine confirmed with docx header scope, new-york ombudsman rebuilt",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "a0f6cd820e934e75a33f499ebc5644a42564eb59d027625ac6c984755f3b69dd",
+  "repo": "transfer-safeguards",
+  "utc": "2026-10-08T12:42:23+00:00"
+ },
+ "entry_sha256": "7c17dc4cdfb922a0a218e77c6fdbead261494b8939428bd61142b4970ea2f024"
+}
