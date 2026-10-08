@@ -92,7 +92,7 @@ What the capture shows. The handbook, the ombudsman page and both TAC portal rec
 
 Edits. Retrieval dates in sections 01 and 03 now read 2026-10-08. The source map lists the two TAC portal records separately, at addresses without the dated query parameter the portal no longer uses, and its note on moved addresses now says second and third rows, correcting an earlier "first and third".
 
-Findings: (1) A source the host cannot fetch is not thereby a changed source. PL 2022-25 was served at the same size (171,752 bytes) recorded on 2026-09-05, with a server modification date of October 12, 2022. (2) Still capture-pending: the rule texts of 26 TAC 554.502 and 554.503. The portal renders them inside a frame on a separate host that this recipe does not open, and the page continues to carry 554.502's notice-contents text through HHSC's handbook. Reviewer: Carrie Schluter; review pending before publication. Corrections: hello@fieldassembly.net.
+Findings: (1) A source the host cannot fetch is not thereby a changed source. PL 2022-25 was served at the same size (171,752 bytes) recorded on 2026-09-05, with a server modification date of October 12, 2022. (2) Still capture-pending: the rule texts of 26 TAC 554.502 and 554.503. The portal renders them inside a frame on a separate host that this recipe does not open, and the page continues to carry 554.502's notice-contents text through HHSC's handbook. Reviewer: Carrie Schluter, reviewed 2026-10-08. Corrections: hello@fieldassembly.net.
 
 2026-09-05 — Two of this page's four sources moved and one of them was revised; the page now quotes the revised text. The 2026-09-05 nightly review recorded the finding (portfolio queue FA-Q-20260905-04) and, correctly, changed nothing.
 
