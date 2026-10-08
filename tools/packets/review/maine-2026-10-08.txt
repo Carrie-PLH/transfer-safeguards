@@ -4,11 +4,11 @@ STATE: maine
 ASSEMBLED: 2026-10-08
 
 CAPTURE NOTES:
-- Captured by tools/capture.py from tools/recipes/maine.json (recipe digest d232dc9140ac). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Captured by tools/capture.py from tools/recipes/maine.json (recipe digest 0f83b9c046a2). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
 - SOURCE 1: transport curl; extractor docx; scope paragraphs-and-tables; slice from '10.Q. Transfer and Discharge Rights 10.Q.1. Definition' to '10.R. Physical or Chemical Restraints'; filters none.
   Fixed 2026-09-24, deepening the page to full: the auto-drafted recipe (never actually exercised — every source still carried its draft-recipe.py placeholder note) named extractor html-text/scope body for a .docx URL, which cannot work and errors 'scope selector matched nothing: body' on any real run. The 2026-09-01 change log already states the true transport: retrieved as a .docx file and converted to text with python-docx. Corrected to match. Re-run and diffed against the standing packet after the fix: source 1's text is unchanged (whitespace only), so this is a recipe-definition fix, not new evidence. Sliced 2026-10-08 (FA-Q-20260924-04): from the 10.Q heading plus its first subsection heading (the table of contents prints 'Transfer and Discharge Rights' without the 10.Q. prefix, so the body heading is already unique; the subsection is carried so the anchor cannot land on a table-of-contents row in a future revision) to the 10.R heading, holding section 10.Q entire. The 2026-09-01 hand capture also carried the chapter's title block (six lines, 'Effective August 1, 2020'); a slice is one span, so the title block is no longer in the packet and the effective date is recorded in source_date instead. Every quotation the page draws from this source lies inside 10.Q; verified by check-fidelity.py on both surfaces at the time of slicing.
-- SOURCE 2: transport curl; extractor docx; scope paragraphs-and-tables; slice from '67.05-9 Discharges A. Discharge Tracking Forms' to '67.06 REIMBURSEMENT'; filters none.
-  Fixed 2026-09-24, same defect and same fix as source 1: extractor corrected from html-text/body to docx/paragraphs-and-tables, matching the true transport the 2026-09-01 change log already documents. Re-run and diffed against the standing packet after the fix: unchanged apart from whitespace. Sliced 2026-10-08 (FA-Q-20260924-04): the hand capture held 67.05-9 through 67.05-12 and 67.05-18, which is not one span, so the slice anchors on the body heading of 67.05-9 (carried with its first subsection heading, because the table of contents prints the bare '67.05-9 Discharges' row first) and runs to the 67.06 REIMBURSEMENT heading, holding 67.05-9 through 67.05-21 entire — a superset of the standing packet, per the CLAUDE.md rule that a slice widens to whole sections and never cuts mid-provision. The chapter title block the hand capture also carried ('SECTION 67 NURSING FACILITY SERVICES ESTABLISHED 7/1/91 / LAST UPDATED 9/15/15') is a running header the document repeats on every page, so it is still inside the slice. Verified by check-fidelity.py on both surfaces at the time of slicing.
+- SOURCE 2: transport curl; extractor docx; scope headers-paragraphs-and-tables; slice from '67.05-9 Discharges A. Discharge Tracking Forms' to '67.06 REIMBURSEMENT'; filters none.
+  Fixed 2026-09-24, same defect and same fix as source 1: extractor corrected from html-text/body to docx/paragraphs-and-tables, matching the true transport the 2026-09-01 change log already documents. Re-run and diffed against the standing packet after the fix: unchanged apart from whitespace. Sliced 2026-10-08 (FA-Q-20260924-04): the hand capture held 67.05-9 through 67.05-12 and 67.05-18, which is not one span, so the slice anchors on the body heading of 67.05-9 (carried with its first subsection heading, because the table of contents prints the bare '67.05-9 Discharges' row first) and runs to the 67.06 REIMBURSEMENT heading, holding 67.05-9 through 67.05-21 entire — a superset of the standing packet, per the CLAUDE.md rule that a slice widens to whole sections and never cuts mid-provision. The chapter title block the hand capture also carried ('SECTION 67 NURSING FACILITY SERVICES ESTABLISHED 7/1/91 / LAST UPDATED 9/15/15') is a running header the document repeats on every page, so it is still inside the slice. Verified by check-fidelity.py on both surfaces at the time of slicing. Scope widened to headers-paragraphs-and-tables 2026-10-08 (FA-Q-20261008-03): the manual's established and last-updated dates ('SECTION 67 NURSING FACILITY SERVICES ESTABLISHED 7/1/91', 'LAST UPDATED 9/15/15') are printed only in the Word section header, which the body extraction does not return; the header block is now emitted ahead of the sliced body under its own marker, which is where the 2026-09-01 hand capture also carried it.
 - SOURCE 3: transport curl; extractor html-text; scope body; filters none.
   DRAFT — replace before promoting.
 - SOURCE 4: transport curl; extractor html-text; scope body; filters none.
@@ -104,6 +104,19 @@ The resident has the right to appeal a transfer or discharge to the Administrati
 The resident has the right to receive sufficient preparation and orientation to ensure safe and orderly transfer or discharge from the facility. This shall be documented in the resident record.
 
 SOURCE 2: 10-144 CMR chapter 101, MaineCare Benefits Manual, Chapter II, Section 67, Nursing Facility Services — Sections 67.05-9 (Discharges), 67.05-10 (Quality Assurance), 67.05-11 (Prior Approval for Payment of Bed Holds During a Hospitalization), 67.05-12 (Therapeutic Leave of Absence), and 67.05-18 (Right of Appeal) (Maine Department of Health and Human Services) | https://www.maine.gov/sos/sites/maine.gov.sos/files/inline-files/c2s067-LUP%2009.15.2014%20NSC.docx | source date: page header states "SECTION 67 NURSING FACILITY SERVICES ESTABLISHED 7/1/91" and "LAST UPDATED 9/15/15"; the file's own name carries "LUP 09.15.2014" — both shown as published, not reconciled | retrieved: 2026-10-08
+=== section header text of this source, distinct blocks in document order ===
+	10-144 Chapter 101
+	MAINECARE BENEFITS MANUAL
+CHAPTER II
+SECTION 67	NURSING FACILITY SERVICES	ESTABLISHED 7/1/91
+LAST UPDATED 9/15/15
+
+	10-144 Chapter 101
+	MAINECARE BENEFITS MANUAL
+SECTION 67	NURSING FACILITY SERVICES	ESTABLISHED 7/1/91
+LAST UPDATED 9/15/15
+
+=== body of this source ===
 67.05-9	Discharges
 
 	A.	Discharge Tracking Forms

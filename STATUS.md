@@ -30,7 +30,7 @@ the state's own published translation only.
 | [Kansas](site/states/kansas.html) | [x] | [x] | [ ] | Oct 6, 2026 |
 | [Kentucky](site/states/kentucky.html) | [x] | [x] | [ ] | Oct 1, 2026 |
 | [Louisiana](site/states/louisiana.html) | [x] | [x] | [ ] | Sep 15, 2026 |
-| [Maine](site/states/maine.html) | [x] | [x] | [ ] | Sep 24, 2026 |
+| [Maine](site/states/maine.html) | [x] | [x] | [ ] | Oct 8, 2026 |
 | [Maryland](site/states/maryland.html) | [x] | [x] | [ ] | Oct 3, 2026 |
 | [Massachusetts](site/states/massachusetts.html) | [x] | [x] | [ ] | Oct 3, 2026 |
 | [Michigan](site/states/michigan.html) | [x] | [x] | [ ] | Oct 4, 2026 |
@@ -42,8 +42,8 @@ the state's own published translation only.
 | [Nevada](site/states/nevada.html) | [x] | [x] | [ ] | Oct 6, 2026 |
 | [New Hampshire](site/states/new-hampshire.html) | [x] | [x] | [ ] | Oct 6, 2026 |
 | [New Jersey](site/states/new-jersey.html) | [x] | [x] | [ ] | Oct 8, 2026 |
-| [New Mexico](site/states/new-mexico.html) | [x] | [x] | [ ] | Sep 24, 2026 |
-| [New York](site/states/new-york.html) | [x] | [x] | [ ] | Sep 4, 2026 |
+| [New Mexico](site/states/new-mexico.html) | [x] | [x] | [ ] | Oct 8, 2026 |
+| [New York](site/states/new-york.html) | [x] | [x] | [ ] | Oct 8, 2026 |
 | [North Carolina](site/states/north-carolina.html) | [x] | [x] | [ ] | Sep 13, 2026 |
 | [North Dakota](site/states/north-dakota.html) | [x] | [x] | [ ] | Sep 25, 2026 |
 | [Ohio](site/states/ohio.html) | [x] | [x] | [ ] | Aug 30, 2026 |

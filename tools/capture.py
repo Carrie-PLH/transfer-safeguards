@@ -621,6 +621,10 @@ def lint(rec, slug=None):
                           and all(isinstance(x, str) for x in sc))):
                 errs.append(f'{w}: {ex} scope must be a path or a '
                             f'non-empty list of paths')
+        if s.get('extractor') == 'docx' and s.get('scope') and \
+                s['scope'] not in DOCX_SCOPES:
+            errs.append(f'{w}: docx scope must be one of '
+                        f'{", ".join(DOCX_SCOPES)}')
         if s.get('scope') and s.get('extractor') not in ('html-text', 'next-data',
                                                          'json-doc', 'docx'):
             errs.append(f'{w}: scope has no meaning for extractor '
@@ -983,9 +987,64 @@ def render_json_lines(node, prefix=''):
     return '\n'.join(l for l in lines if l.strip())
 
 
+# docx scopes. The two plain ones read the body. The two "headers-" ones read
+# the body the same way and additionally emit the document's section-header
+# text ahead of it, under DOCX_HEADER_MARKER, after the slice has been cut
+# (see capture_source). Added 2026-10-08 (FA-Q-20261008-03): Maine's MaineCare
+# manual prints its established and last-updated dates only in the Word
+# section header, which python-docx does not return among d.paragraphs, so a
+# page quoting that header could not be reproduced by any recipe. State
+# manuals often carry their revision dates there, so this is opt-in per source
+# rather than a change to what every docx packet already holds.
+DOCX_SCOPES = ('paragraphs-and-tables', 'paragraphs-only',
+               'headers-paragraphs-and-tables', 'headers-paragraphs-only')
+DOCX_HEADER_MARKER = '=== section header text of this source, distinct blocks in document order ==='
+DOCX_BODY_MARKER = '=== body of this source ==='
+
+
+def docx_wants_headers(src):
+    return src.get('extractor') == 'docx' and \
+        str(src.get('scope') or '').startswith('headers-')
+
+
+def extract_docx_headers(blob):
+    """The distinct header blocks of a .docx, in document order: for each
+    section, its first-page, default and even-page headers where not linked
+    to the previous section, each as its non-empty paragraphs followed by any
+    table rows pipe-joined. A block already emitted is not repeated, because
+    a manual whose every section repeats one header has one header."""
+    if _core.is_legacy_doc(blob):
+        raise RuntimeError(
+            'a headers- scope was requested but this file is a legacy binary '
+            '.doc, which capture-core converts with an external tool that '
+            'does not return section headers; use a body scope or find the '
+            'publisher\'s .docx')
+    import io
+    import docx
+    d = docx.Document(io.BytesIO(blob))
+    blocks, seen = [], set()
+    for sec in d.sections:
+        for kind in ('first_page_header', 'header', 'even_page_header'):
+            h = getattr(sec, kind)
+            if h.is_linked_to_previous:
+                continue
+            lines = [p.text for p in h.paragraphs if p.text.strip()]
+            for t in h.tables:
+                for row in t.rows:
+                    lines.append(' | '.join(c.text.strip() for c in row.cells))
+            key = '\n'.join(lines)
+            if lines and key not in seen:
+                seen.add(key)
+                blocks.append(key)
+    return '\n\n'.join(blocks)
+
+
 def extract_docx(blob, scope):
     """Paragraphs in document order, then table rows with cells pipe-joined —
     the convention the California packet already records for its .docx source.
+    A "headers-" scope reads the body exactly as its plain counterpart; the
+    header text is read separately by extract_docx_headers and placed by
+    capture_source after the slice.
 
     A pre-2007 binary .doc (Composite Document Format) is not an OOXML zip and
     python-docx cannot open one, so it is routed to a converter instead; see
@@ -1005,7 +1064,7 @@ def extract_docx(blob, scope):
     import docx
     d = docx.Document(io.BytesIO(blob))
     out = [p.text for p in d.paragraphs]
-    if scope != 'paragraphs-only':
+    if scope.replace('headers-', '', 1) != 'paragraphs-only':
         for t in d.tables:
             for row in t.rows:
                 out.append(' | '.join(c.text.strip() for c in row.cells))
@@ -1205,6 +1264,14 @@ def capture_source(src, supplied=None):
             f'  reissued, repaginated or re-headed is a finding about the '
             f'source, not a\n'
             f'  recipe to widen until it matches again.')
+
+    # A docx "headers-" scope: the section-header text goes ahead of the
+    # sliced body, under its own marker, so a slice still anchors on body
+    # headings and the header's dates remain quotable (FA-Q-20261008-03).
+    # Only when this file read the bytes: a supplied text has no sections.
+    if docx_wants_headers(src) and isinstance(raw, bytes):
+        text = (DOCX_HEADER_MARKER + '\n' + extract_docx_headers(raw) + '\n\n'
+                + DOCX_BODY_MARKER + '\n' + text)
 
     text = apply_filters(text, src.get('filters', []))
 
@@ -1548,6 +1615,45 @@ def self_test():
     check(any('ca_bundle applies' in e
               for e in lint(ca_wrong_transport, 'testland')),
           'lint accepted ca_bundle on a non-curl transport')
+
+    # docx header scope (FA-Q-20261008-03): lint admits only DOCX_SCOPES; a
+    # headers- scope reads the body exactly as its plain counterpart and
+    # emits the distinct section headers ahead of it; a header repeated by
+    # every section is emitted once; a legacy .doc refuses the scope.
+    import io as _io
+    import docx as _docx
+    _d = _docx.Document()
+    _d.sections[0].header.paragraphs[0].text = 'SECTION 9 ESTABLISHED 1/1/90'
+    _d.sections[0].header.add_paragraph('LAST UPDATED 2/2/92')
+    _d.add_paragraph('9.01 Body heading')
+    _d.add_paragraph('Body text that a slice could anchor on.')
+    _d.add_section().header.is_linked_to_previous = True
+    _buf = _io.BytesIO(); _d.save(_buf); _blob = _buf.getvalue()
+    hdr = extract_docx_headers(_blob)
+    check(hdr == 'SECTION 9 ESTABLISHED 1/1/90\nLAST UPDATED 2/2/92',
+          f'docx header block read wrongly: {hdr!r}')
+    check(extract_docx(_blob, 'headers-paragraphs-only')
+          == extract_docx(_blob, 'paragraphs-only'),
+          'a headers- scope changed the body extraction')
+    check('ESTABLISHED' not in extract_docx(_blob, 'paragraphs-and-tables'),
+          'the body extraction now carries header text')
+    dx = copy.deepcopy(ua_none)
+    dx['sources'][0].update({'extractor': 'docx',
+                             'scope': 'headers-paragraphs-and-tables'})
+    check(not any('docx scope' in e for e in lint(dx, 'testland')),
+          'lint rejected a headers- docx scope')
+    dx_bad = copy.deepcopy(dx)
+    dx_bad['sources'][0]['scope'] = 'body'
+    check(any('docx scope' in e for e in lint(dx_bad, 'testland')),
+          'lint accepted an unknown docx scope')
+    check(digest(dx) != digest(copy.deepcopy(ua_none)),
+          'docx scope did not join the digest')
+    try:
+        extract_docx_headers(b'\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1' + b'\0' * 64)
+    except RuntimeError as e:
+        check('legacy' in str(e), f'legacy .doc refusal reads wrongly: {e}')
+    else:
+        check(False, 'a legacy .doc accepted a headers- scope')
 
     # pages: the PDF scope field. It moves the digest, because a capture of
     # pages 1-14 and a capture of the whole file are different evidence.

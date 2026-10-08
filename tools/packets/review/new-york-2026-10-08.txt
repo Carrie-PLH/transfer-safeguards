@@ -702,7 +702,6 @@ Educate residents, families, facility staff, and community about issues in long 
 Refer complaints to the New York State Department of Health or other appropriate agencies when resolution through the Ombudsman program is not achievable.
 
 How Ombudsmen Help
-
 'A Good Listening Ear'
 
 "They have given a good listening ear" and "interacted with the residents on a very positive level," says Andrea of Plainview, New York about her experience working with Ombudsmen from the NYS Long Term Care Ombudsman Program (LTCOP). Watch and listen to her testimonial below.
@@ -727,8 +726,6 @@ This fact sheet reviews how the Ombudsman program advocates for residents of nur
 
  Educate. Empower. Advocate. Tell us about yourself and start your journey.
 
-Sign Up Now
-
 card image
 
  Volunteer Spotlight Video Series
@@ -741,8 +738,6 @@ Barbara
 
 Alice Jean
 
-LEARN MORE
-
 card image
 
  Volunteer Ombudsmen of the Year
@@ -752,8 +747,6 @@ card image
 2026: Andrea Kabcenell
 
 2026: Janice Munson
-
-LEARN MORE
 
 Contact
 
@@ -1402,4 +1395,85 @@ Statutory Authority
 Social Services Law, Sections 363-a and 365-a(2)
 
 Volume
+
+SOURCE 6: Transfer/Discharge Notice template (DOCX) — New York State Department of Health | https://www.health.ny.gov/facilities/nursing/rights/docs/discharge_notice_template.docx | source date: none stated in the document | retrieved: 2026-10-08
+TRANSFER/DISCHARGE NOTICE
+
+Date: 
+
+Resident: 
+
+Designated Representative: 
+
+This is to inform you that the interdisciplinary team has determined that you will be discharged on  to: 
+
+In accordance with 10 NYCRR § 415.3 and 42 CFR § 483.15, this transfer/discharge notice is being issued because: 
+
+ The resident’s needs cannot be met after reasonable attempts at accommodation in the facility as evidenced by: 
+
+ The resident's health has improved sufficiently so the resident no longer needs the services provided by the facility as evidenced by: 
+
+ The safety of individuals in the facility would be endangered, as evidenced by: 
+
+ The health of individuals in the facility would be endangered, as evidenced by: 
+
+ the resident has failed, after reasonable and appropriate notice, to pay for (or to have paid under Medicare, Medicaid, or third-party insurance) a stay at the facility, charges are not in dispute, no appeal of a denial of benefits is pending, or funds for payment are available and the resident refuses to cooperate with the facility in obtaining funds as evidenced by: 
+
+ the facility is discontinuing operation and has received approval of its plan of closure from the New York State Department of Health.
+
+APPEAL & HEARING RIGHTS
+If you do not agree with the proposed transfer/discharge, you have the right to appeal the action and request an evidentiary hearing. You may file a request for an appeal and hearing by contacting the New York State Department of Health (NYSDOH) in one of the following manners:   
+
+Phone: Call the NYSDOH Nursing Home Complaint Hotline at 1-888-201-4563.
+Internet: Complete and submit the online Nursing Home Complaint form found at https://apps.health.ny.gov/surveyd8/nursing-home-complaint-form.
+Mail: Complete and mail a paper Nursing Home Complaint Form to the following address: 
+NYS DOH Centralized Complaint Intake Program 
+875 Central Ave. 
+Albany, NY 12206	
+Email: Complete and email a scanned copy of a Nursing Home Complaint Form to nhintake@health.ny.gov. 
+
+The Nursing Home Complaint form is available online at https://www.health.ny.gov/forms/doh-5022.pdf. 	
+All appeal requests must be submitted within sixty (60) days from the date a resident receives a notice of transfer/discharge.
+
+If a request for an appeal is filed with NYSDOH prior to the resident’s transfer/discharge from the facility, the resident may remain in the facility (excluding cases of transfer/discharge due to imminent danger) pending an appeal hearing decision. It should be noted that any resident choosing to remain at a facility pending appeal may be liable for the cost to stay at the facility pending the appeal if the resident loses their appeal.
+
+A post-discharge/transfer hearing will be held when a request for an appeal and hearing is filed with the NYSDOH after the resident is transferred/discharged from the facility. In these cases or cases involving a transfer/discharge due to imminent danger, the resident has the right to return to the next available semiprivate bed in the facility if the resident prevails/wins at the hearing on appeal. 
+
+At the evidentiary hearing, the resident may represent themselves, or use legal counsel, a relative, a friend, or any other spokesmen. 
+
+In cases of an action based on a change in law, the resident will be provided an explanation of the circumstances under which an appeal will be granted.  
+ 
+ADVOCACY CONTACTS
+Local New York State Long Term Care Ombudsman:
+Name: 
+Address: 
+Phone: 
+
+Disability Rights New York:
+For nursing facility residents with mental illness or developmental disabilities.
+Address: 279 Troy Road, Suite 9, PMB 236, Rensselaer, NY 12144
+Email: Mail@DRNY.org
+Online: https://www.drny.org/intake.php
+Phone: 518-432-7861
+Toll Free: 1-800-993-8982
+
+Legal Services Agencies and Community Resources Providing Resident Advocacy Services Guide:
+https://www.health.ny.gov/facilities/nursing/docs/community_resource_guide.pdf
+
+Resident Signature: 
+Date: 
+
+Resident Representative Signature: 
+Date: 
+
+Facility Representative Signature and Title:  
+Date: 
+
+Designated Representative Verbally Informed on: 
+
+Document Mailed to Designated Representative on:  
+
+Document Mailed to NYS Ombudsman on:  
+
+Document Mailed to Family Member on:
 

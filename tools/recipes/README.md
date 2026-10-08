@@ -229,7 +229,7 @@ HTML instead, name `html-text` and supply the HTML.
 | `html-text` | required: a CSS selector (`select_one`, so the first match), or `body` for the whole document. State `body` explicitly when you mean it; an unstated scope is one nobody checked. A fragment with no `<body>` needs a real selector (Alaska's BASIS print fragment needs `div.statute`) |
 | `next-data` | required: a dotted path into the island, `[i]` for list indices, or a non-empty list of such paths concatenated in order |
 | `json-doc` | required: the same dotted-path vocabulary, into the response body (`Html` for sdlegislature.gov) |
-| `docx` | optional: `paragraphs-only` omits tables; anything else (default `paragraphs-and-tables`) includes them |
+| `docx` | optional, one of `paragraphs-and-tables` (default), `paragraphs-only`, `headers-paragraphs-and-tables`, `headers-paragraphs-only`. A `headers-` scope reads the body exactly as its plain counterpart and additionally emits the document's distinct section-header blocks ahead of the sliced body, under `=== section header text of this source ... ===` and `=== body of this source ===` markers (added 2026-10-08, FA-Q-20261008-03: Maine's MaineCare manual prints its established and last-updated dates only in the Word header). The slice still anchors on the body. A legacy `.doc` refuses a `headers-` scope, because its converter does not return headers |
 | PDF extractors, `none` | not allowed; lint rejects it |
 
 Find the contact facts — phone, fax, email, mailing address — before settling

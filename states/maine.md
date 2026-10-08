@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Maine Long-Term Care Ombudsman Program states of itself: "The Maine Long-Term Care Ombudsman Program is a non-profit agency whose mission is to advocate for quality of life and care for long-term care consumers." Its staff directory names "Brenda Gallant" as "Executive Director" and "State Long-Term Care Ombudsman". Its own published contact: "61 Winthrop St." "Augusta, ME 04330", "(207) 621-1079" (local), "(800) 499-0229" (toll free), "(207) 621-0509" (fax), "MLTCOP@MaineOmbudsman.org". The MaineCare Benefits Manual instead prints the program's address as "P.O. Box 2723, Augusta, Maine 04333" — both addresses shown as published, not reconciled.
 
-**Sources last checked.** 2026-09-24
+**Sources last checked.** 2026-10-08
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

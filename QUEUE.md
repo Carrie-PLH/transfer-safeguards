@@ -399,3 +399,16 @@ FA-Q-20261008-03 with the options. Running `new-york.json` for the first time
 since its docx source became readable showed source 6 unchanged and source 3
 (aging.ny.gov ombudsman page) rewritten, three quotations failing; not
 retained, filed as FA-Q-20261008-04 for a review pass. Nothing deployed.
+
+**Same day, on the owner's acceptance of the recommendations above.** The docx
+extractor took an opt-in `headers-` scope (`headers-paragraphs-and-tables`,
+`headers-paragraphs-only`): the document's distinct section-header blocks are
+emitted ahead of the sliced body under their own marker, so a slice still
+anchors on body headings and a header's dates become quotable; a legacy `.doc`
+refuses the scope. Self-tested, documented in tools/recipes/README.md, ported
+to the three siblings. `maine.json` source 2 uses it; Maine's capture is now
+byte-identical across runs with zero fidelity failures on both surfaces,
+retained as confirmed and the checked date advanced. New York's ombudsman
+docket was rebuilt against the rewritten aging.ny.gov page (findings 13–15 in
+the page's change log), the 2026-09-04 capture retained beside the new one,
+and the rebuild promoted. FA-Q-20261008-03 and -04 closed. Nothing deployed.
