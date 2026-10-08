@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Office of the Long-Term Care Ombudsman, which publishes its own contact as "Office of the Long-Term Care Ombudsman" "P.O. Box 852" "Trenton, NJ 08625-0852" "(877) 582-6995" "Fax: (609) 943-3479" "mandatoryreports@LTCO.nj.gov". The resident-rights page gives the same number: "The LTCO can be contacted at 1-877-582-6995."
 
-**Sources last checked.** 2026-09-06
+**Sources last checked.** 2026-10-08
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

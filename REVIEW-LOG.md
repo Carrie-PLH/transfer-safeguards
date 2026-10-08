@@ -876,3 +876,41 @@ the source-movement link and retrieval dates plus a dated change-log entry
 (reviewer placeholder, so the gate holds kansas until review). check-all: 102
 pages clean. Kansas re-enters ordinary rotation review, with the standing note
 that source 3 needs the browser pane each time. No deploy.
+
+## 2026-10-08 — Nightly review: New Jersey confirmed; New Mexico and New York tooling-blocked
+
+Cursor stood at new-jersey; selected new-jersey, new-mexico, new-york (next two
+alphabetically). Cursor advanced to north-carolina regardless of result.
+
+**New Jersey — confirmed.** Fresh capture of both sources; zero fidelity
+failures, markdown and HTML. Retained changed body (source 2: 9570 -> 9500
+chars, whitespace collapsed; header title/URL/date unchanged, no replacement
+signal). Hash 9df67e0896a52397, promoted. Checked date advanced to Oct 8,
+2026 (markdown, re-rendered, synced).
+
+**New Mexico — not reviewed, tooling-blocked.** Fresh capture of both sources
+(8.370.16 and 8.312.2 NMAC, www.srca.nm.gov) decoded clean on fetch but
+fidelity reported 6 QUOTE-not-in-packet failures, markdown and HTML, each
+landing where the document's Word-exported tab-alignment spans sit beside
+quoted text. Traced to capture.py's fetch_curl decoding every curl response
+as UTF-8 with errors='replace' unless the source sets the opt-in "encoding"
+field (added for FA-Q-20261006-02, the Nevada 0x92 case) — these sources
+serve undeclared Windows-1252 bytes (0xA0 inside mso-tab-count spans), so
+every run of them became U+FFFD. Confirmed deterministic (two consecutive
+captures byte-identical) and confirmed against the raw bytes directly (curl +
+hexdump: 0xA0 x10 before "Voluntary removal:" in 08.370.0016.html). This is a
+capture-side artifact, not source drift: not retained, standing packet and
+checked date untouched. Tooling entry opened: FA-Q-20261008-02 (recipe needs
+"encoding": "cp1252" on both sources; also notes gathered-work and
+licensure-mobility lack the opt-in mechanism entirely).
+
+**New York — not reviewed, tooling-blocked.** Capture failed outright:
+"SOURCE 6 failed: No module named 'docx'" — tools/.venv has no python-docx
+installed, a known open gap (FA-Q-20260924-04, opened 2026-09-24, already
+naming new-york.json among the affected recipes). Bumped that entry
+(occurrence 2) rather than opening a duplicate; not retained, standing packet
+and checked date untouched.
+
+sync-checked-dates.py corrected 2 derived dates (table + JSON, new-jersey
+only). build-status.py re-run. No drift queue entries — the two blocked
+pages are tooling findings, not source movement.
