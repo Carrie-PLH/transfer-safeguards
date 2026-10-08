@@ -11,7 +11,11 @@
       "user_agent": "browser",
       "extractor": "docx",
       "scope": "paragraphs-and-tables",
-      "notes": "Fixed 2026-09-24, deepening the page to full: the auto-drafted recipe (never actually exercised — every source still carried its draft-recipe.py placeholder note) named extractor html-text/scope body for a .docx URL, which cannot work and errors 'scope selector matched nothing: body' on any real run. The 2026-09-01 change log already states the true transport: retrieved as a .docx file and converted to text with python-docx. Corrected to match. Re-run and diffed against the standing packet after the fix: source 1's text is unchanged (whitespace only), so this is a recipe-definition fix, not new evidence."
+      "slice": {
+        "from": "10.Q. Transfer and Discharge Rights 10.Q.1. Definition",
+        "to": "10.R. Physical or Chemical Restraints"
+      },
+      "notes": "Fixed 2026-09-24, deepening the page to full: the auto-drafted recipe (never actually exercised — every source still carried its draft-recipe.py placeholder note) named extractor html-text/scope body for a .docx URL, which cannot work and errors 'scope selector matched nothing: body' on any real run. The 2026-09-01 change log already states the true transport: retrieved as a .docx file and converted to text with python-docx. Corrected to match. Re-run and diffed against the standing packet after the fix: source 1's text is unchanged (whitespace only), so this is a recipe-definition fix, not new evidence. Sliced 2026-10-08 (FA-Q-20260924-04): from the 10.Q heading plus its first subsection heading (the table of contents prints 'Transfer and Discharge Rights' without the 10.Q. prefix, so the body heading is already unique; the subsection is carried so the anchor cannot land on a table-of-contents row in a future revision) to the 10.R heading, holding section 10.Q entire. The 2026-09-01 hand capture also carried the chapter's title block (six lines, 'Effective August 1, 2020'); a slice is one span, so the title block is no longer in the packet and the effective date is recorded in source_date instead. Every quotation the page draws from this source lies inside 10.Q; verified by check-fidelity.py on both surfaces at the time of slicing."
     },
     {
       "n": 2,
@@ -22,7 +26,11 @@
       "user_agent": "browser",
       "extractor": "docx",
       "scope": "paragraphs-and-tables",
-      "notes": "Fixed 2026-09-24, same defect and same fix as source 1: extractor corrected from html-text/body to docx/paragraphs-and-tables, matching the true transport the 2026-09-01 change log already documents. Re-run and diffed against the standing packet after the fix: unchanged apart from whitespace."
+      "slice": {
+        "from": "67.05-9 Discharges A. Discharge Tracking Forms",
+        "to": "67.06 REIMBURSEMENT"
+      },
+      "notes": "Fixed 2026-09-24, same defect and same fix as source 1: extractor corrected from html-text/body to docx/paragraphs-and-tables, matching the true transport the 2026-09-01 change log already documents. Re-run and diffed against the standing packet after the fix: unchanged apart from whitespace. Sliced 2026-10-08 (FA-Q-20260924-04): the hand capture held 67.05-9 through 67.05-12 and 67.05-18, which is not one span, so the slice anchors on the body heading of 67.05-9 (carried with its first subsection heading, because the table of contents prints the bare '67.05-9 Discharges' row first) and runs to the 67.06 REIMBURSEMENT heading, holding 67.05-9 through 67.05-21 entire — a superset of the standing packet, per the CLAUDE.md rule that a slice widens to whole sections and never cuts mid-provision. The chapter title block the hand capture also carried ('SECTION 67 NURSING FACILITY SERVICES ESTABLISHED 7/1/91 / LAST UPDATED 9/15/15') is a running header the document repeats on every page, so it is still inside the slice. Verified by check-fidelity.py on both surfaces at the time of slicing."
     },
     {
       "n": 3,
@@ -65,8 +73,8 @@
       "transport": "curl",
       "user_agent": "browser",
       "extractor": "html-text",
-      "scope": "body",
-      "notes": "DRAFT — replace before promoting."
+      "scope": ".row.withmargin .col-sm-6.text-center",
+      "notes": "Scoped 2026-10-08 (FA-Q-20260924-04): the standing 2026-09-01 packet holds the Contact Information column only (address, phone, toll-free, fax, email, hours), and that is what this selector matches — the left column of the page's two-column contact row. The whole-body scope the draft carried also captured the site chrome and the contact form's anti-robot arithmetic question ('If you're not a robot, what is 200 + 28?'), whose operands change on every fetch, so two consecutive captures were never byte-identical. The form is in the right column and is outside this scope. Verified byte-identical across two consecutive runs at the time of scoping."
     },
     {
       "n": 7,

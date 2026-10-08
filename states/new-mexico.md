@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Aging and Long-Term Services Department states of the program: "Residents, their families, friends, and caregivers entrust long-term care and nursing facilities to provide safe environments that meet standards of care and provide a quality of life. If ever they fall short, the Long-Term Care Ombudsman offers an avenue for expressing and resolving concerns." The department's own published contact, printed in the footer of both pages captured: "Long-Term Care Ombudsman Program" — "1-866-451-2901" on the department's Contact Us page and "866-451-2901" on the Ombudsman Advocacy page itself, both "Toll-Free; Statewide" shown as published and not reconciled. The department's own "Location" and "Mailing Address": "2550 Cerrillos Road" "Santa Fe, NM 87505". The licensing rule itself requires a facility's own transfer notice to carry the "name and address of ombudsman" (8.370.16.22(K) NMAC).
 
-**Sources last checked.** 2026-09-24
+**Sources last checked.** 2026-10-08
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

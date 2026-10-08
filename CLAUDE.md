@@ -119,9 +119,11 @@ is the venv and not the system python3:
 
     tools/.venv/bin/python tools/capture.py --preflight
 
-It checks both pins against what this repo's recipes actually reach for, prints
-one line each, and exits nonzero with the reason if the host cannot reproduce
-this repo's captures. It fetches nothing, so it costs a second. Run the capture
+It checks the pins — poppler, pdfplumber and, since 2026-10-08, python-docx
+(FA-Q-20260924-04: four recipes declared the docx extractor against a venv
+that had no docx package, and the preflight said nothing) — against what this
+repo's recipes actually reach for, prints one line each, and exits nonzero
+with the reason if the host cannot reproduce this repo's captures. It fetches nothing, so it costs a second. Run the capture
 on the Mac through Desktop Commander when it fails.
 
 ## Doctrine — the long-horizon frame (read before optimizing anything)

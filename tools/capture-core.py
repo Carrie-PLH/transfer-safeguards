@@ -78,6 +78,13 @@ import tempfile
 # silently re-baseline a repo nobody meant to touch.
 DEFAULT_POPPLER_PIN = "26.07.0"
 DEFAULT_PDFPLUMBER_PIN = "0.11.10"
+# python-docx, for the docx extractor. Pinned 2026-10-08 (FA-Q-20260924-04):
+# transfer-safeguards' venv had no docx package at all, four of its recipes
+# declared the extractor, and --preflight said nothing because it checked
+# poppler and pdfplumber only -- a session trusting a clean preflight hit
+# "No module named 'docx'" one source at a time, after the fetching. The
+# version sped-safeguards and gathered work already carried.
+DEFAULT_DOCX_PIN = "1.2.0"
 
 # pdftotext flags. -nopgbrk was removed on 2026-09-03 from every mode: it
 # suppresses the form feed, and a suppressed form feed is not a page break
@@ -140,6 +147,28 @@ def require_pdfplumber(pin=DEFAULT_PDFPLUMBER_PIN):
     if got != pin:
         raise RuntimeError(
             f'pdfplumber {got} is installed; this project pins {pin}. See '
+            f'require_poppler for why the extractor version is an input and '
+            f'not an environment detail.')
+    return got
+
+
+def require_docx(pin=DEFAULT_DOCX_PIN):
+    """Same rule as require_poppler, for the docx extractor. python-docx reads
+    the OOXML container; a legacy binary .doc goes to a converter instead and
+    does not need it (see extract_legacy_doc), so a repo whose only docx
+    sources are legacy files is not blocked by this."""
+    try:
+        import docx
+    except ImportError:
+        raise RuntimeError(
+            'python-docx is not installed in this interpreter; this project '
+            'pins ' + pin + ' for the docx extractor. Install it into '
+            'tools/.venv (tools/.venv/bin/pip install "python-docx==' + pin +
+            '"), not into the system python.')
+    got = getattr(docx, '__version__', None)
+    if got != pin:
+        raise RuntimeError(
+            f'python-docx {got} is installed; this project pins {pin}. See '
             f'require_poppler for why the extractor version is an input and '
             f'not an environment detail.')
     return got

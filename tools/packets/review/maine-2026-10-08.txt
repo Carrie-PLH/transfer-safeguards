@@ -1,0 +1,2727 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: maine
+ASSEMBLED: 2026-10-08
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/maine.json (recipe digest d232dc9140ac). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- SOURCE 1: transport curl; extractor docx; scope paragraphs-and-tables; slice from '10.Q. Transfer and Discharge Rights 10.Q.1. Definition' to '10.R. Physical or Chemical Restraints'; filters none.
+  Fixed 2026-09-24, deepening the page to full: the auto-drafted recipe (never actually exercised — every source still carried its draft-recipe.py placeholder note) named extractor html-text/scope body for a .docx URL, which cannot work and errors 'scope selector matched nothing: body' on any real run. The 2026-09-01 change log already states the true transport: retrieved as a .docx file and converted to text with python-docx. Corrected to match. Re-run and diffed against the standing packet after the fix: source 1's text is unchanged (whitespace only), so this is a recipe-definition fix, not new evidence. Sliced 2026-10-08 (FA-Q-20260924-04): from the 10.Q heading plus its first subsection heading (the table of contents prints 'Transfer and Discharge Rights' without the 10.Q. prefix, so the body heading is already unique; the subsection is carried so the anchor cannot land on a table-of-contents row in a future revision) to the 10.R heading, holding section 10.Q entire. The 2026-09-01 hand capture also carried the chapter's title block (six lines, 'Effective August 1, 2020'); a slice is one span, so the title block is no longer in the packet and the effective date is recorded in source_date instead. Every quotation the page draws from this source lies inside 10.Q; verified by check-fidelity.py on both surfaces at the time of slicing.
+- SOURCE 2: transport curl; extractor docx; scope paragraphs-and-tables; slice from '67.05-9 Discharges A. Discharge Tracking Forms' to '67.06 REIMBURSEMENT'; filters none.
+  Fixed 2026-09-24, same defect and same fix as source 1: extractor corrected from html-text/body to docx/paragraphs-and-tables, matching the true transport the 2026-09-01 change log already documents. Re-run and diffed against the standing packet after the fix: unchanged apart from whitespace. Sliced 2026-10-08 (FA-Q-20260924-04): the hand capture held 67.05-9 through 67.05-12 and 67.05-18, which is not one span, so the slice anchors on the body heading of 67.05-9 (carried with its first subsection heading, because the table of contents prints the bare '67.05-9 Discharges' row first) and runs to the 67.06 REIMBURSEMENT heading, holding 67.05-9 through 67.05-21 entire — a superset of the standing packet, per the CLAUDE.md rule that a slice widens to whole sections and never cuts mid-provision. The chapter title block the hand capture also carried ('SECTION 67 NURSING FACILITY SERVICES ESTABLISHED 7/1/91 / LAST UPDATED 9/15/15') is a running header the document repeats on every page, so it is still inside the slice. Verified by check-fidelity.py on both surfaces at the time of slicing.
+- SOURCE 3: transport curl; extractor html-text; scope body; filters none.
+  DRAFT — replace before promoting.
+- SOURCE 4: transport curl; extractor html-text; scope body; filters none.
+  DRAFT — replace before promoting.
+- SOURCE 5: transport curl; extractor html-text; scope body; filters none.
+  DRAFT — replace before promoting.
+- SOURCE 6: transport curl; extractor html-text; scope .row.withmargin .col-sm-6.text-center; filters none.
+  Scoped 2026-10-08 (FA-Q-20260924-04): the standing 2026-09-01 packet holds the Contact Information column only (address, phone, toll-free, fax, email, hours), and that is what this selector matches — the left column of the page's two-column contact row. The whole-body scope the draft carried also captured the site chrome and the contact form's anti-robot arithmetic question ('If you're not a robot, what is 200 + 28?'), whose operands change on every fetch, so two consecutive captures were never byte-identical. The form is in the right column and is outside this scope. Verified byte-identical across two consecutive runs at the time of scoping.
+- SOURCE 7: transport curl; extractor html-text; scope body; filters none.
+  DRAFT — replace before promoting.
+
+SOURCE 1: 10-144 CMR chapter 110, Regulations Governing the Licensing and Functioning of Skilled Nursing Facilities and Nursing Facilities — Section 10.Q, Transfer and Discharge Rights (Maine Department of Health and Human Services, Division of Licensing and Certification) | https://www.maine.gov/sos/sites/maine.gov.sos/files/content/assets/144c110.docx | source date: Effective August 1, 2020 | retrieved: 2026-10-08
+10.Q.	Transfer and Discharge Rights
+
+	10.Q.1.	Definition
+
+Transfer and discharge includes movement of a resident to a bed outside of the certified unit, whether that bed is in the same facility or not. Transfer and discharge does not refer to movement of a resident to a bed within the same certified unit.
+
+	10.Q.2.	Transfer and Discharge Requirements
+
+The facility must permit each resident to remain in the unit or facility, and not transfer or discharge the resident from the unit or facility unless:
+
+a.	The transfer or discharge is necessary for the resident's welfare and the resident's needs cannot be met in the unit or facility.
+
+b.	The transfer or discharge is appropriate because the resident's health and/or functional ability has improved sufficiently so that the resident no longer needs the services provided by the unit or facility.
+
+			c.	The safety and/or health of individuals in the facility is endangered.
+
+d.	The resident has failed, after reasonable and appropriate notice, to pay for (or to have paid under Medicare or Medicaid) a stay at the facility. For a resident who becomes eligible for Medicaid after admission to a facility, the facility may charge a resident only charges allowable under Medicaid.
+
+			e.	The facility ceases to operate.
+
+	10.Q.3.	Notice Before Transfer
+
+Before a facility transfers or discharges a resident, the facility must notify the resident and, if known, a family member or legal representative of the resident, of the transfer or discharge and the reasons.
+
+The resident’s clinical record shall contain documentation describing the basis for the transfer or discharge.
+
+	10.Q.4.	Contents of the Notice
+
+Each notice must be written and include, in a language and manner understood by the resident. 
+
+
+
+a.	In order to provide for informed resident decisions, a nursing facility shall provide lists of licensed providers of care and services for all patients prior to discharge for whom home health care is needed.
+
+(1)	For all residents requiring home health care, the list must include all licensed home health care providers that request to be listed and any branch offices, including addresses and telephone numbers, that serve the area in which the resident resides.
+
+(2)	The nursing facility shall disclose to the resident any direct or indirect financial interest which the nursing facility has in the home health care provider.
+
+b.	For all residents transferring to another nursing facility, a list must be provided of all nursing facilities that request to be listed that serve the area in which the resident resides or wishes to reside.
+
+c.	The reason for the transfer or discharge, including events which are the basis for such action.
+
+			d.	The effective date of the transfer or discharge.
+
+			e.	The location to which the resident is transferred or discharged.
+
+f.	Notice of the resident's right to appeal the transfer or discharge as set forth in the Maine Medical Assistance Manual.
+
+			g.	The location to which the resident is transferred or discharged. 
+
+h.	Notice of the resident’s right to appeal the transfer or discharge as set forth in the Maine Medical Assistance Manual.
+
+i.	The mailing address and telephone number of the Long Term Care Ombudsman Program.
+
+j.	In the case of residents with developmental disabilities or mental illness, the mailing address and telephone number of the Office of Advocate, Department of Mental Health, Mental Retardation and Substance Abuse Services.
+
+k.	The resident's right to be represented by himself or herself or by legal counsel, a relative, friend or other spokesman.
+
+	10.Q.5.	Timing of the Notice
+
+Except when specified in Section 10.Q.2.c., the notice of transfer or discharge must be made by the facility at least:
+
+		a.	Thirty (30) days before the resident is transferred or discharged.
+
+		b.	As soon as practicable before transfer or discharge when:
+
+				1.	The safety and/or health of individuals in the facility would be endangered.
+
+2.	The resident's health improves sufficiently to allow a more immediate transfer or discharge.
+
+3.	An immediate transfer or discharge is required by the resident's urgent medical needs, or
+
+				4.	A resident has not resided in the facility for thirty (30) days.
+
+	10.Q.6.	Appeal of Transfer or Discharge
+
+The resident has the right to appeal a transfer or discharge to the Administrative Hearings Unit of the Department.
+
+	10.Q.7.	Transfer or Discharge Orientation
+
+The resident has the right to receive sufficient preparation and orientation to ensure safe and orderly transfer or discharge from the facility. This shall be documented in the resident record.
+
+SOURCE 2: 10-144 CMR chapter 101, MaineCare Benefits Manual, Chapter II, Section 67, Nursing Facility Services — Sections 67.05-9 (Discharges), 67.05-10 (Quality Assurance), 67.05-11 (Prior Approval for Payment of Bed Holds During a Hospitalization), 67.05-12 (Therapeutic Leave of Absence), and 67.05-18 (Right of Appeal) (Maine Department of Health and Human Services) | https://www.maine.gov/sos/sites/maine.gov.sos/files/inline-files/c2s067-LUP%2009.15.2014%20NSC.docx | source date: page header states "SECTION 67 NURSING FACILITY SERVICES ESTABLISHED 7/1/91" and "LAST UPDATED 9/15/15"; the file's own name carries "LUP 09.15.2014" — both shown as published, not reconciled | retrieved: 2026-10-08
+67.05-9	Discharges
+
+	A.	Discharge Tracking Forms
+
+		When a resident is discharged from a nursing facility with no expectation of return, discharged with return anticipated, or discharged prior to completing a MDS, a Discharge Tracking Form is to be completed within seven (7) days of the event. Completion of the discharge tracking form is required upon discharge from a facility, admission to another health care facility, or for hospital stays of twenty-four (24) hours or more. The form is not required for therapeutic or social leaves or for observational stays of less than twenty-four (24) hours. Discharge tracking forms must be electronically submitted at least monthly to the Department or its Authorized Entity.
+
+	B.	Reentry Tracking Forms
+
+		Following submission of a discharge tracking form coded as discharged with return anticipated or discharged prior to completion of initial assessment, a reentry tracking form must be completed within seven (7) days of the reentry to the facility. The reentry tracking forms must be electronically submitted at least monthly to the Department or its Authorized Entity.
+
+C.	Discharge Planning Procedure
+
+1.	Each participating NF shall maintain written discharge planning procedures that describe which staff members of the facility will have operational responsibility for discharge planning; and, the manner and methods by which such staff members will function, including their relationship with the facility staff.
+
+
+67.05	POLICIES AND PROCEDURES (cont.)
+
+2.	At the time of the resident’s discharge, the facility shall provide to those persons responsible for post-discharge care such information as will insure the optimal continuity of care. Examples of such information are: current information relative to diagnosis, prior treatment, rehabilitation potential, physician advice concerning immediate care, and pertinent social information.
+
+	3.	Nursing facilities must notify the Department, Office of Elder Services, of all MaineCare discharges by submitting the Member Transfer form on the day of discharge. This notification is not required for Medicare discharges where MaineCare covers the co-pay, deductible and/or coinsurance. However, notification is required if a member is enrolled in a Medicare managed care plan and Medicare will be paying the member’s daily rate of reimbursement for a period of time. The NF must also notify the Department’s Office of Elder Services when the member’s Medicare benefits discontinue and MaineCare will again be responsible for the daily rate.
+
+4.	If the resident is transferring to another NF, copies of the current MDS assessment, the most recent MED form and all PAS CIC 
+records (Level I, Level II and Annual Resident Reviews) shall be sent along.
+
+	5.	Individuals who are discharged from a NF to their home or community setting shall be made aware of community resources prior to discharge. A referral may be submitted to the Department or its Authorized Entity for an assessment for long term care services.
+
+D.	Resident Transfer and Discharge Rights
+
+A nursing facility must permit each resident to remain in the facility and must not transfer or discharge the resident from the facility unless:
+
+1.	the transfer or discharge is necessary to meet the resident's welfare or medical needs and the resident's welfare or medical needs cannot be met in the facility;
+
+2.	the transfer or discharge is appropriate because the resident's health and/or functional abilities has improved sufficiently so the resident no longer needs the services provided by the facility; as determined by the resident’s physician or a third party payor including Medicare and/or MaineCare;
+
+the safety of individuals in the facility is endangered;
+
+67.05	POLICIES AND PROCEDURES (cont.)
+
+4.	the health of individuals in the facility would otherwise be endangered as determined by the resident's physician;
+
+5.	the resident has failed, after reasonable and appropriate notice, to pay or have paid on his or her behalf (including MaineCare, Medicare) for the stay at the facility. Conversion from private pay rate to payment at the MaineCare rate does not constitute non-payment. For a resident who becomes eligible for MaineCare after admission to a facility, the facility may charge a resident only allowable charges under MaineCare; or
+
+	6.	the facility ceases to operate. In the event a NF ceases to operate and the member is to be transferred to another NF, the member must accept the first available placement that is appropriate to meet his or her medical care needs within a sixty (60) miles radius of the member’s home, (or the NF, if this is considered home) or MaineCare reimbursement will cease. The member may accept a placement beyond the sixty (60) miles radius, however, this cannot be required.
+
+	The resident's clinical record shall contain documentation describing the basis for the transfer or discharge. When a resident is transferred or discharged for reasons described in 67.05-9(D)(1) or (2), the resident's clinical record shall contain documentation by the resident’s physician that identifies the need for transfer or discharge and Interdisciplinary Care Team planning. The member’s clinical record must be documented by a physician if the resident is being discharged for the reasons described in 67.05-9(D)(4). Documentation by a physician is not required if the discharge is based upon the reasons described in 67.05-9(D)(3), (5) or (6).
+
+The facility must demonstrate that appropriate multidisciplinary interventions have been tried and have failed before discharging a resident because of violent behavior.
+
+E.	Pre-transfer and Pre-discharge Notice
+
+1.	In General - Before transferring or discharging of a resident, a nursing facility must -
+
+a.	notify the resident (and, if known, a family member of the resident or legal representative) of the transfer or discharge and the reason(s);
+
+	b.	record the reason(s) in the resident's clinical record, including any documentation required in Section 67.05-9(D)(1-6) above; and
+
+67.05	POLICIES AND PROCEDURES (cont.)
+
+c.	include in the notice the items described in Section 65.05-9(E)(3) below.
+
+2.	Timing of Notice - Written notice must be made at least thirty (30) days in advance of the resident's transfer or discharge except:
+
+	a.	in a case described in Section 67.05-9(D) (3)and (4),
+
+b.	in a case described in Section 67.05-9(D)(2) where the resident's health and/or functional abilities improve sufficiently to allow a more immediate transfer or discharge;
+
+c.	in a case described in Section 67.05-9(D)(1) where a more immediate transfer or discharge is necessitated by the resident's urgent medical needs; or
+
+d.	in a case where a resident has not resided in the facility for thirty (30) days.
+
+In the case of such exceptions, written notice must be given as many days before the date of the transfer or discharge as is practicable.
+
+In addition, oral notice shall be provided immediately to the resident, his/her legal representative, or a family member (if they are able to be contacted) unless the discharge meets the exceptions. (67.05-9(E)(2)(a - d).
+
+3.	Items included in notice - Each notice must include:
+
+a.	the reason for the transfer or discharge including events that are the basis for such action;
+
+b.	the effective date of the transfer or discharge;
+
+c.	the location to which the resident is transferred or discharged;
+
+d.	notice of the resident’s right to appeal the transfer or discharge as set forth in Section 67.05-9(G);
+
+e.	the mailing address and telephone number of the State Long-term Care Ombudsman Program which is: P.O. Box 2723, Augusta, Maine 04333, 1-800-499-0229 (in-state only) and (207) 621-1079 (local and out-of state);
+
+
+67.05	POLICIES AND PROCEDURES (cont.)
+
+f.	in the case of resident’s with developmental disabilities, the mailing address and telephone number of the Office of Advocacy Services, Department of Health and Human Services, Office of Adults with Cognitive and Physical Disabilities, which is: 40 State House Station, Augusta, Maine 04333-0040, 287-4228; and for residents with mental illness, the advocacy office is “Disability Rights Center of Maine”, Office of Adults with Mental Illness, 40 State House Station, Augusta, Maine 04333-0040, 626-2774 or 1-800-452-1948.
+
+g.	the resident’s right to be represented by him or herself or by legal counsel, a relative, friend or other spokesperson.
+
+F.	Orientation for Transfer or Discharge
+
+A nursing facility must provide sufficient preparation and orientation to residents to ensure safe and orderly transfer or discharge from the facility as defined in the Department's "Regulations Governing the Licensing and Functioning of Skilled Nursing Facilities and Nursing Facilities."
+
+1.	Sufficient preparation and orientation shall include, a discharge summary that includes -
+
+a.	a recapitulation of the resident’s stay;
+
+b.	a final summary of the resident’s status to include an assessment of the resident’s current functional and physical abilities at the time of the discharge that is available for release to authorized persons and agencies, with the consent of the resident or legal representative; and
+
+c.	a post-discharge plan of care developed with the participation of the resident and his or her family (if available), that will assist the resident to adjust to his or her new living environment.
+
+2.	Sufficient preparation may include trial visits by the resident to a new location, working with family to ask their assistance in assuring the resident that valued possessions are not left.
+
+G.	Hearings
+
+A notice of intent to transfer or discharge (see Section 67.05-9(E)) shall include a statement that any resident has the right to appeal a decision to transfer or discharge to the Office of Administrative 
+
+
+67.05	POLICIES AND PROCEDURES (cont.)
+
+Hearings, Department of Health and Human Services. To challenge the transfer or discharge, submit a request in writing to the:
+
+	The Office of Administrative Hearings
+Department of Health and Human Services
+11 State House Station
+Augusta, Maine 04333-0011
+
+Hearings will be held on an expedited basis and a written decision will be rendered within three (3) working days. The decision by The Office of Administrative Hearings is enforceable following two (2) working
+days of the written decision, unless the resident has appealed the decision in court. The appeal must be submitted within two (2) working days. A facility decision to transfer or discharge will be upheld if consistent with the standard set forth in Section 67.05-9(D), (E), and (F). The hearing officer may consider violations, by the facility, of federal or state statutes or regulations that may have contributed to the basis for discharge.
+
+A facility may not transfer or discharge a resident until a decision is rendered if that resident has requested a hearing within ten (10) days of receipt of notice unless:
+
+1.	the health or safety of individuals is in immediate risk and cannot be otherwise protected until a decision is rendered (see Section 67.05-9(D) (3) and (4));
+
+2.	immediate transfer or discharge is necessitated by the resident's urgent medical need (see Section 67.05-9(D)(1)).
+
+Hearings will be held as described in Chapter I of this Manual unless inconsistent with this Section in which case this Section shall govern.
+
+67.05-10	Quality Assurance
+
+	Each nursing facility shall have in effect a written quality assurance plan that includes, but is not limited to:
+
+1.	Utilization Review
+
+2.	Infection Control
+
+3.	Discharge Planning
+
+As part of utilization review a NF is required to review the necessity for continued stay and discharge planning in accordance with Section 67.
+
+The Department will monitor the NF's compliance with Section 67.
+
+67.05	POLICIES AND PROCEDURES (cont.)
+
+67.05-11	Prior Approval for Payment of Bed Holds During a Hospitalization
+
+A.	All nursing facilities must provide written information to the member and a family member or legal representative that specifies the Department's bed hold policy and the facility's bed hold policy before the member is transferred to a hospital and at the time of transfer.
+
+	B.	A NF shall provide a member with the opportunity for readmission following hospitalization, if the individual remains a MaineCare member. The NF must request prior approval on the day of admission to the hospital or the first working day after admission, if admission is on a non-working day by submitting the Department’s member transfer form to the Department. If the NF fails to do so, reimbursement will be granted only for the remainder of the allowed days. If the NF fails to notify the Department Services, the patient shall not be billed for non-reimbursed days.
+
+C.	Effective March 25, 2013, payment of bed holds for a semi-private room for a short-term hospitalization of the member shall be granted up to four (4) days (midnights) absence through March 31, 2013, as long as the member is expected to return to the nursing facility. 
+
+	Effective April 1, 2013, payment for bed holds shall be granted up to seven (7) days (midnights) absence per inpatient hospitalization absence, as long as the member is expected to return to the nursing facility. 
+
+If a member leaves the hospital and does not return to the NF, MaineCare reimbursement for the bed hold will stop as of the date of discharge from the hospital.
+
+If the member’s hospitalization exceeds the applicable limit on the number of bed hold days, the resident must receive a medical eligibility assessment prior to continued MaineCare coverage of nursing facility services.
+
+MaineCare eligible members who are admitted to a NF from their home or community living situation and their expected stay is to be less than thirty (30) days in the NF, would not qualify for bed hold days. MaineCare members authorized under extraordinary circumstances (see Section 67.06) or awaiting placement for residential care (see Section 67.06-9) are not eligible for bed hold days. The facility must notify the Department by faxing the member transfer form.
+
+	D.	Upon a resident’s readmission to a NF, following a hospital stay, the NF must FAX or mail a completed copy of the Member Transfer Form to the Department.
+
+67.05	POLICIES AND PROCEDURES (cont.)
+
+E.	If at any point it is determined that the resident will not return to the NF, the Department must be notified and reimbursement for the bed hold will cease.
+
+	F.	Family or friends of a MaineCare-eligible resident may make payment for bed holds in excess of the maximum number of days allowed under MaineCare regulations. This payment may not exceed the usual and customary rate for a bed in a semi-private room.
+
+	67.05-12	Therapeutic Leave of Absence for a MaineCare Member
+
+Effective March 25, 2013, all nursing facilities are responsible for informing residents in writing of their right to one (1) overnight leave of absence through March 31, 2013.All nursing facilities must inform patients who are in days awaiting NF placement, in writing, of their right to twenty (20) therapeutic overnight leaves of absence from April 1, 2013 through June 30, 2013; and twenty (20) overnight leaves of absence from July 1, 2013 through June 30, 2014 and subsequent state fiscal years. A leave of absence may not be used to extend a bed hold during a hospital stay. 
+
+Payment may be made to a facility to reserve a bed for a resident on an overnight leave of absence if the following conditions are met:
+
+A.	The resident's plan of care provides for such an absence;
+B.	The resident takes no more than one (1) overnight leave of absence from March 25, 2013 through March 31, 2013; 
+C.	The member takes no more than a total of twenty (20) therapeutic overnight leaves of absence from April 1, 2013 through June 30, 2013;
+D.	The member takes no more than a total of twenty (20) therapeutic overnight leaves of absence from July 1, 2013 through June 30, 2014 and subsequent state fiscal years;
+E.	If at any point it is determined that the resident will not return to the NF, the Department must be notified and reimbursement for the bed will cease.
+
+67.05-13	Services, Supplies and Equipment
+
+A.	Routine Services, Supplies and Equipment Included in Regular Rate for Reimbursement
+
+1.	Routine services, supplies, and equipment shall be supplied by the facility as part of the regular rate of reimbursement. Routine services means regular room, dietary and nursing services, minor medical and surgical supplies, and the use of equipment. (See Chapter II, Section 60, “Medical Supplies and Durable Medical Equipment” for a list of supplies and equipment provided to members in a NF as part of the regular rate of reimbursement.)
+
+67.05	POLICIES AND PROCEDURES (cont.)
+
+2.	Facilities which serve a special group of the disabled are expected to furnish the equipment and services normally used in their care (e.g., children's wheelchairs) as part of their reasonable cost.
+
+B.	Supplies and Equipment for Which Department May Be Billed by a Supplier or Pharmacy
+
+1.	Equipment and supplies which, when ordered by a physician, may be payable to a supplier or pharmacy in accordance with the policies established under Section 60 and Section 80 of Chapter II of this Manual.
+
+2.	For purposes of reimbursement, acute care general hospitals that are affiliated with the facility through the same corporate structure, or have a NF as a distinct part of a larger institution, may be considered a supplier of these items and must bill the Department as a provider of medical supplies and durable medical equipment for patients who are residents of the hospital-based NF.
+
+C.	Services, Supplies and Equipment Costs Charged to Residents' Personal Funds
+
+1.	Personal Funds
+
+Charges may not be imposed against the personal funds of a resident for any item or service for which payment is made under MaineCare. In addition, residents shall not be required to supplement MaineCare payments for items or services that are covered.
+
+	2.	Member Cost of Care
+
+a.	A member’s cost of care is determined by OIAS under MaineCare eligibility rules.
+
+b.	Routine supplies and personal care items that are provided by the NF under 67.05-13(A), may not be purchased by a member and then deducted from his or her client cost of care.. If a resident has a therapeutic need for a particular brand name item, or product, as documented by the physician, then the NF must provide that brand name item or product to the resident as part of the NF regular rate of reimbursement.
+
+67.05	POLICIES AND PROCEDURES (cont.)
+
+c.	The cost of "Less-Than-Effective" drug products, identified under the FDA's Drug Efficacy Study Implementation (DESI) program, may not be deducted from a resident's client cost of care. These drug products are not covered under MaineCare.
+
+d.	Drugs of manufacturers not participating in the Rebate Program may not be deducted from a resident’s client cost of care. Reimbursement for these drug products is not covered under MaineCare.
+
+	e.	Some items are covered by MaineCare only for individuals under the age of twenty-one (21). In cases where an individual age twenty-one (21), or over, requires an item or service covered by MaineCare only for individuals under age twenty-one (21), the amount to be charged to the client assessment or to the responsible party, shall be limited to the MaineCare rate for that item or service.
+
+f.	Eyeglasses for individuals residing in a nursing facility, who are age twenty-one (21), or over, must be obtained through the Vision Care Volume Purchase Contract.
+
+D.	Physical Therapy (PT) and Occupational Therapy (OT) Services
+
+Physical and occupational therapy services must be directly and specifically related to an active written treatment regimen designed by the physician after any needed consultation with the qualified physical or occupational therapist, and the services must be included in the written plan of care. To constitute physical or occupational therapy, a service furnished to a member must be reasonable and necessary for the treatment of his or her illness or condition. The services must be of such a level of complexity and sophistication, or the condition of the member must be such, that the judgment, specialized knowledge, and skills of a qualified physical or occupational therapist are required. 
+
+See Section 68, Occupational Therapy Services and Section 85, Physical Therapy Services of the MaineCare Benefits Manual for licensing criteria of the practitioner and covered services.
+
+1.	Limitations
+
+a.	MaineCare will not reimburse for more than two (2) hours each of PT and OT per day.
+
+PT or OT services can be provided by a home health agency certified as a Medicare provider, or an outpatient department of an acute care hospital, or a licensed independent therapist as defined in Chapter II, Sections 68 and 85 of the MaineCare Benefits Manual.
+
+67.05	POLICIES AND PROCEDURES (cont.)
+
+NFs may bill for services of PT and/or OT on their staff or under a contract with them. Reimbursement for services provided by a licensed independent physical or occupational therapist will be limited to the maximum allowance as defined in Chapter III, Sections 68 and 85 of the MaineCare Benefits Manual.
+
+For purposes of reimbursement, acute care general hospitals that are affiliated with the facility through the same corporate structure, or have a NF as a distinct part of a larger institution, must bill the Department as a provider of physical or occupational therapy services on the NF’s billing form for patients who are residents of the hospital-based NF.
+
+2.	Reimbursement for PT and OT Consultations
+
+a.	Consultation provided to a NF must be reimbursed at a reasonable cost.
+
+b.	Types of consultation that may be approved include:
+
+1.	In-service education programs for staff members who have not been trained to carry out procedures that may be delegated by a physical or occupational therapist; and
+
+	2.	Professional consultation provided to administrators with respect to purchasing equipment or modification of a physical plant to meet the needs of individuals.
+
+E.	Speech and Hearing Services
+
+All covered services provided under Section 109 of the MaineCare Benefits Manual must be ordered or requested in writing by a physician, physician assistant, or advanced practice registered nurse as allowed by the respective licensing authority and his or her scope of practice.
+
+Covered speech-language pathology services for members aged twenty-one (21) or older are also limited to those members who have been assessed to have rehabilitation potential as defined in Section 67.01-26 or to those who have demonstrated medical necessity for speech therapy to avoid a significant deterioration in ability to communicate orally, safely swallow or masticate. A member’s rehabilitation potential must originate from a physician or primary care provider.
+
+
+67.05	POLICIES AND PROCEDURES (cont.)
+
+Adult members (age twenty-one (21) and over), must have an initial assessment by a physician or primary care provider that documents that the member has experienced a significant decline in his/her ability to communicate orally, safely swallow or masticate, and that the member’s condition is expected to improve significantly in a reasonable, predictable period of time as a result of the prescribed treatment plan.
+
+One initial evaluation of the member is covered per provider per year. The member must receive an initial evaluation by a speech-language pathologist annually that supports the physician or primary care provider’s determination that rehabilitation potential exists.
+
+If speech-language pathology services are to be continued beyond a period of six (6) months, a re- evaluation by a speech-language pathologist must be completed every sixth month from the initial determination of eligibility, in order to determine that eligibility continues to exist. A report of the results of the speech-language pathologist’s six-month re-evaluation must be sent to the member’s physician or primary care provider, who will use that information to decide if eligibility continues to exist. If the physician or primary care provider agrees in writing that eligibility continues to exist, the member may continue to receive speech-language pathology services for an additional six (6) month period.
+
+6.	Limitations
+
+Speech and hearing services when provided in a NF setting, will be reimbursable to the following types of providers only: a home health agency certified as a Medicare provider, or a speech and hearing clinic certified as a Medicare provider, or a licensed speech-language pathologist, or audiologist, or a speech and hearing agency as defined in Section 109 of the MaineCare Benefits Manual.
+
+NFs may bill for services of a speech-language pathologist or audiologist on their staff or under a contract with them. Reimbursement for services provided by a speech-language pathologist or audiologist will be limited to the maximum allowance as defined in Chapter III, Section 109 of the MaineCare Benefits Manual.
+
+For purposes of reimbursement, acute care general hospitals that are affiliated with the facility through the same corporate structure, or have a NF, as a distinct part of a larger institution, must bill the Department as a provider of speech and hearing services on the NF’s billing form for members who are residents of the hospital-based NF.
+
+
+67.05	POLICIES AND PROCEDURES (cont.)
+
+7.	Reimbursement for Consultation Services
+
+Types of consultation that may be approved include: In-service education programs for staff members who have not been trained to carry out procedures and principles developed by the licensed speech pathologist and/or audiologist.
+
+F.	Mental Health Services
+
+Mental Health Services are covered when those services meet all the following conditions:
+
+1.	The services must be of a level of less intensity than those defined as specialized services;
+
+2.	The services must be specifically designed by a plan of care developed in response to the findings and recommendations of PAS CIC and approved by the NF interdisciplinary team or, for individuals exempt from PAS, the services must be specifically designed by a plan of care developed in response to the findings and recommendations of, and approved by, the NF interdisciplinary team;
+
+3.	The service must be reasonable and necessary for the treatment of the individual's mental illness;
+
+4.	The services must be of a level that the skills and expertise of a mental health professional are required;
+
+The services must be provided by an individual appropriately licensed or certified in the State or province in which he or she practices and practicing within the scope of that licensure or certification. A clinician includes the following: licensed clinical professional counselor (LCPC); licensed clinical professional counselor-conditional (LCPC-conditional); licensed clinical social worker (LCSW); licensed master social worker conditional clinical (LMSW-conditional clinical); licensed marriage and family counselor (LMFT); licensed marriage and family counselor-conditional (LMFT-conditional); physician; psychiatrist; advanced practice registered nurse psychiatric and mental health nurse practitioner (APRN-PMH-NP); advanced practice registered nurse psychiatric and mental health clinical nurse specialists (APRN-PMH-CNS); psych examiner, RNC, or licensed clinical psychologist.
+
+6.	The services must be provided with the expectation that there will be improvement in mental, psychosocial and functional abilities;
+
+67.05	POLICIES AND PROCEDURES (cont.)
+
+7.	Mental health services will include consultation with and education of staff in the implementation of the treatment plan recommendations;
+
+	8.	Mental health services in a NF setting will be reimbursed when ordered by a physician; and
+
+9.	Mental health services must be provided and reimbursed in accordance with the relevant sections of the MBM and Chapter III of this Section, “Principles of Reimbursement for Nursing Facility Services”.
+
+G.	Services for Individuals with Intellectual Disability or Other Related Condition
+
+Community support services are covered for those members residing in the NF who meet the eligibility criteria under Section 21 or have an “other related condition” as defined in 67.01-27 above. The services must meet all the requirements outlined below:
+
+The community support services are designed to increase or maintain a member’s ability to successfully engage in inclusive social and community relationships and to maintain and develop skills that support health and wellbeing. These services focus on community inclusion, personal development, and support in areas of daily living skills if necessary.
+
+The services are provided by individuals who have successfully completed the Direct Support Professional (DSP) curriculum or the Maine College of Direct Support.
+
+All services delivered are written and documented in the member’s plan of care.
+
+The services must be provided and reimbursed in accordance with Chapter III, Section 67, “Principles of Reimbursement for Nursing Facility Services”, Subsection 70, “Special Service Allowance”.
+
+H.	Services for Individuals with Acquired Brain Injury (ABI)
+
+	1.	A nursing facility that has Commission on Accreditation of Rehabilitation Facilities (CARF) accreditation may be designated by the Department as a provider of service for individuals with Acquired Brain Injury.
+
+	2.	The Department or its Authorized Entity will review each individual’s need for ABI services at least annually, based upon the criteria set forth in 67.02.
+
+67.05	POLICIES AND PROCEDURES (cont.)
+
+	Additionally, the member must show measurable improvement in a reasonable, and generally predictable, period of time. Once it is established that the restorative potential has been reached, and maintenance rehabilitation is required, the member shall be transferred to an appropriate setting.
+
+3.	A nursing facility providing ABI Services shall provide a program of goal-oriented, comprehensive, interdisciplinary and coordinated services directed at restoring an individual to the optimal level of physical, cognitive, and behavioral functioning. Covered services include medical, rehabilitative, and social services provided by appropriately licensed or qualified staff as defined in the Principles of Reimbursement for Nursing Facilities.
+
+4.	All direct care staff will have expertise in brain injury rehabilitation as demonstrated by achieving the Certified Brain Injury Specialist (CBIS) designation from the Academy of Certified Brain Injury Specialists (ACBIS) or demonstrating competency through an equivalent training program supervised by the provider and approved by the Department (Brain Injury Services). New staff will achieve CBIS or demonstrate equivalent competency within twelve (12) months from date of hire. If an equivalent training program is used, the provider must submit documentation and receive approval from the Department (Brain Injury Services) for this program. 
+
+The provider will submit a detailed curriculum, training and evaluation plan to the Department for review and approval prior to implementation of an equivalent training program. The provider must seek reevaluation of equivalent training programs from the Department on an annual basis. Documentation of plan approval and results of all training and evaluation of staff will be maintained by the provider for Department inspection. Equivalent training programs will be evaluated and approved by the Department based on the following:
+
+A.	Curriculum - must cover all of the content areas of the CBIS course; and
+B.	Evaluation - assessment methods used to determine the staff member’s competence in brain injury rehabilitation including some form of written test; and 
+C.	Continuing Education Requirements – must have at least 10 hours of continuing education credits for staff each year. 
+
+A roster of provider staff, their CBIS (or equivalent) status, date of hire, and professional license status (type, number & standing) if applicable, will be submitted to the Department (Brain Injury Services) annually. 
+
+
+	Reimbursement for all NF-ABI services will be included in the per diem rate, as described in the Principles of Reimbursement for Nursing Facilities. Members classified for NF-ABI are prohibited from receiving coverage for services under Section 102, “Rehabilitative Services”, as long as the member is a NF-ABI resident.
+
+I.	Pharmaceutical Services
+
+All nursing facilities shall comply with State and Federal regulations that govern obtaining, dispensing and administering drugs and biologicals. Refer to the “Regulations Governing the Licensing and Functioning of Skilled Nursing Facilities and Nursing Facilities” for rules regarding pharmaceutical services.
+
+A pharmacy affiliated through common ownership or control with a hospital and/or nursing facility is allowed to dispense covered MaineCare prescription drugs to MaineCare members in that facility. The drugs must be dispensed by a registered pharmacist, according to dispensing regulations. Drugs are to be billed in accordance with the Department's billing guidelines and drug claim processing system, at Average Wholesale Price (AWP) without professional fee. (Also see Section 80, “Pharmacy Services”.)
+
+	J.	Respiratory Therapy Services
+
+	1.	The following respiratory therapy services are included in the facility’s per diem rate and shall not be billed separately:
+
+		a.	Maintenance of artificial airways;
+
+b.	Therapeutic administration and monitoring of medical gases (especially oxygen), pharmacological active mists and aerosols;
+
+	c.	Bronchial hygiene therapy, including deep breathing and coughing exercises, IPPB, postural drainage, chest percussion and vibration, and nasotrachael suctioning; and
+
+	d.	periodic assessment and monitoring of acute and chronically ill members for indications for respiratory therapy services.
+
+67.05	POLICIES AND PROCEDURES (cont.)
+
+	2.	The following services shall be provided by appropriately licensed professionals of the facility. Effective 7/1/15, if CMS approves, the facility is eligible to receive the Ventilator Services rate as described in Chapter III, Section 67, Principle 42. The following Respiratory Therapy Services shall be billed separately:
+
+a.	diagnostic tests for evaluation by a physician (e.g.: pulmonary function tests, spirometry, and blood gas analysis); and
+
+	b.	pulmonary rehabilitation that includes exercise conditioning, breathing retraining, and patient education regarding the management of the member’s respiratory problem.
+
+K.	Services for Members Requiring Ventilator Care
+
+Effective 7/1/15, if CMS approves, Ventilator Care for Members requiring 24 hour ventilator care or requiring weaning from a ventilator, under the care of a respiratory therapist and a pulmonologist. In order to provide this care, at a minimum, the facility must supply their own ventilators, employ or contract with a pulmonologist or other health care professional trained in respiratory therapy available to meet the member’s needs, and have the staff required to meet the additional staffing needs of ventilator patients. 
+
+L.	Other Services
+
+The attending physician's order is required for all other types of services provided in a NF (e.g.: psychological services, podiatric services, etc.). The individual providing the service shall bill in accordance with the policies and procedures in the section of this Manual that apply to his or her specialty.
+
+67.05-14	Transportation to Services Outside of the Nursing Facility
+
+
+A.	Arranging or Providing Transportation
+
+NF's are required to assist members in gaining access to vision, hearing, or other medically necessary MaineCare services by making appointments, and providing or arranging for transportation. To enable a NF to provide transportation, the reasonable costs of operating one (1) motor vehicle is an allowable cost in the facility's reimbursement rate (as set forth in this Section, Chapter III, “Principles of Reimbursement for Nursing Facilities”). NF's must use their agency vehicle to transport members whenever possible. Each time a member is transported by someone other than a family member/friend, or the NF's agency vehicle, and for which MaineCare reimbursement will be sought, the member's record must document why the NF vehicle was not used.
+
+67.05	POLICIES AND PROCEDURES (cont.)
+
+B.	Transportation Agency
+
+Effective August 1, 2013, when a member requires transportation to a MaineCare covered service, and the NF or a family member/friend is unable to provide it and the NF has documented why the transportation cannot be provided, then the MaineCare Non-Emergency Transportation (NET) Broker must be called to make travel arrangements. NF staffing shortages should not be an ongoing reason for NET services. It is the expectation that the NF is fully staffed and a need to use a transportation agency due to unavailable staff would not occur frequently.
+
+The only exception is when the services of a wheelchair van are medically necessary, in which case, the NF must call the NET Broker and the NET Broker will arrange for this transportation as needed, if the NF does not own a vehicle that can accommodate a wheelchair. (e.g. the member is not able to transfer from a wheelchair to a car or van that is owned by the NF) The NF must document in the member's medical record if this situation occurs.
+
+The NET Broker must work with the NFs to coordinate member appointments to utilize the available resources in the most cost effective manner.
+
+	67.05-15	Flu and Pneumonia Vaccinations
+
+		Upon admission, and annually every fall, each resident’s immunization status shall be updated, regardless of payor. Unless medically contraindicated or refused, the standard of care is to administer an annual flu (influenza) vaccination in the fall; and a pneumonia (pneumococcal) vaccination, that may be repeated no more than every five (5) years (other immunizations should also be reviewed and updated as necessary). As with any treatment, the resident has the right to refuse the vaccination. Each vaccination must be documented in the resident’s medical record. Each vaccination refusal by the resident (or guardian, agent or surrogate, as defined in 18-A MRSA Sec. 5-801) must also be documented in the resident’s record. Annually, the NF shall report to the Department, in a format specified by the Department, the number of residents, number and type of vaccinations administered, and the number of refusals for the reporting period.
+
+	67.05-16	Respite Services
+
+		A MaineCare waiver member may be admitted to a NF in order to receive “waiver” respite services for no more than thirty (30) days annually. The Medical Eligibility Determination (MED) assessment and the PAS screen are NOT required for a respite admission reimbursed by waiver funds. Respite 
+
+67.05	POLICIES AND PROCEDURES (cont.)
+
+services for a MaineCare home and community based waiver services member will be authorized and reimbursed through Section 19, “Home and Community Based Benefits for the Elderly and for Adults with Disabilities”, of the MaineCare Benefits Manual. If the member applies to remain in the NF, MaineCare coverage for NF services shall begin only after all of the requirements in Sec. 67.02 have been met and a classification period has been authorized by the Department or its Authorized Entity.
+
+67.05-17	Non-Covered Services
+
+A.	Payment by a relative of an additional amount to enable a member to obtain non-covered services such as a private room (single bed), telephone, television, and authorized bed reservation days is permitted. However, the additional charge for noncovered services shall not exceed the charge to private pay residents. The supplement for a private room shall be no more than the difference between the private pay rate for a semi-private room and a private room. There shall be a signed statement by the relative making the additional payment that he/she was notified and agreed to the payment for non-covered services before those services were provided.
+
+	B.	A private room is a noncovered service under the MaineCare program, but if there is a medical necessity for a private room, the nursing facility must make one available. However, reimbursement will be made only at the MaineCare semi-private room rate.
+
+	C.	Specialized services, as determined by a PAS CIC assessment, for NF residents diagnosed with mental illness, intellectual disability, or other related condition, are noncovered services under Section 67, “Nursing Facility Services”. (Also see Section 67.05-13(F)and (G) for covered MI/ID services).
+
+	D.	PT and OT therapy services related to activities for the general good and welfare of resident, e.g., general exercises to promote overall fitness and flexibility and activities to provide diversion or general motivation, do not constitute physical therapy for MaineCare purposes.
+
+Maintenance therapy (repetitive services not requiring the skills of a qualified physical or occupational therapist or the use of complex and sophisticated physical or occupational therapy procedures) is not a covered service, except as provided in Section 67.05-13(D).
+
+Services provided in the absence of a valid MED form completed by the Department or its Authorized Entity.
+
+Services that are provided outside an approved classification period.
+
+
+67.05	POLICIES AND PROCEDURES (cont.)
+
+67.05-18	Right of Appeal
+
+The following individuals may request an administrative hearing if aggrieved by a decision of the Department as set forth in this section.
+
+	A.	The Member, His or Her Family or Responsible Person
+
+An appeal may be made by the member, his or her family, or responsible person or the attending physician on behalf of the member, for any classification decision. In order to appeal, the member should state by letter his or her reasons for disagreement with the classification and any other pertinent information. This letter shall be addressed to the Director of the Office of Elder Services, Department of Health and Human Services, 11 State House Station, Augusta, Maine 04333-0011.
+
+B.	The Provider
+
+	Providers may request a hearing when aggrieved by a decision of the Department as set forth in Chapter I of this Manual. The procedure for administrative hearings is more specifically set forth in Chapter I of this Manual.
+
+67.05-19	Freedom of Choice
+
+	If a nursing facility contracts with or utilizes a single source of qualified outside resources such as pharmacy services, members must be given a choice of using this particular service or another qualified resource.
+
+67.05-20	Program Integrity
+
+All providers are subject to the Department’s Program Integrity activities. See Chapter I, “General Administrative Policies and Procedures”, Section 1.18 of the MBM for rules governing these functions.
+
+67.05-21	Confidentiality
+
+The disclosure of information regarding individuals participating in the MaineCare program is strictly limited to purposes directly connected with the administration of the MaineCare program. Providers shall maintain the confidentiality of information regarding these individuals in accordance with 42 CFR §431.300 et seq. and other applicable sections of State and Federal law and regulation.
+
+SOURCE 3: Administrative Hearings — Maine Department of Health and Human Services | https://www.maine.gov/dhhs/about-us/administrative-hearings | source date: none stated on page (footer copyright 2023) | retrieved: 2026-10-08
+Skip to main navigation
+
+
+Skip to main content
+
+
+Skip to footer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Maine.gov
+
+
+
+
+Agencies |
+
+
+Online Services |
+
+
+Help |
+
+
+Search Maine.gov
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Maine Department of Health and Human Services
+
+
+
+
+
+
+
+Hotlines
+
+
+
+
+Contact Us
+
+
+
+
+Online Services
+
+
+
+
+Privacy
+
+
+
+
+
+
+
+
+ Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Home
+
+
+
+
+About Us
+
+
+
+
+Diversity, Equity, & Inclusion
+
+
+
+
+Contact DHHS
+
+
+
+
+Hotlines / Crisis Numbers
+
+
+
+
+District Office Locations
+
+
+
+
+Administrative Office Locations
+
+
+
+ 
+
+
+
+Commissioner
+
+
+
+
+Staff
+
+
+
+
+Careers at DHHS
+
+
+
+
+Budget & Financial Management
+
+
+
+
+DHHS Budget
+
+
+
+
+Contract Management
+
+
+
+
+Contract Documents
+
+
+
+ 
+
+
+
+Division of Audit
+
+
+
+
+MaineCare Cost Report Template
+
+
+
+
+Division of Audit Appeal Decisions
+
+
+
+
+Social Services Audit
+
+
+
+ 
+
+
+ 
+
+
+
+Rulemaking
+
+
+
+
+Administrative Hearings
+
+
+
+
+Provider Appeal Decisions
+
+
+
+
+Frequently Asked Questions
+
+
+
+ 
+
+
+ 
+
+
+
+Programs & Services
+
+
+
+
+Health Insurance
+
+
+
+
+Food & Nutrition
+
+
+
+
+Human Services
+
+
+
+
+Health & Prevention Services
+
+
+
+
+Safety
+
+
+
+
+Education
+
+
+
+
+Employment Assistance
+
+
+
+
+Financial Assistance
+
+
+
+
+Inspections & Licensing
+
+
+
+ 
+
+
+
+Offices/Divisions
+
+
+
+
+Data & Reports
+
+
+
+
+DHHS Reports
+
+
+
+
+DHHS By the Numbers
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Department of Health and Human Services →
+ 
+ About Us →
+ 
+ Administrative Hearings
+ 
+
+
+
+
+
+
+
+
+
+
+About Us
+
+
+
+
+Contact Us
+
+
+
+
+Commissioner
+
+
+
+
+Staff
+
+
+
+
+Budget & Financial Management
+
+
+
+
+Careers at DHHS
+
+
+
+
+Rulemaking
+
+
+
+
+Administrative Hearings
+
+
+
+
+
+Provider Appeal Decisions
+
+
+
+
+Frequently Asked Questions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Administrative Hearings
+
+
+
+
+
+
+The Division of Administrative Hearings provides administrative hearings to citizens and clients who are aggrieved by actions or inactions of the Maine Department of Health and Human Services. Hearings are conducted on a variety of matters including, but not limited to, child support, medical eligibility determinations, eligibility for Food Supplement, MaineCare, Temporary Assistance for Needy Families, Emergency Assistance, ASPIRE, General Assistance and licensing matters. Hearings are generally held at the regional offices of the Maine Department of Health and Human Services from Sanford to Fort Kent.
+
+
+Resources
+
+
+
+Policy Concerning Use of Recording Devices in DHHS Offices (PDF)
+
+
+Order on Media, Cameras and Audio Recording in the Hearing Room (Word)
+
+
+2023 Changes to the Order of Reference (PDF)
+
+
+Maine Constitution, Statutes, and Law
+
+
+Office of Attorney General
+
+
+State of Maine Judicial Branch
+
+
+1995 Consent Decision (PDF)
+
+
+Administrative Hearing Regulation – 10-144 CMR ch. 1 (Word)
+
+
+
+
+
+
+ 
+
+
+
+
+
+Forms
+
+
+
+Subpoena Request Form (Word)
+
+
+Appointment of Authorized Representative form (PDF)
+
+
+Authorization to Release Information form (PDF)
+
+
+
+Contact Us
+
+
+Maine Department of Health and Human Services
+
+
+Division of Administrative Hearings
+
+
+109 Capitol Street
+
+
+11 State House Station
+
+
+Augusta, ME 04333-0011
+
+
+TEL: (207) 624-5350
+
+
+FAX: (207) 287-8448
+
+
+TTY: Users: Dial 711 (Maine Relay)
+
+
+DHHSadminhearings@maine.gov
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Credit
+
+
+
+
+
+
+
+
+
+Copyright © 2023
+
+
+All rights reserved.
+
+
+
+
+
+
+Information
+
+
+
+
+
+
+
+Site Policies
+
+
+Maine.gov
+
+
+DHHS Home
+
+
+Sitemap
+
+
+
+
+
+
+
+
+
+
+DHHS Address
+
+
+
+
+
+
+Department of
+
+
+Health and Human Services
+
+
+109 Capitol Street
+
+
+11 State House Station
+
+
+Augusta, Maine 04333
+
+
+Phone: (207) 287-3707
+
+
+FAX: DHHS Fax Numbers
+
+
+TTY: Maine relay 711
+
+
+
+
+
+
+Accessibility & Policy
+
+
+
+
+
+
+
+DHHS Tribal Collaboration Policy (PDF)
+
+
+Americans With Disabilities Act/Civil Rights Compliance
+
+
+Language Access
+
+
+Non-Discrimination Notice
+
+
+Hospital Price Transparency (DDPC) (RPC)
+
+
+Report a problem with this page
+
+SOURCE 4: Frequently Asked Questions — Administrative Hearings, Maine Department of Health and Human Services | https://www.maine.gov/dhhs/about-us/administrative-hearings/faq | source date: none stated on page (footer copyright 2023) | retrieved: 2026-10-08
+Skip to main navigation
+
+
+Skip to main content
+
+
+Skip to footer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Maine.gov
+
+
+
+
+Agencies |
+
+
+Online Services |
+
+
+Help |
+
+
+Search Maine.gov
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Maine Department of Health and Human Services
+
+
+
+
+
+
+
+Hotlines
+
+
+
+
+Contact Us
+
+
+
+
+Online Services
+
+
+
+
+Privacy
+
+
+
+
+
+
+
+
+ Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Home
+
+
+
+
+About Us
+
+
+
+
+Diversity, Equity, & Inclusion
+
+
+
+
+Contact DHHS
+
+
+
+
+Hotlines / Crisis Numbers
+
+
+
+
+District Office Locations
+
+
+
+
+Administrative Office Locations
+
+
+
+ 
+
+
+
+Commissioner
+
+
+
+
+Staff
+
+
+
+
+Careers at DHHS
+
+
+
+
+Budget & Financial Management
+
+
+
+
+DHHS Budget
+
+
+
+
+Contract Management
+
+
+
+
+Contract Documents
+
+
+
+ 
+
+
+
+Division of Audit
+
+
+
+
+MaineCare Cost Report Template
+
+
+
+
+Division of Audit Appeal Decisions
+
+
+
+
+Social Services Audit
+
+
+
+ 
+
+
+ 
+
+
+
+Rulemaking
+
+
+
+
+Administrative Hearings
+
+
+
+
+Provider Appeal Decisions
+
+
+
+
+Frequently Asked Questions
+
+
+
+ 
+
+
+ 
+
+
+
+Programs & Services
+
+
+
+
+Health Insurance
+
+
+
+
+Food & Nutrition
+
+
+
+
+Human Services
+
+
+
+
+Health & Prevention Services
+
+
+
+
+Safety
+
+
+
+
+Education
+
+
+
+
+Employment Assistance
+
+
+
+
+Financial Assistance
+
+
+
+
+Inspections & Licensing
+
+
+
+ 
+
+
+
+Offices/Divisions
+
+
+
+
+Data & Reports
+
+
+
+
+DHHS Reports
+
+
+
+
+DHHS By the Numbers
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Department of Health and Human Services →
+ 
+ About Us →
+ 
+ Administrative Hearings →
+ 
+ Frequently Asked Questions
+ 
+
+
+
+
+
+
+
+
+
+
+About Us
+
+
+
+
+Contact Us
+
+
+
+
+Commissioner
+
+
+
+
+Staff
+
+
+
+
+Budget & Financial Management
+
+
+
+
+Careers at DHHS
+
+
+
+
+Rulemaking
+
+
+
+
+Administrative Hearings
+
+
+
+
+
+Provider Appeal Decisions
+
+
+
+
+Frequently Asked Questions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Frequently Asked Questions
+
+
+
+
+
+
+What is a Fair Hearing?
+
+
+If you disagree with a Department of Health and Human Services' (DHHS) decision to grant, deny, or otherwise change a benefit, license, an amount owed, or some other decision affecting you, then you have a right to a hearing. Most DHHS hearings are held by the Division of Administrative Hearings. Sometimes hearings are held before another agency.
+
+
+When you have a hearing, it is our goal to make sure that the hearing process is meaningful and fair. We want to make sure that it gives an opportunity to each party to present their side of the story.
+
+
+The Hearing Officer will make sure you understand the hearing process and that you have the time you need to present information relevant to your case. The Hearing Officer only makes the decision after considering the testimony of all witnesses and other evidence. The Hearing Officer will put the decision in writing. That decision will either uphold or reverse the initial decision of the Department.
+
+
+Are there time limits to appeal a Decision by the Department??
+
+
+Time Limits: You generally have 30 days to appeal for a hearing. Each program has different rules on appeals. It is important to read carefully the notice you get from the Department to make sure that you do not miss any deadlines for your appeal. The Division of Administrative Hearings cannot give this information to you. Be clear that you are filing for an appeal and that your letter is postmarked within the filing time period.
+
+
+You may be allowed to file a late appeal. You will need to show "good cause" for filing the appeal late. "Good cause" happens when you were prevented from making the deadline by circumstances beyond your control. "Good cause" is difficult to prove, so it is very important that your appeal is filed within the time required.
+
+
+How does a Hearing Get Scheduled?
+
+
+You will get a scheduling letter from the Division of Administrative Hearings (unless your hearing is a child support related hearing, then you will receive a notice directly from the Division of Support Enforcement and Recovery). The letter will state the time, date and place for the hearing.
+
+
+Your hearing may be held by telephone (however, it is recommended that you attend). You can also ask that your hearing be by telephone. To do this see the section below.
+
+
+Witnesses may testify by telephone. However, you must make arrangements with the witness beforehand. You must also tell us that you plan to have witnesses by phone. This is so we can be sure to have things set up for your witness to testify by telephone.
+
+
+What If the Date for the Hearing is Bad for Me?
+
+
+Carefully note the DATE, TIME and LOCATION of the hearing. You must make every effort to attend the hearing.
+
+
+If you have a very good reason and cannot make it, let us know immediately. Generally, hearings will not be postponed for personal reasons, vacations, or business appointments since these can often be re-scheduled.
+
+
+How Do I get Ready for a Hearing?
+
+
+This appeal hearing may be your last chance to present your case, so be prepared to do it thoroughly.
+
+
+Department of Health and Human Services appeal hearings are generally said to be "de novo," Latin for afresh or anew. This is done to keep your hearing impartial and independent of the initial decision to grant or deny benefits, or a license. Therefore, the Hearing Officer who conducts the hearing is not bound by the initial decision and will base their decision only on the evidence and testimony presented at the appeal hearing.
+
+
+If papers, letters, statements, or other evidence were presented previously to the Department, and could be helpful to your case, you must take responsibility for presenting this information again at your appeal hearing. If there are direct witnesses to the circumstances surrounding your case, make sure they will attend your hearing to present their information. Before the hearing, you, your attorney, or authorized representative have the right to copy the case file.
+
+
+Can I Make Someone show up at the hearing?
+
+
+Witnesses who are not parties to the hearing may be necessary for you to present the facts that are favorable to your case. If you ask someone to appear as a witness and they refuse, you may request that they be "subpoenaed". This means they will be required by law to appear. You also have the same right to request a subpoena for written documents or other evidence that you cannot obtain on your own.
+
+
+If you need a subpoena, immediately call the Division of Administrative Hearings at (207) 624-5350. You will be sent a form to fill out.
+
+
+
+Request for subpoena form (Word)
+
+
+
+Do I Need to Show Up at the Hearing?
+
+
+It is important that you arrive on time for your hearing. You should arrive at least 15 minutes before the scheduled time of your hearing. If you do not appear, your appeal may be dismissed or the hearing could be held without you. Your failure to appear may result in you losing all rights of further appeal.
+
+
+What Happens at the Hearing?
+
+
+A Hearing Officer runs the hearing. The hearing is to decide if the Department was correct in their decision. Anyone with an interest in the outcome of the hearing is a "party" to the hearing. Parties to hearings are usually the Department and you.
+
+
+The Hearing Officer will make sure you understand the hearing process and that you have the time you need to present information relevant to your case. The Hearing Officer only makes the decision after considering the testimony of all witnesses and other evidence. The Hearing Officer will put the decision in writing. That decision will either uphold or reverse the initial decision of the Department.
+
+
+The hearing is a fact-finding process. It is like a trial, but not as formal. The appeal hearing is carefully controlled by the Hearing Officer. This is done to make sure each person has the same opportunity to present his/her case.
+
+
+The hearing will begin with the Hearing Officer making an opening statement about what will happen during the hearing. He/she will answer any questions you might have about the hearing process. The Hearing Officer will only use information presented at the hearing in reaching his/her decision.
+
+
+All testimony is given under oath and is recorded. The Hearing Officer will begin receiving testimony by swearing in the first Department witness.
+
+
+The burden of proof varies depending on the issue. The party carrying the burden of proof usually presents their case first. The burden of proof generally lies with the Department to provide proof by a "preponderance of the evidence" that the decision they made was correct.
+
+
+The Hearing Officer will allow the Department and its witnesses to tell their story. You will be allowed to cross-examine each of the Department's witnesses. The Hearing Officer may ask questions also. When the Department has finished presenting its case, you will then be given the opportunity to present your case. The same process of questioning and cross-examination will take place (with the Department being allowed to cross-examine you and/or your witnesses).
+
+
+The Hearing Officer will close the hearing when neither side has any additional information or evidence to present. If you need clarification or have questions at any time during the hearing, ask the Hearing Officer for assistance.
+
+
+Finally, it is important to remember that the hearing is held to gather facts, not to get into an argument. Arguing, or getting angry during a hearing, prevents you from clearly stating the facts of your case. You will give a much better presentation if you stay calm and do not allow emotions to cloud the issues.
+
+
+What Type of Evidence is Considered?
+
+
+Only evidence presented at the hearing will be considered; therefore, you should bring any documents or witnesses that can directly help your case. Carefully think through your case. Ask yourself what information, documents, or witnesses will help to establish the facts in your favor.
+
+
+Choose witnesses who have first-hand information: a person who directly saw or heard the event to which they are testifying. Someone who testifies about what someone else said, saw or heard is giving hearsay; therefore, he/she can only have limited knowledge of that event. A witness with first-hand information is generally considered more reliable than hearsay evidence since he or she can be cross-examined.
+
+
+Some hearsay is allowed. However, it is generally not as reliable as testimony from someone who has first-hand information. Testimony given at the hearing, under oath and subject to cross-examination, is often given more weight than hearsay statements.
+
+
+How Do I Get Ready for My Hearing?
+
+
+
+Prepare yourself for the appeal hearing.
+
+
+Think about your case and ask yourself what information, documents, or witnesses will help establish the facts in your favor.
+
+
+Choose witnesses who have direct, personal knowledge of events about your case.
+
+
+Stick to the facts. Emotions usually cloud the issue and prevent you from presenting your case effectively.
+
+
+Organize your facts on paper. Make a list of the important points you would like to present at the hearing.
+
+
+Make another list of the points you think the opposing party may make. Consider what you will say or ask in response.
+
+
+
+Can I Have an Attorney or Someone Else Represent Me?
+
+
+You have the right to bring an attorney or other person to represent you at your hearing. The Hearing Officer will make sure all parties are given an opportunity to present their case.
+
+
+IF YOU CHOOSE TO HAVE SOMEONE REPRESENT YOU, YOU MUST COMPLETE, DATE AND SIGN THE DHHS “APPOINTMENT OF AUTHORIZED REPRESENTATIVE” FORM.  ALSO, IF YOU INTEND THAT THE AUTHORIZED REPRESENTATIVE HAVE ACCESS TO VIEW, COPY OR ACCESS YOUR PROTECTED HEALTH INFORMATION OR OTHER CONFIDENTIAL OR IDENTIFIABLE INFORMATION (“PROTECTED INFORMATION”) AND THAT PERSON DOES NOT ALREADY HAVE LEGAL STANDING OR A COURT ORDER THAT AUTHORIZES THE PERSON TO HAVE SUCH ACCESS THEN YOU MUST SUBMIT A DULY COMPLETED AND SIGNED “AUTHORIZATION TO RELEASE INFORMATION FORM.”  CONTACT THE DHHS PROGRAM THAT MADE THE DECISION YOU ARE APPEALING TO OBTAIN THE FORMS.
+
+
+
+Download the Appointment of Authorized Representative form (PDF)
+
+
+Download the Authorization to Release Information form (PDF)
+
+
+
+It is the Hearing Officer's job to make sure each party receives a fair and unbiased hearing, whether or not he/she chooses to have representation. If you believe your case is complicated, or you think you may be uncomfortable presenting your case, you can hire a lawyer or representative of your choice to present your case. Your attorney or representative will be given an opportunity to question the witnesses.
+
+
+If you choose to have legal representation, contact your attorney immediately to allow them ample time to prepare for the hearing. It is your responsibility to notify them of the time and place of the hearing and to pay any fees charged for such representation.
+
+
+What if I Need Special Arrangements for the Hearing?
+
+
+If you need special services, such as accommodations for people with disabilities or an interpreter to present your facts at the hearing, contact the DHHS program that made the decision you are appealing in advance so they can make the necessary arrangements.
+
+
+Telephone Hearings and Documents in General
+
+
+Telephone hearings (via "conference call") allow you to have a hearing without the expense, time or possible hazard of traveling to a central hearing site.
+
+
+Telephone hearings are scheduled by the Division of Administrative Hearings. Not all hearings can be held by telephone. In deciding if a telephone hearing can be held, the Office will consider things such as the number of witnesses and documents, the length of the hearing, the distance to a central hearing site, and the safety of the participants.
+
+
+In a telephone hearing, your testimony and that of your witness is taken, under oath, by phone. The Hearing Officer conducts the hearing in the same manner as an in-person hearing, using the same question and answer format. You will have the same opportunity to present your case and question the other people involved. In certain hearings, the Department's representative may conduct their portion of the hearing by telephone.
+
+
+On the Notice of Hearing, you will be provided a toll free number to call with a conference code.  You must call into the conference and enter the conference code as prompted by the instructions.  If you do not call into the conference, your hearing will be treated as abandoned.   Important: If your hearing will be by telephone, any documents or other similar types of evidence you would like to present must be provided to the other party and to the Division of Administrative Hearings no later than 7 days prior to the hearing. Even if you participate in the hearing in person, any documents or other similar types of evidence you would like to present must be provided to the hearing officer and the opposing party no later than 7 days prior to the hearing.
+
+
+What Happens After the Hearing?
+
+
+You will get a written decision, by mail, from the Hearing Officer approximately 30 days after the hearing is closed.
+
+
+The decision may take one of two forms. For most hearings, the Hearing Officer's written decision is the final agency action. For some hearings, the Hearing Officer's written decision will be a "Recommended Decision." In this type of case, the Commissioner of the Department of Health and Human Services will have the final say and will issue a written "Final Decision."
+
+
+If you do not agree with the final decision of the Hearing Officer, you can appeal the decision within 30 days, to the Superior Court. If you do not agree with the "Recommended Decision" of the Hearing Officer, you have 7 to 20 days (depending on the type of case) to write to the Commissioner to explain your exceptions to the Recommended Decision. If you do not agree with the Final Decision of the Commissioner, you can appeal the decision within 30 days, to the Superior Court.
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Credit
+
+
+
+
+
+
+
+
+
+Copyright © 2023
+
+
+All rights reserved.
+
+
+
+
+
+
+Information
+
+
+
+
+
+
+
+Site Policies
+
+
+Maine.gov
+
+
+DHHS Home
+
+
+Sitemap
+
+
+
+
+
+
+
+
+
+
+DHHS Address
+
+
+
+
+
+
+Department of
+
+
+Health and Human Services
+
+
+109 Capitol Street
+
+
+11 State House Station
+
+
+Augusta, Maine 04333
+
+
+Phone: (207) 287-3707
+
+
+FAX: DHHS Fax Numbers
+
+
+TTY: Maine relay 711
+
+
+
+
+
+
+Accessibility & Policy
+
+
+
+
+
+
+
+DHHS Tribal Collaboration Policy (PDF)
+
+
+Americans With Disabilities Act/Civil Rights Compliance
+
+
+Language Access
+
+
+Non-Discrimination Notice
+
+
+Hospital Price Transparency (DDPC) (RPC)
+
+
+Report a problem with this page
+
+SOURCE 5: Home page — Maine Long-Term Care Ombudsman Program | https://www.maineombudsman.org/ | source date: none stated on page (footer copyright 2026) | retrieved: 2026-10-08
+Skip to Page Content
+Skip to Footer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+61 Winthrop St.
+
+
+Augusta, ME 04330
+
+
+(800) 499-0229 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle navigation
+MENU
+
+
+
+
+
+
+
+Home
+
+
+
+Our Services
+
+
+
+
+Residents, Consumers and Family
+
+
+
+Long-Term Care Information
+
+
+Residents' Rights
+
+
+Home Care Information and Rights
+
+
+Homeward Bound
+
+
+Hospital Patient Advocacy
+
+
+Resident Council and Family Council
+
+
+Hospice
+
+
+Legislative Advocacy
+
+
+Brochures & Consumer Guides
+
+
+
+
+
+
+
+Long Term Care Professionals
+
+
+
+Staff Training and Resources
+
+
+Hospital Patient Advocacy
+
+
+Homeward Bound
+
+
+MDS Section Q
+
+
+Brochures & Consumer Guides
+
+
+
+
+
+
+
+
+
+
+
+Volunteers
+
+
+
+Role of a Volunteer Ombudsman Representative
+
+
+Become a Volunteer Ombudsman Representative
+
+
+
+
+
+
+Our Team
+
+
+Helpful Links
+
+
+Advisory Council
+
+
+Contact Us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+This is the default banner text. Please verify that your banner has been setup properly.
+
+
+
+
+
+
+
+
+
+
+
+
+Maine Long-Term Care Ombudsman Program
+
+
+An Advocacy Program for Long-Term Care Consumers
+
+
+
+ The Maine Long-Term Care Ombudsman Program is a non-profit agency whose mission is to advocate for quality of life and care for long-term care consumers. Our services are free and confidential. 
+ Federal law and Maine law authorize our staff to investigate complaints made by or on behalf of long-term care consumers and to assist consumers in exercising their rights that are guaranteed by law.
+ 
+
+
+
+ Our program serves residents of nursing homes, assisted housing programs including residential care and assisted living, consumers receiving home care services including homemaker, adult day and hospice. 
+ We also serve patients in hospitals facing barriers in accessing long-term care services. Our staff is knowledgeable about long-term care services. We can answer questions about services, including 
+ where to find services, how services are paid for, what to do if services are denied, terminated or reduced, and how to proceed when problems arise. 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ The Maine Long-Term Care Ombudsman Program provides advocacy services while maintaining strict confidence. This means that anyone reporting concerns about long-term care services can be assured that all 
+ communication with our staff and volunteers will not be disclosed without consent. In addition, when we are contacted with a request for assistance, we will not take action to investigate or resolve a complaint 
+ without obtaining consent first. In providing advocacy services we work to support the wishes of the consumer.
+ 
+
+
+
+ The Maine Long-Term Care Ombudsman Program is here to help with information, guidance and advocacy. Our services are free and confidential. For more information or assistance contact us at (800) 499-0229 or (207) 621-1079.
+
+
+
+
+ Please click here to read our Annual Report for FY 2024. 
+ 
+
+
+
+
+
+
+
+
+
+
+
+ The Maine Long-Term Ombudsman Program complies with applicable state and federal civil rights laws and does not discriminate on the basis of race, color, religion, 
+ national origin, age, disability, sexual orientation, gender identity and/or expression in the administration or operation of its services, programs, or activities.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Home Page
+
+
+Our Team
+
+
+Helpful Links
+
+
+Contact Us
+
+
+Accessibility
+
+
+
+
+ Copyright © 2026Manage Website Ombudsman Program.
+ Design and hosting provided by PHD Consulting, a Maine company.
+
+SOURCE 6: Contact, Advocacy Intake Office & Winthrop Street Headquarters — Maine Long-Term Care Ombudsman Program | https://www.maineombudsman.org/contact.aspx | source date: none stated on page (footer copyright 2026) | retrieved: 2026-10-08
+Contact Information
+
+
+
+
+Address: | 61 Winthrop St. Augusta, ME 04330
+
+
+Phone: Toll Free: Fax: | (207) 621-1079 (800) 499-0229 (207) 621-0509
+
+
+Email: | MLTCOP@MaineOmbudsman.org
+
+
+Hours: | Mon – Thurs 8:00am – 4:30pm Fri: 8:00am - 4:00pm Closed on all federal and state holidays
+
+SOURCE 7: Our Team — Maine Long-Term Care Ombudsman Program | https://www.maineombudsman.org/about.aspx | source date: none stated on page (footer copyright 2026) | retrieved: 2026-10-08
+Skip to Page Content
+Skip to Footer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+61 Winthrop St.
+
+
+Augusta, ME 04330
+
+
+(800) 499-0229 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle navigation
+MENU
+
+
+
+
+
+
+
+Home
+
+
+
+Our Services
+
+
+
+
+Residents, Consumers and Family
+
+
+
+Long-Term Care Information
+
+
+Residents' Rights
+
+
+Home Care Information and Rights
+
+
+Homeward Bound
+
+
+Hospital Patient Advocacy
+
+
+Resident Council and Family Council
+
+
+Hospice
+
+
+Legislative Advocacy
+
+
+Brochures & Consumer Guides
+
+
+
+
+
+
+
+Long Term Care Professionals
+
+
+
+Staff Training and Resources
+
+
+Hospital Patient Advocacy
+
+
+Homeward Bound
+
+
+MDS Section Q
+
+
+Brochures & Consumer Guides
+
+
+
+
+
+
+
+
+
+
+
+Volunteers
+
+
+
+Role of a Volunteer Ombudsman Representative
+
+
+Become a Volunteer Ombudsman Representative
+
+
+
+
+
+
+Our Team
+
+
+Helpful Links
+
+
+Advisory Council
+
+
+Contact Us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Staff Directory
+
+
+
+
+
+
+
+
+Brenda Gallant
+
+
+ Executive Director
+
+
+ State Long-Term Care Ombudsman
+ 
+
+
+
+Pamela Marshall
+
+
+ Associate Director
+ 
+
+
+
+Jasmine Labrie
+
+
+ Executive Assistant
+ 
+
+
+
+Joanne West
+
+
+ Intake Worker
+ 
+
+
+
+Stephanie Day
+
+
+ Intake Worker
+ 
+
+
+
+Allison Knight
+
+
+ Homeward Bound Transition Manager
+ 
+
+
+
+Kristen McCausland
+
+
+ Volunteer and Community Engagement Manager
+ 
+
+
+
+Nicole Marchesi
+
+
+ Public Policy Advocate
+ 
+
+
+
+
+
+
+
+Danielle Malcolm
+
+
+ Home Care Program Manager
+ 
+
+
+
+Jamie Dyer
+
+
+ Home Care Ombudsman
+ 
+
+
+
+Bethany Tompkins
+
+
+ Regional Ombudsman – Team Leader
+ 
+
+
+
+Christopher Allen
+
+
+ Regional Ombudsman – Team Leader
+ 
+
+
+
+Maria Woodward
+
+
+ Regional Ombudsman
+ 
+
+
+
+Tracy Richard
+
+
+ Regional Ombudsman
+ 
+
+
+
+Sue McKeen
+
+
+ Regional Ombudsman
+ 
+
+
+
+Seth Morgan
+
+
+ Regional Ombudsman - Patient Advocate 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Board of Directors
+
+
+
+
+
+
+
+Executive Committee
+
+
+
+Roy Gedat - President
+ 
+
+
+
+Diane Barnes - Vice-President
+ 
+
+
+
+George Roy - Treasurer
+ 
+
+
+
+
+
+
+Directors
+
+
+
+
+
+
+Paul Linet
+
+
+Diana Scully
+
+
+Sandra Butler
+
+
+
+
+
+
+Fred Fowler
+
+
+Betsy DiCapua
+
+
+Sharon Berz
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Home Page
+
+
+Our Team
+
+
+Helpful Links
+
+
+Contact Us
+
+
+Accessibility
+
+
+
+
+ Copyright © 2026Manage Website Ombudsman Program.
+ Design and hosting provided by PHD Consulting, a Maine company.
+

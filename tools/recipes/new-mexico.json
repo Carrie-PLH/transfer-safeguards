@@ -9,6 +9,7 @@
       "source_date": "8.370.16.5 NMAC states: Effective Date: July 1, 2024, unless a different date is cited at the end of a section; the sliced sections' own closing history notes read 7/1/2024",
       "transport": "curl",
       "user_agent": "browser",
+      "encoding": "cp1252",
       "extractor": "html-text",
       "scope": "body",
       "notes": "DRAFT — replace before promoting."
@@ -20,6 +21,7 @@
       "source_date": "section's own closing history note reads: [8.312.2.16 NMAC - Rp, 8.312.2.16 NMAC, 8/1/2014; A/E, 3/1/2025]",
       "transport": "curl",
       "user_agent": "browser",
+      "encoding": "cp1252",
       "extractor": "html-text",
       "scope": "body",
       "notes": "DRAFT — replace before promoting."

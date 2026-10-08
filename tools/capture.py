@@ -231,6 +231,7 @@ PDFTOTEXT_LAYOUT = ["-layout", "-enc", "UTF-8"]
 # working days this week.
 POPPLER_PIN = _core.DEFAULT_POPPLER_PIN
 PDFPLUMBER_PIN = _core.DEFAULT_PDFPLUMBER_PIN
+DOCX_PIN = _core.DEFAULT_DOCX_PIN
 
 
 def require_poppler():
@@ -239,6 +240,10 @@ def require_poppler():
 
 def require_pdfplumber():
     return _core.require_pdfplumber(PDFPLUMBER_PIN)
+
+
+def require_docx():
+    return _core.require_docx(DOCX_PIN)
 
 
 # --- filters -----------------------------------------------------------------
@@ -2143,6 +2148,12 @@ def cmd_preflight():
          any(e.startswith('pdftotext') for e in extractors)),
         ('pdfplumber', PDFPLUMBER_PIN, require_pdfplumber,
          any('pdfplumber' in e for e in extractors)),
+        # Recipes naming the docx extractor over legacy .doc files alone
+        # would not need python-docx (capture-core converts those), but the
+        # recipe does not say which kind a URL serves, so the check is
+        # required whenever the extractor is declared (FA-Q-20260924-04).
+        ('python-docx', DOCX_PIN, require_docx,
+         'docx' in extractors),
     ]
     failed = False
     for name, pin, check, needed in needs:

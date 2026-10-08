@@ -376,3 +376,26 @@ on Aging, health.hawaii.gov/eoa) and a possible bed-hold source in HRS
 chapter 346C or 346F (Long-Term Care Financing / Nursing Facility
 Sustainability, cross-referenced from chapter 321 but not yet read) remain
 uncaptured and unevaluated pending the core rule.
+
+**2026-10-08 — attended session on the three handoffs the 2026-10-08
+nightly left open (FA-Q-20260924-04, FA-Q-20261008-02, FA-Q-20261008-01).**
+python-docx 1.2.0 is now installed in this repo's `tools/.venv` (and
+licensure mobility's), pinned as `DEFAULT_DOCX_PIN` in the canonical
+capture-core.py, and checked by `capture.py --preflight` in all four
+collections whenever a recipe declares the docx extractor — the gap the
+2026-09-24 Maine entry above named. `new-mexico.json` sources 1–2 carry
+`"encoding": "cp1252"`; two captures were byte-identical with no U+FFFD, both
+surfaces passed fidelity, and the capture was retained as confirmed. The
+encoding option was ported to gathered work and licensure mobility. `maine.json`
+is now sliced (10.Q entire; 67.05-9 through 67.05-21 entire) and source 6 is
+scoped to the contact column, because the whole-body scope captured the
+contact form's anti-robot arithmetic question, whose operands change every
+fetch; two captures are now byte-identical. What remains on Maine is not a
+recipe defect: three quotations ("SECTION 67 NURSING FACILITY SERVICES
+ESTABLISHED 7/1/91", "ESTABLISHED 7/1/91", "LAST UPDATED 9/15/15") live only
+in the .docx section header, which `extract_docx` does not read, so the
+packet was not retained and the checked date not advanced — filed as
+FA-Q-20261008-03 with the options. Running `new-york.json` for the first time
+since its docx source became readable showed source 6 unchanged and source 3
+(aging.ny.gov ombudsman page) rewritten, three quotations failing; not
+retained, filed as FA-Q-20261008-04 for a review pass. Nothing deployed.
