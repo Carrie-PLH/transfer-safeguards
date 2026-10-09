@@ -117,10 +117,24 @@ ENV_PATH = os.path.expanduser("~/.config/ia/spn.env")
 SAVE_URL = "https://web.archive.org/save"
 STATUS_URL = "https://web.archive.org/save/status/"
 
+# The publisher's other sites, linked from every footer's "More from Field
+# Assembly" column (field-assembly-standard/tools/cross-links.py, 2026-10-09),
+# and byreassembly.com, where the "Built by Reassembly" credit moved on
+# 2026-10-06. Family, not sources: none of them will ever appear in a packet.
+FAMILY_HOSTS = {"boardandborder.com", "www.boardandborder.com",
+                "rulesandrecord.com", "www.rulesandrecord.com",
+                "roomandrecourse.com", "www.roomandrecourse.com",
+                "gatheredwork.com", "www.gatheredwork.com",
+                "ai-learningevidence.com", "www.ai-learningevidence.com",
+                "glp-1evidence.com", "www.glp-1evidence.com",
+                "provisionrecord.com", "www.provisionrecord.com",
+                "materialsmonitor.com", "www.materialsmonitor.com",
+                "byreassembly.com", "www.byreassembly.com"}
+
 # Hosts that are ours or infrastructure, never sources to capture.
 SKIP_HOSTS = {"roomandrecourse.com", "www.roomandrecourse.com",
               "fieldassembly.net", "www.fieldassembly.net",
-              "web.archive.org"}
+              "web.archive.org"} | FAMILY_HOSTS
 
 # Consecutive hard failures before a source is left alone.
 BLOCK_AFTER = 3

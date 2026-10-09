@@ -205,7 +205,7 @@ fi
 # tools/render-state.py; the hand-built pages carry it by hand, so a new page
 # copied from an older one is the way it goes missing.
 # Tripwire: delete the line from about.html -> must FAIL; restore -> pass.
-nocredit=$(HTML0 | xargs -0 grep -L 'Built by <a href="https://reassembly.fieldassembly.net/"' 2>/dev/null || true)
+nocredit=$(HTML0 | xargs -0 grep -L 'Built by <a href="https://byreassembly.com/"' 2>/dev/null || true)
 if [ -n "$nocredit" ]; then
   bad "page(s) missing the Built by Reassembly footer credit:"
   printf '%s\n' "$nocredit" | sed 's/^/        /'

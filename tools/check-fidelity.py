@@ -58,6 +58,20 @@ import os
 import re
 import sys
 
+# The publisher's other sites, linked from every footer's "More from Field
+# Assembly" column (field-assembly-standard/tools/cross-links.py, 2026-10-09),
+# and byreassembly.com, where the "Built by Reassembly" credit moved on
+# 2026-10-06. Family, not sources: none of them will ever appear in a packet.
+FAMILY_HOSTS = {"boardandborder.com", "www.boardandborder.com",
+                "rulesandrecord.com", "www.rulesandrecord.com",
+                "roomandrecourse.com", "www.roomandrecourse.com",
+                "gatheredwork.com", "www.gatheredwork.com",
+                "ai-learningevidence.com", "www.ai-learningevidence.com",
+                "glp-1evidence.com", "www.glp-1evidence.com",
+                "provisionrecord.com", "www.provisionrecord.com",
+                "materialsmonitor.com", "www.materialsmonitor.com",
+                "byreassembly.com", "www.byreassembly.com"}
+
 # reassembly.fieldassembly.net is the "Built by Reassembly" footer credit
 # (portfolio rule 2026-09-29, enforced by predeploy check 7b); it is the
 # site's own family, not a source, and it will never appear in a packet.
@@ -67,7 +81,7 @@ import sys
 # evidence that the source was archived, not a claim the packet must support.
 ALLOW_HOSTS = {"fieldassembly.net", "www.fieldassembly.net",
                 "reassembly.fieldassembly.net", "web.archive.org",
-                "roomandrecourse.com", "www.roomandrecourse.com"}
+                "roomandrecourse.com", "www.roomandrecourse.com"} | FAMILY_HOSTS
 ALLOW_EMAILS = {"hello@fieldassembly.net"}
 
 # "you qualify" and "we advise" were Board & Border's additions to the
