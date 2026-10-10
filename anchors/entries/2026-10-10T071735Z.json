@@ -1,0 +1,16 @@
+{
+ "entry": {
+  "file_count": 294,
+  "id": "2026-10-10T071735Z",
+  "manifest_file": "manifests/2026-10-10T071735Z.txt",
+  "manifest_sha256": "e12bc3a2bec0df84c0647bf485d3bf35f7df14f4f003b89504e9eab5104cb1c3",
+  "note": "nightly review: north-carolina, ohio confirmed; north-dakota recipe blocked",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "3a8a9aae51c2a4a567de200cfd1ce1efd7a6f5dd1e580cf678502e5c563b6b6a",
+  "repo": "transfer-safeguards",
+  "utc": "2026-10-10T07:17:35+00:00"
+ },
+ "entry_sha256": "9e264039354aaac9b7775ea61b38c962c9f1dff26f141ccdf54a85982f172eb0"
+}
