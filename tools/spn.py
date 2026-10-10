@@ -129,6 +129,7 @@ FAMILY_HOSTS = {"boardandborder.com", "www.boardandborder.com",
                 "glp-1evidence.com", "www.glp-1evidence.com",
                 "provisionrecord.com", "www.provisionrecord.com",
                 "materialsmonitor.com", "www.materialsmonitor.com",
+                "learnthings.online", "www.learnthings.online",
                 "byreassembly.com", "www.byreassembly.com"}
 
 # Hosts that are ours or infrastructure, never sources to capture.
