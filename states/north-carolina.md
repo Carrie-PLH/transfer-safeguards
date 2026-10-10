@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Long-Term Care Ombudsman Program, which "consists of an Office of the State Long-Term Care Ombudsman and 16 Offices of the Regional Long-Term Care Ombudsman that are housed in Area Agencies on Aging." No statewide telephone number for the program is published on the page reviewed; access runs through the region, and the department directs the reader to "Find information for your county". The notice form leaves the regional ombudsman's name, email, address and phone as blanks the facility fills in.
 
-**Sources last checked.** 2026-09-13
+**Sources last checked.** 2026-10-10
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** Office of the State Long-Term Care Ombudsman, Ohio Department of Aging. State program contact as published on the department's Discharge & Transfer Rights page (dated February 19, 2025): [OhioOmbudsman@age.ohio.gov](mailto:OhioOmbudsman@age.ohio.gov), 1-800-282-1206, with regional programs reached through the department's [directory](https://aging.ohio.gov/care-and-living/ombudsman/get-help/get-help).
 
-**Sources last checked.** 2026-08-30
+**Sources last checked.** 2026-10-10
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

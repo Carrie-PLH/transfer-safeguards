@@ -944,3 +944,44 @@ Reviewer line reads "review pending before publication": Carrie has not yet
 reviewed this entry, so the gate's review-pending check fails for texas until
 she does. Still capture-pending: rule texts of 26 TAC 554.502 and 554.503.
 No push, no deploy.
+
+## 2026-10-10 — nightly review: north-carolina, north-dakota, ohio
+
+**North Carolina — confirmed.** Fresh capture of all 6 sources; zero
+fidelity failures, markdown and HTML. Retained textual movement confined to
+NCDHHS/Medicaid navigation chrome (accessibility-issue link, proposed-policy
+list and accordion items appearing/disappearing between captures); all
+source dates (statute PDF, form revision, clinical-policy amendment dates)
+unchanged, no instrument replacement. Hash 620a0195f9939203, promoted.
+Checked date advanced to 2026-10-10.
+
+**North Dakota — RECIPE BACKFILL REQUIRED (not reviewed).** Capture failed:
+source 5's slice `to` anchor ("...rvice Area (serves entire state) *****
+SEND-TO-ME") no longer matches the Care Choice ombudsman directory listing.
+Diagnostic re-fetch (read-only) confirms the source itself is reachable
+(HTTP 200) and substantively unchanged — the listing widget's own UI copy
+changed ("Service Area" -> "Provider Service Area"; the old literal
+"SEND-TO-ME" control label was replaced by descriptive SMS-prompt text) —
+so this is a recipe needing an anchor update, not a source outage or an
+instrument replacement. Per the no-unattended-tool-fix rule, the recipe was
+left unmodified, the page was left unreviewed (no retention, no checked-date
+change), and tooling entry **FA-Q-20261010-01**
+(queue/open/FA-Q-20261010-01-rr-north-dakota-recipe-tooling.md) was opened
+in field-assembly-standard naming the fix for an attended session.
+
+**Ohio — confirmed.** Fresh capture of all 7 sources; zero fidelity
+failures, markdown and HTML. Source 7 (aging.ohio.gov ombudsman page)
+shrank from 14,606 to 6,807 chars, which `retain-packet.py` flagged by
+name; diffed by hand before promoting — the drop is entirely CMS template
+chrome (Ohio Design component comments, Thymeleaf footer fragments) that
+the live page no longer renders into the extracted text; the substantive
+content (ombudsman contact, "Related Laws & Forms") is intact in the new
+capture and fidelity confirms it. Hash 07d349124dea9dcd, promoted. Checked
+date advanced to 2026-10-10.
+
+sync-checked-dates.py corrected 4 derived dates (table + JSON for the two
+confirmed pages). build-status.py, check-all.py and build-state-picker.py
+re-run (51/51 baseline, 50/51 full — the North Dakota gap predates this
+pass and is unrelated to tonight's finding; no unexplained check-all
+failures). Review cursor advanced to oklahoma. One queue entry opened
+(FA-Q-20261010-01, tooling).
