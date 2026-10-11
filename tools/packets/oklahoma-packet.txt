@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: oklahoma
-ASSEMBLED: 2026-09-18
+ASSEMBLED: 2026-10-11
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/oklahoma.json (recipe digest 5f05ccef0701). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -14,7 +14,7 @@ CAPTURE NOTES:
 - SOURCE 4: transport curl; extractor html-text; scope #text-522564591e; filters trim-lines, collapse-blank-runs.
   Added 2026-09-18, deepening the page, to answer section 02's bed-hold row with the Medicaid payment agency's own rule rather than the Department of Health's readmission provision alone. The rule text on this OHCA policy page sits inside one component, id='text-522564591e' on this build; the scope selector targets that element directly rather than 'body', because 'body' on this page's template pulls in the full site navigation, program menus and footer, none of which bears on the rule. The same text also appears, HTML-escaped, inside a client-side analytics data-layer attribute earlier in the document; that occurrence is not what this scope selector reads and is not the evidence — the rendered element is. If a future recapture reports the selector as absent, the component id has likely changed on a template update, which is capture drift to be re-established (find the new id for the rule heading's containing element), not evidence that the rule moved.
 
-SOURCE 1: Oklahoma Nursing Home Care Act, 63 O.S. §§ 1-1926 through 1-1928 (excerpt from the state's posted copy of Title 63 §§ 1-1900 et seq.) | https://oklahoma.gov/content/dam/ok/en/osbeltca/documents/statutes/osdh/nursing-home-care-act-2021-gzt-from-oscn.pdf | source date: document foot: Unofficial Version – copied from OSCN.NET version, April 27, 2021 | retrieved: 2026-09-18
+SOURCE 1: Oklahoma Nursing Home Care Act, 63 O.S. §§ 1-1926 through 1-1928 (excerpt from the state's posted copy of Title 63 §§ 1-1900 et seq.) | https://oklahoma.gov/content/dam/ok/en/osbeltca/documents/statutes/osdh/nursing-home-care-act-2021-gzt-from-oscn.pdf | source date: document foot: Unofficial Version – copied from OSCN.NET version, April 27, 2021 | retrieved: 2026-10-11
 §1-1926. Involuntary Transfer or Discharge of Resident – Grounds
 
 A facility shall not involuntarily transfer or discharge a resident except for medical reasons, for
@@ -64,7 +64,7 @@ Historical Data
 Laws 1980, HB 1853, c. 241, § 28, eff. October 1, 1980; Amended by Laws 1984, HB 1898, c. 128, § 6, eff. November 1, 1984;
 Amended by Laws 1987, HB 1092, c. 98, § 28, emerg. eff. May 20, 1987.
 
-SOURCE 2: OAC 310:675-7-4, Resident transfers or discharge (excerpt from the state's posted copy of OAC 310 chapter 675) | https://oklahoma.gov/content/dam/ok/en/osbeltca/documents/rules/osdh/oac310-ch675-nursing-and-specialized-facilities-gzt-from-oar-2020.pdf | source date: document foot: Unofficial – copied from/linked to OAR.STATE.OK.US, September 13, 2020 | retrieved: 2026-09-18
+SOURCE 2: OAC 310:675-7-4, Resident transfers or discharge (excerpt from the state's posted copy of OAC 310 chapter 675) | https://oklahoma.gov/content/dam/ok/en/osbeltca/documents/rules/osdh/oac310-ch675-nursing-and-specialized-facilities-gzt-from-oar-2020.pdf | source date: document foot: Unofficial – copied from/linked to OAR.STATE.OK.US, September 13, 2020 | retrieved: 2026-10-11
 310:675-7-4. Resident transfers or discharge
 (a) Reasons for transfer or discharge. Involuntary transfer or discharge of a resident may be initiated
 by a facility only for one or more of the following:
@@ -256,7 +256,7 @@ OAC 310: Chapter 675                                                            
           final and binding on all parties unless appealed under the Administrative Procedures Act.
 [Source: Added at 37 Ok Reg 1448, eff 9-11-20]
 
-SOURCE 3: Oklahoma Department of Human Services, Nursing Home Transfers & Discharges (consumer leaflet, PDF) | https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/19-06_NursingHomeTransfersandDischarge_cap_03292022.pdf | source date: publication 19-06, file dated 03292022 | retrieved: 2026-09-18
+SOURCE 3: Oklahoma Department of Human Services, Nursing Home Transfers & Discharges (consumer leaflet, PDF) | https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/19-06_NursingHomeTransfersandDischarge_cap_03292022.pdf | source date: publication 19-06, file dated 03292022 | retrieved: 2026-10-11
 Nursing Home
    Transfers & Discharges
 Have you been told to leave?
@@ -544,7 +544,7 @@ Copies have been deposited with the Publications Clearinghouse of the Oklahoma
 Department of Libraries. Members of the public may obtain copies by calling 1-877-283-
 4113 (toll free) or by downloading a copy at www.okdhs.org/library.
 
-SOURCE 4: OAC 317:30-5-126, Therapeutic leave and hospital leave (Oklahoma Health Care Authority's posted copy of its own rule) | https://oklahoma.gov/ohca/policies-and-rules/xpolicy/medical-providers-fee-for-service/individual-providers-and-specialties/long-term-care-facilities/therapeutic-leave-and-hospital-leave.html | source date: page states [Revised 09-01-15]; the page's own disclaimer calls this copy unofficial and names the Secretary of State's Office of Administrative Rules as the official publisher of Title 317 | retrieved: 2026-09-18
+SOURCE 4: OAC 317:30-5-126, Therapeutic leave and hospital leave (Oklahoma Health Care Authority's posted copy of its own rule) | https://oklahoma.gov/ohca/policies-and-rules/xpolicy/medical-providers-fee-for-service/individual-providers-and-specialties/long-term-care-facilities/therapeutic-leave-and-hospital-leave.html | source date: page states [Revised 09-01-15]; the page's own disclaimer calls this copy unofficial and names the Secretary of State's Office of Administrative Rules as the official publisher of Title 317 | retrieved: 2026-10-11
 317:30-5-126. Therapeutic leave and hospital leave
 
 [Revised 09-01-15]

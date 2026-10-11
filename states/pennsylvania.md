@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Pennsylvania Long-Term Care Ombudsman Program, in the Department of Aging. As published on the Commonwealth's own service page, contact is "By Phone" — "Call the PA Long-term Care Office to connect with your local Ombudsman." at 717-783-8975 — and "By Email" at LTC-Ombudsman@pa.gov. The Department of Health's facility protocol routes discharge notices to the same address: the facility is to "e-mail notice to LTC-ombudsman@pa.gov the same day it’s issued to the resident. The State Office will distribute the notice to the appropriate local ombudsman."
 
-**Sources last checked.** 2026-09-06
+**Sources last checked.** 2026-10-11
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

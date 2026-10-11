@@ -1,0 +1,1178 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: oregon
+ASSEMBLED: 2026-10-11
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/oregon.json (recipe digest 411d9b92b896). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- SOURCE 1: transport curl; extractor pdftotext-layout; slice from '411-088-0010 Involuntary Transfer (Effective 10/1/1990) Unless' to 'behavior of a sexual nature, or verbal threats'; filters none.
+  Division 88 is published as one document and each rule carries its own effective or amended date in the heading, which makes the headings good anchors: a rule amended after this capture changes its own heading and the slice fails loudly rather than quietly capturing the wrong text. Anchors proposed mechanically by tools/propose-slice.py from the standing packet's span and confirmed by the checker.
+- SOURCE 2: transport curl; extractor pdftotext-layout; slice from '411-088-0070 Notice Requirements (Amended 04/01/2014) (1)' to '411-088-0080 Informal Conference and Hearing (Amended 04/01/2014) (1)'; filters none.
+  Division 88 is published as one document and each rule carries its own effective or amended date in the heading, which makes the headings good anchors: a rule amended after this capture changes its own heading and the slice fails loudly rather than quietly capturing the wrong text. Anchors proposed mechanically by tools/propose-slice.py from the standing packet's span and confirmed by the checker.
+- SOURCE 3: transport curl; extractor pdftotext-layout; slice from '411-088-0080 Informal Conference and Hearing (Amended 04/01/2014) (1)' to '(C) An expedited hearing shall be conducted within'; filters none.
+  Division 88 is published as one document and each rule carries its own effective or amended date in the heading, which makes the headings good anchors: a rule amended after this capture changes its own heading and the slice fails loudly rather than quietly capturing the wrong text. Anchors proposed mechanically by tools/propose-slice.py from the standing packet's span and confirmed by the checker.
+- SOURCE 4: transport curl; extractor pdftotext-layout; slice from 'OREGON DEPARTMENT OF HUMAN SERVICES AGING AND PEOPLE WITH DISABILITIES OREGON ADMINISTRATIVE RULES CHAPTER 411 DIVISION 88 NURSING FACILITIES/LICENSING - TRANSFERS Table' to '(1) "Hearing" means a contested case hearing according'; filters none.
+  Division 88 is published as one document and each rule carries its own effective or amended date in the heading, which makes the headings good anchors: a rule amended after this capture changes its own heading and the slice fails loudly rather than quietly capturing the wrong text. Anchors proposed mechanically by tools/propose-slice.py from the standing packet's span and confirmed by the checker.
+- SOURCE 5: transport curl; extractor html-text; scope body; filters none.
+  Server-rendered; scope 'body', matching the standing packet's tag strip over the served page.
+- SOURCE 6: transport curl; extractor pdftotext-layout; slice from '411-088-0050 Right to Return from Hospital (Amended 08/10/2015)' (occurrence 2) to '411-088-0070 Notice Requirements (Amended 04/01/2014)'; filters none.
+  Same document as sources 1-4; this is the division's bed-hold and readmission pair, pending since baseline. Each heading appears twice (table of contents, then the body), so from_occurrence 2 lands on the body; the 'to' anchor's own occurrence resets after the 'from' match, so the single body occurrence of the 411-088-0070 heading needs no override.
+- SOURCE 7: transport curl; extractor pdftotext-layout; slice from 'Your Hearing Rights' to the end of the document; filters none.
+  The department's own standard notice form, named by OAR 411-088-0070(4) (source 2) as the form that must be used for a Notice of Transfer. The rule text captured as source 3 names an office and a filing period without a street address; this form supplies both -- a street address, email and fax for the Nursing Facility Licensing Unit -- and states the filing period as calendar days where OAR 411-088-0080 states it as business days, a discrepancy this recipe does not resolve. Slice runs from the 'Your Hearing Rights' heading to the end of the document.
+
+SOURCE 1: OAR 411-088-0010 and 411-088-0020, Involuntary Transfer; Basis for Involuntary Transfer | https://www.oregon.gov/odhs/rules-policy/apdrules/411-088.pdf | source date: 411-088-0010 Effective 10/1/1990; 411-088-0020 Amended 04/01/2014 | retrieved: 2026-10-11
+411-088-0010 Involuntary Transfer (Effective 10/1/1990)
+
+Unless a transfer is voluntary, no resident may be transferred from a facility
+except for the reasons and according to the procedures described in these
+Transfer Rules. These rules shall only apply to residents in nursing facility
+beds or persons returning to nursing facility beds.
+
+Stat. Auth.: ORS 410, 441
+Stats. Implemented: ORS 441.055, 441.600, 441.615
+                                   Page 3
+
+411-088-0020 Basis for Involuntary Transfer (Amended 04/01/2014)
+
+Upon compliance with these transfer rules (OAR 411-088), an involuntary
+transfer of a resident may be made when one of the reasons specified in
+this rule exists.
+
+(1) MEDICAL AND WELFARE REASONS.
+
+     (a) A resident may be transferred when the resident's physician
+     states in writing that:
+
+           (A) The resident's health has improved sufficiently so the
+           resident no longer needs the services provided by the facility; or
+
+           (B) The facility is unable to meet the resident's needs and the
+           facility has identified another environment available to the
+           resident that may better meet the resident's needs. The
+           Department shall assist the facility in the facility's effort to
+           identify another environment for the resident.
+
+     (b) A resident may be transferred when the Department Administrator
+     or the State Fire Marshal states in writing the safety of the resident
+     (or other people in the facility) is endangered and justifies the
+     transfer;
+
+     (c) A resident may be transferred when the behavior of the resident
+     creates a serious and immediate threat to the resident or to other
+     residents or people in the facility and all reasonable alternatives to
+     transfer (consistent with the attending physician's orders) have been
+     attempted and documented in the resident's medical record. Such
+     alternatives may include but are not limited to chemical or physical
+     restraints and medication;
+
+     (d) A resident may be transferred when the resident has a medical
+     emergency;
+
+     (e) A resident may be transferred when governmental action results
+     in a facility's certification or license being revoked or not renewed;
+
+
+                                  Page 4
+
+     (f) A resident may be transferred when a facility intends to terminate
+     operation as a nursing facility. The facility must:
+
+           (A) Certify in writing to the Department the license is to be
+           irrevocably terminated as described in OAR 411-085-0025; and
+
+           (B) Establish to the satisfaction of the Department that
+           arrangements to accomplish all necessary transfers are made
+           in a safe manner with adequate resident involvement and
+           follow-up for each resident to minimize negative effects of the
+           transfer;
+
+     (g) A resident receiving post-hospital extended care services or
+     specialized services from a facility under a physician's order may be
+     transferred from the facility when, according to the physician's written
+     opinion, the resident has improved sufficiently and no longer needs
+     the post-hospital extended care services or specialized services
+     provided by the facility.
+
+           (A) The purpose of the admission, including the projected
+           course of treatment and the expected length of stay, must be
+           agreed to in writing by the resident (or the resident's legal
+           representative who is so authorized to make such an
+           agreement) at or prior to admission.
+
+           (B) The facility must identify another environment available to
+           the resident that is appropriate to meet the resident's needs.
+
+           (C) The notice of transfer may be issued at the time of
+           admission or later and must be based upon the projected
+           course of treatment.
+
+(2) NON-PAYMENT REASONS. A resident may be transferred when there
+is a non-payment of facility charges for the resident and payment for the
+stay is not available through Medicaid, Medicare, or other third party
+reimbursement.
+
+     (a) A resident may not be transferred if, prior to actual transfer,
+     delinquent charges are paid.
+
+                                   Page 5
+
+    (b) A resident may not be transferred for delinquent charges if
+    payment for current charges is available through Medicaid, Medicare,
+    or other third party reimbursement.
+
+(3) CONVICTION OF A SEX CRIME.
+
+    (a) A resident who was admitted January 1, 2006 or later may be
+    moved without advance notice if all of the following are met:
+
+          (A) The facility was not notified prior to admission that the
+          resident is on probation, parole, or post-prison supervision after
+          being convicted of a sex crime;
+
+          (B) The facility learns that the resident is on probation, parole,
+          or post-prison supervision after being convicted of a sex crime;
+          and
+
+          (C) The resident presents a current risk of harm to another
+          resident, staff, or visitor in the facility as evidenced by:
+
+                (i) Current or recent sexual inappropriateness, aggressive
+
+SOURCE 2: OAR 411-088-0070, Notice Requirements | https://www.oregon.gov/odhs/rules-policy/apdrules/411-088.pdf | source date: Amended 04/01/2014 | retrieved: 2026-10-11
+411-088-0070 Notice Requirements (Amended 04/01/2014)
+
+(1) NOTICE LENGTH:
+
+      (a) A facility must provide a resident transferred from the facility a
+      minimum of 30 days prior written notice unless otherwise provided
+      under this section.
+
+      (b) A resident may be involuntarily transferred under OAR 411-088-
+      0020(1)(b) (Life or Safety Threat) or OAR 411-088-0020(1)(c)
+      (Behavior Problem) with fewer than 30 days prior written notice if the
+      reason for the transfer constitutes an emergency. However, the
+      facility must give as much prior written notice as the emergency
+      permits.
+
+      (c) A resident may be involuntarily transferred under OAR 411-088-
+      0020(1)(d) (Medical Emergency) with no prior notice. However, the
+      facility must give written notice before giving the resident's bed to
+      another person.
+
+      (d) A resident involuntarily transferred under OAR 411-088-
+      0020(1)(g) (Post-Hospital Extended Care Services or Specialized
+      Services) and cared for in the facility for less than 30 days may be
+      transferred with fewer than 30 days prior written notice.
+                                   Page 11
+
+      (A) In such cases, the resident must be provided with written
+      notice no shorter than the length of the resident's current stay in
+      the nursing facility.
+
+      (B) The notice may be issued at the time of the resident's
+      admission or as soon as the length of time for projected course
+      of treatment is estimated.
+
+      (C) Section (1)(d) of this rule does not apply if the resident had
+      a right of readmission to the same facility as described in OAR
+      411-088-0060 prior to the hospital, surgical, or emergency
+      department services.
+
+(e) A facility must provide a resident involuntarily transferred under
+OAR 411-088-0020(1)(b) or (e) (Governmental Action) a minimum of
+14 days prior written notice.
+
+(f) A facility must immediately notify a resident denied the right of
+return or the right of readmission. The facility must also provide the
+resident written notice that is mailed (registered or certified) or
+delivered in person within five days from the date of request for return
+or readmission. A denial of right of return or readmission is allowable
+only if there is good cause to believe the resident lacks such right
+(see OAR 411-088-0050, OAR 411-088-0060, and OAR 411-088-
+0080).
+
+(g) A facility must provide written notice to a resident involuntarily
+transferred under OAR 411-088-0020(1)(f) (Termination of
+Operations as a Nursing Facility).
+
+      (A) In the case of voluntary closure, written notice must be
+      provided 60 days prior to facility closure.
+
+      (B) In the case of involuntary closure, written notice must be
+      provided as determined by the Department.
+
+(h) A facility must provide written notice to a resident voluntarily
+transferring from a facility pursuant to this rule and must maintain the
+signed consent form in the resident's medical record.
+                             Page 12
+
+(2) NOTIFICATION LIST. The facility must maintain and keep current in the
+resident's record the name, address, and telephone number of the
+resident's legal representative, if any, and of any person designated by the
+resident or the resident's legal representative to receive notice of a transfer.
+The facility must also record the name, address, and telephone number of
+any person who has demonstrated consistent concern for the resident if the
+resident has no one who is currently involved and who has been
+designated by the resident.
+
+(3) NOTICE DISTRIBUTION. Notice must be provided to:
+
+      (a) The resident or former resident, as appropriate;
+
+      (b) All persons required to be listed in the resident's medical record
+      under section (2) of this rule;
+
+      (c) The local unit of the Aging and People with Disabilities Division or
+      Type B Area Agency on Aging. The notice does not need to be
+      provided to the local unit of the Aging and People with Disabilities
+      Division or Type B Area Agency on Aging if the resident is private pay
+      and the resident's stay in the facility totals 30 days or less; and
+
+      (d) The Long-Term Care Ombudsman if there is no one currently
+      involved and designated by the resident. Written notice must be
+      provided to the Long-Term Care Ombudsman In the case of an
+      involuntary transfer under OAR 411-088-0020(1)(f) (Termination of
+      Nursing Facility Operations).
+
+(4) STANDARD NOTICE REQUIRED. Written notice must be provided
+using Form 0509 (Notice of Transfer), Form 0510 (Denial of
+Readmission/Return), or Form 0509L (Resident Letter Nursing Facility
+Closure), as appropriate. Forms may be accessed electronically from the
+Department's Forms Server (https://aix-
+xweb1p.state.or.us/es_xweb/FORMS/) or from the Department by request.
+
+      (a) The notice provided to a resident and the people required to be
+      listed in the resident's medical record under section (2) of this rule
+      must be accompanied by a copy of the Aging and People with
+
+                                   Page 13
+
+      Disabilities Division's brochure, "Leaving the Nursing Facility" (Form
+      9847).
+
+      (b) In the case of involuntary transfer under OAR 411-088-0020(1)(f)
+      (Termination of Nursing Facility Operations), Form 0509L (Resident
+      Letter Nursing Facility Closure) must be distributed with Form 0509
+      (Notice of Transfer).
+
+(5) NOTICE SERVICE. If the person receiving notice as described in
+section (3) of this rule is a resident at a facility, the facility must personally
+serve the written notice to the resident. All other notices required by this
+rule, including notices to former residents, must be either served personally
+or delivered by registered or certified mail.
+
+Stat. Auth.: ORS 441.055, 441.615
+Stats. Implemented: ORS 441.055, 441.600, 441.605, 441.615
+
+SOURCE 3: OAR 411-088-0080, Informal Conference and Hearing | https://www.oregon.gov/odhs/rules-policy/apdrules/411-088.pdf | source date: Amended 04/01/2014 | retrieved: 2026-10-11
+411-088-0080 Informal Conference and Hearing (Amended 04/01/2014)
+
+(1) A resident who is to be involuntarily transferred or refused the right of
+return or readmission is entitled to an informal conference and hearing as
+provided in this rule.
+
+(2) CONFERENCE REQUEST.
+
+      (a) Upon receipt of a notice, a resident, any designated agency, or
+      person acting on the resident's or former resident's behalf, may
+      request an informal conference on the form provided on the brochure,
+      "Leaving the Nursing Facility".
+
+            (A) The request for informal conference must be mailed to the
+            Department within 10 business days of the service or delivery
+            of the notice. The Department shall immediately notify the
+            licensee of the request.
+
+            (B) The Department may extend the time allowed for requesting
+            an informal conference if the Department determines that good
+            cause exists for failure to make a timely request.
+
+
+
+                                    Page 14
+
+         (C) Any facility management personnel or employee involved in
+         providing nursing or other direct care who receives any oral or
+         written indication of a desire for an informal conference from a
+         resident must immediately notify the facility administrator. The
+         administrator must immediately thereupon provide notification
+         to the Department.
+
+    (b) A resident may not be transferred after having requested an
+    informal conference or after facility staff or the licensee has
+    knowledge of any indication of a resident's desire for an informal
+    conference until:
+
+         (A) Disposition of the request has been completed to the
+         satisfaction of all parties; or
+
+         (B) Authorization for transfer is provided by a Hearings Officer
+         pursuant to this rule.
+
+(3) INFORMAL CONFERENCE.
+
+    (a) The Department shall hold an informal conference as promptly as
+    reasonably possible but in no event later than 10 days after the
+    request is received unless a later date is agreed upon by both the
+    facility and the person or agency requesting the conference. The
+    Department shall give telephone notice (where a telephone number is
+    available) and send written notice of the time and place of the
+    informal conference to the facility and all persons entitled to the
+    notice. The purpose of the informal conference is to resolve the
+    matter without a formal hearing. If a resolution is reached at the
+    informal conference, the resolution shall be reduced to writing and no
+    formal hearing shall be held.
+
+    (b) The proceedings shall be conducted at the facility where the
+    resident is located unless an alternate site is agreed upon by both the
+    licensee and the person or agency requesting the informal
+    conference.
+
+    (c) If at the end of an informal conference the licensee wishes to
+    proceed with the transfer, the Department shall ask if the resident or
+
+                                Page 15
+
+    any person or agency representing the resident wishes to request a
+    hearing.
+
+(4) HEARING.
+
+    (a) A hearing is conducted as a contested case in accordance with
+    the Administrative Procedures Act, ORS Chapter 183, and the rules
+    of the Department adopted there under. Parties to the hearing must
+    be the resident (or former resident) and the licensee. The Hearings
+    Officer is delegated the authority to issue the final order and shall do
+    so.
+
+    (b) If, pursuant to section (3) of this rule, the Department receives
+    (orally or in writing) a request for a hearing, the Department shall set
+    the date, time, and place of the hearing as promptly as possible.
+    Unless a later date is agreed upon by both the licensee and the
+    person requesting the hearing, the hearing must be held no later than
+    30 days after the informal conference.
+
+    (c) An expedited hearing must be conducted In the case of an
+    involuntary transfer under OAR 411-088-0020(1)(f) (Termination of
+    Nursing Facility Operations).
+
+          (A) To request an expedited hearing, the resident or any
+          agency or person designated to act on the resident's behalf
+          must verbally request or submit a completed and signed
+          Hearing Request form. The request for an expedited hearing
+          must be received by the Department within 10 business days
+          after an informal conference.
+
+          (B) The Department may extend the time allowed for requesting
+          an expedited hearing if the Department determines that good
+          cause exists for failure to make a timely request.
+
+SOURCE 4: OAR chapter 411 division 88 — contents and purpose | https://www.oregon.gov/odhs/rules-policy/apdrules/411-088.pdf | source date: 411-088-0000 Effective 10/1/1993 | retrieved: 2026-10-11
+OREGON DEPARTMENT OF HUMAN SERVICES
+                   AGING AND PEOPLE WITH DISABILITIES
+                     OREGON ADMINISTRATIVE RULES
+
+                                             CHAPTER 411
+                                              DIVISION 88
+
+                 NURSING FACILITIES/LICENSING - TRANSFERS
+
+                                          Table of Contents
+                                             09/25/2024
+
+411-088-0000 Purpose (Effective 10/1/1993)............................................. 1
+411-088-0005 Definitions (Effective 2/15/1995) ........................................ 1
+411-088-0007 Voluntary Transfer (Effective 10/1/1993) ........................... 3
+411-088-0010 Involuntary Transfer (Effective 10/1/1990)......................... 3
+411-088-0020 Basis for Involuntary Transfer (Amended 04/01/2014) ..... 4
+411-088-0030 Considerations Required Prior to Involuntary Transfer
+(Effective 10/1/1993) ................................................................................... 7
+411-088-0040 Involuntary Transfer Prohibited (Amended 09/25/2024)... 8
+411-088-0050 Right to Return from Hospital (Amended 08/10/2015) ...... 9
+411-088-0060 Right to Readmission (Amended 08/10/2015) ................. 10
+411-088-0070 Notice Requirements (Amended 04/01/2014) .................. 11
+411-088-0080 Informal Conference and Hearing (Amended 04/01/2014)
+................................................................................................................. 14
+
+            OREGON DEPARTMENT OF HUMAN SERVICES
+              AGING AND PEOPLE WITH DISABILITIES
+                OREGON ADMINISTRATIVE RULES
+
+                               CHAPTER 411
+                                DIVISION 88
+
+            NURSING FACILITIES/LICENSING - TRANSFERS
+
+411-088-0000 Purpose (Effective 10/1/1993)
+
+These Oregon Administrative Rules, OAR 411-088-0000 through 411-088-
+0080, shall be known as the "Transfer Rules." The purpose of these rules is
+to ensure that:
+
+(1) Unnecessary transfers do not occur;
+
+(2) When transfers are necessary, precautions are taken by the facility to
+minimize risk to the resident and to help ensure the transfer will result in an
+environment that is suited to meet the resident's needs; and
+
+(3) Residents who leave to go to a hospital, or who choose to go to any
+other environment (except another nursing facility), may return; and
+
+(4) Residents are provided with information on their rights relative to the
+transfer process prior to a voluntary or involuntary transfer.
+
+Stat. Auth.: ORS 410, 411.055
+Stats. Implemented: ORS 441.055, 441.600, 441.615
+
+411-088-0005 Definitions (Effective 2/15/1995)
+
+As used in OAR Chapter 411, Division 088, unless the context requires
+otherwise, the following definitions apply:
+
+SOURCE 5: Contact Us | http://www.oltco.org/contact-us/ | source date: none stated on page | retrieved: 2026-10-11
+GET STARTED
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Programs
+ 
+ Long-Term Care Ombudsman 
+ 
+ Residential Facilities Ombudsman 
+ 
+ Oregon Public Guardian 
+ 
+
+
+Volunteer
+ 
+ Long-Term Care Ombudsman 
+ 
+ Residential Facilities Ombudsman 
+ 
+ Oregon Public Guardian 
+ 
+
+
+Resources
+ 
+ Agency Public Records 
+ 
+ Rulemaking 
+ 
+ Reading List 
+ 
+
+
+Contact Us
+ 
+ Agency Staff 
+ 
+ Public Records Request 
+ 
+
+
+Board
+ 
+ ROPGAB Resources 
+ 
+ ROPGAB Minutes 
+ 
+ ROPGAB Agenda 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Oregon Public Guardian
+
+Location: 830 D St. NE, Salem OR, 97301
+
+General Contact:
+
+     
+
+        844-656-6774 | 503-378-6848          opg.info@rights.oregon.gov          Fax 503-373-0852
+
+
+
+
+
+New Guardianship Case Referrals:  
+
+      971-374-3582                                                                           
+
+
+
+
+
+
+
+
+
+
+
+Residential Facilities Ombudsman
+
+Location: 830 D St. NE, Salem OR, 97301
+
+
+
+
+
+     
+
+        844-674-4567 | 503-378-6852          rfo.info@rights.oregon.gov            Fax 503-373-0852
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Long-Term Care Ombudsman
+
+Location: 830 D St. NE, Salem OR, 97301
+
+
+
+
+
+     
+
+      800-522-2602 | 503-378-6533           ltco.info@rights.oregon.gov          Fax 503-373-0852
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contact Us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CONTACT US
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Agency Location:
+
+830 D St. NE, Salem, OR 97301
+
+
+
+
+
+
+
+
+
+
+
+Long-Term Care Ombudsman
+
+
+
+
+
+
+
+
+
+
+
+Residential Facilities Ombudsman
+
+
+
+
+
+
+
+
+
+
+
+Oregon Public Guardian
+
+
+
+
+
+
+
+
+
+
+
+(800) 522-2602
+
+(503) 378-6533
+
+(503) 373-0852
+
+ltco.info@rights.oregon.gov 
+
+
+
+
+
+
+
+
+
+
+
+(844) 674-4567
+
+(503) 378-6852
+
+
+
+
+
+rfo.info@rights.oregon.gov 
+
+
+
+
+
+
+
+
+
+
+
+(844) 656-6774
+
+(503) 378-6848
+
+New guardianship referrals:
+
+(971) 374-3582
+
+opg.info@rights.oregon.gov 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Accessibility Statement
+
+
+
+
+
+
+
+
+
+
+
+Privacy Statement
+
+
+
+
+
+
+
+
+
+
+
+LTCO COs ONLY
+
+SOURCE 6: OAR 411-088-0050 and 411-088-0060, Right to Return from Hospital; Right to Readmission | https://www.oregon.gov/odhs/rules-policy/apdrules/411-088.pdf | source date: 411-088-0050 Amended 08/10/2015; 411-088-0060 Amended 08/10/2015 | retrieved: 2026-10-11
+411-088-0050 Right to Return from Hospital (Amended 08/10/2015)
+
+(1) If a resident is transferred to a hospital, the facility may not fill the
+resident's bed with another person if the resident or the resident's legal
+representative offers payment, or reimbursement is available from the
+Department, for the period of the hospital stay. If payment or
+reimbursement is offered or available, from or on behalf of the resident, the
+Department, or a combination thereof, or if the facility has not complied in
+full with section (2) of this rule, the resident shall have the right of return to
+his or her bed immediately after the period of hospital stay.
+
+(2) The Administrator, or his or her designee, is responsible for notifying the
+resident or legal representative and any agency responsible for the welfare
+or support of the resident of the option to offer payment to hold the bed
+prior to filling the bed with another person. This notification shall be
+documented in the resident's record by either the resident's or legal
+representative's written agreement to pay or rejection of the option to pay.
+
+(3) If the resident is unable, due to physical or mental incapacity, to enter
+such agreement and there is no legal representative known to the facility,
+this fact shall be documented in the resident's record and the resident's bed
+may thereafter be filled upon issuance of the notice (SDS 0510).
+
+(4) If the resident's bed has been given to another person because
+payment was not offered, the resident shall have priority for readmission
+over all other persons with a right to readmission and over any waiting list.
+
+(5) If a former resident or his or her legal representative requests right of
+return and the facility denies right of return, then the facility shall give
+written notice (SDS 0510).
+
+
+
+                                     Page 9
+
+(6) Persons with right of return have priority over all persons with right of
+readmission.
+
+(7) Residents with a right of return are entitled to return to the facility
+immediately upon discharge from the hospital unless the resident's bed has
+been filled in compliance with this rule and there is no available bed in the
+facility.
+
+Stat. Auth.: ORS 410, 441.055
+Stats. Implemented: ORS 441.055, 441.600, 441.615
+
+411-088-0060 Right to Readmission (Amended 08/10/2015)
+
+(1) Any person transferred from a facility voluntarily or involuntarily shall
+have the right of readmission to the facility from which the person was
+transferred, provided that:
+
+      (a) A request for readmission is made within 180 days of the date of
+      transfer;
+
+      (b) The person is eligible by means of payment and requires nursing
+      facility care; and
+
+      (c) No determination was made at informal conference or hearing that
+      the person does not have the right of readmission.
+
+(2) Section (1) of this rule does not require a facility to accept a person in a
+bed located in a room which is occupied by a resident of the opposite sex
+at the time of the request.
+
+EXCEPTION: A facility is required to accept a person to a room occupied
+by a resident of the opposite sex if the respective resident previously
+shared a room in the facility and if neither resident objects to the admission.
+
+(3) Section (1) of this rule does not require a facility to accept a person who
+voluntarily transferred from the facility directly to another nursing facility.
+
+(4) If a person or his or her legal representative request readmission, and
+the facility denies readmission, then the facility shall give written notice
+(SDS 0510).
+                                    Page 10
+
+(5) A former resident who receives Medicaid does not have the right to be
+readmitted to a facility which is not Medicaid certified unless reimbursement
+is available pursuant to OAR 411-070-0010.
+
+(6) If more than one person has a right of readmission, priority in allocation
+of vacancies shall be determined by the earliest date of application for
+readmission.
+
+(7) A person whose stay in the facility totals 30 or fewer days and was
+transferred pursuant to OAR 411-088-0070(1)(d) (post-hospital extended
+care services or specialized services) may not have a right of readmission.
+
+Stat. Auth.: ORS 441.055, 441.605
+Stats. Implemented: ORS 441.055, 441.600, 441.615
+
+SOURCE 7: Form 0509, Notice of Involuntary Transfer — hearing rights and filing instructions | https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/se0509.pdf | source date: 100-898600 APD 0509 (02/2026) | retrieved: 2026-10-11
+Your Hearing Rights
+What you can do when you do not agree with this notice:
+   This Notice of Involuntary Transfer must be accompanied by a copy of the
+   Leaving the Nursing Facility brochure (DHS 9847). This brochure will
+   provide you with information about your rights and more information
+   about how to request a hearing.
+
+            Use this QR code or link to access related Oregon
+            Administrative Rules (OARs):
+            https://www.oregon.gov/odhs/rules-policy/apdrules/411-088.pdf
+
+   If you disagree with this notice, you must notify the Nursing Facility
+   Licensing Unit within 10 calendar days from the date you receive this
+   notice at: NF.Licensing@odhs.oregon.gov. A Policy Analyst will contact
+   you to schedule an informal meeting.
+
+   If you have questions about your right to disagree with this Notice of
+   Involuntary Transfer, you may contact the Office of the Long-Term Care
+   Ombudsman at:
+       Phone: 1-800-522-2602
+       Mail: 830 D St NE, Salem, OR 97301
+       Email: ltco.info@rights.oregon.gov
+
+   Disability Rights Oregon is the protection and advocacy agency for
+   Nursing Facility residents with:
+     • Intellectual and developmental disabilities or related disabilities
+       established under Part C of the Developmental Disabilities Assistance
+       and Bill of Rights Act of 2000; and
+     • Mental disorder or related disabilities established under the
+       Protection and Advocacy for Mentally Ill Individuals Act.
+       Address:                            Voice: 503-243-2081
+       Disability Rights Oregon            or 1-800-452-1694
+       610 SW Broadway, Suite 200          TTY users: dial 711
+       Portland, OR 97205                  Fax: 1-503-243-1738
+       Website: https://droregon.org
+
+
+100-898600 APD 0509 (02/2026)                                     Page 4 of 6
+
+Alternate formats and languages
+  You can get this document in other languages, large print, braille or a
+  format you prefer free of charge. Contact the Nursing Facility Licensing
+  Unit at NF.licensing@odhs.oregon.gov or 503-373-2227 (voice/text). We
+  accept all relay calls.
+
+
+Instructions to Request a Hearing
+   If you disagree with this Notice of Involuntary Transfer, please contact the
+   Nursing Facility Licensing Unit by email, fax, telephone or US Mail:
+
+       Email:                                Address:
+       NF.Licensing@odhs.oregon.gov          ODHS Safety Oversight & Quality
+       Fax: 503-378-8966                     Nursing Facility Licensing Unit
+                                             P.O. Box 14530
+       Telephone: 503-373-2227 —
+                                             Salem, OR 97309
+       ask to speak to the Nursing
+       Facility Policy Analyst.
+
+   The Policy Analyst will schedule an informal conference with you, anyone
+   you wish to include and the nursing facility staff.
+   The purpose of the informal conference is to resolve the matter without a
+   formal hearing.
+
+   If agreement is not reached at the informal conference, you may request
+   a formal hearing. Hearings are held by the Office of Administrative
+   Hearings, which is independent from the Oregon Department of Human
+   Services (ODHS). After the hearing the judge will make a decision and
+   issue a Final Order.
+
+   If you are not satisfied with the Final Order, ask the Administrative Law
+   Judge to rehear the hearing or reconsider this Order (ORS 183.480-
+   183.497).
+
+   Who can help with my hearing?
+   Anyone may represent you. You may call the Public Benefits Hotline (a
+   program of Legal Aid Services of Oregon and the Oregon Law Center) at
+   1-800-520-5292 for advice and possible representation.
+
+
+100-898600 APD 0509 (02/2026)                                       Page 5 of 6
+
+   What are my other hearing rights?
+   At the hearing, you can tell why you do not agree with the Notice. You
+   can have people testify for you. The laws about your hearing rights and
+   the hearing process are at OAR 137-003-0501 to 0700, 411-088-0080, ORS
+   183.411 to 183.470 and ORS 441.600, 441.605 and 441.615.
+
+   Can I have an expedited hearing?
+   If the facility is closing, you have the right to an “expedited hearing.”
+   There are other circumstances in which you might have the right
+   to request an expedited hearing, however approval is at the judges
+   discretion.
+
+   Note to military personnel
+   Active duty service members have a right to stay (delay) these
+   proceedings under the federal Service Members Civil Relief Act (SCRA).
+   For more information, you may contact the Oregon State Bar (1-800-452-
+   8260), the Oregon Military Department (1-800-452-7500).
+
+
+
+
+     Reset                                                Print
+
+
+100-898600 APD 0509 (02/2026)                                          Page 6 of 6
+

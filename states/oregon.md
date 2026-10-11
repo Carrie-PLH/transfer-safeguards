@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Office of the Long-Term Care Ombudsman, an agency of its own, at "830 D St. NE, Salem, OR 97301", with "(800) 522-2602", "(503) 378-6533", fax "(503) 373-0852" and "ltco.info@rights.oregon.gov". The same office houses a Residential Facilities Ombudsman and the Oregon Public Guardian.
 
-**Sources last checked.** 2026-09-22
+**Sources last checked.** 2026-10-11
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

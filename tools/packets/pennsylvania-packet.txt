@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: pennsylvania
-ASSEMBLED: 2026-09-06
+ASSEMBLED: 2026-10-11
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/pennsylvania.json (recipe digest e41d22209ad8). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -18,7 +18,7 @@ CAPTURE NOTES:
 - SOURCE 6: transport curl; extractor html-text; scope body; slice from 'An appeal received from a proposed action.' to '(D) An appeal received from a food stamp written notice.'; filters trim-lines, collapse-blank-runs.
   Added 2026-09-06, deepening the page to full: 55 Pa. Code Chapter 275 is the Department of Human Services' general fair-hearing procedure, already cited by the handbook (source 1) for the four items an appeal request must contain; this slice is the chapter's own pendency provision -- clause (C)(I) states that when a hearing is requested within the specified time period, assistance is continued pending the hearing decision unless waived. Section 275.4 in full is a long, general-assistance procedural section (food stamps, cash grants, medical assistance alike) running well past this page's scope, so the slice is bounded to clause (C), the one that states the pendency rule, rather than capturing the whole section; the heading text of the next lettered clause, (D), is used as the exclusive upper bound. Same host and body-scope reasoning as sources 4 and 5. This provision is stated for Medical Assistance generally, not for nursing-facility discharge appeals specifically, and the page records that scope rather than assuming it reaches this page's subject.
 
-SOURCE 1: Pennsylvania Department of Human Services, Long-Term Care Handbook, 423.6 Changes in Residence/Discharge/Transfers | http://services.dpw.state.pa.us/oimpolicymanuals/ltc/423_Residence/423_6_Discharge_and_Transfer_from_an_LTC_Facility_or_HCBS.htm | source date: Updated June 11, 2025, Replacing August 22, 2019 | retrieved: 2026-09-06
+SOURCE 1: Pennsylvania Department of Human Services, Long-Term Care Handbook, 423.6 Changes in Residence/Discharge/Transfers | http://services.dpw.state.pa.us/oimpolicymanuals/ltc/423_Residence/423_6_Discharge_and_Transfer_from_an_LTC_Facility_or_HCBS.htm | source date: Updated June 11, 2025, Replacing August 22, 2019 | retrieved: 2026-10-11
 Long-Term Care Handbook
 
 Click here to see this page in full context
@@ -303,7 +303,7 @@ NOTE: The new CAO will determine eligibility for MA as well as LTC Services. �
 
 Updated June 11, 2025, Replacing August 22, 2019
 
-SOURCE 2: Pennsylvania Department of Health, Involuntary Discharge and Transfer Notices — When and what to send to the PA Long-Term Care Ombudsman Office (State Office) | https://sais.health.pa.gov/CommonPOC/content/FacilityWeb/attachment.asp?messageid=3521&filename=Involuntary+Discharge+Notice+Protocol.pdf&attachmentnumber=1 | source date: none stated on document | retrieved: 2026-09-06
+SOURCE 2: Pennsylvania Department of Health, Involuntary Discharge and Transfer Notices — When and what to send to the PA Long-Term Care Ombudsman Office (State Office) | https://sais.health.pa.gov/CommonPOC/content/FacilityWeb/attachment.asp?messageid=3521&filename=Involuntary+Discharge+Notice+Protocol.pdf&attachmentnumber=1 | source date: none stated on document | retrieved: 2026-10-11
 Involuntary Discharge and Transfer Notices
        When and what to send to the PA Long-Term Care Ombudsman Office (State Office)
 
@@ -365,7 +365,7 @@ is required to be                                           required to be sent 
                                                                                        A discharge notice is required unless the discharge is now
                                                                                     resident-initated.
 
-SOURCE 3: Commonwealth of Pennsylvania, Department of Aging — Request Assistance from a Long-Term Care Ombudsman | https://www.pa.gov/services/aging/request-assistance-from-a-long-term-care-ombudsman | source date: none stated on page | retrieved: 2026-09-06
+SOURCE 3: Commonwealth of Pennsylvania, Department of Aging — Request Assistance from a Long-Term Care Ombudsman | https://www.pa.gov/services/aging/request-assistance-from-a-long-term-care-ombudsman | source date: none stated on page | retrieved: 2026-10-11
 Skip to main content
 
  Official website
@@ -518,7 +518,7 @@ Security
 
 Social Media Policy & Disclaimer
 
-SOURCE 4: 28 Pa. Code § 201.29 (Resident rights) | https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/028/chapter201/s201.29.html&d=reduce | source date: site states the Code reflects changes effective through 56 Pa.B. 4026 (July 4, 2026) | retrieved: 2026-09-06
+SOURCE 4: 28 Pa. Code § 201.29 (Resident rights) | https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/028/chapter201/s201.29.html&d=reduce | source date: site states the Code reflects changes effective through 56 Pa.B. 4026 (July 4, 2026) | retrieved: 2026-10-11
 Skip to main content
 
 HOME
@@ -550,13 +550,13 @@ PENNSYLVANIA
 No statutes or acts will be found at this website.
 
  The Pennsylvania Code website reflects the Pennsylvania Code
- changes effective through 56 Pa.B. 4026 (July 4, 2026).
+ changes effective through 56 Pa.B. 5370 (August 8, 2026).
 
  About the Pennsylvania Code & Bulletin
 
 • No statutes or acts will be found at this website.
 
-The Pennsylvania Code website reflects the Pennsylvania Code changes effective through 56 Pa.B. 4026 (July 4, 2026).
+The Pennsylvania Code website reflects the Pennsylvania Code changes effective through 56 Pa.B. 5370 (August 8, 2026).
 
 Previous Doc
 
@@ -680,7 +680,7 @@ Accessibility  |
  Code Publication Schedule  |
  Bulletin Publication Schedule
 
-SOURCE 5: 28 Pa. Code § 201.2 (Requirements) | https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/028/chapter201/s201.2.html&d=reduce | source date: site states the Code reflects changes effective through 56 Pa.B. 4026 (July 4, 2026) | retrieved: 2026-09-06
+SOURCE 5: 28 Pa. Code § 201.2 (Requirements) | https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/028/chapter201/s201.2.html&d=reduce | source date: site states the Code reflects changes effective through 56 Pa.B. 4026 (July 4, 2026) | retrieved: 2026-10-11
 Skip to main content
 
 HOME
@@ -712,13 +712,13 @@ PENNSYLVANIA
 No statutes or acts will be found at this website.
 
  The Pennsylvania Code website reflects the Pennsylvania Code
- changes effective through 56 Pa.B. 4026 (July 4, 2026).
+ changes effective through 56 Pa.B. 5370 (August 8, 2026).
 
  About the Pennsylvania Code & Bulletin
 
 • No statutes or acts will be found at this website.
 
-The Pennsylvania Code website reflects the Pennsylvania Code changes effective through 56 Pa.B. 4026 (July 4, 2026).
+The Pennsylvania Code website reflects the Pennsylvania Code changes effective through 56 Pa.B. 5370 (August 8, 2026).
 
 Previous Doc
 
@@ -796,7 +796,7 @@ Accessibility  |
  Code Publication Schedule  |
  Bulletin Publication Schedule
 
-SOURCE 6: 55 Pa. Code § 275.4(a)(3)(v)(C) (Procedures — an appeal received from a proposed action) | https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/055/chapter275/s275.4.html&d=reduce | source date: site states the Code reflects changes effective through 56 Pa.B. 4026 (July 4, 2026) | retrieved: 2026-09-06
+SOURCE 6: 55 Pa. Code § 275.4(a)(3)(v)(C) (Procedures — an appeal received from a proposed action) | https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/055/chapter275/s275.4.html&d=reduce | source date: site states the Code reflects changes effective through 56 Pa.B. 4026 (July 4, 2026) | retrieved: 2026-10-11
 An appeal received from a proposed action. Procedures for an appeal received from a proposed action will conform with the following:
 
          (I)   When an applicant/recipient responds to a written notice by requesting a hearing within the specified time period as described in §  133.4 (relating to procedures), the agency receiving the hearing request will date stamp the form upon receipt, review the complaint as required in this paragraph, and forward the appeal to the Office of Hearings and Appeals within 3 working days from the time the appeal is received from scheduling a fair hearing. In cases in which a hearing is requested within the specified time period, assistance will be continued pending the hearing decision unless the client waives continuation of benefits.

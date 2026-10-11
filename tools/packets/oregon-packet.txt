@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: oregon
-ASSEMBLED: 2026-09-22
+ASSEMBLED: 2026-10-11
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/oregon.json (recipe digest 411d9b92b896). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -20,7 +20,7 @@ CAPTURE NOTES:
 - SOURCE 7: transport curl; extractor pdftotext-layout; slice from 'Your Hearing Rights' to the end of the document; filters none.
   The department's own standard notice form, named by OAR 411-088-0070(4) (source 2) as the form that must be used for a Notice of Transfer. The rule text captured as source 3 names an office and a filing period without a street address; this form supplies both -- a street address, email and fax for the Nursing Facility Licensing Unit -- and states the filing period as calendar days where OAR 411-088-0080 states it as business days, a discrepancy this recipe does not resolve. Slice runs from the 'Your Hearing Rights' heading to the end of the document.
 
-SOURCE 1: OAR 411-088-0010 and 411-088-0020, Involuntary Transfer; Basis for Involuntary Transfer | https://www.oregon.gov/odhs/rules-policy/apdrules/411-088.pdf | source date: 411-088-0010 Effective 10/1/1990; 411-088-0020 Amended 04/01/2014 | retrieved: 2026-09-22
+SOURCE 1: OAR 411-088-0010 and 411-088-0020, Involuntary Transfer; Basis for Involuntary Transfer | https://www.oregon.gov/odhs/rules-policy/apdrules/411-088.pdf | source date: 411-088-0010 Effective 10/1/1990; 411-088-0020 Amended 04/01/2014 | retrieved: 2026-10-11
 411-088-0010 Involuntary Transfer (Effective 10/1/1990)
 
 Unless a transfer is voluntary, no resident may be transferred from a facility
@@ -138,7 +138,7 @@ reimbursement.
 
                 (i) Current or recent sexual inappropriateness, aggressive
 
-SOURCE 2: OAR 411-088-0070, Notice Requirements | https://www.oregon.gov/odhs/rules-policy/apdrules/411-088.pdf | source date: Amended 04/01/2014 | retrieved: 2026-09-22
+SOURCE 2: OAR 411-088-0070, Notice Requirements | https://www.oregon.gov/odhs/rules-policy/apdrules/411-088.pdf | source date: Amended 04/01/2014 | retrieved: 2026-10-11
 411-088-0070 Notice Requirements (Amended 04/01/2014)
 
 (1) NOTICE LENGTH:
@@ -264,7 +264,7 @@ or delivered by registered or certified mail.
 Stat. Auth.: ORS 441.055, 441.615
 Stats. Implemented: ORS 441.055, 441.600, 441.605, 441.615
 
-SOURCE 3: OAR 411-088-0080, Informal Conference and Hearing | https://www.oregon.gov/odhs/rules-policy/apdrules/411-088.pdf | source date: Amended 04/01/2014 | retrieved: 2026-09-22
+SOURCE 3: OAR 411-088-0080, Informal Conference and Hearing | https://www.oregon.gov/odhs/rules-policy/apdrules/411-088.pdf | source date: Amended 04/01/2014 | retrieved: 2026-10-11
 411-088-0080 Informal Conference and Hearing (Amended 04/01/2014)
 
 (1) A resident who is to be involuntarily transferred or refused the right of
@@ -367,7 +367,7 @@ provided in this rule.
           an expedited hearing if the Department determines that good
           cause exists for failure to make a timely request.
 
-SOURCE 4: OAR chapter 411 division 88 — contents and purpose | https://www.oregon.gov/odhs/rules-policy/apdrules/411-088.pdf | source date: 411-088-0000 Effective 10/1/1993 | retrieved: 2026-09-22
+SOURCE 4: OAR chapter 411 division 88 — contents and purpose | https://www.oregon.gov/odhs/rules-policy/apdrules/411-088.pdf | source date: 411-088-0000 Effective 10/1/1993 | retrieved: 2026-10-11
 OREGON DEPARTMENT OF HUMAN SERVICES
                    AGING AND PEOPLE WITH DISABILITIES
                      OREGON ADMINISTRATIVE RULES
@@ -429,7 +429,7 @@ Stats. Implemented: ORS 441.055, 441.600, 441.615
 As used in OAR Chapter 411, Division 088, unless the context requires
 otherwise, the following definitions apply:
 
-SOURCE 5: Contact Us | http://www.oltco.org/contact-us/ | source date: none stated on page | retrieved: 2026-09-22
+SOURCE 5: Contact Us | http://www.oltco.org/contact-us/ | source date: none stated on page | retrieved: 2026-10-11
 GET STARTED
 
 
@@ -974,7 +974,7 @@ Privacy Statement
 
 LTCO COs ONLY
 
-SOURCE 6: OAR 411-088-0050 and 411-088-0060, Right to Return from Hospital; Right to Readmission | https://www.oregon.gov/odhs/rules-policy/apdrules/411-088.pdf | source date: 411-088-0050 Amended 08/10/2015; 411-088-0060 Amended 08/10/2015 | retrieved: 2026-09-22
+SOURCE 6: OAR 411-088-0050 and 411-088-0060, Right to Return from Hospital; Right to Readmission | https://www.oregon.gov/odhs/rules-policy/apdrules/411-088.pdf | source date: 411-088-0050 Amended 08/10/2015; 411-088-0060 Amended 08/10/2015 | retrieved: 2026-10-11
 411-088-0050 Right to Return from Hospital (Amended 08/10/2015)
 
 (1) If a resident is transferred to a hospital, the facility may not fill the
@@ -1067,7 +1067,7 @@ care services or specialized services) may not have a right of readmission.
 Stat. Auth.: ORS 441.055, 441.605
 Stats. Implemented: ORS 441.055, 441.600, 441.615
 
-SOURCE 7: Form 0509, Notice of Involuntary Transfer — hearing rights and filing instructions | https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/se0509.pdf | source date: 100-898600 APD 0509 (02/2026) | retrieved: 2026-09-22
+SOURCE 7: Form 0509, Notice of Involuntary Transfer — hearing rights and filing instructions | https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/se0509.pdf | source date: 100-898600 APD 0509 (02/2026) | retrieved: 2026-10-11
 Your Hearing Rights
 What you can do when you do not agree with this notice:
    This Notice of Involuntary Transfer must be accompanied by a copy of the

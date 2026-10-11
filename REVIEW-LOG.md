@@ -985,3 +985,29 @@ re-run (51/51 baseline, 50/51 full — the North Dakota gap predates this
 pass and is unrelated to tonight's finding; no unexplained check-all
 failures). Review cursor advanced to oklahoma. One queue entry opened
 (FA-Q-20261010-01, tooling).
+
+## 2026-10-11 — nightly review: oklahoma, oregon, pennsylvania
+
+**Oklahoma — confirmed.** Fresh capture of all 4 sources; zero fidelity
+failures, markdown and HTML. Source headers unchanged byte-for-byte apart
+from retrieval date — no instrument movement or re-dating. Hash
+2cc6278266a6cc37, promoted. Checked date advanced to 2026-10-11.
+
+**Oregon — confirmed.** Fresh capture of all 7 sources; zero fidelity
+failures, markdown and HTML. `retain-packet.py` flagged source headers as
+changed; on inspection this was two sources (6 and 7 — OAR 411-088-0050/0060
+Right to Return from Hospital, and APD Form 0509) present in the recipe and
+already quoted on the live page but absent from the last packet actually
+promoted through retention (2026-09-04, 5 sources) — a recipe-widening gap
+in the retention record, not a replaced or re-dated document; sources 1-5
+are byte-identical to the prior retained packet apart from retrieval date.
+Hash 7a35ffedc2d76123, promoted. Checked date advanced to 2026-10-11.
+
+**Pennsylvania — confirmed.** Fresh capture of all 6 sources; zero fidelity
+failures, markdown and HTML. Source headers unchanged byte-for-byte apart
+from retrieval date — no instrument movement or re-dating. Hash
+6d118788b6e8aad2, promoted. Checked date advanced to 2026-10-11.
+
+sync-checked-dates.py corrected 6 derived dates (table + JSON for the three
+confirmed pages). build-status.py re-run (51/51 baseline, 50/51 full —
+unchanged). Review cursor advanced to rhode-island. No queue entries opened.

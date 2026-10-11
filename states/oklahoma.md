@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Long-Term Care Ombudsman Program. The Department of Human Services leaflet publishes the contact — "calling (405) 521-6734 or 1-800-211-2116" and "ombudsman.intake.line@okdhs.org" — and states that ombudsman representatives "are knowledgeable about discharge requirements and empowered by law to advocate for you." That leaflet is dated 2022, and the Attorney General's office now lists a Long-Term Care Ombudsman among its divisions; no first-party page from that division stating its own contact was captured.
 
-**Sources last checked.** 2026-09-18
+**Sources last checked.** 2026-10-11
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 
