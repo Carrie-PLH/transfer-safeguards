@@ -1,0 +1,7826 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: rhode-island
+ASSEMBLED: 2026-10-13
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/rhode-island.json (recipe digest 0de17a91a036). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- SOURCE 1: transport curl; extractor html-text; scope body; filters none.
+  DRAFT — replace before promoting.
+- SOURCE 2: transport curl; extractor html-text; scope body; filters none.
+  DRAFT — replace before promoting.
+- SOURCE 3: transport curl; extractor html-text; scope body; filters none.
+  DRAFT — replace before promoting.
+- SOURCE 4: transport curl; extractor html-text; scope body; filters none.
+  DRAFT — replace before promoting.
+- SOURCE 5: transport curl; extractor html-text; scope body; filters none.
+  DRAFT — replace before promoting.
+- SOURCE 6: transport curl; extractor html-text; scope body; filters none.
+  DRAFT — replace before promoting.
+- SOURCE 7: transport curl; extractor html-text; scope body; filters none.
+  DRAFT — replace before promoting.
+- SOURCE 8: transport curl; extractor html-text; scope body; filters none.
+  DRAFT — replace before promoting.
+- SOURCE 9: transport curl; extractor html-text; scope body; filters none.
+  DRAFT — replace before promoting.
+- SOURCE 10: transport curl; extractor html-text; scope body; filters none.
+  DRAFT — replace before promoting.
+- SOURCE 11: transport curl; extractor html-text; scope body; filters none.
+  DRAFT — replace before promoting.
+
+SOURCE 1: 210-RICR-50-00-7, Involuntary Discharge from a Long-Term Care Facility | https://rules.sos.ri.gov/regulations/part/210-50-00-7 | source date: Regulation Effective Date 01/04/2022 (Periodic Refile; original E-SIGNED December 15, 2021) | retrieved: 2026-10-13
+An Official Rhode Island State Website.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Rhode Island Department of State
+ 
+
+
+
+ Gregg M. Amore
+ 
+
+
+
+ Secretary of State
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Menu
+
+
+
+
+
+
+
+
+
+
+
+Business Services
+
+
+
+Elections
+
+
+Civics and Education
+
+
+Open Government
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+You are here:
+
+
+Home
+
+
+Open Government
+
+
+Rules and Regulations
+
+
+Code of Regulations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Involuntary Discharge from a Long-Term Care Facility (210-RICR-50-00-7)
+
+
+
+
+
+
+
+
+
+210-RICR-50-00-7
+
+
+ ACTIVE RULE
+ 
+
+
+
+
+
+
+
+
+
+Regulation Text
+
+
+Overview
+
+
+Regulation
+
+
+History
+
+
+Rulemaking Documents
+
+
+
+
+
+
+
+
+
+
+To view the official Final Regulation for accessibility and readability, click Download Regulation:
+
+
+ Download Regulation
+
+
+
+
+My Page Title
+
+7.1Purpose and Overview
+
+7.2Legal Authority
+
+7.3Definitions
+
+7.4Discharge Criteria
+
+7.5DOCUMENTATION REQUIREMENTS
+
+7.6PRE-TRANSFER/ DISCHARGE NOTICE
+
+7.7RESIDENT APPEAL RIGHTS
+
+7.8SEVERABILITY 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Title | 210 | Executive Office of Health and Human Services
+
+
+Chapter | 50 | Medicaid Long-Term Services and Supports
+
+
+Subchapter | 00 | Long-Term Services
+
+
+Part | 7 | Involuntary Discharge from a Long-Term Care Facility (210-RICR-50-00-7)
+
+
+
+
+
+
+
+
+Type of Filing | Periodic Refile
+
+
+Regulation Status | Active
+
+
+Effective | 01/04/2022
+
+
+Additional Information | https://www.eohhs.ri.gov
+
+
+
+
+
+
+
+
+Regulation Authority:
+
+
+
+
+R.I. Gen. Laws Chapters 40-6 ; 40-8; and 42-35; Title XIX of the Social Security Act
+
+
+
+
+
+
+
+
+
+
+Purpose and Reason:
+
+
+
+
+This rule is being refiled by the agency pursuant to R.I. Gen. Laws § 42-35-4.1. No changes were made to the text of this rule.  
+
+
+
+
+
+
+
+
+
+To view the official Final Regulation for accessibility and readability, click Download Regulation:
+
+
+ Download Regulation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ACTIVE RULE
+
+
+
+Periodic Refile
+- effective from 01/04/2022
+to Current
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+
+Amendment
+- effective from 08/01/2018
+to 01/04/2022
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+
+Technical Revision
+- effective from 09/14/2015
+to 08/01/2018
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+
+Technical Revision
+- effective from 12/03/2007
+to 09/14/2015
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+
+Technical Revision
+- effective from 12/03/2007
+to 12/03/2007
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+
+Technical Revision
+- effective from 12/03/2007
+to 12/03/2007
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+
+Amendment
+- effective from 04/01/2007
+to 12/03/2007
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+
+Amendment
+- effective from 06/29/2006
+to 04/01/2007
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+
+Technical Revision
+- effective from 04/04/2006
+to 06/29/2006
+
+
+
+
+
+
+Click 
+here
+ to view previous versions of this Part.
+ 
+
+
+
+
+
+
+
+
+ Rulemaking Documents are organized by document type and are part of this rule’s rulemaking record (R.I. Gen. Laws § 42-35-2.3). If multiple documents of the same type are listed below, each is a unique document.
+ If there are multiple Public Notice of Proposed Rulemaking documents, view each document to identify the most recently amended version, as it may be amended at any point during the Public Comment Period.
+ 
+
+
+
+There are no rulemaking documents associated with this filing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2002-Current Regulations
+
+
+
+
+1950-2001 Regulations
+
+
+
+
+FAQs
+
+
+
+
+Subscribe to Notifications
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Return to top
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+About
+
+
+
+
+Contact
+
+
+
+
+News
+
+
+
+
+Notary Public
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ Rhode Island Department of State
+
+
+
+
+
+
+
+
+
+
+
+Facebook
+
+
+LinkedIn
+
+
+Twitter
+
+SOURCE 2: 210-RICR-10-05-2, Appeals Process and Procedures for EOHHS Agencies and Programs — excerpt: EHO definition, § 2.2.1(A)(4) filing procedures, and § 2.4.8 (Institutional and Community-Based Long-Term Care Resident Involuntary Discharges and Transfers) in full | https://rules.sos.ri.gov/regulations/part/210-10-05-2 | source date: Regulation Effective Date 01/04/2022 (Refile Capabilities; original E-SIGNED December 14, 2021; original signing date 09/13/2018) | retrieved: 2026-10-13
+An Official Rhode Island State Website.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Rhode Island Department of State
+ 
+
+
+
+ Gregg M. Amore
+ 
+
+
+
+ Secretary of State
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Menu
+
+
+
+
+
+
+
+
+
+
+
+Business Services
+
+
+
+Elections
+
+
+Civics and Education
+
+
+Open Government
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+You are here:
+
+
+Home
+
+
+Open Government
+
+
+Rules and Regulations
+
+
+Code of Regulations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Appeals Process and Procedures for EOHHS Agencies and Programs
+
+
+
+
+
+
+
+
+
+210-RICR-10-05-2
+
+
+ ACTIVE RULE
+ 
+
+
+
+
+
+
+
+
+
+Regulation Text
+
+
+Overview
+
+
+Regulation
+
+
+History
+
+
+Rulemaking Documents
+
+
+
+
+
+
+
+
+
+
+To view the official Final Regulation for accessibility and readability, click Download Regulation:
+
+
+ Download Regulation
+
+
+
+
+My Page Title
+
+2.1Purpose, Scope and Applicability
+
+2.2Appeals: General Provisions
+
+2.3Administrative Fair Hearing Process
+
+2.4Agency/Program Specific Appeal and Hearing Provisions
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Title | 210 | Executive Office of Health and Human Services
+
+
+Chapter | 10 | EOHHS General Provisions
+
+
+Subchapter | 05 | Consumer Rights, Responsibilities, and Protections
+
+
+Part | 2 | Appeals Process and Procedures for EOHHS Agencies and Programs
+
+
+
+
+
+
+
+
+Type of Filing | Periodic Refile
+
+
+Regulation Status | Active
+
+
+Effective | 01/04/2022
+
+
+Additional Information | https://eohhs.ri.gov
+
+
+
+
+
+
+
+
+Regulation Authority:
+
+
+
+
+Chapters 40-6 and 40-8 of the Rhode Island General Laws
+
+
+ as amended; Title XIX of the Social Security Act
+
+
+
+
+
+
+
+
+
+
+Purpose and Reason:
+
+
+
+
+This rule is being refiled by the agency pursuant to R.I. Gen. Laws § 42-35-4.1.  No changes were made to the text of this rule. 
+
+
+
+
+
+
+
+
+
+To view the official Final Regulation for accessibility and readability, click Download Regulation:
+
+
+ Download Regulation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ACTIVE RULE
+
+
+
+Periodic Refile
+- effective from 01/04/2022
+to Current
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+EMERGENCY RULE
+
+
+
+Amendment
+- effective from 03/24/2020
+to 07/22/2020
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+
+Amendment
+- effective from 10/03/2018
+to 01/04/2022
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+
+Adoption
+- effective from 06/13/2018
+to 10/03/2018
+
+
+
+
+
+
+
+
+
+
+
+
+ Rulemaking Documents are organized by document type and are part of this rule’s rulemaking record (R.I. Gen. Laws § 42-35-2.3). If multiple documents of the same type are listed below, each is a unique document.
+ If there are multiple Public Notice of Proposed Rulemaking documents, view each document to identify the most recently amended version, as it may be amended at any point during the Public Comment Period.
+ 
+
+
+
+There are no rulemaking documents associated with this filing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2002-Current Regulations
+
+
+
+
+1950-2001 Regulations
+
+
+
+
+FAQs
+
+
+
+
+Subscribe to Notifications
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Return to top
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+About
+
+
+
+
+Contact
+
+
+
+
+News
+
+
+
+
+Notary Public
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ Rhode Island Department of State
+
+
+
+
+
+
+
+
+
+
+
+Facebook
+
+
+LinkedIn
+
+
+Twitter
+
+SOURCE 3: R.I. Gen. Laws § 23-17.5-17, Transfer to another facility | https://webserver.rilegislature.gov/Statutes/TITLE23/23-17.5/23-17.5-17.HTM | source date: History of Section — P.L. 1978, ch. 235, § 1; P.L. 2000, ch. 240, § 1; P.L. 2015, ch. 141, art. 5, § 3 | retrieved: 2026-10-13
+Title 23
+
+Health and Safety
+ 
+
+
+
+
+
+
+
+
+Chapter 17.5
+
+Rights of Nursing Home Patients
+ 
+
+
+
+
+
+
+
+
+R.I. Gen. Laws § 23-17.5-17
+
+
+
+
+
+
+
+§ 23-17.5-17. Transfer to another facility.
+
+
+(a) Before transferring a patient to another facility or level of care within a facility,
+ the patient shall be informed of the need for the transfer and of any alternatives
+ to the transfer.
+ 
+
+
+(b) A patient shall be transferred or discharged only for medical reasons, or for the
+ patient’s welfare or that of other patients or for nonpayment of the patient’s stay.
+ A facility seeking to discharge a patient for nonpayment of the patient’s stay must,
+ if the patient has been a patient of the facility for thirty (30) days or longer,
+ provide the patient and, if known, a family member or legal representative of the
+ patient, with written notice of the proposed discharge thirty (30) days in advance
+ of the discharge.
+ 
+
+
+(c) The patient may file an appeal of the proposed discharge with the state agency designated
+ for hearing such appeals, and if the appeal is received by that agency within ten
+ days after the date of written notice, the patient may remain in the facility until
+ the decision of the hearing officer. For appeals where the patient remains in the
+ facility:
+ 
+
+
+(i) Any hearing on the appeal shall be scheduled no later than thirty (30) days after
+ the receipt by the state agency of the request for appeal;
+ 
+
+
+(ii) No more than one request for continuance by the patient shall be permitted and, if
+ granted, the hearing on the appeal must be rescheduled for a date and time no later
+ than forty (40) days after the receipt by the state agency of the request for appeal;
+ and
+ 
+
+
+(iii) The decision of the hearing officer shall be rendered as soon as possible, but in
+ any event within five (5) days after the date of the hearing.
+ 
+
+
+(d) Reasonable advance notice of transfers to healthcare facilities other than hospitals
+ shall be given to ensure orderly transfer or discharge and those actions shall be
+ documented in the medical record.
+ 
+
+
+(e) In the event that a facility seeks a variance from the required thirty (30) day notice
+ of closure of the facility, reasonable advance notice of the hearing for the variance
+ shall be given by the facility to the patient, his or her guardian, or relative so
+ appointed or elected to be his or her decision-maker, and an opportunity to be present
+ at the hearing shall be granted to the designated person.
+ 
+
+
+(f) In the event of the voluntary closure of a facility, which closure is the result of
+ a variance from the required thirty (30) day notice of closure, granted by the director
+ of the department of health, reasonable advance notice of the closure shall be given
+ by the facility to the patient, his or her guardian, or relative so appointed or elected
+ to be his or her decision-maker.
+ 
+
+
+(g) Nothing herein shall be construed to relieve a patient from any obligation to pay
+ for the patient’s stay in a facility.
+ 
+
+
+
+
+History of Section.
+
+P.L. 1978, ch. 235, § 1; P.L. 2000, ch. 240, § 1; P.L. 2015, ch. 141, art. 5, § 3.
+
+SOURCE 4: R.I. Gen. Laws § 23-17.5-25, Notice on bed-hold policy and readmission | https://webserver.rilegislature.gov/Statutes/TITLE23/23-17.5/23-17.5-25.HTM | source date: History of Section — P.L. 1989, ch. 270, § 1; P.L. 2004, ch. 228, § 1; P.L. 2004, ch. 303, § 1 | retrieved: 2026-10-13
+Title 23
+
+Health and Safety
+ 
+
+
+
+
+
+
+
+
+Chapter 17.5
+
+Rights of Nursing Home Patients
+ 
+
+
+
+
+
+
+
+
+R.I. Gen. Laws § 23-17.5-25
+
+
+
+
+
+
+
+§ 23-17.5-25. Notice on bed-hold policy and readmission.
+
+
+(a) Notice before transfer. Before a resident of a nursing facility is transferred for hospitalization or therapeutic
+ leave, a nursing facility must provide written information to the resident and a family
+ member or legal representative concerning:
+ 
+
+
+(1) The provisions of the medical assistance program state plan regarding the period (if
+ any) during which the resident will be permitted under the state plan to return and
+ resume residence in the facility; and
+ 
+
+
+(2) The policies of the facility regarding the period, which policies must be consistent
+ with subsection (c).
+ 
+
+
+(b) Notice upon transfer. At the time of the transfer of a resident to a hospital or for therapeutic leave,
+ a nursing facility must provide written notice to the resident and a family member
+ or legal representative of the duration of any period described in subsection (c).
+ 
+
+
+(c) Permitting resident to return. A nursing facility must establish and follow a written policy under which a resident:
+ 
+
+
+(1) Who is transferred from the facility for hospitalization or therapeutic leave; and
+ 
+
+
+(2) Whose hospitalization or therapeutic leave exceeds a period paid for under the state
+ plan for the holding of a bed in the facility for the resident, will be permitted
+ to be readmitted to the facility immediately upon the first availability of a bed
+ of appropriate level of care in a semi-private room in the facility if at the time
+ of readmission, the resident requires the services provided by the facility.
+ 
+
+
+(d) Any nursing facility that accepts private payment for purposes of reserving a bed
+ in the facility for a resident who is transferred from the facility for hospitalization
+ or other institutional therapeutic leave, and that resident’s medical and health care
+ is being paid for by the state medical assistance program, shall not charge an amount
+ per day for reserving a bed in the facility that exceeds the facility’s current Medicaid
+ daily rate; for a minimum of the first five (5) days of said hospitalization or the
+ institutional therapeutic leave.
+ 
+
+
+(e) The departments of human services and health shall receive, on a monthly basis, the
+ names from each nursing home of those persons awaiting readmission under these provisions.
+ 
+
+
+(f) The department of health shall promulgate regulations governing these provisions.
+ 
+
+
+
+
+History of Section.
+
+P.L. 1989, ch. 270, § 1; P.L. 2004, ch. 228, § 1; P.L. 2004, ch. 303, § 1.
+
+SOURCE 5: 216-RICR-40-10-1, Licensing of Nursing Facilities — § 1.15.4(S), Rights of Residents (transfer, discharge, and bed-hold) | https://rules.sos.ri.gov/regulations/part/216-40-10-1 | source date: Regulation Effective Date 05/07/2025 (Amendment; Agency Signature April 17, 2025) | retrieved: 2026-10-13
+An Official Rhode Island State Website.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Rhode Island Department of State
+ 
+
+
+
+ Gregg M. Amore
+ 
+
+
+
+ Secretary of State
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Menu
+
+
+
+
+
+
+
+
+
+
+
+Business Services
+
+
+
+Elections
+
+
+Civics and Education
+
+
+Open Government
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+You are here:
+
+
+Home
+
+
+Open Government
+
+
+Rules and Regulations
+
+
+Code of Regulations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Licensing of Nursing Facilities (216-RICR-40-10-1)
+
+
+
+
+
+
+
+
+
+216-RICR-40-10-1
+
+
+ ACTIVE RULE
+ 
+
+
+
+
+
+
+
+
+
+Regulation Text
+
+
+Overview
+
+
+Regulation
+
+
+History
+
+
+Rulemaking Documents
+
+
+
+
+
+
+
+
+
+
+To view the official Final Regulation for accessibility and readability, click Download Regulation:
+
+
+ Download Regulation
+
+
+
+
+My Page Title
+
+1.1Authority
+
+1.2Incorporated Materials
+
+1.3Definitions
+
+1.4Certificate of Need Requirements
+
+1.5General Requirements for Licensure
+
+1.6Application for License or for Changes in Owner, Operator, or Lessee
+
+1.7Issuance and Renewal of License
+
+1.8Capacity and Classifications
+
+1.9Change of Ownership, Operation and/or Location
+
+1.10Inspections
+
+1.11Denial, Suspension, Revocation of License or Curtailment of Activities & Sanctions
+
+1.12Sanctions
+
+1.13Organization and Management
+
+1.14Personnel
+
+1.15Reporting of Resident Abuse or Neglect, Accidents & Death
+
+1.16Resident Care Services
+
+1.17Special Care Units
+
+1.18Environmental and Maintenance Services
+
+1.19Physical Plant
+
+1.20Confidentiality – Variance and Appeal Procedure
+
+1.21Exception and Severability
+
+1.22Licensing Procedures, Definitions, and Conditions for Resident-Directed Homes
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Title | 216 | Department of Health
+
+
+Chapter | 40 | Professional Licensing and Facility Regulation
+
+
+Subchapter | 10 | Facilities Regulation
+
+
+Part | 1 | Licensing of Nursing Facilities (216-RICR-40-10-1)
+
+
+
+
+
+
+
+
+Type of Filing | Amendment
+
+
+Regulation Status | Active
+
+
+Effective | 05/07/2025
+
+
+Additional Information | https://health.ri.gov/regulations/
+
+
+
+
+
+
+
+
+Regulation Authority:
+
+
+
+
+R.I. Gen. Laws § 23-17-10
+
+
+R.I. Gen. Laws § 23-17.5-32
+
+
+R.I. Gen. Laws § 23-17.5-33
+
+
+
+
+
+
+
+
+
+
+Purpose and Reason:
+
+
+
+
+
+ 
+
+These regulations are being amended to align with the statutory language regarding reporting in  § 1.15.5(A). Additionally, RIDOH has removed a reference to R.I. Gen. Laws Chapter 5-29 in § 1.15.4(N)(2). Other non-substantive changes were made.
+ 
+
+
+
+
+
+
+
+
+
+To view the official Final Regulation for accessibility and readability, click Download Regulation:
+
+
+ Download Regulation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ACTIVE RULE
+
+
+
+Amendment
+- effective from 05/07/2025
+to Current
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+
+Amendment
+- effective from 03/07/2024
+to 05/07/2025
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+EMERGENCY RULE
+
+
+
+Amendment
+- effective from 10/02/2023
+to 03/07/2024
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+
+Amendment
+- effective from 08/25/2022
+to 10/02/2023
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+
+Amendment
+- effective from 07/03/2022
+to 08/25/2022
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+EMERGENCY RULE
+
+
+
+Amendment
+- effective from 08/31/2021
+to 02/27/2022
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+EMERGENCY RULE
+
+
+
+Amendment
+- effective from 08/20/2021
+to 08/31/2021
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+EMERGENCY RULE
+
+
+
+Amendment
+- effective from 07/10/2021
+to 08/20/2021
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+EMERGENCY RULE
+
+
+
+Amendment
+- effective from 04/29/2021
+to 07/10/2021
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+EMERGENCY RULE
+
+
+
+Amendment
+- effective from 01/12/2021
+to 04/29/2021
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+EMERGENCY RULE
+
+
+
+Amendment
+- effective from 09/28/2020
+to 01/12/2021
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+EMERGENCY RULE
+
+
+
+Amendment
+- effective from 05/26/2020
+to 09/28/2020
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+
+Technical Revision
+- effective from 03/29/2018
+to 07/03/2022
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+
+Amendment
+- effective from 03/29/2018
+to 03/29/2018
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+
+Technical Revision
+- effective from 08/01/2013
+to 03/29/2018
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+
+Amendment
+- effective from 08/01/2013
+to 08/01/2013
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+
+Amendment
+- effective from 12/10/2012
+to 08/01/2013
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+
+Amendment
+- effective from 11/07/2006
+to 12/10/2012
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+
+Amendment
+- effective from 04/07/2005
+to 11/07/2006
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+
+Amendment
+- effective from 05/01/2003
+to 04/07/2005
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+
+Amendment
+- effective from 08/04/2002
+to 05/01/2003
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INACTIVE RULE
+
+
+
+Periodic Refile
+- effective from 01/02/2002
+to 08/04/2002
+
+
+
+
+
+
+
+
+
+
+
+
+ Rulemaking Documents are organized by document type and are part of this rule’s rulemaking record (R.I. Gen. Laws § 42-35-2.3). If multiple documents of the same type are listed below, each is a unique document.
+ If there are multiple Public Notice of Proposed Rulemaking documents, view each document to identify the most recently amended version, as it may be amended at any point during the Public Comment Period.
+ 
+
+
+
+
+
+ Concise Explanatory Statement
+
+
+
+
+ Public Comment
+
+
+
+
+ Public Notice of Proposed Rulemaking
+
+
+
+
+ Proposed Rule
+
+
+
+
+ Additional Documentation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2002-Current Regulations
+
+
+
+
+1950-2001 Regulations
+
+
+
+
+FAQs
+
+
+
+
+Subscribe to Notifications
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Return to top
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+About
+
+
+
+
+Contact
+
+
+
+
+News
+
+
+
+
+Notary Public
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ Rhode Island Department of State
+
+
+
+
+
+
+
+
+
+
+
+Facebook
+
+
+LinkedIn
+
+
+Twitter
+
+SOURCE 9: Contact (Alliance for Better Long Term Care) | https://alliancebltc.org/contact/ | source date: none stated on page | retrieved: 2026-10-13
+Call Us Today (401) 785-3340
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+Useful links
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ How can we help you? 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+About Us
+
+
+Our Programs
+
+
+
+
+
+Building Bridges Intergenerational Program
+
+
+Office of the RI State Long Term Care Ombudsman
+
+
+The Sweet Acts Program
+
+
+Friendly Visitors Program
+
+
+
+
+
+
+
+
+Volunteer
+
+
+News
+
+
+Contact
+
+
+
+
+
+Alliance
+
+
+Ombudsman
+
+
+
+
+
+
+
+
+Donate
+
+
+
+
+
+Annual Appeal
+
+
+The Sweet Acts Program
+
+
+Donate Now
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+About Us
+
+
+
+Our Programs
+
+
+
+
+Building Bridges Intergenerational Program
+
+
+Office of the RI State Long Term Care Ombudsman
+
+
+The Sweet Acts Program
+
+
+Friendly Visitors Program
+
+
+
+
+
+
+Volunteer
+
+
+News
+
+
+
+Contact
+
+
+
+
+Alliance
+
+
+Ombudsman
+
+
+
+
+
+
+Donate
+
+
+
+Annual Appeal
+
+
+The Sweet Acts Program
+
+
+Donate Now
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Home > Contact
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contact
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Alliance for Better Long Term Care
+
+
+422 Post Road, Suite 204
+
+
+Warwick, RI 02888
+
+
+Phone: (401) 785-3340
+
+
+Toll-Free: (888) 351-0808
+
+
+Fax: (401) 785-3391
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Looking for help with a long-term care concern?
+
+
+If you are contacting us about a resident concern, complaint, resident rights, or an issue involving a nursing home or assisted living facility, please contact The Rhode Island State Long Term Care Ombudsman Program here.
+
+
+Messages submitted through this Alliance contact form are not sent to the Ombudsman Program.
+
+
+
+
+
+
+
+
+
+
+Contact the Alliance for Better Long Term Care
+
+
+Use this form for general questions about the Alliance, our programs, volunteering, donations, events, partnerships, or other organizational matters.
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0/1000 characters
+ 
+
+
+
+
+Submit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+We Listen. We Act. We Care.
+
+
+
+
+
+ 
+
+CALL US TODAY
+
+
+(401) 785-3340
+
+
+
+
+
+
+
+• RI Nursing Home Facilities
+
+• RI ASSISTED LIVING FACILITIES
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+About the Alliance
+
+
+
+
+About Us
+
+
+Contact
+
+
+Donate
+
+
+
+
+ 
+
+
+
+
+
+
+Our Programs
+
+
+
+
+Building Bridges Intergenerational Program
+
+
+Office of the RI State Long Term Care Ombudsman
+
+
+The Sweet Acts Program
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ The RI State Long Term Care Ombudsman Program is
+ supported by federal funding, state grants through the
+ Office of Healthy Aging and philanthropic giving through
+ private donations, under the umbrella of the Alliance for
+ Better Long Term Care.
+ 
+
+
+
+
+
+
+ 
+
+© Copyright Alliance For Better Long Term Care
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+ 
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+ 
+
+0807 8055 100
+
+
+
+
+ 
+
+
+
+
+ 
+
+ 
+
+ 
+
+
+
+ 
+
+
+
+
+Copyrights 2019 © Qode Interactive
+
+
+All Rights Reserved.
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ English 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Accessibility Adjustments 
+
+
+
+
+
+
+
+
+
+
+ Powered by 
+
+ OneTap 
+
+
+
+
+
+
+
+
+
+
+ Hide Toolbar 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Select your accessibility profile
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Vision Impaired Mode 
+
+
+
+
+
+ Enhances website's visuals 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Vision Impaired Mode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Seizure Safe Profile 
+
+
+
+
+
+ Clear flashes & reduces color 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Seizure Safe Profile
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ADHD Friendly Mode 
+
+
+
+
+
+ Focused browsing, distraction-free 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ADHD Friendly Mode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Blindness Mode 
+
+
+
+
+
+ Reduces distractions, improves focus 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Blindness Mode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Epilepsy Safe Mode 
+
+
+
+
+
+ Dims colors and stops blinking 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epilepsy Safe Mode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Content Modules
+
+
+
+
+
+
+
+
+
+
+
+Font Size
+
+
+
+
+
+
+
+Default
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Readable Font
+
+
+
+
+
+
+
+
+
+
+Line Height
+
+
+
+
+
+
+
+Default
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cursor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Letter Spacing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Align Text
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Font Weight
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Color Modules
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Light Contrast
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+High Contrast
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Monochrome
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Orientation Modules
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reading Line
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reading Mask
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hide Images
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Highlight Content
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Stop Animations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Highlight Links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Skip To Content 
+
+Choose...
+Main Content
+Navigation
+Footer
+
+
+
+
+
+
+
+
+
+
+
+ Reset Settings
+
+SOURCE 10: Contact Us — Office of the RI State Long Term Care Ombudsman (Alliance for Better Long Term Care) | https://alliancebltc.org/ombudsman-program/contact/ | source date: none stated on page | retrieved: 2026-10-13
+Call Us Today (401) 785-3340
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+Useful links
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ How can we help you? 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+About Us
+
+
+Our Programs
+
+
+
+
+
+Building Bridges Intergenerational Program
+
+
+Office of the RI State Long Term Care Ombudsman
+
+
+The Sweet Acts Program
+
+
+Friendly Visitors Program
+
+
+
+
+
+
+
+
+Volunteer
+
+
+News
+
+
+Contact
+
+
+
+
+
+Alliance
+
+
+Ombudsman
+
+
+
+
+
+
+
+
+Donate
+
+
+
+
+
+Annual Appeal
+
+
+The Sweet Acts Program
+
+
+Donate Now
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+About Us
+
+
+Our Programs
+
+
+
+
+
+Building Bridges Intergenerational Program
+
+
+Office of the RI State Long Term Care Ombudsman
+
+
+The Sweet Acts Program
+
+
+Friendly Visitors Program
+
+
+
+
+
+
+
+
+Volunteer
+
+
+News
+
+
+Contact
+
+
+
+
+
+Alliance
+
+
+Ombudsman
+
+
+
+
+
+
+
+
+Donate
+
+
+
+
+
+Annual Appeal
+
+
+The Sweet Acts Program
+
+
+Donate Now
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+About Us
+
+
+
+Our Programs
+
+
+
+
+Building Bridges Intergenerational Program
+
+
+Office of the RI State Long Term Care Ombudsman
+
+
+The Sweet Acts Program
+
+
+Friendly Visitors Program
+
+
+
+
+
+
+Volunteer
+
+
+News
+
+
+
+Contact
+
+
+
+
+Alliance
+
+
+Ombudsman
+
+
+
+
+
+
+Donate
+
+
+
+Annual Appeal
+
+
+The Sweet Acts Program
+
+
+Donate Now
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ombudsman Program
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Call Now
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Program Overview
+
+
+What does an Ombudsman do?
+
+
+Certified Volunteer Program
+
+
+Resident’s Rights
+
+
+Choosing a Nursing Home
+
+
+EVENT: Monthly Zoom Family Meetings
+
+
+Annual & NORS Reports
+
+
+Contact Us
+
+
+RILTC Facility Lists
+
+
+Ombudsman Blog
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+Subscribe to our newsletter!
+
+
+
+
+
+
+
+
+
+
+ 
+
+Subscribe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contact the Rhode Island State Long Term Care Ombudsman Program
+
+
+Use this form if you are seeking assistance with a long-term care concern, complaint, resident rights issue, or a problem involving a nursing home or assisted living facility.
+
+
+To protect resident privacy, please DO NOT include the resident’s name or any other personally identifying information in your message. An Ombudsman Program representative will contact you to obtain any additional information needed.
+
+
+We will respond as soon as possible.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PLEASE DO NOT INCLUDE PERSONAL IDENTIFYING INFORMATION OF A RESIDENT OR PATIENT.
+ 
+
+
+
+
+
+
+
+
+
+
+0/1000 characters
+ 
+
+
+
+
+Submit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+We Listen. We Act. We Care.
+
+
+
+
+
+ 
+
+CALL US TODAY
+
+
+(401) 785-3340
+
+
+
+
+
+
+
+• RI Nursing Home Facilities
+
+• RI ASSISTED LIVING FACILITIES
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+About the Alliance
+
+
+
+
+About Us
+
+
+Contact
+
+
+Donate
+
+
+
+
+ 
+
+
+
+
+
+
+Our Programs
+
+
+
+
+Building Bridges Intergenerational Program
+
+
+Office of the RI State Long Term Care Ombudsman
+
+
+The Sweet Acts Program
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ The RI State Long Term Care Ombudsman Program is
+ supported by federal funding, state grants through the
+ Office of Healthy Aging and philanthropic giving through
+ private donations, under the umbrella of the Alliance for
+ Better Long Term Care.
+ 
+
+
+
+
+
+
+ 
+
+© Copyright Alliance For Better Long Term Care
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+ 
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+ 
+
+0807 8055 100
+
+
+
+
+ 
+
+
+
+
+ 
+
+ 
+
+ 
+
+
+
+ 
+
+
+
+
+Copyrights 2019 © Qode Interactive
+
+
+All Rights Reserved.
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ English 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Accessibility Adjustments 
+
+
+
+
+
+
+
+
+
+
+ Powered by 
+
+ OneTap 
+
+
+
+
+
+
+
+
+
+
+ Hide Toolbar 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Select your accessibility profile
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Vision Impaired Mode 
+
+
+
+
+
+ Enhances website's visuals 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Vision Impaired Mode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Seizure Safe Profile 
+
+
+
+
+
+ Clear flashes & reduces color 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Seizure Safe Profile
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ADHD Friendly Mode 
+
+
+
+
+
+ Focused browsing, distraction-free 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ADHD Friendly Mode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Blindness Mode 
+
+
+
+
+
+ Reduces distractions, improves focus 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Blindness Mode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Epilepsy Safe Mode 
+
+
+
+
+
+ Dims colors and stops blinking 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epilepsy Safe Mode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Content Modules
+
+
+
+
+
+
+
+
+
+
+
+Font Size
+
+
+
+
+
+
+
+Default
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Readable Font
+
+
+
+
+
+
+
+
+
+
+Line Height
+
+
+
+
+
+
+
+Default
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cursor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Letter Spacing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Align Text
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Font Weight
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Color Modules
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Light Contrast
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+High Contrast
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Monochrome
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Orientation Modules
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reading Line
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reading Mask
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hide Images
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Highlight Content
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Stop Animations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Highlight Links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Skip To Content 
+
+Choose...
+Main Content
+Navigation
+Footer
+
+
+
+
+
+
+
+
+
+
+
+ Reset Settings
+
+SOURCE 11: Resident's Rights — Office of the RI State Long Term Care Ombudsman (Alliance for Better Long Term Care) | https://alliancebltc.org/ombudsman-program/residents-rights/ | source date: none stated on page | retrieved: 2026-10-13
+Call Us Today (401) 785-3340
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+Useful links
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ How can we help you? 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+About Us
+
+
+Our Programs
+
+
+
+
+
+Building Bridges Intergenerational Program
+
+
+Office of the RI State Long Term Care Ombudsman
+
+
+The Sweet Acts Program
+
+
+Friendly Visitors Program
+
+
+
+
+
+
+
+
+Volunteer
+
+
+News
+
+
+Contact
+
+
+
+
+
+Alliance
+
+
+Ombudsman
+
+
+
+
+
+
+
+
+Donate
+
+
+
+
+
+Annual Appeal
+
+
+The Sweet Acts Program
+
+
+Donate Now
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+About Us
+
+
+Our Programs
+
+
+
+
+
+Building Bridges Intergenerational Program
+
+
+Office of the RI State Long Term Care Ombudsman
+
+
+The Sweet Acts Program
+
+
+Friendly Visitors Program
+
+
+
+
+
+
+
+
+Volunteer
+
+
+News
+
+
+Contact
+
+
+
+
+
+Alliance
+
+
+Ombudsman
+
+
+
+
+
+
+
+
+Donate
+
+
+
+
+
+Annual Appeal
+
+
+The Sweet Acts Program
+
+
+Donate Now
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+About Us
+
+
+
+Our Programs
+
+
+
+
+Building Bridges Intergenerational Program
+
+
+Office of the RI State Long Term Care Ombudsman
+
+
+The Sweet Acts Program
+
+
+Friendly Visitors Program
+
+
+
+
+
+
+Volunteer
+
+
+News
+
+
+
+Contact
+
+
+
+
+Alliance
+
+
+Ombudsman
+
+
+
+
+
+
+Donate
+
+
+
+Annual Appeal
+
+
+The Sweet Acts Program
+
+
+Donate Now
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ombudsman Program
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Call Now
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Program Overview
+
+
+What does an Ombudsman do?
+
+
+Certified Volunteer Program
+
+
+Resident’s Rights
+
+
+Choosing a Nursing Home
+
+
+EVENT: Monthly Zoom Family Meetings
+
+
+Annual & NORS Reports
+
+
+Contact Us
+
+
+RILTC Facility Lists
+
+
+Ombudsman Blog
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+Subscribe to our newsletter!
+
+
+
+
+
+
+
+
+
+
+ 
+
+Subscribe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nursing Home Resident’s Rights
+
+
+Many people believe that once a person enters a nursing home or assisted living facility, they lose their rights or their rights are altered in some manner – this is not true. Residents have rights and those rights need to be protected. Unfortunately, many residents receive no visitors and have no close relatives. This decreases their opportunities to communicate meaningfully with those who could care and advocate for them. Ombudsman Program staff and volunteers communicate with each resident and the program affirms the dignity and value of each resident. Communication is essential to maintaining the rights of all people and is absolutely critical to the Rhode Islanders in nursing facilities and those who live in licensed and unlicensed assisted living facilities.
+
+
+
+
+
+
+
+
+
+
+What to Know About the Residents Rights Camera Law
+
+
+Rhode Island’s Resident Rights Camera Law goes into effect 1/30/25. This law gives residents of nursing homes and assisted living residences the right to have a security-type camera in their room if they choose, with a number of qualifications.
+
+
+
+
+
+
+Learn More
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+You have the right and freedom to exercise your rights as a resident of a facility and as a citizen or resident of the United States without fear of discrimination, restraint, interference, coercion or reprisal. If you are unable to act in your own behalf, your rights are exercised by the person appointed under state law to act in your behalf.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Expand Each Section by Clicking on It
+
+
+
+
+
+
+
+
+Notice of Rights and Services
+
+
+
+
+
+You will be informed of your rights and of all rules and regulations governing resident conduct and responsibilities both orally and in writing.
+
+
+You have the right to inspect and purchase photocopies of your records.
+
+
+You have the right to be fully informed of your total health status.
+
+
+You have the right to refuse treatment and the right to refuse to participate in experimental research.
+
+
+You have the right to formulate an advance directive in accordance with facility policy.
+
+
+You will be informed of Medicare and Medicaid benefits. This information will be posted.
+
+
+You will be informed of facility services and charges.
+
+
+The facility will inform you of procedures for protecting personal funds. If you deem necessary, you may file a complaint with the state survey and certification agency.
+
+
+You will be informed of your physician, his or her specialty, and ways of contacting him or her.
+
+
+The facility must consult with you and notify your physician and interested family member of any significant change in your condition or treatment, or of any decision to transfer or discharge.
+
+
+The facility will notify you and interested family member of a room or roommate change.
+
+
+You may have the right to refuse a room change if your move is from a Medicare bed to a non-Medicare bed or from a Medicaid bed to a non-Medicaid bed.
+
+
+The facility will periodically update the address and telephone number of your legal representative or interested family member.
+
+
+The facility will notify you and interested family member of change in your rights as a resident.
+
+
+
+
+
+
+
+
+Protection of Funds
+
+
+
+
+
+You may manage your own financial affairs. You are not required to deposit personal funds with the facility.
+
+
+The facility must manage your deposited funds with your best interests in mind. Your money will not be commingled with facility funds.
+
+
+The facility will provide you with an individualized financial report quarterly and upon your request.
+
+
+Any remaining estate will be conveyed to your named successor.
+
+
+All funds held by the facility will be protected by a security bond.
+
+
+
+
+
+
+
+
+Free Choice
+
+
+
+
+
+You may choose your own personal physician.
+
+
+You will be informed of and may participate in your care and treatment and any resulting changes.
+
+
+
+
+
+
+
+
+Privacy
+
+
+
+
+
+You have the right of privacy over your personal and clinical records.
+
+
+Your privacy will include: personal care, medical treatments, telephone use, visits, letters, and meetings of family and resident groups.
+
+
+You may approve or refuse the release of your records except in the event of a transfer or legal situation.
+
+
+
+
+
+
+
+
+Grievances
+
+
+
+
+
+You may voice grievances concerning your care without fear of discrimination or reprisal.
+
+
+You may expect prompt efforts for the resolution of grievances.
+
+
+
+
+
+
+
+
+Examination of Survey Results
+
+
+
+
+
+You may examine survey results and the plan of correction. These, or a notice of their location, will be posted in a readily accessible place.
+
+
+You may contact client advocate agencies and receive information from them.
+
+
+
+
+
+
+
+
+Work
+
+
+
+
+
+You may perform or refuse to perform services for the facility.
+
+
+All services performed must be well documented in the care plan to include nature of the work and compensation.
+
+
+
+
+
+
+
+
+Mail
+
+
+
+
+
+You may promptly send and receive your mail unopened and have access to writing supplies.
+
+
+
+
+
+
+
+
+Access and Visitation Rights
+
+
+
+
+
+You have the right to receive or deny visitors.
+
+
+You have the right and the facility must provide access to visit with any relevant agency of the state or any entity providing health, social, legal or other services.
+
+
+
+
+
+
+
+
+Telephone
+
+
+
+
+
+You have the right to use the telephone in private.
+
+
+
+
+
+
+
+
+Personal Property
+
+
+
+
+
+You can retain and use personal possessions as space permits.
+
+
+
+
+
+
+
+
+Married Couples
+
+
+
+
+
+A married couple may share a room.
+
+
+
+
+
+
+
+
+Self-Administration of Drugs
+
+
+
+
+
+You may self-administer drugs unless determined unsafe by the interdisciplinary team.
+
+
+
+
+
+
+
+
+
+
+
+Admission, Transfer and Discharge Rights
+
+
+
+
+
+
+
+
+Transfer and Discharge
+
+
+
+
+
+You may not be transferred or discharged unless your needs cannot be met, safety is endangered, services are no longer required, or payment has not been made.
+
+
+Notice of and reason(s) for transfer or discharge must be provided to you in an understandable manner.
+
+
+Notice of transfer or discharge must be given 30 days prior, except in cases of health and safety needs.
+
+
+The transfer or discharge notice must include the name, address and telephone number of the appropriate, responsible protective agency.
+
+
+A facility must provide sufficient preparation to ensure a safe transfer or discharge.
+
+
+
+
+
+
+
+
+Equal Access to Quality Care
+
+
+
+
+
+The facility must use identical policies regarding transfer, discharge and services for all residents.
+
+
+The facility may determine charges for a non-Medicaid resident as long as written notice was provided at the time of admission.
+
+
+
+
+
+
+
+
+Notice of Bed Hold Policy and Readmission
+
+
+
+
+
+You and a family member must receive written notice of state and facility bed hold policies before and at the time of a transfer.
+
+
+The facility must follow a written policy for readmittance if the bed hold period is exceeded.
+
+
+
+
+
+
+
+
+Admission Policy
+
+
+
+
+
+The facility must not require a third-party guarantee of payment or accept any gifts as a condition of admission or continued stay.
+
+
+The facility cannot require you to waive your right to receive or apply for Medicare or Medicaid benefits.
+
+
+The facility may obtain legal financial access for payment without incurring your personal liability.
+
+
+The facility may charge a Medicaid-eligible resident for items and services requested.
+
+
+The facility may only accept contributions if they are not a condition of admission or continued stay.
+
+
+
+
+
+
+
+
+
+
+
+Resident Behavior and Facility Practices
+
+
+
+
+
+
+
+
+Dignity
+
+
+
+
+
+The facility will treat you with the dignity and respect in full recognition of your individuality.
+
+
+
+
+
+
+
+
+Restraints
+
+
+
+
+
+The facility may not use physical restraints or psychoactive drugs for discipline or convenience or when they are not required to treat medical symptoms.
+
+
+
+
+
+
+
+
+Abuse
+
+
+
+
+
+You have the right to be free from verbal, sexual, physical or mental abuse, corporal punishment and involuntary seclusion.
+
+
+
+
+
+
+
+
+Staff Treatment
+
+
+
+
+
+The facility must implement procedures that protect you from abuse, neglect or mistreatment, and misappropriation of your property.
+
+
+In the event of an alleged violation involving your treatment, the facility is required to report it to the appropriate officials. All alleged violations must be thoroughly investigated and the results reported.
+
+
+
+
+
+
+
+
+Quality of Life
+
+
+
+
+
+The facility must care for you in a manner that enhances your quality of life.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Assisted Living Resident’s Rights (216-RICR-40-10-2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+We Listen. We Act. We Care.
+
+
+
+
+
+ 
+
+CALL US TODAY
+
+
+(401) 785-3340
+
+
+
+
+
+
+
+• RI Nursing Home Facilities
+
+• RI ASSISTED LIVING FACILITIES
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+About the Alliance
+
+
+
+
+About Us
+
+
+Contact
+
+
+Donate
+
+
+
+
+ 
+
+
+
+
+
+
+Our Programs
+
+
+
+
+Building Bridges Intergenerational Program
+
+
+Office of the RI State Long Term Care Ombudsman
+
+
+The Sweet Acts Program
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ The RI State Long Term Care Ombudsman Program is
+ supported by federal funding, state grants through the
+ Office of Healthy Aging and philanthropic giving through
+ private donations, under the umbrella of the Alliance for
+ Better Long Term Care.
+ 
+
+
+
+
+
+
+ 
+
+© Copyright Alliance For Better Long Term Care
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+ 
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+ 
+
+0807 8055 100
+
+
+
+
+ 
+
+
+
+
+ 
+
+ 
+
+ 
+
+
+
+ 
+
+
+
+
+Copyrights 2019 © Qode Interactive
+
+
+All Rights Reserved.
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ English 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Accessibility Adjustments 
+
+
+
+
+
+
+
+
+
+
+ Powered by 
+
+ OneTap 
+
+
+
+
+
+
+
+
+
+
+ Hide Toolbar 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Select your accessibility profile
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Vision Impaired Mode 
+
+
+
+
+
+ Enhances website's visuals 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Vision Impaired Mode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Seizure Safe Profile 
+
+
+
+
+
+ Clear flashes & reduces color 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Seizure Safe Profile
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ADHD Friendly Mode 
+
+
+
+
+
+ Focused browsing, distraction-free 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ADHD Friendly Mode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Blindness Mode 
+
+
+
+
+
+ Reduces distractions, improves focus 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Blindness Mode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Epilepsy Safe Mode 
+
+
+
+
+
+ Dims colors and stops blinking 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epilepsy Safe Mode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Content Modules
+
+
+
+
+
+
+
+
+
+
+
+Font Size
+
+
+
+
+
+
+
+Default
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Readable Font
+
+
+
+
+
+
+
+
+
+
+Line Height
+
+
+
+
+
+
+
+Default
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cursor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Letter Spacing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Align Text
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Font Weight
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Color Modules
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Light Contrast
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+High Contrast
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Monochrome
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Orientation Modules
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reading Line
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reading Mask
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hide Images
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Highlight Content
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Stop Animations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Highlight Links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Skip To Content 
+
+Choose...
+Main Content
+Navigation
+Footer
+
+
+
+
+
+
+
+
+
+
+
+ Reset Settings
+

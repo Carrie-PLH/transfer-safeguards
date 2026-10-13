@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: south-carolina
-ASSEMBLED: 2026-09-18
+ASSEMBLED: 2026-10-13
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/south-carolina.json (recipe digest da788e39c404). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -12,7 +12,7 @@ CAPTURE NOTES:
 - SOURCE 3: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
   Added 2026-09-18, deepening the page, to answer section 02's hearing-office row: found by search rather than by following a link from an already-captured source, because the 2026-08-30 packet's two sources (Chapter 81 and the ombudsman program page) name no state forum and the department's own appeals apparatus sits on a different subdomain neither source links. `#main-content` on this page's template is an empty skip-link anchor with no text of its own (confirmed by inspection), so, as with source 2, 'body' is used to reach the actual content, which on this page includes an inline FAQ accordion; the department's site navigation is left in as 'body' produces it. The page states this apparatus is South Carolina's general Medicaid fair-hearing forum (an appeal of eligibility, benefit, and provider determinations across the agency, an MCO, or a nursing home), not a route created specifically for nursing-home transfer or discharge; its own 'When can I appeal?' list names 'You receive notice that the nursing home where you reside plans to discharge or transfer you against your wishes.' as one of the enumerated situations, which is the first-party statement this page's hearing-office row rests on.
 
-SOURCE 1: South Carolina Code of Laws, Title 44 Chapter 81 — Bill of Rights for Residents of Long-Term Care Facilities | https://www.scstatehouse.gov/code/t44c081.php | source date: none stated on page | retrieved: 2026-09-18
+SOURCE 1: South Carolina Code of Laws, Title 44 Chapter 81 — Bill of Rights for Residents of Long-Term Care Facilities | https://www.scstatehouse.gov/code/t44c081.php | source date: none stated on page | retrieved: 2026-10-13
 CHAPTER 81
 
 Bill of Rights for Residents of Long-Term Care Facilities
@@ -115,7 +115,7 @@ HISTORY: 1985 Act No. 118, SECTION 6.
 
 HISTORY: 1985 Act No. 118, SECTION 7.
 
-SOURCE 2: South Carolina Department on Aging — Long Term Care Ombudsman Program | https://aging.sc.gov/programs-initiatives/long-term-care-ombudsman-program | source date: none stated on page; footer carries Copyright © 2026 | retrieved: 2026-09-18
+SOURCE 2: South Carolina Department on Aging — Long Term Care Ombudsman Program | https://aging.sc.gov/programs-initiatives/long-term-care-ombudsman-program | source date: none stated on page; footer carries Copyright © 2026 | retrieved: 2026-10-13
 Skip to main content
 
 Home
@@ -138,7 +138,7 @@ Data
 
 Reports and Plans
 
-Program Instruction (PI) and Waivers
+Policy
 
 Events
 
@@ -172,7 +172,7 @@ Senior Nutrition Program
 
 Senior P.R.E.P.
 
-SC Vulnerable Adult Guardian Ad Litem
+Vulnerable Adult Guardian ad Litem of SC
 
 Supportive Services
 
@@ -266,7 +266,7 @@ Senior Nutrition Program
 
 Senior P.R.E.P.
 
-SC Vulnerable Adult Guardian Ad Litem
+Vulnerable Adult Guardian ad Litem of SC
 
 Supportive Services
 
@@ -317,7 +317,7 @@ youtube
  Website by
  Cyberwoven
 
-SOURCE 3: File an Appeal (South Carolina Department of Health and Human Services, Office of Appeals and Hearings) | https://www.scdhhs.gov/appeals/file-appeal | source date: none stated on page | retrieved: 2026-09-18
+SOURCE 3: File an Appeal (South Carolina Department of Health and Human Services, Office of Appeals and Hearings) | https://www.scdhhs.gov/appeals/file-appeal | source date: none stated on page | retrieved: 2026-10-13
 Skip to main content
 
 Top Nav

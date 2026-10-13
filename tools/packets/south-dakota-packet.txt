@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: south-dakota
-ASSEMBLED: 2026-09-25
+ASSEMBLED: 2026-10-13
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/south-dakota.json (recipe digest 634cc3da5d2b). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -18,7 +18,7 @@ CAPTURE NOTES:
 - SOURCE 6: transport curl; extractor pdftotext-layout; slice from 'Nursing Facility Leave Days' to 'Out-of-State Services'; filters none.
   Linked from the department's Medicaid Provider Billing Manuals index (dss.sd.gov/medicaid/providers/billingmanuals/default.aspx, 200 to curl with a browser user-agent) as the skilled-nursing/nursing-facility manual. The direct PDF address carries no session token or query hash, so it is a stable, directly-linked download (PROVENANCE.md transport rule), and answers plain curl with a browser user-agent. 12 pages, no scanned image — pdftotext -layout reproduces the running text cleanly (single-column). Sliced from the 'Nursing Facility Leave Days' heading (Covered Services and Limits section) to the next heading, 'Out-of-State Services'; this is the only span stating the reserve-bed-day and therapeutic-leave-day limits. Both anchors occur once in the extracted text (checked 2026-09-24). A second, shorter 'Reserved Bed Days' passage appears later in the manual's Payment section (page 8) restating that a reserved bed is reimbursed at up to 100% of the per diem rate 'in accordance with the criteria in the Covered Services and Limits section' — i.e. it cross-references rather than restates the day limits captured here, so it was not separately sliced.
 
-SOURCE 1: ARSD chapter 44:73:11, Residents' Rights (South Dakota Administrative Rules, Title 44 — Department of Health, Article 44:73, Nursing Facilities) | https://sdlegislature.gov/api/Rules/44%3A73 | source date: no single date for the chapter; each section carries its own "Source:" line — § 44:73:11:14 (Admission, transfer, and discharge policies) states "Source: 19 SDR 95, effective January 7, 1993; 22 SDR 70, effective November 10. 1995; transferred from § 44:04:17:14, 42 SDR 51, effective October 13, 2015; 51 SDR 53, effective November 11, 2024." | retrieved: 2026-09-25
+SOURCE 1: ARSD chapter 44:73:11, Residents' Rights (South Dakota Administrative Rules, Title 44 — Department of Health, Article 44:73, Nursing Facilities) | https://sdlegislature.gov/api/Rules/44%3A73 | source date: no single date for the chapter; each section carries its own "Source:" line — § 44:73:11:14 (Admission, transfer, and discharge policies) states "Source: 19 SDR 95, effective January 7, 1993; 22 SDR 70, effective November 10. 1995; transferred from § 44:04:17:14, 42 SDR 51, effective October 13, 2015; 51 SDR 53, effective November 11, 2024." | retrieved: 2026-10-13
 CHAPTER 44:73:11
 
  
@@ -579,7 +579,7 @@ from § 44:04:17:07, repealed, 42 SDR 51, effective October 13, 2015.
 
     Law Implemented: SDCL 34-12-13.
 
-SOURCE 2: ARSD chapter 67:17:02, Fair Hearings (South Dakota Administrative Rules, Title 67 — Department of Social Services), sections 67:17:02:01 through 67:17:02:04 | https://sdlegislature.gov/api/Rules/67%3A17%3A02 | source date: no single date for the chapter; § 67:17:02:03 (Hearing requests) states "Source: SL 1975, ch 16, § 1; transferred from § 67:12:03:03, 2 SDR 71, effective April 29, 1976; 7 SDR 66, 7 SDR 89, effective July 1, 1981; 35 SDR 166, effective December 24, 2008; 52 SDR 33, effective September 29, 2025." | retrieved: 2026-09-25
+SOURCE 2: ARSD chapter 67:17:02, Fair Hearings (South Dakota Administrative Rules, Title 67 — Department of Social Services), sections 67:17:02:01 through 67:17:02:04 | https://sdlegislature.gov/api/Rules/67%3A17%3A02 | source date: no single date for the chapter; § 67:17:02:03 (Hearing requests) states "Source: SL 1975, ch 16, § 1; transferred from § 67:12:03:03, 2 SDR 71, effective April 29, 1976; 7 SDR 66, 7 SDR 89, effective July 1, 1981; 35 SDR 166, effective December 24, 2008; 52 SDR 33, effective September 29, 2025." | retrieved: 2026-10-13
 CHAPTER 67:17:02
 
 
@@ -905,7 +905,7 @@ Implemented: SDCL 28-1-24.1.
 
     Overpayments -- Hearings -- Payments made pending hearing,§ 67:47:01:25.01.
 
-SOURCE 3: Fair Hearings — South Dakota Department of Social Services | https://dss.sd.gov/keyresources/adminhearings/fairhearing.aspx | source date: none stated on page (footer copyright 2020) | retrieved: 2026-09-25
+SOURCE 3: Fair Hearings — South Dakota Department of Social Services | https://dss.sd.gov/keyresources/adminhearings/fairhearing.aspx | source date: none stated on page (footer copyright 2020) | retrieved: 2026-10-13
 Fair Hearings 
 
 
@@ -1054,7 +1054,7 @@ The ALJ will not participate in a discussion with you or anyone else about the f
 
  Additional information on administrative hearing procedure can be found in South Dakota Codified Law (SDCL) Chapter 1-26 and in Administrative Rules of South Dakota (ARSD) Chapter 67:17.
 
-SOURCE 4: Ombudsman Program — South Dakota Department of Human Services | https://dhs.sd.gov/en/ltss/ombudsman-program | source date: none stated on page | retrieved: 2026-09-25
+SOURCE 4: Ombudsman Program — South Dakota Department of Human Services | https://dhs.sd.gov/en/ltss/ombudsman-program | source date: none stated on page | retrieved: 2026-10-13
 Ombudsman Program
 Home
 |
@@ -1125,7 +1125,7 @@ Pierre, SD  57501
 
 Skip to menu
 
-SOURCE 5: Long-Term Care Ombudsman Program | South Dakota Department of Human Services — Dakota at Home directory listing | https://dakotaathome.sd.gov/search/c5a84daf-cd8f-5ac5-bad2-b72b20ac7b97 | source date: "Last Assured 11/20/2025" | retrieved: 2026-09-25
+SOURCE 5: Long-Term Care Ombudsman Program | South Dakota Department of Human Services — Dakota at Home directory listing | https://dakotaathome.sd.gov/search/c5a84daf-cd8f-5ac5-bad2-b72b20ac7b97 | source date: "Last Assured 11/20/2025" | retrieved: 2026-10-13
 Long-Term Care Ombudsman Program | South Dakota Department of Human Services
 
 Results
@@ -1311,7 +1311,7 @@ Last Assured
 
 What's Here
 
-State Government Agencies/DepartmentsLong Term Care Ombudsman ProgramsNursing Facility Complaints
+State Government Agencies/DepartmentsNursing Facility ComplaintsLong Term Care Ombudsman Programs
 
 
 
@@ -1361,7 +1361,7 @@ South Dakota Department of Human Services
 
 Enhances the quality of life of people with disabilities, in partnership with its stakeholders.
 
-SOURCE 6: South Dakota Medicaid Billing and Policy Manual — Skilled Nursing Facility and Nursing Facility Services (PDF) | https://dss.sd.gov/docs/medicaid/providers/billingmanuals/Institutional/Skilled_Nursing_Facilities_and_Nursing_Facilities.pdf | source date: Every page header states "UPDATED" / "July 24"; PDF document properties (Creator: Microsoft Word for Microsoft 365) give CreationDate and ModDate both 2024-07-26T15:00:26-04:00. | retrieved: 2026-09-25
+SOURCE 6: South Dakota Medicaid Billing and Policy Manual — Skilled Nursing Facility and Nursing Facility Services (PDF) | https://dss.sd.gov/docs/medicaid/providers/billingmanuals/Institutional/Skilled_Nursing_Facilities_and_Nursing_Facilities.pdf | source date: Every page header states "UPDATED" / "July 24"; PDF document properties (Creator: Microsoft Word for Microsoft 365) give CreationDate and ModDate both 2024-07-26T15:00:26-04:00. | retrieved: 2026-10-13
 Nursing Facility Leave Days
  Reserve Bed Days
  Reserve bed days are days that the recipient is absent from the nursing facility due to an inpatient

@@ -1,0 +1,1096 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: south-carolina
+ASSEMBLED: 2026-10-13
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/south-carolina.json (recipe digest da788e39c404). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- SOURCE 1: transport curl; extractor html-text; scope body; slice from 'CHAPTER 81 Bill of Rights for Residents of Long-Term Care Facilities' to 'South Carolina Legislative Services Agency'; filters trim-lines, collapse-blank-runs.
+  The served page opens with a long run of client-side search/print JavaScript before the chapter text begins and closes with the Legislative Services Agency's own address block; the standing packet's own method was 'sliced from the first section heading of chapter 81 to the end of section 44-81-70' after a tag strip. This recipe anchors one heading earlier, at the chapter's own title line rather than SECTION 44-81-10's heading, because the chapter title is unique on the page and at least as stable, and a wider slice can only add evidence. `to` excludes the Legislative Services Agency footer. Both anchors confirmed unique (count 1) on a fresh fetch 2026-09-06.
+- SOURCE 2: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The 2026-08-30 standing packet used the session HTTP fetch tool, which trimmed the department's navigation, programme lists and resource links; tested 2026-09-06 with plain curl and a browser user-agent, the page returns HTTP 200. A narrower scope was tried first: the page's `<main id="main-content">` landmark reaches the program copy but not the office's fax number and street address, which the theme prints in a separate global `#block-footercontactblock` footer widget rather than inside `main`. `body` is used instead so the packet can vouch for those contact facts too, matching this project's rule to find the contact facts before settling the scope; the department's site navigation is left in as 'body' produces it, the same choice this project already makes for other states' unscoped html-text sources (e.g. virginia).
+- SOURCE 3: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  Added 2026-09-18, deepening the page, to answer section 02's hearing-office row: found by search rather than by following a link from an already-captured source, because the 2026-08-30 packet's two sources (Chapter 81 and the ombudsman program page) name no state forum and the department's own appeals apparatus sits on a different subdomain neither source links. `#main-content` on this page's template is an empty skip-link anchor with no text of its own (confirmed by inspection), so, as with source 2, 'body' is used to reach the actual content, which on this page includes an inline FAQ accordion; the department's site navigation is left in as 'body' produces it. The page states this apparatus is South Carolina's general Medicaid fair-hearing forum (an appeal of eligibility, benefit, and provider determinations across the agency, an MCO, or a nursing home), not a route created specifically for nursing-home transfer or discharge; its own 'When can I appeal?' list names 'You receive notice that the nursing home where you reside plans to discharge or transfer you against your wishes.' as one of the enumerated situations, which is the first-party statement this page's hearing-office row rests on.
+
+SOURCE 1: South Carolina Code of Laws, Title 44 Chapter 81 — Bill of Rights for Residents of Long-Term Care Facilities | https://www.scstatehouse.gov/code/t44c081.php | source date: none stated on page | retrieved: 2026-10-13
+CHAPTER 81
+
+Bill of Rights for Residents of Long-Term Care Facilities
+
+ SECTION 44-81-10. Short title.
+
+ This act may be cited as the "Bill of Rights for Residents of Long-Term Care Facilities".
+
+HISTORY: 1985 Act No. 118, SECTION 1.
+
+ SECTION 44-81-20. Legislative findings.
+
+ The General Assembly finds that persons residing within long-term care facilities are isolated from the community and often lack the means to assert their rights fully as individual citizens. The General Assembly recognizes the need for these persons to live within the least restrictive environment possible in order to retain their individuality and personal freedom. The General Assembly further finds that it is necessary to preserve the dignity and personal integrity of residents of long-term care facilities through the recognition and declaration of rights safeguarding against encroachments upon each resident's need for self-determination.
+
+HISTORY: 1985 Act No. 118, SECTION 2.
+
+ SECTION 44-81-30. Definitions.
+
+ As used in this chapter:
+
+ (1) "Long-term care facility" means an intermediate care facility, nursing care facility, or residential care facility subject to regulation and licensure by the State Department of Health and Environmental Control (department).
+
+ (2) "Resident" means a person who is receiving treatment or care in a long-term care facility.
+
+ (3) "Representative" means a resident's legal guardian, committee, or next of kin or other person acting as agent of a resident who does not have a legally appointed guardian.
+
+HISTORY: 1985 Act No. 118, SECTION 3.
+
+ SECTION 44-81-40. Rights of residents; written and oral explanation required.
+
+ (A) Each resident or the resident's representative must be given by the facility a written and oral explanation of the rights, grievance procedures, and enforcement provisions of this chapter before or at the time of admission to a long-term care facility. Written acknowledgment of the receipt of the explanation by the resident or the resident's representative must be made a part of the resident's file. Each facility must have posted written notices of the residents' rights in conspicuous locations in the facility. The written notices must be approved by the department. The notices must be in a type and a format which is easily readable by residents and must describe residents' rights, grievance procedures, and the enforcement provisions provided by this chapter.
+
+ (B) Each resident and the resident's representative must be informed in writing, before or at the time of admission, of:
+
+ (1) available services and of related charges, including all charges not covered under federal or state programs, by other third party payers, or by the facility's basic per diem rate;
+
+ (2) the facility's refund policy which must be adopted by each facility and which must be based upon the actual number of days a resident was in the facility and any reasonable number of bed-hold days, except when the provisions of subsection (E) apply.
+
+ Each resident and the resident's representative must be informed in writing of any subsequent change in services, charges, or refund policy.
+
+ (C) Each resident or the resident's legal guardian has the right to:
+
+ (1) choose a personal attending physician;
+
+ (2) participate in planning care and treatment or changes in care and treatment;
+
+ (3) be fully informed in advance about changes in care and treatment that may affect the resident's well-being;
+
+ (4) receive from the resident's physician a complete and current description of the resident's diagnosis and prognosis in terms that the resident is able to understand;
+
+ (5) refuse to participate in experimental research.
+
+ (D) A resident may be transferred or discharged only for medical reasons, for the welfare of the resident or for the welfare of other residents of the facility, or for nonpayment and must be given written notice of not less than thirty days, except that when the health, safety, or welfare of other residents of the facility would be endangered by the thirty-day notice requirement, the time for giving notice must be that which is practicable under the circumstances. Each resident must be given written notice before the resident's room or roommate in the facility is changed.
+
+ (E)(1) If a community residential care facility resident or a resident's representative chooses to voluntarily relocate from the resident's current facility, the resident or the resident's representative must give the facility administrator written notice of this intent to relocate not less than fourteen days before the resident's relocation becomes effective. Voluntary relocation does not occur when a resident of a community residential care facility seeks to be discharged because a higher level of care is required or because the resident's health, safety, or welfare is endangered.
+
+ (2) If a community residential care facility resident or a resident's representative fails to give timely notice as required by this subsection, the facility administrator may charge the resident the equivalent of fourteen days occupancy from the earlier of the date of the relocation or the date the facility administrator received proper notice of the resident's intent to relocate. However, if the facility is able to fill the bed vacated by the resident, the facility shall cease charging the resident regardless of the notice given. The facility shall notify the previous resident in writing as soon as it fills the bed with a new resident.
+
+ (3) Residents participating in the Optional State Supplementation Program are excluded from the requirements of items (1) and (2).
+
+ (F) Each resident or the resident's representative may manage the resident's personal finances unless the facility has been delegated in writing to carry out this responsibility, in which case the resident must be given a quarterly report of the resident's account.
+
+ (G) Each resident must be free from mental and physical abuse and free from chemical and physical restraints except those restraints ordered by a physician.
+
+ (H) Each resident must be assured security in storing personal possessions and confidential treatment of the resident's personal and medical records and may approve or refuse their release to any individual outside the facility, except in the case of a transfer to another health care institution or as required by law or a third party payment contract.
+
+ (I) Each resident must be treated with respect and dignity and assured privacy during treatment and when receiving personal care.
+
+ (J) Each resident must be assured that no resident will be required to perform services for the facility that are not for therapeutic purposes as identified in the plan of care for the resident.
+
+ (K) The legal guardian, family members, and other relatives of each resident must be allowed immediate access to that resident, subject to the resident's right to deny access or withdraw consent to access at any time. Each resident without unreasonable delay or restrictions must be allowed to associate and communicate privately with persons of the resident's choice and must be assured freedom and privacy in sending and receiving mail. The legal guardian, family members, and other relatives of each resident must be allowed to meet in the facility with the legal guardian, family members, and other relatives of other residents to discuss matters related to the facility, so long as the meeting does not disrupt resident care or safety.
+
+ (L) Each resident may meet with and participate in activities of social, religious, and community groups at the resident's discretion unless medically contraindicated by written medical order.
+
+ (M) Each resident must be able to keep and use personal clothing and possessions as space permits unless it infringes on another resident's rights.
+
+ (N) Each resident must be assured privacy for visits of a conjugal nature.
+
+ (O) Married residents must be permitted to share a room unless medically contraindicated by the attending physician in the medical record.
+
+ (P) A resident or a resident's legal representative may contract with a person not associated with or employed by the facility to perform sitter services unless the services are prohibited from being performed by a private contractor by state or federal law or by the written contract between the facility and the resident. The person, being a private contractor, is required to abide by and follow the policies and procedures of the facility as they pertain to sitters and volunteers. The person must be selected from an approved list or agency and approved by the facility. All residents or residents' legal representatives employing a private contractor must agree in writing to hold the facility harmless from any liability.
+
+HISTORY: 1985 Act No. 118, SECTION 4; 1992 Act No. 474, SECTION 1; 1994 Act No. 438, SECTION 1; 2014 Act No. 170 (H.3098), SECTION 1, eff May 16, 2014.
+
+ SECTION 44-81-50. Discrimination.
+
+ Each resident must be offered treatment without discrimination as to sex, race, color, religion, national origin, or source of payment.
+
+HISTORY: 1985 Act No. 118, SECTION 5.
+
+ SECTION 44-81-60. Grievance procedures; review by department.
+
+ Each facility shall establish grievance procedures to be exercised by or on behalf of the resident to enforce the rights provided by this act. The department shall review and approve these grievance procedures annually. This act is enforced by the department. The department may promulgate regulations to carry out the provisions of this act.
+
+HISTORY: 1985 Act No. 118, SECTION 6.
+
+ SECTION 44-81-70. Retaliation.
+
+ No facility by or through its owner, administrator, or operator, or any person subject to the supervision, direction, or control of the owner, administrator, or operator shall retaliate against a resident after the resident or the resident's legal representative has engaged in exercising rights under this act by increasing charges, decreasing services, rights, or privileges, or by taking any action to coerce or compel the resident to leave the facility or by abusing or embarrassing or threatening any resident in any manner.
+
+HISTORY: 1985 Act No. 118, SECTION 7.
+
+SOURCE 2: South Carolina Department on Aging — Long Term Care Ombudsman Program | https://aging.sc.gov/programs-initiatives/long-term-care-ombudsman-program | source date: none stated on page; footer carries Copyright © 2026 | retrieved: 2026-10-13
+Skip to main content
+
+Home
+
+Search Term
+
+Increase the size of text on this page
+
+Main navigation
+
+About
+
+Financial Details
+
+Transparency
+
+Staff and Partners
+
+Data
+
+Reports and Plans
+
+Policy
+
+Events
+
+Programs & Initiatives
+
+Alzheimer’s Resource Coordination Center (ARCC)
+
+Dementia Care Specialist Program
+
+ElderCare Trust Fund
+
+Evidence-Based Disease Prevention and Health Promotion
+
+Family Caregiver Support
+
+Geriatric Physician Loan Forgiveness
+
+Healthy Connections Prime Ombudsman
+
+Legal Assistance for Seniors
+
+Long Term Care Ombudsman
+
+Medicare and Medicare Fraud
+
+Senior Centers and Permanent Improvement Project Grant
+
+Senior Community Service Employment Program
+
+Senior Nutrition Program
+
+Senior P.R.E.P.
+
+Vulnerable Adult Guardian ad Litem of SC
+
+Supportive Services
+
+Find Service Providers
+
+Menu
+
+ triggers privacy signup box
+
+Notice
+
+This is not a secure email. Do not submit any personal health information, social security numbers, or other confidential information on this form.
+
+Long Term Care Ombudsman Program
+
+Breadcrumb
+
+Home
+
+ Long Term Care Ombudsman Program
+
+South Carolina's Long Term Care Ombudsman Program (LTCOP) helps to resolve complaints made by or for residents of long term care facilities. They address issues related to quality of care and quality of life.  Some of the issues LTCOP may assist with include:
+
+Violations of rights
+
+Improper transfer or discharge of a resident
+
+Assistance with benefits
+
+Dignity and respect
+
+Abuse, neglect or exploitation
+
+If you suspect abuse or neglect in a long term care facility, please call the SCDOA Long Term Care Ombudsman at 1-800-868-9095.
+
+Do you need to report the abuse, neglect or exploitation of an adult in the community? Click here to make a report and for more information.
+
+About the Issue
+
+South Carolina has 2,039 long term care facilities (nursing homes, assisted living, community residential care facilities, DDSN and DMH facilities) with 43,678 beds.  Annually, the Long Term Care Ombudsman Program investigates more than 8,000 complaints filed by or on behalf of long term care residents.
+
+What does the Long Term Care Ombudsman do?
+
+Long Term Care Ombudsmen serve as advocates for the resident and help them or their family members navigate the long term care maze and educate them on resident rights and benefits.
+
+Long Term Care Ombudsmen assist any resident with concerns about quality of care or quality of life.
+
+Long Term Care Ombudsmen assist the resident or their representative with the appeals and grievance process.
+
+Long Term Care Ombudsmen educate the residents, caregivers, stakeholders, and community members about long term care and the issues they may face via telephone, walk-in, emails, or outreach events.
+
+Get Involved
+
+To serve as a Volunteer Ombudsman, contact the Ombudsman's office at 1-800-868-9095.
+
+Reports and Plans
+
+Click here to view reports and plans.
+
+Speaking Engagements
+
+We'll happily send a representative to speak to your group about the Ombudsman program and the services we offer. Contact us at 803-734-9900 to arrange a speaker.
+
+Programs & Initiatives
+
+Alzheimer’s Resource Coordination Center (ARCC)
+
+Dementia Care Specialist Program
+
+ElderCare Trust Fund
+
+Evidence-Based Disease Prevention and Health Promotion
+
+Family Caregiver Support
+
+Geriatric Physician Loan Forgiveness
+
+Healthy Connections Prime Ombudsman
+
+Legal Assistance for Seniors
+
+Long Term Care Ombudsman
+
+Medicare and Medicare Fraud
+
+Senior Centers and Permanent Improvement Project Grant
+
+Senior Community Service Employment Program
+
+Senior Nutrition Program
+
+Senior P.R.E.P.
+
+Vulnerable Adult Guardian ad Litem of SC
+
+Supportive Services
+
+Ombudsman Links & Resources
+
+Resident Rights (The Consumer Voice)
+
+Visitation Guidelines FAQs for Nursing Homes and Community Residential Care Facilities (CMS)
+
+Updated Guidelines for Visitation (DHEC)
+
+How to Safely Conduct Visits to Nursing Homes (CMS)
+
+SC Facility Vaccination Rates (as of 7/18/21)
+
+If you need help finding assisted living, transportation, financial assistance, or other services, please visit our resource site GetCareSC.com.
+
+Footer menu
+
+GetCareSC.com
+
+SC.gov
+
+Download Adobe Reader
+
+Accessibility
+
+Call SCDOA Toll Free:
+
+1-800-868-9095
+
+Local: (803) 734-9900
+
+Fax: (803) 734-9886
+
+1301 Gervais Street, Suite 350, Columbia, SC 29201
+
+South Carolina is making our veterans a priority for employment in state agencies and institutions. Click here for eligibility requirements.
+
+facebook
+
+twitter
+
+youtube
+
+ Copyright © 2026 South Carolina Department on Aging
+
+ Website by
+ Cyberwoven
+
+SOURCE 3: File an Appeal (South Carolina Department of Health and Human Services, Office of Appeals and Hearings) | https://www.scdhhs.gov/appeals/file-appeal | source date: none stated on page | retrieved: 2026-10-13
+Skip to main content
+
+Top Nav
+
+Agency Listing
+
+Online Services
+
+Cybersecurity Tips
+
+Menu
+
+Open Search
+
+Search Terms
+
+Main navigation
+
+Members
+
+Getting Started
+
+Program Eligibility and Income Limits
+
+Where to Go For Help
+
+FAQs
+
+Annual Reviews
+
+Provider Information
+
+Resources
+
+Tax Information
+
+Provider Search
+
+Forms
+
+Managed Care Plan Information
+
+Member Information
+
+Healthy Connections Prime (MMP)
+
+Member and Advocate Toolkit
+
+Health Plans
+
+Healthy Connections Prime Advocate (Ombudsman)
+
+Program For All-Inclusive Care Of The Elderly (PACE)
+
+Dual Special Needs Plans
+
+Recursos en Español
+
+Pharmacy Preferred Drug Lists
+
+Providers
+
+Manuals
+
+Administrative and Billing Manual
+
+Ambulance Services Manual
+
+Autism Spectrum Disorder (ASD) Services Manual
+
+Clinic Services Manual
+
+Community Mental Health (CMH) Services Manual
+
+Dental Services Manual
+
+Durable Medical Equipment Services Manual
+
+Early Intervention Services Manual
+
+Enhanced Services Manual
+
+Federally Qualified Health Center (FQHC) Services Provider Manual
+
+Home and Community-based Services (HCBS) Manual
+
+Home Health Services Manual
+
+Hospice Services Manual
+
+Hospital Services Manual
+
+Licensed Independent Practitioners (LIP) Rehabilitative Services Manual
+
+Local Education Agencies (LEA) Services Provider Manual
+
+Medicaid Targeted Case Management (MTCM) Services Manual
+
+Nursing Facility Services Manual
+
+Optional State Supplementation Services Manual
+
+Pharmacy Services Manual
+
+Physicians Services Provider Manual
+
+Psychiatric Hospital Services Manual
+
+Rehabilitative Behavioral Health Services (RBHS) Manual
+
+Rehabilitative Therapy and Audiological Services Manual
+
+Rural Health Clinic (RHC) Services Provider Manual
+
+SC Medicaid Policy And Procedures Manual
+
+Provider Manual Archive
+
+Fee Schedules
+
+Provider Enrollment
+
+Agreements and Forms
+
+FAQs
+
+Ordering, Referring and Prescribing (ORP) Providers
+
+Revalidation
+
+Managed Care
+
+Managed Care Organizations (MCO)
+
+Provider Information
+
+Healthy Connections Prime (MMP)
+
+Provider Information
+
+Provider FAQs
+
+Provider Toolkit
+
+Program For All-Inclusive Care Of The Elderly (PACE)
+
+Provider Information
+
+Dual Special Needs Plans (D-SNP)
+
+Provider Information
+
+Trainings
+
+Provider Training Resources
+
+Contact a Provider Representative
+
+Provider Appeals
+
+All Patient Refined Diagnosis Related Groups (APR-DRGs)
+
+Claims
+
+Pharmacy
+
+Current Preferred Drug List (PDL)
+
+MCO Comprehensive Drug Lists
+
+Partners
+
+Committees and Groups
+
+Managed Care
+
+Managed Care Organizations (MCO)
+
+Resources
+
+Contacts
+
+For MCOs
+
+Healthy Connections Prime (MMP)
+
+Resources
+
+Program Data
+
+For CICOs
+
+Program For All-Inclusive Care Of The Elderly (PACE)
+
+Program Data
+
+Regulatory
+
+Dual Special Needs Plans (D-SNP)
+
+Program Data
+
+Regulatory
+
+Managed Care Carve-in
+
+Managed Care Carve-in FAQs
+
+Managed Care Carve-in Training Resources
+
+Quality
+
+Reports and Resources
+
+External Quality Review (EQR) Reports
+
+Quality Metrics
+
+Special Populations Program
+
+Waiver QA, Training, and Compliance
+
+Waiver Compliance FAQs
+
+Reports and Statistics
+
+Data and Research
+
+Transparency
+
+Medicaid Enrollment Dashboard
+
+Aged 65 and Older
+
+Children
+
+Disabled Adults
+
+Limited Benefits
+
+New Applications
+
+Other Adults
+
+Medicaid Annual Eligibility Review Dashboard
+
+SC Health Viz
+
+Vendor Information
+
+Apply for Medicaid
+
+Header Navigation
+
+Claims
+
+Communications
+
+Appeals
+
+Fraud
+
+Contact
+
+Breadcrumb
+
+Home
+
+Appeals
+
+ File An Appeal
+
+File an Appeal
+
+Open a New Appeal
+Eligibility Appeals
+This is a denial of an initial application for Medicaid or nursing home benefits. For questions regarding Eligibility Appeals please read the Eligibility Appeals FAQs below.
+
+Eligibility Appeals
+Provider Appeals
+This is a denial of claim for services rendered by a provider after any applicable reconsideration process has occurred.  It also is an appeal from a determination from the Office of Program Integrity regarding an overpayment, suspension, or termination of a provider.
+
+Provider Appeals
+Other Appeals
+This is a denial of a request for services by a Medicaid Member before the services were provided.
+
+Prior to filing an appeal on behalf of a Medicaid Member, you must have legal authority to do so, or have a completed Form 1282 signed by the Member granting permission to act on their behalf.
+
+Other Appeals
+
+FAQs
+
+Please view the frequently asked questions (FAQs) related to the appeals process for information that can help you choose the right appeal process. The contents of the FAQs are for informational purposes only, and answers may vary by situation or hearing officer. Please read any orders or other communications received from a hearing officer carefully and follow any instructions given.
+Appeals and Hearings FAQs
+What is an appeal?
+
+An appeal is asking for a hearing because you do not agree with a decision the South Carolina Department of Health and Human Services (SCDHHS), a Managed Care Organization (MCO), or another party acting on behalf of the agency has made. The hearings that are held are often referred to as "fair hearings."
+
+An appeal is not a claim review or claim reconsideration process. Providers should exhaust their options through the SCDHHS Provider Service Center at 888-289-0709 or, if applicable, through the agency's Claim Reconsideration Process.
+
+You should state why and what you are appealing or why you think the decision made is erroneous. You should include a copy of the notice you received, keeping the original for your records. Additionally, you should include your full contact information (name, address, phone number, email, Medicaid number, etc.) so we can contact you.
+
+You can also include copies of additional documentation you want the hearing officer to review (i.e.: medical records, bank statements, etc.). However, you will have an opportunity later in the process and during the hearing to introduce those documents.
+
+You may also request continued benefits or services if you request continued services within ten days (10) of the date on the notice.
+
+What is a fair hearing?
+
+A fair hearing is an in-person proceeding conducted by a hearing officer of the Office of Appeals and Hearings. The parties and hearing officer will meet at a set time and place for the hearing. During the hearing, the hearing officer listens to your explanation as to why you do not agree with the action taken by SCDHHS, the MCO, or another party acting on the agency's behalf. The hearing officer will also listen to the representative for the other party explain the action taken on your case. Both sides can ask questions of the other party's witnesses. The hearing officer can also ask the witnesses questions. After the hearing, the hearing officer will issue a written decision in the case.
+
+Hearings are not held telephonically.
+
+Where is a fair hearing held?
+
+Most hearings are held at Jefferson Square, 1801 Main Street, Columbia, SC 29201. Occasionally, hearings may be scheduled for county eligibility or Community Long Term Care (CLTC) offices or other locations. You may request a different location for the hearing. The location of the hearing will be determined by the hearing officer.
+
+What is a hearing officer?
+
+A hearing officer is a neutral third party that presides over the appeal. The hearing officer guides the proceeding, sending letters and orders to the parties. The hearing officer also presides over the hearing and issues a final order in the appeal.
+
+A hearing officer is not a representative or advocate for any party at the proceeding, and he or she cannot provide legal or other advice to either party.
+
+When can I appeal?
+
+The following are some of the situations in which you can ask for an appeal (not an exhaustive list):
+
+You are denied eligibility.
+
+Your benefits or services are reduced, terminated, or suspended.
+
+The agency or another party (MCO, South Carolina Department of Disabilities and Special Needs [SCDDSN], etc.) denies your request for benefits or services.
+
+Your request for prior authorization is denied.
+
+A decision on your application or request for benefits has not been made in a timely manner.
+
+You receive notice that the nursing home where you reside plans to discharge or transfer you against your wishes.
+
+How do I appeal?
+
+You should carefully read the notice or denial you receive. It will contain instructions on how to appeal.
+
+To appeal a Medicaid eligibility decision, state what and why you are appealing and include a copy of the notice you received.
+
+You can submit this information in the following ways:
+
+Submit your appeal online. You will receive an electronic confirmation via email after submitting an appeal.
+
+Fax to 803-255-8206 or 803-255-8251
+
+Mail to:
+
+Attn: Eligibility Appeals
+
+SCDHHS
+
+PO Box 8206
+
+Columbia, SC 29202
+
+Email your appeal to eligappeals@scdhhs.gov
+
+Call 888-549-0820
+
+If you are enrolled in a Managed Care Organization (MCO), you should contact your health plan and work through its internal appeal process before filing an appeal with the Office of Appeals and Hearings.
+
+If you are enrolled in waiver services through SCDDSN, you should complete its reconsideration process before filing an appeal with the Office of Appeals and Hearings.
+
+For other appeals, please state what and why you are appealing (why you think the decision made or action taken is wrong). Please include a copy of the notice or denial you received with your letter and be sure to include complete contact information for you and your representative (if you have one). Please submit the appeal one of the following ways:
+
+Submit your appeal online. You will receive an electronic confirmation via email after submitting an appeal.
+
+Fax to (803) 255-8206
+
+Mail your appeal to:
+
+Office of Appeals and Hearings
+
+PO Box 8206
+
+Columbia, SC 29202
+
+Email your appeal to appeals@scdhhs.gov
+
+Can I ask for my hearing to be considered quickly?
+
+A member may request an expedited appeal. SCDHHS will grant or deny these requests as expeditiously as possible. If we grant your request to expedite, your appeal will be resolved as expeditiously as possible instead of the standard 90-day timeframe. If we deny the request to expedite, the appeal will follow the standard 90-day timeframe.
+
+SCDHHS may grant expedited review if we determine the standard appeal timeframe could jeopardize the individual's life, health, or ability to attain, maintain, or regain maximum function. SCDHHS may consider, among other facts:
+
+The medical urgency of the member's situation.
+
+Whether a needed procedure has already been scheduled.
+
+Whether a member is unable to schedule a needed procedure due to lack of coverage.
+
+Whether other insurance will cover most of the costs of the requested treatment.
+
+You may request an expedited appeal at the same time you file your appeal request or after you file an appeal. Please state you are requesting an expedited appeal and explain why. Requests can be filed on the Appeals website (www.scdhhs.gov/appeals), by fax, email, or mail.
+
+To avoid delays in the process, please submit any supporting documentation with the request for expedited review or immediately thereafter. While supporting documentation is not required, SCDHHS will make its determination based on the information made available at the time we consider the request.
+
+Who is an Eligibility Respondent Coordinator?
+
+Eligibility appeals are routed to the Eligibility Respondent Coordinator (ERC), who will review the appeal request and determination. In the case of caseworker or other error or upon the receipt of more information, the ERC may be able to resolve your appeal request without a hearing. If the ERC can resolve the case, you will be notified. If the case cannot be resolved, the ERC will send you and the hearing officer a copy of the Eligibility Appeal Summary. This summary includes all information about the eligibility determination that was made and the appeal. It can include supporting policy, any documents submitted with the application, the application itself, and other documents. Once the hearing officer receives the Eligibility Appeal Summary, he or she will continue with the appeal.
+
+How long do I have to appeal?
+
+You should carefully read the notice or denial you receive. It will contain instructions on how long you have to appeal. Some notices will give you thirty (30) days from the date of the notice. Other notices give you thirty (30) days from the day you receive the notice.
+
+MCOs may have their own appeal times and procedures. Please review the notice you received carefully.
+
+Can I ask for my services or benefits to continue?
+
+New services cannot be started. However, you may request continued benefits or services if you do so within ten days (10) of the date on the notice. Your services or benefits will continue during the appeal process. Any disputed benefits or services you receive during the appeal process may have to be paid back if the hearing officer rules the agency, MCO, or other party making the decision was correct.
+
+Can someone ask for an appeal for me?
+
+Yes, you may have a representative appear on your behalf for the appeal. You can also represent yourself.
+
+Do I have to hire an attorney?
+
+No, an attorney is not required. However, you may hire an attorney if you choose to do so. The attorney should file a notice of appearance with the hearing officer as soon as possible.
+
+Can I contact the hearing officer?
+
+Yes, you may contact the hearing officer about procedural issues such as scheduling matters, questions about the appeals process, requests for an extension, or to withdraw an appeal. However, the hearing officer cannot discuss the substantive issues of the appeal with you without the other parties also on the communication (email, phone call, etc.). Speaking to the hearing officer about issues in the appeal without having all the parties involved is called ex parte communication. Ex parte communication is not allowed. The parties may speak to each other at any time without the hearing officer's involvement.
+
+You can contact the Office of Appeals and Hearings at (803)898-2600 or (800)763-9087.
+
+Can I receive communication and documents from the Appeals Office or Eligibility Respondent Coordinator s electronically?
+
+Yes, you can elect to receive all documents via email. This option is available when you file appeals on the Appeals website. You can also indicate you would like to receive documents electronically by fax, email, or mail.
+
+The Appeals Office and/or Eligibility Respondent Coordinator will send you a written confirmation if you elect to receive correspondence electronically. We will also send a test message to your email address and ask you to confirm you received it.
+
+If the Appeals Office or ERC sends a message to you electronically and it does not bounce back as undeliverable, it is presumed to have been delivered.
+
+If it bounces back as undeliverable, we will try to send it to the designated email address one more time. If it is returned as undeliverable again, we will place a hard copy of the correspondence or Order in the mail to you. Please be sure to provide an up-to-date and working email address.
+
+Do you need special accommodations?
+
+You may need accommodations in order to complete the appeals process. For example, you may need a translator, interpreter, a Braille form, handicap-accessible parking, or assistance with transportation. If you require special accommodations, please contact the Office of Appeals and Hearings at (803)898-2600 or (800)763-9087 so that we may assist you.
+
+What is a Petitioner?
+
+A Petitioner is the person filing the appeal or the person on whose behalf an appeal is filed.
+
+What is a Respondent?
+
+The Respondent is the party whose determination is appealed. It is often SCDHHS, an MCO, or a nursing home.
+
+What is a Pre-Hearing Conference Order?
+
+A Pre-Hearing Conference Order is often issued at the beginning of an appeal. It generally requires the appealing party, the Petitioner, to contact the Respondent, the agency or other party making the determination. The conference between the parties can be held in person, but it is most often conducted over the phone.
+
+After the conference is held, both parties must then provide a summary to the hearing officer of the issues discussed and what issues remain outstanding. The Petitioner must also indicate if they want to move forward with a hearing. If the parties settled the matter, the Petitioner should indicate if they want to withdraw the appeal request.
+
+As with all orders and communications received from the hearing officer, please carefully review the Order and follow all instructions. Failure to do so may result in dismissal of your appeal.
+
+Who will be present at my hearing?
+
+The hearing will include at least the following:
+
+The hearing officer.
+
+The Petitioner and/or their representative.
+
+A representative from SCDHHS or the other organization making a determination. Others present may include:
+
+Any witnesses either party brings to testify.
+
+Observers, such as family members or other hearing officers, if the parties do not object to the observers' attendance, and their attendance does not otherwise disrupt the proceeding.
+
+What happens at the hearing?
+
+Hearings have a more relaxed environment than courtrooms you see on TV or in movies. Typically, the hearing officer, the parties, and any witnesses meet around a table in a conference room.
+
+Both parties will be given an opportunity to present an opening statement. Then, the Petitioner is given a turn to speak and present its witnesses and arguments. The Respondent is then allowed to cross-examine the Petitioner's witnesses. Then the Respondent is given its turn to present its witnesses and arguments, with the Petitioner then being allowed to cross-examine those witnesses.
+
+Typically, the Petitioner goes first in presenting its argument and case. However, when the Petitioner is not represented by an attorney, the hearing officer typically asks the agency or Respondent to go first. The hearing officer will determine the order of presentation. At the conclusion of the hearing, each party is given an opportunity to make a closing statement.
+
+A decision will not be made the day of the hearing.
+
+When will I get the order or decision from the hearing officer?
+
+There is no set timeframe for receiving the order or decision from the hearing officer. The timeframe can depend on several factors: how much evidence needs to be reviewed, whether the parties submit additional evidence after the hearing, and the difficulty of the type of case, among others.
+
+Ordinarily, member appeals should be concluded within 90 days of filing. The 90 days can be affected by requests for extension by the parties, requests to supply additional information to the hearing officers, and difficulty scheduling a hearing. There is no equivalent deadline for provider appeals. In all instances, the hearing officers strive to issue timely and thorough decisions.
+
+You will receive the final order via certified mail. Please be sure to accept or retrieve certified mail when delivered or when you receive notice of it.
+
+Can I appeal the hearing officer's decision?
+
+Yes. You may appeal to the Administrative Law Court. Directions on how to contact and begin an appeal to the ALC are contained within the cover letter sent with the hearing officer's order. Please be aware that appeals must be filed with the ALC within thirty (30) days of the receipt of the hearing officer's order. For more information about appealing to the ALC visit the ALC website or call (803) 734-0550.
+Eligibility Appeals FAQs
+What is an appeal?
+
+An appeal is asking for a hearing because you do not agree with a decision the South Carolina Department of Health and Human Services (SCDHHS), a Managed Care Organization (MCO), or another party acting on behalf of the agency has made. The hearings that are held are often referred to as "fair hearings."
+
+An appeal is not a claim review or claim reconsideration process. Providers should exhaust their options through the SCDHHS Provider Service Center at 888-289-0709 or, if applicable, through the agency's Claim Reconsideration Process.
+
+What is a fair hearing?
+
+A fair hearing is an in-person proceeding conducted by a hearing officer of the Office of Appeals and Hearings. The parties and hearing officer will meet at a set time and place for the hearing. During the hearing, the hearing officer listens to your explanation as to why you do not agree with the action taken by SCDHHS, the MCO, or another party acting on the agency's behalf. The hearing officer will also listen to the representative for the other party explain the action taken on your case. Both sides can ask questions of the other party's witnesses. The hearing officer can also ask the witnesses questions. After the hearing, the hearing officer will issue a written decision in the case.
+
+Hearings are not held telephonically.
+
+Where is a fair hearing held?
+
+Most hearings are held at Jefferson Square, 1801 Main Street, Columbia, SC 29201. Occasionally, hearings may be scheduled for county eligibility or Community Long Term Care (CLTC) offices or other locations. You may request a different location for the hearing. The location of the hearing will be determined by the hearing officer.
+
+What is a hearing officer?
+
+A hearing officer is a neutral third party that presides over the appeal. The hearing officer guides the proceeding, sending letters and orders to the parties. The hearing officer also presides over the hearing and issues a final order in the appeal.
+
+A hearing officer is not a representative or advocate for any party at the proceeding, and he or she cannot provide legal or other advice to either party.
+
+When can I appeal?
+
+The following are some of the situations in which you can ask for an appeal (not an exhaustive list):
+
+You are denied eligibility.
+
+Your benefits or services are reduced or terminated.
+
+Your eligibility is terminated.
+
+A request for benefits or services is denied.
+
+A decision on your application or request for benefits has not been made in a timely manner.
+
+How do I appeal?
+
+You should carefully read the notice or denial you receive. It will contain instructions on how to appeal.
+
+To appeal a Medicaid eligibility decision, state what and why you are appealing and include a copy of the notice you received.
+
+You can submit this information in the following ways:
+
+Submit your appeal online
+
+Fax to (803) 255-8251
+
+Email to appeals@scdhhs.gov
+
+Mail to:
+
+Attn: Eligibility Appeals
+
+SCDHHS
+
+PO Box 8206
+
+Columbia, SC 29202
+
+A request for a fair hearing by mail is considered filed if postmarked by the 30 calendar day following receipt of this notification.
+
+In Person - Hand deliver your written appeal request to a Health Connections Medicaid (SCDHHS) county office or visit the county office to tell us verbally that you would wish to appear. Click here to find a county office or call (888) 549-0820.
+
+Can I ask for my hearing to be considered quickly?
+
+A member may request an expedited appeal. SCDHHS will grant or deny these requests as expeditiously as possible. If we grant your request to expedite, your appeal will be resolved as expeditiously as possible instead of the standard 90-day timeframe. If we deny the request to expedite, the appeal will follow the standard 90-day timeframe.
+
+SCDHHS may grant expedited review if we determine the standard appeal timeframe could jeopardize the individual's life, health, or ability to attain, maintain, or regain maximum function. SCDHHS may consider, among other facts:
+
+The medical urgency of the member's situation.
+
+Whether a needed procedure has already been scheduled.
+
+Whether a member is unable to schedule a needed procedure due to lack of coverage.
+
+Whether other insurance will cover most of the costs of the requested treatment.
+
+You may request an expedited appeal at the same time you file your appeal request or after you file an appeal. Please state you are requesting an expedited appeal and explain why. Requests can be filed on the Appeals webpage, by fax, email or mail.
+
+To avoid delays in the process, please submit any supporting documentation with the request for expedited review or immediately thereafter. While supporting documentation is not required, SCDHHS will make its determination based on the information made available at the time we consider the request.
+
+Who is an Eligibility Respondent Coordinator?
+
+Eligibility appeals are routed to the Eligibility Respondent Coordinator (ERC), who will review the appeal request and determination. In the case of caseworker or other error or upon the receipt of more information, the ERC may be able to resolve your appeal request without a hearing. If the ERC can resolve the case, you will be notified. If the case cannot be resolved, the ERC will send you and the hearing officer a copy of the Eligibility Appeal Summary. This summary includes all information about the eligibility determination that was made and the appeal. It can include supporting policy, any documents submitted with the application, the application itself, and other documents. Once the hearing officer receives the Eligibility Appeal Summary, he or she will continue with the appeal.
+
+How long do I have to appeal?
+
+You should carefully read the notice or denial you receive. It will contain instructions on how long you have to appeal. Some notices will give you 30 days from the date of the notice. Other notices give you 30 days from the day you receive the notice.
+
+What should I include in my appeal letter?
+
+You should state why and what you are appealing or why you think the decision made is erroneous. You should include a copy of the notice you received, keeping the original for your records. Additionally, you should include your full contact information (name, address, phone number, email, Medicaid number, etc.) so we can contact you.
+
+You can also include copies of additional documentation you want the hearing officer to review (i.e.: bank statements, insurance policies, etc.). However, you will have an opportunity later in the process and during the hearing to introduce those documents.
+
+You may also request continued benefits or services if you request continued services within 10 days of the date on the notice.
+
+Can I ask for my services or benefits to continue?
+
+New services cannot be started. However, you may request continued benefits or services if you do so within 10) of the date on the notice. Your services or benefits will continue during the appeal process. Any disputed benefits or services you receive during the appeal process may have to be paid back if the hearing officer rules the agency, MCO, or other party making the decision was correct.
+
+Can someone ask for an appeal for me?
+
+Yes, you may have a representative appear on your behalf for the appeal. You can also represent yourself.
+
+Do I have to hire an attorney?
+
+No, an attorney is not required. However, you may hire an attorney if you choose to do so. The attorney should file a notice of appearance with the hearing officer as soon as possible.
+
+Can I contact the Eligibility Respondent coordinator?
+
+Yes, you may contact the Eligibility Respondent Coordinator at the contact information listed above.
+
+Can I contact the hearing officer?
+
+Yes, you may contact the hearing officer about procedural issues such as scheduling matters, questions about the appeals process, requests for an extension, or to withdraw an appeal. However, the hearing officer cannot discuss the substantive issues of the appeal with you without the other parties also on the communication (email, phone call, etc.). Speaking to the hearing officer about issues in the appeal without having all the parties involved is called ex parte communication. Ex parte communication is not allowed. The parties may speak to each other at any time without the hearing officer's involvement.
+
+You can contact the Office of Appeals and Hearings at (803)898-2600 or (800)763-9087.
+
+Can I receive communication and documents from the Appeals Office or Eligibility Respondent Coordinator s electronically?
+
+Yes, you can elect to receive all documents via email. This option is available when you file appeals on the Appeals website. You can also indicate you would like to receive documents electronically by fax, email, or mail.
+
+The Appeals Office and/or Eligibility Respondent Coordinator will send you a written confirmation if you elect to receive correspondence electronically. We will also send a test message to your email address and ask you to confirm you received it.
+
+If the Appeals Office or ERC sends a message to you electronically and it does not bounce back as undeliverable, it is presumed to have been delivered.
+
+If it bounces back as undeliverable, we will try to send it to the designated email address one more time. If it is returned as undeliverable again, we will place a hard copy of the correspondence or Order in the mail to you.
+
+Please be sure to provide an up-to-date and working email address.
+
+Do you need special accommodations?
+
+You may need accommodations in order to complete the appeals process. For example, you may need a translator, interpreter, a Braille form, handicap-accessible parking, or assistance with transportation. If you require special accommodations, please contact the Office of Appeals and Hearings at (803)898-2600 or (800)763-9087 so that we may assist you.
+
+What is a Petitioner?
+
+A Petitioner is the person filing the appeal or the person on whose behalf an appeal is filed.
+
+What is a Respondent?
+
+The Respondent is the party whose determination is appealed. It is often SCDHHS, an MCO, or a nursing home.
+
+What is a Pre-Hearing Conference Order?
+
+A Pre-Hearing Conference Order is often issued at the beginning of an appeal. It generally requires the appealing party, the Petitioner, to contact the Respondent, the agency or other party making the determination. The conference between the parties can be held in person, but it is most often conducted over the phone.
+
+After the conference is held, both parties must then provide a summary to the hearing officer of the issues discussed and what issues remain outstanding. The Petitioner must also indicate if they want to move forward with a hearing. If the parties settled the matter, the Petitioner should indicate if they want to withdraw the appeal request.
+
+As with all orders and communications received from the hearing officer, please carefully review the Order and follow all instructions. Failure to do so may result in dismissal of your appeal.
+
+Who will be present at my hearing?
+
+The hearing will include at least the following:
+
+The hearing officer.
+
+The Petitioner and/or their representative.
+
+A representative from SCDHHS or the other organization making a determination. Others present may include:
+
+Any witnesses either party brings to testify.
+
+Observers, such as family members or other hearing officers, if the parties do not object to the observers' attendance, and their attendance does not otherwise disrupt the proceeding.
+
+What happens at the hearing?
+
+Hearings have a more relaxed environment than courtrooms you see on TV or in movies. Typically, the hearing officer, the parties, and any witnesses meet around a table in a conference room.
+
+Both parties will be given an opportunity to present an opening statement. Then, the Petitioner is given a turn to speak and present its witnesses and arguments. The Respondent is then allowed to cross-examine the Petitioner's witnesses. Then the Respondent is given its turn to present its witnesses and arguments, with the Petitioner then being allowed to cross-examine those witnesses.
+
+Typically, the Petitioner goes first in presenting its argument and case. However, when the Petitioner is not represented by an attorney, the hearing officer typically asks the agency or Respondent to go first. The hearing officer will determine the order of presentation. At the conclusion of the hearing, each party is given an opportunity to make a closing statement.
+
+A decision will not be made the day of the hearing.
+
+When will I get the order or decision from the hearing officer?
+
+There is no set timeframe for receiving the order or decision from the hearing officer. The timeframe can depend on several factors: how much evidence needs to be reviewed, whether the parties submit additional evidence after the hearing, and the difficulty of the type of case, among others.
+
+Ordinarily, member appeals should be concluded within 90 days of filing. The 90 days can be affected by requests for extension by the parties, requests to supply additional information to the hearing officers, and difficulty scheduling a hearing. There is no equivalent deadline for provider appeals. In all instances, the hearing officers strive to issue timely and thorough decisions.
+
+You will receive the final order via certified mail. Please be sure to accept or retrieve certified mail when delivered or when you receive notice of it.
+
+Can I appeal the hearing officer's decision?
+
+Yes. You may appeal to the Administrative Law Court. Directions on how to contact and begin an appeal to the ALC are contained within the cover letter sent with the hearing officer's order. Please be aware that appeals must be filed with the ALC within thirty (30) days of the receipt of the hearing officer's order. For more information about appealing to the ALC visit the ALC website or call (803) 734-0550.
+
+Footer Navigation
+
+About
+
+Mission and History
+
+Leadership
+
+Job Openings
+
+Strategic Plan
+
+Report Waste and Wrongdoing
+
+Legal
+
+IT Privacy Policy
+
+Notice of Privacy Practices
+
+Notice of Privacy Practices (Español)
+
+Notice of Non-Discrimination
+
+Supported Browsers
+
+Authorization to Disclose Health Information
+
+Revocation for Authorization to Disclose Health Information
+
+Office of Civil Rights & Privacy
+
+Freedom of Information Act (FOIA)
+
+Right to Access, Correct, & Delete Data
+
+Text Messaging
+
+Third Party Liability - Casualty Recovery
+
+Resources
+
+State Plan
+
+Contract Library
+
+Notification Forms
+
+Programs and Initiatives
+
+BabyNet (IDEA Part C)
+
+Appendix K Amendment
+
+Grants
+
+Waivers
+
+P.O. Box 8206
+
+Columbia,
+ SC
+29202-8206
+
+info@scdhhs.gov
+
+(888) 549-0820
+
+Social Links
+
+Facebook
+
+Twitter
+
+Subscribe to our newsletter for important updates!
+
+Email Address
+
+ SC.GOV Home
+
+ SC.GOV Privacy & Security Policy
+
+ Help Center
+
+ Contact SC.GOV
+
+ Download Adobe Reader
+
+ Copyright ©
+
+ State of South Carolina
+

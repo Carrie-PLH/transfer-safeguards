@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Long Term Care Ombudsman Program, in the South Carolina Department on Aging, which lists "Improper transfer or discharge of a resident" among the issues it handles. Its published contact: "please call the SCDOA Long Term Care Ombudsman at 1-800-868-9095.", with "Local: (803) 734-9900", "Fax: (803) 734-9886" and the office at "1301 Gervais Street, Suite 350, Columbia, SC 29201".
 
-**Sources last checked.** 2026-09-18
+**Sources last checked.** 2026-10-13
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

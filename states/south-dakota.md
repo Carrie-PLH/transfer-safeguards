@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The South Dakota Long-Term Care Ombudsman Program, run by the Department of Human Services, states of itself: "The South Dakota Long-Term Care Ombudsman Program provides information and referral assistance, education to increase community awareness of resident's rights, and training for long-term care facility staff." Its own published contact: "Division of Long Term Services and Supports" "Hillsview Plaza, 3800 E Hwy 34" "c/o 500 E. Capitol Avenue" "Pierre, SD 57501", "By phone: 833-663-9673", "By email: DakotaAtHome@state.sd.us", and "You can also email the State Ombudsman at LTCO@state.sd.us." The department's own Dakota at Home directory listing instead gives the program's address as "3800 E. Highway 34, Pierre, SD 57501" — both addresses shown as published, not reconciled.
 
-**Sources last checked.** 2026-09-25
+**Sources last checked.** 2026-10-13
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

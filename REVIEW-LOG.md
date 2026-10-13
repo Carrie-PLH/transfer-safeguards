@@ -1011,3 +1011,54 @@ from retrieval date — no instrument movement or re-dating. Hash
 sync-checked-dates.py corrected 6 derived dates (table + JSON for the three
 confirmed pages). build-status.py re-run (51/51 baseline, 50/51 full —
 unchanged). Review cursor advanced to rhode-island. No queue entries opened.
+
+## 2026-10-13 — nightly review: rhode-island, south-carolina, south-dakota (scheduled)
+
+**Rhode Island — unreachable.** Fresh capture of sources 1-5 clean; sources
+6, 7 and 8 (DHS-200NF 30-day notice PDF at eohhs.ri.gov/media/45546, the
+EOHHS Appeals Office page, and the Ombudsman Program page at oha.ri.gov)
+each returned HTTP 403 to curl with a browser user-agent — the only
+transport the recipe documents, and confirmed genuine by a second curl with
+a current browser UA string, same result. No alternate transport for either
+host is recorded in CLAUDE.md. Both sources 6-8's own recipe entries carry
+"DRAFT — replace before promoting" in their notes, so this recipe was never
+fully finished. The fidelity checker was run against the partial capture
+only to confirm scope — 57 failures, nearly all of this page's quoted
+notice/appeal/ombudsman content, which traces entirely to the three
+unreachable sources, not to any change in sources 1-5. Not recorded as
+drift: an incomplete evidence set reporting failures is not evidence that
+anything published moved. Nothing retained, page and checked date
+untouched. First unreachable occurrence for this page — log material, not
+a repeated-unreachable queue entry. A working session should finish this
+recipe (sources 6-8 need a documented transport, most likely the session
+browser tool per the chrome-transport pattern used elsewhere in this repo)
+before the next attempt.
+
+**South Carolina — confirmed.** Fresh capture of all 3 sources, curl. Zero
+fidelity failures, markdown and HTML. Source 2 ran shorter than the prior
+capture (3816 -> 3794 chars); diffed by hand — a site-navigation list
+reordered and one link label's capitalization changed ("Guardian Ad Litem"
+-> "Guardian ad Litem"), no instrument moved and nothing quoted by the page
+is affected. Hash f3cd8091d49c9ed7, promoted. Checked date advanced to
+2026-10-13.
+
+**South Dakota — confirmed.** Source 4 (Ombudsman Program, dhs.sd.gov) is
+the recipe's documented chrome-transport case — a client-rendered page
+whose content endpoint 404s without a tenant header a recipe cannot send.
+Fetched via the session browser (`document.querySelector('main').innerText`,
+transferred through a JSON.stringify/double-decode round trip to avoid
+transcription drift) and supplied; sources 1-3, 5 and 6 captured by curl
+per the recipe. Zero fidelity failures, markdown and HTML. Source 4's
+digest differed from the recipe notes' recorded 627f20aa9ca8...; diffed
+against the standing packet and the difference is three inserted blank
+lines between list sections, no wording changed — extraction-only
+movement, not a content change. Hash 2dcd856fa6537c0a, promoted. Checked
+date advanced to 2026-10-13.
+
+sync-checked-dates.py corrected 4 derived dates (table + JSON for the two
+confirmed pages). build-status.py (51/51 baseline, 50/51 full — unchanged;
+the North Dakota gap predates this pass). check-all.py: 102 pages across 52
+states, no unexplained failures. build-state-picker.py regenerated (51/51).
+check-live.py: 5 pages sampled, nothing loaded from any other host. Review
+cursor advanced to tennessee. No queue entries opened — nothing here rose
+to a human-decided finding.
