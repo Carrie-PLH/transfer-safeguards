@@ -278,15 +278,15 @@ fi
 # runs the generator and fails if it changed anything: on a current tree it is
 # a no-op. If it fails, the regenerated files are already correct — review the
 # diff and commit them.
-before=$(shasum index.html states/index.html | shasum)
 picker_out=$(cd .. && python3 tools/build-state-picker.py 2>&1)
 picker_rc=$?
-after=$(shasum index.html states/index.html | shasum)
 if [ "$picker_rc" -ne 0 ]; then
   bad "build-state-picker.py failed:"
   printf '%s\n' "$picker_out" | sed 's/^/        /'
-elif [ "$before" != "$after" ]; then
-  bad "the state picker was stale and has been regenerated — review the diff to index.html and states/index.html, commit it, then re-run this check"
+elif ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+  bad "not a git work tree, so the picker cannot be checked against its committed copy"
+elif [ -n "$(git status --porcelain -- index.html states/index.html)" ]; then
+  bad "the state picker differs from its committed copy — review the diff to index.html and states/index.html, commit it, then re-run this check"
 else
   ok "state picker markup is current"
 fi
@@ -364,28 +364,40 @@ fi
 # what the tree implies — the same shape as check 11, and for the same reason:
 # a generated file that can be edited by hand will be.
 #
-# Same shape as the state-picker check: regenerate in place, then fail if
-# anything moved. A sitemap change is a published-surface change and must not
-# be deployed unseen, but making a person run the generator by hand before
-# every deploy is how a gate earns its way into being skipped. Regenerating
-# and then failing keeps both: the work is done for you, and the diff still
-# has to be read and committed before anything ships.
+# Same shape as the state-picker check: regenerate in place, then fail if the
+# result differs from the committed copy. A sitemap change is a published-
+# surface change and must not be deployed unseen, but making a person run the
+# generator by hand before every deploy is how a gate earns its way into being
+# skipped. Regenerating and then failing keeps both: the work is done for you,
+# and the diff still has to be read and committed before anything ships.
+#
+# The comparison is against git, not against the file's own state before the
+# run, and that is the whole point. Until 2026-10-14 it hashed the three files
+# before regenerating and after, and failed when the two differed — which meant
+# the failure cleared itself: on a second run the file on disk was already the
+# regenerated one, before matched after, and the check passed with the diff
+# still uncommitted. Found that day when a stale sitemap failed this gate, a
+# re-run passed it, and site/sitemap.xml was still modified in the working
+# tree; deploy.sh runs the gate and then publishes, so the natural response to
+# "re-run this check" would have shipped a published-surface change that
+# nobody read. Comparing against the committed copy makes the failure stick
+# until it is actually committed.
 #
 # Tripwire: delete a line from sitemap.xml -> must FAIL; regenerate -> pass.
-before=$(shasum sitemap.xml robots.txt _redirects 2>/dev/null | shasum)
 if [ ! -f ../tools/generate-sitemap.py ]; then
   bad "tools/generate-sitemap.py is missing; the sitemap cannot be verified"
+elif ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+  bad "not a git work tree, so the generated files cannot be checked against their committed copies"
 else
   out=$(python3 ../tools/generate-sitemap.py 2>&1); rc=$?
-  after=$(shasum sitemap.xml robots.txt _redirects 2>/dev/null | shasum)
   if [ "$rc" -ne 0 ]; then
     bad "the sitemap generator failed:"
     printf '%s\n' "$out" | sed 's/^/        /'
-  elif [ "$before" = "$after" ]; then
-    ok "$(printf '%s' "$out" | head -1)"
-  else
-    bad "the sitemap was stale and has been regenerated — review the diff to sitemap.xml, robots.txt and _redirects, commit it, then re-run this check"
+  elif [ -n "$(git status --porcelain -- sitemap.xml robots.txt _redirects)" ]; then
+    bad "the sitemap differs from its committed copy — review the diff to sitemap.xml, robots.txt and _redirects, commit it, then re-run this check"
     printf '%s\n' "$out" | sed 's/^/        /'
+  else
+    ok "$(printf '%s' "$out" | head -1)"
   fi
 fi
 
