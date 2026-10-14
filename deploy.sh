@@ -8,6 +8,18 @@
 # Deploy only when the owner asked in that session; the gate still decides
 # whether anything ships. Runs on the Mac (bash 3.2 — no case-in-$( ), see
 # CLAUDE.md), through Desktop Commander from a Cowork session.
+#
+# One ordering rule, which the gate reports but cannot do for you: the
+# sitemap's lastmod for each page is that page's git commit date, so committing
+# a page invalidates the sitemap by definition. Regenerate and commit the
+# sitemap, robots.txt and _redirects after the content commits they describe,
+# as the last commit before this script runs. Check 13 then passes; otherwise
+# it fails and keeps failing until you do.
+#
+# Added 2026-10-14. Until that day the check compared the generated files to
+# their own state before the run rather than to the committed copy, so a
+# re-run cleared the failure and the ordering never had to be met — two sites
+# were found deploying sitemaps a day or more behind their own pages.
 set -euo pipefail
 cd "$(dirname "$0")"
 
