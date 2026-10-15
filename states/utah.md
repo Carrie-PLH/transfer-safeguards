@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The state ombudsman named on the Division's own locations page: "Alianne Sipes" "Department of Health and Human Services" "385-222-1273" "asipes@utah.gov". The program's own published office contact, printed on its pages: "Cannon Health Building" "288 North 1460 West" "Salt Lake City, Utah" "84116" "Phone: 801-538-3910" "Fax: 801-538-4395" "Email: agingservices@utah.gov". The rule itself requires a facility's own transfer or discharge notice to carry "the name, address, and telephone number of the state and local long term care ombudsman programs" (R432-150-20(6)(b)(iii)).
 
-**Sources last checked.** 2026-09-24
+**Sources last checked.** 2026-10-15
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

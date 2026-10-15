@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: tennessee
-ASSEMBLED: 2026-09-15
+ASSEMBLED: 2026-10-15
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/tennessee.json (recipe digest 218e67906405). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -14,7 +14,7 @@ CAPTURE NOTES:
 - SOURCE 4: transport curl; extractor pdftotext-layout; slice from '1200-13-02-.16 BED HOLDS.' to '1200-13-02-.17 OTHER REIMBURSEMENT ISSUES.'; filters none.
   Added 2026-09-15, deepening the state to a full page, following the same Secretary of State chapter-PDF pattern already used for source 2. The chapter's table of contents sets the rule title case ('Bed Holds'); the body sets it in capitals ('BED HOLDS'), so the anchor as written matches only the body and no occurrence key is needed, the same reasoning already recorded for source 2's slice. The rule is one sentence: it states Tennessee eliminated Medicaid bed-hold reimbursement effective July 1, 2018, and states nothing about the notice a facility gives before a hospital transfer or therapeutic leave, which the sources reviewed do not otherwise address.
 
-SOURCE 1: Bureau of TennCare, Nursing Home Notice of Involuntary Transfer or Discharge (PDF) | https://www.tn.gov/content/dam/tn/tenncare/documents/NFInvoluntaryDischargeNotice.pdf | source date: TennCare LTSS dev. 09/2014 Rev 02/2026 | retrieved: 2026-09-15
+SOURCE 1: Bureau of TennCare, Nursing Home Notice of Involuntary Transfer or Discharge (PDF) | https://www.tn.gov/content/dam/tn/tenncare/documents/NFInvoluntaryDischargeNotice.pdf | source date: TennCare LTSS dev. 09/2014 Rev 02/2026 | retrieved: 2026-10-15
 Nursing Home Notice of
                Involuntary Transfer or Discharge
 To the Nursing Home: This notice is for an involuntary discharge or transfer. Fill out this notice
@@ -151,7 +151,7 @@ and District LTC Ombudsman, and the Health Facilities Commission at:
 
 TennCare LTSS dev. 09/2014 Rev 02/2026
 
-SOURCE 2: Rules of the Tennessee Department of Health, Chapter 1200-08-06, Standards for Nursing Homes — Rule .05 Admissions, Discharges, and Transfers (excerpt) | https://publications.tnsosfiles.com/rules/1200/1200-08/1200-08-06.20210818.pdf | source date: August, 2021 (Revised); rule history ends amendment filed April 17, 2007, effective July 1, 2007 | retrieved: 2026-09-15
+SOURCE 2: Rules of the Tennessee Department of Health, Chapter 1200-08-06, Standards for Nursing Homes — Rule .05 Admissions, Discharges, and Transfers (excerpt) | https://publications.tnsosfiles.com/rules/1200/1200-08/1200-08-06.20210818.pdf | source date: August, 2021 (Revised); rule history ends amendment filed April 17, 2007, effective July 1, 2007 | retrieved: 2026-10-15
 1200-08-06-.05 ADMISSIONS, DISCHARGES, AND TRANSFERS.
 
       (1)   Every person admitted for care or treatment shall be under the supervision of a physician
@@ -310,7 +310,7 @@ and new rule filed July 14, 1983; effective August 15, 1983. Repeal and new rule
 effective April 15, 2000. Amendment filed April 10, 2000; effective June 24, 2000. Amendment filed
 February 23, 2007; effective May 9, 2007. Amendment filed April 17, 2007; effective July 1, 2007.
 
-SOURCE 3: Bureau of TennCare, Involuntary Discharge and Transfer Appeals | https://www.tn.gov/tenncare/long-term-services-supports/involuntary-discharge-and-transfer-appeals.html | source date: none stated on page | retrieved: 2026-09-15
+SOURCE 3: Bureau of TennCare, Involuntary Discharge and Transfer Appeals | https://www.tn.gov/tenncare/long-term-services-supports/involuntary-discharge-and-transfer-appeals.html | source date: none stated on page | retrieved: 2026-10-15
 Skip to Main Content
 
 
@@ -556,7 +556,7 @@ LTSS Contact Information
 PACE
 
 
-Katie Beckett Waiver
+Katie Beckett Program
 
 
 Involuntary Discharge and Transfer Appeals
@@ -626,14 +626,6 @@ Go to Search
 
 
  For information on important changes to D-SNP, please visit our D-SNP page.
- 
-
-
-
-
-
- 
- Please see the Privacy Announcements page for updates on current incidents impacting TennCare members.
  
 
 
@@ -716,7 +708,7 @@ PACE
 
 
 
-Katie Beckett Waiver
+Katie Beckett Program
 
 
 
@@ -797,16 +789,11 @@ What is an Involuntary Transfer or Discharge?
 
 
 
-
 Any transfer or discharge of a resident that is initiated by a Medicare skilled nursing facility or a Medicaid nursing facility.
-
 
 Involuntary Transfers and Discharges are governed by 42 CFR § 483.15.
 
-
 Nursing Facilities must give written notice to the resident (sample Involuntary Discharge Notice).
-
-
 
 
 
@@ -817,13 +804,9 @@ Can I Appeal an Involuntary Transfer or Discharge?
 
 
 
-
 Yes. Pursuant to 42 CFR § 431.220(a)(2), any resident in a Medicare skilled nursing facility or a Medicaid nursing facility can request an appeal if he or she believes a facility has erroneously determined that he or she must be transferred or discharged.
 
-
 The appeal can be filed by the resident, their family or other representative.
-
-
 
 
 
@@ -834,41 +817,28 @@ How Do I Appeal?
 
 
 
-
 You can appeal by phone, fax, email or mail.
-
 
 Toll Free Phone: 833-582-1224
 
-
 Fax: 615-734-5317
 
-
 Email: cd.appeals.tenncare@tn.gov
-
 
 Mail: TennCare’s Commissioner’s Designee ATTN: Involuntary NF Discharge Appeals 310 Great Circle Road, Nashville, TN 37243
 
 
 
 
-
-
 You can use the Appeal Form or you can write your appeal on plain paper, but be sure to include:
-
 
 Resident’s Name and Phone Number
 
-
 Resident’s Representative and Phone Number, if applicable
-
 
 Facility Name
 
-
 Provide a copy of the discharge notice from the facility
-
-
 
 
 
@@ -879,9 +849,7 @@ What Happens Next?
 
 
 
-
 After an appeal has been submitted, you will receive written confirmation that your appeal was filed. If the appeal was timely filed, a contested case hearing will be held and a written decision will be issued on the involuntary discharge. The hearing will be conducted pursuant to the Uniform Administrative Procedures Act at Tenn. Code Ann. §§ 4-5-301 – 325.
-
 
 
 
@@ -889,18 +857,13 @@ Where Can I Get More Information?
 
 
 
-
 42 CFR § 483.15 (eCFR)
-
 
 TennCare Long-Term Care Rules
 
-
 Long-Term Care Ombudsmen
 
-
 Disability Rights Tennessee
-
 
 
 
@@ -1002,6 +965,11 @@ linkedin
 
 
 
+
+
+
+
+Notice of Change in Medicaid State Plan: PACE Reimbursement 
 
 
 
@@ -1397,7 +1365,7 @@ A+
 
 Close
 
-SOURCE 4: Rules of the Division of TennCare, Chapter 1200-13-02, Nursing Facility Provider Reimbursement — Rule .16 Bed Holds (excerpt) | https://publications.tnsosfiles.com/rules/1200/1200-13/1200-13-02.20260629.pdf | source date: June, 2026 (Revised); rule .16's own administrative history ends 'Original rules filed May 1, 2018; effective July 30, 2018.' | retrieved: 2026-09-15
+SOURCE 4: Rules of the Division of TennCare, Chapter 1200-13-02, Nursing Facility Provider Reimbursement — Rule .16 Bed Holds (excerpt) | https://publications.tnsosfiles.com/rules/1200/1200-13/1200-13-02.20260629.pdf | source date: June, 2026 (Revised); rule .16's own administrative history ends 'Original rules filed May 1, 2018; effective July 30, 2018.' | retrieved: 2026-10-15
 1200-13-02-.16 BED HOLDS. Effective July 1, 2018, Medicaid bed hold days will no longer be
 reimbursed.
 

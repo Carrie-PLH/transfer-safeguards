@@ -1062,3 +1062,43 @@ states, no unexplained failures. build-state-picker.py regenerated (51/51).
 check-live.py: 5 pages sampled, nothing loaded from any other host. Review
 cursor advanced to tennessee. No queue entries opened — nothing here rose
 to a human-decided finding.
+
+## 2026-10-15 — scheduled nightly QC (rr-state-review)
+
+Batch from cursor "tennessee": tennessee, texas, utah.
+
+- **Tennessee — confirmed.** Fresh capture of all 4 sources (recipe
+  218e67906405), curl. Zero fidelity failures, markdown and HTML. Source 3
+  ran shorter than the prior capture (3838 -> 3802 chars), whitespace
+  collapsed only; no instrument moved. Hash 3fdc2c18ece4d75e, promoted.
+  Checked date advanced to 2026-10-15.
+- **Texas — partially confirmed; checked date NOT advanced.** Source 1
+  (HHSC Provider Letter PL 2022-25, the PDF hhs.texas.gov still 403s to every
+  automated transport) is marked `"attended": true` since the 2026-10-08
+  rebuild and needs the owner's own browser download under FA-D-20260922-01;
+  this unattended pass cannot supply it. Sources 2-3 (fhb.hhs.texas.gov,
+  ltco.texas.gov) recaptured by curl; sources 4-5 (Secretary of State TAC
+  portal, records 203098 and 203099) recaptured live via the session browser
+  — `document.documentElement.outerHTML`, same method the standing recipe's
+  notes record for this transport — and verified on-page against the
+  expected Rule §554.502/§554.503 titles and the unchanged Chapter Review
+  Date (03/11/2024) before being supplied. Checked
+  `states/texas.md`/`site/states/texas.html` against the fresh 4-source
+  capture plus the standing main packet (to cover source 1's unrefreshed
+  content): 0 failures, markdown and HTML — nothing that could be
+  mechanically reverified has drifted. Not retained/promoted as a new
+  standing packet (promoting a 4-of-5 capture would truncate the standing
+  evidence record of source 1) and the checked date is left at 2026-10-08.
+  Not queued: this is the same documented attended-only limitation recorded
+  at the last rebuild, not a new finding.
+- **Utah — confirmed.** Fresh capture of all 12 sources (recipe
+  440aa0a4fc67), curl. Zero fidelity failures, markdown and HTML. Unchanged
+  since the 2026-09-24 capture (hash 446727cfb0be34c9), promoted. Checked
+  date advanced to 2026-10-15.
+
+sync-checked-dates.py corrected 4 derived dates (table + JSON for tennessee
+and utah). build-status.py: 51/51 baseline, 50/51 full (North Dakota gap
+predates this pass), unchanged. check-all.py: 102 pages across 52 states, no
+unexplained failures. build-state-picker.py regenerated (51/51).
+check-live.py: 5 pages sampled, nothing loaded from any other host. Review
+cursor advanced to vermont. No queue entries opened.

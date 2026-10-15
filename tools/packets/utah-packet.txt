@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: utah
-ASSEMBLED: 2026-09-24
+ASSEMBLED: 2026-10-15
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/utah.json (recipe digest 440aa0a4fc67). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -30,7 +30,7 @@ CAPTURE NOTES:
 - SOURCE 12: transport curl; extractor none; filters none.
   Not a source the page quotes. Same role for source 11 that source 8 holds for source 1.
 
-SOURCE 1: R432-150, Nursing Care Facility — Utah Administrative Code | https://adminrules.utah.gov/api/public/getHTML/uac-html/9635398a-ce5f-438c-8817-197550b951c7.html | source date: Effective Date: 02/18/2025 | retrieved: 2026-09-24
+SOURCE 1: R432-150, Nursing Care Facility — Utah Administrative Code | https://adminrules.utah.gov/api/public/getHTML/uac-html/9635398a-ce5f-438c-8817-197550b951c7.html | source date: Effective Date: 02/18/2025 | retrieved: 2026-10-15
 R432. Health and Human Services, Health Care Facility Licensing.
 R432-150. Nursing Care Facility.
 
@@ -1573,7 +1573,7 @@ Notice of Continuation: January 24, 2022
 
 Authorizing, and Implemented or Interpreted Law: 26B-2-202
 
-SOURCE 2: Skilled nursing facility-initiated discharge appeal form — Utah Division of Aging and Adult Services (PDF) | https://daas.utah.gov/wp-content/uploads/2024/07/SNF-Discharge-Appeal-Form-11.7.23.pdf | source date: form dated 11.7.23 in its own filename | retrieved: 2026-09-24
+SOURCE 2: Skilled nursing facility-initiated discharge appeal form — Utah Division of Aging and Adult Services (PDF) | https://daas.utah.gov/wp-content/uploads/2024/07/SNF-Discharge-Appeal-Form-11.7.23.pdf | source date: form dated 11.7.23 in its own filename | retrieved: 2026-10-15
 Skilled nursing facility-initiated discharge appeal form
                           If the nursing facility where you live has told you they intend to transfer you or
                           discharge you, and you would rather stay in the facility, you have the right to
@@ -1699,7 +1699,7 @@ Salt Lake City, UT 84114-3105       Salt Lake City, UT 84116            Fax: 801
 
 Updated: 10/17/2023          Administrative Hearings Telephone #: 801-538-6576              Page 3 of 3
 
-SOURCE 3: Hearings — Medicaid — Utah Department of Health and Human Services | https://medicaid.utah.gov/hearings/ | source date: none stated on page | retrieved: 2026-09-24
+SOURCE 3: Hearings — Medicaid — Utah Department of Health and Human Services | https://medicaid.utah.gov/hearings/ | source date: none stated on page | retrieved: 2026-10-15
 Skip to content
 
 Hearings
@@ -1960,7 +1960,7 @@ Utah Domestic Violence opens in a new tab
 
 Translate ❯
 
-SOURCE 4: Medicaid Fair Hearings — Utah Department of Health and Human Services | https://dhhs.utah.gov/oah/medicaid-fair-hearings/ | source date: none stated on page | retrieved: 2026-09-24
+SOURCE 4: Medicaid Fair Hearings — Utah Department of Health and Human Services | https://dhhs.utah.gov/oah/medicaid-fair-hearings/ | source date: none stated on page | retrieved: 2026-10-15
 Skip to content
 
 Medicaid Fair Hearings
@@ -2134,7 +2134,7 @@ Call or text 988
 
 Translate ❯
 
-SOURCE 5: Utah Medicaid Provider Manual, Section I: General Information, chapter 5-4 Hearings and Administrative Review (PDF) | https://medicaid-documents.dhhs.utah.gov/Documents/manuals/pdfs/Medicaid+Provider+Manuals/All+Providers+General+Information+Section+I/AllProvidersGeneralInfo_Section_1.pdf | source date: Updated September 2026, as the chapter's own footer states (was Updated July 2026 as of the 2026-09-04 capture) | retrieved: 2026-09-24
+SOURCE 5: Utah Medicaid Provider Manual, Section I: General Information, chapter 5-4 Hearings and Administrative Review (PDF) | https://medicaid-documents.dhhs.utah.gov/Documents/manuals/pdfs/Medicaid+Provider+Manuals/All+Providers+General+Information+Section+I/AllProvidersGeneralInfo_Section_1.pdf | source date: Updated September 2026, as the chapter's own footer states (was Updated July 2026 as of the 2026-09-04 capture) | retrieved: 2026-10-15
 55                                                                   Updated September 2026
 
 
@@ -2248,7 +2248,7 @@ SOURCE 5: Utah Medicaid Provider Manual, Section I: General Information, chapter
 
               Utah Medicaid Provider Manual – Section I: General Information
 
-SOURCE 6: Long Term Care Ombudsman — Aging & Adult Services, Utah Department of Health and Human Services | https://daas.utah.gov/long-term-care-ombudsman/ | source date: none stated on page | retrieved: 2026-09-24
+SOURCE 6: Long Term Care Ombudsman — Aging & Adult Services, Utah Department of Health and Human Services | https://daas.utah.gov/long-term-care-ombudsman/ | source date: none stated on page | retrieved: 2026-10-15
 Skip to content
 
 Long Term Care Ombudsman
@@ -2509,7 +2509,7 @@ Utah Domestic Violenceopens in a new tab
 
 Translate ❯
 
-SOURCE 7: Ombudsman Locations — Aging & Adult Services, Utah Department of Health and Human Services | https://daas.utah.gov/ombudsman-locations-3/ | source date: none stated on page | retrieved: 2026-09-24
+SOURCE 7: Ombudsman Locations — Aging & Adult Services, Utah Department of Health and Human Services | https://daas.utah.gov/ombudsman-locations-3/ | source date: none stated on page | retrieved: 2026-10-15
 Skip to content
 
 Ombudsman Locations
@@ -2640,10 +2640,10 @@ Utah Domestic Violenceopens in a new tab
 
 Translate ❯
 
-SOURCE 8: R432-150 rule metadata — Utah Office of Administrative Rules (version witness for source 1) | https://adminrules.utah.gov/api/public/rule/R432-150/undefined/Current%20Rules | source date: carries its own effectiveDate field | retrieved: 2026-09-24
+SOURCE 8: R432-150 rule metadata — Utah Office of Administrative Rules (version witness for source 1) | https://adminrules.utah.gov/api/public/rule/R432-150/undefined/Current%20Rules | source date: carries its own effectiveDate field | retrieved: 2026-10-15
 {"number":"150","name":"Nursing Care Facility","ruleType":"Current Rules","effectiveDate":"2025-02-18T15:24:07.783","effectiveEndDate":"2027-01-24T14:28:42.043","commentDate":"2024-11-16T00:00:00","commentDateEnd":"2024-12-15T19:32:36.4585167","referenceNumber":"R432-150","htmlDownload":"uac-html/9635398a-ce5f-438c-8817-197550b951c7.html","htmlDownloadName":"R432-150.html","pdfDownload":"uac-pdf/9635398a-ce5f-438c-8817-197550b951c7.pdf","pdfDownloadName":"R432-150.pdf","agencyName":"Health and Human Services","programName":"Health Care Facility Licensing","action":"Amendment","linkToRule":"https://adminrules.utah.gov/public/rule/R432-150/Current%20Rules"}
 
-SOURCE 9: R410-14, Administrative Hearing Procedures — Utah Administrative Code | https://adminrules.utah.gov/api/public/getHTML/uac-html/73994768-4705-4e78-bf9e-3167834a0136.html | source date: Effective Date: 09/19/2025 | retrieved: 2026-09-24
+SOURCE 9: R410-14, Administrative Hearing Procedures — Utah Administrative Code | https://adminrules.utah.gov/api/public/getHTML/uac-html/73994768-4705-4e78-bf9e-3167834a0136.html | source date: Effective Date: 09/19/2025 | retrieved: 2026-10-15
 R410. Health and Human Services, Integrated Healthcare, Administrative Hearings.
 R410-14. Administrative Hearing Procedures.
 
@@ -3292,10 +3292,10 @@ Notice of Continuation: August 12, 2022
 
 Authorizing, and Implemented or Interpreted Law: 26B-1-202(1); 26B-1-204; 63G-4-102
 
-SOURCE 10: R410-14 rule metadata — Utah Office of Administrative Rules (version witness for source 9) | https://adminrules.utah.gov/api/public/rule/R410-14/undefined/Current%20Rules | source date: carries its own effectiveDate field | retrieved: 2026-09-24
+SOURCE 10: R410-14 rule metadata — Utah Office of Administrative Rules (version witness for source 9) | https://adminrules.utah.gov/api/public/rule/R410-14/undefined/Current%20Rules | source date: carries its own effectiveDate field | retrieved: 2026-10-15
 {"number":"14","name":"Administrative Hearing Procedures","ruleType":"Current Rules","effectiveDate":"2025-09-19T13:24:48.64","effectiveEndDate":"2027-08-12T11:12:47.753","commentDate":"2025-07-02T00:00:00","commentDateEnd":"2025-07-31T11:27:58.0151773","referenceNumber":"R410-14","htmlDownload":"uac-html/73994768-4705-4e78-bf9e-3167834a0136.html","htmlDownloadName":"R410-14.html","pdfDownload":"uac-pdf/73994768-4705-4e78-bf9e-3167834a0136.pdf","pdfDownloadName":"R410-14.pdf","agencyName":"Health and Human Services","programName":"Integrated Healthcare, Administrative Hearings","action":"Amendment","linkToRule":"https://adminrules.utah.gov/public/rule/R410-14/Current%20Rules"}
 
-SOURCE 11: R414-504, Nursing Facility Payments — Utah Administrative Code | https://adminrules.utah.gov/api/public/getHTML/uac-html/285f3d84-7c8f-42a0-bf1f-cca3a6c68d83.html | source date: Effective Date: 07/02/2025 | retrieved: 2026-09-24
+SOURCE 11: R414-504, Nursing Facility Payments — Utah Administrative Code | https://adminrules.utah.gov/api/public/getHTML/uac-html/285f3d84-7c8f-42a0-bf1f-cca3a6c68d83.html | source date: Effective Date: 07/02/2025 | retrieved: 2026-10-15
 R414. Health and Human Services, Integrated Healthcare.
 R414-504. Nursing Facility Payments.
 
@@ -3467,6 +3467,6 @@ Notice of Continuation: October 12, 2022
 
 Authorizing, and Implemented or Interpreted Law: 26B-1-213; 26B-3-108
 
-SOURCE 12: R414-504 rule metadata — Utah Office of Administrative Rules (version witness for source 11) | https://adminrules.utah.gov/api/public/rule/R414-504/undefined/Current%20Rules | source date: carries its own effectiveDate field | retrieved: 2026-09-24
+SOURCE 12: R414-504 rule metadata — Utah Office of Administrative Rules (version witness for source 11) | https://adminrules.utah.gov/api/public/rule/R414-504/undefined/Current%20Rules | source date: carries its own effectiveDate field | retrieved: 2026-10-15
 {"number":"504","name":"Nursing Facility Payments","ruleType":"Current Rules","effectiveDate":"2025-07-02T09:44:12.19","effectiveEndDate":"2027-10-12T08:40:31.93","commentDate":"2025-05-16T00:00:00","commentDateEnd":"2025-06-14T20:29:07.1758595","referenceNumber":"R414-504","htmlDownload":"uac-html/285f3d84-7c8f-42a0-bf1f-cca3a6c68d83.html","htmlDownloadName":"R414-504.html","pdfDownload":"uac-pdf/285f3d84-7c8f-42a0-bf1f-cca3a6c68d83.pdf","pdfDownloadName":"R414-504.pdf","agencyName":"Health and Human Services","programName":"Integrated Healthcare","action":"Amendment","linkToRule":"https://adminrules.utah.gov/public/rule/R414-504/Current%20Rules"}
 

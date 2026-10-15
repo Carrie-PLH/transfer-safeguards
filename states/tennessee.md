@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The State Long-Term Care Ombudsman, in the Tennessee Commission on Disability and Aging. The notice publishes the contact: "Call 1-877-236-0013. Or write to them at 502 Deaderick Street, Andrew Jackson Building, 9th Floor, Nashville, TN 37243-0860." and states the service is free: "You can ask a resident advocate to help you. This person is the Long-Term Care Ombudsman and their services are free and confidential. They can explain this page to you. They can also help you appeal." The notice's own transmission grid records the date it went to the District LTC Ombudsman and the State LTC Ombudsman.
 
-**Sources last checked.** 2026-09-15
+**Sources last checked.** 2026-10-15
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

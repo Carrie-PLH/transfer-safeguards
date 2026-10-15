@@ -1,0 +1,320 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: texas
+ASSEMBLED: 2026-10-15
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/texas.json (recipe digest 1b5ccae65f20). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- SOURCE 1: transport chrome; extractor pdftotext-layout; attended; filters strip-running-headers, strip-page-numbers, trim-lines, collapse-blank-runs.
+  Filters added 2026-09-05 after the first capture split 'NFs are' from 'encouraged to send it no less than five business days before the hearing date' across a page break (the running header 'PL 2022-25 (NF)  September 29, 2022  Page 7 of 8' and two bare footnote-marker lines, '12' and '13', sat between them) -- a recipe defect (category a: the recipe read the source differently from the original hand capture, which rendered the sentence as one unbroken run), not a change in the document. strip-running-headers and strip-page-numbers remove exactly that interleaved material; the footnote text itself ('1 TAC Chapter 357, Subchapter A.', etc.) is not a bare digit or a running head and survives untouched, as do the other footnote citations the page quotes from this same document. hhs.texas.gov returns HTTP 403 to every direct fetch of this PDF -- confirmed 2026-09-05 from both the sandbox and the host Mac, with a browser user-agent, with and without --http1.1, and with browser-shaped Accept/Accept-Language headers. A Chrome session already on an hhs.texas.gov page can fetch the same URL same-origin (fetch() returns 200 with the full 171,752-byte PDF) even though top-level navigation to the PDF and curl from any origin cannot. THE EXTRACTOR FIELD ABOVE IS DECLARATIVE ONLY, per the convention florida.json source 5 established: the fetched PDF bytes were converted to text outside capture.py, with the exact command capture.py's own extract_pdf would run (`pdftotext -layout -enc UTF-8`, poppler 26.07.0, matching POPPLER_PIN on both the sandbox and the host) rather than via a different tool, so the declared extractor stays true to what actually produced the text; only the FETCH ran outside capture.py, because hhs.texas.gov refuses it entirely as a non-browser client and this is one of the two agent transports capture.py's own docstring anticipates for exactly this case. Re-running `python3 tools/capture.py texas` without a fresh --supply for source 1 fails loudly with NeedsAgentFetch, not silently reproduce or corrupt this text. Content unchanged from the 2026-08-30 hand capture: same 8-page document, same September 29, 2022 date, same section and footnote numbering, verified by diffing this extraction against the standing packet's source 1 body. ATTENDED 2026-10-08 (FA-D-20260922-01): marked attended, because this is a source only a real browser can reach and its extractor needs the raw bytes. hhs.texas.gov still returned HTTP 403 to curl from the host Mac on 2026-10-08 (browser user-agent and headers, with and without --http1.1). On 2026-10-08 the owner approved the browser download in session; the attended session saved the PDF (171,752 bytes, Last-Modified Wed, 12 Oct 2022 18:41:09 GMT) and the bytes were supplied with --supply-file and --supply-sha256 52226df72a4ae311e6551180c9f3bc3a646e7d12c4c1b2ce2ffec8b67ea973b5, a SHA-256 computed reader-side in the built-in browser (crypto.subtle.digest over the same-origin fetch response) and matched by shasum -a 256 over the saved file. From this capture on, capture.py's own pinned pdftotext-layout extractor reads the bytes, so the paragraph above calling the extractor field declarative only describes the 2026-09-05 capture, not this one.
+- SOURCE 2: transport curl; extractor html-text; scope #main; filters trim-lines, collapse-blank-runs.
+  URL CHANGED since the 2026-08-30 capture: the standing packet's URL, https://www.hhs.texas.gov/handbooks/fair-fraud-hearings-handbook/1300-notice, now returns HTTP 403 to every fetch (confirmed 2026-09-05, sandbox and host, curl and a live Chrome session alike -- this is a genuine host block, not a UA problem). HHSC's Forms and Handbooks system has moved to its own subdomain, fhb.hhs.texas.gov, plain curl-able with a browser user-agent (verified 2026-09-05, HTTP 200); a Chrome navigation to the old URL redirects there automatically (location.href resolves to the same fhb.hhs.texas.gov address), which is how the new address was found. #main (id=main, class=c-main) is the Drupal template's content region and excludes the site's nav/header/footer chrome; it is the narrowest scope that holds the whole handbook section including its own revision-history lines. CONTENT HAS ALSO DRIFTED: the handbook has been revised past the standing packet's Revision 23-1 (Effective July 31, 2023) to Revision 25-3 (Effective May 15, 2025). Section 1323's quotation of 26 TAC Section 554.502 now reads 'or person in the facility' where the packet's Revision 23-1 text and the published page both read 'or individuals in the facility', and 'assistance completing the form' where the page reads 'assistance in completing the form' -- verbatim wording changes, not extraction artifacts, confirmed by reading this capture's own text. Recorded as drift; the page is not edited by this pass.
+- SOURCE 3: transport curl; extractor html-text; scope #main; filters trim-lines, collapse-blank-runs.
+  URL CHANGED since the 2026-08-30 capture: the standing packet's URL, https://apps.hhs.texas.gov/news_info/ombudsman/, now returns 'You do not have permission to view this directory or page.' to every fetch (confirmed 2026-09-05, sandbox curl, host curl, and a live Chrome session -- identical refusal from all three, so this is the host's own response, not a fetcher block). The Long-Term Care Ombudsman program has moved off the apps.hhs.texas.gov directory entirely, to its own site at ltco.texas.gov: other pages under the old apps.hhs.texas.gov/news_info/ombudsman/ path (e.g. how_it_works.html) still 301-redirect there with a tracking query string (utm_source=appsltco-domain&utm_medium=old-url), which is how the new site was found, but the bare directory the packet's URL names has no such redirect and instead serves the permission-denied response above. ltco.texas.gov itself (the home page) is plain curl-able with a browser user-agent (verified 2026-09-05, HTTP 200) and is the closest current equivalent of the packet's captured page: it restates the program's mission, the toll-free number, and 'free, confidential and available statewide' almost verbatim. #main (id=main, class=c-main) is this template's content region, same convention as Source 2, minus the nav/header/menu chrome. CONTENT HAS ALSO DRIFTED: the packet quotes 'Call 1-800-252-2412 to speak with an LTC ombudsman in your area.' with a leading '1-'; the current home page states the same number as 'Call 800-252-2412 to speak with an LTC ombudsman in your area.', without it. Recorded as drift; the page is not edited by this pass.
+- SOURCE 4: transport chrome; extractor html-text; scope body; filters trim-lines, collapse-blank-runs (bytes obtained in an attended session and supplied from a file, sha256 c6aeb9d4ad121515ee98180cb73126d2932fd8b0a75906a09052953e4ae3ba50, read by the extractor named here).
+  SITE REDESIGNED since the 2026-08-30 capture. The standing packet's URL carried a queryAsDate parameter set to the capture date (08/30/2026) and an interface=VIEW_TAC_SUMMARY parameter that then rendered one page listing all five rules of Subchapter F (§554.501-505) with §554.502 and §554.503 each called out by their own Chapter Review Date line. The same interface parameter today (queryAsDate omitted -- the app supplies today's date itself and the rendered fields do not change when a different queryAsDate is passed, confirmed 2026-09-05) renders a single-rule card instead: Title 26 / Part 1 / Chapter 554 / Subchapter F / one Rule number and title / Previous Rule and Next Rule links / one Chapter Review Date. Reaching the same two rules the standing packet named therefore takes two record IDs, this one (203098, §554.502) and 203099 (§554.503, Source 5 below), not the combined view the original capture used -- the chapter and subchapter facts, and the review date (03/11/2024, unchanged), are otherwise identical. Still a client-rendered Appian portal: plain curl to this URL returns HTTP 200 but only the empty application shell (confirmed 2026-09-05), no rule content, so a live Chrome render is still required, exactly as the standing packet's own capture notes said in 2026-08-30. The rendered card also embeds two same-origin iframes (a differently-domained appianportalsgov-dynamic.com host) that appear to hold much longer content behind them -- one measuring 42200px tall on this record -- which would be the actual rule body text the standing packet's PENDING list still calls capture-blocked; this capture does not open them, stays within the same scope the original packet used (the outer page's own header fields, not rule body text), and notes the iframes as an unresolved lead for a future session rather than a widening of this recipe's scope. body scope: the outer document has no narrower named container around these fields; iframe contents are separate documents and do not appear in this document's own HTML text regardless of scope, so body captures exactly the header fields and nothing from inside the iframes. Supplied via --supply because Appian's client-rendered output is not curl-reachable; the raw HTML supplied is exactly what document.documentElement.outerHTML returned from a live Chrome navigation to this URL on 2026-09-05 (verified byte-for-byte against a SHA-256 taken independently of the transcription, sha256 e8eb7712f8bf3dedd373d2fdae34d73634145e1a47918b9854e56861933a6da0), with script tags (holding a page-load timestamp and a per-load nonce, both of which would otherwise make every capture of this source unreproducible) and the href query strings on the Previous/Next Rule links (which embed the fetch date) excluded, because capture.py's own html-text extractor drops script tags entirely and never reads attribute values as text -- confirmed by inspecting extract_html before relying on it. Re-running `python3 tools/capture.py texas --source 4` without a fresh --supply fails loudly with NeedsAgentFetch. 2026-10-08 re-supply: the same expression as 2026-09-05 -- document.documentElement.outerHTML from a live navigation in the built-in browser, with script elements removed and the query string dropped from every href containing '?' (the Previous/Next Rule links) -- saved to disk and checked against a SHA-256 the browser computed over the string (TextEncoder UTF-8). Record 203098: sha256 9a397f2bf0410a7d7062ebf537c4436691ef5b54cff4e590afbd41fcca147313, 25,491 characters. A second independent navigation of the same record produced a different hash (8a2f3a78...), because the Appian app assigns fresh 32-hex element ids on each load; two snapshots taken 1.5 s apart within one load were identical. The extracted text, which is all the extractor reads, does not depend on those ids.
+- SOURCE 5: transport chrome; extractor html-text; scope body; filters trim-lines, collapse-blank-runs (bytes obtained in an attended session and supplied from a file, sha256 3430a9379e93afefab5a3a14c80d542724d89b3e160307a93ae3f7d95b9b301e, read by the extractor named here).
+  The other half of the standing packet's Source 4, split for the reason Source 4's notes above explain in full: the portal now renders one rule per record ID instead of a Subchapter F summary, so §554.502 and §554.503 need two captures where the 2026-08-30 packet used one. Same transport, scope and reasoning as Source 4. Supplied via --supply; the raw HTML is exactly what document.documentElement.outerHTML returned from a live Chrome navigation to this URL on 2026-09-05, verified self-consistent (four concatenated copies fetched in one call were byte-identical to each other before being split back apart) since this Appian app's outerHTML was observed to vary by a couple of characters between successive fetches of the SAME record in this same session -- almost certainly a transient ARIA live-region or scroll-detector artifact rather than a change in the rendered rule content, since the visible fields (rule number, title, review date) were identical every time this record was viewed. This capture uses the one saved snapshot for both verification runs, consistent with capture.py's own documented design for agent-mediated sources: the fetch itself is not reproducible by a subprocess, but the extractor, scope and filters downstream of it are, and that is what the byte-identical check is verifying here. Re-running `python3 tools/capture.py texas --source 5` without a fresh --supply fails loudly with NeedsAgentFetch. 2026-10-08 re-supply: the same expression as 2026-09-05 -- document.documentElement.outerHTML from a live navigation in the built-in browser, with script elements removed and the query string dropped from every href containing '?' (the Previous/Next Rule links) -- saved to disk and checked against a SHA-256 the browser computed over the string (TextEncoder UTF-8). Record 203099: sha256 7198fc9bf2931ffef2551b67284078069f34ef2bc0673de10874ba88456c6ffb, 25,505 characters; two snapshots 1.5 s apart within one load were identical. Per-load element ids vary between navigations as for Source 4.
+
+SOURCE 2: Texas HHSC, Fair and Fraud Hearings Handbook, 1300 Notice | https://fhb.hhs.texas.gov/handbooks/fair-fraud-hearings-handbook/1300-notice | source date: Revision 25-3, Effective May 15, 2025 | retrieved: 2026-10-15
+1300, Notice
+
+Printer-friendly version
+
+Body
+
+Revision 25-3; Effective May 15, 2025
+
+1310 Notice of Proposed Adverse Action
+
+Revision 25-3; Effective May 15, 2025
+
+1 TAC Section 357.11
+
+Whenever an adverse action is taken, agencies are required to send an adequate notice to the client. The HHS agency follows notice requirements in the appropriate state or federal law or regulations for the individual program.
+
+A notice must:
+
+be sent to the client when a denial or reduction in services or eligibility action is taken.
+
+advise the client of:
+
+the right to a fair hearing;
+
+how to appeal;
+
+the right to be represented by others, including legal counsel;
+
+available legal services in the community; and
+
+an explanation of the circumstances when continued benefits may apply.
+
+1320 Content of Notice
+
+Revision 23-1; Effective July 31, 2023
+
+Notice requirements vary for different programs. Notice requirements for the various programs are listed below.
+
+1321 Medicaid
+
+Revision 23-1; Effective July 31, 2023
+
+According to 42 CFR Section 431.210, relating to notice requirements for Medicaid-funded programs, “a notice required under §431.206(c)(2), (c)(3), or (c)(4) of this subpart must contain:
+
+a statement of what action the agency, skilled nursing facility or nursing facility intends to take and the effective date of such action;
+
+a clear statement of the specific reasons supporting the intended action;
+
+the specific regulations that support, or the change in federal or state law that requires, the action;
+
+an explanation of:
+
+the individual's right to request an evidentiary hearing if one is available, or a state agency hearing; or
+
+in cases of an action based on a change in law, the circumstances under which a hearing will be granted;
+
+an explanation of the circumstances under which Medicaid is continued if a hearing is requested."
+
+1322 Alberto N. Settlement
+
+Revision 23-1; Effective July 31, 2023
+
+In addition, in cases involving denials or reductions of services provided to Medicaid clients under age 21, the Alberto N. settlement requires an explanation of why the request for services was denied and where appropriate, how to obtain services through other programs.
+
+1323 Nursing Facility Discharge
+
+Revision 25-3; Effective May 15, 2025
+
+26 TAC Section 554.502 specifies requirements for the notice on a nursing facility discharge action:
+
+Contents of the notice. For nursing facilities, the written notice specified in subsection (d) of this section must include the following:
+
+the reason for transfer or discharge;
+
+the effective date of transfer or discharge;
+
+the location to which the resident is transferred or discharged;
+
+a statement of the resident’s appeal rights, including:
+
+the resident has the right to appeal the action as outlined in HHSC's Fair and Fraud Hearings Handbook by requesting a hearing within 90 days after the date of the notice;
+
+if the resident requests the hearing before the discharge date, the resident has the right to remain in the facility until the hearing officer makes a final determination unless failure to transfer or discharge would endanger the health or safety of the resident or person in the facility. The facility must document the danger failure to discharge would present; and
+
+information on how to obtain an appeal form and assistance completing the form and submitting the appeal hearing request;
+
+the name, address, email address and phone number of the managing local ombudsman and the toll-free number of the Ombudsman Program;
+
+in the case of a resident with mental illness, the address, email address and phone number of the state mental health authority; and
+
+in the case of a resident with an intellectual or developmental disability, the authority for individuals with intellectual and developmental disabilities, and the phone number, address and email address of the agency responsible for the protection and advocacy of people with intellectual and developmental disabilities.
+
+1324 SNAP
+
+Revision 23-1; Effective July 31, 2023
+
+According to 7 CFR Section 273.13, relating to notices required for SNAP, "The notice of adverse action shall be considered adequate if it explains in easily understandable language:
+
+the proposed action;
+
+the reason for the proposed action;
+
+the household's right to request a fair hearing;
+
+the telephone number of the SNAP office (toll-free number or a number where collect calls will be accepted for households outside the local calling area) and, if possible,
+
+the name of the person to contact for additional information;
+
+the availability of continued benefits; and
+
+the liability of the household for any over issuances received while awaiting a fair hearing if the hearing official's decision is adverse to the household. If there is an individual or organization available that provides free legal representation, the notice shall also advise the household of the availability of the service."
+
+1325 TANF
+
+Revision 23-1; Effective July 31, 2023
+
+According to 45 CFR Section 206.10 (4), adequate notice shall be sent to applicants and recipients to indicate that assistance has been authorized (including the amount of financial assistance) or that it has been denied or terminated. Under this requirement, adequate notice means:
+
+a written notice that contains a statement of the action taken;
+
+the reasons for and specific regulations supporting such action; and
+
+an explanation of the individual's right to request a hearing.
+
+1330 Agency Action Notice Issues
+
+Revision 23-1; Effective July 31, 2023
+
+1331 When Appellant Raises a Notice Issue
+
+Revision 23-1; Effective July 31, 2023
+
+The appellant has the right to receive adequate notice. If the appellant raises an issue at the hearing questioning the sufficiency of the notice, or if the hearings officer identifies an issue with the notice, the hearings officer must address the issue on the record at that time.
+
+If the hearings officer determines that the notice is not adequate, the hearings officer must instruct the agency representative to prepare a new notice and provide it to the appellant. After the new notice is provided, the hearings officer will reconvene the hearing.
+
+If the hearings officer determines that the notice is adequate, they will inform all parties and proceed with the hearing.
+
+If the hearings officer requires additional time or escalation of the notice to determine if it is sufficient or not, the hearings officer can recess the hearing and escalate the notice to their management. Once a response has been received regarding the adequacy of the notice, the hearings officer will reconvene the hearing and provide a response.
+
+Nursing Facility Discharge
+
+Notices are of particular importance in nursing facility discharge hearings. Regardless of the issue listed as the basis for appeal, the hearings officer must also address adequacy of the notice to show that it complies with policy. In these hearings, if the notice issue is not raised by the appellant, the hearings officer must develop the record to include information to determine the legal adequacy of the notice.
+
+1340 Receipt of Agency Notices
+
+Revision 23-1; Effective July 31, 2023
+
+An appellant may testify at the hearing that an agency notice, such as an appointment notice or a request for additional information, was not received.
+
+The hearings officer should address this issue by asking questions and taking testimony from both the appellant or the appellant’s representative and the agency representative.
+
+If a letter is sent and not returned, the sender may presume the letter was received.
+
+The decision should include findings of fact regarding the determinations used in reaching the decision on whether the agency notice letter was received.
+
+SOURCE 3: Texas State Long-Term Care Ombudsman (formerly Texas HHS, Office of the Long-Term Care Ombudsman) | https://ltco.texas.gov | source date: none stated on page | retrieved: 2026-10-15
+Homepage
+
+What We Do
+
+Protect the rights of assisted living and nursing facility residents.
+
+Contact Us
+
+Call 800-252-2412 to speak with an LTC ombudsman in your area, email our office, or look for an LTC ombudsman in your area.
+
+Find an LTC Ombudsman
+
+Long-term care (LTC) ombudsmen are advocates for residents' rights. They protect the quality of life and quality of care of anybody who lives in a nursing facility or assisted living facility.
+
+Ombudsmen can be volunteers or paid staff of agencies who are independent of any long-term care facility. Services are free, confidential and available statewide.
+
+If you have concerns about the care of a person with a developmental disability who lives in a state supported living center, visit the Office of the Independent Ombudsman for State Supported Living Centers website.
+
+If you have concerns about health and human services that are not related to a person living in a nursing facility or assisted living facility, contact the HHS Office of the Ombudsman.
+
+What Does an LTC Ombudsman Do?
+
+Some ways LTC ombudsmen help nursing facility and assisted living residents:
+
+Listen to residents and family members when they have concerns or issues.
+
+Tell residents about their rights.
+
+Protect resident health, safety, welfare and rights.
+
+Help families learn about long-term care and how to pay for it.
+
+Solve problems to a resident’s satisfaction.
+
+Ensure state regulations and laws protect residents.
+
+Learn More About LTC Ombudsmen
+
+How Do I Become a Volunteer Ombudsman?
+
+People who live in nursing facilities and assisted living facilities may have little or no contact with the outside world. Many feel they lack control over their lives. A volunteer LTC ombudsman who visits regularly can be the highlight of a resident's day and ensure residents get the best care possible.
+
+If you have a passion for helping others, a caring spirit and a willingness to learn, we need you! Become an ombudsman and help improve the quality of life and care for residents in a facility near you. We provide training, tools and ongoing support.
+
+Become a Volunteer Ombudsman
+
+SOURCE 4: Texas Secretary of State, TAC portal — 26 TAC §554.502, Transfer and Discharge in Medicaid-certified Facilities (record 203098) | https://texas-sos.appianportalsgov.com/rules-and-meetings?recordId=203098&interface=VIEW_TAC_SUMMARY | source date: Chapter Review Date 03/11/2024 | retrieved: 2026-10-15
+Home - Rules & Meetings
+
+Skip to main content
+
+Rules & Meetings
+
+Rules & Meetings
+
+TAC Rule
+
+Historical
+
+Texas Register
+
+View PDF
+
+Title 26
+
+HEALTH AND HUMAN SERVICES
+
+Part 1
+
+HEALTH AND HUMAN SERVICES COMMISSION
+
+Chapter 554
+
+NURSING FACILITY REQUIREMENTS FOR LICENSURE AND MEDICAID CERTIFICATION
+
+Subchapter F
+
+ADMISSION, TRANSFER, AND DISCHARGE RIGHTS IN MEDICAID-CERTIFIED FACILITIES
+
+Rule §554.502
+
+Transfer and Discharge in Medicaid-certified Facilities
+
+Previous Rule
+
+View Rule
+
+Next Rule
+
+View Rule
+
+Chapter Review Date
+
+03/11/2024
+
+SOURCE 5: Texas Secretary of State, TAC portal — 26 TAC §554.503, Notice of Bed-Hold Policy and Return To Medicaid-certified Facilities (record 203099) | https://texas-sos.appianportalsgov.com/rules-and-meetings?recordId=203099&interface=VIEW_TAC_SUMMARY | source date: Chapter Review Date 03/11/2024 | retrieved: 2026-10-15
+Home - Rules & Meetings
+
+Skip to main content
+
+Rules & Meetings
+
+Rules & Meetings
+
+TAC Rule
+
+Historical
+
+Texas Register
+
+View PDF
+
+Title 26
+
+HEALTH AND HUMAN SERVICES
+
+Part 1
+
+HEALTH AND HUMAN SERVICES COMMISSION
+
+Chapter 554
+
+NURSING FACILITY REQUIREMENTS FOR LICENSURE AND MEDICAID CERTIFICATION
+
+Subchapter F
+
+ADMISSION, TRANSFER, AND DISCHARGE RIGHTS IN MEDICAID-CERTIFIED FACILITIES
+
+Rule §554.503
+
+Notice of Bed-Hold Policy and Return To Medicaid-certified Facilities
+
+Previous Rule
+
+View Rule
+
+Next Rule
+
+View Rule
+
+Chapter Review Date
+
+03/11/2024
+

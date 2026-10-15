@@ -1,0 +1,3472 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: utah
+ASSEMBLED: 2026-10-15
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/utah.json (recipe digest 440aa0a4fc67). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- SOURCE 1: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  adminrules.utah.gov is a client-rendered single-page app: the rule's own address, https://adminrules.utah.gov/public/rule/R432-150/Current%20Rules, returns 404 to any direct fetch and renders only in a browser. The 2026-09-01 capture recorded that and read the rendered page by hand. This address is what the app itself fetches for the rule text, so it is first-party and curl-reachable. IT IS PINNED TO A VERSION, NOT TO THE RULE. The GUID names the current text of R432-150; an amendment produces a new GUID and this URL would keep returning the superseded rule while looking healthy, which is the exact failure this project exists to prevent. Source 8 exists to close that hole and must never be removed: it is keyed by rule number rather than by GUID, so an amendment changes it, the pass sees drift, and a session updates this GUID deliberately. Verified 2026-09-04 before re-basing: all 21 quotations this page draws from the rule appear verbatim in this text, so it is the same instrument the page was built on.
+- SOURCE 2: transport curl; extractor pdftotext-layout; filters none.
+  Re-based 2026-09-04. The address the 2026-09-01 capture recorded, .../SNF-Discharge-Appeal-Form.pdf, now returns an nginx 404: the department renamed the file in place, appending its own revision date, and nothing announced the move. Found again by reading the Long Term Care Ombudsman page, which still links it. Verified before re-basing: all 8 quotations this page draws from the form appear verbatim in the renamed file, so it is the same document under a new name rather than a new form.
+- SOURCE 3: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  Cloudflare hides this page's contact address behind a client-side script. The 2026-09-01 capture left the placeholder text in the packet because curl cannot run it; decode_cfemail in the shared capture reader resolves it, and this source now yields utmedicaidhearings@utah.gov as the department publishes it.
+- SOURCE 4: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The same office's contact page published on a second department domain, carried because the two are not word-for-word identical. Same Cloudflare obfuscation and same resolution as source 3.
+- SOURCE 5: transport curl; extractor pdftotext-layout; pages 55-57; filters none.
+  The 2026-09-01 capture sliced this chapter by hand from a 139-page manual. Pages 55 to 57 are the printed range that chapter occupies and contain the standing text exactly; a range is reproducible where a hand slice is not. The chapter heading also appears on pages 4 and 134, in the table of contents and in a later cross-reference, which is why the range is pinned rather than searched for by heading.
+- SOURCE 6: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The 2026-09-01 capture had to render this page in a browser and read document.body.innerText, because every listed address was a Cloudflare placeholder to curl — recorded then as a last-resort transport, not independently re-verifiable by an automated pass. decode_cfemail removes that need: curl now yields the addresses the department publishes, and this source is ordinary again.
+- SOURCE 7: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  Re-based 2026-09-04: the recorded address, /ombudsman-locations, 301-redirects here. Same browser-transport history and same resolution as source 6; the regional ombudsman roster's addresses now decode under curl.
+- SOURCE 8: transport curl; extractor none; filters none.
+  Not a source the page quotes. It exists so that source 1's GUID cannot go stale unnoticed. This address is keyed by rule number rather than by version, and returns the rule's effectiveDate together with the htmlDownload GUID that source 1 pins. If Utah amends R432-150, both fields change here, this packet changes, the review pass reports drift, and a session updates source 1's URL as a deliberate act. Without it, source 1 would keep returning a superseded rule and every check would pass. The literal 'undefined' path segment is what the department's own application sends; it is reproduced rather than corrected, because a guess at the intended value would be a different request from the one that is known to work.
+- SOURCE 9: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  Added 2026-09-24, deepening the page to full: the Medicaid Provider Manual (source 5) itself names this rule as the one setting forth Medicaid hearing procedures ('Utah Administrative Code R410-14 et seq. sets forth the administrative hearing procedures for Medicaid hearings'), and R410-14-2(2)(d) defines a nursing facility's own determination to transfer or discharge a resident as an 'action' this rule governs, and R410-14-23 names SNF hearings expressly. It is the same adminrules.utah.gov client-rendered application as source 1, reached the same way: this address is what the app itself fetches for the rule text and is first-party and curl-reachable, but IT IS PINNED TO A VERSION, NOT TO THE RULE, for the same reason source 1 is. Source 10 is this source's version witness and must never be removed for the same reason source 8 must not be removed for source 1.
+- SOURCE 10: transport curl; extractor none; filters none.
+  Not a source the page quotes. Same role for source 9 that source 8 holds for source 1: keyed by rule number rather than by version, so an amendment to R410-14 changes this packet and the review pass reports drift rather than silently continuing to quote a superseded rule.
+- SOURCE 11: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  Added 2026-09-24, deepening the page to full: this is Utah Medicaid's nursing-facility payment rule, searched for a state-wide bed-hold day count after R432-150-20(9) (source 1) proved to require only a facility's own written bed-hold policy with no state-set duration. This rule addresses case-mix reimbursement and reserved/swing beds by payment category (R414-504-3(9)) but states no bed-hold or reserved-bed day count either; it supports the page's stated absence rather than a quotation of a period. Same client-rendered application and same version-pinning caveat as sources 1 and 9; source 12 is its version witness.
+- SOURCE 12: transport curl; extractor none; filters none.
+  Not a source the page quotes. Same role for source 11 that source 8 holds for source 1.
+
+SOURCE 1: R432-150, Nursing Care Facility — Utah Administrative Code | https://adminrules.utah.gov/api/public/getHTML/uac-html/9635398a-ce5f-438c-8817-197550b951c7.html | source date: Effective Date: 02/18/2025 | retrieved: 2026-10-15
+R432. Health and Human Services, Health Care Facility Licensing.
+R432-150. Nursing Care Facility.
+
+R432-150-1. Authority and Purpose.
+
+(1) Section 26B-2-202 authorizes this rule.
+
+(2) The purpose of this rule is to establish health and safety standards to provide for the physical and psychosocial well-being of an individual receiving services in a nursing care facility.
+
+R432-150-2. Construction Standard.
+
+The licensee shall ensure the facility is constructed and maintained in accordance with Rule R432-5.
+
+R432-150-3. Definitions.
+
+(1) The definitions found in Rules R432-1 and R380-600 apply to this rule. Additionally:
+
+(2) "Adult day care" means nonresidential care and supervision for at least four, but less than 24 hours, a day, that meets the needs of functionally impaired adults through a comprehensive program that provides a variety of health, social, recreational, and related support services in a protective setting.
+
+(3) "Certification in cardiopulmonary resuscitation (CPR)" refers to certification issued after completion of an in- person course, to include skills testing and evaluation on-site with a licensed instructor.
+
+(4) "Chemical restraint" means any medication administered to a resident to control or restrict the resident's physical, emotional, behavioral functioning for the convenience of staff, punishment, discipline, or as a substitute for direct resident care.
+
+(5) "Dining assistant" means an individual unrelated to a resident who meets the training requirements outlined in this rule to assist a resident with eating and drinking.
+
+(6) "Governing body" means the board of trustees, owner, and individuals designated by the owner with the legal authority and ultimate responsibility for the management, control, conduct, and functioning of the health care facility or agency.
+
+(7) "Intermediate care" means a level of care that provides 24-hour inpatient care to each resident who needs licensed supervision and supportive care but does not require continuous nursing care.
+
+(8) "Medically-related social services" means assistance provided by the licensed social worker to maintain or improve each resident's ability to control everyday physical, mental, and psychosocial needs.
+
+(9) "Monitoring device" means the same as defined in Section 26B-2-236.
+
+(10) "Nurse aide" means any individual, other than an individual licensed in another category, providing nursing or nurse related services to a resident in a nursing care facility. This definition does not include an individual who volunteers to provide such services without pay.
+
+(11) "Nursing staff" means nurse aides that are in the process of becoming certified, certified nurse aides, and those individuals that are licensed, including licensed practical nurses and registered nurses, to provide nursing care in Utah.
+
+(12) "OL" means the Office of Licensing in the Division of Licensing and Background Checks under the Department of Health and Human Services.
+
+(13) "Palatable" means food that has a pleasant and agreeable taste and is acceptable to eat.
+
+(14) "Physical restraint" means any physical method, physical or mechanical device, material, or equipment attached or adjacent to the resident's body that the resident cannot easily remove and restricts the resident's freedom of movement or normal access to their body.
+
+(15) "Pre-admission screening resident review" is a preliminary assessment completed for each individual before admission to a Medicaid-certified nursing facility to determine whether an individual might have a mental illness or intellectual disability.
+
+(16) "Respite" means to provide intermittent, time-limited care to give primary caretakers relief from the demands of caring for a person.
+
+(17) "Resident care conference" means a review of the resident's care plan by an interdisciplinary team comprised of representatives of disciplines based on the resident's needs.
+
+(18) "Responsible person" means the same as defined in Rule R432-1.
+
+(19) "Secure memory care unit" means a nursing care unit with a controlled egress locking system to ensure a resident in cognitive decline, including dementia or Alzheimer's Disease, is prevented from wandering away or getting lost.
+
+(10) "Significant change" means a major change in a resident's status that impacts more than one area of the resident's health status.
+
+(21) "Skilled level of nursing care" means a level of care that provides 24-hour inpatient care to a resident who needs licensed nursing supervision; by licensed health care personnel who closely supervise or perform the prescribed services.
+
+(22) "Therapeutic leave" means leave pertaining to planned medical treatment that is implemented to meet an objective that is specified in the individual care plan.
+
+(23) "Unnecessary drug" means any drug used:
+
+(a) excessive in dose;
+
+(b) for any combination of these reasons;
+
+(c) for excessive duration;
+
+(d) in the presence of adverse consequences that show the dose should be reduced or discontinued;
+
+(e) without indications for its use; or
+
+(f) without monitoring.
+
+R432-150-4. Scope of Services.
+
+(1) For an intermediate care facility, the licensee:
+
+(a) may employ a licensed practical nurse to act as the health services supervisor instead of a director of nursing if a registered nurse consultant meets regularly with the health services supervisor;
+
+(b) shall ensure nursing staff are present on the premises 24 hours a day to meet the needs of each resident;
+
+(c) shall provide 24-hour licensed nursing services;
+
+(d) shall provide at least one registered nurse either by direct employ or by contract to provide direction to nursing services; and
+
+(e) shall provide at least:
+
+(i) dietary services;
+
+(ii) medical supervision;
+
+(iii) recreational therapy; and
+
+(iv) social services.
+
+(2) The licensee shall provide the following service as required in the resident's care plan:
+
+(a) occupational therapy;
+
+(c) physical therapy;
+
+(d) respiratory therapy;
+
+(e) speech therapy; and
+
+(f) any other therapy as ordered by the licensed practitioner.
+
+(3) For a skilled level of nursing care facility, the licensee shall:
+
+(a) designate a registered nurse to serve as the director of nursing on a full-time basis;
+
+(b) employ a registered nurse for at least eight consecutive hours a day, seven days a week;
+
+(c) ensure a licensed charge nurse is present on each shift;
+
+(d) ensure nursing staff are present on the premises 24 hours a day to meet the needs of each resident;
+
+(e) not permit a person to concurrently serve as the director of nursing and as a charge nurse;
+
+(f) provide 24-hour licensed nursing services; and
+
+(g) provide a service to each resident that maintains current capabilities and prevents further deterioration, including:
+
+(i) a dental service;
+
+(ii) a dietary service;
+
+(iii) a pharmacy service;
+
+(iv) medical supervision;
+
+(v) physical therapy;
+
+(vi) recreational therapy; and
+
+(vii) social services.
+
+(4) The licensee shall provide the following services as required by the resident's care plan:
+
+(a) occupational therapy;
+
+(b) respiratory therapy; and
+
+(c) speech therapy.
+
+(5)(a) The licensee shall ensure that a respite service comply with Subsections R432-150-5(5) through (13).
+
+(b) The licensee may provide a respite service at an hourly rate or daily rate but may not exceed 14 days for any single respite stay.
+
+(c) A respite stay that exceeds 14 days is considered a nursing facility admission and is subject to the requirements of this rule applicable to a non-respite resident.
+
+(d) The licensee shall coordinate the delivery of respite services with the recipient, the case manager, if applicable, and the family member, or primary caretaker.
+
+(e) The licensee shall document and coordinate with each provider agency to ensure uninterrupted service delivery.
+
+(6) The licensee shall complete:
+
+(a) a Level 1 pre-admission screening upon the person's admission for respite services;
+
+(b) a record for each person receiving respite services;
+
+(c) a service agreement to serve as the care plan, that identifies the prescribed medications, physician treatment orders, need for assistance with activities of daily living, and diet orders; and
+
+(d) written respite care policies and procedures that are available to staff.
+
+(7) The licensee shall ensure respite care policies and procedures address:
+
+(a) behavior management interventions;
+
+(b) handling personal funds;
+
+(c) medication administration;
+
+(d) notification of a responsible person in the case of an emergency;
+
+(e) philosophy of respite services;
+
+(f) post-service summary;
+
+(g) service agreement and admission criteria; and
+
+(h) training and in-service requirement for employees.
+
+(8) The licensee shall ensure the individual receiving respite services receives a copy of the resident rights documents upon initiation of the respite services.
+(9) The licensee shall ensure a respite record contains:
+
+(a) a post-service summary;
+
+(b) any accident and injury report;
+
+(c) an advanced directive, if available;
+
+(d) daily staff notes;
+
+(e) nursing notes;
+
+(f) physician treatment orders;
+
+(g) resident demographic information; and
+
+(h) the service agreement.
+
+(10) The licensee shall ensure retention and storage of a respite record complies with Subsection R432-150-25(3).
+
+(11) The licensee shall ensure confidentiality and release of information complies with Subsection R432-150-25(4).
+
+(12) Hospice care may only be arranged and provided by a licensed hospice agency in accordance with Rule R432-750.
+
+(13) A nursing care facility may provide terminal care.
+
+R432-150-5. Adult Day Care Services.
+
+(1) A nursing care facility licensee may provide adult day care without an additional license from OL.
+
+(2) The licensee shall submit policies and procedures for adult day care to the OL for approval.
+
+(3) The governing body shall designate a qualified director to be responsible for the day-to-day program operation.
+
+(4) The director shall maintain the following information on-site for each staff member:
+
+(a) a background check consent and release form;
+
+(b) an emergency contact with name, address, and telephone number;
+
+(c) health history;
+
+(d) in-service training requirements; and
+
+(e) verification of orientation completion.
+
+(5) The director shall maintain the following information on-site for each client:
+
+(a) a health record to include:
+
+(i) a current health assessment signed by a licensed practitioner;
+
+(ii) a level of care assessment; and
+
+(iii) a record of medication including dosage and administration;
+
+(b) a signed client agreement and care plan;
+
+(c) an emergency contact with name, address, and telephone number; and
+
+(d) demographic information.
+
+(6) The licensee shall have a written eligibility, admission, and discharge policy that includes:
+
+(a) intake process;
+
+(b) notification of responsible person of any upcoming admission or discharge;
+
+(c) reason for discharge or dismissal;
+
+(d) reasons for admission refusal, including the director's written, signed statement; and
+
+(e) resident rights notification.
+
+(7) Before the licensee may admit a client to the facility, the licensee must ensure the following are addressed in writing to determine client eligibility for the program:
+
+(a) current health status;
+
+(b) immunizations;
+
+(c) legal status;
+
+(d) medical history; and
+
+(e) psychological factors.
+
+(8) The licensee shall ensure that the director or designee, the responsible person, and the client if competent develops a written, signed client agreement that includes:
+
+(a) arrangements regarding:
+
+(i) absenteeism;
+
+(ii) gifts;
+
+(iii) mail;
+
+(iv) telephone calls;
+
+(v) vacations; and
+
+(vi) visits.
+
+(b) rules of the program; and
+
+(c) services provided and cost of service, including refund policy.
+
+(9) The licensee shall ensure the director or designee:
+
+(a) develops an individual client care plan that is implemented for the client within three days of admission to the program;
+
+(b) ensures the care plan includes the specification of daily activities and services; and
+(c) reevaluates and changes, if necessary, the client's care plan at least every six months.
+
+(10) The licensee shall comply with Rule R380-600 regarding critical incident reporting.
+
+(11) The director shall notify and review the incident report with the responsible person no later than when the client is picked up at the end of the day.
+
+(12) The licensee shall post and implement a daily activity schedule.
+
+(13) The licensee shall:
+
+(a) ensure a client is always directly supervised and are encouraged to participate in activities;
+
+(b) ensure one staff member provides continuous, direct supervision when eight or fewer clients are present;
+
+(c) ensure staff supervision is provided continually when a client is present;
+
+(d) if one-half or more of the clients are diagnosed by a physician's assessment with Alzheimer's or other dementia, the ratio is one staff for every six clients, or fraction thereof;
+
+(e) maintain any indoor and outdoor areas in a clean, secure, and safe condition;
+
+(f) provide at least 50 square feet of indoor floor space, excluding hallways, office, storage, kitchens, and bathrooms, per client designated for adult day care during program operational hours;
+
+(g) provide at least one bathroom designated for client use during business hours;
+
+(h) provide continuous, direct supervision at a ratio of one staff to every eight clients; and
+
+(i) provide at least two designated bathrooms designed for client use if serving more than ten clients.
+
+R432-150-6. Governing Body.
+
+(1) The licensee shall have a governing body or designated persons functioning as a governing body.
+
+(2) The licensee shall ensure that the governing body establishes and implements policies regarding the management and operation of the facility.
+
+(3) The governing body shall institute bylaws, policies, and procedures relative to the general operation of any licensee services including the health care of the resident and the protection of resident rights.
+
+(4) The governing body shall appoint the administrator in writing.
+
+R432-150-7. Administrator.
+
+(1) The licensee shall ensure that the administrator:
+
+(a) designates, in writing, the name and job title of the person who has the authority and freedom to act in the best interests of resident safety and well-being to act as administrator in any temporary absence of the administrator;
+
+(b) does not supervise more than one nursing care facility;
+
+(c) is not superseded by an unlicensed administrator designee;
+
+(d) has enough freedom from other responsibilities to permit attention to the management and administration of the facility;
+
+(e) holds a current license as a health facility administrator by the Utah Department of Commerce in accordance with Title 58, Chapter 15, Health Facility Administrator Act; and
+
+(f) posts the license in a place visible to the public.
+
+(2) The licensee shall ensure the administrator's responsibilities are defined in a written job description on file in the facility that includes the following responsibilities:
+
+(a) secure and update contracts for required professional services that are not provided directly by the facility that document:
+
+(i) a copy of the business or professional license of the contractor;
+
+(ii) a description of goods or services provided by the contractor to the facility;
+
+(iii) a provision to report findings, observations, and recommendations to the administrator on a regular basis;
+
+(iv) a provision to terminate the contract with advance notice;
+
+(v) a statement that the contractor shall conform to the standards required by law or rule;
+
+(vi) contracts are signed, dated, and maintained for review by OL;
+
+(vii) the effective and expiration date of contract; and
+
+(viii) the financial terms of the contract;
+
+(b) the completion, submission, and filing of any required reports, including a monthly census report to the Department of Health and Human Services, Division of Integrated Healthcare as required by Section R414-401-4, by the end of the succeeding month;
+
+(c) to act as a liaison between the licensee, medical and nursing staffs, and other supervisory staff of the facility;
+
+(d) to ensure that facility policies and procedures reflect current facility practice, and are revised and updated as needed;
+
+(e) to implement policies and procedures governing the operation of any functions of the facility;
+
+(f) to respond to recommendations made by the quality assurance committee; and
+
+(g) to review any incident, accident report, and document the action taken or reason for no action.
+
+(3) The licensee shall ensure the administrator maintains a written transfer agreement with one or more hospitals to facilitate the transfer of a resident and essential resident information that includes:
+
+(a) criteria for transfer;
+
+(b) method of transfer;
+(c) proper notification of hospital and responsible person before the transfer;
+
+(d) resident confidentiality;
+
+(e) security and accountability of personal property of the resident transferred;
+
+(f) the facility responsible for resident care during the transfer; and
+
+(g) transfer of information needed for proper care and treatment of the resident transferred.
+
+R432-150-8. Medical Director.
+
+(1) The licensee shall ensure that the administrator secures, by formal agreement, a licensed physician to serve as medical director or advisory physician according to resident and facility needs.
+
+(2) The medical director or advisory physician shall:
+
+(a) act as consultant to the director of nursing or the health services supervisor in matters relating to resident care policies;
+
+(b) develop resident care policies and procedures, including the delineation of responsibilities of attending physicians;
+
+(c) review current resident care policies and procedures with the administrator;
+
+(d) review incident and accident reports at the request of the administrator to identify health hazards to a resident and employee; and
+
+(e) serve as a liaison between resident physicians and the administrator.
+
+R432-150-9. Staff and Personnel.
+
+(1) The administrator shall employ personnel who are able and competent to perform their respective duties, services, and functions.
+
+(2) The administrator shall ensure the administrator, director of nursing or health services supervisor, and facility supervisors develop job descriptions for each position, including:
+
+(a) a job summary;
+
+(b) a job title;
+
+(c) any required qualifications;
+
+(d) any required skills and licenses;
+
+(e) responsibilities of the position; and
+
+(f) the position's physical requirements.
+
+(3) The licensee shall monitor staff to ensure compliance with each applicable rule under Title R432.
+
+(4) The licensee shall ensure each employee has access to facility policy and procedure manuals and other information necessary to effectively perform duties and carry out responsibilities.
+
+(5) The licensee shall ensure each employee is licensed, certified, or registered as required by the Utah Department of Commerce, and a copy of the license, certification, or registration is maintained for OL review.
+
+(6) The licensee shall:
+
+(a) complete a health evaluation for each employee upon hire that includes the employee's history of the following:
+
+(i) any condition that may prevent the employee from performing certain assigned duties satisfactorily; and
+
+(ii) any condition that predisposes the employee to acquiring or transmitting infectious diseases;
+
+(b) conduct regular performance reviews and regular in-service education to ensure that individuals used as nurse aides are competent to perform services as nurse aides;
+
+(c) develop and ensure adherence to a policy that prohibits employees from deactivating, repositioning, or otherwise interfering with the operation of a monitoring device in a secure memory care patient's room;
+
+(d) ensure a health screening and immunization component is included in the employee's personnel health program, outlined in Subsection (j);
+
+(e) ensure any infections and communicable diseases reportable by law are reported to the local health department in accordance with Section R386-702-3;
+
+(f) ensure any person who provides nursing care, including any nurse aide or orderly, works under the supervision of a registered nurse or licensed practical nurse and demonstrates competency and dependability in resident care;
+
+(g) ensure employee skin testing by the Mantoux method or other FDA approved in vitro serologic test and follow up for tuberculosis is done in accordance with Rule R388-804 and each employee is skin-tested for tuberculosis within two weeks of:
+
+(i) development of symptoms of tuberculosis;
+
+(ii) initial hiring; and
+
+(iii) suspected exposure to a person with active tuberculosis;
+
+(h) ensure infection control includes staff immunization as necessary to prevent the spread of disease;
+
+(i) ensure staff are available on each shift, who are CPR certified, trained in emergency procedures and basic first aid, including the Heimlich maneuver;
+
+(j) establish a personnel health program through written personnel health policies and procedures;
+
+(k) exempt skin testing for each employee with a known positive reaction to skin tests;
+
+(l) maintain staffing records, including employee performance evaluations, for the preceding 12 months;
+
+(m) plan and document in-service training for each staff member and address the following topics annually:
+
+(i) a basic understanding of the various types of mental illness, including symptoms, expected behaviors and intervention approaches;
+(ii) accident prevention and safety procedures including instruction in body mechanics for any employees required to lift, turn, position, or ambulate a resident; and proper safety precautions when floors are wet or waxed;
+
+(iii) confidentiality of resident information;
+
+(iv) fire prevention;
+
+(v) prevention and control of infections;
+
+(vi) proper use and documentation of restraints;
+
+(vii) resident rights;
+
+(viii) review and drill of emergency procedures and evacuation plan; and
+
+(ix) the reporting of resident abuse, neglect, or exploitation to the proper authorities;
+
+(n) prohibit any person from working in the facility as a nurse aide for more than four months, on full-time, temporary, per diem, or other basis, unless that individual has successfully completed a state Department of Education-approved training and testing program;
+
+(o) require a person to complete a new training and competency evaluation program if an individual has not performed paid nursing or nursing related services for a continuous period of 24 consecutive months since the most recent completion of a training and competency evaluation program; and
+
+(p) verify through the nurse aid registry before offering employment that nurse aide applicants do not have a verified report of abuse, neglect, or exploitation, and if such a verified report exists, the licensee may not hire the applicant.
+
+(7) The licensee may utilize volunteers in the daily activities of the licensee if volunteers are not included in the licensee's staffing plan in lieu of facility employees and the licensee ensures:
+
+(a) each volunteer is supervised and familiar with resident rights and the licensee's policies and procedures; and
+
+(b) each volunteer who provides personal care to a resident is screened according to facility policy and under the direct supervision of a qualified employee.
+
+(8) The licensee shall ensure an employee who reports suspected abuse, neglect, or exploitation is not subject to retaliation, disciplinary action, or termination by the licensee for making the report.
+
+R432-150-10. Quality Assurance.
+
+(1) The administrator shall develop and follow a well-defined quality assurance plan designed to improve resident care that:
+
+(a) implements a system to assess identified problems, concerns, and opportunities for improvement;
+
+(b) implements actions that are designed to eliminate identified problems and improve resident care;
+
+(c) includes a system for the collection of data indicators; and
+
+(d) includes an incident reporting system in accordance with Rule R380-600 to identify problems, concerns, and opportunities for improvement of resident care.
+
+(2) The licensee shall ensure the quality assurance plan includes a quality assurance committee that functions as follows:
+
+(a) conducts quarterly meetings and reports findings, concerns and actions to the administrator and governing body;
+
+(b) coordinates input of data indicators from any provided services and other departments as determined by the resident's care plan and facility scope of services; and
+
+(c) documents committee meeting minutes including any corrective actions and results.
+
+(3) The licensee shall ensure incident and accident reports:
+
+(a) are available for OL and quality assurance committee review;
+
+(b) are numbered and logged in a manner to account for each filed report; and
+
+(c) have space for written comments by the administrator or medical director.
+
+(4) The licensee shall ensure infection reporting is integrated into the quality assurance plan and is reported to the department in accordance with Rule R386-702.
+
+R432-150-11. Resident Rights.
+
+(1) The licensee shall establish written resident rights.
+
+(2) The licensee shall post resident rights in areas accessible to a resident.
+
+(3) The licensee shall ensure a copy of the resident rights document is available to:
+
+(a) each resident;
+
+(b) each residents' guardian or responsible person; and
+
+(c) to the public and OL upon request.
+
+(4) The licensee shall ensure that each resident admitted to the facility has the right to:
+
+(a) allow relatives or responsible persons to visit a critically ill resident at any time;
+
+(b) associate and communicate privately with persons of the resident's choice, and to send and receive personal mail unopened;
+
+(c) be allowed privacy for visits with family, friends, clergy, social workers, or for professional or business purposes;
+
+(d) be assured confidential treatment of personal and medical records, including photographs, and to approve or refuse their release to any individual outside the facility, except in the case of transfer to another health facility, or as required by law or third-party payment contract;
+(e) be encouraged and assisted throughout the period of stay to exercise any rights as a resident and as a citizen;
+
+(f) be free from abuse, neglect, and exploitation and from chemical and physical restraints;
+
+(g) be given reasonable advance notice to ensure orderly transfer or discharge;
+
+(h) be informed, at the time of admission and during the stay, of resident rights and of any rules or laws governing resident conduct;
+
+(i) be informed, at the time of admission and during the stay, of services available in the facility and of related charges, including any charges for services not covered by the licensee's basic per diem rate or not covered under Titles XVIII or XIX of the Social Security Act;
+
+(j) be informed by a licensed practitioner of current total health status, including current medical condition, unless medically contraindicated, the right to refuse treatment, and the right to formulate an advance directive in accordance with Section 75-2a-107;
+
+(k) be transferred or discharged only for:
+
+(i) nonpayment for the stay;
+
+(ii) personal welfare or welfare of another resident; or
+
+(iii) medical reasons;
+
+(l) be treated with consideration, respect, and full recognition of dignity and individuality, including privacy in treatment and in care for personal needs;
+
+(m) choose activities, schedules, and health care consistent with individual interests, assessments, and care plan;
+
+(n) have access to the state long term care ombudsman program or representatives of the long term care ombudsman program;
+
+(o) have confidential access to telephones for both free local calls and for accommodation of long-distance calls according to facility policy;
+
+(p) have members of the clergy admitted at the request of the resident or responsible person at any time;
+
+(q) if married, to be assured privacy for visits by the spouse and if both are residents in the facility, to be permitted to share a room;
+
+(r) interact with members of the community both inside and outside the facility;
+
+(s) keep and use personal clothing and possessions as space permits, unless to do so would infringe upon rights of another resident;
+
+(t) make choices about any aspects of life in the facility that are significant to the resident;
+
+(u) manage personal financial affairs or to be given at least a quarterly accounting of financial transactions made on their behalf should the licensee accept their written delegation of this responsibility;
+
+(v) meet with social, religious, and community groups and participate in activities provided that the activities do not interfere with the rights of any other resident in the facility;
+
+(w) not be required to perform services for the facility that are not included for therapeutic purposes in the care plan ; and
+
+(x) voice grievances and recommend changes in policies and services to facility staff and outside representatives of personal choice, free from restraint, interference, coercion, discrimination, or reprisal.
+
+(5)(a) A resident has the right to organize and participate in resident and family groups in the facility.
+
+(b) A resident's family has the right to meet in the facility with the families of other residents in the facility.
+
+(c) The licensee shall provide a resident or family group, if one exists, with private space.
+
+(d) Staff or visitors may attend meetings at the group's invitation.
+
+(e) The licensee shall designate a staff person responsible for assisting and responding to written requests that result from group meetings.
+
+(f) If a resident or family group exists, the licensee shall listen to the views and act upon the grievances and recommendations of the resident or family group concerning proposed policy and operational decisions affecting resident care and life in the facility.
+
+(6) The licensee shall:
+
+(a) accommodate resident needs and preferences, except when the health and safety of the individual or another resident may be endangered;
+
+(b) ensure a resident is given at least a 24-hour notice before an involuntary room move is made in the facility;
+
+(c) ensure that in an emergency when there is actual or threatened harm to others, property, or self, the 24-hour notice requirement for an involuntary room move may be waived if the circumstances requiring the emergency room change are documented for OL review; and
+
+(d) make and document efforts to accommodate the resident's adjustment and choices regarding room and roommate changes.
+
+(7) If a licensee is entrusted with a residents funds or valuables, the licensee or staff may not use resident funds or valuables or mingle them with their own and shall:
+
+(a) deposit any money over $100 in an interest-bearing account;
+
+(b) deposit each resident's funds not kept in the facility within five days of receipt of the funds in an interest-bearing, insured account in a local bank or savings and loan association authorized to do business in Utah;
+(c) ensure each resident's account is kept current with columns for debits, credits, and balance;
+
+(d) ensure each residents funds and valuables are separate, intact, and free from any liability that the licensee incurs in the use of their own or the institution's funds and valuables;
+
+(e) ensure records of each resident's funds and other valuables entrusted to the licensee for safekeeping include a copy of the receipt furnished to the resident or to the person responsible for the resident;
+
+(f) ensure records of each resident's funds that are maintained as a drawing account include a control account for any receipts and expenditures, an account for each resident, and supporting vouchers filed in chronological order;
+
+(g) maintain a separate account for each facility, when a licensee is licensed to operate more than one health facility, and may not commingle resident funds from one facility with another;
+
+(h) maintain adequate safeguards and accurate records of each resident's monies and valuables entrusted to the licensee's care;
+
+(i) provide evidence of the purchase of a surety bond or other equivalent assurance to secure any resident funds, upon license renewal;
+
+(j) surrender any money and valuables kept within the facility upon demand and make available any money kept in an interest-bearing account within three working days; and
+
+(k) surrender upon discharge any resident money and valuables that have been entrusted to the licensee in exchange for a signed receipt.
+
+(8)(a) Within 30 days following the death of a resident, except in a case under investigation by the medical examiner, the licensee shall surrender any money and valuables of the resident that have been entrusted to the licensee to the person responsible for the resident or to the executor or the administrator of the estate in exchange for a signed receipt.
+
+(b) If a resident dies without a representative or known heirs, the licensee shall immediately notify the local probate court and OL in writing.
+
+R432-150-12. Resident Assessment.
+
+(1) The licensee shall, upon resident admission, obtain physician orders for the resident's immediate care.
+
+(2) The licensee shall:
+
+(a) complete a comprehensive assessment of each resident's needs including a description of the resident's capability to perform daily life functions and significant impairments in functional capacity that includes:
+
+(i) activities potential;
+
+(ii) cognitive status;
+
+(iii) dental condition;
+
+(iv) discharge potential;
+
+(v) drug therapy;
+
+(vi) medical status measurement;
+
+(vii) medically defined conditions and prior medical history;
+
+(viii) mental and psychosocial status;
+
+(ix) nutritional status and requirements;
+
+(x) physical and mental functional status;
+
+(xi) rehabilitation potential;
+
+(xii) sensory and physical impairments; and
+
+(xiii) special treatments or procedures;
+
+(b) complete three quarterly reviews and one full assessment in each 12-month period;
+
+(c) ensure that a resident care conference is conducted when there is any significant change in a resident's physical or mental health and the team may require a new assessment within 14 days of the condition change;
+
+(d) ensure the initial assessment is completed within 14 calendar days of admission and any revisions to the initial assessment are completed within 21 calendar days of admission; and
+
+(e) use the results of the assessment to develop, review, and revise the resident's comprehensive care plan.
+
+(3) The licensee shall ensure each individual who completes a portion of the assessment signs and certifies the accuracy of that portion of the assessment.
+
+(4) The licensee shall develop a comprehensive care plan for each resident that includes measurable objectives and timetables to meet a resident's medical, nursing, and mental and psychosocial needs as identified in the comprehensive assessment.
+
+(5) The licensee shall ensure the comprehensive care plan is:
+
+(a) developed within seven days after completion of the comprehensive assessment;
+
+(b) periodically reviewed and revised by a team of qualified individuals at least after each assessment and as the resident's condition changes; and
+
+(c) prepared with input from the client, the resident's responsible person to the extent practicable, and a resident care conference that includes:
+
+(i) the attending physician;
+
+(ii) the registered nurse responsible for the resident; and
+
+(iii) other appropriate staff in disciplines determined by the resident's needs.
+(6) The licensee shall ensure the services provided or arranged meet professional standards of quality and be provided by qualified persons in accordance with the resident's written care plan.
+
+(7)(a) The licensee shall ensure a final summary of the resident's status, to include items in Subsection R432-150-13(2)(a), is prepared at the time of discharge and is available for release to authorized persons and agencies, with the consent of the resident or responsible person.
+
+(b) The licensee shall ensure the final summary includes a post-discharge care plan developed with the participation of the resident and resident's family or guardian.
+
+(c) If the licensee discharges a resident because they cannot meet the resident's needs, the licensee shall include a detailed explanation of why the resident's needs could not be met in the final summary.
+
+R432-150-13. Restraint Policy.
+
+(1) Each resident has the right to be free from physical and chemical restraints imposed for purposes of discipline or convenience, or not required to treat the resident's medical symptoms.
+
+(2)(a) The licensee shall have written policies and procedures regarding the proper use of restraints.
+
+(b) The licensee shall ensure physical and chemical restraints are only used to assist a resident to attain and maintain optimum levels of physical and emotional functioning.
+
+(c) The licensee shall ensure physical and chemical restraints are not used as substitutes for direct resident care, activities, or other services.
+
+(d) The licensee shall ensure restraints do not hinder evacuation of the resident in the event of fire or other emergency.
+
+(e) If use of a physical or a chemical restraint is implemented, the licensee shall ensure the resident and responsible person are informed of the reasons for the restraint, the circumstances that allow the restraint to be discontinued, and the hazards of the restraint, including potential physical side effects.
+
+(3) The licensee shall develop and implement policies and procedures that govern the use of physical and chemical restraints, promote optimal resident function, minimize adverse consequences of restraint use and incorporate and address:
+
+(a) examples of the types of restraints and safety devices that are acceptable for the specified use and possible resident conditions when the restraint may be used;
+
+(b) govern the use of physical and chemical restraints;
+
+(c) incorporate and address:
+
+(i) resident assessment criteria that includes:
+
+(A) appropriateness of use;
+
+(B) behavior management and modification protocols including possible alterations to the physical environment;
+
+(C) less restrictive alternatives before the use of more restrictive measures;
+
+(D) procedures for use; and
+
+(E) purpose and nature of the restraint;
+
+(d) minimize adverse consequences of restraint use;
+
+(e) physical restraint guidelines for periodic release and position change or exercise, with instructions for documentation of this action; and
+
+(f) safely and therapeutically promote optimal resident function.
+
+(4) The licensee shall ensure emergency use of physical and chemical restraints comply with:
+
+(a) a physician, a licensed health practitioner, the director of nursing, or the health services supervisor authorizes the emergency use of restraints;
+
+(b) the attending physician is notified as soon as possible, but at least within 24 hours of the application of the restraints;
+
+(c) the circumstances necessitating emergency use of the restraint and the client's response is documented in the resident's record; and
+
+(d) the director of nursing or health services supervisor is notified no later than the beginning of the next day shift of the application of the restraints.
+
+(5) The licensee shall ensure:
+
+(a) any medication given to a resident is administered according to the requirements of professional and ethical practice and according to the policies and procedures of the facility;
+
+(b) chemical restraints are authorized in writing by a licensed practitioner and incorporated in the resident's care plan in conjunction with an individualized behavior management program;
+
+(c) each resident receiving chemical restraints is monitored for adverse effects that significantly hinder verbal, emotional, or physical abilities;
+
+(d) leather restraints, straight jackets, or locked restraints are prohibited;
+
+(e) physical restraints are authorized in writing by a licensed practitioner and incorporated in the resident's care plan;
+
+(f) staff application of physical restraints do not cause injury or allow a potential for injury;
+
+(g) staff application of physical restraints ensures minimal discomfort to the resident and allow sufficient body movement for proper circulation;
+
+(h) the resident care conference team reviews and documents the use of chemical restraints during each resident care conference and upon receipt of renewal orders from the licensed practitioner;
+
+(i) the resident care conference team reviews and documents the use of physical restraints, including simple safety devices, during each resident care conference, and upon receipt of renewal orders from the licensed practitioner; and
+(j) the resident's care plan includes:
+
+(i) the frequency of release;
+
+(ii) the length of time to be used;
+
+(iii) the type of exercise or ambulation provided; and
+
+(iv) the type of physical restraint or safety device.
+
+(6) The licensee shall initiate gradual drug dosage reductions as outlined in Subsection R432-150-15(13)(c).
+
+(7) The licensee shall include criteria for admission and retention of a resident who requires behavior management program in the facility policy.
+
+R432-150-14. Quality of Care.
+
+(1)(a) The licensee shall ensure each resident is provided the necessary care and services to attain or maintain the highest practicable physical, mental, and psychosocial well-being, in accordance with the comprehensive assessment and care plan.
+
+(b) Necessary care and services under Subsection (1)(a) include the resident's ability to:
+
+(i) bathe, dress, and groom;
+
+(ii) eat;
+
+(iii) transfer and ambulate;
+
+(iv) use speech, language, or other functional communication systems; and
+
+(v) use the toilet.
+
+(c) Based on the resident's comprehensive assessment, the licensee shall ensure that:
+
+(i) a resident who cannot carry out these functions receives the necessary services to maintain good nutrition, grooming, and personal and oral hygiene;
+
+(ii) each resident is given the treatment and services to maintain or improve their abilities; and
+
+(iii) each resident's abilities in activities of daily living do not diminish unless circumstances of the individual's clinical condition demonstrates that diminution was unavoidable.
+
+(2) The licensee shall assist each resident in scheduling appointments and arranging transportation for vision, dental, and hearing care as needed.
+
+(3) The licensee's comprehensive assessment of a resident shall include an assessment of pressure sores. The licensee shall additionally ensure:
+
+(a) a resident having pressure sores receives the necessary treatment and services to promote healing, prevent infection, and prevent new sores from developing; and
+
+(b) a resident who enters the facility without pressure sores does not develop pressure sores unless the individual's clinical condition demonstrates that they were unavoidable.
+
+(4)(a) The licensee's comprehensive assessment of the resident shall include an assessment of incontinence.
+
+(b) The licensee shall additionally ensure that:
+
+(i) a licensed nurse completes a written assessment to determine the resident's ability to participate in a bowel and bladder management program;
+
+(ii) a resident who enters the facility without an indwelling catheter is not catheterized unless the resident's clinical condition demonstrates that catheterization is necessary;
+
+(iii) a resident who is incontinent of bladder receives appropriate treatment and services to prevent urinary tract infections; and
+
+(iv) a resident who is incontinent of bowel or bladder receives the treatment and services to restore as much normal functioning as possible.
+
+(5) The licensee shall assess each resident to ensure that:
+
+(a) a resident who enters the facility without a limited range of motion does not experience reduction in range of motion unless the resident's clinical condition demonstrates that a reduction in range of motion is unavoidable; and
+
+(b) a resident with a limited range of motion receives treatment and services to increase range of motion or to prevent further decrease in range of motion.
+
+(6) The licensee shall ensure that the psychosocial function of the resident remains at or above the level at the time of admission, unless the individual's clinical condition demonstrates that a reduction in psychosocial function was unavoidable and psychosocial practices adhere to:
+
+(a) a resident who displays psychosocial adjustment difficulty receives treatment and services to achieve as much re-motivation and reorientation as possible; and
+
+(b) a resident whose assessment does not reveal a psychosocial adjustment difficulty does not display a pattern of decreased social interaction, increased withdrawn anger, or depressive behaviors, unless the resident's clinical condition demonstrates that such a pattern is unavoidable.
+
+(7) The licensee shall assess alternative feeding methods to ensure that:
+
+(a) a resident who has been able to eat enough alone or with assistance is not fed by naso-gastric tube unless the resident's clinical condition demonstrates that use of a naso-gastric tube is unavoidable; and
+
+(b) a resident who is fed by a naso-gastric or gastrostomy tube receives the treatment and services to prevent aspiration pneumonia, diarrhea, vomiting, dehydration, metabolic abnormalities, and nasal-pharyngeal ulcers and to restore, if possible, normal feeding function.
+(8) The licensee shall maintain the resident's environment and is free of accident hazards.
+
+(9) The licensee shall provide each resident with supervision and assistive devices to prevent accidents.
+
+(10) The licensee shall ensure that each resident's comprehensive assessment includes an assessment of nutritional status and nutritional practices to ensure that each resident:
+
+(a) maintains acceptable nutritional status parameters, including body weight and protein levels, unless the resident's clinical condition demonstrates that this is not possible; and
+
+(b) receives a therapeutic diet when there is a nutritional problem.
+
+(11) The licensee shall provide each resident with sufficient fluid intake to maintain proper hydration and health.
+
+(12) The licensee shall ensure that each resident receives proper treatment and care for the following special services:
+
+(a) colostomy, ureterostomy, or ileostomy care;
+
+(b) foot care;
+
+(c) injections;
+
+(d) parenteral and enteral fluids;
+
+(e) prostheses care;
+
+(f) respiratory care;
+
+(g) tracheal suctioning; and
+
+(h) tracheostomy care.
+
+(13) The licensee shall ensure:
+
+(a) a resident who has not used antipsychotic drugs is not given these drugs unless antipsychotic drug therapy is necessary to treat a specific condition as diagnosed and documented in the clinical record;
+
+(b) a resident who uses antipsychotic drugs receives a gradual dose reduction and behavioral intervention to discontinue the drugs, unless clinically contraindicated; and
+
+(c) each resident's drug regimen is free from unnecessary drugs.
+
+(14) The licensee shall ensure the quality assurance committee monitors medication errors to ensure that:
+
+(a) the licensee does not have medication error rates of 5% or greater; and
+
+(b) each resident is free of any significant medication errors.
+
+R432-150-15. Physician Services.
+
+(1)(a) The licensee shall ensure a physician approves, in writing, a recommendation that an individual be admitted to the nursing care facility.
+
+(b) Each resident shall remain under the care of a physician licensed in Utah to deliver the scope of services required by the resident.
+
+(c) Nurse practitioners or physician assistants, working under the direction of a licensed physician may initiate admission to a nursing care facility pending personal review by the physician.
+
+(2) The licensee shall provide supervision to ensure that the medical care of each resident is supervised by a physician. When a resident's attending physician is unavailable, another qualified physician shall supervise the medical care of the resident.
+
+(3) The physician that supervises the resident's care shall:
+
+(a) review the resident's total program of care, including medications and treatments, at each visit;
+
+(b) sign each order;
+
+(c) state, in writing, direction and supervision of health care provided to the resident by a nurse practitioner or physician assistant; and
+
+(d) write, sign, and date progress notes at each visit.
+
+(4) The licensee shall ensure that physician visits comply with the following:
+
+(a) a physician sees each resident at least once every 30 days for the first 90 days after admission, and at least every 60 days thereafter;
+
+(b) at the option of the physician, required visits after the initial visit may alternate between personal visits by the physician and visits by a physician assistant or nurse practitioner;
+
+(c) except as permitted in Subsection R432-150-16(4)(e), the physician makes each required visit; and
+
+(d) physician visits are completed within ten days of the date the visit is required.
+
+(5) The licensee shall provide or arrange for physician services 24 hours a day if there is an emergency.
+
+R432-150-16. Laboratory Services.
+
+(1) The licensee shall provide laboratory services in accordance with the size and needs of the facility.
+
+(2) The licensee shall comply with and maintain the Clinical Laboratory Improvement Amendments of 1988 (CLIA) inspection reports for OL review.
+
+R432-150-17. Pharmacy Services.
+
+(1) The licensee shall provide, or obtain by contract, routine and emergency drugs, biologicals, and pharmaceutical services to meet each resident's physician's orders for medications.
+
+(2) The licensee shall employ or obtain the services of a licensed pharmacist who:
+(a) determines that drug records are in order and that an account of controlled substances is maintained and reconciled monthly;
+
+(b) establishes a system of records of receipt and disposition of any controlled substances that documents an accurate reconciliation; and
+
+(c) provides consultation on the pharmacy services in the facility.
+
+(3)(a) A licensed pharmacist shall review the drug regimen of each resident at least monthly.
+
+(b) The pharmacist shall provide reports of any drug regimen irregularities to the attending physician and the director of nursing or health services supervisors.
+
+(c) The physician and director of nursing or health services supervisor shall document acceptance or rejection of the pharmacist's irregularity report and document any action taken.
+
+(4) Pharmacy personnel shall ensure that labels on drugs and biologicals are in accordance with currently accepted professional principles, and include the appropriate accessory and cautionary instructions, and the expiration date.
+
+(5)(a) The licensee shall store any drugs and biologicals in locked compartments under proper temperature controls in accordance with Subsections R432-150-18(5)(c)(iii) and (iv), and permit only authorized personnel to have access to the keys.
+
+(b) The licensee shall provide separately locked, permanently affixed compartments for storage of controlled substances and other drugs subject to abuse, except when the licensee uses single unit dose package drug distribution systems where the quantity stored is minimal and a missing dose can be readily detected.
+
+(c) The licensee may not store non-medication materials that are poisonous or caustic with medications.
+
+(d) The licensee shall ensure:
+
+(i) containers are clearly labeled;
+
+(ii) medication intended for internal use is stored separately from medication intended for external use;
+
+(iii) medications stored at room temperature are maintained within 59 and 80 degrees F; and
+
+(iv) refrigerated medications are maintained within 36 and 46 degrees F.
+
+(6) The licensee shall maintain an emergency drug supply and ensure emergency drug practices adhere to the following:
+
+(a) contents of the emergency drug supply are listed on the outside of the container and the use of contents is documented by the nursing staff;
+
+(b) emergency drug containers are sealed to prevent unauthorized use;
+
+(c) the emergency drug supply is stored and located for access by the nursing staff;
+
+(d) the pharmacist inventories the emergency drug supply monthly; and
+
+(e) used or outdated items are replaced within 72 hours by the pharmacist.
+
+(7) The licensee shall ensure that the pharmacy dispenses drugs and biologicals on a timely basis.
+
+(8) The licensee shall limit the duration of a drug order in the absence of the prescriber's specific instructions.
+
+(9) The licensee shall ensure drug references are available for any drugs used in the facility and references include generic and brand names, available strength and dosage forms, indications and side effects, and other pharmacological data.
+
+(10) The licensee may send drugs with the resident upon discharge, if ordered by the discharging physician provided that a record of the drugs sent with the resident is documented in the resident's health record.
+
+(11) The licensee shall ensure disposal of controlled substances are in accordance with Title 58, Chapter 17b, Pharmacy Practice Act.
+
+R432-150-18. Recreation Therapy.
+
+(1) The licensee shall provide an ongoing program of individual and group activities and therapeutic interventions designed to meet the interests, and attain or maintain the highest practicable physical, mental, and psychosocial well-being of each resident in accordance with the comprehensive assessment.
+
+(2) Additionally, the licensee shall ensure:
+
+(a) recreation therapy is provided in accordance with Title 58, Chapter 40, Recreational Therapy Practice Act; and
+
+(b) the recreation therapy staff develops and conspicuously posts monthly resident activity calendars for each resident, staff, and visitor to reference.
+
+(3) Each licensee shall ensure sufficient space and a variety of supplies and resource equipment are provided to meet the recreational needs and interests of each resident.
+
+(4) The licensee shall ensure storage is provided for recreational equipment and supplies.
+
+(5) The licensee shall ensure locked storage is provided for potentially dangerous items including scissors, knives, and toxic materials.
+
+R432-150-19. Pet Policy.
+
+(1) The licensee shall develop a written policy regarding pets in accordance with local ordinances.
+
+(2) The licensee shall ensure that the administrator or designee determines which pets may be brought into the facility and ensures that pet policy and practices adhere to the following:
+
+(a) family members may bring pets to visit provided they have approval from the administrator and offer assurance that the pets are clean, disease free, and vaccinated;
+
+(b) pets are not permitted in any area where their presence would create a health or safety risk; and
+
+(c) pets are not permitted in food preparation or storage areas.
+R432-150-20. Admission, Transfer, and Discharge.
+
+(1) Each licensee shall develop written admission, transfer, and discharge policies and make these policies available to the public upon request.
+
+(2) The licensee shall permit each resident to remain in the facility, and not transfer or discharge the resident from the facility unless:
+
+(a) the health or safety of an individual in the facility is endangered;
+
+(b) the licensee ceases to operate the facility;
+
+(c) the resident has failed, after reasonable and appropriate notice, to pay for a stay at the facility;
+
+(d) the transfer or discharge is appropriate because the resident's health has improved sufficiently so the resident no longer needs the services provided by the facility; or
+
+(e) the transfer or discharge is necessary for the resident's welfare and the resident's needs cannot be met in the facility.
+
+(3) The licensee may not deny an individual admission to a secure memory care unit for the sole reason that the individual or the individual's legal representative requests to install or operate a monitoring device in the individual's room in accordance with Section 26B-2-236.
+
+(4) The licensee may not discharge an individual for the sole reason that the resident or the resident's legal representative requests to install or operate a monitoring device in the individual's secure memory care unit room in accordance with Section 26B-2-236.
+
+(5)(a) The licensee shall ensure resident transfers or discharges are documented under any of the circumstances specified in Subsection R432-150-22(1), in the resident's medical record.
+
+(b) The licensee shall ensure the transfer or discharge documentation is made by:
+
+(i) a physician if transfer or discharge is necessary under Subsection R432-150-22(1)(c); or
+
+(ii) the resident's physician if transfer or discharge is necessary under Subsections R432-150-22(1)(a) and (b).
+
+(6) Before the transfer or discharge of a resident, the licensee must ensure:
+
+(a) a written notification of the transfer or discharge and the reasons for the transfer or discharge to the resident is provided in a language and manner the resident understands, and, if known, to a family member or legal representative of the resident;
+
+(b) the notice includes:
+
+(i) the effective date of transfer or discharge;
+
+(ii) the location where the resident is transferred or discharged;
+
+(iii) the name, address, and telephone number of the state and local long term care ombudsman programs; and
+
+(iv) the reason for transfer or discharge; and
+
+(c) the reasons are recorded in the resident's clinical record.
+
+(7)(a) Except when specified in Subsection R432-150-21(6)(a), the licensee must ensure the notice of transfer or discharge required under Subsection R432-150-(21)(4), is made by the licensee at least 30 days before the resident is transferred or discharged.
+
+(b) The licensee may issue the notice of transfer or discharge as soon as practicable before transfer or discharge if:
+
+(i) a resident has not resided in the facility for 30 days;
+
+(ii) an immediate transfer or discharge is required by the resident's urgent medical needs;
+
+(iii) the resident's health improves sufficiently to allow a more immediate transfer or discharge; and
+
+(iv) the safety or health of individuals in the facility would be endangered if the resident is not transferred or discharged sooner.
+
+(c) The licensee shall ensure that the notice for a resident with developmental disabilities contains the mailing address and telephone number of the Disability Law Center that is responsible for the protection and advocacy of developmentally disabled individuals.
+
+(d) The licensee shall ensure that the notice for a resident who is mentally ill contains the mailing address and telephone number of the Disability Law Center who is responsible for the protection and advocacy of mentally ill individuals established under the Protection and Advocacy for Mentally Ill Individuals Act.
+
+(8) The licensee shall provide discharge planning to prepare and orient a resident to ensure safe and orderly transfer or discharge from the facility.
+
+(9) Before a licensee transfers a resident to a hospital or allows a resident to go on therapeutic leave, the licensee must ensure:
+
+(a) a written policy is established and followed for when a resident whose hospitalization or therapeutic leave exceeds the bed-hold period may be readmitted to the facility;
+
+(b) notification is provided as soon as possible following a transfer necessitated by a medical emergency;
+
+(c) written notice is provided to the resident and a family member or responsible person, that specifies the duration of the bed-hold policy at the time of transfer of a resident to a hospital or for therapeutic leave; and
+
+(d) written notification and information is provided to the resident and a family member or legal representative that specifies:
+
+(i) the duration of the bed-hold policy, if any, and the resident is permitted to return and resume residence in the facility; and
+
+(ii) the policies regarding bed-hold periods permitting a resident to return.
+(10) The licensee shall establish and maintain identical policies and practices regarding transfer, discharge, and the provision of services for each individual regardless of pay source.
+
+(11) The licensee shall have a written transfer agreement in effect with one or more hospitals to ensure that:
+
+(a) medical and other information needed for care and treatment of the resident is exchanged between facilities including documentation of reasons for a less expensive setting;
+
+(b) security and accountability of personal property of the individual transferred is maintained; and
+
+(c) the resident is transferred from the facility to the hospital and ensured of timely admission to the hospital when transfer is medically necessary as determined by the attending physician.
+
+R432-150-21. Ancillary Health Services.
+
+(1) A licensee that provides its own radiology services shall comply with Section R432-100-23.
+
+(2) A licensee may provide specialized rehabilitative services directly or through agreements with outside agencies or qualified therapists.
+
+(3) A licensee that directly provides specialized rehabilitative services shall ensure:
+
+(a) an attending physician initiates the care plan of treatment;
+
+(b) delivery of any specialized rehabilitative services are documented in the resident record;
+
+(c) each speech pathologist has a certificate of clinical compliance issued by the American Speech and Hearing Association;
+
+(d) each therapy assistant always works under the direct supervision of the licensed therapist;
+
+(e) specialized rehabilitative services are only provided by therapists licensed in Utah;
+
+(f) specialized rehabilitative services are only provided upon order of the attending physician;
+
+(g) the physician and therapist review the care plan at least monthly unless the physician recommends an alternate schedule in writing;
+
+(h) the therapist, in consultation with the nursing staff develops and implements the care plan and provides an initial progress report to the attending physician within two weeks of the start of treatment, or as specified by the attending physician; and
+
+(i) there is space and equipment provided to meet the prescribed needs of the resident.
+
+(4) The licensee shall provide or arrange for regular and emergency dental care for each resident through dental care practices that include:
+
+(a) arrangement for transportation to and from the dentist's office;
+
+(b) development of oral hygiene policies and procedures with input from dentists;
+
+(c) development of referral service for any resident who does not have a personal dentist; and
+
+(d) presentation of oral hygiene in-service programs to staff by knowledgeable persons.
+
+(5)(a) The licensee shall ensure that medical social services are sufficient to meet the needs of the resident and provided or arranged by the nursing care facility.
+
+(b) The licensee shall ensure that social services are under the direction of a therapist licensed in accordance with Title 58 Chapter 60, Mental Health Professional Practice Act.
+
+R432-150-22. Food Services.
+
+(1) The licensee shall provide each resident with a safe, palatable, well-balanced diet that meets the daily nutritional and special dietary needs of each resident.
+
+(2) The licensee shall employ enough staff to assist residents to meet their dietary needs.
+
+(3) For food services and practices, the licensee shall ensure:
+
+(a) there is a dietitian employed either full-time, part-time, or on a consultant basis to perform the duties outlined in this section;
+
+(b) the dietitian is certified in accordance with Title 58, Chapter 49, Dietitian Certification Act;
+
+(c) if a dietitian is not employed full-time, the administrator designates a full-time person to serve as the dietetic supervisor;
+
+(d) if the dietetic supervisor is not a certified dietitian, the dietetic supervisor consults a certified dietitian at least monthly, according to the needs of each resident and documents the consultations; and
+
+(e) the dietetic supervisor is available when the consulting dietitian visits the facility.
+
+(4) The licensee shall develop menus that meet the nutritional needs of each resident to the extent medically possible and ensure the menus are:
+
+(a) approved and signed by a certified dietitian;
+
+(b) cycled no less that every three weeks;
+
+(c) different each day;
+
+(d) followed;
+
+(e) posted each day of the week; and
+
+(f) prepared in advance.
+
+(5) The licensee shall keep documentation for at least three months for any served substitutions to the menu.
+
+(6) The licensee shall ensure any food sanitation inspection reports of state or local health department inspections are available for OL review.
+(7) The licensee shall ensure the attending physician or qualified registered dietitian in consultation with the physician, orders each therapeutic diet in writing, if allowed by facility policy.
+
+(8) The licensee shall ensure there is no more than a 14-hour interval between the evening meal and breakfast, unless a substantial snack is served in the evening.
+
+(9) The licensee shall provide special eating equipment and assistive devices for each resident who needs them.
+
+(10) The licensee shall ensure the facility's food service complies with Rule R392-100.
+
+(11) The licensee shall ensure a one-week supply of nonperishable staple foods and a three-day supply of perishable foods are maintained to complete the established menu for three meals a day, per resident.
+
+(12) A nursing care licensee may use trained dining assistants to aid a resident in eating and drinking if:
+
+(a) a licensed practical nurse-geriatric care manager, registered nurse, advance practice registered nurse, speech pathologist, occupational therapist, or dietitian has assessed that the resident does not have complicated feeding problems, including recurrent lung aspirations, behaviors that interfere with eating, difficulty swallowing, or tube or parenteral feeding; and
+
+(b) the service plan or plan of care documents that the resident needs assistance with eating and drinking and defines who is qualified to offer the assistance.
+
+(13) If the nursing care facility uses a dining assistant, the licensee shall ensure that the dining assistant:
+
+(a) has completed a background screening pursuant to Rule R432-35;
+
+(b) has completed a training course from an OL-approved training program; and
+
+(c) performs duties only for a resident who does not have complicated feeding problems.
+
+(14) A long term care licensee shall submit the following to OL to become an approved training program:
+
+(a) a copy of the curriculum to be implemented that meets the requirements of Subsection (13); and
+
+(b) the names and credentials of the trainers.
+
+(15) The long term care licensee shall ensure a dietitian training program is approved by OL if it includes:
+
+(a) appropriate response to resident behaviors;
+
+(b) assistance with eating and drinking;
+
+(c) communication and interpersonal skills;
+
+(d) documentation of type and amount of food and hydration intake;
+
+(e) eight hours of instruction for the dining assistant and one hour of observation by the trainer to ensure competency;
+
+(f) feeding techniques;
+
+(g) infection control;
+
+(h) recognizing resident changes inconsistent with their normal behavior and the importance in reporting those changes to the supervisory nurse;
+
+(i) resident rights;
+
+(j) safety and emergency procedures including the Heimlich maneuver;
+
+(k) special diets; and
+
+(l) use of adaptive equipment.
+
+(16) The licensee shall issue a training certificate of completion and maintain a list of the dining assistants that identifies:
+
+(a) each dining assistant's name and address;
+
+(b) the telephone number where the licensee may verify the training; and
+
+(c) the training program provider.
+
+(17) To provide dining assistant training in an OL-approved training program, the licensee shall ensure a trainer holds a current valid license to practice as:
+
+(a) a registered dietitian, pursuant to Title 58, Chapter 49, Dietitian Certification Act;
+
+(b) a registered nurse, advanced practice registered nurse, or licensed practical nurse-geriatric care manager pursuant to Title 58, Chapter 31b, Nurse Practice Act;
+
+(c) a speech-language pathologist, pursuant to Title 58, Chapter 41, Speech-Language Pathology and Audiology Licensing Act; or
+
+(d) an occupational therapist, pursuant to Title 58, Chapter 42a, Occupational Therapy Practice Act.
+
+(18) The licensee may suspend a training program if the program's courses do not meet the requirements of this rule.
+
+(19) The licensee may suspend a training program operated by a nursing care facility if:
+
+(a) a federal or state survey reveals failure to comply with regulations or rules regarding feeding or dining assistant programs;
+
+(b) OL determines that the licensee is in continuous or chronic noncompliance under rule or that the licensee has provided sub-standard quality of care under regulation;
+
+(c) OL sanctions the facility for any reason; or
+
+(d) the licensee fails to provide sufficient, competent staff to respond to emergencies.
+
+R432-150-23. Medical Records.
+
+(1) The licensee shall implement a medical records system to ensure complete and accurate retrieval and compilation of information.
+
+(2)(a) The administrator shall designate an employee to be responsible and accountable for the processing of medical records.
+(b) The administrator shall ensure that a registered record administrator (RRA) or accredited record technician (ART) directs the medical records department.
+
+(c) If an RRA or ART is not employed at least part-time, the administrator shall consult with an RRA or ART according to the needs of the facility, and no less than semi-annually.
+
+(3) The licensee shall ensure resident medical records are:
+
+(a) kept for at least seven years and medical records of minors are kept until the age of 18 plus four years, but in no case less than seven years;
+
+(b) kept, stored, and safeguarded from loss, defacement, tampering, and damage from fires and floods; and
+
+(c) protected against access by unauthorized individuals.
+
+(4) The licensee shall maintain an individual medical record for each resident that contains written documentation of:
+
+(a) a copy of an advanced directive, if a resident has one;
+
+(b) a discharge summary for the resident to include a note of condition, instructions given, and referral as appropriate;
+
+(c) a history and physical examination up-to-date at the time of the resident's admission;
+
+(d) a pre-admission screening;
+
+(e) a record of assessments, including the comprehensive resident assessment, care plan, and services provided;
+
+(f) a record of medications and treatments administered;
+
+(g) a service agreement if respite services are provided;
+
+(h) an admission record with demographic information and resident identification data;
+
+(i) orders by clinical staff members;
+
+(j) information pertaining to incidents, accidents, and injuries;
+
+(k) informative progress notes by staff to record changes in the resident's condition and response to care and treatment in accordance with the care plan;
+
+(l) laboratory and radiology reports;
+
+(m) monthly nursing summaries;
+
+(n) nursing notes;
+
+(o) physician treatment orders;
+
+(p) quarterly resident assessments;
+
+(q) records made by staff regarding daily care of the resident; and
+
+(r) written and signed informed consent.
+
+(5) The licensee shall ensure any entries into the medical record are authenticated including date, name or identifier initials, and job title of the person making the entries.
+
+(6) The licensee shall ensure resident respite records are maintained within the facility.
+
+R432-150-24. Housekeeping Services.
+
+(1) The licensee shall provide a safe, clean, comfortable environment, allowing the resident to use personal belongings to create a homelike environment.
+
+(2) The licensee shall ensure cleaning agents, bleaches, insecticides, poisonous, dangerous, or flammable materials are stored in a locked area to prevent unauthorized access.
+
+(3) The licensee shall:
+
+(a) develop and implement employee hygiene and infection control measures to maintain a safe, sanitary environment if housekeeping personnel also work in food services or direct patient care services;
+
+(b) ensure personnel engaged in housekeeping or laundry services are not engaged concurrently in food service or resident care; and
+
+(c) provide enough housekeeping services and personnel to maintain a clean and sanitary environment.
+
+R432-150-25. Laundry Services.
+
+(1) The administrator shall designate a person to direct the facility's laundry service that has experience, training, or knowledge of:
+
+(a) facility policies and procedures;
+
+(b) federal, state, and local rules and regulations;
+
+(c) proper laundry procedures;
+
+(d) proper use of chemicals in the laundry; and
+
+(e) proper use of laundry equipment.
+
+(2) The licensee shall provide clean linens, towels, and washcloths for resident use.
+
+(3) If the licensee contracts for laundry services, there is a signed, dated agreement that details any services provided.
+
+(4) The licensee shall inform the resident and family of facility laundry policy for personal clothing.
+
+(5) The licensee shall ensure:
+
+(a) clean linen is handled and stored in a manner to minimize contamination from surface contact or airborne deposition;
+
+(b) each resident's personal laundry is marked for identification;
+
+(c) soiled linen is handled, stored, and processed in a manner to prevent contamination and the spread of infections;
+(d) soiled linen is sorted in a separate room by methods affording protection from contamination;
+
+(e) the laundry area is separate from any room where food is stored, prepared, or served;
+
+(f) there are enough clean linen, towels, and washcloths for at least three complete changes of the facility's licensed bed capacity; and
+
+(g) there is a bedspread for each resident bed.
+
+R432-150-26. Maintenance Services.
+
+(1) The licensee shall ensure that buildings, equipment, and grounds are maintained in a clean and sanitary condition and in good repair for the safety and well-being of each resident, staff, and visitor.
+
+(2) For facility maintenance services the licensee shall ensure:
+
+(a) any facility equipment is tested, calibrated, and maintained in accordance with manufacturer specifications;
+
+(b) any spaces within buildings that house people, machinery, equipment, approaches to buildings, and parking lots have lighting;
+
+(c) back-flow prevention devices are maintained in operating condition and tested according to manufacturer specifications;
+
+(d) disposable and single use items are properly disposed of after use;
+
+(e) documentation of testing or calibration conducted by an outside agency is available for OL review;
+
+(f) emergency lighting and heat are provided to meet the needs of each resident in a facility that provides care for a resident who cannot be relocated in an emergency;
+
+(g) entrances, exits, steps, ramps, and outside walkways are maintained in a safe condition with regard to snow, ice, and other hazards;
+
+(h) functional flashlights are available for emergency use by staff;
+
+(i) heating, air conditioning, and ventilating systems are maintained to provide comfortable temperatures;
+
+(j) hot water temperature controls automatically regulate temperatures of hot water delivered to plumbing fixtures used by a resident and hot water is delivered to public and resident care areas at temperatures between 105-115 degrees F;
+
+(k) if the licensee contracts for maintenance services, there is a signed and dated agreement that details each service provided and the contracted maintenance service meets each requirement of this section;
+
+(j) nursing equipment and supplies are available as determined by facility policy in accordance with the needs of each resident;
+
+(l) testing frequency and calibration documentation is available for OL review;
+
+(m) the administrator employs a person, qualified by experience and training, to be in charge of facility maintenance;
+
+(n) the licensee develops and implements a written maintenance program, that includes preventive maintenance, to ensure the continued operation of the facility and sanitary practices throughout the facility;
+
+(o) the premises are free from vermin and rodents;
+
+(p) there is at least one first aid kit available at a specified location in the facility accompanied by a current edition of a first aid manual approved by the American Red Cross or the American Medical Association;
+
+(q) there is at least one Occupational Safety and Health Administration (OSHA) approved spill or clean-up kit for blood-borne pathogens; and
+
+(r) vehicles used to transport a resident is:
+
+(i) equipped with a first aid kit and current version of a first aid manual approved by the American Red Cross or the American Medical Association;
+
+(ii) equipped with individual, size-appropriate safety restraints including seat belts that are installed and used in accordance with manufacturer specifications; and
+
+(iii) licensed with a current vehicle registration and safety inspection.
+
+R432-150-27. Emergency Response and Preparedness Plan.
+
+(1)(a) The licensee shall ensure the safety and well-being of each resident and provide for a safe environment in the event of an emergency or disaster.
+
+(b) An emergency or disaster may include utility interruption, explosion, fire, earthquake, bomb threat, flood, windstorm, epidemic, and injury.
+
+(2)(a) The licensee shall develop an emergency and disaster plan that is approved by the governing body.
+
+(b) The emergency and disaster plan shall delineate:
+
+(i) assignment of personnel to specific tasks during an emergency;
+
+(ii) individuals to be notified in an emergency in order of priority;
+
+(iii) methods of communicating with local emergency agencies, authorities, and other appropriate individuals;
+
+(iv) methods of transporting and evacuating each resident and staff to other locations;
+
+(v) on-hand personnel, equipment, and supplies and how to acquire additional help, supplies, and equipment after an emergency or disaster; and
+
+(vi) the person with decision-making authority for fiscal, medical, and personnel management.
+
+(c) The licensee shall have emergency phone numbers at each nursing station with responsible staff listed in the order of priority contact.
+
+(d) The licensee shall document resident emergencies and responses, emergency events and responses, and the location of each resident and staff evacuated from the facility during an emergency.
+(e) The licensee shall conduct and document simulated disaster drills semi-annually.
+
+(3) The administrator shall develop a written fire emergency and evacuation plan in consultation with qualified fire safety personnel that:
+
+(a) delineates evacuation routes, location of fire alarm boxes, fire extinguishers, and emergency telephone numbers of the local fire department;
+
+(b) ensures fire drills and fire drill documentation are completed in accordance with Rule R710-4;
+
+(c) ensures the evacuation plan is posted in prominent locations in exit access ways throughout the building; and
+
+(d) includes fire containment procedures and how to use the facility alarm systems and signals.
+
+R432-150-28. Alternative Sanctions for Nursing Facilities.
+
+(1) This section applies in addition to the requirements of Rule R380-600 for certified nursing facility licensees participating in the Centers for Medicare and Medicaid (CMS) program and establishes criteria for the imposition of sanctions authorized by statute.
+
+(2)(a) As the sole agency of the state authorized to act as the health care facilities certification agency under Section 26B-2-217, OL shall conduct on-site inspections of nursing facilities to determine compliance with federal nursing home requirements found in 42 CFR 488 (2023).
+
+(b) When OL finds that a nursing facility licensee is out of compliance with requirements of participation in the CMS program, OL may recommend to CMS the imposition of sanctions, including federal civil money penalties (CMP).
+
+(3)(a) For a CMS certified nursing facility licensee, OL has authority to apply the sanctions defined in the federal Omnibus Budget Reconciliation Act (OBRA) of 1987, Pub. L. No. 100 203 and Sections 1819(h) and 1919(h) of the Social Security Act.
+
+(b) OL may recommend termination from the Medicare or Medicaid program if a nursing facility licensee is found in chronic noncompliance with CMS participation requirements.
+
+(4) In accordance with 42 CFR 488 (2023), OL may recommend any of the following sanctions:
+
+(a) closure of the facility and transfer of a resident;
+
+(b) CMPs for:
+
+(i) each instance that a facility is not in substantial compliance in accordance with 42 CFR 488 (2023); or
+
+(ii) the number of days a facility is out of compliance with one or more participation requirements;
+
+(c) denial of payment for new admissions;
+
+(d) directed in-service training;
+
+(e) directed plan of correction;
+
+(f) state monitoring;
+
+(g) temporary management; and
+
+(h) transfer of a resident.
+
+(5)(a) OL shall assess interest on the unpaid balance of any CMP issued and collected by OL on behalf of CMS, beginning on the due date.
+
+(b) The interest rate charged is the average of the bond equivalent of the federal standard as outlined in 42 CFR 488 (2023) during the period when interest is charged.
+
+(6) OL shall apply CMPs collected under this section in accordance with Sections 1819 and 1919 of the Social Security Act to the protection of the health and property of each resident.
+
+R432-150-29. Annual Reporting Requirements.
+
+(1) A nursing care facility licensee approved for a health facility license under Subsection 26B-2-222(2)(c) shall submit an annual financial report within 90 days of the end of each calendar year.
+
+(2) The annual financial report shall contain:
+
+(a) percentage of Medicare inpatient revenue including Medicare Advantage revenue in relation to the total of any revenue received within the calendar year;
+
+(b) total of any Medicare Advantage revenue received within the calendar year;
+
+(c) total of any Medicare inpatient revenue received within the calendar year; and
+
+(d) total of any revenue received within the calendar year.
+
+(3)(a) OL shall review the submitted reports for compliance with Subsection 26B-2-222(7)(a).
+
+(b) OL may perform financial audits as part of a review.
+
+(c) If OL determines a facility is not in compliance with Subsection 26B-2-222(7)(a), a CMP of $50,000 will be issued for the facility's failure to comply.
+
+R432-150-30. Penalties.
+
+Any provider found in noncompliance with any part of this rule may be subject to the penalties enumerated in this rule, Rule R380-600 and Title 26B, Chapter 2, Part 7, Penalties and Investigations.
+
+KEY: health care facilities
+
+Date of Last Change: February 18, 2025
+Notice of Continuation: January 24, 2022
+
+Authorizing, and Implemented or Interpreted Law: 26B-2-202
+
+SOURCE 2: Skilled nursing facility-initiated discharge appeal form — Utah Division of Aging and Adult Services (PDF) | https://daas.utah.gov/wp-content/uploads/2024/07/SNF-Discharge-Appeal-Form-11.7.23.pdf | source date: form dated 11.7.23 in its own filename | retrieved: 2026-10-15
+Skilled nursing facility-initiated discharge appeal form
+                          If the nursing facility where you live has told you they intend to transfer you or
+                          discharge you, and you would rather stay in the facility, you have the right to
+                          appeal the facility's decision. Fill out this form completely and submit it if you
+                          want to ask for a hearing to appeal your facility-initiated transfer or discharge.
+
+                          *To appeal a Medicaid denial, fill out this form:
+       https://medicaid.utah.gov/Documents/pdfs/Forms/HearingRequest2023.pdf
+
+*To appeal a Medicare or insurance decision, contact KEPRO at 888-317-0891 or
+       https://www.keproqio.com
+
+Appeal requests MUST be turned in within 30 days of the discharge notice.
+
+1. Who is completing this form?
+
+   ☐ Resident                       ☐ Resident representative
+
+2. Who is the resident?
+
+   Full name:                                               Date of birth:                  /      /
+
+   Current mailing address:
+
+   City:                                                             State:            ZIP code:
+
+   Telephone number: (      )       -              Email:
+
+   The name of the person to contact if there are questions about this appeal:
+
+   Daytime phone number for that person: (         )        -                 Email:
+
+
+3. Do you want another person to get notices about the hearing?
+   You may represent yourself or have another person represent you. List everyone you want contacted.
+
+   ☐ Legal representative (attorneys must file a Notice of Appearance):
+
+      Name:                                        Have they been contacted by you: ☐ Yes              ☐ No
+
+      Telephone number: (       )       -                   Email:
+
+
+   ☐ Local ombudsman:
+
+      Name:                                        Have they been contacted by you: ☐ Yes              ☐ No
+
+      Telephone number: (       )       -                   Email:
+
+
+
+
+Updated: 10/17/2023             Administrative Hearings Telephone #: 801-538-6576                      Page 1 of 3
+
+   ☐ Family member or friend:
+
+     Name:                                              Relationship:
+
+     Telephone number: (          )           -                Email:
+
+
+
+     Name:                                              Relationship:
+
+     Telephone number: (          )           -                Email:
+
+
+
+     Name:                                              Relationship:
+
+     Telephone number: (          )           -                Email:
+
+
+   ☐ Other:
+
+     Name:                                              Relationship:
+
+     Telephone number: (          )           -                Email:
+
+
+4. Nursing facility information
+
+   Name of nursing facility
+
+   Telephone number (         )           -                    Email
+
+   Administrator name:                                         Date of admission to the facility   /       /
+
+   Date of discharge notice           /           /   Date the facility plans to move resident         /       /
+
+   Discharge location
+
+   ☐ Resident is currently in the hospital and the facility is not allowing the resident to be readmitted
+
+
+   Reason for discharge as listed on the discharge notice:
+      ☐ Transfer/discharge is necessary to meet resident’s welfare and resident’s needs cannot be met
+         in the facility.
+      ☐ Health has improved sufficiently so the resident no longer needs the services provided by the
+         facility.
+      ☐ The safety of individuals in the facility is endangered.
+      ☐ The health of individuals in the facility is endangered.
+      ☐ The resident has failed, after reasonable and appropriate notice, to pay for a stay at the facility.
+      ☐ The facility is ceasing to operate.
+
+
+
+
+Updated: 10/17/2023               Administrative Hearings Telephone #: 801-538-6576                    Page 2 of 3
+
+How to file your involuntary discharge appeal
+
+   1. After you complete everything on this form, make a copy of this page to keep.
+   2. Send this form and a copy of the discharge notice to:
+
+Via U.S. Post Office                Via UPS or FedEx                    Email or Fax
+Office of Administrative Hearings   Office of Administrative Hearings   Email:
+PO Box 143105                       195 North 1950 West                 utmedicaidhearings@utah.gov
+Salt Lake City, UT 84114-3105       Salt Lake City, UT 84116            Fax: 801-536-0143
+
+
+
+
+Updated: 10/17/2023          Administrative Hearings Telephone #: 801-538-6576              Page 3 of 3
+
+SOURCE 3: Hearings — Medicaid — Utah Department of Health and Human Services | https://medicaid.utah.gov/hearings/ | source date: none stated on page | retrieved: 2026-10-15
+Skip to content
+
+Hearings
+
+When a Medicaid member, provider, or other interested party is dissatisfied with an action taken by Utah Medicaid, a hearing may be requested by filing a hearing request with the DHHS Office of Administrative Hearings (OAH). Hearing requests to Medicaid include requests to dispute disability decisions made by the DHHS Medical Review Board (MRB).
+
+Hearing requests must be filed by the filing deadline.
+
+Providers ‐ When a provider wishes to appeal a payment reflected by an explanation of benefits, or other remittance document issued by Medicaid, the hearing request must be filed within 30 calendar days of the date of the remittance document.
+
+Members ‐ When a member wishes to appeal a Medicaid or CHIP eligibility or disability decision, the hearing request must be filed within 90 days from the date of the notice they disagreed with.
+
+Managed care plan hearing request
+
+A member or provider wishing to dispute an action taken by an Accountable Care Organization or Managed Care Entity must complete the appeal process within that organization before filing a hearing request with OAH.
+
+Medicaid eligibility fair hearing requests
+
+Although, OAH handles hearing requests to dispute disability decisions made by the MRB, OAH does not handle disputes regarding eligibility decisions for Medicaid or CHIP. Fair hearings for Medicaid and CHIP eligibility should be filed with the Department of Workforce Services (DWS), Division of Adjudications here opens in a new tab.
+
+Administrative hearings for other DHHS divisions
+
+The OAH conducts fair hearings for some divisions outside DHHS including: Division of Child and Family Services (DCFS), Division of Services for People with Disabilities (DSPD), Office of Recovery Services (ORS), Division of Licensing and Background Checks, and Adult Protective Services. These hearings are received within their respective divisions.
+
+How to request a Medicaid fair hearing
+
+You can fill out the State Fair Hearing Request Form available in English and Spanish, and email the form as an attachment to utmedicaidhearings@utah.gov.
+
+If you prefer to mail your request, you may use the mailing addresses listed below:
+
+Mailing Address:
+
+     Department of Health and Human Services
+
+     Office of Administrative Hearings
+
+     PO Box 143105
+
+     Salt Lake City, UT 84114-3105
+
+If you have any questions about your request, contact the Office of Administrative Hearings using one of the methods below:
+
+Email: utmedicaidhearings@utah.gov.
+
+Phone: 801-538-6576
+
+Fax: 801-536-0143
+
+Street Address:
+
+     Department of Health and Human Services
+
+     Office of Administrative Hearings
+
+     195 North 1950 West
+
+     Salt Lake City, UT 84111
+
+Additional information
+
+Additional information on fair hearings is contained in the Utah Medicaid Provider Manual, General Information – Section I opens in a new tab, Chapter 5, section 4 (pg. 35)-4.
+
+Laws and rules:
+
+42 Code of Federal Regulations Part 431, Subpart E opens in a new tab
+
+42 Code of Federal Regulations Part 438, Subpart F opens in a new tab
+
+Utah Administrative Procedures Act: Utah Code Annotated, Title 63G, Chapter 4 opens in a new tab
+
+Utah Administrative Code, Title R410 opens in a new tab: Administrative Hearing Procedures
+
+Follow us online
+
+(opens in a new tab)(opens in a new tab)(opens in a new tab)(opens in a new tab)(opens in a new tab)(opens in a new tab)
+
+Department of Health and Human Services opens in a new tab
+
+Cannon Health Building
+
+288 North 1460 West
+
+Salt Lake City, UT
+
+84116
+
+Contact Us
+
+For eligibility questions or concerns:
+
+1-866-435-7414
+
+For other questions:
+
+1-866-608-9422
+
+External information disclaimer opens in a new tab
+
+Navigation Menu
+
+Apply
+
+Apply for Medicaid
+
+Apply for Baby Your Baby
+
+Cómo y Dónde Pedir la Asistencia Médica
+
+Members
+
+Members Home
+
+Additional Information
+
+Language Services
+
+Nondiscrimination Policy
+
+Programs and Services
+
+Providers
+
+Resources
+
+MyBenefits Login
+
+Medicaid Member Guide
+
+Providers
+
+Providers Home
+
+PRISM Info
+
+PRISM Portal Access
+
+Become a Medicaid Provider
+
+Claims
+
+Coverage and Reimbursement
+
+Managed Care
+
+Medicaid Pharmacy Program
+
+Patient Eligibility Verification
+
+Presumptive Eligibility Portal Access
+
+Prior Authorization
+
+Provider Resources and Information
+
+Provider Training
+
+Programs
+
+Programs Home
+
+Adult Expansion Medicaid
+
+Autism Related Services
+
+Baby Your Baby
+
+Buyout Program
+
+Children’s Health Insurance Program
+
+Early and Periodic Screening, Diagnostic and Treatment
+
+Living Well with Chronic Conditions Program
+
+Medicaid for Long-Term Care and Waiver Programs
+
+Presumptive Eligibility
+
+Restriction Program
+
+Spenddown Program (Medically Needy)
+
+Summary of All Medicaid Programs
+
+Targeted Adult Medicaid Program
+
+Tobacco Cessation Program
+
+Utah’s Premium Partnership for Health Insurance
+
+Justice-Involved Program
+
+Administration
+
+Administration Home
+
+UTAH’S MEDICAID REFORM 1115 DEMONSTRATION
+
+Boards and Committees
+
+HIPAA
+
+Hearings
+
+HR 1 (One Big Beautiful Bill Act, 2025)
+
+Medicaid Data
+
+Medicaid Expansion
+
+Medicaid State Plan
+
+Nondiscrimination Policy
+
+PRISM Info
+
+Publications
+
+Reporting Fraud
+
+Unwinding Medicaid Continuous Eligibility
+
+Resources
+
+211Utah - United Way opens in a new tab
+
+Safe UT opens in a new tab
+
+Utah Domestic Violence Coalition opens in a new tab
+
+988 Suicide and Crisis Lifeline opens in a new tab
+
+Hotlines
+
+Abuse/Neglect of Seniors and Adults with Disabilities opens in a new tab
+
+1-800-371-7897
+
+Child Abuse/Neglect
+
+1-855-323-DCFS(3237)
+
+Crisis Line & Mobile Outreach Team
+
+1-801-587-3000
+
+National Suicide Prevention Lifeline opens in a new tab
+
+1-800-273-TALK(8255)
+
+Sexual Violence Crisis Line
+
+1-888-421-1100
+
+Utah Domestic Violence opens in a new tab
+
+1-800-897-LINK(5465)
+
+Translate ❯
+
+SOURCE 4: Medicaid Fair Hearings — Utah Department of Health and Human Services | https://dhhs.utah.gov/oah/medicaid-fair-hearings/ | source date: none stated on page | retrieved: 2026-10-15
+Skip to content
+
+Medicaid Fair Hearings
+
+Home
+
+Office of Administrative Hearings
+
+Medicaid Fair Hearings
+
+When a Medicaid member, provider, or other interested party is dissatisfied with an action taken by Utah Medicaid, a hearing may be requested by filing a hearing request with the DHHS Office of Administrative Hearings (OAH). Hearing requests to Medicaid include requests to dispute disability decisions made by the DHHS Medical Review Board (MRB). For non-Medicaid hearings visit our human services administrative hearings page.
+
+Hearing requests must be filed by the filing deadline
+
+Providers: When a provider wishes to appeal a payment reflected by an explanation of benefits, or other remittance document issued by Medicaid, the hearing request must be filed within 30 calendar days of the date of the remittance document.
+
+Members: When a member wishes to appeal a Medicaid or CHIP eligibility or disability decision, the hearing request must be filed within 90 days from the date of the notice they disagreed with.
+
+Managed care plan hearing request
+
+A member or provider wishing to dispute an action taken by an Accountable Care Organization or Managed Care Entity must complete the appeal process within that organization before filing a hearing request with OAH.
+
+Medicaid eligibility fair hearing requests
+
+Although OAH handles hearing requests to dispute disability decisions made by the MRB, OAH does not handle disputes regarding eligibility decisions for Medicaid or CHIP.  Fair hearings for Medicaid and CHIP eligibility should be filed with the Department of Workforce Services (DWS), Division of Adjudications here.
+
+How to request a Medicaid fair hearing
+
+You can fill out the State Fair Hearing Request Form available here, and email the form as an attachment to utmedicaidhearings@utah.gov.
+
+If you prefer to mail your request, you may use the mailing addresses listed below:
+
+Mailing Address:
+
+Department of Health and Human Services
+
+Office of Administrative Hearings
+
+PO Box 143105
+
+Salt Lake City, UT 84114-3105
+
+If you have any questions about your request, contact the Office of Administrative Hearings using one of the methods below:
+
+Email: utmedicaidhearings@utah.gov
+
+Phone: 801-538-6576
+
+Fax: 801-536-0143
+
+Street Address:
+
+Department of Health and Human Services
+
+Office of Administrative Hearings
+
+195 North 1950 West
+
+Salt Lake City, UT 84111
+
+Additional information
+
+Additional information on fair hearings is contained in the Utah Medicaid Provider Manual, General Information – Section I, Chapter 5, section 4 (pg. 35)-4.
+
+Laws and rules:
+
+42 Code of Federal Regulations Part 431, Subpart E
+
+42 Code of Federal Regulations Part 438, Subpart F
+
+Utah Administrative Procedures Act: Utah Code Annotated, Title 63G, Chapter 4
+
+Utah Administrative Code, Rule R410: Administrative Hearing Procedures
+
+Follow us online
+
+(opens in a new tab)(opens in a new tab)(opens in a new tab)(opens in a new tab)(opens in a new tab)(opens in a new tab)
+Subscribe to our newsletter
+
+(opens in a new tab)
+
+Multi-Agency State Office Building
+
+195 North 1950 West
+
+Salt Lake City, Utah
+
+84116
+
+Phone: (833) 353-3447
+
+If you know what division you need to reach, please visit our Divisions page for specific contact information.
+
+External information disclaimer
+
+Federal guidance letters
+
+Navigation menu
+
+About
+
+About DHHS
+
+About DHHS
+
+Performance Measures
+
+What is public health?
+
+Block Grants
+
+Boards
+
+Leadership
+
+Policies
+
+(opens in a new tab)
+
+Reports
+
+Federal guidance letters
+
+Rural Health Transformation Program
+
+Safety tips
+
+Our divisions
+
+Contacts
+
+Data
+
+Health Care Statistics
+
+Health data dashboards
+
+Health Equity data and reports
+
+IBIS-PH
+
+Utah Healthy Places Index
+
+En Español
+
+Popular Searches
+
+Safety tips
+
+News
+
+Newsroom
+
+Hotlines
+
+Abuse/Neglect of Seniors and Adults with Disabilities
+
+1-800-371-7897
+
+Child Abuse/Neglect
+
+1-855-323-DCFS(3237)
+
+Disease Reporting
+
+1-888-EPI-UTAH(374-8824)
+
+Suicide and Crisis Lifeline
+
+Call or text 988
+
+Translate ❯
+
+SOURCE 5: Utah Medicaid Provider Manual, Section I: General Information, chapter 5-4 Hearings and Administrative Review (PDF) | https://medicaid-documents.dhhs.utah.gov/Documents/manuals/pdfs/Medicaid+Provider+Manuals/All+Providers+General+Information+Section+I/AllProvidersGeneralInfo_Section_1.pdf | source date: Updated September 2026, as the chapter's own footer states (was Updated July 2026 as of the 2026-09-04 capture) | retrieved: 2026-10-15
+55                                                                   Updated September 2026
+
+
+
+     (801) 538-6087, 1(855) 403-7283
+
+     https://oig.utah.gov/
+
+     5-4 Hearings and Administrative Review
+     A provider or member may request an administrative hearing to dispute an adverse
+     coverage or benefit determination taken by the Division of Integrated Healthcare
+     (DIH) or a managed care entity (MCE). Actions taken that may be appealed include,
+     but are not limited to:
+        •   Denial of a prior authorization request.
+        •   Denial of a claim, as indicated by an explanation of benefits or other
+            remittance document issued by Medicaid.
+        •   Denial by manual review.
+     When Medicaid issues a determination on a claim for a specific item or service, the
+     aggrieved person has 30 days to request a hearing. Adjustments to the initial claim
+     or a claim resubmission that does not revise the initial determination, shall not
+     extend or change the appeal rights and timing of the initial determination.
+     If a provider has received a claim denial for lack of prior authorization, the claim
+     must be rebilled with the prior authorization number for the claim to adjudicate
+     properly.
+     For additional information on retroactive prior authorization, see Chapter 10-3,
+     Retroactive authorization.
+
+     5-4.1 Managed Care Entities Hearing and Administrative Review
+     With respect to denials issued by an MCE, providers or members must complete the
+     MCE’s appeal process prior to requesting a hearing with DIH.
+     To request a hearing, send a completed hearing request form to the Office of
+     Administrative Hearings. The form must be faxed, emailed, or postmarked within
+
+
+
+              Utah Medicaid Provider Manual – Section I: General Information
+
+56                                                                   Updated September 2026
+
+
+
+     120 calendar days from the date the MCE sends written notice of its denial or
+     intended action, unless a different time period is indicated on the denial document.
+
+     All hearing requests for DIH and Managed Care Entities must include the following:
+        • A completed hearing request form
+        • A denial notice
+        • If a medical issue is in dispute, each request must include supporting medical
+          documentation
+     Failure to submit a timely request for a hearing constitutes a waiver of the due
+     process right to a hearing. The agency is not required to grant a hearing if the sole
+     issue is a federal or state law requiring an automatic change. Utah Administrative
+     Code R410-14 et seq. sets forth the administrative hearing procedures for Medicaid
+     hearings.
+     A Request for Hearing/Agency Action form (Hearing Request) is available on the
+     Medicaid website at: https://medicaid.utah.gov/utah-medicaid-forms, Hearing
+     Request, or a copy may be requested from the Office of Administrative Hearings by
+     calling (801) 538-6576.
+     Submit the form by mail, email, or fax.
+
+     Mail:
+
+     Via U.S. Post Office-
+     Division of Integrated Healthcare
+     Office of Administrative Hearings
+     Box 143105
+     Salt Lake City, UT 84114-3105
+
+     Via UPS or FedEx-
+     Division of Integrated Healthcare
+     Office of Administrative Hearings
+
+
+              Utah Medicaid Provider Manual – Section I: General Information
+
+57                                                                  Updated September 2026
+
+
+
+     195 North 1950 West
+     Salt Lake City, UT 84116
+
+     FAX: (801) 536-0143
+
+     EMAIL: utmedicaidhearings@utah.gov
+
+
+     6     Member Eligibility
+     6-1 Verifying Medicaid Eligibility
+     A Medicaid member is required to present the Medicaid Member Card before each
+     service, and every provider must verify each member’s eligibility each time before
+     rendering services. Presentation of the Medicaid Member Card does not guarantee
+     a member continues eligible for Medicaid. Verify the member’s eligibility and
+     determine whether the member is enrolled in an MCO, Emergency Only Program, or
+     the Restriction Program; assigned to a PCP; covered by a third party; or responsible
+     for a co-payment or co-insurance. Eligibility and health plan enrollment may
+     change from month to month. Retain documentation of the verified eligibility for
+     billing purposes.
+     Verify member eligibility using the Eligibility Lookup Tool, and ANSI 270 and ANSI
+     271. Brief descriptions of each are below; for detailed information, call Medicaid
+     Information, or go to the Medicaid website at https://medicaid.utah.gov/medicaid-
+     online.
+     Note: Medicaid staff make every effort to provide complete and accurate
+     information on all inquiries. However, federal regulations do not allow a claim
+     payment even if the information given to a provider by Medicaid staff was incorrect.
+     6-1.1 Tools to Verify Medicaid Eligibility
+     These tools may be used to verify member eligibility:
+
+     Eligibility Lookup Tool
+
+
+              Utah Medicaid Provider Manual – Section I: General Information
+
+SOURCE 6: Long Term Care Ombudsman — Aging & Adult Services, Utah Department of Health and Human Services | https://daas.utah.gov/long-term-care-ombudsman/ | source date: none stated on page | retrieved: 2026-10-15
+Skip to content
+
+Long Term Care Ombudsman
+
+The Long-Term Care Ombudsman (LTCO) seeks resolution of problems and advocates for the rights of residents of long term care facilities to ensure and enhance the quality of life and care of residents.
+
+Possibly the best way to get your questions answered is by talking to an Ombudsman. The county you live in determines who your Ombudsman is.
+
+Here you can view a list displaying location specific information for an Ombudsman near you.
+
+Find a location
+
+Report personal rights violations
+
+If you aware of an individual who resides in a nursing home or assisted living, that are dealing with a violation of their personal rights. Please report.
+
+The long-term care ombudsman will initiate an investigation within 5 business days.
+
+Report violation
+
+Resident's rights
+
+Anyone (residents, relatives, friends or even the staff of a facility) may initiate a complaint on behalf of the resident. Often residents are unable to do it themselves. Only as mutually agreed upon, between the ombudsman and the resident or his/her legal representative, the ombudsman will make every reasonable effort to assist, represent and intervene on behalf of the resident.
+
+Services are provided to persons:
+
+Without regard for income and resources
+
+As requested by an individual or on behalf of an individual
+
+Available to a person attempting to enter a facility
+
+Long-term care resident rights
+
+If you are a resident or have a loved one in a nursing home or assisted living facility, the link below can provide information highlighting your rights.
+
+Long-term care resident rights
+
+(opens in a new tab)
+
+Understanding nursing home transfer and discharge requirements in Utah
+
+Nursing home transfers/discharges, particularly when involuntary, can have serious negative effects on residents. Many residents experience transfer trauma, also known as relocation stress syndrome.
+
+Since transfers/discharges can have a devastating impact on residents, it is important that they be prevented if at all possible, and carried out appropriately, safely, and carefully when they do occur.  To that end, providers, ombudsmen, and other stakeholders charged with following, enforcing, or advocating for residents under the rules need to fully understand the requirements and guidance around transfer and discharge.
+
+The following resources were developed by the National Consumer Voice for Quality Long-Term Care, in coordination with the Utah Office of the State Long-Term Care Ombudsman, to assist long-term care providers, ombudsmen, consumers, and other stakeholders in comprehending federal and state requirements around transfer and discharge rights and responsibilities.
+
+Download resource manual for providers, ombudsmen, and other stakeholdersopens in a new tab
+
+(opens in a new tab)
+
+Download consumer brochure - nursing home discharge guideopens in a new tab
+
+(opens in a new tab)
+
+Webinar reviewing the resource manual
+
+Ombudsman program overview
+
+The heart of the Long Term Care Ombudsmen Program is the team of certified Ombudsmen who are empowered to resolve issues surrounding the care and quality of life for people living in nursing homes and assisted living facilities. Ombudsmen are there to represent the residents' interests. It is the residents' desires and needs that are considered and acted upon.
+
+Being an Ombudsman is an important responsibility that is taken on with great care and professionalism. In Utah, Ombudsmen are certified only after receiving extensive training.
+
+Code of ethics
+
+As an ombudsman:
+
+Participate in efforts to maintain and promote the integrity of the long-term care Ombudsman program.
+
+Act in accordance with its standards and procedures.
+
+Recognize the boundaries of my own level of training and skills and consult with an Ombudsman supervisor when needed.
+
+Provide services with respect for human dignity and the individuality of the resident unrestricted by considerations of age, social or economic status, personal characteristics, sexual orientation or lifestyle.
+
+Respect and promote residents’ rights of self-determination, making every reasonable effort to act in accordance with residents’ wishes.
+
+Continually safeguard the confidentiality of residents and not divulge any information unless an immediate life-threatening situation overrides this discretion.
+
+Participate in efforts to promote a quality long-term care system.
+
+Avoid any conflict of interest or appearance of conflict of interest (including gain) in the provision of ombudsman services within nursing or assisted living homes
+
+You can volunteer
+
+Are you interested in using your time and talents to serve as an advocate for nursing home and adult care facility residents? The Long Term Care Ombudsman Program is looking for volunteers to serve as certified Ombudsmen to improve the quality of care and quality of life to residents living in long term care facilities.
+
+Certified Ombudsman not only visit residents, investigate and resolve complaints, but also use their skills to advocate for the rights of residents in nursing homes and other long term care facilities. The dual focus of quality of care and quality of life enables the volunteers to assure that residents are cared for appropriately.
+
+Volunteers serve as a voice for residents of nursing homes and assisted living centers. Certified Ombudsmen are indispensable in ensuring that all facilities meet mandated, legal standards for every person requiring long term care.
+
+Statewide ombudsman locations
+
+The Utah Department of Health and Human Services may occasionally link to outside sources of information. DHHS and the state of Utah do not necessarily endorse the provider of the content and are not responsible for any content published on the external site.
+
+Resources
+
+Annual reports
+
+Annual report - Federal fiscal year 2022opens in a new tab
+
+Assisted living discharge legislative report - State fiscal year 2022
+
+Assisted living discharge legislative report - State fiscal year 2023
+
+Assisted living discharge legislative report - State fiscal year 2024
+
+Rules and regulations
+
+Utah Assisted Living Rules:
+
+rules.utah.gov/publicat/code/r432/r432-270.htm"opens in a new tab
+
+Utah Ombudsman Rule:
+
+rules.utah.govopens in a new tab
+
+Utah Ombudsman Law:
+
+www.le.utah.govopens in a new tab
+
+Nursing Home Rules:
+
+rules.utah.gov/publicat/code/r432/r432-150.htm"
+
+opens in a new tab
+
+Other resources
+
+Medicaid denial appeal request
+
+Skilled nursing facility-initiated discharge appeal formopens in a new tab
+
+Disability Law Center
+
+disabilitylawcenter.orgopens in a new tab
+
+Medicare Nursing Home Compare
+
+medicare.gov/nhcompare/home.aspopens in a new tab
+
+Centers for Medicaid/Medicare Services
+
+cms.hhs.govopens in a new tab
+
+Utah Division of Aging and Adult Services
+
+daas.utah.gov
+
+Utah Home and Community Based Services (HCBS) Waiver Programs
+
+medicaid.utah.gov/ltc-2/opens in a new tab
+
+Utah Nursing Assistant Registry
+
+utahcna.comopens in a new tab
+
+ACL Administration for Community Living
+
+aoa.govopens in a new tab
+
+National Ombudsman Resource Center (NORC)
+
+ltcombudsman.orgopens in a new tab
+
+About Assisted Living
+
+aboutassistedliving.orgopens in a new tab
+
+Utah Health Care Association
+
+uthca.orgopens in a new tab
+
+Utah Assisted Living Association
+
+utahassistedliving.orgopens in a new tab
+
+2016-17 Utah Healthcare Guide
+
+ut-hospitals.comopens in a new tab
+
+Follow us online
+
+(opens in a new tab)(opens in a new tab)(opens in a new tab)(opens in a new tab)(opens in a new tab)(opens in a new tab)
+
+Cannon Health Building
+
+288 North 1460 West
+
+Salt Lake City, Utah
+
+84116
+
+Phone: 801-538-3910
+
+Fax: 801-538-4395
+
+Email: agingservices@utah.gov
+
+External Information Disclaimeropens in a new tab
+
+Navigation Menu
+
+Protection
+
+Services
+
+Public Guardian
+
+Centenarians
+
+Locations
+
+About
+
+Contact
+
+Questions
+
+Utah WISE Initiative
+
+Resources
+
+211Utah - United Wayopens in a new tab
+
+Safe UTopens in a new tab
+
+Utah Domestic Violence Coalitionopens in a new tab
+
+988 Suicide and Crisis Lifelineopens in a new tab
+
+Hotlines
+
+Abuse/Neglect of Seniors and Adults with Disabilitiesopens in a new tab
+
+1-800-371-7897
+
+Child Abuse/Neglect
+
+1-855-323-DCFS(3237)
+
+Crisis Line & Mobile Outreach Team
+
+1-801-587-3000
+
+National Suicide Prevention Lifelineopens in a new tab
+
+1-800-273-TALK(8255)
+
+Sexual Violence Crisis Line
+
+1-888-421-1100
+
+Utah Domestic Violenceopens in a new tab
+
+1-800-897-LINK(5465)
+
+Translate ❯
+
+SOURCE 7: Ombudsman Locations — Aging & Adult Services, Utah Department of Health and Human Services | https://daas.utah.gov/ombudsman-locations-3/ | source date: none stated on page | retrieved: 2026-10-15
+Skip to content
+
+Ombudsman Locations
+
+Possibly the best way to get your questions answered is by talking to an Ombudsman. The county you live in determines who your Ombudsman is.
+
+If you feel that your concerns have not been addressed or you need further assistance please contact the State Ombudsman .
+
+Long-term care ombudsman contact information
+
+County | Ombudsman | Phone # | Email
+
+Cache, Rich, Box Elder | Chad Fairbanks | 435-713-1464 | chadf@brag.utah.gov
+
+Davis County | Jennifer Kay | 801-525-5060 | jkay@co.davis.ut.us
+
+Washington, Beaver, Garfield, Iron, Kane | Kelly Reeder | 435-263-0489 | kreeder@fivecounty.utah.gov
+
+Utah, Wasatch, Summit | Ann Humpherys | 801-229-3809 | ahumpherys@magutah.gov ombudsman@magutah.gov
+
+Salt Lake | Ombudsman Line | 385-468-3255 | ombudsman@saltlakecounty.gov
+
+San Juan | Natalie Freestone | 435-459-2875 | nfreestone@sanjuancountyut.gov
+
+Sevier, Millard, Piute, Wayne, Sanpete, Juab | Michelle Standley | 435-893-0736 | michellestandley@r6.utah.gov
+
+Carbon, Emery, and Grand | Robbie Jensen | 435-613-0023 | rjensen@seualg.utah.gov
+
+Duchesne, Daggett, Uintah | Sam Creamer | 435-722-5229 | samc@ubaog.org
+
+Tooele | Ombudsman line | 435-277-2350 | jennifer.romero@tooeleco.gov
+
+Weber and Morgan | Angela Stout | 801-625-3783 | angelas@weberhs.org
+
+State of Utah
+
+Alianne Sipes
+
+Department of Health and Human Services
+
+385-222-1273
+
+asipes@utah.gov
+
+Dianna Sanchez
+
+Ombudsman Records Requests
+
+801-459-8588
+
+diannas@utah.gov
+
+Follow us online
+
+(opens in a new tab)(opens in a new tab)(opens in a new tab)(opens in a new tab)(opens in a new tab)(opens in a new tab)
+
+Cannon Health Building
+
+288 North 1460 West
+
+Salt Lake City, Utah
+
+84116
+
+Phone: 801-538-3910
+
+Fax: 801-538-4395
+
+Email: agingservices@utah.gov
+
+External Information Disclaimeropens in a new tab
+
+Navigation Menu
+
+Protection
+
+Services
+
+Public Guardian
+
+Centenarians
+
+Locations
+
+About
+
+Contact
+
+Questions
+
+Utah WISE Initiative
+
+Resources
+
+211Utah - United Wayopens in a new tab
+
+Safe UTopens in a new tab
+
+Utah Domestic Violence Coalitionopens in a new tab
+
+988 Suicide and Crisis Lifelineopens in a new tab
+
+Hotlines
+
+Abuse/Neglect of Seniors and Adults with Disabilitiesopens in a new tab
+
+1-800-371-7897
+
+Child Abuse/Neglect
+
+1-855-323-DCFS(3237)
+
+Crisis Line & Mobile Outreach Team
+
+1-801-587-3000
+
+National Suicide Prevention Lifelineopens in a new tab
+
+1-800-273-TALK(8255)
+
+Sexual Violence Crisis Line
+
+1-888-421-1100
+
+Utah Domestic Violenceopens in a new tab
+
+1-800-897-LINK(5465)
+
+Translate ❯
+
+SOURCE 8: R432-150 rule metadata — Utah Office of Administrative Rules (version witness for source 1) | https://adminrules.utah.gov/api/public/rule/R432-150/undefined/Current%20Rules | source date: carries its own effectiveDate field | retrieved: 2026-10-15
+{"number":"150","name":"Nursing Care Facility","ruleType":"Current Rules","effectiveDate":"2025-02-18T15:24:07.783","effectiveEndDate":"2027-01-24T14:28:42.043","commentDate":"2024-11-16T00:00:00","commentDateEnd":"2024-12-15T19:32:36.4585167","referenceNumber":"R432-150","htmlDownload":"uac-html/9635398a-ce5f-438c-8817-197550b951c7.html","htmlDownloadName":"R432-150.html","pdfDownload":"uac-pdf/9635398a-ce5f-438c-8817-197550b951c7.pdf","pdfDownloadName":"R432-150.pdf","agencyName":"Health and Human Services","programName":"Health Care Facility Licensing","action":"Amendment","linkToRule":"https://adminrules.utah.gov/public/rule/R432-150/Current%20Rules"}
+
+SOURCE 9: R410-14, Administrative Hearing Procedures — Utah Administrative Code | https://adminrules.utah.gov/api/public/getHTML/uac-html/73994768-4705-4e78-bf9e-3167834a0136.html | source date: Effective Date: 09/19/2025 | retrieved: 2026-10-15
+R410. Health and Human Services, Integrated Healthcare, Administrative Hearings.
+R410-14. Administrative Hearing Procedures.
+
+R410-14-1. Authority and Purpose.
+
+(1) Subsections 26B-1-202(1) and 26B-1-204(1), 42 CFR 431 Subpart E (2025), and 42 U.S.C. 1396a(a)(3) authorize this rule.
+
+(2) This rule sets forth the administrative hearing procedures for actions that the Division of Integrated Healthcare or other agency, as defined in Section R410-14-2, takes.
+
+R410-14-2. Definitions.
+
+(1) Terms in this rule are defined in Rule R414-1 and Section 63G-4-103. Additionally:
+
+(2) "Action" means:
+
+(a) a denial or termination of eligibility for participation in a program or as a provider;
+
+(b) a denial, reduction, or revocation of reimbursement for services for a provider;
+
+(c) a denial, reduction, suspension, or termination of medical assistance for a member;
+
+(d) a determination by a skilled nursing facility or nursing facility to transfer or discharge a resident;
+
+(e) an adverse benefit determination, as defined in Subsection R410-14-20(2)(a);
+
+(f) an adverse determination, as defined in Subsection (2)(b); or
+
+(g) the placement of a Medicaid member on the restriction program, as described under Section R414-29-3.
+
+(3) "Adverse determination" means a determination, in accordance with Subsection 1919(b)(3)(F) or Subsection 1919(e)(7)(B) of the Social Security Act, that:
+
+(a) an individual does not require the level of services provided by a nursing facility; or
+
+(b) an individual does or does not require specialized services.
+
+(4) "Agency" means:
+
+(a) the Division of Integrated Healthcare (DIH) within the Department of Health and Human Services, except the Office of Substance Use and Mental Health;
+
+(b) the Department of Workforce Services (DWS); or
+
+(c) any MCO that conducts or performs an action.
+
+(5) "Aggrieved person" means any member, enrollee, or provider who is adversely affected by an action.
+
+(6) "Child Health Evaluation and Care" program or "CHEC" means Utah's version of the federally mandated Early and Periodic Screening, Diagnostic and Treatment (EPSDT) Medicaid child health program.
+
+(7) "De novo" means anew or considering the question of a case for the first time.
+
+(8) "Decision" or "order" means a ruling by a presiding officer that determines the legal rights, duties, privileges, immunities, or other legal interests of a party.
+
+(9) "Department" means the Department of Health and Human Services.
+
+(10) "Eligibility agency" means:
+
+(a) the department;
+
+(b) DWS; or
+
+(c) any entity the agency contracts with to determine medical assistance eligibility.
+
+(11) "Ex parte communication" means direct or indirect communication in connection with an issue of fact or law, between the presiding officer and only one party.
+
+(12)(a) "Grievance" means an expression of dissatisfaction about any matter other than an action as defined in this rule.
+
+(b) A grievance may include:
+
+(i) the quality of care of services provided; or
+
+(ii) an aspect of interpersonal relationships, such as rudeness of a provider or employee or the failure to respect the rights of an MCO member.
+
+(13) "Grievance system" means the overall process for an MCO to collect, review, and make a determination on a grievance or appeal and for the individual who files an appeal to access the administrative hearing process set out in this rule.
+
+(14) "Mail" means to send through mail services, email, fax, or hand-delivery.
+
+(15) "Managed care organization" or "MCO" means an entity that:
+
+(a)(i) is a health maintenance organization;
+
+(ii) is a prepaid mental health plan; or
+
+(iii) is a dental managed care plan; and
+
+(b) contracts with DIH to provide health, behavioral health, or oral health services to Medicaid or Children's Health Insurance Program members.
+
+(16) "Medical record" means a record that contains medical data of a medical assistance member.
+
+(17) "Office" means the Office of Administrative Hearings within the Department of Health and Human Services.
+
+(18)(a) "Party" includes:
+
+(i) the agency or an individual designated by the agency head to represent the agency in an adjudicative proceeding;
+
+(ii) an aggrieved person; or
+
+(iii) a claimant.
+
+(b) "Party" does not include:
+
+(i) the general public;
+(ii) a witness testifying at an adjudicative proceeding; or
+
+(iii) an Artificial Intelligence (AI) bot, computer, or program.
+
+(19) "Presiding officer" means an agency head, or individual designated by the agency head, by rule, or by statute to conduct an adjudicative proceeding and may include:
+
+(a) a division or office director;
+
+(b) a hearing officer;
+
+(c) a statutorily created board or committee;
+
+(d) an administrative law judge; and
+
+(e) the superintendent of an agency institution.
+
+(20) "Provider" means any person or entity that is licensed and otherwise authorized to furnish health care to members.
+
+(21) "Scope of service" means behavioral, medical, or oral health services under Title R414, Integrated Healthcare, as a covered benefit.
+
+(22) "State fair hearing" means an administrative hearing conducted pursuant to this rule.
+
+R410-14-3. Administrative Adjudicative Procedures.
+
+(1) Except as provided in this rule or otherwise designated by rule or statute or converted pursuant to Subsection 63G-4-202(3), each adjudicative proceeding conducted pursuant to this rule shall be designated an informal adjudicative proceeding.
+
+(2) An aggrieved person may file a written request for agency action, pursuant to Subsections 63G-4-201(3)(a) and (b) and in accordance with this rule.
+
+(a) A provider may file a written request for agency action without the consent of the member or MCO enrollee if the request for agency action pertains to the denial of an authorization for service or a denial of payment on a claim.
+
+(b) A provider may not file a request for agency action if the request for agency action pertains to the denial, change, or termination of eligibility of a member for a medical assistance program.
+
+(3) If a medical issue is in dispute, each request shall include supporting medical documentation. The office may schedule a hearing only when it receives sufficient medical records and may dismiss a request for agency action if it does not receive supporting medical documentation in a timely manner.
+
+(4) An agency shall provide a written notice of action to each aggrieved person. These actions include:
+
+(a) denial or limited prior authorization of a requested service including the type or level of service;
+
+(b) eligibility for assistance;
+
+(c) payment of a claim; and
+
+(d) scope of service.
+
+(5) The notice shall include:
+
+(a) a statement of the action the agency intends to take;
+
+(b) the date the intended action becomes effective;
+
+(c) the reasons for the intended action;
+
+(d) the specific regulations that support the action, or the change in federal law, state law, or DIH policy which requires the action;
+
+(e) the right to request a hearing;
+
+(f) the right to represent oneself, the right to legal counsel, or the right to use another representative at the hearing; and
+
+(g) if applicable, an explanation of the circumstances under which reimbursement for medical services will continue or may be reinstated pursuant to this rule.
+
+(6) The agency shall mail the notice at least ten calendar days before the date of the intended action except that:
+
+(a) the agency may mail the notice before the date of action in accordance with 42 CFR 431.213 (2025); and
+
+(b) the agency may shorten the period of advance notice to five days before the date of action if the agency has facts that indicate the agency shall take action due to probable fraud by the member or provider and the facts have been verified by affidavit.
+
+R410-14-4. Hearings.
+
+(1) The office shall conduct informal hearings. The presiding officer may convert the proceeding to a formal hearing if an aggrieved person requests a hearing that meets the criteria set forth in Section 63G-4-202.
+
+(2) If a hearing under this rule is converted to a formal hearing pursuant to Section 63G-4-202, the formal hearing shall be conducted in accordance with these criteria except as otherwise provided in Sections 63G-4-204 through 63G-4-208 or other applicable statute.
+
+(3) The office shall conduct a hearing in connection with an action if the aggrieved person requests a hearing and there is a disputed issue of fact. If there is no disputed issue of fact, the presiding officer may deny a request for an evidentiary hearing and issue a decision without a hearing based on the record. In the decision, the presiding officer shall specifically set out any material and relevant fact not in dispute.
+
+(4)(a) There is no disputed issue of fact if every material fact the agency relied upon in taking the adverse action or in obtaining the relief sought in the adjudicative proceeding is established by:
+
+(i) the aggrieved person's own acknowledgment or admission;
+
+(ii) an adjudication from a court of competent jurisdiction; or
+
+(iii) a record submitted by either party if the aggrieved person does not challenge the record's accuracy.
+(b) When the reasonableness of the agency's action is the primary issue under consideration, rather than whether there is a factual basis for the agency's action, the issue of reasonableness remains in dispute even if there is no dispute as to any underlying material fact that resulted in the agency's action.
+
+(5) If the aggrieved person objects to the hearing denial, the person may raise that objection as grounds for relief in a request for agency review.
+
+(6) An MCO may not require an aggrieved person to use arbitration or mediation to resolve an action. An aggrieved person may file a request for hearing relating to an action regardless of any contractual provision with an MCO that may require arbitration or mediation.
+
+(7) The presiding officer may not grant a hearing if the issue is a state or federal law requiring an automatic change in eligibility for medical assistance or covered services that affect the aggrieved person.
+
+R410-14-5. Request for Hearing.
+
+(1)(a) An aggrieved person shall request a hearing by:
+
+(i) completing the DIH Form to Request a State Fair Hearing; and
+
+(ii) submitting the form by mail, fax, or other electronic means as directed on the form or the notice of agency action.
+
+(b) The request shall explain why the aggrieved person is seeking agency relief.
+
+(2) Except as described in Section R410-14-20, a hearing shall be requested within the following deadlines:
+
+(a) a medical assistance provider or member shall request a hearing within 30 calendar days from the date that DIH sends a written notice of agency action.
+
+(b) a medical assistance member shall request a hearing with DWS regarding medical assistance eligibility within 90 calendar days from the date the agency sends a written notice of agency action.
+
+(c) a medical assistance member shall request a hearing with the office regarding a determination of disability for medical assistance eligibility within 90 calendar days from the date that DIH sends a written notice of agency action.
+
+(d) a medical assistance member shall request a hearing regarding approval or denial of a scope of service within 30 calendar days from the date the agency sends written notice of agency action.
+
+(3) A hearing request that an aggrieved person sends through the mail is considered filed on the date of the postmark. If the postmark date is illegible, erroneous, or omitted, the request is considered filed on the date the agency receives it, unless the sender can demonstrate the mailing date through credible evidence.
+
+(4) Failure to submit a timely request for a hearing constitutes a waiver of an individual's due process rights.
+
+(5) The office may dismiss a request for a hearing if the aggrieved person:
+
+(a) withdraws the hearing request in writing;
+
+(b) verbally withdraws the hearing request at a prehearing conference;
+
+(c) fails to appear or participate in a scheduled proceeding without good cause;
+
+(d) prolongs the hearing process without good cause;
+
+(e) cannot be located or agency mail is returned without a forwarding address;
+
+(f) fails to provide medical records that the agency requests; or
+
+(g) does not respond to any correspondence from the office.
+
+R410-14-6. Continuation and Reinstatement of Services.
+
+(1) If the agency mails a notice of agency action in the time required by Section R410-14-3 and the recipient requests a hearing within ten days of the date the notice was mailed, the agency shall continue services until a decision is rendered after the hearing. The agency may terminate or reduce services if it is determined at the hearing that the sole issue is one of federal or state law or policy and the agency promptly informs the recipient in writing that services are to be terminated or reduced pending the hearing decision.
+
+(2)(a) The agency may reinstate services if a recipient requests a hearing no more than ten days after the date of the action. The reinstated services shall continue until a hearing decision is rendered unless, at the hearing, it is determined that the sole issue is one of federal or state law or policy.
+
+(b) The agency shall reinstate and continue services until a decision is rendered after a hearing if:
+
+(i) the agency takes action without giving a ten-day notice as required by Section R410-14-3;
+
+(ii) the recipient requests a hearing no more than ten days after the date the notice of agency action is mailed; and
+
+(iii) the action is not the result of the application of federal or state law or policy.
+
+R410-14-7. Notice of Hearing.
+
+The office shall notify each party or a party representative in writing of the date, time, and place of the hearing and shall mail the notice at least ten calendar days before the date of the hearing unless each party agrees to an alternative timeframe. Each party shall inform the agency of a current email address, mailing address, and telephone number.
+
+R410-14-8. Prehearing Procedures.
+
+(1) The office shall schedule a prehearing conference in a timely manner after the office receives the request for a hearing.
+
+(2) The purpose of the prehearing conference is to:
+
+(a) arrange for the exchange of proposed exhibits or prepared expert testimony;
+(b) formulate or simplify the issues;
+
+(c) obtain admissions of fact and documents that will avoid unnecessary proof;
+
+(d) outline procedures for the hearing; or
+
+(e) agree to other matters that may expedite the orderly conduct of the hearing or settlement.
+
+(3) The presiding officer may request a review of the medical record by a DIH CHEC Utilization Review committee to evaluate the medical necessity of benefits or services under dispute.
+
+(a) The committee's recommendation is not binding but may be admitted as evidence and included in the hearing record.
+
+(b) If a party to the proceeding objects to the committee's determination, a representative of the committee shall be available at the hearing for examination by the presiding officer and each party.
+
+(4) The presiding officer may require any party to submit a prehearing position statement setting forth that party's positions.
+
+(5) A party may enter into a written stipulation during the preliminary conference or at any time during the process.
+
+(6) Ex parte communication with the presiding officer is prohibited.
+
+(a) If a party attempts ex parte communication, the presiding officer shall inform the offeror that any communication the presiding officer receives off the record will become part of the record and furnished to every party.
+
+(b) Ex parte communication does not apply to communication on the status of the hearing and uncontested procedural matters.
+
+(7) The agency shall allow the aggrieved person or a representative to examine each DIH document and record upon written request to DIH at least three days before the hearing.
+
+(8) A party may request access to protected health information in accordance with Rule R380-250, which implements the privacy rule under the Health Insurance Portability and Accountability Act of 1996 (HIPAA).
+
+(a)(i) The agency may request copies of pertinent records in the possession of a party and the member's health care providers.
+
+(ii) In the event the member or provider fails to produce the records within a reasonable time, DIH may review each pertinent record in the custody of the member or provider during regular working hours at least three days after issuing written notice.
+
+(b) The member shall submit necessary medical records with the hearing request when possible, including:
+
+(i) the provision of each service and activity addressed in the hearing request;
+
+(ii) the first and last name of the party;
+
+(iii) the reason for performing the service or activity that includes the party's complaint or symptom;
+
+(iv) the member's medical history;
+
+(v) examination findings;
+
+(vi) diagnostic test results;
+
+(vii) the goal or need the plan of care identifies; and
+
+(viii) the observer's assessment, clinical impression, or diagnosis that includes the date of observation and identity of the observer.
+
+(c) The necessary medical records shall demonstrate that the service is:
+
+(i) medically necessary;
+
+(ii) consistent with the diagnosis of the member's condition; and
+
+(iii) consistent with professionally recognized standards of care.
+
+(9) The presiding officer may require each party to file a signed prehearing disclosure form at least ten calendar days before the scheduled hearing that identifies:
+
+(a) fact witnesses;
+
+(b) expert witnesses; and
+
+(c) any exhibits and reports each party intends to offer into evidence at the hearing.
+
+(10) Each party shall supplement the disclosure form with information that becomes available after filing the original form.
+
+R410-14-9. Form and Service of Papers.
+
+(1) Any document that a party files with the office in a proceeding shall:
+
+(a) be signed and dated by the party or the party's authorized representative;
+
+(b) be typed or legibly written;
+
+(c) bear a caption that clearly shows the title of the hearing;
+
+(d) bear the docket number, if any; and
+
+(e) contain the address and telephone number of the party or the party's authorized representative.
+
+(2) The party that files a document with the office shall also serve a copy of the document to each party to the proceeding or the party's representative and file a proof of service with the office consisting of a certificate of service.
+
+(3) A document may be served by mail, fax, or email address to the party's address or phone number on record with the agency.
+
+(4) In addition to the methods described in this rule, a party may be served as permitted by the Utah Rules of Civil Procedure.
+R410-14-10. Conduct of Hearing.
+
+(1) The office shall conduct hearings in accordance with Section 63G-4-203 on a de novo basis.
+
+(2)(a) The department shall appoint an impartial presiding officer to conduct hearings.
+
+(b) An officer involved in the initial determination of the action may not be appointed as the presiding officer.
+
+(3) Any telephonic hearing shall be held at the discretion of the presiding officer.
+
+(4) The department is not responsible for any travel costs incurred by the member in attending an in-person hearing.
+
+(5) The presiding officer shall take testimony under oath or affirmation.
+
+(6) Each party has the right to:
+
+(a) present evidence, argue, respond, conduct cross-examination, and submit rebuttal evidence;
+
+(b) introduce exhibits;
+
+(c) impeach any witness regardless of which party first called the witness to testify; and
+
+(d) rebut the evidence against the party.
+
+(7)(a) Each party may admit any relevant evidence and use hearsay evidence to supplement or explain other evidence as may be required for full disclosure of all facts relevant to the disposition of the hearing.
+
+(b) Hearsay is not sufficient by itself to support a finding unless admissible over objection in a civil action.
+
+(c) The presiding officer shall give effect to the rules of privilege recognized by law and may exclude irrelevant, immaterial, and repetitious evidence.
+
+(8) The presiding officer may question any party or witness.
+
+(9) The presiding officer shall control the evidence to obtain full disclosure of the relevant facts and to safeguard the rights of each party. The presiding officer may determine the order in which the officer receives the evidence.
+
+(10)(a) The presiding officer shall maintain order and may recess the hearing to regain order if a person engages in disrespectful, disorderly, or disruptive conduct.
+
+(b) The presiding officer may remove any person, including a participant from the hearing, to maintain order.
+
+(c) If a person shows persistent disregard for order and procedure, the presiding officer may:
+
+(i) restrict the person's participation in the hearing;
+
+(ii) strike pleadings or evidence; or
+
+(iii) issue an order of default.
+
+(11) To employ a court reporter to make a record of the hearing, a party must file an original transcript of the hearing with the presiding officer at no cost to the agency.
+
+(12) The party who initiates the hearing process through a request for agency action has the burden of proof as the moving party.
+
+(13) When a party possesses but fails to introduce certain evidence, the presiding officer may infer that the evidence does not support the party's position.
+
+(14) An AI bot, computer, or program may not appear, dictate, listen to, record, or summarize any adjudicative proceeding or hearing under this rule.
+
+(15) If a party sends an AI bot, computer, or program to appear at a hearing instead of the party, the presiding officer:
+
+(a) shall consider this a failure to appear on the part of the party; and
+
+(b) may issue an order of default against the party under the relevant default provisions of Title 63G, Chapter 4, Administrative Procedures Act.
+
+(16) A party shall mail a copy of any motion or pleading that the party files with the office to each of the other parties named in the action.
+
+(a) The non-moving party shall:
+
+(i) unless the office dictates otherwise, file any response to a motion or pleading filed with the office within ten calendar days; and
+
+(ii) mail a copy of that response to each of the other parties named in the action.
+
+(b) Any motion or pleading received by the office after the regular business hours of Monday through Friday, 8 a.m. to 5 p.m., excluding state holidays, is considered received the following business day.
+
+R410-14-11. Witnesses and Subpoenas.
+
+(1) A party shall arrange for a witness to be present at a hearing.
+
+(2) At the request of a party or at the presiding officer's discretion, the presiding officer may order a witness excluded so that the witness cannot hear another witness's testimony.
+
+(3) Discovery is prohibited, but the office may issue a subpoena or other order to compel the production of necessary evidence.
+
+(4)(a) An attorney may issue a subpoena for necessary evidence.
+
+(b) A party who is not represented by an attorney may request a subpoena from the office.
+
+(c) When the presiding officer issues a subpoena to a party, the party shall serve that subpoena on the witness.
+
+(5)(a) A party shall request a subpoena as soon as possible after a hearing date is set.
+
+(b) The office may not issue a subpoena fewer than 16 calendar days before the hearing.
+
+(6) The presiding officer may issue a subpoena on the presiding officer's own motion.
+(7) A party may file an affidavit that requests the presiding officer to subpoena a witness to produce books, papers, correspondence, memoranda, or other records. The affidavit shall include:
+
+(a) the name and address of the person or entity being served the subpoena;
+
+(b) a description of any account, book, document, letter, object, paper, photograph, or other tangible item that the applicant seeks;
+
+(c) material that is relevant to the issue of the hearing; and
+
+(d) a statement by the applicant that, to the best of the applicant's knowledge, the witness possesses or controls the requested material.
+
+(8) A party shall arrange to serve any subpoena that the presiding officer issues on the party's behalf and shall serve a copy of the affidavit that the party presents to the presiding officer.
+
+(9) Except for an employee of an agency, a witness that the presiding officer subpoenas to attend a hearing is entitled to appropriate fees and mileage. The witness shall file a written demand for fees with the presiding officer within ten calendar days from the date that the witness appears at the hearing.
+
+(10) The presiding officer may issue an order of default against any party that fails to appear, participate, or obey an order entered by the presiding officer.
+
+R410-14-12. Record.
+
+(1)(a) The presiding officer shall make a complete hearing record.
+
+(b) A hearing record is the sole property of the office, and the office shall maintain the complete hearing record electronically in a secure area.
+
+(2) Proceedings other than hearings may be recorded at the discretion of the presiding officer.
+
+(3) If a party requests a copy of a hearing's recording, that party may transcribe the recording at the party's sole cost.
+
+(4) The office or a designated agent shall keep recordings of each hearing for one year.
+
+(5) The office shall keep written records of each hearing for ten years pending further litigation.
+
+R410-14-13. Continuances or Further Hearings.
+
+(1) The presiding officer, on the officer's own motion or at the request of a party showing good cause, may:
+
+(a) continue the hearing to another time or place; or
+
+(b) order a further hearing.
+
+(2) If the presiding officer determines that additional evidence is necessary for the proper determination of the case, the officer may:
+
+(a) continue the hearing to a later date and order any party to produce additional evidence; or
+
+(b) close the hearing and hold the record open to receive additional documentary evidence.
+
+(3)(a) The presiding officer shall provide to each party any evidence that the officer receives.
+
+(b) Each party shall have the opportunity to rebut that evidence.
+
+(4) The presiding officer shall provide written notice of the time and place of a continued or further hearing, except when the officer orders a continuance during a hearing and each party receives oral notice.
+
+R410-14-14. Orders.
+
+(1) Within a reasonable time after the close of a hearing, or after a party's failure to request a hearing within a reasonable time prescribed by agency rules, the presiding officer shall issue a signed order that conforms to Subsection 63G-4-203(1)(i).
+
+(2) The office shall mail a copy of the order to each party or representative, notifying the party of any right to agency review and judicial review.
+
+(3) Each party shall comply with the order from the presiding officer reversing the agency's decision within ten calendar days.
+
+(4)(a) The department's executive director shall review each order to determine approval of medical assistance for an organ transplant.
+
+(b) The executive director's decision constitutes final administrative action and is subject to judicial review.
+
+R410-14-15. Amending Administrative Orders.
+
+(1) The presiding officer may amend an order if the officer determines the order contains a clerical error.
+
+(2) The office shall mail a copy of the final amended order to each party.
+
+R410-14-16. Availability of Agency Review.
+
+A party may obtain agency review of a final order by filing a request with the department's executive director, pursuant to Section 63G-4-301.
+
+R410-14-17. Judicial Review.
+
+A party to the proceeding may obtain judicial review in accordance with Section 63G-4-102 and Title 63G, Chapter 4, Part 4, Judicial Review.
+
+R410-14-18. Declaratory Orders.
+
+(1) DIH may issue a declaratory order in accordance with Rule R380-1.
+
+(2) If DIH does not issue a declaratory order within 60 days after receipt of the request, the petition shall be denied.
+
+(3) DIH shall retain the request for a declaratory ruling in DIH's records.
+
+(4) DIH may not issue a declaratory order if an adjudicative proceeding that involves the same parties and issue is pending before the office, state court, or federal court.
+
+R410-14-19. Interpreters.
+
+(1) If a party notifies the office that the party needs an interpreter, the office shall arrange for an interpreter at no cost to the party.
+
+(2) The party may arrange for an interpreter to be present at the hearing only if the presiding officer can verify the interpreter is at least 18 years of age and fluent in English and the language of the person testifying.
+
+(3) The presiding officer shall instruct the interpreter to interpret word for word and not to summarize, add, change, or delete any of the testimony or questions.
+
+(4) The interpreter shall swear under oath to truthfully and accurately translate each statement, question, and answer.
+
+R410-14-20. MCO Grievance and Appeal System.
+
+(1) The procedures in this section apply only to an appeal or request for agency action arising from an action taken by an MCO.
+
+(2) Terms in this section are defined as follows:
+
+(a) "Adverse benefit determination" means one of the following actions by an MCO:
+
+(i) the denial or limited authorization of a requested service, including the type and level of service, any requirement for medical necessity, appropriateness, setting, or effectiveness of a covered benefit;
+
+(ii) the reduction, suspension, or termination of a previously authorized service;
+
+(iii) the denial, in whole or in part, of payment for a service;
+
+(iv) the failure to provide a service in a timely manner;
+
+(v) the failure to act within the time frames provided in 42 CFR 438.408(b) (2025);
+
+(vi) the denial of a request by a Medicaid member who is a resident of a rural area with only one MCO to exercise the member's right under 42 CFR 438.52(b)(2)(ii) to obtain services outside of the network;
+
+(vii) the denial of a member's request to dispute a financial liability, including cost sharing or any copayment, premium, deductible, coinsurance, and other member financial liability; or
+
+(viii) the restriction of a Medicaid member who uses services at a frequency or amount that is not medically necessary, in accordance with state utilization guidelines.
+
+(b) "Appeal" means a review by an MCO of an action as defined in this section or a request for the office to review a final decision made by an MCO as a result of the MCO's appeal process.
+
+(c) "Grievance" means an expression of dissatisfaction about any matter other than an adverse benefit determination, including:
+
+(i) the quality of care or services provided and aspects of interpersonal relationships, such as rudeness of a provider or employee or failure to respect the member's rights, regardless of whether remedial action is requested; and
+
+(ii) a member's right to dispute an extension of time proposed by the MCO to make an authorization decision.
+
+(d) "Grievance and appeal system" means the processes the MCO implements to handle an appeal of an action and grievance.
+
+(e) "Party" means the agency, or other person commencing an adjudicative proceeding, any respondent, and any MCO who is or may be obligated to pay a claim or provide a benefit or service to a member.
+
+(3) An MCO shall establish a grievance and appeal system in accordance with this rule, 42 CFR 431.200 et seq. and 42 CFR 438.400 et seq. and the MCO's contractual obligations entered into with DIH.
+
+(4) The MCO grievance and appeal system shall include a written internal grievance and appeal procedure for an aggrieved person to challenge an action by the MCO.
+
+(5) The MCO shall provide to its members and providers written information that explains the grievance and appeal procedure, including a right to request a state fair hearing in accordance with this rule.
+
+(6) The MCO's notice of action shall comply with the requirements set forth in Section R410-14-3, 42 CFR 438.402, and 42 CFR 438.404.
+
+(7) The MCO's written notice of final decision shall comply with the requirements set forth in 42 CFR 438.408 and include an explanation of the aggrieved person's right to a state fair hearing in accordance with this rule.
+
+(8)(a)(i) Unless otherwise stated in this section, an aggrieved party may appeal an MCO final written disposition on an action by requesting a state fair hearing in accordance with this rule.
+
+(ii) The hearing request shall include a copy of the final written notice of the MCO disposition.
+
+(b)(i) An aggrieved person must exhaust the MCO grievance and appeal procedure before requesting a state fair hearing for an action other than the restriction of a Medicaid member. In the case of an MCO that fails to adhere to the notice and timing requirements in 42 CFR 438.400 et seq., the member is considered to have exhausted the MCO's appeals process.
+
+(ii) The hearing request shall include a copy of the final written notice of the MCO decision.
+
+(c) The aggrieved party shall request a hearing within 120 days from the date of the MCO final written notice of the decision.
+(d)(i) If an appeal is based on a dispute regarding the payment liability between two or more MCOs, the aggrieved person is not required to exhaust the MCO grievance procedure for each MCO before requesting a state fair hearing under this rule.
+
+(ii) If DIH identifies an MCO that may be liable to pay the claim and did not participate in the underlying grievance procedure, DIH shall send notice to that MCO that the MCO may be subject to liability and of the MCO's right to participate in the state fair hearing.
+
+(iii) If more than one MCO is party to the state fair hearing, DIH shall provide a notice to each party that shall include:
+
+(A) the identity of each party;
+
+(B) the reason for the dispute;
+
+(C) a copy of the hearing request;
+
+(D) a statement specifying that any MCO that did not participate in the underlying MCO grievance and appeal procedure may be subject to payment liability, described in Subsection (8)(d)(ii); and
+
+(E) a statement of the right to participate in the state fair hearing.
+
+(e) DIH may file an answer or other response or position statement in the hearing proceeding at any time so long as it gives notice to other parties no fewer than five days before the hearing. If DIH chooses not to file a response or position statement, DIH does not waive the right to participate in the hearing.
+
+(9)(a) If the MCO or state fair hearing presiding officer reverses a decision to deny, limit, or delay services that were not furnished while the appeal was pending, the MCO shall authorize or provide the disputed services promptly and as expeditiously as the member's health condition requires but before 72 hours from the date the MCO receives notice reversing the determination.
+
+(b) If the MCO or state fair hearing presiding officer reverses a decision to deny authorization of services and the member received the disputed services while the appeal was pending, the MCO or DIH shall pay for those services in accordance with state policy and rule.
+
+R410-14-21. Preadmission Screening Resident Review (PASRR) Hearings.
+
+Pursuant to 42 U.S.C. 1396r, any resident or potential resident of a nursing facility, whether Medicaid eligible or not, who disagrees with the preadmission screening and appropriateness of a placement decision that DIH or a designated agent makes, has the right to an informal hearing upon request in accordance with this rule and the requirements set out in 42 CFR 483.200, Subpart E.
+
+R410-14-22. Nurse Aide Registry Hearings.
+
+(1) Pursuant to 42 U.S.C. 1395i-3, each nurse aide is subject to investigation of any allegation of resident abuse, neglect, or misappropriation of resident property.
+
+(2) Before a substantiated claim can be entered into the registry:
+
+(a) DIH or a designated agent shall investigate each complaint; and
+
+(b) the nurse aide shall be entitled to a hearing that the office conducts.
+
+R410-14-23. Skilled Nursing Facility (SNF), Intermediate Care Facility (ICF), and Intermediate Care Facility for Persons with Intellectual Disabilities (ICF/ID) Hearings.
+
+Pursuant to 42 CFR 431, Subpart D, DIH shall provide an appeals hearing procedure for SNFs, ICFs or ICF/IDs. The office shall conduct the informal hearing pursuant to this rule and the requirements of 42 CFR 431.153 and 42 CFR 431.154.
+
+R410-14-24. Home and Community-Based Waiver Hearings.
+
+(1) Pursuant to 42 CFR 431 Subpart E, DIH shall provide an appeals hearing procedure for home and community-based waiver hearings. The office shall conduct the informal hearing pursuant to this rule and the requirements of 42 CFR 431.200 through 431.250.
+
+(2)(a) For home and community-based waivers in which the Division of Services for People with Disabilities (DSPD) is the designated operating agency and the grievance is based on whether the person meets the eligibility criteria for state matching funds through the department in accordance with Section 26B-1-430, the eligibility determination of the operating agency is final.
+
+(b) If DSPD determines that an individual does not meet the eligibility criteria for state matching funds through the department, DSPD shall inform the individual in writing and provide the individual an opportunity to appeal the decision through the administrative hearing process in accordance with Section R539-3-8.
+
+(c) The DSPD decision is dispositive for the purposes of this subsection. The office shall sustain the determination, and there is no right to further agency review.
+
+R410-14-25. Restriction Program Hearings.
+
+(1) Pursuant to 42 CFR 431.54(e), the department may restrict a Medicaid member who uses services at a frequency or amount that is not medically necessary, in accordance with state utilization guidelines.
+
+(2) DIH shall give the member notice and opportunity for an informal hearing pursuant to this rule before imposing restrictions.
+R410-14-26. Eligibility Hearings.
+
+DWS conducts eligibility hearings in accordance with Section R414-301-7.
+
+KEY: Medicaid
+
+Date of Last Change: September 19, 2025
+
+Notice of Continuation: August 12, 2022
+
+Authorizing, and Implemented or Interpreted Law: 26B-1-202(1); 26B-1-204; 63G-4-102
+
+SOURCE 10: R410-14 rule metadata — Utah Office of Administrative Rules (version witness for source 9) | https://adminrules.utah.gov/api/public/rule/R410-14/undefined/Current%20Rules | source date: carries its own effectiveDate field | retrieved: 2026-10-15
+{"number":"14","name":"Administrative Hearing Procedures","ruleType":"Current Rules","effectiveDate":"2025-09-19T13:24:48.64","effectiveEndDate":"2027-08-12T11:12:47.753","commentDate":"2025-07-02T00:00:00","commentDateEnd":"2025-07-31T11:27:58.0151773","referenceNumber":"R410-14","htmlDownload":"uac-html/73994768-4705-4e78-bf9e-3167834a0136.html","htmlDownloadName":"R410-14.html","pdfDownload":"uac-pdf/73994768-4705-4e78-bf9e-3167834a0136.pdf","pdfDownloadName":"R410-14.pdf","agencyName":"Health and Human Services","programName":"Integrated Healthcare, Administrative Hearings","action":"Amendment","linkToRule":"https://adminrules.utah.gov/public/rule/R410-14/Current%20Rules"}
+
+SOURCE 11: R414-504, Nursing Facility Payments — Utah Administrative Code | https://adminrules.utah.gov/api/public/getHTML/uac-html/285f3d84-7c8f-42a0-bf1f-cca3a6c68d83.html | source date: Effective Date: 07/02/2025 | retrieved: 2026-10-15
+R414. Health and Human Services, Integrated Healthcare.
+R414-504. Nursing Facility Payments.
+
+R414-504-1. Introduction.
+
+(1) This rule adopts a case mix or severity-based payment system for nursing facilities that are not intermediate care facilities for persons with intellectual disabilities (ICF/IDs). This system reimburses facilities based on the case mix index of the facility. It also establishes rates for ICF/ID facilities.
+
+(2) This rule is authorized by Sections 26B-1-213, 26B-3-108, and Title 26B, Chapter 3.
+
+R414-504-2. Definitions.
+
+The definitions in Sections R414-1-2 and R414-501-2 apply to this rule. In addition:
+
+(1) "Bed addition" means, as used in the fair rental value calculation, a capitalized project that adds additional beds to the facility. This must be new and complete construction. An increase in total licensed beds and new construction costs support a claim of additional beds.
+
+(2) "Bed replacement" means, as used in the fair rental value calculation, a capitalized project that furnishes a bed in the place of another, previously existing bed. Room remodeling is not a replacement of beds. This must be new and complete construction.
+
+(3) "Behaviorally complex resident" means a long-term care resident with a severe, medically based behavior disorder, including traumatic brain injury, dementia, Alzheimer's, Huntington's Chorea, which causes diminished capacity for judgment, retention of information or decision-making skills, or a resident, who meets the Medicaid criteria for nursing facility level of care and who has a medically based mental health disorder or diagnosis and has a high level resource use in the nursing facility not currently recognized in the case mix.
+
+(4) "Case mix index" means a score assigned to each facility based on the average of the Medicaid patients' case mix scores for that facility.
+
+(5) "Case mix score" means the acuity or frailty of a resident based on medical needs resulting in a weight used to calculate rates.
+
+(6) "Exception qualifying major renovation" means for purposes of a moratorium exception, a project in a facility that undergoes major renovations that involve significant structural changes of the physical facility and requires review and approval under Rule 432-4. The renovation includes a cost greater than or equal to $5,000 for total licensed beds and excludes flooring and paint.
+
+(7) "Facility case mix rate" means the rate the Department issues to a facility for a specified period. This rate utilizes the case mix index for a provider, labor wage index application, and other case mix-related costs.
+
+(8) "Fair rental value (FRV) data report" means a report that provides the Department with information related to capital improvements to be included in the FRV calculation.
+
+(9) "FCP" means the facility cost profile report filed by the provider on an annual basis.
+
+(10) "Major renovation" means, as used in the fair rental value calculation, a capitalized project with a cost equal to or greater than $500 for a licensed bed. A renovation extends the life, increases the productivity, or significantly improves the safety, such as by asbestos removal, of a facility as opposed to repairs and maintenance that either restore the facility to, or maintain it at its normal or expected service life. Vehicle costs are not a major renovation capital expenditure.
+
+(11) "Minimum data set" (MDS) means a set of screening, clinical, and functional status elements, including common definitions and coding categories, that form the foundation of the comprehensive assessment for residents of long-term care facilities certified to participate in Medicaid.
+
+(12) "Nursing costs" means the current costs from the annual FCP report reported on lines 070-012 Nursing Admin Salaries and Wages, 070-013 Nursing Admin Tax and Benefits, 070-040 Nursing Direct Care Salaries and Wages, 070-041 Nursing Direct Care Tax and Benefits, and 070-050 Purchased Nursing Services.
+
+(13) "Nursing facility" or "facility" means a Medicaid-participating nursing facility, skilled nursing facility, or a combination thereof, as defined in 42 USC 1396r (a), 42 CFR 440.150, 42 CFR 442.12, and Section 26B-2-201.
+
+(14) "Patient day" means the care of one patient during a day of service, excluding the day of discharge.
+
+(15) "Patient-driven payment model" (PDPM) means the Medicare prospective payment system for classifying skilled nursing facility patients in a covered Medicare Part A stay.
+
+(16) "Property costs" means the fair rental value (FRV) established by this rule.
+
+R414-504-3. Principles of Facility Case Mix Rates and Other Payments.
+
+The principles in this section apply to the payment of freestanding and provider-based nursing facilities for services provided to a qualified Medicaid patient. This rule does not affect the system for reimbursement for intensive-skilled Medicaid patient add-on amounts.
+
+(1)(a) A portion of total payments to nursing facilities for qualified Medicaid patients is based on a prospective facility case mix rate.
+
+(b) These facilities shall be paid a flat basic operating expense payment. The balance of the total payments will be paid in aggregate to facilities as required by this section based on other authorized factors, including property and behaviorally complex residents, in the proportion that each facility qualifies for the factor.
+
+(2) Each quarter, the department shall calculate a new case mix index for each nursing facility. The case mix index is based on three months of MDS assessment data. The case mix index is applied to a new rate at the beginning of a quarter according to the following schedule:
+(a) January, February, and March MDS assessments are used for July 1 rates.
+
+(b) April, May, and June MDS assessments are used for October 1 rates.
+
+(c) July, August, and September MDS assessments are used for January 1 rates.
+
+(d) October, November, and December MDS assessments are used for April 1 rates.
+
+(3) MDS data is used in calculating each facility's case mix index and upper payment limit gap.
+
+(a) Each facility shall submit MDS data and is responsible for the accuracy of that data.
+
+(b) Each facility shall ensure needed sections of the MDS are completed so that a PDPM or resource utilization group score may be calculated.
+
+(c) The department may exclude inaccurate or incomplete MDS data from a calculation.
+
+(4)(a) An MDS assessment for a patient who is eligible for the intensive skilled add-on are excluded from the case mix calculation.
+
+(b) The state average case mix index excludes:
+
+(i) a facility with less than 20% of the facility's total census days as Medicaid fee-for-service paid days, as reported on the facility's FCP or FRV data report; or
+
+(ii) a facility having less than six months of data reported under Rule R414-401.
+
+(c) The state average case mix index is used to set the rate for:
+
+(i) a facility with less than 20% of the facility's total census days as Medicaid fee-for-service paid days, as reported on the facility's FCP or FRV data report; or
+
+(ii) a facility having less than six months of data reported under Rule R414-401.
+
+(5)(a) A facility may apply for a special add-on rate for behaviorally complex residents by filing a written request with the Division of Integrated Healthcare (DIH).
+
+(b) The department may approve an add-on rate if an assessment of the acuity and needs of the patient demonstrates that the facility is not adequately reimbursed by the case mix score for that patient. The rate is added on for the specific resident's payment and is not subsumed as part of the facility case mix rate. The Office of Long-Term Services and Supports determines qualification for any additional payment.
+
+(c) DIH shall determine the amount of any add-on.
+
+(6) The department pays any property cost separately from the case mix rate.
+
+(7) Reimbursement for a nursing home rate is in accordance with Attachment 4.19-D of the Medicaid State Plan, which is incorporated by reference in Section R414-1-5.
+
+(8)(a) A provider may challenge the rate set pursuant to this rule using the appeal in Rule R410-14. This applies to which rate methodology is used and to the specifics of implementation of the methodology.
+
+(b) A provider must exhaust administrative remedies before challenging rates in any other forum.
+
+(9) The department reimburses swing beds, transitional care unit beds, and small health care facility beds that are used as nursing facility beds, using the prior calendar year statewide average of the daily nursing facility rate.
+
+(10) Unless specified otherwise, the department may withhold Title XIX payments from providers if:
+
+(a) there is a shortage in a resident trust account managed by the facility;
+
+(b) the facility fails to submit a complete and accurate FCP, as required by Attachment 4.19-D of the Medicaid State Plan;
+
+(c) the facility fails to submit timely and accurate MDS data;
+
+(d) the facility owes money to DIH because of an overpayment, nursing care facility assessment, civil money penalty, or other offset; or
+
+(e) the facility fails to respond within ten business days to a written request for information.
+
+(11) The department shall provide written notice before withholding any payment.
+
+(12) When the department rescinds withholding of a payment to a provider, it will, without notice, resume payments according to the regular claims payment cycle.
+
+(a) For ongoing operations, the department shall provide notice before withholding any payment.
+
+(b) The department and provider may negotiate a repayment schedule acceptable to the department for any money owed to the department listed in Subsection R414-504-3(10).
+
+(c) The repayment schedule may not exceed 180 days.
+
+(d) When the department rescinds withholding of a payment to a facility, it will resume payments according to the regular claims payment cycle.
+
+R414-504-4. Quality Improvement Incentive.
+
+(1) Reimbursement for Nursing Home Quality Improvement Incentives is in accordance with Attachment 4.19-D of the Medicaid State Plan, which is incorporated by reference in Rule R414-1.
+
+(2) DIH staff are not required to request additional information relating to any application submission.
+
+(3) Providers shall ensure all necessary information is included in the application to qualify.
+
+(4) For applications received and reviewed by DIH staff before the annual submission deadline, if the application is incorrect or lacks sufficient supporting documentation, then the application shall be denied. If it is received before the annual
+
+submission deadline, the provider may submit a subsequent application that includes all needed supporting documentation for consideration.
+(5) For applications received before the annual submission deadline and reviewed by DIH staff after the annual submission deadline, then the provider's application may be considered for qualification of a reduced amount, where possible, based on the submitted documentation.
+
+(6) In all cases, the Department does not accept additional applications, documentation, or explanation if submitted after the annual submission deadline.
+
+R414-504-5. Reimbursement for Intermediate Care Facilities for Persons with Intellectual Disabilities.
+
+The following principles apply to the payment of community-based ICF/IDs licensed under Section 26B-2-212.
+
+(1) The Department pays according to rates established in Attachment 4.19-D of the Medicaid State Plan.
+
+(2)(a) Reimbursement for the ICF/ID quality improvement incentive is in accordance with Attachment 4.19-D of the Medicaid State Plan, which is incorporated by reference in Rule R414-1.
+
+(b) DIH staff are not required to request additional information relating to any application submission.
+
+(c) Providers must ensure they include necessary information in the application to qualify.
+
+(d) For applications received and reviewed by DIH staff before the annual submission deadline, the Department shall deny them if they are incorrect or lack sufficient supporting documentation. If the Department receives an application before the annual submission deadline, the provider may submit a subsequent application that includes needed supporting documentation for consideration.
+
+(e) For applications received before the annual submission deadline and reviewed by DIH staff after the annual submission deadline, the Department may consider the provider's application for qualification of a reduced amount, where possible, based on the submitted documentation.
+
+(f) The Department does not accept additional applications, documentation, or explanation if submitted after the annual submission deadline.
+
+R414-504-6. Moratorium Exception for Major Renovation as Allowable.
+
+(1) In accordance with Subsection 26B-3-311(7), a facility that requests to include beds as part of an exception qualifying major renovation, must submit to the Division of Integrated Healthcare an application within six months of approval of completing the renovation.
+
+(2) The requirement of $5,000 for each bed excludes interest payments, and calculates costs related only to the exception qualifying major renovation as prescribed under Subsection 26B-3-311(7).
+
+KEY: Medicaid
+
+Date of Last Change: July 2, 2025
+
+Notice of Continuation: October 12, 2022
+
+Authorizing, and Implemented or Interpreted Law: 26B-1-213; 26B-3-108
+
+SOURCE 12: R414-504 rule metadata — Utah Office of Administrative Rules (version witness for source 11) | https://adminrules.utah.gov/api/public/rule/R414-504/undefined/Current%20Rules | source date: carries its own effectiveDate field | retrieved: 2026-10-15
+{"number":"504","name":"Nursing Facility Payments","ruleType":"Current Rules","effectiveDate":"2025-07-02T09:44:12.19","effectiveEndDate":"2027-10-12T08:40:31.93","commentDate":"2025-05-16T00:00:00","commentDateEnd":"2025-06-14T20:29:07.1758595","referenceNumber":"R414-504","htmlDownload":"uac-html/285f3d84-7c8f-42a0-bf1f-cca3a6c68d83.html","htmlDownloadName":"R414-504.html","pdfDownload":"uac-pdf/285f3d84-7c8f-42a0-bf1f-cca3a6c68d83.pdf","pdfDownloadName":"R414-504.pdf","agencyName":"Health and Human Services","programName":"Integrated Healthcare","action":"Amendment","linkToRule":"https://adminrules.utah.gov/public/rule/R414-504/Current%20Rules"}
+
