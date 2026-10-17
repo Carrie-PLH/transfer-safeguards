@@ -1,0 +1,483 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: washington
+ASSEMBLED: 2026-10-17
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/washington.json (recipe digest 92618e36b910). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- SOURCE 1: transport curl; extractor html-text; scope #contentWrapper; filters strip-zero-width, trim-lines, collapse-blank-runs.
+  app.leg.wa.gov's RCW template wraps the section's operative text (the numbered subsections and the bracketed history/notes line) in <div id='contentWrapper'>, which sits below the page's title/caption block and prev-next navigation and excludes both -- narrower than 'main-page-content' (a sibling container on this same page that includes the prev/next links and a 'field: Citations' metadata row neither of which this page quotes) and confirmed present in both the RCW and WAC templates this state cites, so one scope value serves both sources. Plain curl, no browser user-agent needed (200).
+- SOURCE 2: transport curl; extractor html-text; scope #contentWrapper; filters strip-zero-width, trim-lines, collapse-blank-runs.
+  Same host, same #contentWrapper container as Source 1, confirmed present on this WAC-cite template too even though the two templates otherwise use different top-level wrapper classes ('main-page-content' on the RCW template is absent here). Plain curl, no browser user-agent needed (200).
+- SOURCE 3: transport curl; extractor html-text; scope body; filters strip-zero-width, trim-lines, collapse-blank-runs.
+  The page's own <main> element (5,960 chars) excludes the sitewide footer, where this program's phone (1-800-562-6028), fax, TTY number and street address (1200 S. 336th St, Federal Way) all sit; only the ltcop@mschelps.org address is inside <main>. body is the narrowest container that is honestly stated and holds every contact fact this page quotes -- a safe superset of the standing packet's own capture, which reads the same way (includes the same footer boilerplate: copyright line, 'Website Design by IlluminAge', social links). Plain curl, no browser user-agent needed (200).
+- SOURCE 4: transport curl; extractor html-text; scope #contentWrapper; filters strip-zero-width, trim-lines, collapse-blank-runs.
+  Added deepening the page to full: WAC 388-97-0120(4)(b) names this section as the state's own source for the social/therapeutic bed-hold day count, and this is Washington's only located first-party statement of a number rather than a duty to have a policy. Same #contentWrapper container and plain curl already confirmed on this host for sources 1-2.
+- SOURCE 5: transport curl; extractor html-text; scope #contentWrapper; filters strip-zero-width, trim-lines, collapse-blank-runs.
+  Added deepening the page to full: chapter 388-02 is DSHS's general hearing-procedure chapter ("Regulates all hearings involving DSHS"), reached because RCW 74.42.450(5) requires a department discharge notice to carry a hearing-request form and names no office of its own; this section states the chapter's own scope, including that a specific DSHS program's hearing rules prevail over it where one exists. Same #contentWrapper container as sources 1-2.
+- SOURCE 6: transport curl; extractor html-text; scope #contentWrapper; filters strip-zero-width, trim-lines, collapse-blank-runs.
+  Added deepening the page to full: the Office of Administrative Hearings' own address and phone, for the hearing right RCW 74.42.450(5)-(6) attaches to a department discharge decision. Same #contentWrapper container as sources 1-2.
+- SOURCE 7: transport curl; extractor html-text; scope #contentWrapper; filters strip-zero-width, trim-lines, collapse-blank-runs.
+  Added deepening the page to full: the chapter's own filing route (written or oral, and where to send a written request). Same #contentWrapper container as sources 1-2.
+- SOURCE 8: transport curl; extractor html-text; scope #contentWrapper; filters strip-zero-width, trim-lines, collapse-blank-runs.
+  Added deepening the page to full: this section states that the filing deadline varies by DSHS program and are the one place the chapter states a specific number (ninety days, for public assistance cases under RCW 74.08.080), which this page cites only to show that number is scoped away from nursing-facility discharge, not carried as this state's discharge-appeal deadline. Same #contentWrapper container as sources 1-2.
+
+SOURCE 1: RCW 74.42.450 | https://app.leg.wa.gov/RCW/default.aspx?cite=74.42.450 | source date: history line ends 2013 c 23 s 229 | retrieved: 2026-10-17
+(1) The facility shall admit as residents only those individuals whose needs can be met by:
+
+(a) The facility;
+
+(b) The facility cooperating with community resources; or
+
+(c) The facility cooperating with other providers of care affiliated or under contract with the facility.
+
+(2) The facility shall transfer a resident to a hospital or other appropriate facility when a change occurs in the resident's physical or mental condition that requires care or service that the facility cannot provide. The resident, the resident's guardian, if any, the resident's next of kin, the attending physician, and the department shall be consulted at least fifteen days before a transfer or discharge unless the resident is transferred under emergency circumstances. The department shall use casework services or other means to insure that adequate arrangements are made to meet the resident's needs.
+
+(3) A resident shall be transferred or discharged only for medical reasons, the resident's welfare or request, the welfare of other residents, or nonpayment. A resident may not be discharged for nonpayment if the discharge would be prohibited by the medicaid program.
+
+(4) If a resident chooses to remain in the nursing facility, the department shall respect that choice, provided that if the resident is a medicaid recipient, the resident continues to require a nursing facility level of care.
+
+(5) If the department determines that a resident no longer requires a nursing facility level of care, the resident shall not be discharged from the nursing facility until at least thirty days after written notice is given to the resident, the resident's surrogate decision maker and, if appropriate, a family member or the resident's representative. A form for requesting a hearing to appeal the discharge decision shall be attached to the written notice. The written notice shall include at least the following:
+
+(a) The reason for the discharge;
+
+(b) A statement that the resident has the right to appeal the discharge; and
+
+(c) The name, address, and telephone number of the state long-term care ombuds.
+
+(6) If the resident appeals a department discharge decision, the resident shall not be discharged without the resident's consent until at least thirty days after a final order is entered upholding the decision to discharge the resident.
+
+(7) Before the facility transfers or discharges a resident, the facility must first attempt through reasonable accommodations to avoid the transfer or discharge unless the transfer or discharge is agreed to by the resident. The facility shall admit or retain only individuals whose needs it can safely and appropriately serve in the facility with available staff or through the provision of reasonable accommodations required by state or federal law. "Reasonable accommodations" has the meaning given to this term under the federal Americans with disabilities act of 1990, 42 U.S.C. Sec. 12101 et seq. and other applicable federal or state antidiscrimination laws and regulations.
+
+[ 2013 c 23 s 229; 1997 c 392 s 216; 1995 1st sp.s. c 18 s 64; 1979 ex.s. c 211 s 45.]
+
+Notes:
+
+Short title—Findings—Construction—Conflict with federal requirements—Part headings and captions not law—1997 c 392: See notes following RCW 74.39A.009.
+
+Conflict with federal requirements—Severability—Effective date—1995 1st sp.s. c 18: See notes following RCW 74.39A.030.
+
+SOURCE 2: WAC 388-97-0120, Individual transfer and discharge rights and procedures | https://app.leg.wa.gov/WAC/default.aspx?cite=388-97-0120 | source date: WSR 26-08-015, filed 3/20/26, effective 4/20/26 | retrieved: 2026-10-17
+The department amended or repealed portions of this section to help facilitate care to align state nursing home rules with federal rules that were amended or suspended during the COVID-19 pandemic from April 13, 2020, through May 23, 2023, in response to the state of emergency. For requirements in place during that time, see WAC 388-97-01201.
+
+(1) The skilled nursing facility and nursing facility must comply with all of the requirements of 42 C.F.R. § 483.10 and § 483.12, and RCW 74.42.450, or successor laws, and the nursing home must comply with all of the requirements of RCW 74.42.450 (1) through (4) and (7), or successor laws, including the following provisions and must not transfer or discharge any resident unless:
+
+(a) At the resident's request;
+
+(b) The transfer or discharge is necessary for the resident's welfare and the resident's needs cannot be met in the facility;
+
+(c) The transfer or discharge is appropriate because the resident's health has improved enough so the resident no longer needs the services provided by the facility;
+
+(d) The safety of individuals in the facility is endangered;
+
+(e) The health of individuals in the facility would otherwise be endangered; or
+
+(f) The resident has failed, after reasonable and appropriate notice, to pay for a stay at the facility.
+
+(2) The following notice requirements apply if a nursing home/facility initiates the transfer or discharge of a resident. The notice must:
+
+(a) Include all information required by 42 C.F.R. § 483.12 when given in a nursing facility;
+
+(b) Be in writing, in language the resident understands;
+
+(c) Be given to the resident, the resident's surrogate decision maker, if any, the resident's family, and to the department;
+
+(d) Be provided 30 days in advance of a transfer or discharge initiated by the nursing facility, except that the notice may be given as soon as practicable when the facility cannot meet the resident's urgent medical needs, or under the conditions described in (1)(c), (d), and (e) of this section; and
+
+(e) Be provided 15 days in advance of a transfer or discharge initiated by the nursing home, unless the transfer is an emergency.
+
+(3) The nursing home must:
+
+(a) Provide sufficient preparation and orientation to the resident to ensure safe and orderly transfer or discharge from the nursing home;
+
+(b) Attempt to avoid the transfer or discharge of a resident from the nursing home through the use of reasonable accommodations unless agreed to by the resident and the requirements of WAC 388-97-0080 are met; and
+
+(c) Develop and implement a bed-hold policy. This policy must be consistent with any bed-hold policy that the department develops.
+
+(4) The nursing home must provide the bed-hold policy, in written format, to the resident, and a family member, before the resident is transferred or goes on therapeutic leave. At a minimum the policy must state:
+
+(a) The number of days, if any, the nursing home will hold a resident's bed pending return from hospitalization or social/therapeutic leave;
+
+(b) That a medicaid eligible resident, whose hospitalization or social/therapeutic leave exceeds the maximum number of bed-hold days will be readmitted to the first available semi-private bed, provided the resident needs nursing facility services. Social/therapeutic leave is defined under WAC 388-97-0001. The number of days of social/therapeutic leave allowed for medicaid residents and the authorization process is found under WAC 388-97-0160; and
+
+(c) That a medicaid eligible resident may be charged if they request that a specific bed be held, but may not be charged a bed-hold fee for the right to return to the first available bed in a semi-private room.
+
+(5) The nursing facility must send a copy of the federally required transfer or discharge notice to:
+
+(a) The department's home and community services when the nursing home has determined under WAC 388-97-0100, that the medicaid resident's health has improved sufficiently so that the resident no longer needs the services provided by the facility; and
+
+(b) The department's designated local office when the transfer or discharge is for any of the following reasons:
+
+(i) The resident's needs cannot be met in the facility;
+
+(ii) The health or safety of individuals in the facility is endangered; or
+
+(iii) The resident has failed to pay for, or to have paid under medicare or medicaid, a stay at the facility.
+
+[Statutory Authority: RCW 74.42.620. WSR 26-08-015, s 388-97-0120, filed 3/20/26, effective 4/20/26. Statutory Authority: Chapters 18.51 and 74.42 RCW and 42 C.F.R. 489.52. WSR 08-20-062, § 388-97-0120, filed 9/24/08, effective 11/1/08.]
+
+SOURCE 3: Washington State Long-Term Care Ombudsman Program — home page | https://www.waombudsman.org/ | source date: none stated beyond the 2026 copyright line | retrieved: 2026-10-17
+Skip to content
+Accessibility tools
+
+ltcop@mschelps.org1-800-562-6028253-815-8173
+
+Contact
+
+Subscribe
+
+Facebook
+YouTube
+
+Home
+
+About
+
+About Us
+
+Staff
+
+FAQ
+
+Careers
+
+Access to Program Records
+
+Grievance Policy
+
+Get Involved
+
+Donate
+
+Volunteer
+
+Share Your Story
+
+Subscribe
+
+Our Work
+
+Our Work
+
+Reports
+
+Policy
+
+Resident Advisory Council
+
+Education
+
+Consumer Information
+
+Resources
+
+Find an Ombuds
+
+File a Complaint
+
+What is an Ombuds?
+
+What exactly does the Ombudsman Program do?
+
+Learn More
+
+What is an Ombuds?
+
+Volunteer
+
+Volunteers are the backbone of our program, and we need you!
+
+Learn More
+
+Volunteer
+
+Consumer Education
+
+Check out our latest information!
+
+Learn More
+
+Consumer Education
+
+Podcast
+
+Listen to our new podcast, “Please Knock Before Entering!”
+
+Learn More
+
+Podcast
+
+File a Complaint
+
+You have the option to remain anonymous.
+Learn More
+
+Resident Rights
+
+State laws that protect long-term care residents.
+Learn More
+
+Find an Ombuds
+
+Locate the office and contact person
+nearest to you.
+Learn More
+
+Volunteer
+
+Volunteers are the backbone of our program, and we need you!
+Learn More
+
+Washington State Long-Term Care Ombudsman Program
+
+“Ensuring the rights, dignity, and well-being of individuals living in long-term care today and tomorrow.”
+
+The Washington State Long-Term Care Ombudsman advocates for residents of nursing homes, adult family homes, and assisted living facilities. Our purpose is to protect and promote the Resident Rights guaranteed these residents under federal and state law and regulations.
+
+We are trained to receive complaints and resolve problems in situations involving quality of care, use of restraints, transfer and discharge, abuse and other aspects of resident dignity and rights.
+
+LTCOP Bill Status & Upcoming Events
+
+CLICK HERE to view the Bill Status Report provided by our Lobbyist, Melanie Smith for more information.
+
+Events this week: TBD
+
+Bill # | Abbrev. Title | Short Description | Status | Sponsor | Position | Priority
+
+SHB 1390 | Community protection program | Repealing the community protection program. | S Rules 2 | Goodman | Support | Low
+
+SHB 2152 (SB 5900) | Cannabis/health facilities | Permitting the medical use of cannabis by qualifying patients in specified health care facilities. | S Ways & Means | Kloba | |
+
+ESHB 2242 (SB 5967) | Preventive health services | Preserving access to preventive services by clarifying state authority and definitions. | S Passed 3rd | Bronoske | Support | Low
+
+ESHB 2319 | DD RHC facilities renaming | Renaming certain state residential facilities for persons with developmental disabilities. | S Rules 2 | Farivar | Support | Low
+
+SHB 2350 | DD RHC federal compliance | Increasing transparency regarding residential habilitation center compliance with certain federal requirements. | S Rules 2 | Farivar | Support | Low
+
+SHB 2355 (SSB 6053) | Domestic workers | Establishing labor protections for domestic workers. | S Passed 3rd | Thomas | Support | Low
+
+2SHB 2384 | Continuing care retirement | Increasing regulatory oversight of continuing care retirement communities. | S Rules 2 | Macri | Support | Low
+
+SHB 2505 (SSB 6036) | Adult family home licensure | Exempting certain former foster care providers from adult family home licensure. | S Rules 2 | Eslick | Neutral | Monitoring
+
+ESSB 5837 | Guardianship, etc. | Concerning guardianship, conservatorship, and other protective arrangements. | H Rules R | Pedersen | Support | Medium
+
+E2SSB 6070 | Recovery of missing persons | Supporting the recovery of missing persons. | H Rules R | Dhingra | Support | Low
+
+New Regulations Regarding Community Based Settings and the Discharge of Medicaid Residents
+
+Beginning January 1, 2026, assisted living facilities, adult family homes, and enhanced services facilities must notify the State LTC Ombuds of transfers and discharges of Medicaid recipients under new state regulations. The new WAC requirements can be found at WAC 388-78A-2661 (assisted living facilities); WAC 388-76-10617 (adult family homes); WAC 388-107-0281 (enhanced services facilities).
+
+Click Here for a Frequency Asked Questions resource created by the State LTCOP Office to support you in implementing the new requirements.
+
+Please include your facility’s address (on the cover sheet or on the notice) so that we can identify the right resident in the right facility. Please complete all the fields on the DSHS Transfer/Discharge form, and please print legibly.
+
+If you or your team members have any questions about the FAQ, please feel free to email at ltcop@mschelps.org or contact the State LTCOP office by phone at 1.800.562.6028.
+
+Other helpful resources for these new requirements are RCS, your provider member association or your legal counsel.
+
+Legal Counsel for Long-Term Care
+Office of Civil Legal Aid
+
+The new legal services program for Medicaid residents who are facing discharge or eviction from a community based care setting.
+
+(888) 437-0017
+Resources
+
+15-458
+HCBS Notice of Transfer/Discharge Form
+
+Click Here to view the Form
+Click Here to View Form
+
+HCBS Discharge Contact Info
+HCBS Discharge Postcard
+
+Click Here to view the HCBS Discharge Postcard
+
+Facility DSHS/Ombudsman Poster
+
+WAC 388-97-0300
+
+A posting of names, addresses, and telephone numbers of all relevant state client advocacy groups such as the state survey and certification agency, the state licensure office, the state ombuds program, the protection and advocacy network, and the medicaid fraud control unit
+
+English Cambodian Korean Vietnamese
+
+NORC, ALTSA, Justice in Aging, Etc.
+
+Who is my Regional Ombudsman?
+
+Find my Ombuds
+
+Contact Us
+
+ltcop@mschelps.org
+
+1-800-562-6028
+
+Fax: 253-815-8173
+
+TTY Number: 711
+
+1200 S. 336th St, Federal Way, WA 98003
+
+Privacy Statement
+
+Accessibility
+
+Copyright © 2026
+
+ Washington State Long-Term Care Ombudsman Program
+
+ All rights reserved.
+
+Website Design by IlluminAge
+
+Facebook
+YouTube
+
+Contrast
+
+AaFont Size
+
+Search
+
+SOURCE 4: WAC 388-97-0160, Discharge or leave of a nursing facility resident | https://app.leg.wa.gov/WAC/default.aspx?cite=388-97-0160 | source date: WSR 08-20-062, filed 9/24/08, effective 11/1/08 | retrieved: 2026-10-17
+(1) A nursing facility must send immediate written notification of the date of discharge or death of a medicaid resident to the department's local home and community service office.
+
+(2) The nursing facility must:
+
+(a) Notify the department of nursing facility discharge and readmission for all medicaid recipients admitted as hospital inpatients; and
+
+(b) Document in the resident's clinical record all social/therapeutic leave exceeding twenty-four hours.
+
+(3) The department will pay the nursing facility for a medicaid resident's social/therapeutic leave not to exceed a total of eighteen days per calendar year per resident.
+
+(4) The department's home and community services may authorize social/therapeutic leave exceeding eighteen days per calendar year per resident when requested by the nursing facility or by the resident. In the absence of prior authorization from the department's home and community services, the department will not make payment to a nursing facility for leave days exceeding eighteen per calendar year per resident.
+
+(5) An individual who is on social/therapeutic leave retains the status of a nursing facility resident.
+
+[Statutory Authority: Chapters 18.51 and 74.42 RCW and 42 C.F.R. 489.52. WSR 08-20-062, § 388-97-0160, filed 9/24/08, effective 11/1/08.]
+
+SOURCE 5: WAC 388-02-0005, What is the purpose and scope of this chapter? | https://app.leg.wa.gov/WAC/default.aspx?cite=388-02-0005 | source date: no per-section date beyond the chapter's own filing history | retrieved: 2026-10-17
+This chapter describes the general procedures that apply to the resolution of disputes between you and the various programs within the department of social and health services (DSHS). The rules of this chapter are intended to supplement for DSHS both the Administrative Procedure Act (APA), chapter 34.05 RCW, and the model rules, chapter 10-08 WAC, adopted by the office of administrative hearings (OAH).
+
+(1) This chapter:
+
+(a) Establishes rules encouraging informal dispute resolution between DSHS and persons or entities who disagree with its actions;
+
+(b) Regulates all hearings involving DSHS; and
+
+(c) Consolidates most DSHS hearing procedural rules into one chapter.
+
+(2) Nothing in this chapter is intended to affect the constitutional rights of any person or to limit or change additional requirements imposed by statute or other rule. Other laws or rules determine if you have a hearing right, including the APA and DSHS program rules or laws.
+
+(3) Specific DSHS program hearing rules prevail over the rules in this chapter.
+
+(4) Rules encouraging informal dispute resolution between the health care authority and persons or entities who disagree with its actions, and regulating hearings for the medical services programs established under chapter 74.09 RCW are governed by chapter 182-526 WAC.
+
+[Statutory Authority: RCW 34.05.020. WSR 13-05-028, § 388-02-0005, filed 2/12/13, effective 3/15/13. Statutory Authority: RCW 74.09.741 and 34.05.020. WSR 12-05-043, § 388-02-0005, filed 2/10/12, effective 2/25/12. Statutory Authority: RCW 34.05.020. WSR 00-18-059, § 388-02-0005, filed 9/1/00, effective 10/2/00.]
+
+SOURCE 6: WAC 388-02-0025, Where is the office of administrative hearings located? | https://app.leg.wa.gov/WAC/default.aspx?cite=388-02-0025 | source date: no per-section date beyond the chapter's own filing history | retrieved: 2026-10-17
+(1) The office of administrative hearings (OAH) headquarters location is:
+
+(a) Office of Administrative Hearings
+
+2420 Bristol Court SW
+
+P.O. Box 42488
+
+Olympia WA 98504-2488
+
+(360) 407-2700
+
+(360) 664-8721 (fax)
+
+(b) The headquarters office is open from 8:00 a.m. to 5:00 p.m. Monday through Friday, except legal holidays.
+
+(2) OAH field offices are at the following locations:
+
+(a) Olympia
+
+Office of Administrative Hearings
+
+2420 Bristol Court SW
+
+P.O. Box 42489
+
+Olympia, WA 98504-2489
+
+fax: (360) 586-6563
+
+(b) Seattle
+
+Office of Administrative Hearings
+
+Closed to the public, see the call center for contact information
+
+fax: (206) 587-5135
+
+(c) SpokaneValley
+
+Office of Administrative Hearings
+
+16201 E. Indiana Avenue, Suite 3000
+
+Spokane Valley, WA 99216
+
+(509) 742-5747
+
+fax: (509) 456-3980 & (509) 456-3997
+
+(d)Tacoma
+
+Office of Administrative Hearings
+
+4301 S. Pine St, Suite 200
+
+Tacoma, WA 98409
+
+(253) 476-6888
+
+Effective 11/18/2024, open by appointment only
+
+fax (253) 593-2200
+
+(3) You should contact the call center, under subsection (2) of this section, if you do not know the correct field office.
+
+Call center telephone: (360) 407-2700
+
+Toll free: (800) 583-8271
+
+Call center is open from 7:00 a.m. to 5:00 p.m. Monday through Friday, except legal holidays.
+
+(4) You can obtain further hearing information at the OAH website: www.oah.wa.gov.
+
+[Statutory Authority: RCW 34.05.020, 34.05.220, and 34.05.353. WSR 25-21-040, s 388-02-0025, filed 10/9/25, effective 11/9/25. Statutory Authority: RCW 34.05.020 and 34.05.353. WSR 15-23-048, § 388-02-0025, filed 11/12/15, effective 12/13/15; WSR 14-11-094, § 388-02-0025, filed 5/21/14, effective 6/21/14. Statutory Authority: RCW 34.05.020, 34.05.220. WSR 11-04-074, § 388-02-0025, filed 1/31/11, effective 3/3/11. Statutory Authority: RCW 34.05.353. WSR 09-05-032, § 388-02-0025, filed 2/11/09, effective 3/14/09. Statutory Authority: RCW 34.05.020 and chapter 34.05 RCW, Parts IV and V. WSR 05-22-076, § 388-02-0025, filed 10/31/05, effective 12/1/05. Statutory Authority: RCW 34.05.020, chapter 34.05 RCW, Parts IV and V, 2002 c 371 § 211. WSR 02-21-061, § 388-02-0025, filed 10/15/02, effective 11/15/02. Statutory Authority: RCW 34.05.020. WSR 00-18-059, § 388-02-0025, filed 9/1/00, effective 10/2/00.]
+
+SOURCE 7: WAC 388-02-0100, How do you request a hearing? | https://app.leg.wa.gov/WAC/default.aspx?cite=388-02-0100 | source date: no per-section date beyond the chapter's own filing history | retrieved: 2026-10-17
+(1) You may request a hearing in writing or orally, depending upon which program is involved. The DSHS notice and applicable laws and rules should tell you whether the request must be in writing or may be made orally.
+
+(2) If you are allowed to make an oral request, you may do so to a DSHS or OAH employee in person or by telephone or voice mail.
+
+(3) You may send a written request by mail, delivery service, personal service, or by fax if you mail a copy the same day. You should send written requests to the location on the notice or to OAH at the location specified in WAC 388-02-0025(2).
+
+[Statutory Authority: RCW 34.05.020. WSR 00-18-059, § 388-02-0100, filed 9/1/00, effective 10/2/00.]
+
+SOURCE 8: WAC 388-02-0085, Do you have a right to a hearing? | https://app.leg.wa.gov/WAC/default.aspx?cite=388-02-0085 | source date: no per-section date beyond the chapter's own filing history | retrieved: 2026-10-17
+(1) You have a right to a hearing only if a law or DSHS rule gives you that right. If you are not sure, you should request a hearing to protect your right.
+
+(2) Some DSHS programs may require you to go through an informal administrative process before you can request or have a hearing. The notice of DSHS action sent to you should include information about this requirement if it applies.
+
+(3) You have a limited time to request a hearing. The deadline for your request varies by the DSHS program involved. You should submit your request right away to protect your right to a hearing, even if you are also trying to resolve your dispute informally. For public assistance cases, if an applicant or recipient does not file a request for a hearing within 90 calendar days after receiving notice of an aggrieving decision, the request may still be filed within one year of the aggrieving decision upon a showing of good cause. For purposes of public assistance cases, as defined in RCW 74.08.080, good cause for not requesting a hearing before the deadline may include, but is not limited to: military deployment, medical reasons, housing instability, language barriers, or domestic violence.
+
+(4) If you request a hearing, one is scheduled.
+
+(5) If DSHS or the ALJ questions your right to a hearing, the ALJ decides whether you have that right.
+
+(6) If the ALJ decides you do not have a right to a hearing, your request is dismissed.
+
+(7) If the ALJ decides you do have a right to a hearing, the hearing proceeds.
+
+[Statutory Authority: RCW 34.05.220, 43.17.060, 43.20A.075, and 74.08.080(2). WSR 24-06-040, § 388-02-0085, filed 2/29/24, effective 4/1/24. Statutory Authority: RCW 34.05.020. WSR 00-18-059, § 388-02-0085, filed 9/1/00, effective 10/2/00.]
+

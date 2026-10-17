@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Office of the State Long-Term Care Ombudsman, in the Department for Aging and Rehabilitative Services: "The Long-Term Care Ombudsmen speak up for people in long-term care, whether they live in a nursing home, an assisted living facility, or are in their own homes with home and community based care." and "This program is managed by the Office of the State Long-Term Care Ombudsman." No statewide telephone number for the program is published on the page reviewed; the department publishes a locator, "Find Your Ombudsman", and its own general number, "Phone: 804-662-7000".
 
-**Sources last checked.** 2026-09-25
+**Sources last checked.** 2026-10-17
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

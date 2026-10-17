@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The program's own page, published by Vermont Legal Aid: "Call us at 1-800-889-2047 ext. 3 or fill out our online form. We will do our best to get back to you within three business days." The department's page states the arrangement — "DAIL contracts with Vermont Legal Aid to operate the Office of the State Long Term Care Ombudsman Program (SLTCOP)." — and prints "CALL:  800-889-2047". The rule requires the facility's notice to carry "the name, address and telephone number of the State Long Term Care Ombudsman;" (rule 3.14 e.5.), and the statute requires it to "include the address and phone number of the area ombudsman" (§ 7301(2)(D)).
 
-**Sources last checked.** 2026-09-26
+**Sources last checked.** 2026-10-17
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

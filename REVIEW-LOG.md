@@ -1102,3 +1102,45 @@ predates this pass), unchanged. check-all.py: 102 pages across 52 states, no
 unexplained failures. build-state-picker.py regenerated (51/51).
 check-live.py: 5 pages sampled, nothing loaded from any other host. Review
 cursor advanced to vermont. No queue entries opened.
+
+## 2026-10-17 — scheduled nightly QC (rr-state-review)
+
+Batch from cursor "vermont": vermont, virginia, washington. The Room &
+Recourse recipe exception (compare state-page count against recipe count
+before reviewing this collection) does not apply this pass: 51 of 51 real
+state pages have a matching recipe (55 recipe files on disk, covering a few
+extras beyond the 1:1 set), so this is an ordinary QC pass, not recipe
+construction.
+
+- **vermont — confirmed, first retention pass.** Fresh capture of all 7
+  sources (recipe 97fee5696430), curl. Zero fidelity failures, markdown and
+  HTML. No prior retention history existed for this slug; this pass's
+  capture (hash 72615a42dc1b26aa) became the baseline, promoted. Checked
+  date advanced to 2026-10-17.
+- **virginia — confirmed, first retention pass.** Fresh capture of all 4
+  sources (recipe c974353f8613), curl. Zero fidelity failures, markdown and
+  HTML. No prior retention history existed for this slug; this pass's
+  capture (hash b70221763949d906) became the baseline, promoted. Checked
+  date advanced to 2026-10-17.
+- **washington — confirmed.** Fresh capture of all 8 sources (recipe
+  92618e36b910), curl. Zero fidelity failures, markdown and HTML. Unchanged
+  since the 2026-09-21-b capture (hash b93df384f0b0a349), promoted. Checked
+  date advanced to 2026-10-17.
+
+sync-checked-dates.py corrected 6 derived dates (table + JSON for vermont,
+virginia and washington). build-status.py: 51/51 baseline, 50/51 full
+(North Dakota gap predates this pass), unchanged. check-all.py: 102 pages
+across 52 states, no unexplained failures. build-state-picker.py
+regenerated (51/51 published). check-live.py: 5 pages sampled, nothing
+loaded from any other host. Review cursor advanced to west-virginia. No
+queue entries opened.
+
+Pre-existing, unrelated working-tree changes found at the start of this
+pass and left untouched throughout: states/delaware.md, states/idaho.md,
+states/illinois.md, states/indiana.md, states/iowa.md, states/kansas.md,
+states/kentucky.md, states/louisiana.md, states/maine.md,
+states/maryland.md, states/massachusetts.md, states/minnesota.md and
+their site/states/ counterparts, plus tools/spn-ledger.json — apparent
+leftovers from an uncommitted archive (spn.py) capture pass, the same
+pattern found in sped-safeguards and Licensure Mobility this same visit.
+None of it was touched or staged by this pass.

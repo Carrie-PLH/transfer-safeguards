@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Washington State Long-Term Care Ombudsman Program, whose published contacts are "ltcop@mschelps.org", "1-800-562-6028", "Fax: 253-815-8173", "TTY Number: 711" and "1200 S. 336th St, Federal Way, WA 98003". The programme also names a separate legal service: "Legal Counsel for Long-Term Care Office of Civil Legal Aid The new legal services program for Medicaid residents who are facing discharge or eviction from a community based care setting." at "(888) 437-0017".
 
-**Sources last checked.** 2026-09-21
+**Sources last checked.** 2026-10-17
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

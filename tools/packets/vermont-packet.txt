@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: vermont
-ASSEMBLED: 2026-09-26
+ASSEMBLED: 2026-10-17
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/vermont.json (recipe digest 97fee5696430). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -20,7 +20,7 @@ CAPTURE NOTES:
 - SOURCE 7: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
   The program's own page, published by the contractor that operates the Office of the State Long-Term Care Ombudsman under DAIL's designation (source 6 states the arrangement). Quoted as the program's own published contact; the department's page is quoted beside it where they differ.
 
-SOURCE 1: 33 V.S.A. chapter 73, Nursing Home Residents' Bill of Rights (§§ 7301-7306) — Vermont Statutes Online, Vermont General Assembly | https://legislature.vermont.gov/statutes/fullchapter/33/073 | source date: each section carries its own amendment history; § 7301 last amended 2021, No. 105 (Adj. Sess.), § 627, eff. July 1, 2022; § 7302 last amended 2023, No. 53, § 130, eff. June 8, 2023 | retrieved: 2026-09-26
+SOURCE 1: 33 V.S.A. chapter 73, Nursing Home Residents' Bill of Rights (§§ 7301-7306) — Vermont Statutes Online, Vermont General Assembly | https://legislature.vermont.gov/statutes/fullchapter/33/073 | source date: each section carries its own amendment history; § 7301 last amended 2021, No. 105 (Adj. Sess.), § 627, eff. July 1, 2022; § 7302 last amended 2023, No. 53, § 130, eff. June 8, 2023 | retrieved: 2026-10-17
 Skip to content
 Skip to navigation
 Skip to subnav
@@ -439,9 +439,14 @@ Print
 
 The Vermont Statutes Online
 
-The Statutes below include the actions of the 2025 session of the General Assembly.
+The Statutes below now include the actions of the 2026 session of the General Assembly.
 
 NOTE: The Vermont Statutes Online is an unofficial copy of the Vermont Statutes Annotated that is provided as a convenience.
+
+Statutes›
+Title 33›
+Chapter 073›
+ Full Text
 
 Title 33: Human Services
 
@@ -798,7 +803,7 @@ Copyright 2026 State of Vermont. All rights reserved.
 
 Website Design & Development by Bluehouse Group
 
-SOURCE 2: Licensing and Operating Rules for Nursing Homes — Vermont Agency of Human Services, Department of Disabilities, Aging and Independent Living, Division of Licensing and Protection (PDF) | https://dail.vermont.gov/sites/dail/files/documents/Nursing_Home_Regulations_2018.pdf | source date: Revision date: June 1, 2018, as the cover states | retrieved: 2026-09-26
+SOURCE 2: Licensing and Operating Rules for Nursing Homes — Vermont Agency of Human Services, Department of Disabilities, Aging and Independent Living, Division of Licensing and Protection (PDF) | https://dail.vermont.gov/sites/dail/files/documents/Nursing_Home_Regulations_2018.pdf | source date: Revision date: June 1, 2018, as the cover states | retrieved: 2026-10-17
 LICENSING AND OPERATING
  RULES FOR NURSING HOMES
 
@@ -2652,7 +2657,7 @@ l.   Emergency Transfer or Discharge of Residents. An emergency discharge or tra
 
                                                 38
 
-SOURCE 3: Nursing Home Sample Discharge-Transfer Notice — Vermont Division of Licensing and Protection (page) | https://dlp.vermont.gov/nursing-home-sample-discharge-transfer-notice | source date: Tuesday, April 23, 2019 - 12:00, as the page dates its posting | retrieved: 2026-09-26
+SOURCE 3: Nursing Home Sample Discharge-Transfer Notice — Vermont Division of Licensing and Protection (page) | https://dlp.vermont.gov/nursing-home-sample-discharge-transfer-notice | source date: Tuesday, April 23, 2019 - 12:00, as the page dates its posting | retrieved: 2026-10-17
 Skip to main content
 
 An Official Vermont Government
@@ -2741,7 +2746,7 @@ For Telecommunications Relay Service: Dial 711
 
 Adult Protective Services Reporting Line
 
-(800) 564-1612
+(800) 564-1612 Online Report
 
 Healthcare Organization Complaint Reporting Line
 
@@ -2781,7 +2786,7 @@ Accessibility
 
 Privacy
 
-SOURCE 4: Nursing Home Transfer/Discharge Letter, sample notice — Vermont Division of Licensing and Protection (PDF) | https://dlp.vermont.gov/sites/dlp/files/documents/Nursing_Home_Transfer_Discharge_Letter.pdf | source date: none stated in the document; posted April 23, 2019 per source 3 | retrieved: 2026-09-26
+SOURCE 4: Nursing Home Transfer/Discharge Letter, sample notice — Vermont Division of Licensing and Protection (PDF) | https://dlp.vermont.gov/sites/dlp/files/documents/Nursing_Home_Transfer_Discharge_Letter.pdf | source date: none stated in the document; posted April 23, 2019 per source 3 | retrieved: 2026-10-17
 *DISCLAIMER: This is only a guide/helpful tool. Be sure to carefully examine the regulatory
 requirements for your type of facility to ensure your notice meets applicable requirements.*
 
@@ -2867,7 +2872,7 @@ Sincerely,
 cc: LTC Ombudsman (required)
    (any other applicable parties)
 
-SOURCE 5: Human Services Board — Vermont Agency of Human Services | https://humanservices.vermont.gov/human-services-board | source date: none stated on page | retrieved: 2026-09-26
+SOURCE 5: Human Services Board — Vermont Agency of Human Services | https://humanservices.vermont.gov/human-services-board | source date: none stated on page | retrieved: 2026-10-17
 Skip to main content
 
 An Official Vermont Government
@@ -3119,7 +3124,7 @@ Accessibility
 
 Privacy
 
-SOURCE 6: State Long-Term Care Ombudsman Program — Adult Services Division, Vermont Department of Disabilities, Aging and Independent Living | https://asd.vermont.gov/services/ltc-ombudsman-program | source date: none stated on page | retrieved: 2026-09-26
+SOURCE 6: State Long-Term Care Ombudsman Program — Adult Services Division, Vermont Department of Disabilities, Aging and Independent Living | https://asd.vermont.gov/services/ltc-ombudsman-program | source date: none stated on page | retrieved: 2026-10-17
 Skip to main content
 
 An Official Vermont Government
@@ -3355,7 +3360,7 @@ Accessibility
 
 Privacy
 
-SOURCE 7: Vermont Long-Term Care Ombudsman Project — Vermont Legal Aid | https://www.vtlegalaid.org/legal-projects/long-term-care-ombudsman | source date: none stated on page | retrieved: 2026-09-26
+SOURCE 7: Vermont Long-Term Care Ombudsman Project — Vermont Legal Aid | https://www.vtlegalaid.org/legal-projects/long-term-care-ombudsman | source date: none stated on page | retrieved: 2026-10-17
 Skip to main content
 
  Vermont Legal Aid

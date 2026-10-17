@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: washington
-ASSEMBLED: 2026-09-21
+ASSEMBLED: 2026-10-17
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/washington.json (recipe digest 92618e36b910). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -22,7 +22,7 @@ CAPTURE NOTES:
 - SOURCE 8: transport curl; extractor html-text; scope #contentWrapper; filters strip-zero-width, trim-lines, collapse-blank-runs.
   Added deepening the page to full: this section states that the filing deadline varies by DSHS program and are the one place the chapter states a specific number (ninety days, for public assistance cases under RCW 74.08.080), which this page cites only to show that number is scoped away from nursing-facility discharge, not carried as this state's discharge-appeal deadline. Same #contentWrapper container as sources 1-2.
 
-SOURCE 1: RCW 74.42.450 | https://app.leg.wa.gov/RCW/default.aspx?cite=74.42.450 | source date: history line ends 2013 c 23 s 229 | retrieved: 2026-09-21
+SOURCE 1: RCW 74.42.450 | https://app.leg.wa.gov/RCW/default.aspx?cite=74.42.450 | source date: history line ends 2013 c 23 s 229 | retrieved: 2026-10-17
 (1) The facility shall admit as residents only those individuals whose needs can be met by:
 
 (a) The facility;
@@ -57,7 +57,7 @@ Short title—Findings—Construction—Conflict with federal requirements—Par
 
 Conflict with federal requirements—Severability—Effective date—1995 1st sp.s. c 18: See notes following RCW 74.39A.030.
 
-SOURCE 2: WAC 388-97-0120, Individual transfer and discharge rights and procedures | https://app.leg.wa.gov/WAC/default.aspx?cite=388-97-0120 | source date: WSR 26-08-015, filed 3/20/26, effective 4/20/26 | retrieved: 2026-09-21
+SOURCE 2: WAC 388-97-0120, Individual transfer and discharge rights and procedures | https://app.leg.wa.gov/WAC/default.aspx?cite=388-97-0120 | source date: WSR 26-08-015, filed 3/20/26, effective 4/20/26 | retrieved: 2026-10-17
 The department amended or repealed portions of this section to help facilitate care to align state nursing home rules with federal rules that were amended or suspended during the COVID-19 pandemic from April 13, 2020, through May 23, 2023, in response to the state of emergency. For requirements in place during that time, see WAC 388-97-01201.
 
 (1) The skilled nursing facility and nursing facility must comply with all of the requirements of 42 C.F.R. § 483.10 and § 483.12, and RCW 74.42.450, or successor laws, and the nursing home must comply with all of the requirements of RCW 74.42.450 (1) through (4) and (7), or successor laws, including the following provisions and must not transfer or discharge any resident unless:
@@ -116,7 +116,7 @@ The department amended or repealed portions of this section to help facilitate c
 
 [Statutory Authority: RCW 74.42.620. WSR 26-08-015, s 388-97-0120, filed 3/20/26, effective 4/20/26. Statutory Authority: Chapters 18.51 and 74.42 RCW and 42 C.F.R. 489.52. WSR 08-20-062, § 388-97-0120, filed 9/24/08, effective 11/1/08.]
 
-SOURCE 3: Washington State Long-Term Care Ombudsman Program — home page | https://www.waombudsman.org/ | source date: none stated beyond the 2026 copyright line | retrieved: 2026-09-21
+SOURCE 3: Washington State Long-Term Care Ombudsman Program — home page | https://www.waombudsman.org/ | source date: none stated beyond the 2026 copyright line | retrieved: 2026-10-17
 Skip to content
 Accessibility tools
 
@@ -342,7 +342,7 @@ AaFont Size
 
 Search
 
-SOURCE 4: WAC 388-97-0160, Discharge or leave of a nursing facility resident | https://app.leg.wa.gov/WAC/default.aspx?cite=388-97-0160 | source date: WSR 08-20-062, filed 9/24/08, effective 11/1/08 | retrieved: 2026-09-21
+SOURCE 4: WAC 388-97-0160, Discharge or leave of a nursing facility resident | https://app.leg.wa.gov/WAC/default.aspx?cite=388-97-0160 | source date: WSR 08-20-062, filed 9/24/08, effective 11/1/08 | retrieved: 2026-10-17
 (1) A nursing facility must send immediate written notification of the date of discharge or death of a medicaid resident to the department's local home and community service office.
 
 (2) The nursing facility must:
@@ -359,7 +359,7 @@ SOURCE 4: WAC 388-97-0160, Discharge or leave of a nursing facility resident | h
 
 [Statutory Authority: Chapters 18.51 and 74.42 RCW and 42 C.F.R. 489.52. WSR 08-20-062, § 388-97-0160, filed 9/24/08, effective 11/1/08.]
 
-SOURCE 5: WAC 388-02-0005, What is the purpose and scope of this chapter? | https://app.leg.wa.gov/WAC/default.aspx?cite=388-02-0005 | source date: no per-section date beyond the chapter's own filing history | retrieved: 2026-09-21
+SOURCE 5: WAC 388-02-0005, What is the purpose and scope of this chapter? | https://app.leg.wa.gov/WAC/default.aspx?cite=388-02-0005 | source date: no per-section date beyond the chapter's own filing history | retrieved: 2026-10-17
 This chapter describes the general procedures that apply to the resolution of disputes between you and the various programs within the department of social and health services (DSHS). The rules of this chapter are intended to supplement for DSHS both the Administrative Procedure Act (APA), chapter 34.05 RCW, and the model rules, chapter 10-08 WAC, adopted by the office of administrative hearings (OAH).
 
 (1) This chapter:
@@ -378,7 +378,7 @@ This chapter describes the general procedures that apply to the resolution of di
 
 [Statutory Authority: RCW 34.05.020. WSR 13-05-028, § 388-02-0005, filed 2/12/13, effective 3/15/13. Statutory Authority: RCW 74.09.741 and 34.05.020. WSR 12-05-043, § 388-02-0005, filed 2/10/12, effective 2/25/12. Statutory Authority: RCW 34.05.020. WSR 00-18-059, § 388-02-0005, filed 9/1/00, effective 10/2/00.]
 
-SOURCE 6: WAC 388-02-0025, Where is the office of administrative hearings located? | https://app.leg.wa.gov/WAC/default.aspx?cite=388-02-0025 | source date: no per-section date beyond the chapter's own filing history | retrieved: 2026-09-21
+SOURCE 6: WAC 388-02-0025, Where is the office of administrative hearings located? | https://app.leg.wa.gov/WAC/default.aspx?cite=388-02-0025 | source date: no per-section date beyond the chapter's own filing history | retrieved: 2026-10-17
 (1) The office of administrative hearings (OAH) headquarters location is:
 
 (a) Office of Administrative Hearings
@@ -455,7 +455,7 @@ Call center is open from 7:00 a.m. to 5:00 p.m. Monday through Friday, except le
 
 [Statutory Authority: RCW 34.05.020, 34.05.220, and 34.05.353. WSR 25-21-040, s 388-02-0025, filed 10/9/25, effective 11/9/25. Statutory Authority: RCW 34.05.020 and 34.05.353. WSR 15-23-048, § 388-02-0025, filed 11/12/15, effective 12/13/15; WSR 14-11-094, § 388-02-0025, filed 5/21/14, effective 6/21/14. Statutory Authority: RCW 34.05.020, 34.05.220. WSR 11-04-074, § 388-02-0025, filed 1/31/11, effective 3/3/11. Statutory Authority: RCW 34.05.353. WSR 09-05-032, § 388-02-0025, filed 2/11/09, effective 3/14/09. Statutory Authority: RCW 34.05.020 and chapter 34.05 RCW, Parts IV and V. WSR 05-22-076, § 388-02-0025, filed 10/31/05, effective 12/1/05. Statutory Authority: RCW 34.05.020, chapter 34.05 RCW, Parts IV and V, 2002 c 371 § 211. WSR 02-21-061, § 388-02-0025, filed 10/15/02, effective 11/15/02. Statutory Authority: RCW 34.05.020. WSR 00-18-059, § 388-02-0025, filed 9/1/00, effective 10/2/00.]
 
-SOURCE 7: WAC 388-02-0100, How do you request a hearing? | https://app.leg.wa.gov/WAC/default.aspx?cite=388-02-0100 | source date: no per-section date beyond the chapter's own filing history | retrieved: 2026-09-21
+SOURCE 7: WAC 388-02-0100, How do you request a hearing? | https://app.leg.wa.gov/WAC/default.aspx?cite=388-02-0100 | source date: no per-section date beyond the chapter's own filing history | retrieved: 2026-10-17
 (1) You may request a hearing in writing or orally, depending upon which program is involved. The DSHS notice and applicable laws and rules should tell you whether the request must be in writing or may be made orally.
 
 (2) If you are allowed to make an oral request, you may do so to a DSHS or OAH employee in person or by telephone or voice mail.
@@ -464,7 +464,7 @@ SOURCE 7: WAC 388-02-0100, How do you request a hearing? | https://app.leg.wa.go
 
 [Statutory Authority: RCW 34.05.020. WSR 00-18-059, § 388-02-0100, filed 9/1/00, effective 10/2/00.]
 
-SOURCE 8: WAC 388-02-0085, Do you have a right to a hearing? | https://app.leg.wa.gov/WAC/default.aspx?cite=388-02-0085 | source date: no per-section date beyond the chapter's own filing history | retrieved: 2026-09-21
+SOURCE 8: WAC 388-02-0085, Do you have a right to a hearing? | https://app.leg.wa.gov/WAC/default.aspx?cite=388-02-0085 | source date: no per-section date beyond the chapter's own filing history | retrieved: 2026-10-17
 (1) You have a right to a hearing only if a law or DSHS rule gives you that right. If you are not sure, you should request a hearing to protect your right.
 
 (2) Some DSHS programs may require you to go through an informal administrative process before you can request or have a hearing. The notice of DSHS action sent to you should include information about this requirement if it applies.
