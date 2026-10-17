@@ -60,6 +60,15 @@
       "last_result": "FAILED",
       "page": "idaho"
     },
+    "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016051926/https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T051943Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "maryland"
+    },
     "https://ahca.myflorida.com/content/download/27067/file/59G-4.200.pdf": {
       "attempts": 1,
       "last_attempt": "2026-09-21T111859Z",
@@ -97,6 +106,24 @@
       "last_detail": "submit-401",
       "last_result": "FAILED",
       "page": "arizona"
+    },
+    "https://apps.legislature.ky.gov/law/kar/titles/900/002/050/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016050407/https://apps.legislature.ky.gov/law/kar/titles/900/002/050/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T050422Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "kentucky"
+    },
+    "https://apps.legislature.ky.gov/law/kar/titles/900/002/060/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016050531/https://apps.legislature.ky.gov/law/kar/titles/900/002/060/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T050712Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "kentucky"
     },
     "https://arombudsman.dhs.arkansas.gov/": {
       "attempts": 1,
@@ -246,6 +273,43 @@
       "last_result": "OK",
       "page": "delaware"
     },
+    "https://dph.illinois.gov/content/dam/soi/en/web/idph/forms/topics-services/health-care-regulation/nursing-homes/itd-form.pdf": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016044943/https://dph.illinois.gov/content/dam/soi/en/web/idph/forms/topics-services/health-care-regulation/nursing-homes/itd-form.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T045015Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "illinois"
+    },
+    "https://dsd.maryland.gov/regulations/Pages/10.07.09.10.aspx": {
+      "attempts": 1,
+      "last_attempt": "2026-10-16T053305Z",
+      "last_detail": "no-playback",
+      "last_result": "FAILED",
+      "page": "maryland"
+    },
+    "https://dsd.maryland.gov/regulations/Pages/10.07.09.11.aspx": {
+      "attempts": 1,
+      "last_attempt": "2026-10-16T053839Z",
+      "last_detail": "no-playback",
+      "last_result": "FAILED",
+      "page": "maryland"
+    },
+    "https://dsd.maryland.gov/regulations/Pages/10.07.09.12.aspx": {
+      "attempts": 1,
+      "last_attempt": "2026-10-16T054401Z",
+      "last_detail": "no-playback",
+      "last_result": "FAILED",
+      "page": "maryland"
+    },
+    "https://dsd.maryland.gov/regulations/Pages/10.07.09.13.aspx": {
+      "attempts": 1,
+      "last_attempt": "2026-10-16T054851Z",
+      "last_detail": "no-playback",
+      "last_result": "FAILED",
+      "page": "maryland"
+    },
     "https://elderaffairs.org/programs-and-services/long-term-care-ombudsman-program/": {
       "attempts": 1,
       "last_attempt": "2026-09-21T111911Z",
@@ -260,10 +324,45 @@
       "last_result": "FAILED",
       "page": "florida"
     },
+    "https://forms.in.gov/Download.aspx?id=5668": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016045140/https://forms.in.gov/Download.aspx?id=5668",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T045147Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "indiana"
+    },
+    "https://forms.in.gov/download.aspx?id=5667": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016045359/https://forms.in.gov/download.aspx?id=5667",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T045432Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "indiana"
+    },
+    "https://goea.louisiana.gov/services/louisiana-ombudsman-program/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016051010/https://goea.louisiana.gov/services/louisiana-ombudsman-program/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T051026Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "louisiana"
+    },
     "https://govt.westlaw.com/calregs/Document/I6300B9C25B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default": {
       "attempts": 1,
       "consecutive_hard_failures": 1,
       "last_attempt": "2026-09-06T131137Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "california"
+    },
+    "https://govt.westlaw.com/calregs/Document/I6300B9C25B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default)": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-16T044328Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "california"
@@ -276,6 +375,13 @@
       "last_result": "FAILED",
       "page": "california"
     },
+    "https://govt.westlaw.com/calregs/Document/IBABA4E545B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default)": {
+      "attempts": 1,
+      "last_attempt": "2026-10-16T044340Z",
+      "last_detail": "submit-0",
+      "last_result": "FAILED",
+      "page": "california"
+    },
     "https://govt.westlaw.com/calregs/Document/IBABCBF5E5B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default": {
       "attempts": 1,
       "consecutive_hard_failures": 1,
@@ -284,11 +390,25 @@
       "last_result": "FAILED",
       "page": "california"
     },
+    "https://govt.westlaw.com/calregs/Document/IBABCBF5E5B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default)": {
+      "attempts": 1,
+      "last_attempt": "2026-10-16T044352Z",
+      "last_detail": "submit-0",
+      "last_result": "FAILED",
+      "page": "california"
+    },
     "https://govt.westlaw.com/calregs/Document/IBAE556025B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default": {
       "attempts": 1,
       "consecutive_hard_failures": 1,
       "last_attempt": "2026-09-06T131646Z",
       "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "california"
+    },
+    "https://govt.westlaw.com/calregs/Document/IBAE556025B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default)": {
+      "attempts": 1,
+      "last_attempt": "2026-10-16T044405Z",
+      "last_detail": "submit-0",
       "last_result": "FAILED",
       "page": "california"
     },
@@ -338,6 +458,15 @@
       "last_result": "FAILED",
       "page": "idaho"
     },
+    "https://hhs.iowa.gov/family-community/aging-services/ltc-ombudsman": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016045631/https://hhs.iowa.gov/family-community/aging-services/ltc-ombudsman",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T045648Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "iowa"
+    },
     "https://humanservices.arkansas.gov/contact-us/file-an-appeal/": {
       "attempts": 1,
       "consecutive_hard_failures": 1,
@@ -352,6 +481,40 @@
       "last_detail": "submit-401",
       "last_result": "FAILED",
       "page": "arkansas"
+    },
+    "https://ilaging.illinois.gov/programs/ltcombudsman/contact-information--office-of-the-state-long-term-care-ombudsma.html": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016045032/https://ilaging.illinois.gov/programs/ltcombudsman/contact-information--office-of-the-state-long-term-care-ombudsma.html",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T045049Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "illinois"
+    },
+    "https://ksrevisor.gov/statutes/chapters/ch39/039_009_0036.html": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016050003/https://ksrevisor.gov/statutes/chapters/ch39/039_009_0036.html",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T050020Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "kansas"
+    },
+    "https://ldh.la.gov/assets/medicaid/StatePlan/Sec4/Attachment4.19C.pdf": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-16T051045Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "louisiana"
+    },
+    "https://ldh.la.gov/assets/medicaid/hss/docs/NH/NH_Regulations/NF_regs_as_of_3-14-22.pdf": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-16T051104Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "louisiana"
     },
     "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=1599.1": {
       "attempts": 1,
@@ -378,6 +541,24 @@
       "last_result": "FAILED",
       "page": "idaho"
     },
+    "https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2025/legislation/S1015.pdf": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016044626/https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2025/legislation/S1015.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T044633Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "idaho"
+    },
+    "https://medicaidpublications.dhss.delaware.gov/docs/DesktopModules/Bring2mind/DMX/API/Entries/Download?Command=Core_Download&EntryId=900&language=en-US&PortalId=0&TabId=94": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016044430/https://medicaidpublications.dhss.delaware.gov/docs/DesktopModules/Bring2mind/DMX/API/Entries/Download?Command=Core_Download&EntryId=900&language=en-US&PortalId=0&TabId=94",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T044443Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "delaware"
+    },
     "https://medquest.hawaii.gov/content/dam/formsanddocuments/client-forms/1161-request-for-a-hearing/DHS_1161_Rev_1218_Fillable.pdf/jcr:content?process=&submitUrl=&type=pdf": {
       "attempts": 1,
       "last_attempt": "2026-09-21T112115Z",
@@ -391,6 +572,24 @@
       "last_detail": "submit-401",
       "last_result": "FAILED",
       "page": "hawaii"
+    },
+    "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=ghg&section=19-345&enactments=false": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016054906/https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=ghg&section=19-345&enactments=false",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T054923Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "maryland"
+    },
+    "https://mn.gov/ooltc/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016055459/https://mn.gov/ooltc/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T055522Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "minnesota"
     },
     "https://oah.dc.gov/page/about": {
       "attempts": 1,
@@ -407,6 +606,15 @@
       "last_detail": "ok",
       "last_result": "OK",
       "page": "district-of-columbia"
+    },
+    "https://oah.idaho.gov/about-common-case-types/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016044908/https://oah.idaho.gov/about-common-case-types/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T044929Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "idaho"
     },
     "https://pamms.dhs.ga.gov/dfcs/medicaid/2582/": {
       "attempts": 1,
@@ -445,12 +653,30 @@
       "last_result": "FAILED",
       "page": "georgia"
     },
+    "https://sos.ks.gov/publications/KAR/2022/2022_KAR_Volumes_Book_2.pdf": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016050033/https://sos.ks.gov/publications/KAR/2022/2022_KAR_Volumes_Book_2.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T050053Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "kansas"
+    },
     "https://www.aarp.org/legal-counsel-for-elderly/what-we-do/info-2017/dc-long-term-care-ombudsman.html": {
       "attempts": 1,
       "last_attempt": "2026-09-21T111732Z",
       "last_detail": "submit-401",
       "last_result": "FAILED",
       "page": "district-of-columbia"
+    },
+    "https://www.adminlaw.la.gov/areas-of-law/health.html": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016051122/https://www.adminlaw.la.gov/areas-of-law/health.html",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T051201Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "louisiana"
     },
     "https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.12.250&secEnd=7.12.290": {
       "attempts": 1,
@@ -549,6 +775,14 @@
       "last_result": "FAILED",
       "page": "connecticut"
     },
+    "https://www.chfs.ky.gov/agencies/dail/Pages/ltcomb.aspx": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-16T050733Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "kentucky"
+    },
     "https://www.cms.gov/regulations-and-guidance/guidance/manuals/downloads/som107ap_pp_guidelines_ltcf.pdf": {
       "attempts": 1,
       "last_attempt": "2026-09-21T111744Z",
@@ -586,12 +820,224 @@
       "last_result": "FAILED",
       "page": "federal"
     },
+    "https://www.health.state.mn.us/facilities/regulation/ohfc/appeals/nhda.html": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016055626/https://www.health.state.mn.us/facilities/regulation/ohfc/appeals/nhda.html",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T055639Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "minnesota"
+    },
+    "https://www.ilga.gov/legislation/ILCS/details?MajorTopic=REGULATION&Chapter=HEALTH+FACILITIES+AND+REGULATION&ActName=Nursing+Home+Care+Act.&ActID=1225&ChapterID=21&ChapAct=210+ILCS+45/&SeqStart=17400000&SeqEnd=19900000&Print=True": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-16T045108Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "illinois"
+    },
+    "https://www.in.gov/health/files/A00162.pdf": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016045445/https://www.in.gov/health/files/A00162.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T045451Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "indiana"
+    },
+    "https://www.in.gov/medicaid/providers/files/modules/long-term-care.pdf": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016045504/https://www.in.gov/medicaid/providers/files/modules/long-term-care.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T045537Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "indiana"
+    },
+    "https://www.in.gov/ombudsman/long-term-care-ombudsman/contact-information/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016045553/https://www.in.gov/ombudsman/long-term-care-ombudsman/contact-information/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T045616Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "indiana"
+    },
+    "https://www.kancare.ks.gov/members/help-resources/appeals-fair-hearings/state-fair-hearings": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-16T050112Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "kansas"
+    },
+    "https://www.legis.iowa.gov/docs/iac/chapter/05-13-2026.441.81.pdf": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016045701/https://www.legis.iowa.gov/docs/iac/chapter/05-13-2026.441.81.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T045733Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "iowa"
+    },
+    "https://www.legis.iowa.gov/docs/iac/rule/481.58.40.pdf": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016045916/https://www.legis.iowa.gov/docs/iac/rule/481.58.40.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T045923Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "iowa"
+    },
+    "https://www.maine.gov/dhhs/about-us/administrative-hearings": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-16T051220Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "maine"
+    },
+    "https://www.maine.gov/dhhs/about-us/administrative-hearings/faq": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-16T051239Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "maine"
+    },
+    "https://www.maine.gov/sos/sites/maine.gov.sos/files/content/assets/144c110.docx": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-16T051428Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "maine"
+    },
+    "https://www.maine.gov/sos/sites/maine.gov.sos/files/inline-files/c2s067-LUP%2009.15.2014%20NSC.docx": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-16T051447Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "maine"
+    },
+    "https://www.maineombudsman.org/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016051633/https://www.maineombudsman.org/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T051651Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "maine"
+    },
+    "https://www.maineombudsman.org/about.aspx": {
+      "attempts": 1,
+      "last_attempt": "2026-10-16T051703Z",
+      "last_detail": "submit-0",
+      "last_result": "FAILED",
+      "page": "maine"
+    },
+    "https://www.maineombudsman.org/contact.aspx": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016051806/https://www.maineombudsman.org/contact.aspx",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T051821Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "maine"
+    },
+    "https://www.mass.gov/doc/long-term-care-services-1/download": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016054936/https://www.mass.gov/doc/long-term-care-services-1/download",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T054943Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "massachusetts"
+    },
+    "https://www.mass.gov/doc/notice-of-nursing-facility-residents-rights-ltc-013/download": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016055019/https://www.mass.gov/doc/notice-of-nursing-facility-residents-rights-ltc-013/download",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T055021Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "massachusetts"
+    },
+    "https://www.mass.gov/how-to/how-to-appeal-a-masshealth-decision": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016055037/https://www.mass.gov/how-to/how-to-appeal-a-masshealth-decision",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T055054Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "massachusetts"
+    },
+    "https://www.mass.gov/how-to/talk-to-an-ombudsman-about-a-problem": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016055140/https://www.mass.gov/how-to/talk-to-an-ombudsman-about-a-problem",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T055157Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "massachusetts"
+    },
+    "https://www.mass.gov/regulations/130-CMR-456000-long-term-care-services": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261016055309/https://www.mass.gov/regulations/130-CMR-456000-long-term-care-services",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-16T055327Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "massachusetts"
+    },
+    "https://www.michigan.gov/-/media/Project/Websites/lara/healthsystemslicensing/Folder9/bhs_GUIDANCE_for_Inv_Transfer.pdf": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-16T055346Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "michigan"
+    },
+    "https://www.michigan.gov/-/media/Project/Websites/mdhhs/Folder1/Folder31/MSA_04-20.pdf": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-16T055405Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "michigan"
+    },
+    "https://www.michigan.gov/lara/-/media/Project/Websites/lara/bchs/Folder2/LARA-BCHS-ITD-100-07262024.pdf": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-16T055424Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "michigan"
+    },
+    "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Assistance-Programs/Medicaid-BPHASA/Other-Prov-Specific-Page-Docs/LTC_00-05_9045_7.pdf": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-16T055443Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "michigan"
+    },
     "https://www.myflfamilies.com/about/office-inspector-general/appeal-hearings": {
       "attempts": 1,
       "last_attempt": "2026-09-21T111936Z",
       "last_detail": "submit-401",
       "last_result": "FAILED",
       "page": "florida"
+    },
+    "https://www.ombudsman.ks.gov/helpful-resources/issues-of-interest/involuntary-discharge": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-16T050308Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "kansas"
     },
     "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12005&fileName=6+CCR+1011-1+Chapter+05": {
       "attempts": 1,
@@ -610,5 +1056,5 @@
       "page": "colorado"
     }
   },
-  "updated": "2026-09-21T112235Z"
+  "updated": "2026-10-16T055639Z"
 }
