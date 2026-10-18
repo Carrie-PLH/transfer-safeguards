@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: west-virginia
-ASSEMBLED: 2026-09-22
+ASSEMBLED: 2026-10-18
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/west-virginia.json (recipe digest ab565978ba2b). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -16,7 +16,7 @@ CAPTURE NOTES:
 - SOURCE 5: transport curl; extractor pdftotext-layout; slice from '514.8.2 Transfer and Discharge Policies' (occurrence 2) to '514.8.4 Medical Leave of Absence'; filters none.
   West Virginia's Medicaid provider manual, published by the Bureau for Medical Services, restates the transfer/discharge policy in its own words (514.8.2) and states the state's Medicaid bed-hold rule (514.8.3), which no licensure source captured as sources 1-3 states. The heading text '514.8.2 Transfer and Discharge Policies' and '514.8.4 Medical Leave of Absence' each appear twice -- once in the table of contents, once at the real heading -- so from_occurrence 2 is used to land on the body; the 'to' anchor's own occurrence count restarts after the 'from' match, so the single body occurrence of the 514.8.4 heading needs no occurrence override. This document's page break carries a six-line footer/header block (a 'BMS Provider Manual / Page NN / Chapter 514... / Effective: 10/1/2024' line pair, a three-line DISCLAIMER paragraph, and a 'CHAPTER 514 NURSING FACILITY SERVICES' banner) -- taller than strip-running-headers' two-line edge window reaches, so that filter (tried, and left off this source since it changed nothing) cannot drop it. The boilerplate survives in the packet between provisions; every quotation in this page's markdown was chosen to fall within a single printed page rather than crossing one of these breaks. See this state's change log and QUEUE.md.
 
-SOURCE 1: 64 CSR 13, Nursing Home Licensure Rule — section 4.13, transfer and discharge | https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=8271&Format=WORD | source date: none stated in the captured span | retrieved: 2026-09-22
+SOURCE 1: 64 CSR 13, Nursing Home Licensure Rule — section 4.13, transfer and discharge | https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=8271&Format=WORD | source date: none stated in the captured span | retrieved: 2026-10-18
 4.12.b.1.  If a former resident wishes to return to the nursing home and meets the requirements for coverage under the Medicare program, the resident may be placed in a bed certified to participate in that program. 
 
 			4.12.b.2.  If the nursing home is not certified under the Medicare program and the resident chooses placement in a nursing home providing Medicare coverage, the resident may be placed on a waiting list for readmission to the nursing home after Medicare coverage has ceased if the nursing home can provide the necessary services to the former resident. 
@@ -107,7 +107,7 @@ SOURCE 1: 64 CSR 13, Nursing Home Licensure Rule — section 4.13, transfer and 
 
 				4.14.a.2.B.  That requires the care to be provided if the nursing home participates in a financial program requiring the admittance or continued residence of the person.
 
-SOURCE 2: 64 CSR 13, Nursing Home Licensure Rule — definitions, excerpt | https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=8271&Format=WORD | source date: none stated in the captured span | retrieved: 2026-09-22
+SOURCE 2: 64 CSR 13, Nursing Home Licensure Rule — definitions, excerpt | https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=8271&Format=WORD | source date: none stated in the captured span | retrieved: 2026-10-18
 2.35.  Nursing Personnel. -- The director of nursing, the charge nurse and all employees under the direct supervision of the director of nursing or charge nurse who attend to resident-oriented nursing functions, including registered professional nurses, licensed practical nurses and nursing aides, but excluding employees engaged in administration, dietetics, social services, activities staff, housekeeping, laundry and maintenance.
 
 	2.36.  Ombudsman. -- Any person or organization designated by the State Long Term Care Ombudsman as part of the West Virginia Long-Term Care Ombudsman Program.
@@ -140,7 +140,7 @@ SOURCE 2: 64 CSR 13, Nursing Home Licensure Rule — definitions, excerpt | http
 
 	2.50.  Standard Quality of Care. -- Substantial compliance with this rule.
 
-SOURCE 3: 64 CSR 13, Nursing Home Licensure Rule — opening | https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=8271&Format=WORD | source date: none stated in the captured span | retrieved: 2026-09-22
+SOURCE 3: 64 CSR 13, Nursing Home Licensure Rule — opening | https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=8271&Format=WORD | source date: none stated in the captured span | retrieved: 2026-10-18
 TITLE 64
 LEGISLATIVE RULES
 WEST VIRGINIA DIVISION OF HEALTH
@@ -156,7 +156,7 @@ NURSING HOME LICENSURE RULE
 
 	1.2.  Authority.  --  W. Va. Code §§16-1-4 and 16-5C-5.
 
-SOURCE 4: Long-Term Care Ombudsman Program | http://www.wvseniorservices.gov/StayingSafe/LongTermCareOmbudsmanProgram/tabid/81/Default.aspx | source date: Updated 3/25/24 | retrieved: 2026-09-22
+SOURCE 4: Long-Term Care Ombudsman Program | http://www.wvseniorservices.gov/StayingSafe/LongTermCareOmbudsmanProgram/tabid/81/Default.aspx | source date: Updated 3/25/24 | retrieved: 2026-10-18
 Long-Term Care Ombudsman Program
 
 
@@ -232,7 +232,7 @@ Copyright (c) 2026 West Virginia Bureau of Senior Services
 
 Login
 
-SOURCE 5: BMS Provider Manual, Chapter 514 Nursing Facility Services — transfer/discharge policy and bed reservation | https://bms.wv.gov/media/40026/download?inline= | source date: Effective: 10/1/2024 | retrieved: 2026-09-22
+SOURCE 5: BMS Provider Manual, Chapter 514 Nursing Facility Services — transfer/discharge policy and bed reservation | https://bms.wv.gov/media/40026/download?inline= | source date: Effective: 10/1/2024 | retrieved: 2026-10-18
 514.8.2 Transfer and Discharge Policies
 According to 42 CFR 483.15, transfer and discharge of an individual includes movement of a resident to a
 bed outside of the Medicaid-certified portion of the facility, whether that bed is in the same physical plant

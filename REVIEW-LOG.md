@@ -1144,3 +1144,51 @@ their site/states/ counterparts, plus tools/spn-ledger.json — apparent
 leftovers from an uncommitted archive (spn.py) capture pass, the same
 pattern found in sped-safeguards and Licensure Mobility this same visit.
 None of it was touched or staged by this pass.
+
+## 2026-10-18 — nightly review: west-virginia, wisconsin, wyoming, alabama, alaska
+
+Cursor was at west-virginia. Recipe-exception check (compare state-page
+count to recipe count in tools/recipes/): 51 of 51 real state pages have a
+matching recipe (55 recipe files on disk: massachusetts, nevada and texas
+each carry an extra alternate-source recipe beyond their base). Exception
+does not apply; ordinary QC pass.
+
+- **west-virginia — confirmed.** Fresh capture of all 5 sources (recipe
+  ab565978ba2b), curl/textutil for the legacy .doc sources. Zero fidelity
+  failures, markdown and HTML. Retention flagged a new source header
+  (source 5, BMS Provider Manual Chapter 514) relative to the prior
+  2026-09-08 retained capture — not a replaced instrument: the prior
+  capture only had 4 sources, so this is the recipe having gained a 5th
+  source since, not an existing document being superseded. Retained, hash
+  965718b0a8fabce8, promoted. Checked date advanced to 2026-10-18.
+- **wisconsin — confirmed.** Fresh capture of all 3 sources (recipe
+  8cc775743cea), curl. Zero fidelity failures, markdown and HTML.
+  Unchanged since 2026-09-18 (hash 64bec19815833bfa), promoted. Checked
+  date advanced to 2026-10-18.
+- **wyoming — confirmed.** Fresh capture of all 7 sources (recipe
+  22f532dbc2fe), curl. Zero fidelity failures, markdown and HTML.
+  Unchanged since 2026-09-27 (hash 330bb290b3a43079), promoted. Checked
+  date advanced to 2026-10-18.
+- **alabama — confirmed.** Fresh capture of 2 sources (recipe
+  8736087ebf91), checked with its two supplements
+  (alabama-packet-complaints.txt, alabama-packet-rule.txt). Zero fidelity
+  failures, markdown and HTML. Unchanged since 2026-09-17 (hash
+  6f01a0d2a3b1603e), promoted. Checked date advanced to 2026-10-18.
+- **alaska — confirmed.** Fresh capture of all 8 sources (recipe
+  bd40de4590dd), curl. Zero fidelity failures, markdown and HTML.
+  Unchanged since 2026-09-17 (hash 07e3ac276d05bdec), promoted. Checked
+  date advanced to 2026-10-18.
+
+sync-checked-dates.py corrected 10 derived dates (table + JSON for all
+five states). build-status.py: 51/51 baseline, 50/51 full (North Dakota
+gap predates this pass), unchanged. check-all.py: 102 pages across 52
+states, no unexplained failures. build-state-picker.py regenerated
+(51/51 published). generate-sitemap.py: 58 URLs, only 404.html omitted.
+check-live.py: nothing loaded from any other host. Review cursor
+advanced to arizona. No queue entries opened.
+
+Pre-existing, unrelated working-tree changes found at the start of this
+pass: none — `git status --short` was empty at the start.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-10-18. No
+human review is claimed for this entry.

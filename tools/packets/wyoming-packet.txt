@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: wyoming
-ASSEMBLED: 2026-09-27
+ASSEMBLED: 2026-10-18
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/wyoming.json (recipe digest 22f532dbc2fe). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -20,7 +20,7 @@ CAPTURE NOTES:
 - SOURCE 7: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
   The program's own page on the department's site: the State Long-Term Care Ombudsman's address and telephone, the two regional ombudsmen employed by the contractor (Wyoming Senior Citizens, Inc.) with their numbers and emails, and the statement of how the program is arranged.
 
-SOURCE 1: Chapter 11, Program Administration of Nursing Care Facilities — Wyoming Department of Health, Aging Division (Wyoming Administrative Rules, reference 048.0003.11.07012020) (PDF) | https://health.wyo.gov/wp-content/uploads/2020/07/FILED-RULES-17704-EFFECT-07-01-2020.pdf | source date: Effective Date: 07/01/2020 to Current, as the Secretary of State's cover sheet states | retrieved: 2026-09-27
+SOURCE 1: Chapter 11, Program Administration of Nursing Care Facilities — Wyoming Department of Health, Aging Division (Wyoming Administrative Rules, reference 048.0003.11.07012020) (PDF) | https://health.wyo.gov/wp-content/uploads/2020/07/FILED-RULES-17704-EFFECT-07-01-2020.pdf | source date: Effective Date: 07/01/2020 to Current, as the Secretary of State's cover sheet states | retrieved: 2026-10-18
 Wyoming Administrative Rules
 
 
@@ -1262,7 +1262,7 @@ for Licensure of Nursing Care Facilities adopted by the Department of Health.
 
                                               11-25
 
-SOURCE 2: Chapter 19, Licensure of Nursing Care Facilities — Wyoming Department of Health, Healthcare Licensing and Surveys (PDF) | https://health.wyo.gov/wp-content/uploads/2016/11/HLS-Rule-Ch-19-Nursing-Care-Facilities.pdf | source date: none stated in the document beyond its adoption; the department's rules page lists it as effective 06-26-2000 | retrieved: 2026-09-27
+SOURCE 2: Chapter 19, Licensure of Nursing Care Facilities — Wyoming Department of Health, Healthcare Licensing and Surveys (PDF) | https://health.wyo.gov/wp-content/uploads/2016/11/HLS-Rule-Ch-19-Nursing-Care-Facilities.pdf | source date: none stated in the document beyond its adoption; the department's rules page lists it as effective 06-26-2000 | retrieved: 2026-10-18
 Wyoming Administrative Rules
 
 
@@ -1518,7 +1518,7 @@ Rules for Health Facilities apply.
 meet the Life Safety Code of the National Fire Protection Association that was in effect at the time the
 facility was licensed as a Nursing Care Facility.
 
-SOURCE 3: W.S. 35-2-901 through 35-2-914, Health Facilities Act (Title 35, chapter 2, article 9) — Wyoming Legislature, Wyoming Statutes (PDF, title 35) | https://wyoleg.gov/statutes/compress/title35.pdf | source date: none stated in the extracted article; the title PDF is the Legislature's current compilation | retrieved: 2026-09-27
+SOURCE 3: W.S. 35-2-901 through 35-2-914, Health Facilities Act (Title 35, chapter 2, article 9) — Wyoming Legislature, Wyoming Statutes (PDF, title 35) | https://wyoleg.gov/statutes/compress/title35.pdf | source date: none stated in the extracted article; the title PDF is the Legislature's current compilation | retrieved: 2026-10-18
 35-2-901.     Definitions; applicability of provisions.
 
     (a)     As used in this act:
@@ -2127,7 +2127,7 @@ health care facility shall allow the person receiving care or
 that person's representative to designate persons as visitors or
 to prohibit some or all visitation under this section.
 
-SOURCE 4: Chapter 22, Determination of Nursing Facility Level of Care — Wyoming Department of Health, Medicaid (Wyoming Administrative Rules) (PDF) | https://health.wyo.gov/wp-content/uploads/2021/10/Chapter-22-active-100521.pdf | source date: Effective Date: 10/05/2021 to Current, as the cover sheet states | retrieved: 2026-09-27
+SOURCE 4: Chapter 22, Determination of Nursing Facility Level of Care — Wyoming Department of Health, Medicaid (Wyoming Administrative Rules) (PDF) | https://health.wyo.gov/wp-content/uploads/2021/10/Chapter-22-active-100521.pdf | source date: Effective Date: 10/05/2021 to Current, as the cover sheet states | retrieved: 2026-10-18
 Wyoming Administrative Rules
 
 
@@ -2252,7 +2252,7 @@ reconsideration determination.
 
                                                22-3
 
-SOURCE 5: Chapter 4, Medicaid Administrative Hearings — Wyoming Department of Health, Medicaid (Wyoming Administrative Rules, reference 048.0037.4.03242020) (PDF) | https://health.wyo.gov/wp-content/uploads/2024/04/WYDOH-Medicaid-Chapter-4.pdf | source date: Effective Date: 03/24/2020 to Current, as the cover sheet states | retrieved: 2026-09-27
+SOURCE 5: Chapter 4, Medicaid Administrative Hearings — Wyoming Department of Health, Medicaid (Wyoming Administrative Rules, reference 048.0037.4.03242020) (PDF) | https://health.wyo.gov/wp-content/uploads/2024/04/WYDOH-Medicaid-Chapter-4.pdf | source date: Effective Date: 03/24/2020 to Current, as the cover sheet states | retrieved: 2026-10-18
 Wyoming Administrative Rules
 
 
@@ -2591,7 +2591,7 @@ http//soswy.state.wy.us/Rules/RULES/9644.pdfhttps://rules.wyo.gov, Reference Num
 
                                                4-7
 
-SOURCE 6: Institutional Provider Manual, chapter 18, Skilled Nursing Facility and Swing Bed Services (sections 18.4.4 through 18.5.1) — Wyoming Medicaid, Wyoming Department of Health, Division of Healthcare Financing, published through its fiscal agent (PDF) | https://wyomingmedicaid.com/portal/References/latestproviderfiles/BMS_Acentra%20Health_Institutional%20Provider%20Manual_N_2026.07.01_v19.0.pdf | source date: version 19.0, effective 2026.07.01, as the file's own name and running foot state | retrieved: 2026-09-27
+SOURCE 6: Institutional Provider Manual, chapter 18, Skilled Nursing Facility and Swing Bed Services (sections 18.4.4 through 18.5.1) — Wyoming Medicaid, Wyoming Department of Health, Division of Healthcare Financing, published through its fiscal agent (PDF) | https://wyomingmedicaid.com/portal/References/latestproviderfiles/BMS_Acentra%20Health_Institutional%20Provider%20Manual_N_2026.07.01_v19.0.pdf | source date: version 19.0, effective 2026.07.01, as the file's own name and running foot state | retrieved: 2026-10-18
 18.4.4 Pre-Admission Screening and Resident Review
 The Pre-Admission Screening and Resident Review (PASRR) process encompasses PASRR Level 1 and
 Level II.
@@ -2750,7 +2750,7 @@ coverage period.
 A Provider may bill a Member or the Member's responsible party for reserved bed days if the facility has
 informed them in writing of their financial responsibility before services are rendered.
 
-SOURCE 7: Wyoming Long-Term Care Ombudsman Program — Wyoming Department of Health | https://health.wyo.gov/admin/long-term-care-ombudsman-program/ | source date: none stated on page | retrieved: 2026-09-27
+SOURCE 7: Wyoming Long-Term Care Ombudsman Program — Wyoming Department of Health | https://health.wyo.gov/admin/long-term-care-ombudsman-program/ | source date: none stated on page | retrieved: 2026-10-18
 Skip to Main Content
 
 Divisions

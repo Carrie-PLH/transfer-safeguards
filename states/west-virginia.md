@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Long-Term Care Ombudsman Program. The Bureau of Senior Services states that "West Virginia's State Ombudsman is employed by the Bureau of Senior Services, and the Bureau contracts with West Virginia Legal Aid to conduct the day-to-day operation of the program via an Ombudsman Supervisor and nine Regional Ombudsmen." Its published route is "call 1-800-834-0598 to speak with an ombudsman or to request services." The Bureau itself is at "1900 Kanawha Blvd. East" "Charleston, WV 25305" with "Phone: (304) 558-3317, (877) 987-3646". The rule defines an ombudsman as "Any person or organization designated by the State Long Term Care Ombudsman as part of the West Virginia Long-Term Care Ombudsman Program."
 
-**Sources last checked.** 2026-09-22
+**Sources last checked.** 2026-10-18
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

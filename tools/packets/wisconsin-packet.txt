@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: wisconsin
-ASSEMBLED: 2026-09-18
+ASSEMBLED: 2026-10-18
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/wisconsin.json (recipe digest 8cc775743cea). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -12,7 +12,7 @@ CAPTURE NOTES:
 - SOURCE 3: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
   Added 2026-09-18, deepening the page. DHS 132.53's own note twice points to 's. DHS 107.09 (4) (j)' as the medical-assistance bedhold rule; this source captures the whole of DHS 107.09 by the same curl-with-browser-user-agent method as source 1, so the page can quote the current state of that cross-reference rather than assert it from the note alone. Same transport and extraction as source 1; no slice, because the absence being captured is structural (the subsection the note names is not present in the section as currently published) rather than a span within a longer document.
 
-SOURCE 1: Wisconsin Administrative Code, DHS 132.53, Transfer and discharge (chapter DHS 132, subchapter V) | https://docs.legis.wisconsin.gov/code/admin_code/dhs/110/132/V/53 | source date: the site states the code is published under s. 35.93, Stats., and updated on the first day of each month | retrieved: 2026-09-18
+SOURCE 1: Wisconsin Administrative Code, DHS 132.53, Transfer and discharge (chapter DHS 132, subchapter V) | https://docs.legis.wisconsin.gov/code/admin_code/dhs/110/132/V/53 | source date: the site states the code is published under s. 35.93, Stats., and updated on the first day of each month | retrieved: 2026-10-18
 Skip navigation
 
 Home
@@ -436,7 +436,7 @@ Menu
 
 Published under s. 35.93, Stats. Updated on the first day of each month. Entire code is always current. The Register date on each page is the date the chapter was last published.
 
-SOURCE 2: Wisconsin Board on Aging and Long Term Care — home page (Ombudsman Program) | https://boaltc.wi.gov/Pages/Home.aspx | source date: none stated on page beyond the February 25 domain-change notice | retrieved: 2026-09-18
+SOURCE 2: Wisconsin Board on Aging and Long Term Care — home page (Ombudsman Program) | https://boaltc.wi.gov/Pages/Home.aspx | source date: none stated on page beyond the February 25 domain-change notice | retrieved: 2026-10-18
 Skip to main content
 
 Wisconsin.Gov
@@ -588,7 +588,7 @@ Open record requests
 
 Copyright © State of Wisconsin All Rights Reserved
 
-SOURCE 3: Wisconsin Administrative Code, DHS 107.09, Skilled nursing home and intermediate care facility services (chapter DHS 107, Medical Assistance) | https://docs.legis.wisconsin.gov/code/admin_code/dhs/101/107/09 | source date: the site states the code is published under s. 35.93, Stats., and updated on the first day of each month | retrieved: 2026-09-18
+SOURCE 3: Wisconsin Administrative Code, DHS 107.09, Skilled nursing home and intermediate care facility services (chapter DHS 107, Medical Assistance) | https://docs.legis.wisconsin.gov/code/admin_code/dhs/101/107/09 | source date: the site states the code is published under s. 35.93, Stats., and updated on the first day of each month | retrieved: 2026-10-18
 Skip navigation
 
 Home

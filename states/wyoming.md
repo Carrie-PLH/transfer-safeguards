@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The program's own page: "State Long-Term Care Ombudsman" "2300 Capitol Avenue" "Hathaway Building 4th Floor" "Cheyenne, WY  82002" "Phone 307-287-7757". The page states that "The Wyoming Department of Health employs a state long-term care ombudsman and contracts with a private, nonprofit organization to employ three regional long-term care ombudsman representatives." and names two regional ombudsmen with their numbers: "Phone 307-856-6880 or toll free 1-800-856-4398" (Riverton) and "Phone: 307-235-5959 or toll free 1-877-634-1006" (Casper). Chapter 11, Section 21(a): "Residents’ unresolved grievances and/or complaints shall be referred to the Long-Term Care Ombudsman."
 
-**Sources last checked.** 2026-09-27
+**Sources last checked.** 2026-10-18
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

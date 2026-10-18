@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: alaska
-ASSEMBLED: 2026-09-27
+ASSEMBLED: 2026-10-18
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/alaska.json (recipe digest bd40de4590dd). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -22,7 +22,7 @@ CAPTURE NOTES:
 - SOURCE 8: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
   The program's statement of where it sits in state government (the Department of Revenue, administered by the Alaska Mental Health Trust Authority), its hours, and its statement that discharge appeals are among the most common complaints it receives.
 
-SOURCE 1: 7 AAC 12.250 - 7 AAC 12.290, Article 5, Nursing Facilities — Alaska Administrative Code, Alaska State Legislature (BASIS) | https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.12.250&secEnd=7.12.290 | source date: none stated in the print rendering | retrieved: 2026-09-27
+SOURCE 1: 7 AAC 12.250 - 7 AAC 12.290, Article 5, Nursing Facilities — Alaska Administrative Code, Alaska State Legislature (BASIS) | https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.12.250&secEnd=7.12.290 | source date: none stated in the print rendering | retrieved: 2026-10-18
 7 AAC 12.250. Scope.
 A facility that is not an acute care hospital and that provides nursing care and related medical services over a period of 24 hours each day to individuals admitted because of illness, disease, or physical infirmity is a nursing facility, and must comply with 7 AAC 12.250 - 7 AAC 12.290.
 
@@ -92,7 +92,7 @@ A nursing facility must provide an activity program that is available to all res
 (a) A pharmacist must review each resident's prescribed drug regimen once every 30 days, make recommendations, note the possibilities or absence of problems irregularities, or clinically significant results or consequences with the prescribed drug regimen, and report potential problems and concerns to the physician and the director of nursing. Reports of potential problems and concerns shall be acted upon promptly. The nursing facility shall provide for more frequent drug regimen reviews by a pharmacist, if a resident's condition requires them.
 (b) A potential problem or concern reported under (a) of this section shall be reviewed in accordance with the risk management program under 7 AAC 12.860.
 
-SOURCE 2: 7 AAC 12.890, Rights of patients, clients, and residents — Alaska Administrative Code, Alaska State Legislature (BASIS) | https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.12.890&secEnd=7.12.890 | source date: none stated in the print rendering | retrieved: 2026-09-27
+SOURCE 2: 7 AAC 12.890, Rights of patients, clients, and residents — Alaska Administrative Code, Alaska State Legislature (BASIS) | https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.12.890&secEnd=7.12.890 | source date: none stated in the print rendering | retrieved: 2026-10-18
 7 AAC 12.890. Rights of patients, clients, and residents.
 (a) Except as otherwise provided in AS 47.30.825, a patient, client, or a nursing facility resident has rights that include the following:
  (1) to associate and communicate privately with persons of the patient's, client's, or resident's choice;
@@ -115,7 +115,7 @@ SOURCE 2: 7 AAC 12.890, Rights of patients, clients, and residents — Alaska Ad
 (c) A written notice that sets out the facility procedures for receipt and safekeeping of patients', clients', or residents' money and valuables must be posted in a conspicuous location. A copy of the notice must be given to a patient, client, or resident, or to a family member or legal representative of the patient, client, or resident. If requested, a copy of the notice must be provided, at cost, to a member of the public. A receipt for safeguarded money and valuables must be provided by the facility to the patient, client, or resident at the time of admission and following changes in the facility's procedures.
 (d) A facility must establish written procedures to assure delivery of complaints by patients, clients, or residents to the facility's administration. The administration shall acknowledge receipt of a patient's, client's, or resident's complaint, and take appropriate action.
 
-SOURCE 3: 7 AAC 140.540 - 7 AAC 140.585, Nursing Facility Services (transfer, discharge, absence from nursing facility) — Alaska Administrative Code, Alaska State Legislature (BASIS) | https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.140.540&secEnd=7.140.585 | source date: none stated in the print rendering | retrieved: 2026-09-27
+SOURCE 3: 7 AAC 140.540 - 7 AAC 140.585, Nursing Facility Services (transfer, discharge, absence from nursing facility) — Alaska Administrative Code, Alaska State Legislature (BASIS) | https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.140.540&secEnd=7.140.585 | source date: none stated in the print rendering | retrieved: 2026-10-18
 7 AAC 140.540. Transfer of recipients.
 (a) No later than seven days after a nursing facility transfers a recipient to another level of care within the same facility, the nursing facility must notify the department of the transfer by submitting a current request for a level-of-care authorization on a form provided by the department.
 (b) Before a nursing facility transfers a recipient to another nursing facility or hospital, the facility shall, at least 10 days before the transfer, provide a written notice
@@ -195,7 +195,7 @@ Payment by the department is payment in full for those services authorized under
 (c) In the recipient's plan of care, the nursing facility shall document the purpose and plan of a therapeutic or rehabilitative absence.
 (d) If a recipient leaves a nursing facility for hospitalization, the department will not pay to reserve the recipient's bed at the nursing facility.
 
-SOURCE 4: 7 AAC 49.010 - 7 AAC 49.200, Hearings — Alaska Administrative Code, Alaska State Legislature (BASIS) | https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.49.010&secEnd=7.49.200 | source date: none stated in the print rendering | retrieved: 2026-09-27
+SOURCE 4: 7 AAC 49.010 - 7 AAC 49.200, Hearings — Alaska Administrative Code, Alaska State Legislature (BASIS) | https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.49.010&secEnd=7.49.200 | source date: none stated in the print rendering | retrieved: 2026-10-18
 7 AAC 49.010. Hearing; special provisions.
 (a) Except as expressly stated in this chapter, hearings for recipients of financial, food, or medical assistance granted by the department in the following programs are conducted under AS 44.64.060 and 2 AAC 64.100 - 2 AAC 64.990:
  (1) General Relief Assistance (GRA);
@@ -320,7 +320,7 @@ Except as otherwise specified in applicable federal regulations, a recipient of 
  7 AAC 49.200. Liability if assistance is continued.
 If a request for a hearing has caused a recipient's assistance to be reinstated or continued pending the hearing under 7 AAC 49.190, and if the final decision is that the department action at issue was correct, the administrative law judge may order the recipient to repay the assistance provided during the hearing process. Nothing in this section limits the ability of the department to seek recoupment of assistance paid as authorized under state or federal law.
 
-SOURCE 5: Uni-08, Notice of Recipient Fair Hearing Rights — Alaska Department of Health (PDF) | https://health.alaska.gov/media/obljx4in/fair-hearing-rights-notice.pdf | source date: Revised 2/1/2025, as the form's footer states | retrieved: 2026-09-27
+SOURCE 5: Uni-08, Notice of Recipient Fair Hearing Rights — Alaska Department of Health (PDF) | https://health.alaska.gov/media/obljx4in/fair-hearing-rights-notice.pdf | source date: Revised 2/1/2025, as the form's footer states | retrieved: 2026-10-18
 Department of Health
 Notice of Recipient Fair Hearing Rights
 You received a letter about a decision affecting your benefits from the Alaska Medicaid office at the Department
@@ -369,7 +369,7 @@ Legal Assistance: You may obtain legal counsel if you wish. Free legal assistanc
 Alaska Legal Services at (888) 478-2572, or through the Disability Law Center at (800) 478-1234.
                                                                                                                Revised 2/1/2025
 
-SOURCE 6: Approved SDS Forms — Division of Senior and Disabilities Services, Alaska Department of Health | https://health.alaska.gov/en/resources/approved-sds-forms/ | source date: none stated on page | retrieved: 2026-09-27
+SOURCE 6: Approved SDS Forms — Division of Senior and Disabilities Services, Alaska Department of Health | https://health.alaska.gov/en/resources/approved-sds-forms/ | source date: none stated on page | retrieved: 2026-10-18
 MyAlaska
 
  Departments
@@ -1060,7 +1060,7 @@ Sán uu dáng gíidang?
 
 Copyright © State of Alaska
 
-SOURCE 7: The Office of Long Term Care Ombudsman — home page (Alaska) | https://akoltco.org/ | source date: none stated on page | retrieved: 2026-09-27
+SOURCE 7: The Office of Long Term Care Ombudsman — home page (Alaska) | https://akoltco.org/ | source date: none stated on page | retrieved: 2026-10-18
 Skip to primary navigation
 
  Skip to main content
@@ -1145,7 +1145,7 @@ Lost Password
 
 © 2026 · The Office of Long Term Care Ombudsman, State of Alaska
 
-SOURCE 8: About Us — The Office of Long Term Care Ombudsman (Alaska) | https://akoltco.org/about-us/ | source date: none stated on page | retrieved: 2026-09-27
+SOURCE 8: About Us — The Office of Long Term Care Ombudsman (Alaska) | https://akoltco.org/about-us/ | source date: none stated on page | retrieved: 2026-10-18
 Skip to primary navigation
 
  Skip to main content

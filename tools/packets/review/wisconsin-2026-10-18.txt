@@ -1,0 +1,1014 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: wisconsin
+ASSEMBLED: 2026-10-18
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/wisconsin.json (recipe digest 8cc775743cea). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- SOURCE 1: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The standing packet's own method is curl with a browser user-agent, reduced to text mechanically (tag strip), sliced from the heading of DHS 132.53(1) to the end of the served document; the Legislature runs each provision's citation into the text with the paragraph letter or number doubled ('DHS 132.53(2)(a)1.1.'), which is the site's own markup and is left as extracted. 'body' matches the standing packet's scope: the reader controls and the standing publication line at the foot are part of the served page and are left in, same as the standing capture.
+- SOURCE 2: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The 2026-08-30 standing packet used the session HTTP fetch tool for this SharePoint page; tested 2026-09-06 with plain curl and a browser user-agent, it now returns HTTP 200 with the page's own text (title, ombudsman-program copy, the domain-change notice) present in the response body, so this recipe uses curl rather than a session transport. Page furniture (SharePoint nav, menu) is left in as 'body' produces it, matching the standing packet's own choice not to hand-trim site chrome.
+- SOURCE 3: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  Added 2026-09-18, deepening the page. DHS 132.53's own note twice points to 's. DHS 107.09 (4) (j)' as the medical-assistance bedhold rule; this source captures the whole of DHS 107.09 by the same curl-with-browser-user-agent method as source 1, so the page can quote the current state of that cross-reference rather than assert it from the note alone. Same transport and extraction as source 1; no slice, because the absence being captured is structural (the subsection the note names is not present in the section as currently published) rather than a span within a longer document.
+
+SOURCE 1: Wisconsin Administrative Code, DHS 132.53, Transfer and discharge (chapter DHS 132, subchapter V) | https://docs.legis.wisconsin.gov/code/admin_code/dhs/110/132/V/53 | source date: the site states the code is published under s. 35.93, Stats., and updated on the first day of each month | retrieved: 2026-10-18
+Skip navigation
+
+Home
+
+Documents
+
+Senate
+
+Assembly
+
+Committees
+
+Service Agencies
+
+Docs
+
+Options
+
+Help
+
+2025 Biennium
+
+Statutes
+
+Admin. Rules
+
+Indices
+
+Miscellaneous
+
+Archives
+
+ Home
+
+Bill, Rule, and Appointment Histories
+
+Senators
+
+Representatives
+
+Committees
+
+Text of Introduced Proposals
+
+Amendment Text
+
+Acts
+
+Veto Messages
+
+Enrolled Bills
+
+Votes
+
+Assembly and Senate Floor Calendars
+
+Schedule of Committee Activities
+
+Assembly and Senate Journals
+
+Committee Records (ROCPs)
+
+Legislative Rules
+
+All Session-Related Documents
+
+Subject Index to Acts
+
+Subject Index to Legislation
+
+Subject Index to Journals
+
+Author Index to Legislation
+
+Subject Index to Clearinghouse Rules
+
+Miscellaneous Budget Documents
+
+Executive Orders
+
+Rulings of the Chair
+
+Wisconsin Supreme Court Rules
+
+Opinions of the Attorney General
+
+Town Law Forms
+
+Law
+
+Districts
+
+Session
+
+Drafting Files
+
+ Feeds
+
+ Preferences
+
+ Show tree
+
+ Hide tree
+
+ Feedback
+
+ Help
+
+ Home
+
+Senate Home
+
+Senators
+
+Committees
+
+Session
+
+Chief Clerk
+
+Sergeant at Arms
+
+Civics Education
+
+Human Resources
+
+Assembly Home
+
+Representatives
+
+Committees
+
+Session
+
+Chief Clerk
+
+Sergeant at Arms
+
+Human Resources
+
+Schedule
+
+Joint
+
+Senate
+
+Assembly
+
+Study
+
+Legislative Audit Bureau
+
+Legislative Council
+
+Legislative Fiscal Bureau
+
+Legislative Human Resources Office
+
+Legislative Reference Bureau
+
+Legislative Technology Services Bureau
+
+Menu
+
+»Administrative Rules Related
+
+»Administrative Code
+
+»Department of Health Services (DHS)
+
+»Chs. DHS 110-199; Health
+
+»Chapter DHS 132
+
+Up
+
+DHS 132.51(2)(d)2.2. Except in an emergency, no person who has a developmental disability may be admitted to a facility unless the county department under s. 46.23, 51.42, or 51.437, Stats., of the individual’s county of residence has recommended the admission.
+
+DHS 132.51(2)(e)(e) Mental illness. Except in an emergency, no person who is under age 65 and has a mental illness as defined in s. 51.01 (13), Stats., may be admitted to a facility unless the county department under s. 46.23, 51.42 or 51.437, Stats., of the individual’s county of residence has recommended the admission.
+
+DHS 132.51(2)(f)(f) Minors.
+
+DHS 132.51(2)(f)1.1. No person under the age of 18 years may be admitted, unless approved for admission by the department.
+
+DHS 132.51(2)(f)2.2. Requests for approval to admit a person under the age of 18 years shall be made in writing and shall include:
+
+DHS 132.51(2)(f)2.a.a. A statement from the referring physician stating the medical, nursing, rehabilitation, and special services required by the minor;
+
+DHS 132.51(2)(f)2.b.b. A statement from the administrator certifying that the required services can be provided;
+
+DHS 132.51(2)(f)2.c.c. A statement from the attending physician certifying that the physician will be providing medical care; and
+
+DHS 132.51(2)(f)2.d.d. A statement from the persons or agencies assuming financial responsibility.
+
+DHS 132.51(2)(g)(g) Admissions 7 days a week. No facility may refuse to admit new residents solely because of the day of the week.
+
+DHS 132.51(3)(3) Day care services. A facility may provide day care services to persons not housed by the facility, provided that:
+
+DHS 132.51(3)(a)(a) Day care services do not interfere with the services for residents;
+
+DHS 132.51(3)(b)(b) Each day care client is served upon the certification by a physician or physician’s assistant that the client is free from tuberculosis infection; and
+
+DHS 132.51(3)(c)(c) Provision is made to enable day care clients to rest. Beds need not be provided for this purpose, and beds assigned to residents may not be provided for this purpose.
+
+DHS 132.51 NoteNote: For administration of medications to day care clients, see s. DHS 132.60 (5) (d) 6.; for required records, see s. DHS 132.45 (4) (c).
+
+DHS 132.51 HistoryHistory: Cr. Register, July, 1982, No. 319, eff. 8-1-82; emerg. r. and recr. (2) (d) and (3), eff. 9-15-86; r. and recr. (2) (d) am. (1) (b) 1., (2) (e) 1. and 2. intro., (3) (a) and (b), (4) (c), Register, January, 1987, No. 373, eff. 2-1-87; am. (2) (b) 2. and 3. (d) 2., r. (2) (d) 3. and (3), renum. (2) (e), (f) and (4) to be (2) (f), (g) and (3), cr. (2) (e), Register, February, 1989, No. 398, eff. 3-1-89; correction in (2) (b) 3. made under s. 13.93 (2m) (b) 7., Stats., Register, August, 2000, No. 536; CR 03-033: r. and recr. (2) (b) 1. Register December 2003 No. 576, eff. 1-1-04: CR 04-053: r. and recr. (2) (b) and am. (2) (c) Register October 2004 No. 586, eff. 11-1-04; correction in (2) (b) 2. made under s. 13.92 (4) (b) 7., Stats., Register January 2009 No. 637; 2019 Wis. Act 1: am. (2) (d) 1. Register May 2019 No. 761, eff. 6-1-19.
+
+DHS 132.52DHS 132.52 Procedures for admission.
+
+DHS 132.52(2)(2) Physician’s orders. No person may be admitted as a resident except upon:
+
+DHS 132.52(2)(a)(a) Order of a physician;
+
+DHS 132.52(2)(b)(b) Receipt of information from a physician, before or on the day of admission, about the person’s current medical condition and diagnosis, and receipt of a physician’s initial plan of care and orders from a physician for immediate care of the resident; and
+
+DHS 132.52(2)(c)(c) Receipt of certification in writing from a physician, physician assistant or advanced practice nurse prescriber that the individual has been screened for the presence of clinically apparent communicable disease that could be transmitted to other residents or employees, including screening for tuberculosis within 90 days prior to admission, or a physician, physician assistant or advanced practice nurse prescriber has ordered procedures to treat and limit the spread of any communicable diseases the individual may be found to have.
+
+DHS 132.52(3)(3) Medical examination and evaluation.
+
+DHS 132.52(3)(a)(a) Examination. Each resident shall have a physical examination by a physician or physician extender within 48 hours following admission unless an examination was performed within 15 days before admission.
+
+DHS 132.52(3)(b)(b) Evaluation. Within 48 hours after admission the physician or physician extender shall complete the resident’s medical history and physical examination record.
+
+DHS 132.52 NoteNote: For admission of residents with communicable disease, see s. DHS 132.51 (2) (b).
+
+DHS 132.52(4)(4) Initial care plan. Upon admission, a plan of care for nursing services based on an initial assessment shall be prepared and implemented, pending development of the plan of care required by s. DHS 132.60 (8).
+
+DHS 132.52 NoteNote: For care planning requirements, see s. DHS 132.60 (8).
+
+DHS 132.52(7)(7) Family care information and referral. If the secretary of the department has certified that a resource center, as defined in s. DHS 10.13 (42), is available for the facility under s. DHS 10.71, the facility shall provide information to prospective residents and refer residents and prospective residents to the aging and disability resource center as required under s. 50.04 (2g) to (2i), Stats., and s. DHS 10.73.
+
+DHS 132.52 HistoryHistory: Cr. Register, July, 1982, No. 319, eff. 8-1-82; renum. (1) to (5) to be (2) to (6) and am. (2) and (3), cr. (1), Register, January, 1987, No. 373, eff. 2-1-87; cr. (7), Register, October, 2000, No. 538, eff. 11-1-00; CR 03-033: am. (2) (c) Register December 2003 No. 576, eff. 1-1-04; CR 04-053: am. (2) (c) and (4) and r. (5) and (6) Register October 2004 No. 586, eff. 11-1-04; CR 06-053: r. (1), Register August 2007 No. 620, eff. 9-1-07; corrections in (7) made under s. 13.92 (4) (b) 7., Stats., Register January 2009 No. 637.
+
+DHS 132.53DHS 132.53 Transfers and discharges.
+
+DHS 132.53(1)(1) Scope. This section shall apply to all resident transfers and discharges, except that in the event of conflict with s. 49.45 (6c) (c) and (d), 49.498 (4) or 50.03 (5m) or (14), Stats., the relevant statutory requirement shall apply.
+
+DHS 132.53(2)(2) Conditions.
+
+DHS 132.53(2)(a)(a) Prohibition and exceptions. No resident may be discharged or transferred from a facility, except:
+
+DHS 132.53(2)(a)1.1. Upon the request or with the informed consent of the resident or guardian;
+
+DHS 132.53(2)(a)2.2. For nonpayment of charges, following reasonable opportunity to pay any deficiency;
+
+DHS 132.53(2)(a)3.3. If the resident requires care other than that which the facility is licensed to provide;
+
+DHS 132.53(2)(a)4.4. If the resident requires care which the facility does not provide and is not required to provide under this chapter;
+
+DHS 132.53(2)(a)5.5. For medical reasons as ordered by a physician;
+
+DHS 132.53(2)(a)6.6. In case of a medical emergency or disaster;
+
+DHS 132.53(2)(a)7.7. If the health, safety or welfare of the resident or other residents is endangered, as documented in the resident’s clinical record;
+
+DHS 132.53(2)(a)8.8. If the resident does not need nursing home care;
+
+DHS 132.53(2)(a)9.9. If the short-term care period for which the resident was admitted has expired; or
+
+DHS 132.53(2)(a)10.10. As otherwise permitted by law.
+
+DHS 132.53(2)(b)(b) Alternate placement.
+
+DHS 132.53(2)(b)1.1. Except for transfers or discharges under par. (a) 2. and 6., for nonpayment or in a medical emergency, no resident may be involuntarily transferred or discharged unless an alternative placement is arranged for the resident. The resident shall be given reasonable advance notice of any planned transfer or discharge and an explanation of the need for and alternatives to the transfer or discharge except when there is a medical emergency. The facility, agency, program or person to which the resident is transferred shall have accepted the resident for transfer in advance of the transfer, except in a medical emergency.
+
+DHS 132.53(2)(b)2.2. No resident may be involuntarily transferred or discharged under par. (a) 2. for nonpayment of charges if the resident meets both of the following conditions:
+
+DHS 132.53(2)(b)2.a.a. He or she is in need of ongoing care and treatment and has not been accepted for ongoing care and treatment by another facility or through community support services; and
+
+DHS 132.53(2)(b)2.b.b. The funding of the resident’s care in the nursing home under s. 49.45 (6m), Stats., is reduced or terminated because either the resident requires a level or type of care which is not provided by the nursing home or the nursing home is found to be an institution for mental diseases as defined under 42 CFR 435.1009.
+
+DHS 132.53(3)(3) Procedures.
+
+DHS 132.53(3)(a)(a) Notice. The facility shall provide a resident, the resident’s physician and, if known, an immediate family member or legal counsel, guardian, relative or other responsible person at least 30 days notice of transfer or discharge under sub. (2) (a) 2. to 10., and the reasons for the transfer or discharge, unless the continued presence of the resident endangers the health, safety or welfare of the resident or other residents. The notice shall also contain the name, address and telephone number of the board on aging and long-term care. For a resident with developmental disability or mental illness, the notice shall contain the mailing address and telephone number of the protection and advocacy agency designated under s. 51.62 (2) (a), Stats.
+
+DHS 132.53(3)(b)(b) Planning conference.
+
+DHS 132.53(3)(b)1.1. Unless circumstances posing a danger to the health, safety or welfare of a resident require otherwise, at least 7 days before the planning conference required by subd. 2., the resident, guardian, if any, any appropriate county agency, and others designated by the resident, including the resident’s physician, shall be given a notice containing the time and place of the conference, a statement informing the resident that any persons of the resident’s choice may attend the conference, and the procedure for submitting a complaint to the department.
+
+DHS 132.53(3)(b)2.2. Unless the resident is receiving respite care or unless precluded by circumstances posing a danger to the health, safety, or welfare of a resident, prior to any involuntary transfer or discharge under sub. (2) (a) 2. to 10., a planning conference shall be held at least 14 days before transfer or discharge with the resident, guardian, if any, any appropriate county agency, and others designated by the resident, including the resident’s physician, to review the need for relocation, assess the effect of relocation on the resident, discuss alternative placements and develop a relocation plan which includes at least those activities listed in subd. 3.
+
+DHS 132.53(3)(b)3.3. Transfer and discharge activities shall include:
+
+DHS 132.53(3)(b)3.a.a. Counseling regarding the impending transfer or discharge;
+
+DHS 132.53(3)(b)3.b.b. The opportunity for the resident to make at least one visit to the potential alternative placement, if any, including a meeting with that facility’s admissions staff, unless medically contraindicated or waived by the resident;
+
+DHS 132.53(3)(b)3.c.c. Assistance in moving the resident and the resident’s belongings and funds to the new facility or quarters; and
+
+DHS 132.53(3)(b)3.d.d. Provisions for needed medications and treatments during relocation.
+
+DHS 132.53(3)(b)4.4. A resident who is transferred or discharged at the resident’s request shall be advised of the assistance required by subd. 3. and shall be provided with that assistance upon request.
+
+DHS 132.53(3)(c)(c) Records. Upon transfer or discharge of a resident, the documents required by s. DHS 132.45 (5) (L) and (6) (h) shall be prepared and provided to the facility admitting the resident, along with any other information about the resident needed by the admitting facility.
+
+DHS 132.53(4)(4) Transfer agreements.
+
+DHS 132.53(4)(a)(a) Requirement. Each facility shall have in effect a transfer agreement with one or more hospitals under which inpatient hospital care or other hospital services are available promptly to the facility’s residents when needed. Each intermediate care facility shall also have in effect a transfer agreement with one or more skilled care facilities.
+
+DHS 132.53(4)(b)(b) Transfer of residents. A hospital and a facility shall be considered to have a transfer agreement in effect if there is a written agreement between them or, when the 2 institutions are under common control, if there is a written statement by the person or body which controls them, which gives reasonable assurance that:
+
+DHS 132.53(4)(b)1.1. Transfer of residents will take place between the hospital and the facility ensuring timely admission, whenever such transfer is medically appropriate as determined by the attending physician; and
+
+DHS 132.53(4)(b)2.2. There shall be interchange of medical and other information necessary for the care and treatment of individuals transferred between the institutions, or for determining whether such individuals can be adequately cared for somewhere other than in either of the institutions.
+
+DHS 132.53(4)(d)(d) Notice requirements.
+
+DHS 132.53(4)(d)1.1. Before a resident of a facility is transferred to a hospital or for therapeutic leave, the facility shall provide written information to the resident and an immediate family member or legal counsel concerning the provisions of the approved state medicaid plan about the period of time, if any, during which the resident is permitted to return and resume residence in the nursing facility.
+
+DHS 132.53(4)(d)2.2. At the time of a resident’s transfer to a hospital or for therapeutic leave, the facility shall provide written notice to the resident and an immediate family member or legal counsel of the duration of the period, if any, specified under subd. 1.
+
+DHS 132.53 NoteNote: The “approved state medicaid plan” referred to s. 49.498 (4) (d) 1a, Stats., and subd. 1. states that the department shall have a bedhold policy. The bedhold policy is found in s. DHS 107.09 (4) (j).
+
+DHS 132.53(5)(5) Bedhold.
+
+DHS 132.53(5)(a)(a) Bedhold. A resident who is on leave or temporarily discharged, as to a hospital for surgery or treatment, and has expressed an intention to return to the facility under the terms of the admission statement for bedhold, shall not be denied readmission unless, at the time readmission is requested, a condition of sub. (2) (b) has been satisfied.
+
+DHS 132.53(5)(b)(b) Limitation. The facility shall hold a resident’s bed under par. (a) until the resident returns, until the resident waives his or her right to have the bed held, or up to 15 days following the temporary leave or discharge, whichever is earlier.
+
+DHS 132.53 NoteNote: See s. DHS 107.09 (4) (j) for medical assistance bedhold rules.
+
+DHS 132.53(6)(6) Appeals on transfers and discharges.
+
+DHS 132.53(6)(a)(a) Right to appeal.
+
+DHS 132.53(6)(a)1.1. A resident may appeal an involuntary transfer or discharge decision.
+
+DHS 132.53(6)(a)2.2. Every facility shall post in a prominent place a notice that a resident has a right to appeal a transfer or discharge decision. The notice shall explain how to appeal that decision and shall contain the address and telephone number of the nearest bureau of quality assurance regional office. The notice shall also contain the name, address and telephone number of the state board on aging and long-term care or, if the resident is developmentally disabled or has a mental illness, the mailing address and telephone number of the protection and advocacy agency designated under s. 51.62 (2) (a), Stats.
+
+DHS 132.53(6)(a)3.3. A copy of the notice of a resident’s right to appeal a transfer or discharge decision shall be placed in each resident’s admission folder.
+
+DHS 132.53(6)(a)4.4. Every notice of transfer or discharge under sub. (3) (a) to a resident, relative, guardian or other responsible party shall include a notice of the resident’s right to appeal that decision.
+
+DHS 132.53(6)(b)(b) Appeal procedures.
+
+DHS 132.53(6)(b)1.1. If a resident wishes to appeal a transfer or discharge decision, the resident shall send a letter to the nearest regional office of the department’s bureau of quality assurance within 7 days after receiving a notice of transfer or discharge from the facility, with a copy to the facility administrator, asking for a review of the decision.
+
+DHS 132.53(6)(b)2.2. The resident’s written appeal shall indicate why the transfer or discharge should not take place.
+
+DHS 132.53(6)(b)3.3. Within 5 days after receiving a copy of the resident’s written appeal, the facility shall provide written justification to the department’s bureau of quality assurance for the transfer or discharge of the resident from the facility.
+
+DHS 132.53(6)(b)4.4. If the resident files a written appeal within 7 days after receiving notice of transfer or of discharge from the facility, the resident may not be transferred or discharged from the facility until the department’s bureau of quality assurance has completed its review of the decision and notified both the resident and the facility of its decision.
+
+DHS 132.53(6)(b)5.5. The department’s bureau of quality assurance shall complete its review of the facility’s decision and notify both the resident and the facility in writing of its decision within 14 days after receiving written justification for the transfer or discharge of the resident from the facility.
+
+DHS 132.53(6)(b)6.6. A resident or a facility may appeal the decision of the department’s bureau of quality assurance in writing to the department of administration’s division of hearings and appeals within 5 days after receipt of the decision.
+
+DHS 132.53 NoteNote: The mailing address of the Division of Hearings and Appeals is P.O. Box 7875, Madison, Wisconsin 53707.
+
+DHS 132.53(6)(b)7.7. The appeal procedures in this paragraph do not apply if the continued presence of the resident poses a danger to the health, safety or welfare of the resident or other residents.
+
+DHS 132.53 NoteNote: The bureau of quality assurance was renamed the division of quality assurance.
+
+Down
+
+/code/admin_code/dhs/110/132
+true
+administrativecode
+/code/admin_code/dhs/110/132/v/53
+Department of Health Services (DHS)
+Chs. DHS 110-199; Health
+administrativecode/DHS 132.53
+administrativecode/DHS 132.53
+section
+true
+
+Menu
+
+»Administrative Rules Related
+
+»Administrative Code
+
+»Department of Health Services (DHS)
+
+»Chs. DHS 110-199; Health
+
+»Chapter DHS 132
+
+×
+
+ Details for
+
+ PDF view
+
+ Link (Permanent link)
+
+ Bookmark this location
+
+ View toggle
+
+ Go to top of document
+
+ Search in this chapter
+
+ Search in this section
+
+ Search in this agency
+
+ Search in this chapter group
+
+ Search in this chapter
+
+ Search in this section
+
+ Cross references for section
+
+ Acts affecting this section
+
+ References to this
+
+ 1970 Statutes Annotations
+
+ Appellate Court Citations
+
+ Administrative Code Index
+
+ Reference lines
+
+ Clear highlighting
+
+Published under s. 35.93, Stats. Updated on the first day of each month. Entire code is always current. The Register date on each page is the date the chapter was last published.
+
+SOURCE 2: Wisconsin Board on Aging and Long Term Care — home page (Ombudsman Program) | https://boaltc.wi.gov/Pages/Home.aspx | source date: none stated on page beyond the February 25 domain-change notice | retrieved: 2026-10-18
+Skip to main content
+
+Wisconsin.Gov
+
+Agency Directory
+
+Online Services
+
+MENU
+
+Medigap Helpline
+
+Ombudsman Services
+
+Volunteer Ombudsman
+
+ FAQs & Links
+
+FAQs
+
+Links
+
+About Us
+
+Communications & Events
+
+Contact
+
+Search Board on Aging and Long Term Care
+
+Effective February 25, our website address has changed from longtermcare.wi.gov to boaltc.wi.gov
+
+​​​​​​​​
+
+ ​
+
+Guiding You to Aging Resources​
+
+No matter where you live in the Badger state, travel through life with confidence. The Board on Aging and Long Term Care exists to help you understand your options regarding aging, long-term care, Medicare and prescription drug coverage. Start here to get your questions answered.​
+
+​
+
+ Medigap Helpline
+
+​The Medigap Helpline Services provides free, confidential counseling for Medicare beneficiaries.
+
+​call
+ 1-800-242-1060,
+
+Prescription Part D call 1-855-677-2783
+
+LEARN MORE ABOUT THE MEDIGAP HELPLINE​​​​
+
+ Ombudsman Services
+
+In Wisconsin, the Ombudsman Program has statutory authority to advocate for long-term care consumers aged 60 and over. ​
+
+call 1-800-815-0015
+
+LEARN MORE ABOUT THE OMBUDSMAN PROGRAM​​
+
+ Ombudsman Volunteer
+
+The Ombudsman Volunteer Program strengthens the advocacy services provided by the Ombudsman Program to people living in long-term care homes.
+
+call 1-800-815-0015​
+
+LEARN MORE ABOUT THE VOLUNTEER PROGRAM​​​
+
+​Board on Aging & Long Term CareMedigap HelplineOmbudsmanVolunteer OmbudsmanFrequently Asked Questions (FAQs)About UsCommunications & EventsLinksContact Us
+
+​
+
+Your Independent Guide to Medicare & Long-Term Care​​
+
+In 1981, the State of Wisconsin created the Board on Aging and Long Term Care as an independent board appointed by the Governor with the advice and consent of the state Senate. The Board on Aging and Long Term Care, led by Executive Director, Jessica Trudell, consists of seven appointed Board Members and Agency staff who operate the Long Term Care Ombudsman, Ombudsman Volunteer, and Medigap Helpline Services. Meet our Board Members​
+
+ ​
+
+Missi​​​on​
+
+The mission of the Board on Aging and Long Term Care is to advocate for the interests of the state's long-term care consumers and Medicare beneficiaries, to inform those consumers of their rights, and to educate the public at large about health care systems, Medicare and long-term care.
+
+Visi​​on
+
+The Board is the premiere resource for information and advocacy for our client population and is an integral part of the ever-changing system for long-term care delivery in Wisconsin. The Board will increase its visibility by expanding its role and recognition as a leader and model of advocacy on the state and national stage.
+
+Valu​​es
+
+The Board subscribes to and defends the values of: respect and dignity for the individual; protection of the right of the individual to be free from threats to health, safety and quality of life; fairness and transparency; and open, clear and consistent communication. Agency staff and volunteers provide valuable services consistent with the spirit and intent of these values.
+
+Who We ​​Serve
+
+The Board on Aging and its programs are here to serve:
+
+Wisconsin residents aged 60 and older living in nursing homes, adult family homes, residential care apartment complexes, or community-based residential facilities.
+
+Wisconsin residents aged 60 and older enrolled in long-term care programs, including Family Care, Partnership, PACE, or IRIS.
+
+Medicare beneficiaries of any age seeking insurance counseling.
+
+​​
+
+​​        State of Wisconsin - Board on Aging & L​ong Term Care
+
+1402 Pankratz Street, Suite 111
+
+Madison, Wisconsin 53704
+
+Ombudsman Program/Volunteer Program: 1-800-815-0015
+
+Medigap Helpline: 1-800-242-1060
+
+​
+
+Medigap Part D & Prescription Drug Helpline: 1-855-677-2783
+
+Fax: 1-608-246-7001
+
+Email: BOALTC@Wisconsin.Gov
+
+​
+
+​We provide free, independent advocacy and information. To remain unbiased, we do not recommend or endorse specific care facilities, insurance companies, or products.​
+
+Back to top button
+
+Contact Information
+
+ 1402 Pankratz Street #111
+
+ Madison, WI 53704
+
+ 1-800-815-0015 (Ombudsman)
+
+ 1-800-242-1060 (Medigap)
+
+ BOALTC@wisconsin.gov
+
+Policies/Records
+
+Privacy Policy
+
+Legal/acceptable use
+
+Public meeting notices
+
+Open record requests
+
+Copyright © State of Wisconsin All Rights Reserved
+
+SOURCE 3: Wisconsin Administrative Code, DHS 107.09, Skilled nursing home and intermediate care facility services (chapter DHS 107, Medical Assistance) | https://docs.legis.wisconsin.gov/code/admin_code/dhs/101/107/09 | source date: the site states the code is published under s. 35.93, Stats., and updated on the first day of each month | retrieved: 2026-10-18
+Skip navigation
+
+Home
+
+Documents
+
+Senate
+
+Assembly
+
+Committees
+
+Service Agencies
+
+Docs
+
+Options
+
+Help
+
+2025 Biennium
+
+Statutes
+
+Admin. Rules
+
+Indices
+
+Miscellaneous
+
+Archives
+
+ Home
+
+Bill, Rule, and Appointment Histories
+
+Senators
+
+Representatives
+
+Committees
+
+Text of Introduced Proposals
+
+Amendment Text
+
+Acts
+
+Veto Messages
+
+Enrolled Bills
+
+Votes
+
+Assembly and Senate Floor Calendars
+
+Schedule of Committee Activities
+
+Assembly and Senate Journals
+
+Committee Records (ROCPs)
+
+Legislative Rules
+
+All Session-Related Documents
+
+Subject Index to Acts
+
+Subject Index to Legislation
+
+Subject Index to Journals
+
+Author Index to Legislation
+
+Subject Index to Clearinghouse Rules
+
+Miscellaneous Budget Documents
+
+Executive Orders
+
+Rulings of the Chair
+
+Wisconsin Supreme Court Rules
+
+Opinions of the Attorney General
+
+Town Law Forms
+
+Law
+
+Districts
+
+Session
+
+Drafting Files
+
+ Feeds
+
+ Preferences
+
+ Show tree
+
+ Hide tree
+
+ Feedback
+
+ Help
+
+ Home
+
+Senate Home
+
+Senators
+
+Committees
+
+Session
+
+Chief Clerk
+
+Sergeant at Arms
+
+Civics Education
+
+Human Resources
+
+Assembly Home
+
+Representatives
+
+Committees
+
+Session
+
+Chief Clerk
+
+Sergeant at Arms
+
+Human Resources
+
+Schedule
+
+Joint
+
+Senate
+
+Assembly
+
+Study
+
+Legislative Audit Bureau
+
+Legislative Council
+
+Legislative Fiscal Bureau
+
+Legislative Human Resources Office
+
+Legislative Reference Bureau
+
+Legislative Technology Services Bureau
+
+Menu
+
+»Administrative Rules Related
+
+»Administrative Code
+
+»Department of Health Services (DHS)
+
+»Chs. DHS 101-109; Medical Assistance
+
+»Chapter DHS 107
+
+Up
+
+DHS 107.08(4)(a)5.5. Hospital admissions on Friday or Saturday, except for emergencies, accident or accident care and obstetrical cases, unless the hospital can demonstrate to the satisfaction of the department that the hospital provides all of its services 7 days a week; and
+
+DHS 107.08(4)(a)6.6. Hospital laboratory, diagnostic, radiology and imaging tests not ordered by a prescribing provider, except in emergencies.
+
+DHS 107.08(4)(b)(b) Neither MA nor the recipient may be held responsible for charges or services identified in par. (a) as non-covered, except that a recipient may be billed for charges under par. (a) 3. or 5., if the recipient was notified in writing in advance of the hospital stay that the service was not a covered service.
+
+DHS 107.08(4)(c)(c) If hospital services for a patient are no longer medically necessary and an appropriate alternative care setting is available but the patient refuses discharge, the patient may be billed for continued services if he or she receives written notification prior to the time medically unnecessary services are provided.
+
+DHS 107.08(4)(d)(d) The following professional services are not covered as part of a hospital inpatient claim but shall be billed by an appropriately certified MA provider:
+
+DHS 107.08(4)(d)1.1. Services of physicians, including pathologists, radiologists and the professional-billed component of laboratory and radiology or imaging services, except that services by physician intern and residents services are included as hospital services.
+
+DHS 107.08(4)(d)2.2. Services of psychiatrists and psychologists, except when performing group therapy and medication management, including services provided to a hospital inpatient when billed by a hospital, clinic or other mental health or AODA provider.
+
+DHS 107.08(4)(d)3.3. Services of podiatrists.
+
+DHS 107.08(4)(d)4.4. Services of physician assistants.
+
+DHS 107.08(4)(d)5.5. Services of nurse midwives, nurse practitioners and independent nurses when functioning as independent providers.
+
+DHS 107.08(4)(d)6.6. Services of certified registered nurse anesthetists.
+
+DHS 107.08(4)(d)7.7. Services of anesthesia assistants.
+
+DHS 107.08(4)(d)8.8. Services of chiropractors.
+
+DHS 107.08(4)(d)9.9. Services of dentists.
+
+DHS 107.08(4)(d)10.10. Services of optometrists.
+
+DHS 107.08(4)(d)11.11. Services of hearing aid dealers or instrument specialists.
+
+DHS 107.08(4)(d)12.12. Services of audiologists.
+
+DHS 107.08(4)(d)12m.12m. Services of pharmacists.
+
+DHS 107.08(4)(d)13.13. Any of the following provided on the date of discharge for home use:
+
+DHS 107.08(4)(d)13.a.a. Drugs.
+
+DHS 107.08(4)(d)13.b.b. Durable medical equipment.
+
+DHS 107.08(4)(d)13.c.c. Disposable medical supplies.
+
+DHS 107.08(4)(d)14.14. Specialized medical vehicle transportation.
+
+DHS 107.08(4)(d)15.15. Air, water and land ambulance transportation.
+
+DHS 107.08(4)(e)(e) Professional services provided to hospital inpatients are not covered hospital inpatient services but are rather professional services and subject to the requirements in this chapter that apply to the services provided by the particular provider type.
+
+DHS 107.08(4)(f)(f) Neither a hospital nor a provider performing professional services to hospital inpatients may impose an unauthorized charge on recipients for services covered under this chapter.
+
+DHS 107.08(4)(g)(g) For provision of inpatient psychiatric care by a general hospital, the services listed under s. DHS 107.13 (1) (f) are non-covered services.
+
+DHS 107.08 NoteNote: For more information on non-covered services, see s. DHS 107.03.
+
+DHS 107.08 HistoryHistory: Cr. Register, February, 1986, No. 362, eff. 3-1-86; am. (4) (e) and (f), cr. (4) (g), Register, February, 1988, No. 388, eff. 3-1-88; correction in (3) (g) made under s. 13.93 (2m) (b) 7., Stats., Register, June, 1990, No. 414; emerg. renum. (4) to be (4) (a) and am. (4) (a) (intro.) 1., 2., 4., 6. and 7., cr. (4) (b) to (f) eff. 1-1-91; r. and recr. Register, September, 1991, No. 429, eff. 10-1-91; correction in (2) (d) made under s. 13.93 (2m) (b) 7., Register August 2006 No. 608; corrections in (1) and (3) (c) 1., made under s. 13.92 (4) (b) 7., Stats., Register December 2008 No. 636; CR 24-047: am. (4) (d) (intro.) to 12., cr. (4) (d) 12m., am. (4) (d) 13., 14. Register April 2025 No. 832, eff. 5-1-25; CR 25-055: am. (4) (a) 6. Register February 2026 No. 842, eff. 3-1-26.
+
+DHS 107.09DHS 107.09 Nursing home services.
+
+DHS 107.09(1)(1) Definition. In this section, “active treatment” means an ongoing, organized effort to help each resident attain his or her developmental capacity through the resident’s regular participation, in accordance with an individualized plan, in a program of activities designed to enable the resident to attain the optimal physical, intellectual, social and vocational levels of functioning of which he or she is capable.
+
+DHS 107.09(2)(2) Covered services. Covered nursing home services are medically necessary services provided by a certified nursing home to an inpatient and prescribed by a prescribing provider in a written plan of care. The costs of all routine, day-to-day health care services and materials provided to recipients by a nursing home shall be reimbursed within the daily rate determined for MA in accordance with s. 49.45 (6m), Stats. These services are the following:
+
+DHS 107.09(2)(a)(a) Routine services and costs, namely:
+
+DHS 107.09(2)(a)1.1. Nursing services;
+
+DHS 107.09(2)(a)2.2. Special care services, including activity therapy, recreation, social services and religious services;
+
+DHS 107.09(2)(a)3.3. Supportive services, including dietary, housekeeping, maintenance, institutional laundry and personal laundry services, but excluding personal dry cleaning services;
+
+DHS 107.09(2)(a)4.4. Administrative and other indirect services;
+
+DHS 107.09(2)(a)5.5. Physical plant, including depreciation, insurance and interest on plant;
+
+DHS 107.09(2)(a)6.6. Property taxes; and
+
+DHS 107.09(2)(a)7.7. Transportation services provided on or after July 1, 1986;
+
+DHS 107.09(2)(b)(b) Personal comfort items, medical supplies and special care supplies. These are items reasonably associated with normal and routine nursing home services which are listed in the nursing home payment formula. If a recipient specifically requests a brand name which the nursing home does not routinely supply and for which there is no equivalent or close substitute included in the daily rate, the recipient, after having been informed in advance that the equivalent or close substitute is not available without charge, will be expected to pay for that brand item at cost out of personal funds; and
+
+DHS 107.09(2)(c)(c) Indirect services provided by independent providers of service.
+
+DHS 107.09 NoteNote: Copies of the Nursing Home Payment Formula may be obtained from Division of Medicaid Services, Bureau of Rate Setting, P.O. Box 7851, Madison, WI 53703-7851.
+
+DHS 107.09 NoteNote: Examples of indirect services provided by independent providers of services are services performed by a pharmacist reviewing prescription services for a facility and services performed by an occupational therapist developing an activity program for a facility.
+
+DHS 107.09(3)(3) Services requiring prior authorization. The rental or purchase of a specialized wheelchair for a recipient in a nursing home, regardless of the purchase or rental cost, requires prior authorization from the department.
+
+DHS 107.09 NoteNote: For more information on prior authorization, see s. DHS 107.02 (3).
+
+DHS 107.09(4)(4) Other limitations.
+
+DHS 107.09(4)(a)(a) Ancillary costs.
+
+DHS 107.09(4)(a)1.1. Treatment costs which are both extraordinary and unique to individual recipients in nursing homes shall be reimbursed separately as ancillary costs, subject to any modifications made under sub. (2) (b). The following items are not included in calculating the daily nursing home rate but may be reimbursed separately:
+
+DHS 107.09(4)(a)1.a.a. Oxygen in liters, tanks, or hours, including tank rentals and monthly rental fees for concentrators.
+
+DHS 107.09(4)(a)1.b.b. Tracheostomy and ventilatory supplies and related equipment, subject to guidelines and limitations published by the department in the provider handbook.
+
+DHS 107.09(4)(a)1.c.c. Transportation of a recipient to obtain health treatment or care if the treatment or care is prescribed by a prescribing provider as medically necessary and is performed at a physician's office, clinic, or other recognized medical treatment center, if the transportation service is provided by the nursing home, in its controlled equipment and by its staff, or by common carrier such as bus or taxi, and if the transportation service was provided prior to July 1, 1986. Transportation shall not be reimbursed as an ancillary service on or after July 1, 1986.
+
+DHS 107.09(4)(a)1.d.d. Direct services provided by independent providers of service only if the nursing home can demonstrate to the department that to pay for the service in question as an add-on adjustment to the nursing home’s daily rate is equal in cost or less costly than to reimburse the independent service provider through a separate billing. The nursing home may receive an ancillary add-on adjustment to its daily rate in accordance with s. 49.45 (6m) (b), Stats. The independent service provider may not claim direct reimbursement if the nursing home receives an ancillary add-on adjustment to its daily rate for the service.
+
+DHS 107.09(4)(a)2.2. The costs of services and materials identified in subd. 1. which are provided to recipients shall be reimbursed in the following manner:
+
+DHS 107.09(4)(a)2.a.a. Claims shall be submitted under the nursing home's provider number, and shall appear on the same claim form used for claiming reimbursement at the daily nursing home rate.
+
+DHS 107.09(4)(a)2.b.b. The items identified in subd. 1. shall have been prescribed in writing by the attending prescribing provider, or that provider’s entry in the medical records or nursing charts shall make the need for the items obvious.
+
+DHS 107.09(4)(a)2.c.c. The amounts billed shall reflect the fact that the nursing home has taken advantage of the benefits associated with quantity purchasing and other outside funding sources.
+
+DHS 107.09(4)(a)2.d.d. Reimbursement for questionable materials and services shall be decided by the department.
+
+DHS 107.09(4)(a)2.e.e. Claims for transportation shall show the name and address of any treatment center to which the patient recipient was transported, and the total number of miles to and from the treatment center.
+
+DHS 107.09(4)(a)2.f.f. The amount charged for transportation may not include the cost of the facility’s staff time, and shall be for an actual mileage amount.
+
+DHS 107.09(4)(b)(b) Independent providers of service. Whenever an ancillary cost is incurred under this subsection by an independent provider of service, reimbursement may be claimed only by the independent provider on its provider number. The procedures followed shall be in accordance with program requirements for that provider specialty type.
+
+DHS 107.09(4)(c)(c) Services covered in a Christian Science sanatorium. Services covered in a Christian Science sanatorium shall be services ordinarily received by inpatients of a Christian Science sanatorium, but only to the extent that these services are the Christian Science equivalent of services which constitute inpatient services furnished by a hospital or skilled nursing facility.
+
+DHS 107.09(4)(d)(d) Wheelchairs. Wheelchairs shall be provided by skilled nursing and intermediate care facilities in sufficient quantity to meet the health needs of patients who are recipients. Nursing homes which specialize in providing rehabilitative services and treatment for the developmentally or physically disabled, or both, shall provide the special equipment, including commodes, elevated toilet seats, grab bars, wheelchairs adapted to the recipient’s disability, and other adaptive prosthetics, orthotics and equipment necessary for the provision of these services. The facility shall provide replacement wheelchairs for recipients who have changing wheelchair needs.
+
+DHS 107.09(4)(e)(e) Determination of services as skilled. In determining whether a nursing service is skilled, the following criteria shall be applied:
+
+DHS 107.09(4)(e)1.1. Where the inherent complexity of a service prescribed for a patient is such that it can be safely and effectively performed only by or under the direct supervision of technical or professional personnel, the service shall constitute a skilled service.
+
+DHS 107.09(4)(e)2.2. The restoration potential of a patient shall not be the deciding factor in determining whether a service is to be considered skilled or nonskilled. Even where full recovery or medical improvement is not possible, skilled care may be needed to prevent, to the extent possible, deterioration of the condition or to sustain current capacities. For example, even though no potential for rehabilitation exists, a terminal cancer patient may require skilled services as defined in this paragraph and par. (f).
+
+DHS 107.09(4)(e)3.3. A service that is ordinarily nonskilled shall be considered a skilled service where, because of medical complications, its performance or supervision or the observation of the patient necessitates the use of skilled nursing or skilled rehabilitation personnel. For example, the existence of a plaster cast on an extremity generally does not indicate a need for skilled care, but a patient with a preexisting acute skin problem or with a need for special traction of the injured extremity might need to have technical or professional personnel properly adjust traction or observe the patient for complications. In these cases, the complications and special services involved shall be documented by the prescribing provider’s orders and nursing or therapy notes.
+
+DHS 107.09(4)(f)(f) Skilled nursing services or skilled rehabilitation services.
+
+DHS 107.09(4)(f)1.1. A nursing home shall provide either skilled nursing services or skilled rehabilitation services on a 7-day-a-week basis. If, however, skilled rehabilitation services are not available on a 7-day-a-week basis, the nursing home would meet the requirement in the case of a patient whose inpatient stay is based solely on the need for skilled rehabilitation services if the patient needs and receives these services on at least 5 days a week.
+
+DHS 107.09 NoteNote: For example, where a facility provides physical therapy on only 5 days a week and the patient in the facility requires and receives physical therapy on each of the days on which it is available, the requirement that skilled rehabilitation services be provided on a daily basis would be met.
+
+DHS 107.09(4)(f)2.2. Examples of services which could qualify as either skilled nursing or skilled rehabilitation services are:
+
+DHS 107.09(4)(f)2.a.a. Overall management and evaluation of the care plan. The development, management and evaluation of a patient care plan based on the prescribing provider’s orders constitute skilled services when, in terms of the patient’s physical or mental condition, the development, management and evaluation necessitate the involvement of technical or professional personnel to meet needs, promote recovery and actuate medical safety. This includes the management of a plan involving only a variety of personal care services where in light of the patient's condition the aggregate of the services necessitates the involvement of technical or professional personnel. Skilled planning and management activities are not always specifically identified in the patient’s clinical record. In light of this, where the patient’s overall condition supports a finding that recovery or safety can be assured only if the total care required is planned, managed, and evaluated by technical or professional personnel, it is appropriate to infer that skilled services are being provided.
+
+DHS 107.09(4)(f)2.b.b. Observation and assessment of the patient’s changing condition. When the patient’s condition is such that the skills of a nurse or other technical or professional person are required to identify and evaluate the patient’s need for possible modification of treatment and the initiation of additional medical procedures until the patient’s condition is stabilized, the services constitute skilled nursing or rehabilitation services. Patients who in addition to their physical problems exhibit acute psychological symptoms such as depression, anxiety or agitation may also require skilled observation and assessment by technical or professional personnel for their safety and the safety of others. In these cases, the special services required shall be documented by a prescribing provider’s orders or nursing or therapy notes.
+
+DHS 107.09(4)(f)2.c.c. Patient education. In cases where the use of technical or professional personnel is necessary to teach a patient self-maintenance, the teaching services constitute skilled nursing or rehabilitative services.
+
+DHS 107.09(4)(g)(g) Intermediate care facility services (ICF).
+
+DHS 107.09(4)(g)1.1. Intermediate care services include services that are:
+
+DHS 107.09(4)(g)1.a.a. Considered appropriate by the department and provided by a Christian Science sanatorium either operated by or listed and certified by the First Church of Christ Scientist, Boston, Mass.
+
+DHS 107.09(4)(g)1.b.b. Provided by a facility located on an Indian reservation that furnishes, on a regular basis, health-related services and is licensed pursuant to s. 50.03, Stats., and ch. DHS 132.
+
+DHS 107.09(4)(g)2.2. Intermediate care services may include services provided in an institution for developmentally disabled persons if all of the following criteria are satisfied:
+
+DHS 107.09(4)(g)2.a.a. The primary purpose of the institution is to provide health or rehabilitation services for developmentally disabled persons.
+
+DHS 107.09(4)(g)2.b.b. The institution meets the standards in s. DHS 105.12.
+
+DHS 107.09(4)(g)2.c.c. The developmentally disabled recipient for whom payment is requested is receiving active treatment and meeting the requirements of 42 CFR 442.445 and 442.464, s. DHS 132.695 and ch. DHS 134.
+
+DHS 107.09(4)(g)3.3. Intermediate care services may include services provided in a distinct part of a facility other than an intermediate care facility if the distinct part meets all of the following criteria:
+
+DHS 107.09(4)(g)3.a.a. Meets all requirements for an intermediate care facility.
+
+DHS 107.09(4)(g)3.b.b. Is an identifiable unit, such as an entire ward or contiguous ward, a wing, a floor, or a building.
+
+DHS 107.09(4)(g)3.c.c. Consists of all beds and related facilities in the unit.
+
+DHS 107.09(4)(g)3.d.d. Houses all recipients for whom payment is being made for intermediate care facility services, except as provided in subd. 4.
+
+DHS 107.09(4)(g)3.e.e. Is clearly identified.
+
+DHS 107.09(4)(g)3.f.f. Is approved in writing by the department.
+
+Down
+
+/code/admin_code/dhs/101/107
+true
+administrativecode
+/code/admin_code/dhs/101/107/09
+Department of Health Services (DHS)
+Chs. DHS 101-109; Medical Assistance
+administrativecode/DHS 107.09
+administrativecode/DHS 107.09
+section
+true
+
+Menu
+
+»Administrative Rules Related
+
+»Administrative Code
+
+»Department of Health Services (DHS)
+
+»Chs. DHS 101-109; Medical Assistance
+
+»Chapter DHS 107
+
+×
+
+ Details for
+
+ PDF view
+
+ Link (Permanent link)
+
+ Bookmark this location
+
+ View toggle
+
+ Go to top of document
+
+ Search in this chapter
+
+ Search in this section
+
+ Search in this agency
+
+ Search in this chapter group
+
+ Search in this chapter
+
+ Search in this section
+
+ Cross references for section
+
+ Acts affecting this section
+
+ References to this
+
+ 1970 Statutes Annotations
+
+ Appellate Court Citations
+
+ Administrative Code Index
+
+ Reference lines
+
+ Clear highlighting
+
+Published under s. 35.93, Stats. Updated on the first day of each month. Entire code is always current. The Register date on each page is the date the chapter was last published.
+

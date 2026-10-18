@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Board on Aging and Long Term Care, an independent state board: "In Wisconsin, the Ombudsman Program has statutory authority to advocate for long-term care consumers aged 60 and over." Its published contact is "1402 Pankratz Street, Suite 111" "Madison, Wisconsin 53704" with "Ombudsman Program/Volunteer Program: 1-800-815-0015" and "Email: BOALTC@Wisconsin.Gov". The rule writes the board into the notice itself, requiring its name, address and telephone number on the face of every transfer or discharge notice.
 
-**Sources last checked.** 2026-09-18
+**Sources last checked.** 2026-10-18
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 
