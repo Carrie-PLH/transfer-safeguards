@@ -1,5 +1,14 @@
 {
   "sources": {
+    "http://govdocs.nebraska.gov/epubs/H8900/R471.0012-2021.pdf": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261019123109/http://govdocs.nebraska.gov/epubs/H8900/R471.0012-2021.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-19T123116Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "nebraska"
+    },
     "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0400/Sections/0400.022.html": {
       "attempts": 1,
       "last_attempt": "2026-09-21T111834Z",
@@ -255,6 +264,42 @@
       "last_result": "FAILED",
       "page": "arizona"
     },
+    "https://dhhs.ne.gov/Documents/Title-175-Complete.pdf": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261019123132/https://dhhs.ne.gov/Documents/Title-175-Complete.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-19T123141Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "nebraska"
+    },
+    "https://dhhs.ne.gov/Documents/Title-465-Complete.pdf": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261019123156/https://dhhs.ne.gov/Documents/Title-465-Complete.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-19T123209Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "nebraska"
+    },
+    "https://dhhs.ne.gov/Pages/Aging-Ombudsman.aspx": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261019123417/https://dhhs.ne.gov/Pages/Aging-Ombudsman.aspx",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-19T123446Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "nebraska"
+    },
+    "https://dhhs.ne.gov/Pages/Title-465.aspx": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261019123653/https://dhhs.ne.gov/Pages/Title-465.aspx",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-19T123714Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "nebraska"
+    },
     "https://dhss.delaware.gov/dhcq/dhcq/contact/": {
       "attempts": 1,
       "capture": "https://web.archive.org/web/20260906133015/https://dhss.delaware.gov/dhcq/dhcq/contact/",
@@ -281,6 +326,15 @@
       "last_detail": "ok",
       "last_result": "OK",
       "page": "illinois"
+    },
+    "https://dphhs.mt.gov/sltc/aging/longtermcareombudsman/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261019122131/https://dphhs.mt.gov/sltc/aging/longtermcareombudsman/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-19T122156Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "montana"
     },
     "https://dsd.maryland.gov/regulations/Pages/10.07.09.10.aspx": {
       "attempts": 1,
@@ -451,6 +505,15 @@
       "last_result": "FAILED",
       "page": "hawaii"
     },
+    "https://health.mo.gov/seniors/ombudsman/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261019121807/https://health.mo.gov/seniors/ombudsman/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-19T121833Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "missouri"
+    },
     "https://healthandwelfare.idaho.gov/appeals-and-fair-hearings": {
       "attempts": 1,
       "last_attempt": "2026-09-21T112222Z",
@@ -516,6 +579,15 @@
       "last_result": "FAILED",
       "page": "louisiana"
     },
+    "https://leg.mt.gov/bills/mca/title_0500/chapter_0050/part_0110/section_0040/0500-0050-0110-0040.html": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261019122232/https://leg.mt.gov/bills/mca/title_0500/chapter_0050/part_0110/section_0040/0500-0050-0110-0040.html",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-19T122304Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "montana"
+    },
     "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=1599.1": {
       "attempts": 1,
       "capture": "https://web.archive.org/web/20260906131705/https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=1599.1",
@@ -549,6 +621,20 @@
       "last_detail": "ok",
       "last_result": "OK",
       "page": "idaho"
+    },
+    "https://medicaid.ms.gov/wp-content/uploads/2025/07/Title-23-Part-300-Appeals-eff.-7.1.2025.pdf": {
+      "attempts": 1,
+      "last_attempt": "2026-10-19T121508Z",
+      "last_detail": "error:not-found",
+      "last_result": "FAILED",
+      "page": "mississippi"
+    },
+    "https://medicaid.ms.gov/wp-content/uploads/2026/07/Title-23-Part-207-Institutional-LTC-eff-8.1.26.pdf": {
+      "attempts": 1,
+      "last_attempt": "2026-10-19T121530Z",
+      "last_detail": "error:not-found",
+      "last_result": "FAILED",
+      "page": "mississippi"
     },
     "https://medicaidpublications.dhss.delaware.gov/docs/DesktopModules/Bring2mind/DMX/API/Entries/Download?Command=Core_Download&EntryId=900&language=en-US&PortalId=0&TabId=94": {
       "attempts": 1,
@@ -590,6 +676,42 @@
       "last_detail": "ok",
       "last_result": "OK",
       "page": "minnesota"
+    },
+    "https://msdh.ms.gov/page/resources/119.pdf": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261019121545/https://msdh.ms.gov/page/resources/119.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-19T121559Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "mississippi"
+    },
+    "https://mydss.mo.gov/sites/mydss/files/media/pdf/2024/01/Nursing-Home-Manual-01-09-24.pdf": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261019121900/https://mydss.mo.gov/sites/mydss/files/media/pdf/2024/01/Nursing-Home-Manual-01-09-24.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-19T121915Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "missouri"
+    },
+    "https://nebraskalegislature.gov/laws/statutes.php?statute=71-445": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261019123829/https://nebraskalegislature.gov/laws/statutes.php?statute=71-445",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-19T123846Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "nebraska"
+    },
+    "https://nebraskalegislature.gov/laws/statutes.php?statute=71-6022": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261019124001/https://nebraskalegislature.gov/laws/statutes.php?statute=71-6022",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-19T124020Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "nebraska"
     },
     "https://oah.dc.gov/page/about": {
       "attempts": 1,
@@ -645,6 +767,42 @@
       "last_detail": "error:no-captures",
       "last_result": "FAILED",
       "page": "delaware"
+    },
+    "https://rules.mt.gov/browse/collections/aec52c46-128e-4279-9068-8af5d5432d74/policies/71e66051-684a-4882-b57b-5ff6c1491f68": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261019122455/https://rules.mt.gov/browse/collections/aec52c46-128e-4279-9068-8af5d5432d74/policies/71e66051-684a-4882-b57b-5ff6c1491f68",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-19T122513Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "montana"
+    },
+    "https://rules.mt.gov/browse/collections/aec52c46-128e-4279-9068-8af5d5432d74/policies/8d6002f2-7e61-46b9-a8d1-d2915232080b": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261019122657/https://rules.mt.gov/browse/collections/aec52c46-128e-4279-9068-8af5d5432d74/policies/8d6002f2-7e61-46b9-a8d1-d2915232080b",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-19T122716Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "montana"
+    },
+    "https://rules.mt.gov/browse/collections/aec52c46-128e-4279-9068-8af5d5432d74/policies/adebcd91-e84e-42fa-a58a-711b9e4e9514": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261019122854/https://rules.mt.gov/browse/collections/aec52c46-128e-4279-9068-8af5d5432d74/policies/adebcd91-e84e-42fa-a58a-711b9e4e9514",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-19T122913Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "montana"
+    },
+    "https://rules.mt.gov/browse/collections/aec52c46-128e-4279-9068-8af5d5432d74/policies/cad14ad9-fc5b-4382-9f22-9659b92adef9": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261019123027/https://rules.mt.gov/browse/collections/aec52c46-128e-4279-9068-8af5d5432d74/policies/cad14ad9-fc5b-4382-9f22-9659b92adef9",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-19T123043Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "montana"
     },
     "https://rules.sos.ga.gov/gac/111-8-50": {
       "attempts": 1,
@@ -992,6 +1150,15 @@
       "last_result": "OK",
       "page": "massachusetts"
     },
+    "https://www.mdhs.ms.gov/ombudsman/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261019121623/https://www.mdhs.ms.gov/ombudsman/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-19T121643Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "mississippi"
+    },
     "https://www.michigan.gov/-/media/Project/Websites/lara/healthsystemslicensing/Folder9/bhs_GUIDANCE_for_Inv_Transfer.pdf": {
       "attempts": 1,
       "consecutive_hard_failures": 1,
@@ -1039,6 +1206,50 @@
       "last_result": "FAILED",
       "page": "kansas"
     },
+    "https://www.revisor.mn.gov/rules/4658.0465/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261019120929/https://www.revisor.mn.gov/rules/4658.0465/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-19T120951Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "minnesota"
+    },
+    "https://www.revisor.mn.gov/rules/9505.0415/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261019121045/https://www.revisor.mn.gov/rules/9505.0415/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-19T121114Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "minnesota"
+    },
+    "https://www.revisor.mn.gov/statutes/cite/144.651": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261019121233/https://www.revisor.mn.gov/statutes/cite/144.651",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-19T121255Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "minnesota"
+    },
+    "https://www.revisor.mn.gov/statutes/cite/144A.135": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261019121427/https://www.revisor.mn.gov/statutes/cite/144A.135",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-19T121447Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "minnesota"
+    },
+    "https://www.sos.mo.gov/cmsimages/adrules/csr/current/19csr/19c30-82.pdf": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-19T121958Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "missouri"
+    },
     "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12005&fileName=6+CCR+1011-1+Chapter+05": {
       "attempts": 1,
       "capture": "https://web.archive.org/web/20260906132430/https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12005&fileName=6+CCR+1011-1+Chapter+05",
@@ -1056,5 +1267,5 @@
       "page": "colorado"
     }
   },
-  "updated": "2026-10-16T055639Z"
+  "updated": "2026-10-19T124020Z"
 }
