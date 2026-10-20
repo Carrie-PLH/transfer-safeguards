@@ -1,0 +1,328 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: california
+ASSEMBLED: 2026-10-20
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/california.json (recipe digest d54553fc0578). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- SOURCE 1: transport curl; extractor html-text; scope #DeltaPlaceHolderMain; filters strip-zero-width, trim-lines, collapse-blank-runs.
+  The 2026-08-30 standing packet recorded cdph.ca.gov as returning an incomplete certificate chain to curl and to python/certifi, and captured this source through the session's HTTP fetch tool. Retested 2026-09-04: plain curl with a browser user-agent now returns 200 with the full page, including the eight-item notice-contents list, the four 30-day exceptions and the 'basis under Title 42 CFR section 483.15(c)(1)(i)(A)-(F)' phrase the standing page quotes verbatim. Whatever blocked it on 2026-08-30 no longer does, consistent with the transient-failure pattern CLAUDE.md records for Arkansas's codeofarrules.arkansas.gov. #DeltaPlaceHolderMain is this SharePoint template's own content well, narrower than body (which also carries the site's mega-menu) and wider than any single paragraph; it includes the page's own masthead furniture ('KAREN L. SMITH, MD, MPH' over a governor line reading 'EDMUND G. BROWN JR.' above a May 28, 2025 letter) exactly as the 2026-08-30 packet recorded a similar mismatched-masthead artifact — reproduced as published, not corrected. strip-zero-width removes the SharePoint editor's own U+200B runs between paragraphs (visible as nothing to a reader); it does not touch the curly apostrophes and quotation marks the letter itself prints, which are left exactly as the publisher set them.
+- SOURCE 2: transport curl; extractor html-text; scope main; filters trim-lines, collapse-blank-runs.
+  The 2026-08-30 standing packet recorded dhcs.ca.gov as returning a 212-byte script shell to curl and captured this source through the session's HTTP fetch tool. Retested 2026-09-04: plain curl with a browser user-agent now returns 200 with the full rendered page (84 KB), including the OAHA phone, fax, email and e-filing-portal sentence and the same 'page modified 2026-07-15' meta value the standing packet recorded — the same document, reachable by a plainer transport. 'main' is this template's own article element and excludes the site's header and footer navigation.
+- SOURCE 3: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The 2026-08-30 standing packet was captured the same way (curl, browser user-agent) and recorded its own method as a tag strip over the <main> element; this template in fact carries no <main> tag, and '#main-content' omits the site's own top navigation ('About Us', 'Providers & Partners', ...) that the standing packet's body plainly carries ('Skip Navigation Links', 'About Us', 'Careers with CDA', ...). 'body' is the narrowest scope that is honestly stated and a safe superset of the standing packet's own text, matching the convention the Florida and New York recipes already use for this reason.
+- SOURCE 4: transport curl; extractor html-text; scope #codeLawSectionNoHead; filters trim-lines, collapse-blank-runs.
+  Same host, method and scope as the standing packet's Source 4; re-fetched 2026-09-04 and unchanged (same closing credit line, 'Amended by Stats. 2023, Ch. 794, Sec. 3. (AB 48) Effective January 1, 2024.'). The line breaks inside sentences are leginfo's own markup.
+- SOURCE 5: transport curl; extractor html-text; scope #co_document; filters trim-lines, collapse-blank-runs.
+  The 2026-08-30 standing packet recorded govt.westlaw.com/calregs as serving rule bodies only to a scripted client, returning a 4.8 KB shell with no rule text to direct capture, and left 72527 capture-pending. That test used the GUID printed on DHCS's own page (I71F6A1A0A39811E08822C131FF5E2170), which returns 'Document not found' from a real browser as well as from curl -- the GUID itself is stale, not the transport. Found again 2026-09-04 by browsing govt.westlaw.com/calregs from its own home page (Title 22 > Division 5 > Chapter 3 > Article 5, no search box or session token involved) to the section's current address, IBAE556025B6111EC9451000D3A7C4BC3, which a plain curl with a browser user-agent resolves directly with no session cookie. This is a stale-link problem, not a scripted-client-over-an-API problem, so it is captured as an ordinary curl source rather than under the agency-API rule. #co_document is the platform's own per-section container: it holds the breadcrumb, the section heading, currentness marker, full text, Credits/NOTE, HISTORY and the 'This database is current through' line, and excludes the page's site chrome and the 'Documents In Sequence' footer navigation.
+- SOURCE 6: transport curl; extractor html-text; scope #co_document; filters trim-lines, collapse-blank-runs.
+  Same host, method, GUID-discovery route and scope as Source 5, found the same session by the same browse path (Article 5's own section list). Also capture-pending in the 2026-08-30 standing packet under the same stale-GUID problem (DHCS's page links I7311F370D4BC11DE8879F88E8B0DAAAE, which also 'Document not found's).
+- SOURCE 7: transport curl; extractor html-text; scope #co_document; filters trim-lines, collapse-blank-runs.
+  Same host, method and scope as Sources 5 and 6, found the same way while reading Article 5's section list (this rule immediately precedes 72520 there). Not linked by either AFL 25-17 or the DHCS OAHA page; captured because its own text cross-references 'Section 72527(a)(5)', which after 72527's 2011 renumbering names a different right (informed consent) than the transfer/discharge right at 72527(a)(6) -- a discrepancy inside the state's own current regulations, recorded as a finding rather than corrected.
+- SOURCE 8: transport curl; extractor html-text; scope #co_document; filters trim-lines, collapse-blank-runs.
+  Found 2026-09-04 by following 72520(a)(2)'s own cross-reference ('Except as provided in Section 51535.1') and browsing to it (Title 22 > Division 3 > Subdivision 1 > Chapter 3 > Article 7's own section list, no search box). Same host, method and #co_document scope as Sources 5-7. This is the Medi-Cal reimbursement counterpart to 72520's licensing bed-hold rule: it states the same seven-day cap for payment purposes and adds the procedural detail (physician notice, day-of-departure/day-of-return counting, termination on death) that 72520 does not. Its own printed payment-rate table runs only through fiscal year 2006-07 despite the section's 'Currentness' marker and a 2013-2014 amendment to the same subsection; both facts are quoted rather than reconciled.
+- SOURCE 9: transport curl; extractor html-text; scope #codeLawSectionNoHead; filters trim-lines, collapse-blank-runs.
+  Same host, method and scope as Source 4. Found 2026-09-04 searching for any California statement of what happens once an OAHA hearing is decided, beyond HSC 1599.1(h)'s Medi-Cal-eligible refusal-to-readmit case; it states a facility must comply within three calendar days of service of an OAHA decision finding an improper transfer, discharge, or refusal to readmit, on pain of a per-day penalty, and applies to TDA and RTR decisions alike rather than only the RTR/Medi-Cal case. It is a post-decision compliance deadline, not a pendency statement (it does not say whether a resident stays in place while the hearing is pending), and its own closing credit line states it is conditionally operative on a skilled-nursing quality-assurance fee remaining approved by CMS and is 'Inoperative after December 31, 2027' -- both quoted rather than assessed, because whether the operative condition is currently met is not a fact this capture can verify.
+
+SOURCE 1: California Department of Public Health, All Facilities Letter AFL 25-17, SNF Discharge Notice Requirements | https://www.cdph.ca.gov/Programs/CHCQ/LCP/Pages/AFL-25-17.aspx | source date: May 28, 2025 | retrieved: 2026-10-20
+KAREN L. SMITH, MD, MPH
+
+Director and State Public Health Officer
+
+EDMUND G. BROWN JR.
+
+ Governor
+
+Health and Human Services Agency
+
+ California Department of Public Health
+
+ AFL 25-17
+
+ May 28, 2025
+
+TO:
+
+ Skilled Nursing Facilities (SNFs)
+
+SUBJECT:
+
+ SNF Discharge Notice Requirements
+
+AUTHORITY:     Health and Safety Code (HSC) section 1599.1(i)
+
+                                Title 42 Code of Federal Regulations (CFR) section 483.15
+
+                                Title 22 California Code of Regulations (CCR) section 72527
+
+All Facilities Letter (AFL) Summary
+
+This AFL reminds skilled nursing facilities (SNFs) of the transfer and discharge notice requirements, as specified in Title 42 CFR section 483.15(c).
+
+Transfer and discharge notices must be in writing and in a language and manner the resident and resident representative(s) understand.
+
+Noncompliance with transfer and discharge requirements will be cited as a deficiency and may result in a citation and/or civil action.
+
+Background
+
+Title 42 CFR section 483.15(c)(3)-(6) provides the notice requirements for facility-initiated transfers and discharges, including discharges that occur while the resident remains in the hospital after an emergency transfer. HSC section 1599.1(i) requires SNFs to comply with Title 42 CFR section 483.15, regardless of a resident's payment source or the Medi-Cal or Medicare certification status of the SNF in which the resident resides, except that a noncertified facility is not obligated to provide notice of Medicaid or Medicare benefits, covered services, or eligibility procedures.
+
+Notice Before Transfer or Discharge
+
+Pursuant to Title 42 CFR
+section 483.15(c)(3), before a SNF transfers or discharges a resident, the SNF must:
+
+Notify the resident and the resident's representative(s) of the transfer or discharge and the reasons for the move in writing and in a language and manner they understand.
+
+Send a copy of the notice of transfer or discharge to the representative of the Office of the State Long-Term Care (LTC) Ombudsman.
+
+Record the reasons for the transfer or discharge in the resident's medical record, in accordance with Title 42 CFR section 483.15(c)(2).
+
+Include in the notice all items required in Title
+42 CFR section 483.15(c)(5) – see  “Contents of the Notice" section below.
+
+Contents of the Notice
+
+The facility's notice must include all of the following at the time notice is provided:
+
+The specific reason for the transfer or discharge, including the basis under Title 42 CFR section 483.15(c)(1)(i)(A)-(F).
+
+The effective date of transfer or discharge.
+
+The specific location (such as the name of the new provider or description and/or address if the location is a residence) to which the resident is to be transferred or discharged.
+
+An explanation of the right to appeal the transfer or discharge to the State (Department of Health Care Services (DHCS), Office of Administrative Hearings and Appeals (OAHA)).
+
+The name, address (mail and email), and telephone number of the state entity which receives such appeal hearing requests (DHCS OAHA, Transfer Discharge and Refusal to Readmit Unit).
+
+Information on how to obtain an appeal form.
+
+Information on obtaining assistance in completing and submitting the appeal hearing request.
+
+The name, address (mailing and email), and phone number of the representative of the Office of the State LTC Ombudsman.
+
+For nursing facility residents with intellectual and developmental disabilities (or related disabilities) or with mental illness (or related disabilities), the notice must include the name, mailing and e-mail addresses, and phone number of the agency responsible for the protection and advocacy for these populations (Disability Rights California, Get Help Webpage).
+
+Timing of The Notice
+
+Notice must be provided at least 30 days prior to the transfer or discharge of the resident. Exceptions to the 30-day requirement apply when the transfer or discharge is affected because:
+
+The health and/or safety of individuals in the facility would be endangered due to the clinical or behavioral status of the resident.
+
+The resident's health improves sufficiently to allow a more immediate transfer or discharge.
+
+An immediate transfer or discharge is required by the resident's urgent medical needs; or
+
+A resident has not resided in the facility for 30 days.
+
+In these exceptional cases, the notice must be provided to the resident, resident's representative(s) if appropriate, and LTC ombudsman as soon as practicable before the transfer or discharge.
+
+The information in this AFL is a brief summary of the laws and regulations governing the rights of resident and the resident's representative(s) on receiving a notification of transfer or discharge from a SNF. SNFs are responsible for complying with all applicable laws. Consequences of not complying will result in a deficiency that can lead to a citation and/or civil action against the licensee of the SNF.
+
+For more information regarding rights, admission, and transfer and discharge requirements, refer to the California Standard Admission Agreement (PDF) and the applicable state and federal requirements referenced above.
+
+If you have questions, please contact your respective district office.
+
+Sincerely,
+
+Original signed by Mandi Posner
+
+Mandi Posner
+
+Deputy Director
+
+ Center for Health Care Quality, MS 0512 . P.O. Box 997377 . Sacramento, CA
+ 95899-7377
+
+ (916) 324-6630 . (916) 324-4820 FAX
+
+ Department Website (cdph.ca.gov)
+
+Page Last Updated :
+
+SOURCE 3: California Department of Aging, Long-Term Care Ombudsman (consumer page) | https://aging.ca.gov/programs_and_services/long-term_care_ombudsman/ | source date: none stated on page | retrieved: 2026-10-20
+Skip to Main Content
+
+×
+
+Saving your location allows us to provide you with more relevant information.
+
+Set Location
+
+return to homepage
+
+department of aging facebook
+
+department of aging instagram
+
+department of aging twitter
+
+department of aging youtube channed
+
+Email california department of aging
+
+Change Text Size T T T
+
+×
+
+Default
+
+High Contrast
+
+Reset
+
+Increase Font SizeFont
+
+Decrease Font SizeFont
+
+Menu
+
+Search
+
+About Us
+
+Providers & Partners
+
+Careers with CDA
+
+Newsroom
+
+Contact Us
+
+Search
+
+How Do I?
+
+Get home delivered meals
+
+Find a nutrition or exercise class
+
+Digital Resources
+
+Apply for Medi-Cal
+
+Get help with Medicare
+
+Determine the best housing option for me
+
+Get help with my landlord
+
+Get legal assistance
+
+Make home modifications so that I can safely stay in my current home
+
+Get help dealing with memory problems
+
+Learn more about hearing, vision, and speech assistive technology
+
+Get transportation to appointments
+
+Learn more about safe senior driving
+
+Get paid to take care of a family member
+
+Open an Adult Day Care Center
+
+Report elder abuse or neglect
+
+Outside California
+
+ Call 1-800-677-1116
+
+Eldercare Locator
+
+For information on services for seniors or adults with disabilities who live outside California.
+
+State Health Insurance Assistance Programs (SHIP)
+
+ For one-on-one insurance counseling and assistance to Medicare beneficiaries, their families, friends, and caregivers.
+
+Long-Term Care Ombudsman
+
+How To Find Services In My Area
+
+You can locate a local Ombudsman office in your area by selecting your county on the Find Services in My County page of this website.
+
+Additionally, all long-term care facilities are required to post, in a visible location, the phone number for the local Ombudsman office and the Statewide Ombudsman Hotline number 1-800-231-4024. The Ombudsman Hotline is available 24 hours a day, 7 days a week to take calls and refer complaints from residents in long-term care facilities.
+
+What Services Are Available
+
+Long-Term Care Ombudsman representatives assist residents in long-term care facilities with issues related to day-to-day care, health, safety, and personal preferences. Problems can include, but are not limited to:
+
+Violation of residents' rights or dignity
+
+Physical, verbal, mental, or financial abuse
+
+Poor quality of care
+
+Dietary concerns
+
+Medical care, therapy, and rehabilitation issues
+
+Medicare and Medi-Cal benefit issues
+
+Improper transfer or discharge of a resident
+
+Inappropriate use of chemical or physical restraints
+
+An Ombudsman:
+
+Will follow your wishes
+
+Ombudsman representatives follow the expressed wishes of residents or, in cases where residents cannot indicate their choices, the expressed wishes of their representatives.
+
+Receives extensive training
+
+Every new Ombudsman representative completes a minimum of 36 hours of training as well as a supervised internship. After being certified, Ombudsman representatives must complete a minimum of 18 hours of ongoing education each year.
+
+Is usually a volunteer
+
+nearly 80 percent of California's State-certified Ombudsman representatives are volunteers.
+
+Reviews and investigates reports of abuse or neglect in long-term care facilities
+
+All Ombudsman services are provided for free and all complaints are confidential.
+
+Who Can Get These Services
+
+All residents of Long-Term Care facilities regardless of age.
+
+Residents' Rights
+
+Learn more about Long-Term Care facility Residents' Rights.
+
+Program Data
+
+ For past and current program data visit the Data and Reports sections of the website.
+
+Volunteer to be a Long-Term Care Ombudsman
+
+Learn more about the volunteer opportunities as a Long-Term Care Ombudsman.
+
+Back to Top
+
+Conditions of Use
+
+Privacy Policy
+
+Accessibility
+
+Get Free Reader
+
+CDA Forms
+
+Program Memos
+
+department of aging facebook
+
+department of aging instagram
+
+department of aging twitter
+
+navigate to linkin login
+
+department of aging youtube channed
+
+ Copyright ©
+ State of California
+

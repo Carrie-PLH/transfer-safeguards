@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: arkansas
-ASSEMBLED: 2026-09-24
+ASSEMBLED: 2026-10-20
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/arkansas.json (recipe digest 6b3471c34a8f). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -14,7 +14,7 @@ CAPTURE NOTES:
 - SOURCE 4: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
   The program's own site, on a dhs.arkansas.gov subdomain, served by a hosted site builder but curl-able. Its text names the State Ombudsman, the coordinator and the regional ombudsmen by region and offers a county search, and prints no telephone number, street address or email in the served text; the contacts sit behind the search widget. The page records that as what the program publishes, not as a capture failure. humanservices.arkansas.gov, the department's main site, returns a bare nginx 403 to curl with every header set tried, over HTTP/1.1 and HTTP/2 alike; the department's File an Appeal page is carried in a supplemental packet captured by browser, marked not re-verifiable.
 
-SOURCE 1: 20 CAR § 400-2505, Transfer or discharge — Code of Arkansas Rules, Title 20, Chapter X (Office of Long-Term Care), Subchapter A, Part 400, Rules for Nursing Homes, Subpart 25, Residents' Rights — Arkansas Secretary of State | https://codeofarrules.arkansas.gov/Rules/Rule?levelType=section&titleID=20&chapterID=38&subChapterID=50&partID=1233&subPartID=7678&sectionID=50213 | source date: the site's footer states 'Last Updated' with a date and that the Code is updated weekly; no per-section date is printed | retrieved: 2026-09-24
+SOURCE 1: 20 CAR § 400-2505, Transfer or discharge — Code of Arkansas Rules, Title 20, Chapter X (Office of Long-Term Care), Subchapter A, Part 400, Rules for Nursing Homes, Subpart 25, Residents' Rights — Arkansas Secretary of State | https://codeofarrules.arkansas.gov/Rules/Rule?levelType=section&titleID=20&chapterID=38&subChapterID=50&partID=1233&subPartID=7678&sectionID=50213 | source date: the site's footer states 'Last Updated' with a date and that the Code is updated weekly; no per-section date is printed | retrieved: 2026-10-20
 Code of Arkansas Rules
 
 Search |
@@ -125,11 +125,11 @@ Search |
  Emergency Rules |
  Contact
 
-Last Updated: 9/21/2026 10:23:50 AM
+Last Updated: 10/19/2026 9:03:10 AM
 
  © 2026 - Arkansas State Government
 
-SOURCE 2: 20 CAR § 400-411, Admission, transfer, and discharge policies — Code of Arkansas Rules, Part 400, Rules for Nursing Homes, Subpart 4 — Arkansas Secretary of State | https://codeofarrules.arkansas.gov/Rules/Rule?levelType=section&titleID=20&chapterID=38&subChapterID=50&partID=1233&subPartID=7657&sectionID=50037 | source date: the site's footer states 'Last Updated' with a date; no per-section date is printed | retrieved: 2026-09-24
+SOURCE 2: 20 CAR § 400-411, Admission, transfer, and discharge policies — Code of Arkansas Rules, Part 400, Rules for Nursing Homes, Subpart 4 — Arkansas Secretary of State | https://codeofarrules.arkansas.gov/Rules/Rule?levelType=section&titleID=20&chapterID=38&subChapterID=50&partID=1233&subPartID=7657&sectionID=50037 | source date: the site's footer states 'Last Updated' with a date; no per-section date is printed | retrieved: 2026-10-20
 Code of Arkansas Rules
 
 Search |
@@ -224,11 +224,11 @@ Search |
  Emergency Rules |
  Contact
 
-Last Updated: 9/21/2026 10:23:50 AM
+Last Updated: 10/19/2026 9:03:10 AM
 
  © 2026 - Arkansas State Government
 
-SOURCE 3: 20 CAR § 400-2507, Exercise of rights — Code of Arkansas Rules, Part 400, Rules for Nursing Homes, Subpart 25 — Arkansas Secretary of State | https://codeofarrules.arkansas.gov/Rules/Rule?levelType=section&titleID=20&chapterID=38&subChapterID=50&partID=1233&subPartID=7678&sectionID=50215 | source date: the site's footer states 'Last Updated' with a date; no per-section date is printed | retrieved: 2026-09-24
+SOURCE 3: 20 CAR § 400-2507, Exercise of rights — Code of Arkansas Rules, Part 400, Rules for Nursing Homes, Subpart 25 — Arkansas Secretary of State | https://codeofarrules.arkansas.gov/Rules/Rule?levelType=section&titleID=20&chapterID=38&subChapterID=50&partID=1233&subPartID=7678&sectionID=50215 | source date: the site's footer states 'Last Updated' with a date; no per-section date is printed | retrieved: 2026-10-20
 Code of Arkansas Rules
 
 Search |
@@ -301,11 +301,11 @@ Search |
  Emergency Rules |
  Contact
 
-Last Updated: 9/21/2026 10:23:50 AM
+Last Updated: 10/19/2026 9:03:10 AM
 
  © 2026 - Arkansas State Government
 
-SOURCE 4: Arkansas Long-Term Care Ombudsman — Office of Long-Term Care Ombudsman, Arkansas Department of Human Services (program site) | https://arombudsman.dhs.arkansas.gov/ | source date: none stated on page beyond a copyright line | retrieved: 2026-09-24
+SOURCE 4: Arkansas Long-Term Care Ombudsman — Office of Long-Term Care Ombudsman, Arkansas Department of Human Services (program site) | https://arombudsman.dhs.arkansas.gov/ | source date: none stated on page beyond a copyright line | retrieved: 2026-10-20
 top of page
 
 Who are the Ombudsman in my area?

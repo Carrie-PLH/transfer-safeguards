@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: arizona
-ASSEMBLED: 2026-09-21
+ASSEMBLED: 2026-10-20
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/arizona.json (recipe digest 4bee96ede9a5). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -16,11 +16,52 @@ CAPTURE NOTES:
 - SOURCE 5: transport curl; extractor pdftotext-raw; pages 10-11; slice from 'R9-28-204. Institutional Services' to 'R9-28-205. Home and Community Based Services (HCBS)'; http_version 1.1; filters none.
   Added deepening the page to full: R9-28-204(D)(3) is Arizona ALTCS's bed-hold rule -- located via a general search after the standing packet's own note that AMPM Policy 1240-A (direct care services) does not address bed-hold; it does not. This chapter shares apps.azsos.gov with source 1 and needs the same http_version 1.1 pin the same host already requires. R9-10-204's own printed page (page 9 of the chapter) spans two PDF pages (10 and 11) because of the running head between them, and the section's Historical Note sits on the second; pdftotext-raw is used for the same two-column reason as source 1, confirmed against this span specifically (raw mode reproduces the printed reading order; -layout interleaves this span with a neighboring column exactly as it does for source 1).
 
-SOURCE 1: R9-10-408, Transfer; Discharge — Arizona Administrative Code, Title 9, Chapter 10 (Department of Health Services, Health Care Institutions: Licensing), Article 4, Nursing Care Institutions — Arizona Secretary of State (PDF, pages 96-97 of the chapter) | https://apps.azsos.gov/public_services/Title_09/9-10.pdf | source date: Supp. 26-1, March 31, 2026, as the running head of every page states; the section's Historical Note records its last amendment effective October 1, 2019 (Supp. 19-3) | retrieved: 2026-09-21
+SOURCE 1: R9-10-408, Transfer; Discharge — Arizona Administrative Code, Title 9, Chapter 10 (Department of Health Services, Health Care Institutions: Licensing), Article 4, Nursing Care Institutions — Arizona Secretary of State (PDF, pages 96-97 of the chapter) | https://apps.azsos.gov/public_services/Title_09/9-10.pdf | source date: Supp. 26-1, March 31, 2026, as the running head of every page states; the section's Historical Note records its last amendment effective October 1, 2019 (Supp. 19-3) | retrieved: 2026-10-20
 9 A.A.C. 10 Arizona Administrative Code
 TITLE 9. HEALTH SERVICES
 CHAPTER 10. DEPARTMENT OF HEALTH SERVICES - HEALTH CARE INSTITUTIONS: LICENSING
-Page 94 Supp. 26-1 March 31, 2026
+Page 94 Supp. 26-3 September 30, 2026
+H. An administrator shall ensure that personnel records are:
+1. Maintained:
+a. Throughout the individual’s period of providing ser-
+vices in or for the nursing care institution, and
+b. For at least 24 months after the last date the individ-
+ual provided services in or for the nursing care insti-
+tution; and
+2. For a personnel member who has not provided physical
+health services or behavioral health services at or for the
+nursing care institution during the previous 12 months,
+provided to the Department within 72 hours after the
+Department’s request.
+I. An administrator shall ensure that:
+1. A plan to provide orientation specific to the duties of a
+personnel member, an employee, a volunteer, and a stu-
+dent is developed, documented, and implemented;
+2. A personnel member completes orientation before pro-
+viding behavioral health services or physical health ser-
+vices;
+3. An individual’s orientation is documented, to include:
+a. The individual’s name,
+b. The date of the orientation, and
+c. The subject or topics covered in the orientation;
+4. A plan to provide in-service education specific to the
+duties of a personnel member is developed, documented,
+and implemented;
+5. A personnel member’s in-service education is docu-
+mented, to include:
+a. The personnel member’s name,
+b. The date of the training, and
+c. The subject or topics covered in the training; and
+6. A work schedule of each personnel member is developed
+and maintained at the nursing care institution for at least
+12 months after the date of the work schedule.
+J. An administrator shall designate a qualified individual to pro-
+vide:
+1. Social services, and
+2. Recreational activities.
+Historical Note
+New Section R9-10-406 made by exempt rulemaking at
+19A.A.R. 2015, effective October 1, 2013 (Supp. 13-2).
 Amended by exempt rulemaking at 19A.A.R. 3334,
 effective October 1, 2013 (Supp. 13-4).Amended by
 exempt rulemaking at 20A.A.R. 1409, pursuant to Laws
@@ -58,7 +99,7 @@ resident’s health care directives;
 6. Within 30 calendar days before admission or 10 working
 days after admission, a medical history and physical
 examination is completed on a resident by:
-a. Aphysician, or
+a. A physician, or
 b. A physician assistant or a registered nurse practi-
 tioner designated by the attending physician;
 7. Except as specified in subsection (8), a resident provides
@@ -80,7 +121,7 @@ Historical Note
 New Section R9-10-407 made by exempt rulemaking at
 19A.A.R. 2015, effective October 1, 2013 (Supp. 13-2).
 Amended by exempt rulemaking at 19A.A.R. 3334,
-effective October 1, 2013 (Supp. 13-4).Amended by
+effective October 1, 2013 (Supp. 13-4). Amended by
 exempt rulemaking at 20A.A.R. 1409, pursuant to Laws
 2013, Ch. 10, § 13; effective July 1, 2014 (Supp. 14-2).
 Amended by final expedited rulemaking at 28A.A.R.
@@ -103,6 +144,10 @@ i. In an emergency, or
 ii. If the resident no longer requires nursing care
 institution services as determined by a physi-
 cian or the physician’s designee;
+September 30, 2026 Supp. 26-3 Page 95
+Arizona Administrative Code 9 A.A.C. 10
+TITLE 9. HEALTH SERVICES
+CHAPTER 10. DEPARTMENT OF HEALTH SERVICES - HEALTH CARE INSTITUTIONS: LICENSING
 d. A notation by a physician or the physician’s desig-
 nee if the transfer or discharge is due to any of the
 reasons listed in subsection (A)(1); and
@@ -148,10 +193,6 @@ b. The state long-term care ombudsman’s name,
 address, and telephone number;
 2. A copy of the written follow-up instructions is provided
 to the resident or the resident’s representative; and
-March 31, 2026 Supp. 26-1 Page 95
-Arizona Administrative Code 9 A.A.C. 10
-TITLE 9. HEALTH SERVICES
-CHAPTER 10. DEPARTMENT OF HEALTH SERVICES - HEALTH CARE INSTITUTIONS: LICENSING
 3. A discharge summary is developed by a personnel mem-
 ber and authenticated by the resident’s attending physi-
 cian or designee and includes:
@@ -233,52 +274,8 @@ a. Abuse;
 b. Neglect;
 c. Exploitation;
 d. Coercion;
-e. Manipulation;
-f. Sexual abuse;
-g. Sexual assault;
-h. Seclusion;
-i. Restraint;
-j. Retaliation for submitting a complaint to the Depart-
-ment or another entity; or
-k. Misappropriation of personal and private property
-by a nursing care institution’s personnel members,
-employees, volunteers, or students; and
-4. A resident or the resident’s representative:
-a. Except in an emergency, either consents to or refuses
-treatment;
-b. May refuse or withdraw consent for treatment before
-treatment is initiated;
-c. Except in an emergency, is informed of proposed
-alternatives to psychotropic medication or a surgical
-procedure and the associated risks and possible com-
-plications of the psychotropic medication or surgical
-procedure;
-d. Is informed of the following:
-i. The health care institution’s policy on health
-care directives, and
-ii. The resident complaint process;
-e. Consents to photographs of the resident before the
-resident is photographed, except that the resident
-may be photographed when admitted to a nursing
-care institution for identification and administrative
-purposes;
-f. May manage the resident’s financial affairs;
-g. May review the nursing care institution’s current
-license survey report and, if applicable, plan of cor-
-rection in effect;
-h. Has access to and may communicate with any indi-
-vidual, organization, or agency;
-i. May participate in a resident group;
-j. May review the resident’s financial records within
-two working days and medical record within one
-working day after theresident’sor the resident’s rep-
-resentative’s request;
-k. May obtain a copy of the resident’s financial records
-and medical record within two working days after
-the resident’s request and in compliance withA.R.S.
-§ 12-2295;
 
-SOURCE 2: Appeal of a Discharge Form — Arizona Health Care Cost Containment System (AHCCCS), Office of the General Counsel (PDF) | https://www.azahcccs.gov/shared/Downloads/GrievanceAndAppeals/NFAppealOfADischargeForm.pdf | source date: none stated on the form | retrieved: 2026-09-21
+SOURCE 2: Appeal of a Discharge Form — Arizona Health Care Cost Containment System (AHCCCS), Office of the General Counsel (PDF) | https://www.azahcccs.gov/shared/Downloads/GrievanceAndAppeals/NFAppealOfADischargeForm.pdf | source date: none stated on the form | retrieved: 2026-10-20
 Appeal of a Discharge Form
 The following information is necessary to file an appeal of transfer or discharge from a
 registered nursing facility. Please attach discharge paperwork from the nursing facility
@@ -320,7 +317,7 @@ If you have any questions or concerns regarding this form, please contact:
    Phone:      602-417-4232
    Email:      NFdischarges@azahcccs.gov
 
-SOURCE 3: Grievance And Appeals — AHCCCS, member rights and responsibilities | https://www.azahcccs.gov/Members/GetCovered/RightsAndResponsibilities/grievanceandappeals.html | source date: none stated on page | retrieved: 2026-09-21
+SOURCE 3: Grievance And Appeals — AHCCCS, member rights and responsibilities | https://www.azahcccs.gov/Members/GetCovered/RightsAndResponsibilities/grievanceandappeals.html | source date: none stated on page | retrieved: 2026-10-20
 ﻿html
 
  Skip to Main Content
@@ -1164,7 +1161,7 @@ News & Press Releases
 
 Back To Top
 
-SOURCE 4: Long-Term Care Ombudsman — Arizona Department of Economic Security | https://des.az.gov/LTCOP | source date: none stated on page | retrieved: 2026-09-21
+SOURCE 4: Long-Term Care Ombudsman — Arizona Department of Economic Security | https://des.az.gov/LTCOP | source date: none stated on page | retrieved: 2026-10-20
 Skip to main content
 
 State of Arizona
@@ -1728,6 +1725,8 @@ Case Management System for Unemployment Benefits
 
 Overpayments (Credits) and Refunds
 
+Unemployment Insurance Operating Fund
+
 Senior Community Service Employment Program
 
 Veterans
@@ -2086,7 +2085,7 @@ Sitemap
 
  Back to Top
 
-SOURCE 5: R9-28-204, Institutional Services — Arizona Administrative Code, Title 9, Chapter 28 (AHCCCS Arizona Long-Term Care System), Article 2 — Arizona Secretary of State (PDF, page 10 of the chapter) | https://apps.azsos.gov/public_services/Title_09/9-28.pdf | source date: Supp. 26-2, June 30, 2026, as the running head states; the section's Historical Note records its last amendment effective October 8, 2013 (Supp. 13-3) | retrieved: 2026-09-21
+SOURCE 5: R9-28-204, Institutional Services — Arizona Administrative Code, Title 9, Chapter 28 (AHCCCS Arizona Long-Term Care System), Article 2 — Arizona Secretary of State (PDF, page 10 of the chapter) | https://apps.azsos.gov/public_services/Title_09/9-28.pdf | source date: Supp. 26-2, June 30, 2026, as the running head states; the section's Historical Note records its last amendment effective October 8, 2013 (Supp. 13-3) | retrieved: 2026-10-20
 R9-28-204. Institutional Services
 A. Institutional services are provided in:
 1. ANF;

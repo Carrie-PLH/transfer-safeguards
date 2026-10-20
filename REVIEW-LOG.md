@@ -1192,3 +1192,66 @@ pass: none — `git status --short` was empty at the start.
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-10-18. No
 human review is claimed for this entry.
+
+## 2026-10-20 — rotation pass: arizona, arkansas confirmed; california mostly unreachable
+
+Cursor read at arizona; batch was arizona, arkansas, california (arizona and
+the next two alphabetically). Pre-existing, unrelated working-tree changes
+found at the start of this pass: minnesota, mississippi, missouri, montana,
+nebraska, nevada, new-hampshire, new-jersey, new-mexico, new-york,
+north-carolina, north-dakota, ohio (main pages and .md) plus
+tools/spn-ledger.json — consistent with a concurrent archive-layer pass;
+left untouched, not staged, not reverted.
+
+- **arizona — confirmed.** Fresh capture of all 5 sources (recipe
+  4bee96ede9a5), curl. Zero fidelity failures, markdown and HTML. Retained,
+  hash 92c792162515c8ed (body moved since the last retained capture;
+  fidelity passed clean, not independently investigated further per the
+  skill, no header movement reported). Promoted. Checked date advanced to
+  2026-10-20.
+- **arkansas — confirmed.** Fresh capture of all 4 sources (recipe
+  6b3471c34a8f), curl, checked with its two supplements
+  (arkansas-packet-dhs.txt, arkansas-packet-medicaid.txt). Zero fidelity
+  failures, markdown and HTML. Retained, hash 1f455c065b9109d5 (body moved;
+  fidelity passed clean, no header movement reported). Promoted. Checked
+  date advanced to 2026-10-20.
+- **california — UNREACHABLE (6 of 9 sources).** Recipe capture (recipe
+  d54553fc0578) over curl, the recipe's own documented transport. Sources
+  5 through 8 (govt.westlaw.com, four CCR sections) and sources 4 and 9
+  (leginfo.legislature.ca.gov) all returned HTTP 403; source 2 (dhcs.ca.gov)
+  failed differently — the
+  recipe's `main` scope selector matched nothing, consistent with the same
+  template drift the standing packet's own Source 3 notes already describe
+  for a sibling CDA page. Only sources 1 (cdph.ca.gov) and 3 (aging.ca.gov)
+  captured cleanly. Diagnosed, not merely logged: a manual `curl --http1.1`
+  probe against the first failing westlaw.com URL (same browser
+  user-agent, no other change) returned a 301 that resolved to 200 on
+  redirect, where the default HTTP/2 request returns 403 — the identical
+  signature CLAUDE.md already documents for Arizona's apps.azsos.gov and
+  des.az.gov (`http_version: "1.1"` is an existing, opt-in per-source
+  capture.py field; no sibling recipe in this repo uses govt.westlaw.com
+  or leginfo.legislature.ca.gov, so this is a California-only recipe-
+  content gap, not a cross-cutting tooling defect). Per the skill, an
+  unattended pass may exercise a method but not redefine one, so the
+  recipe was not edited here. No fidelity check run on incomplete evidence;
+  nothing retained; checked date untouched. This is the first unreachable
+  pass for california since the 2026-09-24 confirmation (all 9 sources
+  then), so it does not meet the three-consecutive threshold for an
+  unreachable-repeated queue entry — logged here only, with the diagnosis a
+  working/recipe-backfill session needs: add `"http_version": "1.1"` to
+  sources 4-9 and verify byte-identical re-capture before promoting, and
+  separately widen source 2's scope from `main` to `body` (or the specific
+  container dhcs.ca.gov's current template uses) following the convention
+  already adopted for aging.ca.gov's sibling template. Partial capture
+  preserved at tools/packets/review/california-2026-10-20.txt.
+
+sync-checked-dates.py corrected 4 derived dates (table + JSON for arizona
+and arkansas). build-status.py: 51/51 baseline, 50/51 full (North Dakota
+gap predates this pass, unchanged). check-all.py: 102 pages across 52
+states, no unexplained failures. build-state-picker.py regenerated (51/51
+published). generate-sitemap.py: 58 URLs, only 404.html omitted.
+check-live.py: nothing loaded from any other host. Review cursor advanced
+past california to colorado. No queue entries opened.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-10-20. No
+human review is claimed for this entry.
