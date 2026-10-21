@@ -245,6 +245,51 @@
       "last_result": "OK",
       "page": "ohio"
     },
+    "https://codes.ohio.gov/ohio-administrative-code/rule-5160-3-16.4": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261021123453/https://codes.ohio.gov/ohio-administrative-code/rule-5160-3-16.4",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-21T123518Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "ohio"
+    },
+    "https://codes.ohio.gov/ohio-revised-code/section-3721.13": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261021123622/https://codes.ohio.gov/ohio-revised-code/section-3721.13",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-21T123643Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "ohio"
+    },
+    "https://codes.ohio.gov/ohio-revised-code/section-3721.16": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261021123811/https://codes.ohio.gov/ohio-revised-code/section-3721.16",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-21T123833Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "ohio"
+    },
+    "https://codes.ohio.gov/ohio-revised-code/section-3721.161": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261021123854/https://codes.ohio.gov/ohio-revised-code/section-3721.161",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-21T123914Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "ohio"
+    },
+    "https://codes.ohio.gov/ohio-revised-code/section-3721.162": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261021123933/https://codes.ohio.gov/ohio-revised-code/section-3721.162",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-21T123954Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "ohio"
+    },
     "https://dcgov.seamlessdocs.com/f/DOHNoticeofDischargeTransferorRelocationForm": {
       "attempts": 1,
       "capture": "https://web.archive.org/web/20260906133949/https://dcgov.seamlessdocs.com/f/DOHNoticeofDischargeTransferorRelocationForm",
@@ -1638,5 +1683,5 @@
       "page": "new-mexico"
     }
   },
-  "updated": "2026-10-20T135026Z"
+  "updated": "2026-10-21T123954Z"
 }
