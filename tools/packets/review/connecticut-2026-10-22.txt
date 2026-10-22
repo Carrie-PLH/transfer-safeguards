@@ -1,0 +1,275 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: connecticut
+ASSEMBLED: 2026-10-22
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/connecticut.json (recipe digest 5f9a18903066). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- SOURCE 1: transport curl; extractor html-text; scope body; slice from 'Sec. 19a-535. (Formerly Sec. 19-616). Transfer or discharge of residents.' (occurrence 2) to 'Sec. 19a-535a.'; filters none.
+  The standing packet (2026-08-30) recorded this source as unreachable to curl (certificate verification failure) and to the session HTTP fetch tool, and was captured through a browser instead, marked not re-verifiable by an automated pass. Retested 2026-09-08: plain curl with a browser user-agent now returns HTTP 200 with the real statute text (951 KB) -- the same transient-failure pattern already documented elsewhere in this portfolio for codeofarrules.arkansas.gov and cdph.ca.gov/dhcs.ca.gov. body scope pulls the whole chapter 368v page (all sections of the chapter); chap_368v.htm prints each section heading twice -- once in the chapter's table of contents, once over the section's own text -- so the slice takes the *second* occurrence of the section heading (from_occurrence: 2), per this project's standing rule to anchor on the body occurrence, not the table of contents. The 'to' anchor (the next section's heading, 19a-535a) is a superset of the original hand-cut boundary: it also picks up the section's own History annotation note and a cross-reference to Sec. 17b-454, which the standing packet's PENDING list says were captured in the browser but not carried into the packet -- this recipe closes that gap rather than reproducing the narrower cut.
+- SOURCE 2: transport curl; extractor html-text; scope body; slice from 'To contact the Ombudsman' to 'View the map of regional ombudsmen and the towns they serve'; filters none.
+  body scope alone pulls the site's full nav and footer chrome around a short contact block; this slice narrows to the contact block itself (phone, fax, email) plus the two links that follow it.
+- SOURCE 3: transport curl; extractor html-text; scope body; slice from 'Sec. 19a-537. (Formerly Sec. 19-617a).' (occurrence 2) to 'Sec. 19a-537a.'; filters none.
+  Same page, template and transport as source 1 -- chap_368v.htm prints every section heading twice (chapter table of contents, then the section's own text), so from_occurrence: 2 lands the slice in the body, per this project's standing rule. The 'to' anchor's default occurrence (1) is correct here because it counts within the tail *after* the from-match, per capture.py's apply_slice, and the chapter's table of contents (which holds the only other 'Sec. 19a-537a.' heading) sits before that point, not after. This is Connecticut's bed-hold and readmission statute: subsection (b) the reservation duty, (c) the 15-day self-pay hold, (d) the Medicaid reimbursement conditions (up to 7 days plus 8 additional, and 21 home-leave days), (e) the first-available-bed obligation once the hold period is exceeded, and (f)-(i) a second, separate hearing route for a refused readmission, distinct from section 19a-535's transfer/discharge hearing.
+- SOURCE 4: transport curl; extractor html-text; scope main; filters trim-lines, collapse-blank-runs.
+  Plain curl, no user-agent needed (200 with no UA, tested 2026-09-17). This is the departmental page the statute's notice provision points to without naming: the mailing address ('DSS-OLCRAH, 55 Farmington Avenue, Hartford CT 06105'), the OLCRAH email (olcrah.DSS@ct.gov), and the Administrative Hearings telephone numbers. A companion page at the same host, .../requesting-a-hearing, states the filing mechanics (Hearing Request Form, or a signed letter) and the two clocks already quoted from the statute; only the Contact page's mailing address and email are quoted here to avoid restating the statute's own words as a second source's.
+
+SOURCE 1: Connecticut General Statutes § 19a-535, Transfer or discharge of residents. Notice. Plan required. Appeal. Hearing. Involuntary transfer, discharge reporting (chapter 368v) | https://www.cga.ct.gov/current/pub/chap_368v.htm#sec_19a-535 | source date: public-act citation line ends P.A. 23-48, S. 1, 3 | retrieved: 2026-10-22
+Sec. 19a-535. (Formerly Sec. 19-616). Transfer or discharge of residents. Notice. Plan required. Appeal. Hearing. Involuntary transfer, discharge reporting. (a) For the purposes of this section: (1) “Facility” means an entity certified as a nursing facility under the Medicaid program or an entity certified as a skilled nursing facility under the Medicare program or with respect to facilities that do not participate in the Medicaid or Medicare programs, a chronic and convalescent nursing home or a rest home with nursing supervision as defined in section 19a-521; (2) “continuing care facility which guarantees life care for its residents” has the same meaning as provided in section 17b-354; (3) “transfer” means the movement of a resident from one facility to another facility or institution, including, but not limited to, a hospital emergency department, if the resident is admitted to the facility or institution or is under the care of the facility or institution for more than twenty-four hours; (4) “discharge” means the movement of a resident from a facility to a noninstitutional setting; (5) “self-pay resident” means a resident who is not receiving state or municipal assistance to pay for the cost of care at a facility, but shall not include a resident who has filed an application with the Department of Social Services for Medicaid coverage for facility care but has not received an eligibility determination from the department on such application, provided the resident has timely responded to requests by the department for information that is necessary to make such determination; and (6) “emergency” means a situation in which a failure to effect an immediate transfer or discharge of the resident that would endanger the health, safety or welfare of the resident or other residents.
+
+
+(b) A facility shall not transfer or discharge a resident from the facility except to meet the welfare of the resident which cannot be met in the facility, or unless the resident no longer needs the services of the facility due to improved health, the facility is required to transfer the resident pursuant to section 17b-359 or 17b-360, or the health or safety of individuals in the facility is endangered, or in the case of a self-pay resident, for the resident's nonpayment or arrearage of more than fifteen days of the per diem facility room rate, or the facility ceases to operate. In each case the basis for transfer or discharge shall be documented in the resident's medical record by a physician, a physician assistant or an advanced practice registered nurse. In each case where the welfare, health or safety of the resident is concerned the documentation shall be by the resident's physician, physician assistant or advanced practice registered nurse. A facility that is part of a continuing care facility which guarantees life care for its residents may transfer or discharge (1) a self-pay resident who is a member of the continuing care community and who has intentionally transferred assets in a sum that will render the resident unable to pay the costs of facility care in accordance with the contract between the resident and the facility, or (2) a self-pay resident who is not a member of the continuing care community and who has intentionally transferred assets in a sum that will render the resident unable to pay the costs of a total of forty-two months of facility care from the date of initial admission to the facility.
+
+
+(c) (1) Before effecting any transfer or discharge of a resident from the facility, the facility shall notify, in writing, the resident and the resident's guardian or conservator, if any, or legally liable relative or other responsible party if known, of the proposed transfer or discharge, the reasons therefor, the effective date of the proposed transfer or discharge, the location to which the resident is to be transferred or discharged, the right to appeal the proposed transfer or discharge and the procedures for initiating such an appeal as determined by the Department of Social Services, the date by which an appeal must be initiated in order to preserve the resident's right to an appeal hearing and the date by which an appeal must be initiated in order to stay the proposed transfer or discharge and the possibility of an exception to the date by which an appeal must be initiated in order to stay the proposed transfer or discharge for good cause, that the resident may represent himself or herself or be represented by legal counsel, a relative, a friend or other spokesperson, an affirmation by the facility that notice of the proposed transfer or discharge has been provided to the State Long-Term Care Ombudsman, in accordance with the provisions of subdivision (3) of this subsection, and information as to bed hold and nursing home readmission policy when required in accordance with section 19a-537. The notice shall also include the name, mailing address and telephone number of the State Long-Term Care Ombudsman. If the resident is, or the facility alleges a resident is, mentally ill or developmentally disabled, the notice shall include the name, mailing address and telephone number of the nonprofit entity designated by the Governor in accordance with section 46a-10b to serve as the Connecticut protection and advocacy system. The notice shall be given at least thirty days and no more than sixty days prior to the resident's proposed transfer or discharge, except where the health or safety of individuals in the facility are endangered, or where the resident's health improves sufficiently to allow a more immediate transfer or discharge, or where immediate transfer or discharge is necessitated by urgent medical needs or where a resident has not resided in the facility for thirty days, in which cases notice shall be given as many days before the transfer or discharge as practicable.
+
+
+(2) The resident may initiate an appeal pursuant to this section by submitting a written request to the Commissioner of Social Services not later than sixty calendar days after the facility issues the notice of the proposed transfer or discharge, except as provided in subsection (h) of this section. In order to stay a proposed transfer or discharge, the resident must initiate an appeal not later than twenty days after the date the resident receives the notice of the proposed transfer or discharge from the facility unless the resident demonstrates good cause for failing to initiate such appeal within the twenty-day period.
+
+
+(3) On the date that the facility provides notice of a proposed involuntary transfer or discharge of a resident pursuant to the provisions of subdivision (1) of this subsection, the facility shall notify the State Ombudsman, appointed pursuant to section 17a-870, in a manner prescribed by the State Ombudsman, of such proposed involuntary transfer or discharge. Failure to provide notice to the State Ombudsman pursuant to the provisions of this subdivision shall invalidate any notice of the proposed involuntary transfer or discharge of a resident submitted pursuant to the provisions of subdivision (1) of this subsection.
+
+
+(d) No resident shall be transferred or discharged from any facility as a result of a change in the resident's status from self-pay or Medicare to Medicaid provided the facility offers services to both categories of residents. Any such resident who wishes to be transferred to another facility that has agreed to accept the resident may do so upon giving at least fifteen days written notice to the administrator of the facility from which the resident is to be transferred and a copy thereof to the appropriate advocate of such resident. The resident's advocate may help the resident complete all administrative procedures relating to a transfer.
+
+
+(e) Except in an emergency or in the case of transfer to a hospital, no resident shall be transferred or discharged from a facility unless a discharge plan has been developed by the personal physician, physician assistant or advanced practice registered nurse of the resident or the medical director in conjunction with the nursing director, social worker or other health care provider. To minimize the disruptive effects of the transfer or discharge on the resident, the person responsible for developing the plan shall consider the feasibility of placement near the resident's relatives, the acceptability of the placement to the resident and the resident's guardian or conservator, if any, or the resident's legally liable relative or other responsible party, if known, and any other relevant factors that affect the resident's adjustment to the move. The plan shall contain a written evaluation of the effects of the transfer or discharge on the resident and a statement of the action taken to minimize such effects. In addition, the plan shall outline the care and kinds of services that the resident shall receive upon transfer or discharge. Not less than thirty days prior to an involuntary transfer or discharge, a copy of the discharge plan shall be provided to the resident's personal physician, physician assistant or advanced practice registered nurse if the discharge plan was prepared by the medical director, to the resident and the resident's guardian or conservator, if any, or legally liable relative or other responsible party, if known.
+
+
+(f) No resident shall be involuntarily transferred or discharged from a facility if such transfer or discharge is medically contraindicated.
+
+
+(g) The facility shall be responsible for assisting the resident in finding appropriate placement.
+
+
+(h) (1) Except in the case of an emergency, as provided in subdivision (4) of this subsection, upon receipt of a request for a hearing to appeal any proposed transfer or discharge, the Commissioner of Social Services or the commissioner's designee shall hold a hearing to determine whether the transfer or discharge is being effected in accordance with this section. A hearing shall be convened not less than ten, but not more than thirty days from the date of receipt of such request and a written decision made by the commissioner or the commissioner's designee not later than thirty days after the date of termination of the hearing or not later than sixty days after the date of the hearing request, whichever occurs sooner. The hearing shall be conducted in accordance with chapter 54. In each case the facility shall prove by a preponderance of the evidence that it has complied with the provisions of this section. Except in the case of an emergency or in circumstances when the resident is not physically present in the facility, whenever the Commissioner of Social Services receives a request for a hearing in response to a notice of proposed transfer or discharge and such notice does not meet the requirements of subsection (c) of this section, the commissioner shall, not later than ten business days after the date of receipt of such notice from the resident or the facility, order the transfer or discharge stayed and return such notice to the facility. Upon receipt of such returned notice, the facility shall issue a revised notice that meets the requirements of subsection (c) of this section.
+
+
+(2) The resident, the resident's guardian, conservator, legally liable relative or other responsible party shall have an opportunity to examine, during regular business hours at least three business days prior to a hearing conducted pursuant to this section, the contents of the resident's file maintained by the facility and all documents and records to be used by the commissioner or the commissioner's designee or the facility at the hearing. The facility shall have an opportunity to examine during regular business hours at least three business days prior to such a hearing, all documents and records to be used by the resident at the hearing.
+
+
+(3) If a hearing conducted pursuant to this section involves medical issues, the commissioner or the commissioner's designee may order an independent medical assessment of the resident at the expense of the Department of Social Services that shall be made part of the hearing record.
+
+
+(4) In an emergency the notice required pursuant to subsection (c) of this section shall be provided as soon as practicable. A resident who is transferred or discharged on an emergency basis or a resident who receives notice of such a transfer or discharge may contest the action by requesting a hearing in writing not later than twenty days after the date of receipt of notice or not later than twenty days after the date of transfer or discharge, whichever is later, unless the resident demonstrates good cause for failing to request a hearing within the twenty-day period. A hearing shall be held in accordance with the requirements of this subsection not later than fifteen business days after the date of receipt of the request. The commissioner, or the commissioner's designee, shall issue a decision not later than thirty days after the date on which the hearing record is closed.
+
+
+(5) Except in the case of a transfer or discharge effected pursuant to subdivision (4) of this subsection, (A) an involuntary transfer or discharge shall be stayed pending a decision by the commissioner or the commissioner's designee, and (B) if the commissioner or the commissioner's designee determines the transfer or discharge is being effected in accordance with this section, the facility may not transfer or discharge the resident prior to fifteen days from the date of receipt of the decision by the resident and the resident's guardian or conservator, if any, or the resident's legally liable relative or other responsible party if known.
+
+
+(6) If the commissioner, or the commissioner's designee, determines after a hearing held in accordance with this section that the facility has transferred or discharged a resident in violation of this section, the commissioner, or the commissioner's designee, may require the facility to readmit the resident to a bed in a semiprivate room or in a private room, if a private room is medically necessary, regardless of whether or not the resident has accepted placement in another facility pending the issuance of a hearing decision or is awaiting the availability of a bed in the facility from which the resident was transferred or discharged.
+
+
+(7) A copy of a decision of the commissioner or the commissioner's designee shall be sent to the facility and to the resident, the resident's guardian, conservator, if any, legally liable relative or other responsible party, if known. The decision shall be deemed to have been received not later than five days after the date it was mailed, unless the facility, the resident or the resident's guardian, conservator, legally liable relative or other responsible party proves otherwise by a preponderance of the evidence. The Superior Court shall consider an appeal from a decision of the Department of Social Services pursuant to this section as a privileged case in order to dispose of the case with the least possible delay.
+
+
+(i) A resident who receives notice from the Department of Social Services or its agent that the resident is no longer in need of the level of care provided by a facility and that, consequently, the resident's coverage for facility care will end, may request a hearing by the Commissioner of Social Services in accordance with the provisions of section 17b-60. If the resident requests a hearing prior to the date that Medicaid coverage for facility care is to end, Medicaid coverage shall continue pending the outcome of the hearing. If the resident receives a notice of denial of Medicaid coverage from the department or its agent and also receives a notice of discharge from the facility pursuant to subsection (c) of this section and the resident requests a hearing to contest each proposed action, the department may schedule one hearing at which the resident may contest both actions.
+
+
+(j) Whenever a facility is discharging a resident to the resident's home in the community, the discharge shall be in accordance with sections 19a-535c and 19a-535d.
+
+
+(k) Except as otherwise provided pursuant to subdivision (3) of subsection (c) of this section, a facility shall electronically report each involuntary transfer or discharge to the State Ombudsman, appointed pursuant to section 17a-870, (1) in a manner prescribed by the State Ombudsman, and (2) on an Internet web site portal maintained by the State Ombudsman in accordance with patient privacy provisions of the Health Insurance Portability and Accountability Act of 1996, P.L. 104-191, as amended from time to time.
+
+
+(P.A. 76-331, S. 9, 16; P.A. 79-265, S. 1; P.A. 89-348, S. 1, 10; P.A. 93-262, S. 1, 87; 93-327, S. 2; 93-381, S. 9, 39; P.A. 94-236, S. 5, 10; P.A. 95-160, S. 2, 69; P.A. 96-139, S. 12, 13; June 18 Sp. Sess. P.A. 97-2, S. 115, 165; P.A. 99-176, S. 22, 24; P.A. 03-278, S. 124; P.A. 11-236, S. 1; P.A. 16-39, S. 18; 16-59, S. 3; P.A. 17-96, S. 20; P.A. 21-196, S. 28, 29; P.A. 22-57, S. 9; P.A. 23-48, S. 1, 3.)
+
+
+History: P.A. 79-265 defined “self-pay” patient in Subsec. (a) and added reference to self-pay status, added provisions re minimizing disruptive effects of transfers or discharges and re provision of copies of discharge plan and added Subsec. (c); Sec. 19-616 transferred to Sec. 19a-535 in 1983; P.A. 89-348 inserted new Subsecs. (a), (b), (c), (g) and (h) re the transfer or discharge of patients, a patient's right to appeal a transfer or discharge decision and a patient's right to a hearing, relettering previously existing Subsecs. as necessary; P.A. 93-262 authorized substitution of commissioner and department of social services for commissioner and department of income maintenance, effective July 1, 1993; P.A. 93-327 amended Subsec. (c) to permit notice no more than 60 days prior to transfer or discharge and amended Subsec. (f) to replace standard of imminent danger of death with “medically contraindicated”; P.A. 93-381 replaced commissioner of health services with commissioner of public health and addiction services, effective July 1, 1993; P.A. 94-236 amended Subsec. (b) to add requirements re transfer or discharge of a patient in a nursing facility which is part of a continuing care facility, effective June 7, 1994; P.A. 95-160 amended Subsec. (a) by replacing former definition of “nursing facility” with new definitions applicable to section, amended Subsec. (c) by allowing a facility to notify, in writing, or other responsible party, if known, of a patient transfer or discharge and by requiring additional information in the notice of transfer or discharge, deleted in Subsec. (h)(1) a provision allowing a patient notified of a transfer or discharge to request a hearing within 10 days of receipt of such notice and added requirement that commissioner provide notice to a patient within 5 business days of receipt of a notice of proposed transfer or discharge and specified the provisions such notice shall include, amended Subsec. (h)(2) by replacing the Commissioner of Public Health and Addiction Services with the Commissioner of Social Services, by extending the time for a hearing to be held from within 7 “business days” to not less than 10 but not more than 30 days of the date of such request, by requiring the commissioner to issue a written decision of his determination, by extending the time the commissioner has to issue such decision from within 20 days “of the termination of the hearing” to within 60 days “of the determination of the hearing” or within 90 days of the date of the hearing request, whichever occurs sooner and by adding a provision that the facility shall prove by a preponderance of the evidence that it has complied with the provisions of this section, added Subsec. (h)(3)and (4) re requirements for the patient to have the opportunity to examine the contents of such patient's file and re commissioner's authority to order an independent medical assessment for a hearing, amended Subsec. (h)(5) by deleting a provision allowing a facility, in an emergency, to request the commissioner to make a determination as to the need for an immediate transfer or discharge of a patient, by adding a provision providing that in an emergency, “notice required pursuant to subsection (c) of this section and subdivision (1) of this subsection shall be provided as soon as practicable”, by adding a definition of emergency and by adding a provision allowing a patient who is transferred or discharged on an emergency basis to contest the action by requesting a hearing, amended Subsec. (h)(6) by providing that an emergency transfer or discharge be excepted from this Subdiv. and by adding Subdiv. (B) prohibiting the transfer or discharge of a patient prior to 15 days from the receipt of the decision and added Subsec. (h)(7) requiring a copy of the decision of the commissioner be sent to the facility and made technical changes, effective July 1, 1995; P.A. 96-139 changed effective date of P.A. 95-160 but without affecting this section; June 18 Sp. Sess. P.A. 97-2 amended Subsec. (c) by eliminating the requirement that the commissioner be notified by a facility of a transfer or discharge and requiring notification to include the procedures for the right to appeal, amended Subsec. (e) by adding transfer to a hospital or transfer into or out of a Medicare distinct part within the same institution to the exceptions in which a patient may be transferred or discharged unless a discharge plan has been developed and eliminating a requirement that the department be notified of an involuntary discharge if the patient receives payments under Title XIX of the federal Social Security Act, as amended, deleted Subsec. (h)(1) which required that the department notify the patient or his representative of any transfer or discharge action a facility plans to make, renumbered the remaining Subdivs. of Subsec. (h) and made technical and conforming changes, effective July 1, 1997; P.A. 99-176 amended Subsec. (c) to substitute “State Long-Term Care Ombudsman” for “state nursing home ombudsman” and to make provisions gender neutral, effective July 1, 1999; P.A. 03-278 made technical changes in Subsec. (c), effective July 9, 2003; P.A. 11-236 replaced “patient” with “resident” throughout, amended Subsec. (a) by deleting definition of “Medicare distinct part” and adding definition of “continuing care facility which guarantees life care for its residents” in Subdiv. (2), by redefining “transfer” in Subdiv. (3), by replacing “discharge” with “movement” and deleting reference to “another institution” in Subdiv. (4) and by adding Subdiv. (5) re definition of “self-pay resident” and Subdiv. (6) re definition of “emergency”, amended Subsec. (b) by adding provision allowing facility to transfer or discharge resident if required by Sec. 17b-359 or 17b-360 and restating Subdivs. (1) and (2), amended Subsec. (c) by designating existing provisions as Subdiv. (1) and amending same by adding provision re notice to specify dates by which appeal must be initiated in order to preserve right to appeal hearing and stay proposed transfer or discharge, deleting provision re 10 days to initiate appeal to stay transfer, adding provision requiring notice of an exception to date to appeal transfer or discharge for good cause and adding provision re notice of readmission policy when required under Sec. 19a-537, and by adding Subdiv. (2) re request for appeal to stay proposed transfer or discharge, amended Subsec. (d) by deleting definition of “self pay”, deleted former Subsec. (e)(3) re transfer into or out of Medicare distinct part, providing amended Subsec. (h)(1) by providing that exceptions apply in the case of emergency, replacing requirement that written decision be made within 60 days of termination of hearing or 90 days after date of hearing request with requirement that such decision be made not later than 30 days after termination of hearing or 60 days after hearing request, and adding provision requiring commissioner to return to facility a request for a hearing that does not comply with requirements of Subsec. (c), amended Subsec. (h)(4) by deleting definition of “emergency”, replacing provision allowing resident to request a hearing within 10 days after receipt of notice or date of transfer or discharge with provision allowing request not later than 20 days after transfer or discharge, adding exception for resident who fails for good cause to request a hearing within 20-day period, replacing requirement that hearing be held within 7 days after receipt of request with requirement that hearing be held not later than 15 days after receipt, and adding provision requiring commissioner to issue decision within 30 days after hearing is closed, added new Subsec. (h)(6) re readmitting resident where transfer or discharge violated provisions of section, redesignated existing Subsec. (h)(6) as Subsec. (h)(7), and amended same by adding requirement that decision be sent to resident and resident's representatives, added Subsec. (i) re request for hearing by resident whose coverage for facility care will end, and made technical and conforming changes, effective July 13, 2011; P.A. 16-39 amended Subsecs. (b) and (e) by adding references to advanced practice registered nurse and made technical changes; P.A. 16-59 added Subsec. (j) re discharging resident to home in community; P.A. 17-96 amended Subsec. (c) (1) by replacing reference to Office of Protection and Advocacy for Persons with Disabilities with reference to nonprofit entity designated to serve as Connecticut protection and advocacy system, effective July 1, 2017; P.A. 21-196 amended Subsec. (b) by adding reference to physician assistant and making a technical change and amended Subsec. (e) by adding reference to physician assistant; P.A. 22-57 added Subsec. (k) re involuntary transfer and discharge reporting, effective July 1, 2022; P.A. 23-48 amended Subsec. (c)(1) by adding provision re affirmation by facility that notice of proposed transfer or discharge has been provided to the State Long-Term Care Ombudsman, and added Subsec. (b)(3) re notification of State Long-Term Care Ombudsman of proposed involuntary transfer or discharge, effective June 16, 2023 and amended Subsec. (k) by adding reference to Subsec. (c)(3) and replacing “17a-405” with “17a-870”, effective June 13, 2023.
+
+
+See Sec. 17b-454 re power of Department of Social Services to take actions necessary to assure health, safety and welfare of the elderly and to transfer an elderly person from a nursing home.
+
+
+
+
+(Return to Chapter Table of Contents) | (Return to List of Chapters) | (Return to List of Titles)
+
+SOURCE 2: Connecticut Long Term Care Ombudsman Program — Contact Information | https://portal.ct.gov/ltcop/content/contact-us/contact | source date: none stated on page | retrieved: 2026-10-22
+To contact the Ombudsman’s office, call our statewide toll-free number or our main office number:
+
+
+
+
+Toll-free: 1-866-388-1888
+
+
+Main office: 860-424-5200
+
+
+Fax: 860-772-1704
+
+
+Email: ltcop@ct.gov
+
+
+Facebook: Connecticut Long Term Care Ombudsman Program on Facebook
+
+
+
+
+
+
+View the list of regional ombudsmen and the towns they serve
+
+SOURCE 3: Connecticut General Statutes § 19a-537, Nursing home responsibilities re reservation of beds. Reimbursement. Readmission (chapter 368v) | https://www.cga.ct.gov/current/pub/chap_368v.htm#sec_19a-537 | source date: public-act citation line ends P.A. 22-58, S. 4 | retrieved: 2026-10-22
+Sec. 19a-537. (Formerly Sec. 19-617a). Definitions. Nursing home responsibilities re reservation of beds. Reimbursement. Readmission. (a) As used in this section and section 19a-537a:
+
+
+(1) “Vacancy” means a bed that is available for an admission;
+
+
+(2) “Nursing home” means any chronic and convalescent facility or any rest home with nursing supervision, as defined in section 19a-521;
+
+
+(3) “Hospital” means a general short-term hospital licensed by the Department of Public Health or a hospital for mental illness, as defined in section 17a-495, or a chronic disease hospital.
+
+
+(b) A nursing home shall:
+
+
+(1) Reserve the bed of a self-pay resident of such facility who is absent from the facility due to hospitalization whenever payment is available to reserve the bed;
+
+
+(2) Inform the self-pay resident and such resident's relatives or other responsible persons, upon admission of a person to the facility and upon transfer of a resident to a hospital, that the bed of a resident will be reserved as long as payment is available to the facility to reserve the bed and that if payment is not made, the resident will be admitted to the next available bed in accordance with subsection (e) of this section;
+
+
+(3) Reserve the bed of a resident who is a recipient of medical assistance when the resident is absent from the facility for home leave days authorized under the Medicaid program;
+
+
+(4) Inform the resident who is a recipient of medical assistance and such resident's relatives or other responsible persons, upon admission of a person to the nursing home and upon transfer of a resident to a hospital of the conditions under which the nursing home is required to reserve the bed of a resident and that if the home is not required to reserve the bed, the resident will be admitted to the next available bed in accordance with subsection (e) of this section; and
+
+
+(5) Not make the bed reserved for a hospitalized resident available for use by any other person unless the nursing home records in such resident's medical record the medical reasons justifying the change in such resident's bed, and the necessity of making the change before the resident's return to the facility, provided no resident's bed shall be changed if (A) such a change is medically contraindicated as defined in subsection (a) of section 19a-550; or (B) if the resident does not consent to the change, except when the change is made (i) to protect the resident or others from physical harm; (ii) to control the spread of an infectious disease; or (iii) to respond to a physical plant or environmental emergency that threatens the resident's health or safety. In the case of such an involuntary change of a resident's bed, disruption of residents shall be minimized, notice shall be provided to the resident or representative not later than twenty-four hours after the change and, if practicable, the resident, if he or she wishes, shall be returned to his or her room when the threat to health or safety which prompted the transfer has been eliminated. When a resident's bed is changed without his or her consent to protect the resident or others from physical harm, a consultative process shall be established on the first business day following the resident's return to the facility. The consultative process shall include the participation of the attending physician, a registered nurse with responsibility for the resident, other appropriate staff in disciplines as determined by the resident's needs and the participation of the resident, such resident's family or other representative. The consultative process shall determine what caused the change in bed, whether the cause can be removed and, if not, whether the facility has attempted alternatives to the change. The resident shall be informed of the risks and benefits of the change in bed and of any alternatives.
+
+
+(c) A nursing home shall reserve, for at least fifteen days, the bed of a resident who is a recipient of medical assistance and who is absent from such home due to hospitalization unless the nursing home documents that it has objective information from the hospital confirming that the resident will not return to the nursing home within fifteen days of the hospital admission including the day of hospitalization.
+
+
+(d) The Department of Social Services shall reimburse a nursing home at the per diem Medicaid rate of the facility for each day that the facility reserves the bed of a resident who is a recipient of medical assistance in accordance with the following conditions:
+
+
+(1) A facility shall be reimbursed for reserving the bed of a resident who is hospitalized for a maximum of seven days including the admission date of hospitalization, if on such date the nursing home documents that (A) it has a vacancy rate of not more than three beds or three per cent of licensed capacity, whichever is greater, and (B) it contacted the hospital and the hospital failed to provide objective information confirming that the person would be unable to return to the nursing home within fifteen days of the date of hospitalization.
+
+
+(2) The nursing home shall be reimbursed for a maximum of eight additional days provided:
+
+
+(A) On the seventh day of the person's hospital stay, the nursing home has a vacancy rate that is not more than three beds or three per cent of licensed capacity, whichever is greater; and
+
+
+(B) Not later than seven days after the date of hospitalization of a resident who is a recipient of medical assistance, the nursing home has contacted the hospital for an update on the person's status and the nursing home documents such contact in the person's file and that the information obtained through the contact does not indicate that the person will be unable to return to the nursing home not later than fifteen days after the date of hospitalization.
+
+
+(3) A facility shall be reimbursed for reserving the bed of a resident who is absent for up to twenty-one days of home leave as authorized under the Medicaid program if on the day of such an absence the facility documents that it has a vacancy rate of not more than four beds or four per cent of licensed capacity, whichever is greater. No facility shall require or request a resident who is a recipient of medical assistance to provide payment for such authorized home leave days, whether or not such payment is available from the department.
+
+
+(e) If a resident's hospitalization exceeds the period of time that a nursing home is required to reserve the resident's bed or the nursing home is not required to reserve the resident's bed under this section, the nursing home:
+
+
+(1) Shall, upon receipt of notification from the hospital that a resident is medically ready for discharge, provide the resident with the first bed available in a semiprivate room or a private room, if a private room is medically necessary;
+
+
+(2) Shall grant the resident priority of admission over applicants for first admission to the nursing home;
+
+
+(3) May charge a fee to reserve the bed, not exceeding the facility's self-pay rate for the unit in which that resident resided, or not exceeding the per diem Medicaid rate for recipients of medical assistance, whichever charge is applicable, for the number of days which the resident is absent from the facility.
+
+
+(f) When the Commissioner of Social Services, or the commissioner's designee, makes a finding that a resident has been refused readmission to a nursing home in violation of this section, the resident shall retain the right to be readmitted to the transferring nursing home pursuant to subsection (e) of this section regardless of whether or not the resident has accepted placement in another nursing home while awaiting the availability of a bed in the facility from which the resident was transferred.
+
+
+(g) Whenever a nursing home has concerns about the readmission of a resident, as required by subsection (e) of this section, based on whether the nursing home has the ability to meet the resident's care needs or the resident presents a danger to himself or herself or to other persons, not later than twenty-four hours after receipt of notification from a hospital that a resident is medically ready for discharge, a nursing home shall request a consultation with the hospital and the resident or the resident's representative. The purpose of the consultation shall be to develop an appropriate care plan to safely meet the resident's nursing home care needs, including a determination of the date for readmission that best meets such needs. The resident's wishes and the hospital's recommendations shall be considered as part of the consultation process. The nursing home shall reserve the resident's bed until completion of the consultation process. The consultation process shall begin as soon as practicable and shall be completed not later than three business days after the date of the nursing home's request for a consultation. The hospital shall participate in the consultation, grant the nursing home access to the resident in the hospital and permit the nursing home to review the resident's hospital records.
+
+
+(h) A nursing home shall not refuse to readmit a resident unless: (1) The resident's needs cannot be met in the facility; (2) the resident no longer needs the services of the nursing home due to improved health; or (3) the health and safety of individuals in the nursing home would be endangered by readmission of the resident. If a nursing home decides to refuse to readmit a resident either without requesting a consultation or following a consultation conducted in accordance with subsection (g) of this section, the nursing home shall, not later than twenty-four hours after making such decision, notify the hospital, the resident and the resident's guardian or conservator, if any, the resident's legally liable relative or other responsible party, if known, in writing of the following: (A) The determination to refuse to readmit the resident; (B) the reasons for the refusal to readmit the resident; (C) the resident's right to appeal the decision to refuse to readmit the resident; (D) the procedures for initiating such an appeal, as determined by the Commissioner of Social Services; (E) the resident has twenty days from the date of receipt of the notice from the facility to initiate an appeal; (F) the possibility of an extension of the time frame for initiating an appeal for good cause; (G) the contact information, including the name, mailing address and telephone number, for the Long-Term Care Ombudsman; and (H) the resident's right to represent himself or herself at the appeal hearing or to be represented by legal counsel, a relative, a friend or other spokesperson. If a resident is, or the nursing home alleges a resident is, mentally ill or developmentally disabled, the nursing home shall include in the notice to the resident the contact information, including the name, mailing address and telephone number of the nonprofit entity designated by the Governor in accordance with section 46a-10b, to serve as the Connecticut protection and advocacy system. The Commissioner of Social Services, or the commissioner's designee, shall hold a hearing in accordance with chapter 54 to determine whether the nursing home has violated the provisions of this section. The commissioner, or the commissioner's designee, shall convene such hearing not later than fifteen days after the date of receipt of the request. The commissioner, or the commissioner's designee, shall issue a decision not later than thirty days after the date on which the hearing record is closed. The commissioner, or the commissioner's designee, may require the nursing home to readmit the resident to a semiprivate room or a private room, if a private room is medically necessary. The Superior Court shall consider an appeal from a decision of the commissioner pursuant to this section as a privileged case in order to dispose of the case with the least possible delay.
+
+
+(i) If, following a consultation convened pursuant to subsection (g) of this section, a nursing home does not readmit a resident, the resident may file a complaint with the Commissioner of Social Services pursuant to section 19a-537a. If the resident has requested a hearing pursuant to subsection (h) of this section, the commissioner shall stay an investigation of such complaint until the issuance of a determination following the hearing. Each day a nursing home fails to readmit a resident in violation of this section may be considered a separate violation for the purpose of determining a penalty pursuant to section 19a-537a, except no penalty shall accrue during the period of time beginning with the date a consultation is requested until the date a hearing decision is issued, if a hearing is requested, provided the commissioner, or the commissioner's designee, finds the nursing home has acted in good faith in refusing to readmit the resident. If the resident does not request a hearing and the resident files a complaint with the commissioner pursuant to section 19a-537a, no penalty shall accrue during the time an investigation is conducted, provided the commissioner finds the facility acted in good faith in refusing to readmit the resident.
+
+
+(P.A. 80-170, S. 1, 2; P.A. 83-348, S. 1, 3; P.A. 85-453, S. 1, 3; P.A. 87-178, S. 1; P.A. 88-197, S. 1; P.A. 93-262, S. 1, 87; 93-381, S. 9, 39; P.A. 95-160, S. 3, 69; 95-257, S. 12, 21, 58; P.A. 96-81, S. 2; 96-139, S. 12, 13; June Sp. Sess. P.A. 01-2, S. 64, 69; June Sp. Sess. P.A. 01-9, S. 129, 131; P.A. 11-236, S. 2; P.A. 17-96, S. 21; P.A. 22-58, S. 4.)
+
+
+History: Sec. 19-617a transferred to Sec. 19a-537 in 1983; P.A. 83-348 amended Subsec. (b) by adding the requirement that on and after October 1, 1983, a nursing home reserve the bed of a resident who is a recipient of medical assistance and who is absent from such home due to hospitalization for the time it may be reimbursed and by requiring the commissioner to adopt regulations to establish a monetary penalty; P.A. 85-453 amended Subsec. (a) to include “any licensed home for the aged” in the definition of “nursing home” and amended Subsec. (b) to authorize reimbursement at per diem boarding home rate; P.A. 87-178 amended Subsec. (a) to delete “licensed home for the aged” from the definition and amended Subsec. (b) to delete a reference to the “per diem boarding home rate”; P.A. 88-197 added definitions of “vacancy”, “level of care” and “hospital”, distinguished between nursing homes' obligations to self-pay patients and to patients receiving medical assistance, and substantially revised prior provisions re reservation of beds including provisions re patient information, reimbursement rates and 15-day mandatory bed reservation policy for residents on assistance; P.A. 93-262 authorized substitution of commissioner and department of social services for commissioner and department of income maintenance, effective July 1, 1993; P.A. 93-381 replaced department of health services with department of public health and addiction services, effective July 1, 1993; P.A. 95-160 amended Subsec. (b)(2) by adding a provision that if payment is not made, the resident will be admitted to the next available bed, added Subsec. (b)(3) requiring a nursing home to reserve the bed of a resident who is a recipient of medical assistance when the resident is absent for home leave days authorized under the Medicaid program, amended Subsec. (b)(4) by adding a provision that if the home is not required to reserve the bed, the resident will be admitted to the next available bed, added Subsec. (d)(3) providing for a facility to be reimbursed for reserving the bed of a resident who is absent for up to 21 days of home leave as authorized under the Medicaid program and amended Subsec. (e)(3) by changing the amount that a nursing home shall not exceed when charging a fee to reserve a bed from “the maximum allowable charge for the accommodation being reserved as established by the Department of Social Services for persons who are not recipients of medical assistance” to “the facility's self-pay rate for the unit in which that resident resided”, effective July 1, 1995; P.A. 95-257 replaced Commissioner and Department of Public Health and Addiction Services with Commissioner and Department of Public Health, effective July 1, 1995; P.A. 96-81 amended Subsec. (b)(5) to prohibit making the reserved bed available unless such change is medically contraindicated or if the resident does not consent to the change, with exceptions and required a consultation process to be established if the resident's bed is changed without his consent; P.A. 96-139 changed effective date of P.A. 95-160 but without affecting this section; June Sp. Sess. P.A. 01-2 amended Subsec. (a) to eliminate definition of “level of care”, renumbering existing Subdiv. (4) as Subdiv. (3), and to make technical changes in definition of “hospital”, amended Subsec. (b) to make technical changes for the purposes of gender neutrality, amended Subsec. (c) to delete phrase “at the same level of care”, and amended Subsec. (d) to delete references to “at the same level of care as the hospitalized person”, “at the same level of care” and “at the same level of care as the resident so absent”, effective July 1, 2001; June Sp. Sess. P.A. 01-9 revised effective date of June Sp. Sess. P.A. 01-2 but without affecting this section; P.A. 11-236 amended Subsec. (b)(2) and (4) by adding requirement that resident be admitted to next available bed in accordance with Subsec. (e), amended Subsec. (b)(4) by replacing reference to Department of Social Services requiring nursing home to reserve a bed with “nursing home is required to reserve the bed”, amended Subsec. (c) by replacing “patient” with “resident”, amended Subsec. (e)(1) by adding requirement that nursing home provide a resident with first bed available in a semiprivate or private room, if medically necessary, added Subsecs. (f) to (i) re readmission to a nursing home, and made technical changes, effective July 13, 2011; P.A. 17-96 amended Subsec. (h) by replacing reference to Office of Protection and Advocacy for Persons with Disabilities with reference to nonprofit entity designated to serve as Connecticut protection and advocacy system, effective July 1, 2017; P.A. 22-58 amended Subsec. (a)(3) by deleting “, as defined in section 19-13-D1(a) of the Public Health Code”.
+
+
+
+
+(Return to Chapter Table of Contents) | (Return to List of Chapters) | (Return to List of Titles)
+
+SOURCE 4: Connecticut Department of Social Services — Office of Legal Counsel, Regulations and Administrative Hearings (OLCRAH), Contact | https://portal.ct.gov/dss/the-office-of-legal-counsel-regulations-and-administrative-hearings/office-of-legal-counsel-regulations-and-administrative-hearings---olcrah/contact | source date: none stated on page | retrieved: 2026-10-22
+CT.gov Home
+
+dss
+
+Health and Human Services
+
+Children Family and Older Adults
+
+Office of Legal Counsel, Regulations and Administrative Hearings (OLCRAH)
+
+Current: Contact
+
+Office of Legal Counsel, Regulations and Administrative Hearings (OLCRAH)
+
+Overview
+
+The Hearings Unit
+
+Requesting A Hearing
+
+Scheduling Of Hearings
+
+Attendance At Hearings
+
+The Hearing Decision
+
+After The Hearing Decision
+
+Administrative Disqualification Hearings
+
+The Legal Unit
+
+Contact
+
+ Contact
+
+Director, Department of Social Services, Office of Legal Counsel, Regulations and Administrative Hearings, 55 Farmington Avenue, 11th floor, Hartford CT 06105.
+
+Telephone and Fax Directory
+
+Legal Director: Matthew S. Antonetti: 860-424-5104, fax 860-424-5403
+
+Hearings Manager: Marci Ostroski: 860-424-4920, fax 860-424-5729
+
+Hearings Supervisors: Valerie Gayer: 860-424-5672, Alisha Laird: 860-424-5199, Joshua Couillard: 860-424-4852, fax 860-424-5729
+
+The Administrative Hearings main telephone number is 860-424-5760 (please use if calling within the Hartford calling area) or 1-800-462-0134 outside of the Hartford calling area. The 800 number is toll free in CT only.
+
+The Administrative Hearings primary fax number is 860-424-5729
+
+The Legal Unit primary fax number is 860-424-5403
+
+The Access Health CT-Health Exchange hearings unit main telephone number is 860-424-4965 (please use if calling within the Hartford area) or 1-855-306-8625 outside of the Hartford calling area. The 855 number is toll free in CT only.
+
+The Access Health CT-Health Exchange hearings unit fax number is 860-424-4923.
+
+The Access Health CT-Health Exchange hearings unit email address is DSS-AHCT@ct.gov.
+
+The Central Office TDD number is 800-842-4524, 860-424-4975 from out of state) Applicants for and recipients of assistance from the Department who wish to seek legal representation may call Statewide Legal Services at 1-800-453-3320 for information. You may also visit the following websites of Connecticut based legal services organizations:
+
+Statewide Legal Services: Statewide Legal Services of Connecticut or Statewide Legal Services of Connecticut (Spanish)
+
+Connecticut Legal Services:  Connecticut’s Largest Legal Aid Agency | Transforming Lives - Connecticut Legal Services or Connecticut’s Largest Legal Aid Agency | Transforming Lives - Connecticut Legal Services (Spanish)
+
+Greater Hartford Legal Aid: Attorneys for Justice | Greater Hartford Legal Aid
+
+New Haven Legal Assistance: Home - The New Haven Legal Assistance Association
+
+Legal Assistance Resource Center Connecticut’s Largest Legal Aid Agency
+
+You may e-mail your questions to the unit at olcrah.DSS@ct.gov.
+
+Mailing Address: DSS-OLCRAH, 55 Farmington Avenue, Hartford CT 06105
+

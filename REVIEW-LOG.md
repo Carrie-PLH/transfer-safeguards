@@ -1255,3 +1255,41 @@ past california to colorado. No queue entries opened.
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-10-20. No
 human review is claimed for this entry.
+
+## 2026-10-22 — rotation pass: colorado unreachable; connecticut, delaware confirmed (scheduled)
+
+Cursor read at colorado; batch was colorado, connecticut, delaware (next two
+alphabetically).
+
+- **colorado** — unreachable. 5 of 6 sources (sources 1-4 and 6, all
+  www.sos.state.co.us CCR rule PDFs) failed with HTTP 500. Confirmed as a
+  genuine server-side outage, not a transport block: bare curl, curl with a
+  full browser header set, and the session browser all returned the same
+  500/"Service Unavailable" against the GenerateRulePdf.do endpoint, the
+  DisplayRule.do endpoint, and the bare /CCR/ root — the whole Secretary of
+  State CCR subsystem, not one URL. Source 5 (cdhs.colorado.gov Long-Term
+  Care Ombudsman page) captured cleanly. No fidelity check run on incomplete
+  evidence; no capture retained; checked date untouched. First unreachable
+  pass on file for colorado since the 2026-09-24 confirmation — not queued
+  (one unreachable pass, below the three-strike threshold).
+- **connecticut** — confirmed. Recipe capture (digest 5f9a18903066), 4
+  sources. Zero failures on both files. Retained — unchanged since
+  2026-09-17 (hash 71b82a37828a13ea). Promoted. Checked date updated to
+  2026-10-22; page re-rendered.
+- **delaware** — confirmed. Recipe capture (digest f5369fe37370), 4
+  sources. Zero failures on both files. Retained, hash 62c20d99ad737a38 —
+  source 4's header line differs only in its retrieved date (same title,
+  same URL, same source date: Revision Table 02/01/2023, Section 4.5 last
+  revised 9/1/2016); not an instrument replacement. Promoted. Checked date
+  updated to 2026-10-22; page re-rendered.
+
+sync-checked-dates.py corrected 4 derived dates (table + JSON for
+connecticut and delaware). build-status.py: 51/51 baseline, 50/51 full
+(North Dakota gap predates this pass, unchanged). check-all.py: 102 pages
+across 52 states, no unexplained failures. build-state-picker.py
+regenerated (51/51 published). generate-sitemap.py: 58 URLs, only 404.html
+omitted. check-live.py: nothing loaded from any other host. Review cursor
+advanced past delaware to district-of-columbia. No queue entries opened.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-10-22. No
+human review is claimed for this entry.
