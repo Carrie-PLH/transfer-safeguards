@@ -140,6 +140,24 @@
       "last_result": "FAILED",
       "page": "alaska"
     },
+    "https://alliancebltc.org/contact/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261023044724/https://alliancebltc.org/contact/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-23T044744Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "rhode-island"
+    },
+    "https://alliancebltc.org/ombudsman-program/contact/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261023044759/https://alliancebltc.org/ombudsman-program/contact/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-23T044816Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "rhode-island"
+    },
     "https://apps.azsos.gov/public_services/Title_09/9-10.pdf": {
       "attempts": 1,
       "consecutive_hard_failures": 1,
@@ -1049,6 +1067,15 @@
       "last_result": "FAILED",
       "page": "georgia"
     },
+    "https://sais.health.pa.gov/CommonPOC/content/FacilityWeb/attachment.asp?messageid=3521&filename=Involuntary+Discharge+Notice+Protocol.pdf&attachmentnumber=1": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261023044256/https://sais.health.pa.gov/CommonPOC/content/FacilityWeb/attachment.asp?messageid=3521&filename=Involuntary+Discharge+Notice+Protocol.pdf&attachmentnumber=1",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-23T044259Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "pennsylvania"
+    },
     "https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/se0509.pdf": {
       "attempts": 1,
       "capture": "https://web.archive.org/web/20261022044200/https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/se0509.pdf",
@@ -1676,6 +1703,42 @@
       "last_result": "OK",
       "page": "oregon"
     },
+    "https://www.pa.gov/services/aging/request-assistance-from-a-long-term-care-ombudsman": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261023044410/https://www.pa.gov/services/aging/request-assistance-from-a-long-term-care-ombudsman",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-23T044424Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "pennsylvania"
+    },
+    "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/028/chapter201/s201.2.html&d=reduce": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261023044544/https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/028/chapter201/s201.2.html&d=reduce",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-23T044601Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "pennsylvania"
+    },
+    "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/028/chapter201/s201.29.html&d=reduce": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261023044616/https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/028/chapter201/s201.29.html&d=reduce",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-23T044633Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "pennsylvania"
+    },
+    "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/055/chapter275/s275.4.html&d=reduce": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261023044649/https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/055/chapter275/s275.4.html&d=reduce",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-23T044704Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "pennsylvania"
+    },
     "https://www.revisor.mn.gov/rules/4658.0465/": {
       "attempts": 1,
       "capture": "https://web.archive.org/web/20261019120929/https://www.revisor.mn.gov/rules/4658.0465/",
@@ -1753,5 +1816,5 @@
       "page": "new-mexico"
     }
   },
-  "updated": "2026-10-22T044312Z"
+  "updated": "2026-10-23T044816Z"
 }
