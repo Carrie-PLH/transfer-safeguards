@@ -1293,3 +1293,53 @@ advanced past delaware to district-of-columbia. No queue entries opened.
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-10-22. No
 human review is claimed for this entry.
+
+## 2026-10-24 — rotation pass: district-of-columbia, florida, georgia confirmed; hawaii unreachable; federal recipe backfill required (scheduled)
+
+Cursor read at district-of-columbia; batch was district-of-columbia and the
+next four alphabetically (federal, florida, georgia, hawaii), widened from
+the normal batch of three per this pass's own larger budget.
+
+- **district-of-columbia** — confirmed. Recipe capture (digest f6b61c9f4ef7),
+  12 sources, checked against the standing supplement
+  (tools/packets/district-of-columbia-packet-bedhold.txt) as well as the
+  fresh capture. Zero failures on both files. Retained, hash
+  0e38d0c02442e8bb — promoted, no header movement flagged. Checked date
+  updated to 2026-10-24; page re-rendered.
+- **federal** — RECIPE BACKFILL REQUIRED. No `tools/recipes/federal.json`
+  exists. Per the skill's eligibility rule, no recipe was built and no
+  source reconnaissance performed this pass; this is backfill work for the
+  recipe-backfill workflow. Page and checked date left untouched.
+- **florida** — confirmed. Recipe capture (digest 63c0a1b05d45), 6 sources
+  (source 3, a legacy `.doc`, converted with `textutil` as the recipe
+  records). Zero failures on both files. Retained, hash b195bb529934139b —
+  promoted, no header movement flagged. Checked date updated to 2026-10-24;
+  page re-rendered.
+- **georgia** — confirmed. Recipe capture (digest 45c47b529b1d), 4 sources.
+  Zero failures on both files. Retained, hash f7463b7a59cc431c — promoted,
+  no header movement flagged. Checked date updated to 2026-10-24; page
+  re-rendered.
+- **hawaii** — unreachable. 3 of 5 sources captured (sources 1-3); source 4
+  (medquest.hawaii.gov grievance-and-appeals page) failed with HTTP 403 and
+  source 5 (the same host's hearing-request-form PDF, linked from source 4)
+  failed with HTTP 404, both under the recipe's documented curl + browser
+  user-agent transport — no alternate transport is documented for either.
+  No fidelity check run on incomplete evidence; no capture retained; checked
+  date untouched. First unreachable pass on file for hawaii since the
+  2026-09-29 confirmation — not queued (one unreachable pass, below the
+  three-strike threshold).
+
+sync-checked-dates.py corrected 6 derived dates (table + JSON for
+district-of-columbia, florida and georgia). build-status.py: 51/51
+baseline, 50/51 full (North Dakota gap predates this pass, unchanged).
+check-all.py: 102 pages across 52 states, no unexplained failures.
+build-state-picker.py regenerated (51/51 published). generate-sitemap.py:
+58 URLs, only 404.html omitted. check-live.py: 5 pages sampled, nothing
+loaded from any other host. Review cursor advanced past hawaii to idaho,
+per skill step, regardless of hawaii's and federal's results. No queue
+entries opened — all three fidelity-checked pages confirmed, and the one
+unreachable source and the one recipe-backfill gap are both below the
+queue threshold.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-10-24. No
+human review is claimed for this entry.

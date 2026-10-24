@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: district-of-columbia
-ASSEMBLED: 2026-09-26
+ASSEMBLED: 2026-10-24
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/district-of-columbia.json (recipe digest f6b61c9f4ef7). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -30,7 +30,7 @@ CAPTURE NOTES:
 - SOURCE 12: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
   The listing only. The DCMR portal serves the rule's text through an ASP.NET postback bound to a session, which curl cannot follow and a direct RuleDetail address returns 403 to; the listing names the section, its title, its effective date and its rulemaking history, and that is what is captured. The rule text itself is capture-pending and the page says so. Cloudflare obfuscates the office's email; the shared reader decodes it.
 
-SOURCE 1: D.C. Code § 44-1003.01, Grounds for involuntary discharge, transfer, or relocation by facility — Council of the District of Columbia, D.C. Law Library | https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.01 | source date: section history: Apr. 18, 1986, D.C. Law 6-108, § 301; last amended Apr. 29, 2010, D.C. Law 18-145, § 4(b); the Code's currency is stated on source 4 | retrieved: 2026-09-26
+SOURCE 1: D.C. Code § 44-1003.01, Grounds for involuntary discharge, transfer, or relocation by facility — Council of the District of Columbia, D.C. Law Library | https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.01 | source date: section history: Apr. 18, 1986, D.C. Law 6-108, § 301; last amended Apr. 29, 2010, D.C. Law 18-145, § 4(b); the Code's currency is stated on source 4 | retrieved: 2026-10-24
 Skip to main content
 
 Toggle mobile menu
@@ -107,7 +107,7 @@ The codes and laws on this website are in the public domain.
 
 Powered by the non-profit Open Law Library.
 
-SOURCE 2: D.C. Code § 44-1003.02, Notice to resident and resident's representative — Council of the District of Columbia, D.C. Law Library | https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.02 | source date: section history: Apr. 18, 1986, D.C. Law 6-108, § 302; last amended Apr. 29, 2010, D.C. Law 18-145, § 4(c); the Code's currency is stated on source 4 | retrieved: 2026-09-26
+SOURCE 2: D.C. Code § 44-1003.02, Notice to resident and resident's representative — Council of the District of Columbia, D.C. Law Library | https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.02 | source date: section history: Apr. 18, 1986, D.C. Law 6-108, § 302; last amended Apr. 29, 2010, D.C. Law 18-145, § 4(c); the Code's currency is stated on source 4 | retrieved: 2026-10-24
 Skip to main content
 
 Toggle mobile menu
@@ -212,7 +212,7 @@ The codes and laws on this website are in the public domain.
 
 Powered by the non-profit Open Law Library.
 
-SOURCE 3: D.C. Code § 44-1003.03, Hearing — Council of the District of Columbia, D.C. Law Library | https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.03 | source date: section history: Apr. 18, 1986, D.C. Law 6-108, § 303; last amended June 9, 2018, D.C. Law 22-112, § 3(b)(1); the Code's currency is stated on source 4 | retrieved: 2026-09-26
+SOURCE 3: D.C. Code § 44-1003.03, Hearing — Council of the District of Columbia, D.C. Law Library | https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.03 | source date: section history: Apr. 18, 1986, D.C. Law 6-108, § 303; last amended June 9, 2018, D.C. Law 22-112, § 3(b)(1); the Code's currency is stated on source 4 | retrieved: 2026-10-24
 Skip to main content
 
 Toggle mobile menu
@@ -293,7 +293,7 @@ The codes and laws on this website are in the public domain.
 
 Powered by the non-profit Open Law Library.
 
-SOURCE 4: Code of the District of Columbia, home page — Council of the District of Columbia, D.C. Law Library (currency statement) | https://code.dccouncil.gov/us/dc/council/code | source date: carries its own 'Current through' statement | retrieved: 2026-09-26
+SOURCE 4: Code of the District of Columbia, home page — Council of the District of Columbia, D.C. Law Library (currency statement) | https://code.dccouncil.gov/us/dc/council/code | source date: carries its own 'Current through' statement | retrieved: 2026-10-24
 Skip to main content
 
 Toggle mobile menu
@@ -430,7 +430,7 @@ Title 35. Railroads and Other Carriers.
 §§ 35-101 – 35-333
 
 Title 36. Trade Practices.
-§§ 36-101 – 36-641.22
+§§ 36-101 – 36-681.01
 
 Title 37. Weights, Measures, Markets, and Vending.
 §§ 37-101 – 37-205.02
@@ -484,17 +484,17 @@ Title 51. Social Security.
 §§ 51-101 – 51-178
 
 Title 99. Reserved sections.
-§§ 1-1163.32h(Perm) – 10-171.03(Perm)
+§§ 42-2803.01(Perm) – 10-171.03(Perm)
 
 Publication Information
 
 Current through
 
-Sept. 5, 2026
+Oct. 14, 2026
 
 Last codified D.C. Law:
 
-Law 26-177 effective Sept. 5, 2026
+Law 26-190 effective Oct. 14, 2026
 
 Last codified Emergency Law:
 
@@ -510,7 +510,7 @@ The codes and laws on this website are in the public domain.
 
 Powered by the non-profit Open Law Library.
 
-SOURCE 5: D.C. Code § 7-702.04, Long-Term Care Ombudsman — Powers and duties — Council of the District of Columbia, D.C. Law Library | https://code.dccouncil.gov/us/dc/council/code/sections/7-702.04 | source date: section history: Mar. 16, 1989, D.C. Law 7-218, § 204; last amended July 3, 2018, D.C. Law 22-125, § 2(e); the Code's currency is stated on source 4 | retrieved: 2026-09-26
+SOURCE 5: D.C. Code § 7-702.04, Long-Term Care Ombudsman — Powers and duties — Council of the District of Columbia, D.C. Law Library | https://code.dccouncil.gov/us/dc/council/code/sections/7-702.04 | source date: section history: Mar. 16, 1989, D.C. Law 7-218, § 204; last amended July 3, 2018, D.C. Law 22-125, § 2(e); the Code's currency is stated on source 4 | retrieved: 2026-10-24
 Skip to main content
 
 Toggle mobile menu
@@ -625,7 +625,7 @@ The codes and laws on this website are in the public domain.
 
 Powered by the non-profit Open Law Library.
 
-SOURCE 6: Incident Report and 6-108 Discharge Transfer and Relocation Forms — DC Health | https://dchealth.dc.gov/service/incident-report-and-6-108-discharge-transfer-and-relocation-forms | source date: none stated on page | retrieved: 2026-09-26
+SOURCE 6: Incident Report and 6-108 Discharge Transfer and Relocation Forms — DC Health | https://dchealth.dc.gov/service/incident-report-and-6-108-discharge-transfer-and-relocation-forms | source date: none stated on page | retrieved: 2026-10-24
 Skip to main content
 
  dchealth
@@ -1018,7 +1018,7 @@ Terms and Conditions
 
 About DC.Gov
 
-SOURCE 7: DOH Notice of Discharge Transfer or Relocation Form (the 6-108 form) — DC Health, served through the District's SeamlessDocs form platform | https://dcgov.seamlessdocs.com/f/DOHNoticeofDischargeTransferorRelocationForm | source date: none stated on the form | retrieved: 2026-09-26
+SOURCE 7: DOH Notice of Discharge Transfer or Relocation Form (the 6-108 form) — DC Health, served through the District's SeamlessDocs form platform | https://dcgov.seamlessdocs.com/f/DOHNoticeofDischargeTransferorRelocationForm | source date: none stated on the form | retrieved: 2026-10-24
 Section 1 of 1 in this document
 
 DOH Notice of Discharge Transfer or Relocation Form
@@ -1263,7 +1263,7 @@ Be sure to verify that you are not a robot by using the Captcha tool at the belo
 
 Having reCaptcha issues? Click here to reset the widget.
 
-SOURCE 8: 6-108 Cover Letter to Nursing Home Providers — DC Health, Health Regulation and Licensing Administration (PDF) | https://dchealth.dc.gov/sites/default/files/dc/sites/doh/publication/attachments/6_108%20Cover%20Letter%20to%20Nursing%20Home%20Providers.pdf | source date: December 31, 2008, as the letter is dated | retrieved: 2026-09-26
+SOURCE 8: 6-108 Cover Letter to Nursing Home Providers — DC Health, Health Regulation and Licensing Administration (PDF) | https://dchealth.dc.gov/sites/default/files/dc/sites/doh/publication/attachments/6_108%20Cover%20Letter%20to%20Nursing%20Home%20Providers.pdf | source date: December 31, 2008, as the letter is dated | retrieved: 2026-10-24
 DISTRICT OF COLUMBIA
                                    Department of Health
 
@@ -1328,12 +1328,14 @@ Enclosures
 
      717 14th Street, N.W. 6th Floor, Washington, D.C. 20005 (202) 724-8800 Fax (202) 442-9431
 
-SOURCE 9: Filings & Forms — DC Office of Administrative Hearings | https://oah.dc.gov/page/filings-forms | source date: none stated on page | retrieved: 2026-09-26
+SOURCE 9: Filings & Forms — DC Office of Administrative Hearings | https://oah.dc.gov/page/filings-forms | source date: none stated on page | retrieved: 2026-10-24
 Skip to main content
 
  oah
 
  Office of Administrative Hearings
+
+As of 10/21/2026 the District of Columbia's Office of Administrative Hearings efiling and final order search portal are undergoing necessary maintenance. Once complete, these portals will be back online as soon as possible. We apologize for any inconvenience.
 
 Effective August 13, 2026, OAH no longer has jurisdiction to conduct hearings for Notices of Infraction issued by the Department of For Hire Vehicles (DFHV). Jurisdiction to conduct these hearings has been transferred to the Department of Motor Vehicles (DMV). See DFHV Hearings for more information..
 
@@ -1459,12 +1461,14 @@ Terms & Conditions
 
 © 2023 District of Columbia
 
-SOURCE 10: About — DC Office of Administrative Hearings | https://oah.dc.gov/page/about | source date: none stated on page | retrieved: 2026-09-26
+SOURCE 10: About — DC Office of Administrative Hearings | https://oah.dc.gov/page/about | source date: none stated on page | retrieved: 2026-10-24
 Skip to main content
 
  oah
 
  Office of Administrative Hearings
+
+As of 10/21/2026 the District of Columbia's Office of Administrative Hearings efiling and final order search portal are undergoing necessary maintenance. Once complete, these portals will be back online as soon as possible. We apologize for any inconvenience.
 
 Effective August 13, 2026, OAH no longer has jurisdiction to conduct hearings for Notices of Infraction issued by the Department of For Hire Vehicles (DFHV). Jurisdiction to conduct these hearings has been transferred to the Department of Motor Vehicles (DMV). See DFHV Hearings for more information..
 
@@ -1692,7 +1696,7 @@ Terms & Conditions
 
 © 2023 District of Columbia
 
-SOURCE 11: Long-Term Care Ombudsman Program for DC Residents — Office of the D.C. Long-Term Care Ombudsman, Legal Counsel for the Elderly | https://www.aarp.org/legal-counsel-for-elderly/what-we-do/info-2017/dc-long-term-care-ombudsman.html | source date: none stated on page | retrieved: 2026-09-26
+SOURCE 11: Long-Term Care Ombudsman Program for DC Residents — Office of the D.C. Long-Term Care Ombudsman, Legal Counsel for the Elderly | https://www.aarp.org/legal-counsel-for-elderly/what-we-do/info-2017/dc-long-term-care-ombudsman.html | source date: none stated on page | retrieved: 2026-10-24
 Skip to content
 
 Get the AARP Now app. New and improved, it’s the app that makes your membership truly mobile!
@@ -2282,7 +2286,7 @@ Cancel
 Cancel
 Continue
 
-SOURCE 12: 29 DCMR § 950, Payment for Reserved Beds — section listing, D.C. Office of Documents and Administrative Issuances (DCMR portal) | https://dcregs.dc.gov/Common/DCMR/SectionList.aspx?SectionNumber=29-950 | source date: Effective Date: 3/9/2018, as the listing states for the most recent adopted rule | retrieved: 2026-09-26
+SOURCE 12: 29 DCMR § 950, Payment for Reserved Beds — section listing, D.C. Office of Documents and Administrative Issuances (DCMR portal) | https://dcregs.dc.gov/Common/DCMR/SectionList.aspx?SectionNumber=29-950 | source date: Effective Date: 3/9/2018, as the listing states for the most recent adopted rule | retrieved: 2026-10-24
 311 Online
 
 Agency Directory

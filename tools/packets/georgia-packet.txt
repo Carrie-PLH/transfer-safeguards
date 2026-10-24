@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: georgia
-ASSEMBLED: 2026-09-27
+ASSEMBLED: 2026-10-24
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/georgia.json (recipe digest 45c47b529b1d). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -24,7 +24,7 @@ The three request lines are set as Cloudflare-obfuscated mailto links (data-cfem
 - SOURCE 4: transport curl; extractor html-text; scope article.doc; filters none.
   Added 2026-09-14, deepening Georgia to a full page: the state's own Medicaid bed-hold statement, uncaptured at baseline ("No first-party statement of a Georgia Medicaid bed-hold period was captured"). Plain curl with the pinned browser user-agent returns 200. This page is one policy of DHS's Antora-built PAMMS manual site; scope article.doc is the template's own per-page content container and holds exactly this policy's text (title, metadata block, Requirements, Basic Considerations, the Chart 2582.1 table, and Procedures), excluding the manual's chapter-tree sidebar navigation that surrounds it in the full document. The manual's own vocabulary is Medicaid, not the department's usual bed-hold phrasing elsewhere in this project's pages: it calls the facility a "nursing home (NH)," the beneficiary an "A/R" or "recipient," and the payment continuation a "vendor payment," and states the hospital bed-hold period as "up to a maximum of seven days per hospitalization," separately from an eight-day-per-calendar-year home-visit allowance in the same chart.
 
-SOURCE 1: Georgia Rules and Regulations, Subject 111-8-50, Long-Term Care Facilities: Residents' Bill of Rights (Department of Community Health) | https://rules.sos.ga.gov/gac/111-8-50 | source date: none stated on page | retrieved: 2026-09-27
+SOURCE 1: Georgia Rules and Regulations, Subject 111-8-50, Long-Term Care Facilities: Residents' Bill of Rights (Department of Community Health) | https://rules.sos.ga.gov/gac/111-8-50 | source date: none stated on page | retrieved: 2026-10-24
 Home |
  Browse |
  Help |
@@ -1013,7 +1013,7 @@ Rule 111-8-50-.16 Enforcement
 Copyright © 2026 Fastcase, Inc - All rights reserved. |
  Email Us | 844-838-0769
 
-SOURCE 2: Georgia Department of Human Services, Division of Aging Services — Long-Term Care Ombudsman Program | https://aging.georgia.gov/programs-and-services/long-term-care-ombudsman-program | source date: none stated on page | retrieved: 2026-09-27
+SOURCE 2: Georgia Department of Human Services, Division of Aging Services — Long-Term Care Ombudsman Program | https://aging.georgia.gov/programs-and-services/long-term-care-ombudsman-program | source date: none stated on page | retrieved: 2026-10-24
 Skip to main content
  
 
@@ -1785,6 +1785,14 @@ Subnavigation toggle for Georgia's Aging and Disability Resource Connection
 
 
 
+ Find Help in Your Community 
+
+
+
+
+
+
+
  Find Local Assistance 
 
 
@@ -2139,7 +2147,7 @@ Human Trafficking Notice
 
 Georgia Web Analytics
 
-SOURCE 3: Georgia Department of Community Health, HFRD Laws & Regulations (Healthcare Facility Regulation Division, Legal Services unit contact for a long-term care discharge appeal) | https://dch.georgia.gov/divisionsoffices/hfrd/hfrd-laws-regulations | source date: none stated on page | retrieved: 2026-09-27
+SOURCE 3: Georgia Department of Community Health, HFRD Laws & Regulations (Healthcare Facility Regulation Division, Legal Services unit contact for a long-term care discharge appeal) | https://dch.georgia.gov/divisionsoffices/hfrd/hfrd-laws-regulations | source date: none stated on page | retrieved: 2026-10-24
 HFRD Laws & Regulations
  
  
@@ -2370,7 +2378,7 @@ Traumatic Brain Injury Facilities, Chapter 118-8-71
 
 X-Ray, Chapter 111-8-90
 
-SOURCE 4: Georgia Department of Human Services, Division of Family and Children Services, Medicaid Policy Manual, 2582 Temporary Absence from Nursing Home | https://pamms.dhs.ga.gov/dfcs/medicaid/2582/ | source date: Effective Date: February 2020 (page also states "Updated or Reviewed in MT: MT-58") | retrieved: 2026-09-27
+SOURCE 4: Georgia Department of Human Services, Division of Family and Children Services, Medicaid Policy Manual, 2582 Temporary Absence from Nursing Home | https://pamms.dhs.ga.gov/dfcs/medicaid/2582/ | source date: Effective Date: February 2020 (page also states "Updated or Reviewed in MT: MT-58") | retrieved: 2026-10-24
 2582 Temporary Absence from Nursing Home | Medicaid
 
 

@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: florida
-ASSEMBLED: 2026-09-27
+ASSEMBLED: 2026-10-24
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/florida.json (recipe digest 63c0a1b05d45). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -18,7 +18,7 @@ CAPTURE NOTES:
 - SOURCE 6: transport curl; extractor pdftotext-layout; filters strip-running-headers, strip-page-numbers, trim-lines, collapse-blank-runs.
   Found from ahca.myflorida.com's own 'Adopted Rules and Service Specific Policies' listing page (medicaid/rules/adopted-rules-service-specific-policies.html), which links this PDF as '59G-4.200 Nursing Facility Services Coverage Policy'; the document's own section 1.2 states its legal authority as 'Rule 59G-4.200, F.A.C.' among others. This is AHCA's own first-party statement of the Medicaid bed-hold ('leave days') policy the licensure statute (400.0255(6), 400.022(1)(u)) refers to without stating a Medicaid-specific day count of its own: section 4.2.1, 'Leave Days', states 'Florida Medicaid reimburses for leave days when the recipient is expected to return to the facility, as follows: Hospitalization -- 8 days per medically necessary hospital stay; Therapeutic leave -- 16 days per state fiscal year.' This 8-day figure differs from 400.022(1)(u)'s own 'up to 15 days' for a Title XIX (Medicaid) resident's hospitalization bed reservation; both are quoted on the page as published by their own publishers and are not reconciled. Single-column PDF, seven pages, no WAF encountered; plain curl with a browser user-agent returns 200 directly.
 
-SOURCE 1: Florida Statutes s. 400.0255, Resident transfer or discharge; requirements and procedures; hearings | http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0400/Sections/0400.0255.html | source date: History line ends s. 22, ch. 2015-31 | retrieved: 2026-09-27
+SOURCE 1: Florida Statutes s. 400.0255, Resident transfer or discharge; requirements and procedures; hearings | http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0400/Sections/0400.0255.html | source date: History line ends s. 22, ch. 2015-31 | retrieved: 2026-10-24
 html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"F.S. 400.0255
 400.0255 Resident transfer or discharge; requirements and procedures; hearings.—
 (1) As used in this section, the term:
@@ -93,7 +93,7 @@ The exemption created by this subsection does not prohibit access to such inform
 
 History.—s. 6, ch. 93-217; s. 4, ch. 95-407; s. 34, ch. 96-169; s. 227, ch. 96-406; s. 8, ch. 99-394; s. 138, ch. 2000-349; s. 3, ch. 2000-350; s. 58, ch. 2000-367; ss. 13, 53, ch. 2001-45; s. 22, ch. 2015-31.
 
-SOURCE 2: Florida Statutes s. 400.022, Residents' rights | http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0400/Sections/0400.022.html | source date: History line ends s. 1, ch. 2023-307 | retrieved: 2026-09-27
+SOURCE 2: Florida Statutes s. 400.022, Residents' rights | http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0400/Sections/0400.022.html | source date: History line ends s. 1, ch. 2023-307 | retrieved: 2026-10-24
 html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"F.S. 400.022
 400.022 Residents’ rights.—
 (1) All licensees of nursing home facilities shall adopt and make public a statement of the rights and responsibilities of the residents of such facilities and shall treat such residents in accordance with the provisions of that statement. The statement shall assure each resident the following:
@@ -163,10 +163,8 @@ The facility must allow representatives of the State Long-Term Care Ombudsman Pr
 
 History.—s. 8, ch. 76-201; s. 1, ch. 77-174; ss. 1, 9, ch. 79-268; ss. 2, 18, ch. 80-186; s. 2, ch. 81-318; ss. 11, 19, ch. 82-148; ss. 5, 79, 83, ch. 83-181; s. 1, ch. 84-144; s. 15, ch. 90-347; s. 30, ch. 93-177; ss. 3, 49, ch. 93-217; s. 764, ch. 95-148; s. 226, ch. 96-406; s. 118, ch. 99-8; s. 5, ch. 99-394; ss. 70, 137, ch. 2000-349; s. 57, ch. 2000-367; s. 33, ch. 2001-62; s. 56, ch. 2007-230; s. 123, ch. 2014-19; s. 43, ch. 2015-2; s. 21, ch. 2015-31; s. 48, ch. 2016-10; s. 1, ch. 2023-307.
 
-SOURCE 3: Florida Department of Children and Families, Office of Inspector General — Appeal Hearings | https://www.myflfamilies.com/about/office-inspector-general/appeal-hearings | source date: page modified 2026-04-08 (meta article:modified_time) | retrieved: 2026-09-27
+SOURCE 3: Florida Department of Children and Families, Office of Inspector General — Appeal Hearings | https://www.myflfamilies.com/about/office-inspector-general/appeal-hearings | source date: page modified 2026-04-08 (meta article:modified_time) | retrieved: 2026-10-24
 Skip to main content
-
-Appeal Hearings
 
 Appeal Hearings
 
@@ -189,6 +187,8 @@ Self-Help Forms
 Internal and Single Audit
 Investigations
 Publications and Reports
+
+Appeal Hearings
 
 Overview
 
@@ -224,7 +224,7 @@ Fort Lauderdale (Southeast)
 
 Miami (Southern)
 
-SOURCE 4: Florida Department of Elder Affairs, Long-Term Care Ombudsman Program | https://elderaffairs.org/programs-and-services/long-term-care-ombudsman-program/ | source date: none stated on page | retrieved: 2026-09-27
+SOURCE 4: Florida Department of Elder Affairs, Long-Term Care Ombudsman Program | https://elderaffairs.org/programs-and-services/long-term-care-ombudsman-program/ | source date: none stated on page | retrieved: 2026-10-24
 About Us
 
 Resources
@@ -252,6 +252,8 @@ Public Notices
 Contact Us
 
 Search for:
+
+Hurricane Isaias Information
 
 Long-Term Care Ombudsman Program
 
@@ -525,6 +527,8 @@ Reports
 
 Forms
 
+Annual Regulatory Plans
+
 Programs & Services
 
 Housing
@@ -575,9 +579,6 @@ Accept All
 
 Powered by
 
-✖
-
-►
 Necessary Cookies
 
 Always Active
@@ -586,33 +587,31 @@ Always Active
 
 None
 
-►
 Functional Cookies
-Remark
+
+Functional Cookies
 
  Functional cookies support features like content sharing on social media, collecting feedback, and enabling third-party tools.
 
 None
 
-►
 Analytical Cookies
-Remark
+
+Analytical Cookies
 
  Analytical cookies track visitor interactions, providing insights on metrics like visitor count, bounce rate, and traffic sources.
 
 None
 
-►
 Advertisement Cookies
-Remark
+
+Advertisement Cookies
 
  Advertisement cookies deliver personalized ads based on your previous visits and analyze the effectiveness of ad campaigns.
 
 None
 
-►
 Unclassified Cookies
-Remark
 
  Unclassified cookies are cookies that we are in the process of classifying, together with the providers of individual cookies.
 
@@ -624,7 +623,7 @@ Accept All
 
 Powered by
 
-SOURCE 5: Florida Administrative Code Chapter 65-2, Rules of Practice and Procedure (Department of Children and Families) | https://flrules.org/gateway/readFile.asp?sid=0&tid=0&cno=65-2&caid=1206309&type=4&file=65-2.doc | source date: most sections effective 4/2/2018 (per each rule's own History line on flrules.org; 65-2.058 effective 12/11/2006 and 65-2.060 effective 10/30/2000 are not amended by the 2018 rulemaking) | retrieved: 2026-09-27
+SOURCE 5: Florida Administrative Code Chapter 65-2, Rules of Practice and Procedure (Department of Children and Families) | https://flrules.org/gateway/readFile.asp?sid=0&tid=0&cno=65-2&caid=1206309&type=4&file=65-2.doc | source date: most sections effective 4/2/2018 (per each rule's own History line on flrules.org; 65-2.058 effective 12/11/2006 and 65-2.060 effective 10/30/2000 are not amended by the 2018 rulemaking) | retrieved: 2026-10-24
 CHAPTER 65-2
 RULES OF PRACTICE AND PROCEDURE
 65-2.042 	Applicant/Recipient Fair Hearings
@@ -792,7 +791,7 @@ Rulemaking Authority 409.285 FS. Law Implemented 409.285 FS. History–New 4-5-8
 (2) The provision for an individual to waive an intentional program violation disqualification hearing is an option of the Food Stamp Act of 1977, 7 U.S.C. 2011 et seq., as amended, and included in 7 C.F.R. 273.16.
 Rulemaking Authority 409.285 FS. Law Implemented 409.285 FS. History–New 7-16-80, Formerly 10-2.69, Amended 4-28-86, 1-5-93, Formerly 10-2.069, Amended 4-2-18.
 
-SOURCE 6: Florida Medicaid Nursing Facility Services Coverage Policy, Rule 59G-4.200, F.A.C. (Agency for Health Care Administration) | https://ahca.myflorida.com/content/download/27067/file/59G-4.200.pdf | source date: May 2016 | retrieved: 2026-09-27
+SOURCE 6: Florida Medicaid Nursing Facility Services Coverage Policy, Rule 59G-4.200, F.A.C. (Agency for Health Care Administration) | https://ahca.myflorida.com/content/download/27067/file/59G-4.200.pdf | source date: May 2016 | retrieved: 2026-10-24
 Florida
 Medicaid
 
