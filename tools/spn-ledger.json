@@ -117,6 +117,15 @@
       "last_result": "FAILED",
       "page": "ohio"
     },
+    "https://aging.sc.gov/programs-initiatives/long-term-care-ombudsman-program": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261024050341/https://aging.sc.gov/programs-initiatives/long-term-care-ombudsman-program",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-24T050358Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "south-carolina"
+    },
     "https://ahca.myflorida.com/content/download/27067/file/59G-4.200.pdf": {
       "attempts": 1,
       "last_attempt": "2026-09-21T111859Z",
@@ -154,6 +163,15 @@
       "capture": "https://web.archive.org/web/20261023044759/https://alliancebltc.org/ombudsman-program/contact/",
       "consecutive_hard_failures": 0,
       "last_attempt": "2026-10-23T044816Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "rhode-island"
+    },
+    "https://alliancebltc.org/ombudsman-program/residents-rights/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261024045614/https://alliancebltc.org/ombudsman-program/residents-rights/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-24T045637Z",
       "last_detail": "ok",
       "last_result": "OK",
       "page": "rhode-island"
@@ -481,6 +499,22 @@
       "last_detail": "submit-401",
       "last_result": "FAILED",
       "page": "florida"
+    },
+    "https://eohhs.ri.gov/media/45546/download?language=en": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-24T045656Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "rhode-island"
+    },
+    "https://eohhs.ri.gov/reference-center/eohhs-appeals-office": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-24T045715Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "rhode-island"
     },
     "https://flrules.org/gateway/readFile.asp?sid=0&tid=0&cno=65-2&caid=1206309&type=4&file=65-2.doc": {
       "attempts": 1,
@@ -944,6 +978,14 @@
       "last_result": "OK",
       "page": "idaho"
     },
+    "https://oha.ri.gov/resources/fraud-and-abuse/ombudsman-program": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-24T045825Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "rhode-island"
+    },
     "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/19-06_NursingHomeTransfersandDischarge_cap_03292022.pdf": {
       "attempts": 1,
       "capture": "https://web.archive.org/web/20261022044009/https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/19-06_NursingHomeTransfersandDischarge_cap_03292022.pdf",
@@ -1067,6 +1109,33 @@
       "last_result": "FAILED",
       "page": "georgia"
     },
+    "https://rules.sos.ri.gov/regulations/part/210-10-05-2": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261024045840/https://rules.sos.ri.gov/regulations/part/210-10-05-2",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-24T045857Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "rhode-island"
+    },
+    "https://rules.sos.ri.gov/regulations/part/210-50-00-7": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261024045913/https://rules.sos.ri.gov/regulations/part/210-50-00-7",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-24T045929Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "rhode-island"
+    },
+    "https://rules.sos.ri.gov/regulations/part/216-40-10-1": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261024045945/https://rules.sos.ri.gov/regulations/part/216-40-10-1",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-24T050001Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "rhode-island"
+    },
     "https://sais.health.pa.gov/CommonPOC/content/FacilityWeb/attachment.asp?messageid=3521&filename=Involuntary+Discharge+Notice+Protocol.pdf&attachmentnumber=1": {
       "attempts": 1,
       "capture": "https://web.archive.org/web/20261023044256/https://sais.health.pa.gov/CommonPOC/content/FacilityWeb/attachment.asp?messageid=3521&filename=Involuntary+Discharge+Notice+Protocol.pdf&attachmentnumber=1",
@@ -1093,6 +1162,24 @@
       "last_detail": "ok",
       "last_result": "OK",
       "page": "kansas"
+    },
+    "https://webserver.rilegislature.gov/Statutes/TITLE23/23-17.5/23-17.5-17.HTM": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261024050113/https://webserver.rilegislature.gov/Statutes/TITLE23/23-17.5/23-17.5-17.HTM",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-24T050131Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "rhode-island"
+    },
+    "https://webserver.rilegislature.gov/Statutes/TITLE23/23-17.5/23-17.5-25.HTM": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261024050242/https://webserver.rilegislature.gov/Statutes/TITLE23/23-17.5/23-17.5-25.HTM",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-24T050254Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "rhode-island"
     },
     "https://www.aarp.org/legal-counsel-for-elderly/what-we-do/info-2017/dc-long-term-care-ombudsman.html": {
       "attempts": 1,
@@ -1816,5 +1903,5 @@
       "page": "new-mexico"
     }
   },
-  "updated": "2026-10-23T044816Z"
+  "updated": "2026-10-24T050358Z"
 }
