@@ -1343,3 +1343,53 @@ queue threshold.
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-10-24. No
 human review is claimed for this entry.
+
+## 2026-10-25 — rotation pass: illinois confirmed; indiana drift; idaho recipe-slice broken (scheduled, portfolio-nightly-qc-review)
+
+Room & Recourse recipe exception checked first, per the nightly routine: 51
+state pages, 55 recipe files (every real slug has one, plus four
+supplements) — the exception remains permanently satisfied, and this
+collection received normal QC review.
+
+Cursor was at idaho. Took idaho, illinois, indiana.
+
+**Idaho — NOT REVIEWED, tooling/source finding.** `tools/capture.py idaho`
+aborted before writing any packet: source 3's slice `to`-anchor
+("500. (RESERVED) 501. ICF/IID: PARTICIPANT ELIGIBILITY.") found 0 times in
+a freshly fetched and extracted copy of the same 190-page PDF
+(adminrules.idaho.gov/rules/current/16/160326.pdf) that matched cleanly on
+2026-09-22 and 2026-09-29. No evidence was produced for any of the 7
+sources, so no fidelity check could run and nothing can be said about
+whether the page's quotations still verify. Per the project's own rule, a
+slice miss is an error and never a fallback, and rewriting a recipe anchor
+is recipe-authoring work this pass does not do. Page and checked date
+untouched. Queue: **FA-Q-20261025-04** (drift, handoff rr-state-page).
+
+**Illinois — confirmed.** Recipe capture (digest 28f20d3e7dc5), 3 sources.
+Zero fidelity failures, markdown and HTML. Retained — unchanged since
+2026-09-06.txt (hash 4e2390b7ef60d815). Promoted. Checked date updated to
+2026-10-25 in states/illinois.md; page re-rendered.
+
+**Indiana — DRIFT.** Recipe capture (digest 00175a9654b0), 5 sources. 1
+quotation failure, markdown and HTML identical: the Office of the Long Term
+Care Ombudsman's contact page no longer publishes "Fax number:
+317-972-3285" — the address, both phone numbers and the email address are
+unchanged and still verify. Retained without promotion (hash
+9f5c3712fd00fc1d). Page content and checked date untouched. First
+occurrence (confirmed clean 2026-09-29). Queue: **FA-Q-20261025-05** (drift,
+handoff rr-state-page).
+
+sync-checked-dates (2 derived dates, illinois only — indiana's did not move).
+build-status (baseline 51/51, full 50/51 — idaho's baseline/full status
+unaffected, STATUS.md reflects no change from this pass's non-review of it).
+build-state-picker (51/51 published). check-all.py (102 pages across 52
+states, no unexplained failures — indiana's live-source drift does not
+affect its standing-packet fidelity). generate-sitemap.py (57 URLs;
+404.html and the now-open-drift indiana page omitted). check-live.py (5
+pages sampled, nothing loaded from any other host). Review cursor advanced
+past indiana to iowa, per skill step, regardless of idaho's non-review.
+Two queue entries opened this pass (idaho FA-Q-20261025-04, indiana
+FA-Q-20261025-05).
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-10-25. No
+human review is claimed for this entry.
