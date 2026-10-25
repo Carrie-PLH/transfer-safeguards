@@ -342,6 +342,15 @@
       "last_result": "OK",
       "page": "ohio"
     },
+    "https://dakotaathome.sd.gov/search/c5a84daf-cd8f-5ac5-bad2-b72b20ac7b97": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261025053959/https://dakotaathome.sd.gov/search/c5a84daf-cd8f-5ac5-bad2-b72b20ac7b97",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-25T054134Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "south-dakota"
+    },
     "https://dcgov.seamlessdocs.com/f/DOHNoticeofDischargeTransferorRelocationForm": {
       "attempts": 1,
       "capture": "https://web.archive.org/web/20260906133949/https://dcgov.seamlessdocs.com/f/DOHNoticeofDischargeTransferorRelocationForm",
@@ -429,6 +438,14 @@
       "last_result": "OK",
       "page": "nebraska"
     },
+    "https://dhs.sd.gov/en/ltss/ombudsman-program": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-25T054153Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "south-dakota"
+    },
     "https://dhss.delaware.gov/dhcq/dhcq/contact/": {
       "attempts": 1,
       "capture": "https://web.archive.org/web/20260906133015/https://dhss.delaware.gov/dhcq/dhcq/contact/",
@@ -492,6 +509,22 @@
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "maryland"
+    },
+    "https://dss.sd.gov/docs/medicaid/providers/billingmanuals/Institutional/Skilled_Nursing_Facilities_and_Nursing_Facilities.pdf": {
+      "attempts": 1,
+      "last_attempt": "2026-10-25T054659Z",
+      "last_detail": "no-playback",
+      "last_result": "FAILED",
+      "page": "south-dakota"
+    },
+    "https://dss.sd.gov/keyresources/adminhearings/fairhearing.aspx": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261025054715/https://dss.sd.gov/keyresources/adminhearings/fairhearing.aspx",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-25T055006Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "south-dakota"
     },
     "https://elderaffairs.org/programs-and-services/long-term-care-ombudsman-program/": {
       "attempts": 1,
@@ -1045,6 +1078,22 @@
       "last_result": "OK",
       "page": "connecticut"
     },
+    "https://publications.tnsosfiles.com/rules/1200/1200-08/1200-08-06.20210818.pdf": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-25T055131Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "tennessee"
+    },
+    "https://publications.tnsosfiles.com/rules/1200/1200-13/1200-13-02.20260629.pdf": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-25T055149Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "tennessee"
+    },
     "https://regs.health.ny.gov/content/section-4153-residents-rights": {
       "attempts": 1,
       "last_attempt": "2026-10-20T133705Z",
@@ -1144,6 +1193,24 @@
       "last_detail": "ok",
       "last_result": "OK",
       "page": "pennsylvania"
+    },
+    "https://sdlegislature.gov/Rules/Administrative/44:73": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261025055021/https://sdlegislature.gov/Rules/Administrative/44:73",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-25T055039Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "south-dakota"
+    },
+    "https://sdlegislature.gov/Rules/Administrative/67:17:02": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261025055054/https://sdlegislature.gov/Rules/Administrative/67:17:02",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-25T055112Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "south-dakota"
     },
     "https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/se0509.pdf": {
       "attempts": 1,
@@ -1862,6 +1929,24 @@
       "last_result": "OK",
       "page": "minnesota"
     },
+    "https://www.scdhhs.gov/appeals/file-appeal": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261025053346/https://www.scdhhs.gov/appeals/file-appeal",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-25T053635Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "south-carolina"
+    },
+    "https://www.scstatehouse.gov/code/t44c081.php": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261025053651/https://www.scstatehouse.gov/code/t44c081.php",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-25T053943Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "south-carolina"
+    },
     "https://www.sos.mo.gov/cmsimages/adrules/csr/current/19csr/19c30-82.pdf": {
       "attempts": 1,
       "consecutive_hard_failures": 1,
@@ -1901,7 +1986,23 @@
       "last_detail": "submit-0",
       "last_result": "FAILED",
       "page": "new-mexico"
+    },
+    "https://www.tn.gov/content/dam/tn/tenncare/documents/NFInvoluntaryDischargeNotice.pdf": {
+      "attempts": 1,
+      "last_attempt": "2026-10-25T055623Z",
+      "last_detail": "no-playback",
+      "last_result": "FAILED",
+      "page": "tennessee"
+    },
+    "https://www.tn.gov/tenncare/long-term-services-supports/involuntary-discharge-and-transfer-appeals.html": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261025055642/https://www.tn.gov/tenncare/long-term-services-supports/involuntary-discharge-and-transfer-appeals.html",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-25T055657Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "tennessee"
     }
   },
-  "updated": "2026-10-24T050358Z"
+  "updated": "2026-10-25T055657Z"
 }
