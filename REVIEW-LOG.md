@@ -1393,3 +1393,25 @@ FA-Q-20261025-05).
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-10-25. No
 human review is claimed for this entry.
+
+## 2026-10-25 — attended tooling session: north-dakota source 5 recipe (FA-Q-20261010-01)
+
+**North Dakota — REBUILD (recipe re-point, no page change).** Source 5's slice
+`to` anchor ended in `***** SEND-TO-ME`, which was never published text: it is
+an HTML comment in the Care Choice listing's markup, read into the 2026-09-04
+capture before capture.py began dropping comments and hidden nodes (2026-09-05).
+The 2026-10-10 pass read the miss as a change in the widget's copy; the raw
+HTML shows "Provider Service Area (serves entire state)" unchanged and the
+comment gone from the extraction. The anchor was shortened to
+`rvice Area (serves entire state)`, so the slice ends where it always did.
+Lint clean (digest 568a1c24876d); two captures byte-identical; 0 fidelity
+failures on states/north-dakota.md and site/states/north-dakota.html. Retained
+as rebuild and promoted (hash 2ec6bff457017b40). The shorter sources are
+extraction, read before promoting: source 5 loses the comments `/row` and
+`***** GROUPINGS *****`; sources 4 and 6 lose the hidden hhs.nd.gov mega-menu
+("Back", "Payment Methods", "Apply for Services" …), none of it quoted.
+Checked date untouched (no review claimed). check-all: 104 pages, no
+unexplained failures; retain-packet --verify 0 failures.
+
+Reviewer: attended tooling session (Claude), 2026-10-25. No human review is
+claimed for this entry.
