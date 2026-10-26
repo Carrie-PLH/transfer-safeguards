@@ -754,6 +754,48 @@ def digest(rec):
 
 # --- transports and extractors ----------------------------------------------
 
+# --- undecodable bytes -------------------------------------------------------
+#
+# Bytes that are not valid UTF-8, fetched for a source whose recipe names no
+# other encoding, used to be decoded with replacement and passed on. Where a
+# replaced byte reached the extracted text, the packet carried U+FFFD where the
+# publisher printed a character, and nothing said so. faculty.weber.edu's
+# FrontPage pages are cp1252 and declare no charset in a header or a meta tag
+# (gathered work weber source 6, found 2026-10-25), so honoring a declared
+# charset would not have caught it either. Owner decision FA-D-20261025-03:
+# such a source now fails and names the remedy, a declared "encoding", instead
+# of corrupting the text. Only a replacement that survives extraction counts.
+# An undecodable byte inside a script, a style block or stripped chrome never
+# reached a packet and still does not, so every capture that succeeded before
+# this check produces the same bytes now.
+
+class LossyText(str):
+    """Decoded text in which bytes invalid in UTF-8 were replaced by U+FFFD."""
+
+
+def decode_fetched(blob, encoding=None):
+    """Fetched bytes to text. A declared non-UTF-8 encoding decodes with
+    replacement, as it always has; UTF-8 decodes strictly first, and text that
+    needed replacement comes back marked LossyText for refuse_lossy to judge."""
+    if encoding:
+        return blob.decode(encoding, 'replace')
+    try:
+        return blob.decode('utf-8')
+    except UnicodeDecodeError:
+        return LossyText(blob.decode('utf-8', 'replace'))
+
+
+def refuse_lossy(raw, text):
+    """Fail a source whose undecodable bytes reached its extracted text."""
+    if isinstance(raw, LossyText) and '\ufffd' in text:
+        raise RuntimeError(
+            f'{text.count(chr(0xfffd))} undecodable byte(s) reached the text as '
+            'U+FFFD: the fetched bytes are not valid UTF-8 and the recipe names '
+            'no other encoding. Read the raw bytes and declare the source\'s '
+            '"encoding" (FA-D-20261025-03); this is a decoding finding, not '
+            'source drift.')
+
+
 def fetch_curl(url, binary, user_agent='none', ca_bundle=None,
                compressed=True, http_version=None, encoding=None):
     ua = USER_AGENTS[user_agent]
@@ -768,7 +810,7 @@ def fetch_curl(url, binary, user_agent='none', ca_bundle=None,
     blob, code = r.stdout[:-3], r.stdout[-3:].decode('ascii', 'replace')
     if code != '200':
         raise RuntimeError(f'HTTP {code}')
-    return blob if binary else blob.decode(encoding or 'utf-8', 'replace')
+    return blob if binary else decode_fetched(blob, encoding)
 
 
 def extract_pdf(blob, mode, pages=None):
@@ -1190,7 +1232,14 @@ def verify_supplied_bytes(blob, expected_sha256, extractor):
 
 
 def _extract(raw, src):
-    """Bytes (or a fetched/decoded text) to text, by the source's extractor."""
+    """Bytes (or a fetched/decoded text) to text, by the source's extractor,
+    refusing text that carries undecodable bytes (refuse_lossy)."""
+    text = _extract_by_kind(raw, src)
+    refuse_lossy(raw, text)
+    return text
+
+
+def _extract_by_kind(raw, src):
     extractor = src['extractor']
     if extractor in PDF_EXTRACTORS:
         return extract_pdf(raw, extractor, src.get('pages'))
@@ -1224,7 +1273,7 @@ def capture_source(src, supplied=None):
     needs_binary = extractor in BINARY_EXTRACTORS
 
     if isinstance(supplied, bytes):
-        raw = supplied if needs_binary else supplied.decode('utf-8', 'replace')
+        raw = supplied if needs_binary else decode_fetched(supplied, src.get('encoding'))
     elif supplied is not None:
         raw = supplied
     elif src.get('attended'):
@@ -1987,6 +2036,28 @@ def self_test():
 
     _self_test_supply_file(check)
     _self_test_urls(check)
+
+
+    # undecodable bytes (FA-D-20261025-03): valid UTF-8 is never marked; a
+    # declared encoding is never marked; invalid bytes are marked, and fail the
+    # source only when a replacement survives extraction.
+    check(type(decode_fetched('caf\u00e9'.encode('utf-8'))) is str,
+          'valid UTF-8 was marked lossy')
+    check(type(decode_fetched(b'patient\x92s', 'cp1252')) is str,
+          'a declared encoding was marked lossy')
+    lossy = decode_fetched(b'<p>students are to \x93determine\x94</p>')
+    check(isinstance(lossy, LossyText) and lossy.count('\ufffd') == 2,
+          'invalid UTF-8 was not marked lossy')
+    try:
+        refuse_lossy(lossy, 'students are to \ufffddetermine\ufffd')
+        check(False, 'a replacement that reached the text was not refused')
+    except RuntimeError as e:
+        check('encoding' in str(e), 'the refusal does not name the remedy')
+    hidden = decode_fetched(b'<script>x="\x93"</script><p>clean text</p>')
+    try:
+        refuse_lossy(hidden, 'clean text')
+    except RuntimeError:
+        check(False, 'a replacement that never reached the text was refused')
 
     print('self-test: ' + ('all checks passed' if ok else 'FAILURES'))
     return 0 if ok else 1
