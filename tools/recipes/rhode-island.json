@@ -64,9 +64,10 @@
       "source_date": "Rev. 11-18",
       "transport": "curl",
       "user_agent": "browser",
+      "http_version": "1.1",
       "extractor": "html-text",
       "scope": "body",
-      "notes": "DRAFT — replace before promoting."
+      "notes": "DRAFT — replace before promoting. 2026-10-25 (FA-Q-20261013-02): http_version 1.1. eohhs.ri.gov and oha.ri.gov return 403 to every HTTP/2 request curl makes, with any user-agent, and serve the same request over HTTP/1.1 (the Arizona pattern in CLAUDE.md). The extractor is still the drafter's html-text, which cannot read this PDF, so the source fails with 'scope selector matched nothing' and the capture stays incomplete. Left so on purpose until sources 1, 2 and 5 verify: pdftotext-raw and pdftotext-layout both reproduce every page quotation from this form, but a complete capture would today fail fidelity on the rules.sos.ri.gov accordion text (41 failures, FA-Q-20260927-02) and a pass would read that as drift."
     },
     {
       "n": 7,
@@ -75,9 +76,10 @@
       "source_date": "page last updated on July 22nd, 2024",
       "transport": "curl",
       "user_agent": "browser",
+      "http_version": "1.1",
       "extractor": "html-text",
       "scope": "body",
-      "notes": "DRAFT — replace before promoting."
+      "notes": "DRAFT — replace before promoting. 2026-10-25 (FA-Q-20261013-02): http_version 1.1. eohhs.ri.gov and oha.ri.gov return 403 to every HTTP/2 request curl makes, with any user-agent, and serve the same request over HTTP/1.1 (the Arizona pattern in CLAUDE.md)."
     },
     {
       "n": 8,
@@ -86,9 +88,10 @@
       "source_date": "page last updated on February 25th, 2026",
       "transport": "curl",
       "user_agent": "browser",
+      "http_version": "1.1",
       "extractor": "html-text",
       "scope": "body",
-      "notes": "DRAFT — replace before promoting."
+      "notes": "DRAFT — replace before promoting. 2026-10-25 (FA-Q-20261013-02): http_version 1.1. eohhs.ri.gov and oha.ri.gov return 403 to every HTTP/2 request curl makes, with any user-agent, and serve the same request over HTTP/1.1 (the Arizona pattern in CLAUDE.md)."
     },
     {
       "n": 9,

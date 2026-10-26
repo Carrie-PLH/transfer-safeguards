@@ -1009,6 +1009,10 @@ packet's capture notes print it. A capture that comes back a few KB long with
 "Just a moment..." in it is a challenge page, not the source, and is a failed
 fetch.
 
+**eohhs.ri.gov and oha.ri.gov (Rhode Island) do the same**, found 2026-10-25
+(FA-Q-20261013-02): a 403 to every HTTP/2 request with any user-agent, a 200
+over `--http1.1`. Rhode Island sources 6–8 carry `"http_version": "1.1"`.
+
 Two more things from the same pass. **Two-column AAC PDFs read correctly in
 `pdftotext -raw`**, which follows the content stream and, for the Arizona
 chapter file, yields column order; `-layout` interleaves the columns as it does
