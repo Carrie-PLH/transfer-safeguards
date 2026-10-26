@@ -23,9 +23,9 @@ the state's own published translation only.
 | [Florida](site/states/florida.html) | [x] | [x] | [ ] | Oct 24, 2026 |
 | [Georgia](site/states/georgia.html) | [x] | [x] | [ ] | Oct 24, 2026 |
 | [Hawaii](site/states/hawaii.html) | [x] | [ ] | [ ] | Sep 29, 2026 |
-| [Idaho](site/states/idaho.html) | [x] | [x] | [ ] | Sep 29, 2026 |
+| [Idaho](site/states/idaho.html) | [x] | [x] | [ ] | Oct 25, 2026 |
 | [Illinois](site/states/illinois.html) | [x] | [x] | [ ] | Oct 25, 2026 |
-| [Indiana](site/states/indiana.html) | [x] | [x] | [ ] | Sep 29, 2026 |
+| [Indiana](site/states/indiana.html) | [x] | [x] | [ ] | Oct 25, 2026 |
 | [Iowa](site/states/iowa.html) | [x] | [x] | [ ] | Sep 29, 2026 |
 | [Kansas](site/states/kansas.html) | [x] | [x] | [ ] | Oct 6, 2026 |
 | [Kentucky](site/states/kentucky.html) | [x] | [x] | [ ] | Oct 1, 2026 |

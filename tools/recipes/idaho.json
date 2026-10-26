@@ -40,9 +40,9 @@
       "extractor": "pdftotext-layout",
       "slice": {
         "from": "IDAPA 16 – IDAHO DEPARTMENT OF HEALTH AND WELFARE Division of Medicaid",
-        "to": "500. (RESERVED) 501. ICF/IID: PARTICIPANT ELIGIBILITY."
+        "to": "500. (RESERVED)"
       },
-      "notes": "A 190-page chapter. The standing packet held four discontiguous excerpts (cover page, rules 000-003, the section 010 'Facility' definition, and rules 470-499, the complete Nursing Facilities sub-area); a slice takes one span, so this captures the contiguous superset from the cover page's first line to the end of rule 496-499, stopping at rule 500's capitalised body heading. A superset can only add evidence. The to-anchor carries rule 501's heading too, so that it matches the body and never the title-case table of contents ('500. (Reserved)'). The chapter dates each paragraph '(7-1-26)'; a rule amended later changes those dates in place, which reads as drift."
+      "notes": "A 189-page chapter (190 pages until the reissue dated 2026-10-02). The standing packet held four discontiguous excerpts (cover page, rules 000-003, the section 010 'Facility' definition, and rules 470-499, the complete Nursing Facilities sub-area); a slice takes one span, so this captures the contiguous superset from the cover page's first line to the end of rule 496-499 and the ICF/IID sub-area heading beneath it, stopping at rule 500's capitalised body heading. A superset can only add evidence. The to-anchor matches the body and never the title-case table of contents ('500. (Reserved)') by case alone. Until 2026-10-25 it also carried rule 501's heading; the 2026-10-02 reissue repaginated the chapter so that a page break (running foot and head) now falls between rule 500 and rule 501, and the two-heading anchor stopped matching (FA-Q-20261025-04). Rule 500's heading sits on one line, so no repagination can split it, and the slice ends exactly where it did before. The chapter dates each paragraph '(7-1-26)'; a rule amended later changes those dates in place, which reads as drift."
     },
     {
       "n": 4,
@@ -70,7 +70,7 @@
       "n": 6,
       "title": "Long-Term Care Ombudsman Program",
       "url": "https://aging.idaho.gov/ombudsman-program/",
-      "source_date": "\"ver: 4.1.9 | last updated: December 2, 2025 at 11:24 am\"",
+      "source_date": "\"ver: 4.1.9 | last updated: October 20, 2026 at 02:52 pm\"",
       "transport": "curl",
       "user_agent": "browser",
       "extractor": "html-text",

@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: indiana
-ASSEMBLED: 2026-09-29
+ASSEMBLED: 2026-10-25
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/indiana.json (recipe digest 00175a9654b0). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -16,7 +16,7 @@ CAPTURE NOTES:
 - SOURCE 5: transport curl; extractor pdftotext-layout; slice from 'Leave Days in a Nursing Facility\nThe IHCP does not reimburse for bed-hold days' to 'Transportation for NF Residents\nNursing facilities (provider specialties 030 and 032)'; filters none.
   IHCP's own 42-page module PDF; the bed-hold statement sits under the heading 'Leave Days in a Nursing Facility' in Section 2: Nursing Facilities. The heading text recurs in the table of contents, so both anchors are widened past the heading into the first words of the body paragraph beneath it to land past the contents listing rather than using from_occurrence.
 
-SOURCE 1: 410 IAC 16.2-3.1-12, Transfer and discharge rights (excerpt from the Department of Health's published Article 16.2) | https://www.in.gov/health/files/A00162.pdf | source date: rule history line ends readopted filed Nov 13, 2019 | retrieved: 2026-09-29
+SOURCE 1: 410 IAC 16.2-3.1-12, Transfer and discharge rights (excerpt from the Department of Health's published Article 16.2) | https://www.in.gov/health/files/A00162.pdf | source date: rule history line ends readopted filed Nov 13, 2019 | retrieved: 2026-10-25
 410 IAC 16.2-3.1-12 Transfer and discharge rights
       Authority: IC 16-28-1-7
       Affected: IC 4-21.5; IC 16-28-5-1
@@ -169,7 +169,7 @@ readopted filed Jul 11, 2001, 2:23 p.m.: 24 IR 4234; readopted filed May 22, 200
 readopted filed Sep 11, 2013, 3:19 p.m.: 20131009-IR-410130346RFA; readopted filed Nov 13, 2019, 3:14 p.m.: 20191211-IR-
 410190391RFA)
 
-SOURCE 2: Indiana State Department of Health, Notice of Transfer or Discharge, State Form 49669 (PDF) | https://forms.in.gov/download.aspx?id=5667 | source date: State Form 49669 (R8 / 1-19) | retrieved: 2026-09-29
+SOURCE 2: Indiana State Department of Health, Notice of Transfer or Discharge, State Form 49669 (PDF) | https://forms.in.gov/download.aspx?id=5667 | source date: State Form 49669 (R8 / 1-19) | retrieved: 2026-10-25
 Reset Form
 
 
@@ -279,7 +279,7 @@ City                                    State                                   
 
                                                     Page 2 of 2
 
-SOURCE 3: Indiana Department of Health, Notice of Transfer or Discharge Request for Hearing, State Form 49831 (PDF) | https://forms.in.gov/Download.aspx?id=5668 | source date: State Form 49831 (R8 / 4-23) | retrieved: 2026-09-29
+SOURCE 3: Indiana Department of Health, Notice of Transfer or Discharge Request for Hearing, State Form 49831 (PDF) | https://forms.in.gov/Download.aspx?id=5668 | source date: State Form 49831 (R8 / 4-23) | retrieved: 2026-10-25
 Reset Form
 
             NOTICE OF TRANSFER OR DISCHARGE REQUEST FOR HEARING
@@ -329,7 +329,7 @@ Facility Street Address (Number and Street)                    Facility City    
 
 Facility Telephone Number                                             Facility Email Address
 
-SOURCE 4: Indiana Long-Term Care Ombudsman, Contact information | https://www.in.gov/ombudsman/long-term-care-ombudsman/contact-information/ | source date: none stated on page | retrieved: 2026-09-29
+SOURCE 4: Indiana Long-Term Care Ombudsman, Contact information | https://www.in.gov/ombudsman/long-term-care-ombudsman/contact-information/ | source date: none stated on page | retrieved: 2026-10-25
 Skip to main content
  
 
@@ -1032,27 +1032,34 @@ Contact information
 
 Contact the State Long Term Care Ombudsman
 
+
 Office of the Long Term Care Ombudsman
 
- 402 West Washington Street, Room W451
+402 West Washington Street, Room W451
 
- Post Office Box 7083, MS 27
+Post Office Box 7083, MS 27
 
- Indianapolis, Indiana 46207-7083
+Indianapolis, Indiana 46207-7083
+
 
 Information/complaint line: 800-622-4484 or 317-232-7134
 
-Fax number: 317-972-3285
 
 Email: LongTermCareOmbudsman@ombudsman.IN.gov
 
+
  
+
 
 Ombudsman in other states
 
+
 To find an ombudsman in other states please click here.
 
+
 Contact a local ombudsman
+
+
 
 
 State Ombudsman – 800-622-4484 or 317-232-7134
@@ -1085,11 +1092,15 @@ State Ombudsman – 800-622-4484 or 317-232-7134
 
 
 
+
 Ombudsman area contact map
+
 
 Click on a county on the Indiana state map at right to find the Long-Term Care Ombudsman contact information for that county.
 
+
 State Contacts
+
 
 FSSA Office of General Counsel
 
@@ -1099,13 +1110,15 @@ P.O. Box 7083, MS 27
 
 Indianapolis, IN 46207-7083
 
+
 Lynn Clough
 
 State Long-Term Care Ombudsman, Director
 
 Email: Lynn.Clough@fssa.in.gov 
 
-Phone: 317-234-5544 / Fax: 317-972-3285
+Phone: 317-234-5544 
+
 
 Mary Swinford
 
@@ -1113,7 +1126,7 @@ State LTC Ombudsman, Deputy Director
 
 Email: Mary.Swinford@fssa.in.gov
 
-Phone: 317-232-7134 / Fax: 317-972-3285
+Phone: 317-232-7134 
 
 
 
@@ -1130,11 +1143,13 @@ County Name Here
 
 Area 3
 
+
 Zanzy Lewis, LTC Ombudsman
 
 Email: zanzy@longtermcare-ombudsman.org
 
 Phone: 260-469-3161
+
 
 Kathy Lewis, LTC Ombudsman
 
@@ -1142,11 +1157,13 @@ Email: Kathy@doingthegood-ombudsman.org
 
 Phone: 260-469-3161
 
+
 Ta'korei Moore, LTC Ombudsman
 
 Email: Takorei@doingthegood-ombudsman.org
 
 Phone: 260-469-3161
+
 
 LTC Ombudsman Program of N.E. Indiana
 
@@ -1159,11 +1176,13 @@ Fort Wayne, IN 46815
 
 Area 3
 
+
 Zanzy Lewis, LTC Ombudsman
 
 Email: zanzy@longtermcare-ombudsman.org
 
 Phone: 260-469-3161
+
 
 Kathy Lewis, LTC Ombudsman
 
@@ -1171,11 +1190,13 @@ Email: Kathy@doingthegood-ombudsman.org
 
 Phone: 260-469-3161
 
+
 Ta'korei Moore, LTC Ombudsman
 
 Email: Takorei@doingthegood-ombudsman.org
 
 Phone: 260-469-3161
+
 
 LTC Ombudsman Program of N.E. Indiana
 
@@ -1188,11 +1209,13 @@ Fort Wayne, IN 46815
 
 Area 11
 
+
 Kirsten Bouthier, LTC Ombudsman
 
 Email: Kirsten.Bouthier@ilsi.net
 
 Phone: 812-314-2727
+
 
 Indiana Legal Services
 
@@ -1205,17 +1228,20 @@ Columbus, IN 47201
 
 Area 4
 
+
 Andrea Smothers, LTC Ombudsman
 
 Email: Andrea.Smothers@ilsi.net
 
 Phone: 765-404-6436
 
+
 Debbie Winchester, LTC Ombudsman
 
 Email: Debbie.Winchester@ilsi.net 
 
 Phone: 765-250-0008
+
 
 Indiana Legal Services
 
@@ -1228,11 +1254,13 @@ Lafayette, IN 47901
 
 Area 6
 
+
 Maureen Walby, LTC Ombudsman
 
 Email: Maureen.Walby@ilsi.net
 
 Phone: 765-759-3371 or 463-237-9384 (Work)
+
 
 Indiana Legal Services, Inc.
 
@@ -1245,11 +1273,13 @@ Yorktown, IN 47396
 
 Area 8
 
+
 Robin Willis, LTC Ombudsman
 
 robin.willis@ilsi.net
 
- Phone: 463-237-9348
+Phone: 463-237-9348
+
 
 Indiana Legal Services, Inc.
 
@@ -1262,11 +1292,13 @@ Indianapolis, IN 46225
 
 Area 11
 
+
 Kirsten Bouthier, LTC Ombudsman
 
 Email: Kirsten.Bouthier@ilsi.net
 
 Phone: 812-314-2727
+
 
 Indiana Legal Services
 
@@ -1279,17 +1311,20 @@ Columbus, IN 47201
 
 Area 4
 
+
 Andrea Smothers, LTC Ombudsman
 
 Email: Andrea.Smothers@ilsi.net
 
 Phone: 765-404-6436
 
+
 Debbie Winchester, LTC Ombudsman
 
 Email: Debbie.Winchester@ilsi.net 
 
 Phone: 765-250-0008
+
 
 Indiana Legal Services
 
@@ -1302,11 +1337,13 @@ Lafayette, IN 47901
 
 Area 5
 
+
 Dana Neer, LTC Ombudsman
 
 Email: dneer@areafive.com
 
 Phone: 260-568-0579
+
 
 Area 5 Agency on Aging
 
@@ -1319,11 +1356,13 @@ Logansport, IN 46947
 
 Area 14
 
+
 Mary Cleavinger, LTC Ombudsman
 
 Email: mary.cleavinger@ilsi.net
 
 Phone: 812-913-7361 ext. 11223
+
 
 Indiana Legal Services
 
@@ -1336,11 +1375,13 @@ New Albany, IN 47150
 
 Area 7
 
+
 Carmen Osterhoudt, LTC Ombudsman
 
 Email: Carmen.Osterhoudt@ilsi.net
 
 Phone: 317-445-2464
+
 
 Indiana Legal Services, Inc.
 
@@ -1353,17 +1394,20 @@ Indianapolis, IN 46225
 
 Area 4
 
+
 Andrea Smothers, LTC Ombudsman
 
 Email: Andrea.Smothers@ilsi.net
 
 Phone: 765-404-6436
 
+
 Debbie Winchester, LTC Ombudsman
 
 Email: Debbie.Winchester@ilsi.net 
 
 Phone: 765-250-0008
+
 
 Indiana Legal Services
 
@@ -1376,11 +1420,13 @@ Lafayette, IN 47901
 
 Area 15
 
+
 Kirsten Bouthier, LTC Ombudsman
 
 Email: kirsten.bouthier@ilsi.net
 
 Phone: 463-237-9346
+
 
 Indiana Legal Services
 
@@ -1388,7 +1434,9 @@ Indiana Legal Services
 
 Columbus, IN 47201
 
+
 Serving: Lawrence County
+
 
 Christina Lafferty, LTC Ombudsman
 
@@ -1396,11 +1444,13 @@ Email: christina.lafferty@ilsi.net
 
 Phone: 317-675-0642
 
+
 Indiana Legal Services
 
 1200 Madison Street, Suite 300
 
 Indianapolis, IN 46225
+
 
 Serving: Crawford, Orange and Washington Counties
 
@@ -1409,11 +1459,13 @@ Serving: Crawford, Orange and Washington Counties
 
 Area 13
 
+
 Christina Lafferty, LTC Ombudsman
 
 Email: christina.lafferty@ilsi.net
 
 Phone: 317-675-0642
+
 
 Indiana Legal Services
 
@@ -1426,17 +1478,20 @@ Indianapolis, IN 46225
 
 Area 12
 
+
 Mhelody Martinez, LTC Ombudsman
 
 Email: Area12Ombudsman@gmail.com
 
 Phone: 800-622-4484
 
+
 SIILC - Southeastern Indiana Independent Living Center
 
 817 East Main Street
 
 Vevay, IN 47043
+
 
 Serving: Dearborn, Jefferson, Ohio, Ripley and Switzerland counties
 
@@ -1445,11 +1500,13 @@ Serving: Dearborn, Jefferson, Ohio, Ripley and Switzerland counties
 
 Area 11
 
+
 Kirsten Bouthier, LTC Ombudsman
 
 Email: Kirsten.Bouthier@ilsi.net
 
 Phone: 812-314-2727
+
 
 Indiana Legal Services
 
@@ -1462,11 +1519,13 @@ Columbus, IN 47201
 
 Area 3
 
+
 Zanzy Lewis, LTC Ombudsman
 
 Email: zanzy@longtermcare-ombudsman.org
 
 Phone: 260-469-3161
+
 
 Kathy Lewis, LTC Ombudsman
 
@@ -1474,11 +1533,13 @@ Email: Kathy@doingthegood-ombudsman.org
 
 Phone: 260-469-3161
 
+
 Ta'korei Moore, LTC Ombudsman
 
 Email: Takorei@doingthegood-ombudsman.org
 
 Phone: 260-469-3161
+
 
 LTC Ombudsman Program of N.E. Indiana
 
@@ -1491,11 +1552,13 @@ Fort Wayne, IN 46815
 
 Area 6
 
+
 Maureen Walby, LTC Ombudsman
 
 Email: Maureen.Walby@ilsi.net
 
 Phone: 765-759-3371 or 463-237-9384 (Work)
+
 
 Indiana Legal Services, Inc.
 
@@ -1508,11 +1571,13 @@ Yorktown, IN 47396
 
 Area 13
 
+
 Christina Lafferty, LTC Ombudsman
 
 Email: christina.lafferty@ilsi.net
 
 Phone: 317-675-0642
+
 
 Indiana Legal Services
 
@@ -1525,6 +1590,7 @@ Indianapolis, IN 46225
 
 Area 2
 
+
 Gretchen Camblin, LTC Ombudsman
 
 gretchen.camblin@ilsi.net
@@ -1533,11 +1599,13 @@ Phone: 574-855-5122
 
 Fax: 574-239-2185
 
+
 Katie Bohm, LTC Ombudsman
 
 Email: katie.bohm@ilsi.net
 
 Phone: 574-528-1858
+
 
 Indiana Legal Services
 
@@ -1545,18 +1613,25 @@ Indiana Legal Services
 
 South Bend, IN 46601
 
+
 Serving: Elkhart, Kosciusko, LaPorte, Marshall and St. Joseph Counties
+
+
+
+
 
 
 
 
 Area 9
 
+
 Daulphine Day, LTC Ombudsman
 
 Email: daulphine.day@ilsi.net
 
 Phone: 463-237-9373
+
 
 Indiana Legal Services, Inc.
 
@@ -1569,11 +1644,13 @@ Indianapolis, IN 46225
 
 Area 14
 
+
 Mary Cleavinger, LTC Ombudsman
 
 Email: mary.cleavinger@ilsi.net
 
 Phone: 812-913-7361 ext. 11223
+
 
 Indiana Legal Services
 
@@ -1586,17 +1663,20 @@ New Albany, IN 47150
 
 Area 4
 
+
 Andrea Smothers, LTC Ombudsman
 
 Email: Andrea.Smothers@ilsi.net
 
 Phone: 765-404-6436
 
+
 Debbie Winchester, LTC Ombudsman
 
 Email: Debbie.Winchester@ilsi.net 
 
 Phone: 765-250-0008
+
 
 Indiana Legal Services
 
@@ -1609,11 +1689,13 @@ Lafayette, IN 47901
 
 Area 9
 
+
 Daulphine Day, LTC Ombudsman
 
 Email: daulphine.day@ilsi.net
 
 Phone: 463-237-9373
+
 
 Indiana Legal Services, Inc.
 
@@ -1626,11 +1708,13 @@ Indianapolis, IN 46225
 
 Area 5
 
+
 Dana Neer, LTC Ombudsman
 
 Email: dneer@areafive.com
 
 Phone: 260-568-0579
+
 
 Area 5 Agency on Aging
 
@@ -1643,11 +1727,13 @@ Logansport, IN 46947
 
 Area 16
 
+
 Laura George, LTC Ombudsman
 
 Email: laura.george@ilsi.net
 
 Phone: 463-237-9345
+
 
 Indiana Legal Services
 
@@ -1660,11 +1746,13 @@ Evansville, IN 47708
 
 Area 6
 
+
 Maureen Walby, LTC Ombudsman
 
 Email: Maureen.Walby@ilsi.net
 
 Phone: 765-759-3371 or 463-237-9384 (Work)
+
 
 Indiana Legal Services, Inc.
 
@@ -1677,11 +1765,13 @@ Yorktown, IN 47396
 
 Area 13
 
+
 Christina Lafferty, LTC Ombudsman
 
 Email: christina.lafferty@ilsi.net
 
 Phone: 317-675-0642
+
 
 Indiana Legal Services
 
@@ -1694,11 +1784,13 @@ Indianapolis, IN 46225
 
 Area 8
 
+
 Sherry Marckel, LTC Ombudsman
 
 Sherry.marckel@ilsi.net
 
 Phone: 317-631-9424
+
 
 Indiana Legal Services, Inc.
 
@@ -1711,11 +1803,13 @@ Indianapolis, IN 46225
 
 Area 8
 
+
 Kit Paternoster, LTC Ombudsman
 
 Email: Kathryn.Paternoster@ilsi.net
 
 Phone: 317-631-9424
+
 
 Indiana Legal Services, Inc.
 
@@ -1728,11 +1822,13 @@ Indianapolis, IN 46225
 
 Area 14
 
+
 Mary Cleavinger, LTC Ombudsman
 
 Email: mary.cleavinger@ilsi.net
 
 Phone: 812-913-7361 ext. 11223
+
 
 Indiana Legal Services
 
@@ -1745,11 +1841,13 @@ New Albany, IN 47150
 
 Area 8
 
+
 Stacey Writt, LTC Ombudsman
 
 Email: Stacey.Writt@ilsi.net
 
 Phone: 317-631-9424
+
 
 Indiana Legal Services, Inc.
 
@@ -1762,11 +1860,13 @@ Indianapolis, IN 46225
 
 Area 6
 
+
 Maureen Walby, LTC Ombudsman
 
 Email: Maureen.Walby@ilsi.net
 
 Phone: 765-759-3371 or 463-237-9384 (Work)
+
 
 Indiana Legal Services, Inc.
 
@@ -1779,11 +1879,13 @@ Yorktown, IN 47396
 
 Area 5
 
+
 Dana Neer, LTC Ombudsman
 
 Email: dneer@areafive.com
 
 Phone: 260-568-0579
+
 
 Area 5 Agency on Aging
 
@@ -1796,11 +1898,13 @@ Logansport, IN 46947
 
 Area 3
 
+
 Zanzy Lewis, LTC Ombudsman
 
 Email: zanzy@longtermcare-ombudsman.org
 
 Phone: 260-469-3161
+
 
 Kathy Lewis, LTC Ombudsman
 
@@ -1808,11 +1912,13 @@ Email: Kathy@doingthegood-ombudsman.org
 
 Phone: 260-469-3161
 
+
 Ta'korei Moore, LTC Ombudsman
 
 Email: Takorei@doingthegood-ombudsman.org
 
 Phone: 260-469-3161
+
 
 LTC Ombudsman Program of N.E. Indiana
 
@@ -1825,11 +1931,13 @@ Fort Wayne, IN 46815
 
 Area 11
 
+
 Kirsten Bouthier, LTC Ombudsman
 
 Email: Kirsten.Bouthier@ilsi.net
 
 Phone: 812-314-2727
+
 
 Indiana Legal Services
 
@@ -1842,11 +1950,13 @@ Columbus, IN 47201
 
 Area 1
 
+
 China Leatherwood, LTC Ombudsman
 
 Email: cleatherwood@coaction.care
 
 Phone:219-794-1829
+
 
 Northwest Indiana Community Action
 
@@ -1861,11 +1971,13 @@ Phone: 800-826-7871, 219-794-1829 ext. 2468
 
 Area 6
 
+
 Maureen Walby, LTC Ombudsman
 
 Email: Maureen.Walby@ilsi.net
 
 Phone: 765-759-3371 or 463-237-9384 (Work)
+
 
 Indiana Legal Services, Inc.
 
@@ -1878,17 +1990,20 @@ Yorktown, IN 47396
 
 Area 12
 
+
 Mhelody Martinez, LTC Ombudsman
 
 Email: Area12Ombudsman@gmail.com
 
 Phone: 800-622-4484
 
+
 SIILC - Southeastern Indiana Independent Living Center
 
 817 East Main Street
 
 Vevay, IN 47043
+
 
 Serving: Dearborn, Jefferson, Ohio, Ripley and Switzerland counties
 
@@ -1897,11 +2012,13 @@ Serving: Dearborn, Jefferson, Ohio, Ripley and Switzerland counties
 
 Area 11
 
+
 Kirsten Bouthier, LTC Ombudsman
 
 Email: Kirsten.Bouthier@ilsi.net
 
 Phone: 812-314-2727
+
 
 Indiana Legal Services
 
@@ -1914,11 +2031,13 @@ Columbus, IN 47201
 
 Area 8
 
+
 Stacey Writt, LTC Ombudsman
 
 Email: Stacey.Writt@ilsi.net
 
 Phone: 317-631-9424
+
 
 Indiana Legal Services, Inc.
 
@@ -1931,11 +2050,13 @@ Indianapolis, IN 46225
 
 Area 13
 
+
 Christina Lafferty, LTC Ombudsman
 
 Email: christina.lafferty@ilsi.net
 
 Phone: 317-675-0642
+
 
 Indiana Legal Services
 
@@ -1948,6 +2069,8 @@ Indianapolis, IN 46225
 
 Area 2
 
+
+
 Gretchen Camblin, LTC Ombudsman
 
 gretchen.camblin@ilsi.net
@@ -1956,17 +2079,20 @@ Phone: 574-855-5122
 
 Fax: 574-239-2185
 
+
 Katie Bohm, LTC Ombudsman
 
 Email: katie.bohm@ilsi.net
 
 Phone: 574-528-1858
 
+
 Indiana Legal Services
 
 227 S. Main Street, Suite 200 
 
 South Bend, IN 46601
+
 
 Serving: Elkhart, Kosciusko, LaPorte, Marshall and St. Joseph Counties
 
@@ -1975,11 +2101,13 @@ Serving: Elkhart, Kosciusko, LaPorte, Marshall and St. Joseph Counties
 
 Area 3
 
+
 Zanzy Lewis, LTC Ombudsman
 
 Email: zanzy@longtermcare-ombudsman.org
 
 Phone: 260-469-3161
+
 
 Kathy Lewis, LTC Ombudsman
 
@@ -1987,11 +2115,13 @@ Email: Kathy@doingthegood-ombudsman.org
 
 Phone: 260-469-3161
 
+
 Ta'korei Moore, LTC Ombudsman
 
 Email: Takorei@doingthegood-ombudsman.org
 
 Phone: 260-469-3161
+
 
 LTC Ombudsman Program of N.E. Indiana
 
@@ -2004,11 +2134,13 @@ Fort Wayne, IN 46815
 
 Area 1
 
+
 China Leatherwood, LTC Ombudsman
 
 Email: cleatherwood@coaction.care
 
 Phone:219-794-1829
+
 
 Northwest Indiana Community Action
 
@@ -2023,6 +2155,8 @@ Phone: 800-826-7871, 219-794-1829 ext. 2468
 
 Area 2
 
+
+
 Gretchen Camblin, LTC Ombudsman
 
 gretchen.camblin@ilsi.net
@@ -2031,17 +2165,20 @@ Phone: 574-855-5122
 
 Fax: 574-239-2185
 
+
 Katie Bohm, LTC Ombudsman
 
 Email: katie.bohm@ilsi.net
 
 Phone: 574-528-1858
 
+
 Indiana Legal Services
 
 227 S. Main Street, Suite 200 
 
 South Bend, IN 46601
+
 
 Serving: Elkhart, Kosciusko, LaPorte, Marshall and St. Joseph Counties
 
@@ -2050,11 +2187,13 @@ Serving: Elkhart, Kosciusko, LaPorte, Marshall and St. Joseph Counties
 
 Area 15
 
+
 Kirsten Bouthier, LTC Ombudsman
 
 Email: kirsten.bouthier@ilsi.net
 
 Phone: 463-237-9346
+
 
 Indiana Legal Services
 
@@ -2062,7 +2201,9 @@ Indiana Legal Services
 
 Columbus, IN 47201
 
+
 Serving: Lawrence County
+
 
 Christina Lafferty, LTC Ombudsman
 
@@ -2070,11 +2211,13 @@ Email: christina.lafferty@ilsi.net
 
 Phone: 317-675-0642
 
+
 Indiana Legal Services
 
 1200 Madison Street, Suite 300
 
 Indianapolis, IN 46225
+
 
 Serving: Crawford, Orange and Washington Counties
 
@@ -2083,11 +2226,13 @@ Serving: Crawford, Orange and Washington Counties
 
 Area 6
 
+
 Maureen Walby, LTC Ombudsman
 
 Email: Maureen.Walby@ilsi.net
 
 Phone: 765-759-3371 or 463-237-9384 (Work)
+
 
 Indiana Legal Services, Inc.
 
@@ -2100,13 +2245,16 @@ Yorktown, IN 47396
 
 Area 8 (NE Marion County)
 
+
 Sherry Marckel, LTC Ombudsman
 
 Sherry.marckel@ilsi.net
 
 Phone: 317-631-9424
 
+
 Area 8 (SW Marion County)
+
 
 Stacey Writt, LTC Ombudsman
 
@@ -2114,7 +2262,9 @@ Email: Stacey.Writt@ilsi.net
 
 Phone: 317-631-9424
 
+
 Area 8 (E and SE Marion County)
+
 
 Kit Paternoster, LTC Ombudsman
 
@@ -2122,13 +2272,16 @@ Email: Kathryn.Paternoster@ilsi.net
 
 Phone: 317-631-9424
 
+
 Area 8 (NW Marion County)
+
 
 Robin Willis, LTC Ombudsman
 
 robin.willis@ilsi.net
 
- Phone: 463-237-9348
+Phone: 463-237-9348
+
 
 Indiana Legal Services, Inc.
 
@@ -2141,6 +2294,8 @@ Indianapolis, IN 46225
 
 Area 2
 
+
+
 Gretchen Camblin, LTC Ombudsman
 
 gretchen.camblin@ilsi.net
@@ -2149,17 +2304,20 @@ Phone: 574-855-5122
 
 Fax: 574-239-2185
 
+
 Katie Bohm, LTC Ombudsman
 
 Email: katie.bohm@ilsi.net
 
 Phone: 574-528-1858
 
+
 Indiana Legal Services
 
 227 S. Main Street, Suite 200 
 
 South Bend, IN 46601
+
 
 Serving: Elkhart, Kosciusko, LaPorte, Marshall and St. Joseph Counties
 
@@ -2168,11 +2326,13 @@ Serving: Elkhart, Kosciusko, LaPorte, Marshall and St. Joseph Counties
 
 Area 13
 
+
 Christina Lafferty, LTC Ombudsman
 
 Email: christina.lafferty@ilsi.net
 
 Phone: 317-675-0642
+
 
 Indiana Legal Services
 
@@ -2185,11 +2345,13 @@ Indianapolis, IN 46225
 
 Area 5
 
+
 Dana Neer, LTC Ombudsman
 
 Email: dneer@areafive.com
 
 Phone: 260-568-0579
+
 
 Area 5 Agency on Aging
 
@@ -2202,11 +2364,13 @@ Logansport, IN 46947
 
 Area 10
 
+
 Kirsten Bouthier, LTC Ombudsman
 
 Email: Kirsten.Bouthier@ilsi.net
 
 Phone: 812-314-2727
+
 
 Indiana Legal Services
 
@@ -2219,17 +2383,20 @@ Columbus, IN 47201
 
 Area 4
 
+
 Andrea Smothers, LTC Ombudsman
 
 Email: Andrea.Smothers@ilsi.net
 
 Phone: 765-404-6436
 
+
 Debbie Winchester, LTC Ombudsman
 
 Email: Debbie.Winchester@ilsi.net 
 
 Phone: 765-250-0008
+
 
 Indiana Legal Services
 
@@ -2242,11 +2409,13 @@ Lafayette, IN 47901
 
 Area 8
 
+
 Stacey Writt, LTC Ombudsman
 
 Email: Stacey.Writt@ilsi.net
 
 Phone: 317-631-9424
+
 
 Indiana Legal Services, Inc.
 
@@ -2259,11 +2428,13 @@ Indianapolis, IN 46225
 
 Area 1
 
+
 China Leatherwood, LTC Ombudsman
 
 Email: cleatherwood@coaction.care
 
 Phone:219-794-1829
+
 
 Northwest Indiana Community Action
 
@@ -2278,11 +2449,13 @@ Phone: 800-826-7871, 219-794-1829 ext. 2468
 
 Area 3
 
+
 Zanzy Lewis, LTC Ombudsman
 
 Email: zanzy@longtermcare-ombudsman.org
 
 Phone: 260-469-3161
+
 
 Kathy Lewis, LTC Ombudsman
 
@@ -2290,11 +2463,13 @@ Email: Kathy@doingthegood-ombudsman.org
 
 Phone: 260-469-3161
 
+
 Ta'korei Moore, LTC Ombudsman
 
 Email: Takorei@doingthegood-ombudsman.org
 
 Phone: 260-469-3161
+
 
 LTC Ombudsman Program of N.E. Indiana
 
@@ -2307,17 +2482,20 @@ Fort Wayne, IN 46815
 
 Area 12
 
+
 Mhelody Martinez, LTC Ombudsman
 
 Email: Area12Ombudsman@gmail.com
 
 Phone: 800-622-4484
 
+
 SIILC - Southeastern Indiana Independent Living Center
 
 817 East Main Street
 
 Vevay, IN 47043
+
 
 Serving: Dearborn, Jefferson, Ohio, Ripley and Switzerland counties
 
@@ -2326,11 +2504,13 @@ Serving: Dearborn, Jefferson, Ohio, Ripley and Switzerland counties
 
 Area 15
 
+
 Kirsten Bouthier, LTC Ombudsman
 
 Email: kirsten.bouthier@ilsi.net
 
 Phone: 463-237-9346
+
 
 Indiana Legal Services
 
@@ -2338,7 +2518,9 @@ Indiana Legal Services
 
 Columbus, IN 47201
 
+
 Serving: Lawrence County
+
 
 Christina Lafferty, LTC Ombudsman
 
@@ -2346,11 +2528,13 @@ Email: christina.lafferty@ilsi.net
 
 Phone: 317-675-0642
 
+
 Indiana Legal Services
 
 1200 Madison Street, Suite 300
 
 Indianapolis, IN 46225
+
 
 Serving: Crawford, Orange and Washington Counties
 
@@ -2359,11 +2543,13 @@ Serving: Crawford, Orange and Washington Counties
 
 Area 10
 
+
 Kirsten Bouthier, LTC Ombudsman
 
 Email: Kirsten.Bouthier@ilsi.net
 
 Phone: 812-314-2727
+
 
 Indiana Legal Services
 
@@ -2376,11 +2562,13 @@ Columbus, IN 47201
 
 Area 7
 
+
 Carmen Osterhoudt, LTC Ombudsman
 
 Email: Carmen.Osterhoudt@ilsi.net
 
 Phone: 317-445-2464
+
 
 Indiana Legal Services, Inc.
 
@@ -2393,11 +2581,13 @@ Indianapolis, IN 46225
 
 Area 16
 
+
 Laura George, LTC Ombudsman
 
 Email: laura.george@ilsi.net
 
 Phone: 463-237-9345
+
 
 Indiana Legal Services
 
@@ -2410,11 +2600,13 @@ Evansville, IN 47708
 
 Area 13
 
+
 Christina Lafferty, LTC Ombudsman
 
 Email: christina.lafferty@ilsi.net
 
 Phone: 317-675-0642
+
 
 Indiana Legal Services
 
@@ -2427,11 +2619,13 @@ Indianapolis, IN 46225
 
 Area 1
 
+
 China Leatherwood, LTC Ombudsman
 
 Email: cleatherwood@coaction.care
 
 Phone:219-794-1829
+
 
 Northwest Indiana Community Action
 
@@ -2446,11 +2640,13 @@ Phone: 800-826-7871, 219-794-1829 ext. 2468
 
 Area 16
 
+
 Laura George, LTC Ombudsman
 
 Email: laura.george@ilsi.net
 
 Phone: 463-237-9345
+
 
 Indiana Legal Services
 
@@ -2463,11 +2659,13 @@ Evansville, IN 47708
 
 Area 1
 
+
 China Leatherwood, LTC Ombudsman
 
 Email: cleatherwood@coaction.care
 
 Phone:219-794-1829
+
 
 Northwest Indiana Community Action
 
@@ -2482,11 +2680,13 @@ Phone: 800-826-7871, 219-794-1829 ext. 2468
 
 Area 7
 
+
 Carmen Osterhoudt, LTC Ombudsman
 
 Email: Carmen.Osterhoudt@ilsi.net
 
 Phone: 317-445-2464
+
 
 Indiana Legal Services, Inc.
 
@@ -2499,11 +2699,13 @@ Indianapolis, IN 46225
 
 Area 6
 
+
 Maureen Walby, LTC Ombudsman
 
 Email: Maureen.Walby@ilsi.net
 
 Phone: 765-759-3371 or 463-237-9384 (Work)
+
 
 Indiana Legal Services, Inc.
 
@@ -2516,17 +2718,20 @@ Yorktown, IN 47396
 
 Area 12
 
+
 Mhelody Martinez, LTC Ombudsman
 
 Email: Area12Ombudsman@gmail.com
 
 Phone: 800-622-4484
 
+
 SIILC - Southeastern Indiana Independent Living Center
 
 817 East Main Street
 
 Vevay, IN 47043
+
 
 Serving: Dearborn, Jefferson, Ohio, Ripley and Switzerland counties
 
@@ -2535,11 +2740,13 @@ Serving: Dearborn, Jefferson, Ohio, Ripley and Switzerland counties
 
 Area 9
 
+
 Daulphine Day, LTC Ombudsman
 
 Email: daulphine.day@ilsi.net
 
 Phone: 463-237-9373
+
 
 Indiana Legal Services, Inc.
 
@@ -2552,11 +2759,13 @@ Indianapolis, IN 46225
 
 Area 14
 
+
 Mary Cleavinger, LTC Ombudsman
 
 Email: mary.cleavinger@ilsi.net
 
 Phone: 812-913-7361 ext. 11223
+
 
 Indiana Legal Services
 
@@ -2569,11 +2778,13 @@ New Albany, IN 47150
 
 Area 8
 
+
 Kit Paternoster, LTC Ombudsman
 
 Email: Kathryn.Paternoster@ilsi.net
 
 Phone: 317-631-9424
+
 
 Indiana Legal Services, Inc.
 
@@ -2586,11 +2797,13 @@ Indianapolis, IN 46225
 
 Area 16
 
+
 Laura George, LTC Ombudsman
 
 Email: laura.george@ilsi.net
 
 Phone: 463-237-9345
+
 
 Indiana Legal Services
 
@@ -2603,6 +2816,8 @@ Evansville, IN 47708
 
 Area 2
 
+
+
 Gretchen Camblin, LTC Ombudsman
 
 gretchen.camblin@ilsi.net
@@ -2611,17 +2826,20 @@ Phone: 574-855-5122
 
 Fax: 574-239-2185
 
+
 Katie Bohm, LTC Ombudsman
 
 Email: katie.bohm@ilsi.net
 
 Phone: 574-528-1858
 
+
 Indiana Legal Services
 
 227 S. Main Street, Suite 200 
 
 South Bend, IN 46601
+
 
 Serving: Elkhart, Kosciusko, LaPorte, Marshall and St. Joseph Counties
 
@@ -2630,11 +2848,13 @@ Serving: Elkhart, Kosciusko, LaPorte, Marshall and St. Joseph Counties
 
 Area 1
 
+
 China Leatherwood, LTC Ombudsman
 
 Email: cleatherwood@coaction.care
 
 Phone:219-794-1829
+
 
 Northwest Indiana Community Action
 
@@ -2649,11 +2869,13 @@ Phone: 800-826-7871, 219-794-1829 ext. 2468
 
 Area 3
 
+
 Zanzy Lewis, LTC Ombudsman
 
 Email: zanzy@longtermcare-ombudsman.org
 
 Phone: 260-469-3161
+
 
 Kathy Lewis, LTC Ombudsman
 
@@ -2661,11 +2883,13 @@ Email: Kathy@doingthegood-ombudsman.org
 
 Phone: 260-469-3161
 
+
 Ta'korei Moore, LTC Ombudsman
 
 Email: Takorei@doingthegood-ombudsman.org
 
 Phone: 260-469-3161
+
 
 LTC Ombudsman Program of N.E. Indiana
 
@@ -2678,11 +2902,13 @@ Fort Wayne, IN 46815
 
 Area 7
 
+
 Carmen Osterhoudt, LTC Ombudsman
 
 Email: Carmen.Osterhoudt@ilsi.net
 
 Phone: 317-445-2464
+
 
 Indiana Legal Services, Inc.
 
@@ -2695,17 +2921,20 @@ Indianapolis, IN 46225
 
 Area 12
 
+
 Mhelody Martinez, LTC Ombudsman
 
 Email: Area12Ombudsman@gmail.com
 
 Phone: 800-622-4484
 
+
 SIILC - Southeastern Indiana Independent Living Center
 
 817 East Main Street
 
 Vevay, IN 47043
+
 
 Serving: Dearborn, Jefferson, Ohio, Ripley and Switzerland counties
 
@@ -2714,17 +2943,20 @@ Serving: Dearborn, Jefferson, Ohio, Ripley and Switzerland counties
 
 Area 4
 
+
 Andrea Smothers, LTC Ombudsman
 
 Email: Andrea.Smothers@ilsi.net
 
 Phone: 765-404-6436
 
+
 Debbie Winchester, LTC Ombudsman
 
 Email: Debbie.Winchester@ilsi.net 
 
 Phone: 765-250-0008
+
 
 Indiana Legal Services
 
@@ -2737,11 +2969,13 @@ Lafayette, IN 47901
 
 Area 5
 
+
 Dana Neer, LTC Ombudsman
 
 Email: dneer@areafive.com
 
 Phone: 260-568-0579
+
 
 Area 5 Agency on Aging
 
@@ -2754,11 +2988,13 @@ Logansport, IN 46947
 
 Area 9
 
+
 Daulphine Day, LTC Ombudsman
 
 Email: daulphine.day@ilsi.net
 
 Phone: 463-237-9373
+
 
 Indiana Legal Services, Inc.
 
@@ -2771,17 +3007,20 @@ Indianapolis, IN 46225
 
 Area 16
 
+
 Michelle Motta, LTC Ombudsman
 
 Email: mmotta@voicesinc.info
 
 Phone: 812-423-2927
 
+
 Alicia Reeves, LTC Ombudsman
 
 Email: areeves@voicesinc.info
 
 Phone: 812-423-2927
+
 
 VOICES, INC.
 
@@ -2794,11 +3033,13 @@ Evansville, IN 47711
 
 Area 7
 
+
 Carmen Osterhoudt, LTC Ombudsman
 
 Email: Carmen.Osterhoudt@ilsi.net
 
 Phone: 317-445-2464
+
 
 Indiana Legal Services, Inc.
 
@@ -2811,11 +3052,13 @@ Indianapolis, IN 46225
 
 Area 7
 
+
 Carmen Osterhoudt, LTC Ombudsman
 
 Email: Carmen.Osterhoudt@ilsi.net
 
 Phone: 317-445-2464
+
 
 Indiana Legal Services, Inc.
 
@@ -2828,11 +3071,13 @@ Indianapolis, IN 46225
 
 Area 5
 
+
 Dana Neer, LTC Ombudsman
 
 Email: dneer@areafive.com
 
 Phone: 260-568-0579
+
 
 Area 5 Agency on Aging
 
@@ -2845,17 +3090,20 @@ Logansport, IN 46947
 
 Area 4
 
+
 Andrea Smothers, LTC Ombudsman
 
 Email: Andrea.Smothers@ilsi.net
 
 Phone: 765-404-6436
 
+
 Debbie Winchester, LTC Ombudsman
 
 Email: Debbie.Winchester@ilsi.net 
 
 Phone: 765-250-0008
+
 
 Indiana Legal Services
 
@@ -2868,11 +3116,13 @@ Lafayette, IN 47901
 
 Area 16
 
+
 Laura George, LTC Ombudsman
 
 Email: laura.george@ilsi.net
 
 Phone: 463-237-9345
+
 
 Indiana Legal Services
 
@@ -2885,11 +3135,13 @@ Evansville, IN 47708
 
 Area 15
 
+
 Kirsten Bouthier, LTC Ombudsman
 
 Email: kirsten.bouthier@ilsi.net
 
 Phone: 463-237-9346
+
 
 Indiana Legal Services
 
@@ -2897,7 +3149,9 @@ Indiana Legal Services
 
 Columbus, IN 47201
 
+
 Serving: Lawrence County
+
 
 Christina Lafferty, LTC Ombudsman
 
@@ -2905,11 +3159,13 @@ Email: christina.lafferty@ilsi.net
 
 Phone: 317-675-0642
 
+
 Indiana Legal Services
 
 1200 Madison Street, Suite 300
 
 Indianapolis, IN 46225
+
 
 Serving: Crawford, Orange and Washington Counties
 
@@ -2918,11 +3174,13 @@ Serving: Crawford, Orange and Washington Counties
 
 Area 9
 
+
 Daulphine Day, LTC Ombudsman
 
 Email: daulphine.day@ilsi.net
 
 Phone: 463-237-9373
+
 
 Indiana Legal Services, Inc.
 
@@ -2935,11 +3193,13 @@ Indianapolis, IN 46225
 
 Area 3
 
+
 Zanzy Lewis, LTC Ombudsman
 
 Email: zanzy@longtermcare-ombudsman.org
 
 Phone: 260-469-3161
+
 
 Kathy Lewis, LTC Ombudsman
 
@@ -2947,11 +3207,13 @@ Email: Kathy@doingthegood-ombudsman.org
 
 Phone: 260-469-3161
 
+
 Ta'korei Moore, LTC Ombudsman
 
 Email: Takorei@doingthegood-ombudsman.org
 
 Phone: 260-469-3161
+
 
 LTC Ombudsman Program of N.E. Indiana
 
@@ -2964,17 +3226,20 @@ Fort Wayne, IN 46815
 
 Area 4
 
+
 Andrea Smothers, LTC Ombudsman
 
 Email: Andrea.Smothers@ilsi.net
 
 Phone: 765-404-6436
 
+
 Debbie Winchester, LTC Ombudsman
 
 Email: Debbie.Winchester@ilsi.net 
 
 Phone: 765-250-0008
+
 
 Indiana Legal Services
 
@@ -2987,11 +3252,13 @@ Lafayette, IN 47901
 
 Area 3
 
+
 Zanzy Lewis, LTC Ombudsman
 
 Email: zanzy@longtermcare-ombudsman.org
 
 Phone: 260-469-3161
+
 
 Kathy Lewis, LTC Ombudsman
 
@@ -2999,11 +3266,13 @@ Email: Kathy@doingthegood-ombudsman.org
 
 Phone: 260-469-3161
 
+
 Ta'korei Moore, LTC Ombudsman
 
 Email: Takorei@doingthegood-ombudsman.org
 
 Phone: 260-469-3161
+
 
 LTC Ombudsman Program of N.E. Indiana
 
@@ -3090,11 +3359,13 @@ County Map Legend
 
 Area 1
 
+
 China Leatherwood, LTC Ombudsman
 
 Email: cleatherwood@coaction.care
 
-Phone:219-794-1829
+Phone: 219-794-1829
+
 
 Northwest Indiana Community Action
 
@@ -3102,11 +3373,25 @@ Northwest Indiana Community Action
 
 Crown Point, Indiana 46307
 
+
 Phone: 800-826-7871 | 219-794-1829 X2468
+
 
 Serving: Jasper, Lake, Newton, Porter, Pulaski and Starke Counties
 
+
+Armelda Chambliss, LTC Ombudsman
+
+
+Email: achambliss@coaction.care
+
+
+Phone: 219-329-1170
+
+
 Area 2
+
+
 
 Gretchen Camblin, LTC Ombudsman
 
@@ -3114,7 +3399,10 @@ gretchen.camblin@ilsi.net
 
 Phone: 574-855-5122
 
-Fax: 574-239-2185
+
+
+
+
 
 Katie Bohm, LTC Ombudsman
 
@@ -3122,15 +3410,19 @@ Email: katie.bohm@ilsi.net
 
 Phone: 574-528-1858
 
+
 Indiana Legal Services
 
 227 S. Main Street, Suite 200 
 
 South Bend, IN 46601
 
+
 Serving: Elkhart, Kosciusko, LaPorte, Marshall and St. Joseph Counties
 
+
 Area 3
+
 
 Zanzy Lewis, LTC Ombudsman
 
@@ -3138,11 +3430,13 @@ Email: zanzy@longtermcare-ombudsman.org
 
 Phone: 260-469-3161
 
+
 Kathy Lewis, LTC Ombudsman
 
 Email: Kathy@doingthegood-ombudsman.org
 
 Phone: 260-469-3161
+
 
 Ta'korei Moore, LTC Ombudsman
 
@@ -3150,21 +3444,19 @@ Email: Takorei@doingthegood-ombudsman.org
 
 Phone: 260-469-3161
 
+
 LTC Ombudsman Program of N.E. Indiana
 
 3201 Stellhorn Rd. 
 
 Fort Wayne, Indiana 46815
 
+
 Serving: Adams, Allen, DeKalb, Huntington, LaGrange, Noble, Steuben, Wells and Whitley Counties
+
 
 Area 4
 
-Andrea Smothers, LTC Ombudsman
-
-Email: Andrea.Smothers@ilsi.net
-
-Phone: 765-404-6436
 
 Debbie Winchester, LTC Ombudsman
 
@@ -3172,15 +3464,19 @@ Email: Debbie.Winchester@ilsi.net 
 
 Phone: 765-250-0008
 
+
 Indiana Legal Services
 
 8 N. Third Street, Suite 102
 
 Lafayette, Indiana 47901
 
+
 Serving: Benton, Carroll, Clinton, Fountain, Montgomery, Tippecanoe, Warren and White Counties
 
+
 Area 5
+
 
 Dana Neer, LTC Ombudsman
 
@@ -3188,15 +3484,19 @@ Email: dneer@areafive.com
 
 Phone: 260-568-0579
 
+
 Area 5 Agency on Aging
 
 1801 Smith St.
 
 Logansport, IN 46947
 
+
 Serving: Cass, Fulton, Howard, Miami, Tipton, and Wabash Counties
 
+
 Area 6
+
 
 Maureen Walby, LTC Ombudsman
 
@@ -3204,11 +3504,13 @@ Email: Maureen.Walby@ilsi.net
 
 Phone: 765-759-3371 or 463-237-9384 (Work)
 
+
 Indiana Legal Services, Inc.
 
 1701 Pilgrim Blvd.
 
 Yorktown, IN 47396
+
 
 Serving: Blackford, Delaware, Grant, Henry, Jay, Madison and Randolph Counties
 
@@ -3223,19 +3525,27 @@ Serving: Blackford, Delaware, Grant, Henry, Jay, Madison and Randolph Counties
 
 Area 7
 
+
 Carmen Osterhoudt, LTC Ombudsman
 
 Email:  Carmen.Osterhoudt@ilsi.net
 
 Phone: 317-445-2464
 
+
 1200 Madison Street, Suite 300
 
 Indianapolis, IN 46225
 
+
 Serving: Clay, Parke, Putnam, Sullivan, Vermillion, and Vigo Counties
 
+
 Area 8
+
+
+Email: aaa8nfombs@ilsi.net
+
 
 Sherry Marckel, LTC Ombudsman
 
@@ -3243,11 +3553,13 @@ Sherry.marckel@ilsi.net
 
 Phone: 317-631-9424
 
+
 Kit Paternoster, LTC Ombudsman
 
 Kathryn.Paternoster@ilsi.net
 
 Phone: 317-631-9424
+
 
 Stacey Writt, LTC Ombudsman
 
@@ -3255,11 +3567,6 @@ Stacey.writt@ilsi.net
 
 Phone: 317-631-9424
 
-Robin Willis, LTC Ombudsman
-
-robin.willis@ilsi.net
-
-Phone: 463-237-9348
 
 Indiana Legal Services
 
@@ -3267,9 +3574,12 @@ Indiana Legal Services
 
 Indianapolis, IN. 46225
 
+
 Serving: Boone, Hamilton, Hancock, Hendricks, Johnson, Marion, Morgan and Shelby Counties
 
+
 Area 9
+
 
 Daulphine Day, LTC Ombudsman
 
@@ -3277,7 +3587,9 @@ Email: daulphine.day@ilsi.net
 
 Phone: 463-237-9373
 
+
 Indiana Legal Services, Inc.
+
 
 Indiana Legal Services
 
@@ -3285,15 +3597,19 @@ Indiana Legal Services
 
 Indianapolis, IN. 46225
 
-Serving: Fayette, Franklin, Rush, Union, and Wayne Counties
+
+Serving: Fayette, Franklin, Rush, Randolph, Union, and Wayne Counties
+
 
 Area 10 & 11
 
+
 Kirsten Bouthier, LTC Ombudsman
 
- Email: Kirsten.Bouthier@ilsi.net
+Email: Kirsten.Bouthier@ilsi.net
 
 Phone: 463-237-9346
+
 
 Indiana Legal Services
 
@@ -3301,9 +3617,12 @@ Indiana Legal Services
 
 Columbus, IN 47201
 
+
 Serving: Bartholomew, Brown, Decatur, Jackson, Jennings, Monroe and Owen Counties
 
+
 Area 12
+
 
 Mhelody Martinez, LTC Ombudsman
 
@@ -3311,15 +3630,19 @@ Email: Area12Ombudsman@gmail.com
 
 Phone: 800-622-4484
 
+
 SIILC - Southeastern Indiana Independent Living Center
 
 817 East Main Street
 
 Vevay, IN 47043
 
+
 Serving: Dearborn, Jefferson, Ohio, Ripley and Switzerland counties
 
+
 Area 13
+
 
 Christina Lafferty, LTC Ombudsman
 
@@ -3327,27 +3650,33 @@ Email: christina.lafferty@ilsi.net
 
 Phone: 317-675-0642
 
+
 Indiana Legal Services
 
 1200 Madison Street, Suite 300 
 
 Indianapolis, IN 46225
 
+
 Serving: Daviess, Dubois, Greene, Knox, Martin and Pike Counties
+
 
 Area 14 
 
-Mary Cleavinger, LTC Ombudsman
+
+Laura George, LTC Ombudsman
 
 Email: mary.cleavinger@ilsi.net
 
-Phone: 812-913-7361 ext. 11223
+Phone: 463-237-9345  ext. 11223
+
 
 Indiana Legal Services
 
-3303 Plaza Dr. #5
+915 Main Street, Suite 201
 
-New Albany, IN 47150
+Evansville, IN 47708
+
 
 Serving: Clark, Floyd, Harrison and Scott Counties
 
@@ -3362,19 +3691,6 @@ Serving: Clark, Floyd, Harrison and Scott Counties
 
 Area 15
 
-Kirsten Bouthier, LTC Ombudsman
-
-Email: kirsten.bouthier@ilsi.net
-
-Phone: 463-237-9346
-
-Indiana Legal Services
-
-1531 13th Street, Suite G 330
-
-Columbus, IN 47201
-
-Serving: Lawrence County
 
 Christina Lafferty, LTC Ombudsman
 
@@ -3382,15 +3698,19 @@ Email: christina.lafferty@ilsi.net
 
 Phone: 317-675-0642
 
+
 Indiana Legal Services
 
 1200 Madison Street, Suite 300
 
 Indianapolis, IN 46225
 
+
 Serving: Crawford, Orange and Washington Counties
 
+
 Area 16 
+
 
 Laura George, LTC Ombudsman
 
@@ -3398,15 +3718,19 @@ Email: laura.george@ilsi.net
 
 Phone: 463-237-9345
 
+
 Indiana Legal Services
 
 915 Main Street, Suite #201
 
 Evansville, IN 47708
 
+
 Serving: Gibson, Perry, Posey, Spencer and Warrick Counties
 
+
 VOICES
+
 
 Michelle Motta, LTC Ombudsman
 
@@ -3414,11 +3738,13 @@ Email: mmotta@voicesinc.info
 
 Phone: 812-423-2927
 
+
 Alicia Reeves, LTC Ombudsman
 
 Email: areeves@voicesinc.info
 
 Phone: 812-423-2927
+
 
 VOICES, INC.
 
@@ -3426,9 +3752,12 @@ VOICES, INC.
 
 Evansville, Indiana 47711
 
+
 Serving: Vanderburgh County
 
+
 State Contacts
+
 
 Lynn Clough
 
@@ -3445,6 +3774,7 @@ Indianapolis, Indiana 46207-7083
 Email: Lynn.Clough@fssa.in.gov 
 
 Phone: 317-234-5544/fax: 317-972-3285
+
 
 Mary Swinford
 
@@ -3518,14 +3848,15 @@ Email
 
 
 
+
+
 Find Information
 
 
 
 
 
-
-State Information Live Chat
+State Information Center Live Chat
 
 
 
@@ -3658,7 +3989,7 @@ Report
 
  Copyright © 2026 State of Indiana - All rights reserved.
 
-SOURCE 5: Indiana Health Coverage Programs, Provider Reference Module — Long-Term Care Facility Services, "Leave Days in a Nursing Facility" (PDF) | https://www.in.gov/medicaid/providers/files/modules/long-term-care.pdf | source date: Library Reference Number: PROMOD00037; Published: May 12, 2026; policies and procedures as of Aug. 1, 2025; Version: 8.0 | retrieved: 2026-09-29
+SOURCE 5: Indiana Health Coverage Programs, Provider Reference Module — Long-Term Care Facility Services, "Leave Days in a Nursing Facility" (PDF) | https://www.in.gov/medicaid/providers/files/modules/long-term-care.pdf | source date: Library Reference Number: PROMOD00037; Published: May 12, 2026; policies and procedures as of Aug. 1, 2025; Version: 8.0 | retrieved: 2026-10-25
 Leave Days in a Nursing Facility
     The IHCP does not reimburse for bed-hold days in an NF as a member benefit unless the member is under
     the care of hospice. All IHCP members residing in an NF are directed to talk with their individual provider
