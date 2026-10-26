@@ -55,6 +55,27 @@
       "last_result": "FAILED",
       "page": "idaho"
     },
+    "https://adminrules.utah.gov/public/rule/R410-14/Current%20Rules": {
+      "attempts": 1,
+      "last_attempt": "2026-10-26T054643Z",
+      "last_detail": "error:not-found",
+      "last_result": "FAILED",
+      "page": "utah"
+    },
+    "https://adminrules.utah.gov/public/rule/R414-504/Current%20Rules": {
+      "attempts": 1,
+      "last_attempt": "2026-10-26T054702Z",
+      "last_detail": "error:not-found",
+      "last_result": "FAILED",
+      "page": "utah"
+    },
+    "https://adminrules.utah.gov/public/rule/R432-150/Current%20Rules": {
+      "attempts": 1,
+      "last_attempt": "2026-10-26T054813Z",
+      "last_detail": "error:not-found",
+      "last_result": "FAILED",
+      "page": "utah"
+    },
     "https://aging.ca.gov/programs_and_services/long-term_care_ombudsman/": {
       "attempts": 1,
       "capture": "https://web.archive.org/web/20260906131018/https://aging.ca.gov/programs_and_services/long-term_care_ombudsman/",
@@ -342,6 +363,30 @@
       "last_result": "OK",
       "page": "ohio"
     },
+    "https://daas.utah.gov/long-term-care-ombudsman/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261026054912/https://daas.utah.gov/long-term-care-ombudsman/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-26T054957Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "utah"
+    },
+    "https://daas.utah.gov/ombudsman-locations": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-26T055016Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "utah"
+    },
+    "https://daas.utah.gov/wp-content/uploads/2024/07/SNF-Discharge-Appeal-Form-11.7.23.pdf": {
+      "attempts": 1,
+      "last_attempt": "2026-10-26T055450Z",
+      "last_detail": "no-playback",
+      "last_result": "FAILED",
+      "page": "utah"
+    },
     "https://dakotaathome.sd.gov/search/c5a84daf-cd8f-5ac5-bad2-b72b20ac7b97": {
       "attempts": 1,
       "capture": "https://web.archive.org/web/20261025053959/https://dakotaathome.sd.gov/search/c5a84daf-cd8f-5ac5-bad2-b72b20ac7b97",
@@ -437,6 +482,15 @@
       "last_detail": "ok",
       "last_result": "OK",
       "page": "nebraska"
+    },
+    "https://dhhs.utah.gov/oah/medicaid-fair-hearings/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261026055506/https://dhhs.utah.gov/oah/medicaid-fair-hearings/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-26T055550Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "utah"
     },
     "https://dhs.sd.gov/en/ltss/ombudsman-program": {
       "attempts": 1,
@@ -548,6 +602,15 @@
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "rhode-island"
+    },
+    "https://fhb.hhs.texas.gov/handbooks/fair-fraud-hearings-handbook/1300-notice": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261026053232/https://fhb.hhs.texas.gov/handbooks/fair-fraud-hearings-handbook/1300-notice",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-26T053405Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "texas"
     },
     "https://flrules.org/gateway/readFile.asp?sid=0&tid=0&cno=65-2&caid=1206309&type=4&file=65-2.doc": {
       "attempts": 1,
@@ -824,6 +887,24 @@
       "last_detail": "ok",
       "last_result": "OK",
       "page": "idaho"
+    },
+    "https://ltco.texas.gov": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261026053508/https://ltco.texas.gov",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-26T053758Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "texas"
+    },
+    "https://medicaid-documents.dhhs.utah.gov/Documents/manuals/pdfs/Medicaid+Provider+Manuals/All+Providers+General+Information+Section+I/AllProvidersGeneralInfo_Section_1.pdf": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261026055603/https://medicaid-documents.dhhs.utah.gov/Documents/manuals/pdfs/Medicaid+Provider+Manuals/All+Providers+General+Information+Section+I/AllProvidersGeneralInfo_Section_1.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-26T055730Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "utah"
     },
     "https://medicaid.ms.gov/wp-content/uploads/2025/07/Title-23-Part-300-Appeals-eff.-7.1.2025.pdf": {
       "attempts": 1,
@@ -1230,6 +1311,24 @@
       "last_result": "OK",
       "page": "kansas"
     },
+    "https://texas-sos.appianportalsgov.com/rules-and-meetings?recordId=203098&interface=VIEW_TAC_SUMMARY": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261026053908/https://texas-sos.appianportalsgov.com/rules-and-meetings?recordId=203098&interface=VIEW_TAC_SUMMARY",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-26T053957Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "texas"
+    },
+    "https://texas-sos.appianportalsgov.com/rules-and-meetings?recordId=203099&interface=VIEW_TAC_SUMMARY": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261026054012/https://texas-sos.appianportalsgov.com/rules-and-meetings?recordId=203099&interface=VIEW_TAC_SUMMARY",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-26T054148Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "texas"
+    },
     "https://webserver.rilegislature.gov/Statutes/TITLE23/23-17.5/23-17.5-17.HTM": {
       "attempts": 1,
       "capture": "https://web.archive.org/web/20261024050113/https://webserver.rilegislature.gov/Statutes/TITLE23/23-17.5/23-17.5-17.HTM",
@@ -1538,6 +1637,13 @@
       "last_detail": "ok",
       "last_result": "OK",
       "page": "north-dakota"
+    },
+    "https://www.hhs.texas.gov/sites/default/files/documents/pl2022-25.pdf": {
+      "attempts": 1,
+      "last_attempt": "2026-10-26T054623Z",
+      "last_detail": "no-playback",
+      "last_result": "FAILED",
+      "page": "texas"
     },
     "https://www.ilga.gov/legislation/ILCS/details?MajorTopic=REGULATION&Chapter=HEALTH+FACILITIES+AND+REGULATION&ActName=Nursing+Home+Care+Act.&ActID=1225&ChapterID=21&ChapAct=210+ILCS+45/&SeqStart=17400000&SeqEnd=19900000&Print=True": {
       "attempts": 1,
@@ -2004,5 +2110,5 @@
       "page": "tennessee"
     }
   },
-  "updated": "2026-10-25T055657Z"
+  "updated": "2026-10-26T055730Z"
 }
