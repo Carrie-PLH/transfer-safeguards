@@ -21,8 +21,16 @@
 #  12. Nothing under the deploy root but the kinds of file this site
 #      publishes — an allowlist, so tool debris fails without anyone having
 #      had to anticipate it.
-# (Per-page quotation fidelity is tools/check-fidelity.py, run per page at
-# build time; this script gates the deploy as a whole.)
+#  14. Every page verifies against its full evidence set, via
+#      tools/check-all.py, which resolves that set with tools/packet-set.py
+#      and treats a page recorded as open drift or an accepted tradeoff as
+#      expected rather than blocking. Ported from Rules & Record's check 10
+#      on 2026-10-25 (FA-Q-20261001-05): until then this gate never ran the
+#      fidelity checker, and on 2026-10-01 it passed a tree in which
+#      check-all reported 51 unexplained failures.
+# Per-page quotation fidelity is tools/check-fidelity.py; the packets a given
+# page must be checked against are whatever tools/packet-set.py resolves, never
+# a name typed from memory.
 cd "$(dirname "$0")" || exit 1
 fail=0
 
@@ -559,6 +567,25 @@ else
 fi
 rm -f /tmp/parity.$$
 
+
+# 14 — every page verifies against its full evidence set. Check 9 asks only
+# whether a packet exists; this asks whether the page's quotations and contact
+# facts are actually in it. Pages recorded as open drift or as an accepted
+# tradeoff are expected to fail and do not block: a board's edit to a PDF
+# should not hold up unrelated work, and a gate that did would be bypassed
+# within the month. Anything else is a failure nobody has seen yet, and stops
+# the deploy. Ported verbatim from Rules & Record's check 10, 2026-10-25.
+fid_out=$(cd .. && python3 tools/check-all.py --quiet 2>&1)
+fid_rc=$?
+fid_tail=$(printf '%s\n' "$fid_out" | tail -3 | tr '\n' ' ')
+if [ "$fid_rc" -ne 0 ]; then
+  bad "page fidelity: $fid_tail"
+  say "      run: python3 tools/check-all.py    (from the project root)"
+else
+  ok "page fidelity: $(printf '%s\n' "$fid_out" | head -1)"
+  printf '%s\n' "$fid_out" | grep -q 'open drift' && \
+    say "      note: $(printf '%s\n' "$fid_out" | grep 'open drift')"
+fi
 
 echo
 if [ "$fail" -eq 0 ]; then

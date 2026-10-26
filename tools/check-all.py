@@ -123,6 +123,12 @@ def pages_of(slug):
     site/discipline/ under the bare state slug, while its packets keep the
     full layered slug (texas-discipline-packet.txt). Everything else is the
     original layer.
+
+    A layer page that lives at the repository root rather than under states/
+    (Board & Border's compact.md -> site/compact.html, Room & Recourse's
+    federal.md -> site/federal.html) is found there when the slug has no
+    state page. Until 2026-10-25 it was not found at all: packet-set listed
+    the slug, this yielded nothing, and the run counted the slug as checked.
     """
     if slug.endswith('-discipline'):
         base = slug[:-len('-discipline')]
@@ -131,6 +137,9 @@ def pages_of(slug):
     else:
         candidates = (os.path.join(ROOT, 'states', f'{slug}.md'),
                       os.path.join(ROOT, 'site', 'states', f'{slug}.html'))
+        if not any(os.path.exists(p) for p in candidates):
+            candidates = (os.path.join(ROOT, f'{slug}.md'),
+                          os.path.join(ROOT, 'site', f'{slug}.html'))
     for p in candidates:
         if os.path.exists(p):
             yield p
@@ -315,6 +324,22 @@ def self_test():
         sink = []
         if run(['ghostland'], quiet=True, out=sink.append) == 0:
             failures.append('a missing packet passed silently')
+
+        # a root-level layer page (compact, federal) is checked, not skipped:
+        # before 2026-10-25 pages_of looked only under states/ and the run
+        # passed a slug whose only page was never opened
+        wp('layerland-packet.txt', src)
+        with open(os.path.join(d, 'layerland.md'), 'w') as fh:
+            fh.write('"complaints are resolved within ten days"\n')
+        sink = []
+        if run(['layerland'], quiet=True, out=sink.append) == 0:
+            failures.append('a failing root-level layer page passed unchecked')
+        with open(os.path.join(d, 'layerland.md'), 'w') as fh:
+            fh.write('"a complaint must be filed in writing"\n')
+        sink = []
+        if run(['layerland'], quiet=True, out=sink.append) != 0:
+            failures.append('a clean root-level layer page failed: '
+                            + '; '.join(sink))
     finally:
         PS.PACKETS = keep_packets
         globals()['HISTORY'] = keep_history
@@ -330,7 +355,7 @@ def self_test():
           'of the same page still fails; recorded drift and recorded accepted '
           'each report without blocking, are labelled apart, and block under '
           '--strict; a rebuild is not an exemption; unrecorded failures and '
-          'missing packets fail the run.')
+          'missing packets fail the run; a root-level layer page is checked.')
     return 0
 
 

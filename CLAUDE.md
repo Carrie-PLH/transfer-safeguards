@@ -347,6 +347,17 @@ A page that has not passed `python3 tools/check-fidelity.py` against its
 packet(s) — markdown and HTML both, zero failures — is not done. There is
 no expected miss.
 
+The deploy gate holds this since 2026-10-25 (FA-Q-20261001-05): check 14 of
+`site/predeploy-check.sh` runs `python3 tools/check-all.py --quiet` from the
+project root, ported from Rules & Record's check 10, and fails on any
+unexplained failure. Pages recorded as open drift or as an accepted tradeoff
+are reported, not blocking, because the exemption comes from the retention
+manifest. Before the port the gate never ran the checker; the same gap in
+Board & Border's gate passed a tree with 51 unexplained failures on 2026-10-01. check-all
+also reads the root-level layer page (`federal.md`, `site/federal.html`) since the same date; it
+had been counting that slug as checked without opening the page. It adds
+under a second to the gate.
+
 ## Capture traps, learned in the build (2026-08-30)
 
 Record here rather than in a page, because these cost an hour each to
