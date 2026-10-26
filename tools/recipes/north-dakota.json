@@ -52,7 +52,7 @@
       "user_agent": "browser",
       "extractor": "html-text",
       "scope": "body",
-      "notes": "A directory listing; the slice drops the surrounding search chrome. The 'to' anchor begins mid-word because the listing's own delimiter line is what follows and the proposer anchored on it as rendered; it is left as proposed rather than tidied, because a hand-adjusted anchor is a hand-read anchor. 2026-10-25 (FA-Q-20261010-01): the listing's literal '***** SEND-TO-ME' control label, which ended the original 'to' anchor, was replaced in the widget by the prose 'Send a condensed resource profile to your phone via text message (SMS).'; 'Provider Service Area (serves entire state)' itself is unchanged. The anchor was shortened to drop the vanished label and nothing else, so the slice ends where it always did.",
+      "notes": "A directory listing; the slice drops the surrounding search chrome. The 'to' anchor begins mid-word because the listing's own delimiter line is what follows and the proposer anchored on it as rendered; it is left as proposed rather than tidied, because a hand-adjusted anchor is a hand-read anchor. 2026-10-25 (FA-Q-20261010-01): '***** SEND-TO-ME', which ended the original 'to' anchor, was never published text: it is an HTML comment in the listing's markup, read into the 2026-09-04 capture before capture.py began dropping comments (2026-09-05). 'Provider Service Area (serves entire state)' is unchanged. The anchor was shortened to drop the comment and nothing else, so the slice ends where it always did.",
       "slice": {
         "from": "Long Term Care Ombudsman Program (North Dakota) https://www.hhs.nd.gov/adults-and-aging/human-services/adults-and-aging",
         "to": "rvice Area (serves entire state)"
