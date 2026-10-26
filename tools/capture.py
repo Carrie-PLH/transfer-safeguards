@@ -639,6 +639,13 @@ def lint(rec, slug=None):
                         f'one of {", ".join(HTTP_VERSIONS)}')
         if s.get('http_version') and s.get('transport') != 'curl':
             errs.append(f'{w}: http_version applies to the curl transport only')
+        if s.get('drop_sr_only') is not None:
+            if not isinstance(s['drop_sr_only'], bool):
+                errs.append(f'{w}: drop_sr_only must be true or false, '
+                            f'got {s["drop_sr_only"]!r}')
+            elif s.get('extractor') != 'html-text':
+                errs.append(f'{w}: drop_sr_only applies to the html-text '
+                            f'extractor only')
         if s.get('drop_icon_space') is not None:
             if not isinstance(s['drop_icon_space'], bool):
                 errs.append(f'{w}: drop_icon_space must be true or false, '
@@ -763,6 +770,8 @@ def digest(rec):
             m['encoding'] = s['encoding']
         if s.get('drop_icon_space'):
             m['drop_icon_space'] = True
+        if s.get('drop_sr_only'):
+            m['drop_sr_only'] = True
         if s.get('ca_bundle'):
             m['ca_bundle'] = s['ca_bundle']
         if s.get('pages'):
@@ -878,6 +887,34 @@ def extract_pdf(blob, mode, pages=None):
         return r.stdout.decode('utf-8', 'replace')
 
 
+# --- screen-reader-only text --------------------------------------------------
+#
+# Opt-in per source ("drop_sr_only": true), html-text only; owner decision
+# FA-D-20261025-07 (FA-Q-20261025-06). Some publishers set text that only a
+# screen reader announces in an element whose class hides it through the
+# site's stylesheet, most often beside an abbreviation:
+#
+#     <span class="visually-hidden">Individuals with Disabilities Education Act </span><abbr>IDEA</abbr>
+#
+# strip_nonvisible_nodes cannot see a stylesheet, so the capture reads
+# "Individuals with Disabilities Education Act IDEA" where a sighted reader
+# sees "IDEA" (www.doe.mass.edu, sped-safeguards massachusetts source 6, from
+# 2026-10). With the field set, elements carrying one of SR_ONLY_CLASSES are
+# dropped before the text walk. The list is closed and names only the two
+# conventions in use; a third is added here deliberately, never matched by
+# pattern. Default off is byte-identical to the behavior before this field,
+# for the same reason drop_icon_space is opt-in.
+
+SR_ONLY_CLASSES = frozenset({'visually-hidden', 'sr-only'})
+
+
+def drop_sr_only_nodes(node):
+    """Remove screen-reader-only elements (SR_ONLY_CLASSES) in place."""
+    for el in node.find_all(class_=lambda c: c in SR_ONLY_CLASSES):
+        if not getattr(el, 'decomposed', False):
+            el.decompose()
+
+
 # --- the space before a dropped icon -----------------------------------------
 #
 # Opt-in per source ("drop_icon_space": true), html-text only; owner decision
@@ -933,7 +970,7 @@ def trim_icon_space(node):
             break
 
 
-def extract_html(text, scope, drop_icon_space=False):
+def extract_html(text, scope, drop_icon_space=False, drop_sr_only=False):
     """Text under one CSS selector, with script, style and hidden nodes dropped.
 
     Implemented against bs4 in this process rather than shelling out to a
@@ -984,6 +1021,8 @@ def extract_html(text, scope, drop_icon_space=False):
         if name in BLOCK:
             parts.append('\n')
 
+    if drop_sr_only:
+        drop_sr_only_nodes(node)
     if drop_icon_space:
         trim_icon_space(node)
     walk(node)
@@ -1331,7 +1370,8 @@ def _extract_by_kind(raw, src):
         return extract_docx(raw, src.get('scope') or 'paragraphs-and-tables')
     if extractor == 'html-text':
         return extract_html(raw, src['scope'],
-                            drop_icon_space=bool(src.get('drop_icon_space')))
+                            drop_icon_space=bool(src.get('drop_icon_space')),
+                            drop_sr_only=bool(src.get('drop_sr_only')))
     if extractor == 'next-data':
         return extract_next_data(raw, src['scope'])
     if extractor == 'json-doc':
@@ -1467,6 +1507,8 @@ def render_packet(rec, bodies, day, supplied_ns=(), supplied_files=None):
             bits.append(f'encoding {s["encoding"]}')
         if s.get('drop_icon_space'):
             bits.append('drop_icon_space: the space before a textless icon dropped')
+        if s.get('drop_sr_only'):
+            bits.append('drop_sr_only: visually-hidden and sr-only text dropped')
         if s.get('urls'):
             bits.append(f'{len(s["urls"])} pages joined in declared order')
         if s.get('attended'):
@@ -2182,6 +2224,39 @@ def self_test():
     di_pdf['sources'][0]['extractor'] = 'pdftotext-raw'
     check(any('drop_icon_space applies' in e for e in lint(di_pdf, 'testland')),
           'lint accepted drop_icon_space on a PDF extractor')
+
+
+    # drop_sr_only (FA-D-20261025-07): the closed class list goes, other hidden-
+    # looking classes stay, off is the old behavior, and the field is boolean,
+    # html-text only, moving the digest only when true. Pairs with
+    # drop_icon_space on the markup that raised it.
+    sr = ('<main><p>In accordance with <a href="x"><span class="visually-hidden">'
+          'Individuals with Disabilities Education Act </span><abbr>IDEA</abbr> '
+          '<i class="fa"></i></a>, any.</p><p>Call <span class="sr-only">phone </span>'
+          '555.</p><p><span class="hidden-ish">Kept</span> text.</p></main>')
+    sr_on = ' '.join(extract_html(sr, 'main', drop_icon_space=True, drop_sr_only=True).split())
+    sr_off = ' '.join(extract_html(sr, 'main', drop_icon_space=True).split())
+    check('with IDEA, any' in sr_on and 'Call 555' in sr_on,
+          'drop_sr_only kept screen-reader-only text')
+    check('Kept text' in sr_on, 'drop_sr_only removed a class outside its list')
+    check('Disabilities Education Act IDEA' in sr_off, 'the default no longer keeps screen-reader text')
+    so_base = {'state': 'testland', 'recipe_version': 1, 'sources': [
+        {'n': 1, 'title': 't', 'url': 'https://example.gov/', 'transport': 'curl',
+         'extractor': 'html-text', 'scope': 'main', 'source_date': 'none stated'}]}
+    so_off = copy.deepcopy(so_base)
+    so_off['sources'][0]['drop_sr_only'] = False
+    so_on = copy.deepcopy(so_base)
+    so_on['sources'][0]['drop_sr_only'] = True
+    check(digest(so_base) == digest(so_off), 'drop_sr_only false moved the digest')
+    check(digest(so_base) != digest(so_on), 'drop_sr_only true did not move the digest')
+    so_str = copy.deepcopy(so_base)
+    so_str['sources'][0]['drop_sr_only'] = 1
+    check(any('drop_sr_only must be' in e for e in lint(so_str, 'testland')),
+          'lint accepted a non-boolean drop_sr_only')
+    so_pdf = copy.deepcopy(so_on)
+    so_pdf['sources'][0]['extractor'] = 'pdftotext-raw'
+    check(any('drop_sr_only applies' in e for e in lint(so_pdf, 'testland')),
+          'lint accepted drop_sr_only on a PDF extractor')
 
     print('self-test: ' + ('all checks passed' if ok else 'FAILURES'))
     return 0 if ok else 1
