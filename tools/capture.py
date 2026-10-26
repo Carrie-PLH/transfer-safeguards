@@ -639,6 +639,13 @@ def lint(rec, slug=None):
                         f'one of {", ".join(HTTP_VERSIONS)}')
         if s.get('http_version') and s.get('transport') != 'curl':
             errs.append(f'{w}: http_version applies to the curl transport only')
+        if s.get('drop_icon_space') is not None:
+            if not isinstance(s['drop_icon_space'], bool):
+                errs.append(f'{w}: drop_icon_space must be true or false, '
+                            f'got {s["drop_icon_space"]!r}')
+            elif s.get('extractor') != 'html-text':
+                errs.append(f'{w}: drop_icon_space applies to the html-text '
+                            f'extractor only')
         if s.get('encoding') and s['encoding'] not in ENCODINGS:
             errs.append(f'{w}: unknown encoding {s["encoding"]!r}; '
                         f'one of {", ".join(ENCODINGS)}')
@@ -736,6 +743,8 @@ def digest(rec):
             m['http_version'] = s['http_version']
         if s.get('encoding'):
             m['encoding'] = s['encoding']
+        if s.get('drop_icon_space'):
+            m['drop_icon_space'] = True
         if s.get('ca_bundle'):
             m['ca_bundle'] = s['ca_bundle']
         if s.get('pages'):
@@ -851,7 +860,62 @@ def extract_pdf(blob, mode, pages=None):
         return r.stdout.decode('utf-8', 'replace')
 
 
-def extract_html(text, scope):
+# --- the space before a dropped icon -----------------------------------------
+#
+# Opt-in per source ("drop_icon_space": true), html-text only; owner decision
+# FA-D-20261025-06 (FA-Q-20260905-07). A publisher that ends a link with an
+# icon writes a space between the link text and the icon:
+#
+#     <a ...><abbr>IDEA</abbr> <i class="fa fa-external-link"></i></a>, its
+#
+# The icon carries no text, so the capture drops it and keeps the space, and
+# the packet reads "IDEA , its" where a reader sees "IDEA", a glyph, and ",".
+# With the field set, whitespace between text and the punctuation that follows
+# it is dropped when an element with no text (the icon) lies between them, and
+# only then. A space the publisher typed before punctuation in running text
+# ("Appeals , which" on mass.gov) is the source's own and is kept, and so is a
+# space at a link boundary with no icon in it. Default off is byte-identical to
+# the behavior before this field, which is why it is opt-in: the same change
+# made globally would move every html-text capture that carries such an icon,
+# and a moved capture reads as source movement.
+
+ICON_SPACE_PUNCT = ',.;:)!?'
+ICON_SPACE_STOP = frozenset({
+    'p', 'div', 'br', 'li', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'section',
+    'article', 'header', 'footer', 'table', 'ul', 'ol', 'tr', 'td', 'th',
+    'main', 'body', 'html', 'nav', 'aside', 'dl', 'dt', 'dd', 'blockquote',
+    'pre'})
+
+
+def trim_icon_space(node):
+    """Drop the whitespace that separated text from a textless element (an
+    icon) when punctuation follows. In place; see the note above."""
+    from bs4 import Tag
+    for st in list(node.find_all(string=True)):
+        text = str(st)
+        if not text or text[0] not in ICON_SPACE_PUNCT:
+            continue
+        spaces, icon = [], False
+        for prev in st.previous_elements:
+            if isinstance(prev, Tag):
+                if prev.name in ICON_SPACE_STOP:
+                    break
+                if not prev.get_text():
+                    icon = True
+                continue
+            pt = str(prev)
+            if not pt.strip():
+                spaces.append(prev)
+                continue
+            if icon:
+                for ws in spaces:
+                    ws.replace_with('')
+                if pt[-1].isspace():
+                    prev.replace_with(pt.rstrip())
+            break
+
+
+def extract_html(text, scope, drop_icon_space=False):
     """Text under one CSS selector, with script, style and hidden nodes dropped.
 
     Implemented against bs4 in this process rather than shelling out to a
@@ -902,6 +966,8 @@ def extract_html(text, scope):
         if name in BLOCK:
             parts.append('\n')
 
+    if drop_icon_space:
+        trim_icon_space(node)
     walk(node)
     return re.sub(r'[ \t]+', ' ', ''.join(parts))
 
@@ -1246,7 +1312,8 @@ def _extract_by_kind(raw, src):
     if extractor == 'docx':
         return extract_docx(raw, src.get('scope') or 'paragraphs-and-tables')
     if extractor == 'html-text':
-        return extract_html(raw, src['scope'])
+        return extract_html(raw, src['scope'],
+                            drop_icon_space=bool(src.get('drop_icon_space')))
     if extractor == 'next-data':
         return extract_next_data(raw, src['scope'])
     if extractor == 'json-doc':
@@ -1378,6 +1445,8 @@ def render_packet(rec, bodies, day, supplied_ns=(), supplied_files=None):
             bits.append(f'http_version {s["http_version"]}')
         if s.get('encoding'):
             bits.append(f'encoding {s["encoding"]}')
+        if s.get('drop_icon_space'):
+            bits.append('drop_icon_space: the space before a textless icon dropped')
         if s.get('urls'):
             bits.append(f'{len(s["urls"])} pages joined in declared order')
         if s.get('attended'):
@@ -2058,6 +2127,38 @@ def self_test():
         refuse_lossy(hidden, 'clean text')
     except RuntimeError:
         check(False, 'a replacement that never reached the text was refused')
+
+
+    # drop_icon_space (FA-D-20261025-06): the space before a textless icon goes
+    # when punctuation follows; a typed space before punctuation, and a link
+    # boundary space with no icon, stay; off is the old behavior; the field is
+    # boolean, html-text only, and moves the digest only when true.
+    ic = ('<main><p>In accordance with <a href="x"><abbr>IDEA</abbr> '
+          '<i class="fa"></i></a>, any individual.</p>'
+          '<p>The Bureau , which derives.</p><p><a href="y">Plain </a>, kept.</p></main>')
+    ic_on = ' '.join(extract_html(ic, 'main', drop_icon_space=True).split())
+    ic_off = ' '.join(extract_html(ic, 'main').split())
+    check('with IDEA, any' in ic_on, 'drop_icon_space kept the space before the icon')
+    check('Bureau , which' in ic_on, 'drop_icon_space removed a typed space')
+    check('Plain , kept' in ic_on, 'drop_icon_space removed a space with no icon')
+    check('with IDEA , any' in ic_off, 'the default no longer keeps the icon space')
+    di_base = {'state': 'testland', 'recipe_version': 1, 'sources': [
+        {'n': 1, 'title': 't', 'url': 'https://example.gov/', 'transport': 'curl',
+         'extractor': 'html-text', 'scope': 'main', 'source_date': 'none stated'}]}
+    di_off = copy.deepcopy(di_base)
+    di_off['sources'][0]['drop_icon_space'] = False
+    di_on = copy.deepcopy(di_base)
+    di_on['sources'][0]['drop_icon_space'] = True
+    check(digest(di_base) == digest(di_off), 'drop_icon_space false moved the digest')
+    check(digest(di_base) != digest(di_on), 'drop_icon_space true did not move the digest')
+    di_str = copy.deepcopy(di_base)
+    di_str['sources'][0]['drop_icon_space'] = 'yes'
+    check(any('drop_icon_space must be' in e for e in lint(di_str, 'testland')),
+          'lint accepted a non-boolean drop_icon_space')
+    di_pdf = copy.deepcopy(di_on)
+    di_pdf['sources'][0]['extractor'] = 'pdftotext-raw'
+    check(any('drop_icon_space applies' in e for e in lint(di_pdf, 'testland')),
+          'lint accepted drop_icon_space on a PDF extractor')
 
     print('self-test: ' + ('all checks passed' if ok else 'FAILURES'))
     return 0 if ok else 1
