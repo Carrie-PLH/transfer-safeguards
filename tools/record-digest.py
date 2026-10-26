@@ -53,6 +53,17 @@ What this adds to compare_capture, and nothing else:
      because that retained history begins inside a recipe backfill.
   5. **A window over the series.** The manifests, read for a date range, with
      attendance counted separately from content.
+  6. **Capture-code comparison** (FA-D-20261025-05, added 2026-10-25). The
+     transport string and the recipe digest say how a capture was asked for,
+     not what code ran it, so an identical recipe digest is not evidence that
+     the method held: licensure mobility's 2026-09 draft called
+     district-of-columbia a board removal when both captures straddled this
+     repo's own comment-stripping commit. Each packet now carries a
+     "Capture code <12 hex>" line; where both captures carry one, they are
+     compared, and where either lacks one, git is asked whether
+     tools/capture.py or tools/capture-core.py was committed to between the
+     two capture dates. A change, or an answer git cannot give, flags the pair
+     as extraction until read, exactly as a changed transport is flagged.
 
 **This tool never edits a page and never writes a change-log entry.** Same
 posture as spn.py and vendor-watch.py: the finding is the output, and deciding
@@ -87,6 +98,7 @@ import importlib.util
 import json
 import os
 import re
+import subprocess
 import sys
 
 # tools/capture-core.py is the portfolio's shared capture module, synced from
@@ -240,6 +252,54 @@ def classify(old_raw, new_raw, limit=4):
             "publishable": any(v in PUBLISHABLE for v in ordered)}
 
 
+CODE_STAMP = re.compile(r"^- Capture code ([0-9a-f]{12}) ", re.M)
+CODE_FILES = ("tools/capture.py", "tools/capture-core.py")
+
+
+def code_stamp(raw):
+    """The capture-code digest a packet's notes record, or None (older packets)."""
+    m = CODE_STAMP.search(raw.split("\nSOURCE 1", 1)[0])
+    return m.group(1) if m else None
+
+
+def code_commits(since, until):
+    """Commits touching the capture code dated since..until, both days whole,
+    as 'hash date' lines; None when git cannot answer (no repository, no git).
+    Whole days on purpose: a commit on either capture's day may fall on either
+    side of it, and an over-report costs a read where an under-report costs a
+    false finding."""
+    try:
+        r = subprocess.run(
+            ["git", "-C", os.path.dirname(HERE), "log", "--format=%h %cd",
+             "--date=short", f"--since={since} 00:00:00",
+             f"--until={until} 23:59:59", "--", *CODE_FILES],
+            capture_output=True, text=True, timeout=60)
+    except (OSError, subprocess.SubprocessError):
+        return None
+    if r.returncode != 0:
+        return None
+    return [line for line in r.stdout.splitlines() if line.strip()]
+
+
+def code_change(old_raw, new_raw, old_date, new_date, commits=code_commits):
+    """None when the capture code held between two captures; otherwise the
+    sentence that flags the pair as extraction until read."""
+    a, b = code_stamp(old_raw), code_stamp(new_raw)
+    tail = "; read this as extraction before reading it as movement"
+    if a and b:
+        return None if a == b else (
+            f"capture code changed between these two captures ({a} -> {b})" + tail)
+    found = commits(old_date, new_date) if old_date and new_date else None
+    if found is None:
+        return ("capture code unrecorded for one or both captures, and git cannot "
+                "say whether it changed" + tail)
+    if found:
+        shown = ", ".join(found[:4]) + (f" and {len(found) - 4} more" if len(found) > 4 else "")
+        return ("capture code committed to between these two captures (no stamp; "
+                f"git: {shown})" + tail)
+    return None
+
+
 def previous_month(today=None):
     today = today or dt.date.today()
     year, month = ((today.year, today.month - 1) if today.month > 1
@@ -281,10 +341,11 @@ def build(rows, start, end, limit=4):
     # capture filename -> transport recorded for it, per slug. A drift whose
     # two captures were taken by different methods is extraction, not movement
     # (CLAUDE.md, "Promotion happens only as a side effect of retention").
-    transports = {}
+    transports, dates = {}, {}
     for r in rows:
         if r.get("capture"):
             transports[(r["slug"], r["capture"])] = r.get("transport") or ""
+            dates.setdefault((r["slug"], r["capture"]), r.get("date"))
 
     findings, tooling, missing = [], [], []
     for r in sorted(window, key=lambda r: (r.get("date", ""), r["slug"])):
@@ -311,6 +372,10 @@ def build(rows, start, end, limit=4):
                 f"capture method changed between these two captures "
                 f"({was or 'unrecorded'} -> {now or 'unrecorded'}); "
                 "read this as extraction before reading it as movement")
+        code = code_change(old_raw, new_raw, dates.get((r["slug"], r["supersedes"])),
+                           r.get("date"))
+        if code:
+            entry["code_changed"] = code
         (findings if entry["publishable"] else tooling).append(entry)
 
     return {"window": {"from": start, "to": end}, "attendance": attendance,
@@ -340,6 +405,8 @@ def render(result, out=sys.stdout):
         out.write("    " + "; ".join(f["verdicts"]) + "\n")
         if f.get("method_changed"):
             out.write(f"    ! {f['method_changed']}\n")
+        if f.get("code_changed"):
+            out.write(f"    ! {f['code_changed']}\n")
         for s in f.get("sources", []):
             out.write(f"    source {s['source']}: {s['verdict']}\n")
             if s.get("url"):
@@ -384,6 +451,8 @@ def render_draft(result, out=sys.stdout):
                   f"{f['supersedes']} and {f['capture']}.\n")
         if f.get("method_changed"):
             out.write(f"  - {f['method_changed']}\n")
+        if f.get("code_changed"):
+            out.write(f"  - {f['code_changed']}\n")
         for s in f.get("sources", []):
             for n in s.get("notes", []):
                 out.write(f"  - source {s['source']}: {n}\n")
@@ -402,6 +471,13 @@ def render_draft(result, out=sys.stdout):
     out.write(", ".join(sorted({f["slug"] for f in result["tooling"]})) or "none")
     out.write(". Publishing them is the difference between a change record and a "
               "marketing page.\n")
+    unread = sorted({f["slug"] for f in pub
+                     if f.get("method_changed") or f.get("code_changed")})
+    if unread:
+        out.write(f"\n{len(unread)} candidate(s) above were captured under a changed "
+                  "method or changed capture code and are extraction until read, not "
+                  "counted either way yet: " + ", ".join(unread) + ". An identical "
+                  "recipe digest is not evidence against extraction.\n")
 
 
 # --- tripwire ------------------------------------------------------------------
@@ -567,7 +643,29 @@ def self_test():
     if previous_month(dt.date(2026, 1, 14)) != ("2025-12-01", "2025-12-31"):
         fails.append("previous_month wrong across a year boundary")
 
-    total = 11
+    # Capture-code comparison (FA-D-20261025-05).
+    stamped = lambda c: HEAD.replace("CAPTURE NOTES\n", f"CAPTURE NOTES\n- Capture code {c} (x).\n") + "SOURCE 1: A | https://x/n.pdf | source date: none\n\nSame.\n"
+    if code_stamp(stamped("aaaaaaaaaaaa")) != "aaaaaaaaaaaa":
+        fails.append("code stamp not read from the capture notes")
+    if code_change(stamped("aaaaaaaaaaaa"), stamped("aaaaaaaaaaaa"), "d1", "d2",
+                   commits=lambda a, b: ["x"]) is not None:
+        fails.append("equal stamps flagged as a code change (git must not be asked)")
+    if "aaaaaaaaaaaa -> bbbbbbbbbbbb" not in (code_change(
+            stamped("aaaaaaaaaaaa"), stamped("bbbbbbbbbbbb"), "d1", "d2") or ""):
+        fails.append("differing stamps not flagged")
+    plain = _pk(("https://x/n.pdf", "none", "Same."))
+    if "git: 2b74789 2026-09-05" not in (code_change(
+            plain, plain, "2026-09-03", "2026-09-12",
+            commits=lambda a, b: ["2b74789 2026-09-05"]) or ""):
+        fails.append("unstamped pair with a code commit between not flagged")
+    if code_change(plain, plain, "2026-09-03", "2026-09-12",
+                   commits=lambda a, b: []) is not None:
+        fails.append("unstamped pair with no code commit between was flagged")
+    if "cannot say" not in (code_change(plain, plain, "2026-09-03", "2026-09-12",
+                                        commits=lambda a, b: None) or ""):
+        fails.append("git unable to answer did not flag the pair")
+
+    total = 17
     if fails:
         print("\n".join(fails))
         print(f"\nSELF-TEST FAILED: {len(fails)} failure(s) of {total} cases.")

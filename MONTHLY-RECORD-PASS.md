@@ -87,7 +87,15 @@ Only the third belongs in a public issue:
 Two signals decide most of it. **The transport line.** Where the tool reports
 that the capture method changed between the two captures, read it as extraction
 before reading it as movement — that is what separates a real revision from
-extraction noise. **Addresses and stated dates.** A changed URL is independent
+extraction noise. **The capture-code line**, the same way: where the tool
+reports that the capture code changed or was committed to between the two
+captures (FA-D-20261025-05), or that git cannot say, the pair is extraction
+until you have read both captures. An identical recipe digest is **not**
+evidence of a publisher's change: it covers the recipe, not the capture.py and
+capture-core.py that ran it. In licensure mobility's 2026-09 draft it was read
+that way, and district-of-columbia was triaged as a board removal when both
+"deleted" spans were HTML comments this project had begun stripping.
+**Addresses and stated dates.** A changed URL is independent
 of extraction, so a moved document is a finding on its own even where the text
 verifies; and a publisher's own revision date moving is the publisher saying it
 revised the document.

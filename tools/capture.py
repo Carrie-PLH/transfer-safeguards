@@ -716,6 +716,24 @@ def lint(rec, slug=None):
     return errs
 
 
+# The capture code's own digest (FA-D-20261025-05, FA-Q-20261001-06). The
+# recipe digest says what a capture was asked to do and is blind to the code
+# that did it: two captures under one recipe digest can still differ because
+# capture.py or capture-core.py changed between them, and record-digest.py used
+# to read an identical recipe digest as evidence against extraction (licensure
+# mobility's 2026-09 change record: district-of-columbia and iowa were this
+# repo's 2b74789, not the boards). Every packet now records both. It hashes the
+# two files whole, comments included, on purpose: a reader who cannot tell
+# whether an edit was cosmetic should treat the pair as extraction until read.
+def code_digest():
+    h = hashlib.sha256()
+    here = os.path.dirname(os.path.abspath(__file__))
+    for name in ('capture.py', 'capture-core.py'):
+        with open(os.path.join(here, name), 'rb') as fh:
+            h.update(fh.read())
+    return h.hexdigest()[:12]
+
+
 def digest(rec):
     """A short hash over the fields that determine the captured text. Title and
     notes are excluded: editing a title changes the packet header, not the
@@ -1430,7 +1448,9 @@ def render_packet(rec, bodies, day, supplied_ns=(), supplied_files=None):
              f'- Captured by tools/capture.py from tools/recipes/{rec["state"]}.json '
              f'(recipe digest {d}). Each source below was fetched and extracted by '
              f'its recorded recipe; re-running that recipe against an unchanged '
-             f'source reproduces this text.']
+             f'source reproduces this text.',
+             f'- Capture code {code_digest()} (sha256 over tools/capture.py and '
+             f'tools/capture-core.py as they ran; FA-D-20261025-05).']
     for s in rec['sources']:
         bits = [f'transport {s["transport"]}', f'extractor {s["extractor"]}']
         if s.get('scope'):
@@ -2001,6 +2021,9 @@ def self_test():
     # A rendered packet must satisfy retain-packet.py's own parser.
     packet = render_packet(good, {1: 'The child must remain.'}, '2026-08-28')
     check(packet.startswith('FIRST LINE OF PACKET'), 'canary missing')
+    check(re.search(r'^- Capture code [0-9a-f]{12} \(sha256 over tools/capture\.py',
+                    packet, re.M), 'packet does not record the capture-code digest')
+    check(code_digest() == code_digest(), 'the capture-code digest is not stable')
     check(re.search(r'^STATE: testland$', packet, re.M), 'state header missing')
     check(re.search(r'^SOURCE 1: Notice \| https://x\.gov/n\.pdf \| ', packet, re.M),
           'source header not in the expected shape')
