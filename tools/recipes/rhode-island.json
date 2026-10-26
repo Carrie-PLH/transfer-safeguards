@@ -4,25 +4,21 @@
   "sources": [
     {
       "n": 1,
-      "title": "210-RICR-50-00-7, Involuntary Discharge from a Long-Term Care Facility",
-      "url": "https://rules.sos.ri.gov/regulations/part/210-50-00-7",
+      "title": "210-RICR-50-00-7, Involuntary Discharge from a Long-Term Care Facility — PDF linked from rules.sos.ri.gov/regulations/part/210-50-00-7",
+      "url": "https://risos-apa-production-public.s3.amazonaws.com/EOHHS/REG_11893_20211215162511.pdf",
       "source_date": "Regulation Effective Date 01/04/2022 (Periodic Refile; original E-SIGNED December 15, 2021)",
       "transport": "curl",
-      "user_agent": "browser",
-      "extractor": "html-text",
-      "scope": "body",
-      "notes": "DRAFT — replace before promoting."
+      "extractor": "pdftotext-layout",
+      "notes": "The regulation's own PDF, the 'Download Regulation' file linked from rules.sos.ri.gov/regulations/part/210-50-00-7, fetched by plain curl from the Department of State's public S3 bucket (200, no user-agent needed). Routed here on owner decision FA-D-20261025-02 (FA-Q-20260927-02): the rules.sos.ri.gov page renders each section as <section class=\"doc-block\" style=\"display: none;\"> opened by an onclick on its heading, which capture.py rightly treats as hidden, so an html-text capture of that page keeps only the section headings. pdftotext-layout, not -raw: with -raw four page quotations broke on line joins; -layout matched every one. Captured whole; the file name changes when the regulation is refiled, which is the supersession signal for this source. Verified 2026-10-25: two captures byte-identical, 0 fidelity failures on both surfaces."
     },
     {
       "n": 2,
-      "title": "210-RICR-10-05-2, Appeals Process and Procedures for EOHHS Agencies and Programs — excerpt: EHO definition, § 2.2.1(A)(4) filing procedures, and § 2.4.8 (Institutional and Community-Based Long-Term Care Resident Involuntary Discharges and Transfers) in full",
-      "url": "https://rules.sos.ri.gov/regulations/part/210-10-05-2",
+      "title": "210-RICR-10-05-2, Appeals Process and Procedures for EOHHS Agencies and Programs — excerpt: EHO definition, § 2.2.1(A)(4) filing procedures, and § 2.4.8 (Institutional and Community-Based Long-Term Care Resident Involuntary Discharges and Transfers) in full — PDF linked from rules.sos.ri.gov/regulations/part/210-10-05-2",
+      "url": "https://risos-apa-production-public.s3.amazonaws.com/EOHHS/REG_11846_20211214162034.pdf",
       "source_date": "Regulation Effective Date 01/04/2022 (Refile Capabilities; original E-SIGNED December 14, 2021; original signing date 09/13/2018)",
       "transport": "curl",
-      "user_agent": "browser",
-      "extractor": "html-text",
-      "scope": "body",
-      "notes": "DRAFT — replace before promoting."
+      "extractor": "pdftotext-layout",
+      "notes": "The regulation's own PDF, the 'Download Regulation' file linked from rules.sos.ri.gov/regulations/part/210-10-05-2, fetched by plain curl from the Department of State's public S3 bucket (200, no user-agent needed). Routed here on owner decision FA-D-20261025-02 (FA-Q-20260927-02): the rules.sos.ri.gov page renders each section as <section class=\"doc-block\" style=\"display: none;\"> opened by an onclick on its heading, which capture.py rightly treats as hidden, so an html-text capture of that page keeps only the section headings. pdftotext-layout, not -raw: with -raw four page quotations broke on line joins; -layout matched every one. Captured whole; the file name changes when the regulation is refiled, which is the supersession signal for this source. Verified 2026-10-25: two captures byte-identical, 0 fidelity failures on both surfaces."
     },
     {
       "n": 3,
@@ -33,7 +29,7 @@
       "user_agent": "browser",
       "extractor": "html-text",
       "scope": "body",
-      "notes": "DRAFT — replace before promoting."
+      "notes": "rilegislature.gov statute page, curl with a browser user-agent, html-text over body, as drafted on 2026-09-01; the scope was not narrowed when the DRAFT note was replaced. Verified 2026-10-25 with the recipe as a whole."
     },
     {
       "n": 4,
@@ -44,18 +40,16 @@
       "user_agent": "browser",
       "extractor": "html-text",
       "scope": "body",
-      "notes": "DRAFT — replace before promoting."
+      "notes": "rilegislature.gov statute page, curl with a browser user-agent, html-text over body, as drafted on 2026-09-01; the scope was not narrowed when the DRAFT note was replaced. Verified 2026-10-25 with the recipe as a whole."
     },
     {
       "n": 5,
-      "title": "216-RICR-40-10-1, Licensing of Nursing Facilities — § 1.15.4(S), Rights of Residents (transfer, discharge, and bed-hold)",
-      "url": "https://rules.sos.ri.gov/regulations/part/216-40-10-1",
+      "title": "216-RICR-40-10-1, Licensing of Nursing Facilities — § 1.15.4(S), Rights of Residents (transfer, discharge, and bed-hold) — PDF linked from rules.sos.ri.gov/regulations/part/216-40-10-1",
+      "url": "https://risos-apa-production-public.s3.amazonaws.com/DOH/REG_13284_20250417153621975.pdf",
       "source_date": "Regulation Effective Date 05/07/2025 (Amendment; Agency Signature April 17, 2025)",
       "transport": "curl",
-      "user_agent": "browser",
-      "extractor": "html-text",
-      "scope": "body",
-      "notes": "DRAFT — replace before promoting."
+      "extractor": "pdftotext-layout",
+      "notes": "The regulation's own PDF, the 'Download Regulation' file linked from rules.sos.ri.gov/regulations/part/216-40-10-1, fetched by plain curl from the Department of State's public S3 bucket (200, no user-agent needed). Routed here on owner decision FA-D-20261025-02 (FA-Q-20260927-02): the rules.sos.ri.gov page renders each section as <section class=\"doc-block\" style=\"display: none;\"> opened by an onclick on its heading, which capture.py rightly treats as hidden, so an html-text capture of that page keeps only the section headings. pdftotext-layout, not -raw: with -raw four page quotations broke on line joins; -layout matched every one. Captured whole; the file name changes when the regulation is refiled, which is the supersession signal for this source. Verified 2026-10-25: two captures byte-identical, 0 fidelity failures on both surfaces."
     },
     {
       "n": 6,
@@ -65,9 +59,8 @@
       "transport": "curl",
       "user_agent": "browser",
       "http_version": "1.1",
-      "extractor": "html-text",
-      "scope": "body",
-      "notes": "DRAFT — replace before promoting. 2026-10-25 (FA-Q-20261013-02): http_version 1.1. eohhs.ri.gov and oha.ri.gov return 403 to every HTTP/2 request curl makes, with any user-agent, and serve the same request over HTTP/1.1 (the Arizona pattern in CLAUDE.md). The extractor is still the drafter's html-text, which cannot read this PDF, so the source fails with 'scope selector matched nothing' and the capture stays incomplete. Left so on purpose until sources 1, 2 and 5 verify: pdftotext-raw and pdftotext-layout both reproduce every page quotation from this form, but a complete capture would today fail fidelity on the rules.sos.ri.gov accordion text (41 failures, FA-Q-20260927-02) and a pass would read that as drift."
+      "extractor": "pdftotext-layout",
+      "notes": "The DHS-200NF notice form is a PDF served from eohhs.ri.gov/media/45546/download, read with pdftotext-layout (the drafter's html-text could not read it). eohhs.ri.gov refuses every HTTP/2 request with 403 and serves HTTP/1.1 (FA-Q-20261013-02), hence http_version 1.1. Verified 2026-10-25 with the recipe as a whole."
     },
     {
       "n": 7,
@@ -79,7 +72,7 @@
       "http_version": "1.1",
       "extractor": "html-text",
       "scope": "body",
-      "notes": "DRAFT — replace before promoting. 2026-10-25 (FA-Q-20261013-02): http_version 1.1. eohhs.ri.gov and oha.ri.gov return 403 to every HTTP/2 request curl makes, with any user-agent, and serve the same request over HTTP/1.1 (the Arizona pattern in CLAUDE.md)."
+      "notes": "eohhs.ri.gov page, curl with a browser user-agent over HTTP/1.1 (403 to every HTTP/2 request, FA-Q-20261013-02), html-text over body for the office's address block. The file list prints sizes as 'less than 1<span aria-hidden>mb</span><span class=\"visually-hidden\">megabytes</span>', which html-text reads as '1mbmegabytes'; no quotation rests on that widget text since 2026-10-25. Verified 2026-10-25 with the recipe as a whole."
     },
     {
       "n": 8,
@@ -91,7 +84,7 @@
       "http_version": "1.1",
       "extractor": "html-text",
       "scope": "body",
-      "notes": "DRAFT — replace before promoting. 2026-10-25 (FA-Q-20261013-02): http_version 1.1. eohhs.ri.gov and oha.ri.gov return 403 to every HTTP/2 request curl makes, with any user-agent, and serve the same request over HTTP/1.1 (the Arizona pattern in CLAUDE.md)."
+      "notes": "oha.ri.gov page, curl with a browser user-agent over HTTP/1.1 (403 to every HTTP/2 request, FA-Q-20261013-02), html-text over body. Verified 2026-10-25 with the recipe as a whole."
     },
     {
       "n": 9,
@@ -102,7 +95,7 @@
       "user_agent": "browser",
       "extractor": "html-text",
       "scope": "body",
-      "notes": "DRAFT — replace before promoting."
+      "notes": "alliancebltc.org page, curl with a browser user-agent, html-text over body, as drafted on 2026-09-01; the scope was not narrowed when the DRAFT note was replaced. Verified 2026-10-25 with the recipe as a whole."
     },
     {
       "n": 10,
@@ -113,7 +106,7 @@
       "user_agent": "browser",
       "extractor": "html-text",
       "scope": "body",
-      "notes": "DRAFT — replace before promoting."
+      "notes": "alliancebltc.org page, curl with a browser user-agent, html-text over body, as drafted on 2026-09-01; the scope was not narrowed when the DRAFT note was replaced. Verified 2026-10-25 with the recipe as a whole."
     },
     {
       "n": 11,
@@ -124,7 +117,7 @@
       "user_agent": "browser",
       "extractor": "html-text",
       "scope": "body",
-      "notes": "DRAFT — replace before promoting."
+      "notes": "alliancebltc.org page, curl with a browser user-agent, html-text over body, as drafted on 2026-09-01; the scope was not narrowed when the DRAFT note was replaced. Verified 2026-10-25 with the recipe as a whole."
     }
   ]
 }

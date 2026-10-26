@@ -1415,3 +1415,27 @@ unexplained failures; retain-packet --verify 0 failures.
 
 Reviewer: attended tooling session (Claude), 2026-10-25. No human review is
 claimed for this entry.
+
+## 2026-10-25 — attended tooling session: rhode-island recipe finished (FA-Q-20261013-02, FA-Q-20260927-02)
+
+**Rhode Island — REBUILD, with one page correction.** Owner decision
+FA-D-20261025-02: the three rules.sos.ri.gov sources (1, 2, 5) are captured
+from each regulation's own PDF, the "Download Regulation" file the page links
+(risos-apa-production-public.s3.amazonaws.com), read with pdftotext-layout,
+because the page hides every section in `<section class="doc-block"
+style="display: none;">` until clicked and an html-text capture kept only the
+headings (41 of the 50 failures the HTTP/1.1-only capture showed). Source 6
+(the DHS-200NF PDF) now reads with pdftotext-layout. Every DRAFT note was
+replaced with what was verified. Lint clean (digest 87d81ca11930); two
+captures byte-identical; 0 fidelity failures on states/rhode-island.md and
+site/states/rhode-island.html. One quotation in section 02 joined the two
+Appeals Office form names with the page's file-size widget text ("PDF file,
+less than 1 mb megabytes"), our 2026-09-01 capture's artifact, not the
+office's words; corrected to the two names as printed, with a dated
+change-log entry carrying the review placeholder. Retained as rebuild and
+promoted (hash 2920802780ee0216). Checked date 2026-09-23 -> 2026-10-25,
+re-rendered, derived dates synced, picker regenerated. check-all: 104 pages,
+no unexplained failures; retain-packet --verify 0 failures.
+
+Reviewer: attended tooling session (Claude), 2026-10-25. No human review is
+claimed for this entry; the page's change-log entry awaits owner review.
