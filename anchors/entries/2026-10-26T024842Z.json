@@ -1,0 +1,16 @@
+{
+ "entry": {
+  "file_count": 346,
+  "id": "2026-10-26T024842Z",
+  "manifest_file": "manifests/2026-10-26T024842Z.txt",
+  "manifest_sha256": "d210d0d38271bf5eac9826626e57090e0ff0251c1340e2e14e312d28aa255e50",
+  "note": "tooling session 2026-10-25: rhode-island rebuild (rules.sos.ri.gov via PDFs), capture-code stamp, owner review confirmed",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "c05771e8c3da08244011887b3312b4244eefb8f5213a6211548ea5260dc571d0",
+  "repo": "transfer-safeguards",
+  "utc": "2026-10-26T02:48:42+00:00"
+ },
+ "entry_sha256": "def09dcd8386d4ee9b1a47f406e333926c3aca30fcd9d846de518f5e72d02dc1"
+}
