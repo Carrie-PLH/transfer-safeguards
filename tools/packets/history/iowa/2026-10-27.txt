@@ -1,0 +1,776 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: iowa
+ASSEMBLED: 2026-10-27
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/iowa.json (recipe digest db5675492fce). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
+- SOURCE 1: transport curl; extractor pdftotext-layout; filters none.
+  The Legislature's single-rule PDF, matching the standing packet's own extraction exactly: the running heads ("IAC Ch 58, p.1"), the indented statutory-quotation blocks, and the parenthesised class citations at the end of many paragraphs are the rule's own and survive -layout intact. Plain curl with a pinned browser user-agent is enough; no WAF or JS gate sits in front of this host.
+- SOURCE 2: transport curl; extractor html-text; scope main; filters trim-lines, collapse-blank-runs.
+  Plain curl with a browser user-agent returns the full server-rendered page; no client-side gate. Scope 'main' holds the page's own on-page table of contents plus the body copy and excludes the site-wide header/footer chrome. Wider than the standing packet's own hand-curated excerpt, which is safe: a superset can only add evidence, never narrow what verifies. The department's own Cloudflare-style email obfuscation renders literally as the placeholder text "[email protected]" rather than the decoded address, matching how the standing packet already carries it — this page's markup does not use the data-cfemail attribute capture.py's decoder targets, so nothing is silently changed here.
+- SOURCE 3: transport curl; extractor pdftotext-layout; slice from '441—81.8(249A) Payment procedures.' to '441—81.9(249A) Billing procedures.'; filters none.
+  Same host and PDF-running-head pattern as source 1's single-rule PDF, but this is the whole-chapter PDF (441 IAC ch. 81 is Iowa Medicaid's nursing-facility payment chapter) because no single-rule PDF address exists for 81.8 the way it does for 481-58.40. Single column throughout -- unlike Missouri's or Arizona's two-column AAC/CSR renders -- so -layout preserves reading order with no interleaving; verified 2026-09-17 by reading the full extraction start to finish. Rule 81.8 states the Medicaid bed-hold: payment approved 'for periods the resident is absent overnight for purpose of visitation or vacation' up to 18 days per calendar year (81.8(3)"d"), and up to 10 days per calendar month for a hospitalization absence (81.8(3)"e"), with payment withheld unless the resident was a private-pay resident before the hospitalization and returns as a resident. Both anchors are single-occurrence in the chapter PDF (grep-verified against the plain extraction, no table-of-contents duplicate to bisect against, unlike Ohio's or Missouri's captures).
+
+SOURCE 1: 481 IAC 58.40(135C), Involuntary discharge or transfer (nursing facilities) — Iowa Administrative Code (PDF) | https://www.legis.iowa.gov/docs/iac/rule/481.58.40.pdf | source date: none stated on document beyond the IAC chapter running head | retrieved: 2026-10-27
+IAC                                                                                              Ch 58, p.1
+
+
+481—58.40(135C) Involuntary discharge or transfer.
+    58.40(1) Involuntary discharge or transfer permitted. A facility may involuntarily discharge or
+transfer a resident for only one of the following reasons:
+    a. Medical reasons;
+    b. The resident’s welfare or that of other residents;
+    c. Nonpayment for the resident’s stay, as described in the contract for the resident’s stay;
+    d. Due to action pursuant to Iowa Code chapter 229;
+    e. By reason of negative action by the Iowa department of human services; or
+    f. By reason of negative action by the quality improvement organization (QIO). (I, II, III)
+    58.40(2) Medical reasons. Medical reasons for transfer or discharge shall be based on the resident’s
+needs and shall be determined and documented in the resident’s record by the primary care provider.
+Transfer or discharge may be required in order to provide a different level of care to the resident. (II)
+    58.40(3) Welfare of a resident. Welfare of a resident or that of other residents refers to a resident’s
+social, emotional, or physical well-being. A resident may be transferred or discharged because the
+resident’s behavior poses a continuing threat to the resident (e.g., suicidal) or to the well-being of other
+residents or staff (e.g., the resident’s behavior is incompatible with other residents’ needs and rights).
+Written documentation that the resident’s continued presence in the facility would adversely affect the
+resident’s own welfare or that of other residents shall be made by the administrator or designee and shall
+include specific information to support this determination. (II)
+    58.40(4) Involuntary discharge or transfer prohibited—payment source. A resident shall not be
+transferred or discharged solely because the cost of the resident’s care is being paid under Iowa Code
+chapter 249A or because the resident’s source of payment is changing from private support to payment
+under Iowa Code chapter 249A. (I, II)
+    58.40(5) Notice. Involuntary transfer or discharge of a resident from a facility shall be preceded by a
+written notice to the resident and the responsible party. (II, III)
+    a. The notice shall contain all of the following information:
+    (1) The stated reason for the proposed transfer or discharge. (II)
+    (2) The effective date of the proposed transfer or discharge. (II)
+    (3) A statement, in not less than 12-point type, that reads as follows: (II)
+
+      You have a right to appeal the facility’s decision to transfer or discharge you. If you
+      think you should not have to leave this facility, you may request a hearing, in writing or
+      verbally, with the Iowa department of inspections and appeals (hereinafter referred to as
+      “department”) within 7 days after receiving this notice. You have a right to be represented at
+      the hearing by an attorney or any other individual of your choice. If you request a hearing, it
+      will be held no later than 14 days after the department’s receipt of your request and you will
+      not be transferred before a final decision is rendered. Extension of the 14-day requirement
+      may be permitted in emergency circumstances upon request to the department’s designee.
+      If you lose the hearing, you will not be transferred before the expiration of either (1) 30
+      days following your receipt of the original notice of the discharge or transfer, or (2) 5 days
+      following final decision of such hearing, including the exhaustion of all appeals, whichever
+      occurs later. To request a hearing or receive further information, call the department at
+      (515)281-4115, or write to the department to the attention of: Administrator, Division of
+      Health Facilities, Department of Inspections and Appeals, Lucas State Office Building, Des
+      Moines, Iowa 50319-0083.
+    b. The notice shall be personally delivered to the resident and a copy placed in the resident’s record.
+A copy shall also be transmitted to the department; the resident’s responsible party; the resident’s primary
+care provider; the person or agency responsible for the resident’s placement, maintenance, and care in the
+facility; and the department on aging’s office of the long-term care ombudsman. The notice shall indicate
+that copies have been transmitted to the required parties by using the abbreviation “cc:” and listing the
+names of all parties to whom copies were sent.
+
+Ch 58, p.2                                                                                                IAC
+
+
+     c. The notice required by paragraph 58.40(5)“a” shall be provided at least 30 days in advance of the
+proposed transfer or discharge unless one of the following occurs:
+     (1) An emergency transfer or discharge is mandated by the resident’s health care needs and is in
+accordance with the written orders and medical justification of the primary care provider. Emergency
+transfers or discharges may also be mandated in order to protect the health, safety, or well-being of other
+residents and staff from the resident being transferred. (II)
+     (2) The transfer or discharge is subsequently agreed to by the resident or the resident’s responsible
+party, and notification is given to the responsible party, the resident’s primary care provider, and the person
+or agency responsible for the resident’s placement, maintenance, and care in the facility.
+     (3) The discharge or transfer is the result of a final, nonappealable decision by the department of
+human services or the QIO.
+     d. A hearing requested pursuant to this subrule shall be held in accordance with subrule 58.40(7).
+     58.40(6) Emergency transfer or discharge. In the case of an emergency transfer or discharge, the
+resident must be given a written notice prior to or within 48 hours following the transfer or discharge. (II,
+III)
+     a. A copy of this notice shall be placed in the resident’s file. The notice shall contain all of the
+following information:
+     (1) The stated reason for the transfer or discharge. (II)
+     (2) The effective date of the transfer or discharge. (II)
+     (3) A statement, in not less than 12-point type, that reads as follows: (II)
+
+     You have a right to appeal the facility’s decision to transfer or discharge you on an
+     emergency basis. If you think you should not have to leave this facility, you may request
+     a hearing, in writing or verbally, with the Iowa department of inspections and appeals
+     (hereinafter referred to as “department”) within 7 days after receiving this notice. You have
+     a right to be represented at the hearing by an attorney or any other individual of your choice.
+     If you request a hearing, it will be held no later than 14 days after the department’s receipt
+     of your request. You may be transferred or discharged before the hearing is held or before
+     a final decision is rendered. If you win the hearing, you have the right to be transferred
+     back into the facility. To request a hearing or receive further information, call the department
+     at (515)281-4115, or write to the department to the attention of: Administrator, Division of
+     Health Facilities, Department of Inspections and Appeals, Lucas State Office Building, Des
+     Moines, Iowa 50319-0083.
+    b. The notice shall be personally delivered to the resident and a copy placed in the resident’s record.
+A copy shall also be transmitted to the department; the resident’s responsible party; the resident’s primary
+care provider; the person or agency responsible for the resident’s placement, maintenance, and care in the
+facility; and the department on aging’s office of the long-term care ombudsman. The notice shall indicate
+that copies have been transmitted to the required parties by using the abbreviation “cc:” and listing the
+names of all parties to whom copies were sent.
+    c. A hearing requested pursuant to this subrule shall be held in accordance with subrule 58.40(7).
+    58.40(7) Hearing.
+    a. Request for hearing.
+    (1) The resident must request a hearing within 7 days of receipt of the written notice.
+    (2) The request must be made to the department, either in writing or verbally.
+    b. The hearing shall be held no later than 14 days after the department’s receipt of the request unless
+either party requests an extension due to emergency circumstances.
+    c. Except in the case of an emergency discharge or transfer, a request for a hearing shall stay a
+transfer or discharge pending a final decision, including the exhaustion of all appeals. (II)
+    d. The hearing shall be heard by a department of inspections and appeals administrative law judge
+pursuant to Iowa Code chapter 17A and 7—Chapter 2506. The hearing shall be public unless the resident
+or resident’s legal representative requests in writing that the hearing be closed. In a determination as to
+
+IAC                                                                                                Ch 58, p.3
+
+
+whether a transfer or discharge is authorized, the burden of proof by a preponderance of the evidence rests
+on the party requesting the transfer or discharge.
+    e. Notice of the date, time, and place of the hearing shall be sent by certified mail or delivered in
+person to the facility, the resident, the responsible party, and the office of the long-term care ombudsman
+not later than 5 full business days after the department’s receipt of the request. The notice shall also inform
+the facility and the resident or the responsible party that they have a right to appear at the hearing in
+person or be represented by an attorney or other individual. The appeal shall be dismissed if neither party is
+present or represented at the hearing. If only one party appears or is represented, the hearing shall proceed
+with one party present. The office of the long-term care ombudsman shall have the right to appear at the
+hearing.
+    f. The administrative law judge’s written decision shall be mailed by certified mail to the facility,
+resident, responsible party, and the office of the long-term care ombudsman within 10 working days after
+the hearing has been concluded.
+    g. If the basis for an involuntary transfer or discharge is the result of a negative action by the Iowa
+department of human services or the QIO, an appeal shall be filed with those agencies as appropriate.
+Continued payment shall be consistent with rules of those agencies.
+    58.40(8) Nonpayment. If nonpayment is the basis for involuntary transfer or discharge, the resident
+shall have the right to make full payment up to the date that the discharge or transfer is to be made and then
+shall have the right to remain in the facility. (II)
+    58.40(9) Discussion of involuntary transfer or discharge. Within 48 hours after notice of involuntary
+transfer or discharge has been received by the resident, the facility shall discuss the involuntary transfer or
+discharge with the resident, the resident’s responsible party, and the person or agency responsible for the
+resident’s placement, maintenance, and care in the facility. (II)
+    a. The facility administrator or other appropriate facility representative serving as the administrator’s
+designee shall provide an explanation and discussion of the reasons for the resident’s involuntary transfer
+or discharge. (II)
+    b. The content of the explanation and discussion shall be summarized in writing, shall include the
+names of the individuals involved in the discussion, and shall be made part of the resident’s record. (II)
+    c. The provisions of this subrule do not apply if the involuntary transfer or discharge has already
+occurred pursuant to subrule 58.40(6) and emergency notice is provided within 48 hours.
+    58.40(10) Transfer or discharge planning.
+    a. The facility shall develop a plan to provide for the orderly and safe transfer or discharge of each
+resident to be transferred or discharged. (II)
+    b. To minimize the possible adverse effects of the involuntary transfer, the resident shall receive
+counseling services by the sending facility before the involuntary transfer and by the receiving facility after
+the involuntary transfer. Counseling shall be documented in the resident’s record. (II)
+    c. The counseling requirement in paragraph 58.40(10)“b” does not apply if the discharge has already
+occurred pursuant to subrule 58.40(6) and emergency notice is provided within 48 hours.
+    d. Counseling, if required, shall be provided by a licensed mental health professional as defined in
+Iowa Code section 228.1(6). (II)
+    e. The health care facility that receives a resident who has been involuntarily transferred shall
+immediately formulate and implement a plan of care which takes into account possible adverse effects the
+transfer may cause. (II)
+    58.40(11) Transfer upon revocation of license or voluntary closure. Residents shall not have the right
+to a hearing to contest an involuntary discharge or transfer resulting from the revocation of the facility’s
+license by the department of inspections and appeals. In the case of the voluntary closure of a facility, a
+period of 60 days must be allowed for an orderly transfer of residents to other facilities.
+    58.40(12) Intrafacility transfer.
+    a. Residents shall not be arbitrarily relocated from room to room within a licensed health care
+facility. (I, II) Involuntary relocation may occur only in the following situations, which shall be
+documented in the resident’s record: (II)
+    (1) Resident’s incompatibility with or disturbance to other roommates.
+
+Ch 58, p.4                                                                                                          IAC
+
+
+     (2) For the welfare of the resident or other residents of the facility.
+     (3) For medical, nursing or psychosocial reasons, as judged by the primary care provider, nurse or
+social worker in the case of a facility which groups residents by medical, nursing or psychosocial needs.
+     (4) To allow a new admission to the facility that would otherwise not be possible due to separation of
+roommates by sex.
+     (5) In the case of a resident whose source of payment was previously private, but who now is eligible
+for Title XIX (Medicaid) assistance, the resident may be transferred from a private room to a semiprivate
+room or from one semiprivate room to another.
+     (6) Reasonable and necessary administrative decisions regarding the use and functioning of the
+building.
+     b. Unreasonable and unjustified reasons for changing a resident’s room without the concurrence of
+the resident or responsible party include:
+     (1) Change from private pay status to Title XIX, except as outlined in subparagraph 58.40(12)“a”(5).
+(II)
+     (2) As punishment or behavior modification, except as specified in subparagraph 58.40(12)“a”(1).
+(II)
+     (3) Discrimination on the basis of race or religion. (II)
+     c. If intrafacility relocation is necessary for reasons outlined in paragraph 58.40(12)“a,” the resident
+shall be notified at least 48 hours prior to the transfer and the reason therefor shall be explained. The
+responsible party shall be notified as soon as possible. The notification shall be documented in the
+resident’s record and signed by the resident or responsible party. (II)
+     d. If emergency relocation is required in order to protect the safety or health of the resident or
+other residents, the notification requirements may be waived. The conditions of the emergency shall be
+documented. The family or responsible party shall be notified immediately or as soon as possible of the
+condition that necessitates emergency relocation, and such notification shall be documented. (II)
+     e. A transfer to a part of a facility that has a different license must be handled the same way as a
+transfer to another facility and not as an intrafacility transfer. (II, III)
+[ARC 1752C, IAB 12/10/14, effective 1/14/15; ARC 3523C, IAB 12/20/17, effective 1/24/18; ARC 7033C, IAB 5/31/23, effective
+7/5/23; Editorial change: IAC Supplement 8/5/26]
+
+SOURCE 2: Iowa Department of Health and Human Services — Office of the State Long-Term Care Ombudsman | https://hhs.iowa.gov/family-community/aging-services/ltc-ombudsman | source date: current on retrieval | retrieved: 2026-10-27
+Office of the State Long-Term Care Ombudsman
+
+ Topics:
+
+ Programs & Services
+
+On this page...
+
+Quick Help - What Do You Need Today?
+
+Local Ombudsman - Your Local Ombudsman is Ready to Help - Find Them Here
+
+Transfers, Discharges and Facility Closures
+
+Volunteer - Change Lives, Including Yours!
+
+Education and Resources - Learn, Connect and Get Involved
+
+Resident and Family Councils
+
+High Five Topics
+
+Resources
+
+Contact - Talk to Us
+
+ Want to Receive Updates from our Office?
+
+Sign-up for the Office of the State Long-Term Care Ombudsman's email list!
+
+Sign-Up
+
+The Office of the State Long-Term Care Ombudsman offers free, confidential advocacy for Iowans living in nursing facilities, assisted living programs, residential care facilities, and elder group homes. We’re here to help residents and families understand their rights and address concerns about long-term care.
+
+We also assist Medicaid managed care members who live in a long-term care facility or receive services through an HCBS waiver, making sure they understand their rights and receive the services they need.
+
+Our team listens, looks into concerns when needed, and works with facilities to ensure every resident is treated with dignity and respect. If you’re unsure where to start or have a question, we’re here to help.
+
+You can reach us through our online form or by contacting us directly.
+
+Toll-Free: 866-236-1430
+
+Email: sltco@hhs.iowa.gov
+
+Mailing Address: 321 E. 12th St., 2nd Floor, Des Moines, IA 50319
+
+Get Help Now— What do you need today?
+
+Volunteer With Us - Change lives including yours
+
+Education and Resources - Learn, connect and get involved
+
+ Back to top
+
+Quick Help - What Do You Need Today?
+
+Report a concern → Share what’s happening and get support.
+
+Find local support → Connect with your regional Ombudsman.
+
+Know your rights → Clear, easy-to-read guides.
+
+Involuntary discharge help → Understand notices and appeal steps.
+
+Facility closure→ What to expect and how we can help.
+
+How we Help - Real Help, from Real People
+
+ Back to top
+
+Local Ombudsman - Your Local Ombudsman is Ready to Help - Find Them Here
+
+A long-term care ombudsman makes sure your voice is heard. We listen to concerns, help solve problems, and protect the rights of people living in long-term care or receiving HCBS waiver services.
+
+Toll-Free 866.236.1430
+
+Email: sltco@hhs.iowa.gov
+
+Long-Term Care Ombudsmen help residents and their families address concerns, understand their options, and protect their rights. If something feels off—or you just need guidance—we’re here to support you.
+
+We listen and help you decide next steps.
+
+We look into concerns and work toward solutions
+
+ We advocate for dignity, respect, and quality of life.
+
+You can contact the OSLTCO if you want to:
+
+• Get help with concerns, care issues, or involuntary discharges/closures
+
+• Understand rights, facility policies, rules, or managed care processes
+
+• Learn about care plans, services, transfers, or discharges
+
+• Get guidance on power of attorney, guardians, or conservators
+
+• Learn about Resident or Family Councils
+
+• Get assistance with Medicaid managed care issues
+
+• Find information to help choose a long-term care facility or managed care organization
+
+You can also learn more by viewing our LTC Ombudsman Brochure, Resident Rights Brochure, and our informational Ombudsman Video and Resident Rights Video.
+
+ Back to top
+
+Transfers, Discharges and Facility Closures
+
+Residents have important rights during transfers or discharges. This includes receiving written notice and having the opportunity to appeal. Facilities may only issue a discharge for specific reasons, such as medical needs they cannot meet, safety concerns, nonpayment, certain policy issues, or a facility closure. If you receive a notice—or are concerned about a possible move—contact us. We can explain your rights and help you determine next steps. Learn more about involuntary discharges with the Involuntary Discharge Brochure. Facilities submitting their monthly discharge information may use the Monthly Discharge Tracking Sheet (10.31 KB) .xlsx .
+
+If a facility closes, we support residents and families throughout the transition. We assist with planning, understanding rights, selecting a new placement, and coordinating with the facility to help ensure the move is as safe and smooth as possible. For more guidance on what to expect during a closure, view the Facility Closure Brochure and Facility Closure Video.
+
+ Back to top
+
+Volunteer - Change Lives, Including Yours!
+
+Volunteers make a real difference in the lives of long-term care residents. By visiting facilities, listening to residents, and supporting advocacy and community education, volunteers help ensure every resident’s voice is heard. We provide full training and ongoing support, making it easy to get started.
+
+Interested in volunteering? Download the application (569.12 KB) .pdf , or email sltco@hhs.iowa.gov if you have questions or want more information.
+
+ Back to top
+
+Education and Resources - Learn, Connect and Get Involved
+
+Past Town Halls
+
+ List items for OSLTCO Past Town Halls
+
+February 2025: Personal Needs Allowance (PNA) Updates
+
+Personal Needs Allowance (PNA) is the amount of monthly income an individual on Medicaid who resides in a nursing facility can keep. Currently, in Iowa, this amount is $50 per month.  This town hall builds off our October 2024 town hall, discussing PNA updates in Iowa and the resident-led initiative to increase the amount to $65 with an annual cost of living adjustment (COLA).
+
+February 2025 Town Hall Recording
+
+June 2025: About the OSLTCO and What is a Long-Term Care...
+
+The Office of the State Long-Term Care Ombudsman (OSLTCO) invites you to join our June town hall, where we will talk about our office and what a long-term care ombudsman does.  We often hear that people aren’t sure how to pronounce “ombudsman,” let alone understand our role. Many tell us they wish they’d known about our services sooner—especially during critical moments or when they had questions and needed support.
+
+June 2025 Town Hall Recording
+
+September 2025: Family Council Updates
+
+Family councils can be described as organized, self-led groups of families and resident representatives who meet regularly to help support and advocate for quality of life and care for individuals in long-term care. September's town hall is a follow up, where there is again discussion about family councils, providing an update on work being done in this area and why it is important to have family, loved ones, and community involved and serving as a voice for residents.
+
+September 2025 Town Hall Recording
+
+December 2025: Addressing Common Issues in Long-Term Care...
+
+Every year, the Office of the State Long-Term Care Ombudsman (OSLTCO) team works to resolve a variety of complaints brought forward by or on behalf of residents in long-term care facilities.  This town hall includes an overview of top complaints received by long-term care ombudsman programs in Iowa and nationwide and focuses on conversation with Iowa's local long-term care ombudsmen about common issues they help address.  Learn what those common issues are, what the regulations say, and what can be done for successful complaint resolution from Iowa's local ombudsmen who advocate every day to uphold quality of care and quality of life for those in long-term care facilities.
+
+December 2025 Town Hall Recording
+
+March 2026: Systems Advocacy: Together, We Can!
+
+March 2026 Town Hall Recording
+
+June 2026: The Resident Takeover...
+
+June 2026 Town Hall Recording
+
+ Back to top
+
+Resident and Family Councils
+
+Resident and Family Councils give long-term care residents, their families, and their supporters a structured and empowering way to share concerns, build community, and work with facility staff to improve quality of life and care. Resident councils are led by residents, while family councils are led by family members and representatives, and both groups meet regularly to discuss issues, plan activities, and bring forward recommendations. Facilities are required to support these councils by providing space, respecting privacy, and responding to concerns. Tenants in assisted living also have specific rights to raise issues and participate in policy discussions. Whether you want to start a council or strengthen an existing one, we’re here to help you make a meaningful impact.
+
+Empower your voice. Use " Family Councils: Making an Impact (4.35 MB) .pdf " to start or join a family council and help strengthen your loved one’s long-term care community.
+
+Tips for Leading a Council
+
+ Family Council Center - The Consumer Voice
+
+ Family Councils: Making an Impact
+
+ Resident Council Center - The Consumer Voice
+
+ Resident Council Rights Fact Sheet
+
+ Forms & Tools for Resident-Centered Advocacy - Nursing Home 411
+
+ Family Councils: For the Families, By the Families - Nursing Home 411
+
+ Fact Sheet: Resident & Family Councils - Nursing Home 411
+
+ Back to top
+
+High Five Topics
+
+Our High Fives are easy-to-read, easy-to-understand topics shared at every support meeting that provide 5 helpful tips for resident and family councils.  These strategies can help individuals better self-advocate and feel empowered to speak up about their or their loved one's care .
+
+ List items for High Five Topics
+
+2026
+
+ July 2026: 5 Tips for Starting a Council (240.41 KB) .pdf
+
+ May 2026: 5 Signs a Long-Term Care Facility Values Person-Centered Car (240.24 KB).pdf (240.24 KB) .pdf
+
+ March 2026: 5 Things to Know About Iowa's Office of the State Long-Term Care Ombudsman (234.45 KB).pdf (234.45 KB) .pdf
+
+ January 2026: 5 Things Every Person who Moves into a Facility Should Know (171.96 KB).pdf (171.96 KB) .pdf
+
+2025
+
+ November 2025: 5 Tips to Support Systems Advocacy (160.62 KB).pdf (160.62 KB) .pdf
+
+ September 2025: 5 ways You Can Show Appreciation to Long-Term Care Facility Staff (253.97 KB).pdf (253.97 KB) .pdf
+
+ August 2025: 5 Ways you can Respond when a Facility is Not Responsive to the Council (107.69 KB).pdf (107.69 KB) .pdf
+
+ July 2025: 5 Ways to Solicit a Better Response from Facility or Program Staff (281.23 KB).pdf (281.23 KB) .pdf
+
+ June 2025: 5 Reasons Resident and Family Councils should exist in every facility (283.07 KB).pdf (283.07 KB) .pdf
+
+ Past Resident and Family Council Support Meetings
+
+2026
+
+July 2026 Resident and Family Councils
+
+Recording / View High Five  (240.41 KB) .pdf
+
+May 2026 Resident and Family Councils
+
+View Recording / View High Five (240.24 KB) .pdf
+
+March 2026 Resident and Family Councils
+
+View recording / View High Five
+
+January 2026 Resident and Family Councils
+
+View recording / View High Five
+
+2025
+
+November 2025 Resident and Family Councils
+
+View recording / View High Five
+
+September 2025 Resident and Family Councils
+
+View recording / View High Five
+
+August 2025 Resident and Family Councils
+
+View recording / View High Five
+
+July 2025 Resident and Family Councils
+
+View recording / View High Five
+
+June 2025 Resident and Family Councils
+
+View recording / View High Five
+
+ Back to top
+
+Resources
+
+ List items for OSLTCO Resources
+
+We offer easy-to-use guides and practical tools to help residents, families, and caregivers understand their rights and navigate the long-term care system. These resources cover a wide range of topics, including resident rights, self-advocacy, Medicaid managed care, involuntary discharges, facility closures, Resident and Family Council leadership, voting rights, and dependent adult abuse. All materials are available on our website or by request.
+
+Annual Reports
+
+ Annual Report FFY 2024 (598.71 KB) .pdf
+
+ Annual Report FFY 2023 (1.2 MB) .pdf
+
+Annual Report FFY 2022
+
+Annual Report FFY 2021
+
+Key Aging and Long-Term Care Resources
+
+Find Healthcare Providers: Compare Care Near You | Medicare
+
+National Consumer Voice for Quality Long-Term Care:
+
+Disability Rights IOWA
+
+Iowa Legal Aid
+
+Iowa Area Agencies on Aging (AAA )
+
+Your guide to living in a nursing home (medicare.gov)
+
+How to Speak Up for Yourself
+
+National Consumer Voice for Quality Long-Term Care:
+
+Medicaid Managed Care Basics
+
+ How to Be Your Own Best Advocate: Navigating Managed Care in Iowa (581.55 KB) .pdf
+
+Your Rights as a Resident
+
+Resident Rights Video
+
+Resident Rights Brochure (3.31 MB).pdf
+
+Sexual Expression in Long-Term Care Brochure (for Residents) (2.52 MB).pdf
+
+Sexual Expression in Long-Term Care (for Facilities) (86.02 KB).pdf
+
+Sexual Expression in Long-Term Care (includes Resources) (227.41 KB).pdf
+
+Help with Involuntary Discharges
+
+ Involuntary Discharge Brochure (2.6 MB) .pdf
+
+Involuntary Discharge Video
+
+What to Know About Facility Closures
+
+Facility Closure Video
+
+ Involuntary Discharge Brochure (2.6 MB) .pdf
+
+Understanding Dependent Adult Abuse
+
+ Dependent Adult Abuse Brochure (47.87 MB) .pdf
+
+Elder Abuse Video
+
+Voting in Long-Term Care
+
+Iowa Voter Guide 2024 (464.72 KB).pdf
+
+Iowa Voter Guide (short) 2024 (303.1 KB).pdf
+
+ Helpful Regulations and Policy Links
+
+Older Americans Act 42 USC 3058 - State Long-Term Care Ombudsman program
+
+The Code of Federal Regulations eCFR :: 45 CFR Part 1324 Subpart A -- State Long-Term Care Ombudsman Program
+
+Iowa Code Chapter 231 231.pdf
+
+State Long Term Care Ombudsman Iowa Administrative Code 441.230 Iowa Legislature - Rule Listings
+
+Iowa Administrative Code 481 DIAL Iowa Legislature - Agency
+
+ Back to top
+
+Contact - Talk to Us
+
+Office of the State Long-Term Care Ombudsman
+
+321 E. 12th Street, 2nd Floor  Des Moines, IA 50319
+
+Phone: 866-236-1430
+
+Email: sltco@hhs.iowa.gov
+
+Online Complaint Form
+
+ Relay Iowa TTY: 1-800-735-2942
+
+Telephone Accessibility Assistance
+
+ Language Accessibility
+
+ Call Relay Iowa TTY
+
+For telephone accessibility assistance if you are deaf, hard-of-hearing, deaf-blind, or have difficulty speaking.
+
+ ةیبرعلا | 简体中文 | Deutsch | Français
+
+ हिंदी | unDusdm (Karen) | 한국어 | ພາສາ
+
+ Llame a Relay Iowa TTY
+
+Teléfono de texto para personas con problemas de audición, del habla y ceguera si necesita asistencia.
+
+ ລາວ | Pennsylfaanisch Deitsch | Русский
+
+ Српско-хрватски | Tagalog | ไทย | Tiếng Việt
+
+ Back to top
+
+ Secondary Navigation Menu
+
+Aging Services
+
+LTC Ombudsman
+
+Abuse Prevention & Legal Assistance
+
+Caregiver Resources
+
+Home Modification
+
+Iowa Area Agencies on Aging
+
+For AAA Professionals
+
+Iowa Centenarians
+
+Nutrition & Wellness
+
+Congregate Nutrition Locations
+
+Falls Prevention
+
+Fresh Conversations
+
+Support Services
+
+SOURCE 3: 441 Iowa Administrative Code chapter 81 (Human Services — Nursing Facilities), rule 81.8(249A), Payment procedures (PDF) | https://www.legis.iowa.gov/docs/iac/chapter/05-13-2026.441.81.pdf | source date: [ARC 9279C, IAB 5/14/25, effective 7/1/25] | retrieved: 2026-10-27
+441—81.8(249A) Payment procedures.
+    81.8(1) Method of payment. Except for Medicaid accountability measures payment established in
+paragraph 81.5(16)“g,” facilities will be reimbursed under a modified price-based vendor payment
+program. A per diem rate will be established based on information submitted according to rule
+441—81.5(249A). The per diem rate will include an amount for Medicaid accountability measures.
+    81.8(2) Authorization of payment. The department will authorize payment for care in a facility. The
+authorization shall be obtained prior to admission of the resident, whenever possible. For a nursing facility
+to be eligible for Medicaid payment for a resident, the facility must, when applicable, exhaust all Medicare
+benefits.
+    81.8(3) Periods authorized for payment.
+    a. Payment will be made on a per diem basis for the portion of the month the resident is in the
+facility.
+    b. Payment will be authorized as long as the resident is certified as needing care in a nursing facility.
+    c. Payment will be approved for the day of admission but not the day of discharge or death.
+    d. Payment will be approved for periods the resident is absent overnight for purpose of visitation or
+vacation. The facility will be paid to hold the bed for a period not to exceed 18 days in any calendar year.
+Additional days shall be based upon a recommendation by the resident’s physician in the plan of care that
+additional days would be rehabilitative.
+    e. Payment will be approved for a period not to exceed 10 days in any calendar month when the
+resident is absent due to hospitalization. Medicaid payment to the facility may not be initiated while a
+resident is on reserve bed days unless the person was residing in the facility as a private pay resident prior
+to the hospitalization and returns to the facility as a resident.
+    f. Payment for periods when residents are absent for a visit, vacation, or hospitalization will be
+made at zero percent of the nursing facility’s rate, except for special population facilities and state-operated
+nursing facilities, which will be paid for such periods at 42 percent of the facility’s rate.
+    g. Payment for residents determined by utilization review to require the residential level of care will
+be made at the maximum state supplementary assistance rate. This rate is effective as of the date of final
+notice by utilization review that the lower level of care is required.
+    h. Ventilator patients.
+    (1) Definition. For purposes of this paragraph only, “ventilator patients” means Medicaid-eligible
+patients who, as determined by the quality improvement organization, require a ventilator at least six hours
+every day, are inappropriate for home care, and have medical needs that require skilled care.
+    (2) Reimbursement. In-state nursing facilities will receive reimbursement for care of ventilator
+patients equal to the sum of the Medicare-certified hospital-based nursing facility rate plus the Medicare-
+certified hospital-based nursing facility non-direct care rate component as defined in subparagraph 81.5(16)
+“f”(3). Facilities may continue to receive this reimbursement at this rate for 30 days after a ventilator
+patient is weaned from a ventilator if, during the 30 days, the patient continues to reside in the facility and
+continues to meet skilled care criteria.
+    i. Payment for residents of a special population facility licensed by the department of inspections,
+appeals, and licensing as an intermediate care facility for persons with mental illness will be made only
+when the resident is aged 65 or over. If a resident under the age of 65 is admitted with a payment source
+other than Medicaid, the facility shall notify the resident, or when applicable the resident’s guardian or
+legal representative, that the department may neither make payment to the facility nor make payment for
+any other services rendered by any provider while the person resides in the facility, until the resident attains
+the age of 65.
+    j. Nonpayment for provider-preventable conditions. Reimbursement will not be made for patient
+days attributable to preventable conditions identified pursuant to this rule that develop in a nursing facility.
+Any patient days attributable to a provider-preventable condition must be billed as noncovered days. A
+provider-preventable condition is one in which any of the following occur:
+
+IAC 12/24/25                               Human Services[441]                                    Ch 81, p.35
+
+
+    (1) The wrong surgical or other invasive procedure is performed on a resident; or
+    (2) A surgical or other invasive procedure is performed on the wrong body part; or
+    (3) A surgical or other invasive procedure is performed on the wrong resident.
+    81.8(4) Supplementation. Only the amount of client participation may be billed to the resident for
+the cost of care, and the facility must accept the combination of client participation and payment made
+through the department as payment in full for the care of a resident. No additional charges shall be made to
+residents or family members for any supplies or services required in the facility-developed plan of care for
+the resident.
+    Residents may choose to spend their personal funds on items of personal care such as professional
+beauty or barber services, but the facility shall not require this expenditure and shall not routinely obligate
+residents to any use of their personal funds.
+    a. Supplies or services that the facility shall provide:
+    (1) Nursing services, social work services, activity programs, individual and group therapy,
+rehabilitation or habilitation programs provided by facility staff in order to carry out the plan of care
+for the resident.
+    (2) Services related to the nutrition, comfort, cleanliness and grooming of a resident as required under
+state licensure and Medicaid survey regulations.
+    (3) Medical equipment and supplies including wheelchairs except for customized wheelchairs for
+which separate payment may be made pursuant to 441—paragraph 78.10(2)“d,” medical supplies
+except for those listed in 441—paragraph 78.10(4)“b,” oxygen except under circumstances specified in
+441—paragraph 78.10(2)“a,” and other items required in the facility-developed plan of care.
+    (4) Nonprescription drugs ordered by the physician.
+    (5) Fees charged by medical professionals for services requested by the facility that do not meet
+criteria for direct Medicaid payment.
+    b. The facility shall arrange for nonemergency transportation for members to receive necessary
+medical services outside the facility.
+    (1) If a family member, friend, or volunteer is not available to provide the transportation at no charge,
+the facility shall arrange and pay for the medically necessary transportation within 30 miles of the facility
+(one way).
+    (2) For medically necessary transportation beyond 30 miles from the facility (one way), when no
+family member, friend, or volunteer is available to provide the transportation at no charge, the facility shall
+arrange for transportation through the broker designated by the department, with the cost to be paid by the
+broker pursuant to rule 441—78.13(249A).
+    c. The department will provide direct payment to relieve the facility of payment responsibility for
+certain medical equipment and services that meet the Medicare definition of medical necessity and are
+provided by providers enrolled in the Medicaid programs including:
+    (1) Physician services.
+    (2) Ambulance services.
+    (3) Hospital services.
+    (4) Hearing aids, braces and prosthetic devices.
+    (5) Customized wheelchairs for which separate payment may be made pursuant to 441—subparagraph
+78.10(2)“a”(4).
+    d. Other supplies or services for which direct Medicaid payment may be available include:
+    (1) Drugs covered pursuant to 441—subrule 78.1(2).
+    (2) Dental services.
+    (3) Optician and optometrist services.
+    (4) Repair of medical equipment and appliances that belong to the resident.
+    (5) Transportation to receive medical services beyond 30 miles from the facility (one way), through
+the broker designated by the department pursuant to a contract between the department and the broker.
+    (6) Other medical services specified in 441—Chapter 78.
+    e. The following supplementation is permitted:
+
+Ch 81, p.36                                  Human Services[441]                                IAC 12/24/25
+
+
+     (1) The resident, the resident’s family, or friends may pay to hold the resident’s bed in cases where a
+resident who is not discharged from the facility is absent overnight. When the resident is discharged, the
+facility may handle the holding of the bed in the same manner as for a private paying resident.
+     (2) Payments made by the resident’s family toward cost of care of the resident shall not be considered
+as supplementation so long as the payments are included in client participation and are not over and above
+the payment made by the state for care of the resident.
+     (3) If a physician does not order a nonprescription drug by brand name, the facility may offer a
+generic. If a resident or family member requests a brand name, the resident or family member may pay for
+the brand-name nonprescription drug.
+     (4) Supplementation for provision of a private room not otherwise covered under the medical
+assistance program, subject to the following conditions, requirements, and limitations:
+     1. Supplementation for provision of a private room is not permitted for any time period during which
+the private room is therapeutically required pursuant to 42 CFR 483.10 (as amended to August 1, 2024).
+     2. Supplementation for provision of a private room is not permitted for a calendar month if no room
+other than the private room was available as of the first day of the month or as of the resident’s subsequent
+initial occupation of the private room.
+     3. Supplementation for provision of a private room is not permitted for a calendar month if the
+facility’s occupancy rate was less than 50 percent as of the first day of the month or as of the resident’s
+subsequent initial occupation of the private room.
+     4. Supplementation for provision of a private room is not permitted if the nursing facility only
+provides one type of room or all private rooms.
+     5. If a nursing facility provides for supplementation for provision of a private room, the facility may
+base the supplementation amount on the difference between the amount paid for a room covered under the
+medical assistance program and the private pay rate for the private room identified for supplementation.
+However, the total payment for the private room from all sources for a calendar month shall not be greater
+than the aggregate average private room rate during that month for the type of rooms covered under the
+medical assistance program for which the resident would be eligible.
+     6. If a nursing facility provides for supplementation for provision of a private room, the facility shall
+notify all residents, prospective residents, and their legal representatives in accordance with Iowa Code
+section 249A.4(10)“b”(1).
+     7. For a resident for whom the nursing facility receives supplementation, the nursing facility shall
+indicate in the resident’s record the information set forth in Iowa Code section 249A.4(10)“b”(2).
+     f. Any medical equipment, supplies, appliances, or devices, personal care items, drugs, or other
+items of personal property that are paid for directly by the Medicaid program or are paid for by the resident
+or the resident’s family, on a nonrental basis, are the personal property of the resident.
+     g. The facility shall not charge a resident for days that are not covered under Medicaid due to a
+provider-preventable condition pursuant to paragraph 81.8(3)“j” and shall not discharge a resident due to
+nonpayment for such days.
+     This rule is intended to implement Iowa Code section 249A.4.
+[ARC 9279C, IAB 5/14/25, effective 7/1/25]
+

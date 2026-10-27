@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Office of the Long-Term Care Ombudsman, an office of its own rather than a programme inside a service agency. Its published contact: "Kansas Long-Term Care Ombudsman" at "900 SW Jackson, Suite 1041 Topeka, Kansas 66612", "Toll FREE: 1 (877) 662 - 8362". On this subject the office states: "Involuntary Discharge continues to be one of the top complaints that ombudsmen report here in Kansas and nationally."
 
-**Sources last checked.** 2026-10-06
+**Sources last checked.** 2026-10-27
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Louisiana Ombudsman Program, in the Governor's Office of Elderly Affairs. The office publishes a regional roster and a state number: "If calling from outside Louisiana, you may need to use the non-toll-free phone numbers or contact the State Office via its toll-free number: (866) 632-0922. The State Office will ask the local office to contact you." The state office publishes an address beside those numbers: "StateOmbudsman@la.gov". It states: "Ombudsmen services are confidential and free of charge." The rule writes the program into the process: "the nursing facility shall transmit a copy of the" "involuntary transfer/discharge notice to the local long-term" "care ombudsman program."
 
-**Sources last checked.** 2026-09-15
+**Sources last checked.** 2026-10-27
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

@@ -1,10 +1,11 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: louisiana
-ASSEMBLED: 2026-09-15
+ASSEMBLED: 2026-10-27
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/louisiana.json (recipe digest 733a555d0a54). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
 - SOURCE 1: transport curl; extractor pdftotext-layout; pages 27-28; filters none.
   The 2026-08-30 capture took this excerpt by hand, cutting within pages 27 and 28 to §9775 alone. This recipe takes both printed pages whole instead, which is reproducible where a hand cut is not: the captured text is a superset of the standing one, adding the neighbouring sections that share those pages. The Administrative Code prints in two columns and pdftotext -layout renders each printed line as the left column followed by the right, so a subsection running down one column is broken across lines carrying unrelated text from its neighbour; the running heads, page numbers and the start of §9777 inside this range are the document's own and are preserved. Page numbers rather than a text slice because the range is what a reader can check against the published PDF.
 - SOURCE 2: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
@@ -14,7 +15,7 @@ CAPTURE NOTES:
 - SOURCE 4: transport curl; extractor pdftotext-layout; slice from 'II. Leave Days for Residents of Nursing Facilities' to 'TN: 24-0008 Approval Date: May 29, 2024'; filters none.
   Added 2026-09-15, deepening the state to a full page. The slice covers only section II (nursing facility leave/bed-hold days), stopping at the page footer that closes it; section I (ICF/IID) precedes it and is out of scope, and the pages after this excerpt (evacuation-related bed-hold provisions, further back in the same attachment) are a poor scan with visible OCR corruption in the served PDF -- letters dropped, ligatures fused ('ofabsence', 'retum'), diacritics inserted into plain English words -- and are not captured as quotable text for that reason; the ordinary hospital/home leave-day policy this page needs sits entirely in the clean section captured here. 'TN: 24-0008 Approval Date: May 29, 2024' is the transmittal footer text and appears twice in the document with different internal spacing (once after section I, once after section II, whitespace-normalized alike); the slice's 'to' anchor matches the first occurrence after 'from', which is section II's own footer, by construction of the search order rather than an explicit occurrence key.
 
-SOURCE 1: LAC Title 48 Part I, §9775, Transfer and/or Discharge of the Resident (excerpt from the Department of Health's published nursing facility standards) | https://ldh.la.gov/assets/medicaid/hss/docs/NH/NH_Regulations/NF_regs_as_of_3-14-22.pdf | source date: Louisiana Administrative Code February 2022; §9775 historical note LR 42:1911 (November 2016) | retrieved: 2026-09-15
+SOURCE 1: LAC Title 48 Part I, §9775, Transfer and/or Discharge of the Resident (excerpt from the Department of Health's published nursing facility standards) | https://ldh.la.gov/assets/medicaid/hss/docs/NH/NH_Regulations/NF_regs_as_of_3-14-22.pdf | source date: Louisiana Administrative Code February 2022; §9775 historical note LR 42:1911 (November 2016) | retrieved: 2026-10-27
 Title 48, Part I
 Louisiana regarding visitation in a nursing facility during a           family member or other designated person tests positive for
 declared PHE.                                                           an infectious agent or infectious disease;
@@ -169,7 +170,7 @@ state long term care ombudsman;
 
 Louisiana Administrative Code                   February 2022         150
 
-SOURCE 2: Louisiana Governor's Office of Elderly Affairs — Louisiana Ombudsman Program | https://goea.louisiana.gov/services/louisiana-ombudsman-program/ | source date: none stated on page | retrieved: 2026-09-15
+SOURCE 2: Louisiana Governor's Office of Elderly Affairs — Louisiana Ombudsman Program | https://goea.louisiana.gov/services/louisiana-ombudsman-program/ | source date: none stated on page | retrieved: 2026-10-27
 An official Louisiana.gov website.
 
 Here's how you know
@@ -406,7 +407,7 @@ carolynsmith@cenlaaging.org
 
  Baton Rouge Region
 
-Ascension, Assumption, East Baton Rouge, East Feliciana, Iberville, Lafourche, Livingston, Pointe Coupee, St. Charles, St. Helena, St. James, St. John, Tangipahoa, Terrebonne, Washington, West Baton Rouge, and West Feliciana
+Ascension, Assumption, East Baton Rouge, East Feliciana, Iberville, Lafourche, Livingston, Pointe Coupee, St. Helena, St. James, Tangipahoa, Terrebonne, Washington, West Baton Rouge, and West Feliciana
 
 Mavis Lee, Ombudsman Coordinator
 
@@ -482,7 +483,7 @@ annahorne@cenlaaging.org
 
  New Orleans Region
 
-Jefferson, Orleans, Plaquemines, St. Bernard, and St. Tammany
+Jefferson, Orleans, Plaquemines, St. Bernard, St. Charles, St. John and St. Tammany
 
 Tanya Hayes, Ombudsman Coordinator
 
@@ -504,6 +505,8 @@ thayes@capitalaaa.org
 
 Bienville, Bossier, Caddo, Claiborne, DeSoto, Red River, and Webster
 
+Beverly Parker, Ombudsman Coordinator
+
 Caddo Council on Aging
 
 1700 Buckner St., Suite 240
@@ -512,7 +515,11 @@ Shreveport, LA 71101
 
 Office: (318) 676-7900 or (800) 256-3003
 
+Work Cell: (318) 347-8353
+
 Fax: (318) 676-7911
+
+bparker@caddocoa.org
 
  State Office
 
@@ -627,7 +634,7 @@ Fax: (225) 342-7133
 
 © . All rights reserved.
 
-SOURCE 3: Louisiana Division of Administrative Law — Areas of Law: Health | https://www.adminlaw.la.gov/areas-of-law/health.html | source date: none stated on page | retrieved: 2026-09-15
+SOURCE 3: Louisiana Division of Administrative Law — Areas of Law: Health | https://www.adminlaw.la.gov/areas-of-law/health.html | source date: none stated on page | retrieved: 2026-10-27
 Skip to main content
 
  Home
@@ -759,7 +766,7 @@ Fax
 
  Contact
 
-SOURCE 4: Louisiana Medicaid State Plan, Attachment 4.19-C — Methods for Payment for Reserving Beds During a Beneficiary's Absence from an Inpatient Facility (excerpt) | https://ldh.la.gov/assets/medicaid/StatePlan/Sec4/Attachment4.19C.pdf | source date: TN: 24-0008, Approval Date: May 29, 2024, Effective Date: February 20, 2024 | retrieved: 2026-09-15
+SOURCE 4: Louisiana Medicaid State Plan, Attachment 4.19-C — Methods for Payment for Reserving Beds During a Beneficiary's Absence from an Inpatient Facility (excerpt) | https://ldh.la.gov/assets/medicaid/StatePlan/Sec4/Attachment4.19C.pdf | source date: TN: 24-0008, Approval Date: May 29, 2024, Effective Date: February 20, 2024 | retrieved: 2026-10-27
 II.   Leave Days for Residents of Nursing Facilities
       A.      For each Medicaid beneficiary, nursing facilities shall be reimbursed for up to seven hospital leave
               of absence days per occurrence per year, and 15 home leave of absence days per year when

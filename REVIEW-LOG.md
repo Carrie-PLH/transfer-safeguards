@@ -1439,3 +1439,59 @@ no unexplained failures; retain-packet --verify 0 failures.
 
 Reviewer: attended tooling session (Claude), 2026-10-25. No human review is
 claimed for this entry; the page's change-log entry awaits owner review.
+
+## 2026-10-27 — nightly review: iowa, kansas, kentucky, louisiana, maine (scheduled)
+
+Cursor at iowa. Selected iowa, kansas, kentucky, louisiana, maine (next four
+alphabetically; portfolio routine's per-collection budget is 5, wider than
+this skill's own suggested 3).
+
+- iowa: CONFIRMED. Recipe capture (digest db5675492fce), 3 sources, no
+  supplements. Zero failures on both pages. Retained (hash 2cc60151dcb9c65d),
+  promoted. Retention tool flagged source 2 as shorter than the previous
+  capture (13130->11918 chars, whitespace collapsed, fetch differed too);
+  fidelity still passed with zero failures, recorded as retained textual
+  movement that did not move any published fact, not independently
+  re-analyzed. No source-header movement. Checked date -> 2026-10-27.
+- kansas: CONFIRMED. tools/recipes/kansas.json is no longer a DRAFT (a
+  working session finished it since the 2026-10-01 pass that logged it as
+  RECIPE BACKFILL REQUIRED): source 3 (ombudsman.ks.gov .../
+  involuntary-discharge) is now a documented `chrome` (session-reader)
+  transport per its own recipe notes, matching this host's known refusal of
+  every curl variant. Fetched source 3 live through the Claude Browser pane
+  (document.body.innerText, unedited, matching the recipe notes' required
+  extraction exactly) and supplied it with `--supply 3=`. All 3 sources
+  captured (digest 405261adf039); checked with its one supplement
+  (tools/packets/kansas-packet-kancare.txt). Zero failures on both pages.
+  Retained (hash 386d6dd60de181d0), promoted. Retention tool flagged source
+  3 as 1 char shorter than the previous capture (trivial, whitespace);
+  fidelity passed, not independently re-analyzed. Checked date -> 2026-10-27.
+- kentucky: UNREACHABLE. Recipe capture, 2 of 3 sources. SOURCE 3
+  (chfs.ky.gov/agencies/dail/Pages/ltcomb.aspx) returned HTTP 404 to the
+  documented transport (curl, browser user-agent), confirmed with a direct
+  host curl (no redirect). No alternate transport is documented for this
+  source. First occurrence — the 2026-10-01 pass confirmed all 3 sources
+  clean. No capture retained (incomplete evidence), checked date untouched,
+  page not modified. Not queued (one unreachable pass).
+- louisiana: CONFIRMED. Recipe capture (digest 733a555d0a54), 4 sources, no
+  supplements. Zero failures on both pages. Retained (hash
+  1363e7a72ebe0e9b), promoted — all 4 sources unchanged or stable. Checked
+  date -> 2026-10-27. (The 2026-10-01 pass had logged this state UNREACHABLE
+  on source 3, HTTP 403 with no alternate transport; that source captured
+  cleanly this pass.)
+- maine: CONFIRMED. Recipe capture (digest 0f83b9c046a2), 7 sources, no
+  supplements. Zero failures on both pages. Retained (hash
+  16c82f4b5f6bde79), promoted — all 7 sources unchanged or stable. Checked
+  date -> 2026-10-27.
+
+Cursor advanced: iowa -> maryland (past maine, the fifth selected unit).
+
+sync-checked-dates.py: 8 derived dates corrected (table + json, iowa/
+kansas/louisiana/maine). build-status.py: baseline 51/51, full 50/51
+(pre-existing Hawaii backfill gap, unaffected by this pass). generate-
+sitemap.py: 58 URLs, robots.txt and _redirects regenerated (no page-set
+change this pass). build-state-picker.py: 51/51 regenerated. check-all.py:
+104 pages across 52 states, no unexplained failures.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-10-27. No
+human review is claimed for this entry.

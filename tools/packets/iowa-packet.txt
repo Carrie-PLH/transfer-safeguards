@@ -1,10 +1,11 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: iowa
-ASSEMBLED: 2026-09-29
+ASSEMBLED: 2026-10-27
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/iowa.json (recipe digest db5675492fce). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
 - SOURCE 1: transport curl; extractor pdftotext-layout; filters none.
   The Legislature's single-rule PDF, matching the standing packet's own extraction exactly: the running heads ("IAC Ch 58, p.1"), the indented statutory-quotation blocks, and the parenthesised class citations at the end of many paragraphs are the rule's own and survive -layout intact. Plain curl with a pinned browser user-agent is enough; no WAF or JS gate sits in front of this host.
 - SOURCE 2: transport curl; extractor html-text; scope main; filters trim-lines, collapse-blank-runs.
@@ -12,7 +13,7 @@ CAPTURE NOTES:
 - SOURCE 3: transport curl; extractor pdftotext-layout; slice from '441—81.8(249A) Payment procedures.' to '441—81.9(249A) Billing procedures.'; filters none.
   Same host and PDF-running-head pattern as source 1's single-rule PDF, but this is the whole-chapter PDF (441 IAC ch. 81 is Iowa Medicaid's nursing-facility payment chapter) because no single-rule PDF address exists for 81.8 the way it does for 481-58.40. Single column throughout -- unlike Missouri's or Arizona's two-column AAC/CSR renders -- so -layout preserves reading order with no interleaving; verified 2026-09-17 by reading the full extraction start to finish. Rule 81.8 states the Medicaid bed-hold: payment approved 'for periods the resident is absent overnight for purpose of visitation or vacation' up to 18 days per calendar year (81.8(3)"d"), and up to 10 days per calendar month for a hospitalization absence (81.8(3)"e"), with payment withheld unless the resident was a private-pay resident before the hospitalization and returns as a resident. Both anchors are single-occurrence in the chapter PDF (grep-verified against the plain extraction, no table-of-contents duplicate to bisect against, unlike Ohio's or Missouri's captures).
 
-SOURCE 1: 481 IAC 58.40(135C), Involuntary discharge or transfer (nursing facilities) — Iowa Administrative Code (PDF) | https://www.legis.iowa.gov/docs/iac/rule/481.58.40.pdf | source date: none stated on document beyond the IAC chapter running head | retrieved: 2026-09-29
+SOURCE 1: 481 IAC 58.40(135C), Involuntary discharge or transfer (nursing facilities) — Iowa Administrative Code (PDF) | https://www.legis.iowa.gov/docs/iac/rule/481.58.40.pdf | source date: none stated on document beyond the IAC chapter running head | retrieved: 2026-10-27
 IAC                                                                                              Ch 58, p.1
 
 
@@ -212,7 +213,7 @@ transfer to another facility and not as an intrafacility transfer. (II, III)
 [ARC 1752C, IAB 12/10/14, effective 1/14/15; ARC 3523C, IAB 12/20/17, effective 1/24/18; ARC 7033C, IAB 5/31/23, effective
 7/5/23; Editorial change: IAC Supplement 8/5/26]
 
-SOURCE 2: Iowa Department of Health and Human Services — Office of the State Long-Term Care Ombudsman | https://hhs.iowa.gov/family-community/aging-services/ltc-ombudsman | source date: current on retrieval | retrieved: 2026-09-29
+SOURCE 2: Iowa Department of Health and Human Services — Office of the State Long-Term Care Ombudsman | https://hhs.iowa.gov/family-community/aging-services/ltc-ombudsman | source date: current on retrieval | retrieved: 2026-10-27
 Office of the State Long-Term Care Ombudsman
 
  Topics:
@@ -235,13 +236,15 @@ Resident and Family Councils
 
 High Five Topics
 
-Join Us! Iowa's Virtual Resident and Family Council Support Meeting
-
 Resources
 
 Contact - Talk to Us
 
-Sign-up for the Office of the State Long-Term Care Ombudsman's email list
+ Want to Receive Updates from our Office?
+
+Sign-up for the Office of the State Long-Term Care Ombudsman's email list!
+
+Sign-Up
 
 The Office of the State Long-Term Care Ombudsman offers free, confidential advocacy for Iowans living in nursing facilities, assisted living programs, residential care facilities, and elder group homes. We’re here to help residents and families understand their rights and address concerns about long-term care.
 
@@ -249,7 +252,7 @@ We also assist Medicaid managed care members who live in a long-term care fa
 
 Our team listens, looks into concerns when needed, and works with facilities to ensure every resident is treated with dignity and respect. If you’re unsure where to start or have a question, we’re here to help.
 
-You can reach us through our  online form or by contacting us directly.
+You can reach us through our online form or by contacting us directly.
 
 Toll-Free: 866-236-1430
 
@@ -334,22 +337,6 @@ Interested in volunteering? Download the application (569.12 KB) .pdf , or email
  Back to top
 
 Education and Resources - Learn, Connect and Get Involved
-
-Town Halls
-
-Town hall meetings are public, recorded, and posted on our website. Because these meetings are open to the public, please keep that in mind when deciding whether to share personal information. If you have concerns about the public nature of these meetings or what may be shared, please reach out to the Office of the State Long-Term Care Ombudsman—we’re happy to talk with you.
-
-Join a Town Hall meeting
-
-Upcoming Town Hall dates:
-
-September 15, 2026
-
-December 15, 2026
-
-March 16, 2027
-
-June 15, 2027
 
 Past Town Halls
 
@@ -441,29 +428,7 @@ Our High Fives are easy-to-read, easy-to-understand topics shared at every suppo
 
  June 2025: 5 Reasons Resident and Family Councils should exist in every facility (283.07 KB).pdf (283.07 KB) .pdf
 
- Back to top
-
-Join Us! Iowa's Virtual Resident and Family Council Support Meeting
-
-The Office of the State Long-Term Care Ombudsman (OSLTCO) hosts virtual Resident and Family Council Support Meetings to connect residents and families, provide education on long-term care issues, and support efforts to improve quality of life in Iowa’s long-term care facilities.
-
-Meetings are held on Zoom on the last Wednesday of every other month from 2:30–3:30 p.m. CST. Residents of long-term care facilities and their loved ones are welcome. Advance registration is required, and a confirmation email will be sent with meeting details.
-
-Meetings are recorded and posted on our website. Please use discretion when sharing personal information. If you have concerns about recorded content, contact the OSLTCO.
-
-Register Here
-
-Upcoming Resident and Family Council Support Meetings
-
-September 30, 2026
-
-November 25, 2026
-
-January 27, 2027
-
-March 31, 2027
-
- Previous Resident and Family Councils
+ Past Resident and Family Council Support Meetings
 
 2026
 
@@ -659,7 +624,7 @@ Fresh Conversations
 
 Support Services
 
-SOURCE 3: 441 Iowa Administrative Code chapter 81 (Human Services — Nursing Facilities), rule 81.8(249A), Payment procedures (PDF) | https://www.legis.iowa.gov/docs/iac/chapter/05-13-2026.441.81.pdf | source date: [ARC 9279C, IAB 5/14/25, effective 7/1/25] | retrieved: 2026-09-29
+SOURCE 3: 441 Iowa Administrative Code chapter 81 (Human Services — Nursing Facilities), rule 81.8(249A), Payment procedures (PDF) | https://www.legis.iowa.gov/docs/iac/chapter/05-13-2026.441.81.pdf | source date: [ARC 9279C, IAB 5/14/25, effective 7/1/25] | retrieved: 2026-10-27
 441—81.8(249A) Payment procedures.
     81.8(1) Method of payment. Except for Medicaid accountability measures payment established in
 paragraph 81.5(16)“g,” facilities will be reimbursed under a modified price-based vendor payment
