@@ -239,6 +239,14 @@
       "last_result": "OK",
       "page": "arkansas"
     },
+    "https://asd.vermont.gov/services/ltc-ombudsman-program": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-27T045213Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "vermont"
+    },
     "https://cdhs.colorado.gov/long-term-care-ombudsman": {
       "attempts": 1,
       "consecutive_hard_failures": 1,
@@ -387,6 +395,14 @@
       "last_result": "FAILED",
       "page": "utah"
     },
+    "https://dail.vermont.gov/sites/dail/files/documents/Nursing_Home_Regulations_2018.pdf": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-27T045233Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "vermont"
+    },
     "https://dakotaathome.sd.gov/search/c5a84daf-cd8f-5ac5-bad2-b72b20ac7b97": {
       "attempts": 1,
       "capture": "https://web.archive.org/web/20261025053959/https://dakotaathome.sd.gov/search/c5a84daf-cd8f-5ac5-bad2-b72b20ac7b97",
@@ -395,6 +411,15 @@
       "last_detail": "ok",
       "last_result": "OK",
       "page": "south-dakota"
+    },
+    "https://dars.virginia.gov/aging/ombudsman/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261027045717/https://dars.virginia.gov/aging/ombudsman/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-27T045734Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "virginia"
     },
     "https://dcgov.seamlessdocs.com/f/DOHNoticeofDischargeTransferorRelocationForm": {
       "attempts": 1,
@@ -517,6 +542,22 @@
       "last_detail": "ok",
       "last_result": "OK",
       "page": "delaware"
+    },
+    "https://dlp.vermont.gov/nursing-home-sample-discharge-transfer-notice": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-27T045343Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "vermont"
+    },
+    "https://dlp.vermont.gov/sites/dlp/files/documents/Nursing_Home_Transfer_Discharge_Letter.pdf": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-27T045446Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "vermont"
     },
     "https://dph.illinois.gov/content/dam/soi/en/web/idph/forms/topics-services/health-care-regulation/nursing-homes/itd-form.pdf": {
       "attempts": 1,
@@ -811,6 +852,14 @@
       "last_result": "FAILED",
       "page": "arkansas"
     },
+    "https://humanservices.vermont.gov/human-services-board": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-27T045505Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "vermont"
+    },
     "https://ilaging.illinois.gov/programs/ltcombudsman/contact-information--office-of-the-state-long-term-care-ombudsma.html": {
       "attempts": 1,
       "capture": "https://web.archive.org/web/20261016045032/https://ilaging.illinois.gov/programs/ltcombudsman/contact-information--office-of-the-state-long-term-care-ombudsma.html",
@@ -828,6 +877,15 @@
       "last_detail": "ok",
       "last_result": "OK",
       "page": "kansas"
+    },
+    "https://law.lis.virginia.gov/vacodefull/title32.1/chapter5/article2/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261027045823/https://law.lis.virginia.gov/vacodefull/title32.1/chapter5/article2/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-27T045839Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "virginia"
     },
     "https://ldh.la.gov/assets/medicaid/StatePlan/Sec4/Attachment4.19C.pdf": {
       "attempts": 1,
@@ -888,6 +946,15 @@
       "last_result": "OK",
       "page": "idaho"
     },
+    "https://legislature.vermont.gov/statutes/fullchapter/33/073": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261027045521/https://legislature.vermont.gov/statutes/fullchapter/33/073",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-27T045537Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "vermont"
+    },
     "https://ltco.texas.gov": {
       "attempts": 1,
       "capture": "https://web.archive.org/web/20261026053508/https://ltco.texas.gov",
@@ -946,6 +1013,15 @@
       "last_detail": "ok",
       "last_result": "OK",
       "page": "north-carolina"
+    },
+    "https://medicaid.utah.gov/hearings/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261027045138/https://medicaid.utah.gov/hearings/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-27T045154Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "utah"
     },
     "https://medicaidpublications.dhss.delaware.gov/docs/DesktopModules/Bring2mind/DMX/API/Entries/Download?Command=Core_Download&EntryId=900&language=en-US&PortalId=0&TabId=94": {
       "attempts": 1,
@@ -1329,6 +1405,15 @@
       "last_result": "OK",
       "page": "texas"
     },
+    "https://vamedicaid.dmas.virginia.gov/sites/default/files/2022-10/Chapter-7%20Residents%20Rights%20and%20Responsibilities%20%28Nursing%20Facilities%29.pdf": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261027045852/https://vamedicaid.dmas.virginia.gov/sites/default/files/2022-10/Chapter-7%20Residents%20Rights%20and%20Responsibilities%20%28Nursing%20Facilities%29.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-27T045858Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "virginia"
+    },
     "https://webserver.rilegislature.gov/Statutes/TITLE23/23-17.5/23-17.5-17.HTM": {
       "attempts": 1,
       "capture": "https://web.archive.org/web/20261024050113/https://webserver.rilegislature.gov/Statutes/TITLE23/23-17.5/23-17.5-17.HTM",
@@ -1538,6 +1623,15 @@
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "new-hampshire"
+    },
+    "https://www.dmas.virginia.gov/media/3221/client-appeals-frequently-asked-questions-2021-05-21.pdf": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261027045912/https://www.dmas.virginia.gov/media/3221/client-appeals-frequently-asked-questions-2021-05-21.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-27T045919Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "virginia"
     },
     "https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-C/part-431/subpart-E": {
       "attempts": 1,
@@ -2108,7 +2202,16 @@
       "last_detail": "ok",
       "last_result": "OK",
       "page": "tennessee"
+    },
+    "https://www.vtlegalaid.org/legal-projects/long-term-care-ombudsman": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261027045647/https://www.vtlegalaid.org/legal-projects/long-term-care-ombudsman",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-27T045701Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "vermont"
     }
   },
-  "updated": "2026-10-26T055730Z"
+  "updated": "2026-10-27T045919Z"
 }
