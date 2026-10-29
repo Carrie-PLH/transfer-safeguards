@@ -1,0 +1,16 @@
+{
+ "entry": {
+  "file_count": 363,
+  "id": "2026-10-29T120329Z",
+  "manifest_file": "manifests/2026-10-29T120329Z.txt",
+  "manifest_sha256": "6ff66a5ee85edff4e346544017ce6b5a6587fd4e2e2de241b9ff1f23c754a973",
+  "note": "nightly review: maryland, massachusetts, michigan confirmed; minnesota, mississippi unreachable (partial) 2026-10-29",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "ea7605baefaf5d7d092848bebffc63b31e98d4a95f35886263c02d321ddb040e",
+  "repo": "transfer-safeguards",
+  "utc": "2026-10-29T12:03:29+00:00"
+ },
+ "entry_sha256": "01a51a77a99b17b516242d67e5355ea99cd1d16413eed262c4e40958ec8cf207"
+}
