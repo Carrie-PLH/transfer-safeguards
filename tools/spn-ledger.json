@@ -298,6 +298,15 @@
       "last_result": "OK",
       "page": "kentucky"
     },
+    "https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=8271&Format=WORD": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261029054055/https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=8271&Format=WORD",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-29T054103Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "west-virginia"
+    },
     "https://arombudsman.dhs.arkansas.gov/": {
       "attempts": 1,
       "capture": "https://web.archive.org/web/20260906130416/https://arombudsman.dhs.arkansas.gov/",
@@ -314,6 +323,24 @@
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "vermont"
+    },
+    "https://bms.wv.gov/media/40026/download?inline=": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261029054116/https://bms.wv.gov/media/40026/download?inline=",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-29T054151Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "west-virginia"
+    },
+    "https://boaltc.wi.gov/Pages/Home.aspx": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261029054254/https://boaltc.wi.gov/Pages/Home.aspx",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-29T054325Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "wisconsin"
     },
     "https://cdhs.colorado.gov/long-term-care-ombudsman": {
       "attempts": 1,
@@ -627,6 +654,20 @@
       "last_result": "FAILED",
       "page": "vermont"
     },
+    "https://docs.legis.wisconsin.gov/code/admin_code/dhs/101/107/09": {
+      "attempts": 1,
+      "last_attempt": "2026-10-29T054346Z",
+      "last_detail": "error:not-found",
+      "last_result": "FAILED",
+      "page": "wisconsin"
+    },
+    "https://docs.legis.wisconsin.gov/code/admin_code/dhs/110/132/V/53": {
+      "attempts": 1,
+      "last_attempt": "2026-10-29T054405Z",
+      "last_detail": "error:not-found",
+      "last_result": "FAILED",
+      "page": "wisconsin"
+    },
     "https://dph.illinois.gov/content/dam/soi/en/web/idph/forms/topics-services/health-care-regulation/nursing-homes/itd-form.pdf": {
       "attempts": 1,
       "capture": "https://web.archive.org/web/20261016044943/https://dph.illinois.gov/content/dam/soi/en/web/idph/forms/topics-services/health-care-regulation/nursing-homes/itd-form.pdf",
@@ -888,6 +929,49 @@
       "last_detail": "ok",
       "last_result": "OK",
       "page": "missouri"
+    },
+    "https://health.wyo.gov/admin/long-term-care-ombudsman-program/": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261029054527/https://health.wyo.gov/admin/long-term-care-ombudsman-program/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-29T054547Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "wyoming"
+    },
+    "https://health.wyo.gov/wp-content/uploads/2016/11/HLS-Rule-Ch-19-Nursing-Care-Facilities.pdf": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261029054600/https://health.wyo.gov/wp-content/uploads/2016/11/HLS-Rule-Ch-19-Nursing-Care-Facilities.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-29T054847Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "wyoming"
+    },
+    "https://health.wyo.gov/wp-content/uploads/2020/07/FILED-RULES-17704-EFFECT-07-01-2020.pdf": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-29T054946Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "wyoming"
+    },
+    "https://health.wyo.gov/wp-content/uploads/2021/10/Chapter-22-active-100521.pdf": {
+      "attempts": 1,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-29T055005Z",
+      "last_detail": "error:no-request",
+      "last_result": "FAILED",
+      "page": "wyoming"
+    },
+    "https://health.wyo.gov/wp-content/uploads/2024/04/WYDOH-Medicaid-Chapter-4.pdf": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261029055031/https://health.wyo.gov/wp-content/uploads/2024/04/WYDOH-Medicaid-Chapter-4.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-29T055312Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "wyoming"
     },
     "https://healthandwelfare.idaho.gov/appeals-and-fair-hearings": {
       "attempts": 1,
@@ -2288,7 +2372,23 @@
       "last_detail": "ok",
       "last_result": "OK",
       "page": "washington"
+    },
+    "https://wyoleg.gov/statutes/compress/title35.pdf": {
+      "attempts": 1,
+      "last_attempt": "2026-10-29T055750Z",
+      "last_detail": "no-playback",
+      "last_result": "FAILED",
+      "page": "wyoming"
+    },
+    "https://wyomingmedicaid.com/portal/References/latestproviderfiles/BMS_Acentra%20Health_Institutional%20Provider%20Manual_N_2026.07.01_v19.0.pdf": {
+      "attempts": 1,
+      "capture": "https://web.archive.org/web/20261029055848/https://wyomingmedicaid.com/portal/References/latestproviderfiles/BMS_Acentra%20Health_Institutional%20Provider%20Manual_N_2026.07.01_v19.0.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-29T060134Z",
+      "last_detail": "ok",
+      "last_result": "OK",
+      "page": "wyoming"
     }
   },
-  "updated": "2026-10-28T060044Z"
+  "updated": "2026-10-29T060134Z"
 }
