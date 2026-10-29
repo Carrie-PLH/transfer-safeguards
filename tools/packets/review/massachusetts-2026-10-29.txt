@@ -1,0 +1,853 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: massachusetts
+ASSEMBLED: 2026-10-29
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/massachusetts.json (recipe digest f2c8a6194960). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
+- SOURCE 1: transport curl; extractor pdftotext-layout; filters none.
+  Recipe written 2026-09-22 (FA-Q-20260917-04). mass.gov now serves this PDF to plain curl with NO user-agent option (curl's own default string): a browser user-agent, on HTTP/2 or --http1.1, still gets the 14 KB 403 page, while the default string got 200 and the same 19,631 bytes on every paced fetch 2026-09-22 (sha256 7206da90ade18931505d8c44b89ffd168a555874a2aece0db411b9f78703a2b7). Do not add user_agent browser. mass.gov's edge also answers bursts with a 3,365-byte 403 (seen on the 465 KB 130 CMR PDF and the regulation page when five URLs were fetched back to back); a 403 fails the source, it does not shorten the packet, so re-run after a pause. If the host goes back to refusing curl, this source becomes transport chrome + attended: true and is supplied with --supply-file (FA-D-20260922-01). Whole document, no slice: the three-page notice is short, and the standing packet's hand selection of sections V, XI, XII and XIV is not one contiguous span, so the recipe captures the superset. pdftotext -layout, as the repo's PDF recipes use; the standing packet's text came from the session fetch tool's own rendering, so line breaks and indentation differ from it. mass.gov burst behaviour, observed 2026-09-22: its edge answers several requests in quick succession with a 3,365-byte HTTP 403 (distinct from the 14 KB 403 a browser user-agent gets), and a pause of about 30-40 seconds clears it; five URLs fetched back to back drew it on the 4th and 5th, and two captures 8 seconds apart drew it again. capture.py treats any non-200 as a failed source (exit 1), never a short packet, and curl's --retry does not retry a 403. So a nightly that reaches this recipe right after another mass.gov fetch may fail a source; re-run it after a pause before recording anything, and capture the three massachusetts recipes at least 30 seconds apart.
+- SOURCE 2: transport curl; extractor html-text; scope #main-content; filters trim-lines, collapse-blank-runs.
+  Recipe written 2026-09-22. Plain curl with no user-agent option reaches it (200, full server-rendered page); a browser user-agent gets 403, as for source 1. #main-content holds the page body and its Contact block (Board of Hearings, 100 Hancock Street, phone and fax) and excludes the site header, language picker and feedback form, which the 2026-08-30 hand capture omitted by hand. It still carries whatever duplicated contact blocks the page renders inside main; those are the publisher's and are left in rather than trimmed.
+- SOURCE 3: transport curl; extractor html-text; scope #main-content; filters trim-lines, collapse-blank-runs.
+  Recipe written 2026-09-22. Same transport finding as sources 1 and 2. #main-content holds the ombudsman phone numbers and the Executive Office of Aging & Independence Contact block (One Ashburton Place, MassOptions, information.resources@mass.gov, fax).
+
+SOURCE 1: Commonwealth of Massachusetts, Division of Medical Assistance — Notice of Nursing Facility Residents' Rights, LTC-013 (PDF) | https://www.mass.gov/doc/notice-of-nursing-facility-residents-rights-ltc-013/download | source date: LTC-013 (Rev. 01/01) | retrieved: 2026-10-29
+Commonwealth of Massachusetts
+Executive Office of Health and Human Services
+Division of Medical Assistance
+
+
+
+                       NOTICE OF NURSING FACILITY RESIDENTS' RIGHTS
+
+This is a summary of your rights as a nursing facility resident. When you enter a
+nursing facility, you do not lose your rights as an individual. A nursing facility must
+protect and promote your rights and the rights of each resident as described below.
+
+I. Free choice
+
+      You have the right to choose a personal attending physician, to be fully informed in
+      advance of your care or treatment, to be fully informed in advance of any changes
+      in your care or treatment that may affect your well-being, and (except in the event
+      that you are not able to make your own decisions) to participate in planning your
+      health care and treatment or changes in your care and treatment.
+
+II. Freedom from Restraints
+
+      You have the right to be free from physical or mental abuse, corporal punishment,
+      involuntary seclusion, and any physical or chemical restraints imposed for the
+      purposes of discipline or convenience and not required to treat your medical
+      symptoms. Restraints may only be imposed:
+
+      • to ensure your physical safety or that of other residents; and
+
+      • only upon the written order of a physician that specifies the duration and
+        circumstances under which the restraints are to be used, except in emergency
+        circumstances specified by the nursing facility until a physician's order can
+        reasonably be obtained.
+
+III. Privacy
+
+      You have the right to privacy with regard to accommodations, medical treatment,
+      written and telephone communications, visits, meetings of family and resident
+      groups, but this does not require the facility to provide a private room for each
+      resident.
+
+IV. Confidentiality
+
+      You have the right to confidentiality of your personal and clinical records and may
+      access any current clinical records upon your request, or that of your legal
+      representative, within 24 hours (excluding weekends and holidays) after making
+      such a request.
+
+
+
+LTC-013 (Rev. 01/01)
+
+V. Accommodation of Needs
+
+   You have the right to reside and receive services with reasonable accommodation
+   of your needs and preferences, except where your health and safety or that of any
+   other resident would be endangered, and to receive notice before your room or
+   roommate in the facility is changed.
+
+VI. Grievances
+
+   You have the right to voice grievances about your treatment or care without
+   discrimination or reprisal for voicing the grievances. You have the right to prompt
+   efforts by the facility to resolve any grievances you may have, including those
+   concerning other residents.
+
+VII. Right to Request a Spousal Asset Assessment
+
+   If your spouse is not living in a facility or institution, you and your spouse have the
+   right to request an assessment of your nonexempt resources at the time you enter
+   the nursing facility. This assessment will assist you in determining your eligibility for
+   MassHealth.
+
+VIII. Participation in Resident and Family Groups
+
+   You have the right to organize and participate in resident groups in the facility. In
+   addition, your family has the right to meet with the families of other residents in the
+   facility.
+
+IX. Participation in Other Activities
+
+   You have the right to participate in the social, religious, and community activities
+   that do not interfere with the rights of other residents in the facility.
+
+X. Examination of Survey Results
+
+   You have the right to examine, upon reasonable request, the results of the most
+   recent survey of the facility conducted by federal or state surveyors and any plan of
+   correction in effect for this facility.
+
+XI. Refusal of Certain Transfers
+
+   You have the right to refuse a transfer to another room within the facility if the
+   purpose of the transfer is based upon your eligibility or ineligibility for Medicare
+   coverage. Should you choose to exercise your right to refuse a transfer, this will not
+   affect your eligibility for or entitlement to Medicare or MassHealth benefits.
+
+
+
+
+                                            -2-
+
+XII. Notice Requirements for Transfers or Discharges
+
+   You have the right to receive written notice if the nursing facility intends to transfer
+   or discharge you to another unit within the facility, to another nursing facility, to a
+   hospital or other institution, or to the community. You have the right to appeal the
+   transfer or discharge by requesting a fair hearing before the Division of Medical
+   Assistance (the state Medicaid agency). The nursing facility must provide you with
+   the address to which you must send the request for a fair hearing and must assist
+   you with requesting a hearing. If you are disabled, you have the right to request
+   that the Division accommodate your disability to ensure your access to the fair
+   hearing.
+
+XIII. Advance Directives
+
+   The nursing facility must provide written information to you upon your admission
+   regarding your right to make your own health care decisions, including the right to
+   accept or refuse medical treatment.
+
+XIV. Notice of Your Rights
+
+   The nursing facility must inform you orally and in writing at the time you enter the
+   facility, regardless of your payment source at that time, of your legal rights during
+   your stay at the facility and of the requirements and procedures for establishing
+   eligibility for MassHealth. The nursing facility must also give you a separate,
+   detailed copy of residents' rights at the time of admission, which fully explains all of
+   your rights as a nursing facility resident.
+
+
+
+
+                                            -3-
+
+SOURCE 2: MassHealth — How to appeal a MassHealth decision (Office of Medicaid, Board of Hearings) | https://www.mass.gov/how-to/how-to-appeal-a-masshealth-decision | source date: none stated on page | retrieved: 2026-10-29
+This page, How to appeal a MassHealth decision, is
+ offered by
+
+MassHealth
+
+ Show more
+
+ How to appeal a MassHealth decision
+
+As a MassHealth applicant or member, if you disagree with a MassHealth decision, or if we modify or deny a prior authorization (PA), you have a right to appeal the decision.
+
+Fair Hearing Request Form
+
+Cómo pedir una audiencia imparcial
+
+Contacts
+
+ Office of Medicaid, Board of Hearings
+
+Phone
+
+Main:
+
+Call Office of Medicaid, Board of Hearings, Main: at (617) 847-1200
+
+Toll free:
+
+Call Office of Medicaid, Board of Hearings, Toll free: at (800) 655-0338
+
+ MassHealth Customer Service Center
+
+Phone
+
+Main:
+
+Call MassHealth Customer Service Center, Main: at (800) 841-2900
+
+TDD/TTY:
+
+Call MassHealth Customer Service Center, TDD/TTY: at 711
+
+Self-service available 24 hrs/day in English and Spanish. Other services available Monday-Friday 8 a.m.–5 p.m. Interpreter services are available.
+
+ MassHealth Enrollment Centers
+
+Address
+
+Charlestown
+
+ 529 Main Street, Charlestown, MA 02129
+
+ Directions
+
+Chelsea (new location)*
+
+ 45 Spruce Street, Chelsea, MA 02150
+
+ Directions
+
+Springfield
+
+ 243 Cottage Street, Springfield, MA 01104
+
+ Directions
+
+Taunton
+
+ 21 Spring Street, Suite 4, Taunton, MA 02780
+
+ Directions
+
+Tewksbury
+
+ 367 East Street, Tewksbury, MA 01876
+
+ Directions
+
+Quincy - MassHealth Central Office
+
+ 1 Enterprise Drive, 3rd Floor , Quincy, MA 02171
+
+ Directions
+
+Worcester
+
+ 50 SW Cutoff, Suite 1A, Worcester, MA 01604
+
+ Directions
+
+The Details
+
+ +
+
+Table of Contents
+
+What you need
+
+How to appeal
+
+Next steps
+
+More info
+
+Downloads
+
+Contact
+
+What you need
+
+You will need to fill out the Fair Hearing Request form within the timeframes listed on the form. Please be sure to read the form before completing.
+
+If you have a disability and need an accommodation in order to attend or participate in your hearing, you can send us a Request for Reasonable Accommodation form to get the accommodation you need.
+
+The Board of Hearings must receive your completed, signed request within 60 calendar days from the date you received the notice of the MassHealth agency’s action.
+
+How to appeal
+
+By mail
++
+
+Fill out the Fair Hearing Request Form.
+
+Make a copy for yourself. Include the MassHealth notice you are appealing.
+
+Send a copy to the Office of Medicaid, Board of Hearings at:
+
+1 Enterprise Drive
+
+3rd Floor
+
+Quincy, MA 02171
+
+By fax
++
+
+Fill out the Fair Hearing Request Form.
+
+Fax the form to the Office of Medicaid, Board of Hearings at 1-617-887-8797.
+
+Include the MassHealth notice you are appealing.
+
+By phone
++
+
+To file an appeal by telephone, you may call the MassHealth Customer Service Center at (800) 841-2900, TDD/TTY: 711.
+
+Self-service is available 24 hours per day in English and Spanish. Other services are available Monday through Friday, 8 a.m.– 5 p.m. Interpreter service is available. Please do not call the Board of Hearings to file a fair hearing request.
+
+In person
++
+
+You can file an appeal in person between the hours of 8:45 and 4:45 at the following location:
+
+Office of Medicaid, Board of Hearings
+
+1 Enterprise Drive, 3rd Floor
+
+Quincy, MA 02171
+
+You must bring the MassHealth notice you received with you. Your appeal will then be filed and processed. A hearing will be scheduled in the ordinary course.
+
+Online
++
+
+Fill out the Fair Hearing Request Form
+
+Include the MassHealth notice you are appealing
+
+E-Mail your request for a Fair Hearing to boh-fairhearingsrequest@mass.gov, with both the completed form and notice attached to the e-mail. MassHealth can only accept password-encrypted/protected documents that are physically attached to the email.  We recommend this approach for your privacy.  Unencrypted e-mails are not secure and could be intercepted and read by a third party.
+
+Next steps
+
+ To ask for a copy of your record, follow the steps below:
+
+Fill out the Fair Hearing Request Form. You can find this form by going to MassHealth Member Forms.
+
+After you send the form, a worker from MassHealth will call you about your appeal and your records. If you have an authorized representative, they will call that person. Let the worker know which records you want.
+
+MassHealth will send your records to you before the appeal.
+
+More info
+
+After you submit your appeal, the Board of Hearings will send you a notice of your hearing date, time, and place at least 10 calendar days before your scheduled hearing date.
+
+At the hearing, you may represent yourself or be represented by a lawyer or other representative at your own expense. You may contact a local legal service or community agency to get advice or representation at no cost. To get information about legal service or community agencies, call the MassHealth Customer Service Center.
+
+The Board of Hearings is committed to providing meaningful access for all users, including users with disabilities. If you have a disability, you can request a reasonable accommodation to give you better access to the Board of Hearings by sending us a Request for Reasonable Accommodation form.
+
+If you cannot come to the hearing for good cause, or if you need a telephone hearing, you must call the Office of Medicaid, Board of Hearings before the hearing date.
+
+Main: (617) 847-1200
+
+Toll free: (800) 655-0338
+
+Failure to appear without having good cause, or having previously rescheduled the hearing, will result in the dismissal of your appeal.
+
+You and/or your representative can review your MassHealth case file before the hearing. To do so, call the MassHealth Customer Service Center.
+
+Main: (800) 841-2900
+
+TDD/TTY: 711
+
+Your MassHealth case file is not kept at the Board of Hearings.
+
+Click here to read about the appeals process in the MassHealth regulations.
+
+If you are looking to request the status of a decision pending on your eligibility appeal or would like to notify the EOHHS General Counsel that you have been denied eligibility based on trust assets, please see the forms in the related links.
+
+Downloads
+
+Fair Hearing Request Form, Open PDF file, 98.62 KB
+
+(English, PDF 98.62 KB)
+
+ 简体中文
+
+ Kreyòl ayisyen
+
+ Português, Brasil
+
+ Español
+
+ Tiếng Việt
+
+Translate labels
+
+Fair Hearing Request Form, Open DOCX file, 21.13 KB
+
+(English, DOCX 21.13 KB)
+
+ 简体中文
+
+ Kreyòl ayisyen
+
+ Português, Brasil
+
+ Español
+
+ Tiếng Việt
+
+Translate labels
+
+Fair Hearing Request Form (Large Print), Open PDF file, 177.4 KB
+
+(English, PDF 177.4 KB)
+
+ Español
+
+Translate labels
+
+Information about your Hearing, Open PDF file, 133.07 KB
+
+(English, PDF 133.07 KB)
+
+ 简体中文
+
+ Kreyòl ayisyen
+
+ Português, Brasil
+
+ Español
+
+ Tiếng Việt
+
+Translate labels
+
+Information about your Hearing, Open DOCX file, 53.23 KB
+
+(English, DOCX 53.23 KB)
+
+Board of Hearings Request for Reasonable Accommodation, Open PDF file, 996.82 KB
+
+(English, PDF 996.82 KB)
+
+ Español
+
+Translate labels
+
+Board of Hearings Request for Reasonable Accommodation (Large Print), Open PDF file, 263.93 KB
+
+(English, PDF 263.93 KB)
+
+Contact
+
+ Office of Medicaid, Board of Hearings
+
++
+
+Address
+
+Mailing Address
+
+ 100 Hancock Street, 6th Floor, Quincy, MA 02171
+
+ Directions
+
+Phone
+
+Main:
+
+Call Office of Medicaid, Board of Hearings, Main: at (617) 847-1200
+
+Toll free:
+
+Call Office of Medicaid, Board of Hearings, Toll free: at (800) 655-0338
+
+Fax
+
+1-617-887-8797
+
+ MassHealth Customer Service Center
+
++
+
+Phone
+
+Main:
+
+Call MassHealth Customer Service Center, Main: at (800) 841-2900
+
+TDD/TTY:
+
+Call MassHealth Customer Service Center, TDD/TTY: at 711
+
+Self-service available 24 hrs/day in English and Spanish. Other services available Monday-Friday 8 a.m.–5 p.m. Interpreter services are available.
+
+ MassHealth Enrollment Centers
+
++
+
+Address
+
+Charlestown
+
+ 529 Main Street, Charlestown, MA 02129
+
+ Directions
+
+Chelsea (new location)*
+
+ 45 Spruce Street, Chelsea, MA 02150
+
+ Directions
+
+Springfield
+
+ 243 Cottage Street, Springfield, MA 01104
+
+ Directions
+
+Taunton
+
+ 21 Spring Street, Suite 4, Taunton, MA 02780
+
+ Directions
+
+Tewksbury
+
+ 367 East Street, Tewksbury, MA 01876
+
+ Directions
+
+Quincy - MassHealth Central Office
+
+ 1 Enterprise Drive, 3rd Floor , Quincy, MA 02171
+
+ Directions
+
+Worcester
+
+ 50 SW Cutoff, Suite 1A, Worcester, MA 01604
+
+ Directions
+
+Related
+
+ Office of Medicaid Board of Hearings Case Decisions
+
+ MassHealth Board of Hearings Fair Hearing Decision Notification Form
+
+ MassHealth Board of Hearings Inquiry Form for Eligibility Denial Notice Based on Trust Assets
+
+ MassHealth Board of Hearings Quarterly Case Statistics
+
+ MassHealth Eligibility Record Request
+
+Contacts
+
+ Office of Medicaid, Board of Hearings
+
+Phone
+
+Main:
+
+Call Office of Medicaid, Board of Hearings, Main: at (617) 847-1200
+
+Toll free:
+
+Call Office of Medicaid, Board of Hearings, Toll free: at (800) 655-0338
+
+ MassHealth Customer Service Center
+
+Phone
+
+Main:
+
+Call MassHealth Customer Service Center, Main: at (800) 841-2900
+
+TDD/TTY:
+
+Call MassHealth Customer Service Center, TDD/TTY: at 711
+
+Self-service available 24 hrs/day in English and Spanish. Other services available Monday-Friday 8 a.m.–5 p.m. Interpreter services are available.
+
+ MassHealth Enrollment Centers
+
+Address
+
+Charlestown
+
+ 529 Main Street, Charlestown, MA 02129
+
+ Directions
+
+Chelsea (new location)*
+
+ 45 Spruce Street, Chelsea, MA 02150
+
+ Directions
+
+Springfield
+
+ 243 Cottage Street, Springfield, MA 01104
+
+ Directions
+
+Taunton
+
+ 21 Spring Street, Suite 4, Taunton, MA 02780
+
+ Directions
+
+Tewksbury
+
+ 367 East Street, Tewksbury, MA 01876
+
+ Directions
+
+Quincy - MassHealth Central Office
+
+ 1 Enterprise Drive, 3rd Floor , Quincy, MA 02171
+
+ Directions
+
+Worcester
+
+ 50 SW Cutoff, Suite 1A, Worcester, MA 01604
+
+ Directions
+
+Related
+
+ Office of Medicaid Board of Hearings Case Decisions
+
+ MassHealth Board of Hearings Fair Hearing Decision Notification Form
+
+ MassHealth Board of Hearings Inquiry Form for Eligibility Denial Notice Based on Trust Assets
+
+ MassHealth Board of Hearings Quarterly Case Statistics
+
+ MassHealth Eligibility Record Request
+
+Help Us Improve Mass.gov  with your feedback
+
+ Did you find what you were looking for on this webpage?
+
+Yes
+
+No
+
+ If you have any suggestions for the website, please let us know.
+
+ How can we improve the page? *
+
+Please do not include personal or contact information.
+
+You will not get a response
+
+The feedback will only be used for improving the website. If you need assistance, please For help on some common issues, see here.. Please limit your input to 500 characters.
+
+Please remove any contact information or personal data from your feedback. You will NOT get a response.
+
+If you need assistance, please For help on some common issues, see here..
+
+Please let us know how we can improve this page.
+
+Please remove any contact information or personal data from your feedback. You will NOT get a response.
+
+If you need assistance, please For help on some common issues, see here..
+
+Thank you for your website feedback! We will use this information to improve this page.
+
+If you would like to continue helping us improve Mass.gov, join our user panel to test new features for the site.
+
+SOURCE 3: Executive Office of Aging & Independence — Talk to an Ombudsman about a problem | https://www.mass.gov/how-to/talk-to-an-ombudsman-about-a-problem | source date: none stated on page | retrieved: 2026-10-29
+This page, Talk to an Ombudsman about a problem, is
+ offered by
+
+Executive Office of Aging & Independence (AGE)
+
+ Show more
+
+ Talk to an Ombudsman about a problem
+
+Learn about how to find and speak with your local Ombudsman about a problem.
+
+Contacts
+
+ Executive Office of Aging & Independence
+
+Phone
+
+MassOptions
+
+Call Executive Office of Aging & Independence, MassOptions at 800-243-4636
+
+Call Specialist available Monday-Friday, 9:00 AM - 5:00 PM (interpreter services are available in 100+ languages)
+
+Online
+
+Email
+
+Email Executive Office of Aging & Independence at information.resources@mass.gov
+
+ MassOptions
+
+ Executive Office of Health and Human Services
+
+Phone
+
+Call Executive Office of Health and Human Services at (617) 573-1600
+
+Online
+
+ Visit the EOHHS web page
+
+The Details
+
+ +
+
+Table of Contents
+
+What you need
+
+How to find
+
+Contact
+
+What you need
+
+An Ombudsman is an advocate. The ombudsman service offers a way for consumers to voice their complaints and have concerns addressed so they can live with dignity and respect.
+
+Anyone can bring a complaint before the ombudsman. The complaint can be on behalf of a specific resident or on behalf of residents as a group.
+
+How to find
+
+By phone
++
+
+Anyone can bring a complaint before the ombudsman. The complaint can be on behalf of a specific resident or on behalf of residents as a group.
+
+Contact an Ombudsman Program: (617) 727-7750/711 MassRelay/TTY
+
+Community Care Ombudsman
+
+Long-Term Care Ombudsman and Assisted Living Ombudsman: 617-222-7495
+
+Contact
+
+ Executive Office of Aging & Independence
+
++
+
+Address
+
+ One Ashburton Place, 10th floor, Boston, MA 02108
+
+ Directions
+
+Phone
+
+MassOptions
+
+Call Executive Office of Aging & Independence, MassOptions at 800-243-4636
+
+Call Specialist available Monday-Friday, 9:00 AM - 5:00 PM (interpreter services are available in 100+ languages)
+
+Online
+
+Email
+
+Email Executive Office of Aging & Independence at information.resources@mass.gov
+
+ MassOptions
+
+Fax
+
+Fax Number
+(617) 727-9368
+
+ Executive Office of Health and Human Services
+
++
+
+Address
+
+ 1 Ashburton Place, Boston, MA 02108
+
+ Directions
+
+Phone
+
+Call Executive Office of Health and Human Services at (617) 573-1600
+
+Online
+
+ Visit the EOHHS web page
+
+Related
+
+ Ombudsman Programs
+
+ Volunteer for the Ombudsman Program
+
+Contacts
+
+ Executive Office of Aging & Independence
+
+Phone
+
+MassOptions
+
+Call Executive Office of Aging & Independence, MassOptions at 800-243-4636
+
+Call Specialist available Monday-Friday, 9:00 AM - 5:00 PM (interpreter services are available in 100+ languages)
+
+Online
+
+Email
+
+Email Executive Office of Aging & Independence at information.resources@mass.gov
+
+ MassOptions
+
+ Executive Office of Health and Human Services
+
+Phone
+
+Call Executive Office of Health and Human Services at (617) 573-1600
+
+Online
+
+ Visit the EOHHS web page
+
+Related
+
+ Ombudsman Programs
+
+ Volunteer for the Ombudsman Program
+
+Help Us Improve Mass.gov  with your feedback
+
+ Did you find what you were looking for on this webpage?
+
+Yes
+
+No
+
+ If you have any suggestions for the website, please let us know.
+
+ How can we improve the page? *
+
+Please do not include personal or contact information.
+
+You will not get a response
+
+The feedback will only be used for improving the website. If you need assistance, please contact the Executive Office of Elder Affairs. Please limit your input to 500 characters.
+
+Please remove any contact information or personal data from your feedback. You will NOT get a response.
+
+If you need assistance, please contact the Executive Office of Elder Affairs.
+
+Please let us know how we can improve this page.
+
+Please remove any contact information or personal data from your feedback. You will NOT get a response.
+
+If you need assistance, please contact the Executive Office of Elder Affairs.
+
+Thank you for your website feedback! We will use this information to improve this page.
+
+If you would like to continue helping us improve Mass.gov, join our user panel to test new features for the site.
+

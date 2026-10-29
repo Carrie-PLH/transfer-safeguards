@@ -1,0 +1,442 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: massachusetts-regs
+ASSEMBLED: 2026-10-29
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/massachusetts-regs.json (recipe digest 86e5ba0d1c49). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
+- SOURCE 1: transport curl; extractor pdftotext-layout; slice from '456.701: Notice Requirements for Transfers and Discharges Initiated by a Nursing Facility (A) A resident may be transferred' to 'REGULATORY AUTHORITY 130 CMR 456.000: M.G.L.'; filters none.
+  Recipe written 2026-09-22 (FA-Q-20260917-04), supplement recipe for tools/packets/massachusetts-packet-regs.txt. mass.gov serves the 465,227-byte PDF to plain curl with no user-agent option (sha256 f90c639146d9f2411d6d973fd48639a8836ee2b6e3e7fe0d3741d4f26bf22150 on 2026-09-22); a browser user-agent gets 403, and back-to-back fetches drew a 3,365-byte 403 now and then, so pace re-runs. If curl is refused again this source becomes chrome + attended: true, supplied with --supply-file. Sliced from 456.701's body heading plus its first words (the table of contents prints the heading followed by leader dots, so the anchor cannot land there) to the REGULATORY AUTHORITY line that follows 456.705 at the end of the document; the slice therefore also carries the page furniture after 456.705(C) (the running block, Transmittal Letter NF-64, 09/08/25), as the hand capture kept it at each page break. pdftotext -layout: the manual is single-column, so -layout and -raw agree on reading order. The standing packet was rendered by the session fetch tool, so line breaks differ. mass.gov burst behaviour, observed 2026-09-22: its edge answers several requests in quick succession with a 3,365-byte HTTP 403 (distinct from the 14 KB 403 a browser user-agent gets), and a pause of about 30-40 seconds clears it; five URLs fetched back to back drew it on the 4th and 5th, and two captures 8 seconds apart drew it again. capture.py treats any non-200 as a failed source (exit 1), never a short packet, and curl's --retry does not retry a 403. So a nightly that reaches this recipe right after another mass.gov fetch may fail a source; re-run it after a pause before recording anything, and capture the three massachusetts recipes at least 30 seconds apart.
+- SOURCE 2: transport curl; extractor html-text; scope #main-content; filters trim-lines, collapse-blank-runs.
+  Recipe written 2026-09-22. Plain curl, no user-agent option (a browser user-agent gets 403). #main-content holds the page's metadata, its 'Date: 09/08/2025' line and the download links' labels; the page carries no rule text (CLAUDE.md, Capture traps).
+
+SOURCE 1: 130 CMR 456.701 through 456.705 (transfers and discharges initiated by a nursing facility, notice time frames, fair hearing time frames, stay pending appeal, scheduling) — excerpt from the Nursing Facility Manual PDF the Commonwealth posts as 130 CMR 456.000 | https://www.mass.gov/doc/long-term-care-services-1/download | source date: regulation page date 09/08/2025; document Transmittal Letter NF-64, dated 09/08/25 | retrieved: 2026-10-29
+456.701: Notice Requirements for Transfers and Discharges Initiated by a Nursing Facility
+
+      (A) A resident may be transferred or discharged from a nursing facility only when
+         (1) the transfer or discharge is necessary for the resident's welfare and the resident's needs
+         cannot be met in the nursing facility;
+         (2) the transfer or discharge is appropriate because the resident's health has improved
+         sufficiently so that the resident no longer needs the services provided by the nursing facility;
+         (3) the safety of individuals in the nursing facility is endangered;
+         (4) the health of individuals in the nursing facility would otherwise be endangered;
+         (5) the resident has failed, after reasonable and appropriate notice, to pay for (or failed to
+         have MassHealth or Medicare pay for) a stay at the nursing facility; or
+         (6) the nursing facility ceases to operate.
+
+      (B) When the facility transfers or discharges a resident under any of the circumstances specified
+      in 130 CMR 456.701(A)(1) through (4), the resident's clinical record must contain
+      documentation to explain the transfer or discharge. The documentation must be made by
+          (1) the resident's physician or PCP when a transfer or discharge is necessary under 130 CMR
+          456.701(A)(1) or (2); and
+          (2) a physician or PCP when the transfer or discharge is necessary under 130 CMR
+          456.701(A)(3) or (4).
+
+      (C) Before a nursing facility discharges or transfers any resident, the nursing facility must hand
+      deliver to the resident and mail to the authorized or legal representative a notice written in 12-
+      point or larger type that contains, in a language the member understands, the following:
+          (1) the action to be taken by the nursing facility;
+          (2) the specific reason or reasons for the discharge or transfer;
+          (3) the effective date of the discharge or transfer;
+          (4) the location to which the resident is to be discharged or transferred;
+          (5) a statement informing the resident of their right to request a hearing before MassHealth’s
+          Board of Hearings, including
+               (a) the address to send a request for a hearing;
+               (b) the time frame for requesting a hearing as provided for under 130 CMR 456.702;
+               and
+               (c) the effect of requesting a hearing as provided for under 130 CMR 456.704;
+          (6) the name, address, and telephone number of the local long-term-care ombudsman office;
+          (7) for nursing facility residents with developmental disabilities, the address and telephone
+          number of the agency responsible for the protection and advocacy of developmentally
+          disabled individuals established under Part C of the Developmental Disabilities Assistance
+          and Bill of Rights Act (42 U.S.C. s. 6041 et seq.);
+          (8) for nursing facility residents who are mentally ill, the mailing address, and telephone
+          number of the agency responsible for the protection and advocacy of mentally ill individuals
+          established under the Protection and Advocacy for Mentally Ill Individuals Act (42 U.S.C. s.
+          10801 et seq.);
+
+    Commonwealth of Massachusetts                    Subchapter Number and Title                   Page
+            MassHealth                                  1. Program Regulations
+                                                                                                    4-27
+       Provider Manual Series                             (130 CMR 456.000)
+
+                                                           Transmittal Letter                      Date
+           Nursing Facility Manual
+                                                                  NF-64                          09/08/25
+
+
+          (9) a statement that all residents may seek legal assistance and that free legal assistance may
+          be available through their local legal services office. The notice should contain the address of
+          the nearest legal services office; and
+          (10) the name of a person at the nursing facility who can answer any questions the resident
+          has about the notice and who will be available to assist the resident in filing an appeal.
+
+      (D) A nursing facility’s failure to readmit a resident following a medical leave of absence will
+      be deemed a transfer or discharge (depending on the resident’s circumstances). The nursing
+      facility must issue notice to the resident and an authorized or legal representative in accordance
+      with 130 CMR 456.701(A) through (C), 456.702(C), 130 CMR 610.028: Notice Requirements
+      Regarding Actions Initiated by a Nursing Facility, and 610.029: Time Frames for Notices
+      Issued by Nursing Facilities.
+
+456.702: Time Frames for Notices Issued by Nursing Facilities
+
+      (A) The notice of discharge or transfer required under 130 CMR 456.701(C) must be made by
+      the nursing facility at least 30 days prior to the date the resident is to be discharged or
+      transferred, except as provided for under 130 CMR 456.702(B).
+
+      (B) In lieu of the 30-day notice requirement set forth in 130 CMR 456.702(A), the notice of
+      discharge or transfer required under 130 CMR 456.701(C) must be made as soon as practicable
+      before the discharge or transfer in any of the following circumstances.
+          (1) The health or safety of individuals in the nursing facility would be endangered and this is
+          documented in the resident's record by a physician or PCP.
+          (2) The resident's health improves sufficiently to allow a more immediate transfer or
+          discharge and the resident's attending physician or PCP documents this in the resident's
+          record.
+          (3) An immediate transfer or discharge is required by the resident's urgent medical needs and
+          this is documented in the medical record by the resident's attending physician or PCP.
+          (4) The resident has not resided in the nursing facility for 30 days immediately prior to
+          receipt of the notice.
+
+      (C) When the transfer or discharge is the result of a nursing facility’s failure to readmit a resident
+      following hospitalization or other medical leave of absence, the notice of transfer or discharge,
+      including that which is required under 130 CMR 456.429, must comply with the requirements set
+      forth in 130 CMR 456.701 and must be provided to the resident and an authorized or legal
+      representative at the time the nursing facility determines that it will not readmit the resident.
+
+456.703: Time Frames for Submission of Requests for Fair Hearings
+
+      (A) Appeals of discharges and transfers will be handled by MassHealth’s Board of Hearings
+      (BOH) pursuant to 130 CMR 610.000: MassHealth: Fair Hearing Rules.
+
+      (B) Time Limitation on the Right of Appeal. The date of request for a fair hearing is the date on
+      which BOH receives such a request in writing. BOH must receive the request for a fair hearing
+      within the following time limits:
+
+    Commonwealth of Massachusetts                     Subchapter Number and Title                    Page
+            MassHealth                                   1. Program Regulations
+                                                                                                     4-28
+       Provider Manual Series                              (130 CMR 456.000)
+
+                                                            Transmittal Letter                       Date
+           Nursing Facility Manual
+                                                                   NF-64                           09/08/25
+
+
+          (1) 30 days after a resident receives written notice of a discharge or transfer pursuant to 130
+          CMR 456.702(A); or (2) 30 days after a nursing facility initiates a transfer or discharge or
+          fails to readmit and fails to give the resident notice; or
+          (3) 14 days after a resident receives written notice of an emergency discharge or emergency
+          transfer pursuant to 130 CMR 456.702(B); or
+          (4) 14 days after a resident receives written notice of a transfer or discharge that is the result
+          of a nursing facility’s failure to readmit a resident following hospitalization or other medical
+          leave of absence.
+
+456.704: Stay of a Transfer or Discharge from a Nursing Facility Pending Appeal
+
+      (A) If a request for a hearing regarding a discharge or transfer from a nursing facility is received
+      by the Board of Hearings during the notice period described in 130 CMR 456.703(B)(1), the
+      nursing facility must stay the planned discharge or transfer until 30 days after the decision is
+      rendered. While this stay is in effect, the resident must not be transferred or discharged from the
+      nursing facility.
+
+      (B) If a hearing is requested, in accordance with 130 CMR 456.703(B)(2), and the request is
+      received prior to the discharge or transfer, then the nursing facility must stay the planned transfer
+      or discharge until five days after the hearing decision.
+
+      (C) If the request for a hearing, in accordance with 130 CMR 456.703(B)(2), is received within
+      the applicable time frame but after the transfer, the nursing facility must, upon receipt of an
+      appeal decision favorable to the resident, promptly readmit the resident to the next available bed
+      in the facility.
+
+      (D) In the case of a transfer or discharge that is the result of a nursing facility’s failure to readmit
+      a resident following hospitalization or other medical leave of absence, if the request for a hearing
+      is received within the applicable time period as described in 130 CMR 456.703(B)(3), the nursing
+      facility must, upon receipt of an appeal decision favorable to the resident, promptly readmit the
+      resident to the next available bed in the facility.
+
+456.705: Scheduling by the Board of Hearings
+
+      (A) Upon receipt of a request for a fair hearing, BOH will register the appeal, set a date for
+      a hearing, and so notify the appellant and the nursing facility.
+
+      (B) In accordance with 130 CMR 610.015(F): Expedited Appeals for Discharges and
+      Transfers from a Nursing Facility Under 130 CMR 610.029(B) or (C), a resident may request
+      an expedited appeal when a nursing facility notifies a resident of a discharge or transfer under
+      the time frames in 130 CMR 456.702(B) or (C).
+
+      (C) BOH will designate a site for the hearing accessible to the appellant. If the appellant has a
+      handicap or disability that reasonably prevents their appearance at the designated site, they
+      may request that the hearing be held by telephone or video conferencing, or at an accessible
+      location.
+
+   Commonwealth of Massachusetts            Subchapter Number and Title    Page
+           MassHealth                          1. Program Regulations
+                                                                           4-29
+      Provider Manual Series                     (130 CMR 456.000)
+
+                                                  Transmittal Letter       Date
+        Nursing Facility Manual
+                                                        NF-64             09/08/25
+
+SOURCE 2: MassHealth, regulation page for 130 CMR 456.000: Long Term Care Services (the page carrying the posted PDF) | https://www.mass.gov/regulations/130-CMR-456000-long-term-care-services | source date: Date: 09/08/2025 | retrieved: 2026-10-29
+This page, 130 CMR 456.000: Long Term Care Services, is
+ offered by
+
+MassHealth
+
+ Show more
+
+This is a part of
+   the
+ law library
+ :
+
+130 CMR
+
++
+
+This is a part of
+   the
+ law library
+ :
+
+130 CMR
+
+ ×
+
+Table of Contents
+
+ 130 CMR 401.000: Independent Clinical Laboratory Services
+
+ 130 CMR 402.000: Vision Care Services
+
+ 130 CMR 403.000: Home Health Agency
+
+ 130 CMR 404.000: Adult Day Health Services
+
+ 130 CMR 405.000: Community Health Center Services
+
+ 130 CMR 406.000: Pharmacy Services
+
+ 130 CMR 407.000: Transportation Services
+
+ 130 CMR 408.000: Adult Foster Care
+
+ 130 CMR 409.000: Durable Medical Equipment Services
+
+ 130 CMR 410.000: Outpatient Hospital Services
+
+ 130 CMR 411.000: Psychologist Services
+
+ 130 CMR 412.000: Renal Dialysis Clinic Services
+
+ 130 CMR 413.000: Speech and Hearing Center Services
+
+ 130 CMR 414.000: Independent Nursing Services
+
+ 130 CMR 415.000: Acute Inpatient Hospital Services
+
+ 130 CMR 416.000: Hearing Instrument Specialist Services
+
+ 130 CMR 417.000: Psychiatric Day Treatment Program Services
+
+ 130 CMR 418.000: Substance Use Disorder Treatment Services
+
+ 130 CMR 419.000: Day Habilitation Center Services
+
+ 130 CMR 420.000: Dental Services
+
+ 130 CMR 421.000: Family Planning Agency Services
+
+ 130 CMR 422.000: Personal Care Attendant Services
+
+ 130 CMR 423.000: Freestanding Ambulatory Surgical Centers
+
+ 130 CMR 424.000: Podiatrist Services
+
+ 130 CMR 425.000: Psychiatric Inpatient Hospital Services
+
+ 130 CMR 426.000: Audiologist Services
+
+ 130 CMR 427.000: Oxygen and Respiratory Therapy Equipment
+
+ 130 CMR 428.000: Prosthetics Services
+
+ 130 CMR 429.000: Mental Health Center Services
+
+ 130 CMR 430.000: Rehabilitation Center Services
+
+ 130 CMR 431.000: Independent Diagnostic Testing Facility Services
+
+ 130 CMR 432.000: Therapist Services
+
+ 130 CMR 433.000: Physician Services
+
+ 130 CMR 434.000: Psychiatric Outpatient Hospital Services
+
+ 130 CMR 435.000: Chronic Disease and Rehabilitation Inpatient Hospital Services
+
+ 130 CMR 436.000: Radiation Oncology Treatment Centers
+
+ 130 CMR 437.000: Hospice Services
+
+ 130 CMR 438.000: Continuous Skilled Nursing Agency Services
+
+ 130 CMR 440.000: Early Intervention Services
+
+ 130 CMR 441.000: Chiropractor Services
+
+ 130 CMR 442.000: Orthotics Services
+
+ 130 CMR 447.000: Acupuncture Services
+
+ 130 CMR 448.000: Community Behavioral Health Center Services
+
+ 130 CMR 449.000: Correctional Facility Services
+
+ 130 CMR 450.000: Administrative and Billing Regulations
+
+ 130 CMR 455.000: Urgent Care Clinic Services
+
+ 130 CMR 456.000: Long Term Care Services
+
+ 130 CMR 457.000: Freestanding Birth Center Services
+
+ 130 CMR 458.000: Homeless Medical Respite Services
+
+ 130 CMR 461.000: Community Support Program Services
+
+ 130 CMR 462.000: Licensed Independent Behavioral Health Clinician Services
+
+ 130 CMR 463.000: Doula Services
+
+ 130 CMR 464.000: Program of Assertive Community Treatment Services
+
+ 130 CMR 484.000: Abortion Clinic Services
+
+ 130 CMR 485.000: Sterilization and Hysterectomy Services
+
+ 130 CMR 501.000: MassHealth: General Policies
+
+ 130 CMR 502.000: MassHealth: The Eligibility Process
+
+ 130 CMR 503.000: MassHealth: Universal Eligibility Requirements
+
+ 130 CMR 504.000: MassHealth: Citizenship and Immigration
+
+ 130 CMR 505.000: MassHealth: Coverage Types
+
+ 130 CMR 506.000: MassHealth: Financial Requirements
+
+ 130 CMR 508.000: MassHealth: Managed Care Requirements
+
+ 130 CMR 515.000: MassHealth: General Policies
+
+ 130 CMR 516.000: MassHealth: The Eligibility Process
+
+ 130 CMR 517.000: MassHealth: Universal Eligibility Requirements
+
+ 130 CMR 518.000: MassHealth: Citizenship and Immigration
+
+ 130 CMR 519.000: MassHealth: Coverage Types
+
+ 130 CMR 520.000: MassHealth: Financial Eligibility
+
+ 130 CMR 522.000: MassHealth: Other Division Programs
+
+ 130 CMR 610.000: MassHealth: Fair Hearing Rules
+
+ 130 CMR 630.000: Home- and Community-Based Services Waiver Services
+
+ Regulation
+
+Regulation
+ 130 CMR 456.000: Long Term Care Services
+
+Date: | 09/08/2025
+
+Organization: | MassHealth
+
+Regulatory Authority: | M.G.L. c. 118E, s. 7 M.G.L. c. 118E, s. 12
+
+Official Version: | Published by the Massachusetts Register
+
+This is an unofficial version of Commonwealth regulations and is posted here for the convenience of the public. It is not an official statement of the regulations. You will find a link to the related rate regulations in the Related section.
+
+Skip table of contents
+
+Table of Contents
+
+ table of contents+
+
+Table of Contents Hide Table of contents×
+
+Show More  Table of contents
+
+top
+
+Table of Contents
+
+You skipped the table of contents section.
+
+Downloads
+
+Long Term Care Services, Open PDF file, 454.32 KB
+
+(English, PDF 454.32 KB)
+
+Long Term Care Services, Open DOCX file, 124.33 KB
+
+(English, DOCX 124.33 KB)
+
+Related
+
+ Nursing Facility Manual for MassHealth Providers
+
+Regulation
+
+ 101 CMR 206.00: Standard Payments to Nursing Facilities
+
+ 10/01/2025
+
+This is part of:
+
+ 130 CMR
+
+130 CMR 455.000: Urgent Care Clinic Services
+
+130 CMR 457.000: Freestanding Birth Center Services
+
+Help Us Improve Mass.gov  with your feedback
+
+ Did you find what you were looking for on this webpage?
+
+Yes
+
+No
+
+ If you have any suggestions for the website, please let us know.
+
+ How can we improve the page? *
+
+Please do not include personal or contact information.
+
+You will not get a response
+
+The feedback will only be used for improving the website. If you need assistance, please For help on some common issues, see here.. Please limit your input to 500 characters.
+
+Please remove any contact information or personal data from your feedback. You will NOT get a response.
+
+If you need assistance, please For help on some common issues, see here..
+
+Please let us know how we can improve this page.
+
+Please remove any contact information or personal data from your feedback. You will NOT get a response.
+
+If you need assistance, please For help on some common issues, see here..
+
+Thank you for your website feedback! We will use this information to improve this page.
+
+If you would like to continue helping us improve Mass.gov, join our user panel to test new features for the site.
+

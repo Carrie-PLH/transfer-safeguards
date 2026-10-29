@@ -1,0 +1,473 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: minnesota
+ASSEMBLED: 2026-10-29
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/minnesota.json (recipe digest 58989314ea0a). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
+- SOURCE 1: transport curl; extractor html-text; scope #xtend; filters pipe-table-cells, trim-lines.
+  Plain curl, no user-agent needed (200 with no UA, tested 2026-09-15). #xtend.statute is the Revisor template's own statute wrapper: narrower than main#legContainerMain, which also carries the breadcrumb, doc_nav prev/next links and the Resources sidebar card. #xtend holds every subdivision (1 through 29) plus the section's History block, so the captured text is a superset of the quoted subd. 29 -- that is expected, not a scope defect.
+- SOURCE 2: transport curl; extractor html-text; scope #xtend; filters pipe-table-cells, trim-lines.
+  Same template and same scope reasoning as source 1. Plain curl, no user-agent needed.
+- SOURCE 3: transport chrome; extractor html-text; scope body; filters pipe-table-cells, trim-lines (fetched by the session reader and supplied).
+  mn.gov sits behind Radware/ShieldSquare bot management (validate.perfdrive.com 302 challenge) -- curl gets a 302 to the challenge URL with or without a browser user-agent and cookie jar reuse across two requests, tested 2026-09-15. A real browser session (Claude Browser pane) reaches the page directly with no interstitial, so the block is a client-fingerprint check a genuine browser passes honestly rather than a request this project should script around; same category as Florida's session-reader sources. scope is body rather than a narrower selector because the two facts the page states -- the OOLTC description under div#content, and the mailing address/phone '540 Cedar Street / St. Paul, MN 55101 / 1-800-657-3591' under footer div.contact-info -- are siblings under body with no smaller common ancestor, and html-text takes one CSS selector (soup.select_one), not a list; the mailing address is the case PROVENANCE.md/CLAUDE.md calls out (Georgia's footer addressLink precedent) where the recipe must reach whatever node the agency puts the contact in.
+- SOURCE 4: transport curl; extractor html-text; scope section#page-content; filters trim-lines, collapse-blank-runs.
+  health.state.mn.us returns HTTP 403 to curl's bare user-agent and 200 to a browser string, tested 2026-09-17; user_agent: browser. This is the department's own statement of the filing route for the hearing row: an online 'HRD Appeals Submission Form', the 30-day filing window, the 14-calendar-day hearing timing at the resident's facility, and the pendency protection -- all absent from the two statutes alone. section#page-content is the Drupal theme's content wrapper; it duplicates a 'Contact Info' sidebar block twice (a responsive-breakpoint artifact, two copies of the same short block for two CSS states), which is harmless to fidelity since the quoted prose itself appears once, contiguously.
+- SOURCE 5: transport curl; extractor html-text; scope #xtend; filters pipe-table-cells, trim-lines.
+  Same Revisor template, scope, and transport reasoning as sources 1 and 2. Plain curl, no user-agent needed, tested 2026-09-17. This is Minnesota's own Medicaid bed-hold/leave-day rule -- 'A reserved bed must be held for a recipient on hospital leave or therapeutic leave', with payment limited to 18 leave days per calendar year for hospital leave and separate per-facility-type limits for therapeutic leave. It states nothing about readmission after the limit is exceeded; that absence is recorded rather than filled.
+- SOURCE 6: transport curl; extractor html-text; scope #xtend; filters pipe-table-cells, trim-lines.
+  Same Revisor template, scope, and transport reasoning as sources 1, 2 and 5. Plain curl, no user-agent needed, tested 2026-09-17. Captured to support the section 01 finding that Minnesota Rules chapter 4658 -- the state's nursing-home rule chapter, capture-pending since the baseline build -- does not enumerate transfer/discharge grounds anywhere in the chapter: the one part titled for the subject, 4658.0465, is a clinical-record documentation rule (what a discharge summary must contain, and that it be sent to a receiving facility), not a grounds provision. The chapter's other parts were read against the Revisor's own rule-listing page (https://www.revisor.mn.gov/rules/4658/, not itself captured as a source because nothing on the page quotes it) and none is titled or worded as a grounds provision either; that page's part titles are checked, not quoted.
+
+SOURCE 3: Minnesota Office of Ombudsman for Long-Term Care | https://mn.gov/ooltc/ | source date: page modified 2025-04-21 (meta dc.modified) | retrieved: 2026-10-29
+skip to content
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Office of Ombudsman for Long-Term Care
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+State of Minnesota
+
+
+
+
+
+
+
+
+
+
+Search:
+
+
+
+
+submit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+About Us
+
+
+
+Mission, Vision and Values
+
+
+
+Minnesota Board on Aging
+
+
+
+Staff
+
+
+
+Staff Directory
+
+
+
+
+
+
+
+Legislative Advocacy
+
+
+
+
+
+
+
+Reports
+
+
+
+Annual Reports
+
+
+Special Reports
+
+
+govDelivery Communications
+
+
+
+
+
+
+Privacy Policy
+
+
+
+Work with Us
+
+
+
+
+
+
+
+Resident and Family Resources
+
+
+
+Resources
+
+
+
+Long-Term Care Facility Information
+
+
+
+Resident and Family Councils
+
+
+
+Nursing Home Councils
+
+
+
+Assisted Living Councils
+
+
+
+
+
+
+
+Self-Advocacy
+
+
+
+Person-Centered Practices
+
+
+
+Electronic Monitoring
+
+
+
+Laws and Regulations
+
+
+
+More Services
+
+
+
+
+
+
+
+Know Your Rights
+
+
+
+Know Your Rights Documents
+
+
+
+
+
+
+Provider Resources
+
+
+
+Submitting Notices
+
+
+
+Closure Resources
+
+
+
+Training
+
+
+
+
+
+
+
+Volunteer with Us
+
+
+
+Contact Us
+
+
+
+Frequently Asked Questions
+
+
+
+Legislative Advocacy
+
+
+
+Annual Reports
+
+
+
+News and Announcements
+
+
+
+Long-Term Care Issues
+
+
+
+
+
+
+
+Search
+
+
+
+JSON Search
+
+
+XML Search
+
+
+Search Page
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Working to preserve individual rights for all who live in a long-term care community.
+
+
+We empower, educate, and advocate for you.
+
+
+
+
+
+
+
+
+
+
+
+The Office of Ombudsman for Long-Term Care (OOLTC) is an independent state agency that serves people needing or receiving long-term care through complaint investigation, advocacy, and education.
+
+
+
+
+
+
+
+
+Keep up to date with our Office
+
+
+Subscribe to our Newsletter to keep up to date and learn about what our Office is up to.
+
+
+
+
+
+
+Policy and Legislation
+
+
+Learn more about the policies we've helped to develop
+
+
+
+
+
+
+
+
+
+
+
+
+
+EMPOWER
+
+
+We empower residents to self advocate and to understand their rights by working with them, their families, health care and service providers, and public agencies to ensure their health, safety, and well-being.
+
+
+
+
+
+
+
+
+
+
+EDUCATE
+
+
+We educate residents about their rights, by offering free services to anyone seeking information about long-term care.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ADVOCATE
+
+
+We advocate for residents, to ensure needs are met and dignity upheld. The office also works to improve the health care and social services delivery systems through changes in state and federal law and policy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The Office of Ombudsman for Long-Term Care
+
+
+
+540 Cedar Street
+
+
+
+St. Paul, MN 55101
+
+
+
+1-800-657-3591
+

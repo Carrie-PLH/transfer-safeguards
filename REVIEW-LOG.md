@@ -1495,3 +1495,72 @@ change this pass). build-state-picker.py: 51/51 regenerated. check-all.py:
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-10-27. No
 human review is claimed for this entry.
+
+## 2026-10-29 — nightly review: maryland, massachusetts, michigan, minnesota, mississippi (scheduled)
+
+Cursor at maryland. Selected maryland, massachusetts, michigan, minnesota,
+mississippi (next four alphabetically; portfolio routine's per-collection
+budget is 5, wider than this skill's own suggested 3). RR recipe-exception
+check run first: 52 state pages, 55 recipe files (`states/README.md` is not
+a page) — every published state page has a recipe, so the Room & Recourse
+recipe exception (building missing recipes) does not apply this pass;
+reviewed normally.
+
+- maryland: CONFIRMED. Recipe capture (digest 094cd75387b1), 6 sources, no
+  supplements. Zero failures on both pages. Retained (hash 9dc8dd474e6f7a55),
+  promoted — unchanged since 2026-10-03. Checked date -> 2026-10-29.
+- massachusetts: CONFIRMED. Recipe capture (digest f2c8a6194960), 3 main
+  sources; first attempt lost source 2 to a connection reset, a serial
+  retry captured all 3 cleanly. Two supplements refreshed through their own
+  recipes: bedhold (digest acc5150214da, unchanged since 2026-09-22) and
+  regs (digest 86e5ba0d1c49) — regs's capture was RETAINED rather than
+  unchanged: the MassHealth regulation-listing page reflowed two "Open ...
+  file" captions and lengthened two cross-referenced chapter titles
+  ("Independent Nurse" -> "Independent Nursing Services", "Continuous
+  Skilled Nursing Agency" -> "...Services"); none of it touches the quoted
+  130 CMR 456.701-705 spans, zero failures against all three fresh
+  captures on both pages. Retained and promoted all three (main hash
+  196acf359f155271, bedhold f2c92b7125761d79, regs 8581b49c66813b21).
+  Checked date -> 2026-10-29.
+- michigan: CONFIRMED. Recipe capture (digest 508f3660fd67); first attempt
+  lost source 1 to an HTTP/2 framing timeout, a serial retry captured all 4
+  sources cleanly. Zero failures on both pages. Retained (hash
+  bb9c7d582cde5789), promoted — unchanged since 2026-09-13. Checked date ->
+  2026-10-29.
+- minnesota: UNREACHABLE (partial). Source 3 (mn.gov/ooltc/, the recipe's
+  documented `chrome` transport for this Radware-fronted host) was fetched
+  through the Claude Browser pane per the recipe's own notes — one page
+  load, no burst requests — and supplied with `--supply 3=`; it captured
+  cleanly. Sources 1, 2, 4, 5 and 6 (revisor.mn.gov and sibling hosts) failed
+  on two separate attempts roughly 15 minutes apart, mostly "connection
+  reset by peer" with one 180-second timeout on revisor.mn.gov/rules/9505.0415/;
+  ordinary internet connectivity was confirmed live throughout (google.com
+  200 OK) so this reads as host- or path-specific network trouble rather
+  than a general outage, but no alternate transport is documented for these
+  sources and none was tried beyond curl with and without the recipe's
+  pinned options. No capture retained (incomplete evidence, 1 of 6
+  sources), checked date untouched, page not modified. First occurrence
+  this pass; not queued (one unreachable pass is weather, not an address).
+- mississippi: UNREACHABLE (partial). Recipe capture; two attempts (one in
+  the initial parallel batch, one serial retry ~10 minutes later) each lost
+  5 of 7 sources. Source 1 (msdh.ms.gov/page/resources/119.pdf) answers a
+  HEAD request with 200 OK but every full GET attempted — default curl,
+  `--http1.1`, and a 60-second-timeout direct retry — failed to complete,
+  mostly "connection reset by peer." Sources 3, 5, 6 and 7 (two
+  medicaid.ms.gov Title 23 PDFs, each cited twice) timed out at 120-180
+  seconds on every attempt. Sources 2 and 4 captured cleanly both times.
+  No capture retained (incomplete evidence, 2 of 7 sources), checked date
+  untouched, page not modified. First occurrence this pass; not queued.
+
+Cursor advanced: maryland -> missouri (past mississippi, the fifth selected
+unit — unreachable pages advance the cursor the same as confirmed ones).
+
+sync-checked-dates.py: 6 derived dates corrected (table + json; maryland,
+massachusetts, michigan). build-status.py: baseline 51/51, full 50/51
+(pre-existing Hawaii backfill gap, unaffected by this pass). generate-
+sitemap.py: 58 URLs, robots.txt and _redirects regenerated (no page-set
+change this pass). build-state-picker.py: 51/51 regenerated. check-all.py:
+104 pages across 52 states, no unexplained failures.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-10-29. No
+human review is claimed for this entry.
