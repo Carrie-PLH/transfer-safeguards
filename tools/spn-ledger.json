@@ -164,17 +164,17 @@
       "page": "florida"
     },
     "https://akoltco.org/": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-09-06T124806Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-10-30T150832Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "alaska"
     },
     "https://akoltco.org/about-us/": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-09-06T124843Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-10-30T150916Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "alaska"
@@ -266,17 +266,18 @@
       "page": "washington"
     },
     "https://apps.azsos.gov/public_services/Title_09/9-10.pdf": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-09-06T125919Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-10-30T150937Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "arizona"
     },
     "https://apps.azsos.gov/public_services/Title_09/9-28.pdf": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T111630Z",
-      "last_detail": "submit-401",
+      "attempts": 2,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-30T150956Z",
+      "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "arizona"
     },
@@ -343,45 +344,51 @@
       "page": "wisconsin"
     },
     "https://cdhs.colorado.gov/long-term-care-ombudsman": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-09-06T132309Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-10-30T151508Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "colorado"
     },
     "https://code.dccouncil.gov/us/dc/council/code": {
-      "attempts": 1,
-      "last_attempt": "2026-09-06T133243Z",
-      "last_detail": "error:not-found",
-      "last_result": "FAILED",
+      "attempts": 2,
+      "capture": "https://web.archive.org/web/20261030153040/https://code.dccouncil.gov/us/dc/council/code",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-30T153217Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "district-of-columbia"
     },
     "https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.01": {
-      "attempts": 1,
-      "last_attempt": "2026-09-06T133431Z",
-      "last_detail": "error:not-found",
-      "last_result": "FAILED",
+      "attempts": 2,
+      "capture": "https://web.archive.org/web/20261030153232/https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.01",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-30T153410Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "district-of-columbia"
     },
     "https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.02": {
-      "attempts": 1,
-      "last_attempt": "2026-09-06T133525Z",
-      "last_detail": "error:not-found",
+      "attempts": 2,
+      "last_attempt": "2026-10-30T153936Z",
+      "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "district-of-columbia"
     },
     "https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.03": {
-      "attempts": 1,
-      "last_attempt": "2026-09-06T133548Z",
-      "last_detail": "error:not-found",
-      "last_result": "FAILED",
+      "attempts": 2,
+      "capture": "https://web.archive.org/web/20261030154052/https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.03",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-30T154225Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "district-of-columbia"
     },
     "https://code.dccouncil.gov/us/dc/council/code/sections/7-702.04": {
-      "attempts": 1,
-      "last_attempt": "2026-09-06T133827Z",
-      "last_detail": "error:not-found",
+      "attempts": 2,
+      "last_attempt": "2026-10-30T154713Z",
+      "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "district-of-columbia"
     },
@@ -560,9 +567,9 @@
       "page": "district-of-columbia"
     },
     "https://des.az.gov/LTCOP": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-09-06T130007Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-10-30T151113Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "arizona"
@@ -830,9 +837,9 @@
       "page": "california"
     },
     "https://govt.westlaw.com/calregs/Document/I6300B9C25B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default)": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-16T044328Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-10-30T151310Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "california"
@@ -846,9 +853,10 @@
       "page": "california"
     },
     "https://govt.westlaw.com/calregs/Document/IBABA4E545B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default)": {
-      "attempts": 1,
-      "last_attempt": "2026-10-16T044340Z",
-      "last_detail": "submit-0",
+      "attempts": 2,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-30T151330Z",
+      "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "california"
     },
@@ -861,9 +869,10 @@
       "page": "california"
     },
     "https://govt.westlaw.com/calregs/Document/IBABCBF5E5B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default)": {
-      "attempts": 1,
-      "last_attempt": "2026-10-16T044352Z",
-      "last_detail": "submit-0",
+      "attempts": 2,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-30T151429Z",
+      "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "california"
     },
@@ -876,9 +885,10 @@
       "page": "california"
     },
     "https://govt.westlaw.com/calregs/Document/IBAE556025B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default)": {
-      "attempts": 1,
-      "last_attempt": "2026-10-16T044405Z",
-      "last_detail": "submit-0",
+      "attempts": 2,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-30T151449Z",
+      "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "california"
     },
@@ -990,17 +1000,18 @@
       "page": "iowa"
     },
     "https://humanservices.arkansas.gov/contact-us/file-an-appeal/": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-09-06T130901Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-10-30T151134Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "arkansas"
     },
     "https://humanservices.arkansas.gov/wp-content/uploads/Medical-Assistance-Program-Manual-of-Cost-Reimbursement-Rules-for-Long-Term-Care-Facilities-8.1.2022.pdf": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T111642Z",
-      "last_detail": "submit-401",
+      "attempts": 2,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-30T151153Z",
+      "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "arkansas"
     },
@@ -1372,9 +1383,9 @@
       "page": "georgia"
     },
     "https://portal.ct.gov/dss/the-office-of-legal-counsel-regulations-and-administrative-hearings/office-of-legal-counsel-regulations-and-administrative-hearings---olcrah/contact": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T111707Z",
-      "last_detail": "submit-401",
+      "attempts": 2,
+      "last_attempt": "2026-10-30T152431Z",
+      "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "connecticut"
     },
@@ -1418,9 +1429,10 @@
       "page": "new-york"
     },
     "https://regulations.delaware.gov/api/AdminCode/title16/3102/390cf383-7c28-4d18-a3be-494417f7c892": {
-      "attempts": 1,
-      "last_attempt": "2026-09-06T133206Z",
-      "last_detail": "error:no-captures",
+      "attempts": 2,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-30T153024Z",
+      "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "delaware"
     },
@@ -1723,9 +1735,9 @@
       "page": "connecticut"
     },
     "https://www.cga.ct.gov/current/pub/chap_368v.htm#sec_19a-537": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T111719Z",
-      "last_detail": "submit-401",
+      "attempts": 2,
+      "last_attempt": "2026-10-30T152958Z",
+      "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "connecticut"
     },
@@ -2317,9 +2329,9 @@
       "page": "colorado"
     },
     "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12655&fileName=10+CCR+2505-10+8.400": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T111655Z",
-      "last_detail": "submit-401",
+      "attempts": 2,
+      "last_attempt": "2026-10-30T151943Z",
+      "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "colorado"
     },
@@ -2390,5 +2402,5 @@
       "page": "wyoming"
     }
   },
-  "updated": "2026-10-29T060134Z"
+  "updated": "2026-10-30T154713Z"
 }
