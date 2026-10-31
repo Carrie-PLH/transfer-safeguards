@@ -19,16 +19,18 @@
       "page": "pennsylvania"
     },
     "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0400/Sections/0400.022.html": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T111834Z",
-      "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "attempts": 2,
+      "capture": "https://web.archive.org/web/20261031182018/http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0400/Sections/0400.022.html",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-31T182037Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "florida"
     },
     "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0400/Sections/0400.0255.html": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T111846Z",
-      "last_detail": "submit-401",
+      "attempts": 2,
+      "last_attempt": "2026-10-31T182532Z",
+      "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "florida"
     },
@@ -58,9 +60,9 @@
       "page": "alabama"
     },
     "https://adminrules.idaho.gov/rules/current/16/160326.pdf": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T112145Z",
-      "last_detail": "submit-401",
+      "attempts": 2,
+      "last_attempt": "2026-10-31T190838Z",
+      "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "idaho"
     },
@@ -95,24 +97,28 @@
       "page": "california"
     },
     "https://aging.georgia.gov/programs-and-services/long-term-care-ombudsman-program": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T111948Z",
-      "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "attempts": 2,
+      "capture": "https://web.archive.org/web/20261031184055/https://aging.georgia.gov/programs-and-services/long-term-care-ombudsman-program",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-31T184118Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "georgia"
     },
     "https://aging.idaho.gov/about-us/our-staff/": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T112157Z",
-      "last_detail": "submit-401",
+      "attempts": 2,
+      "last_attempt": "2026-10-31T191329Z",
+      "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "idaho"
     },
     "https://aging.idaho.gov/ombudsman-program/": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T112210Z",
-      "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "attempts": 2,
+      "capture": "https://web.archive.org/web/20261031191346/https://aging.idaho.gov/ombudsman-program/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-31T191640Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "idaho"
     },
     "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx": {
@@ -157,9 +163,9 @@
       "page": "south-carolina"
     },
     "https://ahca.myflorida.com/content/download/27067/file/59G-4.200.pdf": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T111859Z",
-      "last_detail": "submit-401",
+      "attempts": 2,
+      "last_attempt": "2026-10-31T183013Z",
+      "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "florida"
     },
@@ -533,9 +539,9 @@
       "page": "district-of-columbia"
     },
     "https://dch.georgia.gov/divisionsoffices/hfrd/hfrd-laws-regulations": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T112000Z",
-      "last_detail": "submit-401",
+      "attempts": 2,
+      "last_attempt": "2026-10-31T184705Z",
+      "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "georgia"
     },
@@ -738,10 +744,12 @@
       "page": "south-dakota"
     },
     "https://elderaffairs.org/programs-and-services/long-term-care-ombudsman-program/": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T111911Z",
-      "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "attempts": 2,
+      "capture": "https://web.archive.org/web/20261031183107/https://elderaffairs.org/programs-and-services/long-term-care-ombudsman-program/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-31T183405Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "florida"
     },
     "https://eohhs.ri.gov/media/45546/download?language=en": {
@@ -770,10 +778,12 @@
       "page": "texas"
     },
     "https://flrules.org/gateway/readFile.asp?sid=0&tid=0&cno=65-2&caid=1206309&type=4&file=65-2.doc": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T111923Z",
-      "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "attempts": 2,
+      "capture": "https://web.archive.org/web/20261031183418/https://flrules.org/gateway/readFile.asp?sid=0&tid=0&cno=65-2&caid=1206309&type=4&file=65-2.doc",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-31T183430Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "florida"
     },
     "https://forms.in.gov/Download.aspx?id=5668": {
@@ -911,23 +921,23 @@
       "page": "alaska"
     },
     "https://health.hawaii.gov/eoa/home/long-term-care-ombudsman/": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T112038Z",
-      "last_detail": "submit-401",
+      "attempts": 2,
+      "last_attempt": "2026-10-31T185341Z",
+      "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "hawaii"
     },
     "https://health.hawaii.gov/opppd/department-of-health-administrative-rules-title-11/": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T112050Z",
-      "last_detail": "submit-401",
+      "attempts": 2,
+      "last_attempt": "2026-10-31T185825Z",
+      "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "hawaii"
     },
     "https://health.hawaii.gov/opppd/files/2022/10/11-94.2-2022.pdf": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T112103Z",
-      "last_detail": "submit-401",
+      "attempts": 2,
+      "last_attempt": "2026-10-31T190302Z",
+      "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "hawaii"
     },
@@ -984,10 +994,12 @@
       "page": "wyoming"
     },
     "https://healthandwelfare.idaho.gov/appeals-and-fair-hearings": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T112222Z",
-      "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "attempts": 2,
+      "capture": "https://web.archive.org/web/20261031191736/https://healthandwelfare.idaho.gov/appeals-and-fair-hearings",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-31T191911Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "idaho"
     },
     "https://hhs.iowa.gov/family-community/aging-services/ltc-ombudsman": {
@@ -1094,10 +1106,12 @@
       "page": "california"
     },
     "https://legislature.idaho.gov/statutesrules/idstat/Title39/T39CH13/SECT39-1301/": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T112235Z",
-      "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "attempts": 2,
+      "capture": "https://web.archive.org/web/20261031192015/https://legislature.idaho.gov/statutesrules/idstat/Title39/T39CH13/SECT39-1301/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-31T192101Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "idaho"
     },
     "https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2025/legislation/S1015.pdf": {
@@ -1196,16 +1210,17 @@
       "page": "delaware"
     },
     "https://medquest.hawaii.gov/content/dam/formsanddocuments/client-forms/1161-request-for-a-hearing/DHS_1161_Rev_1218_Fillable.pdf/jcr:content?process=&submitUrl=&type=pdf": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T112115Z",
-      "last_detail": "submit-401",
+      "attempts": 2,
+      "last_attempt": "2026-10-31T190325Z",
+      "last_detail": "error:not-found",
       "last_result": "FAILED",
       "page": "hawaii"
     },
     "https://medquest.hawaii.gov/en/members-applicants/rights-and-responsibilities/grievance-appeals.html": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T112128Z",
-      "last_detail": "submit-401",
+      "attempts": 2,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-31T190357Z",
+      "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "hawaii"
     },
@@ -1307,9 +1322,9 @@
       "page": "new-hampshire"
     },
     "https://oah.dc.gov/page/about": {
-      "attempts": 1,
-      "last_attempt": "2026-09-06T134207Z",
-      "last_detail": "error:no-captures",
+      "attempts": 2,
+      "last_attempt": "2026-10-31T180426Z",
+      "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "district-of-columbia"
     },
@@ -1376,10 +1391,12 @@
       "page": "oklahoma"
     },
     "https://pamms.dhs.ga.gov/dfcs/medicaid/2582/": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T112013Z",
-      "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "attempts": 2,
+      "capture": "https://web.archive.org/web/20261031184724/https://pamms.dhs.ga.gov/dfcs/medicaid/2582/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-31T184815Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "georgia"
     },
     "https://portal.ct.gov/dss/the-office-of-legal-counsel-regulations-and-administrative-hearings/office-of-legal-counsel-regulations-and-administrative-hearings---olcrah/contact": {
@@ -1473,9 +1490,10 @@
       "page": "montana"
     },
     "https://rules.sos.ga.gov/gac/111-8-50": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T112025Z",
-      "last_detail": "submit-401",
+      "attempts": 2,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-10-31T184849Z",
+      "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "georgia"
     },
@@ -1597,9 +1615,9 @@
       "page": "rhode-island"
     },
     "https://www.aarp.org/legal-counsel-for-elderly/what-we-do/info-2017/dc-long-term-care-ombudsman.html": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T111732Z",
-      "last_detail": "submit-401",
+      "attempts": 2,
+      "last_attempt": "2026-10-31T180942Z",
+      "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "district-of-columbia"
     },
@@ -1750,10 +1768,12 @@
       "page": "kentucky"
     },
     "https://www.cms.gov/regulations-and-guidance/guidance/manuals/downloads/som107ap_pp_guidelines_ltcf.pdf": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T111744Z",
-      "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "attempts": 2,
+      "capture": "https://web.archive.org/web/20261031181034/https://www.cms.gov/regulations-and-guidance/guidance/manuals/downloads/som107ap_pp_guidelines_ltcf.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-31T181044Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "federal"
     },
     "https://www.dhcs.ca.gov/forms-laws-publications/laws-and-regulations/transfer-discharge-and-refusal-to-readmit-unit/": {
@@ -1798,23 +1818,25 @@
       "page": "virginia"
     },
     "https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-C/part-431/subpart-E": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T111757Z",
-      "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "attempts": 2,
+      "capture": "https://web.archive.org/web/20261031181112/https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-C/part-431/subpart-E",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-10-31T181248Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "federal"
     },
     "https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-483/subpart-B/section-483.1": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T111809Z",
-      "last_detail": "submit-401",
+      "attempts": 2,
+      "last_attempt": "2026-10-31T181941Z",
+      "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "federal"
     },
     "https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-483/subpart-B/section-483.15": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T111822Z",
-      "last_detail": "submit-401",
+      "attempts": 2,
+      "last_attempt": "2026-10-31T181959Z",
+      "last_detail": "submit-500",
       "last_result": "FAILED",
       "page": "federal"
     },
@@ -2135,9 +2157,9 @@
       "page": "michigan"
     },
     "https://www.myflfamilies.com/about/office-inspector-general/appeal-hearings": {
-      "attempts": 1,
-      "last_attempt": "2026-09-21T111936Z",
-      "last_detail": "submit-401",
+      "attempts": 2,
+      "last_attempt": "2026-10-31T184022Z",
+      "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "florida"
     },
@@ -2402,5 +2424,5 @@
       "page": "wyoming"
     }
   },
-  "updated": "2026-10-30T154713Z"
+  "updated": "2026-10-31T192101Z"
 }
