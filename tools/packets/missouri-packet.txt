@@ -1,10 +1,11 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: missouri
-ASSEMBLED: 2026-10-06
+ASSEMBLED: 2026-10-31
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/missouri.json (recipe digest 9d0acc95d4b4). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
 - SOURCE 1: transport curl; extractor pdftotext-layout; slice from '19 CSR 30-82.020 Classification of Rules' (occurrence 2) to '19 CSR 30-82.070 Alzheimer’s Demonstration Projects'; filters none.
   Two columns, and that governs both anchors. The Secretary of State sets 19 CSR 30-82 in two columns, so -layout renders each printed line as the left column's text followed by the right column's, and a rule running down one column is broken across lines carrying unrelated text from its neighbour. The consequence here is that .050's own text does not sit between its own headings: section (2), the enumerated grounds this page quotes, renders in the right-hand column of the page whose left column is still printing .020 and .030 — above the line where the .050 heading itself appears — while .050's paragraphs (10) through (14) render below the line carrying the heading of .060. Anchoring on .050's heading was tried first and lost all six grounds; the checker caught it, which is the point of checking before promoting. So the anchors are the headings of the rules on either side of that spread, .020 and .070, and the slice is a deliberate superset: it holds .020, .030, .050 and .060 entire. A superset can only add evidence and never narrows what verifies, and in this rendering it is the only contiguous span that certainly holds all of .050. from_occurrence 2 on both skips the chapter's table of contents on page 1, which prints the same headings with dot leaders.
 - SOURCE 2: transport curl; extractor html-text; scope body; filters none.
@@ -14,7 +15,7 @@ CAPTURE NOTES:
 
 from_occurrence 2 on the opening anchor skips the manual's own table of contents on page 1, which prints every section heading with dot leaders and a page number exactly as the body does. The closing anchor needs no occurrence key: apply_slice searches for it only in the tail *after* the from-match, and the table of contents sits before that point, so the body's one occurrence of the 2.12 heading is the only one left to find -- unlike the from anchor, which has to skip past the table of contents in the full document. (Tried to_occurrence 2 first, matching how the from anchor was written; capture.py refused it because counted from the tail there is only one, which is the correct reading of the option, not a bug.) The slice is bounded by the headings on either side of the material this page quotes (2.11 Program Policies through the start of 2.12) rather than by any internal subheading, because 2.11 is one continuous run of prose -- Reimbursement, then the therapeutic-home and hospital-reserve-day provisions, then the Bed-Hold Policy paragraph itself -- with no page break or heading marking where the bed-hold material specifically begins; anchoring tighter would risk losing the surrounding conditions (the 97% occupancy test, the three-day hospital-stay cap, and the choice between the two readmission routes) that qualify it. The slice therefore holds the whole of section 2.11 entire, a superset of what is quoted, which can only add evidence.
 
-SOURCE 1: 19 CSR 30-82.050, Transfer and Discharge Procedures (excerpt from the Secretary of State's published 19 CSR 30-82) | https://www.sos.mo.gov/cmsimages/adrules/csr/current/19csr/19c30-82.pdf | source date: rule history line ends Amended: Filed Sept. 1, 2021, effective March 30, 2022; page stamp (3/31/26) | retrieved: 2026-10-06
+SOURCE 1: 19 CSR 30-82.050, Transfer and Discharge Procedures (excerpt from the Secretary of State's published 19 CSR 30-82) | https://www.sos.mo.gov/cmsimages/adrules/csr/current/19csr/19c30-82.pdf | source date: rule history line ends Amended: Filed Sept. 1, 2021, effective March 30, 2022; page stamp (3/31/26) | retrieved: 2026-10-31
 19 CSR 30-82.020 Classification of Rules                                        the reinspection, or shall be correcting it in accordance with
                                                                                 the time schedules set out in the operator’s approved plan of
 PURPOSE: This rule adds to the classification of the standards for              correction as provided for under section 198.026, RSMo. If not,
@@ -470,7 +471,7 @@ amended 1997, 1998, 2003, 2014, 2016, 2018.                                   th
                                                                               been collected from state civil money penalties to fund the
                                                                               qualified facility’s proposal. In the absence of extraordinary
 
-SOURCE 2: Missouri Department of Health and Senior Services, Long-Term Care Ombudsman | https://health.mo.gov/seniors/ombudsman/ | source date: none stated on page | retrieved: 2026-10-06
+SOURCE 2: Missouri Department of Health and Senior Services, Long-Term Care Ombudsman | https://health.mo.gov/seniors/ombudsman/ | source date: none stated on page | retrieved: 2026-10-31
 Skip to main content
  
 
@@ -3909,7 +3910,7 @@ State Agencies
 
 Follow Us:
 
-SOURCE 3: MO HealthNet Nursing Home Provider Manual, section 2.11 Program Policies (Therapeutic Home Reserve Days, Hospital Reserve Days, and Bed-Hold Policy) | https://mydss.mo.gov/sites/mydss/files/media/pdf/2024/01/Nursing-Home-Manual-01-09-24.pdf | source date: Nursing Home Manual – 01/08/2024 (running header on every page); file dated 01-09-24 in its published filename | retrieved: 2026-10-06
+SOURCE 3: MO HealthNet Nursing Home Provider Manual, section 2.11 Program Policies (Therapeutic Home Reserve Days, Hospital Reserve Days, and Bed-Hold Policy) | https://mydss.mo.gov/sites/mydss/files/media/pdf/2024/01/Nursing-Home-Manual-01-09-24.pdf | source date: Nursing Home Manual – 01/08/2024 (running header on every page); file dated 01-09-24 in its published filename | retrieved: 2026-10-31
 2.11 Program Policies
 Reimbursement
 MHD reimburses an enrolled NF based on the eligible participant’s days of care multiplied by the

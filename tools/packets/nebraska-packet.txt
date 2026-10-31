@@ -1,10 +1,11 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: nebraska
-ASSEMBLED: 2026-10-06
+ASSEMBLED: 2026-10-31
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/nebraska.json (recipe digest 27b925a0693b). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
 - SOURCE 1: transport curl; extractor html-text; scope body; slice from '71-6022. Transfer or discharge of resident; conditions;' to 'View Statute 71-6021 Chapter 71 Index View Statute71-6023 Frequent'; filters none.
   The Legislature serves one statute per page with its own navigation above and below; the slice keeps the section and drops the chrome. The 'to' anchor is that navigation strip, which is stable because it names the neighbouring sections.
 - SOURCE 2: transport curl; extractor html-text; scope body; slice from '71-6023. Involuntary transfer or discharge; notice;' to 'View Statute 71-6022 Chapter 71 Index View Statute71-6023.01 Frequent'; filters none.
@@ -26,7 +27,7 @@ CAPTURE NOTES:
 - SOURCE 10: transport curl; extractor html-text; scope body; slice from "View Title 465 on the Secretary of State's website." to 'Rules & Regulations Page'; filters none.
   Server-rendered SharePoint page listing each Title 465 chapter with its own most-recent-amendment date, captured to support the dating discrepancy recorded against sources 8 and 9 (the compiled manual PDF's own running heads read 1995 for the same chapters).
 
-SOURCE 1: Neb. Rev. Stat. 71-6022 | https://nebraskalegislature.gov/laws/statutes.php?statute=71-6022 | source date: Laws 1983, LB 235, § 15; Laws 1986, LB 782, § 5 | retrieved: 2026-10-06
+SOURCE 1: Neb. Rev. Stat. 71-6022 | https://nebraskalegislature.gov/laws/statutes.php?statute=71-6022 | source date: Laws 1983, LB 235, § 15; Laws 1986, LB 782, § 5 | retrieved: 2026-10-31
 71-6022.
  
 
@@ -52,7 +53,7 @@ Laws 1983, LB 235, § 15;
 
 Laws 1986, LB 782, § 5.
 
-SOURCE 2: Neb. Rev. Stat. 71-6023 | https://nebraskalegislature.gov/laws/statutes.php?statute=71-6023 | source date: Laws 1983, LB 235, § 16; Laws 2000, LB 819, § 125 | retrieved: 2026-10-06
+SOURCE 2: Neb. Rev. Stat. 71-6023 | https://nebraskalegislature.gov/laws/statutes.php?statute=71-6023 | source date: Laws 1983, LB 235, § 16; Laws 2000, LB 819, § 125 | retrieved: 2026-10-31
 71-6023.
  
 
@@ -87,7 +88,7 @@ Laws 1983, LB 235, § 16;
 
 Laws 2000, LB 819, § 125.
 
-SOURCE 3: Neb. Rev. Stat. 71-445 | https://nebraskalegislature.gov/laws/statutes.php?statute=71-445 | source date: Laws 2000, LB 819, § 45; Laws 2007, LB296, § 372; Laws 2016, LB750, § 10 | retrieved: 2026-10-06
+SOURCE 3: Neb. Rev. Stat. 71-445 | https://nebraskalegislature.gov/laws/statutes.php?statute=71-445 | source date: Laws 2000, LB 819, § 45; Laws 2007, LB296, § 372; Laws 2016, LB750, § 10 | retrieved: 2026-10-31
 71-445.
  
 
@@ -143,7 +144,7 @@ Annotations
 
 The State has not waived its sovereign immunity for claims arising under the Health Care Facility Licensure Act. Baker-Heser v. State, 309 Neb. 979, 963 N.W.2d 59 (2021).
 
-SOURCE 4: 175 NAC 12, Skilled Nursing and Nursing Facilities — resident rights, transfer and discharge | https://dhhs.ne.gov/Documents/Title-175-Complete.pdf | source date: running head EFFECTIVE 2/27/07 | retrieved: 2026-10-06
+SOURCE 4: 175 NAC 12, Skilled Nursing and Nursing Facilities — resident rights, transfer and discharge | https://dhhs.ne.gov/Documents/Title-175-Complete.pdf | source date: running head EFFECTIVE 2/27/07 | retrieved: 2026-10-31
 12-006.05 Resident Rights                                          30
       12-006.06 Complaints and Grievances                                33
 
@@ -1871,7 +1872,7 @@ EFFECTIVE          NEBRASKA HEALTH AND HUMAN SERVICES                           
 
         6.    Exercise rights as a resident of the facility and as a citizen of the United
 
-SOURCE 5: Long-Term Care Ombudsman | https://dhhs.ne.gov/Pages/Aging-Ombudsman.aspx | source date: none stated on page | retrieved: 2026-10-06
+SOURCE 5: Long-Term Care Ombudsman | https://dhhs.ne.gov/Pages/Aging-Ombudsman.aspx | source date: none stated on page | retrieved: 2026-10-31
 The Long-Term Care Ombudsman (LTCO) works with nursing home and assisted living residents. They help answer resident concerns and complaints. The LTCO advocates for resident rights and their well-being.
 
 
@@ -2041,6 +2042,17 @@ La toma de decisiones sustitutas es un término que describe situaciones en que 
 Volunteer!
 
 Are you interested in volunteering as an Ombudsman Advocate?
+
+
+
+
+
+
+
+
+State Unit on Aging
+
+Oversees funding to help Nebraskans stay in their homes.
 
 
 
@@ -2406,7 +2418,7 @@ Contact Us
 
  Helping People Live Better Lives
 
-SOURCE 6: 471 NAC 12, Nursing Facility Regulations — bed-holding, discharge and appeals | http://govdocs.nebraska.gov/epubs/H8900/R471.0012-2021.pdf | source date: running head EFFECTIVE 06-26-2021 | retrieved: 2026-10-06
+SOURCE 6: 471 NAC 12, Nursing Facility Regulations — bed-holding, discharge and appeals | http://govdocs.nebraska.gov/epubs/H8900/R471.0012-2021.pdf | source date: running head EFFECTIVE 06-26-2021 | retrieved: 2026-10-31
 007.12 BED-HOLDING POLICIES FOR HOSPITAL AND THERAPEUTIC LEAVE. The
   facility must develop policies as defined in 42 CFR 483.15(d).
 
@@ -2521,7 +2533,7 @@ EFFECTIVE                  NEBRASKA DEPARTMENT OF
   90 days of the date of the Preadmission Screening and Resident Review (PASRR)
   determination notice. The appeal and hearing must be conducted under 465 NAC 2.
 
-SOURCE 7: 471 NAC 12, Nursing Facility Regulations — payment for bed-holding | http://govdocs.nebraska.gov/epubs/H8900/R471.0012-2021.pdf | source date: running head EFFECTIVE 06-26-2021 | retrieved: 2026-10-06
+SOURCE 7: 471 NAC 12, Nursing Facility Regulations — payment for bed-holding | http://govdocs.nebraska.gov/epubs/H8900/R471.0012-2021.pdf | source date: running head EFFECTIVE 06-26-2021 | retrieved: 2026-10-31
 007.25(K) PAYMENT FOR BED-HOLDING. The Department makes payments to reserve
      a bed in a nursing facility (NF) during a client's absence due to hospitalization for an acute
      condition and for therapeutically-indicated home visits. Therapeutically-indicated home
@@ -2559,7 +2571,7 @@ SOURCE 7: 471 NAC 12, Nursing Facility Regulations — payment for bed-holding |
 EFFECTIVE                  NEBRASKA DEPARTMENT OF
 06-26-2021                 HEALTH AND HUMAN SERVICES                                    471 NAC 12
 
-SOURCE 8: 465 NAC 2, Grievances and Fair Hearings — right to appeal | https://dhhs.ne.gov/Documents/Title-465-Complete.pdf | source date: running head REV. AUGUST 21, 1995 | retrieved: 2026-10-06
+SOURCE 8: 465 NAC 2, Grievances and Fair Hearings — right to appeal | https://dhhs.ne.gov/Documents/Title-465-Complete.pdf | source date: running head REV. AUGUST 21, 1995 | retrieved: 2026-10-31
 2-001.02 Right to Appeal: Every applicant for or recipient of assistance or services provided
      through the Nebraska Department of Social Services has the right to appeal any action,
      inaction, or failure to act with reasonable promptness with regard to the assistance or services.
@@ -2610,7 +2622,7 @@ MANUAL LETTER # 61-95              SOCIAL SERVICES MANUAL                       
          Emergency Assistance appeals.) The letter must include a detailed explanation of the
          petitioner's rights and duties at the hearing (see 465 NAC 6-000).
 
-SOURCE 9: 465 NAC 6, Practice and Procedure for Hearings in Contested Cases — filing | https://dhhs.ne.gov/Documents/Title-465-Complete.pdf | source date: running head AUGUST 21, 1995 | retrieved: 2026-10-06
+SOURCE 9: 465 NAC 6, Practice and Procedure for Hearings in Contested Cases — filing | https://dhhs.ne.gov/Documents/Title-465-Complete.pdf | source date: running head AUGUST 21, 1995 | retrieved: 2026-10-31
 6-004 Commencement of a Contested Case:
 
     6-004.01 Filing of Petition and Request for Hearing: The contested case begins with the filing
@@ -2627,7 +2639,7 @@ SOURCE 9: 465 NAC 6, Practice and Procedure for Hearings in Contested Cases — 
     The individual's request for a hearing is made to the Director of the Department of Social
     Services and forwarded to the attention of the Legal Services Division.
 
-SOURCE 10: Title 465 Regulations of General Application (chapter index) | https://dhhs.ne.gov/Pages/Title-465.aspx | source date: none stated on page | retrieved: 2026-10-06
+SOURCE 10: Title 465 Regulations of General Application (chapter index) | https://dhhs.ne.gov/Pages/Title-465.aspx | source date: none stated on page | retrieved: 2026-10-31
 View Title 465 on the Secretary of State's website.
 
 

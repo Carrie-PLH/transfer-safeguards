@@ -1564,3 +1564,51 @@ change this pass). build-state-picker.py: 51/51 regenerated. check-all.py:
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-10-29. No
 human review is claimed for this entry.
+
+## 2026-10-31 — rotation pass: missouri, montana, nebraska confirmed
+
+Recipe count (55) exceeds published state-page count (52), so the Room &
+Recourse recipe exception (CLAUDE.md "Room & Recourse recipe exception") did
+not apply this pass — every page already has a recipe. Ordinary QC proceeded.
+
+Cursor started at missouri; batch was missouri, montana, nebraska (the fixed
+rotation's next three). All three had working recipes.
+
+- **missouri: CONFIRMED.** Recipe capture (digest 9d0acc95d4b4), 3 sources.
+  Zero failures on both states/missouri.md and site/states/missouri.html.
+  Retained, unchanged since 2026-10-06. Promoted.
+- **montana: CONFIRMED.** Recipe capture (digest a5a560fac077), 6 sources —
+  source 1 (statute, curl) and source 5 (ombudsman page, curl) fetched
+  normally; sources 2, 3, 4 and 6 (rules.mt.gov permalinks) are
+  chrome-transport per the recipe, fetched this pass via the built-in browser
+  tool's page-text read, trimmed of the shared site footer per the recipe's
+  own convention, and supplied with `--supply`. Zero failures on both files.
+  Retained (hash 7cdacbf245b0b716) — sources 2, 3, 4 and 6 each came back
+  shorter than the 2026-10-06 capture (whitespace-collapsed). Read before
+  promoting, per the retention tool's own prompt: the earlier capture's text
+  included a "Subchapter ... Minimum Standards for Nursing Facilities"
+  breadcrumb line and a trailing "Collapse All" UI control that this pass's
+  browser read did not surface; the rule text itself (requirements,
+  authorizing/implementing statutes, history lines) is unchanged across all
+  four sources. Read as a capture-presentation difference between browser
+  reads, not a site content change or instrument replacement — no source
+  header, title, document number or effective date moved. Promoted.
+- **nebraska: CONFIRMED.** Recipe capture (digest 27b925a0693b), 10 sources.
+  Zero failures on both files. Retained (hash c1a292a2e0589de6) — retained
+  textual movement with no source-header movement and no
+  instrument-replacement signal. Promoted.
+
+Checked date updated to 2026-10-31 in each states/<slug>.md (bare ISO),
+re-rendered via render-state.py (zero fidelity failures confirmed against
+each render), derived dates synced via sync-checked-dates.py (6 corrected:
+table + json for all three). build-status.py: baseline 51/51, full 50/51
+(pre-existing Hawaii backfill gap, unaffected by this pass). generate-
+sitemap.py: 58 URLs, robots.txt and _redirects regenerated (no page-set
+change this pass). build-state-picker.py: 51/51 regenerated on both pages.
+check-all.py: 104 pages across 52 states, no unexplained failures.
+check-live.py: 5 pages sampled, nothing loaded from any other host. Cursor
+advanced: nebraska -> nevada. No drift, no unreachable sources, no queue
+entries opened this pass. Not deployed.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-10-31. No
+human review is claimed for this entry.

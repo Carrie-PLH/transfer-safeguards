@@ -1,0 +1,4107 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: missouri
+ASSEMBLED: 2026-10-31
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/missouri.json (recipe digest 9d0acc95d4b4). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
+- SOURCE 1: transport curl; extractor pdftotext-layout; slice from '19 CSR 30-82.020 Classification of Rules' (occurrence 2) to '19 CSR 30-82.070 Alzheimer’s Demonstration Projects'; filters none.
+  Two columns, and that governs both anchors. The Secretary of State sets 19 CSR 30-82 in two columns, so -layout renders each printed line as the left column's text followed by the right column's, and a rule running down one column is broken across lines carrying unrelated text from its neighbour. The consequence here is that .050's own text does not sit between its own headings: section (2), the enumerated grounds this page quotes, renders in the right-hand column of the page whose left column is still printing .020 and .030 — above the line where the .050 heading itself appears — while .050's paragraphs (10) through (14) render below the line carrying the heading of .060. Anchoring on .050's heading was tried first and lost all six grounds; the checker caught it, which is the point of checking before promoting. So the anchors are the headings of the rules on either side of that spread, .020 and .070, and the slice is a deliberate superset: it holds .020, .030, .050 and .060 entire. A superset can only add evidence and never narrows what verifies, and in this rendering it is the only contiguous span that certainly holds all of .050. from_occurrence 2 on both skips the chapter's table of contents on page 1, which prints the same headings with dot leaders.
+- SOURCE 2: transport curl; extractor html-text; scope body; filters none.
+  Server-rendered; plain curl with a browser user-agent returns the whole document. Scope 'body' reproduces the standing packet, which was a tag strip over the served document and carries the department's site navigation at the head of the capture.
+- SOURCE 3: transport curl; extractor pdftotext-layout; slice from '2.11 Program Policies' (occurrence 2) to '2.12 Included Services, Items and Supplies'; filters none.
+  Added 2026-09-14, deepening Missouri to a full page: the state Medicaid bed-hold statement, uncaptured at baseline ("No first-party statement of a Missouri Medicaid bed-hold period was captured"). The direct file path is a plain static asset -- no query hash, session token, or viewer wrapper -- found by following the 'Section 5' / 'Nursing Home Provider Manual' links off dss.mo.gov's Nursing Home Facility Claims FAQs page, which point at the same file. Plain curl with a browser user-agent returns 200; single-column layout, so pdftotext-layout and -raw agree.
+
+from_occurrence 2 on the opening anchor skips the manual's own table of contents on page 1, which prints every section heading with dot leaders and a page number exactly as the body does. The closing anchor needs no occurrence key: apply_slice searches for it only in the tail *after* the from-match, and the table of contents sits before that point, so the body's one occurrence of the 2.12 heading is the only one left to find -- unlike the from anchor, which has to skip past the table of contents in the full document. (Tried to_occurrence 2 first, matching how the from anchor was written; capture.py refused it because counted from the tail there is only one, which is the correct reading of the option, not a bug.) The slice is bounded by the headings on either side of the material this page quotes (2.11 Program Policies through the start of 2.12) rather than by any internal subheading, because 2.11 is one continuous run of prose -- Reimbursement, then the therapeutic-home and hospital-reserve-day provisions, then the Bed-Hold Policy paragraph itself -- with no page break or heading marking where the bed-hold material specifically begins; anchoring tighter would risk losing the surrounding conditions (the 97% occupancy test, the three-day hospital-stay cap, and the choice between the two readmission routes) that qualify it. The slice therefore holds the whole of section 2.11 entire, a superset of what is quoted, which can only add evidence.
+
+SOURCE 1: 19 CSR 30-82.050, Transfer and Discharge Procedures (excerpt from the Secretary of State's published 19 CSR 30-82) | https://www.sos.mo.gov/cmsimages/adrules/csr/current/19csr/19c30-82.pdf | source date: rule history line ends Amended: Filed Sept. 1, 2021, effective March 30, 2022; page stamp (3/31/26) | retrieved: 2026-10-31
+19 CSR 30-82.020 Classification of Rules                                        the reinspection, or shall be correcting it in accordance with
+                                                                                the time schedules set out in the operator’s approved plan of
+PURPOSE: This rule adds to the classification of the standards for              correction as provided for under section 198.026, RSMo. If not,
+long-term care facilities as cited in chapters 13 CSR 15-12, 13 CSR             if the plan of correction is not approved and the violation not
+15-14, 13 CSR 15-15 and 13 CSR 15-16 and as required in section                 corrected, a point value of one (1) point each will be noted
+198.085.1, RSMo.                                                                for violations of each distinct class III standard not corrected;
+                                                                                however, the points will not be assessed if there are five (5) or
+(1) All rules relating to long-term care facilities licensed                    fewer class III standards violated.
+by the Division of Aging, other than those rules which are                         (A) If the points total twenty (20) or more points, the facility
+informational in character, shall be followed by a notation at                  will be deemed to be in substantial noncompliance under the
+the end of each rule, section, subsection or pertinent part. This               Omnibus Nursing Home Act and the division may initiate any
+notation shall consist of a Roman numeral(s). These Roman                       action as authorized by law, including issuance of a notice of
+numerals refer to the class (either class I, class II or class III) of          noncompliance, as provided under section 198.026, RSMo.
+standard as designated in section 198.085.1, RSMo and will be                      (B) If the points total less than twenty (20) points, the
+used when that rule, section, subsection or portion of a rule                   points will remain on the facility’s record until the time the
+carrying the notation is violated by the facility.                              violations are corrected and are noted as corrected during a
+                                                                                reinspection. If during the reinspection a class III standard
+(2) In those instances where a particular rule, section, subsec-                violated in the prior inspection continues to be violated, the
+tion or portion of a rule is followed by a notation consisting                  previously assessed points will be doubled unless the operator
+of more than one (1) Roman numeral, the lower classification                    immediately corrects the violation. If after the reinspection the
+shall be applied unless the division can show that the higher                   points for all previously noted and left uncorrected violations
+classification is merited because of the extent of the violation,               of distinct class III standards total twenty (20) or more, the
+the violations effect on residents or the impact when combined                  facility will be deemed to be in substantial noncompliance
+with other deficiencies. The division, on the Statement of                      under the Omni-bus Nursing Home Act and the division may
+Deficiency, shall indicate for the operator which classification                take action as provided under section 198.026, RSMo.
+has been applied and if the higher one is used, for what reason.                   (C) The division shall not revoke an operator’s license to
+                                                                                operate a long-term care facility for violations of class III
+(3) A violation of a class I standard is one which would present                standards unless—
+either an imminent danger to the health, safety or welfare of                         1. The uncorrected violations taken all together present
+any resident or a substantial probability that death or serious                 either an imminent danger to the health, safety or welfare of
+physical harm would result. If a violation of a class I standard is             any resident or a substantial probability of death or serious
+
+       Denny Hoskins           (3/31/26)                     CODE OF STATE REGULATIONS				                                                        9
+       Secretary of State
+
+               DIVISION 30—DIVISION OF REGULATION                                         19 CSR 30-82—DEPARTMENT OF HEALTH AND
+               AND LICENSURE 					                                                                     SENIOR SERVICES
+
+
+physical harm; or                                                               than ninety (90) days;
+     2. The operator or his/her agent knowingly acted or                          (C) Consent to or agreement with transfer or discharge
+knowingly omitted any duty which would materially and                           means one of the following:
+adversely affect the health, safety, welfare or property of a                        1. The resident or a legally authorized representative of
+resident.                                                                       the resident has consented to, agreed with, or requested the
+   (D) Points will not be assessed for class III violations if the              discharge; or
+operator can show that the violation had been corrected since                        2. The resident’s treating physician has ordered the transfer
+it was initially noted, that the operator made a good faith                     and the releasing facility intends to readmit the resident if
+effort, as judged by the division, to stay in compliance and that               requested to do so;
+the violation again occurred for reasons beyond the operator’s                    (D) Consent of the resident means that the resident, with
+control.                                                                        sufficient mental capacity to fully understand the effects
+                                                                                and consequences of the transfer or discharge, consents to or
+(6) The division shall not initiate any action against an                       agrees with the transfer or discharge; and
+operator as authorized by law, including issuance of a notice                     (E) Legally authorized representative of a resident means
+of noncompliance for uncorrected violations of class II or III                  a duly appointed guardian or an attorney-in-fact who has
+standards, unless the facility’s record, the cited violations and               current and valid power to make health care decisions for the
+the circumstances are reviewed by the director of the division                  resident.
+or his/her designee.
+                                                                                (2) The facility shall permit each resident to remain in the
+AUTHORITY: sections 198.009 and 198.085.1, RSMo 1986.* This                     facility unless—
+rule was originally filed as 13 CSR 15-10.020. Original rule filed                 (A) The transfer or discharge is appropriate because the
+Dec. 10, 1981, effective May 13, 1982. Amended: Filed July 13, 1983,            resident’s welfare and the resident’s needs cannot be met by
+effective Oct. 13, 1983. Moved to 19 CSR 30-82.020, effective Aug.              the facility;
+28, 2001.                                                                          (B) The transfer or discharge is appropriate because the
+                                                                                resident’s health has improved sufficiently so the resident no
+*Original authority: 198.009, RSMo 1979 and 198.085, RSMo 1979, amended 1984.   longer needs the services provided by the facility;
+                                                                                   (C) The safety of individuals in the facility is endangered;
+                                                                                   (D) The health of individuals in the facility would otherwise
+19 CSR 30-82.030 Assessment of Availability of Beds                             be endangered;
+(Rescinded March 30, 2020)                                                         (E) The resident has failed, after reasonable and appropriate
+                                                                                notice, to pay for (or have paid under Medicare or Medicaid)
+AUTHORITY: sections 197.318, RSMo Supp. 1992 and 198.009, RSMo                  a stay at the facility. For a resident who becomes eligible for
+1986. This rule was originally filed as 13 CSR 15-10.030. Emergency             Medicaid after admission to a facility, the facility may charge
+rule filed June 17, 1986, effective June 27, 1986, expired Oct. 24,             that resident only allowable charges under Medicaid; or
+1986. Original rule filed June 17, 1986, effective Oct. 24, 1986.                  (F) The facility ceases to operate.
+Moved to 19 CSR 30-82.030, effective Aug. 28, 2001. Rescinded:
+Filed Aug. 28, 2019, effective March 30, 2020.                                  (3) When the facility transfers or discharges a resident under
+                                                                                any of the circumstances specified in subsections (2)(A)–(E),
+                                                                                the resident’s clinical record shall be documented. The facility
+19 CSR 30-82.050 Transfer and Discharge Procedures                              shall ensure that documentation for the transfer or discharge
+                                                                                is obtained from—
+PURPOSE: This rule provides instructions for persons who are dis-                  (A) The resident’s personal physician when transfer or
+charged from a licensed long-term care facility under involuntary               discharge is necessary under subsections (2)(A)–(B); and
+circumstances. When this proposed rule becomes effective it will                   (B) A physician when transfer or discharge is necessary under
+replace 13 CSR 15-9.010(17) which will be rescinded by subsequent               subsection (2)(D); and
+rulemaking. This rule also includes the provisions of section                      (C) The facility administrator or the facility director of
+198.088, RSMo, applicable to transfer or discharge and the notice               nursing in all circumstances.
+and due process required of all licensed facilities.
+                                                                                (4) Before a facility transfers or discharges a resident, the
+(1) For the purposes of this rule, the following terms shall be                 facility shall—
+defined as follows:                                                                (A) Send written notice to the resident in a language
+   (A) Transfer means moving a resident from one institutional                  and manner reasonably calculated to be understood by the
+setting to another institutional setting for care and under                     resident. The notice must also be sent to any legally authorized
+circumstances where the releasing facility has decided                          representative of the resident and to at least one (1) family
+that it will not readmit the resident or a legally authorized                   member. In the event that there is no family member known
+representative of the resident has not consented or agreed with                 to the facility, the facility shall send a copy of the notice to
+the transfer. Unless indicated otherwise from the context of                    the appropriate regional coordinator of the Missouri State
+this rule, a transfer shall be deemed the same as a discharge;                  Ombudsman’s office;
+   (B) Discharge means releasing from a facility or refusing                       (B) Include in the written notice the following information:
+to readmit a resident from a community setting under                                  1. The reason for the transfer or discharge;
+circumstances where the resident or a legally authorized                              2. The effective date of transfer or discharge;
+representative of the resident has not consented or agreed                            3. The resident’s right to appeal the transfer or discharge
+with the move or decision to refuse readmittance. Refusal to                    notice to the director of the Department of Health and Senior
+readmit a former resident shall not constitute a discharge if                   Services or his/her designated hearing official within thirty (30)
+the former resident has been absent from the facility for more                  days of the receipt of the notice;
+
+10			 			CODE OF STATE REGULATIONS                                                                               (3/31/26)    Denny Hoskins
+                                                                                                                              Secretary of State
+
+19 CSR 30-82—DEPARTMENT OF HEALTH AND                                    DIVISION 30—DIVISION OF REGULATION
+             SENIOR SERVICES                                                                  AND LICENSURE
+
+
+      4. That a request for a hearing should be sent to Department    Jefferson City, Missouri 65102-0570, by fax to (573) 751-0247, or
+of Health and Senior Services Appeals Unit, PO Box 570, 912           by email to DHSS.Appeals@health.mo.gov within thirty (30)
+Wildwood Drive 3rd floor, Jefferson City, Missouri 65102-0570,        days of the date the resident received the discharge notice
+by fax to (573) 751-0247, or by email to DHSS.Appeals@health.         from the facility. The resident’s legal guardian, the resident’s
+mo.gov and the phone number for the appeals unit is (573)             attorney-in-fact appointed under sections 404.700–404.725,
+522-1699;                                                             RSMo (Durable Power of Attorney Law of Missouri) or pursuant
+      5. That filing an appeal will allow a resident to remain in     to sections 404.800–404.865, RSMo (Durable Power of Attorney
+the facility until the hearing is held unless a hearing official      for Health Care Act), or any other individual may file an
+finds otherwise;                                                      appeal on the resident’s behalf. A Nursing Facility Transfer or
+      6. The location to which the resident is being transferred      Discharge Hearing Request form (MO Form 886-3245) to request
+or discharged;                                                        a hearing may be obtained from the Department of Health and
+      7. The name, address, and telephone number of the               Senior Services or the regional ombudsman. However, the use
+designated regional long-term care ombudsman office;                  of a form is not required in order to file a request for a hearing.
+      8. For Medicare and Medicaid certified facility residents       The request for a hearing shall be verified in writing by the
+with developmental disabilities, the mailing address and              resident, his/her legal guardian, attorney-in-fact, or any other
+telephone number of the Missouri Protection and Advocacy              party requesting a hearing on the resident’s behalf by attesting
+Agency, 925 South Country Club Drive, Jefferson City, MO              to the truth of the resident’s request for a hearing.
+65109, (573) 893-3333, or the current address and telephone
+number of the protection advocacy agency if it has changed.           (7) The director of the Department of Health and Senior
+The protection and advocacy agency is responsible for                 Services shall designate a hearing official to hear and decide
+the protection and advocacy of developmentally disabled               the resident’s appeal.
+individuals established under Part C of the Developmental                (A) The designated hearing official shall notify the resident,
+Disabilities Assistance and Bill of Rights Act. For Medicare          the state long-term care ombudsman and the facility that the
+and Medicaid certified facility residents with mental illness,        request for a hearing has been received and that a hearing has
+the address and telephone number of Missouri Protection and           been scheduled.
+Advocacy Agency, the agency responsible for persons with                 (B) The hearing may be held by telephone conference call or
+mental illness under the Protection and Advocacy for Mentally         in person at any location the designated hearing official deems
+Ill Individuals Act; and                                              reasonably appropriate to accommodate the resident’s needs.
+   (C) Record and document in detail in each affected resident’s
+record the reason for the transfer or discharge. The recording        (8) The discharge of the resident shall be stayed at the time
+of the reason for the transfer or discharge shall be entered into     the request for a hearing was filed unless the facility can
+the resident’s record prior to the date the resident receives         show good cause why the resident should not remain in the
+notice of the transfer or discharge, or prior to the time when        facility until a written hearing decision has been issued by the
+the transferring or discharging facility decides to transfer or       designated hearing official. Good cause shall include, but is not
+discharge the resident.                                               limited to, those exceptions when the facility may notify the
+                                                                      resident of a discharge from the facility with less than thirty
+(5) The notice of transfer or discharge described in this rule        (30) days notice as set forth in section (5) of this rule.
+shall be made by the facility no less than thirty (30) days before       (A) The facility may show good cause for discharging the
+the resident is to be transferred or discharged. In the case of       resident prior to a hearing decision being issued by the
+an emergency discharge, the notice shall be made as soon as           designated hearing official by filing a written Motion to Set
+practicable before the discharge when it is specifically alleged      Aside the Stay with the Department of Health and Senior
+in the notice that—                                                   Services Appeals Unit at the address, fax number, or email
+   (A) The safety of individuals in the facility would be             address in paragraph (4)(B)4. The facility must provide a copy
+endangered under subsection (2)(C) of this rule and the notice        of the Motion to Set Aside the Stay to the resident, or to the
+contains specific facts upon which the facility has based its         resident’s legally authorized representative and to at least
+determination that the safety of said individuals would be so         one (1) family member, if one is known. In the event that
+endangered;                                                           a resident has no legally authorized representative and no
+   (B) The health of individuals in the facility would be             known family members, then a copy of the Motion to Set Aside
+endangered under subsection (2)(D) of this rule and the notice        the Stay must be provided to the Missouri State Long-Term Care
+contains specific facts upon which the facility has based its         Ombudsman’s Office.
+determination that the safety of said individuals would be so            (B) Within five (5) days after a written Motion to Set Aside
+endangered;                                                           the Stay has been filed with the Department of Health and
+   (C) The resident’s health has improved sufficiently to allow       Senior Services Appeals Unit the designated hearing official
+a more immediate transfer or discharge under subsection (2)           shall schedule a hearing to determine whether the facility has
+(B) of this rule;                                                     good cause to discharge the resident prior to a written hearing
+   (D) An immediate transfer or discharge is required by the          decision being issued. Notice of the good cause hearing need
+resident’s urgent medical needs under subsection (2)(A) of this       not be in writing. All parties and representatives who received
+rule; or                                                              a copy of the Motion to Set Aside the Stay under subsection (8)
+   (E) The resident has not resided in the facility for thirty (30)   (A) of this rule shall also be notified of the good cause hearing.
+days.                                                                       1. The designated hearing official shall have the discretion
+                                                                      to consolidate the facility’s good cause hearing with the
+(6) Any resident of a facility who receives notice of discharge       discharge hearing requested by the resident. In the case of an
+from the facility in which he/she resides may file an appeal of       emergency discharge, an expedited hearing shall be held upon
+the notice with the Department of Health and Senior Services          the request of the resident, legally authorized representative,
+Appeals Unit, PO Box 570, 912 Wildwood Drive 3rd floor,               family member, and in a case where notice was required to be
+
+      Denny Hoskins        (3/31/26)                 CODE OF STATE REGULATIONS				                                                    11
+      Secretary of State
+
+            DIVISION 30—DIVISION OF REGULATION                                 19 CSR 30-82—DEPARTMENT OF HEALTH AND
+            AND LICENSURE 					                                                             SENIOR SERVICES
+
+
+sent to the regional ombudsman, to the state long-term care         resident shall be permitted to remain in the facility. If the
+ombudsman, so long as the parties waive the ten- (10-) day          decision is in the facility’s favor, the resident shall be granted
+notice requirement specified in section (9).                        an additional ten (10) days after the decision is received for
+     2. Subsequent to the good cause hearing, the designated        purpose of relocation, and the facility shall assist the resident
+hearing official shall issue an order granting or denying the       in making suitable arrangements for relocation. If the resident
+facility’s Motion to Set Aside the Stay. If the facility’s good     prevails and has already been discharged, the facility shall
+cause hearing and the resident’s discharge hearing were             notify the resident, the qualified representative, or any other
+consolidated, the order shall also set forth whether the facility   responsible party who will assure that the resident is made
+may discharge the resident.                                         aware of the decision and that the resident may return to the
+                                                                    facility. In the event that there are no beds available, the facility
+(9) Written notice of a hearing shall contain the date and time     shall admit the resident to occupy the first available bed
+for the hearing and shall be mailed to the facility, the resident   without regard to any waiting list maintained by the facility.
+or the resident’s legally authorized representative, and to any
+and all parties in interest, including any family members           AUTHORITY: sections 192.2000, 198.009, and 198.088, RSMo
+who received notice of the discharge, that are known to the         2016.* This rule was originally filed as 13 CSR 15-10.050. Original
+designated hearing official. The written notice shall be mailed     rule filed Feb. 13, 1998, effective Sept. 30, 1998. Moved to 19 CSR
+to the parties at least ten (10) days prior to the hearing.         30-82.050, effective Aug. 28, 2001. Amended: Filed Sept. 1, 2021,
+                                                                    effective March 30, 2022.
+(10) If the facility’s good cause hearing and the resident’s
+discharge hearing were not consolidated and the designated          Original authority: 192.2000, RSMo 1984, amended 2014; 198.009, RSMo 1979,
+hearing official issues an order denying the facility’s Motion      amended 1993, 1995; and 198.088, RSMo 1997, amended 1988, 1989, 1994.
+to Set Aside the Stay, the designated hearing official shall
+schedule the discharge hearing subsequent to the date the
+order which denied the facility’s motion was issued. After the      19 CSR 30-82.060 Hiring Restrictions—Good Cause Waiver
+hearing, the designated hearing official shall issue a written
+decision setting forth whether the facility may discharge the       PURPOSE: This rule establishes the procedure by which persons
+resident. The written decision shall be mailed to the facility,     with criminal convictions may seek a waiver allowing them to be
+the resident or the resident’s legally authorized representative    employed by health care and mental health providers despite the
+and counsels for all parties, if any. If the state long-term care   hiring restrictions found in section 192.2495, RSMo. The waivers
+ombudsman’s office received notice of the discharge, a copy of      are to be for “good cause” as defined by that statute. This rule sets
+the hearing decision shall be sent to the ombudsman’s office.       forth both the procedure for seeking waivers and the facts and
+If a member of the resident’s family received notice of the         circumstances to be considered by the Department of Health and
+discharge, a copy of the hearing decision shall be mailed to the    Senior Services in determining “good cause.”
+family member upon request.
+                                                                    (1) Definitions.
+(11) The burden of showing that the facility has complied with         (A) Applicant means a person who has been or would be
+all requirements for appropriate discharge of the resident shall    rejected for employment by a provider due to the hiring
+be upon the facility. The resident may provide any additional       restrictions found in section 192.2495, RSMo.
+evidence competent to show that the facility has not met its           (B) Department means the Department of Health and Senior
+burden.                                                             Services.
+                                                                       (C) Determination means the decision issued by the director
+(12) The resident may obtain legal counsel, represent him/          of the Department of Health and Senior Services or the
+herself or use a relative, a friend or other spokesperson. All      director’s designee based on the factual, procedural, or causal
+natural parties, including residents, sole proprietors of a         issues of the request for waiver.
+facility and a partner of a facility operated in the partnership       (D) Director means the director of the Department of Health
+form of business, may represent themselves in a pro se capacity     and Senior Services.
+on behalf of the facility. Corporate operators of a facility may       (E) Good cause waiver means a finding that is reasonable to
+only be represented by an attorney licensed to practice law in      believe that the restrictions imposed by section 192.2495, RSMo,
+Missouri.                                                           on the employment of an applicant may be waived after an
+                                                                    examination of the applicant’s prior work history and other rel-
+(13) Hearings shall be subject to the hearing procedures found      evant factors is conducted and demonstrates that such appli-
+in 42 CFR Chapter IV, Part 483, subpart E, and the Missouri         cant does not present a risk to the health or safety of residents,
+Administrative Procedures Act, specifically sections 536.070        patients, or clients if employed by a provider.
+through 536.080, RSMo, which include, but are not limited              (F) Provider means any person, corporation or association
+to, oral and written evidence, witnesses, objections, official      who—
+notices, affidavits, transcripts, depositions and other discovery         1. Is licensed as an operator pursuant to Chapter 198, RSMo;
+methods, sanctions, oral arguments and written briefs. Written            2. Provides in-home services under contract with the
+medical statements by a physician, psychiatrist or psychologist     Department of Health and Senior Services;
+shall be admitted as relevant and probative evidence and shall            3. Employs nurses or nursing assistants for temporary or
+be given due weight in consideration by the director or his/        intermittent placement in health care facilities;
+her designated hearing official. An audiotape recording of the            4. Is an entity licensed pursuant to Chapter 197, RSMo;
+hearing shall be made unless it is agreed by both parties to              5. Is a public or private facility, day program, residential
+substitute a certified transcript.                                  facility or specialized service operated, funded or licensed by
+                                                                    the Department of Mental Health; or
+(14) If the decision is that there is no cause for discharge, the         6. Is a licensed adult day care provider.
+
+12			 			CODE OF STATE REGULATIONS                                                                       (3/31/26)     Denny Hoskins
+                                                                                                                       Secretary of State
+
+19 CSR 30-82—DEPARTMENT OF HEALTH AND                                     DIVISION 30—DIVISION OF REGULATION
+             SENIOR SERVICES                                                                   AND LICENSURE
+
+
+  (G) Reference means a written statement of character,                   (O) If in addition to the criminal offense(s) for which the ap-
+qualification or ability issued on behalf of the applicant by          plicant is requesting a waiver the applicant has any pending
+a person who is not related to or residing with the applicant          felony or misdemeanor charges, includes a statement explain-
+requesting a good cause waiver.                                        ing the circumstances and certified copies of the charging
+  (H) Sponsor means the current or potential employer of the           documents for all pending criminal charges; and, in the case
+applicant, or a training program, agency, or school in which           of an applicant seeking a position with an in-home services
+the applicant is or was a student enrolled for the purpose             provider agency or home health agency, if in addition to the
+of earning a professional license, certification, or otherwise         circumstances related to the listing on any of the background
+becoming qualified to perform the duties of an occupation.             checklists of the Family Care Safety Registry for which the ap-
+                                                                       plicant is requesting a waiver the applicant has any pending
+(2) Any person who is not eligible for employment by a provider        circumstances which if established would lead to an additional
+due to the hiring restrictions found in section 192.2495, RSMo,        listing on any of the background checklists of the Family Care
+may apply to the director for a good cause waiver. If the director     Safety Registry, includes a statement explaining the circum-
+or the director’s designee determines that the applicant has           stances and certified copies of documents relating to those
+demonstrated good cause, such restrictions prohibiting such            circumstances.
+persons from being hired by a provider shall be waived,
+and such persons may be so employed unless rejected for                (4) The director, or the director’s designee, will not consider any
+employment on other grounds. Hiring restrictions based on              application for a good cause waiver unless it is fully completed,
+the Department of Health and Senior Services’ employee                 signed by the applicant, and contains all required attachments.
+disqualification list are not subject to a waiver.
+                                                                       (5) Each completed application will be reviewed by a good
+(3) The director, or the director’s designee, shall accept an          cause waiver committee of two (2) or more employees of
+application for a good cause waiver only if the application—           the department. The director shall determine the size of the
+   (A) Is submitted in writing by the applicant on the form            committee and shall, from time to time, appoint members to
+provided by the department;                                            serve on the committee.
+   (B) Is legible;                                                        (A) If the applicant seeks a good cause waiver of placement
+   (C) Is signed by the applicant;                                     on the disqualification list maintained by the Department of
+   (D) Includes an indication of the type of waiver that is being      Mental Health, the director shall appoint an employee of the
+requested;                                                             Department of Mental Health recommended by the director of
+   (E) Includes a complete history of residency since the earliest     the Department of Mental Health to serve on the good cause
+disqualifying offense or incident;                                     waiver committee.
+   (F) Includes a complete employment history since the age of            (B) A member of the good cause waiver committee shall
+eighteen (18) years;                                                   recuse himself or herself in a good cause waiver review
+   (G) Includes an attached explanation written by the applicant       in which the member’s impartiality might reasonably be
+as to why the applicant believes he or she no longer poses a risk      questioned, including but not limited to instances where the
+to the health, safety, or welfare of residents, patients or clients;   committee member has a personal bias or prejudice concerning
+   (H) Includes an attached description written by the applicant       the applicant, or personal knowledge of evidentiary facts
+of the events that resulted in each disqualifying offense or           concerning the application for good cause waiver.
+incident;
+   (I) Includes attached documentation on the applicant’s              (6) The department may, at any time during the application
+professional, vocational, or occupational licensure, certification,    process or review thereof, request additional information from
+or registration history and current status, if any, in this state      the applicant. If the applicant fails to supply any requested
+and any other state;                                                   additional information within thirty (30) calendar days of
+   (J) Includes at least one (1) reference letter from a sponsor.      the date of the request, unless the applicant requests and the
+If the applicant is not able to obtain a sponsor, the applicant        department grants an extension, the department will consider
+shall so state, shall identify those potential sponsors who have       the application for good cause waiver to be withdrawn by the
+been approached by the applicant, and shall submit three               applicant.
+(3) reference letters from individuals knowledgeable of the
+applicant’s character or work history who are not related to or        (7) The department may request that the applicant, prior to the
+residing with the applicant;                                           completion of the review, appear in person to answer questions
+   (K) Includes a criminal history record from the Missouri State      about his or her application. If the applicant is requested to
+Highway Patrol if requesting a waiver of disqualifying criminal        appear in person, the department, in its sole discretion, shall
+offenses;                                                              determine the location for the appearance and may conduct
+   (L) Includes a certified court document for each disqualifying      any such proceedings using electronic means, including
+criminal offense. If such document is not obtainable, a written        but not limited to telephonic or video conferencing. The
+and signed statement from the court indicating that no such            department shall review and may investigate the information
+record exists must be submitted;                                       contained in each application for completeness, accuracy, and
+   (M) Includes certified investigative reports from the               truthfulness. The burden of proof shall be on the applicant
+Department of Social Services if requesting a waiver of child          to demonstrate that he or she no longer poses a risk to the
+abuse or neglect findings or a waiver of foster parent license         health, safety, or welfare of residents, patients, or clients. The
+denial, revocation, or involuntary suspension;                         following factors shall be considered in determining whether
+   (N) Includes certified investigative reports or other docu-         a good cause waiver should be granted:
+mentation of the incident(s) which resulted in the applicant’s            (A) The applicant’s age at the time the crime was committed
+inclusion on all other lists in the Family Care Safety Registry for    or at the time the incident occurred that resulted in the
+which waiver is requested; and                                         applicant being listed on the background checklists in the
+
+       Denny Hoskins        (3/31/26)                 CODE OF STATE REGULATIONS				                                                    13
+       Secretary of State
+
+            DIVISION 30—DIVISION OF REGULATION                                 19 CSR 30-82—DEPARTMENT OF HEALTH AND
+            AND LICENSURE 					                                                             SENIOR SERVICES
+
+
+Family Care Safety Registry;                                         sent to the applicant’s address given on the application.
+   (B) The circumstances surrounding the crime or surrounding
+the incident that resulted in the applicant being listed on the      (10) Any good cause waiver granted to an applicant applies
+background checklists in the Family Care Safety Registry;            only to—
+   (C) The length of time since the conviction or since the             (A) The specific disqualifying conviction(s), finding(s) of
+occurrence of the incident that resulted in the applicant being      guilt, plea(s) of guilty or nolo contendere, as contained in the
+listed on the background checklists in the Family Care Safety        certifying copies of the court documents which are required in
+Registry;                                                            the application; and/or
+   (D) The length of time since the applicant completed his or          (B) The incident(s) that resulted in the applicant being
+her sentence for the disqualifying conviction(s), whether or not     listed on the background checklists in the Family Care Safety
+the applicant was confined, conditionally released, on parole        Registry, as contained in the investigative reports or other
+or probation;                                                        supporting documentation required in the application or
+   (E) The applicant’s entire criminal history and entire history    subsequently requested by the department.
+of all incidents that resulted in the applicant being listed on
+the background checklists in the Family Care Safety Registry,        (11) Any good cause waiver granted to applicant applies only
+including whether that history shows a repetitive pattern of         to those disqualifying criminal convictions on incidents that
+offenses or incidents;                                               resulted in the applicant being listed on the background
+   (F) The applicant’s prior work history;                           checklists in the Family Care Safety Registry, as covered under
+   (G) Whether the applicant had been employed in good               the provisions of section 192.2495, RSMo, and shall not apply to
+standing by a provider but subsequently became ineligible for        any other hiring restriction or exclusion imposed by any other
+employment due to the hiring restrictions in section 192.2495,       federal or state laws or regulations.
+RSMo;
+   (H) Whether the applicant has been convicted or found             (12) The director or the director’s designee may withdraw a
+guilty of, or pled guilty or nolo contendere to any offense          good cause waiver if he or she receives information or finds
+displaying extreme brutality or disregard for human welfare          that—
+or safety;                                                              (A) The applicant has omitted a material fact or misrepresented
+   (I) Whether the applicant has omitted a material fact or          a material fact in seeking a good cause waiver;
+misrepresented a material fact pertaining to his or her criminal        (B) The applicant has been subsequently convicted or found
+or employment history or to his or her history of incidents that     guilty of or pled guilty or nolo contendere to any class A or
+resulted in his or her being listed on the background checklists     B felony violation of Chapter 565, 566, or 569, RSMo, or any
+in the Family Care Safety Registry;                                  violation of subsection 3 of section 198.070, RSMo, or section
+   (J) Whether the applicant has ever been listed on the             568.020, RSMo, in this state or any other state;
+Employee Disqualification List maintained by the department;            (C) Such applicant is a prospective or current employee of
+   (K) Whether the applicant’s criminal offenses were commit-        an in-home services provider or home health agency and has
+ted, or the incidents that resulted in the applicant being listed    been subsequently involved in an incident that results in the
+on the background checklists in the Family Care Safety Registry      applicant being listed on any of the background checklists in
+occurred, during the time he or she was acting as a provider or      the Family Care Safety Registry;
+as an employee for a provider;                                          (D) The applicant has omitted, misrepresented, or failed to
+   (L) Whether the applicant has, while disqualified from            disclose or provide any of the information required by section
+employment by a provider, obtained employment by                     192.2495, RSMo, or the provisions of this rule; or
+fraud, deceit, deception or misrepresentation, including                (E) There has been a material change in the circumstances
+misrepresentation of his or her identity;                            upon which the good cause waiver was granted.
+   (M) Whether the applicant has ever had a professional or
+occupational license, certification, or registration revoked,        (13) If the good cause waiver is withdrawn by the department,
+suspended, or otherwise disciplined;                                 the notice of such withdrawal shall be mailed by the department
+   (N) Any other information relevant to the applicant’s             to the applicant’s last known address, with a copy of the notice
+employment background or past actions indicating whether             sent to the applicant’s last known employer, if any.
+he or she would pose a risk to the health, safety, or welfare of
+residents, patients, or clients; and                                 (14) No applicant may be employed in a direct care or direct
+   (O) Whether the applicant has supplied all information            service position with a provider during the pendency of a
+requested by the department.                                         request for waiver unless the applicant has been continuously
+                                                                     employed by that provider prior to August 28, 2003. If an
+(8) If, at the time of an application for a waiver or during the     applicant is employed on or after August 28, 2003, he or she
+waiver consideration process, the applicant has been charged         may be employed following submission of a completed waiver
+or indicted for, but not convicted of, any of the crimes covered     application on a conditional basis to provide in-home services
+under the provisions of section 192.2495, RSMo, the division         or home health services to any in-home services client or home
+will hold the request for waiver in abeyance while such              health patient during the pendency of that waiver application
+charges are pending or until a court of competent jurisdiction       if—
+enters a judgment or order disposing of the matter.                     (A) The disqualifying crime is not one that would preclude
+                                                                     employment pursuant to subsection 6 of section 192.2495,
+(9) Each applicant who submits a waiver application meeting          RSMo; and
+the requirements of section (3) of this rule shall be notified in       (B) The applicant is not listed on the Department of Health
+writing by the director, or the director’s designee, as to whether   and Senior Services’ employee disqualification list.
+his or her application has resulted in a determination of good
+cause or no good cause. Such notification shall be effective if      (15) If a waiver is denied to an applicant employed on or
+
+14			 			CODE OF STATE REGULATIONS                                                                    (3/31/26)    Denny Hoskins
+                                                                                                                   Secretary of State
+
+19 CSR 30-82—DEPARTMENT OF HEALTH AND                                            DIVISION 30—DIVISION OF REGULATION
+             SENIOR SERVICES                                                                          AND LICENSURE
+
+
+after August 28, 2003, on a conditional basis, the conditional                improve the quality of service the facility provides to its residents.
+employment shall immediately terminate.
+                                                                              (1) Definitions.
+(16) Applicants who have been denied a good cause waiver,                        (A) Qualified Facility—Any facility licensed pursuant to
+or who have had their good cause waivers withdrawn by the                     Chapter 198, RSMo, that has received a Class I or Uncorrected
+department, may reapply one (1) time every twelve (12) months,                Class II Notice of Noncompliance within the past twelve (12)
+or whenever the circumstances related to the disqualifying                    months in one (1) of the following areas:
+conviction(s) have changed.                                                        1. For Residential Care Facility I (RCF I) and Residential Care
+                                                                              Facility II (RCF II):
+(17) Each provider shall be responsible for—                                          A. Administrative, Personnel and Resident Care (19 CSR
+   (A) Requesting criminal background checks on all prospective               30-86.042);
+employees, regardless of waiver status, in accordance with the                        B. Dietary (19 CSR 30-86.052); or
+provisions of sections 192.2495 and 43.540, RSMo; and                                 C. Resident Rights (19 CSR 30-88.010);
+   (B) Contacting the department to confirm the validity of a                      2. For Skilled Nursing Facility (SNF) and Intermediate Care
+prospective employee’s good cause waiver prior to hiring the                  Facility (ICF):
+prospective employee if the prospective employee reveals the                          A. Administration and Resident Care (19 CSR 30-85.042)
+existence of a good cause waiver or reveals the existence of an                       B. Dietary (19 CSR 30-85.052); or
+otherwise disqualifying circumstance.                                                 C. Resident Rights (19 CSR 30-88.010).
+                                                                                 (B) Quality Improvement Project for Missouri (QIPMO)
+(18) Each in-home services provider or home health provider                   consultation—Provides technical assistance and support to
+shall also be responsible for—                                                nursing facility staff throughout the state in order to improve
+   (A) Requesting Family Care Safety Registry background                      the quality of care in nursing facilities using the Minimum
+screenings on all prospective employees, regardless of waiver                 Data Set (MDS) and on-site clinical consultation.
+status, in accordance with the provisions of section 192.2495,
+RSMo; and                                                                     (2) Selection of Qualified Facilities.
+   (B) Contacting the department to confirm the validity of a                    (A) Qualified facilities may submit a written request to the
+prospective employee’s good cause waiver prior to hiring the                  department for funds from the Nursing Facility Quality of Care
+prospective employee if the prospective employee reveals the                  (NFQC) Fund to pay for QIPMO assistance and support. The
+existence of a good cause waiver or reveals the existence of an               department will provide a written response to the qualified
+otherwise disqualifying circumstance.                                         facility’s request approving or disapproving the use of NFQC
+                                                                              funding for QIPMO assistance. In the absence of extraordinary
+(19) All applications for good cause waivers and related                      circumstances, a qualified facility shall receive no more than
+documents shall become permanent records maintained by                        one thousand dollars ($1,000) per request. A qualified facility
+the department.                                                               which wishes to receive more than one thousand dollars
+                                                                              ($1,000) per request must separately justify reimbursement
+AUTHORITY: sections 192.006 and 192.2000, RSMo 2016, and                      in excess of one thousand dollars ($1,000) by setting forth
+section 192.2495, RSMo Supp. 2025.* This rule was originally filed            the extraordinary circumstances justifying reimbursement in
+as 13 CSR 15-10.060. Emergency rule filed March 1, 1999, effective            excess of one thousand dollars ($1,000). The department may,
+March 30, 1999, expired Jan. 10, 2000. Original rule filed March 1,           in its sole discretion, approve reimbursement in excess of one
+1999, effective Sept. 30, 1999. Moved to 19 CSR 30-82.060, effective          thousand dollars ($1,000).
+Aug. 28, 2001. Emergency amendment filed Oct. 15, 2003, effective                (B) Qualified facilities may also submit to the department
+Oct. 26, 2003, expired April 22, 2004. Amended: Filed Oct. 15, 2003,          proposals describing implementation of a quality improvement
+effective April 30, 2004. Amended: Filed Aug. 27, 2025, effective             program, in lieu of the QIPMO Program. Such proposals shall
+April 30, 2026.                                                               address areas of noncompliance that have been cited in
+                                                                              the notice of noncompliance issued in the past twelve (12)
+*Original authority: 192.006, RSMo 1993, amended 1995; 192.2000, RSMo 1984,
+amended 1988, 1992, 1993, 1994, 1995, 2001, 2014; and 192.2495, RSMo 1996,    months. Upon approval of the proposal by the department,
+amended 1997, 1998, 2003, 2014, 2016, 2018.                                   the department may use funds in the NFQC Fund that have
+                                                                              been collected from state civil money penalties to fund the
+                                                                              qualified facility’s proposal. In the absence of extraordinary
+
+SOURCE 2: Missouri Department of Health and Senior Services, Long-Term Care Ombudsman | https://health.mo.gov/seniors/ombudsman/ | source date: none stated on page | retrieved: 2026-10-31
+Skip to main content
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Secondary navigation
+
+
+
+
+
+Find an Agency
+
+
+
+
+Governor Kehoe
+
+
+
+
+MO.gov
+
+
+
+
+Online Services
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Health & Wellness
+
+Toggle submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+Resources, tips and guidance to help individuals adopt and maintain healthy lifestyle habits for improved overall well-being.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Conditions & Diseases
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Chronic Diseases
+
+
+
+
+
+
+
+
+
+
+Communicable Diseases
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Providers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Rural Health & Primary Care
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Families
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Genetic Disease & Early Childhood
+
+
+
+
+
+
+
+
+
+
+Healthy Families
+
+
+
+
+
+
+
+
+
+
+Women, Infants & Children (WIC)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Prevention
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Antibiotic Resistance
+
+
+
+
+
+
+
+
+
+
+Environmental Factors
+
+
+
+
+
+
+
+
+
+
+Overdose Prevention & Response
+
+
+
+
+
+
+
+
+
+
+Wellness & Prevention
+
+
+
+
+
+
+
+
+
+
+Immunizations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+School & Childcare
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+School Immunizations
+
+
+
+
+
+
+
+
+
+
+Online Reporting System
+
+
+
+
+
+
+
+
+
+
+School Health Overview
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Health Emergencies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Alerts, Advisories, Updates & Guidance
+
+
+
+
+
+
+
+
+
+
+Natural Disasters & Weather Emergencies
+
+
+
+
+
+
+
+
+
+
+Hazardous Substances
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Licensing & Regulations
+
+Toggle submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+Guidance and resources to ensure compliance with state health and safety standards across various professions, facilities and services.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Providers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ambulatory Surgery Centers
+
+
+
+
+
+
+
+
+
+
+Birthing Centers
+
+
+
+
+
+
+
+
+
+
+Boards, Commissions & Councils
+
+
+
+
+
+
+
+
+
+
+Certificate of Need
+
+
+
+
+
+
+
+
+
+
+CLIA
+
+
+
+
+
+
+
+
+
+
+Community Health Workers
+
+
+
+
+
+
+
+
+
+
+CNA, CMT, LIMA & Insulin Registry
+
+
+
+
+
+
+
+
+
+
+Emergency Medical Services
+
+
+
+
+
+
+
+
+
+
+End Stage Renal Diseases
+
+
+
+
+
+
+
+
+
+
+Family Care Safety Registry
+
+
+
+
+
+
+
+
+
+
+Form Library
+
+
+
+
+
+
+
+
+
+
+Good Cause Waiver
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Home Care
+
+
+
+
+
+
+
+
+
+
+Home & Community-Based Services Provider Information
+
+
+
+
+
+
+
+
+
+
+Hospice
+
+
+
+
+
+
+
+
+
+
+Hospital Standards
+
+
+
+
+
+
+
+
+
+
+Long-Term Care
+
+
+
+
+
+
+
+
+
+
+Manuals
+
+
+
+
+
+
+
+
+
+
+Narcotics & Dangerous Drugs
+
+
+
+
+
+
+
+
+
+
+Radiation Control
+
+
+
+
+
+
+
+
+
+
+Strategic National Stockpile
+
+
+
+
+
+
+
+
+
+
+Supplemental Health Care Service Agencies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Business Professionals
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cannabis
+
+
+
+
+
+
+
+
+
+
+Employee Disqualification List (EDL)
+
+
+
+
+
+
+
+
+
+
+Food Safety
+
+
+
+
+
+
+
+
+
+
+Free Resources
+
+
+
+
+
+
+
+
+
+
+Lodging
+
+
+
+
+
+
+
+
+
+
+Lead Licensing
+
+
+
+
+
+
+
+
+
+
+Onsite Wastewater Treatment
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Citizens
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cannabis - Patient Services
+
+
+
+
+
+
+
+
+
+
+Food & Drug Recalls
+
+
+
+
+
+
+
+
+
+
+Report Adult Abuse & Neglect
+
+
+
+
+
+
+
+
+
+
+Sunshine & Records Requests
+
+
+
+
+
+
+
+
+
+
+Vital Records
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Senior & Disability Services
+
+Toggle submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+Resources and support to promote health, well-being and access to care for seniors and citizens with disabilities.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Senior & Disability Services
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Caregivers Support
+
+
+
+
+
+
+
+
+
+
+Financial Planning Resources
+
+
+
+
+
+
+
+
+
+
+Home & Community-Based Services
+
+
+
+
+
+
+
+
+
+
+Long-Term Care Ombudsman
+
+
+
+
+
+
+
+
+
+
+Medicare Outreach & Assistance
+
+
+
+
+
+
+
+
+
+
+Nursing Homes
+
+
+
+
+
+
+
+
+
+
+Rules & Regulations
+
+
+
+
+
+
+
+
+
+
+Senior Programs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Partners & Providers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Area Agencies on Aging
+
+
+
+
+
+
+
+
+
+
+Home & Community-Based Services Provider Information
+
+
+
+
+
+
+
+
+
+
+Manuals
+
+
+
+
+
+
+
+
+
+
+Missouri Master Plan on Aging
+
+
+
+
+
+
+
+
+
+
+Senior Employment
+
+
+
+
+
+
+
+
+
+
+Silver Haired Legislature
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Report Adult Abuse
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Stop Adult Abuse
+
+
+
+
+
+
+
+
+
+
+Avoiding Scams
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Get Involved
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Caregiver Support
+
+
+
+
+
+
+
+
+
+
+Missouri Century Club
+
+
+
+
+
+
+
+
+
+
+Volunteer Opportunities
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Programs & Services
+
+Toggle submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+Support services to promote health, well-being and access to care for individuals, families and communities.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Food & Nutrition
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Food Programs
+
+
+
+
+
+
+
+
+
+
+Form Library
+
+
+
+
+
+
+
+
+
+
+Women, Infants & Children (WIC)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+VITAL RECORDS & REGISTRIES
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Vital Records
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ORGAN, EYE & TISSUE DONATION & REGISTRY
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Library
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Archive Library
+
+
+
+
+
+
+
+
+
+
+Events
+
+
+
+
+
+
+
+
+
+
+Form Library
+
+
+
+
+
+
+
+
+
+
+Free Resources
+
+
+
+
+
+
+
+
+
+
+Manuals
+
+
+
+
+
+
+
+
+
+
+Sitewide Publications
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Emergency Planning
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Healthcare Preparedness
+
+
+
+
+
+
+
+
+
+
+Public Health Emergency Preparedness
+
+
+
+
+
+
+
+
+
+
+Ready in 3 - Prepare for Emergencies
+
+
+
+
+
+
+
+
+
+
+Volunteer Opportunities
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+STATE PUBLIC HEALTH LABORATORY
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Newborn Screening
+
+
+
+
+
+
+
+
+
+
+Specimen Delivery & Courier Information
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Data & Reports
+
+Toggle submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+Find public health data, statistics and research reports that inform community decision-making.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Data Dashboards & Tools
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MOPHIMS (Missouri Public Health Information Management System)
+
+
+
+
+
+
+
+
+
+
+MoHealthData
+
+
+
+
+
+
+
+
+
+
+Drug Overdose Dashboard
+
+
+
+
+
+
+
+
+
+
+Influenza Dashboard
+
+
+
+
+
+
+
+
+
+
+Wastewater Surveillance Dashboard
+
+
+
+
+
+
+
+
+
+
+Rabies Dashboard
+
+
+
+
+
+
+
+
+
+
+Sexually Transmitted Infections (STI) Dashboard
+
+
+
+
+
+
+
+
+
+
+School Immunizations Dashboard
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Guidelines & Requests
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Data Request Form
+
+
+
+
+
+
+
+
+
+
+Data Release Policies, Procedures & Guidelines
+
+
+
+
+
+
+
+
+
+
+Institutional Review Guidelines
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Surveillance Systems & Reports
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Missouri Cancer Registry
+
+
+
+
+
+
+
+
+
+
+Deaths
+
+
+
+
+
+
+
+
+
+
+Live Births
+
+
+
+
+
+
+
+
+
+
+Missouri State Health Assessment
+
+
+
+
+
+
+
+
+
+
+Environmental Public Health Tracking
+
+
+
+
+
+
+
+
+
+
+Pregnancy Risk Assessment Monitoring System (PRAMS) 
+
+
+
+
+
+
+
+
+
+
+Missouri Wastewater Surveillance
+
+
+
+
+
+
+
+
+
+
+Legionella
+
+
+
+
+
+
+
+
+
+
+Vital Records
+
+
+
+
+
+
+
+
+
+
+Rabies
+
+
+
+
+
+
+
+
+
+
+Communicable Disease
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Local
+
+Toggle submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+A central hub with search tools to help you quickly find services and resources in your community.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Local
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Events
+
+
+
+
+
+
+
+
+
+
+Area Agencies on Aging
+
+
+
+
+
+
+
+
+
+
+Find Cooling Centers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Find Your Ombudsman
+
+
+
+
+
+
+
+
+
+
+Find Your Local Public Health Agency
+
+
+
+
+
+
+
+
+
+
+Find WIC Clinics & Retailers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MO.gov
+
+
+
+
+Governor Kehoe
+
+
+
+
+Find an Agency
+
+
+
+
+Online Services
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Breadcrumb
+
+
+
+
+
+Home
+
+
+
+
+Senior & Disability Services
+
+
+
+
+ Long-Term Care Ombudsman
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Long-Term Care Ombudsman
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Topic Menu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Family Councils
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Residents' Right to Vote
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ombudsman Resources
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ombudsman Know Your Rights
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Volunteer Ombudsman Exit Questionnaire
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Return to Senior & Disability Services
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+Contact Information
+
+
+Long-Term Care Ombudsman
+
+
+
+
+
+912 Wildwood Dr.
+
+PO Box 570
+
+Jefferson City, MO 65102-0570
+
+
+
+
+
+Email
+
+
+LTCOmbudsman@health.mo.gov
+
+
+
+
+
+
+Phone
+
+
+800-309-3282
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+Improving the quality of life for residents of long-term care through advocacy, education and empowerment.
+
+Visit us on Facebook
+
+
+
+
+
+
+
+
+
+
+
+
+What is an Ombudsman?
+
+The word “Ombudsman” (om-budz-man) comes from Swedish. It means someone who speaks or helps on behalf of another person. The Missouri Long-Term Care Ombudsman Program is a group of trained volunteers across the state who help residents in long‑term care facilities. Their goal is to make sure residents have a good quality of life and that their rights are protected.
+
+Volunteers are recruited by regional Ombudsman coordinators who work in local programs run by the Area Agencies on Aging (AAAs) or their service partners. After training, Ombudsmen visit residents regularly to discuss any issues. Residents may file complaints anonymously through volunteers, but it will not be acted upon until the resident gives permission. When they act on a complaint, they first support residents in solving the problem themselves. Ombudsmen always act based on what the resident wants, unless a very serious situation requires a different response. Ombudsmen encourage residents to make their own choices and use their rights.
+
+Overall Program Policy
+
+It is important to understand the Ombudsman Program does not have enforcement powers of its own and is not a regulatory agency in any sense. Trust and confidence can be maintained only so long as residents, nursing home facilities, agencies and the public know the Ombudsman has no vested interest in any given case. The Ombudsman's only interest is ensuring long-term care residents are able to freely exercise their rights.
+
+Ombudsman Program Structure
+
+The Missouri Long‑Term Care Ombudsman Program is overseen by the Office of the State Long‑Term Care Ombudsman. This office is part of the Missouri Department of Health and Senior Services (DHSS), within the Division of Senior and Disability Services (DSDS).
+
+The State Office, led by the State Ombudsman, manages and directs all activities of the program.
+
+Missouri law requires DSDS to work with Area Agencies on Aging (AAAs) to run services under the Older Americans Act (OAA), including the Long‑Term Care Ombudsman Program.
+
+
+
+
+
+
+
+
+
+
+
+
+Mission: 
+
+To improve the quality of life for residents in long‑term care facilities through advocacy and education.
+
+
+
+
+
+
+
+
+
+
+
+
+Ombudsman Goals:
+
+• Advocate for residents’ rights.
+
+• Educate residents about their rights and help the community learn about long‑term care issues.
+
+• Empower residents to speak up when they feel unheard.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Ombudsman Roles
+ 
+
+
+ Copy link
+ 
+
+
+
+
+
+
+
+Ombudsman Roles
+
+Ombudsmen take on several roles in their work:
+
+
+Facilitator: Help residents speak up for themselves and learn how to solve their own problems.
+
+Educator: Give information and resources to residents, staff, families, and the community to support learning and problem‑solving.
+
+Broker: Connect residents with people or services that can help and follow up until the issue is solved.
+
+Intermediary: Help improve communication between people who are involved in a problem.
+
+Collaborator: Work with residents and staff to find solutions that meet the resident’s needs.
+
+Mediator: Bring together residents with similar abilities to help them reach an agreement or compromise.
+
+Advocate: Speak or act on behalf of someone else.
+
+Investigator: Gather important information from different sources to understand the problem and find a solution.
+
+Problem solver: Help resolve complaints and issues from residents.
+
+Activist: Work to improve systems and policies that affect residents in long‑term care.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Systems Advocacy
+ 
+
+
+ Copy link
+ 
+
+
+
+
+
+
+
+The federal Older Americans Act created the Long‑Term Care Ombudsman program and explains what Ombudsmen are required to do. Ombudsmen at the state and regional levels have several jobs, especially in systems advocacy, which means speaking up for residents on a larger, public level.
+
+According to the Older Americans Act, Ombudsmen should:
+
+• Speak up for residents to government agencies and seek solutions that protect their health, safety, and rights.
+
+• Review and comment on laws, rules and government actions that affect residents.
+
+• Help the public share their opinions on laws and policies.
+
+• Support resident and family councils.
+
+• Do any other activities that help protect residents.
+
+To make sure residents’ voices are heard by the public and lawmakers, Ombudsmen also:
+
+• Teach advocacy groups, government agencies and lawmakers how laws and policies affect residents.
+
+• Work to change laws, rules or practices that harm residents’ rights or well‑being.
+
+• Help residents, families and the public share opinions about laws and policies.
+
+• Join work groups that study important issues.
+
+• Take part in public hearings and meetings.
+
+• Provide education in the community.
+
+• Teach other aging‑service providers and the public about long‑term care issues.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Find Your Ombudsman
+
+
+
+Long-Term Care Ombudsmen are a group of trained volunteers across the state who help residents in long‑term care facilities.
+
+
+
+
+
+
+Find Your Ombudsman
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Become an Ombudsman
+
+
+
+Become part of a support system for those living in long-term care facilities.
+
+
+
+
+
+
+Volunteer to Help
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Resources
+
+
+
+Resources for the Ombudsman Program
+
+
+
+
+
+
+Ombudsman Resources
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ombudsman Annual Report
+
+
+
+Missouri Long-Term Care Ombudsman
+
+
+
+
+
+
+Ombudsman Annual Report
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ombudsman Dashboard
+
+
+
+Bed and Services Availability Dashboard
+
+
+
+
+
+
+Dashboard
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+Governor
+
+
+Mike Kehoe
+
+
+
+
+
+
+ 
+
+
+Director
+
+
+Sarah Willson
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Footer
+
+
+
+
+
+About Us
+
+
+
+
+Accessibility
+
+
+
+
+Careers
+
+
+
+
+Contact Us
+
+
+
+
+Privacy Policy
+
+
+
+
+Subscribe to Emails
+
+
+
+
+Sunshine Requests
+
+
+
+
+
+
+
+Secondary Footer
+
+
+
+
+
+Data Policy
+
+
+
+
+Pre-Rulemaking
+
+
+
+
+Proposed Rules
+
+
+
+
+Publications
+
+
+
+
+Recalls
+
+
+
+
+Site Index A - Z
+
+
+
+
+State Agencies
+
+
+
+
+
+
+
+
+
+
+Follow Us:
+
+SOURCE 3: MO HealthNet Nursing Home Provider Manual, section 2.11 Program Policies (Therapeutic Home Reserve Days, Hospital Reserve Days, and Bed-Hold Policy) | https://mydss.mo.gov/sites/mydss/files/media/pdf/2024/01/Nursing-Home-Manual-01-09-24.pdf | source date: Nursing Home Manual – 01/08/2024 (running header on every page); file dated 01-09-24 in its published filename | retrieved: 2026-10-31
+2.11 Program Policies
+Reimbursement
+MHD reimburses an enrolled NF based on the eligible participant’s days of care multiplied by the
+NF’s Title XIX per diem rate less any patient surplus amount.
+
+MHD pays for the day of admission but does not pay for the day of hospice election, transfer,
+discharge or death. The day of hospice election, transfer, discharge or death may not be billed to
+the participant or their representative.
+
+If a participant dies on the day of admission, contact MHD Provider Communications by calling the
+Interactive Voice Response (IVR) system at (573) 751-2896, option 6 for special handling.
+
+MHD does not pay for any day a participant is not in the NF except for therapeutic home reserve
+and, under certain circumstances, hospital leave days. To determine a “day,” a bed count performed
+at 11:59 PM is the most acceptable.
+
+                                                                                                   23
+
+                                                                      Nursing Home Manual – 01/08/2024
+If a participant is receiving outpatient hospital services that span midnight but is not admitted to the
+hospital, the NF may bill for that day.
+
+If the participant has both Medicare Part A and MHD coverage, the Medicare Part A benefit must be
+utilized until it has been exhausted. During a Medicare Part A coverage period, only claims reflecting
+Medicare days, revenue code 0189, are to be submitted. NFs are not to submit claims for room and
+board charges, revenue codes 0110, 0119, 0120, 0129, 0190, 0191, 0192, 0193, 0194 and 0199,
+during Part A coverage periods.
+
+Therapeutic Home Reserve Days
+MHD reimburses the NF for therapeutic home reserve days provided the attending physician has
+documented approval in the patient’s plan of care. The coverage of a temporary leave of absence
+includes those periods when a participant is away from the NF visiting a friend or relative. It does
+not apply to any days during which the participant is hospitalized except for the provision under
+hospital reserve days.
+
+The number of days allowed for home leave is 12 days for the first six (6) calendar months and 12
+days for the second six (6) calendar months of the year.
+
+Hospital Reserve Days
+Payment to an NF for hospital reserve days is made under the following specific conditions only:
+
+         The NF is licensed by DHSS
+
+         DHSS has not taken any legal action to terminate the NF’s participation in MHD
+          or deny payments for new admissions as a result of noncompliance with federal
+          standards
+
+         The NF has 97% occupancy of the MHD certified area in the prior calendar
+          quarter in which the first hospital reserve day occurs. Determination of
+          occupancy is based on the quarterly survey report submitted by every NF to
+          DHSS.
+
+         The inpatient hospital stay is three (3) days or less
+
+         The resident has enough unused therapeutic home reserve days to use two (2)
+          home reserve days when one (1) hospital reserve day is requested
+
+         The resident or the resident’s responsible party notifies the NF that the resident
+          intends to return to the NF following the hospital stay
+
+A resident is not required to use therapeutic home reserve days when hospital reserve days are
+applicable. The resident has two choices, described below.
+
+         The resident may choose not to reserve a room at all. Under OBRA 1987 the NF
+          is obligated to place the resident in the first available semi-private room with a
+          Medicaid certified bed upon the participant's discharge from the hospital.
+
+                                                                                                     24
+
+                                                                     Nursing Home Manual – 01/08/2024
+         The resident may pay the NF to reserve the bed during the hospitalization period
+          instead of using the participant's therapeutic home reserve days. The NF should
+          have a statement on record signed by the resident or resident’s guardian that the
+          resident chooses not to use therapeutic home reserve days to cover the hospital
+          leave day’s charge and understands that in order to hold a specific bed the
+          resident is financially responsible.
+
+Bed-Hold Policy
+Neither a resident nor the responsible party is required to pay an NF to hold a bed. If the resident
+or responsible party chooses to, they may pay an NF to reserve the same bed the participant is
+leaving. An NF has an obligation to inform a resident or the responsible party that paying to hold a
+bed is voluntary.
+
+When a resident is transferred to a hospital, the NF is required, both by federal statute and federal
+regulation, to readmit the resident immediately upon the first availability of a bed in a semi-private
+room.
+
+Private Room
+The MHD per diem includes reimbursement for a semi-private room and board. The MHD per diem
+covers a private room when necessary to isolate a participant due to a medical or social condition.
+A MO HealthNet participant or responsible party may elect a private room subject to availability and
+pay the difference between an NF’s private pay semi-private rate and the private pay private rate.
+
+A MO HealthNet participant may not be placed in a private room and charged any additional amount
+above the NF’s MHD per diem rate unless the participant or responsible party specifically requests a
+private room in writing prior to placement in a private room and acknowledges that an additional
+amount not payable by MHD will be charged.
+
+Deposits
+Upon acceptance of a participant’s MHD benefits, and under the terms of the provider agreement
+and federal and state regulations, an NF may not require MO HealthNet residents to pay a deposit
+as a condition of admission.
+
+It is a felony and grounds for termination from the Title XIX Program to charge money as a
+precondition of admission or as a requirement for continued stay. The following is a section from
+1128B(d) of the Social Security Act:
+      (d) Whoever knowingly and willfully—
+          (2) Charges, solicits, accepts, or receives, in addition to any amount otherwise
+              required to be paid under a State Plan approved under this title (42 USCS
+              section 1396 et seq.), any gift, money, donation, or other consideration
+              (other than a charitable, religious, or philanthropic contribution from an
+              organization or from a person unrelated to the patient)—
+
+
+
+                                                                                                   25
+
+                                                                        Nursing Home Manual – 01/08/2024
+               (A)   As a precondition of admitting a patient to a hospital, skilled nursing
+                     facility, or intermediate care facility, or
+               (B)   As a requirement for the patient’s continued stay in such a facility,
+                     when the cost of the services provided therein to the patient is paid
+                     for (in whole or in part) under the State Plan, shall be guilty of a felony
+                     and upon conviction thereof shall be fined not more than $25,000, or
+                     imprisoned for not more than five (5) years, or both.
+
+If a resident is admitted as private pay and a deposit has been collected, this deposit must be
+returned to the resident or to the resident’s representative if the individual later becomes MO
+HealthNet eligible.
+
+Participant Nonliability
+Covered Services
+MHD covered services rendered to an eligible participant are not billable to the participant if MHD
+would have paid had the provider followed the proper policies and procedures for obtaining payment
+through MHD as set forth in 13 CSR 70-4.030.
+
+Retroactive Coverage
+The Social Security Act at 1919(c)(5) specifies admission practices MO HealthNet NF must follow
+regarding a participant’s right to MO HealthNet benefits. A resident cannot be required to waive their
+rights to benefits under MHD. Therefore, if a resident is not eligible for MO HealthNet benefits at the
+time of admission but is eligible retroactively to the time of admission, the resident is not responsible
+for payment of those days.
+
+Those days can be billed to MHD. If the resident or their family paid for those days until eligibility
+was established, the money must be returned after MO HealthNet eligibility is established. Failure to
+return the money after MO HealthNet eligibility has been established is a MHD violation under 13
+CSR 70-3.030.
+
+Remaining Personal Funds for a Deceased Participant
+NFs are required to submit a written account of the remaining personal funds for any deceased
+resident who has received aid, care, assistance or services paid by the DSS (Section 198.088(7),
+RSMo [Cum. Supp. 1993]). For the purpose of this policy, personal funds of the deceased resident
+include all of the resident’s remaining funds held by the NF, in whatever title the account or accounts
+may be known. The resident’s personal funds account balance must be submitted on the Personal
+Funds Account Balance Report within 60 days from the date of the resident’s death. Providers
+must send the completed report to MHD.CostRecovery@dss.mo.gov.
+
+The NF must include the name and address of the resident’s estate or the individual designated to
+receive the resident’s quarterly accounting of all financial transactions on the report.
+
+
+
+
+                                                                                                      26
+
+                                                                      Nursing Home Manual – 01/08/2024
+Cost Recovery/Third Party Liability Unit
+Providers may contact the Third Party Liability Unit at MHD.CostRecovery@dss.mo.gov or by
+calling (573) 751-2005 during regular business hours to ask questions regarding this matter,
+including verifying if a resident has received aid or assistance.
+
+Funeral Expenses
+Funeral expenses may be paid from a resident’s personal funds held by an NF if no other funds are
+available to cover the cost. If personal funds are used for this purpose, complete the Personal
+Funds Account Balance Report indicating in Remarks that funds were used to pay funeral
+expenses, the payee and the amount applied toward the funeral expenses.
+
+Aid and Assistance Paid by the Department of Social Services
+Upon receipt of the report, MHD determines the amount of aid, care, assistance and services paid
+on behalf of the deceased resident by DSS. Within 60 days of receipt of the Personal Funds
+Account Balance Report, MHD notifies the NF of the amount determined to have been paid by
+DSS on behalf of the deceased participant. The NF must pay to DSS any remaining personal funds,
+up to the amount of aid and assistance that was paid by DSS. The NF must send a check payable to
+DSS within 60 days of the NF’s receipt of the notification for payment. Instructions for payment are
+on the DSS notification letter.
+
+If a balance remains in the residents personal fund account after payment has been issued to DSS,
+then the deceased resident’s remaining personal funds should be treated in the same manner as the
+NF does for residents who do not receive aid and assistance.
+
+Providers are in violation of MHD regulation 13 CSR 70-3.030 if, within 60 days of the death of
+the resident, they fail to submit a complete accounting of the remaining personal funds of a deceased
+resident who has received aid, care, assistance or services paid by DSS.
+

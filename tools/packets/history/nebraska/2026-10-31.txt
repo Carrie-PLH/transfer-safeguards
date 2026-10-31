@@ -1,0 +1,2682 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: nebraska
+ASSEMBLED: 2026-10-31
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/nebraska.json (recipe digest 27b925a0693b). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
+- SOURCE 1: transport curl; extractor html-text; scope body; slice from '71-6022. Transfer or discharge of resident; conditions;' to 'View Statute 71-6021 Chapter 71 Index View Statute71-6023 Frequent'; filters none.
+  The Legislature serves one statute per page with its own navigation above and below; the slice keeps the section and drops the chrome. The 'to' anchor is that navigation strip, which is stable because it names the neighbouring sections.
+- SOURCE 2: transport curl; extractor html-text; scope body; slice from '71-6023. Involuntary transfer or discharge; notice;' to 'View Statute 71-6022 Chapter 71 Index View Statute71-6023.01 Frequent'; filters none.
+  The Legislature serves one statute per page with its own navigation above and below; the slice keeps the section and drops the chrome. The 'to' anchor is that navigation strip, which is stable because it names the neighbouring sections.
+- SOURCE 3: transport curl; extractor html-text; scope body; slice from '71-445. Discrimination or retaliation prohibited;' to 'View Statute 71-444 Chapter 71 Index View Statute71-446 Frequent'; filters none.
+  The Legislature serves one statute per page with its own navigation above and below; the slice keeps the section and drops the chrome. The 'to' anchor is that navigation strip, which is stable because it names the neighbouring sections.
+- SOURCE 4: transport curl; extractor pdftotext-layout; slice from '12-006.05 Resident Rights' to 'States; 7. Voice complaints and grievances without'; filters none.
+  175 NAC is published as one complete-title PDF. The slice starts at the resident rights heading rather than at the standing packet's own first line, which began mid-sentence ('rate; 2. Be fully informed of his or her rights') — a mid-sentence anchor is one revision away from matching nothing, and starting at the heading is a superset.
+- SOURCE 5: transport curl; extractor html-text; scope body; slice from 'The Long-Term Care Ombudsman (LTCO)' to the end of the document; filters none.
+  Server-rendered. The slice drops the site chrome above the page content and runs to the end of the document: the standing packet's span ended a few words before the end, and no anchor long enough to be safe exists in what follows, so this is a deliberate superset rather than a short anchor. Anchor corrected 2026-09-22: the page's hidden 'Page Content' field label, previously part of this anchor, no longer appears in the extraction (the page's own markup changed; capture.py was not touched) -- see this state's change log.
+- SOURCE 6: transport curl; extractor pdftotext-layout; slice from '007.12 BED-HOLDING POLICIES FOR HOSPITAL AND THERAPEUTIC LEAVE' to '007.22 PRIOR AUTHORIZATION.'; filters none.
+  471 NAC is Nebraska Medicaid's own nursing-facility regulation, distinct from the 175 NAC licensure chapter already captured as source 4; the department's own Title 471 index page (dhhs.ne.gov/Pages/Title-471.aspx) lists Chapter 12 as 'Amended 6/26/2021', matching this document's running head. This slice runs from the bed-holding policy through the appeals-of-discharge section, a single contiguous span in the source.
+- SOURCE 7: transport curl; extractor pdftotext-layout; slice from '007.25(K) PAYMENT FOR BED-HOLDING.' to '(5) The discharge potential.'; filters none.
+  Same document as source 6; the payment-side bed-holding rule (day limits and conditions) sits later in the chapter, under the specific-payments section, so it is a separate slice rather than a wider span of source 6.
+- SOURCE 8: transport curl; extractor pdftotext-layout; slice from '2-001.02 Right to Appeal: Every applicant for or recipient' to '2-002 Client Responsibilities: Each applicant for, or client of'; filters none.
+  471 NAC 12-007.21 (source 6) directs a discharge/transfer appeal to be conducted under 465 NAC 2 and 6; this is the compiled Title 465 manual PDF linked from dhhs.ne.gov/Pages/Title-465.aspx (source 10). The running head on this chapter reads REV. AUGUST 21, 1995 throughout, while that index page states Chapter 2 was 'Amended 9/17/2024' -- a discrepancy this recipe does not resolve; the change log records it. This slice holds the right-to-appeal provision and its subsections on time limits, filing and notice.
+- SOURCE 9: transport curl; extractor pdftotext-layout; slice from '6-004 Commencement of a Contested Case:' to '6-004.02 Parties to a Contested Case:'; filters none.
+  Same document as source 8; the commencement-of-a-contested-case provision sits far later in the compiled manual, so it is captured as a separate slice. Same dating discrepancy against dhhs.ne.gov/Pages/Title-465.aspx as source 8 (that page states Chapter 6 was 'Amended 9/17/2024').
+- SOURCE 10: transport curl; extractor html-text; scope body; slice from "View Title 465 on the Secretary of State's website." to 'Rules & Regulations Page'; filters none.
+  Server-rendered SharePoint page listing each Title 465 chapter with its own most-recent-amendment date, captured to support the dating discrepancy recorded against sources 8 and 9 (the compiled manual PDF's own running heads read 1995 for the same chapters).
+
+SOURCE 1: Neb. Rev. Stat. 71-6022 | https://nebraskalegislature.gov/laws/statutes.php?statute=71-6022 | source date: Laws 1983, LB 235, § 15; Laws 1986, LB 782, § 5 | retrieved: 2026-10-31
+71-6022.
+ 
+
+
+Transfer or discharge of resident; conditions; procedure; involuntary transfer or discharge; notice requirements.
+
+
+(1) A nursing home shall not transfer or discharge a resident except (a) upon his or her consent, (b) for medical reasons, (c) for the resident's safety or the safety of other residents or nursing home employees, (d) when rehabilitation is such that movement to a less restrictive setting is possible, or (e) for nonpayment for the resident's stay, except as prohibited by section 71-6023.01 or by Title XVIII or XIX of the Social Security Act as amended.
+
+
+(2) Involuntary transfer from a nursing home or discharge of a resident shall be preceded by a minimum written notice of thirty days, except when subdivision (d) of subsection (1) of this section applies, five days written notice shall be given to the resident or his or her representative and when subdivision (e) of subsection (1) of this section applies, a resident shall be given ten days' written notice if his or her charges are five days or more in arrears. This subsection shall not apply when (a) an emergency transfer or discharge is mandated by the resident's health care needs and is in accord with the written orders and medical justification of the attending physician or (b) the transfer is mandated by the physical safety of other residents or nursing home employees, as documented in the nursing home records.
+
+
+
+
+Source
+
+
+
+
+Laws 1983, LB 235, § 15; 
+
+
+Laws 1986, LB 782, § 5.
+
+SOURCE 2: Neb. Rev. Stat. 71-6023 | https://nebraskalegislature.gov/laws/statutes.php?statute=71-6023 | source date: Laws 1983, LB 235, § 16; Laws 2000, LB 819, § 125 | retrieved: 2026-10-31
+71-6023.
+ 
+
+
+Involuntary transfer or discharge; notice; contents.
+
+
+(1) The notice required by subsection (2) of section 71-6022 shall contain:
+
+
+(a) The stated reason for the proposed transfer or discharge;
+
+
+(b) The effective date of the proposed transfer or discharge; and
+
+
+(c) In not less than twelve-point type, the text of section 71-445.
+
+
+(2) A copy of the notice required by subsection (2) of section 71-6022 shall be transmitted to the resident and the resident's representative, if a representative has been designated.
+
+
+
+
+Source
+
+
+
+
+Laws 1983, LB 235, § 16; 
+
+
+Laws 2000, LB 819, § 125.
+
+SOURCE 3: Neb. Rev. Stat. 71-445 | https://nebraskalegislature.gov/laws/statutes.php?statute=71-445 | source date: Laws 2000, LB 819, § 45; Laws 2007, LB296, § 372; Laws 2016, LB750, § 10 | retrieved: 2026-10-31
+71-445.
+ 
+
+
+Discrimination or retaliation prohibited; action for relief authorized.
+
+
+(1) A health care facility or health care service shall not discriminate or retaliate against a person residing in, served by, or employed at such facility or service who has initiated or participated in any proceeding authorized by the Health Care Facility Licensure Act or who has presented a complaint or provided information to the administrator of such facility or service or the Department of Health and Human Services. Such person may maintain an action for any type of relief, including injunctive and declaratory relief, permitted by law.
+
+
+(2) A health care facility licensed pursuant to the Health Care Facility Licensure Act shall not discriminate or retaliate against any person who has initiated or participated in the making of a report under the Uniform Credentialing Act to the department. Such person may maintain an action for any type of relief, including injunctive and declaratory relief, permitted by law.
+
+
+
+
+Source
+
+
+
+
+Laws 2000, LB 819, § 45; 
+
+
+Laws 2007, LB296, § 372; 
+
+
+Laws 2016, LB750, § 10. 
+
+
+
+
+
+
+
+
+Cross References
+
+
+
+
+Uniform Credentialing Act, see section 38-101.
+
+
+
+
+
+
+
+Annotations
+
+
+
+
+The State has not waived its sovereign immunity for claims arising under the Health Care Facility Licensure Act. Baker-Heser v. State, 309 Neb. 979, 963 N.W.2d 59 (2021).
+
+SOURCE 4: 175 NAC 12, Skilled Nursing and Nursing Facilities — resident rights, transfer and discharge | https://dhhs.ne.gov/Documents/Title-175-Complete.pdf | source date: running head EFFECTIVE 2/27/07 | retrieved: 2026-10-31
+12-006.05 Resident Rights                                          30
+      12-006.06 Complaints and Grievances                                33
+
+
+
+                                       i
+
+EFFECTIVE         NEBRASKA HEALTH AND HUMAN SERVICES                              175 NAC 12
+2/27/07                REGULATION AND LICENSURE
+
+       12-006.07 Quality Assurance/Performance Improvement                          33
+       12-006.08 Medical Services                                                   34
+       12-006.09 Care and Treatment                                                 35
+       12-006.10 Administration of Medication                                       41
+       12-006.11 Dietary Services                                                   44
+       12-006.12 Pharmacotherapy Services                                           44
+       12-006.13 Specialized Rehabilitative Services                                47
+       12-006.14 Dental Services                                                    47
+       12-006.15 Outside Resources                                                  47
+       12-006.16 Record-Keeping Requirements                                        48
+       12-006.17 Infection Control                                                  50
+       12-006.18 Environmental Services                                             51
+
+12-007 PHYSICAL PLANT STANDARDS                                                     54
+      12-007.01 Support Areas                                                       54
+      12-007.02 Care and Treatment Areas                                            55
+      12-007.03 Construction Standards                                              56
+      12-007.04 Building Systems                                                    60
+      12-007.05 Waivers                                                             63
+
+12-008 DENIAL, REFUSAL TO RENEW, AND DISCIPLINARY ACTION                            64
+      12-008.01 Grounds for Denial, Refusal to Renew, or Disciplinary Action        64
+      12-008.02 Procedures for Denial, Refusal to Renew, or Disciplinary Action     65
+      12-008.03 Types of Disciplinary Action                                        66
+      12-008.04 Reinstatement from Disciplinary Probation or Suspension, and        68
+                   Re-Licensure After Revocation
+
+
+
+
+                                         ii
+
+EFFECTIVE             NEBRASKA HEALTH AND HUMAN SERVICES                             SNF-NF-ICF
+2/27/07                    REGULATION AND LICENSURE                                  175 NAC 12
+
+
+TITLE 175               HEALTH CARE FACILITIES AND SERVICES LICENSURE
+
+CHAPTER 12         SKILLED NURSING FACILITIES, NURSING FACILITIES, AND
+                   INTERMEDIATE CARE FACILITIES
+
+12-001 SCOPE AND AUTHORITY: These regulations govern licensure of skilled nursing
+facilities, nursing facilities, and intermediate care facilities. The regulations are authorized by
+and implement the Health Care Facility Licensure Act, Neb. Rev. Stat. §§ 71-401 to 71-459.
+
+12-002 DEFINITIONS
+
+Abuse means any knowing, intentional, or negligent act or omission on the part of any person
+which results in physical, sexual, verbal or mental abuse, unreasonable confinement, cruel
+punishment, exploitation, or denial of essential care, treatment, or services to a resident.
+
+Accident means an unexpected, unintended event that can cause a resident bodily injury.
+
+Activities of daily living (See definition of “Care.”)
+
+Adjoining means located to allow access without having to enter a general corridor area used or
+observed by other facility occupants.
+
+Apartment means a portion of a building that contains: living and sleeping areas; storage
+room(s); separate room(s) containing a toilet, lavatory, and bathtub or shower; and a kitchen
+area with a sink and cooking and refrigeration appliances.
+
+Applicant means the individual, government, corporation, partnership, limited liability company,
+or other form of business organization that applies for a license.
+
+Biological means any virus, therapeutic serum, toxin, antitoxin, or analogous product applicable
+to the prevention, treatment, or cure of disease or injuries of humans.
+
+Care means the exercise of concern or responsibility for the comfort, welfare, and habilitation of
+persons, including a minimum amount of supervision and assistance with or the provision of
+personal care, activities of daily living, health maintenance activities, or other supportive
+services. For purposes of this chapter:
+
+
+
+
+                                                  1
+
+EFFECTIVE           NEBRASKA HEALTH AND HUMAN SERVICES                                 SNF-NF-ICF
+2/27/07                  REGULATION AND LICENSURE                                      175 NAC 12
+
+      1.    Activities of daily living means transfer, ambulation, exercise, toileting, eating, self-
+            administered medication, and similar activities;
+
+      2.    Health maintenance activities means noncomplex interventions which can safely be
+            performed according to exact directions, which do not require alteration of the
+            standard procedure, and for which the results and resident responses are
+            predictable; and
+
+      3.    Personal care means bathing hair care, nail care, shaving, dressing, oral care, and
+            similar activities.
+
+Chemical restraint means a psychopharmacologic drug that is used for discipline or
+convenience and is not required to treat medical symptoms.
+
+Complaint means any expression of concern or dissatisfaction.
+
+Completed application means an application that contains all the information specified in 175
+NAC 12-003 and includes all required attachments, documentation, and the licensure fee.
+
+Department means the Department of Health and Human Services Regulation and Licensure.
+
+Designee means a person who is authorized by law or by the resident to act on his or her
+behalf, for example, a parent of a minor child, a legal guardian, a conservator, or an attorney in
+fact named in a durable power of attorney for health care.
+
+Device means an instrument, apparatus, implement, machine, contrivance, implant, in vitro
+reagent, or other similar or related article, including any component, part, or accessory, which is
+prescribed by a medical practitioner and dispensed by a pharmacist or other person authorized
+by law to do so.
+
+Direction and monitoring means, for the purpose of medication administration, the acceptance
+of responsibility for observing and taking appropriate action regarding any desired effects, side
+effects, interactions, and contraindications associated with the medication. Direction and
+monitoring can be done by a:
+
+      1.    Competent individual for himself or herself;
+      2.    Caretaker; or
+      3.    Licensed health care professional.
+
+Director means the Director of Regulation and Licensure.
+
+Dispensing pharmacy means the pharmacy that provides prescribed medications to residents of
+the facility or that provides emergency box drugs to an institution pursuant to the Emergency
+Box Drug Act, Neb. Rev. Stat. §§ 71-2410 to 71-2417.
+
+Drug means substances as defined in Neb. Rev. Stat. § 71-1,142.
+
+
+
+                                               2
+
+EFFECTIVE             NEBRASKA HEALTH AND HUMAN SERVICES                                  SNF-NF-ICF
+2/27/07                    REGULATION AND LICENSURE                                       175 NAC 12
+
+Dwelling means a building that contains: living and sleeping areas; storage room(s); separate
+room(s) containing a toilet, lavatory, and bathtub or shower; and a kitchen area with a sink and
+cooking and refrigeration appliances.
+
+Emergency box drugs means drugs required to meet the immediate therapeutic needs of
+residents when the drugs are not available from any other authorized source in time to
+sufficiently prevent risk of harm to such residents by the delay resulting from obtaining such
+drugs from such other authorized source.
+
+Existing facility means a licensed facility or a facility whose construction or remodeling plans
+were approved by the Department prior to the effective date of 175 NAC 12.
+
+Exploitation means the taking of property of a resident by means of undue influence, breach of a
+fiduciary relationship, deception, extortion, or by any unlawful means.
+
+Facility means a skilled nursing facility, nursing facility, or intermediate care facility as defined.
+
+Five rights means the right medication to the right resident in the right dosage by the right route
+at the right time.
+
+Food Code means the Nebraska Food Code as defined in Neb. Rev. Stat. § 81-2,244.01 and as
+published by the Nebraska Department of Agriculture, except for compliance and enforcement
+provisions.
+
+Foreign when applied to corporations means all those created by authority other than that of the
+State of Nebraska.
+
+Grievance means any written expression of dissatisfaction which may or may not be the result
+of an unresolved complaint.
+
+Health care facility means a(n) ambulatory surgical center, assisted-living facility, center or
+group home for the developmentally disabled, critical access hospital, general acute hospital,
+health clinic, hospital, intermediate care facility, intermediate care facility for the mentally
+retarded, long-term care hospital, mental health center, nursing facility, pharmacy, psychiatric or
+mental hospital, public health clinic, rehabilitation hospital, skilled nursing facility, or substance
+abuse treatment center.
+
+Health maintenance activity (See definition of “Care”.)
+
+Incident means an occurrence likely to have a grave outcome.
+
+Intermediate care facility means a facility where shelter, food, and nursing care or related
+services are provided for a period of more than 24 consecutive hours to persons residing at
+such facility who are ill, injured, or disabled and do not require hospital or skilled nursing facility
+care.
+
+Licensed health care professional means an individual for whom medication authorization or
+administration of medications is included in the scope of practice.
+
+                                                 3
+
+EFFECTIVE            NEBRASKA HEALTH AND HUMAN SERVICES                              SNF-NF-ICF
+2/27/07                   REGULATION AND LICENSURE                                   175 NAC 12
+
+
+Licensed nurse means a licensed registered nurse or a licensed practical nurse.
+
+Licensee means the individual, government, corporation, partnership, limited liability company,
+or other form of business organization legally responsible for the operation of the facility and to
+whom the Department has issued a license.
+
+Medical practitioner means any licensed physician, osteopathic physician, dentist, podiatrist,
+optometrist, chiropractor, physician assistant, certified registered nurse anesthetist, advanced
+practice registered nurse, or certified nurse midwife.
+
+Medication means any prescription or nonprescription drug intended for treatment or prevention
+of disease or to affect body function in humans.
+
+Medication administration includes, but is not limited to:
+
+      1.    Providing medication for another person according to the five rights;
+      2.    Recording medication provision; and
+      3.    Observing, monitoring, reporting, and otherwise taking appropriate actions regarding
+            desired effects, side effects, interactions, and contraindications associated with the
+            medication.
+
+Medication aide means an individual who is listed on the medication aide registry operated by
+the Department as provided in 172 NAC 95 and 96.
+
+Medication error is the preparation, provision or administration of medications which is not in
+accordance with:
+
+      1.    Physician orders;
+      2.    Manufacturers specifications regarding the preparation and administration of the
+            drug or biological; or
+      3.    Accepted professional standards and principles that apply to professionals providing
+            services.
+
+Medication error rate is determined by calculating the percentage of errors. The numerator is
+the total number of errors that the survey team observes, both significant and nonsignificant.
+The denominator is called “opportunities for error” and includes all the doses the survey team
+observed being administered plus the doses ordered but not administered.
+
+Medication provision means the component of the administration of medication that includes
+giving or applying a dose of medication to an individual and includes helping an individual in
+giving or applying such medication to himself or herself.
+
+Medically related social services means services provided by the facility’s staff to assist
+residents in maintaining or improving their ability to manage their everyday physical, mental,
+and psychosocial needs.
+
+
+
+                                               4
+
+EFFECTIVE            NEBRASKA HEALTH AND HUMAN SERVICES                               SNF-NF-ICF
+2/27/07                   REGULATION AND LICENSURE                                    175 NAC 12
+
+Mental abuse means humiliation, harassment, threats of punishment or deprivation, or other
+action causing mental anguish.
+
+Misappropriation of money or property means the deliberate misplacement, exploitation, or use
+of a resident’s belongings or money without the resident’s consent.
+
+NAC means Nebraska Administrative Code.
+
+Neglect means a failure to provide care, treatment, or services necessary to avoid physical
+harm or mental anguish of a resident.
+
+New construction means a facility or a distinct part of a facility in which care and treatment is to
+be provided and which is enlarged, remodeled, or altered in any fashion or is built from the
+ground up on or after the effective date of 175 NAC 12.
+
+New facility means a facility or a distinct part of a facility in which care and treatment is to be
+provided and which is not currently licensed as a health care facility. New facility also includes
+those facilities, which were previously licensed for care and treatment in another licensure
+category, that now intend to seek licensure in a different category.
+
+Nursing facility means a facility where medical care, nursing care, rehabilitation, or related
+services and associated treatment are provided for a period of more than 24 consecutive hours
+to persons residing at such facility who are ill, injured, or disabled.
+
+Personal care (See definition of “Care.”)
+
+Physical abuse means hitting, slapping, pinching, kicking, or other actions causing injury to the
+body.
+
+Physical restraint means any manual method or physical or mechanical device, material, or
+equipment attached or adjacent to the resident’s body that he or she cannot remove easily and
+that restricts freedom of movement or normal access to his or her own body.
+
+Premises means a facility, the facility’s grounds and each building or grounds on contiguous
+property used for administering and operating a facility.
+
+PRN means an administration scheme in which a medication is not routine, is taken as needed,
+and requires assessment for need and effectiveness.
+
+Qualified dietitian means a Registered Dietitian or a Licensed Medical Nutrition Therapist.
+
+Qualified inspector means a professional architect or engineer licensed to practice in Nebraska,
+an official or employee of a local jurisdiction authorized by that jurisdiction to make inspections
+of particular building equipment or systems, or an individual certified by a nationally recognized
+organization to make such inspections.
+
+Qualified personnel means that professional staff are licensed, certified or registered to provide
+specialized therapy/rehabilitative services in accordance with applicable state laws.
+
+                                               5
+
+EFFECTIVE            NEBRASKA HEALTH AND HUMAN SERVICES                                 SNF-NF-ICF
+2/27/07                   REGULATION AND LICENSURE                                      175 NAC 12
+
+
+Resident means a person residing and receiving care and/or treatment as recommended by a
+medical practitioner at a skilled nursing facility, nursing facility, or intermediate care facility.
+
+Schematic plans means a diagram of the facility which describes the number and location of
+beds, the location of care and treatment rooms, Life Safety Code construction and occupancy
+classifications locations, fire compartments, and Fire Marshal-approved points of safety.
+
+Sexual abuse means sexual harassment, sexual coercion, or sexual assault.
+
+Significant change means a major change in the resident’s status that is not self-limiting,
+impacts on more than one area of the resident’s health status, and requires interdisciplinary
+review and/or revision of the care plan.
+
+Significant medication error means one which jeopardizes a resident’s health and safety.
+
+Significant weight loss is 5% loss of body weight in one month, 7.5% loss of body weight in
+three months, or 10% body weight loss in six months.
+
+Skilled nursing facility means a facility where medical care, skilled nursing care, rehabilitation, or
+related services and associated treatment are provided for a period of more than 24 consecutive
+hours to persons residing at such facility who are ill, injured, or disabled.
+
+Specialized rehabilitative services means services provided by qualified personnel such as, but
+not limited to, physical therapy, speech-language pathology, occupational therapy, and mental
+health rehabilitative services for mental illness and mental retardation.
+
+Sufficient fluid means the amount of fluid needed to prevent dehydration (output of fluids far
+exceeds fluid intake) and maintain health. The amount needed is specific for each resident, and
+fluctuates as the resident’s condition fluctuates.
+
+Therapeutic diet means a diet ordered by a physician as part of treatment for a disease or
+clinical condition, to increase, decrease or eliminate certain substances in the diet, or to provide
+food the resident is able to eat.
+
+Treatment means a therapy, modality, product, device, or other intervention used to maintain
+well being or to diagnose, assess, alleviate, or prevent a disability, injury, illness, disease, or
+other similar condition.
+
+Unlicensed direct care staff means personnel who are not licensed or certified under the
+Uniform Licensing Law or other state laws governing the practice of health care and whose
+primary responsibility is to manage, supervise, and/or provide direct care to residents.
+Unlicensed direct care staff includes nursing assistants, medication aides, and other personnel
+with this responsibility and with job titles designated by the facility.
+
+Verbal abuse means the use of oral, written, or gestured language including disparaging and
+derogatory terms to residents or within their hearing distance.
+
+
+                                                6
+
+EFFECTIVE               NEBRASKA HEALTH AND HUMAN SERVICES                                  SNF-NF-ICF
+2/27/07                      REGULATION AND LICENSURE                                       175 NAC 12
+
+12-003 LICENSING REQUIREMENTS AND PROCEDURES: Any person intending to
+establish, operate, or maintain a skilled nursing facility, nursing facility, or intermediate care
+facility must first obtain a license from the Department. A facility must not hold itself out as a
+skilled nursing facility, nursing facility, or intermediate care facility or as providing skilled nursing,
+nursing or intermediate care nursing services unless licensed under the Health Care Facility
+Licensure Act. An applicant for an initial or renewal license must demonstrate that the facility
+meets the care, treatment, operational, and physical plant standards contained in 175 NAC 12.
+
+      12-003.01 Initial License: The initial license process occurs in two stages. The first stage
+      consists of the applicant’s submission of affirmative evidence of the ability to comply with
+      the operational and physical plant standards contained in 175 NAC 12-006 and 12-007.
+      The application is not complete until the Department receives documents specified in 175
+      NAC 12-003.01.
+
+      The second stage consists of the Department’s review of the completed application
+      together with an inspection of the skilled nursing facility, nursing facility, or intermediate
+      care facility. The Department determines whether the applicant meets the standards
+      contained in 175 NAC 12 and the Health Care Facility Licensure Act.
+
+             12-003.01A Applicant Responsibilities: An applicant for an initial skilled nursing
+             facility, nursing facility, or intermediate care facility license must:
+
+                   1.     Intend to provide skilled nursing facility, nursing facility, or intermediate
+                          care facility services as defined;
+                   2.     Comply with the applicable codes, guidelines, and standards specified
+                          in 175 NAC 12-007;
+                   3.     Submit a written application to the Department as provided in 175 NAC
+                          12-003.01B;
+                   4.     Receive approval, in writing from the Department, of schematic plans
+                          and, if new construction, of construction plans; and
+                   5.     Notify the Department at least 30 working days prior to planned resident
+                          occupancy.
+
+             12-003.01B Application Requirements: The applicant may construct an application
+             or obtain an application form from the Department. The application must include:
+
+                   1.     Full name of the facility to be licensed, street and mailing address,
+                          telephone number, and facsimile number, if any;
+                   2.     Type of facility to be licensed;
+                   3.     Name of the administrator;
+                   4.     Name(s) and address(es) of the facility owner(s);
+                   5.     Ownership type;
+                   6.     Mailing address of the owner;
+                   7.     Preferred mailing address for receipt of official notices from the
+                          Department;
+                   8.     List of names and addresses of all persons in control of the facility. The
+                          list must include all individual owners, partners, limited liability company
+                          members, parent companies, and members of boards of directors
+
+                                                  7
+
+EFFECTIVE        NEBRASKA HEALTH AND HUMAN SERVICES                             SNF-NF-ICF
+2/27/07               REGULATION AND LICENSURE                                  175 NAC 12
+
+                   owning or managing the operations and any other persons with financial
+                   interests or investments in the facility. In the case of publicly held
+                   corporations, the individual owners listed must include any stockholders
+                   who own 5% or more of the company’s stock;
+            9.     Legal name of the individual or business organization (government,
+                   corporation, partnership, limited liability company, or other type) to
+                   whom the license should be issued and a statement that such individual
+                   or organization accepts the legal responsibility for compliance with 175
+                   NAC 12;
+            10.    Applicant’s federal employer identification number, if not an individual;
+            11.    Applicant’s social security number if the applicant is an individual. To
+                   ensure social security numbers are not part of public records and are
+                   used only for administrative purposes, applicants may submit social
+                   security numbers in a separate document;
+            12.    Number of beds;
+            13.    Signature(s) of:
+                   a.    The owner, if the applicant is an individual or partnership;
+                   b.    Two of its members, if the applicant is a limited liability company;
+                   c.    Two of its officers, if the applicant is a corporation; or
+                   d.    The head of the governmental unit having jurisdiction over the
+                         facility to be licensed, if the applicant is a governmental unit;
+            14.    Copy of the registration as a foreign corporation filed with the Nebraska
+                   Secretary of State, if applicant is a foreign corporation;
+            15.    Schematic plans;
+            16.    For new construction, construction plans completed in accordance with
+                   the Engineers and Architects Regulation Act, Neb. Rev. Stat. §§ 81-
+                   3401 to 81-3455. Construction plans and description must include the
+                   following:
+                   a.    Project name; description of the project with quantity and floor
+                         area information on bed, care, treatment, bathing, toileting, dining,
+                         and activity locations, building systems, and medical equipment;
+                         street address; and contact person;
+                   b.    Site plan, floor plans, elevations, wall and building sections,
+                         construction details, plumbing and electrical diagrams, and
+                         construction component schedules;
+                   c.    Complete list of names, titles, and telephone numbers of other
+                         authorities reviewing or inspecting the construction;
+                   d.    Upon Department request, any additional information that may be
+                         required for review, such as structural and mechanical
+                         calculations, electrical system calculations, and product and
+                         equipment information; and
+                   e.    Certification, if any, from a licensed architect or engineer that the
+                         construction plan and any revisions thereof meet the requirements
+                         of 175 NAC 12-007;
+            17.    Planned occupancy date;
+            18.    Copies of zoning approval from the relevant jurisdiction;
+            19.    Occupancy certificates issued by the State Fire Marshal or delegated
+                   authority;
+
+                                         8
+
+EFFECTIVE          NEBRASKA HEALTH AND HUMAN SERVICES                              SNF-NF-ICF
+2/27/07                 REGULATION AND LICENSURE                                   175 NAC 12
+
+              20.    Required licensure fee specified in 175 NAC 12-004.10; and
+              21.    If applicable, the disclosure information required by the Alzheimer’s
+                     Special Care Disclosure Act, Neb. Rev. Stat. §§ 71-516.01 to 71-
+                     516.04. The following information must be submitted:
+                     a.    The Alzheimer’s special care unit’s written statement of its overall
+                           philosophy and mission which reflects the needs of residents
+                           afflicted with Alzheimer’s disease, dementia, or a related disorder;
+                     b.    The process and criteria for placement in, transfer to, or discharge
+                           from the unit;
+                     c.    The process used for assessment and establishment of the plan
+                           of care and its implementation, including the method by which the
+                           plan of care evolves and is responsible to changes in condition;
+                     d.    Staff training and continuing education practices;
+                     e.    The physical environment and design features appropriate to
+                           support the functioning of cognitively impaired adult residents;
+                     f.    The frequency and types of resident activities;
+                     g.    The involvement of families and the availability of family support
+                           programs; and
+                     h.    The costs of care and any additional fees.
+
+         12-003.01C Department Responsibilities: The Department will:
+
+              1.     Review the application for completeness;
+              2.     Provide notification to the applicant of any information needed to
+                     complete the application;
+              3.     Confirm, either by Department review or by accepting certification from
+                     an architect or engineer, that the schematic plans and, if new
+                     construction, the construction plans meet the standards of 175 NAC 12-
+                     007;
+              4.     Upon receipt of the requested information, conduct an on-site inspection
+                     in accordance with 175 NAC 12-005; and
+              5.     Issue or deny a license based on the results of the initial inspection.
+
+         12-003.01D Denial of License: See 175 NAC 12-008.01 and 12-008.02 for grounds
+         and procedures for the Department’s denial of an initial license.
+
+    12-003.02 Renewal Licenses
+
+         12-003.02A Licensee Responsibilities: The licensee must submit a written
+         application to the Department. The licensee may construct an application or obtain
+         an application form from the Department. The application must include:
+
+              1.     Full name of the facility to be licensed, street and mailing address,
+                     telephone number, and facsimile number, if any;
+              2.     Type of facility to be licensed;
+              3.     Name of the administrator;
+              4.     Name(s) and address(es) of the facility owner(s);
+              5.     Ownership type;
+
+                                           9
+
+EFFECTIVE        NEBRASKA HEALTH AND HUMAN SERVICES                              SNF-NF-ICF
+2/27/07               REGULATION AND LICENSURE                                   175 NAC 12
+
+            6.     Mailing address(es) of the owner(s);
+            7.     Preferred mailing address for receipt of official notices from the
+                   Department;
+            8.     List of names and addresses of all persons in control of the facility. The
+                   list must include all individual owners, partners, limited liability company
+                   members, parent companies, and members of boards of directors
+                   owning or managing the operations and any other persons with financial
+                   interests or investments in the facility. In the case of publicly held
+                   corporations, the individual owners listed must include any stockholders
+                   who own 5% or more of the company’s stock;
+            9.     Legal name of the individual or business organization (government,
+                   corporation, partnership, limited liability company, or other type) to
+                   whom the license should be issued and a statement that the individual
+                   or organization accepts the legal responsibility for compliance with 175
+                   NAC 12;
+            10.    Applicant’s federal employer identification number, if not an individual;
+            11.    Applicant’s social security number if the applicant is an individual. (To
+                   ensure social security numbers are not part of public records and are
+                   used only for administrative purposes, applicants may submit social
+                   security numbers in a separate document.);
+            12.    Number of beds;
+            13.    Signature(s) of:
+                   a.     The owner, if the applicant is an individual or partnership;
+                   b.     Two of its members, if the applicant is a limited liability company;
+                   c.     Two of its officers, if the applicant is a corporation; or
+                   d.     The head of the governmental unit having jurisdiction over the
+                          facility to be licensed, if the applicant is a governmental unit;
+            14.    Occupancy certificates issued by the State Fire Marshal or delegated
+                   authority dated within the 18 months prior to the license expiration date;
+            15.    Required licensure fee specified in 175 NAC 12-004.10; and
+            16.    If applicable, the disclosure information required by the Alzheimer’s
+                   Special Care Disclosure Act. The following information must be
+                   submitted:
+                   a.     The Alzheimer’s special care unit’s written statement of its overall
+                          philosophy and mission which reflects the needs of residents
+                          afflicted with Alzheimer’s disease, dementia, or a related disorder;
+                   b.     The process and criteria for placement in, transfer to, or discharge
+                          from the unit;
+                   c.     The process used for assessment and establishment of the plan
+                          of care and its implementation, including the method by which the
+                          plan of care evolves and is responsible to changes in condition;
+                   d.    Staff training and continuing education practices;
+                   e.     The physical environment and design features appropriate to
+                          support the functioning of cognitively impaired adult residents;
+                   f.     The frequency and types of resident activities;
+                   g.     The involvement of families and the availability of family support
+                          programs; and
+                   h.     The costs of care and any additional fees.
+
+                                         10
+
+EFFECTIVE           NEBRASKA HEALTH AND HUMAN SERVICES                             SNF-NF-ICF
+2/27/07                  REGULATION AND LICENSURE                                  175 NAC 12
+
+
+         12-003.02B Department Responsibilities: The Department will:
+
+               1.     Send a notice of expiration and an application for renewal to the
+                      licensee’s preferred mailing address not later than 30 days prior to the
+                      expiration date. The licensure renewal notice specifies:
+                      a.    Date of expiration;
+                      b.    Fee for renewal;
+                      c.    License number; and
+                      d.    Name and address of the facility;
+               2.     Issue a renewal license when it determines that the licensee has
+                      submitted a completed renewal application;
+               3.     Send to each licensee that fails to renew its license a second notice,
+                      which is the final notice and specifies that:
+                      a.    The licensee failed to pay its renewal fees or submit an
+                            application, or both;
+                      b.    The license has expired;
+                      c.    The Department will suspend action for 30 days following the date
+                            of expiration;
+                      d.    Upon receipt of the renewal fee and completed renewal
+                            application, the Department will issue the renewal license; and
+                      e.    Upon failure to receive the renewal fee and completed renewal
+                            application, the license will be lapsed; and
+               4.     Place the facility license on lapsed status for nonpayment of fees if the
+                      licensee fails to renew the license. During this time, the facility may not
+                      operate. The license remains in lapsed status until it is reinstated.
+
+         12-003.02C Refusal to Renew: See 175 NAC 12-008.01 and 12-008.02 for
+         grounds and procedures for the Department’s refusal to renew a license.
+
+    12-003.03 Reinstatement from Lapsed Status: A facility requesting reinstatement of its
+    lapsed license must submit to the Department an application for reinstatement and pay
+    the required licensure fee specified in 175 NAC 12-004.10. The application must conform
+    to the requirements specified in 175 NAC 12-003.02.
+
+         12-003.03A The Department will review the application for completeness and will
+         decide if an onsite inspection is needed to determine compliance with the operation,
+         care, treatment, and physical plant requirements of 175 NAC 12-006 and 12-007.
+         The decision is based on the following factors:
+
+               1.     The length of time that has transpired from the date the license was
+                      placed on lapsed status to the date of the reinstatement application; and
+               2.     Whether the facility has provided care or treatment from the site under a
+                      license that is different from the lapsed license.
+
+         12-003.03B When the Department decides that a reinstatement inspection is
+         warranted, it will conduct the inspection in accordance with 175 NAC 12-005.
+
+
+                                            11
+
+EFFECTIVE         NEBRASKA HEALTH AND HUMAN SERVICES                               SNF-NF-ICF
+2/27/07                REGULATION AND LICENSURE                                    175 NAC 12
+
+          12-003.03C When the Department decides that a reinstatement inspection is not
+          warranted, it will reinstate the license.
+
+          12-003.03D Refusal to Reinstate: See 175 NAC 12-008.01 and 12-008.02 for
+          grounds and procedures for the Department’s refusal to reinstate a lapsed license.
+
+12-004 GENERAL REQUIREMENTS
+
+    12-004.01 Separate License: An applicant must obtain a separate license for each type
+    of health care facility or health care service that the applicant seeks to operate. All
+    buildings in which care and treatment is provided must comply with 175 NAC 12-006 and,
+    if applicable, 175 NAC 12-007. A single license may be issued for:
+
+          1.    A facility operating in separate buildings or structures on the same premises
+                under one management;
+          2.    An inpatient facility that provides services on an outpatient basis at multiple
+                locations; or
+          3.    A health clinic operating satellite clinics on an intermittent basis within a
+                portion of the total geographic area served by such health clinic and sharing
+                administration with such clinics.
+
+    12-004.02 Single License Document: The Department may issue one license document
+    that indicates the various types of health care facilities or health care services for which
+    the entity is licensed.
+
+    12-004.03 Effective Date and Term of License: Skilled nursing facility, nursing facility,
+    and intermediate care facility licenses expire on March 31st of each year.
+
+    12-004.04 License Not Transferable: A license is issued only for the premises and
+    persons named in the application and is not transferable or assignable. Change of
+    ownership (sale, whether of stock, title, or assets, lease, discontinuance of operations) or
+    change of premises terminates the license. If there is a change of ownership and the
+    facility remains on the same premises, the inspection in 175 NAC 12-005 is not required.
+    If there is a change of premises, the facility must pass the inspection specified in 175 NAC
+    12-005.
+
+    12-004.05 Bed Capacity, Usage, and Location: The facility must not use more beds than
+    the total number of beds for which the facility is licensed. Changes in the use and location
+    of beds may occur at any time without Department approval for licensure purposes. The
+    facility must not locate more residents in a sleeping room/bedroom than the capacity for
+    which the room was originally approved.
+
+    12-004.06 Change of Ownership or Premises: The licensee must notify the Department
+    in writing ten days before a skilled nursing facility, nursing facility, or intermediate care
+    facility is sold, leased, discontinued, or moved to new premises.
+
+    12-004.07 Notification: An applicant or licensee must notify the Department in writing by
+    electronic mail, facsimile, or postal service:
+
+                                            12
+
+EFFECTIVE           NEBRASKA HEALTH AND HUMAN SERVICES                               SNF-NF-ICF
+2/27/07                  REGULATION AND LICENSURE                                    175 NAC 12
+
+
+         1.    At the time of license renewal, of any change in the use or location of beds;
+         2.    At least 30 working days prior to the date it wishes to increase the number of
+               beds for which the facility is licensed;
+         3.    To request a single license document;
+         4.    To request simultaneous facility or service licensure inspections for all types of
+               licensure held or sought;
+         5.    If new construction is planned, and submit construction plans for Department
+               approval prior to any new construction affecting resident living, care, or
+               treatment portions of the facility. The Department may accept certification
+               from an architect or engineer in lieu of Department review;
+         6.    Within 24 hours of any resident death that occurred due to suicide, a violent
+               act, or the resident’s leaving the facility without staff knowledge when
+               departure presented a threat to the safety of the resident or others;
+         7.    Within 24 hours if a facility has reason to believe that a resident death was
+               due to abuse or neglect by staff;
+         8.    Within 24 hours of any facility fire requiring fire department response; or
+         9.    Within 24 hours of an accident or natural disaster resulting in damage to the
+               physical plant and having a direct or immediate adverse effect on the health,
+               safety, and security of residents. This must include a description of the well-
+               being of the facility’s residents and the steps being taken to assure resident
+               safety, well-being, and continuity of care and treatment. The notification may
+               be made by telephone if the accident or natural disaster has affected the
+               facility’s capacity to communicate.
+
+    12-004.08 Information Available to Public: The licensee must make available for public
+    inspection upon request licenses, license record information, and inspection reports. This
+    information may be displayed on the licensed premises.
+
+    12-004.09 Deemed Compliance
+
+         12-004.09A Accreditation or Certification: The Department may deem an applicant
+         or licensee in compliance with 175 NAC 12-006 based on its accreditation as a
+         skilled nursing facility, nursing facility, or intermediate care facility by the:
+
+               1.     Joint Commission on Accreditation of Health Organizations;
+               2.     Commission on Accreditation of Rehabilitation Facilities; or
+               3.     Medicare or Medicaid certification program.
+
+               12-004.09A1 The applicant or licensee must request the Department to deem
+               its facility in compliance with 175 NAC 12-006 based upon accreditation or
+               certification. The request must be:
+
+                      1.   Submitted in writing within 30 days of receipt of a report granting
+                           accreditation or certification; and
+                      2.   Accompanied by a copy of the accreditation or certification report.
+
+
+
+                                           13
+
+EFFECTIVE            NEBRASKA HEALTH AND HUMAN SERVICES                                 SNF-NF-ICF
+2/27/07                   REGULATION AND LICENSURE                                      175 NAC 12
+
+                  12-004.09A2 Upon receipt of the request the Department will deem the facility
+                  in compliance with 175 NAC 12-006 and will provide written notification of the
+                  decision to the facility within 10 working days of receipt of the request.
+
+                  12-004.09A3 The Department will exclude a facility that has been deemed in
+                  compliance with 175 NAC 12-006 from the random selection of up to 25% of
+                  facilities for compliance inspections under 175 NAC 12-005.04A. The facility
+                  may be selected for a compliance inspection under 175 NAC 12-005.04B.
+
+                  12-004.09A4 To maintain deemed compliance, the licensee must maintain
+                  the accreditation or certification on which its license was issued. If the
+                  accreditation or certification has been sanctioned, modified, terminated, or
+                  withdrawn, the licensee must notify the Department within 15 days of receipt
+                  of notification of the action. After giving the notice, the facility may continue to
+                  operate unless the Department determines that the facility no longer meets
+                  the requirements for licensure under the Health Care Facilities Licensing Act.
+                  If the Department determines the facility no longer qualifies for deemed
+                  compliance, the facility is subject to inspections under 175 NAC 12-005.
+
+      12-004.10 Fees: The licensee must pay fees for licensure and services as set forth
+      below:
+
+            1.    Initial and renewal licensure fees:
+                  a.      1 to 50 Beds                        $1,550
+                  b.      51 to 100 Beds                      $1,750
+                  c.      101 or more Beds                    $1,950
+
+            2.    Duplicate license:                          $ 10
+
+            3.    Refunds for denied applications:
+                  a.   If the Department did not perform an inspection, the license fee is
+                       refunded except for an administrative fee of $25.
+                  b.   If the Department performed an inspection, the license fee is not
+                       refunded.
+
+12-005 INSPECTIONS: To determine compliance with operational, care, treatment, and
+physical plant standards, the Department inspects skilled nursing facilities, nursing facilities, and
+intermediate care facilities prior to and following licensure. The Department determines
+compliance through on-site inspections, review of schematic and construction plans, and reports
+of qualified inspectors.
+
+      12-005.01 Initial Inspection: The Department will conduct an announced initial on-site
+      inspection to determine compliance with 175 NAC 12-006 and 12-007. The inspection will
+      be conducted within 30 working days, or later if requested by the applicant, of receipt of a
+      completed application for an initial license. The Department will provide a copy of the
+      inspection report to the facility within ten working days after completion of an inspection.
+
+
+
+                                               14
+
+EFFECTIVE            NEBRASKA HEALTH AND HUMAN SERVICES                              SNF-NF-ICF
+2/27/07                   REGULATION AND LICENSURE                                   175 NAC 12
+
+    12-005.02 Results of Initial Inspection
+
+          12-005.02A When the Department finds that the applicant fully complies with the
+          requirements of 175 NAC 12-006 and 12-007, the Department will issue a license.
+
+          12-005.02B      When the Department finds that the applicant has complied
+          substantially but has failed to comply fully with the requirements of 175 NAC 12-006
+          and 12-007 and the failure(s) would not pose an imminent danger of death or
+          physical harm to residents of the facility, the Department may issue a provisional
+          license. The provisional license:
+
+                1.     Is valid for up to one year; and
+                2.     Is not renewable.
+
+          12-005.02C When the Department finds the applicant has one or more violations
+          that create no imminent danger of death or serious physical harm and no direct or
+          immediate adverse relationship to the health, safety, or security of the residents of
+          the facility, the Department may send a letter to the facility requesting a statement
+          of compliance. The letter will include:
+
+                1.     A description of each violation;
+                2.     A request that the facility submit a statement of compliance within ten
+                       working days; and
+                3.     A notice that the Department may take further steps if the statement of
+                       compliance is not submitted.
+
+          12-005.02D The statement of compliance must indicate any steps that have been
+          or will be taken to correct each violation and the estimated time to correct each
+          violation. Based on the statement of compliance, the Department will take one of
+          the following actions:
+
+                1.     If the facility submits and implements a statement of compliance that
+                       indicates a good faith effort to correct the violations, the Department will
+                       issue either a regular license or a provisional license; or
+                2.     If the facility fails to submit and implement a statement of compliance
+                       that indicates a good faith effort to correct the violations, the Department
+                       may deny the license.
+
+          12-005.02E When the Department finds the applicant fails to meet the requirements
+          of 175 NAC 12-006 and 12-007 and the failure(s) would create an imminent danger
+          of death or serious physical harm, the Department will deny the license.
+
+    12-005.03 Physical Plant Inspections:       The Department will conduct inspections for
+    conformity with construction plans and compliance with 175 NAC 12-007 for new
+    construction and new facilities in accordance with the following:
+
+          12-005.03A On-site progress inspections of the physical plant by qualified
+          inspectors for conformity to construction documents and compliance with code
+
+                                              15
+
+EFFECTIVE         NEBRASKA HEALTH AND HUMAN SERVICES                               SNF-NF-ICF
+2/27/07                REGULATION AND LICENSURE                                    175 NAC 12
+
+         requirements may occur at any time after construction has begun and prior to the
+         concealment of essential components.
+
+         12-005.03B The Department will conduct an on-site final inspection of the physical
+         plant prior to use or occupancy. In lieu of an on-site final inspection by the
+         Department, the Department may accept a certification from a licensed architect or
+         engineer that the physical plant meets the requirements of the Health Care Facility
+         Licensure Act and 175 NAC 12, and that the facility is complete and ready for
+         occupancy in accordance with Department-approved plans. The architect or
+         engineer may construct a certification form or obtain a certification form from the
+         Department.
+
+               12-005.03B1 The certification must state:
+
+                     1.    Name of the architect or engineer;
+                     2.    Name of the professional entity with which he or she is affiliated, if
+                           any;
+                     3.    Address and telephone number;
+                     4.    Type of license held, the state in which it is held, and the license
+                           number;
+                     5.    Name and location of the facility;
+                     6.    Name(s) of the owner(s) of the facility;
+                     7.    New construction had the building structure and plumbing rough-in
+                           inspected by a qualified inspector prior to the time these would be
+                           concealed and preclude observation;
+                     8.    All new construction is completed in accordance with approved
+                           construction plans; and
+                     9.    The facility is furnished, cleaned, and equipped for the care and
+                           treatment to be performed in compliance with 175 NAC 12-007,
+                           and approved for use and occupancy.
+
+               12-005.03B2 The certification must have attached to it:
+
+                     1.    Copies of documents from other authorities having jurisdiction
+                           verifying the facility meets the codes specified in 175 NAC 12-
+                           007.03A, and is approved for use and occupancy;
+                     2.    Copies of certifications and documentation from equipment and
+                           building system installers verifying that all equipment and systems
+                           installed are operating and approved for use and occupancy; and
+                     3.    Schematic floor plans documenting actual room numbers and
+                           titles, bed locations and capacity, and life safety information.
+
+    12-005.04 Compliance Inspections: The Department may, following the initial licensure
+    of a facility, conduct an unannounced onsite inspection at any time it deems necessary to
+    determine compliance with 175 NAC 12-006 and 12-007. The inspection may occur
+    based on random selection or focused selection.
+
+
+
+                                           16
+
+EFFECTIVE           NEBRASKA HEALTH AND HUMAN SERVICES                              SNF-NF-ICF
+2/27/07                  REGULATION AND LICENSURE                                   175 NAC 12
+
+         12-005.04A Random Selection: Each year the Department may inspect up to 25%
+         of the skilled nursing facilities, nursing facilities, and intermediate care facilities
+         based on a random selection of licensed skilled nursing facilities, nursing facilities,
+         and intermediate care facilities.
+
+         12-005.04B Focused Selection: The Department may inspect a skilled nursing
+         facility, nursing facility, or intermediate care facility when the Department is informed
+         of one or more of the following:
+
+               1.     An occurrence resulting in resident death or serious physical harm;
+               2.     An occurrence resulting in imminent danger to or the possibility of death
+                      or serious physical harm to residents;
+               3.     An accident or natural disaster resulting in damage to the physical plant
+                      and having a direct or immediate adverse effect on the health, safety,
+                      and security of residents;
+               4.     The passage of five years without an inspection;
+               5.     A complaint alleging violation of the Health Care Facility Licensure Act
+                      or 175 NAC 12;
+               6.     Complaints that, because of their number, frequency, or type, raise
+                      concerns about the maintenance, operation, or management of the
+                      facility;
+               7.     Financial instability of the licensee or the licensee’s parent company;
+               8.     Outbreaks or recurrent incidents of physical health problems such as
+                      dehydration, pressure sores, or other illnesses;
+               9.     Change of services, management or ownership;
+               10.    Change in status of accreditation or certification on which licensure is
+                      based, as provided in 175 NAC 12-004.09; or
+               11.    Any other event that raises concerns about the maintenance, operation,
+                      or management of the facility.
+
+    12-005.05 Results of Compliance Inspections
+
+         12-005.05A When the inspection reveals violations that create imminent danger of
+         death or serious physical harm or have a direct or immediate adverse effect on the
+         health, safety, or security of the facility’s residents, the Department will review the
+         inspection findings within 20 working days after the inspection. If the evidence from
+         the inspection supports the findings, the Department will impose discipline in
+         accordance with 175 NAC 12-008.03.
+
+         12-005.05B When the inspection reveals one or more violations that create no
+         imminent danger of death or serious physical harm and no direct or immediate
+         adverse effect on the health, safety, or security of the facility’s residents, the
+         Department may request a statement of compliance from the facility. The statement
+         of compliance must indicate any steps that have been or will be taken to correct
+         each violation and the estimated time to correct each violation. Based on the
+         statement of compliance, the Department will take one of the following actions:
+
+
+
+                                           17
+
+EFFECTIVE              NEBRASKA HEALTH AND HUMAN SERVICES                              SNF-NF-ICF
+2/27/07                     REGULATION AND LICENSURE                                   175 NAC 12
+
+                  1.     If the facility submits and implements a statement of compliance that
+                         indicates a good faith effort to correct the violations, the Department will
+                         not take any disciplinary action against the license; or
+                  2.     If the facility fails to submit and implement a statement of compliance,
+                         the Department will initiate disciplinary action against the license in
+                         accordance with 175 NAC 12-008.
+
+      12-005.06 Re-Inspections
+
+            12-005.06A The Department may conduct re-inspections to determine if a facility
+            fully complies with the requirements of 175 NAC 12-006 and 12-007. Re-inspection
+            occurs:
+
+                  1.     After the Department has issued a provisional license;
+                  2.     Before a provisional license is converted to a regular license;
+                  3.     Before a disciplinary action is modified or terminated; or
+                  4.     After the Department receives a statement of compliance for cited
+                         violations.
+
+            12-005.06B Following a re-inspection, the Department may:
+
+                  1.     Convert a provisional license to a regular license;
+                  2.     Affirm that the provisional license is to remain effective;
+                  3.     Modify a disciplinary action in accordance with 175 NAC 12-008.02; or
+                  4.     Grant full reinstatement of the license.
+
+12-006 STANDARDS OF OPERATION, CARE, AND TREATMENT: To assure adequate
+protection and promotion of the health, safety, and well-being of facility residents and
+compliance with state statutes, skilled nursing facilities, nursing facilities, and intermediate care
+facilities must meet the following standards except where specified otherwise.
+
+      12-006.01 Licensee Responsibilities: The licensee of each facility must assume the
+      responsibility for the total operation of the facility. The licensee may appoint a governing
+      body. Licensee responsibilities include:
+
+            1.    Monitoring policies to assure the appropriate administration and management
+                  of the facility;
+            2.    Ensuring the facility’s compliance with all applicable state statutes and
+                  relevant rules and regulations;
+            3.    Periodically reviewing reports and recommendations regarding the quality
+                  assurance/performance improvement program and implementing programs
+                  and policies to maintain and improve the quality of resident care and
+                  treatment;
+            4.    Appointing a Nebraska-licensed administrator who is responsible for the day-
+                  to-day management of the facility;
+            5.    Defining the duties and responsibilities of the administrator in writing;
+
+
+
+                                               18
+
+EFFECTIVE         NEBRASKA HEALTH AND HUMAN SERVICES                               SNF-NF-ICF
+2/27/07                REGULATION AND LICENSURE                                    175 NAC 12
+
+         6.    Notifying the Department in writing within five working days when a vacancy in
+               the administrator position occurs, including who will be responsible for the
+               position until another administrator is appointed; and
+         7.    Notifying the Department in writing within five working days when the vacancy
+               in the administrator position is filled, including the effective date, license
+               number, and the name of the person appointed administrator.
+
+    12-006.02 Administrator: Every skilled nursing facility, nursing facility, and intermediate
+    care facility must have a Nebraska-licensed administrator who is responsible for the
+    overall management of the facility. Each administrator must be responsible for and
+    oversee the operation of only one licensed facility or one integrated system, except that
+    an administrator may be responsible for and oversee the operations of up to three
+    licensed facilities if approval is granted by the Board of Examiners in Nursing Home
+    Administration and such facilities are located within two hours’ travel time of each other,
+    the distance between the two facilities the farthest apart does not exceed 150 miles, and
+    the combined total number of beds in the facilities does not exceed 200. With approval of
+    the Board, an administrator may act in the dual role of administrator and department head
+    but not in the dual role of administrator and director of nursing. The administrator is
+    responsible for:
+
+         1.    The facility’s compliance with rules and regulations.
+         2.    Planning, organizing, and directing those responsibilities delegated to him or
+               her by the licensee of the facility;
+         3.    Maintaining liaison, through meetings and periodic reports, among the
+               governing body, medical and nursing staff, and other professional and
+               supervisory staff of the facility;
+         4.    The facility’s protection and promotion of residents’ health, safety and well-
+               being; promotion of resident individuality, privacy and dignity; and resident
+               participation in decisions regarding care and services;
+         5.    Ensuring staffing appropriate in number and qualification to meet the resident
+               needs;
+         6.    Designating an appropriate person to act as a substitute in his or her absence
+               who is responsible and accountable for management of the facility. The
+               administrator remains responsible for the acts of the designated person. In
+               case of an extended absence, an appropriate person means one who holds a
+               current license or provisional license issued by the Department to act as a
+               nursing home administrator;
+         7.    Ensuring that facility staff identify and review incidents and accidents, resident
+               complaints and concerns, patterns and trends in overall facility operation such
+               as provisions of resident care and service and take action to alleviate
+               problems and prevent recurrence;
+         8.    Ensuring that a report is made on any alleged abuse of a resident by a staff
+               member, volunteer, family member, visitor, or any other person to Adult
+               Protective Services or local law enforcement as directed in the Adult
+               Protective Services Act, Neb. Rev. Stat. §§ 28-348 to 28-387. All alleged
+               abuse must be investigated and residents protected from further abuse
+               throughout the investigation; and
+
+
+                                           19
+
+EFFECTIVE         NEBRASKA HEALTH AND HUMAN SERVICES                             SNF-NF-ICF
+2/27/07                REGULATION AND LICENSURE                                  175 NAC 12
+
+         9.    Ensuring the establishment of a quality assurance/performance improvement
+               committee and that the recommendations of the committee are addressed.
+
+    12-006.03 Medical Director: The facility must designate a physician to serve as medical
+    director. The medical director is responsible for:
+
+         1.    Ensuring adequate medical practitioner availability and support;
+         2.    Ensuring effective medical practitioner and facility compliance with
+               requirements;
+         3.    Evaluating and improving the quality of the care; and
+         4.    Evaluating and improving the quality of the systems and processes that
+               influence the care.
+
+    12-006.04 Staff Requirements: The facility must maintain a sufficient number of staff with
+    the required training and skills necessary to meet the resident population’s requirements
+    for assistance or provision of personal care, activities of daily living, supervision,
+    supportive services and medical care where appropriate.
+
+         12-006.04A Employment Eligibility:      The facility must provide for and maintain
+         evidence of the following:
+
+               12-006.04A1 Staff Credentials: The facility must verify the current licensure,
+               certification, registration, or other credentials of staff prior to the staff
+               assuming job responsibilities and must have procedures for verifying that
+               current status is maintained.
+
+               12-006.04A2 Health Status: The facility must establish and implement
+               policies and procedures related to the health status of staff to prevent the
+               transmission of disease to residents.
+
+                     12-006.04A2a Health History Screening: The facility must complete a
+                     health history screening for each staff prior to assuming job
+                     responsibilities. A physical examination is at the discretion of the
+                     employer based on results of the health history screening.
+
+               12-006.04A3 Criminal Background and Registry Checks: The facility must
+               complete and maintain documentation of pre-employment criminal
+               background and registry checks on each unlicensed direct care staff member.
+
+                     12-006.04A3a     Criminal Background Checks:  The facility must
+                     complete criminal background checks through a governmental law
+                     enforcement agency or a private entity that maintains criminal
+                     background information.
+
+                     12-006.04A3b Registry Checks: The facility must check for adverse
+                     findings on the following registries:
+
+                           1.    Nurse Aide Registry;
+
+                                          20
+
+EFFECTIVE       NEBRASKA HEALTH AND HUMAN SERVICES                               SNF-NF-ICF
+2/27/07              REGULATION AND LICENSURE                                    175 NAC 12
+
+                         2.    Adult Protective Services Central Registry;
+                         3.    Central Register of Child Protection Cases; and
+                         4.    Nebraska State Patrol Sex Offender Registry.
+
+                   12-006.04A3c The facility must:
+
+                         1.    Determine how to use the criminal background and registry
+                               information, except for the Nurse Aide Registry, in making
+                               hiring decisions;
+                         2.    Decide whether employment can begin prior to receiving the
+                               criminal background and registry information; and
+                         3.    Document any decision to hire a person with a criminal
+                               background or adverse registry findings, except for the
+                               Nurse Aide Registry. The documentation must include the
+                               basis for the decision and how it will not pose a threat to
+                               patient safety or patient property.
+
+                   12-006.04A3d: The facility must not employ a person with adverse
+                   findings on the Nurse Aide Registry regarding resident abuse, neglect,
+                   or misappropriation of resident property.
+
+        12-006.04B Training: The facility must provide initial and ongoing training designed
+        to meet the needs of the resident population. Training must be provided by a
+        person qualified by education, experience, and knowledge in the area of the service
+        being provided. The training must include the following:
+
+             12-006.04B1 Initial Orientation: The facility must ensure each employee of
+             the facility receives initial orientation within two weeks that includes as a
+             minimum, but is not limited to:
+
+                   1.    Resident rights;
+                   2.    Emergency procedures including fire safety and disaster
+                         preparedness plans including availability and notification;
+                   3.    Information on abuse, neglect, and misappropriation of money or
+                         property of a resident and reporting requirements according to the
+                         Adult Protective Services Act, and facility procedures;
+                   4.    Job duties and responsibilities; and,
+                   5.    Nursing staff must receive information on medical emergencies
+                         directives.
+
+             12-006.04B2 Ongoing Training: The facility must ensure each employee
+             receives ongoing training to ensure continued compliance with regulations and
+             facility policy. The record of such training must include a notation of type of
+             training, name of employee(s), date of training, and name of person providing
+             the training.
+
+                   12-006.04B2a Nursing Assistant Training: Ongoing training for nursing
+                   assistants must consist of at least 12 hours per year on topics
+
+                                         21
+
+EFFECTIVE       NEBRASKA HEALTH AND HUMAN SERVICES                              SNF-NF-ICF
+2/27/07              REGULATION AND LICENSURE                                   175 NAC 12
+
+                   appropriate to the employee’s job duties, including meeting the physical,
+                   psychosocial, and mental needs of the residents in the facility.
+
+                   12-006.04B2b Medication Aides: When medication aides are utilized
+                   by the facility, there must be ongoing training to ensure competencies
+                   are met as provided in 172 NAC 95.
+
+                   12-006.04B2c Director of Food Service: When the director of food
+                   service is not a qualified dietitian, the director must have at least 15
+                   hours of continuing education related to dietetics each year, 5 hours of
+                   which relate to sanitation. Evidence of credentials and of continuing
+                   education must be available within the facility.
+
+        12-006.04C Nursing Staff Resources and Responsibilities: The facility must
+        provide sufficient nursing staff on a 24-hour basis, with specified qualifications as
+        follows, to provide nursing care to all residents in accordance with resident care
+        plans.
+
+             12-006.04C1 Director of Nursing Services: The facility must employ a
+             Director of Nursing Services full-time, who may serve only one facility in this
+             capacity. The Director of Nursing Services of the facility must be a registered
+             nurse. The Director of Nursing Services is responsible for the following:
+
+                   1.    Administrative authority, function, and activity of the nursing
+                         department;
+                   2.    Orientation and inservice education of the nursing services staff;
+                   3.    Establishment and implementation of nursing services, objectives,
+                         standards of nursing practices, nursing policy and procedure
+                         manuals and written job descriptions for each level of nursing
+                         personnel;
+                   4.    Establishment and implementation of methods of coordination of
+                         nursing services with other resident services in meeting each
+                         resident’s needs;
+                   5.    Preadmission evaluation of residents; establishment and
+                         implementation of criteria for admission to the facility;
+                   6.    Recommendation of the number and levels of nursing personnel
+                         to be employed;
+                   7.    Nursing staff development; and
+                   8.    Establishment and implementation of complete nursing
+                         assessments and nursing care plans for residents, and ongoing
+                         evaluation and updating of care plans to reflect the current overall
+                         condition of the residents.
+
+                   12-006.04C1a The full-time registered nurse requirement as a Director
+                   of Nursing Services may not be waived.
+
+
+
+
+                                         22
+
+EFFECTIVE     NEBRASKA HEALTH AND HUMAN SERVICES                              SNF-NF-ICF
+2/27/07            REGULATION AND LICENSURE                                   175 NAC 12
+
+                 12-006.04C1b The Director of Nursing Services may serve as a charge
+                 nurse only when the facility has an average daily occupancy of 60 or
+                 fewer residents.
+
+                 12-006.04C1c The facility must notify the Department in writing within
+                 five working days when a vacancy in the Director of Nursing Services
+                 position occurs, including who will be responsible for the position until a
+                 full-time Director of Nursing Services is secured. The Department must
+                 be notified in writing within five working days when the vacancy is filled
+                 indicating effective date, name, and license number of the person
+                 assuming Director of Nursing Services responsibilities.
+
+            12-006.04C2 Registered Nurse Requirement: Except when waived under
+            175 NAC 12-006.04C2a or 12-006.04C2b, skilled nursing facilities and nursing
+            facilities must use the services of a registered nurse for at least eight
+            consecutive hours a day, seven days a week.
+
+                 12-006.04C2a Registered Nurse Waiver in a Nursing Facility: The
+                 Department may waive the requirement that a nursing facility certified
+                 under Title XIX of the federal Social Security Act, as amended, use the
+                 services of a registered nurse for at least eight consecutive hours per
+                 day, seven days per week, if:
+
+                       1.   The facility demonstrates to the satisfaction of the
+                            Department that it has been unable despite diligent efforts,
+                            including offering wages at the community prevailing rate for
+                            nursing facilities, to recruit appropriate personnel;
+                       2.   The Department determines that a waiver of the requirement
+                            will not endanger the health or safety of individuals staying
+                            in the facility; and
+                       3.   The Department finds that, for any periods in which a
+                            registered nurse is not available, a registered nurse or
+                            physician is obligated to respond immediately to telephone
+                            calls from the facility; or
+                       4.   The Department of Health and Human Services Finance and
+                            Support has been granted any waiver by the federal
+                            government of staffing standards for certification under Title
+                            XIX of the federal Social Security Act, as amended, and the
+                            requirements of subdivisions of 12-006.04C2a, items 1-3,
+                            have been met.
+
+                 A waiver granted under this section is subject to annual review by the
+                 Department. As a condition of granting or renewing a waiver, a facility
+                 may be required to employ other qualified personnel. The Department
+                 may grant a waiver under this section if it determines that the waiver will
+                 not cause the State of Nebraska to fail to comply with any of the
+                 applicable requirements of Medicaid so as to make the state ineligible
+                 for the receipt of all funds to which it might otherwise be entitled.
+
+                                       23
+
+EFFECTIVE     NEBRASKA HEALTH AND HUMAN SERVICES                                 SNF-NF-ICF
+2/27/07            REGULATION AND LICENSURE                                      175 NAC 12
+
+
+                 12-006.04C2b Registered Nurse Waiver in a Skilled Nursing Facility:
+                 The Department may waive, for up to one year, the requirement that a
+                 skilled nursing facility certified under Title XVIII of the Federal Social
+                 Security Act, as amended, use the services of a registered nurse for
+                 more than 40 hours per week if:
+
+                       1.    The facility is located in a non-urban area where the supply
+                             of skilled nursing facility services is not sufficient to meet the
+                             needs of individuals residing in the area;
+                       2.    The facility has one full-time registered nurse who is
+                             regularly on duty at the facility 40 hours per week; and
+                       3.    The facility has:
+                             a.      Only residents whose physician has indicated through
+                                     orders or admission or progress notes that the
+                                     residents do not require the services of a registered
+                                     nurse or a physician for more than 40 hours per week;
+                                     and
+                             b.      Has made arrangements for a registered nurse or a
+                                     physician to spend time at the facility, as determined
+                                     necessary by the physician, to provide the necessary
+                                     services on days when the regular, full-time registered
+                                     nurse is not on duty.
+
+                 A waiver granted under this subsection is subject to annual review by
+                 the Department. As a condition of granting or renewing a waiver, a
+                 facility may be required to employ other qualified licensed personnel.
+
+            12-006.04C3 Charge Nurse Requirement: Except when waived under 175
+            NAC 12-006.04C4 or 12-006.04C5 of this section, skilled nursing facilities and
+            nursing facilities must designate a licensed nurse to serve as a charge nurse
+            on each tour of duty. Intermediate care facilities must designate a licensed
+            nurse to serve as a charge nurse for one tour of duty each 24 hours.
+
+                 12-006.04C3a The charge nurse is responsible for the total nursing
+                 care delivered on his or her tour of duty on the assigned unit. Charge
+                 nurse responsibilities are as follows:
+
+                       1.    Through assignment, delegate and/or direct to other nursing
+                             personnel the direct nursing care of the specific residents on
+                             the basis of staff qualifications, size and physical layout of
+                             the facility, characteristics of the resident load, and the
+                             emotional, social, and nursing care needs of residents;
+                       2.    Be knowledgeable and responsive to the physical and
+                             emotional needs of all residents;
+                       3.    Complete and accurate medication administration;
+                       4.    Provide direct resident care as required;
+
+
+                                       24
+
+EFFECTIVE     NEBRASKA HEALTH AND HUMAN SERVICES                                SNF-NF-ICF
+2/27/07            REGULATION AND LICENSURE                                     175 NAC 12
+
+                        5.    Participate in the review, revising and implementation of
+                              residents’ plan of care;
+                        6.    Notify the Director of Nursing Services, physician, and family
+                              of changes in resident condition, i.e., injury, accident, or
+                              adverse change; and,
+                        7.    Complete documentation describing nursing care provided,
+                              including resident response and status.
+
+            12-006.04C4 24-Hour Nurse Staffing Waiver in a Nursing Facility: The
+            Department may waive the requirement that a nursing facility certified under
+            Title XIX of the federal Social Security Act, as amended, use the services of a
+            licensed nurse on a 24-hour basis seven days per week, including the
+            requirement for a charge nurse on each tour of duty, if:
+
+                  1.    The facility demonstrates to the satisfaction of the Department that
+                        it has been unable, despite diligent efforts, including offering
+                        wages at the community prevailing rate for nursing facilities, to
+                        recruit appropriate personnel;
+                  2.    The Department determines that a waiver of the requirement will
+                        not endanger the health or safety of individuals staying in the
+                        facility; and
+                  3.    The Department finds that, for any periods in which licensed
+                        nursing services are not available, a licensed registered nurse or
+                        physician is obligated to respond immediately to telephone calls
+                        from the facility or hospital; or
+                  4.    The Department of Health and Human Services Finance and
+                        Support has been granted any waiver by the federal government
+                        of staffing standards for certification under Title XIX of the federal
+                        Social Security Act, as amended, and the requirements of 175
+                        NAC 12-006. 04C4, items 1-3 have been met.
+
+            A waiver granted under this section is subject to annual review by the
+            Department. As a condition of granting or renewing a waiver, a facility may be
+            required to employ other qualified licensed personnel. The Department may
+            grant a waiver under this section if it determines that the waiver will not cause
+            the State of Nebraska to fail to comply with any of the applicable requirements
+            of Medicaid so as to make the state ineligible for the receipt of all funds to
+            which it might otherwise be entitled.
+
+            12-006.04C5 24-Hour Nurse Staffing Waiver in a Skilled Nursing Facility:
+            The Department may waive the requirement that a skilled nursing facility use
+            licensed nurses on a 24-hour basis, seven days a week, including the
+            requirement for a charge nurse each tour of duty, if:
+
+                  1.    The facility demonstrates to the satisfaction of the Department that
+                        it has been unable, despite diligent efforts including but not limited
+                        to offering wages equal to or greater than the community
+
+
+                                        25
+
+EFFECTIVE     NEBRASKA HEALTH AND HUMAN SERVICES                                SNF-NF-ICF
+2/27/07            REGULATION AND LICENSURE                                     175 NAC 12
+
+                       prevailing wage rate being paid nurses at nursing facilities, to hire
+                       enough licensed nurses to fulfill such requirements;
+                 2.    The Department determines that a waiver of the requirement will
+                       not endanger the health or safety of residents of the facility; and,
+                 3.    The Department finds that, for any period in which staffing
+                       requirements cannot be met, a registered nurse or a physician is
+                       obligated to respond immediately to telephone calls from the
+                       facility.
+
+            A waiver granted under this subsection is subject to annual review by the
+            Department. As a condition of granting or renewing a waiver, a facility may be
+            required to employ other qualified licensed personnel.
+
+            12-006.04C6 Notification of Waiver
+
+                 12-006.04C6a The Department will provide notice of the granting of a
+                 waiver to the office of the state long-term care ombudsman and to
+                 Nebraska Advocacy Services or any successor designated for the
+                 protection of and advocacy for persons with mental illness or mental
+                 retardation.
+
+                 12-006.04C6b The skilled nursing facility or nursing facility granted a
+                 waiver must provide written notification to each resident of the facility or,
+                 if appropriate, to the guardian, designee, or immediate family of the
+                 resident.
+
+            12-006.04C7 Other Nursing Personnel: The facility must assign a sufficient
+            number of qualified nursing personnel who are awake, dressed and assigned
+            to resident care duties at all times.
+
+                 12-006.04C7a The facility must ensure personnel who provide direct
+                 resident care but are not required to be licensed or registered, including
+                 Nursing Assistants and Medication Aides, meet the following
+                 requirements:
+
+                       12-006.04C7a(1) Nursing Assistants must be at least 16 years of
+                       age and must have completed a training course approved by the
+                       Department in accordance with 175 NAC 13.
+
+                       12-006.04C7a(2) Medication Aides must meet the requirements
+                       in 172 NAC 95.
+
+                       12-006.04C7a(3) Personnel must have the ability to speak and
+                       understand the English language or a language understood by a
+                       substantial portion of the facility’s residents.
+
+                 12-006.04C7b Paid Dining Assistants: When the facility utilizes
+                 persons other than a licensed registered or practical nurse or a nursing
+
+                                       26
+
+EFFECTIVE   NEBRASKA HEALTH AND HUMAN SERVICES                              SNF-NF-ICF
+2/27/07          REGULATION AND LICENSURE                                   175 NAC 12
+
+              assistant for the feeding of residents, the facility must follow 172 NAC
+              105.    Each facility must establish and implement policies and
+              procedures:
+
+                   1.    To ensure that paid dining assistants providing assistance
+                         with feeding to residents in the facility meet the qualification,
+                         training and competency requirements specified in 172 NAC
+                         105;
+
+                   2.    To ensure that competency assessments and/or courses for
+                         paid dining assistants have been completed in accordance
+                         with the provisions of 172 NAC 105;
+
+                   3.    That specify how the facility will meet the role requirements
+                         at 172 NAC 105-004, which state that paid dining assistants
+                         must:
+                         a.    Only feed residents who have no complicated feeding
+                               problems as selected by the facility based on the
+                               resident’s latest assessment, plan of care, and
+                               determinations by the charge nurse that the resident’s
+                               condition at the time of such feeding meets that plan
+                               of care and that the paid dining assistant is competent
+                               to feed that particular resident;
+                         b.    Work under the supervision of a licensed registered or
+                               practical nurse who is on duty, physically present in
+                               the facility, and immediately available; and
+                         c.    Call a supervisor for help in an emergency;
+
+                   4.    That specify how the facility will meet the requirements at
+                         172 NAC 105-007, which state that the facility must
+                         maintain:
+                         a.   A listing of all paid dining assistants employed at the
+                              facility and the number of hours worked;
+                         b.   For each individual paid dining assistant:
+                              (1) Verification of successful completion of an
+                                      approved paid dining assistant training course
+                                      and competency evaluation, and
+                              (2) Verification that the facility has made checks
+                                      with the Nurse Aide Registry, the Adult
+                                      Protective Services Central Registry, and the
+                                      central register of child protection cases
+                                      maintained by the Department of Health and
+                                      Human Services if applicable; and
+
+                   5.    That address how supervision of paid dining assistants will
+                         occur and how paid dining assistants will be identified as
+                         single-task workers.
+
+
+                                   27
+
+EFFECTIVE       NEBRASKA HEALTH AND HUMAN SERVICES                              SNF-NF-ICF
+2/27/07              REGULATION AND LICENSURE                                   175 NAC 12
+
+        12-006.04D Dietary Services Staffing: The facility must employ sufficient personnel
+        competent to carry out the functions of the dietary services in a safe and timely
+        manner.
+
+             12-006.04D1 Qualified Dietitian: The facility must employ a qualified dietitian
+             on a full-time, part-time, or consultant basis.
+
+                   12-006.04D1a The qualified dietitian is responsible for the general
+                   guidance and direction of dietary services, assessing special nutritional
+                   needs, developing therapeutic diets, regular diets, developing and
+                   implementing inservice education programs, participating in
+                   interdisciplinary care planning when necessary, supervising institutional
+                   food preparation, service and storage.
+
+             12-006.04D2 Food Service Director: The facility must designate a person to
+             serve as the director of food service who receives scheduled consultation from
+             a registered dietitian or licensed medical nutrition therapist if a qualified
+             dietitian is not employed full-time.
+
+                   12-006.04D2a To qualify as director of food service the employee must
+                   be one of the following:
+
+                         1.    A graduate of a dietetic technician program approved by the
+                               American Dietetic Association;
+                         2.    An individual with a bachelor’s degree in foods and nutrition;
+                         3.    A graduate of a dietetic assistant program approved by the
+                               American Dietetic Association, qualifying for certification by
+                               the Dietary Managers Association;
+                         4.    A graduate of a dietary manager program approved by the
+                               Dietary Managers Association and qualifying for certification
+                               by the Dietary Managers Association; or
+                         5.    An individual who successfully completes a course in food
+                               service management offered by an accredited university,
+                               community college, or technical college, whose curriculum
+                               meets at least the minimum requirements of any of the
+                               programs described in 175 NAC 12-006.04D2a, items 1-3,
+                               whether or not formally approved by the entities named in
+                               those sections.
+
+             12-006.04D3 The dietitian or director of food service is responsible for
+             ensuring residents are provided with a nourishing, palatable, well-balanced
+             diet that meets the daily nutritional and special dietary needs of each resident.
+             The director of food service or his/her designee must participate in the
+             interdisciplinary care plan.
+
+        12-006.04E Social Services Staffing: The facility must employ adequate staff to
+        meet the social service needs of the residents.
+
+
+                                         28
+
+EFFECTIVE       NEBRASKA HEALTH AND HUMAN SERVICES                               SNF-NF-ICF
+2/27/07              REGULATION AND LICENSURE                                    175 NAC 12
+
+             12-006.04E1 The facility must designate a social services director to be
+             responsible for arranging and integrating social services with other elements
+             of the care plan. The person designated as social services director must
+             have:
+
+                   1.    A certificate issued by the Department to practice social work as a
+                         certified master social worker;
+                   2.    A Master of Social Work (M.S.W.) degree with one year
+                         experience in the provision of social services in a long term care
+                         facility, or geriatric setting;
+                   3.    A graduate degree in social or behavioral sciences with a
+                         specialty in gerontology with one year experience in the provision
+                         of social services in a long term care facility, or geriatric setting;
+                   4.    A Bachelor of Social Work degree from a college or university with
+                         an undergraduate social work program accredited by the Council
+                         on Social Work Education with one year of experience in the
+                         provision of social services in a long term care facility or geriatric
+                         setting;
+                   5.    A Bachelor of Arts (B.A.) or Bachelor of Science (B.S.) degree in
+                         social or behavioral sciences with one year of experience in the
+                         provision of social service in a long term care facility, or geriatric
+                         setting;
+                   6.    An Associate of Arts degree in social or behavioral sciences with
+                         two years of experience in the provision of social services in a
+                         long term care facility, or the services of a qualified consultant;
+                   7.    Successfully completed a course of instruction in social services
+                         of at least 36 hours established by the Provider Associations; or
+                   8.    Two years experience in the provision of social services in a long-
+                         term care facility.
+
+             12-006.04E2 If the designated person does not meet the qualifications of a
+             social service director, the facility must have a written agreement with a
+             qualified social worker for consultation and assistance on a regularly
+             scheduled basis as required to meet the needs of the residents.
+
+             12-006.04E3 The social service director or his/her designee must act as part
+             of the interdisciplinary team in assessing the individual needs of the resident
+             and participate in development and implementation of the interdisciplinary
+             care plan. The facility must implement social service interventions to assist
+             the resident in meeting treatment goals, address resident needs and provide
+             social service support in meeting resident needs and individuality.
+
+             12-006.04E4 The facility social service staff must establish and maintain
+             relationships with the resident’s family or designee.
+
+        12-006.04F Resident Activity Staffing: The facility must employ adequate staff to
+        provide activities of interest to residents.
+
+
+                                         29
+
+EFFECTIVE         NEBRASKA HEALTH AND HUMAN SERVICES                                SNF-NF-ICF
+2/27/07                REGULATION AND LICENSURE                                     175 NAC 12
+
+                12-006.04F1 The facility must designate a qualified resident activities
+                director. The activities director must meet one of the following qualifications:
+
+                      1.    A qualified therapeutic recreation specialist with one year of
+                            experience in a long term care facility or geriatric setting;
+                      2.    A licensed occupational therapist with one year of experience in a
+                            long term care facility or geriatric setting;
+                      3.    A qualified therapeutic recreation assistant with one year of
+                            experience in a long term care facility or geriatric setting;
+                      4.    An individual who has a Bachelor of Arts (B.A.) or Bachelor of
+                            Science (B.S.) degree in social or behavioral sciences with one
+                            year of experience in the provision of recreational services in a
+                            long term care facility or geriatric setting;
+                      5.    An individual who has successfully completed a course of
+                            instruction in recreational services of at least 36 hours established
+                            by the provider associations, or a substantially equivalent course
+                            established by any other health care association or entity; or,
+                      6.    Has two years of full-time experience in a resident activities
+                            program in a health care setting.
+
+                12-006.04F2 If the designated person does not meet the qualifications of an
+                activities director, the facility must have a written agreement with a qualified
+                consultant for consultation and assistance on a regularly scheduled basis as
+                required to meet the needs of the residents.
+
+                12-006.04F3 The activity director or his/her designee must act as a member
+                of the interdisciplinary team and participate in the development of the
+                interdisciplinary care plan. The activity director is responsible for providing
+                daily activities for residents to stimulate and promote the physical, spiritual,
+                social, emotional, and intellectual well-being of each resident.
+
+          12-006.04G Medical Records Staffing: The facility must assign overall supervisory
+          responsibility for the medical record service to a full-time employee of the facility,
+          and must maintain sufficient supporting personnel competent to carry out the
+          functions of the medical record services.
+
+    12-006.05 Resident Rights: The facility must inform residents of their rights in writing.
+    The operations of the facility must afford residents the opportunity to exercise their rights,
+    which must include, but are not limited to, the following. Residents must have the right to:
+
+          1.    Be fully informed in writing prior to or at the time of admission and during his
+                or her stay, of services available in the facility, and of related charges
+                including any charges for services not covered by the facility’s basic per diem
+                rate;
+          2.    Be fully informed of his or her rights and responsibilities as a resident and of
+                all rules and regulations governing resident conduct and responsibilities. This
+                information must be provided prior to or at the time of admission and its
+                receipt acknowledged by the resident in writing, or, in the case of residents
+
+                                            30
+
+EFFECTIVE         NEBRASKA HEALTH AND HUMAN SERVICES                             SNF-NF-ICF
+2/27/07                REGULATION AND LICENSURE                                  175 NAC 12
+
+             already in the facility, upon the facility’s adoption or amendment of resident
+             rights policies;
+        3.   Be fully informed by a physician of his or her health and medical condition
+             unless medically contraindicated;
+        4.   Participate in the planning of his or her total care and medical treatment, or to
+             refuse treatment. A resident may participate in experimental research only
+             upon informed written consent;
+        5.   Be free from arbitrary transfer or discharge. The resident must be informed at
+             the time of admission that he or she may be transferred or discharged only
+             upon the following terms:
+
+             a.     Upon his or her consent;
+             b.     For medical reasons, which must be based on the resident’s needs and
+                    be determined and documented by a physician;
+             c.     For the resident’s safety or the safety of other residents or facility
+                    employees;
+             d.     When rehabilitation is such that movement to a less restrictive setting is
+                    possible; or
+             e.     For nonpayment of the resident’s stay, except as prohibited by Title
+                    XVIII or XIX of the Social Security Act as amended, or the Nebraska
+                    Nursing Home Act, Neb. Rev. Stat. §§ 71-6008 to 71-6037. Non-
+                    payment under the Nebraska Nursing Home Act must not include a
+                    change in resident economic status so that the resident receives
+                    Medicaid or becomes eligible for Medicaid if the resident has resided in
+                    the facility for a period of at least one year after July 17, 1986, unless
+                    10% of the facility’s residents are receiving Medicaid or are eligible for
+                    Medicaid. This provision does not apply to Nebraska Veterans’ Homes
+                    established under Chapter 80, Article 3 of Nebraska Statutes.
+
+             A minimum of 30 days written notice must be given to the resident or to his or
+             her designee prior to involuntary transfer or discharge of a resident, except
+             that:
+
+                    (1)   Five days written notice must be given if the transfer is to a less
+                          restrictive setting due to rehabilitation.
+                    (2)   Ten days written notice will be given if the resident is five or more
+                          days in arrears of payment for stay.
+                    (3)   Written notice is not required in the event of emergency transfer or
+                          discharge if the transfer or discharge is mandated by the
+                          resident’s health care needs and is in accord with the written
+                          orders and medical justification of the attending physician, or if
+                          mandated for safety of other residents or facility employees as is
+                          documented in the facility’s records.
+
+             Written notice must contain:
+
+                    (1)   The stated reason for transfer or discharge;
+                    (2)   The effective date of the transfer or discharge; and
+
+                                         31
+
+EFFECTIVE          NEBRASKA HEALTH AND HUMAN SERVICES                             SNF-NF-ICF
+2/27/07                 REGULATION AND LICENSURE                                  175 NAC 12
+
+                     (3)   In not less than 12-point type, the following text:
+
+                           A health care facility or health care service shall not discriminate
+                           or retaliate against a person residing in, served by, or employed at
+                           the facility or service who has initiated or participated in any
+                           proceeding authorized by the Health Care Facility Licensure Act or
+                           who has presented a complaint or provided information to the
+                           administrator of the facility or service, the Department of Health
+                           and Human Services, the Department of Health and Human
+                           Services Finance and Support, or the Department of Health and
+                           Human Services Regulation and Licensure. Such person may
+                           maintain an action for any type of relief, including injunctive and
+                           declaratory relief, permitted by law.
+
+        6.    Exercise rights as a resident of the facility and as a citizen of the United
+
+SOURCE 5: Long-Term Care Ombudsman | https://dhhs.ne.gov/Pages/Aging-Ombudsman.aspx | source date: none stated on page | retrieved: 2026-10-31
+The Long-Term Care Ombudsman (LTCO) works with nursing home and assisted living residents. They help answer resident concerns and complaints. The LTCO advocates for resident rights and their well-being.
+
+
+
+Who is my Long-Term Care Ombudsman?
+
+
+​Email: DHHS.LTCOmbudsman@nebraska.gov
+
+
+
+Call: (800) 942-7830​
+
+Ombudsman Contacts & Service Area ​​​Map​
+
+
+What services are available?
+
+
+Education: Inform residents, families, facility staff, and others on a variety of issues related to aging, long-term care, and residents' rights.
+
+Information & Referral: Empower individuals to resolve concerns and complaints on their own behalf.
+
+Consultation: Make recommendations for protecting the rights of residents. Make recommendations to improve resident care and quality of life.
+
+Individual Advocacy: Facilitate the resolution of concerns and complaints. Protect the rights of residents.
+
+Systems Advocacy: Identify significant concerns and problematic trends. Advocate for systemic changes that will benefit current and future residents in long-term care facilities.
+
+
+
+
+
+
+
+
+ Neat to know...
+
+
+
+Ombudsman acronyms
+
+
+Current State Regulations: Title 15 - Chapter 6
+
+
+
+Federal Website: Administration on community living
+
+
+National LTCO Resource Center
+
+
+
+FFY 2025 Annual Report​​​
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Guides & Other Resources
+
+
+
+
+
+
+
+
+Long-Term Care ombudsman brochure
+
+Learn more about the Long-Term Care Ombudsman Program.
+
+
+
+
+
+
+
+
+Residents' Rights Poster
+
+A brief overview of your rights as a long-term care facility resident.
+
+
+
+
+
+
+
+
+Residents Rights Brochure
+
+Know your rights as a Long-Term Care resident.
+
+
+
+
+
+
+
+
+Selecting a Nursing Home
+
+This checklist helps you know what to look for when you visit possible nursing homes.
+
+
+
+
+
+
+
+
+Know the Facts about Assisted Living Facilities
+
+This guide will help you prepare to visit facilities and make the best choice for you.
+
+
+
+
+
+
+
+
+Surrogate Decision Making Guide
+
+This guide will help you determine what surrogate decision making options are the best for you.
+
+
+
+
+
+
+
+
+Toma de Decisiones Sustitutas
+
+La toma de decisiones sustitutas es un término que describe situaciones en que alguien toma decisions a nombre de otra persona.
+
+
+
+
+
+
+
+
+Volunteer!
+
+Are you interested in volunteering as an Ombudsman Advocate?
+
+
+
+
+
+
+
+
+State Unit on Aging
+
+Oversees funding to help Nebraskans stay in their homes.
+
+
+
+
+
+
+
+
+Five Wishes
+
+The Five Wishes Program for Health Care
+
+
+
+
+
+
+
+
+Five Wishes Sample
+
+A sample Five Wishes plan.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ​
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ More
+
+
+
+
+
+
+
+
+
+
+
+
+
+Navigation List Name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ©
+ 
+ 
+
+ 2026
+ 
+ Nebraska Department of Health and Human Services
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 301 Centennial Mall South,
+ 
+ 
+
+
+
+
+ Lincoln, Nebraska 68508 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ (402) 471-3121
+ 
+ 
+
+
+
+
+
+
+
+
+ TDD
+ 
+ 
+
+
+
+
+ (800) 833-7352
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contact Us
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ For Latest Updates :
+ 
+ 
+
+
+
+
+
+ Sign Up
+ 
+
+
+
+
+
+
+
+ Careers
+ 
+ 
+
+
+
+
+
+ Security, Privacy & Accessibility Policy
+ 
+ 
+
+
+
+
+
+ Non Discrimination & Language Assistance
+ 
+ 
+
+
+
+
+
+ General Disclaimer
+ 
+ 
+
+
+
+
+
+ HIPAA
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Helping People Live Better Lives
+
+SOURCE 6: 471 NAC 12, Nursing Facility Regulations — bed-holding, discharge and appeals | http://govdocs.nebraska.gov/epubs/H8900/R471.0012-2021.pdf | source date: running head EFFECTIVE 06-26-2021 | retrieved: 2026-10-31
+007.12 BED-HOLDING POLICIES FOR HOSPITAL AND THERAPEUTIC LEAVE. The
+  facility must develop policies as defined in 42 CFR 483.15(d).
+
+  007.13 INITIAL NOTICE OF BED-HOLDING POLICIES. The facility must provide written
+  information to the client and a family member or legal representative that specifies:
+      (A) The duration of the bed-hold policy during which the client is permitted to return and
+          resume residence in the facility; and
+      (B) The facility's policies regarding bed-hold periods which must be consistent with 42
+          CFR 483.15(d).
+
+  007.14 NOTICE UPON TRANSFER. At the time of transfer, the facility must provide written
+  notice to the client and a family member or legal representative which specifies the duration
+  of the bed-hold policy.
+
+  007.15 PERMITTING THE CLIENT TO RETURN TO THE FACILITY. The facility must
+  establish and follow a written policy under which a client whose leave exceeds the bed-hold
+  period is re-admitted to the facility immediately upon availability of a bed if the client:
+      (A) Requires the services provided by the facility; and
+      (B) Is eligible for Medicaid nursing facility services.
+
+  007.16 FACILITY-TO-FACILITY TRANSFER. To transfer any Medicaid client from one facility
+  to another, the transferring facility must:
+      (A) Obtain physician's written order for transfer;
+      (B) Obtain written consent from the client, his or her family, or guardian;
+      (C) Notify the Department that handles the client's case in writing, stating:
+          (i) The reason for transfer;
+          (ii) The name of facility to which the client is being transferred; and
+          (iii) The date of transfer;
+      (D) Transfer the following to the receiving facility:
+          (i) Necessary medical, social, and Preadmission Screening and Resident Review
+                (PASRR) information;
+          (ii) Any non-standard wheelchair and wheelchair accessories, options, or
+                components, including power operated vehicles;
+          (iii) Any augmentative communication devices with related equipment and software;
+          (iv) Supports; and
+          (v) Custom fitted or custom fabricated items; and
+      (E) Document transfer information in the client's record and discharge summary.
+
+
+
+
+                                             26
+
+EFFECTIVE                  NEBRASKA DEPARTMENT OF
+06-26-2021                 HEALTH AND HUMAN SERVICES                                   471 NAC 12
+
+  007.17 DISCHARGES. At the time of or no later than 48 hours after a client is discharged or
+  expires, the facility must notify the Department that handles the client's case of:
+     (A) Date of discharge and the place to which the client was discharged; or
+     (B) Date of death.
+
+  007.18 DISCHARGE PLANNING. Before a client's discharge or deinstitutionalization, the
+  facility staff must document in the medical record the actual implementation date of the
+  discharge plan. Each nursing facility must maintain written discharge planning procedures for
+  all Medicaid clients that describe:
+      (A) Which staff member of the facility has operational responsibility for discharge
+            planning;
+      (B) The manner in, and methods by, which the staff member will function, including
+            authority and relationship with the facility's staff;
+      (C) The time period in which each client's need for discharge planning will be determined,
+            which period may not be later than seven days after the day of admission;
+      (D) The maximum time period after which the interdisciplinary team reevaluates each
+            client's discharge plan;
+      (E) The resources available to the facility, the client, and the attending physician to assist
+            in developing and implementing individual discharge plans; and
+      (F) The provisions for periodic review and reevaluation of the facility's discharge planning
+            program.
+
+  007.19 INAPPROPRIATE LEVEL OF CARE (LOC). If it is determined that the client's present
+  level of care is inappropriate:
+      (A) The present facility must provide services to meet the needs of the client and must
+           refer to appropriate agencies for services until an appropriate living situation is
+           available;
+      (B) The facility must document that other alternatives were explored and the responses;
+      (C) The facility must make documentation of active exploration for appropriate living
+           situations available to the Department or their agent;
+      (D) The facility must work cooperatively with the preadmission screening and resident
+           review referral (PASRR) process.
+
+  007.20 AT THE TIME OF DISCHARGE. At the time of the client's discharge, the facility must:
+     (A) Provide any information about the discharged client that will ensure the optimal
+         continuity of care to those persons responsible for the individual's post-discharge
+         care.
+     (B) Include current information on diagnosis, prior treatment, rehabilitation potential,
+         physician advice concerning immediate care, and pertinent social information.
+     (C) Discharge the following items specifically purchased for and used by the client with
+         the client:
+        (i) Any non-standard wheelchair and wheelchair accessories, options, and
+              components, including power operated vehicles;
+        (ii) Any augmentative communication devices with related equipment and software;
+        (iii) Supports; and
+        (iv) Custom fitted or custom fabricated items.
+
+
+
+
+                                               27
+
+EFFECTIVE                  NEBRASKA DEPARTMENT OF
+06-26-2021                 HEALTH AND HUMAN SERVICES                                   471 NAC 12
+
+  007.21 APPEALS OF DISCHARGES, TRANSFERS, AND PREADMISSION SCREENING
+  AND RESIDENT REVIEW (PASRR) DETERMINATIONS. A resident of a skilled nursing
+  facility (SNF) or a nursing facility (NF) who receives a notice from the skilled nursing facility
+  (SNF) or nursing facility (NF) of the intent to discharge or transfer the resident may appeal to
+  the Department of Health and Human Services for a hearing on this notice. The appeal and
+  hearing must be conducted under 465 NAC 2 and 6. An individual who is adversely affected
+  by any Preadmission Screening and Resident Review (PASRR) determination may appeal to
+  the Department of Health and Human Services for a hearing on the decision. The individual
+  or legal representative will be instructed to contact the Department or contractor for
+  information on appeals and to forward a written request for an appeal to the Department within
+  90 days of the date of the Preadmission Screening and Resident Review (PASRR)
+  determination notice. The appeal and hearing must be conducted under 465 NAC 2.
+
+SOURCE 7: 471 NAC 12, Nursing Facility Regulations — payment for bed-holding | http://govdocs.nebraska.gov/epubs/H8900/R471.0012-2021.pdf | source date: running head EFFECTIVE 06-26-2021 | retrieved: 2026-10-31
+007.25(K) PAYMENT FOR BED-HOLDING. The Department makes payments to reserve
+     a bed in a nursing facility (NF) during a client's absence due to hospitalization for an acute
+     condition and for therapeutically-indicated home visits. Therapeutically-indicated home
+     visits are overnight visits with relatives and friends or visits to participate in therapeutic or
+     rehabilitative programs. Payment for bed-holding is subject to the following conditions:
+          (1) A held bed must be vacant and counted in the census. The census must not
+              exceed licensed capacity;
+          (2) Hospital bed-holding is limited to reimbursement for 15 days per hospitalization.
+              Hospital bed-holding does not apply if the transfer is to the following: nursing
+              facility, hospital nursing facility, swing-bed, a Medicare-covered special needs
+              facility stay, or to hospitalization following a Medicare-covered special needs
+              facility stay;
+          (3) Therapeutic leave bed-holding is limited to reimbursement for 18 days per calendar
+              year. Bed-holding days are prorated when a client is a resident for a partial year;
+          (4) A transfer from one facility to another does not begin a new 18-day period;
+          (5) The client's comprehensive care plan must provide for therapeutic leave;
+          (6) Facility staff must work with the client, the client's family, or guardian to plan the
+              use of the allowed 18 days of therapeutic leave for the calendar year; and
+          (7) Qualifying hospital and therapeutic leave days will be reimbursed at the facility’s
+              bed-hold rate.
+
+         007.25(K)(i) SPECIAL LIMITS. When the limitation for therapeutic leave interferes
+         with an approved therapeutic or rehabilitation program, the facility may submit a
+         request for special limits of up to an additional six days per calendar year to Medicaid.
+         Requests for special limits must include:
+             (1) The number of leave days requested;
+             (2) The need for additional therapeutic bed-holding days;
+             (3) The physician's orders;
+             (4) The comprehensive plan of care; and
+
+
+
+                                                31
+
+EFFECTIVE                  NEBRASKA DEPARTMENT OF
+06-26-2021                 HEALTH AND HUMAN SERVICES                                    471 NAC 12
+
+SOURCE 8: 465 NAC 2, Grievances and Fair Hearings — right to appeal | https://dhhs.ne.gov/Documents/Title-465-Complete.pdf | source date: running head REV. AUGUST 21, 1995 | retrieved: 2026-10-31
+2-001.02 Right to Appeal: Every applicant for or recipient of assistance or services provided
+     through the Nebraska Department of Social Services has the right to appeal any action,
+     inaction, or failure to act with reasonable promptness with regard to the assistance or services.
+      The individual may appeal because -
+
+          1.   His/her application for financial or medical assistance or services is denied;
+          2.   His/her application for financial or medical assistance or services is not acted upon
+               with reasonable promptness;
+          3.   His/her assistance is suspended;
+          4.   His/her assistance or services are reduced;
+          5.   His/her assistance or services are terminated;
+          6.   His/her form of payment or services is changed to be more restrictive; or
+          7.   S/he thinks the staff's action was erroneous.
+
+     Exception: The client is not entitled to a fair hearing when either state or federal law requires
+     automatic case adjustments for classes of clients unless the reason for an individual appeal is
+     incorrect eligibility determination.
+
+REV. AUGUST 21, 1995               NEBRASKA DEPARTMENT OF                          INTRODUCTION
+MANUAL LETTER # 61-95              SOCIAL SERVICES MANUAL                        465 NAC 2-001.02A
+
+
+         2-001.02A Appeal Time Limits: The applicant or client must request a fair hearing within
+         90 days following the date the notice of adverse action is mailed. If an applicant wishes to
+         appeal due to inaction, s/he must request a fair hearing within 90 days of the date the
+         application was signed.
+
+         If the client submits a request for a hearing within ten days following the date the notice is
+         mailed, the staff shall not take the adverse action until a fair hearing decision is rendered.
+
+         If the client submits a request for a hearing within ten days following the date the notice is
+         mailed, the client must be allowed an opportunity to decline receipt of continued
+         assistance pending the appeal decision.
+
+         2-001.02B Filing an Appeal: See 465 NAC 6-004.01.
+
+         2-001.02C Notice to the Petitioner: Upon receiving a request for an appeal, the Director
+         acknowledges the appeal by sending a letter to the petitioner, stating that the appeal has
+         been received and informing him/her -
+
+              1.   Of the time and the place the hearing will be held on his/her appeal; or
+              2.   That the basis of the appeal is inappropriate or that the appeal request has
+                   been received after the deadline for appealing an action. (See 465 NAC
+                   2-001.02A regarding appeal time limits.)
+
+         The hearing must be scheduled not less than one week nor more than six weeks from the
+         date of the request, unless the time is waived by the petitioner. (See 468 NAC 6-012.01
+         Emergency Assistance appeals.) The letter must include a detailed explanation of the
+         petitioner's rights and duties at the hearing (see 465 NAC 6-000).
+
+SOURCE 9: 465 NAC 6, Practice and Procedure for Hearings in Contested Cases — filing | https://dhhs.ne.gov/Documents/Title-465-Complete.pdf | source date: running head AUGUST 21, 1995 | retrieved: 2026-10-31
+6-004 Commencement of a Contested Case:
+
+    6-004.01 Filing of Petition and Request for Hearing: The contested case begins with the filing
+    of a petition and request for hearing, if applicable, with the Department. The petition is the
+    initial document filed by or with the Department that sets forth a claim and request for
+    Department action or appeal from Department action or inaction. Form DA-6, "Notice and
+    Petition for Fair Hearing," is available for filing an appeal to anyone who requests it at any office
+    of the Department. (The Food Stamp Program uses notices with a tear-off section which may
+    be used instead of Form DA-6.) Staff shall make every effort to help an individual who wishes
+    to file an appeal. An individual's request for a hearing may also be made in the form of an
+    simple letter or written request to the Department, provided the request identifies the basis for
+    appeal.
+
+    The individual's request for a hearing is made to the Director of the Department of Social
+    Services and forwarded to the attention of the Legal Services Division.
+
+SOURCE 10: Title 465 Regulations of General Application (chapter index) | https://dhhs.ne.gov/Pages/Title-465.aspx | source date: none stated on page | retrieved: 2026-10-31
+View Title 465 on the Secretary of State's website.
+
+
+
+​Title 465 Appendix 
+
+Chapter 1        Repealed 9/17/2024
+
+General Information
+
+Chapter 2        Amended 9/17/2024
+
+Grievances and Fair Hearings
+
+
+
+Chapter 3        Amended 9/17/2024​
+
+Procedures for Negotiated Rulemaking
+
+Chapter 4        Amended 8/21/1995
+
+Petitioning for Rule Making 
+
+Chapter 5        Amended 9/17/2024
+
+Request for a Declaratory Order
+
+Chapter 6        Amended 9/17/2024
+
+Practice and Procedure for Hearings in Contested Cases Before the Department
+
+
+
+ 
+
+
+
+Useful Links
+
