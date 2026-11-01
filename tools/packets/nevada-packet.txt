@@ -1,10 +1,11 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: nevada
-ASSEMBLED: 2026-10-06
+ASSEMBLED: 2026-11-01
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/nevada.json (recipe digest dc167f8f2e6b). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
 - SOURCE 1: transport curl; extractor html-text; scope body; slice from 'NAC 449.74429 Transfer or discharge of patient.' to 'NAC 449.74431 Summary of discharge.'; encoding cp1252; filters none.
   Sliced to NAC 449.74429, the section the page quotes. leg.state.nv.us serves Windows-1252 with no charset declared (possessive apostrophe = byte 0x92), hence encoding cp1252; decoded as UTF-8 it became U+FFFD, and the 2026-09-01 hand capture dropped it (FA-Q-20261006-02).
 - SOURCE 2: transport curl; extractor html-text; scope body; slice from 'NRS 449A.114 Certain facilities to notify patient and State Long-Term Care Ombudsman of intent to transfer patient and provide opportunity for patient or representative to meet with administrator; exceptions.' (occurrence 2) to 'NRS 449A.153 “Hospital care” defined.'; encoding cp1252; filters none.
@@ -24,7 +25,7 @@ CAPTURE NOTES:
 - SOURCE 9: transport curl; extractor pdftotext-layout; slice from 'Long Term Care Ombudsman Program For more information' to the end of the document; filters none.
   From the program heading to the end of the brochure.
 
-SOURCE 1: Nevada Administrative Code, Chapter 449, Facilities for Skilled Nursing — NAC 449.74429, Transfer or discharge of patient | https://www.leg.state.nv.us/NAC/NAC-449.html | source date: added by the Board of Health, effective 9-27-99 | retrieved: 2026-10-06
+SOURCE 1: Nevada Administrative Code, Chapter 449, Facilities for Skilled Nursing — NAC 449.74429, Transfer or discharge of patient | https://www.leg.state.nv.us/NAC/NAC-449.html | source date: added by the Board of Health, effective 9-27-99 | retrieved: 2026-11-01
 NAC 449.74429  Transfer or discharge of patient.
 (NRS
 449.0302)
@@ -171,7 +172,7 @@ located within the facility for skilled nursing.
 
      (Added to NAC by Bd. of Health by R051-99, eff. 9-27-99)
 
-SOURCE 2: Nevada Revised Statutes Chapter 449A, Care and Rights of Patients — NRS 449A.114, Certain facilities to notify patient and State Long-Term Care Ombudsman of intent to transfer patient and provide opportunity for patient or representative to meet with administrator; exceptions | https://www.leg.state.nv.us/nrs/nrs-449a.html | source date: Added to NRS by 2019, 440; amended 2021, 3443; amended 2023, 718 | retrieved: 2026-10-06
+SOURCE 2: Nevada Revised Statutes Chapter 449A, Care and Rights of Patients — NRS 449A.114, Certain facilities to notify patient and State Long-Term Care Ombudsman of intent to transfer patient and provide opportunity for patient or representative to meet with administrator; exceptions | https://www.leg.state.nv.us/nrs/nrs-449a.html | source date: Added to NRS by 2019, 440; amended 2021, 3443; amended 2023, 718 | retrieved: 2026-11-01
 NRS 449A.114  Certain facilities to notify patient and State Long-Term Care
 Ombudsman of intent to transfer patient and provide opportunity for patient or
 representative to meet with administrator; exceptions.
@@ -1004,7 +1005,7 @@ them in those sections.
 1497; A 2011,
 1524)
 
-SOURCE 3: Nevada Revised Statutes Chapter 449, Medical Facilities and Other Related Entities — NRS 449.183, Facility for intermediate care, facility for skilled nursing and residential facility for groups to adopt written policy concerning readmission after temporary transfer of patient or resident | https://www.leg.state.nv.us/nrs/nrs-449.html | source date: Added to NRS by 2011, 1063 | retrieved: 2026-10-06
+SOURCE 3: Nevada Revised Statutes Chapter 449, Medical Facilities and Other Related Entities — NRS 449.183, Facility for intermediate care, facility for skilled nursing and residential facility for groups to adopt written policy concerning readmission after temporary transfer of patient or resident | https://www.leg.state.nv.us/nrs/nrs-449.html | source date: Added to NRS by 2011, 1063 | retrieved: 2026-11-01
 NRS 449.183  Facility for intermediate care, facility for skilled nursing and
 residential facility for groups to adopt written policy concerning readmission
 after temporary transfer of patient or resident.
@@ -1038,7 +1039,7 @@ resident, a copy of the policy established pursuant to subsection 1.
       (Added to NRS by 2011,
 1063)
 
-SOURCE 4: Nevada Revised Statutes Chapter 449A, Care and Rights of Patients — NRS 449A.282, Limitations on transfer or involuntary discharge; and NRS 449A.284, Notices concerning discharge of resident, excerpt (both apply on their own terms to a "residential facility for groups," a facility type distinct from a facility for skilled nursing and out of this project's v1 scope; captured to document that distinction) | https://www.leg.state.nv.us/nrs/nrs-449a.html | source date: NRS 449A.282 added to NRS by 2023, 716; NRS 449A.284 added to NRS by 2023, 717 | retrieved: 2026-10-06
+SOURCE 4: Nevada Revised Statutes Chapter 449A, Care and Rights of Patients — NRS 449A.282, Limitations on transfer or involuntary discharge; and NRS 449A.284, Notices concerning discharge of resident, excerpt (both apply on their own terms to a "residential facility for groups," a facility type distinct from a facility for skilled nursing and out of this project's v1 scope; captured to document that distinction) | https://www.leg.state.nv.us/nrs/nrs-449a.html | source date: NRS 449A.282 added to NRS by 2023, 716; NRS 449A.284 added to NRS by 2023, 717 | retrieved: 2026-11-01
 NRS 449A.282  Limitations on transfer or involuntary discharge; opportunity to
 cure delinquency; duty to attempt to resolve circumstances with potential to
 result in involuntary discharge.
@@ -1184,7 +1185,7 @@ scope of care that the facility is legally authorized to provide.
       (Added to NRS by 2023,
 717)
 
-SOURCE 5: Nevada Medicaid Services Manual, Chapter 500 — Nursing Facilities, Section 503.5, Therapeutic Leave of Absence, excerpt | https://www.nevadamedicaid.nv.gov/siteassets/content/resources/adminsupport/manuals/msm/c500/MSM_500_25_07_01.pdf | source date: effective July 1, 2025 (MTL 16/25) | retrieved: 2026-10-06
+SOURCE 5: Nevada Medicaid Services Manual, Chapter 500 — Nursing Facilities, Section 503.5, Therapeutic Leave of Absence, excerpt | https://www.nevadamedicaid.nv.gov/siteassets/content/resources/adminsupport/manuals/msm/c500/MSM_500_25_07_01.pdf | source date: effective July 1, 2025 (MTL 16/25) | retrieved: 2026-11-01
 503.5          THERAPEUTIC LEAVE OF ABSENCE
 
                Therapeutic Leave means a recipient leaves the facility for one or more days for reasons outlined in
@@ -1280,7 +1281,7 @@ SOURCE 5: Nevada Medicaid Services Manual, Chapter 500 — Nursing Facilities, S
                                                                              Subject:
   MEDICAID SERVICES MANUAL                                                                   POLICY
 
-SOURCE 6: Nevada Medicaid Services Manual, Chapter 3100 — Hearings, Sections 3100 through 3104.1B, excerpt | https://www.nevadamedicaid.nv.gov/uploadedFiles/dhcfpnvgov/content/Resources/AdminSupport/Manuals/MSM/C3100/MSM_Ch_3100_18_02_23.pdf | source date: transmittal letter dated February 22, 2018; the Chapter 3100 landing page at nevadamedicaid.nv.gov labels this document "Current - Effective Feb 23, 2018" | retrieved: 2026-10-06
+SOURCE 6: Nevada Medicaid Services Manual, Chapter 3100 — Hearings, Sections 3100 through 3104.1B, excerpt | https://www.nevadamedicaid.nv.gov/uploadedFiles/dhcfpnvgov/content/Resources/AdminSupport/Manuals/MSM/C3100/MSM_Ch_3100_18_02_23.pdf | source date: transmittal letter dated February 22, 2018; the Chapter 3100 landing page at nevadamedicaid.nv.gov labels this document "Current - Effective Feb 23, 2018" | retrieved: 2026-11-01
 3100        INTRODUCTION
 
             The Division of Health Care Financing and Policy (DHCFP) (also referred to as the “agency”)
@@ -2459,7 +2460,7 @@ MEDICAID SERVICES MANUAL                                                    RECI
 
   October 26, 2017                  HEARINGS                 Section 3105 Page 8
 
-SOURCE 7: Nevada Medicaid Fair Hearing Request Form, NMO-6300 (English portion) | https://www.nevadamedicaid.nv.gov/siteassets/content/providers/fair-hearings/documents/final-nmo-6300-fair-hearing-request-form-6-25.pdf | source date: NMO-6300 (6/25) | retrieved: 2026-10-06
+SOURCE 7: Nevada Medicaid Fair Hearing Request Form, NMO-6300 (English portion) | https://www.nevadamedicaid.nv.gov/siteassets/content/providers/fair-hearings/documents/final-nmo-6300-fair-hearing-request-form-6-25.pdf | source date: NMO-6300 (6/25) | retrieved: 2026-11-01
 REQUESTING A FAIR HEARING
 •      If you disagree with Medicaid's denial, reduction, suspension, or termination of service, you may request a
        Fair Hearing. A Fair Hearing allows you and Medicaid to give information about your situation to a Hearing
@@ -2609,7 +2610,7 @@ Authorized representative signature / Firma del representante autorizado: ______
 
                                                                                                                           NMO-6300 (6/25)
 
-SOURCE 8: Long Term Care Ombudsman | Nevada Aging and Disability Services Division | https://www.adsd.nv.gov/programs/programs-for-seniors/long-term-care-ombudsman/ | source date: none stated on page | retrieved: 2026-10-06
+SOURCE 8: Long Term Care Ombudsman | Nevada Aging and Disability Services Division | https://www.adsd.nv.gov/programs/programs-for-seniors/long-term-care-ombudsman/ | source date: none stated on page | retrieved: 2026-11-01
 The Nevada State Long Term Care Ombudsman Program (LTCOP) is authorized by the federal Older American’s Act. Federal law requires each state have a Long Term Care (LTC) Ombudsman Program managed by a State Long Term Care Ombudsman. The program was initiated to improve the quality of care in America’s nursing homes.
 
 
@@ -3084,7 +3085,7 @@ Web Style Standards
 
 ADA Assistance
 
-SOURCE 9: Nursing Home Discharges, Transfers, and Room Changes: Know Your Rights (LTC Discharges Brochure), excerpt (first page only; the brochure's inside spread runs in three interleaved newspaper columns per CLAUDE.md's two-column-PDF trap and is captured separately below exactly as pdftotext rendered it) | Nevada Aging and Disability Services Division, Long Term Care Ombudsman Program | https://www.adsd.nv.gov/uploadedFiles/adsdnvgov/content/Programs/Seniors/LTCOmbudsman/LTC%20Discharges%20Brochure(2).pdf | source date: none stated | retrieved: 2026-10-06
+SOURCE 9: Nursing Home Discharges, Transfers, and Room Changes: Know Your Rights (LTC Discharges Brochure), excerpt (first page only; the brochure's inside spread runs in three interleaved newspaper columns per CLAUDE.md's two-column-PDF trap and is captured separately below exactly as pdftotext rendered it) | Nevada Aging and Disability Services Division, Long Term Care Ombudsman Program | https://www.adsd.nv.gov/uploadedFiles/adsdnvgov/content/Programs/Seniors/LTCOmbudsman/LTC%20Discharges%20Brochure(2).pdf | source date: none stated | retrieved: 2026-11-01
 Long Term Care
     Ombudsman Program                          For more information please
                                                       contact your

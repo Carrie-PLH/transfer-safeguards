@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** "The Nevada State Long Term Care Ombudsman Program (LTCOP) is authorized by the federal Older American's Act." Its published helpline: "please contact LTCOP Helpline at" "1-888-282-1155". The program's own discharge-rights brochure lists a Carson City office at "3416 Goni Rd. Suite 132" "Carson City, NV 89706" "(775) 687-4210", and three others: Elko at "1010 Ruby Vista Dr. Suite 104" "Elko, NV 89801", "(775) 738-1966"; Las Vegas at "3320 W. Sahara Ave" "Las Vegas, NV 89104", "(702) 486-3545"; and Reno at "9670 Gateway Dr. Suite 100" "Reno, NV 89521" "(775) 687-0800". The Aging and Disability Services Division's own program page carries a different Carson City street address under the same phone number: "1550 E College Parkway" "Carson City, NV 89706" "(775) 687-4210". Both are shown; neither is reconciled here.
 
-**Sources last checked.** 2026-10-06
+**Sources last checked.** 2026-11-01
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

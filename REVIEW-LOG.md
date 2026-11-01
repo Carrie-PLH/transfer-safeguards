@@ -1612,3 +1612,45 @@ entries opened this pass. Not deployed.
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-10-31. No
 human review is claimed for this entry.
+
+## 2026-11-01 — nightly review (portfolio-nightly-qc-review)
+
+Cursor was `nevada`; batch nevada, new-hampshire, new-jersey.
+
+- **nevada: CONFIRMED.** Recipe capture (digest dc167f8f2e6b), 9 sources.
+  Zero failures on both files against the fresh capture plus the `moved`
+  supplement (tools/packets/nevada-packet-moved.txt). Retained; unchanged
+  since the 2026-10-06-b capture (hash f1ddda5550295eca). Promoted. This
+  resolves the 2026-10-06 drift (the apostrophe restored in "patient's
+  welfare") — fidelity now traces clean, consistent with the correction
+  recorded on the page 2026-10-06 and the closure of FA-Q-20261006-02 that
+  date.
+- **new-hampshire: CONFIRMED.** Recipe capture (digest 55e50782350a), 9
+  sources. Sources 4-6 (www.dhhs.nh.gov, chrome transport per the recipe,
+  403s curl) fetched through the Claude Browser pane with
+  `document.querySelector('main').innerText`, exactly as the recipe notes
+  specify, each transferred as base64-encoded bytes and verified against
+  the in-page `crypto.subtle` SHA-256 digest before being supplied with
+  `--supply`. Zero failures on both files. Retained (hash fc5cb5be4cfe1605)
+  — retained textual movement since the 2026-09-22 capture (unchanged since
+  2026-10-06's confirmation) with no source-header movement and no
+  instrument-replacement signal; fidelity traces clean throughout, so the
+  movement is recorded and not investigated further. Promoted.
+- **new-jersey: CONFIRMED.** Recipe capture (digest 191d87d35358), 2 sources.
+  Zero failures on both files. Retained; unchanged since the 2026-10-08
+  capture (hash 9df67e0896a52397). Promoted.
+
+Checked date updated to 2026-11-01 in each states/<slug>.md (bare ISO),
+re-rendered via render-state.py (zero fidelity failures confirmed against
+each render), derived dates synced via sync-checked-dates.py (6 corrected:
+table + json for all three). build-status.py: baseline 51/51, full 50/51
+(pre-existing Hawaii backfill gap, unaffected by this pass). generate-
+sitemap.py: 58 URLs, robots.txt and _redirects regenerated (no page-set
+change this pass). build-state-picker.py: 51/51 regenerated on both pages.
+check-all.py: 104 pages across 52 states, no unexplained failures.
+check-live.py: 5 pages sampled, nothing loaded from any other host. Cursor
+advanced: nevada -> new-mexico. No drift, no unreachable sources, no queue
+entries opened this pass. Not deployed.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-11-01. No
+human review is claimed for this entry.

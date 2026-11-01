@@ -1,16 +1,17 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: new-jersey
-ASSEMBLED: 2026-10-08
+ASSEMBLED: 2026-11-01
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/new-jersey.json (recipe digest 191d87d35358). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
 - SOURCE 1: transport curl; extractor pdftotext-layout; filters none.
   Plain curl with a pinned browser user-agent reaches nj.gov; no WAF or client-side gate. -layout matches the standing packet's own extraction: the bullet glyphs at the foot of the summary do not survive and appear as leading spaces, and the block addresses keep the document's own line breaks. Both are the extraction's doing rather than the document's, and they are reproduced rather than repaired because the page quotes this capture as it stands.
 - SOURCE 2: transport curl; extractor html-text; scope body; filters none.
   Server-rendered; plain curl with a browser user-agent returns the whole document. Scope 'body' rather than a narrower selector because the standing packet was a tag strip over the served document and carries the office's site navigation and footer in the captured text, and because the page's own 'Last Updated' line — its only date — sits near the foot outside any content wrapper. A narrower scope would drop the date this packet records as the source's own.
 
-SOURCE 1: New Jersey Office of the Long-Term Care Ombudsman, Notice Requirements for Transfer/Discharge of a Long-Term Care Resident (PDF) | https://www.nj.gov/ooie/div-assets/docs/Notice-Requirements-for-Transfer.pdf | source date: none stated on document | retrieved: 2026-10-08
+SOURCE 1: New Jersey Office of the Long-Term Care Ombudsman, Notice Requirements for Transfer/Discharge of a Long-Term Care Resident (PDF) | https://www.nj.gov/ooie/div-assets/docs/Notice-Requirements-for-Transfer.pdf | source date: none stated on document | retrieved: 2026-11-01
 Notice Requirements for Transfer/Discharge of a Long-Term Care Resident
 
 I.       Content
@@ -152,7 +153,7 @@ To summarize, the notice requirements for transfer/discharge of a resident from 
           Contact information for the NJ LTCO or Disability Rights NJ and appeals information for the Division of
            Medical Assistance and Health Services Fair Hearing Unit. (See above.)
 
-SOURCE 2: New Jersey Long-Term Care Ombudsman, Nursing Home Resident Rights | https://www.nj.gov/ooie/resident.shtml | source date: Last Updated: Thursday, 05/15/25 | retrieved: 2026-10-08
+SOURCE 2: New Jersey Long-Term Care Ombudsman, Nursing Home Resident Rights | https://www.nj.gov/ooie/resident.shtml | source date: Last Updated: Thursday, 05/15/25 | retrieved: 2026-11-01
 Official Site of The State of New Jersey
 
 

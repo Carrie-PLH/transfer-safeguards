@@ -1,10 +1,11 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: new-hampshire
-ASSEMBLED: 2026-10-06
+ASSEMBLED: 2026-11-01
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/new-hampshire.json (recipe digest 55e50782350a). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
 - SOURCE 1: transport curl; extractor html-text; scope body; filters none.
   gc.nh.gov (the General Court's RSA pages) is static HTML, curl-able with a browser user-agent (2026-09-22). Scope body: one section per page, and the page carries nothing but the title, chapter and section headings above the section text and its source note.
 - SOURCE 2: transport curl; extractor html-text; scope body; filters none.
@@ -24,7 +25,7 @@ CAPTURE NOTES:
 - SOURCE 9: transport curl; extractor pdftotext-layout; slice from 'Bed Days and Temporary Absences Bed days shall include' to 'Rate Setting and Payment Limitations for Atypical Nursing Care'; filters none.
   nhmmis.nh.gov serves the manual to plain curl, but its Incapsula bot-mitigation intermittently answers the same request with a ~200-byte text/html challenge (seen 2026-09-22: four challenged fetches about 08:45, then ten clean ones, then challenged on every fetch from about 09:05 to 09:15, then clean again by 09:48, across header sets and HTTP versions; 2026-09-22 queue entry FA-Q-20260922-01 recorded the challenge persisting across a cookie jar). A challenged fetch fails this source (pdftotext rejects it), it does not produce a short packet; re-run later, and if the challenge persists, obtain the PDF in an attended session and supply it with --supply-file and its SHA-256. The 41-page PDF is extracted with pdftotext -layout, as the hand capture was. Sliced from the 'Bed Days and Temporary Absences' heading to the next heading, as the hand capture was.
 
-SOURCE 1: RSA 151:21, Patients' Bill of Rights | https://gc.nh.gov/rsa/html/XI/151/151-21.htm | source date: none stated on the page (Source note lists amending sessions through 2025, 287:11, 12, eff. July 1, 2025) | retrieved: 2026-10-06
+SOURCE 1: RSA 151:21, Patients' Bill of Rights | https://gc.nh.gov/rsa/html/XI/151/151-21.htm | source date: none stated on the page (Source note lists amending sessions through 2025, 287:11, 12, eff. July 1, 2025) | retrieved: 2026-11-01
 TITLE XI
 
 HOSPITALS AND SANITARIA
@@ -211,7 +212,7 @@ XXIII. (a) In addition to the rights specified in paragraph XVIII, the patient s
 
 Source. 1981, 453:1. 1989, 43:1. 1990, 18:1-6; 140:2, XI. 1991, 365:10. 1992, 78:1. 1997, 108:6; 331:3-8. 1998, 199:2; 388:5, 6. 2001, 85:1, eff. Aug. 18, 2001. 2009, 252:1, eff. Sept. 14, 2009. 2013, 265:3, eff. Jan. 1, 2014. 2019, 332:6, eff. Oct. 15, 2019. 2020, 39:61, 62, eff. Jan. 1, 2021. 2022, 52:1, eff. May 20, 2022; 304:2, eff. July 1, 2022. 2025, 287:11, 12, eff. July 1, 2025.
 
-SOURCE 2: RSA 151:25, Temporary Absence | https://gc.nh.gov/rsa/html/XI/151/151-25.htm | source date: none stated on the page (Source note lists amending sessions through 2013, 265:8, eff. Jan. 1, 2014) | retrieved: 2026-10-06
+SOURCE 2: RSA 151:25, Temporary Absence | https://gc.nh.gov/rsa/html/XI/151/151-25.htm | source date: none stated on the page (Source note lists amending sessions through 2013, 265:8, eff. Jan. 1, 2014) | retrieved: 2026-11-01
 TITLE XI
 
 HOSPITALS AND SANITARIA
@@ -246,7 +247,7 @@ III. This section shall not apply to home health care providers.
 
 Source. 1981, 453:1. 1983, 274:10. 2001, 111:3, eff. Aug. 25, 2001. 2013, 265:8, eff. Jan. 1, 2014.
 
-SOURCE 3: RSA 151:26, Transfer or Discharge of Patients | https://gc.nh.gov/rsa/html/XI/151/151-26.htm | source date: none stated on the page (Source note lists amending sessions through 2013, 265:9, eff. Jan. 1, 2014) | retrieved: 2026-10-06
+SOURCE 3: RSA 151:26, Transfer or Discharge of Patients | https://gc.nh.gov/rsa/html/XI/151/151-26.htm | source date: none stated on the page (Source note lists amending sessions through 2013, 265:9, eff. Jan. 1, 2014) | retrieved: 2026-11-01
 TITLE XI
 
 HOSPITALS AND SANITARIA
@@ -353,7 +354,7 @@ VI. If the patient or his or her legal guardian wishes to have the patient reloc
 
 Source. 1981, 453:1. 1983, 274:10; 291:1, II. 1991, 365:12-14. 1993, 81:1. 1995, 310:182. 2001, 111:4, eff. Aug. 25, 2001. 2006, 153:2, 3, eff. July 21, 2006. 2009, 54:4, 5, eff. July 21, 2009. 2013, 265:9, eff. Jan. 1, 2014.
 
-SOURCE 4: Long-Term Care Ombudsman | https://www.dhhs.nh.gov/about-dhhs/long-term-care-ombudsman | source date: none stated on the page body; a linked document is dated 03/08/2022 | retrieved: 2026-10-06
+SOURCE 4: Long-Term Care Ombudsman | https://www.dhhs.nh.gov/about-dhhs/long-term-care-ombudsman | source date: none stated on the page body; a linked document is dated 03/08/2022 | retrieved: 2026-11-01
 Main navigation
 OPEN MENU
 Home
@@ -368,6 +369,7 @@ Information about the Long-Term Care Ombudsman and its role in investigating and
 
 The Long-Term Care Ombudsman receives, services, investigates and resolves complaints or problems concerning residents of long-term health care facilities. The program also provides advocacy services to long-term care facility residents, and comments on existing and proposed legislation, regulations and policies affecting long-term care residents. Education is provided to residents, family members and facility staff concerning the legal rights of residents.
 
+NH State Commission on Aging
 Our Mission
 
 The Office of the Long Term Care Ombudsman shall represent the interests and concerns of elders residing in New Hampshire's long term care facilities and advocate on their behalf to ensure full realization of their rights to receive quality care and services and to experience an optimal quality of life.
@@ -383,7 +385,6 @@ Intervention
 Investigation of problems and complaints, negotiation and intervention to assist residents and their family members in resolving conflicts or problems.
 Advocacy
 Service gap assessment and recommendations for the development of programs and supports to meet the needs of elder long-term care residents; and represent the interests of residents before governmental agencies and seek administrative, legal and other remedies, to protect the health, safety, welfare and rights of the residents.
-NH State Commission on Aging
 Resources
 Become an Advocate - Join the Volunteer Force!
 
@@ -405,7 +406,7 @@ Escape Site
 
  Files with this icon are archived and will not be updated or changed. They were created before the Federal ADA Title 2 deadline of April 26, 2027. If you need an accommodation for any archived file, please contact the agency at dhhs.webteam@dhhs.nh.gov.
 
-SOURCE 5: Long-Term Care Ombudsman (OLTC) | https://www.dhhs.nh.gov/long-term-care-ombudsman-oltc | source date: none stated on the page | retrieved: 2026-10-06
+SOURCE 5: Long-Term Care Ombudsman (OLTC) | https://www.dhhs.nh.gov/long-term-care-ombudsman-oltc | source date: none stated on the page | retrieved: 2026-11-01
 Main navigation
 OPEN MENU
 Home
@@ -428,7 +429,7 @@ Fax:
 603-271-5574
 Escape Site
 
-SOURCE 6: Administrative Appeals | https://www.dhhs.nh.gov/doing-business-dhhs/legal-services/administrative-appeals | source date: none stated on the page | retrieved: 2026-10-06
+SOURCE 6: Administrative Appeals | https://www.dhhs.nh.gov/doing-business-dhhs/legal-services/administrative-appeals | source date: none stated on the page | retrieved: 2026-11-01
 Main navigation
 OPEN MENU
 Home
@@ -459,7 +460,7 @@ Transfers of NHH patients to the Secure Psychiatric Unit; and
 Findings that place individuals on the DHHS central registry of child abuse and neglect.
 How to Start an Appeal
 
-Generally, an appeal request must be in writing. You can use the Appeal Request form  or just write a letter to the Department. Your request can be submitted in a few different ways:
+Generally, an appeal request must be in writing. You can use the Appeal Request form  or just write a letter to the Department. Your request can be submitted in a few different ways:
 
 Dropped off or mailed to your local District Office;
 Mailed to the Administrative Appeals Unit; or
@@ -477,7 +478,7 @@ You do not need an attorney, but you may want to have one to protect your intere
 
 How do I start an appeal?
 
-Generally, an appeal request must be in writing. You can use the Appeal Request form   or just write a letter to the Department. Your request can be submitted in a few different ways:
+Generally, an appeal request must be in writing. You can use the Appeal Request form   or just write a letter to the Department. Your request can be submitted in a few different ways:
 
 Dropped off or mailed to your local District Office;
 Mailed to the Administrative Appeals Unit; or
@@ -506,7 +507,7 @@ You may question or refute any testimony or evidence.
 
 Do I need an attorney?
 
-You do not need an attorney, however, you may want one to protect your interests and rights. The laws and rules are complicated, but do remain the same whether or not you have an attorney. Exceptions will not be made for self-represented parties.  If you want an attorney and cannot afford one, the organizations on the Legal Resources page may be able to assist you or provide a referral.
+You do not need an attorney, however, you may want one to protect your interests and rights. The laws and rules are complicated, but do remain the same whether or not you have an attorney. Exceptions will not be made for self-represented parties.  If you want an attorney and cannot afford one, the organizations on the Legal Resources page may be able to assist you or provide a referral.
 
 Will DHHS pay for my attorney?
 
@@ -514,7 +515,7 @@ No, DHHS will not pay for you to have an attorney. You do not have the right to 
 
 Can I get help preparing for the hearing?
 
-DHHS cannot assist you in preparing for the hearing. Though you do not need an attorney to make an appeal, you may want one to protect your interests. You do not have the right to appointed counsel for a hearing and must pay for your own attorney.  If you want an attorney and cannot afford one, the organizations on the Legal Resources page may be able to assist you or provide a referral.
+DHHS cannot assist you in preparing for the hearing. Though you do not need an attorney to make an appeal, you may want one to protect your interests. You do not have the right to appointed counsel for a hearing and must pay for your own attorney.  If you want an attorney and cannot afford one, the organizations on the Legal Resources page may be able to assist you or provide a referral.
 
 What are the “mandatory pre-hearing disclosure requirements” mentioned in the Notice of Hearing?
 
@@ -586,7 +587,7 @@ Escape Site
 
  Files with this icon are archived and will not be updated or changed. They were created before the Federal ADA Title 2 deadline of April 26, 2027. If you need an accommodation for any archived file, please contact the agency at dhhs.webteam@dhhs.nh.gov.
 
-SOURCE 7: NH Medicaid Nursing Facilities and Swing Bed Hospitals Provider Manual, Volume II — Section 2, Provider Participation & Ongoing Responsibilities, p.2-1, excerpt | https://nhmmis.nh.gov/portals/wps/wcm/connect/07669c79-1c8c-4fae-b94e-5a367379f968/NH+Medicaid+Final++Nursing+Facility+Manual+7-14-2020.pdf?MOD=AJPERES&CVID=ninzmzW | source date: cover page reads "September, 2020"; the running page footer throughout reads "NH Medicaid Nursing Facilities and Swing Bed Hospitals – December 2017" (the document is internally inconsistent about its own date) | retrieved: 2026-10-06
+SOURCE 7: NH Medicaid Nursing Facilities and Swing Bed Hospitals Provider Manual, Volume II — Section 2, Provider Participation & Ongoing Responsibilities, p.2-1, excerpt | https://nhmmis.nh.gov/portals/wps/wcm/connect/07669c79-1c8c-4fae-b94e-5a367379f968/NH+Medicaid+Final++Nursing+Facility+Manual+7-14-2020.pdf?MOD=AJPERES&CVID=ninzmzW | source date: cover page reads "September, 2020"; the running page footer throughout reads "NH Medicaid Nursing Facilities and Swing Bed Hospitals – December 2017" (the document is internally inconsistent about its own date) | retrieved: 2026-11-01
 2. Provider Participation & Ongoing Responsibilities
 All Nursing Facilities (NF’s) and all hospitals containing swing beds shall be licensed pursuant to RSA
 151, be enrolled as New Hampshire Medicaid Program providers, and be certified by Medicare as a
@@ -619,7 +620,7 @@ from the facility. The change of status form is available on E-Studio.
 E-Studio is an on-line system that allows the secure exchange of data between DHHS and approved
 external parties.
 
-SOURCE 8: NH Medicaid Nursing Facilities and Swing Bed Hospitals Provider Manual, Volume II — Section 5, Service Authorizations and Utilization Review, p.5-2, excerpt | https://nhmmis.nh.gov/portals/wps/wcm/connect/07669c79-1c8c-4fae-b94e-5a367379f968/NH+Medicaid+Final++Nursing+Facility+Manual+7-14-2020.pdf?MOD=AJPERES&CVID=ninzmzW | source date: cover page reads "September, 2020"; the running page footer reads "NH Medicaid Nursing Facilities and Swing Bed Hospitals – December 2017" | retrieved: 2026-10-06
+SOURCE 8: NH Medicaid Nursing Facilities and Swing Bed Hospitals Provider Manual, Volume II — Section 5, Service Authorizations and Utilization Review, p.5-2, excerpt | https://nhmmis.nh.gov/portals/wps/wcm/connect/07669c79-1c8c-4fae-b94e-5a367379f968/NH+Medicaid+Final++Nursing+Facility+Manual+7-14-2020.pdf?MOD=AJPERES&CVID=ninzmzW | source date: cover page reads "September, 2020"; the running page footer reads "NH Medicaid Nursing Facilities and Swing Bed Hospitals – December 2017" | retrieved: 2026-11-01
 When, as a result of utilization review, the medical condition of a resident in a specific placement no
 longer meets the criteria specified in He-E 802.04 for the specific placement, a notice of the determination
 and the right to request an appeal shall be sent to the resident and the nursing facility, pursuant to He-E
@@ -627,7 +628,7 @@ and the right to request an appeal shall be sent to the resident and the nursing
 
 If BEAS approves a continued stay, BEAS sends a Notice of Eligibility to the facility.
 
-SOURCE 9: NH Medicaid Nursing Facilities and Swing Bed Hospitals Provider Manual, Volume II — Section 10, Payment Policies, "Bed Days and Temporary Absences," p.10-1/10-2, excerpt | https://nhmmis.nh.gov/portals/wps/wcm/connect/07669c79-1c8c-4fae-b94e-5a367379f968/NH+Medicaid+Final++Nursing+Facility+Manual+7-14-2020.pdf?MOD=AJPERES&CVID=ninzmzW | source date: cover page reads "September, 2020"; the running page footer reads "NH Medicaid Nursing Facilities and Swing Bed Hospitals – December 2017" | retrieved: 2026-10-06
+SOURCE 9: NH Medicaid Nursing Facilities and Swing Bed Hospitals Provider Manual, Volume II — Section 10, Payment Policies, "Bed Days and Temporary Absences," p.10-1/10-2, excerpt | https://nhmmis.nh.gov/portals/wps/wcm/connect/07669c79-1c8c-4fae-b94e-5a367379f968/NH+Medicaid+Final++Nursing+Facility+Manual+7-14-2020.pdf?MOD=AJPERES&CVID=ninzmzW | source date: cover page reads "September, 2020"; the running page footer reads "NH Medicaid Nursing Facilities and Swing Bed Hospitals – December 2017" | retrieved: 2026-11-01
 Bed Days and Temporary Absences
 Bed days shall include the day of admission, but not the day of discharge. If admission and discharge
 occur on the same day, one bed day shall be allowed.

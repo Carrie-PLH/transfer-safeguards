@@ -1,0 +1,3188 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: nevada
+ASSEMBLED: 2026-11-01
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/nevada.json (recipe digest dc167f8f2e6b). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
+- SOURCE 1: transport curl; extractor html-text; scope body; slice from 'NAC 449.74429 Transfer or discharge of patient.' to 'NAC 449.74431 Summary of discharge.'; encoding cp1252; filters none.
+  Sliced to NAC 449.74429, the section the page quotes. leg.state.nv.us serves Windows-1252 with no charset declared (possessive apostrophe = byte 0x92), hence encoding cp1252; decoded as UTF-8 it became U+FFFD, and the 2026-09-01 hand capture dropped it (FA-Q-20261006-02).
+- SOURCE 2: transport curl; extractor html-text; scope body; slice from 'NRS 449A.114 Certain facilities to notify patient and State Long-Term Care Ombudsman of intent to transfer patient and provide opportunity for patient or representative to meet with administrator; exceptions.' (occurrence 2) to 'NRS 449A.153 “Hospital care” defined.'; encoding cp1252; filters none.
+  Sliced from NRS 449A.114 (body occurrence 2; occurrence 1 is the table of contents) to the next section the page does not quote. Windows-1252, see source 1.
+- SOURCE 3: transport curl; extractor html-text; scope body; slice from 'NRS 449.183 Facility for intermediate care, facility for skilled nursing and residential facility for groups to adopt written policy concerning readmission after temporary transfer of patient or resident.' (occurrence 2) to 'NRS 449.184 Operator of residential facility for groups'; encoding cp1252; filters none.
+  Sliced to NRS 449.183 (body occurrence 2; occurrence 1 is the table of contents). Windows-1252, see source 1.
+- SOURCE 4: transport curl; extractor html-text; scope body; slice from 'NRS 449A.282 Limitations on transfer or involuntary discharge; opportunity to cure delinquency; duty to attempt to resolve circumstances with potential to result in involuntary discharge.' (occurrence 2) to 'DESIGNATION OF CAREGIVERS NRS 449A.300 Definitions.'; encoding cp1252; filters none.
+  Sliced from NRS 449A.282 (body occurrence 2; occurrence 1 is the table of contents) through 449A.286, to the caregiver-designation heading. Windows-1252, see source 1.
+- SOURCE 5: transport curl; extractor pdftotext-layout; slice from '503.5 THERAPEUTIC LEAVE OF ABSENCE Therapeutic' to '503.6 PATIENT INCOME CHANGES AND PATIENT LIABILITY'; filters none.
+  Sliced to Medicaid Services Manual 503.5, therapeutic leave of absence, ending at the 503.6 heading.
+- SOURCE 6: transport curl; extractor pdftotext-layout; slice from '3100 INTRODUCTION The Division of Health Care' to the end of the document; filters none.
+  From Chapter 3100 to the end of the document (the document is the Fair Hearing chapter).
+- SOURCE 7: transport curl; extractor pdftotext-layout; slice from 'REQUESTING A FAIR HEARING • If you disagree with' to the end of the document; filters none.
+  From the 'Requesting a Fair Hearing' block to the end of the document.
+- SOURCE 8: transport curl; extractor html-text; scope body; slice from 'The Nevada State Long Term Care Ombudsman Program' to 'Nevada Digital Accessibility Website'; filters none.
+  From the program description through the site footer, ending before the rotating State Animal / State Bird sidebar widget that follows the footer and changes on every load. The footer carries a Carson City address that is a recorded finding on the page.
+- SOURCE 9: transport curl; extractor pdftotext-layout; slice from 'Long Term Care Ombudsman Program For more information' to the end of the document; filters none.
+  From the program heading to the end of the brochure.
+
+SOURCE 1: Nevada Administrative Code, Chapter 449, Facilities for Skilled Nursing — NAC 449.74429, Transfer or discharge of patient | https://www.leg.state.nv.us/NAC/NAC-449.html | source date: added by the Board of Health, effective 9-27-99 | retrieved: 2026-11-01
+NAC 449.74429  Transfer or discharge of patient.
+(NRS
+449.0302)
+
+
+     1.  A facility for skilled nursing may
+transfer or discharge a patient from the facility only if:
+
+
+     (a) The facility can no longer provide for the
+needs of the patient and the transfer or discharge is necessary for the
+patient’s welfare;
+
+
+     (b) The health of the patient has improved
+sufficiently so that the patient no longer requires the services provided by
+the facility;
+
+
+     (c) The health or safety of other persons in the
+facility is endangered if the patient remains in the facility;
+
+
+     (d) The charges for services provided to the
+patient by the facility have not been paid after the facility has given notice
+of those charges; or
+
+
+     (e) The facility ceases to operate.
+
+
+     2.  Before a facility for skilled nursing may
+transfer or discharge a patient from the facility, the facility shall:
+
+
+     (a) Record the reasons for the transfer or
+discharge in the medical records of the patient. If a patient is transferred or
+discharged under the circumstances described in:
+
+
+          (1) Paragraph (a) or (b) of subsection 1, the
+reasons for the transfer or discharge must be recorded by the patient’s
+physician.
+
+
+          (2) Paragraph (c) of subsection 1, the reasons
+for the transfer or discharge must be recorded by any physician.
+
+
+     (b) Give notice of the transfer or discharge to the
+patient and, if known, to the legal representative of the patient or a member
+of the patient’s family. The notice must:
+
+
+          (1) Be in writing;
+
+
+          (2) Be in a language that is understood by the
+patient and his or her legal representative or a member of his or her family;
+
+
+          (3) Except as otherwise provided in subsection
+3, be given at least 30 days before the effective date of the transfer or
+discharge;
+
+
+          (4) Include the reasons for the transfer or
+discharge;
+
+
+          (5) Include the effective date of the transfer
+or discharge;
+
+
+          (6) Specify the location to which the patient
+will be transferred or discharged;
+
+
+          (7) Include a statement that the patient has a
+right to appeal the transfer or discharge;
+
+
+          (8) Include the name, address and telephone
+number of the advocates for residents of facilities for long-term care
+appointed pursuant to chapter 427A of
+NRS; and
+
+
+          (9) If the patient is developmentally disabled
+or mentally ill, include the name, address and telephone number of persons who
+advocate for and are responsible for the protection of such persons.
+
+
+     3.  The notice required by paragraph (b) of
+subsection 2 may be given less than 30 days before the effective date of the
+transfer or discharge if:
+
+
+     (a) The health or safety of other persons in the
+facility is endangered if the patient remains in the facility;
+
+
+     (b) The health of the patient has improved
+sufficiently to allow a more immediate transfer or discharge of the patient;
+
+
+     (c) The medical needs of the patient require a more
+immediate transfer or discharge; or
+
+
+     (d) The patient has not resided in the facility for
+at least 30 days.
+
+
+     4.  Upon admission of a patient to a facility
+for skilled nursing and at the time the facility transfers the patient for
+hospitalization or therapeutic leave, the facility shall provide to the patient
+and to the legal representative of the patient or to a member of the patient’s
+family, in writing:
+
+
+     (a) The time within which the patient may resume
+his or her residency in the facility without waiting for readmission; and
+
+
+     (b) The policy of the facility for readmitting a
+patient whose hospitalization or therapeutic leave exceeds the time within
+which he or she may resume his or her residency in the facility without waiting
+for readmission upon the first availability of a bed in a semiprivate room.
+
+
+     5.  A facility for skilled nursing shall
+prepare a patient for his or her transfer or discharge in such a manner as to
+ensure the safe and orderly transfer or discharge of the patient from the
+facility.
+
+
+     6.  As used in this section, “transfer” or
+“discharge” means the movement of a patient to a location outside of a facility
+for skilled nursing, whether or not that location is within the same physical area
+of the facility. The term does not include the movement of a patient to a bed
+located within the facility for skilled nursing.
+
+
+     (Added to NAC by Bd. of Health by R051-99, eff. 9-27-99)
+
+SOURCE 2: Nevada Revised Statutes Chapter 449A, Care and Rights of Patients — NRS 449A.114, Certain facilities to notify patient and State Long-Term Care Ombudsman of intent to transfer patient and provide opportunity for patient or representative to meet with administrator; exceptions | https://www.leg.state.nv.us/nrs/nrs-449a.html | source date: Added to NRS by 2019, 440; amended 2021, 3443; amended 2023, 718 | retrieved: 2026-11-01
+NRS 449A.114  Certain facilities to notify patient and State Long-Term Care
+Ombudsman of intent to transfer patient and provide opportunity for patient or
+representative to meet with administrator; exceptions.
+
+
+      1.  Except as otherwise provided in
+subsection 2, before a facility for intermediate care, facility for skilled
+nursing or residential facility for groups transfers a patient to another
+medical facility or facility for the dependent or discharges the patient or
+resident from the facility, the facility shall:
+
+
+      (a) At least 30 calendar days before transferring
+or discharging the patient, provide the patient and the Ombudsman with written
+notice of the intent to transfer or discharge the patient; and
+
+
+      (b) Within 10 calendar days after providing
+written notice to the patient or resident and the Ombudsman pursuant to
+paragraph (a), allow the patient and any person authorized by the patient the
+opportunity to meet in person with the administrator of the facility to discuss
+the proposed transfer or discharge.
+
+
+      2.  The provisions of this section do not
+apply to:
+
+
+      (a) A voluntary discharge or transfer of a
+patient to another medical facility or facility for the dependent at the
+request of the patient; or
+
+
+      (b) The transfer of a patient to another facility
+because the condition of the patient necessitates an immediate transfer to a
+facility for a higher level of care.
+
+
+      3.  As used in this section:
+
+
+      (a) “Facility for intermediate care” has the
+meaning ascribed to it in NRS 449.0038.
+
+
+      (b) “Facility for skilled nursing” has the
+meaning ascribed to it in NRS 449.0039.
+
+
+      (c) “Ombudsman” means the State Long-Term Care
+Ombudsman appointed pursuant to NRS
+427A.125.
+
+
+      (Added to NRS by 2019,
+440; A 2021,
+3443; 2023,
+718)
+
+
+      NRS 449A.115  Owner and administrator of certain facility prohibited from
+receiving certain money or property from resident or former resident;
+exception.
+
+
+      1.  Except as otherwise provided in
+subsection 3 and notwithstanding any other provision of law, an owner or
+administrator of a medical facility or facility for the dependent is not
+entitled to receive, and must not receive:
+
+
+      (a) Any money, personal property or real property
+that is devised or bequeathed by will to the owner or administrator by a
+resident or former resident of the facility.
+
+
+      (b) Any proceeds from a life insurance policy
+upon the life or body of a resident or former resident of the facility.
+
+
+      2.  Except as otherwise provided in
+subsection 3, any money, property, proceeds or interest therein that is
+described in subsection 1 passes in accordance with law as if the owner or
+administrator of the medical facility or facility for the dependent had
+predeceased the decedent resident or former resident.
+
+
+      3.  The provisions of subsections 1 and 2
+do not apply if the owner or administrator of the medical facility or facility
+for the dependent is the spouse, legal guardian or next of kin of the resident
+or former resident of the facility or home, as applicable.
+
+
+      (Added to NRS by 2011,
+696)
+
+
+      NRS 449A.118  Patient to be informed of rights upon admission to facility;
+required disclosures and notices.
+
+
+      1.  Every medical facility and facility for
+the dependent shall inform each patient or the patient’s legal representative,
+upon the admission of the patient to the facility, of the patient’s rights as
+listed in NRS 449A.100 and 449A.106 to 449A.115, inclusive.
+
+
+      2.  In addition to the requirements of
+subsection 1, if a person with a disability is a patient at a facility, as that
+term is defined in NRS 449A.218, the
+facility shall inform the patient of his or her rights pursuant to NRS 449A.200 to 449A.263, inclusive.
+
+
+      3.  In addition to the requirements of
+subsections 1 and 2, every hospital shall, upon the admission of a patient to
+the hospital, provide to the patient or the patient’s legal representative:
+
+
+      (a) Notice of the right of the patient to:
+
+
+             (1) Designate a caregiver pursuant to NRS 449A.300 to 449A.330, inclusive; and
+
+
+             (2) Express complaints and grievances as
+described in paragraphs (b) to (f), inclusive;
+
+
+      (b) The name and contact information for persons
+to whom such complaints and grievances may be expressed, including, without
+limitation, a patient representative or hospital social worker;
+
+
+      (c) Instructions for filing a complaint with the
+Division;
+
+
+      (d) The name and contact information of any
+entity responsible for accrediting the hospital;
+
+
+      (e) A written disclosure approved by the Director
+of the Department of Human Services, which written disclosure must set forth:
+
+
+             (1) Notice of the existence of the Bureau
+for Hospital Patients created pursuant to NRS
+232.462;
+
+
+             (2) The address and telephone number of
+the Bureau; and
+
+
+             (3) An explanation of the services
+provided by the Bureau, including, without limitation, the services for dispute
+resolution described in subsection 3 of NRS
+232.462; and
+
+
+      (f) Contact information for any other state or
+local entity that investigates complaints concerning the abuse or neglect of
+patients.
+
+
+      4.  In addition to the requirements of
+subsections 1, 2 and 3, every hospital shall, upon the discharge of a patient
+from the hospital, provide to the patient or the patient’s legal representative
+a written disclosure approved by the Director, which written disclosure must
+set forth:
+
+
+      (a) If the hospital is a major hospital:
+
+
+             (1) Notice of the reduction or discount
+available pursuant to NRS 439B.260,
+including, without limitation, notice of the criteria a patient must satisfy to
+qualify for a reduction or discount under that section; and
+
+
+             (2) Notice of any policies and procedures
+the hospital may have adopted to reduce charges for services provided to
+persons or to provide discounted services to persons, which policies and
+procedures are in addition to any reduction or discount required to be provided
+pursuant to NRS 439B.260. The notice
+required by this subparagraph must describe the criteria a patient must satisfy
+to qualify for the additional reduction or discount, including, without
+limitation, any relevant limitations on income and any relevant requirements as
+to the period within which the patient must arrange to make payment. 
+
+
+      (b) If the hospital is not a major hospital,
+notice of any policies and procedures the hospital may have adopted to reduce
+charges for services provided to persons or to provide discounted services to
+persons. The notice required by this paragraph must describe the criteria a
+patient must satisfy to qualify for the reduction or discount, including,
+without limitation, any relevant limitations on income and any relevant
+requirements as to the period within which the patient must arrange to make
+payment.
+
+
+Ê As used in
+this subsection, “major hospital” has the meaning ascribed to it in NRS 439B.115.
+
+
+      5.  In addition to the requirements of
+subsections 1 to 4, inclusive, every hospital shall post in a conspicuous place
+in each public waiting room in the hospital a legible sign or notice in
+14-point type or larger, which sign or notice must:
+
+
+      (a) Provide a brief description of any policies
+and procedures the hospital may have adopted to reduce charges for services
+provided to persons or to provide discounted services to persons, including,
+without limitation:
+
+
+             (1) Instructions for receiving additional
+information regarding such policies and procedures; and
+
+
+             (2) Instructions for arranging to make
+payment;
+
+
+      (b) Be written in language that is easy to
+understand; and
+
+
+      (c) Be written in English and Spanish.
+
+
+      (Added to NRS by 1983,
+822; A 1985,
+1749; 1999,
+1053, 3252;
+2003,
+1880; 2005,
+947; 2011,
+362, 697;
+2019,
+537; 2025,
+1440)
+
+
+      NRS 449A.1185  Rights of parent or guardian of newborn child receiving care in
+neonatal intensive care unit.  The
+parent or legal guardian of a newborn child who is receiving care in a neonatal
+intensive care unit of a hospital has the right to:
+
+
+      1.  Receive clear, honest and timely
+updates concerning the condition, treatment plan and prognosis of the newborn
+child in a language that the parent or legal guardian understands.
+
+
+      2.  Be near the newborn child, except in
+emergency situations or if other safety concerns exist, and participate in the
+daily rounds and decision making relating to the child.
+
+
+      3.  Be informed of and provide consent to
+all treatments for and procedures performed on the newborn child, except in
+emergency situations.
+
+
+      4.  As medically appropriate, hold and
+touch the newborn child.
+
+
+      5.  Access lactation support, receive
+information on breastfeeding and the expression of breast milk and access
+options for the safe storage of breast milk that are within the existing
+capabilities of the hospital, if the parent or legal guardian chooses to
+breastfeed the newborn child.
+
+
+      6.  Receive information concerning
+resources relating to the mental health of the parent or legal guardian,
+including, without limitation, support groups, counseling services or peer
+networks.
+
+
+      7.  Ask questions and voice concerns to the
+medical staff of the hospital.
+
+
+      8.  Request and, when feasible, receive
+accommodations for religious or cultural needs, including, without limitation,
+spiritual support or dietary needs.
+
+
+      9.  Be informed concerning the process for
+discharge from the hospital and any potential long-term needs of the newborn
+child.
+
+
+      10.  Receive guidance on applying for and
+receiving benefits under private insurance, the Supplemental Security Income
+Program, as defined in NRS 422A.075,
+and Medicaid, where applicable.
+
+
+      11.  An environment in the hospital that
+acknowledges the role of the parent or legal guardian as a caregiver,
+including, without limitation, reasonable accommodations for the comfort and
+privacy of the parent or legal guardian and the ability of the parent or legal
+guardian to communicate with the medical staff and others.
+
+
+      (Added to NRS by 2025,
+1047)
+
+
+      NRS 449A.119  Provision of information by off-campus location of hospital
+where emergency room services are provided.
+
+
+      1.  An off-campus location shall post
+conspicuously in each location where patients are admitted and registered a
+sign, in not less than 24 point boldface type, which states in English and
+Spanish:
+
+
+ 
+
+
+NOTICE
+
+
+ 
+
+
+This is an emergency medical
+facility that treats emergency medical conditions. You will be charged for a
+visit to an emergency room and not for a visit to an urgent care center.
+
+
+ 
+
+
+      2.  An off-campus location shall provide to
+each patient of the emergency department of the off-campus location and any
+adult accompanying such a patient who is less than 18 years of age immediately
+upon registration a written statement in substantially the following form:
+
+
+ 
+
+
+PATIENT INFORMATION
+
+
+ 
+
+
+This is an emergency medical
+facility that treats emergency medical conditions. You will be charged for a
+visit to an emergency room and not for a visit to an urgent care center.
+
+
+ 
+
+
+We will screen and treat you
+regardless of your ability to pay. 
+
+
+ 
+
+
+You have the right to ask questions
+regarding your treatment options and costs.
+
+
+ 
+
+
+You have the right to receive prompt
+and reasonable responses to such questions and requests.
+
+
+ 
+
+
+You have the right to reject
+treatment.
+
+
+ 
+
+
+This is not a complete statement of
+patient information or rights. You will receive a more comprehensive statement
+after the completion of a medical screening examination that does not reveal an
+emergency medical condition or after your emergency medical condition has been
+stabilized.
+
+
+ 
+
+
+      3.  To the extent practicable, a written
+statement provided pursuant to subsection 2 must be in the language requested
+by the patient or the adult accompanying the patient, as applicable.
+
+
+      4.  After the completion of an appropriate
+medical screening examination of a patient of the emergency department of the
+off-campus location that does not reveal an emergency medical condition or
+after stabilizing the emergency medical condition of such a patient, an
+off-campus location shall provide the patient and, if the patient is less than
+18 years of age, any adult accompanying the patient, with written notice of:
+
+
+      (a) The policies of the off-campus location
+concerning the acceptance of patients enrolled in Medicaid and Medicare;
+
+
+      (b) The networks of third parties in which the
+off-campus location participates;
+
+
+      (c) The possibility that the patient may be
+billed separately by providers of health care at the off-campus location;
+
+
+      (d) The maximum price for emergency medical
+services that the off-campus location commonly provides; and 
+
+
+      (e) Any additional fees that the off-campus
+location charges.
+
+
+      5.  As used in this section:
+
+
+      (a) “Network” means a defined set of providers of
+health care who are under contract with a third party to provide health care
+services to persons covered by the third party.
+
+
+      (b) “Off-campus location” means a facility:
+
+
+             (1) With operations that are directly or
+indirectly owned or controlled by, in whole or in part, a hospital or which is
+affiliated with a hospital, regardless of whether it is operated by the same
+governing body as the hospital;
+
+
+             (2) That is located more than 250 yards
+from the main campus of the hospital;
+
+
+             (3) That provides services which are
+organizationally and functionally integrated with the hospital; and
+
+
+             (4) That is an outpatient facility
+providing emergency room services.
+
+
+      (c) “Third party” means any insurer, governmental
+entity or other organization providing health coverage or benefits in
+accordance with state or federal law.
+
+
+      (Added to NRS by 2023,
+2023)
+
+
+      NRS 449A.121  Procedure to insert implant in breast of patient: Informed
+consent required; withdrawal of consent; penalty.
+
+
+      1.  A physician shall not perform any
+procedure to insert an implant in the breast of a patient unless within 5 days
+before the procedure is performed the physician has:
+
+
+      (a) Discussed with the patient and any other
+person whose consent is required pursuant to paragraph (b), the advantages,
+disadvantages and risks associated with the procedure; and
+
+
+      (b) Obtained informed consent in writing from the
+following persons freely and without coercion:
+
+
+             (1) The patient if he or she is 18 years
+of age or over or legally emancipated and competent to give that consent, and
+from the patient’s legal guardian, if any;
+
+
+             (2) The parent or guardian of a patient
+under 18 years of age and not legally emancipated; or
+
+
+             (3) The legal guardian of a patient of any
+age who has been adjudicated mentally incapacitated,
+
+
+Ê and the
+required consent was not withdrawn pursuant to subsection 3 before the
+procedure began.
+
+
+      2.  An informed consent requires that the
+person whose consent is sought be adequately informed as to:
+
+
+      (a) The nature and consequences of the procedure;
+
+
+      (b) The reasonable risks, possible side effects,
+benefits and purposes of the procedure; and
+
+
+      (c) Any alternative procedures available.
+
+
+      3.  The consent of a patient or other
+person whose consent is required pursuant to paragraph (b) of subsection 1 may
+be withdrawn in writing at any time before the procedure has begun, with or
+without cause.
+
+
+      4.  A physician satisfies the requirements
+of:
+
+
+      (a) Paragraph (a) of subsection 1 if the
+physician provides the patient and any other person whose consent is required
+pursuant to paragraph (b) of subsection 1 with a copy of the current
+explanation form prepared by the Division pursuant to NRS 449A.124 in a language that the
+person is able to read.
+
+
+      (b) Paragraph (b) of subsection 1 if the person
+or persons whose consent is required sign a copy of the current consent form
+prepared by the Division pursuant to NRS
+449A.124 freely and without coercion and the consent is not withdrawn
+pursuant to subsection 3 before the procedure has begun. The consent form must
+be in a language that the person who signs the form is able to read.
+
+
+      5.  Any person who violates the provisions
+of this section is guilty of a misdemeanor.
+
+
+      (Added to NRS by 1991,
+1690)
+
+
+      NRS 449A.124  Procedure to insert implant in breast of patient: Contents of
+explanation form and consent form; fee for forms.
+
+
+      1.  The Division shall prepare and provide
+to physicians upon request:
+
+
+      (a) An explanation form for a procedure to insert
+an implant in the breast of a person which includes:
+
+
+             (1) An explanation of the advantages,
+disadvantages and risks associated with a procedure to insert an implant in the
+breast of a person, including any known side effects; and
+
+
+             (2) Any other information the Division
+determines to be useful to a person contemplating a procedure to insert an
+implant in the breast; and
+
+
+      (b) A consent form for a procedure to insert an
+implant in the breast of a person which includes:
+
+
+             (1) The nature and consequences of the
+procedure;
+
+
+             (2) The reasonable risks, possible side
+effects, benefits and purposes of the procedure; and
+
+
+             (3) Any alternative procedures available.
+
+
+      2.  The Division shall revise the
+explanation form and consent form as necessary to keep the medical information
+current.
+
+
+      3.  The Division shall charge and collect a
+fee for all forms distributed pursuant to this section that is adequate to
+cover the cost of producing the forms.
+
+
+      (Added to NRS by 1991,
+1690)
+
+
+RIGHT TO CONTRACEPTION AND FAMILY PLANNING SERVICES ACT
+
+
+      NRS 449A.140  Short title.  NRS 449A.140 to 449A.148, inclusive, may be cited as the
+Right to Contraception and Family Planning Services Act.
+
+
+      (Added to NRS by 2025,
+1445)
+
+
+      NRS 449A.141  Definitions.  As
+used in NRS 449A.140 to 449A.148, inclusive, unless the context
+otherwise requires, the words and terms defined in NRS 449A.142, 449A.143 and 449A.144 have the meanings ascribed to
+them in those sections.
+
+
+      (Added to NRS by 2025,
+1446)
+
+
+      NRS 449A.142  “Contraception and family planning services” defined.  “Contraception and family planning services”
+means medical, surgical, counseling or referral services relating to the human
+reproductive system, including, without limitation, services relating to
+pregnancy, contraception, miscarriage, in vitro fertilization or any procedure
+or care found by a competent medical professional to be appropriate based upon
+the wishes of a patient and in accordance with the laws of this State.
+
+
+      (Added to NRS by 2025,
+1446)
+
+
+      NRS 449A.143  “Governmental entity” defined.  “Governmental
+entity” means the State of Nevada or any of its agencies or political
+subdivisions.
+
+
+      (Added to NRS by 2025,
+1446)
+
+
+      NRS 449A.144  “Provider of health care” defined.  “Provider
+of health care” has the meaning ascribed to it in NRS 629.031.
+
+
+      (Added to NRS by 2025,
+1446)
+
+
+      NRS 449A.146  Applicability.
+
+
+      1.  Except as otherwise provided in this
+section, the provisions of NRS 449A.140
+to 449A.148, inclusive, apply to all
+state and local laws and ordinances and the implementation of those laws and
+ordinances, whether statutory or otherwise, and whether enacted before, on or
+after January 1, 2026. 
+
+
+      2.  The provisions of NRS 449A.140 to 449A.148, inclusive, do not apply to:
+
+
+      (a) State and local laws and ordinances and the
+implementation of those laws and ordinances relating to abortion, the provision
+of medication to induce an abortion and any medical, surgical, counseling or
+referral services associated with an abortion, including, without limitation, NRS 442.250, whether statutory or
+otherwise, and whether enacted before, on or after January 1, 2026;
+
+
+      (b) Regulations and policies approved, enacted or
+administered, on or after January 1, 2026, by:
+
+
+             (1) The State Board of Education;
+
+
+             (2) The Department of Education;
+
+
+             (3) The board of trustees of a school
+district;
+
+
+             (4) The governing body of a charter school
+or university school for profoundly gifted pupils; or 
+
+
+             (5) A public school; and
+
+
+      (c) Activities that occur at a public school or
+are sponsored by a public school, school district or governing body of a
+charter school or university school for profoundly gifted pupils.
+
+
+      3.  Except as otherwise provided in
+subsection 2, state laws that are enacted on or after January 1, 2026, are
+subject to the provisions of NRS 449A.140
+to 449A.148, inclusive, unless the law
+explicitly excludes such application by reference to this section.
+
+
+      4.  Except as otherwise provided in
+subsection 2, the provisions of NRS
+449A.140 to 449A.148, inclusive,
+do not:
+
+
+      (a) Authorize a governmental entity to burden:
+
+
+             (1) The access of any person to
+contraception and family planning services, information related to contraception
+and family planning services or any drug or device related to contraception and
+family planning services; or
+
+
+             (2) The ability of a provider of health
+care to provide contraception and family planning services or information
+related to contraception and family planning services or to provide,
+administer, dispense or prescribe any drug or device related to contraception
+and family planning services within the scope of practice, training and experience
+of the provider of health care.
+
+
+      (b) Authorize or sanction any sterilization
+procedure without the voluntary and informed consent of the patient.
+
+
+      5.  As used in this section, “public
+school” means any school described in NRS
+388.020.
+
+
+      (Added to NRS by 2025,
+1446)
+
+
+      NRS 449A.148  Governmental entity prohibited from enacting or implementing certain
+limitations or requirements concerning contraception and family planning
+services; exception; relief; finding of vexatious litigant.
+
+
+      1.  Except as otherwise provided in this
+section, a governmental entity shall not enact or implement any limitation or
+requirement that:
+
+
+      (a) Expressly, effectively, implicitly or, as
+implemented, singles out contraception and family planning services, drugs or
+devices related to contraception and family planning services or information
+related to contraception and family planning services or any providers of
+health care or facilities that provide contraception and family planning
+services, drugs or devices related to contraception and family planning
+services or information related to contraception and family planning services; and
+
+
+      (b) Substantially burdens:
+
+
+             (1) The access of a person to contraception
+and family planning services, drugs or devices related to contraception and
+family planning services or information related to contraception and family
+planning services; or 
+
+
+             (2) The ability of a provider of health
+care to provide contraception and family planning services, drugs or devices
+related to contraception and family planning services or information related to
+contraception and family planning services within the scope of practice,
+training and experience of the provider of health care.
+
+
+      2.  A governmental entity may enact a
+limitation or requirement described in subsection 1 if the governmental entity
+demonstrates by clear and convincing evidence that the burden imposed by the
+requirement or limitation on the activity described in paragraph (b) of
+subsection 1, as applied to the person or provider of health care who is
+subject to the burden:
+
+
+      (a) Furthers a compelling interest; and 
+
+
+      (b) Is the least restrictive means of furthering
+that interest.
+
+
+      3.  Notwithstanding any provision of NRS 41.0305 to 41.039, inclusive, but subject to the
+limitation on damages set forth in NRS
+41.035 when applicable, a person or provider of health care who has been
+substantially burdened in violation of this section may assert that violation
+as a claim or defense in a judicial proceeding and obtain appropriate relief. A
+court shall award costs and attorney’s fees to a person who prevails on such a
+claim or defense pursuant to this section.
+
+
+      4.  A court may find that a person is a
+vexatious litigant if the person makes a claim within the scope of NRS 449A.140 to 449A.148, inclusive, which is without
+merit, fraudulent or otherwise intended to harass or annoy a person. If a court
+finds that a person is a vexatious litigant pursuant to this subsection, the
+court may deny standing to that person to bring further claims which allege a
+violation of this section.
+
+
+      (Added to NRS by 2025,
+1447)
+
+
+COLLECTION OF AMOUNT OWED FOR HOSPITAL CARE
+
+
+      NRS 449A.150  Definitions.  As used
+in NRS 449A.150 to 449A.165, inclusive, unless the context
+otherwise requires, the words and terms defined in NRS 449A.153 and 449A.156 have the meanings ascribed to
+them in those sections.
+
+
+      (Added to NRS by 2007,
+1497; A 2011,
+1524)
+
+SOURCE 3: Nevada Revised Statutes Chapter 449, Medical Facilities and Other Related Entities — NRS 449.183, Facility for intermediate care, facility for skilled nursing and residential facility for groups to adopt written policy concerning readmission after temporary transfer of patient or resident | https://www.leg.state.nv.us/nrs/nrs-449.html | source date: Added to NRS by 2011, 1063 | retrieved: 2026-11-01
+NRS 449.183  Facility for intermediate care, facility for skilled nursing and
+residential facility for groups to adopt written policy concerning readmission
+after temporary transfer of patient or resident.
+
+
+      1.  A facility for intermediate care,
+facility for skilled nursing and residential facility for groups shall adopt a
+written policy that establishes:
+
+
+      (a) The number of days the facility will hold the
+bed of a patient or resident for his or her return if the patient or resident
+is transferred temporarily to a hospital or other facility for medical reasons;
+and
+
+
+      (b) That a patient or resident who is so
+transferred for a period that exceeds the period of the hold established
+pursuant to paragraph (a) will be allowed to resume his or her residency as
+soon as a bed becomes available, if the facility is suitable for properly
+caring for the patient upon his or her return.
+
+
+      2.  Upon admission of a patient or resident
+to a facility for intermediate care, facility for skilled nursing or
+residential facility for groups, the facility shall provide to the patient or
+resident and, if applicable, to the legal representative of the patient or
+resident, a copy of the policy established pursuant to subsection 1.
+
+
+      (Added to NRS by 2011,
+1063)
+
+SOURCE 4: Nevada Revised Statutes Chapter 449A, Care and Rights of Patients — NRS 449A.282, Limitations on transfer or involuntary discharge; and NRS 449A.284, Notices concerning discharge of resident, excerpt (both apply on their own terms to a "residential facility for groups," a facility type distinct from a facility for skilled nursing and out of this project's v1 scope; captured to document that distinction) | https://www.leg.state.nv.us/nrs/nrs-449a.html | source date: NRS 449A.282 added to NRS by 2023, 716; NRS 449A.284 added to NRS by 2023, 717 | retrieved: 2026-11-01
+NRS 449A.282  Limitations on transfer or involuntary discharge; opportunity to
+cure delinquency; duty to attempt to resolve circumstances with potential to
+result in involuntary discharge.
+
+
+      1.  A residential facility for groups shall
+not transfer or involuntarily discharge a resident except where:
+
+
+      (a) The health of the resident has improved
+sufficiently such that the resident no longer needs the services provided by
+the residential facility for groups;
+
+
+      (b) The health or safety of any person in the
+residential facility for groups is endangered;
+
+
+      (c) The resident has failed, after notice has
+been provided pursuant to subsection 2, to pay for contracted charges for a
+residency at or a service provided by the residential facility for groups; 
+
+
+      (d) The services available to the resident at the
+residential facility for groups are no longer adequate to meet the needs of the
+resident, as determined using information from the annual physical examination
+and assessment conducted pursuant to NRS
+449.1845; or
+
+
+      (e) The residential facility for groups ceases to
+operate.
+
+
+      2.  At least 30 days before providing
+notice of intent to discharge a resident for failure to pay contracted charges
+pursuant to NRS 449A.114, a
+residential facility for groups shall notify the resident and any
+representative of the resident in writing of the delinquency. The facility
+shall allow the resident or his or her representative, as applicable, at least
+15 days after such notice is provided to cure the delinquency.
+
+
+      3.  Except as otherwise provided in this
+subsection, a residential facility for groups shall attempt to resolve with the
+resident or the representative of the resident, if applicable, any
+circumstances that, if not remedied, have the potential to result in an
+involuntary discharge of the resident. The facility shall document any such
+attempt in the file of the resident. All attempts at resolution pursuant to
+this subsection must occur before the resident is discharged, but may occur
+before or after the provision of notice pursuant to NRS 449A.114. A residential facility for
+groups is not required to comply with the requirements of this subsection in an
+emergency.
+
+
+      4.  A residential facility for groups shall
+not transfer or involuntarily discharge a resident if such transfer or
+discharge presents an imminent danger of death to the resident.
+
+
+      (Added to NRS by 2023,
+716)
+
+
+      NRS 449A.284  Notices concerning discharge of resident.
+
+
+      1.  Written notice of the intent of a
+residential facility for groups to discharge a resident provided pursuant to NRS 449A.114 must, in addition to the
+persons described in that section, be provided to the representative of the
+patient, where applicable, and must include, without limitation:
+
+
+      (a) The reason for the proposed discharge; and
+
+
+      (b) The date of the proposed discharge. 
+
+
+      2.  Except as otherwise provided in this
+subsection, written notice of the intent of a residential facility for groups
+to discharge a resident pursuant to NRS
+449A.114 must be provided to a resident in a language that the resident or
+the representative of the resident, if applicable, is capable of reading. If
+the written notice is not provided in such a language, the facility must
+provide a translator who has been trained to assist the resident or the
+representative of the resident, if applicable, in the appeal process.
+
+
+      3.  A residential facility for groups shall
+provide to a resident or a representative of the resident written notice of the
+location of the discharge of the resident not later than 10 days after
+providing written notice of the proposed intent to discharge the resident
+pursuant to NRS 449A.114.
+
+
+      (Added to NRS by 2023,
+717)
+
+
+      NRS 449A.286  Assistance to and consultation with resident concerning
+discharge.
+
+
+      1.  Before discharging a resident, a
+residential facility for groups shall offer assistance to the resident and any
+representative of the resident concerning the discharge and relocation of the
+resident. Such assistance must include, without limitation, information on
+available alternative placements.
+
+
+      2.  Except in an emergency, a residential
+facility for groups shall involve a resident and his or her representative, if
+applicable, in planning the relocation of the resident and allow the resident
+or his or her representative to choose among the available alternative
+placements. Any emergency placement must be temporary and must terminate when
+the resident or his or her representative is able to offer input on the final
+decision concerning the placement of the resident. A residential facility for
+groups shall not require a resident to remain in a temporary or permanent
+placement.
+
+
+      3.  In nonemergency situations, and where
+possible in an emergency, a residential facility for groups that transfers or
+discharges a resident shall, in consultation with the resident and his or her
+representative, if applicable, design and implement a transition plan in
+advance of the transfer or discharge.
+
+
+      4.  A residential facility for groups is
+not in violation of this section or subject to disciplinary action if: 
+
+
+      (a) A resident returns to the facility after an
+emergency transfer or discharge; and
+
+
+      (b) The emergency transfer or discharge was
+necessary to address health care needs of the resident which are outside the
+scope of care that the facility is legally authorized to provide.
+
+
+      (Added to NRS by 2023,
+717)
+
+SOURCE 5: Nevada Medicaid Services Manual, Chapter 500 — Nursing Facilities, Section 503.5, Therapeutic Leave of Absence, excerpt | https://www.nevadamedicaid.nv.gov/siteassets/content/resources/adminsupport/manuals/msm/c500/MSM_500_25_07_01.pdf | source date: effective July 1, 2025 (MTL 16/25) | retrieved: 2026-11-01
+503.5          THERAPEUTIC LEAVE OF ABSENCE
+
+               Therapeutic Leave means a recipient leaves the facility for one or more days for reasons outlined in
+               their POC, but not for purposes of hospitalization or transfer to another facility. A therapeutic leave
+               must include therapeutic or rehabilitative home and community visits with relatives and friends.
+               Therapeutic leave also includes leave used in preparation for discharge to community living.
+
+503.5A         THERAPEUTIC LEAVE OF ABSENCE COVERAGE AND LIMITATIONS
+
+               1.      The absence of a Medicaid recipient from the facility for the purpose of therapeutic leave
+                       must be authorized in writing by the recipient’s attending physician and included in the
+                       recipient’s POC.
+
+               2.      Therapeutic leave days are considered overnight stays. Therapeutic leave does not apply
+                       when a recipient is out on pass for short periods of time.
+
+               3.      Therapeutic leave does not include hospital emergency room visits or hospital stays.
+
+503.5B         THERAPEUTIC LEAVE OF ABSENCE PROVIDER RESPONSIBILITIES
+
+               1.      Therapeutic leave days must be authorized by the physician for specific dates. If a recipient
+                       fails to return to the facility within the specified timeframe, Medicaid reimbursement is not
+                       available for dates beyond the physician’s order.
+
+               2.      Each therapeutic leave of absence must be authorized by the attending physician’s order to
+                       ensure the recipient is medically stable and capable of safely tolerating the absence.
+
+               3.      The physicians order should specify:
+
+        July 1, 2025                        NURSING FACILITIES                              Section 503 Page 27
+
+                                                                                       MTL 16/25
+                                                                         Section:
+ DIVISION OF HEALTH CARE FINANCING AND POLICY                                              503
+
+                                                                         Subject:
+ MEDICAID SERVICES MANUAL                                                               POLICY
+
+
+                    a.     The dates the recipient will be out of the facility;
+
+                    b.     Authorize the facility to provide necessary medications for recipient use during
+                           therapeutic leave; and
+
+                    c.     If the recipient does not have the capacity to administer their own medications, then
+                           instructions must be included for the family member/friend on how and when to
+                           administer the medications.
+
+            4.      A physician’s order such as “may go out on pass” does not meet the requirements for
+                    therapeutic leave of absence. The NF must provide care instructions for the responsible
+                    person who will be accompanying the recipient during their therapeutic leave of absence.
+
+            5.      In those instances where a Medicaid recipient resides in more than one NF within a calendar
+                    year, the admitting facility must determine the number of therapeutic leave days that
+                    have been exhausted by the discharging facility within the same calendar year. A record of
+                    any leave days must be a part of the information provided to the admitting facility as part of
+                    the transfer documents.
+
+            6.      NFs will be reimbursed their per diem rate for reserving beds for Medicaid recipients who
+                    are absent from the facility on therapeutic leave up to a maximum of 24 days annually.
+
+                    a.     For this purpose, annually is defined as a calendar year beginning on January 1 and
+                           ending on December 31. No portion of the unused leave days may be carried over
+                           into the next calendar year.
+
+                    b.     The facility must maintain accurate leave day records on the recipient’s chart, for
+                           review by Medicaid staff.
+
+            7.      The NF must reserve and hold the same room and bed for the Medicaid recipient on a
+                    therapeutic leave for the dates specified in the physicians order. The bed may not be
+                    occupied by another individual during the period of time in which the Medicaid recipient is
+                    on such leave.
+
+            8.      When billing for therapeutic leave of absence days provider must use therapeutic leave of
+                    absence code specified on the Provider Billing Guide.
+
+503.5C      THERAPEUTIC LEAVE OF ABSENCE RECIPIENT RESPONSIBILITIES
+
+            1.      The recipient is responsible to abide by the physician’s order and to return to the facility by
+                    the date specified on the physician’s order.
+
+            2.      The recipient must contact the facility to advise them of any change in the plan regarding
+                    therapeutic leave.
+
+
+
+     July 1, 2025                        NURSING FACILITIES                               Section 503 Page 28
+
+                                                                                            MTL 16/25
+                                                                             Section:
+  DIVISION OF HEALTH CARE FINANCING AND POLICY                                                  503
+
+                                                                             Subject:
+  MEDICAID SERVICES MANUAL                                                                   POLICY
+
+SOURCE 6: Nevada Medicaid Services Manual, Chapter 3100 — Hearings, Sections 3100 through 3104.1B, excerpt | https://www.nevadamedicaid.nv.gov/uploadedFiles/dhcfpnvgov/content/Resources/AdminSupport/Manuals/MSM/C3100/MSM_Ch_3100_18_02_23.pdf | source date: transmittal letter dated February 22, 2018; the Chapter 3100 landing page at nevadamedicaid.nv.gov labels this document "Current - Effective Feb 23, 2018" | retrieved: 2026-11-01
+3100        INTRODUCTION
+
+            The Division of Health Care Financing and Policy (DHCFP) (also referred to as the “agency”)
+            makes a Fair Hearing process available to any Nevada Medicaid or Nevada Check Up (NCU)
+            recipient who disagrees with: any action resulting in the reduction, suspension, termination, denial
+            or denial-in-part of a Medicaid service; any recipient who makes a request for a service and
+            believes the request was not acted upon with reasonable promptness by the DHCFP and/or the
+            health plan. Also, the DHCFP makes available a Fair Hearing process for any Nursing Facility
+            (NF) resident eviction.
+
+            The DHCFP makes available a Fair Hearing process whereby providers may request a hearing for
+            any adverse action taken by the Division or its agents which affects the provider’s participation in
+            the Medicaid program, and/or reimbursement for services rendered to eligible Medicaid recipients’
+            recoupment of overpayments or disenrollment.
+
+            For purposes of this manual section, Medicaid and NCU are referred to as Medicaid. All Medicaid
+            policies and requirements (such as prior authorization, etc.) are the same for NCU, with the
+            exception of three areas where Medicaid and NCU policies differ as referenced in the NCU
+            Manual, Section 1003.6.
+
+
+
+
+  October 26, 2017                            HEARINGS                                 Section 3100 Page 1
+
+                                                                                   MTL 20/17
+                                                                     Section:
+DIVISION OF HEALTH CARE FINANCING AND POLICY                                           3101
+
+                                                                     Subject:
+MEDICAID SERVICES MANUAL                                                          AUTHORITY
+
+
+3101        AUTHORITY
+
+            The Fair Hearing process for recipients is a mandated service. The citation denoting the right to a
+            hearing is found in 42 Code of Federal Regulations (CFR), §431, Subpart E and 42 CFR 457.1130
+            and Nevada Revised Statute (NRS) 422.276. Please see CFR §431.244 for exceptions to the
+            Hearing decision due dates. In addition, the citation denoting the appeals procedure for NF and
+            Intermediate Care Facility for Individuals with Intellectual Disabilities (ICF/IID) is found in 42
+            CFR §431, Subpart D.
+
+            The Fair Hearing process for providers is cited at NRS Chapter 422.306 – Hearing to review action
+            taken against provider of services under state plan for Medicaid regulations; appeal of final
+            decision.
+
+
+
+
+  October 26, 2017                            HEARINGS                                Section 3101 Page 1
+
+                                                          MTL 18/11
+                                               Section:
+DIVISION OF HEALTH CARE FINANCING AND POLICY                3102
+
+                                               Subject:
+MEDICAID SERVICES MANUAL                                  RESERVED
+
+
+3102         RESERVED
+
+
+
+
+   August 24, 2011               HEARINGS                   Section 3102 Page 1
+
+                                                                                MTL 20/17
+                                                                  Section:
+ DIVISION OF HEALTH CARE FINANCING AND POLICY                                      3103
+
+                                                                  Subject:
+ MEDICAID SERVICES MANUAL                                                        POLICY
+
+
+3103        POLICY
+
+3103.1      The DHCFP provides the Fair Hearing process pursuant to Sections 3104 and 3105 of this Chapter
+            of the Medicaid Services Manual (MSM).
+
+
+
+
+  October 26, 2017                          HEARINGS                               Section 3103 Page 1
+
+                                                                                      MTL 20/17
+                                                                        Section:
+ DIVISION OF HEALTH CARE FINANCING AND POLICY                                            3104
+
+                                                                        Subject:
+ MEDICAID SERVICES MANUAL                                                     RECIPIENT HEARINGS
+
+
+3104        RECIPIENT FAIR HEARINGS
+
+3104.1      FAIR HEARINGS
+
+3104.1A     MEDICAID SERVICES STANDARD FAIR HEARING
+
+            1.       WHO MAY REQUEST
+
+                     A recipient or his authorized representative may request a Standard Fair Hearing. A request
+                     for a Fair Hearing can be submitted via the internet, telephonically, in person, through other
+                     commonly available electronic means and in writing and signed by the recipient or the
+                     recipient’s authorized representative.
+
+            2.       DATE OF REQUEST
+
+                     The date of the request for a Standard Fair Hearing is the date the request is received by the
+                     DHCFP office. The request must be received by the DHCFP office within 90 calendar days
+                     from the Notice Date, unless a recipient can substantiate “good cause” for not doing so.
+                     When the deadline falls on a weekend or holiday, the deadline is extended to the next
+                     working day.
+
+                     The request for hearing must contain the recipient’s name, address, telephone number and
+                     Medicaid number as well as the name, telephone number and address of the authorized
+                     representative, if applicable.
+
+                     Recipients enrolled in a Managed Care Organization (MCO) must request a Fair Hearing
+                     no later than 120 days from the date on the MCO’s Notice of Decision (NOD) (Action).
+            3.       SUBJECT MATTER
+
+                     The DHCFP must grant an opportunity for a hearing to:
+
+                     a.     a recipient who requests it because his request for services is denied, reduced,
+                            suspended or terminated;
+
+                     b.     a recipient who requests it because his request for services is not acted upon with
+                            reasonable promptness;
+
+                     c.     a recipient who requests it because he believes the agency or managed health plan
+                            has taken an action erroneously;
+
+                     d.     any resident of a nursing facility who believes the facility erroneously determined
+                            that he must be transferred or discharged;
+
+
+
+  October 26, 2017                             HEARINGS                                  Section 3104 Page 1
+
+                                                                                        MTL 03/18
+                                                                         Section:
+DIVISION OF HEALTH CARE FINANCING AND POLICY                                               3104
+
+                                                                         Subject:
+MEDICAID SERVICES MANUAL                                                       RECIPIENT HEARINGS
+
+
+                      e.     any recipient who requests it because he believes the State has made an erroneous
+                             determination with regard to the Pre-admission Screening and Resident Review
+                             (PASRR) as outlined in Section 1917(e)(7) of the Social Security Act;
+
+                      f.     any recipient who is assigned (locked in) to using one pharmacy for all controlled
+                             substance prescriptions.
+
+                      This includes an adverse determination that the recipient does not require specialized
+                      services as defined in 42 CFR §431.201, 431.206 and 431.220 as determined by a PASRR.
+
+                      Pursuant to 42 CFR §483.204, the state will provide a system for a resident of a NF to appeal
+                      a notice from the NF of intent to discharge or transfer the resident. Upon receipt of the
+                      discharge notice, the resident may request a Fair Hearing via the internet, telephonically, in
+                      person, through other commonly available electronic means or by submitting the request to
+                      the DHCFP. The DHCFP will inform the Department of Administration of the residents
+                      request for a Fair Hearing. The DHCFP does not take an adverse action against the resident;
+                      rather the facility takes the action via the discharge. The DHCFP is not a party to the action.
+
+3104.1B      MEDICAID SERVICES EXPEDITED FAIR HEARING
+
+             1.       WHO MAY REQUEST
+
+                      A recipient, his/her authorized representative or a provider acting on a recipient’s behalf
+                      (only under circumstances described below) may file for an Expedited Fair Hearing if the
+                      clinical documentation shows that the time permitted for a Standard Fair Hearing could
+                      jeopardize the individual’s life, health or ability to attain, maintain or regain maximum
+                      function. The Expedited Fair Hearing request must be submitted with pertinent medical
+                      information that supports the reason for the urgent need of the expedited timeframe.
+                      Providers may file a request only in cases where the recipient is unable to act on their own
+                      behalf, either because of physical incapacity or mental incapacity. Additional
+                      documentation may be required to demonstrate the incapacity on a case by case basis. A
+                      request for an Expedited Fair Hearing can be made via the internet, telephonically, in
+                      person, through other commonly available electronic means and in writing.
+
+             2.       DATE OF REQUEST
+
+                      The date of the request for an Expedited Fair Hearing is the date the request is received by
+                      the DHCFP office.
+
+                      The request for an Expedited Fair Hearing must contain the recipient’s name, address,
+                      telephone number and Medicaid number, as well as the name, telephone number and address
+                      of the authorized representative and/or provider, if applicable, and must include all pertinent
+                      medical information that supports the reason for the urgent need of the expedited timeframe.
+
+
+  February 23, 2018                              HEARINGS                                  Section 3104 Page 2
+
+                                                                                     MTL 20/17
+                                                                       Section:
+DIVISION OF HEALTH CARE FINANCING AND POLICY                                            3104
+
+                                                                       Subject:
+MEDICAID SERVICES MANUAL                                                     RECIPIENT HEARINGS
+
+
+                    If the Expedited Hearing request is submitted without pertinent medical information, the
+                    Hearing request will be treated as a Standard Fair Hearing request (90-day decision). If the
+                    required documentation is submitted after the initial Expedited Hearing request is received,
+                    the timeframe for the Expedited Fair Hearing will begin the day the required pertinent
+                    medical documentation is received by the DHCFP.
+
+           3.       SUBJECT MATTER
+
+                    The DHCFP must grant an opportunity for an Expedited Fair Hearing to:
+
+                    a.     a recipient who requests it because his request for services is denied, reduced,
+                           suspended or terminated and the time permitted for a Standard Fair Hearing could
+                           jeopardize the individual’s life, health or ability to attain, maintain or regain
+                           maximum function;
+
+                    b.     a recipient who requests it because his request for services is not acted upon with
+                           reasonable promptness and the time permitted for a Standard Fair Hearing could
+                           jeopardize the individual’s life, health or ability to attain, maintain or regain
+                           maximum function;
+
+                    c.     a recipient who requests it because he believes the agency or managed health plan
+                           has taken an action erroneously and the time permitted for a Standard Fair Hearing
+                           could jeopardize the individual’s life, health or ability to attain, maintain or regain
+                           maximum function; or
+
+                    d.     any resident of a NF who believes the facility erroneously determined that he must
+                           be transferred or discharged and the time permitted for a standard Fair Hearing could
+                           jeopardize the individual’s life, health or ability to attain, maintain or regain
+                           maximum function;
+
+                    This includes an adverse determination that the recipient does not require specialized
+                    services as defined in 42 CFR §431.201, 431.206 and 431.220 as determined by a PASRR.
+
+                    Pursuant to 42 CFR §483.204, the state will provide a system for a resident of a NF to appeal
+                    a notice from the NF of intent to discharge or transfer the resident. Upon receipt of the
+                    discharge notice, the resident may request an Expedited Fair Hearing over the phone,
+                    electronically or in writing by submitting a letter to the DHCFP. The DHCFP will inform
+                    the Department of Administration of the resident’s request for a Fair Hearing. The DHCFP
+                    does not take an adverse action against the resident; rather the facility takes the action via
+                    the discharge. The DHCFP is not a party to the action. A decision will be provided within
+                    seven working days from when the Hearing request was received.
+
+
+
+
+ October 26, 2017                             HEARINGS                                  Section 3104 Page 3
+
+                                                                                      MTL 20/17
+                                                                       Section:
+ DIVISION OF HEALTH CARE FINANCING AND POLICY                                            3104
+
+                                                                       Subject:
+ MEDICAID SERVICES MANUAL                                                    RECIPIENT HEARINGS
+
+
+            4.       EXCEPTIONS TO EXPEDITED FAIR HEARINGS
+
+                     a.     The agency cannot reach a decision because the recipient, authorized representative
+                            and/or provider request the delay.
+
+                     b.     The recipient, authorized representative and/or provider fails to take a required
+                            action such as submitting the required documentation.
+
+                     c.     If Medicaid services have been continued at unreduced levels per MSM Section
+                            3104.4(C), the Expedited Fair Hearing process is not applicable and the Fair Hearing
+                            request will be treated as a Standard Fair Hearing request.
+
+3104.2      DISPOSITION OF A FAIR HEARING REQUEST
+
+            A.       DISMISSAL OF A HEARING REQUEST
+
+                     A Fair Hearing request will be dismissed upon:
+
+                     1.     Withdrawal of a Hearing Request
+
+                            A recipient may withdraw the request for a hearing at any time before a decision is
+                            rendered via phone, written submission or electronically. Notification of the request
+                            for withdrawal will be submitted to the Hearing Officer who will dismiss the hearing
+                            request. Written confirmation will be sent to the recipient regarding the withdrawal.
+
+                     2.     Abandonment of a Hearing Request
+
+                            A hearing is considered abandoned and may be dismissed by the Hearing Officer
+                            when the recipient fails to appear for a scheduled hearing after having been properly
+                            notified. The recipient's request for hearing is considered abandoned unless they
+                            submit to the Hearing Officer substantiation for good cause for failing to appear.
+                            The Hearing Officer must receive the substantiation within 10 calendar days of the
+                            date of the scheduled hearing.
+
+                     3.     Agency Action
+
+                            Medicaid may reverse its NOD at any time during the hearing process. If a
+                            Medicaid reversal occurs, a report shall be submitted by the person conducting the
+                            review detailing the reason(s) for the reversal if a Fair Hearing has been calendared.
+                            The report must be forwarded to the Hearing Officer within five business days
+                            following the reversal decision date or review date if a fair hearing has been
+                            scheduled. The Hearing Officer notifies the recipient the request for hearing is
+                            dismissed because Medicaid will not take action or has reversed the decision.
+
+
+  October 26, 2017                             HEARINGS                                  Section 3104 Page 4
+
+                                                                                     MTL 20/17
+                                                                       Section:
+ DIVISION OF HEALTH CARE FINANCING AND POLICY                                            3104
+
+                                                                       Subject:
+ MEDICAID SERVICES MANUAL                                                    RECIPIENT HEARINGS
+
+
+            B.       DENIAL OF A HEARING REQUEST
+
+                     A hearing need not be granted when:
+
+                     1.     the sole issue is a Federal or State law requiring an automatic change adversely
+                            affecting some or all recipients;
+
+                     2.     the request is not received timely;
+
+                     3.     the agency and/or managed health plan has not taken any action affecting the
+                            recipient, or made an Adverse Determination, nor denied a request for services or
+                            failed to act upon the request within reasonable promptness;
+
+                     4.     a recipient is not Medicaid eligible, except for PASRR determinations; or
+
+                     5.     the primary insurance policy and access (including appeal/hearing process) has not
+                            been exhausted. As Medicaid is the payer of last resort, all remedies under other
+                            insurance must be exhausted.
+
+3104.3      HEARING NOTIFICATION, SCHEDULING AND LOCATION
+
+            A.       HEARING PREPARATION MEETING (HPM)
+
+                     Within 10 calendar days of a request for a Standard Fair Hearing, the DHCFP Hearings
+                     Office shall contact the recipient to offer an HPM. The purpose is to provide the recipient
+                     an explanation of the action, which is the subject of the hearing request, and attempt to
+                     resolve the matter. Every effort is made to reconcile the disagreement without the necessity
+                     of a Fair Hearing. The right to a Fair Hearing is not affected by attendance at a HPM. The
+                     recipient may allow participation in the HPM by legal counsel, a friend or other
+                     spokesperson.
+
+                     It is important the HPM be held at the earliest possible date, no later than 21 working days
+                     after receipt of a hearing request. Rescheduling of an HPM shall be kept to a maximum of
+                     two instances, assuring completion within 21 working days.
+
+                     An HPM shall be conducted telephonically.
+
+            B.       NOTICE OF A STANDARD FAIR HEARING
+
+                     The Department of Administration Hearing Officer shall notify all parties by mail as to the
+                     time, date and place the hearing has been scheduled. Recipients are given at least 10
+                     calendar days advance notice of the scheduled hearing unless the recipient specifically
+                     requests a hearing in a shorter period of time based on an emergency.
+
+
+  October 26, 2017                             HEARINGS                                 Section 3104 Page 5
+
+                                                                                     MTL 20/17
+                                                                       Section:
+ DIVISION OF HEALTH CARE FINANCING AND POLICY                                           3104
+
+                                                                       Subject:
+ MEDICAID SERVICES MANUAL                                                    RECIPIENT HEARINGS
+
+
+                     At the discretion of the Hearing Officer, a Fair Hearing may be postponed if requested by
+                     either party.
+
+                     If the recipient requests a postponement, the number of days postponed will extend the
+                     decision due date by an equal number of days.
+
+            C.       FAIR HEARINGS BY TELEPHONE
+
+                     Either party may request the Fair Hearing be conducted telephonically. If a telephone
+                     hearing is held, the following procedures apply:
+
+                     1.     The recipient is advised at the time the hearing is scheduled that all other policies
+                            and procedures relative to hearings and program requirements still apply.
+
+                     2.     The Hearing Officer may request the DHCFP, the managed health plan and the
+                            recipient to provide copies of any evidence or exhibits to be presented during the
+                            hearing to the Hearing Officer and the other parties prior to a scheduled telephone
+                            hearing. This does not preclude additional information from being presented during
+                            the hearing, or if requested, after the close of the hearing.
+
+                     3.     All telephone hearings must be tape recorded by the Hearing Officer over the
+                            telephone. This recording is the official record.
+
+                     All Expedited Fair Hearings are held telephonically due to time constraints.
+
+3104.4      PROGRAM PARTICIPATION PENDING A HEARING DECISION
+
+            A.       RECOVERY
+
+                     If Medicaid services are continued until a decision is rendered, such cost of services are
+                     subject to recovery by the DHCFP if the agency's action is sustained or the hearing request
+                     is withdrawn by the recipient.
+
+            B.       MAINTAINING MEDICAID SERVICES
+
+                     If the agency mails the notice as required, and the recipient requests a hearing before the
+                     Date of Action, the DHCFP or managed health plan will not terminate or reduce services
+                     until a decision is rendered after the hearing unless:
+
+                     1.     the Hearing Officer makes a determination the sole issue is one of Federal or State
+                            law or policy and the agency promptly informs the recipient in writing that services
+                            are to be terminated or reduced pending the hearing decision; or
+
+
+
+  October 26, 2017                             HEARINGS                                 Section 3104 Page 6
+
+                                                                                       MTL 20/17
+                                                                         Section:
+ DIVISION OF HEALTH CARE FINANCING AND POLICY                                              3104
+
+                                                                         Subject:
+ MEDICAID SERVICES MANUAL                                                      RECIPIENT HEARINGS
+
+
+                     2.     the recipient requests in writing that benefits not be continued pending a hearing
+                            decision; or
+
+                     3.     the request for hearing is denied or dismissed.
+
+            C.       REINSTATING MEDICAID SERVICES
+
+                     1.     Discretionary:
+
+                            When a recipient requests a hearing no more than the 10th calendar day after the
+                            Date of Action, the agency may reinstate benefits if requested by the recipient. The
+                            reinstated services will continue until a hearing decision is rendered unless, at the
+                            hearing, it is determined that the sole issue is one of Federal or State law or policy.
+
+                     2.     Mandatory:
+
+                            The agency must reinstate and continue services until a decision is rendered after a
+                            hearing if:
+
+                            a.      action is taken without the required advance notice;
+
+                            b.      the agency mails the 10-day or 5-day notice as required under 42 CFR
+                                    §431.211 or 42 CFR §431.214, and the recipient requests a hearing before
+                                    the date of action, the agency may not terminate or reduce services until a
+                                    decision is rendered after the hearing unless:
+
+                                    1.       it is determined that the sole issue is one of Federal or State law or
+                                             policy; and
+
+                                    2.       the agency promptly informs the recipient in writing that services
+                                             are to be terminated or reduced pending the hearing decision.
+
+3104.5      HEARING PARTICIPATION
+
+            A.       ATTENDANCE
+
+                     Attendance at a hearing is limited to those directly concerned; namely, the Hearing Officer,
+                     recipient(s), and/or their witnesses, counsel or authorized representative(s), interpreter,
+                     witnesses and representatives of the DHCFP, and if applicable, representatives from the
+                     managed health plan. Counsel for the agency and/or managed health plan may also attend
+                     as necessary.
+
+
+
+
+  October 26, 2017                              HEARINGS                                  Section 3104 Page 7
+
+                                                                                    MTL 20/17
+                                                                      Section:
+ DIVISION OF HEALTH CARE FINANCING AND POLICY                                          3104
+
+                                                                      Subject:
+ MEDICAID SERVICES MANUAL                                                   RECIPIENT HEARINGS
+
+
+                    Medicaid assures the availability for recipients, their authorized representatives and
+                    witnesses of necessary transportation to and from the hearing.
+
+             B.     GROUP HEARINGS
+
+                    A series of recipient requests for a hearing may be consolidated upon agreement of all
+                    parties by conducting a single group hearing in cases in which the sole issue involved is
+                    one of State and/or Federal law, regulation or policy.
+
+3104.6       PREPARATION/PRESENTATION
+
+             A.     AGENCY/MANAGED HEALTH PLAN
+
+                    It is the responsibility of the agency and/or managed health plan representative to be
+                    present at the hearing, in person or telephonically, and to provide testimony and/or
+                    evidence regarding the agency's and/or managed health plan's action. This includes the
+                    organization of oral and written evidence and preparation of a Basis of Action summary
+                    substantiating the decision to be presented at the hearing. This summary becomes part of
+                    the record at the end of the hearing.
+
+             B.     RECIPIENT
+
+                    1.     Before the date of the hearing and during the hearing, the recipient may examine
+                           and request copies of their own case information. Authorized representatives must
+                           provide a current signed release from the recipient to permit release of records. The
+                           DHCFP and/or managed health plan will provide the copies free of charge. The
+                           recipient shall not have access to confidential information.
+
+                    2.     It is the responsibility of the recipient to provide testimony and/or evidence in
+                           support of their position either in person or telephonically. If the hearing involves
+                           a legal issue only, the recipient's presence, in person or telephonically, is not
+                           necessary. Testimony can be provided by a representative.
+
+                           Recipients are allowed to bring witnesses and submit evidence to establish all
+                           pertinent facts and circumstances relative to the issue and to present arguments
+                           without undue interference. They are also allowed to question or refute any
+                           testimony or evidence and confront and cross-examine adverse witnesses. New
+                           evidence not previously provided to the DHCFP or managed health plan, but which
+                           is believed to have a bearing on the action taken, must be provided to the DHCFP
+                           prior to the hearing for evaluation and any necessary action.
+
+                    3.     Recipients are provided a copy of all evidence presented at the hearing by the
+                           DHCFP.
+
+
+    October 20/17                             HEARINGS                                 Section 3104 Page 8
+
+                                                                                     MTL 18/11
+                                                                       Section:
+ DIVISION OF HEALTH CARE FINANCING AND POLICY                                           3104
+
+                                                                       Subject:
+ MEDICAID SERVICES MANUAL                                                    RECIPIENT HEARINGS
+
+
+3104.7       CONDUCT OF HEARING
+
+             A.      CONTROL
+
+                     The Hearing Officer controls the hearing and ensures only relevant issues are considered.
+                     Disrespectful language or contemptuous conduct, refusal to comply with directions or
+                     continued use of dilatory tactics by any person at the hearing constitutes grounds for
+                     immediate exclusion of such person from the hearing by the Hearing Officer and the
+                     hearing decision will be based on evidence submitted. The Hearing Officer shall record
+                     hearing proceedings. The Hearing Officer’s Transcripts of Evidence constitutes the sole
+                     official record.
+
+             B.      OPENING THE HEARING
+
+                     At the opening of the hearing, the Hearing Officer shall:
+
+                     1.     Introduce their self;
+
+                     2.     Explain the reason for the hearing and the role of the Hearing Officer;
+
+                     3.     Assure all persons in attendance at the hearing are identified by name and purpose
+                            of attendance;
+
+                     4.     Advise all persons in attendance that the hearing is being tape-recorded.
+
+             C.      ADMINISTERING OATHS
+
+                     Testimony under oath shall be required at the discretion of the Hearing Officer.
+
+             D.      TESTIMONY AND EVIDENCE
+
+                     Nevada Rules of Evidence do not apply in the hearing. The Hearing Officer:
+
+                     1.     Excludes irrelevant, immaterial or unduly repetitious evidence;
+
+                     2.     Provides the parties an opportunity to present their case, to present witnesses,
+                            introduce evidence and cross-examine witnesses and examine evidence; and
+
+                     3.     Collects and logs relevant evidence exhibits.
+
+             E.      CLOSING THE HEARING
+
+                     At the close of the hearing, the Hearing Officer advises persons in attendance:
+
+
+   August 24, 2011                             HEARINGS                                 Section 3104 Page 9
+
+                                                                                       MTL 20/17
+                                                                        Section:
+ DIVISION OF HEALTH CARE FINANCING AND POLICY                                             3104
+
+                                                                        Subject:
+ MEDICAID SERVICES MANUAL                                                     RECIPIENT HEARINGS
+
+
+                     1.     When a decision is expected to be made;
+
+                     2.     That the decision will be made based on program policy and exclusively on the
+                            testimony and evidence presented at the hearing; and
+
+                     3.     The parties will be advised in writing by certified mail of the decision.
+
+3104.8      ACTION ON INCORRECT NOTICE OF DECISION (NOD)
+
+            A.       If, prior to the hearing, it becomes apparent the recipient has received an incorrect NOD
+                     for Prior Authorization Request from the DHCFP or the managed health plan, a corrected
+                     notice must be sent to the recipient if the proposed action remains unchanged.
+
+            B.       If, after a hearing has begun, it becomes apparent the recipient received an incorrect NOD
+                     for Prior Authorization Request (i.e., the notice quotes incorrect factual and legal reason(s)
+                     or omits additional factual and legal reason(s) pertinent to the issue), the Hearing Officer
+                     may offer the recipient the choice of either accepting the incorrect notice, with the
+                     necessary corrections noted for the record and continuing with the hearing; or setting the
+                     hearing to a later date to allow the DHCFP or the managed health plan time to prepare and
+                     serve the corrected NOD.
+
+3104.9      SUBMISSION OF ADDITIONAL EVIDENCE
+
+            During a hearing, additional evidence related to the hearing issue may be submitted. The Hearing
+            Officer, recipient, the DHCFP or managed health plan may request additional evidence be
+            submitted which is not available at the hearing.
+
+            The Hearing Officer shall:
+
+            A.       Recess the hearing if additional evidence has been submitted, to allow for review by the
+                     recipient, the DHCFP or managed health plan; or
+
+            B.       Continue the hearing to a later date and order further investigation or request either party
+                     to review or produce the additional evidence; or
+
+            C.       Close the hearing, but hold the record open to permit submission of any additional
+                     evidence.
+
+3104.10     MEDICAL ISSUES
+
+            When the hearing involves medical issues such as those concerning a diagnosis or an examining
+            physician's report, the Hearing Officer may require an additional medical assessment other than
+            that of the person involved in making the original assessment. The request is directed to the
+
+
+  October 26, 2017                              HEARINGS                                 Section 3104 Page 10
+
+                                                                                     MTL 20/17
+                                                                       Section:
+ DIVISION OF HEALTH CARE FINANCING AND POLICY                                            3104
+
+                                                                       Subject:
+ MEDICAID SERVICES MANUAL                                                    RECIPIENT HEARINGS
+
+
+            DHCFP or the managed health plan for evaluation and follow-up. Any additional assessment
+            determined to be necessary is obtained at the DHCFP or the managed health plan’s expense. The
+            hearing may be held open for a specified length of time pending receipt of such requested
+            information. This additional assessment must be made part of the record.
+
+3104.11     HEARING DECISION
+
+            The Hearing Officer’s decision must be in writing and comply with Medicaid program policy. The
+            decision is based exclusively on evidence introduced at the hearing. Changed physical or social
+            factors following the DHCFP or managed health plan action being appealed cannot be considered
+            in rendering the hearing decision.
+
+            A.       BASIS
+
+                     Decisions by the Hearing Officer shall:
+
+                     1.      Be based exclusively on the evidence introduced at the hearing;
+
+                     2.      Comply with applicable regulations in effect at the time of the agency or managed
+                             health plan’s action;
+
+                     3.      Summarize the findings of fact;
+
+                     4.      Identify and cite supporting evidence and regulation;
+
+                     5.      Be submitted in written format, to the Deputy Administrator, the DHCFP or
+                             designee.
+
+            B.       APPEAL IS DENIED
+
+                     Denied decisions are adverse to the recipient. When the appeal is denied, the Hearing
+                     Officer will notify the DHCFP or the managed health plan and the recipient of the right to
+                     judicial review.
+
+                     Recipient withdrawals and abandonments are equivalent to a denied appeal. The DHCFP
+                     may institute recovery procedures against the recipient to recoup the cost of any services
+                     furnished by Medicaid.
+
+            C.       APPEAL IS SUSTAINED
+
+                     Sustained decisions are favorable to the recipient. The DHCFP or the managed health plan
+                     must take corrective action promptly, retroactive to the date an incorrect action was taken.
+                     If appropriate, the agency must provide for admission or readmission of a recipient to a
+
+
+  October 26, 2017                             HEARINGS                                 Section 3104 Page 11
+
+                                                                                       MTL 20/17
+                                                                         Section:
+ DIVISION OF HEALTH CARE FINANCING AND POLICY                                              3104
+
+                                                                         Subject:
+ MEDICAID SERVICES MANUAL                                                      RECIPIENT HEARINGS
+
+
+                     facility if the hearing decision is favorable to the recipient or if the DHCFP decides in the
+                     recipient's favor before the hearing.
+
+            D.       DECISION DUE DATE
+
+                     Within 90 calendar days after the date of the request for a hearing has been received by the
+                     DHCFP office, the recipient and the Hearings Unit must be notified of the Hearing
+                     Officer’s decision specifying the factual and legal reasons for the decision and identifying
+                     the supporting evidence relied upon to reach the decision. A copy of the decision must be
+                     delivered by certified mail to each party and to their attorney or other authorized
+                     representative.
+
+                     The time period for a hearing decision may be extended for a period equal to the total delay
+                     if the recipient requests a delay or postponement of the hearing proceedings and waives his
+                     right to have a decision rendered within 90 days after the date of the request for a hearing.
+
+                     Decisions on Expedited Fair Hearing requests will be made expeditiously as the recipient’s
+                     health condition requires, but no later than three working days after the date the request for
+                     a hearing has been received by the DHCFP office.
+
+3104.12     RIGHT TO APPEAL HEARING DECISION
+
+            The Decision of the Hearing Officer is final. The Hearing Decision may be appealed by any party,
+            within 90 days after the date on which the written notice of decision is mailed, to the appropriate
+            District Court of the State of Nevada. The day after the mailing is the first day of the 90-day period.
+
+3104.13     HEARING RECORD
+
+            A.       CONTENT
+
+                     A hearing record is maintained by the Department of Administration, Hearing Office. The
+                     record consists of all papers and requests filed in the proceeding, the transcript or recording
+                     of testimony and exhibits, or an official report containing the substance of what happened
+                     at the hearing, all exhibits received or considered and the Decision letter.
+
+            B.       RETENTION OF HEARING RECORD
+
+                     Administrative hearing files and taped recordings must be retained no less than six years
+                     from the date the hearing decision was rendered.
+
+                     If a hearing decision is appealed, the hearing record must be retained until the court action
+                     is resolved or the designated retention period, whichever is later.
+
+
+
+  October 26, 2017                              HEARINGS                                  Section 3104 Page 12
+
+                                                                                     MTL 20/17
+                                                                      Section:
+DIVISION OF HEALTH CARE FINANCING AND POLICY                                            3104
+
+                                                                      Subject:
+MEDICAID SERVICES MANUAL                                                    RECIPIENT HEARINGS
+
+
+           C.       COPYING THE HEARING RECORD
+
+                    Copies of the Hearing Record are made as follows:
+
+                    1.     The requestor may secure a copy of the recording and/or transcript of a Fair Hearing
+                           by written request to the Department of Administration. Please note that the
+                           requestor shall be invoiced from the Department of Administration for this service
+                           and the requestor is responsible for the payment of these records.
+
+                    2.     An official typed transcription of the recording of the hearing is prepared for the
+                           District Court and recipient when a hearing decision is appealed. Within 90 days
+                           after the service of the petition for judicial review, the DHCFP or its designee shall
+                           transmit to the court the original or a certified copy of the entire record of the
+                           proceeding under review, including, without limitation, a transcript of the evidence
+                           resulting in the final decision of the Hearing Officer.
+
+                           * The requested recording and/or transcript is free of charge to the recipient in the
+                           event that the recipient appeals to District Court.
+
+
+
+
+ October 26, 2017                             HEARINGS                                 Section 3104 Page 13
+
+                                                                                     MTL 20/17
+                                                                       Section:
+ DIVISION OF HEALTH CARE FINANCING AND POLICY                                           3105
+
+                                                                       Subject:
+ MEDICAID SERVICES MANUAL                                                    PROVIDER HEARINGS
+
+
+3105        MEDICAID PROVIDER HEARINGS
+
+3105.1      REQUEST FOR A MEDICAID PROVIDER FAIR HEARING
+
+            A.       WHO MAY REQUEST
+
+                     A Nevada Medicaid provider may request a Fair Hearing when they disagree with an
+                     adverse determination taken against them by the agency, the Quality Improvement
+                     Organization (QIO)-like vendor/fiscal agent, managed health plan or other third-party plan
+                     or Program Administrator. An adverse determination may include, but is not limited to:
+
+                     1.     an outcome of the Fiscal Agent’s provider appeal determination regarding a denied
+                            claim;
+
+                     2.     a determination to suspend payment;
+
+                     3.     suspension, sanction, lockout or termination;
+
+                     4.     recoupment of an overpayment; or
+
+                     5.     disenrollment or denied renewal of a provider contract
+
+                     6.     ineligible determination for the Incentive Payment Program for Electronic Health
+                            Record (EHR) enrollment.
+
+                     The provider must exhaust any internal grievance process available through the QIO-like
+                     vendor/Fiscal Agent, managed health plan or third-party plan or Program Administrator
+                     prior to a DHCFP Fair Hearing.
+
+            B.       DATE OF REQUEST
+
+                     The date of request for a hearing is the date the request is received by the DHCFP Hearings
+                     Office. A request for a Fair Hearing must be received by the DHCFP Hearings Office
+                     within 90 calendar days from the date of the adverse determination notification. When a
+                     determination notification provides a specific timeframe in which a Fair Hearing may be
+                     requested, the timeframe specified in the notification is the applicable timeframe. When
+                     the deadline falls on a weekend or holiday, the deadline is extended to the next working
+                     day.
+
+            C.       REQUEST FOR A FAIR HEARING
+
+                     A request for a Fair Hearing must be submitted to the DHCFP Hearing Office in writing
+                     and must include the provider name, Medicaid provider number, correspondence address,
+
+
+  October 26, 2017                             HEARINGS                                 Section 3105 Page 1
+
+                                                                                    MTL 20/17
+                                                                      Section:
+ DIVISION OF HEALTH CARE FINANCING AND POLICY                                          3105
+
+                                                                      Subject:
+ MEDICAID SERVICES MANUAL                                                   PROVIDER HEARINGS
+
+
+                     contact telephone number, the reason(s) why the provider disagrees with the determination
+                     and a copy of the determination notification from the agency, Fiscal Agent, managed health
+                     plan or third-party plan or Program Administrator. A request for a Fair Hearing must be
+                     signed by the provider or the provider’s authorized representative.
+
+3105.2      DISPOSITION OF A MEDICAID PROVIDER FAIR HEARING REQUEST
+
+            A.       DISMISSAL OF A HEARING REQUEST UPON:
+
+                     1.     Withdrawal of a Hearing Request
+
+                            A provider may withdraw a request for a Fair Hearing at any time before a decision
+                            is rendered. A request to withdraw a hearing must be submitted in writing to the
+                            Hearing Officer who may dismiss the hearing request.
+
+                     2.     Abandonment of a Hearing Request
+
+                            A provider hearing is considered abandoned and may be dismissed by the Hearing
+                            Officer when the provider fails to appear for a scheduled hearing after having been
+                            properly notified. The provider’s request for hearing is considered abandoned
+                            unless they submit to the Hearing Officer substantiation for good cause for failing
+                            to appear. The Hearing Officer must receive the substantiation within 10 calendar
+                            days of the date of the scheduled hearing.
+
+                     3.     Agency, Fiscal Agent or Managed Health Plan Action
+
+                            The agency, Fiscal Agent or managed health plan may reverse its adverse action
+                            determination at any time during the hearing process. If a determination reversal
+                            occurs, notification of the reversal must be made to the Hearing Officer, if a Fair
+                            Hearing had been scheduled. The Hearing Officer notifies the provider the request
+                            for hearing is dismissed because Medicaid, the Fiscal Agent or managed health plan
+                            will not take the action or has reversed the decision.
+
+            B.       DENIAL OF A HEARING REQUEST
+
+                     A hearing need not be granted when:
+
+                     1.     the sole issue is a Federal suspension or ban of regulation at the Federal level
+                            affecting providers.
+
+                     2.     the request is not received timely.
+
+
+
+
+  October 26, 2017                             HEARINGS                                Section 3105 Page 2
+
+                                                                                     MTL 20/17
+                                                                       Section:
+ DIVISION OF HEALTH CARE FINANCING AND POLICY                                           3105
+
+                                                                       Subject:
+ MEDICAID SERVICES MANUAL                                                    PROVIDER HEARINGS
+
+
+                     3.     the provider has not exhausted the Appeal process available through the Fiscal
+                            Agent, the managed health plan or a third-party plan administrator.
+
+3105.3      FAIR HEARING NOTIFICATION, SCHEDULING AND LOCATION
+
+            A.       HEARING PREPARATION MEETING (HPM)
+
+                     Nevada Medicaid Hearings Office will offer an HPM with the provider to allow an
+                     opportunity to have an informal discussion regarding the determination being disputed, and
+                     to attempt to resolve the disputed matter. A provider may refuse an HPM if they choose.
+                     The right to a Fair Hearing is not affected by attendance at an HPM. A provider may
+                     designate participation in the HPM by legal counsel or a representative.
+
+                     An HPM shall be conducted telephonically.
+
+            B.       NOTICE OF A FAIR HEARING
+
+                     The Department of Administration Hearing Officer shall notify all parties by mail as to the
+                     date, time and location of the Fair Hearing.
+
+                     At the discretion of the Hearing Officer, a Fair Hearing may be postponed if requested by
+                     either party.
+
+            C.       HEARINGS BY TELEPHONE
+
+                     1.     A representative of each party must be in attendance at a Provider Fair Hearing.
+
+                     2.     The Hearing Officer may allow testimony from witnesses telephonically.
+
+                     3.     Telephonic testimony is recorded by the Hearing Officer and is part of the official
+                            record.
+
+3105.4      HEARING PARTICIPATION
+
+            A.       ATTENDANCE
+
+                     Attendance at a hearing is limited to those directly concerned, namely the:
+
+                     1.     Hearing Officer;
+
+                     2.     provider;
+
+                     3.     provider’s witnesses, counsel or authorized representative(s) for the provider;
+
+
+  October 26, 2017                             HEARINGS                                 Section 3105 Page 3
+
+                                                                                     MTL 20/17
+                                                                       Section:
+ DIVISION OF HEALTH CARE FINANCING AND POLICY                                            3105
+
+                                                                       Subject:
+ MEDICAID SERVICES MANUAL                                                    PROVIDER HEARINGS
+
+
+                     4.     interpreter;
+
+                     5.     witnesses, counsel and representatives of Medicaid; and
+
+                     6.     representatives, counsel and witnesses from the managed health plan.
+
+            B.       GROUP HEARINGS
+
+                     At the discretion of the Hearing Officer, a series of provider requests for a hearing may be
+                     consolidated by conducting a single group hearing in cases in which the sole issue involved
+                     is one of State and/or Federal law, regulation or policy.
+
+3105.5      PREPARATION/PRESENTATION
+
+            A.       AGENCY/MANAGED HEALTH PLAN
+
+                     1.     It is the responsibility of the agency and/or managed health plan representative to
+                            be present at the Fair Hearing, unless permission has been granted prior to the Fair
+                            Hearing by the Hearing Officer to participate telephonically.
+
+                     2.     The agency or the managed health plan must provide testimony and/or evidence
+                            regarding the agency's and/or managed health plan's action. This includes the
+                            organization of oral and written evidence and preparation of a Basis of Action
+                            summary substantiating the decision to be presented at the Fair Hearing. This
+                            summary becomes part of the record at the conclusion of the Fair Hearing. Witness
+                            testimony may be provided telephonically at the discretion of the Hearing Officer.
+
+                     3.     All documents being presented at a Fair Hearing by the agency or managed health
+                            plan must be made available to the provider or representative and to the Hearing
+                            Officer at least five days prior to the Fair Hearing.
+
+            B.       PROVIDER
+
+                     1.     It is the responsibility of the provider or representative to be present at the Fair
+                            Hearing, unless permission has been granted prior to the Fair Hearing by the
+                            Hearing Officer to participate telephonically.
+
+                     2.     Providers must provide testimony and/or evidence in support of their position.
+                            Testimony may be provided telephonically at the discretion of the Hearing Officer.
+                            Providers may bring witnesses and submit evidence to establish all pertinent facts
+                            and circumstances relative to the issue and to present arguments without undue
+                            interference. They may also question or refute any testimony or evidence and
+                            confront and cross-examine adverse witnesses. New evidence not previously
+                            provided to the DHCFP or the managed health plan, but which is believed to have
+
+  October 26, 2017                             HEARINGS                                 Section 3105 Page 4
+
+                                                                                     MTL 20/17
+                                                                       Section:
+ DIVISION OF HEALTH CARE FINANCING AND POLICY                                           3105
+
+                                                                       Subject:
+ MEDICAID SERVICES MANUAL                                                    PROVIDER HEARINGS
+
+
+                            a bearing on the action taken, must be provided to all parties prior to the hearing
+                            for evaluation and any necessary action.
+
+                     3.     All documents being presented at a Fair Hearing by the provider or representative
+                            must be made available to the agency or managed health plan and to the Hearing
+                            Officer at least five days prior to the Fair Hearing.
+
+3105.6      CONDUCT OF A FAIR HEARING
+
+            A.       CONTROL
+
+                     The Hearing Officer controls the hearing and ensures only relevant issues are considered.
+                     Disrespectful language or contemptuous conduct, refusal to comply with directions or
+                     continued use of dilatory tactics by any person at the hearing constitutes grounds for
+                     immediate exclusion of such person from the hearing by the Hearing Officer and the
+                     hearing decision will be based on evidence submitted. A recorder shall be used by the
+                     hearing officer to record hearing proceedings. The Hearing Officer’s Transcripts of
+                     Evidence constitutes the sole official record.
+
+            B.       OPENING THE HEARING
+
+                     At the opening of the hearing, the Hearing Officer shall:
+
+                     1.     introduce their self;
+
+                     2.     explain the reason for the hearing and the role of the Hearing Officer;
+
+                     3.     assure all persons in attendance at the hearing are identified by name and purpose
+                            of attendance; and
+
+                     4.     advise all persons in attendance that the hearing is being recorded.
+
+            C.       ADMINISTERING OATHS
+
+                     Testimony under oath shall be required at the discretion of the Hearing Officer.
+
+            D.       TESTIMONY AND EVIDENCE
+
+                     Nevada Rules of Evidence do not apply in the hearing. The Hearing Officer shall:
+
+                     1.     exclude irrelevant, immaterial or unduly repetitious evidence;
+
+
+
+
+  October 26, 2017                             HEARINGS                                 Section 3105 Page 5
+
+                                                                                       MTL 20/17
+                                                                         Section:
+ DIVISION OF HEALTH CARE FINANCING AND POLICY                                              3105
+
+                                                                         Subject:
+ MEDICAID SERVICES MANUAL                                                      PROVIDER HEARINGS
+
+
+                     2.     provide the parties an opportunity to present their case, to present witnesses,
+                            introduce evidence and cross-examine witnesses and examine evidence; and
+
+                     3.     collect and log relevant evidence exhibits.
+
+            E.       CLOSING THE HEARING
+
+                     At the close of the hearing, the Hearing Officer shall advise persons in attendance:
+
+                     1.     when a decision is expected to be made;
+
+                     2.     that the decision will be made based on program policy and exclusively on the
+                            testimony and evidence presented at the hearing; and
+
+                     3.     the parties will be advised in writing by certified mail of the decision.
+
+3105.7      ACTION ON INCORRECT DETERMINATION NOTICE
+
+            If the agency, fiscal agent or managed health plan recognizes an incorrect or inaccurate
+            determination Notice has been issued, a corrected Amended Notice will be issued by the agency,
+            Fiscal Agent or managed health plan. The action and effective date remain unchanged unless
+            otherwise notified in the Amended Notice.
+
+3105.8      SUBMISSION OF ADDITIONAL EVIDENCE
+
+            During a hearing, additional evidence related to the hearing issue may be submitted. The Hearing
+            Officer, provider, the DHCFP or managed health plan may request additional evidence be
+            submitted which is not available at the hearing. The Hearing Officer may:
+
+            A.       recess the hearing if additional evidence has been submitted, to allow for review by the
+                     provider, the DHCFP or managed health plan;
+
+            B.       continue the hearing to a later date and order further investigation or request either party to
+                     review or produce the additional evidence; or
+
+            C.       close the hearing, but hold the record open to permit submission of any additional evidence.
+
+3105.9      HEARING DECISION
+
+            The Hearing Officer’s decision must be in writing and comply with Nevada Medicaid or the
+            managed health plan’s program policy. The decision is based exclusively on evidence introduced
+            at the hearing.
+
+
+
+  October 26, 2017                              HEARINGS                                   Section 3105 Page 6
+
+                                                                                     MTL 20/17
+                                                                       Section:
+ DIVISION OF HEALTH CARE FINANCING AND POLICY                                            3105
+
+                                                                       Subject:
+ MEDICAID SERVICES MANUAL                                                    PROVIDER HEARINGS
+
+
+            A.       BASIS
+
+                     Decisions by the Hearing Officer shall:
+
+                     1.      be based exclusively on the evidence introduced at the hearing;
+
+                     2.      comply with applicable regulations in effect at the time of the agency’s or managed
+                             health plan’s action;
+
+                     3.      summarize the findings of fact;
+
+                     4.      identify and cite supporting evidence and regulation; and
+
+                     5.      be submitted in written format, to the Deputy Administrator, Medicaid or designee.
+
+            B.       APPEAL IS DENIED
+
+                     Denied decisions are adverse to the provider. When an appeal is denied, the Hearing Officer
+                     will notify the DHCFP or the managed health plan and the provider of their right to judicial
+                     review.
+
+                     Provider withdrawals and abandonments are equivalent to a denied appeal. The DHCFP
+                     may institute recovery procedures against the provider to recoup the cost of any services
+                     furnished.
+
+            C.       APPEAL IS SUSTAINED
+
+                     Sustained decisions are favorable to the provider. The DHCFP or the managed health plan
+                     must take corrective action promptly, retroactive to the date an incorrect action was taken.
+                     If appropriate, the agency must provide for admission or readmission of a recipient to a
+                     facility if the hearing decision is favorable to the provider or if the DHCFP decides in the
+                     provider's favor before the hearing.
+
+            D.       DECISION DUE DATE
+
+                     Within 30 calendar days following the Fair Hearing, or the date the record is closed,
+                     whichever is later, the Hearing Officer shall issue a final Decision.
+
+3105.10     RIGHT TO APPEAL HEARING DECISION
+
+            Reference NRS 422.306
+
+
+
+
+  October 26, 2017                             HEARINGS                                  Section 3105 Page 7
+
+                                                           MTL 20/17
+                                                Section:
+ DIVISION OF HEALTH CARE FINANCING AND POLICY                3105
+
+                                                Subject:
+ MEDICAID SERVICES MANUAL                             PROVIDER HEARINGS
+
+
+3105.11     HEARING RECORD
+
+            Reference NRS 422.306
+
+
+
+
+  October 26, 2017                  HEARINGS                 Section 3105 Page 8
+
+SOURCE 7: Nevada Medicaid Fair Hearing Request Form, NMO-6300 (English portion) | https://www.nevadamedicaid.nv.gov/siteassets/content/providers/fair-hearings/documents/final-nmo-6300-fair-hearing-request-form-6-25.pdf | source date: NMO-6300 (6/25) | retrieved: 2026-11-01
+REQUESTING A FAIR HEARING
+•      If you disagree with Medicaid's denial, reduction, suspension, or termination of service, you may request a
+       Fair Hearing. A Fair Hearing allows you and Medicaid to give information about your situation to a Hearing
+       Officer. The Hearing Officer is a neutral party who makes a decision on your appeal. There is no charge for a Fair
+       Hearing.
+
+•      Medicaid must receive your request within 90 calendar days from the Notice Date.
+
+•      You may represent yourself or have the help of another adult. The adult can be a friend, family member, or
+       lawyer. Medicaid has provided the names of some agencies that may be able to help you. (See below).
+
+•      The request for a Fair Hearing must include: (1) your name, address, telephone number, (2) Medicaid number;
+       and (3) if someone is helping you, the name, telephone number and address of the adult who will help you (the
+       "authorized representative"). You must sign the request unless you are unable to do so because of your disability.
+       You may use the enclosed form to request a Fair Hearing.
+
+•      If you want your services to stay the same during Fair Hearing process, you must: 1) ask for a hearing not
+       more than 10 calendar days after the Date of Action (shown on the Notice of Decision); and 2) you must
+       ask that your services stay the same. (During the Fair Hearing process, your services will be continued) You
+       may use the enclosed form to do this.
+
+•      Medicaid may ask you to pay back the cost of the continued services if you lose your appeal.
+
+•      After you have requested a Fair Hearing, Medicaid will contact you within 10 days to arrange a Hearing
+       Preparation Meeting (HPM). The meeting will be by telephone. The goal of this meeting is to try to resolve
+       your appeal. Medicaid will explain its decision and give you the chance to provide more information. If you and
+       Medicaid cannot agree, you may go to a Fair Hearing. A Hearing Preparation Meeting (HPM) is optional. You
+       do not have to take part in a HPM. You can let Medicaid know you want to go directly to a Fair Hearing and have
+       a Hearing Officer decide your appeal.
+
+To find out more about Medicaid appeals, you may go to the Nevada Department of Health and Human Services, Division
+        of Health Care Financing and Policy's Medicaid Service Manual Chapter 3100 — Hearings at: https://dhcfp.nv.gov
+If you cannot afford legal counsel, one of the Legal Services programs listed below may be able to help.
+Nevada Legal Services, Inc. (Reno) (Washoe County): (775) 284-3491
+Nevada Legal Services, Inc. (Las Vegas) Clark, Lincoln, Nye, and Esmeralda Counties:
+    (702) 386-0404 or (866) 432-0404 TDD: (702) 386-1059
+Nevada Legal Services, Inc. (Elko) Elko County: (775) 753-5880
+Nevada Legal Services, Inc (Carson City) Carson City and remaining counties: (775) 883-0404 or (800) 323-8666
+Senior Law Project (Las Vegas) Clark County residents age 60 and older:           (702) 229-6596 TDD: (702) 386-9108
+Washoe County Senior Law Project Washoe County residents age 60 and older: (775) 328-2592
+Nevada Disability Advocacy and Law Center (South) Disabled Persons and Families with Disabled Persons:
+    (702) 257-8150 or (888) 349-3843, TTY: (702) 257-8160
+Nevada Disability Advocacy and Law Center (North): (775) 333-7878 or (800) 992-5715 or TTY: (775) 788-7824
+
+                                   PIDIENDO UNA AUDIENCIA JUSTA
+•      Si usted no está de acuerdo con la negación, reducción, suspensión o terminación de servicio que
+       Medicaid ha hecho, usted puede pedir una audiencia Justa. La Audiencia Justa permite que usted y Medicaid
+       den información sobre su situación a un oficial de Audiencia. El Oficial de Audiencia es una persona neutral
+       que tomara decisiones pertinentes a su apelación. No hay costos para usted por la Audiencia Justa
+
+•      Medicaid tiene que recibir su petición dentro de 90 días calendario a partir de la fecha de la Noticia de Decisión.
+
+•      Usted puede representarse a sí mismo o puede tener la ayuda de otro adulto. El adulto puede ser un amigo, un
+       familiar o un abogado. Medicaid le ha proveído nombres de algunas agencias que quizás le puedan ayudar. (vea
+       abajo)
+
+•      La petición para una audiencia Justa tiene que incluir: (l) Su nombre, dirección, numero de teléfono, (2) su número
+       de Medicaid; y (3) si alguien le está ayudando, el nombre, el numero de teléfono y la dirección del adulto que le
+       está ayudando (el "representante autorizado"). Usted tiene que firmar la petición a menos que usted no pueda
+       hacerlo debido a una discapacidad. Usted puede usar la forma adjunta para pedir una Audiencia Justa.
+
+•      Si usted quiere que su servicio se mantenga durante el proceso de una Audiencia Justa, usted debe: l) pedir por
+       una audiencia no más de 10 días después de la fecha de Acción (que aparece en la Noticia de Decisión); 2) usted
+       tiene que pedir que su servicio siga igual (durante el proceso de Audiencia Justa, su servicio continuara) usted
+       puede usar la forma incluida para hacer eso.
+
+•      Medicaid quizás le pida que usted reembolse los costos de los servicios que han continuado si usted pierde la
+       apelación.
+
+•      Después de que usted haya pedido una Audiencia Justa. Medicaid se pondrá en contacto con usted dentro de los
+       primeros 10 días para concertar la Reunión de Preparación de Audiencia (HPM). La Reunión será por teléfono. El
+       objetivo de esta reunión es el tratar de resolver su apelación. Medicaid le explicara su decisión y le dará la
+       oportunidad de proveer mas información. Si usted o Medicaid no pueden llegar a un acuerdo usted puede ir a una
+       Audiencia Justa. La Reunión de Preparación de Audiencia (HPM) es opcional. Usted no tiene que participar en
+       una Reunión de Preparación de Audiencia. Usted puede decirle a Medicaid que usted quiere ir directamente a una
+       Audiencia Justa para que un oficial de Audiencia decida su apelación.
+
+Para saber más sobre la apelación a Medicaid, usted puede ir al Departamento de Salud y Servicios Humanos de
+       Nevada, División de Cuidados de Salud Financiamiento y Póliza Manual de Servicios de Medicaid Capitulo
+       3100 — Hearings en https://dhcfp.nv.gov . Los programas de servicios legales que aparecen abajo quizás le
+       puedan ayudar.
+
+Servicios Legales de Nevada, Inc. (Reno) (Condado de Washoe) (775) 284-3491
+Servicios Legales de Nevada, Inc (Las Vegas) condados de Clark, Lincoln, Nye y Esmeralda
+   (775) 386-0404 0 (866) 432-0404, TDD: (702) 386-1059
+Servicios Legales de Nevada, Inc (Elko) Condado de Elko (775) 753-5880
+Servicios Legales de Nevada, Inc (Carson City) Carson City y todos los demás condados        (775) 883-0404 0 (800)
+       323-8666
+Proyecto de Ley para mayores (Las Vegas) para residentes de Clark County de 60 0 más años de edad. (702)
+   229-6596, TDI): (702) 386-9108
+Proyecto de Ley para mayores para residentes del condado de Washoe de 60 0 más años de edad (775) 328-2592
+Nevada Centro de apoyo y leyes (Sur) para personas minusválidas y familias con minusválidos (702)
+   257-8150 0 (888) 349-3843, TTY (702) 257-8160
+Nevada Centro de Apoyo y Leyes (None) (775) 333-7878 (800) 992-5715, ny: (775) 788-7824
+
+                                            FAIR HEARING REQUEST FORM
+
+                  I am submitting this form to request a Fair Hearing. (Check all that apply and complete fields below)
+___ I disagree with Nevada Medicaid’s decision to reduce, terminate or deny benefits.
+___ I am requesting my Fair Hearing be expedited because a standard hearing could jeopardize my life, health or ability to attain, maintain
+    or regain maximum function. The documentation from my medical provider to support this request is attached. (If you do not supply
+    this documentation, this request will be processed within the Standard Fair Hearing timeframe, 90 days.)
+___ I am requesting a fair hearing based on the issue of reasonable promptness.
+___ During the Fair Hearing process, I would like my benefits continued. I understand I may have to pay back the cost of services or items
+    if I do not win the Fair Hearing.
+___ Please send me a free copy of the regulations relevant to my case. Also available at website: http://dhcfp.nv.gov/.
+     Estoy entregando esta forma para pedir una Audiencia Justa: (Chequee todos los que aplican y complete las lineas de abajo)
+___ Yo no estoy de acuerdo con la decision de Nevada Medicaid de reducir, terminar o negar beneficios.
+___ Estoy solicitando que mi audiencia imparcial sea acelerada porque una audiencia estándar podría poner en peligro mi vida, mi salud o
+    mi habilidad para alcanzar, mantener o recuperar la máxima función. La documentación de mi proveedor médico para apoyar esta
+    solicitud se adjunta. (Si no suministra esta documentación, esta solicitud se procesará dentro del plazo estándar de audiencia imparcial,
+    90 día.)
+___ Yo estoy pidiendo una Audiencia Justa basado en el asunto de tiempo razonable.
+___ Durante el proceso de Fair Hearing, yo quisiera que mis beneficios continύen. Yo entiendo que yo podria tener que pagar los costos por
+    servicios o cosas, si yo no gano la Audiencia Justa.
+___ Por favor mándeme una copia gratis de las regulaciones relevantes a mi caso. También disponibles en la pagina del internet
+    http://dhcfp.nv.gov/.
+
+
+Recipient name / Nombre del recipient: __________________________________________________________________________
+Phone / Teléfono: ____________________________ Recipient ID number / # de ID del recipiente: ___________________________
+Recipient mailing address / Dirección del recipiente: ________________________________________________________________
+___________________________________________________________________________________________________________
+Recipient signature / Firma Del Recipiente: _____________________________________Date / Fecha: ____________________
+
+
+Authorized representative name / Nombre del representante autorizado: _________________________________________________
+Representative mailing address / Dirección del representante: _________________________________________________________
+___________________________________________________________________________________________________________
+Phone / Teléfono: ___________________________________________________________ Date / Fecha: _____________________
+Authorized representative signature / Firma del representante autorizado: ___________________________________________
+
+                                       Return this request with a copy of the Notice of Decision to /
+                                    Regrese esta petición con una copia de la Notificación de Decisión a:
+
+                                                     Nevada Medicaid Hearings Unit
+                                                       9850 Double R Blvd Ste. 200
+                                                             Reno, NV 89521
+                                       Fax # (775) 684-3610, E-Mail medicaidhearings@nvha.nv.gov
+
+
+                               If this form is completed by a NV State employee on behalf of the Recipient:
+
+                   Employee name: ______________________________________________ Date: __________________
+
+
+
+                                                                                                                          NMO-6300 (6/25)
+
+SOURCE 8: Long Term Care Ombudsman | Nevada Aging and Disability Services Division | https://www.adsd.nv.gov/programs/programs-for-seniors/long-term-care-ombudsman/ | source date: none stated on page | retrieved: 2026-11-01
+The Nevada State Long Term Care Ombudsman Program (LTCOP) is authorized by the federal Older American’s Act. Federal law requires each state have a Long Term Care (LTC) Ombudsman Program managed by a State Long Term Care Ombudsman. The program was initiated to improve the quality of care in America’s nursing homes.
+
+
+LTC Ombudsmen receive complaints on behalf of residents who reside in LTC facilities. LTC facilities include homes for individual residential care, residential facilities for groups and nursing homes. LTC Ombudsmen conduct investigations with the resident’s consent and attempt to resolve the complaints to the satisfaction of the resident. LTC Ombudsmen work with the resident to address their concerns using person centered advocacy. Services provided by the LTCOP are confidential. LTC Ombudsmen do not share the name of the individual who filed a complaint. Any resident living in LTC facilities is eligible for services.
+
+
+ 
+
+
+In addition to resolving complaints, the LTC Ombudsmen conduct unannounced routine access visits to LTC facilities throughout the state. The purpose of these visits is to speak with residents about the care they receive and to inform residents about services provided by the LTCOP. LTC Ombudsmen also inform LTC facility staff about the role of the LTC Ombudsman during visits.
+
+
+The LTCOP serves a vital public purpose and the program provides assistance to thousands of long term care residents each year.
+
+
+ 
+
+
+Ombudsman Services:
+
+
+ 
+
+
+
+
+Assist resident with concerns related to day-to-day care, health, safety, and personal preferences.
+
+
+Provide information to the community regarding long term care in Nevada;
+
+
+Provide education to residents, families, facility staff and others on a variety of issues related to aging, long term care and resident rights; and
+
+
+Provide in-service training for long term care professionals regarding trends and best practices to improve the quality of care for residents
+
+
+
+
+ 
+
+
+Who Can Make a Report to the Ombudsman Program?
+
+
+ 
+
+
+
+
+All residents of long term care facilities;
+
+
+Friends and relatives of persons living in long term care facilities;  
+
+
+Health care professionals; and
+
+
+Long term care facility staff members.
+
+
+
+
+ 
+
+
+How to Make a Report to the Ombudsman Program?
+
+
+ 
+
+
+To report concerns in long-term care facilities, please contact LTCOP Helpline at 1-888-282-1155 or complete the complaint form: Long-Term Care Ombudsman Complaint Form. 
+
+
+Please Note: The Aging and Disability Services Division's Adult Protective Services focuses on investigations regarding abuse, neglect, including self-neglect, isolation, exploitation and abandonment involving community members and those in a long term care setting for vulnerable persons, age 18-59, in addition to older persons 60 years and older.
+
+
+ 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Make a Report to the Long Term Care Ombudsman Program 
+
+
+Call 1-888-282-1155
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LTC Ombudsman Additional Information 
+
+
+
+
+
+CMS Nursing Home Visitation FAQs
+
+
+
+
+How to Safely Conduct Visits to Nursing Homes Infographic
+
+
+
+
+LCB Draft File No. R111-19
+
+
+
+
+LTC Discharges Brochure
+
+
+
+
+LTC Ombudsman Program Brochure
+
+
+
+
+LTC Ombudsman Program Poster
+
+
+
+
+LTC Residents' Rights
+
+
+
+
+Family Council Brochure
+
+
+
+
+Resident Council Brochure
+
+
+
+
+Volunteer LTC Ombudsman Program Brochure
+
+
+
+
+Volunteer LTC Ombudsman Position Description 
+
+
+
+
+LGBT Resources
+
+
+
+
+
+
+
+
+
+Helpful Links
+
+
+
+
+
+Alzheimer’s Association
+
+
+
+
+Bureau of Health Care Quality and Compliance
+
+
+
+
+Centers for Medicare and Medicaid Services
+
+
+
+
+Medicare’s Nursing Homes
+
+
+
+
+National Consumer Voice for Quality Long Term Care
+
+
+
+
+Pioneer Network
+
+
+
+
+Positive Approach to Care
+
+
+
+
+Sanford Center for Aging
+
+
+
+
+The Eden Alternative
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Scroll to Top
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Aging & Disability Services Division
+
+Carson City
+
+Regional Office
+
+
+
+1550 E College Parkway 
+
+Carson City, NV 89706
+
+(775) 687-4210 
+
+(775) 687-0574 Fax
+
+
+
+
+
+
+
+
+
+
+
+
+
+Home
+
+
+
+
+
+
+
+
+
+
+adsd.nv.gov
+
+
+
+
+
+
+
+
+
+
+
+
+About
+
+
+
+
+
+
+
+
+
+
+About
+
+
+
+
+
+
+
+
+
+
+
+
+Programs Information
+
+
+
+
+
+
+
+
+
+
+Programs
+
+
+Program Policy
+
+
+
+
+
+
+
+
+
+
+
+
+
+Board/Commission Information
+
+
+
+
+
+
+
+
+
+
+Boards/Commissions
+
+
+Meetings
+
+
+
+
+
+
+
+
+
+
+
+
+
+Resources
+
+
+
+
+
+
+
+
+
+
+Resources
+
+
+Contact
+
+
+Career Opportunities
+
+
+Providers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The Official State of Nevada Website
+Copyright © 2026 State of Nevada - All Rights Reserved
+
+
+
+
+
+
+Privacy Policy
+
+
+ADA Technology And Accessibility Guidelines
+
+
+Web Style Standards
+
+
+ADA Assistance
+
+SOURCE 9: Nursing Home Discharges, Transfers, and Room Changes: Know Your Rights (LTC Discharges Brochure), excerpt (first page only; the brochure's inside spread runs in three interleaved newspaper columns per CLAUDE.md's two-column-PDF trap and is captured separately below exactly as pdftotext rendered it) | Nevada Aging and Disability Services Division, Long Term Care Ombudsman Program | https://www.adsd.nv.gov/uploadedFiles/adsdnvgov/content/Programs/Seniors/LTCOmbudsman/LTC%20Discharges%20Brochure(2).pdf | source date: none stated | retrieved: 2026-11-01
+Long Term Care
+    Ombudsman Program                          For more information please
+                                                      contact your
+        Mission Statement                         local Long Term Care
+                                                      Ombudsman:
+   To empower residents and advo-
+    cate for the protection of residents’                Carson City
+    health, safety, welfare, and rights             3416 Goni Rd. Suite 132
+                                                     Carson City, NV 89706
+   To promote or support resident                      (775) 687-4210
+    councils, family councils, and com-
+                                                             Elko
+    munity groups
+                                                 1010 Ruby Vista Dr. Suite 104
+                                                       Elko, NV 89801
+   To represent the interests of resi-
+    dents before governmental agen-
+    cies
+                                                       (775) 738-1966
+                                                          Las Vegas
+                                                                                       Nursing Home
+   To analyze, comment on, and moni-
+                                                     3320 W. Sahara Ave
+                                                     Las Vegas, NV 89104
+                                                                                        Discharges,
+    tor laws, regulations, and policies
+    pertinent to long term care residents
+                                                        (702) 486-3545                 Transfers, and
+                                                            Reno
+                                                  9670 Gateway Dr. Suite 100          Room Changes:
+                                                       Reno, NV 89521
+                                                       (775) 687-0800                    Know Your
+                                                                                           Rights
+
+
+
+
+                                            To report concerns about long term care
+                                                    facilities please call the
+                                                     Ombudsman Helpline:
+
+                                                        1-888-282-1155
+
+             Discharges                                            Transfers                                      Room Changes
+According to Nevada Revised Statute 449            A nursing facility must give you, your guardian,     Under the Code of Federal Regulations 483.10(b)
+                                                                                                        (11) residents have an absolute right to refuse to
+and Code of Federal Regulations 483.12             conservator or legally liable relative a written
+                                                                                                        accept:
+the only legitimate reasons to be dis-             notice with at least 30 days notice before a
+                                                                                                        • a transfer from the portion of a nursing home
+charged from a Nursing Home are as fol-            resident is transferred or discharged. In order
+                                                                                                            designated as the Medicare wing to any other
+lows:                                              to ensure that the resident has been made
+                                                                                                            portion of the home ;
+                                                   aware of their rights and afforded the oppor-
+•   Transfer or discharge is necessary to                                                               •   a transfer from the portion of a nursing home
+                                                   tunity to appeal the nursing home must comply
+    meet the resident’s welfare; and the res-                                                               designated as the Medicaid wing to any other
+                                                   with all of the following notice requirements:
+    ident’s welfare cannot be met in the fa-                                                                portion of the home
+    cility; (i.e. resident requires hospitaliza-                                                        Room-to-room transfers are permitted only in fol-
+                                                   •   The reason for transfer/ discharge.              lowing instances:
+    tion)                                          •   The date of the proposed transfer/
+                                                                                                        •   If it is necessary to promote the resident’s well
+•   Resident is well enough to be dis-                 discharge.
+                                                                                                        -being. (i.e. infection control or need for special-
+    charged to a lower level of care and no        •   The location to which the nursing facility       ized equipment that cannot be accommodated in
+    longer needs Nursing Home placement;               proposes transfer/ discharge                     current room)
+                                                   •   Resident’s right to a hearing to appeal the
+                                                                                                        •   If roommates are incompatible causing risk.
+•   The resident has become a danger to                 transfer/discharge.
+                                                                                                        •   If a temporary transfer is needed to make re-
+    themselves or others in the facility;          •   The procedures you must follow to request
+                                                                                                        pairs or renovations. The resident has the right to
+                                                       a hearing.
+•   The resident’s health status is a danger                                                            return as soon as the repairs or renovations are
+                                                   •   The date by which you must request a
+    to others in the facility; (i.e. infectious                                                         completed.
+                                                       hearing in order to prevent the transfer/
+    disease)                                                                                            • If the transfer is necessary to permit the ad-
+                                                       discharge.
+                                                                                                        mission of a resident of the opposite sex.
+•   The resident has failed to pay their bill      •   Resident’s right to representation at the
+                                                       hearing.                                         • If the resident no longer needs specialized
+    after reasonable and appropriate notice;                                                            medical equipment that cannot be moved from the
+    or                                             •   If a resident is being transferred to a hospi-
+                                                                                                        resident’s room, or another resident needs access
+                                                       tal; information regarding holding your bed
+                                                                                                        to that equipment.
+•   The facility ceases to operate.                    and readmission to the facility.
+                                                   •   Contact information for the Long-term Care       •   If the resident no longer needs the specialized
+The need for all discharges must be appro-                                                              services or programming that is the focus of the
+                                                       Ombudsman .
+priately documented by physicians and clin-                                                             area of the facility in which the patient is located.
+ical staff. Moreover the facility is responsi-                                                          •   If facility wants to transfer a Medicaid recipient
+ble to arrange for safe and appropriate dis-                                                            from a private room to a non-private room.
+charge.                                                                                                 •   If a temporary transfer is necessary because
+                                                                                                        of an emergency. (i.e. infection control, environ-
+                                                                                                        mental emergency)
+
