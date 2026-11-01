@@ -1,0 +1,16 @@
+{
+ "entry": {
+  "file_count": 372,
+  "id": "2026-11-01T135352Z",
+  "manifest_file": "manifests/2026-11-01T135352Z.txt",
+  "manifest_sha256": "991e11bd27eec53b78e19cc91c13b30d6a93542d14523720084e04d3f623a66f",
+  "note": "nightly review: nevada, new-hampshire, new-jersey confirmed",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "8c18ad184e0a328f020aa05d6aa9fe53ec49a4f87cb814970fe310683650eabc",
+  "repo": "transfer-safeguards",
+  "utc": "2026-11-01T13:53:52+00:00"
+ },
+ "entry_sha256": "1da9135d4ce165dc12e40fa74cad05abad0407029b8b6272ccd63abade012a18"
+}
