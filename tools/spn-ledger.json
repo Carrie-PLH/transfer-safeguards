@@ -700,29 +700,29 @@
       "page": "montana"
     },
     "https://dsd.maryland.gov/regulations/Pages/10.07.09.10.aspx": {
-      "attempts": 1,
-      "last_attempt": "2026-10-16T053305Z",
+      "attempts": 2,
+      "last_attempt": "2026-11-01T162703Z",
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "maryland"
     },
     "https://dsd.maryland.gov/regulations/Pages/10.07.09.11.aspx": {
-      "attempts": 1,
-      "last_attempt": "2026-10-16T053839Z",
+      "attempts": 2,
+      "last_attempt": "2026-11-01T163152Z",
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "maryland"
     },
     "https://dsd.maryland.gov/regulations/Pages/10.07.09.12.aspx": {
-      "attempts": 1,
-      "last_attempt": "2026-10-16T054401Z",
+      "attempts": 2,
+      "last_attempt": "2026-11-01T165240Z",
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "maryland"
     },
     "https://dsd.maryland.gov/regulations/Pages/10.07.09.13.aspx": {
-      "attempts": 1,
-      "last_attempt": "2026-10-16T054851Z",
+      "attempts": 2,
+      "last_attempt": "2026-11-01T165837Z",
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "maryland"
@@ -823,9 +823,9 @@
       "page": "new-hampshire"
     },
     "https://gc.nh.gov/rsa/html/XI/151/151-26.htm": {
-      "attempts": 1,
-      "last_attempt": "2026-10-20T132556Z",
-      "last_detail": "submit-0",
+      "attempts": 2,
+      "last_attempt": "2026-11-01T182858Z",
+      "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "new-hampshire"
     },
@@ -1063,17 +1063,17 @@
       "page": "virginia"
     },
     "https://ldh.la.gov/assets/medicaid/StatePlan/Sec4/Attachment4.19C.pdf": {
-      "attempts": 1,
+      "attempts": 2,
       "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-16T051045Z",
-      "last_detail": "error:no-request",
+      "last_attempt": "2026-11-01T161438Z",
+      "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "louisiana"
     },
     "https://ldh.la.gov/assets/medicaid/hss/docs/NH/NH_Regulations/NF_regs_as_of_3-14-22.pdf": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-16T051104Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-01T161513Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "louisiana"
@@ -1151,16 +1151,16 @@
       "page": "utah"
     },
     "https://medicaid.ms.gov/wp-content/uploads/2025/07/Title-23-Part-300-Appeals-eff.-7.1.2025.pdf": {
-      "attempts": 1,
-      "last_attempt": "2026-10-19T121508Z",
-      "last_detail": "error:not-found",
+      "attempts": 2,
+      "last_attempt": "2026-11-01T170140Z",
+      "last_detail": "error:no-captures",
       "last_result": "FAILED",
       "page": "mississippi"
     },
     "https://medicaid.ms.gov/wp-content/uploads/2026/07/Title-23-Part-207-Institutional-LTC-eff-8.1.26.pdf": {
-      "attempts": 1,
-      "last_attempt": "2026-10-19T121530Z",
-      "last_detail": "error:not-found",
+      "attempts": 2,
+      "last_attempt": "2026-11-01T170220Z",
+      "last_detail": "error:no-captures",
       "last_result": "FAILED",
       "page": "mississippi"
     },
@@ -1315,8 +1315,8 @@
       "page": "nebraska"
     },
     "https://nhmmis.nh.gov/portals/wps/wcm/connect/07669c79-1c8c-4fae-b94e-5a367379f968/NH+Medicaid+Final++Nursing+Facility+Manual+7-14-2020.pdf?MOD=AJPERES&CVID=ninzmzW": {
-      "attempts": 1,
-      "last_attempt": "2026-10-20T132608Z",
+      "attempts": 2,
+      "last_attempt": "2026-11-01T182913Z",
       "last_detail": "submit-0",
       "last_result": "FAILED",
       "page": "new-hampshire"
@@ -1760,9 +1760,9 @@
       "page": "connecticut"
     },
     "https://www.chfs.ky.gov/agencies/dail/Pages/ltcomb.aspx": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-16T050733Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-01T160954Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "kentucky"
@@ -1786,25 +1786,25 @@
       "page": "california"
     },
     "https://www.dhhs.nh.gov/about-dhhs/long-term-care-ombudsman": {
-      "attempts": 1,
-      "last_attempt": "2026-10-20T132620Z",
+      "attempts": 2,
+      "last_attempt": "2026-11-01T182930Z",
       "last_detail": "submit-0",
       "last_result": "FAILED",
       "page": "new-hampshire"
     },
     "https://www.dhhs.nh.gov/doing-business-dhhs/legal-services/administrative-appeals": {
-      "attempts": 1,
+      "attempts": 2,
       "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-20T132640Z",
-      "last_detail": "error:no-request",
+      "last_attempt": "2026-11-01T182943Z",
+      "last_detail": "submit-0",
       "last_result": "FAILED",
       "page": "new-hampshire"
     },
     "https://www.dhhs.nh.gov/long-term-care-ombudsman-oltc": {
-      "attempts": 1,
+      "attempts": 2,
       "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-20T132830Z",
-      "last_detail": "error:no-request",
+      "last_attempt": "2026-11-01T183016Z",
+      "last_detail": "submit-0",
       "last_result": "FAILED",
       "page": "new-hampshire"
     },
@@ -1926,9 +1926,9 @@
       "page": "texas"
     },
     "https://www.ilga.gov/legislation/ILCS/details?MajorTopic=REGULATION&Chapter=HEALTH+FACILITIES+AND+REGULATION&ActName=Nursing+Home+Care+Act.&ActID=1225&ChapterID=21&ChapAct=210+ILCS+45/&SeqStart=17400000&SeqEnd=19900000&Print=True": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-16T045108Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-01T160736Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "illinois"
@@ -1961,9 +1961,9 @@
       "page": "indiana"
     },
     "https://www.kancare.ks.gov/members/help-resources/appeals-fair-hearings/state-fair-hearings": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-16T050112Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-01T160847Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "kansas"
@@ -2014,33 +2014,33 @@
       "page": "iowa"
     },
     "https://www.maine.gov/dhhs/about-us/administrative-hearings": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-16T051220Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-01T161538Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "maine"
     },
     "https://www.maine.gov/dhhs/about-us/administrative-hearings/faq": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-16T051239Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-01T161602Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "maine"
     },
     "https://www.maine.gov/sos/sites/maine.gov.sos/files/content/assets/144c110.docx": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-16T051428Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-01T161656Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "maine"
     },
     "https://www.maine.gov/sos/sites/maine.gov.sos/files/inline-files/c2s067-LUP%2009.15.2014%20NSC.docx": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-16T051447Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-01T161715Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "maine"
@@ -2055,9 +2055,9 @@
       "page": "maine"
     },
     "https://www.maineombudsman.org/about.aspx": {
-      "attempts": 1,
-      "last_attempt": "2026-10-16T051703Z",
-      "last_detail": "submit-0",
+      "attempts": 2,
+      "last_attempt": "2026-11-01T162210Z",
+      "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "maine"
     },
@@ -2125,33 +2125,33 @@
       "page": "mississippi"
     },
     "https://www.michigan.gov/-/media/Project/Websites/lara/healthsystemslicensing/Folder9/bhs_GUIDANCE_for_Inv_Transfer.pdf": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-16T055346Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-01T165919Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "michigan"
     },
     "https://www.michigan.gov/-/media/Project/Websites/mdhhs/Folder1/Folder31/MSA_04-20.pdf": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-16T055405Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-01T165939Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "michigan"
     },
     "https://www.michigan.gov/lara/-/media/Project/Websites/lara/bchs/Folder2/LARA-BCHS-ITD-100-07262024.pdf": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-16T055424Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-01T165958Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "michigan"
     },
     "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Assistance-Programs/Medicaid-BPHASA/Other-Prov-Specific-Page-Docs/LTC_00-05_9045_7.pdf": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-16T055443Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-01T170018Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "michigan"
@@ -2227,9 +2227,9 @@
       "page": "new-jersey"
     },
     "https://www.ombudsman.ks.gov/helpful-resources/issues-of-interest/involuntary-discharge": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-16T050308Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-01T160932Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "kansas"
@@ -2334,9 +2334,9 @@
       "page": "south-carolina"
     },
     "https://www.sos.mo.gov/cmsimages/adrules/csr/current/19csr/19c30-82.pdf": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-19T121958Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-01T170324Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "missouri"
@@ -2424,5 +2424,5 @@
       "page": "wyoming"
     }
   },
-  "updated": "2026-10-31T192101Z"
+  "updated": "2026-11-01T183016Z"
 }
