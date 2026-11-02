@@ -35,8 +35,8 @@
       "page": "florida"
     },
     "http://www.oltco.org/contact-us/": {
-      "attempts": 1,
-      "last_attempt": "2026-10-22T044147Z",
+      "attempts": 2,
+      "last_attempt": "2026-11-02T154321Z",
       "last_detail": "error:not-acceptable",
       "last_result": "FAILED",
       "page": "oregon"
@@ -67,22 +67,22 @@
       "page": "idaho"
     },
     "https://adminrules.utah.gov/public/rule/R410-14/Current%20Rules": {
-      "attempts": 1,
-      "last_attempt": "2026-10-26T054643Z",
+      "attempts": 2,
+      "last_attempt": "2026-11-02T160221Z",
       "last_detail": "error:not-found",
       "last_result": "FAILED",
       "page": "utah"
     },
     "https://adminrules.utah.gov/public/rule/R414-504/Current%20Rules": {
-      "attempts": 1,
-      "last_attempt": "2026-10-26T054702Z",
+      "attempts": 2,
+      "last_attempt": "2026-11-02T160327Z",
       "last_detail": "error:not-found",
       "last_result": "FAILED",
       "page": "utah"
     },
     "https://adminrules.utah.gov/public/rule/R432-150/Current%20Rules": {
-      "attempts": 1,
-      "last_attempt": "2026-10-26T054813Z",
+      "attempts": 2,
+      "last_attempt": "2026-11-02T160625Z",
       "last_detail": "error:not-found",
       "last_result": "FAILED",
       "page": "utah"
@@ -140,15 +140,15 @@
       "page": "new-york"
     },
     "https://aging.ohio.gov/care-and-living/ombudsman/get-help/get-help": {
-      "attempts": 1,
-      "last_attempt": "2026-10-20T134919Z",
+      "attempts": 2,
+      "last_attempt": "2026-11-02T154240Z",
       "last_detail": "error:not-found",
       "last_result": "FAILED",
       "page": "ohio"
     },
     "https://aging.ohio.gov/care-and-living/ombudsman/residents-rights/discharge-transfer": {
-      "attempts": 1,
-      "last_attempt": "2026-10-20T134938Z",
+      "attempts": 2,
+      "last_attempt": "2026-11-02T154301Z",
       "last_detail": "error:not-found",
       "last_result": "FAILED",
       "page": "ohio"
@@ -489,18 +489,20 @@
       "page": "utah"
     },
     "https://daas.utah.gov/ombudsman-locations": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-26T055016Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-02T160645Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "utah"
     },
     "https://daas.utah.gov/wp-content/uploads/2024/07/SNF-Discharge-Appeal-Form-11.7.23.pdf": {
-      "attempts": 1,
-      "last_attempt": "2026-10-26T055450Z",
-      "last_detail": "no-playback",
-      "last_result": "FAILED",
+      "attempts": 2,
+      "capture": "https://web.archive.org/web/20261102160703/https://daas.utah.gov/wp-content/uploads/2024/07/SNF-Discharge-Appeal-Form-11.7.23.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-11-02T160740Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "utah"
     },
     "https://dail.vermont.gov/sites/dail/files/documents/Nursing_Home_Regulations_2018.pdf": {
@@ -626,9 +628,9 @@
       "page": "utah"
     },
     "https://dhs.sd.gov/en/ltss/ombudsman-program": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-25T054153Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-02T154631Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "south-dakota"
@@ -728,8 +730,8 @@
       "page": "maryland"
     },
     "https://dss.sd.gov/docs/medicaid/providers/billingmanuals/Institutional/Skilled_Nursing_Facilities_and_Nursing_Facilities.pdf": {
-      "attempts": 1,
-      "last_attempt": "2026-10-25T054659Z",
+      "attempts": 2,
+      "last_attempt": "2026-11-02T155107Z",
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "south-dakota"
@@ -753,17 +755,17 @@
       "page": "florida"
     },
     "https://eohhs.ri.gov/media/45546/download?language=en": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-24T045656Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-02T154438Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "rhode-island"
     },
     "https://eohhs.ri.gov/reference-center/eohhs-appeals-office": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-24T045715Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-02T154553Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "rhode-island"
@@ -1347,9 +1349,9 @@
       "page": "idaho"
     },
     "https://oha.ri.gov/resources/fraud-and-abuse/ombudsman-program": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-24T045825Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-02T154611Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "rhode-island"
@@ -1416,32 +1418,34 @@
       "page": "connecticut"
     },
     "https://publications.tnsosfiles.com/rules/1200/1200-08/1200-08-06.20210818.pdf": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-25T055131Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-02T155126Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "tennessee"
     },
     "https://publications.tnsosfiles.com/rules/1200/1200-13/1200-13-02.20260629.pdf": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-25T055149Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-02T155145Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "tennessee"
     },
     "https://regs.health.ny.gov/content/section-4153-residents-rights": {
-      "attempts": 1,
-      "last_attempt": "2026-10-20T133705Z",
-      "last_detail": "submit-0",
+      "attempts": 2,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-11-02T153946Z",
+      "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "new-york"
     },
     "https://regs.health.ny.gov/content/section-5059-residential-health-care": {
-      "attempts": 1,
-      "last_attempt": "2026-10-20T133717Z",
-      "last_detail": "submit-0",
+      "attempts": 2,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-11-02T154005Z",
+      "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "new-york"
     },
@@ -1649,16 +1653,16 @@
       "page": "nevada"
     },
     "https://www.aging.nm.gov/contact-us/": {
-      "attempts": 1,
-      "last_attempt": "2026-10-20T133103Z",
-      "last_detail": "submit-0",
+      "attempts": 2,
+      "last_attempt": "2026-11-02T152946Z",
+      "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "new-mexico"
     },
     "https://www.aging.nm.gov/ombudsman/": {
-      "attempts": 1,
-      "last_attempt": "2026-10-20T133115Z",
-      "last_detail": "submit-0",
+      "attempts": 2,
+      "last_attempt": "2026-11-02T153435Z",
+      "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "new-mexico"
     },
@@ -1859,25 +1863,25 @@
       "page": "new-mexico"
     },
     "https://www.health.ny.gov/facilities/nursing/rights/docs/discharge_notice_template.docx": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-20T133826Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-02T154136Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "new-york"
     },
     "https://www.health.ny.gov/facilities/nursing/rights/transfer_discharge.htm": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-20T133938Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-02T154159Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "new-york"
     },
     "https://www.health.ny.gov/facilities/nursing/rights/transfer_discharge_appeal.htm": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-20T133957Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-02T154220Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "new-york"
@@ -1919,8 +1923,8 @@
       "page": "north-dakota"
     },
     "https://www.hhs.texas.gov/sites/default/files/documents/pl2022-25.pdf": {
-      "attempts": 1,
-      "last_attempt": "2026-10-26T054623Z",
+      "attempts": 2,
+      "last_attempt": "2026-11-02T160111Z",
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "texas"
@@ -2367,15 +2371,15 @@
       "page": "new-mexico"
     },
     "https://www.srca.nm.gov/parts/title08/08.370.0016.html": {
-      "attempts": 1,
-      "last_attempt": "2026-10-20T133425Z",
-      "last_detail": "submit-0",
+      "attempts": 2,
+      "last_attempt": "2026-11-02T153923Z",
+      "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "new-mexico"
     },
     "https://www.tn.gov/content/dam/tn/tenncare/documents/NFInvoluntaryDischargeNotice.pdf": {
-      "attempts": 1,
-      "last_attempt": "2026-10-25T055623Z",
+      "attempts": 2,
+      "last_attempt": "2026-11-02T155620Z",
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "tennessee"
@@ -2424,5 +2428,5 @@
       "page": "wyoming"
     }
   },
-  "updated": "2026-11-01T183016Z"
+  "updated": "2026-11-02T160740Z"
 }
