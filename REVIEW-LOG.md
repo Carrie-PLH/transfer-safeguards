@@ -1654,3 +1654,39 @@ entries opened this pass. Not deployed.
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-11-01. No
 human review is claimed for this entry.
+
+## 2026-11-03 — nightly review (portfolio-nightly-qc-review)
+
+Cursor was `new-mexico`; batch new-mexico, new-york, north-carolina,
+north-dakota, ohio (5-page budget this pass).
+
+- **new-mexico: CONFIRMED.** Recipe capture (digest 6d7c97f52626), 6
+  sources. Zero failures on both files. Retained (hash b6addcb54d7f46cf).
+  Promoted.
+- **new-york: CONFIRMED.** Recipe capture (digest 2578dffd9ed4), 6 sources.
+  Zero failures on both files. Retained; unchanged since the 2026-10-08
+  capture. Promoted.
+- **north-carolina: CONFIRMED.** Recipe capture (digest 62f09b26277f), 6
+  sources. Zero failures on both files. Retained (hash d2d4b7e4efdef0d0).
+  Promoted.
+- **north-dakota: CONFIRMED.** Recipe capture (digest 568a1c24876d), 6
+  sources. Zero failures on both files. Retained (hash 245f6f14ec64ffa8).
+  Promoted.
+- **ohio: CONFIRMED.** Recipe capture (digest 7feaef9993da), 7 sources.
+  Zero failures on both files. Retained; unchanged since the 2026-10-10
+  capture. Promoted.
+
+Checked date updated to 2026-11-03 in each states/<slug>.md (bare ISO),
+re-rendered via render-state.py (zero fidelity failures confirmed against
+each render), derived dates synced via sync-checked-dates.py (10 corrected:
+table + json for all five). build-status.py: baseline 51/51, full 50/51
+(pre-existing Hawaii backfill gap, unaffected by this pass). generate-
+sitemap.py: 58 URLs, robots.txt and _redirects regenerated (no page-set
+change this pass). build-state-picker.py: 51/51 regenerated on both pages.
+check-all.py: 104 pages across 52 states, no unexplained failures.
+check-live.py: 5 pages sampled, nothing loaded from any other host. Cursor
+advanced: new-mexico -> oklahoma. No drift, no unreachable sources, no
+queue entries opened this pass. Not deployed.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-11-03. No
+human review is claimed for this entry.

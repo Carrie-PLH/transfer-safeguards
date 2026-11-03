@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The New York State Long Term Care Ombudsman Program, on the NYS Office for the Aging's own page: "Helping residents in long term care facilities. Call 1-(855)-582-6769 to reach your Ombudsman." The page's contact section reads: "Reach out to the New York State Ombudsman Claudette Royal." The page as read 2026-09-04 also carried a sentence describing the Office of the State Long Term Care Ombudsman as an independent office administratively housed in the Office for the Aging; the page as read 2026-10-08 no longer carries it (finding 13 in the change log, where the superseded wording is quoted).
 
-**Sources last checked.** 2026-10-08
+**Sources last checked.** 2026-11-03
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 

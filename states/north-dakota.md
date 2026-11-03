@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The North Dakota Long-Term Care Ombudsman Program's own page states of itself: "North Dakota's Long-Term Care Ombudsman Program speaks on behalf of people living in assisted living homes, basic care homes, hospital swing beds, transitional cal units or nursing homes." Its own published contact carries no street address, only "Calling toll-free (855) 462-5465, select option 3, or (701) 328-4617." and "Sending an encrypted email to dhsagingombud@nd.gov". The department's own Care Choice provider directory instead lists a street address for the same program: "1237 W Divide Ave Ste 6" "Bismarck, 58501", alongside the same phone numbers and a fax number the program's own page does not print, "(701) 328-0389" — both shown as published, not reconciled.
 
-**Sources last checked.** 2026-09-25
+**Sources last checked.** 2026-11-03
 
 Reproduced from the agencies' own pages and documents quoted below, potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 
