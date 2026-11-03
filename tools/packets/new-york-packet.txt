@@ -1,10 +1,11 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: new-york
-ASSEMBLED: 2026-10-08
+ASSEMBLED: 2026-11-03
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/new-york.json (recipe digest 2578dffd9ed4). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
 - SOURCE 1: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
   The standing packet's own method is 'tag strip over the <main> element', but this response has no <main> tag and its id="main" div omits the page's own 'Revised: April 2022' line and site navigation that the standing packet plainly carries — the original capture must have scoped wider than that div, whatever tool produced it. 'body' is the widest legal scope and reproduces everything the standing packet holds (the nav menu, the rights list, the 'Revised' line, the footer) plus nothing narrower would have dropped; a superset is safe here per the recipe README. Plain curl with a browser user-agent returns 200 with the full server-rendered page; no WAF or JS gate sits in front of this host.
 - SOURCE 2: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
@@ -18,7 +19,7 @@ CAPTURE NOTES:
 - SOURCE 6: transport curl; extractor docx; scope paragraphs-and-tables; filters none.
   Linked from source 2 ('Discharge Appeal template (DOCX) - Available in the following languages: ...'), recorded capture-pending at baseline. This is the English-language version; the other ten linked language versions are not captured, matching the project's Spanish-page convention of published-translations-only and this page carrying no non-English edition yet. The document is the department's own fillable notice form, citing '10 NYCRR § 415.3 and 42 CFR § 483.15' on its face; it states the same 30-day/60-day/appeal structure as sources 1-2 and adds two things neither consumer page states: a sentence that a resident who remains in the facility pending an appeal 'may be liable for the cost to stay at the facility pending the appeal if the resident loses their appeal', and the full published contact block for Disability Rights New York, the protection-and-advocacy agency 415.3(i)(1)(v)(h) requires the notice to name for residents with mental illness or developmental disabilities. The file has 10 tables, each with no cells holding text (checkbox/layout scaffolding only), so 'paragraphs-and-tables' and 'paragraphs-only' extract identically here; the wider setting is used for consistency with the California packet's convention for this extractor.
 
-SOURCE 1: New York State Department of Health, Transfer and Discharge Resident Rights | https://www.health.ny.gov/facilities/nursing/rights/transfer_discharge.htm | source date: Revised: April 2022 | retrieved: 2026-10-08
+SOURCE 1: New York State Department of Health, Transfer and Discharge Resident Rights | https://www.health.ny.gov/facilities/nursing/rights/transfer_discharge.htm | source date: Revised: April 2022 | retrieved: 2026-11-03
 skip to main content
 
 Navigation menu
@@ -392,7 +393,7 @@ THREADS
 
 BLUESKY
 
-SOURCE 2: New York State Department of Health, Nursing Home Transfer or Discharge Appeal | https://www.health.ny.gov/facilities/nursing/rights/transfer_discharge_appeal.htm | source date: Revised: July 2026 | retrieved: 2026-10-08
+SOURCE 2: New York State Department of Health, Nursing Home Transfer or Discharge Appeal | https://www.health.ny.gov/facilities/nursing/rights/transfer_discharge_appeal.htm | source date: Revised: July 2026 | retrieved: 2026-11-03
 skip to main content
 
 Navigation menu
@@ -668,7 +669,7 @@ THREADS
 
 BLUESKY
 
-SOURCE 3: New York State Office for the Aging, Long Term Care Ombudsman Program | https://aging.ny.gov/long-term-care-ombudsman-program | source date: none stated on page | retrieved: 2026-10-08
+SOURCE 3: New York State Office for the Aging, Long Term Care Ombudsman Program | https://aging.ny.gov/long-term-care-ombudsman-program | source date: none stated on page | retrieved: 2026-11-03
 An Advocate and Resource
 
 Helping residents in long term care facilities. Call 1-(855)-582-6769 to reach your Ombudsman.
@@ -754,7 +755,7 @@ Reach out to the New York State Ombudsman Claudette Royal.
 
 Contact
 
-SOURCE 4: 10 NYCRR 415.3, Residents' rights — New York Codes, Rules and Regulations | https://regs.health.ny.gov/content/section-4153-residents-rights | source date: Effective Date 02/24/2022 | retrieved: 2026-10-08
+SOURCE 4: 10 NYCRR 415.3, Residents' rights — New York Codes, Rules and Regulations | https://regs.health.ny.gov/content/section-4153-residents-rights | source date: Effective Date 02/24/2022 | retrieved: 2026-11-03
 Home
 
 Section 415.3 - Residents' rights
@@ -1111,7 +1112,7 @@ Section 415.3 - Residents' rights
 
 Volume
 
-SOURCE 5: 18 NYCRR 505.9, Residential health care — New York Codes, Rules and Regulations | https://regs.health.ny.gov/content/section-5059-residential-health-care | source date: Effective Date 05/29/2019 | retrieved: 2026-10-08
+SOURCE 5: 18 NYCRR 505.9, Residential health care — New York Codes, Rules and Regulations | https://regs.health.ny.gov/content/section-5059-residential-health-care | source date: Effective Date 05/29/2019 | retrieved: 2026-11-03
 Home
 
 Section 505.9 - Residential health care.
@@ -1396,7 +1397,7 @@ Social Services Law, Sections 363-a and 365-a(2)
 
 Volume
 
-SOURCE 6: Transfer/Discharge Notice template (DOCX) — New York State Department of Health | https://www.health.ny.gov/facilities/nursing/rights/docs/discharge_notice_template.docx | source date: none stated in the document | retrieved: 2026-10-08
+SOURCE 6: Transfer/Discharge Notice template (DOCX) — New York State Department of Health | https://www.health.ny.gov/facilities/nursing/rights/docs/discharge_notice_template.docx | source date: none stated in the document | retrieved: 2026-11-03
 TRANSFER/DISCHARGE NOTICE
 
 Date: 

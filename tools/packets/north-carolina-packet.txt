@@ -1,10 +1,11 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: north-carolina
-ASSEMBLED: 2026-10-10
+ASSEMBLED: 2026-11-03
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/north-carolina.json (recipe digest 62f09b26277f). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
 - SOURCE 1: transport curl; extractor pdftotext-layout; filters none.
   The General Assembly's single-section PDF, captured whole — no slice, because the document is the section. Plain curl with a pinned browser user-agent is enough for ncleg.gov. The Assembly prints its own hyphenation character inside section numbers and defined terms; that character is the document's and is carried through rather than folded to an ASCII hyphen.
 - SOURCE 2: transport curl; extractor pdftotext-layout; filters none.
@@ -18,7 +19,7 @@ CAPTURE NOTES:
 - SOURCE 6: transport curl; extractor pdftotext-layout; slice from '7.4     Bed Holds\nIn accordance with 42 CFR 483.12(b)' to '7.5     Private Rooms\nIn accordance with 42 CFR 483.10(c)(8)(ii)(k)'; filters none.
   Same document and transport as source 5, a second slice for the non-adjacent Bed Holds subsection. Same table-of-contents collision, same fix.
 
-SOURCE 1: N.C.G.S. § 131E-117, Declaration of patient's rights | https://www.ncleg.gov/EnactedLegislation/Statutes/PDF/BySection/Chapter_131E/GS_131E-117.pdf | source date: none stated on document | retrieved: 2026-10-10
+SOURCE 1: N.C.G.S. § 131E-117, Declaration of patient's rights | https://www.ncleg.gov/EnactedLegislation/Statutes/PDF/BySection/Chapter_131E/GS_131E-117.pdf | source date: none stated on document | retrieved: 2026-11-03
 § 131E‑117. Declaration of patient's rights.
     All facilities shall treat their patients in accordance with the provisions of this Part. Every
 patient shall have the following rights:
@@ -108,7 +109,7 @@ G.S. 131e-117                                                                   
 
 G.S. 131e-117                                                                                 Page 2
 
-SOURCE 2: NC Medicaid, Nursing Home Notice of Transfer/Discharge, NC Medicaid-9050 (PDF) | https://medicaid.ncdhhs.gov/nursing-home-transfer-dicharge-notice/download | source date: NC Medicaid-9050 (6/2026) | retrieved: 2026-10-10
+SOURCE 2: NC Medicaid, Nursing Home Notice of Transfer/Discharge, NC Medicaid-9050 (PDF) | https://medicaid.ncdhhs.gov/nursing-home-transfer-dicharge-notice/download | source date: NC Medicaid-9050 (6/2026) | retrieved: 2026-11-03
 NURSING HOME
                                               NOTICE OF TRANSFER/DISCHARGE
 
@@ -169,7 +170,7 @@ Signature of Administrator                                                Date
 
     NC Medicaid-9050 (6/2026)
 
-SOURCE 3: NC Medicaid, Appeals and Grievances — NC Medicaid Hearing Office | https://medicaid.ncdhhs.gov/beneficiaries/appeals-and-grievances | source date: none stated on page | retrieved: 2026-10-10
+SOURCE 3: NC Medicaid, Appeals and Grievances — NC Medicaid Hearing Office | https://medicaid.ncdhhs.gov/beneficiaries/appeals-and-grievances | source date: none stated on page | retrieved: 2026-11-03
 Skip to main content
  
 
@@ -495,6 +496,11 @@ Program Specific Clinical Coverage Policies
 
 
 Claims and Billing
+
+
+
+
+Federal Medicaid Changes: What Providers Need to Know
 
 
 
@@ -899,10 +905,7 @@ Additional Information
 
 
 
-
 Skilled Nursing Facility Discharge Appeals
-
-
 
 
 
@@ -910,16 +913,11 @@ Adult Care Home Discharge Appeals
 
 
 
-
-
 Transfer/Discharge Process Webinars
 
 
 
-
-
 PASRR Adverse Determination Hearings
-
 
 
 
@@ -1359,7 +1357,7 @@ Open Budget
 Hosted on
  Digital Commons
 
-SOURCE 4: NCDHHS Division of Aging, Long-Term Care Ombudsman | https://www.ncdhhs.gov/divisions/aging/long-term-care-ombudsman | source date: none stated on page | retrieved: 2026-10-10
+SOURCE 4: NCDHHS Division of Aging, Long-Term Care Ombudsman | https://www.ncdhhs.gov/divisions/aging/long-term-care-ombudsman | source date: none stated on page | retrieved: 2026-11-03
 Skip to main content
  
 
@@ -2485,6 +2483,11 @@ Open Budget
 
 
 
+Price Transparency
+
+
+
+
 
 
 
@@ -2492,7 +2495,7 @@ Open Budget
 Hosted on
  Digital Commons
 
-SOURCE 5: NC Medicaid, Nursing Facilities Clinical Coverage Policy No. 2B-1, Subsection 5.7 "Therapeutic Leave" (PDF) | https://medicaid.ncdhhs.gov/documents/files/2b1/open | source date: Amended Date: October 1, 2015 | retrieved: 2026-10-10
+SOURCE 5: NC Medicaid, Nursing Facilities Clinical Coverage Policy No. 2B-1, Subsection 5.7 "Therapeutic Leave" (PDF) | https://medicaid.ncdhhs.gov/documents/files/2b1/open | source date: Amended Date: October 1, 2015 | retrieved: 2026-11-03
 5.7     Therapeutic Leave
                 Therapeutic leave must be provided in accordance with 10A NCAC 22O.0409.
                 a. Each Medicaid eligible resident who is occupying a nursing facility bed for which the
@@ -2529,7 +2532,7 @@ SOURCE 5: NC Medicaid, Nursing Facilities Clinical Coverage Policy No. 2B-1, Sub
                    an emergency; therefore, ambulance service for this purpose shall not be reimbursed
                    by Medicaid.
 
-SOURCE 6: NC Medicaid, Nursing Facilities Clinical Coverage Policy No. 2B-1, Subsection 7.4 "Bed Holds" (PDF) | https://medicaid.ncdhhs.gov/documents/files/2b1/open | source date: Amended Date: October 1, 2015 | retrieved: 2026-10-10
+SOURCE 6: NC Medicaid, Nursing Facilities Clinical Coverage Policy No. 2B-1, Subsection 7.4 "Bed Holds" (PDF) | https://medicaid.ncdhhs.gov/documents/files/2b1/open | source date: Amended Date: October 1, 2015 | retrieved: 2026-11-03
 7.4     Bed Holds
                 In accordance with 42 CFR 483.12(b), when a resident must be hospitalized, the resident
                 or responsible party may arrange to reserve the resident’s bed in the nursing facility.

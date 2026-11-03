@@ -1,10 +1,11 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: new-mexico
-ASSEMBLED: 2026-10-08
+ASSEMBLED: 2026-11-03
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/new-mexico.json (recipe digest 6d7c97f52626). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
 - SOURCE 1: transport curl; extractor html-text; scope body; encoding cp1252; filters none.
   DRAFT — replace before promoting.
 - SOURCE 2: transport curl; extractor html-text; scope body; encoding cp1252; filters none.
@@ -18,7 +19,7 @@ CAPTURE NOTES:
 - SOURCE 6: transport curl; extractor html-text; scope body; filters none.
   DRAFT — replace before promoting.
 
-SOURCE 1: 8.370.16 NMAC, Requirements for Long Term Care Facilities (New Mexico Administrative Code), sliced to 8.370.16.1, 8.370.16.3, 8.370.16.22.K, 8.370.16.38, and 8.370.16.40 | https://www.srca.nm.gov/parts/title08/08.370.0016.html | source date: 8.370.16.5 NMAC states: Effective Date: July 1, 2024, unless a different date is cited at the end of a section; the sliced sections' own closing history notes read 7/1/2024 | retrieved: 2026-10-08
+SOURCE 1: 8.370.16 NMAC, Requirements for Long Term Care Facilities (New Mexico Administrative Code), sliced to 8.370.16.1, 8.370.16.3, 8.370.16.22.K, 8.370.16.38, and 8.370.16.40 | https://www.srca.nm.gov/parts/title08/08.370.0016.html | source date: 8.370.16.5 NMAC states: Effective Date: July 1, 2024, unless a different date is cited at the end of a section; the sliced sections' own closing history notes read 7/1/2024 | retrieved: 2026-11-03
 TITLE 8               SOCIAL
 SERVICES
 
@@ -5484,7 +5485,7 @@ hearings, New Mexico health care authority, 8.370.2 NMAC.
 
 History of 8.370.16 NMAC: RESERVED
 
-SOURCE 2: 8.312.2 NMAC, Nursing Facilities (New Mexico Administrative Code), sliced to 8.312.2.16, Reserve Bed Days | https://www.srca.nm.gov/parts/title08/08.312.0002.html | source date: section's own closing history note reads: [8.312.2.16 NMAC - Rp, 8.312.2.16 NMAC, 8/1/2014; A/E, 3/1/2025] | retrieved: 2026-10-08
+SOURCE 2: 8.312.2 NMAC, Nursing Facilities (New Mexico Administrative Code), sliced to 8.312.2.16, Reserve Bed Days | https://www.srca.nm.gov/parts/title08/08.312.0002.html | source date: section's own closing history note reads: [8.312.2.16 NMAC - Rp, 8.312.2.16 NMAC, 8/1/2014; A/E, 3/1/2025] | retrieved: 2026-11-03
 TITLE 8              SOCIAL
 SERVICES
 
@@ -6777,7 +6778,7 @@ effective 10/15/2012.
 8.312.2 NMAC, Nursing Facilities, filed 10/2/2012 - Repealed
 effective 8/1/2014.
 
-SOURCE 3: Office of Fair Hearings — FAQ | https://www.hca.nm.gov/office-of-fair-hearings-faq/ | source date: page's own JSON-LD metadata: datePublished 2024-09-09; no dateModified value present | retrieved: 2026-10-08
+SOURCE 3: Office of Fair Hearings — FAQ | https://www.hca.nm.gov/office-of-fair-hearings-faq/ | source date: page's own JSON-LD metadata: datePublished 2024-09-09; no dateModified value present | retrieved: 2026-11-03
 APPLY FOR BENEFITS
 
 
@@ -8077,7 +8078,7 @@ View preferences
 
 Manage consent
 
-SOURCE 4: Fair Hearing Request (form, PDF) | https://www.hca.nm.gov/wp-content/uploads/Fair-Hearing-Request-Form-2024.pdf | source date: none stated on the form's face; the file's own PDF metadata records a creation date of 2024-11-06 | retrieved: 2026-10-08
+SOURCE 4: Fair Hearing Request (form, PDF) | https://www.hca.nm.gov/wp-content/uploads/Fair-Hearing-Request-Form-2024.pdf | source date: none stated on the form's face; the file's own PDF metadata records a creation date of 2024-11-06 | retrieved: 2026-11-03
 Michelle Lujan Grisham, Governor
                                                                                                     Kari Armijo, Secretary
                                                                                     Alex Castillo Smith, Deputy Secretary
@@ -8175,11 +8176,20 @@ Claimant or Authorized Representative Signature:                Date:           
                                 New Mexico Health Care Authority | Office of Fair Hearings
        Email: HCA-FairHearings@hca.nm.gov | Phone: (505) 476-6213| Fax: (505) 476-6215| PO Box 2348 Santa Fe, NM 87504
 
-SOURCE 5: Ombudsman Advocacy | https://www.aging.nm.gov/ombudsman/ | source date: page's own JSON-LD metadata: dateModified 2026-07-05 | retrieved: 2026-10-08
-The 48th Annual Conference on Aging 
+SOURCE 5: Ombudsman Advocacy | https://www.aging.nm.gov/ombudsman/ | source date: page's own JSON-LD metadata: dateModified 2026-07-05 | retrieved: 2026-11-03
+Medicare Open Enrollment begins October 15th!
 
 
-New dates: October 20th-21st
+Reserve an appointment with a
+
+
+State Health Insurance Assistance Program (SHIP) Counselor
+
+
+HERE
+
+
+or contact us by phone at 800-432-2080
 
 
 
@@ -8855,47 +8865,6 @@ HCA Division of Health Improvement
 
 
 
-w
-
-
-
-
-Have a Question?
-
-
-
-
-
-
-
-
-Start a Live Chat
-
-
-
-
-
-Monday – Friday, 8 AM – 5 PM
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -9175,6 +9144,12 @@ Powered by Real Time Solutions – Website Design & Document Management
 
 
 
+
+
+
+
+
+
  
 
 
@@ -9355,11 +9330,20 @@ View preferences
 
 Manage consent
 
-SOURCE 6: Contact Us | https://www.aging.nm.gov/contact-us/ | source date: page's own JSON-LD metadata: dateModified 2026-07-17 | retrieved: 2026-10-08
-The 48th Annual Conference on Aging 
+SOURCE 6: Contact Us | https://www.aging.nm.gov/contact-us/ | source date: page's own JSON-LD metadata: dateModified 2026-07-17 | retrieved: 2026-11-03
+Medicare Open Enrollment begins October 15th!
 
 
-New dates: October 20th-21st
+Reserve an appointment with a
+
+
+State Health Insurance Assistance Program (SHIP) Counselor
+
+
+HERE
+
+
+or contact us by phone at 800-432-2080
 
 
 
@@ -10001,7 +9985,7 @@ Contact Form
 
 
 
-Facebook
+X/Twitter
 This field is for validation purposes and should be left unchanged.
 
 
@@ -10067,47 +10051,6 @@ Please let us know what's on your mind. Have a question for us? Ask away.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-w
-
-
-
-
-Have a Question?
-
-
-
-
-
-
-
-
-Start a Live Chat
-
-
-
-
-
-Monday – Friday, 8 AM – 5 PM
 
 
 
@@ -10398,6 +10341,12 @@ Follow
 
 
 Powered by Real Time Solutions – Website Design & Document Management
+
+
+
+
+
+
 
 
 

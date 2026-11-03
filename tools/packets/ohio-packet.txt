@@ -1,10 +1,11 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: ohio
-ASSEMBLED: 2026-10-10
+ASSEMBLED: 2026-11-03
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/ohio.json (recipe digest 7feaef9993da). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
 - SOURCE 1: transport curl; extractor html-text; scope body; filters none.
   Captured whole. The proposer's anchors here were the site's own boilerplate — 'The Legislative Service Commission staff updates...' at the head and a Thymeleaf template fragment at the foot — which is a sign that the standing packet's span was the whole page minus chrome. Capturing the page entire is the same evidence without an anchor that breaks when the Commission edits its own footer.
 - SOURCE 2: transport curl; extractor html-text; scope body; filters none.
@@ -20,7 +21,7 @@ CAPTURE NOTES:
 - SOURCE 7: transport curl; extractor html-text; scope body; filters none.
   Captured whole. The proposer's anchors here were the site's own boilerplate — 'The Legislative Service Commission staff updates...' at the head and a Thymeleaf template fragment at the foot — which is a sign that the standing packet's span was the whole page minus chrome. Capturing the page entire is the same evidence without an anchor that breaks when the Commission edits its own footer.
 
-SOURCE 1: Ohio Revised Code 3721.13, Residents' rights (Legislative Service Commission) | https://codes.ohio.gov/ohio-revised-code/section-3721.13 | source date: Effective October 3, 2023 | retrieved: 2026-10-10
+SOURCE 1: Ohio Revised Code 3721.13, Residents' rights (Legislative Service Commission) | https://codes.ohio.gov/ohio-revised-code/section-3721.13 | source date: Effective October 3, 2023 | retrieved: 2026-11-03
 Skip to main content
 
 
@@ -611,7 +612,7 @@ Disclaimer
 Contact
 About
 
-SOURCE 2: Ohio Revised Code 3721.16, Residents' rights concerning transfer or discharge | https://codes.ohio.gov/ohio-revised-code/section-3721.16 | source date: Effective October 3, 2023 | retrieved: 2026-10-10
+SOURCE 2: Ohio Revised Code 3721.16, Residents' rights concerning transfer or discharge | https://codes.ohio.gov/ohio-revised-code/section-3721.16 | source date: Effective October 3, 2023 | retrieved: 2026-11-03
 Skip to main content
 
 
@@ -1140,7 +1141,7 @@ Disclaimer
 Contact
 About
 
-SOURCE 3: Ohio Revised Code 3721.161, Hearing on proposed transfer or discharge | https://codes.ohio.gov/ohio-revised-code/section-3721.161 | source date: Effective October 3, 2023 | retrieved: 2026-10-10
+SOURCE 3: Ohio Revised Code 3721.161, Hearing on proposed transfer or discharge | https://codes.ohio.gov/ohio-revised-code/section-3721.161 | source date: Effective October 3, 2023 | retrieved: 2026-11-03
 Skip to main content
 
 
@@ -1617,7 +1618,7 @@ Disclaimer
 Contact
 About
 
-SOURCE 4: Ohio Revised Code 3721.162, Conduct of hearing | https://codes.ohio.gov/ohio-revised-code/section-3721.162 | source date: Effective October 3, 2023 | retrieved: 2026-10-10
+SOURCE 4: Ohio Revised Code 3721.162, Conduct of hearing | https://codes.ohio.gov/ohio-revised-code/section-3721.162 | source date: Effective October 3, 2023 | retrieved: 2026-11-03
 Skip to main content
 
 
@@ -2106,7 +2107,7 @@ Disclaimer
 Contact
 About
 
-SOURCE 5: Ohio Administrative Code 3701-61-03, Notice and hearing request requirements | https://codes.ohio.gov/ohio-administrative-code/rule-3701-61-03 | source date: Effective February 1, 2024 | retrieved: 2026-10-10
+SOURCE 5: Ohio Administrative Code 3701-61-03, Notice and hearing request requirements | https://codes.ohio.gov/ohio-administrative-code/rule-3701-61-03 | source date: Effective February 1, 2024 | retrieved: 2026-11-03
 Skip to main content
 
 
@@ -2733,7 +2734,7 @@ Disclaimer
 Contact
 About
 
-SOURCE 6: Ohio Administrative Code 5160-3-16.4, Bed-hold days (Ohio Department of Medicaid rule) | https://codes.ohio.gov/ohio-administrative-code/rule-5160-3-16.4 | source date: Effective August 17, 2017 | retrieved: 2026-10-10
+SOURCE 6: Ohio Administrative Code 5160-3-16.4, Bed-hold days (Ohio Department of Medicaid rule) | https://codes.ohio.gov/ohio-administrative-code/rule-5160-3-16.4 | source date: Effective August 17, 2017 | retrieved: 2026-11-03
 Skip to main content
 
 
@@ -3443,7 +3444,7 @@ Disclaimer
 Contact
 About
 
-SOURCE 7: Ohio Department of Aging, Long-Term Care Ombudsman — Discharge & Transfer Rights | https://aging.ohio.gov/care-and-living/ombudsman/residents-rights/discharge-transfer | source date: February 19, 2025 | retrieved: 2026-10-10
+SOURCE 7: Ohio Department of Aging, Long-Term Care Ombudsman — Discharge & Transfer Rights | https://aging.ohio.gov/care-and-living/ombudsman/residents-rights/discharge-transfer | source date: February 19, 2025 | retrieved: 2026-11-03
 IBM WebSphere Portal
 
 

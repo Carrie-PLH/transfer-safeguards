@@ -1,10 +1,11 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: north-dakota
-ASSEMBLED: 2026-10-25
+ASSEMBLED: 2026-11-03
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/north-dakota.json (recipe digest 568a1c24876d). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
 - SOURCE 1: transport curl; extractor pdftotext-layout; filters none.
   Captured whole: the served document is the chapter or page the packet holds, so no slice is needed and none is written — a slice that spans the whole document is an anchor waiting to break for no gain.
 - SOURCE 2: transport curl; extractor pdftotext-layout; filters none.
@@ -14,11 +15,11 @@ CAPTURE NOTES:
 - SOURCE 4: transport curl; extractor html-text; scope body; filters none.
   Captured whole: the served document is the chapter or page the packet holds, so no slice is needed and none is written — a slice that spans the whole document is an anchor waiting to break for no gain.
 - SOURCE 5: transport curl; extractor html-text; scope body; slice from 'Long Term Care Ombudsman Program (North Dakota) https://www.hhs.nd.gov/adults-and-aging/human-services/adults-and-aging' to 'rvice Area (serves entire state)'; filters none.
-  A directory listing; the slice drops the surrounding search chrome. The 'to' anchor begins mid-word because the listing's own delimiter line is what follows and the proposer anchored on it as rendered; it is left as proposed rather than tidied, because a hand-adjusted anchor is a hand-read anchor. 2026-10-25 (FA-Q-20261010-01): the listing's literal '***** SEND-TO-ME' control label, which ended the original 'to' anchor, was replaced in the widget by the prose 'Send a condensed resource profile to your phone via text message (SMS).'; 'Provider Service Area (serves entire state)' itself is unchanged. The anchor was shortened to drop the vanished label and nothing else, so the slice ends where it always did.
+  A directory listing; the slice drops the surrounding search chrome. The 'to' anchor begins mid-word because the listing's own delimiter line is what follows and the proposer anchored on it as rendered; it is left as proposed rather than tidied, because a hand-adjusted anchor is a hand-read anchor. 2026-10-25 (FA-Q-20261010-01): '***** SEND-TO-ME', which ended the original 'to' anchor, was never published text: it is an HTML comment in the listing's markup, read into the 2026-09-04 capture before capture.py began dropping comments (2026-09-05). 'Provider Service Area (serves entire state)' is unchanged. The anchor was shortened to drop the comment and nothing else, so the slice ends where it always did.
 - SOURCE 6: transport curl; extractor html-text; scope body; filters none.
   Captured whole: the served document is the chapter or page the packet holds, so no slice is needed and none is written — a slice that spans the whole document is an anchor waiting to break for no gain.
 
-SOURCE 1: NDAC Chapter 75-01-03, Appeals and Hearings (North Dakota Administrative Code, Title 75 — Human Services, Article 75-01, Department of Human Services — General Administration), sections 75-01-03-01 through 75-01-03-26, including 75-01-03-08.1 (Notice of facility's intention to transfer or discharge a resident) | https://ndlegis.gov/information/acdata/pdf/75-01-03.pdf | source date: no single date for the chapter; each section carries its own History line — section 75-01-03-08.1 states "History: Effective February 1, 1995; amended effective July 1, 1996; May 1, 2006."; section 75-01-03-26 (Appeals supervisor address) states "History: Effective April 1, 2018." | retrieved: 2026-10-25
+SOURCE 1: NDAC Chapter 75-01-03, Appeals and Hearings (North Dakota Administrative Code, Title 75 — Human Services, Article 75-01, Department of Human Services — General Administration), sections 75-01-03-01 through 75-01-03-26, including 75-01-03-08.1 (Notice of facility's intention to transfer or discharge a resident) | https://ndlegis.gov/information/acdata/pdf/75-01-03.pdf | source date: no single date for the chapter; each section carries its own History line — section 75-01-03-08.1 states "History: Effective February 1, 1995; amended effective July 1, 1996; May 1, 2006."; section 75-01-03-26 (Appeals supervisor address) states "History: Effective April 1, 2018." | retrieved: 2026-11-03
 CHAPTER 75-01-03
                                     APPEALS AND HEARINGS
 Section
@@ -1779,7 +1780,7 @@ Law Implemented: NDCC 50-06-05.1
 
                                                    29
 
-SOURCE 2: NDAC Chapter 75-02-06, Ratesetting for Nursing Home Care (North Dakota Administrative Code, Title 75 — Human Services, Article 75-02, Medical Services), including 75-02-06-14 (Resident days) and 75-02-06-22 (Participation requirement) | https://ndlegis.gov/information/acdata/pdf/75-02-06.pdf | source date: no single date for the chapter; section 75-02-06-14 states "History: Effective September 1, 1980; amended effective December 1, 1983; September 1, 1987; January 1, 1990; November 1, 1992; November 22, 1993; January 1, 1996; January 1, 1998; January 1, 1999; July 2, 2002; January 1, 2020."; section 75-02-06-22 states "History: Effective January 1, 1996; amended effective January 1, 1998; January 1, 2000." | retrieved: 2026-10-25
+SOURCE 2: NDAC Chapter 75-02-06, Ratesetting for Nursing Home Care (North Dakota Administrative Code, Title 75 — Human Services, Article 75-02, Medical Services), including 75-02-06-14 (Resident days) and 75-02-06-22 (Participation requirement) | https://ndlegis.gov/information/acdata/pdf/75-02-06.pdf | source date: no single date for the chapter; section 75-02-06-14 states "History: Effective September 1, 1980; amended effective December 1, 1983; September 1, 1987; January 1, 1990; November 1, 1992; November 22, 1993; January 1, 1996; January 1, 1998; January 1, 1999; July 2, 2002; January 1, 2020."; section 75-02-06-22 states "History: Effective January 1, 1996; amended effective January 1, 1998; January 1, 2000." | retrieved: 2026-11-03
 CHAPTER 75-02-06
                          RATESETTING FOR NURSING HOME CARE
 Section
@@ -5423,7 +5424,7 @@ Law Implemented: NDCC 50-24.4; 42 USC 1396a(a)(13)
 
                                                     60
 
-SOURCE 3: North Dakota Medicaid Billing and Policy Manual — Nursing Facilities | https://www.hhs.nd.gov/sites/www/files/documents/medicaid-policies/nursing-facilities.pdf | source date: "Updated: April 2026" (printed on every page) | retrieved: 2026-10-25
+SOURCE 3: North Dakota Medicaid Billing and Policy Manual — Nursing Facilities | https://www.hhs.nd.gov/sites/www/files/documents/medicaid-policies/nursing-facilities.pdf | source date: "Updated: April 2026" (printed on every page) | retrieved: 2026-11-03
 North Dakota Medicaid
                                                                     Billing and Policy Manual
                                                                              Nursing Facilities
@@ -5882,7 +5883,7 @@ April 2026
 
                                                                            10 | P a g e
 
-SOURCE 4: Long-Term Care Ombudsman Program | Health and Human Services North Dakota | https://www.hhs.nd.gov/adults-and-aging/human-services/adults-and-aging/long-term-care-ombudsman-program | source date: none stated on page (footer copyright 2026) | retrieved: 2026-10-25
+SOURCE 4: Long-Term Care Ombudsman Program | Health and Human Services North Dakota | https://www.hhs.nd.gov/adults-and-aging/human-services/adults-and-aging/long-term-care-ombudsman-program | source date: none stated on page (footer copyright 2026) | retrieved: 2026-11-03
 Skip to main content
  
 
@@ -6106,12 +6107,35 @@ Decline
 
 
 
- 
 
 
 
 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6693,12 +6717,35 @@ Lifeline
 
 
 
- 
 
 
 
 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8968,6 +9015,11 @@ North Dakota Trauma System
 
 
 
+Upcoming EMS Courses
+
+
+
+
 Emergency Medical Services (EMS) System
 
 
@@ -10971,12 +11023,35 @@ Subscribe to News and Alerts
 
 
 
- 
 
 
 
 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11014,7 +11089,7 @@ Subscribe to News and Alerts
 
 This website is supported by grants from the Administration for Children and Families (ACF), a division for the U.S. Department of Health and Human Services. Information shared on this site is the responsibility of North Dakota Health and Human Services and does not necessarily reflect the views of ACF.
 
-SOURCE 5: Long Term Care Ombudsman Program (North Dakota) — Care Choice directory listing | North Dakota Health and Human Services (Care Choice / ndcarechoice.hhs.nd.gov) | https://ndcarechoice.hhs.nd.gov/index.php?option=com_cpx&task=resource.view&id=4769615&search_history_id=267327296&code=PX-1850 | source date: none stated on the listing itself | retrieved: 2026-10-25
+SOURCE 5: Long Term Care Ombudsman Program (North Dakota) — Care Choice directory listing | North Dakota Health and Human Services (Care Choice / ndcarechoice.hhs.nd.gov) | https://ndcarechoice.hhs.nd.gov/index.php?option=com_cpx&task=resource.view&id=4769615&search_history_id=267327296&code=PX-1850 | source date: none stated on the listing itself | retrieved: 2026-11-03
 Long Term Care Ombudsman Program (North Dakota)
 
 https://www.hhs.nd.gov/adults-and-aging/human-services/adults-and-aging
@@ -11167,7 +11242,7 @@ Sat Closed
 
 Provider Se
 
-SOURCE 6: Client Rights and Appeals | Health and Human Services North Dakota | https://www.hhs.nd.gov/about-us/client-rights-and-appeals | source date: none stated on page (footer copyright 2026) | retrieved: 2026-10-25
+SOURCE 6: Client Rights and Appeals | Health and Human Services North Dakota | https://www.hhs.nd.gov/about-us/client-rights-and-appeals | source date: none stated on page (footer copyright 2026) | retrieved: 2026-11-03
 Skip to main content
  
 
@@ -11391,12 +11466,35 @@ Decline
 
 
 
- 
 
 
 
 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11978,12 +12076,35 @@ Lifeline
 
 
 
- 
 
 
 
 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12516,12 +12637,35 @@ Subscribe to News and Alerts
 
 
 
- 
 
 
 
 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
