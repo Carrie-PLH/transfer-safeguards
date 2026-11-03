@@ -324,9 +324,9 @@
       "page": "arkansas"
     },
     "https://asd.vermont.gov/services/ltc-ombudsman-program": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-27T045213Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-03T052035Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "vermont"
@@ -506,9 +506,9 @@
       "page": "utah"
     },
     "https://dail.vermont.gov/sites/dail/files/documents/Nursing_Home_Regulations_2018.pdf": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-27T045233Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-03T052055Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "vermont"
@@ -654,17 +654,17 @@
       "page": "delaware"
     },
     "https://dlp.vermont.gov/nursing-home-sample-discharge-transfer-notice": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-27T045343Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-03T052114Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "vermont"
     },
     "https://dlp.vermont.gov/sites/dlp/files/documents/Nursing_Home_Transfer_Discharge_Letter.pdf": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-27T045446Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-03T052132Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "vermont"
@@ -1030,9 +1030,9 @@
       "page": "arkansas"
     },
     "https://humanservices.vermont.gov/human-services-board": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-27T045505Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-03T052152Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "vermont"
@@ -2428,5 +2428,5 @@
       "page": "wyoming"
     }
   },
-  "updated": "2026-11-02T160740Z"
+  "updated": "2026-11-03T052152Z"
 }
