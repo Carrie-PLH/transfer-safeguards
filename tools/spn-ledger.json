@@ -231,10 +231,12 @@
       "page": "washington"
     },
     "https://app.leg.wa.gov/WAC/default.aspx?cite=388-02-0025": {
-      "attempts": 1,
-      "last_attempt": "2026-10-28T055042Z",
-      "last_detail": "no-playback",
-      "last_result": "FAILED",
+      "attempts": 2,
+      "capture": "https://web.archive.org/web/20261104065651/https://app.leg.wa.gov/WAC/default.aspx?cite=388-02-0025",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-11-04T065732Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "washington"
     },
     "https://app.leg.wa.gov/WAC/default.aspx?cite=388-02-0085": {
@@ -256,8 +258,8 @@
       "page": "washington"
     },
     "https://app.leg.wa.gov/WAC/default.aspx?cite=388-97-0120": {
-      "attempts": 1,
-      "last_attempt": "2026-10-28T055717Z",
+      "attempts": 2,
+      "last_attempt": "2026-11-04T070304Z",
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "washington"
@@ -2428,5 +2430,5 @@
       "page": "wyoming"
     }
   },
-  "updated": "2026-11-03T052152Z"
+  "updated": "2026-11-04T070304Z"
 }
