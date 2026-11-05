@@ -51,6 +51,18 @@ What this adds to compare_capture, and nothing else:
      noise, and it can reframe a whole window: every candidate in
      sped-safeguards' series through 2026-09-08 carries a changed method,
      because that retained history begins inside a recipe backfill.
+
+     The pair is compared by recipe digest first, not by prose. A manifest's
+     transport field is the operator's own sentence, with only the
+     `recipe <digest>` reference written by the tool (retain-packet.py's
+     transport_for), so one recipe run twice is recorded two ways and a string
+     comparison reports a method change that never happened. Where both
+     captures name the same digest, the method held: capture.py builds that
+     digest from the transport, extractor, scope, slice, filters, pages and
+     user_agent, so the two captures were asked to do the same thing. Where
+     either names no digest, the strings are compared as before. This is only
+     about what the capture was asked for; whether the same code ran it is
+     item 6's question and is still asked separately.
   5. **A window over the series.** The manifests, read for a date range, with
      attendance counted separately from content.
   6. **Capture-code comparison** (FA-D-20261025-05, added 2026-10-25). The
@@ -331,6 +343,49 @@ def load_rows(slug_filter=None):
     return rows
 
 
+RECIPE_REF_RE = re.compile(r"\brecipe\s+([0-9a-f]{12})\b")
+
+
+def method_held(was, now):
+    """Did the capture method hold between two captures?
+
+    Not a string comparison, because the strings are not the tool's. A
+    manifest's transport field is prose the operator typed, and
+    retain-packet.py writes only the canonical `recipe <digest>` reference into
+    it. So the same recipe, run twice, is recorded two ways. Florida's series
+    is the case that cost something: 2026-09-12 reads "curl +
+    tools/capture.py recipe 5efc56d610ce", 2026-10-06 reads "curl, browser
+    user-agent (recipe florida), recipe 5efc56d610ce", and 2026-10-25 reads
+    "curl, tools/capture.py recipe 5efc56d610ce" — one recipe, one digest,
+    three sentences. Compared as strings, every pair in that series carries a
+    changed method, and the 2026-10 draft duly told its reader that the capture
+    had "dropped its browser user-agent" and to read the pair as extraction
+    first. The user-agent had not moved; it is pinned in the recipe and inside
+    the digest. The ~5,400 characters missing from the 2026-10-25 capture were
+    a scope bug (Python's html.parser closing <main> early on the board's new
+    accordion markup, FA-Q-20261025-03), which a session then had to find
+    behind a transport story the manifest did not actually support.
+
+    So the digest decides where both sides carry one. capture.py builds it from
+    the transport, extractor, scope, slice, filters, pages and user_agent, and
+    user_agent joins it whenever a recipe sets one, so equal digests mean the
+    two captures were asked to do the same thing whatever the prose says.
+    Where either side names no digest there is nothing better to go on and the
+    strings are compared as before — which keeps the pre-recipe history
+    honestly flagged.
+
+    This answers only what the capture was asked for. Whether the same code ran
+    it is code_change()'s question, and that check is unchanged: an identical
+    recipe digest is still not evidence that the method held.
+    """
+    if was == now:
+        return True
+    d_was, d_now = RECIPE_REF_RE.findall(was or ""), RECIPE_REF_RE.findall(now or "")
+    if d_was and d_now:
+        return d_was == d_now
+    return False
+
+
 def build(rows, start, end, limit=4):
     window = [r for r in rows if start <= r.get("date", "") <= end]
     attendance = {}
@@ -366,7 +421,8 @@ def build(rows, start, end, limit=4):
         entry.update(classify(old_raw, new_raw, limit))
         was = transports.get((r["slug"], r["supersedes"]), "")
         now = transports.get((r["slug"], r["capture"]), "")
-        entry["transport"] = {"was": was, "now": now, "held": was == now}
+        entry["transport"] = {"was": was, "now": now,
+                              "held": method_held(was, now)}
         if not entry["transport"]["held"]:
             entry["method_changed"] = (
                 f"capture method changed between these two captures "
@@ -665,7 +721,20 @@ def self_test():
                                         commits=lambda a, b: None) or ""):
         fails.append("git unable to answer did not flag the pair")
 
-    total = 17
+    # Transport comparison is by recipe digest, not by prose (the florida
+    # 2026-09-12 / 10-06 / 10-25 series, which read as three method changes).
+    if not method_held("curl + tools/capture.py recipe 5efc56d610ce",
+                       "curl, browser user-agent (recipe florida), recipe 5efc56d610ce"):
+        fails.append("same recipe digest, different prose, read as a method change")
+    if method_held("curl + tools/capture.py recipe 5efc56d610ce",
+                   "curl + tools/capture.py recipe 847e2db7891e"):
+        fails.append("two different recipe digests read as the same method")
+    if method_held("curl, hand capture", "browser, hand capture (rendered)"):
+        fails.append("two undigested transports read as the same method")
+    if not method_held("curl, hand capture", "curl, hand capture"):
+        fails.append("identical undigested transports read as a method change")
+
+    total = 21
     if fails:
         print("\n".join(fails))
         print(f"\nSELF-TEST FAILED: {len(fails)} failure(s) of {total} cases.")
