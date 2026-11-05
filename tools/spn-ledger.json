@@ -672,15 +672,15 @@
       "page": "vermont"
     },
     "https://docs.legis.wisconsin.gov/code/admin_code/dhs/101/107/09": {
-      "attempts": 1,
-      "last_attempt": "2026-10-29T054346Z",
+      "attempts": 2,
+      "last_attempt": "2026-11-05T063020Z",
       "last_detail": "error:not-found",
       "last_result": "FAILED",
       "page": "wisconsin"
     },
     "https://docs.legis.wisconsin.gov/code/admin_code/dhs/110/132/V/53": {
-      "attempts": 1,
-      "last_attempt": "2026-10-29T054405Z",
+      "attempts": 2,
+      "last_attempt": "2026-11-05T063106Z",
       "last_detail": "error:not-found",
       "last_result": "FAILED",
       "page": "wisconsin"
@@ -973,19 +973,20 @@
       "page": "wyoming"
     },
     "https://health.wyo.gov/wp-content/uploads/2020/07/FILED-RULES-17704-EFFECT-07-01-2020.pdf": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-29T054946Z",
+      "attempts": 2,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-05T063124Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "wyoming"
     },
     "https://health.wyo.gov/wp-content/uploads/2021/10/Chapter-22-active-100521.pdf": {
-      "attempts": 1,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-29T055005Z",
-      "last_detail": "error:no-request",
-      "last_result": "FAILED",
+      "attempts": 2,
+      "capture": "https://web.archive.org/web/20261105063206/https://health.wyo.gov/wp-content/uploads/2021/10/Chapter-22-active-100521.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-11-05T063214Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "wyoming"
     },
     "https://health.wyo.gov/wp-content/uploads/2024/04/WYDOH-Medicaid-Chapter-4.pdf": {
@@ -2414,10 +2415,12 @@
       "page": "washington"
     },
     "https://wyoleg.gov/statutes/compress/title35.pdf": {
-      "attempts": 1,
-      "last_attempt": "2026-10-29T055750Z",
-      "last_detail": "no-playback",
-      "last_result": "FAILED",
+      "attempts": 2,
+      "capture": "https://web.archive.org/web/20261105063227/https://wyoleg.gov/statutes/compress/title35.pdf",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-11-05T063238Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "wyoming"
     },
     "https://wyomingmedicaid.com/portal/References/latestproviderfiles/BMS_Acentra%20Health_Institutional%20Provider%20Manual_N_2026.07.01_v19.0.pdf": {
@@ -2430,5 +2433,5 @@
       "page": "wyoming"
     }
   },
-  "updated": "2026-11-04T070304Z"
+  "updated": "2026-11-05T063238Z"
 }
