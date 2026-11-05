@@ -1,0 +1,15 @@
+{
+  "recipe_version": 1,
+  "state": "kansas-kancare",
+  "sources": [
+    {
+      "n": 1,
+      "title": "State Fair Hearings — KanCare (Kansas Department of Health and Environment / Kansas Department for Aging and Disability Services)",
+      "url": "https://www.kancare.ks.gov/members/help-resources/appeals-fair-hearings/state-fair-hearings",
+      "transport": "chrome",
+      "extractor": "none",
+      "filters": [],
+      "notes": "Recipe written 2026-11-05 for tools/packets/kansas-packet-kancare.txt, which had none, so no pass could re-fetch it (pass-health finding, 2026-11-05 nightly run). Transport is chrome because the supplement's capture notes record that plain curl and the session's web-fetch tool both return HTTP 403 from an Akamai edge block on kancare.ks.gov, and only a rendered browser page returned the document; extractor none, as the capture was the rendered page's text. Same shape as kansas.json source 3 (ombudsman.ks.gov), which is also chrome/none. This records the method and makes it executable by a session with a browser; an unattended pass still cannot refresh this source and will say so (exit 3) rather than reporting it as having no recipe at all. Both of the page's accordions, 'Eligibility State Fair Hearings' and 'KanCare State Fair Hearings', are captured whole and no slice is set, because the page does not itself say which, if either, covers a nursing facility's own transfer or discharge decision, and the supplement deliberately carries the whole of what is published rather than a pre-selected half."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "recipe_version": 1,
+  "state": "arkansas-dhs",
+  "sources": [
+    {
+      "n": 1,
+      "title": "File an Appeal — Arkansas Department of Human Services",
+      "url": "https://humanservices.arkansas.gov/contact-us/file-an-appeal/",
+      "transport": "chrome",
+      "extractor": "none",
+      "filters": [],
+      "slice": {
+        "from": "Home > Contact Us > File an Appeal",
+        "to": "Learn About Programs"
+      },
+      "notes": "Recipe written 2026-11-05 for tools/packets/arkansas-packet-dhs.txt, which had none, so no pass could re-fetch it (pass-health finding, 2026-11-05 nightly run). Transport is chrome because the supplement's capture notes record that humanservices.arkansas.gov returns a bare nginx 403 to curl on every path tried, over HTTP/1.1 and HTTP/2, with and without a browser user-agent, Accept and Accept-Language headers, and that the session's web-fetch tool returned the site's navigation menus twice and none of the page body; a browser rendering was the only transport that produced the page. Extractor none, as the capture was document.body.innerText. The slice anchors are the ones that capture already used: the breadcrumb line down to the footer's 'Learn About Programs'. The supplement is carried for the Office of Appeals and Hearings' address and email only — the page nowhere mentions nursing facilities, transfers or discharges, and says so itself. This records the method and makes it executable by a session with a browser; it does not make the source re-verifiable by the unattended pass, which the packet's capture notes state and which stays true."
+    }
+  ]
+}

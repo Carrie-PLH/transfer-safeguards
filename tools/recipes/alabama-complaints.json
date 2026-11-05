@@ -1,0 +1,20 @@
+{
+  "recipe_version": 1,
+  "state": "alabama-complaints",
+  "sources": [
+    {
+      "n": 1,
+      "title": "Alabama Department of Public Health, Bureau of Health Provider Standards — Filing Complaints (re-captured with Cloudflare email decoding)",
+      "url": "https://www.alabamapublichealth.gov/providerstandards/complaints.html",
+      "source_date": "Page last updated: March 30, 2026",
+      "transport": "curl",
+      "extractor": "html-text",
+      "scope": "main",
+      "filters": [
+        "trim-lines",
+        "collapse-blank-runs"
+      ],
+      "notes": "Recipe written 2026-11-05 for tools/packets/alabama-packet-complaints.txt, which had none, so no pass could re-fetch it (pass-health finding, 2026-11-05 nightly run). Transport, extractor, scope and filters are transcribed from that supplement's own capture notes, not guessed: 'Transport: curl, no browser user-agent required, HTTP 200; extractor html-text at scope main; filters trim-lines and collapse-blank-runs.' No user_agent is set, because the note records that the host needs none. No slice: the supplement carries scope main whole. The supplement exists because the standing Alabama packet holds this page's four department email addresses as Cloudflare's placeholder text; capture.py decodes those attributes, so this recipe reproduces the addresses rather than the placeholders, and the nursing-home complaint address this state's page needs is among them. Verified 2026-11-05 by running this recipe and diffing source 1 against the retained supplement with capture-core's reader: 3,727 characters against 4,054, identical throughout except at the top, where the 2026-09-03 capture carried two raw markup lines as text (a <section ...> and a <div ...> opening tag, each on its own line) and a leading space before 'Bureau of Health Provider Standards'. Every other line matches, and all three department addresses (ACCComplaints@, ALFComplaints@, NHComplaints@adph.state.al.us) come back identical, so the page has not moved: the difference is this repository's own html-text extractor no longer emitting those unclosed tags as text. Recorded here so the first pass to retain a capture under this recipe reads that shortening as extraction rather than as the department withdrawing text. The fresh capture was not retained or promoted by the session that wrote this recipe; the 2026-09-03 supplement remains the evidence for what the Alabama page quotes."
+    }
+  ]
+}
