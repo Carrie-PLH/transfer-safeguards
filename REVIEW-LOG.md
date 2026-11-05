@@ -1690,3 +1690,36 @@ queue entries opened this pass. Not deployed.
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-11-03. No
 human review is claimed for this entry.
+
+- **oklahoma: CONFIRMED.** Recipe capture (digest 5f05ccef0701), 4
+  sources. Zero failures on both files. Retained; unchanged since the
+  2026-09-18 rebuild. Promoted.
+- **oregon: CONFIRMED.** Recipe capture (digest 411d9b92b896), 7
+  sources. Zero failures on both files. Retained; unchanged since the
+  2026-10-11 capture. Promoted.
+- **pennsylvania: CONFIRMED.** Recipe capture (digest e41d22209ad8), 6
+  sources. First fetch of source 3 (pa.gov's Long-Term Care Ombudsman
+  page) returned an empty extraction under its documented `body` scope
+  despite the live page answering 200 with the quoted phone number and
+  sentence plainly present in its markup (verified by a direct curl);
+  a second capture through the same recipe and transport returned the
+  full page normally (3156 chars from source 3) and traced clean. Treated
+  as the same transient-fetch pattern CLAUDE.md already records for
+  Arkansas's codeofarrules.arkansas.gov and California's cdph.ca.gov/
+  dhcs.ca.gov, not as drift or a tooling defect. Retained; textual
+  movement since the 2026-10-11 capture, no header movement. Promoted.
+
+Checked date updated to 2026-11-05 in each states/<slug>.md (bare ISO),
+re-rendered via render-state.py (zero fidelity failures confirmed against
+each render), derived dates synced via sync-checked-dates.py (6 corrected:
+table + json for all three). build-status.py: baseline 51/51, full 50/51
+(pre-existing Hawaii backfill gap, unaffected by this pass). generate-
+sitemap.py: 58 URLs, robots.txt and _redirects regenerated (no page-set
+change this pass). build-state-picker.py: 51/51 regenerated on both pages.
+check-all.py: 104 pages across 52 states, no unexplained failures.
+check-live.py: 5 pages sampled, nothing loaded from any other host. Cursor
+advanced: oklahoma -> rhode-island. No drift, no unreachable sources, no
+queue entries opened this pass. Not deployed.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-11-05. No
+human review is claimed for this entry.
