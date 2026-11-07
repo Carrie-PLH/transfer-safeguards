@@ -1,11 +1,11 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: rhode-island
-ASSEMBLED: 2026-10-25
+ASSEMBLED: 2026-11-07
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/rhode-island.json (recipe digest 87d81ca11930). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
-- Capture code e6aaca77bee6 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
 - SOURCE 1: transport curl; extractor pdftotext-layout; filters none.
   The regulation's own PDF, the 'Download Regulation' file linked from rules.sos.ri.gov/regulations/part/210-50-00-7, fetched by plain curl from the Department of State's public S3 bucket (200, no user-agent needed). Routed here on owner decision FA-D-20261025-02 (FA-Q-20260927-02): the rules.sos.ri.gov page renders each section as <section class="doc-block" style="display: none;"> opened by an onclick on its heading, which capture.py rightly treats as hidden, so an html-text capture of that page keeps only the section headings. pdftotext-layout, not -raw: with -raw four page quotations broke on line joins; -layout matched every one. Captured whole; the file name changes when the regulation is refiled, which is the supersession signal for this source. Verified 2026-10-25: two captures byte-identical, 0 fidelity failures on both surfaces.
 - SOURCE 2: transport curl; extractor pdftotext-layout; filters none.
@@ -29,7 +29,7 @@ CAPTURE NOTES:
 - SOURCE 11: transport curl; extractor html-text; scope body; filters none.
   alliancebltc.org page, curl with a browser user-agent, html-text over body, as drafted on 2026-09-01; the scope was not narrowed when the DRAFT note was replaced. Verified 2026-10-25 with the recipe as a whole.
 
-SOURCE 1: 210-RICR-50-00-7, Involuntary Discharge from a Long-Term Care Facility — PDF linked from rules.sos.ri.gov/regulations/part/210-50-00-7 | https://risos-apa-production-public.s3.amazonaws.com/EOHHS/REG_11893_20211215162511.pdf | source date: Regulation Effective Date 01/04/2022 (Periodic Refile; original E-SIGNED December 15, 2021) | retrieved: 2026-10-25
+SOURCE 1: 210-RICR-50-00-7, Involuntary Discharge from a Long-Term Care Facility — PDF linked from rules.sos.ri.gov/regulations/part/210-50-00-7 | https://risos-apa-production-public.s3.amazonaws.com/EOHHS/REG_11893_20211215162511.pdf | source date: Regulation Effective Date 01/04/2022 (Periodic Refile; original E-SIGNED December 15, 2021) | retrieved: 2026-11-07
 210-RICR-50-00-7
 
 TITLE 210 - EXECUTIVE OFFICE OF HEALTH AND HUMAN SERVICES
@@ -321,7 +321,7 @@ _________________________________________________________________
 _________________________________________________________________
   Department of State Initials     Department of State Date
 
-SOURCE 2: 210-RICR-10-05-2, Appeals Process and Procedures for EOHHS Agencies and Programs — excerpt: EHO definition, § 2.2.1(A)(4) filing procedures, and § 2.4.8 (Institutional and Community-Based Long-Term Care Resident Involuntary Discharges and Transfers) in full — PDF linked from rules.sos.ri.gov/regulations/part/210-10-05-2 | https://risos-apa-production-public.s3.amazonaws.com/EOHHS/REG_11846_20211214162034.pdf | source date: Regulation Effective Date 01/04/2022 (Refile Capabilities; original E-SIGNED December 14, 2021; original signing date 09/13/2018) | retrieved: 2026-10-25
+SOURCE 2: 210-RICR-10-05-2, Appeals Process and Procedures for EOHHS Agencies and Programs — excerpt: EHO definition, § 2.2.1(A)(4) filing procedures, and § 2.4.8 (Institutional and Community-Based Long-Term Care Resident Involuntary Discharges and Transfers) in full — PDF linked from rules.sos.ri.gov/regulations/part/210-10-05-2 | https://risos-apa-production-public.s3.amazonaws.com/EOHHS/REG_11846_20211214162034.pdf | source date: Regulation Effective Date 01/04/2022 (Refile Capabilities; original E-SIGNED December 14, 2021; original signing date 09/13/2018) | retrieved: 2026-11-07
 210-RICR-10-05-2
 
 TITLE 210 – EXECUTIVE OFFICE OF HEALTH AND HUMAN SERVICES
@@ -2520,7 +2520,7 @@ _________________________________________________________________
 _________________________________________________________________
   Department of State Initials     Department of State Date
 
-SOURCE 3: R.I. Gen. Laws § 23-17.5-17, Transfer to another facility | https://webserver.rilegislature.gov/Statutes/TITLE23/23-17.5/23-17.5-17.HTM | source date: History of Section — P.L. 1978, ch. 235, § 1; P.L. 2000, ch. 240, § 1; P.L. 2015, ch. 141, art. 5, § 3 | retrieved: 2026-10-25
+SOURCE 3: R.I. Gen. Laws § 23-17.5-17, Transfer to another facility | https://webserver.rilegislature.gov/Statutes/TITLE23/23-17.5/23-17.5-17.HTM | source date: History of Section — P.L. 1978, ch. 235, § 1; P.L. 2000, ch. 240, § 1; P.L. 2015, ch. 141, art. 5, § 3 | retrieved: 2026-11-07
 Title 23
 
 Health and Safety
@@ -2630,7 +2630,7 @@ History of Section.
 
 P.L. 1978, ch. 235, § 1; P.L. 2000, ch. 240, § 1; P.L. 2015, ch. 141, art. 5, § 3.
 
-SOURCE 4: R.I. Gen. Laws § 23-17.5-25, Notice on bed-hold policy and readmission | https://webserver.rilegislature.gov/Statutes/TITLE23/23-17.5/23-17.5-25.HTM | source date: History of Section — P.L. 1989, ch. 270, § 1; P.L. 2004, ch. 228, § 1; P.L. 2004, ch. 303, § 1 | retrieved: 2026-10-25
+SOURCE 4: R.I. Gen. Laws § 23-17.5-25, Notice on bed-hold policy and readmission | https://webserver.rilegislature.gov/Statutes/TITLE23/23-17.5/23-17.5-25.HTM | source date: History of Section — P.L. 1989, ch. 270, § 1; P.L. 2004, ch. 228, § 1; P.L. 2004, ch. 303, § 1 | retrieved: 2026-11-07
 Title 23
 
 Health and Safety
@@ -2730,7 +2730,7 @@ History of Section.
 
 P.L. 1989, ch. 270, § 1; P.L. 2004, ch. 228, § 1; P.L. 2004, ch. 303, § 1.
 
-SOURCE 5: 216-RICR-40-10-1, Licensing of Nursing Facilities — § 1.15.4(S), Rights of Residents (transfer, discharge, and bed-hold) — PDF linked from rules.sos.ri.gov/regulations/part/216-40-10-1 | https://risos-apa-production-public.s3.amazonaws.com/DOH/REG_13284_20250417153621975.pdf | source date: Regulation Effective Date 05/07/2025 (Amendment; Agency Signature April 17, 2025) | retrieved: 2026-10-25
+SOURCE 5: 216-RICR-40-10-1, Licensing of Nursing Facilities — § 1.15.4(S), Rights of Residents (transfer, discharge, and bed-hold) — PDF linked from rules.sos.ri.gov/regulations/part/216-40-10-1 | https://risos-apa-production-public.s3.amazonaws.com/DOH/REG_13284_20250417153621975.pdf | source date: Regulation Effective Date 05/07/2025 (Amendment; Agency Signature April 17, 2025) | retrieved: 2026-11-07
 216-RICR-40-10-1
 
 TITLE 216 – DEPARTMENT OF HEALTH
@@ -7580,7 +7580,7 @@ ____________________________
 _________________________________________________________________
   Department of State Initials     Department of State Date
 
-SOURCE 6: DHS-200NF, Pre-Transfer or Pre-Discharge 30 Day Notice (Rhode Island Department of Human Services) | https://eohhs.ri.gov/media/45546/download?language=en | source date: Rev. 11-18 | retrieved: 2026-10-25
+SOURCE 6: DHS-200NF, Pre-Transfer or Pre-Discharge 30 Day Notice (Rhode Island Department of Human Services) | https://eohhs.ri.gov/media/45546/download?language=en | source date: Rev. 11-18 | retrieved: 2026-11-07
 DHS-200NF
                                                                                                                                      Rev. 11-18
 
@@ -7706,7 +7706,7 @@ notice period.
  5. In the case of such exceptions (as above), notice must be given as many days before the date of the move as is practicable,
     and include all the information set forth in § 7.6(B) of this Part.
 
-SOURCE 7: EOHHS Appeals Office | https://eohhs.ri.gov/reference-center/eohhs-appeals-office | source date: page last updated on July 22nd, 2024 | retrieved: 2026-10-25
+SOURCE 7: EOHHS Appeals Office | https://eohhs.ri.gov/reference-center/eohhs-appeals-office | source date: page last updated on July 22nd, 2024 | retrieved: 2026-11-07
 Skip to main content
  
 
@@ -7949,6 +7949,11 @@ Data, Analytics, and Evaluation
 
 
 Federal Compliance Advisory Group
+
+
+
+
+Food As Medicine
 
 
 
@@ -8324,45 +8329,6 @@ Strategic Plan And Priorities
 
 
 2025 Accomplishments
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-xml version="1.0" encoding="utf-8"?
-
-Agency Announcements
-
-Alerts
- 
-
-
-
-
-
-
-
-
-
-Federal Changes Affecting RI Medicaid
-
-
-
-The federal government is making changes to Medicaid programs across the country. Effective October 1, 2026, new federal laws have ended Medicaid eligibility for some adults who are not U.S. citizens. Starting in 2027, some adults on Medicaid will have to meet work requirements and renew their coverage every six months.
-
-Learn more about what is changing and who will be impacted at staycovered.ri.gov/updates.
 
 
 
@@ -8866,7 +8832,7 @@ State Agencies (A-Z)
  © 2026
  RI.gov. This page last updated on July 22nd, 2024. Accessibility, data, and privacy policies | Top of page
 
-SOURCE 8: Ombudsman Program (Rhode Island Office of Healthy Aging) | https://oha.ri.gov/resources/fraud-and-abuse/ombudsman-program | source date: page last updated on February 25th, 2026 | retrieved: 2026-10-25
+SOURCE 8: Ombudsman Program (Rhode Island Office of Healthy Aging) | https://oha.ri.gov/resources/fraud-and-abuse/ombudsman-program | source date: page last updated on February 25th, 2026 | retrieved: 2026-11-07
 Skip to main content
  
 
@@ -9889,7 +9855,7 @@ State Agencies (A-Z)
  © 2026
  RI.gov. This page last updated on February 25th, 2026. Accessibility, data, and privacy policies | Top of page
 
-SOURCE 9: Contact (Alliance for Better Long Term Care) | https://alliancebltc.org/contact/ | source date: none stated on page | retrieved: 2026-10-25
+SOURCE 9: Contact (Alliance for Better Long Term Care) | https://alliancebltc.org/contact/ | source date: none stated on page | retrieved: 2026-11-07
 Call Us Today (401) 785-3340
 
 
@@ -11420,7 +11386,7 @@ Footer
 
  Reset Settings
 
-SOURCE 10: Contact Us — Office of the RI State Long Term Care Ombudsman (Alliance for Better Long Term Care) | https://alliancebltc.org/ombudsman-program/contact/ | source date: none stated on page | retrieved: 2026-10-25
+SOURCE 10: Contact Us — Office of the RI State Long Term Care Ombudsman (Alliance for Better Long Term Care) | https://alliancebltc.org/ombudsman-program/contact/ | source date: none stated on page | retrieved: 2026-11-07
 Call Us Today (401) 785-3340
 
 
@@ -13133,7 +13099,7 @@ Footer
 
  Reset Settings
 
-SOURCE 11: Resident's Rights — Office of the RI State Long Term Care Ombudsman (Alliance for Better Long Term Care) | https://alliancebltc.org/ombudsman-program/residents-rights/ | source date: none stated on page | retrieved: 2026-10-25
+SOURCE 11: Resident's Rights — Office of the RI State Long Term Care Ombudsman (Alliance for Better Long Term Care) | https://alliancebltc.org/ombudsman-program/residents-rights/ | source date: none stated on page | retrieved: 2026-11-07
 Call Us Today (401) 785-3340
 
 

@@ -1723,3 +1723,54 @@ queue entries opened this pass. Not deployed.
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-11-05. No
 human review is claimed for this entry.
+
+## 2026-11-07 — nightly review: rhode-island, south-carolina, south-dakota — all confirmed
+
+Batch selected from cursor rhode-island (next three alphabetically). No
+supplements for any of the three.
+
+- **rhode-island** — confirmed. Fresh capture (11 sources, recipe
+  87d81ca11930) vs both files: 0 failures each. Retained, hash
+  bcc001b5bd7a0aec. Source 7 (EOHHS Appeals Office) came back 425 characters
+  shorter than the 2026-10-25 retained capture; diffed against it before
+  promoting, per retain-packet.py's own flag for a shrinking source. The
+  difference is an "Agency Announcements" alert banner ("Federal Changes
+  Affecting RI Medicaid...") present in the old capture and gone from the
+  fresh one, plus one new nav item ("Food As Medicine") added under
+  Initiatives — site chrome, not anything the page quotes; no quoted fact
+  moved. Checked date updated to 2026-11-07; page re-rendered.
+- **south-carolina** — confirmed. Fresh capture (3 sources, recipe
+  da788e39c404) vs both files: 0 failures each. Retained, hash
+  428dd7b78f4d117a (minor textual movement since the 2026-10-13 retained
+  capture; not independently investigated further per the skill, since
+  fidelity passed clean). Checked date updated to 2026-11-07; page
+  re-rendered.
+- **south-dakota** — confirmed. Recipe capture (recipe 634cc3da5d2b) stopped
+  on source 4 (dhs.sd.gov/en/ltss/ombudsman-program, `transport: chrome` per
+  the recipe's own notes — a client-rendered app with no curl-able content
+  endpoint). Fetched `document.querySelector('main').innerText` in the
+  built-in browser exactly as the recipe prescribes, transferred as
+  base64-encoded UTF-8 bytes rather than through a plain tool-call string
+  (so the publisher's non-breaking spaces after "By phone:", "By email:" and
+  before the ZIP code survive the relay unedited), and verified the SHA-256
+  of the decoded file (b55261ee...) against the digest computed in-page
+  before supplying it. The 2026-09-22 recipe note's recorded digest
+  (627f20aa9ca8...) no longer matches — source 4's text has changed since
+  then — so this is itself a finding about that source, not a transport
+  problem; re-ran `capture.py south-dakota --supply 4=<file>` to complete
+  the capture (6 sources). Fidelity vs both files: 0 failures each.
+  Retained, hash e739915e96532d83 (textual movement since the 2026-10-13
+  retained capture). Checked date updated to 2026-11-07; page re-rendered.
+
+Cursor advanced to tennessee. Derived dates synced (sync-checked-dates.py, 6
+corrected: table + json for all three). build-status.py: baseline 51/51,
+full 50/51 (pre-existing Hawaii backfill gap, unaffected by this pass).
+build-state-picker.py: 51/51 regenerated on both pages. generate-sitemap.py:
+58 URLs, robots.txt and _redirects regenerated (no page-set change this
+pass). check-all.py: 104 pages across 52 states, no unexplained failures.
+check-live.py: 5 pages sampled, nothing loaded from any other host. No
+drift, no unreachable sources, no queue entries opened this pass. Not
+deployed.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-11-07. No
+human review is claimed for this entry.

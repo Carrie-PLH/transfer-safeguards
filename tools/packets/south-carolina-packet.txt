@@ -1,10 +1,11 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: south-carolina
-ASSEMBLED: 2026-10-13
+ASSEMBLED: 2026-11-07
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/south-carolina.json (recipe digest da788e39c404). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
 - SOURCE 1: transport curl; extractor html-text; scope body; slice from 'CHAPTER 81 Bill of Rights for Residents of Long-Term Care Facilities' to 'South Carolina Legislative Services Agency'; filters trim-lines, collapse-blank-runs.
   The served page opens with a long run of client-side search/print JavaScript before the chapter text begins and closes with the Legislative Services Agency's own address block; the standing packet's own method was 'sliced from the first section heading of chapter 81 to the end of section 44-81-70' after a tag strip. This recipe anchors one heading earlier, at the chapter's own title line rather than SECTION 44-81-10's heading, because the chapter title is unique on the page and at least as stable, and a wider slice can only add evidence. `to` excludes the Legislative Services Agency footer. Both anchors confirmed unique (count 1) on a fresh fetch 2026-09-06.
 - SOURCE 2: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
@@ -12,7 +13,7 @@ CAPTURE NOTES:
 - SOURCE 3: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
   Added 2026-09-18, deepening the page, to answer section 02's hearing-office row: found by search rather than by following a link from an already-captured source, because the 2026-08-30 packet's two sources (Chapter 81 and the ombudsman program page) name no state forum and the department's own appeals apparatus sits on a different subdomain neither source links. `#main-content` on this page's template is an empty skip-link anchor with no text of its own (confirmed by inspection), so, as with source 2, 'body' is used to reach the actual content, which on this page includes an inline FAQ accordion; the department's site navigation is left in as 'body' produces it. The page states this apparatus is South Carolina's general Medicaid fair-hearing forum (an appeal of eligibility, benefit, and provider determinations across the agency, an MCO, or a nursing home), not a route created specifically for nursing-home transfer or discharge; its own 'When can I appeal?' list names 'You receive notice that the nursing home where you reside plans to discharge or transfer you against your wishes.' as one of the enumerated situations, which is the first-party statement this page's hearing-office row rests on.
 
-SOURCE 1: South Carolina Code of Laws, Title 44 Chapter 81 — Bill of Rights for Residents of Long-Term Care Facilities | https://www.scstatehouse.gov/code/t44c081.php | source date: none stated on page | retrieved: 2026-10-13
+SOURCE 1: South Carolina Code of Laws, Title 44 Chapter 81 — Bill of Rights for Residents of Long-Term Care Facilities | https://www.scstatehouse.gov/code/t44c081.php | source date: none stated on page | retrieved: 2026-11-07
 CHAPTER 81
 
 Bill of Rights for Residents of Long-Term Care Facilities
@@ -33,13 +34,17 @@ HISTORY: 1985 Act No. 118, SECTION 2.
 
  As used in this chapter:
 
- (1) "Long-term care facility" means an intermediate care facility, nursing care facility, or residential care facility subject to regulation and licensure by the State Department of Health and Environmental Control (department).
+ (1) "Long-term care facility" means an intermediate care facility, nursing care facility, or residential care facility subject to regulation and licensure by the State Department of Public Health (department).
 
  (2) "Resident" means a person who is receiving treatment or care in a long-term care facility.
 
  (3) "Representative" means a resident's legal guardian, committee, or next of kin or other person acting as agent of a resident who does not have a legally appointed guardian.
 
-HISTORY: 1985 Act No. 118, SECTION 3.
+HISTORY: 1985 Act No. 118, SECTION 3; 2026 Act No. 146 (H.4189), SECTION 191, eff May 15, 2026.
+
+Effect of Amendment
+
+ 2026 Act No. 146, SECTION 191, in (1), substituted "Department of Public Health" for "Department of Health and Environmental Control".
 
  SECTION 44-81-40. Rights of residents; written and oral explanation required.
 
@@ -47,7 +52,7 @@ HISTORY: 1985 Act No. 118, SECTION 3.
 
  (B) Each resident and the resident's representative must be informed in writing, before or at the time of admission, of:
 
- (1) available services and of related charges, including all charges not covered under federal or state programs, by other third party payers, or by the facility's basic per diem rate;
+ (1) available services and of related charges, including all charges not covered under federal or state programs, by other third-party payers, or by the facility's basic per diem rate;
 
  (2) the facility's refund policy which must be adopted by each facility and which must be based upon the actual number of days a resident was in the facility and any reasonable number of bed-hold days, except when the provisions of subsection (E) apply.
 
@@ -77,7 +82,7 @@ HISTORY: 1985 Act No. 118, SECTION 3.
 
  (G) Each resident must be free from mental and physical abuse and free from chemical and physical restraints except those restraints ordered by a physician.
 
- (H) Each resident must be assured security in storing personal possessions and confidential treatment of the resident's personal and medical records and may approve or refuse their release to any individual outside the facility, except in the case of a transfer to another health care institution or as required by law or a third party payment contract.
+ (H) Each resident must be assured security in storing personal possessions and confidential treatment of the resident's personal and medical records and may approve or refuse their release to any individual outside the facility, except in the case of a transfer to another healthcare institution or as required by law or a third-party payment contract.
 
  (I) Each resident must be treated with respect and dignity and assured privacy during treatment and when receiving personal care.
 
@@ -93,9 +98,21 @@ HISTORY: 1985 Act No. 118, SECTION 3.
 
  (O) Married residents must be permitted to share a room unless medically contraindicated by the attending physician in the medical record.
 
- (P) A resident or a resident's legal representative may contract with a person not associated with or employed by the facility to perform sitter services unless the services are prohibited from being performed by a private contractor by state or federal law or by the written contract between the facility and the resident. The person, being a private contractor, is required to abide by and follow the policies and procedures of the facility as they pertain to sitters and volunteers. The person must be selected from an approved list or agency and approved by the facility. All residents or residents' legal representatives employing a private contractor must agree in writing to hold the facility harmless from any liability.
+ (P) A resident or a resident's legal representative may contract with a person not associated with or employed by the facility to perform sitter services unless the services are prohibited from being performed by a private contractor by state or federal law or by the written contract between the facility and the resident. The person, being a private contractor, is required to abide by and follow the policies and procedures of the facility as they pertain to sitters and volunteers. All residents or residents' legal representatives employing a private contractor must agree in writing to hold the facility harmless from any liability.
 
-HISTORY: 1985 Act No. 118, SECTION 4; 1992 Act No. 474, SECTION 1; 1994 Act No. 438, SECTION 1; 2014 Act No. 170 (H.3098), SECTION 1, eff May 16, 2014.
+ (Q) Each resident or representative of a resident may designate up to three people who are permitted to visit the resident in the event that access to the facility is limited or prohibited due to a declared state of emergency arising from a disaster or public health emergency. Only one visitor per resident shall be allowed at any time during regular visiting hours. The resident or representative of a resident shall provide the facility each person's name, relationship to the resident, and contact information. The designated person must be allowed to regularly visit the resident during the time that access to the facility is limited or prohibited. A resident or representative of a resident may change the list of designated visitors twice during any calendar year or at such time as a designated visitor is permanently unable to continue to visit. Nothing in this subsection may be construed to require a resident, or the resident's representative, to authorize visitation by any particular member of the clergy or any other individual acting in a religious or spiritual capacity if doing so would be inconsistent with that resident's or representative's religious beliefs.
+
+HISTORY: 1985 Act No. 118, SECTION 4; 1992 Act No. 474, SECTION 1; 1994 Act No. 438, SECTION 1; 2014 Act No. 170 (H.3098), SECTION 1, eff May 16, 2014; 2026 Act No. 111 (S.146), SECTION 2, eff April 6, 2026.
+
+Editor's Note
+
+ 2026 Act No. 111, SECTION 1, provides as follows:
+
+ "SECTION 1. This act may be cited as the 'Senator Roger A. Nutt Act.'"
+
+Effect of Amendment
+
+ 2026 Act No. 111, SECTION 2, in (P), deleted the third sentence; added (Q); and made nonsubstantive changes.
 
  SECTION 44-81-50. Discrimination.
 
@@ -115,7 +132,7 @@ HISTORY: 1985 Act No. 118, SECTION 6.
 
 HISTORY: 1985 Act No. 118, SECTION 7.
 
-SOURCE 2: South Carolina Department on Aging — Long Term Care Ombudsman Program | https://aging.sc.gov/programs-initiatives/long-term-care-ombudsman-program | source date: none stated on page; footer carries Copyright © 2026 | retrieved: 2026-10-13
+SOURCE 2: South Carolina Department on Aging — Long Term Care Ombudsman Program | https://aging.sc.gov/programs-initiatives/long-term-care-ombudsman-program | source date: none stated on page; footer carries Copyright © 2026 | retrieved: 2026-11-07
 Skip to main content
 
 Home
@@ -172,9 +189,9 @@ Senior Nutrition Program
 
 Senior P.R.E.P.
 
-Vulnerable Adult Guardian ad Litem of SC
-
 Supportive Services
+
+Vulnerable Adult Guardian ad Litem of SC
 
 Find Service Providers
 
@@ -266,9 +283,9 @@ Senior Nutrition Program
 
 Senior P.R.E.P.
 
-Vulnerable Adult Guardian ad Litem of SC
-
 Supportive Services
+
+Vulnerable Adult Guardian ad Litem of SC
 
 Ombudsman Links & Resources
 
@@ -282,11 +299,11 @@ How to Safely Conduct Visits to Nursing Homes (CMS)
 
 SC Facility Vaccination Rates (as of 7/18/21)
 
-If you need help finding assisted living, transportation, financial assistance, or other services, please visit our resource site GetCareSC.com.
+If you need help finding assisted living, transportation, financial assistance, or other services, please visit our resource site GetCare.SC.gov.
 
 Footer menu
 
-GetCareSC.com
+GetCare.SC.gov
 
 SC.gov
 
@@ -317,7 +334,7 @@ youtube
  Website by
  Cyberwoven
 
-SOURCE 3: File an Appeal (South Carolina Department of Health and Human Services, Office of Appeals and Hearings) | https://www.scdhhs.gov/appeals/file-appeal | source date: none stated on page | retrieved: 2026-10-13
+SOURCE 3: File an Appeal (South Carolina Department of Health and Human Services, Office of Appeals and Hearings) | https://www.scdhhs.gov/appeals/file-appeal | source date: none stated on page | retrieved: 2026-11-07
 Skip to main content
 
 Top Nav
@@ -362,17 +379,9 @@ Managed Care Plan Information
 
 Member Information
 
-Healthy Connections Prime (MMP)
-
-Member and Advocate Toolkit
-
-Health Plans
-
-Healthy Connections Prime Advocate (Ombudsman)
+Dual Special Needs Plans
 
 Program For All-Inclusive Care Of The Elderly (PACE)
-
-Dual Special Needs Plans
 
 Recursos en Español
 
@@ -450,23 +459,29 @@ Revalidation
 
 Managed Care
 
-Managed Care Organizations (MCO)
+Medicaid Managed Care Organizations (MCO)
 
 Provider Information
 
-Healthy Connections Prime (MMP)
+Managed Care Initiatives
 
-Provider Information
+Phase I (Completed)
 
-Provider FAQs
+Frequently Asked Questions (FAQs) - Phase I
 
-Provider Toolkit
+Training Resources - Phase I
 
-Program For All-Inclusive Care Of The Elderly (PACE)
+Phase II (In-Progress)
 
-Provider Information
+Frequently Asked Questions (FAQs) - Phase II
+
+Training Resources - Phase II
 
 Dual Special Needs Plans (D-SNP)
+
+Provider Information
+
+Program For All-Inclusive Care Of The Elderly (PACE)
 
 Provider Information
 
@@ -494,7 +509,7 @@ Committees and Groups
 
 Managed Care
 
-Managed Care Organizations (MCO)
+Medicaid Managed Care Organizations (MCO)
 
 Resources
 
@@ -502,19 +517,19 @@ Contacts
 
 For MCOs
 
-Healthy Connections Prime (MMP)
+Managed Care Initiatives
 
-Resources
+Phase I (Completed)
 
-Program Data
+Frequently Asked Questions (FAQs) - Phase I
 
-For CICOs
+Training Resources - Phase I
 
-Program For All-Inclusive Care Of The Elderly (PACE)
+Phase II (In-Progress)
 
-Program Data
+Frequently Asked Questions (FAQs) - Phase II
 
-Regulatory
+Training Resources - Phase II
 
 Dual Special Needs Plans (D-SNP)
 
@@ -522,11 +537,11 @@ Program Data
 
 Regulatory
 
-Managed Care Carve-in
+Program For All-Inclusive Care Of The Elderly (PACE)
 
-Managed Care Carve-in FAQs
+Program Data
 
-Managed Care Carve-in Training Resources
+Regulatory
 
 Quality
 
@@ -567,8 +582,6 @@ Medicaid Annual Eligibility Review Dashboard
 SC Health Viz
 
 Vendor Information
-
-Apply for Medicaid
 
 Header Navigation
 

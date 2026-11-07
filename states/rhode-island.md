@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Office of Healthy Aging's own page states that "Rhode Island's Long-Term Care Ombudsman advocates on behalf of residents in care facilities, listening to their concerns and taking action to protect their rights" and directs residents to "contact the Office of the Rhode Island State Long Term Care Ombudsman at 401.785.3340 or toll-free at 1.888.351.0808." That program is administered by the Alliance for Better Long Term Care, whose own site gives a full mailing address: "Alliance for Better Long Term Care 422 Post Road, Suite 204 Warwick, RI 02888", with "Phone: (401) 785-3340", "Toll-Free: (888) 351-0808", and "Fax: (401) 785-3391". The program's own resident-rights page restates the transfer-and-discharge rule directly, in its own words: "You may not be transferred or discharged unless your needs cannot be met, safety is endangered, services are no longer required, or payment has not been made" and that "Notice of transfer or discharge must be given 30 days prior, except in cases of health and safety needs."
 
-**Sources last checked.** 2026-10-25
+**Sources last checked.** 2026-11-07
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 
