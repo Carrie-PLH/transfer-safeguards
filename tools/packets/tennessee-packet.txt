@@ -1,10 +1,11 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: tennessee
-ASSEMBLED: 2026-10-15
+ASSEMBLED: 2026-11-08
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/tennessee.json (recipe digest 218e67906405). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
 - SOURCE 1: transport curl; extractor pdftotext-layout; filters none.
   TennCare's fillable notice form, captured whole — the document is the form. -layout keeps the underscore rules, the signature grid and the per-page footer where the form prints them, and holds the asterisked footnote about physician sign-off beside the item it marks rather than reflowing it to the foot of the text.
 - SOURCE 2: transport curl; extractor pdftotext-layout; slice from '1200-08-06-.05 ADMISSIONS, DISCHARGES, AND TRANSFERS.' to '1200-08-06-.06 BASIC SERVICES.'; filters none.
@@ -14,7 +15,7 @@ CAPTURE NOTES:
 - SOURCE 4: transport curl; extractor pdftotext-layout; slice from '1200-13-02-.16 BED HOLDS.' to '1200-13-02-.17 OTHER REIMBURSEMENT ISSUES.'; filters none.
   Added 2026-09-15, deepening the state to a full page, following the same Secretary of State chapter-PDF pattern already used for source 2. The chapter's table of contents sets the rule title case ('Bed Holds'); the body sets it in capitals ('BED HOLDS'), so the anchor as written matches only the body and no occurrence key is needed, the same reasoning already recorded for source 2's slice. The rule is one sentence: it states Tennessee eliminated Medicaid bed-hold reimbursement effective July 1, 2018, and states nothing about the notice a facility gives before a hospital transfer or therapeutic leave, which the sources reviewed do not otherwise address.
 
-SOURCE 1: Bureau of TennCare, Nursing Home Notice of Involuntary Transfer or Discharge (PDF) | https://www.tn.gov/content/dam/tn/tenncare/documents/NFInvoluntaryDischargeNotice.pdf | source date: TennCare LTSS dev. 09/2014 Rev 02/2026 | retrieved: 2026-10-15
+SOURCE 1: Bureau of TennCare, Nursing Home Notice of Involuntary Transfer or Discharge (PDF) | https://www.tn.gov/content/dam/tn/tenncare/documents/NFInvoluntaryDischargeNotice.pdf | source date: TennCare LTSS dev. 09/2014 Rev 02/2026 | retrieved: 2026-11-08
 Nursing Home Notice of
                Involuntary Transfer or Discharge
 To the Nursing Home: This notice is for an involuntary discharge or transfer. Fill out this notice
@@ -151,7 +152,7 @@ and District LTC Ombudsman, and the Health Facilities Commission at:
 
 TennCare LTSS dev. 09/2014 Rev 02/2026
 
-SOURCE 2: Rules of the Tennessee Department of Health, Chapter 1200-08-06, Standards for Nursing Homes — Rule .05 Admissions, Discharges, and Transfers (excerpt) | https://publications.tnsosfiles.com/rules/1200/1200-08/1200-08-06.20210818.pdf | source date: August, 2021 (Revised); rule history ends amendment filed April 17, 2007, effective July 1, 2007 | retrieved: 2026-10-15
+SOURCE 2: Rules of the Tennessee Department of Health, Chapter 1200-08-06, Standards for Nursing Homes — Rule .05 Admissions, Discharges, and Transfers (excerpt) | https://publications.tnsosfiles.com/rules/1200/1200-08/1200-08-06.20210818.pdf | source date: August, 2021 (Revised); rule history ends amendment filed April 17, 2007, effective July 1, 2007 | retrieved: 2026-11-08
 1200-08-06-.05 ADMISSIONS, DISCHARGES, AND TRANSFERS.
 
       (1)   Every person admitted for care or treatment shall be under the supervision of a physician
@@ -310,7 +311,7 @@ and new rule filed July 14, 1983; effective August 15, 1983. Repeal and new rule
 effective April 15, 2000. Amendment filed April 10, 2000; effective June 24, 2000. Amendment filed
 February 23, 2007; effective May 9, 2007. Amendment filed April 17, 2007; effective July 1, 2007.
 
-SOURCE 3: Bureau of TennCare, Involuntary Discharge and Transfer Appeals | https://www.tn.gov/tenncare/long-term-services-supports/involuntary-discharge-and-transfer-appeals.html | source date: none stated on page | retrieved: 2026-10-15
+SOURCE 3: Bureau of TennCare, Involuntary Discharge and Transfer Appeals | https://www.tn.gov/tenncare/long-term-services-supports/involuntary-discharge-and-transfer-appeals.html | source date: none stated on page | retrieved: 2026-11-08
 Skip to Main Content
 
 
@@ -764,6 +765,11 @@ Inclusive Internship Opportunities
 
 
 
+Self-Direction of Healthcare Tasks (SDHCT)
+
+
+
+
 
 
 
@@ -969,7 +975,7 @@ linkedin
 
 
 
-Notice of Change in Medicaid State Plan: PACE Reimbursement 
+2026 Update to Quality Improvement Strategy (Comment period is open)
 
 
 
@@ -980,11 +986,6 @@ Proposed Medical Necessity Rule Changes
 
 
 Katie Beckett Program
-
-
-
-
-Preparing for Renewals
 
 
 
@@ -1365,7 +1366,7 @@ A+
 
 Close
 
-SOURCE 4: Rules of the Division of TennCare, Chapter 1200-13-02, Nursing Facility Provider Reimbursement — Rule .16 Bed Holds (excerpt) | https://publications.tnsosfiles.com/rules/1200/1200-13/1200-13-02.20260629.pdf | source date: June, 2026 (Revised); rule .16's own administrative history ends 'Original rules filed May 1, 2018; effective July 30, 2018.' | retrieved: 2026-10-15
+SOURCE 4: Rules of the Division of TennCare, Chapter 1200-13-02, Nursing Facility Provider Reimbursement — Rule .16 Bed Holds (excerpt) | https://publications.tnsosfiles.com/rules/1200/1200-13/1200-13-02.20260629.pdf | source date: June, 2026 (Revised); rule .16's own administrative history ends 'Original rules filed May 1, 2018; effective July 30, 2018.' | retrieved: 2026-11-08
 1200-13-02-.16 BED HOLDS. Effective July 1, 2018, Medicaid bed hold days will no longer be
 reimbursed.
 

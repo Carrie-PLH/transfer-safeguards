@@ -1,0 +1,1100 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: utah
+ASSEMBLED: 2026-11-08
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/utah.json (recipe digest 440aa0a4fc67). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
+- SOURCE 1: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  adminrules.utah.gov is a client-rendered single-page app: the rule's own address, https://adminrules.utah.gov/public/rule/R432-150/Current%20Rules, returns 404 to any direct fetch and renders only in a browser. The 2026-09-01 capture recorded that and read the rendered page by hand. This address is what the app itself fetches for the rule text, so it is first-party and curl-reachable. IT IS PINNED TO A VERSION, NOT TO THE RULE. The GUID names the current text of R432-150; an amendment produces a new GUID and this URL would keep returning the superseded rule while looking healthy, which is the exact failure this project exists to prevent. Source 8 exists to close that hole and must never be removed: it is keyed by rule number rather than by GUID, so an amendment changes it, the pass sees drift, and a session updates this GUID deliberately. Verified 2026-09-04 before re-basing: all 21 quotations this page draws from the rule appear verbatim in this text, so it is the same instrument the page was built on.
+- SOURCE 2: transport curl; extractor pdftotext-layout; filters none.
+  Re-based 2026-09-04. The address the 2026-09-01 capture recorded, .../SNF-Discharge-Appeal-Form.pdf, now returns an nginx 404: the department renamed the file in place, appending its own revision date, and nothing announced the move. Found again by reading the Long Term Care Ombudsman page, which still links it. Verified before re-basing: all 8 quotations this page draws from the form appear verbatim in the renamed file, so it is the same document under a new name rather than a new form.
+- SOURCE 3: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  Cloudflare hides this page's contact address behind a client-side script. The 2026-09-01 capture left the placeholder text in the packet because curl cannot run it; decode_cfemail in the shared capture reader resolves it, and this source now yields utmedicaidhearings@utah.gov as the department publishes it.
+- SOURCE 4: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The same office's contact page published on a second department domain, carried because the two are not word-for-word identical. Same Cloudflare obfuscation and same resolution as source 3.
+- SOURCE 5: transport curl; extractor pdftotext-layout; pages 55-57; filters none.
+  The 2026-09-01 capture sliced this chapter by hand from a 139-page manual. Pages 55 to 57 are the printed range that chapter occupies and contain the standing text exactly; a range is reproducible where a hand slice is not. The chapter heading also appears on pages 4 and 134, in the table of contents and in a later cross-reference, which is why the range is pinned rather than searched for by heading.
+- SOURCE 6: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The 2026-09-01 capture had to render this page in a browser and read document.body.innerText, because every listed address was a Cloudflare placeholder to curl — recorded then as a last-resort transport, not independently re-verifiable by an automated pass. decode_cfemail removes that need: curl now yields the addresses the department publishes, and this source is ordinary again.
+- SOURCE 7: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  Re-based 2026-09-04: the recorded address, /ombudsman-locations, 301-redirects here. Same browser-transport history and same resolution as source 6; the regional ombudsman roster's addresses now decode under curl.
+- SOURCE 8: transport curl; extractor none; filters none.
+  Not a source the page quotes. It exists so that source 1's GUID cannot go stale unnoticed. This address is keyed by rule number rather than by version, and returns the rule's effectiveDate together with the htmlDownload GUID that source 1 pins. If Utah amends R432-150, both fields change here, this packet changes, the review pass reports drift, and a session updates source 1's URL as a deliberate act. Without it, source 1 would keep returning a superseded rule and every check would pass. The literal 'undefined' path segment is what the department's own application sends; it is reproduced rather than corrected, because a guess at the intended value would be a different request from the one that is known to work.
+- SOURCE 9: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  Added 2026-09-24, deepening the page to full: the Medicaid Provider Manual (source 5) itself names this rule as the one setting forth Medicaid hearing procedures ('Utah Administrative Code R410-14 et seq. sets forth the administrative hearing procedures for Medicaid hearings'), and R410-14-2(2)(d) defines a nursing facility's own determination to transfer or discharge a resident as an 'action' this rule governs, and R410-14-23 names SNF hearings expressly. It is the same adminrules.utah.gov client-rendered application as source 1, reached the same way: this address is what the app itself fetches for the rule text and is first-party and curl-reachable, but IT IS PINNED TO A VERSION, NOT TO THE RULE, for the same reason source 1 is. Source 10 is this source's version witness and must never be removed for the same reason source 8 must not be removed for source 1.
+- SOURCE 10: transport curl; extractor none; filters none.
+  Not a source the page quotes. Same role for source 9 that source 8 holds for source 1: keyed by rule number rather than by version, so an amendment to R410-14 changes this packet and the review pass reports drift rather than silently continuing to quote a superseded rule.
+- SOURCE 11: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  Added 2026-09-24, deepening the page to full: this is Utah Medicaid's nursing-facility payment rule, searched for a state-wide bed-hold day count after R432-150-20(9) (source 1) proved to require only a facility's own written bed-hold policy with no state-set duration. This rule addresses case-mix reimbursement and reserved/swing beds by payment category (R414-504-3(9)) but states no bed-hold or reserved-bed day count either; it supports the page's stated absence rather than a quotation of a period. Same client-rendered application and same version-pinning caveat as sources 1 and 9; source 12 is its version witness.
+- SOURCE 12: transport curl; extractor none; filters none.
+  Not a source the page quotes. Same role for source 11 that source 8 holds for source 1.
+
+SOURCE 2: Skilled nursing facility-initiated discharge appeal form — Utah Division of Aging and Adult Services (PDF) | https://daas.utah.gov/wp-content/uploads/2024/07/SNF-Discharge-Appeal-Form-11.7.23.pdf | source date: form dated 11.7.23 in its own filename | retrieved: 2026-11-08
+Skilled nursing facility-initiated discharge appeal form
+                          If the nursing facility where you live has told you they intend to transfer you or
+                          discharge you, and you would rather stay in the facility, you have the right to
+                          appeal the facility's decision. Fill out this form completely and submit it if you
+                          want to ask for a hearing to appeal your facility-initiated transfer or discharge.
+
+                          *To appeal a Medicaid denial, fill out this form:
+       https://medicaid.utah.gov/Documents/pdfs/Forms/HearingRequest2023.pdf
+
+*To appeal a Medicare or insurance decision, contact KEPRO at 888-317-0891 or
+       https://www.keproqio.com
+
+Appeal requests MUST be turned in within 30 days of the discharge notice.
+
+1. Who is completing this form?
+
+   ☐ Resident                       ☐ Resident representative
+
+2. Who is the resident?
+
+   Full name:                                               Date of birth:                  /      /
+
+   Current mailing address:
+
+   City:                                                             State:            ZIP code:
+
+   Telephone number: (      )       -              Email:
+
+   The name of the person to contact if there are questions about this appeal:
+
+   Daytime phone number for that person: (         )        -                 Email:
+
+
+3. Do you want another person to get notices about the hearing?
+   You may represent yourself or have another person represent you. List everyone you want contacted.
+
+   ☐ Legal representative (attorneys must file a Notice of Appearance):
+
+      Name:                                        Have they been contacted by you: ☐ Yes              ☐ No
+
+      Telephone number: (       )       -                   Email:
+
+
+   ☐ Local ombudsman:
+
+      Name:                                        Have they been contacted by you: ☐ Yes              ☐ No
+
+      Telephone number: (       )       -                   Email:
+
+
+
+
+Updated: 10/17/2023             Administrative Hearings Telephone #: 801-538-6576                      Page 1 of 3
+
+   ☐ Family member or friend:
+
+     Name:                                              Relationship:
+
+     Telephone number: (          )           -                Email:
+
+
+
+     Name:                                              Relationship:
+
+     Telephone number: (          )           -                Email:
+
+
+
+     Name:                                              Relationship:
+
+     Telephone number: (          )           -                Email:
+
+
+   ☐ Other:
+
+     Name:                                              Relationship:
+
+     Telephone number: (          )           -                Email:
+
+
+4. Nursing facility information
+
+   Name of nursing facility
+
+   Telephone number (         )           -                    Email
+
+   Administrator name:                                         Date of admission to the facility   /       /
+
+   Date of discharge notice           /           /   Date the facility plans to move resident         /       /
+
+   Discharge location
+
+   ☐ Resident is currently in the hospital and the facility is not allowing the resident to be readmitted
+
+
+   Reason for discharge as listed on the discharge notice:
+      ☐ Transfer/discharge is necessary to meet resident’s welfare and resident’s needs cannot be met
+         in the facility.
+      ☐ Health has improved sufficiently so the resident no longer needs the services provided by the
+         facility.
+      ☐ The safety of individuals in the facility is endangered.
+      ☐ The health of individuals in the facility is endangered.
+      ☐ The resident has failed, after reasonable and appropriate notice, to pay for a stay at the facility.
+      ☐ The facility is ceasing to operate.
+
+
+
+
+Updated: 10/17/2023               Administrative Hearings Telephone #: 801-538-6576                    Page 2 of 3
+
+How to file your involuntary discharge appeal
+
+   1. After you complete everything on this form, make a copy of this page to keep.
+   2. Send this form and a copy of the discharge notice to:
+
+Via U.S. Post Office                Via UPS or FedEx                    Email or Fax
+Office of Administrative Hearings   Office of Administrative Hearings   Email:
+PO Box 143105                       195 North 1950 West                 utmedicaidhearings@utah.gov
+Salt Lake City, UT 84114-3105       Salt Lake City, UT 84116            Fax: 801-536-0143
+
+
+
+
+Updated: 10/17/2023          Administrative Hearings Telephone #: 801-538-6576              Page 3 of 3
+
+SOURCE 3: Hearings — Medicaid — Utah Department of Health and Human Services | https://medicaid.utah.gov/hearings/ | source date: none stated on page | retrieved: 2026-11-08
+Skip to content
+
+Hearings
+
+When a Medicaid member, provider, or other interested party is dissatisfied with an action taken by Utah Medicaid, a hearing may be requested by filing a hearing request with the DHHS Office of Administrative Hearings (OAH). Hearing requests to Medicaid include requests to dispute disability decisions made by the DHHS Medical Review Board (MRB).
+
+Hearing requests must be filed by the filing deadline.
+
+Providers ‐ When a provider wishes to appeal a payment reflected by an explanation of benefits, or other remittance document issued by Medicaid, the hearing request must be filed within 30 calendar days of the date of the remittance document.
+
+Members ‐ When a member wishes to appeal a Medicaid or CHIP eligibility or disability decision, the hearing request must be filed within 90 days from the date of the notice they disagreed with.
+
+Managed care plan hearing request
+
+A member or provider wishing to dispute an action taken by an Accountable Care Organization or Managed Care Entity must complete the appeal process within that organization before filing a hearing request with OAH.
+
+Medicaid eligibility fair hearing requests
+
+Although, OAH handles hearing requests to dispute disability decisions made by the MRB, OAH does not handle disputes regarding eligibility decisions for Medicaid or CHIP. Fair hearings for Medicaid and CHIP eligibility should be filed with the Department of Workforce Services (DWS), Division of Adjudications here opens in a new tab.
+
+Administrative hearings for other DHHS divisions
+
+The OAH conducts fair hearings for some divisions outside DHHS including: Division of Child and Family Services (DCFS), Division of Services for People with Disabilities (DSPD), Office of Recovery Services (ORS), Division of Licensing and Background Checks, and Adult Protective Services. These hearings are received within their respective divisions.
+
+How to request a Medicaid fair hearing
+
+You can fill out the State Fair Hearing Request Form available in English and Spanish, and email the form as an attachment to utmedicaidhearings@utah.gov.
+
+If you prefer to mail your request, you may use the mailing addresses listed below:
+
+Mailing Address:
+
+     Department of Health and Human Services
+
+     Office of Administrative Hearings
+
+     PO Box 143105
+
+     Salt Lake City, UT 84114-3105
+
+If you have any questions about your request, contact the Office of Administrative Hearings using one of the methods below:
+
+Email: utmedicaidhearings@utah.gov.
+
+Phone: 801-538-6576
+
+Fax: 801-536-0143
+
+Street Address:
+
+     Department of Health and Human Services
+
+     Office of Administrative Hearings
+
+     195 North 1950 West
+
+     Salt Lake City, UT 84111
+
+Additional information
+
+Additional information on fair hearings is contained in the Utah Medicaid Provider Manual, General Information – Section I opens in a new tab, Chapter 5, section 4 (pg. 35)-4.
+
+Laws and rules:
+
+42 Code of Federal Regulations Part 431, Subpart E opens in a new tab
+
+42 Code of Federal Regulations Part 438, Subpart F opens in a new tab
+
+Utah Administrative Procedures Act: Utah Code Annotated, Title 63G, Chapter 4 opens in a new tab
+
+Utah Administrative Code, Title R410: Administrative Hearing Procedures
+
+Follow us online
+
+(opens in a new tab)(opens in a new tab)(opens in a new tab)(opens in a new tab)(opens in a new tab)(opens in a new tab)
+
+Department of Health and Human Services opens in a new tab
+
+Cannon Health Building
+
+288 North 1460 West
+
+Salt Lake City, UT
+
+84116
+
+Contact Us
+
+For eligibility questions or concerns:
+
+1-866-435-7414
+
+For other questions:
+
+1-866-608-9422
+
+External information disclaimer opens in a new tab
+
+Navigation Menu
+
+Apply
+
+Apply for Medicaid
+
+Apply for Baby Your Baby
+
+Cómo y Dónde Pedir la Asistencia Médica
+
+Members
+
+Members Home
+
+Additional Information
+
+Language Services
+
+Nondiscrimination Policy
+
+Programs and Services
+
+Providers
+
+Resources
+
+MyBenefits Login
+
+Medicaid Member Guide
+
+Providers
+
+Providers Home
+
+PRISM Info
+
+PRISM Portal Access
+
+Become a Medicaid Provider
+
+Claims
+
+Coverage and Reimbursement
+
+Managed Care
+
+Medicaid Pharmacy Program
+
+Patient Eligibility Verification
+
+Presumptive Eligibility Portal Access
+
+Prior Authorization
+
+Provider Resources and Information
+
+Provider Training
+
+Programs
+
+Programs Home
+
+Adult Expansion Medicaid
+
+Autism Related Services
+
+Baby Your Baby
+
+Buyout Program
+
+Children’s Health Insurance Program
+
+Early and Periodic Screening, Diagnostic and Treatment
+
+Living Well with Chronic Conditions Program
+
+Medicaid for Long-Term Care and Waiver Programs
+
+Presumptive Eligibility
+
+Restriction Program
+
+Spenddown Program (Medically Needy)
+
+Summary of All Medicaid Programs
+
+Targeted Adult Medicaid Program
+
+Tobacco Cessation Program
+
+Utah’s Premium Partnership for Health Insurance
+
+Justice-Involved Program
+
+Administration
+
+Administration Home
+
+UTAH’S MEDICAID REFORM 1115 DEMONSTRATION
+
+Boards and Committees
+
+HIPAA
+
+Hearings
+
+HR 1 (One Big Beautiful Bill Act, 2025)
+
+Medicaid Data
+
+Medicaid Expansion
+
+Medicaid State Plan
+
+Nondiscrimination Policy
+
+PRISM Info
+
+Publications
+
+Reporting Fraud
+
+Unwinding Medicaid Continuous Eligibility
+
+Resources
+
+211Utah - United Way opens in a new tab
+
+Safe UT opens in a new tab
+
+Utah Domestic Violence Coalition opens in a new tab
+
+988 Suicide and Crisis Lifeline opens in a new tab
+
+Hotlines
+
+Abuse/Neglect of Seniors and Adults with Disabilities opens in a new tab
+
+1-800-371-7897
+
+Child Abuse/Neglect
+
+1-855-323-DCFS(3237)
+
+Crisis Line & Mobile Outreach Team
+
+1-801-587-3000
+
+National Suicide Prevention Lifeline opens in a new tab
+
+1-800-273-TALK(8255)
+
+Sexual Violence Crisis Line
+
+1-888-421-1100
+
+Utah Domestic Violence opens in a new tab
+
+1-800-897-LINK(5465)
+
+Translate ❯
+
+SOURCE 4: Medicaid Fair Hearings — Utah Department of Health and Human Services | https://dhhs.utah.gov/oah/medicaid-fair-hearings/ | source date: none stated on page | retrieved: 2026-11-08
+Skip to content
+
+Medicaid Fair Hearings
+
+Home
+
+Office of Administrative Hearings
+
+Medicaid Fair Hearings
+
+When a Medicaid member, provider, or other interested party is dissatisfied with an action taken by Utah Medicaid, a hearing may be requested by filing a hearing request with the DHHS Office of Administrative Hearings (OAH). Hearing requests to Medicaid include requests to dispute disability decisions made by the DHHS Medical Review Board (MRB). For non-Medicaid hearings visit our human services administrative hearings page.
+
+Hearing requests must be filed by the filing deadline
+
+Providers: When a provider wishes to appeal a payment reflected by an explanation of benefits, or other remittance document issued by Medicaid, the hearing request must be filed within 30 calendar days of the date of the remittance document.
+
+Members: When a member wishes to appeal a Medicaid or CHIP eligibility or disability decision, the hearing request must be filed within 90 days from the date of the notice they disagreed with.
+
+Managed care plan hearing request
+
+A member or provider wishing to dispute an action taken by an Accountable Care Organization or Managed Care Entity must complete the appeal process within that organization before filing a hearing request with OAH.
+
+Medicaid eligibility fair hearing requests
+
+Although OAH handles hearing requests to dispute disability decisions made by the MRB, OAH does not handle disputes regarding eligibility decisions for Medicaid or CHIP.  Fair hearings for Medicaid and CHIP eligibility should be filed with the Department of Workforce Services (DWS), Division of Adjudications here.
+
+How to request a Medicaid fair hearing
+
+You can fill out the State Fair Hearing Request Form available here, and email the form as an attachment to utmedicaidhearings@utah.gov.
+
+If you prefer to mail your request, you may use the mailing addresses listed below:
+
+Mailing Address:
+
+Department of Health and Human Services
+
+Office of Administrative Hearings
+
+PO Box 143105
+
+Salt Lake City, UT 84114-3105
+
+If you have any questions about your request, contact the Office of Administrative Hearings using one of the methods below:
+
+Email: utmedicaidhearings@utah.gov
+
+Phone: 801-538-6576
+
+Fax: 801-536-0143
+
+Street Address:
+
+Department of Health and Human Services
+
+Office of Administrative Hearings
+
+195 North 1950 West
+
+Salt Lake City, UT 84111
+
+Additional information
+
+Additional information on fair hearings is contained in the Utah Medicaid Provider Manual, General Information – Section I, Chapter 5, section 4 (pg. 35)-4.
+
+Laws and rules:
+
+42 Code of Federal Regulations Part 431, Subpart E
+
+42 Code of Federal Regulations Part 438, Subpart F
+
+Utah Administrative Procedures Act: Utah Code Annotated, Title 63G, Chapter 4
+
+Utah Administrative Code, Rule R410: Administrative Hearing Procedures
+
+Follow us online
+
+(opens in a new tab)(opens in a new tab)(opens in a new tab)(opens in a new tab)(opens in a new tab)(opens in a new tab)
+Subscribe to our newsletter
+
+(opens in a new tab)
+
+Multi-Agency State Office Building
+
+195 North 1950 West
+
+Salt Lake City, Utah
+
+84116
+
+Phone: (833) 353-3447
+
+If you know what division you need to reach, please visit our Divisions page for specific contact information.
+
+External information disclaimer
+
+Federal guidance letters
+
+Navigation menu
+
+About
+
+About DHHS
+
+About DHHS
+
+Performance Measures
+
+What is public health?
+
+Block Grants
+
+Boards
+
+Leadership
+
+Policies
+
+(opens in a new tab)
+
+Reports
+
+Federal guidance letters
+
+Rural Health Transformation Program
+
+Safety tips
+
+Our divisions
+
+Contacts
+
+Data
+
+Health Care Statistics
+
+Health data dashboards
+
+Health Equity data and reports
+
+IBIS-PH
+
+Utah Healthy Places Index
+
+En Español
+
+Popular Searches
+
+Safety tips
+
+News
+
+Newsroom
+
+Hotlines
+
+Abuse/Neglect of Seniors and Adults with Disabilities
+
+1-800-371-7897
+
+Child Abuse/Neglect
+
+1-855-323-DCFS(3237)
+
+Disease Reporting
+
+1-888-EPI-UTAH(374-8824)
+
+Suicide and Crisis Lifeline
+
+Call or text 988
+
+Translate ❯
+
+SOURCE 5: Utah Medicaid Provider Manual, Section I: General Information, chapter 5-4 Hearings and Administrative Review (PDF) | https://medicaid-documents.dhhs.utah.gov/Documents/manuals/pdfs/Medicaid+Provider+Manuals/All+Providers+General+Information+Section+I/AllProvidersGeneralInfo_Section_1.pdf | source date: Updated September 2026, as the chapter's own footer states (was Updated July 2026 as of the 2026-09-04 capture) | retrieved: 2026-11-08
+55                                                                   Updated September 2026
+
+
+
+     (801) 538-6087, 1(855) 403-7283
+
+     https://oig.utah.gov/
+
+     5-4 Hearings and Administrative Review
+     A provider or member may request an administrative hearing to dispute an adverse
+     coverage or benefit determination taken by the Division of Integrated Healthcare
+     (DIH) or a managed care entity (MCE). Actions taken that may be appealed include,
+     but are not limited to:
+        •   Denial of a prior authorization request.
+        •   Denial of a claim, as indicated by an explanation of benefits or other
+            remittance document issued by Medicaid.
+        •   Denial by manual review.
+     When Medicaid issues a determination on a claim for a specific item or service, the
+     aggrieved person has 30 days to request a hearing. Adjustments to the initial claim
+     or a claim resubmission that does not revise the initial determination, shall not
+     extend or change the appeal rights and timing of the initial determination.
+     If a provider has received a claim denial for lack of prior authorization, the claim
+     must be rebilled with the prior authorization number for the claim to adjudicate
+     properly.
+     For additional information on retroactive prior authorization, see Chapter 10-3,
+     Retroactive authorization.
+
+     5-4.1 Managed Care Entities Hearing and Administrative Review
+     With respect to denials issued by an MCE, providers or members must complete the
+     MCE’s appeal process prior to requesting a hearing with DIH.
+     To request a hearing, send a completed hearing request form to the Office of
+     Administrative Hearings. The form must be faxed, emailed, or postmarked within
+
+
+
+              Utah Medicaid Provider Manual – Section I: General Information
+
+56                                                                   Updated September 2026
+
+
+
+     120 calendar days from the date the MCE sends written notice of its denial or
+     intended action, unless a different time period is indicated on the denial document.
+
+     All hearing requests for DIH and Managed Care Entities must include the following:
+        • A completed hearing request form
+        • A denial notice
+        • If a medical issue is in dispute, each request must include supporting medical
+          documentation
+     Failure to submit a timely request for a hearing constitutes a waiver of the due
+     process right to a hearing. The agency is not required to grant a hearing if the sole
+     issue is a federal or state law requiring an automatic change. Utah Administrative
+     Code R410-14 et seq. sets forth the administrative hearing procedures for Medicaid
+     hearings.
+     A Request for Hearing/Agency Action form (Hearing Request) is available on the
+     Medicaid website at: https://medicaid.utah.gov/utah-medicaid-forms, Hearing
+     Request, or a copy may be requested from the Office of Administrative Hearings by
+     calling (801) 538-6576.
+     Submit the form by mail, email, or fax.
+
+     Mail:
+
+     Via U.S. Post Office-
+     Division of Integrated Healthcare
+     Office of Administrative Hearings
+     Box 143105
+     Salt Lake City, UT 84114-3105
+
+     Via UPS or FedEx-
+     Division of Integrated Healthcare
+     Office of Administrative Hearings
+
+
+              Utah Medicaid Provider Manual – Section I: General Information
+
+57                                                                  Updated September 2026
+
+
+
+     195 North 1950 West
+     Salt Lake City, UT 84116
+
+     FAX: (801) 536-0143
+
+     EMAIL: utmedicaidhearings@utah.gov
+
+
+     6     Member Eligibility
+     6-1 Verifying Medicaid Eligibility
+     A Medicaid member is required to present the Medicaid Member Card before each
+     service, and every provider must verify each member’s eligibility each time before
+     rendering services. Presentation of the Medicaid Member Card does not guarantee
+     a member continues eligible for Medicaid. Verify the member’s eligibility and
+     determine whether the member is enrolled in an MCO, Emergency Only Program, or
+     the Restriction Program; assigned to a PCP; covered by a third party; or responsible
+     for a co-payment or co-insurance. Eligibility and health plan enrollment may
+     change from month to month. Retain documentation of the verified eligibility for
+     billing purposes.
+     Verify member eligibility using the Eligibility Lookup Tool, and ANSI 270 and ANSI
+     271. Brief descriptions of each are below; for detailed information, call Medicaid
+     Information, or go to the Medicaid website at https://medicaid.utah.gov/medicaid-
+     online.
+     Note: Medicaid staff make every effort to provide complete and accurate
+     information on all inquiries. However, federal regulations do not allow a claim
+     payment even if the information given to a provider by Medicaid staff was incorrect.
+     6-1.1 Tools to Verify Medicaid Eligibility
+     These tools may be used to verify member eligibility:
+
+     Eligibility Lookup Tool
+
+
+              Utah Medicaid Provider Manual – Section I: General Information
+
+SOURCE 6: Long Term Care Ombudsman — Aging & Adult Services, Utah Department of Health and Human Services | https://daas.utah.gov/long-term-care-ombudsman/ | source date: none stated on page | retrieved: 2026-11-08
+Skip to content
+
+Long Term Care Ombudsman
+
+The Long-Term Care Ombudsman (LTCO) seeks resolution of problems and advocates for the rights of residents of long term care facilities to ensure and enhance the quality of life and care of residents.
+
+Possibly the best way to get your questions answered is by talking to an Ombudsman. The county you live in determines who your Ombudsman is.
+
+Here you can view a list displaying location specific information for an Ombudsman near you.
+
+Find a location
+
+Report personal rights violations
+
+If you aware of an individual who resides in a nursing home or assisted living, that are dealing with a violation of their personal rights. Please report.
+
+The long-term care ombudsman will initiate an investigation within 5 business days.
+
+Report violation
+
+Resident's rights
+
+Anyone (residents, relatives, friends or even the staff of a facility) may initiate a complaint on behalf of the resident. Often residents are unable to do it themselves. Only as mutually agreed upon, between the ombudsman and the resident or his/her legal representative, the ombudsman will make every reasonable effort to assist, represent and intervene on behalf of the resident.
+
+Services are provided to persons:
+
+Without regard for income and resources
+
+As requested by an individual or on behalf of an individual
+
+Available to a person attempting to enter a facility
+
+Long-term care resident rights
+
+If you are a resident or have a loved one in a nursing home or assisted living facility, the link below can provide information highlighting your rights.
+
+Long-term care resident rights
+
+(opens in a new tab)
+
+Understanding nursing home transfer and discharge requirements in Utah
+
+Nursing home transfers/discharges, particularly when involuntary, can have serious negative effects on residents. Many residents experience transfer trauma, also known as relocation stress syndrome.
+
+Since transfers/discharges can have a devastating impact on residents, it is important that they be prevented if at all possible, and carried out appropriately, safely, and carefully when they do occur.  To that end, providers, ombudsmen, and other stakeholders charged with following, enforcing, or advocating for residents under the rules need to fully understand the requirements and guidance around transfer and discharge.
+
+The following resources were developed by the National Consumer Voice for Quality Long-Term Care, in coordination with the Utah Office of the State Long-Term Care Ombudsman, to assist long-term care providers, ombudsmen, consumers, and other stakeholders in comprehending federal and state requirements around transfer and discharge rights and responsibilities.
+
+Download resource manual for providers, ombudsmen, and other stakeholdersopens in a new tab
+
+(opens in a new tab)
+
+Download consumer brochure - nursing home discharge guideopens in a new tab
+
+(opens in a new tab)
+
+Webinar reviewing the resource manual
+
+Ombudsman program overview
+
+The heart of the Long Term Care Ombudsmen Program is the team of certified Ombudsmen who are empowered to resolve issues surrounding the care and quality of life for people living in nursing homes and assisted living facilities. Ombudsmen are there to represent the residents' interests. It is the residents' desires and needs that are considered and acted upon.
+
+Being an Ombudsman is an important responsibility that is taken on with great care and professionalism. In Utah, Ombudsmen are certified only after receiving extensive training.
+
+Code of ethics
+
+As an ombudsman:
+
+Participate in efforts to maintain and promote the integrity of the long-term care Ombudsman program.
+
+Act in accordance with its standards and procedures.
+
+Recognize the boundaries of my own level of training and skills and consult with an Ombudsman supervisor when needed.
+
+Provide services with respect for human dignity and the individuality of the resident unrestricted by considerations of age, social or economic status, personal characteristics, sexual orientation or lifestyle.
+
+Respect and promote residents’ rights of self-determination, making every reasonable effort to act in accordance with residents’ wishes.
+
+Continually safeguard the confidentiality of residents and not divulge any information unless an immediate life-threatening situation overrides this discretion.
+
+Participate in efforts to promote a quality long-term care system.
+
+Avoid any conflict of interest or appearance of conflict of interest (including gain) in the provision of ombudsman services within nursing or assisted living homes
+
+You can volunteer
+
+Are you interested in using your time and talents to serve as an advocate for nursing home and adult care facility residents? The Long Term Care Ombudsman Program is looking for volunteers to serve as certified Ombudsmen to improve the quality of care and quality of life to residents living in long term care facilities.
+
+Certified Ombudsman not only visit residents, investigate and resolve complaints, but also use their skills to advocate for the rights of residents in nursing homes and other long term care facilities. The dual focus of quality of care and quality of life enables the volunteers to assure that residents are cared for appropriately.
+
+Volunteers serve as a voice for residents of nursing homes and assisted living centers. Certified Ombudsmen are indispensable in ensuring that all facilities meet mandated, legal standards for every person requiring long term care.
+
+Statewide ombudsman locations
+
+The Utah Department of Health and Human Services may occasionally link to outside sources of information. DHHS and the state of Utah do not necessarily endorse the provider of the content and are not responsible for any content published on the external site.
+
+Resources
+
+Annual reports
+
+Annual report - Federal fiscal year 2022opens in a new tab
+
+Assisted living discharge legislative report - State fiscal year 2022
+
+Assisted living discharge legislative report - State fiscal year 2023
+
+Assisted living discharge legislative report - State fiscal year 2024
+
+Rules and regulations
+
+Utah Assisted Living Rules:
+
+rules.utah.gov/publicat/code/r432/r432-270.htm"opens in a new tab
+
+Utah Ombudsman Rule:
+
+rules.utah.govopens in a new tab
+
+Utah Ombudsman Law:
+
+www.le.utah.govopens in a new tab
+
+Nursing Home Rules:
+
+rules.utah.gov/publicat/code/r432/r432-150.htm"
+
+opens in a new tab
+
+Other resources
+
+Medicaid denial appeal request
+
+Skilled nursing facility-initiated discharge appeal formopens in a new tab
+
+Disability Law Center
+
+disabilitylawcenter.orgopens in a new tab
+
+Medicare Nursing Home Compare
+
+medicare.gov/nhcompare/home.aspopens in a new tab
+
+Centers for Medicaid/Medicare Services
+
+cms.hhs.govopens in a new tab
+
+Utah Division of Aging and Adult Services
+
+daas.utah.gov
+
+Utah Home and Community Based Services (HCBS) Waiver Programs
+
+medicaid.utah.gov/ltc-2/opens in a new tab
+
+Utah Nursing Assistant Registry
+
+utahcna.comopens in a new tab
+
+ACL Administration for Community Living
+
+aoa.govopens in a new tab
+
+National Ombudsman Resource Center (NORC)
+
+ltcombudsman.orgopens in a new tab
+
+About Assisted Living
+
+aboutassistedliving.orgopens in a new tab
+
+Utah Health Care Association
+
+uthca.orgopens in a new tab
+
+Utah Assisted Living Association
+
+utahassistedliving.orgopens in a new tab
+
+2016-17 Utah Healthcare Guide
+
+ut-hospitals.comopens in a new tab
+
+Follow us online
+
+(opens in a new tab)(opens in a new tab)(opens in a new tab)(opens in a new tab)(opens in a new tab)(opens in a new tab)
+
+Cannon Health Building
+
+288 North 1460 West
+
+Salt Lake City, Utah
+
+84116
+
+Phone: 801-538-3910
+
+Fax: 801-538-4395
+
+Email: agingservices@utah.gov
+
+External Information Disclaimeropens in a new tab
+
+Navigation Menu
+
+Protection
+
+Services
+
+Public Guardian
+
+Centenarians
+
+Locations
+
+About
+
+Contact
+
+Questions
+
+Utah WISE Initiative
+
+Resources
+
+211Utah - United Wayopens in a new tab
+
+Safe UTopens in a new tab
+
+Utah Domestic Violence Coalitionopens in a new tab
+
+988 Suicide and Crisis Lifelineopens in a new tab
+
+Hotlines
+
+Abuse/Neglect of Seniors and Adults with Disabilitiesopens in a new tab
+
+1-800-371-7897
+
+Child Abuse/Neglect
+
+1-855-323-DCFS(3237)
+
+Crisis Line & Mobile Outreach Team
+
+1-801-587-3000
+
+National Suicide Prevention Lifelineopens in a new tab
+
+1-800-273-TALK(8255)
+
+Sexual Violence Crisis Line
+
+1-888-421-1100
+
+Utah Domestic Violenceopens in a new tab
+
+1-800-897-LINK(5465)
+
+Translate ❯
+
+SOURCE 7: Ombudsman Locations — Aging & Adult Services, Utah Department of Health and Human Services | https://daas.utah.gov/ombudsman-locations-3/ | source date: none stated on page | retrieved: 2026-11-08
+Skip to content
+
+Ombudsman Locations
+
+Possibly the best way to get your questions answered is by talking to an Ombudsman. The county you live in determines who your Ombudsman is.
+
+If you feel that your concerns have not been addressed or you need further assistance please contact the State Ombudsman .
+
+Long-term care ombudsman contact information
+
+County | Ombudsman | Phone # | Email
+
+Cache, Rich, Box Elder | Chad Fairbanks | 435-713-1464 | chadf@brag.utah.gov
+
+Davis County | Jennifer Kay | 801-525-5060 | jkay@co.davis.ut.us
+
+Washington, Beaver, Garfield, Iron, Kane | Kelly Reeder | 435-263-0489 | kreeder@fivecounty.utah.gov
+
+Utah, Wasatch, Summit | Ann Humpherys | 801-229-3809 | ahumpherys@magutah.gov ombudsman@magutah.gov
+
+Salt Lake | Ombudsman Line | 385-468-3255 | ombudsman@saltlakecounty.gov
+
+San Juan | Natalie Freestone | 435-459-2875 | nfreestone@sanjuancountyut.gov
+
+Sevier, Millard, Piute, Wayne, Sanpete, Juab | Michelle Standley | 435-893-0736 | michellestandley@r6.utah.gov
+
+Carbon, Emery, and Grand | Robbie Jensen | 435-613-0023 | rjensen@seualg.utah.gov
+
+Duchesne, Daggett, Uintah | Sam Creamer | 435-722-5229 | samc@ubaog.org
+
+Tooele | Ombudsman line | 435-277-2350 | jennifer.romero@tooeleco.gov
+
+Weber and Morgan | Angela Stout | 801-625-3783 | angelas@weberhs.org
+
+State of Utah
+
+Alianne Sipes
+
+Department of Health and Human Services
+
+385-222-1273
+
+asipes@utah.gov
+
+Dianna Sanchez
+
+Ombudsman Records Requests
+
+801-459-8588
+
+diannas@utah.gov
+
+Follow us online
+
+(opens in a new tab)(opens in a new tab)(opens in a new tab)(opens in a new tab)(opens in a new tab)(opens in a new tab)
+
+Cannon Health Building
+
+288 North 1460 West
+
+Salt Lake City, Utah
+
+84116
+
+Phone: 801-538-3910
+
+Fax: 801-538-4395
+
+Email: agingservices@utah.gov
+
+External Information Disclaimeropens in a new tab
+
+Navigation Menu
+
+Protection
+
+Services
+
+Public Guardian
+
+Centenarians
+
+Locations
+
+About
+
+Contact
+
+Questions
+
+Utah WISE Initiative
+
+Resources
+
+211Utah - United Wayopens in a new tab
+
+Safe UTopens in a new tab
+
+Utah Domestic Violence Coalitionopens in a new tab
+
+988 Suicide and Crisis Lifelineopens in a new tab
+
+Hotlines
+
+Abuse/Neglect of Seniors and Adults with Disabilitiesopens in a new tab
+
+1-800-371-7897
+
+Child Abuse/Neglect
+
+1-855-323-DCFS(3237)
+
+Crisis Line & Mobile Outreach Team
+
+1-801-587-3000
+
+National Suicide Prevention Lifelineopens in a new tab
+
+1-800-273-TALK(8255)
+
+Sexual Violence Crisis Line
+
+1-888-421-1100
+
+Utah Domestic Violenceopens in a new tab
+
+1-800-897-LINK(5465)
+
+Translate ❯
+

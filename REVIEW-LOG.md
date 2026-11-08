@@ -1774,3 +1774,75 @@ deployed.
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-11-07. No
 human review is claimed for this entry.
+
+## 2026-11-08 — nightly review: tennessee, texas, utah (scheduled)
+
+Cursor at tennessee. Batch: tennessee, texas, utah.
+
+- **Tennessee — confirmed.** Fresh capture of all 4 sources (recipe
+  218e67906405), curl. Zero fidelity failures, markdown and HTML. Hash
+  bec77cadd7ec1b52, retained and promoted. The capture moved slightly
+  from 2026-10-15: retrieval-date stamps aside, the page's news/notice
+  feed item changed ("Notice of Change in Medicaid State Plan: PACE
+  Reimbursement" -> "2026 Update to Quality Improvement Strategy") and a
+  "Self-Direction of Healthcare Tasks (SDHCT)" link was added to the
+  landing page — both routine site-chrome movement, not any quoted rule
+  or fact; the two cited rules' own filed/effective dates (April 17,
+  2007 / July 1, 2007; May 1, 2018 / July 30, 2018) are unchanged, so
+  this is revision noise, not instrument replacement. Checked date
+  advanced to 2026-11-08.
+- **Texas — partially confirmed; checked date NOT advanced (unchanged
+  limitation).** Source 1 (HHSC Provider Letter PL 2022-25, the PDF
+  hhs.texas.gov) is marked `"attended": true` and needs the owner's own
+  browser download under FA-D-20260922-01; this unattended pass cannot
+  supply it. Sources 2-3 (fhb.hhs.texas.gov, ltco.texas.gov) recaptured
+  by curl. Sources 4-5 (Secretary of State TAC portal, records 203098
+  and 203099) recaptured live via the session browser —
+  `document.documentElement.outerHTML` with script elements stripped and
+  query strings dropped from Previous/Next Rule hrefs, the same method
+  the standing recipe's notes record — and verified on-page against the
+  expected Rule §554.502/§554.503 titles and the unchanged Chapter
+  Review Date (03/11/2024) before being supplied. Checked
+  `states/texas.md`/`site/states/texas.html` against the fresh 4-source
+  capture plus the standing main packet (for source 1's unrefreshed
+  content) plus the texas-packet-moved.txt supplement: 0 failures,
+  markdown and HTML. Not retained/promoted (would truncate the standing
+  record of source 1) and checked date left at 2026-10-08. Not queued:
+  the same documented attended-only limitation recorded at every pass
+  since the 2026-10-08 rebuild, not a new finding.
+- **Utah — UNREACHABLE on 6 of 12 sources (first occurrence of this
+  symptom).** Recipe capture, 6 of 12 sources. SOURCES 1, 8, 9, 10, 11
+  and 12 — every adminrules.utah.gov address this recipe names, all
+  version-pinned UUID endpoints (`/api/public/getHTML/uac-html/<uuid>`
+  and the matching `/api/public/rule/<rule>/undefined/Current%20Rules`
+  metadata witnesses, covering all three operative rules this page is
+  built on: R432-150, R410-14, R414-504) — failed HTTP 404, confirmed by
+  a direct curl against one endpoint both bare and with a full browser
+  user-agent (both 404; adminrules.utah.gov's own root answers 200, so
+  this is not a whole-host outage). Sources 2-7 (daas.utah.gov,
+  medicaid.utah.gov, dhhs.utah.gov, medicaid-documents.dhhs.utah.gov)
+  captured cleanly. This repo confirmed all 12 Utah sources clean as
+  recently as 2026-10-15 (hash 446727cfb0be34c9); this is the first
+  failure on file here, so per the skill no queue entry yet (one
+  unreachable pass is log material, not a human-decided finding) — but
+  it is worth flagging for the owner alongside the licensure-mobility
+  sibling's own 2026-11-07 log entry, which recorded the *same host*,
+  adminrules.utah.gov, 404ing on a different rule's UUID address
+  (R156-31b) the pass before. Two different Field Assembly repos hitting
+  404s on three different adminrules.utah.gov document UUIDs within 24
+  hours reads more like a site-wide republish or UUID rotation than
+  three unrelated coincidences; it may be worth a human visit to
+  adminrules.utah.gov before this reaches the three-strike threshold in
+  either repo. No fidelity check run on incomplete evidence; nothing
+  retained; checked date untouched (stays 2026-10-15).
+
+sync-checked-dates.py corrected 2 derived dates (table + JSON for
+tennessee). build-status.py: 51/51 baseline, 50/51 full (pre-existing
+North Dakota gap, not from this pass). build-state-picker.py regenerated
+(51/51). generate-sitemap.py: 58 URLs. check-all.py: 104 pages across 52
+states, no unexplained failures. check-live.py: 5 pages, nothing loaded
+from any other host. Cursor advanced to vermont. No queue entries
+opened — nothing here crossed the human-decided threshold yet.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-11-08. No
+human review is claimed for this entry.
