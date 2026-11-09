@@ -28,10 +28,12 @@
       "page": "florida"
     },
     "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0400/Sections/0400.0255.html": {
-      "attempts": 2,
-      "last_attempt": "2026-10-31T182532Z",
-      "last_detail": "no-playback",
-      "last_result": "FAILED",
+      "attempts": 3,
+      "capture": "https://web.archive.org/web/20261109062610/http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0400/Sections/0400.0255.html",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-11-09T062656Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "florida"
     },
     "http://www.oltco.org/contact-us/": {
@@ -60,8 +62,8 @@
       "page": "alabama"
     },
     "https://adminrules.idaho.gov/rules/current/16/160326.pdf": {
-      "attempts": 2,
-      "last_attempt": "2026-10-31T190838Z",
+      "attempts": 3,
+      "last_attempt": "2026-11-09T065704Z",
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "idaho"
@@ -106,8 +108,8 @@
       "page": "georgia"
     },
     "https://aging.idaho.gov/about-us/our-staff/": {
-      "attempts": 2,
-      "last_attempt": "2026-10-31T191329Z",
+      "attempts": 3,
+      "last_attempt": "2026-11-09T070204Z",
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "idaho"
@@ -163,8 +165,8 @@
       "page": "south-carolina"
     },
     "https://ahca.myflorida.com/content/download/27067/file/59G-4.200.pdf": {
-      "attempts": 2,
-      "last_attempt": "2026-10-31T183013Z",
+      "attempts": 3,
+      "last_attempt": "2026-11-09T063143Z",
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "florida"
@@ -378,8 +380,8 @@
       "page": "district-of-columbia"
     },
     "https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.02": {
-      "attempts": 2,
-      "last_attempt": "2026-10-30T153936Z",
+      "attempts": 3,
+      "last_attempt": "2026-11-09T061007Z",
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "district-of-columbia"
@@ -394,8 +396,8 @@
       "page": "district-of-columbia"
     },
     "https://code.dccouncil.gov/us/dc/council/code/sections/7-702.04": {
-      "attempts": 2,
-      "last_attempt": "2026-10-30T154713Z",
+      "attempts": 3,
+      "last_attempt": "2026-11-09T061510Z",
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "district-of-columbia"
@@ -543,10 +545,12 @@
       "page": "district-of-columbia"
     },
     "https://dch.georgia.gov/divisionsoffices/hfrd/hfrd-laws-regulations": {
-      "attempts": 2,
-      "last_attempt": "2026-10-31T184705Z",
-      "last_detail": "no-playback",
-      "last_result": "FAILED",
+      "attempts": 3,
+      "capture": "https://web.archive.org/web/20261109063703/https://dch.georgia.gov/divisionsoffices/hfrd/hfrd-laws-regulations",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-11-09T063719Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "georgia"
     },
     "https://dchealth.dc.gov/service/incident-report-and-6-108-discharge-transfer-and-relocation-forms": {
@@ -704,29 +708,29 @@
       "page": "montana"
     },
     "https://dsd.maryland.gov/regulations/Pages/10.07.09.10.aspx": {
-      "attempts": 2,
-      "last_attempt": "2026-11-01T162703Z",
+      "attempts": 3,
+      "last_attempt": "2026-11-09T071432Z",
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "maryland"
     },
     "https://dsd.maryland.gov/regulations/Pages/10.07.09.11.aspx": {
-      "attempts": 2,
-      "last_attempt": "2026-11-01T163152Z",
+      "attempts": 3,
+      "last_attempt": "2026-11-09T071923Z",
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "maryland"
     },
     "https://dsd.maryland.gov/regulations/Pages/10.07.09.12.aspx": {
-      "attempts": 2,
-      "last_attempt": "2026-11-01T165240Z",
+      "attempts": 3,
+      "last_attempt": "2026-11-09T072413Z",
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "maryland"
     },
     "https://dsd.maryland.gov/regulations/Pages/10.07.09.13.aspx": {
-      "attempts": 2,
-      "last_attempt": "2026-11-01T165837Z",
+      "attempts": 3,
+      "last_attempt": "2026-11-09T072903Z",
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "maryland"
@@ -925,22 +929,24 @@
       "page": "alaska"
     },
     "https://health.hawaii.gov/eoa/home/long-term-care-ombudsman/": {
-      "attempts": 2,
-      "last_attempt": "2026-10-31T185341Z",
+      "attempts": 3,
+      "last_attempt": "2026-11-09T064240Z",
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "hawaii"
     },
     "https://health.hawaii.gov/opppd/department-of-health-administrative-rules-title-11/": {
-      "attempts": 2,
-      "last_attempt": "2026-10-31T185825Z",
-      "last_detail": "no-playback",
-      "last_result": "FAILED",
+      "attempts": 3,
+      "capture": "https://web.archive.org/web/20261109064258/https://health.hawaii.gov/opppd/department-of-health-administrative-rules-title-11/",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-11-09T064552Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "hawaii"
     },
     "https://health.hawaii.gov/opppd/files/2022/10/11-94.2-2022.pdf": {
-      "attempts": 2,
-      "last_attempt": "2026-10-31T190302Z",
+      "attempts": 3,
+      "last_attempt": "2026-11-09T065031Z",
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "hawaii"
@@ -1068,17 +1074,17 @@
       "page": "virginia"
     },
     "https://ldh.la.gov/assets/medicaid/StatePlan/Sec4/Attachment4.19C.pdf": {
-      "attempts": 2,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-11-01T161438Z",
-      "last_detail": "no-playback",
+      "attempts": 3,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-09T070445Z",
+      "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "louisiana"
     },
     "https://ldh.la.gov/assets/medicaid/hss/docs/NH/NH_Regulations/NF_regs_as_of_3-14-22.pdf": {
-      "attempts": 2,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-01T161513Z",
+      "attempts": 3,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-09T070508Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "louisiana"
@@ -1215,16 +1221,16 @@
       "page": "delaware"
     },
     "https://medquest.hawaii.gov/content/dam/formsanddocuments/client-forms/1161-request-for-a-hearing/DHS_1161_Rev_1218_Fillable.pdf/jcr:content?process=&submitUrl=&type=pdf": {
-      "attempts": 2,
-      "last_attempt": "2026-10-31T190325Z",
+      "attempts": 3,
+      "last_attempt": "2026-11-09T065054Z",
       "last_detail": "error:not-found",
       "last_result": "FAILED",
       "page": "hawaii"
     },
     "https://medquest.hawaii.gov/en/members-applicants/rights-and-responsibilities/grievance-appeals.html": {
-      "attempts": 2,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-31T190357Z",
+      "attempts": 3,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-09T065156Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "hawaii"
@@ -1327,10 +1333,12 @@
       "page": "new-hampshire"
     },
     "https://oah.dc.gov/page/about": {
-      "attempts": 2,
-      "last_attempt": "2026-10-31T180426Z",
-      "last_detail": "no-playback",
-      "last_result": "FAILED",
+      "attempts": 3,
+      "capture": "https://web.archive.org/web/20261109061556/https://oah.dc.gov/page/about",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-11-09T061733Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "district-of-columbia"
     },
     "https://oah.dc.gov/page/filings-forms": {
@@ -1455,9 +1463,9 @@
       "page": "new-york"
     },
     "https://regulations.delaware.gov/api/AdminCode/title16/3102/390cf383-7c28-4d18-a3be-494417f7c892": {
-      "attempts": 2,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-30T153024Z",
+      "attempts": 3,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-09T060515Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "delaware"
@@ -1499,9 +1507,9 @@
       "page": "montana"
     },
     "https://rules.sos.ga.gov/gac/111-8-50": {
-      "attempts": 2,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-10-31T184849Z",
+      "attempts": 3,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-09T063751Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "georgia"
@@ -1624,8 +1632,8 @@
       "page": "rhode-island"
     },
     "https://www.aarp.org/legal-counsel-for-elderly/what-we-do/info-2017/dc-long-term-care-ombudsman.html": {
-      "attempts": 2,
-      "last_attempt": "2026-10-31T180942Z",
+      "attempts": 3,
+      "last_attempt": "2026-11-09T062224Z",
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "district-of-columbia"
@@ -1771,9 +1779,9 @@
       "page": "connecticut"
     },
     "https://www.chfs.ky.gov/agencies/dail/Pages/ltcomb.aspx": {
-      "attempts": 2,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-01T160954Z",
+      "attempts": 3,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-09T070423Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "kentucky"
@@ -1838,17 +1846,21 @@
       "page": "federal"
     },
     "https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-483/subpart-B/section-483.1": {
-      "attempts": 2,
-      "last_attempt": "2026-10-31T181941Z",
-      "last_detail": "no-playback",
-      "last_result": "FAILED",
+      "attempts": 3,
+      "capture": "https://web.archive.org/web/20261109062243/https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-483/subpart-B/section-483.1",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-11-09T062421Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "federal"
     },
     "https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-483/subpart-B/section-483.15": {
-      "attempts": 2,
-      "last_attempt": "2026-10-31T181959Z",
-      "last_detail": "submit-500",
-      "last_result": "FAILED",
+      "attempts": 3,
+      "capture": "https://web.archive.org/web/20261109062501/https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-483/subpart-B/section-483.15",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-11-09T062545Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "federal"
     },
     "https://www.hca.nm.gov/office-of-fair-hearings-faq/": {
@@ -1937,9 +1949,9 @@
       "page": "texas"
     },
     "https://www.ilga.gov/legislation/ILCS/details?MajorTopic=REGULATION&Chapter=HEALTH+FACILITIES+AND+REGULATION&ActName=Nursing+Home+Care+Act.&ActID=1225&ChapterID=21&ChapAct=210+ILCS+45/&SeqStart=17400000&SeqEnd=19900000&Print=True": {
-      "attempts": 2,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-01T160736Z",
+      "attempts": 3,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-09T070228Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "illinois"
@@ -1972,9 +1984,9 @@
       "page": "indiana"
     },
     "https://www.kancare.ks.gov/members/help-resources/appeals-fair-hearings/state-fair-hearings": {
-      "attempts": 2,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-01T160847Z",
+      "attempts": 3,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-09T070311Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "kansas"
@@ -2025,33 +2037,33 @@
       "page": "iowa"
     },
     "https://www.maine.gov/dhhs/about-us/administrative-hearings": {
-      "attempts": 2,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-01T161538Z",
+      "attempts": 3,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-09T070531Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "maine"
     },
     "https://www.maine.gov/dhhs/about-us/administrative-hearings/faq": {
-      "attempts": 2,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-01T161602Z",
+      "attempts": 3,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-09T070658Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "maine"
     },
     "https://www.maine.gov/sos/sites/maine.gov.sos/files/content/assets/144c110.docx": {
-      "attempts": 2,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-01T161656Z",
+      "attempts": 3,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-09T070722Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "maine"
     },
     "https://www.maine.gov/sos/sites/maine.gov.sos/files/inline-files/c2s067-LUP%2009.15.2014%20NSC.docx": {
-      "attempts": 2,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-01T161715Z",
+      "attempts": 3,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-09T070747Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "maine"
@@ -2066,10 +2078,12 @@
       "page": "maine"
     },
     "https://www.maineombudsman.org/about.aspx": {
-      "attempts": 2,
-      "last_attempt": "2026-11-01T162210Z",
-      "last_detail": "no-playback",
-      "last_result": "FAILED",
+      "attempts": 3,
+      "capture": "https://web.archive.org/web/20261109070808/https://www.maineombudsman.org/about.aspx",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-11-09T070856Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "maine"
     },
     "https://www.maineombudsman.org/contact.aspx": {
@@ -2136,17 +2150,17 @@
       "page": "mississippi"
     },
     "https://www.michigan.gov/-/media/Project/Websites/lara/healthsystemslicensing/Folder9/bhs_GUIDANCE_for_Inv_Transfer.pdf": {
-      "attempts": 2,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-01T165919Z",
+      "attempts": 3,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-09T072926Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "michigan"
     },
     "https://www.michigan.gov/-/media/Project/Websites/mdhhs/Folder1/Folder31/MSA_04-20.pdf": {
-      "attempts": 2,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-01T165939Z",
+      "attempts": 3,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-09T072951Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "michigan"
@@ -2168,8 +2182,8 @@
       "page": "michigan"
     },
     "https://www.myflfamilies.com/about/office-inspector-general/appeal-hearings": {
-      "attempts": 2,
-      "last_attempt": "2026-10-31T184022Z",
+      "attempts": 3,
+      "last_attempt": "2026-11-09T063634Z",
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "florida"
@@ -2238,9 +2252,9 @@
       "page": "new-jersey"
     },
     "https://www.ombudsman.ks.gov/helpful-resources/issues-of-interest/involuntary-discharge": {
-      "attempts": 2,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-01T160932Z",
+      "attempts": 3,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-09T070334Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "kansas"
@@ -2439,5 +2453,5 @@
       "page": "wyoming"
     }
   },
-  "updated": "2026-11-08T064103Z"
+  "updated": "2026-11-09T072951Z"
 }
