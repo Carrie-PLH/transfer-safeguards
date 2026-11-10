@@ -831,8 +831,8 @@
       "page": "new-hampshire"
     },
     "https://gc.nh.gov/rsa/html/XI/151/151-26.htm": {
-      "attempts": 2,
-      "last_attempt": "2026-11-01T182858Z",
+      "attempts": 3,
+      "last_attempt": "2026-11-10T113602Z",
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "new-hampshire"
@@ -1162,15 +1162,15 @@
       "page": "utah"
     },
     "https://medicaid.ms.gov/wp-content/uploads/2025/07/Title-23-Part-300-Appeals-eff.-7.1.2025.pdf": {
-      "attempts": 2,
-      "last_attempt": "2026-11-01T170140Z",
+      "attempts": 3,
+      "last_attempt": "2026-11-10T113023Z",
       "last_detail": "error:no-captures",
       "last_result": "FAILED",
       "page": "mississippi"
     },
     "https://medicaid.ms.gov/wp-content/uploads/2026/07/Title-23-Part-207-Institutional-LTC-eff-8.1.26.pdf": {
-      "attempts": 2,
-      "last_attempt": "2026-11-01T170220Z",
+      "attempts": 3,
+      "last_attempt": "2026-11-10T113055Z",
       "last_detail": "error:no-captures",
       "last_result": "FAILED",
       "page": "mississippi"
@@ -1326,9 +1326,10 @@
       "page": "nebraska"
     },
     "https://nhmmis.nh.gov/portals/wps/wcm/connect/07669c79-1c8c-4fae-b94e-5a367379f968/NH+Medicaid+Final++Nursing+Facility+Manual+7-14-2020.pdf?MOD=AJPERES&CVID=ninzmzW": {
-      "attempts": 2,
-      "last_attempt": "2026-11-01T182913Z",
-      "last_detail": "submit-0",
+      "attempts": 3,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-11-10T113621Z",
+      "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "new-hampshire"
     },
@@ -1666,15 +1667,15 @@
       "page": "nevada"
     },
     "https://www.aging.nm.gov/contact-us/": {
-      "attempts": 2,
-      "last_attempt": "2026-11-02T152946Z",
+      "attempts": 3,
+      "last_attempt": "2026-11-10T114257Z",
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "new-mexico"
     },
     "https://www.aging.nm.gov/ombudsman/": {
-      "attempts": 2,
-      "last_attempt": "2026-11-02T153435Z",
+      "attempts": 3,
+      "last_attempt": "2026-11-10T114744Z",
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "new-mexico"
@@ -1805,25 +1806,26 @@
       "page": "california"
     },
     "https://www.dhhs.nh.gov/about-dhhs/long-term-care-ombudsman": {
-      "attempts": 2,
-      "last_attempt": "2026-11-01T182930Z",
-      "last_detail": "submit-0",
+      "attempts": 3,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-11-10T113640Z",
+      "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "new-hampshire"
     },
     "https://www.dhhs.nh.gov/doing-business-dhhs/legal-services/administrative-appeals": {
-      "attempts": 2,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-11-01T182943Z",
-      "last_detail": "submit-0",
+      "attempts": 3,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-10T113659Z",
+      "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "new-hampshire"
     },
     "https://www.dhhs.nh.gov/long-term-care-ombudsman-oltc": {
-      "attempts": 2,
-      "consecutive_hard_failures": 1,
-      "last_attempt": "2026-11-01T183016Z",
-      "last_detail": "submit-0",
+      "attempts": 3,
+      "consecutive_hard_failures": 2,
+      "last_attempt": "2026-11-10T113809Z",
+      "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "new-hampshire"
     },
@@ -2166,17 +2168,17 @@
       "page": "michigan"
     },
     "https://www.michigan.gov/lara/-/media/Project/Websites/lara/bchs/Folder2/LARA-BCHS-ITD-100-07262024.pdf": {
-      "attempts": 2,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-01T165958Z",
+      "attempts": 3,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-10T112932Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "michigan"
     },
     "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Assistance-Programs/Medicaid-BPHASA/Other-Prov-Specific-Page-Docs/LTC_00-05_9045_7.pdf": {
-      "attempts": 2,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-01T170018Z",
+      "attempts": 3,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-10T112951Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "michigan"
@@ -2359,9 +2361,9 @@
       "page": "south-carolina"
     },
     "https://www.sos.mo.gov/cmsimages/adrules/csr/current/19csr/19c30-82.pdf": {
-      "attempts": 2,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-01T170324Z",
+      "attempts": 3,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-10T113114Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "missouri"
@@ -2453,5 +2455,5 @@
       "page": "wyoming"
     }
   },
-  "updated": "2026-11-09T072951Z"
+  "updated": "2026-11-10T114744Z"
 }
