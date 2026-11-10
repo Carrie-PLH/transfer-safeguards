@@ -1846,3 +1846,38 @@ opened — nothing here crossed the human-decided threshold yet.
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-11-08. No
 human review is claimed for this entry.
+
+## 2026-11-10 — scheduled nightly QC (rr-state-review)
+Batch from cursor "vermont": vermont, virginia, washington. The Room &
+Recourse recipe exception (compare state-page count against recipe count
+before reviewing this collection) does not apply this pass: 51 of 51 real
+state pages have a matching recipe (58 recipe files on disk, covering a few
+extras beyond the 1:1 set), so this is an ordinary QC pass, not recipe
+construction.
+
+- **vermont — confirmed.** Fresh capture of all 7 sources (recipe
+  97fee5696430), curl. Source 6 (asd.vermont.gov ombudsman page) marginally
+  shorter than the 2026-10-17 capture (2936 → 2918 chars, whitespace-
+  collapsed); source headers identical (title, URL, source date), zero
+  fidelity failures on both surfaces. Retained, promoted. Checked date
+  advanced to 2026-11-10.
+- **virginia — confirmed.** Fresh capture of all 4 sources (recipe
+  c974353f8613), curl. Source 1 (law.lis.virginia.gov Article 2) shorter
+  than the 2026-10-17 capture (24714 → 24427 chars, whitespace-collapsed);
+  source headers identical, zero fidelity failures on both surfaces.
+  Retained, promoted. Checked date advanced to 2026-11-10.
+- **washington — confirmed.** Fresh capture of all 8 sources (recipe
+  92618e36b910), curl. Zero fidelity failures, markdown and HTML. Unchanged
+  since the 2026-09-21-b capture (hash b93df384f0b0a349), promoted. Checked
+  date advanced to 2026-11-10.
+
+sync-checked-dates.py corrected 6 derived dates (table + JSON for vermont,
+virginia and washington). build-status.py: 51/51 baseline, 50/51 full
+(pre-existing North Dakota gap, not from this pass). build-state-picker.py
+regenerated (51/51 published). generate-sitemap.py: 58 URLs. check-all.py:
+104 pages across 52 states, no unexplained failures. check-live.py: 5
+pages, nothing loaded from any other host. Cursor advanced to
+west-virginia. No queue entries opened.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-11-10. No
+human review is claimed for this entry.

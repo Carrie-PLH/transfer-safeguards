@@ -1,10 +1,11 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: vermont
-ASSEMBLED: 2026-10-17
+ASSEMBLED: 2026-11-10
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/vermont.json (recipe digest 97fee5696430). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
 - SOURCE 1: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
   The Legislature's full-chapter page, which prints every section of chapter 73 on one page with its history line. Captured whole rather than section by section so the grounds statement in § 7301(2)(D), the grievance and ombudsman provisions of §§ 7302-7303 and the readmission petition of § 7305 sit in one source.
 - SOURCE 2: transport curl; extractor pdftotext-layout; filters none.
@@ -20,7 +21,7 @@ CAPTURE NOTES:
 - SOURCE 7: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
   The program's own page, published by the contractor that operates the Office of the State Long-Term Care Ombudsman under DAIL's designation (source 6 states the arrangement). Quoted as the program's own published contact; the department's page is quoted beside it where they differ.
 
-SOURCE 1: 33 V.S.A. chapter 73, Nursing Home Residents' Bill of Rights (§§ 7301-7306) — Vermont Statutes Online, Vermont General Assembly | https://legislature.vermont.gov/statutes/fullchapter/33/073 | source date: each section carries its own amendment history; § 7301 last amended 2021, No. 105 (Adj. Sess.), § 627, eff. July 1, 2022; § 7302 last amended 2023, No. 53, § 130, eff. June 8, 2023 | retrieved: 2026-10-17
+SOURCE 1: 33 V.S.A. chapter 73, Nursing Home Residents' Bill of Rights (§§ 7301-7306) — Vermont Statutes Online, Vermont General Assembly | https://legislature.vermont.gov/statutes/fullchapter/33/073 | source date: each section carries its own amendment history; § 7301 last amended 2021, No. 105 (Adj. Sess.), § 627, eff. July 1, 2022; § 7302 last amended 2023, No. 53, § 130, eff. June 8, 2023 | retrieved: 2026-11-10
 Skip to content
 Skip to navigation
 Skip to subnav
@@ -803,7 +804,7 @@ Copyright 2026 State of Vermont. All rights reserved.
 
 Website Design & Development by Bluehouse Group
 
-SOURCE 2: Licensing and Operating Rules for Nursing Homes — Vermont Agency of Human Services, Department of Disabilities, Aging and Independent Living, Division of Licensing and Protection (PDF) | https://dail.vermont.gov/sites/dail/files/documents/Nursing_Home_Regulations_2018.pdf | source date: Revision date: June 1, 2018, as the cover states | retrieved: 2026-10-17
+SOURCE 2: Licensing and Operating Rules for Nursing Homes — Vermont Agency of Human Services, Department of Disabilities, Aging and Independent Living, Division of Licensing and Protection (PDF) | https://dail.vermont.gov/sites/dail/files/documents/Nursing_Home_Regulations_2018.pdf | source date: Revision date: June 1, 2018, as the cover states | retrieved: 2026-11-10
 LICENSING AND OPERATING
  RULES FOR NURSING HOMES
 
@@ -2657,7 +2658,7 @@ l.   Emergency Transfer or Discharge of Residents. An emergency discharge or tra
 
                                                 38
 
-SOURCE 3: Nursing Home Sample Discharge-Transfer Notice — Vermont Division of Licensing and Protection (page) | https://dlp.vermont.gov/nursing-home-sample-discharge-transfer-notice | source date: Tuesday, April 23, 2019 - 12:00, as the page dates its posting | retrieved: 2026-10-17
+SOURCE 3: Nursing Home Sample Discharge-Transfer Notice — Vermont Division of Licensing and Protection (page) | https://dlp.vermont.gov/nursing-home-sample-discharge-transfer-notice | source date: Tuesday, April 23, 2019 - 12:00, as the page dates its posting | retrieved: 2026-11-10
 Skip to main content
 
 An Official Vermont Government
@@ -2786,7 +2787,7 @@ Accessibility
 
 Privacy
 
-SOURCE 4: Nursing Home Transfer/Discharge Letter, sample notice — Vermont Division of Licensing and Protection (PDF) | https://dlp.vermont.gov/sites/dlp/files/documents/Nursing_Home_Transfer_Discharge_Letter.pdf | source date: none stated in the document; posted April 23, 2019 per source 3 | retrieved: 2026-10-17
+SOURCE 4: Nursing Home Transfer/Discharge Letter, sample notice — Vermont Division of Licensing and Protection (PDF) | https://dlp.vermont.gov/sites/dlp/files/documents/Nursing_Home_Transfer_Discharge_Letter.pdf | source date: none stated in the document; posted April 23, 2019 per source 3 | retrieved: 2026-11-10
 *DISCLAIMER: This is only a guide/helpful tool. Be sure to carefully examine the regulatory
 requirements for your type of facility to ensure your notice meets applicable requirements.*
 
@@ -2872,7 +2873,7 @@ Sincerely,
 cc: LTC Ombudsman (required)
    (any other applicable parties)
 
-SOURCE 5: Human Services Board — Vermont Agency of Human Services | https://humanservices.vermont.gov/human-services-board | source date: none stated on page | retrieved: 2026-10-17
+SOURCE 5: Human Services Board — Vermont Agency of Human Services | https://humanservices.vermont.gov/human-services-board | source date: none stated on page | retrieved: 2026-11-10
 Skip to main content
 
 An Official Vermont Government
@@ -3048,9 +3049,9 @@ Maelezo haya ni muhimu. Ikiwa unahitaji msaada wa kuyafahamu, tueleze. (Swahili)
 
 هذه المعلومات مهمة.  إذا كنت تحتاج إلى مساعدة لفهمها، أخبرنا. (Arabic)
 
-यो जानकारी महत्त्वपूर्ण छ ।  यदि तपाईंलाई यसलाई बुझ्नमा मद्दत आवश्यक पर्छ भने हामीलाई भन्नुहोस् ।  (Nepali)
+योजानकारी महत्त्वपूर्ण छ । यदि तपाईंलाई यसलाई बुझ्नमा मद्दत आवश्यक पर्छ भने हामीलाई भन्नुहोस् ।(Nepali)
 
-ဤအချက်အလက်သည် အရေးကြီးပါသည်။ ၎င်းကို နားလည်ရန်အတွက် အကူအညီလိုအပ်ပါက၊ ကျွန်ုပ်တို့အား ပြောပါ။  (Burmese)
+ဤအချက်အလက်သည် အရေးကြီးပါသည်။ ၎င်းကို နားလည်ရန်အတွက် အကူအညီလိုအပ်ပါက၊ ကျွန်ုပ်တို့အား ပြောပါ။(Burmese)
 
 Contact Information
 
@@ -3124,7 +3125,7 @@ Accessibility
 
 Privacy
 
-SOURCE 6: State Long-Term Care Ombudsman Program — Adult Services Division, Vermont Department of Disabilities, Aging and Independent Living | https://asd.vermont.gov/services/ltc-ombudsman-program | source date: none stated on page | retrieved: 2026-10-17
+SOURCE 6: State Long-Term Care Ombudsman Program — Adult Services Division, Vermont Department of Disabilities, Aging and Independent Living | https://asd.vermont.gov/services/ltc-ombudsman-program | source date: none stated on page | retrieved: 2026-11-10
 Skip to main content
 
 An Official Vermont Government
@@ -3190,7 +3191,7 @@ State Health Insurance Program
 
 State Long-Term Care Ombudsman Program
 
-Traumatic Brain Injury Program
+Brain Injury Program
 
 Vermont Senior Centers
 
@@ -3252,7 +3253,7 @@ State Health Insurance Program
 
 State Long-Term Care Ombudsman Program
 
-Traumatic Brain Injury Program
+Brain Injury Program
 
 Vermont Senior Centers
 
@@ -3360,7 +3361,7 @@ Accessibility
 
 Privacy
 
-SOURCE 7: Vermont Long-Term Care Ombudsman Project — Vermont Legal Aid | https://www.vtlegalaid.org/legal-projects/long-term-care-ombudsman | source date: none stated on page | retrieved: 2026-10-17
+SOURCE 7: Vermont Long-Term Care Ombudsman Project — Vermont Legal Aid | https://www.vtlegalaid.org/legal-projects/long-term-care-ombudsman | source date: none stated on page | retrieved: 2026-11-10
 Skip to main content
 
  Vermont Legal Aid
