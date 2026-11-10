@@ -23,20 +23,29 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
+# field-assembly-standard is always a sibling of this repo's own root, which
+# "../field-assembly-standard" only reaches when this script runs from that
+# root directly. A Claude Code Desktop worktree checkout sits at
+# <repo>/.claude/worktrees/<name>/, so the same literal lands one or more
+# levels short there (FA-Q-20261110-01). git's own common-dir is shared by
+# every worktree of this repo and always names the real root, worktree or not,
+# so anchor the sibling lookup to that instead of a fixed "../" count.
+STANDARD_DIR="$(cd "$(git rev-parse --git-common-dir)/.." && pwd)/../field-assembly-standard"
+
 bash site/predeploy-check.sh
 
 # security.txt must be RFC 9116-valid and not expiring (FA-D-20260911-05).
 # Refuses when Expires is past or within 60 days; the fix is
-#   python3 ../field-assembly-standard/tools/securitytxt-check.py --renew
+#   python3 "$STANDARD_DIR/tools/securitytxt-check.py" --renew
 # in every site repo, committed with the deploy.
-python3 ../field-assembly-standard/tools/securitytxt-check.py
+python3 "$STANDARD_DIR/tools/securitytxt-check.py"
 
 (cd site && npx wrangler deploy)
 
 # IndexNow: submit what this deploy changed (FA-D-20260911-01). set -e means
 # a ping failure after a successful publish stops here and is seen, not
 # hidden; rerun the tool by hand after fixing.
-python3 ../field-assembly-standard/tools/indexnow-ping.py
+python3 "$STANDARD_DIR/tools/indexnow-ping.py"
 
 # Keep the ledger on the record with the pass that deployed. Commits only
 # the ledger path, never the working tree.

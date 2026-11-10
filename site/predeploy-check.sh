@@ -34,6 +34,17 @@
 cd "$(dirname "$0")" || exit 1
 fail=0
 
+# field-assembly-standard is a sibling of this repo's own root. "../../" only
+# reaches it when this script runs from site/ under that root directly; a
+# Claude Code Desktop worktree checkout sits two or more levels deeper, so the
+# same literal silently misses and the checks below report "not checked out"
+# even though the standard repo is right there (FA-Q-20261110-01). git's own
+# common-dir is shared by every worktree of this repo and always names the
+# real root, so anchor the sibling lookup to that instead of a fixed "../../".
+# Exported so the embedded page/source-parity check below (a separate python3
+# subprocess) can read it too, rather than computing its own guess.
+export STANDARD_DIR="$(cd "$(git rev-parse --git-common-dir)/.." && pwd)/../field-assembly-standard"
+
 say()  { printf '%s\n' "$*"; }
 bad()  { printf 'FAIL  %s\n' "$*"; fail=1; }
 ok()   { printf 'ok    %s\n' "$*"; }
@@ -416,7 +427,7 @@ fi
 # deploy whose copy no longer matches the canonical block. The canonical repo
 # is a sibling checkout; when it is absent the check reports that rather than
 # failing, so this script still runs on a machine that has only one repo.
-ML_TOOL="../../field-assembly-standard/tools/apply-mobile-layer.py"
+ML_TOOL="$STANDARD_DIR/tools/apply-mobile-layer.py"
 if [ ! -f "$ML_TOOL" ]; then
   ok "shared mobile layer not verified (field-assembly-standard not checked out)"
 elif python3 "$ML_TOOL" --check >/tmp/ml-check.$$ 2>&1; then
@@ -431,7 +442,7 @@ fi
 # institution title pattern, both owned by the shared tool (FA-D-20260922-05).
 # A page copied from an older page arrives with the old title and no
 # canonical; this refuses it until the tool has been re-applied.
-SEO_TOOL="../../field-assembly-standard/tools/apply-seo-head.py"
+SEO_TOOL="$STANDARD_DIR/tools/apply-seo-head.py"
 if [ ! -f "$SEO_TOOL" ]; then
   ok "seo head not verified (field-assembly-standard not checked out)"
 elif python3 "$SEO_TOOL" --check --site "transfer-safeguards" >/tmp/seo-check.$$ 2>&1; then
@@ -545,7 +556,7 @@ try:
         page = live / (md.stem + ".html")
         if r.returncode != 0 or not out.exists():
             bad.append((md.stem, "render failed: " + (r.stderr or "").strip()[:120])); continue
-        seo = repo.parent / "field-assembly-standard" / "tools" / "apply-seo-head.py"
+        seo = pathlib.Path(os.environ["STANDARD_DIR"]) / "tools" / "apply-seo-head.py"
         if seo.exists():   # the search block is the shared tool's, applied to the fresh render too
             subprocess.run([sys.executable, str(seo), "--site", "transfer-safeguards", "--rel", "states/" + md.stem + ".html", "--file", str(out)],
                            check=True, capture_output=True)
