@@ -1881,3 +1881,53 @@ west-virginia. No queue entries opened.
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-11-10. No
 human review is claimed for this entry.
+
+## 2026-11-14 — nightly review: west-virginia confirmed; wisconsin drift; wyoming unreachable (scheduled, portfolio-nightly-qc-review)
+
+Recipe count (58) exceeds the published state-page count (52), so the
+Room & Recourse recipe-backfill exception does not apply this visit;
+reviewed normally. Cursor-selected: west-virginia, wisconsin, wyoming.
+
+- **west-virginia — confirmed.** Fresh capture of all 5 sources (recipe
+  ab565978ba2b, three legacy .doc sources converted with textutil). Zero
+  fidelity failures, markdown and HTML. Unchanged since the 2026-10-18
+  capture (hash 965718b0a8fabce8), promoted. Checked date advanced to
+  2026-11-14.
+- **wisconsin — DRIFT.** Fresh capture of all 3 sources (recipe
+  8cc775743cea), curl. 2 quotation failures, markdown and HTML (identical
+  sets): `QUOTE not in packet: 'Ombudsman Program/Volunteer Program:
+  1-800-815-0015'` and `QUOTE not in packet: 'Email:
+  BOALTC@Wisconsin.Gov'`. Both the phone number and the email are present
+  in the fresh capture (boaltc.wi.gov/Pages/Home.aspx) but no longer
+  joined to their labels on one line — this reads as a layout/markup
+  change on the SharePoint page rather than a changed fact, but that is
+  not confirmed. Retained without promotion (hash aaf11f3c03c4d95f).
+  Checked date and page content untouched. Queue: **FA-Q-20261114-04**
+  (drift, handoff rr-state-page).
+- **wyoming — UNREACHABLE.** 5 of 7 sources failed: HTTP 403 on sources
+  1, 2, 4, 5 (health.wyo.gov PDFs, curl with the recipe's documented
+  browser user-agent) and source 7 (health.wyo.gov ombudsman page, same
+  transport). Reproduced on a second capture.py run, identical result. A
+  manual curl against source 7's URL with a full browser header set
+  returned 200, but not with the exact recipe-pinned user-agent string
+  (a further one-off check using that exact string was not permitted in
+  this session) — so the discrepancy between capture.py's request and a
+  plain browser-shaped one is noted but not isolated. Sources 3 and 6
+  captured cleanly. No further transport was tried, per the instruction
+  against broad reconnaissance during QC. Fidelity not run against the
+  incomplete evidence set; checked date and standing packet untouched.
+  First occurrence on file for this state (last confirmed clean
+  2026-10-18) — not queued.
+
+Cursor advanced to alabama (wrapped past wyoming, the alphabetically last
+published page). sync-checked-dates.py corrected 2 derived dates (table +
+JSON for west-virginia only — wisconsin and wyoming correctly untouched).
+build-status.py: 51/51 baseline, 50/51 full (pre-existing North Dakota
+gap, not from this pass). build-state-picker.py regenerated (51/51
+published). generate-sitemap.py: 57 URLs; states/wisconsin.html omitted
+(recorded drift, awaiting rebuild). check-all.py: 104 pages across 52
+states, no unexplained failures. check-live.py: 5 pages, nothing loaded
+from any other host. Queue: FA-Q-20261114-04 opened.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-11-14. No
+human review is claimed for this entry.

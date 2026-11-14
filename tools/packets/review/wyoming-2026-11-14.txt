@@ -1,0 +1,791 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: wyoming
+ASSEMBLED: 2026-11-14
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/wyoming.json (recipe digest 22f532dbc2fe). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
+- SOURCE 1: transport curl; extractor pdftotext-layout; filters none.
+  The department's posted copy of the current program-administration rule for nursing care facilities, as filed with the Secretary of State. Captured whole. It is the rule a state-stated ground, notice period or resident appeal route would sit in if Wyoming's licensing law carried one; it carries none, and the page records that as a finding. What it does carry and the page quotes: residents' rights (Section 19), referral of unresolved grievances to the Long-Term Care Ombudsman (Section 21), and a hearing route that exists for facilities only (Section 22).
+- SOURCE 2: transport curl; extractor pdftotext-layout; filters none.
+  The licensure chapter, captured whole so the absence finding names both chapters the department publishes for nursing care facilities. Its only use of the word transfer concerns the license itself.
+- SOURCE 3: transport curl; extractor pdftotext-layout; slice from '35-2-901.     Definitions; applicability of provisions.\n    (a)     As used in this act:' to 'ARTICLE 10 - DESIGNATION OF HOSPITALS'; filters none.
+  The whole of title 35 is a 2.9 MB PDF; the slice is article 9, the Health Facilities Act under which the department licenses nursing care facilities, from the body heading of 35-2-901 (anchored with the first words beneath it, so the table of contents cannot match) to the heading of article 10. Captured to establish that the statute, like the rules, states no grounds, notice or resident appeal for a facility-initiated transfer or discharge.
+- SOURCE 4: transport curl; extractor pdftotext-layout; filters none.
+  The Medicaid rule under which the department decides whether a resident meets nursing facility level of care. Section 6 gives the individual a notice of adverse action and an administrative hearing under Chapter 4 when that determination goes against them; it is the one Wyoming rule that ties a resident-side hearing to continued nursing facility placement, and the page quotes it for exactly that and no more.
+- SOURCE 5: transport curl; extractor pdftotext-layout; filters none.
+  The hearing rule Chapter 22 sends a client to: Section 7 states the ways and the twenty-business-day period in which a client requests a hearing, and Section 8 the department's handling. The rule names the Department as recipient and states no street address, email address or form; the page records that.
+- SOURCE 6: transport curl; extractor pdftotext-layout; slice from '18.4.4 Pre-Admission Screening and Resident Review\nThe Pre-Admission Screening and Resident Review (PASRR) process' to '18.6 Billing Requirements\nWyoming Medicaid requires'; filters none.
+  A 373-page manual; the slice runs from the body heading of 18.4.4 (anchored with its first sentence so the two table-of-contents entries cannot match) to the body heading of 18.6. It holds the manual's statement that Medicaid does not cover reserve bed days (18.5.1) and its statement that an adverse resident-review determination carries a right of appeal for the resident. The address carries the manual's version in its filename, so a new version is a new address: when the review pass reports it gone, look for the current file on wyomingmedicaid.com's Provider Manuals page rather than treating the manual as withdrawn.
+- SOURCE 7: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
+  The program's own page on the department's site: the State Long-Term Care Ombudsman's address and telephone, the two regional ombudsmen employed by the contractor (Wyoming Senior Citizens, Inc.) with their numbers and emails, and the statement of how the program is arranged.
+
+SOURCE 3: W.S. 35-2-901 through 35-2-914, Health Facilities Act (Title 35, chapter 2, article 9) — Wyoming Legislature, Wyoming Statutes (PDF, title 35) | https://wyoleg.gov/statutes/compress/title35.pdf | source date: none stated in the extracted article; the title PDF is the Legislature's current compilation | retrieved: 2026-11-14
+35-2-901.     Definitions; applicability of provisions.
+
+    (a)     As used in this act:
+
+            (i)    "Acute care" means short term care provided in a
+hospital;
+
+          (ii) "Ambulatory surgical center" means a facility
+which provides surgical treatment to patients not requiring
+hospitalization and is not part of a hospital or offices of
+private physicians, dentists or podiatrists. "Ambulatory
+surgical center" shall include any surgical abortion facility as
+defined by W.S. 35-6-201(a)(x);
+
+          (iii) "Birthing center" means a facility which
+operates for the primary purpose of performing deliveries and is
+not part of a hospital;
+
+          (iv) "Boarding home" means a dwelling or rooming
+house operated by any person, firm or corporation engaged in the
+business of operating a home for the purpose of letting rooms
+for rent and providing meals and personal daily living care, but
+not habilitative or nursing care, for persons not related to the
+owner. Boarding home does not include a lodging facility or an
+apartment in which only room and board is provided;
+
+            (v)    Repealed by Laws 2025, ch. 102, § 2.
+
+            (vi)   "Department" means the department of health;
+
+          (vii) "Division" means the designated division within
+the department of health;
+
+          (viii) "Freestanding diagnostic testing center" means
+a mobile or permanent facility which provides diagnostic testing
+but not treatment and is not part of the private offices of
+health care professionals operating within the scope of their
+licenses;
+
+            (ix)   Repealed By Laws 1999, ch. 119, § 2.
+
+          (x) "Health care facility" means any ambulatory
+surgical center, assisted living facility, adult day care
+facility, adult foster care home, alternative eldercare home,
+birthing center, boarding home, freestanding diagnostic testing
+center, home health agency, hospice, hospital, freestanding
+emergency center, intermediate care facility for people with
+intellectual disability, medical assistance facility, nursing
+
+care facility, rehabilitation facility and renal dialysis
+center;
+
+          (xi) "Home health agency" means an agency primarily
+engaged in arranging and directly providing nursing or other
+health care services to persons at their residence;
+
+          (xii) "Hospice" means a program of care for the
+terminally ill and their families given in a home or health
+facility which provides medical, palliative, psychological,
+spiritual and supportive care and treatment. Hospice care may
+include short-term respite care for non-hospice patients, if the
+primary activity of the hospice is the provision of hospice
+services to terminally ill individuals and provided that the
+respite care is paid by the patient or by a private third party
+payor and not through any governmental third party payment
+program;
+
+          (xiii) "Hospital" means an institution or a unit in
+an institution providing one (1) or more of the following to
+patients by or under the supervision of an organized medical
+staff:
+
+               (A) Diagnostic and therapeutic services for
+medical diagnosis, treatment and care of injured, disabled or
+sick persons;
+
+               (B) Rehabilitation services for the
+rehabilitation of injured, disabled or sick persons;
+
+              (C)   Acute care;
+
+              (D)   Psychiatric care;
+
+              (E)   Swing beds.
+
+          (xiv) "Intermediate care facility for people with
+intellectual disability" means a facility which provides on a
+regular basis health related care and training to persons with
+intellectual disabilities or persons with related conditions,
+who do not require the degree of care and treatment of a
+hospital or nursing facility and services above the need of a
+boarding home. The term also means "intermediate care facility
+for the mentally retarded" or "ICFMR" or "ICFs/MR" as those
+terms are used in federal law and in other laws, rules and
+regulations;
+
+          (xv) "Medical assistance facility" means a facility
+which provides inpatient care to ill or injured persons prior to
+their transportation to a hospital or provides inpatient care to
+persons needing that care for a period of no longer than sixty
+(60) hours and is located more than thirty (30) miles from the
+nearest Wyoming hospital;
+
+          (xvi) "Nursing care facility" means a facility
+providing assisted living care, nursing care, rehabilitative and
+other related services;
+
+          (xvii) "Physician" means a doctor of medicine or
+osteopathy licensed to practice medicine or surgery under state
+law;
+
+          (xviii) "Psychiatric care" means the in-patient care
+and treatment of persons with a mental diagnosis;
+
+          (xix) "Rehabilitation facility" means an outpatient
+or residential facility which is operated for the primary
+purpose of assisting the rehabilitation of disabled persons
+including persons with acquired brain injury by providing
+comprehensive medical evaluations and services, psychological
+and social services, or vocational evaluations and training or
+any combination of these services and in which the major portion
+of the services is furnished within the facility;
+
+          (xx) "Renal dialysis center" means a freestanding
+facility for treatment of kidney diseases;
+
+          (xxi) "Swing bed" means a special designation for a
+hospital which has a program to provide specialized in-patient
+long term care. Any medical-surgical bed in a hospital can be
+designated as a swing bed;
+
+          (xxii) "Assisted living facility" means a dwelling
+operated by any person, firm or corporation engaged in providing
+limited nursing care, personal care and boarding home care, but
+not habilitative care, for persons not related to the owner of
+the facility. This definition may include facilities with
+secured units and facilities dedicated to the special care and
+services for people with Alzheimer's disease or other dementia
+conditions;
+
+          (xxiii) "Adult day care facility" means any facility
+not otherwise certified by the department of health, engaged in
+the business of providing activities of daily living support and
+
+supervision services programming based on a social model, to
+four (4) or more persons eighteen (18) years of age or older
+with physical or mental disabilities;
+
+          (xxiv) "Adult foster care home" means a home where
+care is provided for up to five (5) adults who are not related
+to the provider by blood, marriage or adoption, except in
+special circumstances, in need of long term care in a home like
+atmosphere. "Adult foster care home" does not include any
+residential facility otherwise licensed or funded by the state
+of Wyoming. The homes shall be regulated in accordance with this
+act and with the Wyoming Long Term Care Choices Act, which shall
+govern in case of conflict with this act;
+
+          (xxv) "Alternative eldercare home" means a facility
+as defined in W.S. 42-6-102(a)(iii). The homes shall be
+regulated in accordance with this act and with the Wyoming Long
+Term Care Choices Act which shall govern in case of conflict
+with this act;
+
+          (xxvi) "Freestanding emergency center" means a
+facility that provides services twenty-four (24) hours a day,
+seven (7) days a week for life threatening emergency medical
+conditions and is at a location separate from a hospital;
+
+           (xxvii)     "This act" means W.S. 35-2-901 through 35-2-
+914.
+
+     (b) This act does not apply to hospitals or any other
+facility or agency operated by the federal government which
+would otherwise be required to be licensed under this act or to
+any person providing health care services within the scope of
+his license in a private office.
+
+       35-2-902.   License required.
+
+No person shall establish any health care facility in this state
+without a valid license issued pursuant to this act.
+
+     35-2-903. Application for license; submission of evidence
+prerequisite to issuance.
+
+     (a) An applicant for a license under this act shall file a
+sworn application with the division on a form provided by the
+division. The form shall request the following information:
+
+           (i)     The applicant's name;
+
+          (ii)   The type of health care facility to be operated;
+
+          (iii) A description of and the location of the
+facility buildings;
+
+          (iv)   The name of the person in charge of the health
+care facility;
+
+          (v) Whether the applicant has had a license to
+operate a health care facility or agency providing health care
+services in this or any other state denied, suspended, revoked
+or otherwise terminated for cause and the specific reasons for
+such action. Evidence that the facility subject to the
+application is currently in compliance with all applicable
+statutes, rules and regulations is required;
+
+          (vi) Evidence that the applicant is capable of
+complying with applicable rules and regulations;
+
+          (vii) Such other information as the division may
+require pursuant to rules promulgated under this act.
+
+     (b) An application by other than an individual shall be
+made by two (2) officers of the organization or by its managing
+agents.
+
+     35-2-904. Issuance of license; fee; duration; renewal;
+transferability; provisional licenses; procedures.
+
+    (a)   The division shall issue a license under this act:
+
+          (i) If the applicant is in compliance with this act
+and in substantial compliance with the rules and regulations
+promulgated pursuant to this act; and
+
+          (ii) Upon payment of a license fee for each health
+care facility as specified in subsection (g) of this section.
+The department may adopt rules which provide for reasonable fees
+for health care facilities not specified in subsection (g) of
+this section in amounts not to exceed five hundred dollars
+($500.00) designed to recover administrative and operational
+expenses of the department in conducting its licensure program
+under this article for those facilities.
+
+     (b) Licenses are issued for a period of one (1) year
+beginning on July 1 of the year of issuance and ending on June
+
+30 of the succeeding year. The full fee is due whether the
+license is issued for the entire year or for part of the year.
+
+     (c) Licenses are renewed annually upon payment of the
+license fee unless suspended or revoked pursuant to W.S.
+35-2-905.
+
+     (d) Fees collected under this act shall be deposited in
+the general fund.
+
+    (e)    Licenses are not assignable or transferable.
+
+     (f) Applicants not complying with this act and not
+substantially complying with the rules and regulations
+promulgated pursuant to this act may be granted a provisional
+license subject to restrictions imposed by the division if the
+operation of the facility will not endanger the health, safety
+and welfare of patients. All applicants found in noncompliance
+shall be notified of the reason for noncompliance.
+
+     (g)   Health care facilities shall be assessed the following
+fees:
+
+           (i)    Adult day care facility . . . . . . $250.00;
+
+           (ii)    Adult foster care home . . . . . . $250.00;
+
+           (iii)   Ambulatory surgical center . . . $500.00;
+
+           (iv)    Assisted living facility:
+
+               (A) For a facility with a bed capacity of at
+least one (1) but not more than twenty-five (25) . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . .$250.00;
+
+               (B) For a facility with a bed capacity of more
+than twenty-five (25) but not more than fifty (50) . . . . . . .
+. . . . . . . . . . . . . . . . . . . . $500.00;
+
+               (C) For a facility with a bed capacity of more
+than fifty (50) . . . . . . . . . . . . . . $1,000.00.
+
+           (v)    Birthing center . . . . . . . . . . $500.00;
+
+          (vi) Boarding home in an amount established by the
+department within this range . . . . . $500.00-$750.00;
+
+         (vii)    Critical access hospital . . . .   $500.00;
+
+         (viii)    Renal dialysis center . . . . .   $500.00;
+
+          (ix) Freestanding diagnostic testing center . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . . $500.00;
+
+         (x)    Freestanding emergency center . . . $500.00;
+
+         (xi)    Home health agency . . . . . . . . $150.00;
+
+         (xii)    Hospice facility . . . . . . . .   $250.00;
+
+         (xiii)    Hospital . . . . . . . . . . . $1,000.00;
+
+          (xiv) Intermediate care facility for people with
+intellectual disability . . . . . . . . . . . . . $250.00;
+
+         (xv)    Medical assistance facility . . .   $250.00;
+
+         (xvi)    Nursing care facility:
+
+               (A) For a facility with a bed capacity of at
+least one (1) but not more than twenty-five (25) . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . . $250.00;
+
+               (B) For a facility with a bed capacity of more
+than twenty-five (25) but not more than fifty (50) . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . . $500.00;
+
+               (C) For a facility with a bed capacity of more
+than fifty (50) . . . . . . . . . . . . . . . . $1,000.00.
+
+         (xvii)    Psychiatric hospital . . . . . $1,000.00;
+
+         (xviii)    Rehabilitation facility . . . . $500.00;
+
+         (xix)    Rehabilitation hospital . . . . . $500.00.
+
+     (h) In addition to the fees imposed under subsection (g)
+of this section, if a licensed health care facility changes its
+name, location or number of beds, the facility shall pay a fee
+in the amount of two hundred fifty dollars ($250.00) for a
+revised license.
+
+    35-2-905.    Conditions, monitoring or revoking a license.
+
+     (a) The division may place conditions upon a license,
+install a division approved monitor or manager at the owner's or
+operator's expense, suspend admissions, or deny, suspend or
+revoke a license issued under this act if a licensee:
+
+          (i) Violates any provision of this act or the rules
+and regulations promulgated pursuant to this act;
+
+          (ii) Permits, aids or abets the commission of any
+illegal act by a licensee;
+
+          (iii) Conducts practices detrimental to the health,
+safety or welfare of the patients of the licensee;
+
+         (iv)   Repealed By Laws 2008, Ch. 116, § 2.
+
+          (v) Fails to pay a nursing care facility assessment
+and the department determines to suspend or revoke the license
+as provided in W.S. 42-8-107(b)(ii);
+
+          (vi) Violates any provision of W.S. 35-2-1501 through
+35-2-1507. This paragraph is repealed effective July 1, 2029.
+
+     (b) No license issued pursuant to this act shall be
+suspended or revoked or have conditions placed upon it or
+admissions suspended nor shall the division install an approved
+monitor or manager without notice to the licensee and an
+opportunity for a hearing under W.S. 16-3-101 through 16-3-115.
+
+     (c) If the division suspends the admission of new patients
+to a health care facility, the health care facility shall be
+provided an opportunity to abate the condition or conditions
+prior to suspension of admissions. If the conditions leading to
+the suspension of new admissions continue unabated beyond the
+period allowed for abatement, the division may continue the
+suspension of new admissions, or suspend or revoke the license.
+
+     (d) Any hearing held by the division under this section
+shall be held in the city or town in which the facility is
+located, or in the closest city or town with appropriate
+facilities for a hearing.
+
+     (e) If the division finds that conditions in a health care
+facility are in violation of this act and rules and regulations
+adopted under this act to the extent that there exists a
+substantial and immediate threat to the health or safety of
+patients, it may summarily suspend the license of that facility
+
+and take action necessary to protect the health and safety of
+patients. In cases of suspension under this subsection, the
+licensee shall be afforded an opportunity for a hearing within
+ten (10) days after the suspension.
+
+     (f) If a license is revoked pursuant to this act, an
+application for a new license may be made to the division only
+after the conditions upon which revocation was based have been
+corrected and evidence of this fact has been furnished to the
+division. A new license shall be granted only if the applicant
+is in compliance with all provisions of this act and rules and
+regulations promulgated pursuant to this act.
+
+     35-2-906.   Construction and expansion of facilities;
+exemption.
+
+     (a) A licensee who contemplates construction of or
+alteration or addition to a health care facility shall submit
+plans and specifications to the division for preliminary
+inspection and approval prior to commencing construction.
+Significant changes to the original plans must also be submitted
+and approved prior to implementation. The plans and any changes
+shall indicate any increase in the number of beds. Information
+submitted pursuant to this subsection shall be used by the
+division only for purposes of health care and life safety
+compliance determinations.
+
+    (b)   Repealed by Laws 2025, ch. 102, § 2.
+
+    (c)   Repealed by Laws 2025, ch. 102, § 2.
+
+    (d)   Repealed By Laws 2002, Ch. 87, § 2.
+
+    (e)   Repealed By Laws 2002, Ch. 87, § 2.
+
+    (f)   Repealed by Laws 2025, ch. 102, § 2.
+
+    (g)   Repealed by Laws 2025, ch. 102, § 2.
+
+     35-2-907. Inspection of licensed establishments;
+exceptions; assisted living facility inspection procedure.
+
+     (a) Except as otherwise provided in this section every
+licensed health care facility shall be periodically inspected by
+the division under rules and regulations promulgated by the
+department. A licensed health care facility which has been
+accredited by a nationally recognized accrediting body approved
+
+by federal regulations shall be granted a license renewal
+without further inspection. Inspection reports shall be
+prepared on forms prescribed by the division. Licensees
+accredited by the nationally recognized accrediting body shall
+submit the inspection report pursuant to its accreditation. If
+the standards of the nationally recognized accrediting body fail
+to meet or exceed the state standards for licensure, the
+division may inspect the licensed facility with regard to those
+matters which did not meet state standards.
+
+     (b) Except as required in administrative and judicial
+proceedings, information obtained from licensees under this act
+is subject to public disclosure only after deletion of
+information which reveals the identity of patients, persons who
+file complaints with the division and employees of the health
+care facility.
+
+    (c)   The division shall:
+
+          (i) Provide for the selection of an inspector to
+inspect and evaluate an applicant for an assisted living
+facility;
+
+          (ii) Approve and establish a fee to be paid by the
+applicant to the selected inspector. The division shall notify
+the applicant of the inspection fee prior to the inspection and
+evaluation;
+
+          (iii) Act on the application within thirty (30) days
+after receiving a report from the selected inspector on the
+inspection and evaluation of the applicant.
+
+    35-2-908.   Rules and regulations.
+
+The department shall promulgate and enforce reasonable rules and
+regulations necessary to protect the health, safety and welfare
+of patients of health care facilities licensed under this act.
+
+    35-2-909.   Penalties for violations.
+
+Except for violations otherwise punishable as a felony under the
+laws of this state, any person establishing or operating a
+facility or providing a service without first obtaining a
+license as required in this act is guilty of a misdemeanor
+punishable by a fine of not to exceed seven hundred fifty
+dollars ($750.00), by imprisonment for not more than six (6)
+
+months, or both. Each calendar week or portion thereof during
+which a violation continues is a separate offense.
+
+     35-2-910. Quality management functions for health care
+facilities; confidentiality; immunity; whistle blowing; peer
+review.
+
+     (a) Each licensee shall implement a quality management
+function to evaluate and improve patient and resident care and
+services in accordance with rules and regulations promulgated by
+the division. Quality management information relating to the
+evaluation or improvement of the quality of health care services
+is confidential. Any person who in good faith and within the
+scope of the functions of a quality management program
+participates in the reporting, collection, evaluation, or use of
+quality management information or performs other functions as
+part of a quality management program with regard to a specific
+circumstance shall be immune from suit in any civil action based
+on such functions brought by a health care provider or person to
+whom the quality information pertains. In no event shall this
+immunity apply to any negligent or intentional act or omission
+in the provision of care.
+
+     (b) Health care facilities subject to or licensed pursuant
+to this act shall not harass, threaten discipline or in any
+manner discriminate against any resident, patient or employee of
+any health care facility for reporting to the division a
+violation of any state or federal law or rule and regulation.
+Any employee found to have knowingly made a false report to the
+division shall be subject to disciplinary action by the
+employing health care facility, including but not limited to,
+dismissal.
+
+     (c) No hospital shall be issued a license or have its
+license renewed unless it provides for the review of
+professional practices in the hospital for the purpose of
+reducing morbidity and mortality and for the improvement of the
+care of patients in the hospital. This review shall include,
+but not be limited to:
+
+          (i) The quality and necessity of the care provided to
+patients as rendered in the hospital;
+
+          (ii) The prevention of complications and deaths
+occurring in the hospital;
+
+          (iii) The review of medical treatments and diagnostic
+and surgical procedures in order to ensure safe and adequate
+treatment of patients in the hospital; and
+
+          (iv) The evaluation of medical and health care
+services and the qualifications and professional competence of
+persons performing or seeking to perform those services.
+
+     (d) The review required in subsection (c) of this section
+shall be performed according to the decision of a hospital's
+governing board by:
+
+          (i) A peer review committee appointed by the
+organized medical staff of the hospital;
+
+         (ii)    A state, local or specialty medical society; or
+
+          (iii) Any other organization of physicians
+established pursuant to state or federal law and engaged by the
+hospital for the purposes of subsection (c) of this section.
+
+     35-2-911.   Nonbinding functional assessments.
+
+The department may, with the consent of the person seeking
+admission into a nursing care facility or his representative,
+conduct a nonbinding functional assessment for that person at
+the state's expense.
+
+     35-2-912.   Repealed by the terms of Laws 2005, Ch. 243, §
+1.
+
+     35-2-913.   Exceptions.
+
+     (a) No freestanding emergency center shall require
+separate licensure under this act when operated by the provider
+based emergency department of a Wyoming licensed hospital.
+
+     (b) On and before June 30, 2025, freestanding emergency
+centers operated by a hospital district or rural health care
+district shall not require licensure under this act provided a
+hospital transfer agreement is in place.
+
+     (c) Any freestanding emergency center shall accept
+patients regardless of age, Medicare, Medicaid or other
+insurance status or ability to pay. A freestanding emergency
+center not owned by a Wyoming hospital shall have an appropriate
+hospital transfer agreement in place.
+
+     (d) A license to operate a freestanding emergency center
+shall not be construed as a license to operate a hospital and
+shall not allow any freestanding emergency center to hold a
+patient within its facility for more than twenty-four (24) hours
+unless an emergency arises that prevents the safe transport of
+the patient.
+
+    35-2-914.    Visitation rights.
+
+     (a) A health care facility, as defined by W.S. 35-2-
+901(a)(x), that provides twenty-four (24) hour per day care
+shall allow visitation for a person receiving care in that
+facility. The visitation required under this section shall not
+apply to persons involuntarily detained under W.S. 25-10-109 or
+25-10-110 or adults who have been charged with or convicted of a
+crime and are in the custody of the state or a local
+jurisdiction.
+
+     (b) A health care facility subject to subsection (a) of
+this section may impose and enforce restrictions on visitation
+that limit the number or age of visitors, limit the location or
+time of visitation, require protective equipment or impose
+requirements otherwise required under W.S. 35-1-240 or by the
+centers for Medicaid and Medicare services, the centers for
+disease control or the joint commission on the accreditation of
+healthcare organizations. Visitation may be further restricted
+or limited under this section when the health care facility
+determines a restriction or limitation is necessary due to a
+court order, violent or disruptive behavior or reasonable
+suspicion of abuse or neglect against a person receiving care in
+the facility. A health care facility shall provide a written
+copy of its visitation policy upon request and shall visibly
+post in the facility one (1) copy of the most current visitation
+restrictions imposed in accordance with this subsection. The
+health care facility shall allow the person receiving care or
+that person's representative to designate persons as visitors or
+to prohibit some or all visitation under this section.
+
+SOURCE 6: Institutional Provider Manual, chapter 18, Skilled Nursing Facility and Swing Bed Services (sections 18.4.4 through 18.5.1) — Wyoming Medicaid, Wyoming Department of Health, Division of Healthcare Financing, published through its fiscal agent (PDF) | https://wyomingmedicaid.com/portal/References/latestproviderfiles/BMS_Acentra%20Health_Institutional%20Provider%20Manual_N_2026.07.01_v19.0.pdf | source date: version 19.0, effective 2026.07.01, as the file's own name and running foot state | retrieved: 2026-11-14
+18.4.4 Pre-Admission Screening and Resident Review
+The Pre-Admission Screening and Resident Review (PASRR) process encompasses PASRR Level 1 and
+Level II.
+Federal law requires all individuals, regardless of payment source, who apply for admissions to a
+Medicaid Nursing Home Facility on or after January 1, 1989, must be screened prior to admission for
+mental illness (MI) and intellectual disabilities (ID).
+PASRR Level I: The purpose of the Level I is to screen for potential diagnosis of mental illness or
+intellectual disabilities. Such a determination will result in a referral for a Level II.
+Routine annual Level I screenings are no longer required by Medicaid. If the Level I does not result in a
+referral to Level II, it need never be performed again unless a significant change in the resident’s
+condition indicates that a Level II evaluation is needed or if there is a transfer to another facility.
+Mental status changes that result in a new diagnosis or that trigger a significant change to the total
+score on the Brief Interview for Mental Status (BIMS) or the Patient Health Questionnaire (PHQ9) on the
+Minimum Data Set (MDS) would result in a significant change of condition.
+Please refer to http://pasrrassist.org/resources/mds-30/what-considered-significant-change-condition
+for more information on significant changes of condition.
+PASRR Level II: The purpose of the Level II is to more accurately identify mental illness or intellectually
+disabled and assess whether the individual needs specialized services and nursing facility level of care.
+
+                   Dementia, including Alzheimer’s disease and other dementias, is
+                   excluded from the definition of serious mental illness for PASRR
+                   purposes unless there is a behavioral component. An individual is
+                   considered to have dementia if he or she has a primary diagnosis of
+                   dementia as described in the DSM (current edition), or a non-primary
+                   diagnosis of dementia unless the primary diagnosis is a major mental
+                   disorder as defined above. A primary diagnosis of a serious mental
+                   illness supersedes a secondary diagnosis of dementia and the
+                   individual must be referred for a Level II evaluation.
+
+    •   Individuals for whom respite care is provided (under HCBS Waiver) in a nursing facility must be
+        treated like any other nursing facility admission, therefore, all PASRR and LT101 requirements
+        apply prior to admission.
+
+    •   Any individual whose PASRR Level I screening indicates the presence or probability of mental
+        illness or intellectual disabilities must be referred to the State. This authority has been
+        delegated by contract to Telligen (see Section 2.1 Quick Reference).
+
+
+
+BMS_Acentra Health_Institutional Provider Manual_N_2026.07.01_v19.0                     Chapter 18– Page 290
+
+    •   A PASRR Level II determination must be completed prior to admission to be appropriate for
+        nursing facility payment.
+    •   If the individual is appropriate for nursing facility placement, the need for specialized services
+        will be determined.
+        o   If an individual seeking admission to a nursing facility has Mental Illness or Intellectual
+            Disabilities and is found to be inappropriate for nursing facility placement, the nursing
+            facility may not admit the individual.
+        o   If an individual already residing in a nursing facility has Mental Illness or Intellectual
+            Disabilities and is found to be inappropriate for nursing facility placement, the Provider must
+            cooperatively arrange with the state for the resident’s orderly discharge from the facility.
+        o   Adverse determinations carry the right of appeal for the resident.
+
+                  PASRR is not a requirement for CHOW (Change of Ownership)
+                  completion. However, the skilled nursing facility will want to ensure
+                  that the admitted residents that need a PASRR evaluation have one on
+                  file and all residents are evaluated as appropriate.
+
+
+18.4.4.1 Transfer
+A PASRR Level I and PASRR Level II is required upon transfer from one facility to another facility.
+    •   In the case of a transfer of a resident with Intellectual Disabilities or Mental Illness from the
+        nursing facility to a hospital or to another nursing facility the transferring nursing facility is
+        responsible for ensuring the completion and copies of the most recent PASRR Level I, Level II (if
+        applicable) and Resident Review reports accompany the transferring resident.
+
+18.4.4.2 Categorical Determinations that do Not Require a Level II Prior to
+        Admission
+Pursuant to Federal guidelines, the Division of Healthcare Financing has defined certain categories of
+conditions that automatically constitute appropriateness for nursing facility placement. The State may
+override the categorical determination and refer the individual for a Level II where appropriate.
+
+    •   Categorical 4: Appropriate for nursing facility placement due to terminal illness – Verified in
+        writing by a physician. This constitutes a Level II determination of “appropriate specialized
+        services not required”.
+
+    •   Categorical 5: Appropriate for nursing facility placement due to severe medical conditions – This
+        determination may only be applied to an individual with Mental Illness or Intellectual Disabilities
+        who is comatose, ventilator dependent, functions at the brain stem level, OR has a diagnosis
+        such as COPD, severe Parkinson’s disease, amyotrophic lateral sclerosis, congestive heart failure
+        (CHF), cardiovascular accident (CVA), Huntington’s Disease, quadriplegia, advanced multiple
+        sclerosis, muscular dystrophy, end stage renal disease (ESRD), severe diabetic neuropathy or
+
+
+BMS_Acentra Health_Institutional Provider Manual_N_2026.07.01_v19.0                     Chapter 18– Page 291
+
+        refractory anemia. The condition must result in a level of impairment so severe that the
+        individual could not be expected to benefit from specialized services. This constitutes a Level II
+        determination of “appropriate, specialized services not required”.
+    •   Categorical 6: Convalescent care for an acute physical illness – This determination applies only
+        to an individual with Mental Illness or Intellectual Disabilities who has an acute physical illness
+        which required hospitalization; AND does not meet all the criteria for an exempt hospital
+        discharge. This categorical determination is limited to 120 days. When it becomes apparent the
+        individual will require nursing facility placement longer than 120 days, the nursing facility must
+        complete a new PASRR Level I and the Level II prior to the end of the 120 days. A Level II
+        determination must be rendered before permanent nursing facility placement can be made.
+
+    •   Categorical 7: Provisional placements – Pending further assessment in cases of delirium, where
+        an accurate diagnosis cannot be made until the delirium clears, or for respite of caregivers. This
+        categorical determination is limited to 14 days. If it becomes apparent the individual will require
+        nursing facility placement longer than 14 days, a new PASRR Level I and Level II must be
+        completed prior to the end of the 14 days. A Level II determination must be rendered before
+        permanent nursing facility placement can be made.
+    •   Categorical 8: Emergency placement – For an individual with Mental Illness or Intellectual
+        Disabilities for the individual’s protection. This categorical determination is limited to seven (7)
+        days, at which time the nursing facility must complete a new PASRR Level I and Level II prior to
+        the end of the 7 days. The determination must be rendered before permanent nursing facility
+        placement can be made.
+
+18.5 Medicaid Reimbursement
+Medicaid will not reimburse a nursing facility for services provided to any individual who has not been
+screened for the PASRR Level I, and if needed a PASRR Level II.
+
+    •   Payment will commence as of the Level I date or admission date, whichever is later.
+
+    •   No retroactive payment will be made.
+
+                  Refer to the Provider Training and Tutorials posted on the Medicaid
+                  website for instructions on how to enter the PASRR Level I on the
+                  Provider Portal.
+
+Medicaid will not reimburse a nursing facility for services provided to any individual with MI or ID who is
+admitted prior to completion of a PASRR Level II.
+
+    •   Payment will commence upon the date of determination of appropriate placement.
+
+    •   No retroactive payment will be made.
+
+    •   The nursing facility may be subject to withdrawal of Medicaid certification if such a person is
+        admitted to the facility before a Level II determination is rendered.
+
+
+BMS_Acentra Health_Institutional Provider Manual_N_2026.07.01_v19.0                      Chapter 18– Page 292
+
+Medicaid will not reimburse a nursing facility for services provided to any individual who has previously
+been found to be inappropriate for nursing facility placement due to the need for specialized services.
+
+      •   Any individual who has received such a determination must be re-evaluated and determined to
+          be appropriate before any placement will be allowed.
+      •   Date of admission is covered
+
+      •   Medicaid does not pay for date of death (Do not deduct one [1] day from R & B units and value
+          code 80 count)
+
+      •   Medicaid does not pay for date of discharge (Do not deduct one [1] day from R & B units and
+          value code 80 count)
+      •   Reserve bed days and leave days are not covered by Medicaid - use value code 81 to report days
+
+18.5.1 Reserve Bed Days
+Reserve bed days during a resident's temporary absence are not covered unless the resident is absent
+from the facility for less than 24 hours. In these instances, the absence is to be billed to Medicaid as a
+normal covered day.
+For days the resident is absent from the facility for 24 hours or more, bill these as non-covered days,
+using value code 81. Value codes and accommodation units must total the number of days within the
+coverage period.
+A Provider may bill a Member or the Member's responsible party for reserved bed days if the facility has
+informed them in writing of their financial responsibility before services are rendered.
+
