@@ -69,22 +69,22 @@
       "page": "idaho"
     },
     "https://adminrules.utah.gov/public/rule/R410-14/Current%20Rules": {
-      "attempts": 2,
-      "last_attempt": "2026-11-02T160221Z",
+      "attempts": 3,
+      "last_attempt": "2026-11-15T152037Z",
       "last_detail": "error:not-found",
       "last_result": "FAILED",
       "page": "utah"
     },
     "https://adminrules.utah.gov/public/rule/R414-504/Current%20Rules": {
-      "attempts": 2,
-      "last_attempt": "2026-11-02T160327Z",
+      "attempts": 3,
+      "last_attempt": "2026-11-15T152227Z",
       "last_detail": "error:not-found",
       "last_result": "FAILED",
       "page": "utah"
     },
     "https://adminrules.utah.gov/public/rule/R432-150/Current%20Rules": {
-      "attempts": 2,
-      "last_attempt": "2026-11-02T160625Z",
+      "attempts": 3,
+      "last_attempt": "2026-11-15T152245Z",
       "last_detail": "error:not-found",
       "last_result": "FAILED",
       "page": "utah"
@@ -260,8 +260,8 @@
       "page": "washington"
     },
     "https://app.leg.wa.gov/WAC/default.aspx?cite=388-97-0120": {
-      "attempts": 2,
-      "last_attempt": "2026-11-04T070304Z",
+      "attempts": 3,
+      "last_attempt": "2026-11-15T153018Z",
       "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "washington"
@@ -284,9 +284,9 @@
       "page": "arizona"
     },
     "https://apps.azsos.gov/public_services/Title_09/9-28.pdf": {
-      "attempts": 3,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-08T063611Z",
+      "attempts": 4,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-15T151721Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "arizona"
@@ -328,9 +328,9 @@
       "page": "arkansas"
     },
     "https://asd.vermont.gov/services/ltc-ombudsman-program": {
-      "attempts": 2,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-03T052035Z",
+      "attempts": 3,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-15T152323Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "vermont"
@@ -493,9 +493,9 @@
       "page": "utah"
     },
     "https://daas.utah.gov/ombudsman-locations": {
-      "attempts": 2,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-02T160645Z",
+      "attempts": 3,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-15T152304Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "utah"
@@ -510,9 +510,9 @@
       "page": "utah"
     },
     "https://dail.vermont.gov/sites/dail/files/documents/Nursing_Home_Regulations_2018.pdf": {
-      "attempts": 2,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-03T052055Z",
+      "attempts": 3,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-15T152343Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "vermont"
@@ -660,32 +660,32 @@
       "page": "delaware"
     },
     "https://dlp.vermont.gov/nursing-home-sample-discharge-transfer-notice": {
-      "attempts": 2,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-03T052114Z",
+      "attempts": 3,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-15T152402Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "vermont"
     },
     "https://dlp.vermont.gov/sites/dlp/files/documents/Nursing_Home_Transfer_Discharge_Letter.pdf": {
-      "attempts": 2,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-03T052132Z",
+      "attempts": 3,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-15T152511Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "vermont"
     },
     "https://docs.legis.wisconsin.gov/code/admin_code/dhs/101/107/09": {
-      "attempts": 2,
-      "last_attempt": "2026-11-05T063020Z",
-      "last_detail": "error:not-found",
+      "attempts": 3,
+      "last_attempt": "2026-11-15T153103Z",
+      "last_detail": "error:gateway-timeout",
       "last_result": "FAILED",
       "page": "wisconsin"
     },
     "https://docs.legis.wisconsin.gov/code/admin_code/dhs/110/132/V/53": {
-      "attempts": 2,
-      "last_attempt": "2026-11-05T063106Z",
-      "last_detail": "error:not-found",
+      "attempts": 3,
+      "last_attempt": "2026-11-15T153147Z",
+      "last_detail": "error:gateway-timeout",
       "last_result": "FAILED",
       "page": "wisconsin"
     },
@@ -871,9 +871,9 @@
       "page": "california"
     },
     "https://govt.westlaw.com/calregs/Document/IBABA4E545B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default)": {
-      "attempts": 3,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-08T063759Z",
+      "attempts": 4,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-15T151849Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "california"
@@ -887,9 +887,9 @@
       "page": "california"
     },
     "https://govt.westlaw.com/calregs/Document/IBABCBF5E5B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default)": {
-      "attempts": 3,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-08T063818Z",
+      "attempts": 4,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-15T151959Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "california"
@@ -903,9 +903,9 @@
       "page": "california"
     },
     "https://govt.westlaw.com/calregs/Document/IBAE556025B6111EC9451000D3A7C4BC3?viewType=FullText&originationContext=documenttoc&transitionType=CategoryPageItem&contextData=(sc.Default)": {
-      "attempts": 3,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-08T063838Z",
+      "attempts": 4,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-15T152018Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "california"
@@ -979,10 +979,10 @@
       "page": "wyoming"
     },
     "https://health.wyo.gov/wp-content/uploads/2020/07/FILED-RULES-17704-EFFECT-07-01-2020.pdf": {
-      "attempts": 2,
+      "attempts": 3,
       "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-05T063124Z",
-      "last_detail": "error:no-request",
+      "last_attempt": "2026-11-15T153706Z",
+      "last_detail": "no-playback",
       "last_result": "FAILED",
       "page": "wyoming"
     },
@@ -1031,17 +1031,17 @@
       "page": "arkansas"
     },
     "https://humanservices.arkansas.gov/wp-content/uploads/Medical-Assistance-Program-Manual-of-Cost-Reimbursement-Rules-for-Long-Term-Care-Facilities-8.1.2022.pdf": {
-      "attempts": 3,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-08T063715Z",
+      "attempts": 4,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-15T151740Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "arkansas"
     },
     "https://humanservices.vermont.gov/human-services-board": {
-      "attempts": 2,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-03T052152Z",
+      "attempts": 3,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-15T152530Z",
       "last_detail": "error:no-request",
       "last_result": "FAILED",
       "page": "vermont"
@@ -2455,5 +2455,5 @@
       "page": "wyoming"
     }
   },
-  "updated": "2026-11-14T053106Z"
+  "updated": "2026-11-15T153706Z"
 }
