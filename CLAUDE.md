@@ -667,6 +667,21 @@ it rests a week first, and saying otherwise misstates the record.
 A failed source returns behind sources never attempted, so forward progress
 onto uncaptured pages is never displaced by retrying a stubborn host.
 
+**A rate-limited playback read is none of those three.** web.archive.org
+limits playback reads per account, and a 429 there says nothing about the
+capture or its host, so it is recorded `playback-429` / SKIPPED: the source
+does not rest, does not move toward BLOCK_AFTER, and the run stops, exactly as
+it does on the daily capture cap. Until 2026-11-15 `playback_ok` caught every
+exception alike and returned a bare False, so a 429 was indistinguishable from
+a capture that would not play back. Found in Gathered Work, where a pass that
+day recorded four duquesne sources as FAILED/no-playback and rested each a
+week, and two of the four had a stored HTTP 200 capture at the moment they
+were written off; the fix was ported to this repo the same day. A capture
+submitted while the limit holds may well be stored, but an unconfirmed capture
+is never recorded -- the source is simply attempted again later. When a pass
+stops this way, wait for the limit to clear rather than re-running, and do not
+raise the budget to compensate: the limit is the finding.
+
 **The budget is a number of captures, not attempts.** `--budget 30` works
 down the candidate list until twenty are confirmed stored, bounded by an
 attempt ceiling of three times the budget. Save Page Now caps concurrent

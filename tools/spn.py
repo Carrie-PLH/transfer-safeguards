@@ -64,6 +64,25 @@ AND the captured response was HTTP 200. A stored 403 or a WAF interstitial is a
 refusal page wearing a capture's clothes; recording one as evidence would be
 worse than recording nothing.
 
+Playback is confirmed before a capture is reported, and the confirmation can
+fail for two unrelated reasons that must not be recorded alike (2026-11-15):
+
+* The capture does not play back -- `no-playback`. The ordinary refusal. The
+  source rests RETRY_AFTER_DAYS and rejoins the list in its own place.
+* web.archive.org is rate-limiting this account's playback reads (HTTP 429) --
+  `playback-429`. Nothing has been learned about the capture or its host, so
+  the attempt is recorded SKIPPED, the source neither rests nor moves toward
+  BLOCK_AFTER, and the run stops, exactly as it does on the daily capture cap.
+
+Until 2026-11-15 `playback_ok` caught every exception alike and returned a
+bare False, so a 429 was indistinguishable from an unplayable capture. The
+cost was not theoretical. In Gathered Work that night a pass recorded four
+duquesne sources as FAILED/no-playback and rested each a week, and two of the
+four had a stored HTTP 200 capture at the moment they were written off. A
+capture submitted while the limit holds may well be stored; this script claims
+nothing about it either way and will attempt the source again rather than
+record an unconfirmed one.
+
 Recording a capture on the page (2026-10-06)
 --------------------------------------------
 Carrie decided on 2026-10-06, for every collection, that the pass writes the
@@ -162,7 +181,41 @@ HARD_FAILURES = {"error:no-request", "error:blocked", "error:forbidden",
 # toward BLOCK_AFTER, and recording them as FAILED would rest each one for
 # RETRY_AFTER_DAYS — both punishing a source for the pass's own appetite.
 # A run that meets this stops instead: see the run loop. (2026-09-04)
-ACCOUNT_LIMIT = {"error:too-many-daily-captures"}
+#
+# playback-429 joined on 2026-11-15, for the same reason and after the same
+# kind of mistake. web.archive.org rate-limits playback reads per account, and
+# playback_ok caught every exception alike, so a 429 read exactly like a
+# capture that would not play back: the run recorded FAILED, rested the source
+# a week, and discarded a capture that had in fact stored. Found in Gathered
+# Work, where four duquesne sources were rested that way before the pass was
+# stopped, and two of the four had a stored HTTP 200 capture at the time. A
+# rate limit is about the night, not the source.
+ACCOUNT_LIMIT = {"error:too-many-daily-captures", "playback-429"}
+
+# Why a run stopped, in the words the stop deserves. Keyed by the ACCOUNT_LIMIT
+# detail that tripped it, because the two conditions call for different things
+# from whoever reads the output.
+ACCOUNT_LIMIT_NOTE = {
+    "error:too-many-daily-captures":
+        "The account's daily capture limit was reached. Every source "
+        "attempted after this point would fail for a reason that is not "
+        "about the source, so the run stops here. Nothing is blocked and "
+        "nothing is resting on account of it; the remaining candidates were "
+        "simply not reached. Do not re-run tonight, and do not raise the "
+        "budget to compensate - the cap is the finding.",
+    "playback-429":
+        "web.archive.org is rate-limiting this account's playback reads "
+        "(HTTP 429). A capture cannot be confirmed while that holds, and "
+        "every source attempted after this point would fail for the same "
+        "reason, which is not about the source, so the run stops here. "
+        "Nothing is blocked and nothing is resting on account of it; the "
+        "remaining candidates were simply not reached. Note that a capture "
+        "submitted under this condition may well have stored even though it "
+        "could not be confirmed - this pass claims nothing about it either "
+        "way, and a later pass will attempt the source again. Wait for the "
+        "limit to clear rather than re-running tonight, and do not raise the "
+        "budget to compensate - the limit is the finding.",
+}
 
 POLL_INTERVAL = 6
 POLL_LIMIT = 70          # ~7 minutes before a job is called a timeout
@@ -392,15 +445,41 @@ def capture(url, auth):
 
 
 def playback_ok(capture_url):
-    """Confirm the capture actually plays back before it is reported."""
+    """Confirm the capture actually plays back before it is reported.
+
+    Returns a (played, detail) pair rather than a bare bool, because the two
+    ways a playback check can come back negative call for opposite handling:
+
+        (True,  None)             plays back, HTTP 200 -- a capture
+        (False, "no-playback")    genuinely does not play back; the ordinary
+                                  refusal, which rests the source a week
+        (False, "playback-429")   web.archive.org is rate-limiting this
+                                  account's reads. Nothing has been learned
+                                  about the capture, so the source must not
+                                  pay for it: ACCOUNT_LIMIT handling applies
+                                  and the run stops.
+
+    A 404 still retries, because a capture a few seconds old may not have
+    propagated to the playback path yet; that is what the backoff is for. A
+    429 retries too, in case the limit is momentary, but it is remembered, and
+    a 429 seen at any point decides the verdict: once the far side is refusing
+    reads, a later 404 says nothing about the capture either.
+    """
+    rate_limited = False
     for attempt in range(4):
         try:
             req = urllib.request.Request(capture_url, method="HEAD")
             req.add_header("User-Agent", "Mozilla/5.0")
-            return urllib.request.urlopen(req, timeout=60).status == 200
+            if urllib.request.urlopen(req, timeout=60).status == 200:
+                return True, None
+            return False, "no-playback"
+        except urllib.error.HTTPError as exc:
+            if exc.code == 429:
+                rate_limited = True
+            time.sleep(25 * (attempt + 1))
         except Exception:                                     # noqa: BLE001
             time.sleep(25 * (attempt + 1))
-    return False
+    return False, ("playback-429" if rate_limited else "no-playback")
 
 
 
@@ -699,8 +778,10 @@ def cmd_run(args):
         attempts += 1
         capture_url, detail = capture(url, auth)
 
-        if capture_url and not playback_ok(capture_url):
-            capture_url, detail = None, "no-playback"
+        if capture_url:
+            played, why = playback_ok(capture_url)
+            if not played:
+                capture_url, detail = None, why
 
         if capture_url:
             rec = note_attempt(ledger, url, slug, "OK", "ok")
@@ -713,13 +794,7 @@ def cmd_run(args):
             if detail in ACCOUNT_LIMIT:
                 save_ledger(ledger)
                 print("STOP    %-14s %-22s %s" % (slug, detail, url))
-                print("\nThe account's daily capture limit was reached. Every "
-                      "source attempted after this point would fail for a "
-                      "reason that is not about the source, so the run stops "
-                      "here. Nothing is blocked and nothing is resting on "
-                      "account of it; the remaining candidates were simply not "
-                      "reached. Do not re-run tonight, and do not raise the "
-                      "budget to compensate - the cap is the finding.")
+                print("\n" + ACCOUNT_LIMIT_NOTE[detail])
                 break
             hard = rec.get("consecutive_hard_failures", 0)
             note = "  [blocked after %d]" % hard if hard >= BLOCK_AFTER else ""
@@ -872,6 +947,56 @@ def self_test():
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
         RESTORE_TREE()
+
+    # ---------------------------------------------------------------- 429
+    # A rate-limited playback read is not a verdict on the capture. These
+    # checks pin the distinction the 2026-11-15 Gathered Work case turned on.
+    check(set(ACCOUNT_LIMIT) <= set(ACCOUNT_LIMIT_NOTE),
+          "every ACCOUNT_LIMIT detail has a stop message")
+
+    saved_urlopen, saved_sleep = urllib.request.urlopen, time.sleep
+    try:
+        time.sleep = lambda _s: None
+
+        def raise_code(code):
+            def _open(req, timeout=None):
+                raise urllib.error.HTTPError(
+                    req.full_url, code, "test", {}, None)
+            return _open
+
+        urllib.request.urlopen = raise_code(429)
+        check(playback_ok("https://web.archive.org/web/1/https://x.gov/a")
+              == (False, "playback-429"), "429 playback reads as playback-429")
+
+        urllib.request.urlopen = raise_code(404)
+        check(playback_ok("https://web.archive.org/web/1/https://x.gov/a")
+              == (False, "no-playback"), "404 playback reads as no-playback")
+
+        class _Resp:
+            status = 200
+
+        urllib.request.urlopen = lambda req, timeout=None: _Resp()
+        check(playback_ok("https://web.archive.org/web/1/https://x.gov/a")
+              == (True, None), "200 playback reads as a capture")
+    finally:
+        urllib.request.urlopen, time.sleep = saved_urlopen, saved_sleep
+
+    # A playback-429 attempt is recorded, but costs the source nothing.
+    led = {"sources": {}}
+    rec = note_attempt(led, "https://x.gov/a", "x", "FAILED", "playback-429")
+    check(rec["last_result"] == "SKIPPED", "playback-429 records SKIPPED")
+    check(rec.get("consecutive_hard_failures", 0) == 0,
+          "playback-429 does not count toward blocking")
+    check(not is_cooling(led, "https://x.gov/a"),
+          "playback-429 does not rest the source")
+    check(not is_blocked(led, "https://x.gov/a"),
+          "playback-429 does not block the source")
+
+    # The ordinary refusal still rests the source, which is the contrast.
+    led2 = {"sources": {}}
+    note_attempt(led2, "https://x.gov/b", "x", "FAILED", "no-playback")
+    check(is_cooling(led2, "https://x.gov/b"), "no-playback still rests")
+
     print("self-test: %d checks passed" % checks)
 
 

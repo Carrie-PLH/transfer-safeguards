@@ -262,8 +262,8 @@
     "https://app.leg.wa.gov/WAC/default.aspx?cite=388-97-0120": {
       "attempts": 3,
       "last_attempt": "2026-11-15T153018Z",
-      "last_detail": "no-playback",
-      "last_result": "FAILED",
+      "last_detail": "playback-429",
+      "last_result": "SKIPPED",
       "page": "washington"
     },
     "https://app.leg.wa.gov/WAC/default.aspx?cite=388-97-0160": {
