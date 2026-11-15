@@ -40,7 +40,7 @@
       "attempts": 3,
       "last_attempt": "2026-11-14T052913Z",
       "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "last_result": "SKIPPED",
       "page": "oregon"
     },
     "http://www.wvseniorservices.gov/StayingSafe/LongTermCareOmbudsmanProgram/tabid/81/Default.aspx": {
@@ -145,14 +145,14 @@
       "attempts": 3,
       "last_attempt": "2026-11-14T052847Z",
       "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "last_result": "SKIPPED",
       "page": "ohio"
     },
     "https://aging.ohio.gov/care-and-living/ombudsman/residents-rights/discharge-transfer": {
       "attempts": 3,
       "last_attempt": "2026-11-14T052900Z",
       "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "last_result": "SKIPPED",
       "page": "ohio"
     },
     "https://aging.sc.gov/programs-initiatives/long-term-care-ombudsman-program": {
@@ -638,7 +638,7 @@
       "consecutive_hard_failures": 2,
       "last_attempt": "2026-11-14T053003Z",
       "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "last_result": "SKIPPED",
       "page": "south-dakota"
     },
     "https://dhss.delaware.gov/dhcq/dhcq/contact/": {
@@ -739,7 +739,7 @@
       "attempts": 3,
       "last_attempt": "2026-11-14T053015Z",
       "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "last_result": "SKIPPED",
       "page": "south-dakota"
     },
     "https://dss.sd.gov/keyresources/adminhearings/fairhearing.aspx": {
@@ -765,7 +765,7 @@
       "consecutive_hard_failures": 2,
       "last_attempt": "2026-11-14T052925Z",
       "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "last_result": "SKIPPED",
       "page": "rhode-island"
     },
     "https://eohhs.ri.gov/reference-center/eohhs-appeals-office": {
@@ -773,7 +773,7 @@
       "consecutive_hard_failures": 2,
       "last_attempt": "2026-11-14T052938Z",
       "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "last_result": "SKIPPED",
       "page": "rhode-island"
     },
     "https://fhb.hhs.texas.gov/handbooks/fair-fraud-hearings-handbook/1300-notice": {
@@ -1365,7 +1365,7 @@
       "consecutive_hard_failures": 2,
       "last_attempt": "2026-11-14T052950Z",
       "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "last_result": "SKIPPED",
       "page": "rhode-island"
     },
     "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/19-06_NursingHomeTransfersandDischarge_cap_03292022.pdf": {
@@ -1436,7 +1436,7 @@
       "consecutive_hard_failures": 2,
       "last_attempt": "2026-11-14T053028Z",
       "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "last_result": "SKIPPED",
       "page": "tennessee"
     },
     "https://publications.tnsosfiles.com/rules/1200/1200-13/1200-13-02.20260629.pdf": {
@@ -1444,7 +1444,7 @@
       "consecutive_hard_failures": 2,
       "last_attempt": "2026-11-14T053041Z",
       "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "last_result": "SKIPPED",
       "page": "tennessee"
     },
     "https://regs.health.ny.gov/content/section-4153-residents-rights": {
@@ -1452,7 +1452,7 @@
       "consecutive_hard_failures": 1,
       "last_attempt": "2026-11-14T052745Z",
       "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "last_result": "SKIPPED",
       "page": "new-york"
     },
     "https://regs.health.ny.gov/content/section-5059-residential-health-care": {
@@ -1460,7 +1460,7 @@
       "consecutive_hard_failures": 1,
       "last_attempt": "2026-11-14T052757Z",
       "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "last_result": "SKIPPED",
       "page": "new-york"
     },
     "https://regulations.delaware.gov/api/AdminCode/title16/3102/390cf383-7c28-4d18-a3be-494417f7c892": {
@@ -1888,7 +1888,7 @@
       "consecutive_hard_failures": 2,
       "last_attempt": "2026-11-14T052810Z",
       "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "last_result": "SKIPPED",
       "page": "new-york"
     },
     "https://www.health.ny.gov/facilities/nursing/rights/transfer_discharge.htm": {
@@ -1896,7 +1896,7 @@
       "consecutive_hard_failures": 2,
       "last_attempt": "2026-11-14T052822Z",
       "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "last_result": "SKIPPED",
       "page": "new-york"
     },
     "https://www.health.ny.gov/facilities/nursing/rights/transfer_discharge_appeal.htm": {
@@ -1904,7 +1904,7 @@
       "consecutive_hard_failures": 2,
       "last_attempt": "2026-11-14T052835Z",
       "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "last_result": "SKIPPED",
       "page": "new-york"
     },
     "https://www.health.state.mn.us/facilities/regulation/ohfc/appeals/nhda.html": {
@@ -1947,7 +1947,7 @@
       "attempts": 3,
       "last_attempt": "2026-11-14T053106Z",
       "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "last_result": "SKIPPED",
       "page": "texas"
     },
     "https://www.ilga.gov/legislation/ILCS/details?MajorTopic=REGULATION&Chapter=HEALTH+FACILITIES+AND+REGULATION&ActName=Nursing+Home+Care+Act.&ActID=1225&ChapterID=21&ChapAct=210+ILCS+45/&SeqStart=17400000&SeqEnd=19900000&Print=True": {
@@ -2399,14 +2399,14 @@
       "attempts": 3,
       "last_attempt": "2026-11-14T052732Z",
       "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "last_result": "SKIPPED",
       "page": "new-mexico"
     },
     "https://www.tn.gov/content/dam/tn/tenncare/documents/NFInvoluntaryDischargeNotice.pdf": {
       "attempts": 3,
       "last_attempt": "2026-11-14T053054Z",
       "last_detail": "submit-401",
-      "last_result": "FAILED",
+      "last_result": "SKIPPED",
       "page": "tennessee"
     },
     "https://www.tn.gov/tenncare/long-term-services-supports/involuntary-discharge-and-transfer-appeals.html": {

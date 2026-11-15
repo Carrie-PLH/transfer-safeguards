@@ -682,6 +682,19 @@ is never recorded -- the source is simply attempted again later. When a pass
 stops this way, wait for the limit to clear rather than re-running, and do not
 raise the budget to compensate: the limit is the finding.
 
+**Nor is a refused submission.** A 401 from Save Page Now (`submit-401`) means
+this account's keys are missing, stale or wrong, which is the same kind of
+fact, so it is handled the same way: recorded SKIPPED, no resting, no move
+toward BLOCK_AFTER, and the run stops. Until 2026-11-15 it sat in neither set
+and so rested its source a week — on the morning the owner's keys went stale
+one sped-safeguards pass rested eighteen sources that way, and 395 submit-401
+records had accumulated in Gathered Work, none of which had refused anything.
+All 467 such records across the four collections were repaired to SKIPPED in
+the same commit as the fix. Memory worth keeping: a uniform `submit-401`
+across a pass is the account, never the hosts, and the fix is new keys at
+https://archive.org/account/s3.php written to `~/.config/ia/spn.env` — not a
+retry, and not a bigger budget.
+
 **The budget is a number of captures, not attempts.** `--budget 30` works
 down the candidate list until twenty are confirmed stored, bounded by an
 attempt ceiling of three times the budget. Save Page Now caps concurrent

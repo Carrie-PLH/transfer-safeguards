@@ -74,6 +74,13 @@ fail for two unrelated reasons that must not be recorded alike (2026-11-15):
   the attempt is recorded SKIPPED, the source neither rests nor moves toward
   BLOCK_AFTER, and the run stops, exactly as it does on the daily capture cap.
 
+Submission has an account condition of its own, handled the same way since
+2026-11-15: a 401 from Save Page Now (`submit-401`) means this account's keys
+are missing, stale or wrong. It too is recorded SKIPPED and stops the run,
+rather than resting a source that refused nothing. Until that day it was in
+neither set, so a stale-key morning cost eighteen sped-safeguards sources a
+week each and left 395 submit-401 records across Gathered Work.
+
 Until 2026-11-15 `playback_ok` caught every exception alike and returned a
 bare False, so a 429 was indistinguishable from an unplayable capture. The
 cost was not theoretical. In Gathered Work that night a pass recorded four
@@ -190,7 +197,16 @@ HARD_FAILURES = {"error:no-request", "error:blocked", "error:forbidden",
 # Work, where four duquesne sources were rested that way before the pass was
 # stopped, and two of the four had a stored HTTP 200 capture at the time. A
 # rate limit is about the night, not the source.
-ACCOUNT_LIMIT = {"error:too-many-daily-captures", "playback-429"}
+#
+# submit-401 joined on 2026-11-15, the same day and for the same reason as
+# playback-429. Save Page Now stopped accepting anonymous saves, so a 401 on
+# submission means this account's keys are missing, stale or wrong -- a fact
+# about the account, never about the source. It sat in neither set, so every
+# 401 was recorded FAILED and rested its source a week: on the morning the
+# owner's keys went stale, one sped-safeguards pass rested eighteen sources
+# that way, and 395 sources across Gathered Work carried a submit-401 record.
+# None of them had refused anything.
+ACCOUNT_LIMIT = {"error:too-many-daily-captures", "playback-429", "submit-401"}
 
 # Why a run stopped, in the words the stop deserves. Keyed by the ACCOUNT_LIMIT
 # detail that tripped it, because the two conditions call for different things
@@ -215,6 +231,17 @@ ACCOUNT_LIMIT_NOTE = {
         "way, and a later pass will attempt the source again. Wait for the "
         "limit to clear rather than re-running tonight, and do not raise the "
         "budget to compensate - the limit is the finding.",
+    "submit-401":
+        "Save Page Now refused the submission with HTTP 401, which means this "
+        "account's keys are missing, stale or wrong -- nothing about the "
+        "source. Every source attempted after this point would be refused the "
+        "same way, so the run stops here. Nothing is blocked and nothing is "
+        "resting on account of it; the remaining candidates were simply not "
+        "reached. Generate fresh keys at https://archive.org/account/s3.php, "
+        "write them to ~/.config/ia/spn.env as IA_ACCESS_KEY and "
+        "IA_SECRET_KEY, and run again. Do not raise the budget and do not "
+        "keep attempting sources in the hope that one slips through - the "
+        "refusal is the finding.",
 }
 
 POLL_INTERVAL = 6
@@ -991,6 +1018,15 @@ def self_test():
           "playback-429 does not rest the source")
     check(not is_blocked(led, "https://x.gov/a"),
           "playback-429 does not block the source")
+
+    # A refused submission is the account's fault too, and costs no more.
+    led3 = {"sources": {}}
+    rec3 = note_attempt(led3, "https://x.gov/c", "x", "FAILED", "submit-401")
+    check(rec3["last_result"] == "SKIPPED", "submit-401 records SKIPPED")
+    check(rec3.get("consecutive_hard_failures", 0) == 0,
+          "submit-401 does not count toward blocking")
+    check(not is_cooling(led3, "https://x.gov/c"),
+          "submit-401 does not rest the source")
 
     # The ordinary refusal still rests the source, which is the contrast.
     led2 = {"sources": {}}
