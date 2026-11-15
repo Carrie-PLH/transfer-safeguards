@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The Long Term Care Ombudsman program: "The Alabama Department of Senior Services administers a Long Term Care Ombudsman" program "that provides services to protect individuals residing in nursing facilities, assisted living facilities, specialty care facilities and boarding homes." The guide publishes one contact route: "Call" "1-800-AGELINE to reach your local Ombudsman." — a word, not a digit string, as the guide prints it. The rule requires the facility's own notice to carry the state ombudsman's name, address and telephone number.
 
-**Sources last checked.** 2026-10-18
+**Sources last checked.** 2026-11-15
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 
@@ -98,6 +98,8 @@ What any of these periods means for a particular case is for the hearing office 
 Captured: all four, in tools/packets/alabama-packet.txt (recipe tools/recipes/alabama.json, digest 8736087ebf91) and tools/packets/alabama-packet-rule.txt. Pending: any published appeal route and deadline, a first-party Alabama Medicaid statement of the bed-hold period's own length, and the Department of Senior Services' own ombudsman page (a statewide telephone number beyond the Elder Rights Guide's "1-800-AGELINE") — per the packets' pending lists.
 
 ## 04 — Change log
+
+2026-11-15 — Sources re-fetched and mechanically re-verified; automated re-verification, not a human review. Both live sources plus the complaints and rule supplements re-captured (recipe 8736087ebf91), unchanged since the 2026-09-17 standing capture. Zero fidelity failures. No quoted text changed.
 
 2026-10-06 — Internet Archive captures recorded. Captures requested on 2026-09-06 by an automated capture pass and recorded this date; no human review is claimed for this entry. No quotation, date, finding or link above was changed by it. Each capture below was requested through Save Page Now and then confirmed to play back. Captures added: Alabama Administrative Code, captured from the code site's API → [https://web.archive.org/web/20260906124329/https://admincode.legislature.state.al.us/administrative-code/420-5-10](https://web.archive.org/web/20260906124329/https://admincode.legislature.state.al.us/administrative-code/420-5-10); Alabama Department of Senior Services, published on alabamapublichealth.gov → [https://web.archive.org/web/20260906124432/https://www.alabamapublichealth.gov/homehealth/assets/elderrightsguide.pdf](https://web.archive.org/web/20260906124432/https://www.alabamapublichealth.gov/homehealth/assets/elderrightsguide.pdf); ADPH, Bureau of Health Provider Standards → [https://web.archive.org/web/20260906124542/https://www.alabamapublichealth.gov/providerstandards/complaints.html](https://web.archive.org/web/20260906124542/https://www.alabamapublichealth.gov/providerstandards/complaints.html).
 

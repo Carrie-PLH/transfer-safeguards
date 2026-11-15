@@ -1,10 +1,11 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: arizona
-ASSEMBLED: 2026-10-20
+ASSEMBLED: 2026-11-15
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/arizona.json (recipe digest 4bee96ede9a5). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
 - SOURCE 1: transport curl; extractor pdftotext-raw; pages 96-97; http_version 1.1; filters none.
   The Secretary of State's chapter file is 10.3 MB and 343 pages; R9-10-408 occupies printed pages 94-95, which are PDF pages 96-97. apps.azsos.gov returns 403 to every HTTP/2 request curl makes, whatever the headers, and 200 to the same request over HTTP/1.1; that is what http_version 1.1 is for, and it is why two earlier sessions recorded this host as unreachable to curl. The chapter is set in two columns, so pdftotext-raw is used rather than -layout: raw mode follows the content stream, which for this file is column order, and the section reads top to bottom. The typesetting hyphenates words at line ends (nurs-ing, physi-cian); those hyphens are the document's and are left as extracted, so a quotation must either stop at a line break or carry the break as two spans. The two pages also carry the tail of R9-10-407 and the head of R9-10-409; a superset only adds evidence.
 - SOURCE 2: transport curl; extractor pdftotext-layout; filters none.
@@ -16,7 +17,7 @@ CAPTURE NOTES:
 - SOURCE 5: transport curl; extractor pdftotext-raw; pages 10-11; slice from 'R9-28-204. Institutional Services' to 'R9-28-205. Home and Community Based Services (HCBS)'; http_version 1.1; filters none.
   Added deepening the page to full: R9-28-204(D)(3) is Arizona ALTCS's bed-hold rule -- located via a general search after the standing packet's own note that AMPM Policy 1240-A (direct care services) does not address bed-hold; it does not. This chapter shares apps.azsos.gov with source 1 and needs the same http_version 1.1 pin the same host already requires. R9-10-204's own printed page (page 9 of the chapter) spans two PDF pages (10 and 11) because of the running head between them, and the section's Historical Note sits on the second; pdftotext-raw is used for the same two-column reason as source 1, confirmed against this span specifically (raw mode reproduces the printed reading order; -layout interleaves this span with a neighboring column exactly as it does for source 1).
 
-SOURCE 1: R9-10-408, Transfer; Discharge — Arizona Administrative Code, Title 9, Chapter 10 (Department of Health Services, Health Care Institutions: Licensing), Article 4, Nursing Care Institutions — Arizona Secretary of State (PDF, pages 96-97 of the chapter) | https://apps.azsos.gov/public_services/Title_09/9-10.pdf | source date: Supp. 26-1, March 31, 2026, as the running head of every page states; the section's Historical Note records its last amendment effective October 1, 2019 (Supp. 19-3) | retrieved: 2026-10-20
+SOURCE 1: R9-10-408, Transfer; Discharge — Arizona Administrative Code, Title 9, Chapter 10 (Department of Health Services, Health Care Institutions: Licensing), Article 4, Nursing Care Institutions — Arizona Secretary of State (PDF, pages 96-97 of the chapter) | https://apps.azsos.gov/public_services/Title_09/9-10.pdf | source date: Supp. 26-1, March 31, 2026, as the running head of every page states; the section's Historical Note records its last amendment effective October 1, 2019 (Supp. 19-3) | retrieved: 2026-11-15
 9 A.A.C. 10 Arizona Administrative Code
 TITLE 9. HEALTH SERVICES
 CHAPTER 10. DEPARTMENT OF HEALTH SERVICES - HEALTH CARE INSTITUTIONS: LICENSING
@@ -275,7 +276,7 @@ b. Neglect;
 c. Exploitation;
 d. Coercion;
 
-SOURCE 2: Appeal of a Discharge Form — Arizona Health Care Cost Containment System (AHCCCS), Office of the General Counsel (PDF) | https://www.azahcccs.gov/shared/Downloads/GrievanceAndAppeals/NFAppealOfADischargeForm.pdf | source date: none stated on the form | retrieved: 2026-10-20
+SOURCE 2: Appeal of a Discharge Form — Arizona Health Care Cost Containment System (AHCCCS), Office of the General Counsel (PDF) | https://www.azahcccs.gov/shared/Downloads/GrievanceAndAppeals/NFAppealOfADischargeForm.pdf | source date: none stated on the form | retrieved: 2026-11-15
 Appeal of a Discharge Form
 The following information is necessary to file an appeal of transfer or discharge from a
 registered nursing facility. Please attach discharge paperwork from the nursing facility
@@ -317,7 +318,7 @@ If you have any questions or concerns regarding this form, please contact:
    Phone:      602-417-4232
    Email:      NFdischarges@azahcccs.gov
 
-SOURCE 3: Grievance And Appeals — AHCCCS, member rights and responsibilities | https://www.azahcccs.gov/Members/GetCovered/RightsAndResponsibilities/grievanceandappeals.html | source date: none stated on page | retrieved: 2026-10-20
+SOURCE 3: Grievance And Appeals — AHCCCS, member rights and responsibilities | https://www.azahcccs.gov/Members/GetCovered/RightsAndResponsibilities/grievanceandappeals.html | source date: none stated on page | retrieved: 2026-11-15
 ﻿html
 
  Skip to Main Content
@@ -713,6 +714,8 @@ Online Provider Directory
  Unauthorize Marketplace Plan Enrollment
 
  CRISIS SERVICES
+
+Due to the Microsoft Outlook services outage, AHCCCS may experience delays in receiving and responding to emails. If you emailed AHCCCS today and need immediate assistance, please contact the AHCCCS Solution Center - Posted on 11/13/2026
 
 Home
 
@@ -1161,7 +1164,7 @@ News & Press Releases
 
 Back To Top
 
-SOURCE 4: Long-Term Care Ombudsman — Arizona Department of Economic Security | https://des.az.gov/LTCOP | source date: none stated on page | retrieved: 2026-10-20
+SOURCE 4: Long-Term Care Ombudsman — Arizona Department of Economic Security | https://des.az.gov/LTCOP | source date: none stated on page | retrieved: 2026-11-15
 Skip to main content
 
 State of Arizona
@@ -1174,686 +1177,189 @@ Register to Vote
 
 Arizona Department of Economic Security
 
-Your Partner for a Stronger Arizona
+Utility Menu - Contact and Location
 
-Search form
+Contact DES
+
+Find a DES Office
 
 Search
 
- Select LanguageEnglishAfrikaansAlbanianAmharicArabicArmenianAzerbaijaniBasqueBelarusianBengaliBosnianBulgarianCatalanCebuanoChichewaChinese (Simplified)Chinese (Traditional)CorsicanCroatianCzechDanishDutchEsperantoEstonianFilipinoFinnishFrenchFrisianGalicianGeorgianGermanGreekGujaratiHaitian CreoleHausaHawaiianHebrewHindiHmongHungarianIcelandicIgboIndonesianIrishItalianJapaneseJavaneseKannadaKazakhKhmerKoreanKurdish (Kurmanji)KyrgyzLaoLatinLatvianLithuanianLuxembourgishMacedonianMalagasyMalayMalayalamMalteseMaoriMarathiMongolianMyanmar (Burmese)NepaliNorwegianPashtoPersianPolishPortuguesePunjabiRomanianRussianSamoanScottish GaelicSerbianSesothoShonaSindhiSinhalaSlovakSlovenianSomaliSpanishSudaneseSwahiliSwedishTajikTamilTeluguThaiTurkishUkrainianUrduUzbekVietnameseWelshXhosaYiddishYorubaZulu
+Search
 
-Facebook
-Instagram
-YouTube
-LinkedIn
+Search
 
-Main menu
+ About DES
 
-About DES
+ Overview of DES Services
 
-Overview of DES Services
+ Michael Wisehart, Director
 
-Michael Wisehart, Director
+ Organizational Chart
 
-Organizational Chart
+ Five-Year Strategic Plan
 
-Five-Year Strategic Plan
+ Services Provided by DES
 
-Strategic Planning Frequently Asked Questions
+ Contact DES
 
-Five-Year Strategic Plan Contact
+ Budget Information
 
-Services Provided by DES
+ Events Calendar
 
-Contact DES
+ Community Engagement
 
-Director's Office
+ Tribal Relations
 
-DES Program and Services Contact Numbers
+ Public Meetings
 
-Governor's Councils Contact Numbers
+ DES Hall of Fame
 
-Report Abuse
+ DES Non-Discrimination Policy
 
-Office of Equal Opportunity
+ Services
 
-Client Advocates and Ombudsman
+ Basic Needs
 
-Website Feedback
+ Adult Protective Services
 
-Budget Information
+ Food Assistance
 
-Events Calendar
+ Medical Assistance
 
-DES Public Events Submission Form
+ Refugee Resettlement
 
-Community Engagement
+ Shelter and Housing
 
-Community Engagement Team
+ Domestic Violence Support
 
-Contact Community Engagement
+ Sexual Violence Support
 
-Tribal Relations
+ Child and Family
 
-Overview
+ Cash Assistance
 
-Staff
+ Child Care
 
-Tribal Consultations and Reports
+ Child Support Services
 
-DES Tribal Maps
+ Community Resources
 
-Resources
+ Disabilities
 
-Request Assistance
+ Developmental Disabilities
 
-Tribal Land Address Verification
+ Early Intervention
 
-Public Meetings
+ Achieving a Better Life Experience
 
-DES Hall of Fame
+ Older Adults
 
-Services
+ Home and Community Based Services
 
-Basic Needs
+ Abuse in Later Life Grant
 
-Adult Protective Services
+ Healthy Living
 
-File an APS Report Online (English)
+ Medicare Assistance
 
-File an APS Report Online (Spanish)
+ Legal Services Assistance
 
-Adult Abuse
+ Family Caregiver Support
 
-Mandated Reporters
+ Long-Term Care Ombudsman
 
-APS Registry
+ Publications on Aging
 
-Employers
+ World Elder Abuse Awareness Day Conference
 
-APS Improvements
+ Employment
 
-Arizona APS Statutes
+ Job Seekers
 
-Arizona APS Definitions
+ Reentry Services
 
-APS Documents
+ Employer Resources
 
-Request APS Records
+ Apprenticeship
 
-APS Data Dashboard
+ Unemployment - Individual
 
-Training, Education, and Community Engagement
+ Working with a Disability
 
-Food Assistance
+ Employment Service/Related Law Complaint
 
-Nutrition Assistance
+ Unemployment - Employer
 
-How to Apply for Nutrition Assistance
+ Senior Community Service Employment Program
 
-Documents Needed to Apply for Nutrition Assistance
+ Veterans
 
-MyFamilyBenefits Frequently Asked Questions (FAQ)
+ Workforce Innovation and Opportunity Act (WIOA)
 
-Frequently Asked Questions
+ Arizona State Monitor Advocate
 
-Change Report for Nutrition, Cash, and Medical Assistance Benefits
+ How do I?
 
-Electronic Benefits Transfer (EBT) Card
+ Do Business with DES?
 
-Health-e-Arizona Plus Application
+ Request a Vendor Meeting
 
-Publications for Nutrition, Cash, and Medical Assistance Benefits
+ Learn about HIPAA?
 
-Work Requirements for Able-Bodied Adults Without Dependents
+ Request Assistance?
 
-Double Up Food Bucks
+ Request DES Public Records?
 
-Student Eligibility for SNAP
+ Submit Website Feedback?
 
-How to Support Health in your Home
+ Work for DES?
 
-Hunger Relief Programs
+ ADA Disability Rights/Reasonable Accommodations
 
-Arizona Commodity Senior Food Program
+ Volunteer?
 
-Congregate and Home-delivered Meals
+ File a Discrimination Complaint
 
-The Emergency Food Assistance Program (TEFAP)
+ Report Developmental Disabilities Fraud, Waste and Abuse
 
-Senior Farmers Markets Nutrition Program (SFMNP)
+ Register to Vote
 
-WIC Farmers Markets Nutrition Program (FMNP)
+ Documents Center
 
-Other Food Programs
+ Reports
 
-SUN Bucks Summer Electronic Benefit Transfer (Summer EBT)
+ Forms
 
-Information for DES Partners
+ Policies and Procedures
 
-Cash and Nutrition Assistance Policy Manual
+ Flyers and Pamphlets
 
-Other Resources
+ DES Rules
 
-DES Hunger Advisory Council
+ Media Center
 
-Disaster Nutrition Assistance Program
+ Featured Content
 
-Appeals
+ News Releases
 
-Contact DES
+ Report Fraud
 
-Customer Bill of Rights
+ Report Suspected Fraud
 
-Limited English Proficiency
+ About OIG
 
-Office of Program Evaluation
+User account menu
 
-USDA Programs Nondiscrimination Statements
-
-Medical Assistance
-
-How to Apply for Medical Assistance
-
-Frequently Asked Questions
-
-Refugee Resettlement
-
-Arizona Refugee Resettlement Program Resources
-
-Arizona Refugee Resettlement - FAQ
-
-Arizona Refugee Resettlement Program - Contract Information
-
-Shelter and Housing
-
-Arizona Rental Assistance Program
-
-Homeless Services
-
-Short-Term Crisis Services
-
-Community Action Agencies
-
-Low Income Household Water Assistance Program
-
-Low Income Home Energy Assistance Program
-
-Domestic Violence Support
-
-Domestic Violence Contracts Directory
-
-Sexual Violence Support
-
-Child and Family
-
-Cash Assistance
-
-Frequently Asked Questions
-
-Applications & Forms
-
-Income Eligibility Guidelines
-
-Personal Responsibility Agreement
-
-Grant Diversion Program
-
-State Assistance
-
-Child Care
-
-Find a DES Child Care Office
-
-Apply for Child Care Assistance
-
-Become a Child Care Provider
-
-Become a DES Certified Family Child Care Provider
-
-DES Contracted Child Care Provider Resources
-
-Non-Certified Relative Provider
-
-Child Care Electronic System (CCES)
-
-File a Complaint on a DES Child Care Provider
-
-Professional Development
-
-Navigating Health and Safety Training
-
-Preventing and Reducing Suspensions and Expulsions in Early Care
-
-Child Care and Development Fund State Plan
-
-Contact Child Care
-
-Child Support Services
-
-Apply for Child Support
-
-Child Support Recipients
-
-Electronic Payment Card (EPC)
-
-Pay Child Support
-
-Resources
-
-Employers
-
-Wanted - Child Support Evaders
-
-Unclaimed Funds
-
-Contact Child Support Services
-
-AZ Child Support Portal
-
-Online Services
-
-Community Resources
-
-Disabilities
-
-Developmental Disabilities
-
-Members and Families
-
-Determine Eligibility
-
-Providers and Vendors
-
-Licensing and Certification
-
-Initiatives and Results
-
-DDD Health Plans Information
-
-Policy and Rules
-
-Public Councils and Committees
-
-Contact DDD
-
-How To Print Page Content
-
-Language Assistance
-
-Job Openings
-
-Early Intervention
-
-AzEIP at a Glance
-
-Apply for AzEIP Services
-
-Find Service-Providing Agencies
-
-Families
-
-Receiving AzEIP Services
-
-Community Programs
-
-AzEIP Videos
-
-Agencies
-
-I-TEAMS
-
-Resources and Tools for Providers
-
-Training
-
-Stakeholders and Advocates
-
-ICC for Infants and Toddlers
-
-Comprehensive System of Personnel Development (CSPD)
-
-Reports
-
-AzEIP Community Resource Guide
-
-Policies and Procedures
-
-Contact AzEIP
-
-AzEIP Dispute Resolution
-
-Join an Early Intervention Team!
-
-Achieving a Better Life Experience
-
-Older Adults
-
-Home and Community Based Services
-
-Abuse in Later Life Grant
-
-Healthy Living
-
-Medicare Assistance
-
-Legal Services Assistance
-
-Family Caregiver Support
-
-Long-Term Care Ombudsman
-
-Publications on Aging
-
-Alerts
-
-Policy Manual
-
-Aging and Disability Services Policy Chapter 1000
-
-Aging and Disability Services Policy Chapter 2000
-
-Aging and Disability Services Policy Chapter 3000
-
-Aging and Disability Services Policy Chapter 4000
-
-World Elder Abuse Awareness Day Conference
-
-Employment
-
-Job Seekers
-
-Trade Adjustment Assistance
-
-Migrant and Seasonal Farm Workers
-
-SNAP CAN Employment
-
-SNAP Participants
-
-SNAP CAN Providers
-
-SNAP CAN Provider Tool
-
-TANF Jobs Program
-
-Grant Funding Disclosures
-
-Reentry Services
-
-Employer Resources
-
-Foreign Labor Certification Program
-
-Work Opportunity Tax Credit
-
-Rapid Response – Workforce Reduction Support
-
-Apprenticeship
-
-Become an Apprentice
-
-Find an Apprenticeship Program
-
-Offer an Apprenticeship Program
-
-Registered Apprenticeship Monthly Office Hours
-
-Registered Apprenticeship Public Information Disclosure
-
-Registered Apprenticeship Success Stories
-
-Arizona Apprenticeship Advisory Committee
-
-State Apprenticeship Expansion
-
-Apprenticeship Certificate Registry
-
-Unemployment - Individual
-
-Apply for UI Benefits
-
-File Your Weekly UI Claims
-
-ID.me Identity Verification
-
-A Better Way to Access UI Services
-
-Overpayments
-
-Understanding UI Overpayments
-
-Waivers
-
-Paying Back
-
-Find Help with Your Overpayment
-
-Frequently Asked Questions about Overpayments
-
-Reemployment Services and Eligibility Assessment (RESEA)
-
-Disaster Unemployment Assistance
-
-ARIZONA@WORK Employment Resources
-
-Income Tax Information
-
-Eligibility for Unemployment Benefits
-
-Work Search and Your Eligibility for Unemployment Benefits
-
-How Do I and Frequently Asked Questions
-
-Forms & Pamphlets
-
-Contact Arizona UI
-
-Contact AZ Unemployment Insurance Client Advocate Via Email
-
-UI Benefit Fraud
-
-UI Benefit Fraud Convictions
-
-UI Benefits (Compensation) Fraud
-
-Weekly UI Benefit Claims Reported Earnings
-
-How To File An Appeal For UI Benefits
-
-FAQs about Hearing and Appeal Process
-
-Legal Representation
-
-The UI Benefits Appeals Process - Helpful Videos
-
-UI Data Dashboard
-
-Working with a Disability
-
-Vocational Rehabilitation
-
-Collaboration with the DDD
-
-Pre-Employment Transition Services (Pre-ETS)
-
-Business Enterprise Program
-
-Facilities List
-
-Independent Living Older Blind (ILOB) Program
-
-Governor's Council on Blindness and Low Vision
-
-State Rehabilitation Council
-
-Governor's Council on Spinal and Head Injuries
-
-Additional Rehabilitation Resources
-
-Contact Information
-
-Employment Service/Related Law Complaint
-
-Unemployment - Employer
-
-Applying for an Unemployment Insurance Tax Account Number
-
-Report Changes to Your Business
-
-Reporting Wages and Paying Unemployment Insurance Taxes
-
-Employment Taxes - Calculating Unemployment Taxes
-
-Unemployment Insurance Tax Forms
-
-Unemployment Insurance Tax Frequently Asked Questions
-
-Request UI Records
-
-Employer Handbook/ Unemployment Tax
-
-Employer Handbook/ Unemployment Benefit Claims
-
-AZ Unemployment Insurance Tax Survey
-
-Contact the Unemployment Tax Office
-
-Arizona Shared Work Program
-
-Case Management System for Unemployment Benefits
-
-Overpayments (Credits) and Refunds
-
-Unemployment Insurance Operating Fund
-
-Senior Community Service Employment Program
-
-Veterans
-
-Workforce Innovation and Opportunity Act (WIOA)
-
-About WIOA
-
-WIOA Resources
-
-WIOA Allocations Information
-
-Title I-B Policy and Procedure Manual
-
-WIOA Plans, Reports, and Waivers
-
-WIOA - Equal Opportunity
-
-Contact WIOA
-
-Eligible Training Provider List
-
-Arizona State Monitor Advocate
-
-How do I?
-
-Do Business with DES?
-
-Procurement Frequently Asked Questions
-
-Arizona Taxonomy of Human Services Contracts
-
-Taxonomy Frequently Asked Questions
-
-Request a Vendor Meeting
-
-Learn about HIPAA?
-
-HIPAA Privacy
-
-Useful HIPAA Web Sites
-
-HIPAA Frequently Asked Questions (FAQ)
-
-Contact HIPAA
-
-Request Assistance?
-
-Mission of Heart
-
-Contact Ombudsman
-
-Frequently Asked Questions
-
-Submit a Request for Assistance
-
-Additional Resources
-
-Request DES Public Records?
-
-Submit Website Feedback?
-
-Work for DES?
-
-ADA Disability Rights/Reasonable Accommodations
-
-FAQs about Reasonable Modifications
-
-Volunteer?
-
-About Volunteer Services
-
-Open Volunteer Opportunities
-
-Volunteer Questions & Answers
-
-Volunteer Online Application
-
-File a Discrimination Complaint
-
-Report Developmental Disabilities Fraud, Waste and Abuse
-
-Register to Vote
-
-Documents Center
-
-Reports
-
-Forms
-
-Policies and Procedures
-
-Flyers and Pamphlets
-
-DES Rules
-
-DES Rulemaking Activities
-
-Submit Comments on DES Rules
-
-Request for Notification of Rulemaking Activity
-
-Contact DES Rules Team
-
-Department of Economic Security Substantive Policy Statement Directory
-
-Media Center
-
-Featured Content
-
-Press Releases
-
-Office Locator
-
-Report Fraud
-
-About OIG
-
-Report Suspected Fraud
+Log in
 
 Home
 
-Services
-
-Older Adults
+ Long-Term Care Ombudsman
 
 Long-Term Care Ombudsman
+
+Main navigation
 
 Older Adults
 
@@ -1862,6 +1368,8 @@ Home and Community Based Services
 Abuse in Later Life Grant
 
 Healthy Living
+
+Chronic Disease Self-Management Program
 
 Medicare Assistance
 
@@ -1886,20 +1394,18 @@ Aging and Disability Services Policy Chapter 3000
 Aging and Disability Services Policy Chapter 4000
 
 World Elder Abuse Awareness Day Conference
-
- Long-Term Care Ombudsman
 
 Announcement
 
 The Long-Term Care Ombudsman Program Annual Report for Fiscal Year 2025 is now available!
 
-The Long-Term Care Ombudsman Program (LTCOP) grew out of efforts by both federal and state governments to respond to widely reported concerns that our most frail and vulnerable citizens (those living in long-term care facilities) were subject to abuse, neglect and substandard care. These residents also lacked the ability to exercise their rights or voice complaints about their circumstances. The primary purpose of the Long-Term Care Ombudsman Program is to identify, investigate and resolve complaints made by or on behalf of residents of nursing homes, assisted living facilities, and adult foster care homes.
+The Long-Term Care Ombudsman Program (LTCOP) was set up by federal and state governments to help those in long-term care facilities. Residents here are often frail and vulnerable. Some face issues like abuse, neglect, or poor care. Many struggle to voice their concerns or know their rights. The LTCOP's main goal is to receive, investigate, and resolve complaints. These complaints can come from residents or from advocates speaking for them. The program supports individuals in nursing homes, assisted living facilities, and adult foster care homes.
 
-The LTCOP will make every reasonable effort to assist, advocate, and intervene on behalf of the resident. When investigating complaints, the program will respect the resident, maintain their confidentiality, and will focus complaint resolution on the resident’s wishes.
+The LTCOP will make every reasonable effort to help, speak up, and intervene for residents. When investigating complaints, the program will respect the resident, keep their information private. The program works to resolve issues based on what the resident wants.
 
 In addition to identifying, investigating and resolving complaints, the LTCOP:
 
-Educates residents, families, facility staff and the community about long term care issues and services
+Teaches residents, families, facility staff and the community about long-term care issues and services
 
 Promotes and advocates for residents’ rights
 
@@ -2001,13 +1507,13 @@ Aging and Disability Resources AZ Links
 
 Arizona Department of Health Services, Public Health Licensing
 
-Licenses and monitors health and child care facilities and providers throughout Arizona. Licensing inspections, on-site surveys, and complaint investigations are conducted to promote quality care and safety and ensure that performance standards are met for facility operation and maintenance.
+ Licenses and monitors health and child care facilities and providers throughout Arizona. Licensing inspections, on-site surveys, and complaint investigations are conducted. These steps help make sure facilities provide safe, quality care and meet required standards for operation and maintenance.
 
 Review nursing home and assisted living survey information and ratings.
 
 Adult Protective Services
 
-The issues of abuse, neglect and exploitation of long-term care residents are of critical importance and should be reported and investigated promptly. The state agency given the responsibility to receive and investigate incidents of abuse, neglect, or exploitation of incapacitated or vulnerable adults is Adult Protective Services. They may be contacted at: APS reporting hotline 877-767-2385
+ Abuse, neglect, or exploitation of people in long-term care is very serious. These concerns should be reported and investigated right away. Adult Protective Services (APS) is the state agency responsible for receiving and investigating these reports for vulnerable or incapacitated adults. You can contact APS at the reporting hotline: 877-767-2385.
 
 Resources and Publications for Providers
 
@@ -2075,7 +1581,7 @@ ADA Disability Rights/Reasonable Accommodations
 
 Pursuant to Title VI of the Civil Rights Act of 1964, the Americans with Disabilities Act (ADA) and other nondiscrimination laws and authorities, ADES does not discriminate on the basis of race, color, national origin, sex, age, or disability. Persons that require a reasonable modification based on language or disability should submit a request as early as possible to ensure the State has an opportunity to address the modification. The process for requesting a reasonable modification can be found at Equal Opportunity and Reasonable Modification
 
-© Copyright 2026 DES
+Footer
 
 Website Policies, Disclaimers and Privacy
 
@@ -2083,9 +1589,9 @@ DES Non-Discrimination Policy
 
 Sitemap
 
- Back to Top
+© Copyright 2026 DES
 
-SOURCE 5: R9-28-204, Institutional Services — Arizona Administrative Code, Title 9, Chapter 28 (AHCCCS Arizona Long-Term Care System), Article 2 — Arizona Secretary of State (PDF, page 10 of the chapter) | https://apps.azsos.gov/public_services/Title_09/9-28.pdf | source date: Supp. 26-2, June 30, 2026, as the running head states; the section's Historical Note records its last amendment effective October 8, 2013 (Supp. 13-3) | retrieved: 2026-10-20
+SOURCE 5: R9-28-204, Institutional Services — Arizona Administrative Code, Title 9, Chapter 28 (AHCCCS Arizona Long-Term Care System), Article 2 — Arizona Secretary of State (PDF, page 10 of the chapter) | https://apps.azsos.gov/public_services/Title_09/9-28.pdf | source date: Supp. 26-2, June 30, 2026, as the running head states; the section's Historical Note records its last amendment effective October 8, 2013 (Supp. 13-3) | retrieved: 2026-11-15
 R9-28-204. Institutional Services
 A. Institutional services are provided in:
 1. ANF;

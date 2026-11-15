@@ -10,7 +10,7 @@
 
 **Ombudsman in these sources.** The program's own page: "Office of Arizona State Long-Term Care Ombudsman Program" "1789 W. Jefferson Street, Mail Drop 6288" "Phoenix, Arizona 85007" "Phone: (602) 542-6454 extension 9" "Email:ltcop@azdes.gov". The page routes complaints to eight regional programs by county — for Maricopa County, "Area Agency on Aging, Region One" "(602) 264-4357"; for Pima County, "Pima Council on Aging" "(520) 790-7262" — and lists the rest.
 
-**Sources last checked.** 2026-10-20
+**Sources last checked.** 2026-11-15
 
 Reproduced from the agencies' own pages and documents quoted below — potentially relevant official sources, not a determination that any notice, ground, or deadline applies to any situation.
 
@@ -91,6 +91,8 @@ What any of these periods means for a particular case is for the hearing office 
 Captured: all five, in tools/packets/arizona-packet.txt. Pending: the Department of Health Services' own page for nursing care institutions, which links the Secretary of State's code rather than posting the rule; any first-party statement of a filing deadline for a nursing-facility transfer-or-discharge appeal specifically, distinct from the general ten-day continuation-of-services deadline AHCCCS states for other appeal types.
 
 ## 04 — Change log
+
+2026-11-15 — Sources re-fetched and mechanically re-verified; automated re-verification, not a human review. All 5 recipe sources re-captured (recipe 4bee96ede9a5). Source 4 (Long-Term Care Ombudsman, des.az.gov/LTCOP) returned substantially less text than the 2026-10-20 capture; same title, same URL, no source date on either capture, and zero fidelity failures, so this reads as the page's own content shrinking rather than an instrument replacement. No quoted text changed.
 
 2026-10-06 — Internet Archive captures recorded. Captures requested on 2026-09-06 by an automated capture pass and recorded this date; no human review is claimed for this entry. No quotation, date, finding or link above was changed by it. Each capture below was requested through Save Page Now and then confirmed to play back. Captures added: AHCCCS → [https://web.archive.org/web/20260906130156/https://www.azahcccs.gov/Members/GetCovered/RightsAndResponsibilities/grievanceandappeals.html](https://web.archive.org/web/20260906130156/https://www.azahcccs.gov/Members/GetCovered/RightsAndResponsibilities/grievanceandappeals.html); AHCCCS, Office of the General Counsel → [https://web.archive.org/web/20260906130309/https://www.azahcccs.gov/shared/Downloads/GrievanceAndAppeals/NFAppealOfADischargeForm.pdf](https://web.archive.org/web/20260906130309/https://www.azahcccs.gov/shared/Downloads/GrievanceAndAppeals/NFAppealOfADischargeForm.pdf).
 

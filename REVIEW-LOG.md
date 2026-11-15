@@ -1931,3 +1931,37 @@ from any other host. Queue: FA-Q-20261114-04 opened.
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-11-14. No
 human review is claimed for this entry.
+
+## 2026-11-15 (nightly QC, portfolio routine) — cursor was alabama;
+reviewed alabama, alaska, arizona (cursor plus next two alphabetically).
+Room & Recourse recipe exception checked first: 51 state pages, 58
+recipes — every published state already has one, so this pass ran as an
+ordinary QC review rather than recipe construction.
+
+- **alabama** — confirmed. Both live sources plus the complaints and
+  rule supplements re-captured (recipe 8736087ebf91); body unchanged
+  since 2026-09-17. Zero fidelity failures. Checked date → 2026-11-15.
+- **alaska** — confirmed. All 8 recipe sources re-captured (recipe
+  bd40de4590dd); body unchanged since 2026-09-17. Zero fidelity
+  failures. Checked date → 2026-11-15.
+- **arizona** — confirmed. All 5 recipe sources re-captured (recipe
+  4bee96ede9a5); source 4 (Long-Term Care Ombudsman, des.az.gov/LTCOP)
+  returned substantially less text than the 2026-10-20 capture (13,948
+  -> 6,533 chars). Same title, same URL, no source date stated on
+  either capture — no header movement establishing instrument
+  replacement, so this is read as the page's own content shrinking
+  rather than a superseded document; not queued. Zero fidelity
+  failures. Checked date → 2026-11-15.
+
+Cursor advanced to arkansas. `tools/sync-checked-dates.py`: 6 derived
+dates corrected (table + JSON for all three). `tools/build-state-picker.py`
+regenerated (51/51 published). `tools/build-status.py`: 51/51 baseline,
+50/51 full (pre-existing North Dakota gap, not from this pass).
+`tools/generate-sitemap.py`: 57 URLs; states/wisconsin.html omitted
+(recorded drift, awaiting rebuild). `tools/check-all.py`: 104 pages
+across 52 states, no unexplained failures. `tools/check-live.py`: 5
+pages, nothing loaded from any other host. No queue entries from this
+pass.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-11-15. No
+human review is claimed for this entry.
