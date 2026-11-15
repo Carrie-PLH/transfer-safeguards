@@ -73,6 +73,8 @@ REVIEW_LOG = os.path.join(ROOT, 'REVIEW-LOG.md')
 ANCHOR_CHAIN = os.path.join(ROOT, 'anchors', 'chain.jsonl')
 ANCHOR_OTS = os.path.join(ROOT, 'anchors', 'ots')
 PACKETS = os.path.join(ROOT, 'tools', 'packets')
+SPN_PY = os.path.join(ROOT, 'tools', 'spn.py')
+SPN_LEDGER = os.path.join(ROOT, 'tools', 'spn-ledger.json')
 
 LAP_DAYS = 25          # 17 nights at three a night, plus slack
 SUPPLEMENT_STALE = 120  # a supplement older than this is worth a look
@@ -129,7 +131,8 @@ def latest_pass_by_state(history=HISTORY):
 
 def check(today=None, max_age_days=2, history=HISTORY, cursor=CURSOR,
           chain=ANCHOR_CHAIN, ots_dir=ANCHOR_OTS, packets=PACKETS,
-          log=REVIEW_LOG):
+          log=REVIEW_LOG,
+          spn_py=SPN_PY, spn_ledger=SPN_LEDGER):
     today = today or datetime.date.today()
     findings = []   # (severity, text) — 'severe' counts against the exit code
     notes = []
@@ -227,6 +230,70 @@ def check(today=None, max_age_days=2, history=HISTORY, cursor=CURSOR,
                              f'supplement {os.path.basename(p)} is '
                              f'{(today - d).days} days old and is never '
                              f're-fetched by a review'))
+
+    # --- SPN ledger: an account-level fault must never rest a source --------
+    # A submit-401 means this Internet Archive account's keys are stale, and a
+    # playback-429 means web.archive.org is rate-limiting this machine's IP.
+    # Both are facts about the account or the night, never about a source, so
+    # spn.py records them SKIPPED and stops the pass. Before 2026-11-15 both
+    # were recorded FAILED, which rested the source for a week and, for a 429,
+    # discarded a capture that had already stored; 467 such records across the
+    # four collections were repaired that day. If they reappear as FAILED the
+    # fix has been reverted or a copy was missed, and the collection is
+    # quietly losing a week of eligibility per affected source.
+    account_faults = ('submit-401', 'playback-429')
+
+    if os.path.exists(spn_py):
+        # Read the real set, never the file's text: '"submit-401"' also
+        # appears in ACCOUNT_LIMIT_NOTE and in spn.py's own self-test, so a
+        # text search passes even when ACCOUNT_LIMIT has been emptied.
+        # Importing is side-effect-free -- spn.py does its argument parsing
+        # and all I/O inside functions.
+        import importlib.util
+        try:
+            spec = importlib.util.spec_from_file_location('spn_probe', spn_py)
+            probe = importlib.util.module_from_spec(spec)
+            saved_argv, sys.argv = sys.argv, ['spn']
+            try:
+                spec.loader.exec_module(probe)
+            finally:
+                sys.argv = saved_argv
+            declared = set(getattr(probe, 'ACCOUNT_LIMIT', ()))
+        except Exception as exc:                        # noqa: BLE001
+            findings.append(('note', f'tools/spn.py could not be read for '
+                                     f'its ACCOUNT_LIMIT: {exc}'))
+        else:
+            undeclared = [d for d in account_faults if d not in declared]
+            if undeclared:
+                findings.append(('severe',
+                                 'spn.py no longer declares '
+                                 + ', '.join(undeclared)
+                                 + ' as an account condition, so a pass will '
+                                   'rest sources for a fault that is not '
+                                   'theirs (fixed 2026-11-15)'))
+
+    if os.path.exists(spn_ledger):
+        try:
+            with open(spn_ledger, encoding='utf-8') as fh:
+                spn_records = json.load(fh).get('sources', {})
+        except (OSError, ValueError) as exc:
+            findings.append(('note',
+                             f'tools/spn-ledger.json unreadable: {exc}'))
+        else:
+            mislabelled = sorted(
+                u for u, v in spn_records.items()
+                if v.get('last_detail') in account_faults
+                and v.get('last_result') == 'FAILED')
+            if mislabelled:
+                findings.append(('severe',
+                                 f'{len(mislabelled)} SPN source(s) are '
+                                 f'resting on an account-level fault, which '
+                                 f'is never the source\'s doing; spn.py '
+                                 f'should record these SKIPPED. First: '
+                                 f'{mislabelled[0]}'))
+            else:
+                notes.append('no SPN source is resting on an account-level '
+                             'fault')
     return findings, notes
 
 
