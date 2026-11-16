@@ -656,6 +656,40 @@ interstitial is a refusal page, not evidence, and the script rejects those.
 Never record a capture the script did not confirm — a change log listing a
 capture that holds a challenge page is worse than one listing nothing.
 
+**A capture is stored on one pass and confirmed on the next (owner decision
+FA-D-20261116-01, 2026-11-16).** Reading a capture back seconds after it
+stored put the read inside the window in which web.archive.org's replay path
+was throttling this machine, so a capture that had in fact stored was
+discarded as unreadable and its source rested a week for a condition that was
+not its doing. A source now passes through three ledger states, and only the
+second is a capture on the record:
+
+- `PENDING` — stored with HTTP 200 and a timestamp, not yet read back. On no
+  page, counted as no capture, and never captured again while it stands.
+- `OK` — read back HTTP 200, and only now eligible for a change-log entry.
+- `FAILED` — a definite refusal, at submission or at the read.
+
+`spn.py run` confirms the outstanding pendings first and then captures, so a
+night's output names what it stored and the next night's names what it
+confirmed; `spn.py confirm` does the confirmation half alone, for a night
+whose reads were throttled. A `playback-429` therefore stops the confirmation
+half only — the capture half runs on, because it uses the authenticated save
+path rather than the replay path — and the pendings it could not read stand
+untouched rather than resting their sources. A pending that stays unreadable
+for `PENDING_EXPIRY_DAYS` (30) is written off; a throttled read never expires
+one, however old, for the same reason it never rests a source. The cost is
+that an entry follows its capture by one night, which is the price of reading
+a capture back when it is old enough for a refusal to mean something.
+
+**The pass was thinned the same day**, because its own volume against
+web.archive.org is a plausible part of what it had been running into: status
+polling went from 6-second to 15-second intervals (the same ~7-minute window,
+2.5x fewer requests), and the replay path now takes one read per capture on
+the following pass instead of up to four inside the capture. What Save Page
+Now says about a refusal is recorded too, as `last_message` in the ledger. It
+was being discarded, which is why `error:no-request` — the largest failure
+class in the portfolio — is classified from its code alone.
+
 **The three states a failed source can be in**, which must be named correctly
 because they call for different things: *resting*, the ordinary outcome,
 which means seven days before it is eligible again; *blocked*, after three
