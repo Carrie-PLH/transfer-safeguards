@@ -1965,3 +1965,54 @@ pass.
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-11-15. No
 human review is claimed for this entry.
+
+## 2026-11-17 — rotation pass: arkansas confirmed; california mostly unreachable (2nd consecutive); colorado drift (scheduled, portfolio-nightly-qc-review)
+
+Cursor read at arkansas; batch was arkansas, california, colorado (arkansas
+and the next two alphabetically).
+
+- **arkansas — confirmed.** Fresh capture of all 4 sources (recipe
+  6b3471c34a8f), curl, checked with its two supplements
+  (arkansas-packet-dhs.txt, arkansas-packet-medicaid.txt). Zero fidelity
+  failures, markdown and HTML. Retained, hash e376e6f0840d4697 (unchanged
+  since the 2026-10-20 standing capture). Promoted. Checked date advanced
+  to 2026-11-17.
+- **california — UNREACHABLE (6-7 of 9 sources, varied across two capture
+  attempts).** Recipe capture (recipe d54553fc0578) over curl, the recipe's
+  own documented transport. First attempt: sources 6-9 (govt.westlaw.com
+  CCR sections and leginfo.legislature.ca.gov) returned HTTP 403, 7 of 9
+  captured. A second capture run minutes later (checking for a documented
+  alternate transport before logging unreachable, per the skill) instead
+  returned HTTP 403 on sources 4, 5, 6, 7, 8, 9 and a `main` scope-selector
+  miss on source 2 — only sources 1 and 3 clean both times — consistent
+  with the same transient westlaw/leginfo blocking pattern CLAUDE.md and
+  the 2026-10-20 entry below already document (an `--http1.1` probe
+  resolved it that night; not re-probed here, since repeating a bare-vs-1.1
+  comparison against the same host twice in one pass risks reading as a
+  retry burst against a host already known to rate-limit). No other
+  documented transport exists. No fidelity check run on incomplete
+  evidence; nothing retained; checked date untouched. This is the second
+  consecutive unreachable pass for california (the first was 2026-10-20,
+  below); the three-consecutive threshold for an unreachable-repeated queue
+  entry is not yet met. Partial capture preserved at
+  tools/packets/review/california-2026-11-17.txt. The outstanding
+  recipe-backfill fix from 2026-10-20 (add `"http_version": "1.1"` to
+  sources 4-9; widen source 2's scope from `main`) remains undone.
+- **colorado — DRIFT.** Fresh capture of all 6 sources (recipe
+  29dfd40e0168). 1 quotation failure, markdown and HTML (identical): the
+  docket quotes the Long-Term Care Ombudsman Program's phone number as
+  "303.862.3524" (periods); cdhs.colorado.gov/long-term-care-ombudsman now
+  punctuates the same number "303-862-3524" (hyphens). The surrounding
+  CDHS page prose was also substantially reworded (not quoted on this
+  page). Retained without promotion (hash 7fd693a77f30e95c). Checked date
+  and page content untouched. Queue: **FA-Q-20261117-03** (drift, handoff
+  rr-state-page).
+
+sync-checked-dates.py corrected 2 derived dates (table + JSON for
+arkansas). build-status.py: 51/51 baseline, 50/51 full (North Dakota gap
+predates this pass, unchanged). build-state-picker.py regenerated (51/51
+published). Review cursor advanced past colorado to connecticut. Queue:
+FA-Q-20261117-03 opened (colorado drift).
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-11-17. No
+human review is claimed for this entry.

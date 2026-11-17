@@ -1,0 +1,4026 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: colorado
+ASSEMBLED: 2026-11-17
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/colorado.json (recipe digest 29dfd40e0168). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
+- SOURCE 1: transport curl; extractor pdftotext-layout; slice from '15.6 RESIDENT TRANSFER, DISCHARGE OR ROOM CHANGE' to '15.7 RESIDENT RELOCATION If a facility intends'; filters none.
+  The Secretary of State serves 6 CCR 1011-1 Chapter 5 as one generated PDF; the slice runs from section 15.6's heading to the start of 15.7. Anchors proposed mechanically by tools/propose-slice.py from the standing packet's span and confirmed by the checker.
+- SOURCE 2: transport curl; extractor pdftotext-layout; slice from '15.1 STATEMENT OF RIGHTS' to 'the treatment of personal and medical records,'; filters none.
+  Section 15.1, the statement of rights. The slice deliberately starts at the section heading rather than at the standing packet's own first line, which began mid-sentence ('other patients. 1) If the resident has limited'): a mid-sentence anchor is one revision away from matching nothing, and starting at the heading is a superset, which can only add evidence. The end anchor is where the packet's span ends.
+- SOURCE 3: transport curl; extractor pdftotext-layout; slice from '5.2 BED HOLD POLICIES The facility shall develop' to '5.3 RESIDENT IDENTIFICATION The facility shall'; filters none.
+  Section 5.2 of the same chapter PDF, heading to the start of 5.3.
+- SOURCE 4: transport curl; extractor pdftotext-layout; slice from 'DEPARTMENT OF PUBLIC HEALTH AND ENVIRONMENT Health' to 'Health Facilities and Emergency Medical Services Division SECTION 1 -'; filters none.
+  The chapter's cover page and Editor's Notes, which is where this rule states its own adoption and effective dates.
+- SOURCE 5: transport curl; extractor html-text; scope body; filters none.
+  Server-rendered; plain curl with a browser user-agent returns the whole document. Scope 'body', matching the standing packet's tag strip over the served page.
+- SOURCE 6: transport curl; extractor pdftotext-layout; slice from '8.482.42     ADDITIONAL PAYMENTS' to '8.482.45      ENFORCEMENT BY THE DEPARTMENT'; filters none.
+  The Secretary of State serves 10 CCR 2505-10 8.400 (Medical Assistance, Section 8.400, Long Term Care, Nursing Facility Care, Adult Day Care Services) as one generated PDF, the same GenerateRulePdf.do mechanism as sources 1-4, addressed by its own ruleVersionId (12655 for the version effective 08/14/2026, current as of this capture). This is the Medicaid room-reservation ('bed hold') provision the baseline page's 2026-08-30 change log recorded as capture-pending. The slice runs from section 8.482.42's heading through the end of section 8.482.44, which is the rule's last paragraph before section 8.482.45 (Enforcement by the Department); the slice is a superset of the single payment-charge provision needed, kept whole because 8.482.42, .43 and .44 cross-reference each other by section number throughout and none reads independently.
+
+SOURCE 1: 6 CCR 1011-1 Chapter 5, section 15.6 (Resident transfer, discharge or room change) | https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12005&fileName=6+CCR+1011-1+Chapter+05 | source date: Adopted by the Board of Health on April 16, 2025. Effective July 1, 2025. | retrieved: 2026-11-17
+15.6    RESIDENT TRANSFER, DISCHARGE OR ROOM CHANGE
+
+        A)      The following definitions apply to this section 15.6:
+
+                1)      “Discharge” means movement of a resident from a nursing care facility to a non-
+                        institutional setting when the discharging facility ceases to be legally responsible
+                        for the care of the resident.
+
+                2)      “Transfer” means movement of a resident from a nursing care facility to another
+                        institutional setting when the legal responsibility for the care of the resident
+                        changes from the transferring facility to the receiving facility.
+
+                3)      “Room change” refers to the movement of a resident from one room to another.
+
+        B)      A resident shall not be transferred or discharged unless:
+
+                1)      The transfer or discharge is necessary for the resident's welfare. Facilities that
+                        are certified to participate in the Medicaid and/or Medicare reimbursement
+                        program must also demonstrate that the resident's needs cannot be met in the
+                        facility,
+
+                2)      The transfer or discharge is only for medical reasons. Facilities that are certified
+                        to participate in the Medicaid and/or Medicare reimbursement program must also
+                        demonstrate that the resident's needs cannot be met in the facility,
+
+                3)      The transfer or discharge is necessary to preserve the welfare of other residents,
+                        or
+
+                4)      The resident has failed to pay for (or to have paid under Medicaid or Medicare) a
+                        stay at the facility.
+
+                        a)       Facilities that are certified to participate in the Medicaid and/or Medicare
+                                 reimbursement program must also provide the resident with reasonable
+                                 and appropriate notice regarding non-payment and its consequences at
+                                 least 30 calendar days before initiating a transfer or discharge for non-
+                                 payment.
+
+        C)      When a resident is transferred or discharged under any of the circumstances specified in
+                15.6(B), the facility shall ensure that the resident's health information record contains
+                documentation from:
+
+                1)      The resident's practitioner when the transfer or discharge is for the reasons
+                        described in sections 15.6(B)(1), (2) or (3); and
+
+                2)      The nursing home administrator when transfer or discharge is for the reason
+                        described in section 15.6(B)(4).
+
+
+
+
+                                                                                                               38
+
+CODE OF COLORADO REGULATIONS                                                         6 CCR 1011-1 Chapter 5
+Health Facilities and Emergency Medical Services Division
+
+
+        D)      Whenever a resident is transferred or discharged for the reasons described in sections
+                15.6(B)(1), (2) or (3), the facility shall provide assessment and reasonable intervention
+                prior to determining the need for the transfer or discharge. The assessment, attempted
+                intervention and reason for the discharge or transfer shall be documented in the
+                resident’s health information record.
+
+        E)      The facility shall provide reasonable advance notice to the resident and resident
+                representative of its intent to transfer or discharge the resident. Reasonable advance
+                notice means notice in writing at least 30 days before the transfer or discharge except in
+                the following circumstances in which the professional staff determines there is an
+                emergency, in which case the notice must be made as soon as practicable before the
+                transfer or discharge:
+
+                1)      The safety of residents in the facility is endangered,
+
+                2)      The health of residents in the facility is endangered, and/or
+
+                3)      An immediate transfer or discharge is required by the resident's urgent medical
+                        needs.
+
+        F)      The written notice shall be in a language and manner understandable to the resident and
+                the resident representative, if applicable, and shall include:
+
+                1)      The reason for the transfer or discharge,
+
+                2)      The effective date of the transfer or discharge,
+
+                3)      The location to which the resident is transferred or discharged,
+
+                4)      The grievance procedure, and
+
+                5)      The following text:
+
+                        “You have a right to appeal the nursing care facility's decision to transfer or
+                        discharge you. If you think you should not be transferred or discharged, you must
+                        appeal to _________ (staff designee) within 14 calendar days. If you do not wish
+                        to handle the appeal yourself, you may use an attorney, relative, or friend. If your
+                        appeal is not resolved to your satisfaction by the staff designee, you may appeal
+                        to the nursing care facility's grievance committee within 10 calendar days of
+                        receipt of the decision of the staff designee. If your appeal is not resolved to your
+                        satisfaction by the nursing care facility’s grievance committee, you may appeal to
+                        the Executive Director of the Colorado Department of Public Health and
+                        Environment within 10 calendar days of receipt of the grievance committee
+                        decision. If you are not satisfied with the Executive Director’s decision, you have
+                        30 calendar days to request that the Department of Public Health and
+                        Environment set the matter for an administrative hearing. You may direct
+                        questions regarding this notice to the Department of Public Health and
+                        Environment at____________________(division name, address and phone
+                        number).”
+
+                        a)      Nursing care facilities that are certified for Medicaid and/or Medicare
+                                reimbursement, must also add the following statement:
+
+
+
+
+                                                                                                            39
+
+CODE OF COLORADO REGULATIONS                                                         6 CCR 1011-1 Chapter 5
+Health Facilities and Emergency Medical Services Division
+
+
+                                “In addition, if you have questions or complaints about the transfer or
+                                discharge or would like help to appeal, call or write the state or local
+                                Long-Term Care Ombudsman at ___________(phone
+                                numbers/addresses).”
+
+                        b)      If the resident who is being involuntarily transferred is a person with a
+                                developmental disability for whom an agency has been authorized by law
+                                as the agency responsible for advocacy and protection of the rights of
+                                persons with developmental disabilities, the nursing care facility must
+                                also furnish to resident and the resident representative, the following
+                                statement:
+
+                                “In addition, if you have questions or complaints about the transfer or
+                                discharge or would like help to appeal, call or write the _____________,
+                                (name, phone number and address of the agency.)”
+
+                        c)      If the resident who is being transferred is a person with mental illness for
+                                whom an agency has been authorized by law as the agency responsible
+                                for the advocacy and protection of persons with mental illness, the
+                                nursing care facility must also furnish to the resident and the resident
+                                representative the following statement:
+
+                                “In addition, if you have questions or complaints about the transfer or
+                                discharge or would like help to appeal, call or write the _____.________,
+                                (name, phone number and address of the agency.)”
+
+        G)      In cases where a resident is being involuntarily transferred or discharged from a nursing
+                care facility that is certified to participate in the Medicaid and/or Medicare reimbursement
+                program, a copy of the written notice (including the grievance and appeal rights, and
+                current contact information for the state and local Long-Term Care Ombudsman) shall
+                also be sent to the state and local Long-Term Care Ombudsman at the same time it is
+                sent to the resident or as soon as the determination is made that the transfer or
+                discharge is involuntary.
+
+        H)      A facility must provide sufficient preparation and orientation to residents to ensure safe
+                and orderly transfer or discharge from the facility.
+
+        I)      When the facility intends to move a resident to another room in the facility without the
+                resident's consent, the facility shall provide the resident and resident representative with
+                written notice of such intent to be received at least five calendar days before such move,
+                including an explanation of their right to appeal.
+
+        J)      A resident shall not be involuntarily transferred, discharged, or moved to another room
+                within the facility until:
+
+                1)      The expiration of the facility notice period, and
+
+                2)      The time for filing a grievance or appeal has expired, or
+
+                3)      The grievance or appeal has been resolved.
+
+
+
+
+                                                                                                             40
+
+CODE OF COLORADO REGULATIONS                                                            6 CCR 1011-1 Chapter 5
+Health Facilities and Emergency Medical Services Division
+
+SOURCE 2: 6 CCR 1011-1 Chapter 5, section 15.1 (Statement of rights), excerpt | https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12005&fileName=6+CCR+1011-1+Chapter+05 | source date: Adopted by the Board of Health on April 16, 2025. Effective July 1, 2025. | retrieved: 2026-11-17
+15.1    STATEMENT OF RIGHTS
+
+        The facility shall adopt and make public a statement regarding of the rights and responsibilities of
+        its residents and provide a copy to each resident and resident representative at or before
+        admission. The facility and staff shall observe these rights in the care, treatment and supervision
+        of the residents. The statement of rights shall include at a minimum, the following items:
+
+        A)      The right to receive adequate and appropriate health care consistent with established
+                and recognized practice standards within the community and this chapter.
+
+                1)       For residents with limited English proficiency, the facility shall arrange for
+                         persons speaking the resident's language to facilitate daily communications and
+                         to attend assessment and care planning conferences in order to allow the
+                         resident to participate in those activities. This section does not require a
+                         translator to be present daily as long as the resident is able to engage in
+                         necessary daily communication within the facility.
+
+                2)       For residents with sensory impairments that inhibit daily communication, the
+                         facility shall provide assistance so that they may participate in care and activities
+                         of daily living.
+
+        B)      The right to civil and religious liberties, including:
+
+                1)       Knowledge of available choices and the right to independent personal decisions,
+                         which will not be infringed upon;
+
+                2)       The right to encouragement and assistance from the staff of the facility in the
+                         fullest possible exercise of these rights;
+
+
+
+
+                                                                                                            32
+
+CODE OF COLORADO REGULATIONS                                                           6 CCR 1011-1 Chapter 5
+Health Facilities and Emergency Medical Services Division
+
+
+                3)      The right to vote; and
+
+                4)      The right to participate in activities of the community both inside and outside the
+                        facility.
+
+        C)      The right to present grievances on behalf of him/herself or others to the facility's staff or
+                administrator; to governmental officials or to any other person without fear of reprisal and
+                to join with other patients or individuals within or outside of the facility to work for
+                improvements in resident care, including:
+
+                1)      The right to participate in the resident council; and
+
+                2)      The right to be informed of the address and phone number for the state and local
+                        Long-Term Care Ombudsman and the Colorado Department of Public Health
+                        and Environment, Health Facilities and Emergency Medical Services Division.
+                        The facility shall post these numbers in a conspicuous manner.
+
+        D)      The right to manage his or her own financial affairs or to have a quarterly accounting of
+                any financial transactions made in his or her behalf, should the resident delegate such
+                responsibility to the facility for any period of time.
+
+        E)      The right to be fully informed, in writing, prior to or at the time of admission and during his
+                or her stay, of services available in the facility and of related charges, including charges
+                for services not covered under Medicare or Medicaid or not covered by the basic per
+                diem rate.
+
+        F)      The right to be fully informed of his or her medical condition and proposed treatment,
+                unless otherwise indicated by his or her practitioner, along with the right to make
+                informed decisions and participate in the planning of all medical treatment, including:
+
+                1)      The right to refuse medication and treatment, unless otherwise indicated by his
+                        or her practitioner, and to know the consequences of such actions;
+
+                2)      The right to participate in discharge planning; and
+
+                3)      The right to review and obtain copies of his or her medical records in accordance
+                        with 6 CCR 1011-1, Chapter 2, Part 6.
+
+        G)      The right to have private and unrestricted communications with any person of his or her
+                choice; including
+
+                1)      The right to privacy for telephone calls or use of electronic communication
+                        devices;
+
+                2)      The right to receive mail unopened; and
+
+                3)      The right to private consensual sexual activity.
+
+        H)      The right to be free from mental and physical abuse and from physical and chemical
+                restraints, except those restraints initiated through the judgment of professional staff for a
+                specified and limited period of time or on the written authorization of a practitioner.
+
+        I)      The right to freedom of choice in selecting a health care facility.
+
+
+
+
+                                                                                                            33
+
+CODE OF COLORADO REGULATIONS                                                           6 CCR 1011-1 Chapter 5
+Health Facilities and Emergency Medical Services Division
+
+
+        J)      The right to copies of the facility's rules and regulations, including a copy of these rights,
+                and an explanation of his or her rights and responsibility to obey all reasonable rules and
+                regulations of the facility and to respect the personal rights and private property of the
+                other patients.
+
+                1)      If the resident has limited English proficiency, the right to an explanation of rights
+                        and responsibilities in a language the resident can understand; and
+
+                2)      The right to see facility policies, upon request, and state survey reports on the
+                        facility.
+
+        K)      The right to be transferred or discharged only for medical reasons, his or her welfare or
+                that of other residents, or for nonpayment for his or her stay; and the right to be given
+                reasonable advance notice of any transfer or discharge, except in the case of an
+                emergency as determined by professional staff, consistent with section 15.6.
+
+        L)      The right not to be transferred or discharged for raising concerns or complaints.
+
+        M)      The right to have privacy in treatment and in caring for personal needs, confidentiality in
+
+SOURCE 3: 6 CCR 1011-1 Chapter 5, section 5.2 (Bed hold policies) | https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12005&fileName=6+CCR+1011-1+Chapter+05 | source date: Adopted by the Board of Health on April 16, 2025. Effective July 1, 2025. | retrieved: 2026-11-17
+5.2     BED HOLD POLICIES
+
+        The facility shall develop policies for holding beds available for residents who are temporarily
+        absent from the facility, provide a copy of the policy upon admission and explain these policies to
+        residents upon admission and before each temporary absence.
+
+SOURCE 4: 6 CCR 1011-1 Chapter 5, cover page and Editor's Notes | https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12005&fileName=6+CCR+1011-1+Chapter+05 | source date: Adopted by the Board of Health on April 16, 2025. Effective July 1, 2025. | retrieved: 2026-11-17
+DEPARTMENT OF PUBLIC HEALTH AND ENVIRONMENT
+
+    Health Facilities and Emergency Medical Services Division
+
+    STANDARDS FOR HOSPITALS AND HEALTH FACILITIES
+
+    CHAPTER 5 - NURSING CARE FACILITIES
+
+    6 CCR 1011-1 Chapter 5
+    [Editor’s Notes follow the text of the rules at the end of this CCR Document.]
+
+    _________________________________________________________________________
+
+    Adopted by the Board of Health on April 16, 2025. Effective July 1, 2025.
+
+    INDEX
+
+    Section 1 - Statutory Authority and Applicability
+    Section 2 - Definitions
+    Section 3 - Governing Body
+    Section 4 - Facility Administration
+    Section 5 - Admissions
+    Section 6 - Personnel
+    Section 7 - Resident Care
+    Section 8 - Medical Care Services
+    Section 9 - Nursing Services
+    Section 10 - Social Services
+    Section 11 - Resident Engagement
+    Section 12 - Dental Services
+    Section 13 - Dietary Services
+    Section 14 - Feeding Assistants
+    Section 15 - Residents Rights
+    Section 16 - Emergency Services
+    Section 17 - Health Information Records
+    Section 18 - Occupational, Physical, and Speech Therapy
+    Section 19 - Pharmaceutical Services
+    Section 20 - Diagnostic Services
+    Section 21 - Physical Plant standards
+    Section 22 - Resident Care Unit
+    Section 23 - Secure Environment
+    Section 24 - Housekeeping Services
+    Section 25 - Linen and Laundry
+    Section 26 - Infection Control
+    Section 27 - Pest Control
+    Section 28 - Waste Disposal
+    Section 29 - Religious Treatment Exclusions
+    Section 30 - Medicaid Certification Standards
+    Section 31 - Enforcement Activities
+    Section 32 - Licensing Fees
+
+
+
+
+                                                                                     1
+
+CODE OF COLORADO REGULATIONS                                                         6 CCR 1011-1 Chapter 5
+
+SOURCE 5: Long-Term Care Ombudsman | https://cdhs.colorado.gov/long-term-care-ombudsman | source date: none stated on page | retrieved: 2026-11-17
+Skip to main content
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Select Language
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ask CDHS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Menu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Benefits assistance
+ 
+ Toggle Benefits assistance submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Cash assistance
+ 
+ Toggle Cash assistance submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Colorado Works (TANF)
+ 
+
+
+
+
+
+
+
+
+
+ Adult Financial Programs
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Disability assistance
+ 
+ Toggle Disability assistance submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Disability Determination Services
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Employment assistance
+ 
+ Toggle Employment assistance submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Colorado Employment First
+ 
+
+
+
+
+
+
+
+
+
+ CW STEP
+ 
+
+
+
+
+
+
+
+
+
+ ReHire Colorado
+ 
+
+
+
+
+
+
+
+
+
+ Senior Community Service Employment Program
+ 
+
+
+
+
+
+
+
+
+
+ Training to Career Pathways
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Food assistance
+ 
+ Toggle Food assistance submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Supplemental Nutrition Assistance Program (SNAP)
+ 
+ Toggle Supplemental Nutrition Assistance Program (SNAP) submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Colorado Healthy Choice Waiver
+ 
+
+
+
+
+
+
+
+
+
+ Colorado SNAP Produce Bonus
+ 
+
+
+
+
+
+
+
+
+
+ SNAP-Ed
+ 
+
+
+
+
+
+
+
+
+
+ SNAP Outreach
+ 
+
+
+
+
+
+
+
+
+
+ ABAWDs
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Summer EBT
+ 
+ Toggle Summer EBT submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ FAQs about Summer EBT
+ 
+
+
+
+
+
+
+
+
+
+ How to use your Summer EBT benefits
+ 
+
+
+
+
+
+
+
+
+
+ More food resources for Summer EBT recipients
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Food Distribution Programs
+ 
+ Toggle Food Distribution Programs submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Household programs
+ 
+ Toggle Household programs submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Commodity Supplemental Food Program (Everyday Eats)
+ 
+
+
+
+
+
+
+
+
+
+ The Emergency Food Assistance Program
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Child nutrition and schools
+ 
+
+
+
+
+
+
+
+
+
+ Disaster feeding and commodity alerts
+ 
+
+
+
+
+
+
+
+
+
+ Local Food Purchase Assistance
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Colorado EBT
+ 
+ Toggle Colorado EBT submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Discount admission for Colorado EBT card holders
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Energy EBT
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Our services
+ 
+ Toggle Our services submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Adult Protective Services
+ 
+ Toggle Adult Protective Services submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ CAPS Check Unit
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Mental health services
+ 
+ Toggle Mental health services submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Mental Health Hospitals
+ 
+ Toggle Mental Health Hospitals submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Colorado Mental Health Hospital in Fort Logan
+ 
+
+
+
+
+
+
+
+
+
+ Colorado Mental Health Hospital in Pueblo
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Forensic services
+ 
+
+
+
+
+
+
+
+
+
+ Behavioral Health Administration
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Child and family services
+ 
+ Toggle Child and family services submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Adoption
+ 
+
+
+
+
+
+
+
+
+
+ Colorado Sexual Health Initiative (CoSHI)
+ 
+
+
+
+
+
+
+
+
+
+ Child support
+ 
+
+
+
+
+
+
+
+
+
+ Child welfare
+ 
+ Toggle Child welfare submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Child welfare collaborations
+ 
+
+
+
+
+
+
+
+
+
+ Data and accountability
+ 
+
+
+
+
+
+
+
+
+
+ Family First Prevention Services Act forms and resources
+ 
+
+
+
+
+
+
+
+
+
+ Forms and policies
+ 
+
+
+
+
+
+
+
+
+
+ Plans of Safe Care
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Frequently asked questions
+ 
+
+
+
+
+
+
+
+
+
+ Research and action
+ 
+
+
+
+
+
+
+
+
+
+ Resources and training
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Unaccompanied Refugee Minors Program
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Domestic Violence Program
+ 
+ Toggle Domestic Violence Program submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Resources for community members
+ 
+
+
+
+
+
+
+
+
+
+ Resources for domestic violence service providers
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Positive Youth Development
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Disability services
+ 
+ Toggle Disability services submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Colorado Commission for the Deaf, Hard of Hearing, and Deafblind
+ 
+
+
+
+
+
+
+
+
+
+ Disability Determination Services
+ 
+
+
+
+
+
+
+
+
+
+ Division of Regional Centers
+ 
+ Toggle Division of Regional Centers submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ About the Division of Regional Centers
+ 
+
+
+
+
+
+
+
+
+
+ Regional Centers Community Partners
+ 
+
+
+
+
+
+
+
+
+
+ Regional Centers Individuals and Families
+ 
+
+
+
+
+
+
+
+
+
+ Grand Junction Regional Center
+ 
+
+
+
+
+
+
+
+
+
+ Pueblo Regional Center
+ 
+
+
+
+
+
+
+
+
+
+ Wheat Ridge Regional Center
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ MINDSOURCE Brain Injury Network
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Older adult services
+ 
+ Toggle Older adult services submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ State Unit on Aging
+ 
+ Toggle State Unit on Aging submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Aging and Disability Resources
+ 
+
+
+
+
+
+
+
+
+
+ Caregiver support
+ 
+
+
+
+
+
+
+
+
+
+ Colorado Commission on Aging
+ 
+
+
+
+
+
+
+
+
+
+ Legal assistance
+ 
+
+
+
+
+
+
+
+
+
+ Long-Term Care Ombudsman
+ 
+
+
+
+
+
+
+
+
+
+ Nutrition services
+ 
+
+
+
+
+
+
+
+
+
+ Senior Community Services Employment Program
+ 
+
+
+
+
+
+
+
+
+
+ Support services
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Veterans Community Living Centers
+ 
+ Toggle Veterans Community Living Centers submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Veterans Community Living Center at Fitzsimons
+ 
+
+
+
+
+
+
+
+
+
+ Bruce McCandless Veterans Community Living Center at Florence
+ 
+
+
+
+
+
+
+
+
+
+ Veterans Community Living Center at Homelake
+ 
+
+
+
+
+
+
+
+
+
+ Veterans Community Living Center at Rifle
+ 
+
+
+
+
+
+
+
+
+
+ Spanish Peaks Veterans Community Living Center at Walsenburg
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Youth services
+ 
+ Toggle Youth services submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Careers
+ 
+
+
+
+
+
+
+
+
+
+ Education
+ 
+
+
+
+
+
+
+
+
+
+ Families of youth services clients
+ 
+
+
+
+
+
+
+
+
+
+ Frequently asked questions
+ 
+
+
+
+
+
+
+
+
+
+ Policies
+ 
+
+
+
+
+
+
+
+
+
+ Records requests
+ 
+
+
+
+
+
+
+
+
+
+ Regional offices and administration
+ 
+
+
+
+
+
+
+
+
+
+ Residential youth centers
+ 
+ Toggle Residential youth centers submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Betty K. Marler Youth Services Center
+ 
+
+
+
+
+
+
+
+
+
+ Gilliam Youth Services Center
+ 
+
+
+
+
+
+
+
+
+
+ Golden Peak Youth Services Center
+ 
+
+
+
+
+
+
+
+
+
+ Grand Mesa Youth Services Center
+ 
+
+
+
+
+
+
+
+
+
+ Marvin W. Foote Youth Services Center
+ 
+
+
+
+
+
+
+
+
+
+ Platte Valley Youth Services Center
+ 
+
+
+
+
+
+
+
+
+
+ Prairie Vista Youth Services Center
+ 
+
+
+
+
+
+
+
+
+
+ Pueblo Youth Services Center
+ 
+
+
+
+
+
+
+
+
+
+ Spring Creek Youth Services Center
+ 
+
+
+
+
+
+
+
+
+
+ Zebulon Pike Youth Services Center
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Victim Services
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Our partners
+ 
+ Toggle Our partners submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Boards and commissions
+ 
+ Toggle Boards and commissions submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ State Board of Human Services
+ 
+
+
+
+
+
+
+
+
+
+ Governor-appointed boards and commissions
+ 
+
+
+
+
+
+
+
+
+
+ Internal boards and commissions
+ 
+
+
+
+
+
+
+
+
+
+ Policy Advisory Committee
+ 
+
+
+
+
+
+
+
+
+
+ Resources for members
+ 
+
+
+
+
+
+
+
+
+
+ Public meeting calendar
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Counties
+ 
+ Toggle Counties submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ CDHS County Portal
+ 
+ Toggle CDHS County Portal submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ County Portal home
+ 
+
+
+
+
+
+
+
+
+
+ About CDHS and contacts
+ 
+
+
+
+
+
+
+
+
+
+ Boards and commissions
+ 
+
+
+
+
+
+
+
+
+
+ Finance, legislation and audits
+ 
+
+
+
+
+
+
+
+
+
+ Offices and divisions
+ 
+
+
+
+
+
+
+
+
+
+ Training and resources
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Memo Series
+ 
+ Toggle Memo Series submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Current memos
+ 
+
+
+
+
+
+
+
+
+
+ Memo archives
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ State-tribal relations
+ 
+
+
+
+
+
+
+
+
+
+ Training
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ About CDHS
+ 
+ Toggle About CDHS submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Leadership and organizational structure
+ 
+
+
+
+
+
+
+
+
+
+ Performance, outcomes and reviews
+ 
+ Toggle Performance, outcomes and reviews submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Quality Assurance and Quality Improvement
+ 
+ Toggle Quality Assurance and Quality Improvement submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Administrative Review Division
+ 
+
+
+
+
+
+
+
+
+
+ Direct Care Facilities Quality assurance
+ 
+
+
+
+
+
+
+
+
+
+ Division of Youth Services Quality Assurance
+ 
+
+
+
+
+
+
+
+
+
+ Public Assistance Quality Assurance
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Performance Management
+ 
+ Toggle Performance Management submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C-Stat
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ CDHS Performance Plan
+ 
+
+
+
+
+
+
+
+
+
+ Ombudsman offices
+ 
+ Toggle Ombudsman offices submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Behavioral Health Ombudsman
+ 
+
+
+
+
+
+
+
+
+
+ Long-Term Care Ombudsman
+ 
+
+
+
+
+
+
+
+
+
+ Child Protection Ombudsman
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Featured initiatives
+ 
+ Toggle Featured initiatives submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ CDHS for ALL
+ 
+
+
+
+
+
+
+
+
+
+ CDHS Legislative Affairs
+ 
+
+
+
+
+
+
+
+
+
+ CDHS Strategic Plan
+ 
+
+
+
+
+
+
+
+
+
+ Family Voice Council
+ 
+
+
+
+
+
+
+
+
+
+ Two-generation approach
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ News
+ 
+ Toggle News submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Press releases
+ 
+
+
+
+
+
+
+
+
+
+ Publications and reports
+ 
+
+
+
+
+
+
+
+
+
+ Social media
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Forms, policies, data and records requests
+ 
+ Toggle Forms, policies, data and records requests submenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Forms
+ 
+
+
+
+
+
+
+
+
+
+ Policies
+ 
+
+
+
+
+
+
+
+
+
+ Data
+ 
+
+
+
+
+
+
+
+
+
+ Records requests
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ HIPAA
+ 
+
+
+
+
+
+
+
+
+
+ Privacy Statement
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Careers
+ 
+
+
+
+
+
+
+
+
+
+ A to Z index
+ 
+
+
+
+
+
+
+
+
+
+ I want to ...
+ 
+
+
+
+
+
+
+
+
+
+ Contact us
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Browse Questions
+
+
+
+
+
+
+How do I apply for SNAP benefits?
+
+
+
+
+
+
+Where is my County Human Services Office?
+
+
+
+
+
+
+Find information on Colorado EBT.
+
+
+
+
+
+
+How do I apply for energy assistance (LEAP)?
+
+
+
+
+
+
+How do I apply for employment assistance?
+
+
+
+
+
+
+I want to find services on older adults.
+
+
+
+
+
+
+Where do I find services on Behavior Health?
+
+
+
+
+
+
+I want to find services on Child Support.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Home
+
+
+
+
+About CDHS
+
+
+
+
+Performance, outcomes and reviews
+
+
+
+
+Ombudsman offices
+
+
+
+
+Long-Term Care Ombudsman
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Long-Term Care Ombudsman
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The Colorado State Long-Term Care Ombudsman Program fights for residents of skilled nursing homes and licensed assisted living facilities.
+
+The authority of the long-term care ombudsman program stems from Title VII, Chapter 2, of the Older Americans Act, as well as Title 26, Article 11.5, of the Older Coloradans Act.
+
+The Long-Term Care Ombudsman Program exists to protect the rights that federal and state law guarantee to every resident.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Long-Term Care Ombudsman Program
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Services
+
+Certified Long-Term Care Ombudsmen receive comprehensive training to field complaints and investigate concerns about quality of care, use of restraints, transfer and discharge, abuse, and other aspects of resident dignity and rights. Ombudsman services are always free, confidential and resident-directed.
+
+Contact an ombudsman
+
+State law requires every licensed long-term care facility to display a poster with the facility's assigned ombudsman's name and contact information. If you're a resident (or a family member of someone) in a facility, call the ombudsman listed on the poster.
+
+To speak with a long-term care ombudsman, visit the Colorado Long-Term Care Program website or call 303-862-3524.
+
+Resources
+
+Long-Term Care Ombudsman Program Annual Report 2023
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+About CDHS
+
+
+Our mission: Together, we empower Coloradans to thrive.
+
+Our vision: To serve Coloradans through bold and innovative health and human services.
+
+Our values: People-first; balance; accountability; transparency; ethical; collaboration.
+
+
+About CDHS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CDHS contact information
+
+Colorado Department of Human Services
+
+1575 Sherman St.
+
+Denver, CO 80203
+
+303-866-5700
+
+County human services departments
+
+Full contact information
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Accessibility at CDHS
+
+CDHS is committed to meeting members of our community where they are, and strives to provide all Coloradans with access to our programs, services, resources, activities and communication regardless of ability.
+
+Digital accessibility statement
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Popular pages
+
+
+Contact your county
+
+Supplemental Nutrition Assistance Program (SNAP)
+
+Low-income Energy Assistance Program (LEAP)
+
+EBT card
+
+Summer EBT
+
+Colorado Works
+
+Careers
+
+A to Z index
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+© 2026 State of Colorado
+
+
+Transparency Online
+
+
+General Notices
+
+
+
+
+
+
+
+
+
+Colorado Official State Web Portal
+
+SOURCE 6: 10 CCR 2505-10 8.400, sections 8.482.42-8.482.44 (Additional Payments; Medical Leave From Nursing Facility; Room Reservations for Non-Medical and/or Programmatic Leave) — Medical Services Board, Department of Health Care Policy and Financing | https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12655&fileName=10+CCR+2505-10+8.400 | source date: current version effective 08/14/2026 (PDF), per the rule's own DisplayRule listing at https://www.sos.state.co.us/CCR/DisplayRule.do?action=ruleinfo&ruleId=2921&deptID=7&agencyID=69&deptName=Department+of+Health+Care+Policy+and+Financing&agencyName=Medical+Services+Board+(Volume+8%3B+Medical+Assistance,+Children's+Health+Plan)&seriesNum=10+CCR+2505-10+8.400 | retrieved: 2026-11-17
+8.482.42     ADDITIONAL PAYMENTS
+
+A.    “Additional payments” are defined as payments made by the resident, or by a
+      resident's family, conservator or administrator for items which are not a benefit of
+      the Medicaid program, such as:
+
+      1.     Items covered in Section 8.440.2.A., Services and items not included in
+             the Per Diem Rate (chargeable to resident personal needs account).
+
+      2.     Room reservations for medical leave in accordance with Section 8.482.43.
+
+      3.     Room reservations for non-medical and/or programmatic leave days in
+             excess of 42 days per calendar year in accordance with Section 8.482.44.
+
+B.    Additional payment for resident care and services which are to be furnished
+      within the nursing facility per diem rate (Section 8.440.1) are specifically
+      prohibited. The nursing facility can neither solicit additional funds for such care
+      and services nor accept voluntary monetary contributions for them, from
+      residents or responsible parties. Any such monies collected or accepted by the
+      nursing facility shall render such facility liable for the penalties set forth in Section
+      8.482.45.
+
+C.    Additional payments may be charged for:
+
+      1.     Services and items not included in the per diem rate, as specified in
+             Section 8.440.2. These items may be billed to the resident, to the
+             resident's estate or other responsible party, subject to the restrictions set
+             forth in Section 8.440.2.
+
+      2.     Room reservations. “Room reservation” is hereby defined as that charge
+             made to a resident or to a resident's family, conservator or administrator,
+             or other responsible party, to retain the resident's room and provide space
+             for clothing and other personal items during the time which the resident is
+             absent from the facility. Room reservation charges may be made under
+
+
+                                                                                           281
+
+CODE OF COLORADO REGULATIONS                                          10 CCR 2505-10 8.400
+Medical Services Board
+
+             the circumstances outlined at 10 CCR 2505-10 sections 8.482.43 and
+             8.482.44.
+
+             a.      Medical leave. See 10 CCR 2505-10 section 8.482.43 for
+                      conditions and restrictions.
+
+             b.      Non-medical and/or programmatic leave. See 10 CCR 2505-10
+                      section 8.482.44.
+
+D.    Failure to comply with the following restrictions on additional payment will render
+      the nursing facility liable for repayment of any such funds, or to prosecution as
+      set forth in 10 CCR 2505-10 section 8.482.45, or both:
+
+      1.     Exact physician's orders on the nursing facility charts, for such additional
+             care or services;
+
+      2.     Fully itemized billings to the resident or responsible party;
+
+E.    Additional payments by persons other than the resident shall not be regarded as
+      income to the resident, and shall not affect the eligibility of the resident for the
+      Medicaid program.
+
+F.    Additional payments may not be deducted from the resident's personal needs
+      account, nor may they be applied to a PETI deduction as described in Section
+      8.482.33, unless authorized by the resident or the party responsible for the
+      resident. The authorization must be a separate written authorization for each
+      billing from the nursing facility.
+
+8.482.43     MEDICAL LEAVE FROM NURSING FACILITY
+
+A.    Definition. “Medical Leave” is defined as absence of the resident from the nursing
+      facility due to admission to a hospital or other institution.
+
+B.    Medical Leave is subject to the following restrictions:
+
+      1.     The resident’s absence must be on the orders of a physician, as noted in
+             the resident's chart;
+
+      2.     The resident plans to return to the nursing facility;
+
+
+
+
+                                                                                             282
+
+CODE OF COLORADO REGULATIONS                                     10 CCR 2505-10 8.400
+Medical Services Board
+
+     3.    The nursing facility must prepare an AP-5615 showing the dates the
+           Medical Leave commenced and ended. See Section 8.482.34.
+
+     4.    The resident, or the responsible party, must be advised, in writing, that
+           payment for holding the nursing facility room cannot be made by Medicaid.
+           In addition, the resident, or responsible party, must give written consent to
+           the additional charge, including the daily rate and the anticipated number
+           of days. If the resident is absent from the facility longer than the
+           anticipated number of days shown on the consent form, the nursing facility
+           must obtain agreement on another consent form before continuing to
+           charge for medical leave. The consent form(s) must be retained with the
+           resident’s records and be subject to audit.
+
+C.   Room reservation charges for Medical Leave:
+
+     1.    The per diem charge for room reservations for Medical Leave cannot
+           exceed the per diem rate currently authorized for the nursing facility, less
+           total food and linen service costs. In no case shall the charge be greater
+           than the current per diem rate less $2.
+
+     2.    The specific bed which the resident had occupied prior to leave must be
+           reserved. No other resident may occupy the reserved bed.
+
+     3.    If no source of payment, other than the resident's funds, are available, and
+           the nursing facility's current occupancy is less than 90 percent of capacity,
+           the room must be reserved at no charge to the resident.
+
+     4.    Revenues to the nursing facility from room reservations must be used in
+           reduction of related expenses, on the MED-13 form.
+
+     5.    If no other funds are available, the room reservation charges may be
+           deducted from the resident's personal needs account, subject to the
+           restrictions in Section 8.482.42. However, the resident's personal needs
+           account must maintain a balance of at least $10 at all times, if used for
+           room reservations payment. In case of death of the resident, the entire
+           resident personal needs account may be used, if necessary.
+
+
+
+                                                                                       283
+
+CODE OF COLORADO REGULATIONS                                        10 CCR 2505-10 8.400
+Medical Services Board
+
+8.482.44      Room Reservations for Non-Medical and/or Programmatic Leave
+
+Medicaid will pay a nursing facility to hold a bed for non-medical and/or programmatic
+leave days up to a combined total of 42 days per resident per calendar year.
+
+Non-medical leave days are defined as days of leave from the nursing facility for non-
+medical reasons. Programmatic leave days are days of leave prescribed by a physician
+for therapeutic and/or rehabilitative reasons. Programmatic leave may entail visits to
+family, friends or guardians, or leave to participate in approved therapeutic and/or
+rehabilitative programs. A leave day is considered to have been incurred for any day
+during which the resident is absent from the nursing facility for therapeutic and/or
+rehabilitative purposes and does not return by midnight of that day.
+
+Before Medicaid payment is made for room reservation costs for non-medical and/or
+programmatic leave, the attending physician must approve each leave and affirm that
+such leave is not contrary to the resident's written plan of care. In the case of
+programmatic leave, this approval must be in writing and noted on the resident's chart
+and/or Individual Habilitation Plan (IHP). In addition, the physician must affirm that the
+resident's programmatic leave is of therapeutic and rehabilitative value and consistent
+with the overall plan of care and/or Individual Habilitation Plan developed for the
+resident.
+
+If the resident has the approval of the attending physician in writing, and such approval
+is noted on the resident's chart, room reservations for non-medical and/or programmatic
+leave may be paid for by the resident, after the allowable 42 days per calendar year has
+been paid from Medicaid funds. Charges to residents for this leave are subject to the
+following restrictions:
+
+A.     Such charges must not commence until after 42 days of non-medical and/or
+       programmatic leave in any one calendar year.
+
+B.     The Medicaid Program has not been billed for such leave. Billing both Medicaid
+       and the resident for the same leave period will subject the nursing facility to the
+       penalties as set forth in10 CCR 2505-10 section 8.482.45.
+
+
+
+
+                                                                                         284
+
+CODE OF COLORADO REGULATIONS                                        10 CCR 2505-10 8.400
+Medical Services Board
+
+C.     The resident or the resident's family must be advised that payment for the
+       nursing facility room cannot be paid from Medical Assistance funds after the
+       resident's allowable leave has been consumed. In addition, the resident and/or
+       legal guardian must give written consent to the room reservation charges, both
+       the daily rate and the anticipated number of days. The consent form must be
+       retained with other resident records and subject to audit.
+
+D.     The maximum allowable charge for non-medical and/or programmatic leave is
+       the same as stated for medical leave in paragraph C of 10 CCR 2505-10 section
+       8.482.43.
+
+E.     The specific bed which the resident occupied prior to leave must be reserved. No
+       other resident may occupy a bed so reserved.
+
+F.     Revenues to the nursing facility from room reservations must be used in
+       reduction of related expenses, on the MED-13 form.
+
+G.     In no case shall the nursing facility deduct non-medical and/or programmatic
+       leave charges from the resident's personal needs account, unless specific
+       authorization has been received, in writing, from the resident and/or legal
+       guardian.
+
