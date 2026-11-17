@@ -23,6 +23,27 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
+# Refuse to publish anything git has not recorded (added 2026-11-17).
+# wrangler uploads site/ as it sits on disk, so an edit another session has in
+# flight ships with whatever this deploy was asked for. On 2026-11-17 a
+# Rules & Record deploy made for a Vermont page published an uncommitted edit
+# to changes.html that way. Asked twice: before the gate, so the refusal is
+# the first thing printed, and again before the upload, because the gate
+# regenerates the sitemap and can itself leave site/ changed. Untracked files
+# count. The remedy is a commit by whoever owns the change, never a stash,
+# revert or delete of another session's files to get a deploy out.
+site_must_be_committed() {
+  dirty="$(git status --porcelain -- site/)"
+  if [ -n "$dirty" ]; then
+    echo "REFUSED ($1): site/ has changes git has not recorded:"
+    echo "$dirty" | sed 's/^/        /'
+    echo "Nothing was published. Commit these, or wait for the session that"
+    echo "owns them to commit, then run deploy.sh again."
+    exit 1
+  fi
+}
+site_must_be_committed "before the gate"
+
 # field-assembly-standard is always a sibling of this repo's own root, which
 # "../field-assembly-standard" only reaches when this script runs from that
 # root directly. A Claude Code Desktop worktree checkout sits at
@@ -40,6 +61,7 @@ bash site/predeploy-check.sh
 # in every site repo, committed with the deploy.
 python3 "$STANDARD_DIR/tools/securitytxt-check.py"
 
+site_must_be_committed "after the gate"
 (cd site && npx wrangler deploy)
 
 # IndexNow: submit what this deploy changed (FA-D-20260911-01). set -e means

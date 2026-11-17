@@ -1207,3 +1207,18 @@ order whenever possible.
 
 Ask an open-ended question only when the available choices genuinely cannot be
 defined in advance.
+
+## A deploy refuses uncommitted changes in site/ (owner rule, 2026-11-17)
+
+`deploy.sh` stops before the gate, and again before the upload, if
+`git status --porcelain -- site/` prints anything, untracked files included.
+wrangler uploads `site/` as it sits on disk, so without this an edit another
+session has in flight is published by whoever deploys next. That happened on
+2026-11-17: a Rules & Record deploy made for a Vermont page also published an
+edit to `changes.html` that was not yet committed.
+
+When it refuses, nothing has been published. If the changes are this
+session's, commit them by path and run `bash deploy.sh` again. If they are
+not, leave them: do not stash, revert, delete or commit another session's
+files to get a deploy out. Tell Carrie which paths are in the way and wait.
+Never deploy around the check with a bare `npx wrangler deploy`.
