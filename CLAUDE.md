@@ -770,6 +770,23 @@ Board & Border's copy has the identical gap and has not been widened:
 mention it. Fix that there, in that repo, when someone is next in it — this
 note is the reminder, not the authority.
 
+## The monthly change record (added 2026-11-17)
+
+`/changes/` (`site/changes.html`) is produced in two halves, each with its
+own file, and neither is run from memory.
+
+- **Unattended, on the 1st:** `MONTHLY-RECORD-PASS.md`, run by the
+  `rr-monthly-change-record` task. It triages last month's retention series
+  into `change-record/drafts/<YYYY-MM>.md` and stops. It never writes the
+  issue.
+- **Attended, with Carrie:** `CHANGE-RECORD-ISSUE.md`. It turns the draft,
+  the pages' own change logs and the retained captures into the published
+  issue, through her review, the commit and the deploy. Read it before
+  touching `site/changes.html`.
+
+Page counts in an issue are taken from git at the month's calendar
+boundaries, as in Gathered Work; the command is in `CHANGE-RECORD-ISSUE.md`.
+
 ## The change log is a record, not a claim (adopted 2026-09-04)
 
 `check-fidelity.py` now splits section 04 out of the quotation scan.
