@@ -412,3 +412,69 @@ retained as confirmed and the checked date advanced. New York's ombudsman
 docket was rebuilt against the rewritten aging.ny.gov page (findings 13–15 in
 the page's change log), the 2026-09-04 capture retained beside the new one,
 and the rebuild promoted. FA-Q-20261008-03 and -04 closed. Nothing deployed.
+
+**2026-11-17 — the thirty-two archive-layer sources their own hosts block stay
+retired (owner decision).** Of the three states a failed capture source can be
+in, these are *blocked*: three consecutive hard failures, held back from the
+rotation until a person looks. `tools/spn-ledger.json` holds thirty-two, and
+every one is `error:no-request`. Since 2026-11-16 that code has a meaning on
+disk rather than a guess. The owner-directed Kentucky retry in licensure
+mobility that day (`3660d0f` there) ran eight `kbn.ky.gov` sources as a
+diagnostic and Save Page Now returned the same sentence for each, now carried
+verbatim in that ledger as `last_message` — "The target server blocks access
+to <url>. (HTTP status=403)". `error:no-request` is the origin host refusing
+the Internet Archive's fetcher, which appears nowhere in SPN's documented
+`status_ext` table and had been classified from its code alone across 341
+sources portfolio-wide, 44 of them here. It is not an SPN fault, not this
+account's keys, and not transient, so `spn.py run --retry-blocked` cannot
+change any of these thirty-two outcomes; only another route to the document
+can. The decision is to leave all thirty-two retired and not to sweep them,
+and the work this entry holds is finding a route, not retrying.
+
+Nineteen hosts, by page. california, 4 — four `govt.westlaw.com` calregs
+documents (`I6300B9C2…`, `IBABA4E54…`, `IBABCBF5E…`, `IBAE55602…`), a
+commercial reprint host and the one group here where a free official publisher
+almost certainly exists. maine, 4 — `www.maine.gov` administrative-hearings
+page and its FAQ, plus the two `www.maine.gov/sos` `.docx` rule files
+(`144c110.docx`, `c2s067-LUP…NSC.docx`). michigan, 4 — four
+`www.michigan.gov` PDFs under the LARA and MDHHS `/-/media/Project/Websites/`
+paths. vermont, 5 across four hosts — `dlp.vermont.gov` (the sample
+discharge/transfer notice and `Nursing_Home_Transfer_Discharge_Letter.pdf`),
+`dail.vermont.gov` (`Nursing_Home_Regulations_2018.pdf`), `asd.vermont.gov`
+(`services/ltc-ombudsman-program`) and `humanservices.vermont.gov`
+(`human-services-board`); one state, four subdomains, which reads as a
+state-wide edge rule rather than four decisions. arizona, 4 across three hosts
+— `apps.azsos.gov` Title 9 PDFs `9-10.pdf` and `9-28.pdf`, and `des.az.gov/LTCOP`.
+arkansas, 2 — `humanservices.arkansas.gov` `contact-us/file-an-appeal/` and
+the cost-reimbursement manual PDF. alaska, 2 — `akoltco.org/` and
+`akoltco.org/about-us/`. Then one apiece: utah `daas.utah.gov/ombudsman-locations`,
+colorado `cdhs.colorado.gov/long-term-care-ombudsman`, louisiana
+`ldh.la.gov` NF regulations PDF, kentucky `www.chfs.ky.gov` DAIL ombudsman
+page, illinois `www.ilga.gov` Nursing Home Care Act query URL, kansas
+`www.kancare.ks.gov` state-fair-hearings and `www.ombudsman.ks.gov`
+involuntary-discharge, missouri `www.sos.mo.gov` `19c30-82.pdf`. Last attempts
+run 2026-11-08 through 2026-11-15; all thirty-two stand at exactly three hard
+failures.
+
+What this does not touch. The pages are unaffected — each cites its source
+directly and a capture is a second copy, so a blocked source costs a published
+page nothing. No reviewer question, no deploy, and the thirty-six other
+failed sources here that have not reached three stay in the ordinary rotation
+and rest their seven days.
+
+What a session would decide, when one takes this up. Per host, whether another
+address reaches the same document, and the groups are not equally promising.
+California first: `govt.westlaw.com` is Westlaw's hosted copy of the
+California Code of Regulations and the state publishes the same text itself,
+so the question is which official address to cite rather than how to get past
+a WAF. Vermont second, as one edge rule over four subdomains is one answer
+rather than five. Maine's and Michigan's document paths are next — a `.docx`
+or a `/-/media/` PDF often has a plainer sibling URL. The eight singletons are
+last and may simply stay uncaptured. Do not open with a retry sweep; 2026-11-16
+ran that experiment on a host of this class and recorded the answer.
+
+Separately, and for a different reason, `tools/spn-ledger.json` was also
+repaired today (`ff0fd00`): the `health.wyo.gov` filed-rules PDF was recorded
+`no-playback` on 2026-11-15 by the pre-fix `playback_ok` when its capture had
+in fact stored, and is now `PENDING` awaiting the next confirmation pass. That
+source is not blocked and is not part of this entry.
