@@ -339,6 +339,19 @@ the session pushes it with its other commits. The key submitted is read from
 the served key file at the site root, so the two cannot disagree. Run the
 tool by hand (`--dry-run` to preview) only to rerun a ping that failed after
 a successful publish. Adopted FA-D-20260911-01; the tool's docstring governs.
+
+**What "changed" means, and one loud deploy coming (2026-11-17).** The ledger
+holds a content fingerprint per URL — the sha256 of the file that URL is served
+from — not the sitemap's `lastmod`. It held the lastmod until 2026-11-17, and a
+lastmod is a date, so two deploys of one page on one day were indistinguishable
+and the second reported "nothing to submit" (FA-D-20261117-01; found on Rules &
+Record's Vermont discipline page, deployed twice that day). Two consequences to
+expect. A page recommitted with no change to its bytes no longer submits, by
+design. And because a pre-2026-11-17 ledger entry is a date, what was submitted
+for it cannot be recovered, so **this repo's next deploy submits its whole
+sitemap once** — the run says so in its own words, counting those apart from
+real changes. That is the migration, not a fault; the deploy after it is quiet
+again.
 Scheduled passes do not deploy and therefore never run this.
 
 ## Fidelity before anything ships
