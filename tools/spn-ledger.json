@@ -165,10 +165,13 @@
       "page": "south-carolina"
     },
     "https://ahca.myflorida.com/content/download/27067/file/59G-4.200.pdf": {
-      "attempts": 3,
-      "last_attempt": "2026-11-09T063143Z",
-      "last_detail": "no-playback",
-      "last_result": "FAILED",
+      "attempts": 4,
+      "capture": "https://web.archive.org/web/20261118055247/https://ahca.myflorida.com/content/download/27067/file/59G-4.200.pdf",
+      "capture_submitted": "2026-11-18T055301Z",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-11-18T055301Z",
+      "last_detail": "stored",
+      "last_result": "PENDING",
       "page": "florida"
     },
     "https://akoltco.org/": {
@@ -380,10 +383,13 @@
       "page": "district-of-columbia"
     },
     "https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.02": {
-      "attempts": 3,
-      "last_attempt": "2026-11-09T061007Z",
-      "last_detail": "no-playback",
-      "last_result": "FAILED",
+      "attempts": 4,
+      "capture": "https://web.archive.org/web/20261118055108/https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.02",
+      "capture_submitted": "2026-11-18T055121Z",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-11-18T055121Z",
+      "last_detail": "stored",
+      "last_result": "PENDING",
       "page": "district-of-columbia"
     },
     "https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.03": {
@@ -396,10 +402,13 @@
       "page": "district-of-columbia"
     },
     "https://code.dccouncil.gov/us/dc/council/code/sections/7-702.04": {
-      "attempts": 3,
-      "last_attempt": "2026-11-09T061510Z",
-      "last_detail": "no-playback",
-      "last_result": "FAILED",
+      "attempts": 4,
+      "capture": "https://web.archive.org/web/20261118055136/https://code.dccouncil.gov/us/dc/council/code/sections/7-702.04",
+      "capture_submitted": "2026-11-18T055148Z",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-11-18T055148Z",
+      "last_detail": "stored",
+      "last_result": "PENDING",
       "page": "district-of-columbia"
     },
     "https://codeofarrules.arkansas.gov/Rules/Rule?levelType=section&titleID=20&chapterID=38&subChapterID=50&partID=1233&subPartID=7657&sectionID=50037": {
@@ -929,10 +938,13 @@
       "page": "alaska"
     },
     "https://health.hawaii.gov/eoa/home/long-term-care-ombudsman/": {
-      "attempts": 3,
-      "last_attempt": "2026-11-09T064240Z",
-      "last_detail": "no-playback",
-      "last_result": "FAILED",
+      "attempts": 4,
+      "capture": "https://web.archive.org/web/20261118055429/https://health.hawaii.gov/eoa/home/long-term-care-ombudsman/",
+      "capture_submitted": "2026-11-18T055456Z",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-11-18T055456Z",
+      "last_detail": "stored",
+      "last_result": "PENDING",
       "page": "hawaii"
     },
     "https://health.hawaii.gov/opppd/department-of-health-administrative-rules-title-11/": {
@@ -983,9 +995,9 @@
       "capture": "https://web.archive.org/web/20261115153250/https://health.wyo.gov/wp-content/uploads/2020/07/FILED-RULES-17704-EFFECT-07-01-2020.pdf",
       "capture_submitted": "2026-11-15T153250Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-15T153706Z",
-      "last_detail": "stored",
-      "last_result": "PENDING",
+      "last_attempt": "2026-11-18T052020Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "wyoming"
     },
     "https://health.wyo.gov/wp-content/uploads/2021/10/Chapter-22-active-100521.pdf": {
@@ -1466,10 +1478,11 @@
       "page": "new-york"
     },
     "https://regulations.delaware.gov/api/AdminCode/title16/3102/390cf383-7c28-4d18-a3be-494417f7c892": {
-      "attempts": 3,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-09T060515Z",
+      "attempts": 4,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-18T055051Z",
       "last_detail": "error:no-request",
+      "last_message": "The target server blocks access to https://regulations.delaware.gov/api/AdminCode/title16/3102/390cf383-7c28-4d18-a3be-494417f7c892. (HTTP status=403)",
       "last_result": "FAILED",
       "page": "delaware"
     },
@@ -1510,10 +1523,11 @@
       "page": "montana"
     },
     "https://rules.sos.ga.gov/gac/111-8-50": {
-      "attempts": 3,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-09T063751Z",
+      "attempts": 4,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-18T055413Z",
       "last_detail": "error:no-request",
+      "last_message": "The target server blocks access to https://rules.sos.ga.gov/gac/111-8-50. (HTTP status=403)",
       "last_result": "FAILED",
       "page": "georgia"
     },
@@ -1635,10 +1649,13 @@
       "page": "rhode-island"
     },
     "https://www.aarp.org/legal-counsel-for-elderly/what-we-do/info-2017/dc-long-term-care-ombudsman.html": {
-      "attempts": 3,
-      "last_attempt": "2026-11-09T062224Z",
-      "last_detail": "no-playback",
-      "last_result": "FAILED",
+      "attempts": 4,
+      "capture": "https://web.archive.org/web/20261118055204/https://www.aarp.org/legal-counsel-for-elderly/what-we-do/info-2017/dc-long-term-care-ombudsman.html",
+      "capture_submitted": "2026-11-18T055233Z",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-11-18T055233Z",
+      "last_detail": "stored",
+      "last_result": "PENDING",
       "page": "district-of-columbia"
     },
     "https://www.adminlaw.la.gov/areas-of-law/health.html": {
@@ -2186,10 +2203,13 @@
       "page": "michigan"
     },
     "https://www.myflfamilies.com/about/office-inspector-general/appeal-hearings": {
-      "attempts": 3,
-      "last_attempt": "2026-11-09T063634Z",
-      "last_detail": "no-playback",
-      "last_result": "FAILED",
+      "attempts": 4,
+      "capture": "https://web.archive.org/web/20261118055328/https://www.myflfamilies.com/about/office-inspector-general/appeal-hearings",
+      "capture_submitted": "2026-11-18T055345Z",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-11-18T055345Z",
+      "last_detail": "stored",
+      "last_result": "PENDING",
       "page": "florida"
     },
     "https://www.ncdhhs.gov/divisions/aging/long-term-care-ombudsman": {
@@ -2457,5 +2477,5 @@
       "page": "wyoming"
     }
   },
-  "updated": "2026-11-17T140343Z"
+  "updated": "2026-11-18T055456Z"
 }
