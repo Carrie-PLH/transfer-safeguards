@@ -2016,3 +2016,43 @@ FA-Q-20261117-03 opened (colorado drift).
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-11-17. No
 human review is claimed for this entry.
+
+## 2026-11-19 — rotation pass: connecticut, delaware, district-of-columbia, federal, florida
+
+Cursor was at connecticut. Took connecticut, delaware, district-of-columbia,
+federal, florida (five, cursor rotation). District-of-columbia also depends
+on a supplement (district-of-columbia-packet-bedhold.txt, NO-RECIPE,
+unrefreshable, left standing per convention).
+
+- **connecticut — confirmed.** Recipe capture (5f9a18903066), 4 of 4 sources.
+  Zero fidelity failures. Retained — unchanged since 2026-09-17.txt (hash
+  71b82a37828a13ea). Promoted. Checked date updated the same way.
+- **delaware — confirmed.** Recipe capture (f5369fe37370), 4 of 4 sources.
+  Zero fidelity failures. Retained — unchanged since 2026-10-22.txt (hash
+  62c20d99ad737a38). Promoted. Checked date updated the same way.
+- **district-of-columbia — confirmed.** Recipe capture (f6b61c9f4ef7), 12 of
+  12 sources. Zero fidelity failures (main packet + bedhold supplement).
+  Retained with textual movement (hash 5da092e6051a0bac); retain-packet.py
+  flagged source 4 (D.C. Law Library currency-statement page) as shrinking
+  3796 -> 3793 chars. Source header unchanged (same URL, same "carries its
+  own 'Current through' statement"); no title, number or instrument change
+  — read as a trivial markup/whitespace difference, not replacement.
+  Promoted. Checked date updated the same way.
+- **federal — RECIPE BACKFILL REQUIRED.** No `tools/recipes/federal.json`
+  exists (standing gap, unchanged since at least 2026-10-24). Per the
+  current review skill, this pass does not hand-capture as a substitute;
+  recorded and advanced rather than reconnoitered.
+- **florida — confirmed.** Recipe capture (63c0a1b05d45; one legacy .doc
+  source converted with textutil), 6 of 6 sources. Zero fidelity failures.
+  Retained — unchanged since 2026-10-24.txt (hash b195bb529934139b).
+  Promoted. Checked date updated the same way.
+
+sync-checked-dates.py corrected 8 derived dates (table + JSON for
+connecticut, delaware, district-of-columbia, florida). build-status.py:
+51/51 baseline, 50/51 full (North Dakota gap predates this pass, unchanged).
+build-state-picker.py regenerated (51/51 published). Review cursor advanced
+past florida to georgia. No queue entries opened or bumped — all four
+capturable pages confirmed, nothing drifted or unreachable.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-11-19. No
+human review is claimed for this entry.
