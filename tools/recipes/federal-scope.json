@@ -1,0 +1,18 @@
+{
+  "recipe_version": 1,
+  "state": "federal-scope",
+  "sources": [
+    {
+      "n": 1,
+      "title": "42 CFR 483.1, Basis and scope",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-483/subpart-B/section-483.1",
+      "source_date": "the page carries its own 'up to date as of ...' and 'last amended ...' statement, not pinned to a capture date; section amended 81 FR 68848, Oct. 4, 2016",
+      "transport": "curl",
+      "user_agent": "browser",
+      "extractor": "html-text",
+      "scope": "div[id=\"483.1\"]",
+      "filters": ["trim-lines", "collapse-blank-runs"],
+      "notes": "Same transport reasoning as federal.json source 1 (unblock.federalregister.gov redirect on a bare curl; a browser user-agent reaches the real page). div[id=\"483.1\"] is the section's own container."
+    }
+  ]
+}

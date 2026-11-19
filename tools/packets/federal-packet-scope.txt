@@ -1,34 +1,38 @@
-FIELD ASSEMBLY SOURCE PACKET — DO NOT EDIT AFTER A PAGE IS BUILT FROM IT
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
-STATE: Federal layer
-SLUG: federal
-ASSEMBLED: 2026-09-27
+STATE: federal-scope
+ASSEMBLED: 2026-11-19
 
-SUPPLEMENT to tools/packets/federal-packet.txt. Review-pass re-capture (portfolio-nightly-qc-review)
-of the one further first-party source supporting the standing scope note added to the federal page
-on 2026-08-31. It adds no source that bears on the grounds, the notice, the hearing or the ombudsman;
-the original packet remains the evidence for every docket row.
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/federal-scope.json (recipe digest 408fdc615043). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
+- SOURCE 1: transport curl; extractor html-text; scope div[id="483.1"]; filters trim-lines, collapse-blank-runs.
+  Same transport reasoning as federal.json source 1 (unblock.federalregister.gov redirect on a bare curl; a browser user-agent reaches the real page). div[id="483.1"] is the section's own container.
 
-CAPTURE NOTES: Re-fetched from the eCFR versioner API (title-42 XML, point-in-time 2026-08-13, the
-title's most recent issue date at retrieval), converted to plain text by mechanical tag-stripping,
-matching the standing supplement's transport (curl with a browser user-agent from the eCFR's own
-section page, stripped of markup).
+SOURCE 1: 42 CFR 483.1, Basis and scope | https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-483/subpart-B/section-483.1 | source date: the page carries its own 'up to date as of ...' and 'last amended ...' statement, not pinned to a capture date; section amended 81 FR 68848, Oct. 4, 2016 | retrieved: 2026-11-19
+§ 483.1 Basis and scope.
 
-PENDING: none.
+(a) Statutory basis.
 
-SOURCE 1: 42 CFR 483.1, Basis and scope | https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-483/subpart-B/section-483.1 | source's own date: current as of 8/13/2026; section amended 81 FR 68848, Oct. 4, 2016 | retrieved: 2026-09-27
- § 483.1 Basis and scope.
- (a) Statutory basis. (1) Sections 1819(a), (b), (c), (d), and (f) of the Act provide that—
- (i) Skilled nursing facilities participating in Medicare must meet certain specified requirements; and
- (ii) The Secretary may impose additional requirements (see section 1819(d)(4)(B)) if they are necessary for the health and safety of individuals to whom services are furnished in the facilities.
- (2) Section 1861(l) of the Act requires the facility to have in effect a transfer agreement with a hospital.
- (3) Sections 1919(a), (b), (c), (d), and (f) of the Act provide that nursing facilities participating in Medicaid must meet certain specific requirements.
- (4) Sections 1128I(b) and (c) require that—
- (i) Skilled nursing facilities or nursing facility have in operation a compliance and ethics program that is effective in preventing and detecting criminal, civil, and administrative violations.
- (ii) The Secretary establish and implement a quality assurance and performance improvement program for facilities, including multi-unit chains of facilities.
- (5) Section 1150B establishes requirements for reporting to law enforcement crimes occurring in federally funded LTC facilities.
- (b) Scope. The provisions of this part contain the requirements that an institution must meet in order to qualify to participate as a Skilled Nursing Facility in the Medicare program, and as a nursing facility in the Medicaid program. They serve as the basis for survey activities for the purpose of determining whether a facility meets the requirements for participation in Medicare and Medicaid.
- [56 FR 48867, Sept. 26, 1991, as amended at 57 FR 43924, Sept. 23, 1992; 60 FR 50443, Sept. 29, 1995; 81 FR 68848, Oct. 4, 2016]
-END SOURCE 1
+(1) Sections 1819(a), (b), (c), (d), and (f) of the Act provide that—
 
-END OF PACKET — 1 source
+(i) Skilled nursing facilities participating in Medicare must meet certain specified requirements; and
+
+(ii) The Secretary may impose additional requirements (see section 1819(d)(4)(B)) if they are necessary for the health and safety of individuals to whom services are furnished in the facilities.
+
+(2) Section 1861(l) of the Act requires the facility to have in effect a transfer agreement with a hospital.
+
+(3) Sections 1919(a), (b), (c), (d), and (f) of the Act provide that nursing facilities participating in Medicaid must meet certain specific requirements.
+
+(4) Sections 1128I(b) and (c) require that—
+
+(i) Skilled nursing facilities or nursing facility have in operation a compliance and ethics program that is effective in preventing and detecting criminal, civil, and administrative violations.
+
+(ii) The Secretary establish and implement a quality assurance and performance improvement program for facilities, including multi-unit chains of facilities.
+
+(5) Section 1150B establishes requirements for reporting to law enforcement crimes occurring in federally funded LTC facilities.
+
+(b) Scope. The provisions of this part contain the requirements that an institution must meet in order to qualify to participate as a Skilled Nursing Facility in the Medicare program, and as a nursing facility in the Medicaid program. They serve as the basis for survey activities for the purpose of determining whether a facility meets the requirements for participation in Medicare and Medicaid.
+
+[56 FR 48867, Sept. 26, 1991, as amended at 57 FR 43924, Sept. 23, 1992; 60 FR 50443, Sept. 29, 1995; 81 FR 68848, Oct. 4, 2016]
+
