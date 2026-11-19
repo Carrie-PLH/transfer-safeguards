@@ -1,0 +1,16 @@
+{
+ "entry": {
+  "file_count": 421,
+  "id": "2026-11-19T141550Z",
+  "manifest_file": "manifests/2026-11-19T141550Z.txt",
+  "manifest_sha256": "60ab5f2045dd2edec3f783e053880f3690cfb33924e06d72783445f86b76109f",
+  "note": "federal layer recipe backfill 2026-11-19",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "09250a9e45486f1c522520a88a56d8376051e71e741c7d40c4e31574e4780cc6",
+  "repo": "transfer-safeguards",
+  "utc": "2026-11-19T14:15:50+00:00"
+ },
+ "entry_sha256": "6d1bd0651b356fa61df6b9399cc3a5e3f8f31f52e092431f0dbf05951c4ac078"
+}
