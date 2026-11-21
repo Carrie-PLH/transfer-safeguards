@@ -2056,3 +2056,37 @@ capturable pages confirmed, nothing drifted or unreachable.
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-11-19. No
 human review is claimed for this entry.
+
+## 2026-11-21 — rotation pass: georgia, idaho confirmed; hawaii unreachable (scheduled)
+
+Cursor read at georgia; batch was georgia, hawaii, idaho (three, normal
+budget).
+
+- **georgia** — confirmed. Recipe capture (digest 45c47b529b1d), 4 sources.
+  Zero failures on both files. Retained, hash d9eaf9d03a8c2e55 — promoted,
+  no header movement flagged. Checked date updated to 2026-11-21; page
+  re-rendered.
+- **hawaii** — unreachable, second consecutive occurrence since the
+  2026-10-24 pass. 3 of 5 sources captured (sources 1-3); source 4
+  (medquest.hawaii.gov grievance-and-appeals page) again returned HTTP 403
+  and source 5 (the same host's hearing-request-form PDF) again returned
+  HTTP 404, both confirmed reproducible with a direct retry under the
+  recipe's documented curl + browser user-agent transport — no alternate
+  transport is documented for either. No fidelity check run on incomplete
+  evidence; no capture retained; checked date untouched. Below the
+  three-strike threshold — not queued.
+- **idaho** — confirmed. Recipe capture (digest 0ca9f5dd1104), 7 sources.
+  Zero failures on both files. Retained — unchanged since 2026-10-25.txt
+  (hash 7ba94b0e7bcbe19f). Promoted. Checked date updated to 2026-11-21;
+  page re-rendered.
+
+sync-checked-dates.py corrected 4 derived dates (table + JSON for georgia
+and idaho). build-status.py: 51/51 baseline, 50/51 full (North Dakota gap
+predates this pass, unchanged). check-all.py: 104 pages across 52 states,
+no unexplained failures. build-state-picker.py regenerated (51/51
+published). Review cursor advanced past idaho to illinois, per skill step,
+regardless of hawaii's result. No queue entries opened — hawaii's second
+unreachable pass is log material only, below the three-strike threshold.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-11-21. No
+human review is claimed for this entry.
