@@ -62,11 +62,11 @@
       "page": "alabama"
     },
     "https://adminrules.idaho.gov/rules/current/16/160326.pdf": {
-      "attempts": 4,
-      "capture": "https://web.archive.org/web/20261119060435/https://adminrules.idaho.gov/rules/current/16/160326.pdf",
-      "capture_submitted": "2026-11-19T060437Z",
+      "attempts": 5,
+      "capture": "https://web.archive.org/web/20261121103443/https://adminrules.idaho.gov/rules/current/16/160326.pdf",
+      "capture_submitted": "2026-11-21T103457Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-19T060437Z",
+      "last_attempt": "2026-11-21T103457Z",
       "last_detail": "stored",
       "last_result": "PENDING",
       "page": "idaho"
@@ -115,9 +115,9 @@
       "capture": "https://web.archive.org/web/20261119060534/https://aging.idaho.gov/about-us/our-staff/",
       "capture_submitted": "2026-11-19T060551Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-19T060551Z",
-      "last_detail": "stored",
-      "last_result": "PENDING",
+      "last_attempt": "2026-11-21T103101Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "idaho"
     },
     "https://aging.idaho.gov/ombudsman-program/": {
@@ -172,11 +172,11 @@
       "page": "south-carolina"
     },
     "https://ahca.myflorida.com/content/download/27067/file/59G-4.200.pdf": {
-      "attempts": 4,
-      "capture": "https://web.archive.org/web/20261118055247/https://ahca.myflorida.com/content/download/27067/file/59G-4.200.pdf",
-      "capture_submitted": "2026-11-18T055301Z",
+      "attempts": 5,
+      "capture": "https://web.archive.org/web/20261121103246/https://ahca.myflorida.com/content/download/27067/file/59G-4.200.pdf",
+      "capture_submitted": "2026-11-21T103301Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-18T055301Z",
+      "last_attempt": "2026-11-21T103301Z",
       "last_detail": "stored",
       "last_result": "PENDING",
       "page": "florida"
@@ -390,13 +390,13 @@
       "page": "district-of-columbia"
     },
     "https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.02": {
-      "attempts": 4,
+      "attempts": 5,
       "capture": "https://web.archive.org/web/20261118055108/https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.02",
       "capture_submitted": "2026-11-18T055121Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-18T055121Z",
-      "last_detail": "stored",
-      "last_result": "PENDING",
+      "last_attempt": "2026-11-21T103106Z",
+      "last_detail": "submit-0",
+      "last_result": "FAILED",
       "page": "district-of-columbia"
     },
     "https://code.dccouncil.gov/us/dc/council/code/sections/44-1003.03": {
@@ -409,11 +409,11 @@
       "page": "district-of-columbia"
     },
     "https://code.dccouncil.gov/us/dc/council/code/sections/7-702.04": {
-      "attempts": 4,
-      "capture": "https://web.archive.org/web/20261118055136/https://code.dccouncil.gov/us/dc/council/code/sections/7-702.04",
-      "capture_submitted": "2026-11-18T055148Z",
+      "attempts": 5,
+      "capture": "https://web.archive.org/web/20261121103121/https://code.dccouncil.gov/us/dc/council/code/sections/7-702.04",
+      "capture_submitted": "2026-11-21T103149Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-18T055148Z",
+      "last_attempt": "2026-11-21T103149Z",
       "last_detail": "stored",
       "last_result": "PENDING",
       "page": "district-of-columbia"
@@ -728,9 +728,9 @@
       "capture": "https://web.archive.org/web/20261119060723/https://dsd.maryland.gov/regulations/Pages/10.07.09.10.aspx",
       "capture_submitted": "2026-11-19T060749Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-19T060749Z",
-      "last_detail": "stored",
-      "last_result": "PENDING",
+      "last_attempt": "2026-11-21T103102Z",
+      "last_detail": "no-playback",
+      "last_result": "FAILED",
       "page": "maryland"
     },
     "https://dsd.maryland.gov/regulations/Pages/10.07.09.11.aspx": {
@@ -738,9 +738,9 @@
       "capture": "https://web.archive.org/web/20261119060837/https://dsd.maryland.gov/regulations/Pages/10.07.09.11.aspx",
       "capture_submitted": "2026-11-19T060903Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-19T060903Z",
-      "last_detail": "stored",
-      "last_result": "PENDING",
+      "last_attempt": "2026-11-21T103103Z",
+      "last_detail": "no-playback",
+      "last_result": "FAILED",
       "page": "maryland"
     },
     "https://dsd.maryland.gov/regulations/Pages/10.07.09.12.aspx": {
@@ -748,9 +748,9 @@
       "capture": "https://web.archive.org/web/20261119060955/https://dsd.maryland.gov/regulations/Pages/10.07.09.12.aspx",
       "capture_submitted": "2026-11-19T061017Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-19T061017Z",
-      "last_detail": "stored",
-      "last_result": "PENDING",
+      "last_attempt": "2026-11-21T103104Z",
+      "last_detail": "no-playback",
+      "last_result": "FAILED",
       "page": "maryland"
     },
     "https://dsd.maryland.gov/regulations/Pages/10.07.09.13.aspx": {
@@ -758,9 +758,9 @@
       "capture": "https://web.archive.org/web/20261120054906/https://dsd.maryland.gov/regulations/Pages/10.07.09.13.aspx",
       "capture_submitted": "2026-11-20T054933Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-20T054933Z",
-      "last_detail": "stored",
-      "last_result": "PENDING",
+      "last_attempt": "2026-11-21T103105Z",
+      "last_detail": "no-playback",
+      "last_result": "FAILED",
       "page": "maryland"
     },
     "https://dss.sd.gov/docs/medicaid/providers/billingmanuals/Institutional/Skilled_Nursing_Facilities_and_Nursing_Facilities.pdf": {
@@ -964,9 +964,9 @@
       "capture": "https://web.archive.org/web/20261118055429/https://health.hawaii.gov/eoa/home/long-term-care-ombudsman/",
       "capture_submitted": "2026-11-18T055456Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-18T055456Z",
-      "last_detail": "stored",
-      "last_result": "PENDING",
+      "last_attempt": "2026-11-21T103057Z",
+      "last_detail": "no-playback",
+      "last_result": "FAILED",
       "page": "hawaii"
     },
     "https://health.hawaii.gov/opppd/department-of-health-administrative-rules-title-11/": {
@@ -979,11 +979,11 @@
       "page": "hawaii"
     },
     "https://health.hawaii.gov/opppd/files/2022/10/11-94.2-2022.pdf": {
-      "attempts": 4,
-      "capture": "https://web.archive.org/web/20261119060116/https://health.hawaii.gov/opppd/files/2022/10/11-94.2-2022.pdf",
-      "capture_submitted": "2026-11-19T060126Z",
+      "attempts": 5,
+      "capture": "https://web.archive.org/web/20261121103421/https://health.hawaii.gov/opppd/files/2022/10/11-94.2-2022.pdf",
+      "capture_submitted": "2026-11-21T103429Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-19T060126Z",
+      "last_attempt": "2026-11-21T103429Z",
       "last_detail": "stored",
       "last_result": "PENDING",
       "page": "hawaii"
@@ -1682,11 +1682,11 @@
       "page": "rhode-island"
     },
     "https://www.aarp.org/legal-counsel-for-elderly/what-we-do/info-2017/dc-long-term-care-ombudsman.html": {
-      "attempts": 4,
-      "capture": "https://web.archive.org/web/20261118055204/https://www.aarp.org/legal-counsel-for-elderly/what-we-do/info-2017/dc-long-term-care-ombudsman.html",
-      "capture_submitted": "2026-11-18T055233Z",
+      "attempts": 5,
+      "capture": "https://web.archive.org/web/20261121103205/https://www.aarp.org/legal-counsel-for-elderly/what-we-do/info-2017/dc-long-term-care-ombudsman.html",
+      "capture_submitted": "2026-11-21T103233Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-18T055233Z",
+      "last_attempt": "2026-11-21T103233Z",
       "last_detail": "stored",
       "last_result": "PENDING",
       "page": "district-of-columbia"
@@ -2248,11 +2248,11 @@
       "page": "michigan"
     },
     "https://www.myflfamilies.com/about/office-inspector-general/appeal-hearings": {
-      "attempts": 4,
-      "capture": "https://web.archive.org/web/20261118055328/https://www.myflfamilies.com/about/office-inspector-general/appeal-hearings",
-      "capture_submitted": "2026-11-18T055345Z",
+      "attempts": 5,
+      "capture": "https://web.archive.org/web/20261121103317/https://www.myflfamilies.com/about/office-inspector-general/appeal-hearings",
+      "capture_submitted": "2026-11-21T103330Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-18T055345Z",
+      "last_attempt": "2026-11-21T103330Z",
       "last_detail": "stored",
       "last_result": "PENDING",
       "page": "florida"
@@ -2525,5 +2525,5 @@
       "page": "wyoming"
     }
   },
-  "updated": "2026-11-20T061221Z"
+  "updated": "2026-11-21T103457Z"
 }
