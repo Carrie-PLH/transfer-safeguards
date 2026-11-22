@@ -2090,3 +2090,30 @@ unreachable pass is log material only, below the three-strike threshold.
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-11-21. No
 human review is claimed for this entry.
+
+## 2026-11-22 (scheduled, portfolio-nightly-qc-review)
+
+- **illinois** — confirmed. Recipe capture (digest 28f20d3e7dc5), 3 sources.
+  Zero failures on both files. Retained — unchanged since 2026-09-06.txt
+  (hash 4e2390b7ef60d815). Promoted. Checked date updated 2026-10-25 ->
+  2026-11-22; page re-rendered.
+- **indiana** — confirmed. Recipe capture (digest 00175a9654b0, unchanged), 5
+  sources. Zero failures on both files. Retained — ordinary retained textual
+  movement from the 2026-10-25 capture (hash 957bc1ef0cbc492b); nothing in
+  the movement affects a quoted span. Promoted. Checked date updated
+  2026-10-25 -> 2026-11-22; page re-rendered.
+- **iowa** — confirmed. Recipe capture (digest db5675492fce, unchanged), 3
+  sources. Zero failures on both files. Retained — ordinary retained textual
+  movement from the 2026-10-27 capture (hash 98d28e2a3e82b5f6). Promoted.
+  Checked date updated 2026-10-27 -> 2026-11-22; page re-rendered.
+
+sync-checked-dates.py corrected 6 derived dates (table + JSON for illinois,
+indiana, iowa). build-status.py: 51/51 baseline, 50/51 full (North Dakota
+gap predates this pass, unchanged). Review cursor advanced past iowa to
+kansas. No queue entries opened — all three confirmed clean.
+
+Pre-existing uncommitted changes found at session start, not made by this
+pass and left untouched: CLAUDE.md, tools/spn.py.
+
+Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-11-22. No
+human review is claimed for this entry.

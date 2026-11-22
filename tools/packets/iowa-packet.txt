@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: iowa
-ASSEMBLED: 2026-10-27
+ASSEMBLED: 2026-11-22
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/iowa.json (recipe digest db5675492fce). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -13,7 +13,7 @@ CAPTURE NOTES:
 - SOURCE 3: transport curl; extractor pdftotext-layout; slice from '441—81.8(249A) Payment procedures.' to '441—81.9(249A) Billing procedures.'; filters none.
   Same host and PDF-running-head pattern as source 1's single-rule PDF, but this is the whole-chapter PDF (441 IAC ch. 81 is Iowa Medicaid's nursing-facility payment chapter) because no single-rule PDF address exists for 81.8 the way it does for 481-58.40. Single column throughout -- unlike Missouri's or Arizona's two-column AAC/CSR renders -- so -layout preserves reading order with no interleaving; verified 2026-09-17 by reading the full extraction start to finish. Rule 81.8 states the Medicaid bed-hold: payment approved 'for periods the resident is absent overnight for purpose of visitation or vacation' up to 18 days per calendar year (81.8(3)"d"), and up to 10 days per calendar month for a hospitalization absence (81.8(3)"e"), with payment withheld unless the resident was a private-pay resident before the hospitalization and returns as a resident. Both anchors are single-occurrence in the chapter PDF (grep-verified against the plain extraction, no table-of-contents duplicate to bisect against, unlike Ohio's or Missouri's captures).
 
-SOURCE 1: 481 IAC 58.40(135C), Involuntary discharge or transfer (nursing facilities) — Iowa Administrative Code (PDF) | https://www.legis.iowa.gov/docs/iac/rule/481.58.40.pdf | source date: none stated on document beyond the IAC chapter running head | retrieved: 2026-10-27
+SOURCE 1: 481 IAC 58.40(135C), Involuntary discharge or transfer (nursing facilities) — Iowa Administrative Code (PDF) | https://www.legis.iowa.gov/docs/iac/rule/481.58.40.pdf | source date: none stated on document beyond the IAC chapter running head | retrieved: 2026-11-22
 IAC                                                                                              Ch 58, p.1
 
 
@@ -213,7 +213,7 @@ transfer to another facility and not as an intrafacility transfer. (II, III)
 [ARC 1752C, IAB 12/10/14, effective 1/14/15; ARC 3523C, IAB 12/20/17, effective 1/24/18; ARC 7033C, IAB 5/31/23, effective
 7/5/23; Editorial change: IAC Supplement 8/5/26]
 
-SOURCE 2: Iowa Department of Health and Human Services — Office of the State Long-Term Care Ombudsman | https://hhs.iowa.gov/family-community/aging-services/ltc-ombudsman | source date: current on retrieval | retrieved: 2026-10-27
+SOURCE 2: Iowa Department of Health and Human Services — Office of the State Long-Term Care Ombudsman | https://hhs.iowa.gov/family-community/aging-services/ltc-ombudsman | source date: current on retrieval | retrieved: 2026-11-22
 Office of the State Long-Term Care Ombudsman
 
  Topics:
@@ -322,7 +322,7 @@ You can also learn more by viewing our LTC Ombudsman Brochure, Resident Rights B
 
 Transfers, Discharges and Facility Closures
 
-Residents have important rights during transfers or discharges. This includes receiving written notice and having the opportunity to appeal. Facilities may only issue a discharge for specific reasons, such as medical needs they cannot meet, safety concerns, nonpayment, certain policy issues, or a facility closure. If you receive a notice—or are concerned about a possible move—contact us. We can explain your rights and help you determine next steps. Learn more about involuntary discharges with the Involuntary Discharge Brochure. Facilities submitting their monthly discharge information may use the Monthly Discharge Tracking Sheet (10.31 KB) .xlsx .
+Residents have important rights during transfers or discharges. This includes receiving written notice and having the opportunity to appeal. Facilities may only issue a discharge for specific reasons, such as medical needs they cannot meet, safety concerns, nonpayment, certain policy issues, or a facility closure. If you receive a notice—or are concerned about a possible move—contact us. We can explain your rights and help you determine next steps. Learn more about involuntary discharges with the Involuntary Discharge Brochure. Facilities submitting their monthly discharge information may use the Monthly Discharge Tracking Sheet (15.38 KB) .xlsx .
 
 If a facility closes, we support residents and families throughout the transition. We assist with planning, understanding rights, selecting a new placement, and coordinating with the facility to help ensure the move is as safe and smooth as possible. For more guidance on what to expect during a closure, view the Facility Closure Brochure and Facility Closure Video.
 
@@ -624,7 +624,7 @@ Fresh Conversations
 
 Support Services
 
-SOURCE 3: 441 Iowa Administrative Code chapter 81 (Human Services — Nursing Facilities), rule 81.8(249A), Payment procedures (PDF) | https://www.legis.iowa.gov/docs/iac/chapter/05-13-2026.441.81.pdf | source date: [ARC 9279C, IAB 5/14/25, effective 7/1/25] | retrieved: 2026-10-27
+SOURCE 3: 441 Iowa Administrative Code chapter 81 (Human Services — Nursing Facilities), rule 81.8(249A), Payment procedures (PDF) | https://www.legis.iowa.gov/docs/iac/chapter/05-13-2026.441.81.pdf | source date: [ARC 9279C, IAB 5/14/25, effective 7/1/25] | retrieved: 2026-11-22
 441—81.8(249A) Payment procedures.
     81.8(1) Method of payment. Except for Medicaid accountability measures payment established in
 paragraph 81.5(16)“g,” facilities will be reimbursed under a modified price-based vendor payment
