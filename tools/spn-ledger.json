@@ -37,10 +37,11 @@
       "page": "florida"
     },
     "http://www.oltco.org/contact-us/": {
-      "attempts": 3,
-      "last_attempt": "2026-11-14T052913Z",
-      "last_detail": "submit-401",
-      "last_result": "SKIPPED",
+      "attempts": 4,
+      "last_attempt": "2026-11-22T055427Z",
+      "last_detail": "error:not-acceptable",
+      "last_message": "The target server replied that the request is not acceptable. http://www.oltco.org/contact-us/. (HTTP status=406)",
+      "last_result": "FAILED",
       "page": "oregon"
     },
     "http://www.wvseniorservices.gov/StayingSafe/LongTermCareOmbudsmanProgram/tabid/81/Default.aspx": {
@@ -66,9 +67,9 @@
       "capture": "https://web.archive.org/web/20261121103443/https://adminrules.idaho.gov/rules/current/16/160326.pdf",
       "capture_submitted": "2026-11-21T103457Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-21T103457Z",
-      "last_detail": "stored",
-      "last_result": "PENDING",
+      "last_attempt": "2026-11-22T055410Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "idaho"
     },
     "https://adminrules.utah.gov/public/rule/R410-14/Current%20Rules": {
@@ -176,9 +177,9 @@
       "capture": "https://web.archive.org/web/20261121103246/https://ahca.myflorida.com/content/download/27067/file/59G-4.200.pdf",
       "capture_submitted": "2026-11-21T103301Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-21T103301Z",
-      "last_detail": "stored",
-      "last_result": "PENDING",
+      "last_attempt": "2026-11-22T055405Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "florida"
     },
     "https://akoltco.org/": {
@@ -270,10 +271,13 @@
       "page": "washington"
     },
     "https://app.leg.wa.gov/WAC/default.aspx?cite=388-97-0120": {
-      "attempts": 3,
-      "last_attempt": "2026-11-15T153018Z",
-      "last_detail": "playback-429",
-      "last_result": "SKIPPED",
+      "attempts": 4,
+      "capture": "https://web.archive.org/web/20261122060120/https://app.leg.wa.gov/WAC/default.aspx?cite=388-97-0120",
+      "capture_submitted": "2026-11-22T060147Z",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-11-22T060147Z",
+      "last_detail": "stored",
+      "last_result": "PENDING",
       "page": "washington"
     },
     "https://app.leg.wa.gov/WAC/default.aspx?cite=388-97-0160": {
@@ -413,9 +417,9 @@
       "capture": "https://web.archive.org/web/20261121103121/https://code.dccouncil.gov/us/dc/council/code/sections/7-702.04",
       "capture_submitted": "2026-11-21T103149Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-21T103149Z",
-      "last_detail": "stored",
-      "last_result": "PENDING",
+      "last_attempt": "2026-11-22T055403Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "district-of-columbia"
     },
     "https://codeofarrules.arkansas.gov/Rules/Rule?levelType=section&titleID=20&chapterID=38&subChapterID=50&partID=1233&subPartID=7657&sectionID=50037": {
@@ -650,11 +654,12 @@
       "page": "utah"
     },
     "https://dhs.sd.gov/en/ltss/ombudsman-program": {
-      "attempts": 3,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-14T053003Z",
-      "last_detail": "submit-401",
-      "last_result": "SKIPPED",
+      "attempts": 4,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-22T055635Z",
+      "last_detail": "error:no-request",
+      "last_message": "The target server blocks access to https://dhs.sd.gov/en/ltss/ombudsman-program. (HTTP status=403)",
+      "last_result": "FAILED",
       "page": "south-dakota"
     },
     "https://dhss.delaware.gov/dhcq/dhcq/contact/": {
@@ -764,10 +769,13 @@
       "page": "maryland"
     },
     "https://dss.sd.gov/docs/medicaid/providers/billingmanuals/Institutional/Skilled_Nursing_Facilities_and_Nursing_Facilities.pdf": {
-      "attempts": 3,
-      "last_attempt": "2026-11-14T053015Z",
-      "last_detail": "submit-401",
-      "last_result": "SKIPPED",
+      "attempts": 4,
+      "capture": "https://web.archive.org/web/20261122055648/https://dss.sd.gov/docs/medicaid/providers/billingmanuals/Institutional/Skilled_Nursing_Facilities_and_Nursing_Facilities.pdf",
+      "capture_submitted": "2026-11-22T055703Z",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-11-22T055703Z",
+      "last_detail": "stored",
+      "last_result": "PENDING",
       "page": "south-dakota"
     },
     "https://dss.sd.gov/keyresources/adminhearings/fairhearing.aspx": {
@@ -789,19 +797,21 @@
       "page": "florida"
     },
     "https://eohhs.ri.gov/media/45546/download?language=en": {
-      "attempts": 3,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-14T052925Z",
-      "last_detail": "submit-401",
-      "last_result": "SKIPPED",
+      "attempts": 4,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-22T055455Z",
+      "last_detail": "error:no-request",
+      "last_message": "The target server blocks access to https://eohhs.ri.gov/media/45546/download?language=en. (HTTP status=403)",
+      "last_result": "FAILED",
       "page": "rhode-island"
     },
     "https://eohhs.ri.gov/reference-center/eohhs-appeals-office": {
-      "attempts": 3,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-14T052938Z",
-      "last_detail": "submit-401",
-      "last_result": "SKIPPED",
+      "attempts": 4,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-22T055523Z",
+      "last_detail": "error:no-request",
+      "last_message": "The target server blocks access to https://eohhs.ri.gov/reference-center/eohhs-appeals-office. (HTTP status=403)",
+      "last_result": "FAILED",
       "page": "rhode-island"
     },
     "https://fhb.hhs.texas.gov/handbooks/fair-fraud-hearings-handbook/1300-notice": {
@@ -863,9 +873,9 @@
       "capture": "https://web.archive.org/web/20261120055217/https://gc.nh.gov/rsa/html/XI/151/151-26.htm",
       "capture_submitted": "2026-11-20T055229Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-20T055229Z",
-      "last_detail": "stored",
-      "last_result": "PENDING",
+      "last_attempt": "2026-11-22T055358Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "new-hampshire"
     },
     "https://goea.louisiana.gov/services/louisiana-ombudsman-program/": {
@@ -983,9 +993,9 @@
       "capture": "https://web.archive.org/web/20261121103421/https://health.hawaii.gov/opppd/files/2022/10/11-94.2-2022.pdf",
       "capture_submitted": "2026-11-21T103429Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-21T103429Z",
-      "last_detail": "stored",
-      "last_result": "PENDING",
+      "last_attempt": "2026-11-22T055408Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "hawaii"
     },
     "https://health.mo.gov/seniors/ombudsman/": {
@@ -1406,11 +1416,12 @@
       "page": "idaho"
     },
     "https://oha.ri.gov/resources/fraud-and-abuse/ombudsman-program": {
-      "attempts": 3,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-14T052950Z",
-      "last_detail": "submit-401",
-      "last_result": "SKIPPED",
+      "attempts": 4,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-22T055607Z",
+      "last_detail": "error:no-request",
+      "last_message": "The target server blocks access to https://oha.ri.gov/resources/fraud-and-abuse/ombudsman-program. (HTTP status=403)",
+      "last_result": "FAILED",
       "page": "rhode-island"
     },
     "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/19-06_NursingHomeTransfersandDischarge_cap_03292022.pdf": {
@@ -1477,19 +1488,21 @@
       "page": "connecticut"
     },
     "https://publications.tnsosfiles.com/rules/1200/1200-08/1200-08-06.20210818.pdf": {
-      "attempts": 3,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-14T053028Z",
-      "last_detail": "submit-401",
-      "last_result": "SKIPPED",
+      "attempts": 4,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-22T055833Z",
+      "last_detail": "error:no-request",
+      "last_message": "The target server blocks access to https://publications.tnsosfiles.com/rules/1200/1200-08/1200-08-06.20210818.pdf. (HTTP status=403)",
+      "last_result": "FAILED",
       "page": "tennessee"
     },
     "https://publications.tnsosfiles.com/rules/1200/1200-13/1200-13-02.20260629.pdf": {
-      "attempts": 3,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-14T053041Z",
-      "last_detail": "submit-401",
-      "last_result": "SKIPPED",
+      "attempts": 4,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-22T055902Z",
+      "last_detail": "error:no-request",
+      "last_message": "The target server blocks access to https://publications.tnsosfiles.com/rules/1200/1200-13/1200-13-02.20260629.pdf. (HTTP status=403)",
+      "last_result": "FAILED",
       "page": "tennessee"
     },
     "https://regs.health.ny.gov/content/section-4153-residents-rights": {
@@ -1686,9 +1699,9 @@
       "capture": "https://web.archive.org/web/20261121103205/https://www.aarp.org/legal-counsel-for-elderly/what-we-do/info-2017/dc-long-term-care-ombudsman.html",
       "capture_submitted": "2026-11-21T103233Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-21T103233Z",
-      "last_detail": "stored",
-      "last_result": "PENDING",
+      "last_attempt": "2026-11-22T055404Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "district-of-columbia"
     },
     "https://www.adminlaw.la.gov/areas-of-law/health.html": {
@@ -1723,9 +1736,9 @@
       "capture": "https://web.archive.org/web/20261120055627/https://www.aging.nm.gov/contact-us/",
       "capture_submitted": "2026-11-20T055652Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-20T055652Z",
-      "last_detail": "stored",
-      "last_result": "PENDING",
+      "last_attempt": "2026-11-22T055359Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "new-mexico"
     },
     "https://www.aging.nm.gov/ombudsman/": {
@@ -1733,9 +1746,9 @@
       "capture": "https://web.archive.org/web/20261120055708/https://www.aging.nm.gov/ombudsman/",
       "capture_submitted": "2026-11-20T055735Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-20T055735Z",
-      "last_detail": "stored",
-      "last_result": "PENDING",
+      "last_attempt": "2026-11-22T055359Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "new-mexico"
     },
     "https://www.akleg.gov/basis/aac.asp?media=print&secStart=7.12.250&secEnd=7.12.290": {
@@ -2008,10 +2021,13 @@
       "page": "north-dakota"
     },
     "https://www.hhs.texas.gov/sites/default/files/documents/pl2022-25.pdf": {
-      "attempts": 3,
-      "last_attempt": "2026-11-14T053106Z",
-      "last_detail": "submit-401",
-      "last_result": "SKIPPED",
+      "attempts": 4,
+      "capture": "https://web.archive.org/web/20261122060030/https://www.hhs.texas.gov/sites/default/files/documents/pl2022-25.pdf",
+      "capture_submitted": "2026-11-22T060046Z",
+      "consecutive_hard_failures": 0,
+      "last_attempt": "2026-11-22T060046Z",
+      "last_detail": "stored",
+      "last_result": "PENDING",
       "page": "texas"
     },
     "https://www.ilga.gov/legislation/ILCS/details?MajorTopic=REGULATION&Chapter=HEALTH+FACILITIES+AND+REGULATION&ActName=Nursing+Home+Care+Act.&ActID=1225&ChapterID=21&ChapAct=210+ILCS+45/&SeqStart=17400000&SeqEnd=19900000&Print=True": {
@@ -2252,9 +2268,9 @@
       "capture": "https://web.archive.org/web/20261121103317/https://www.myflfamilies.com/about/office-inspector-general/appeal-hearings",
       "capture_submitted": "2026-11-21T103330Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-21T103330Z",
-      "last_detail": "stored",
-      "last_result": "PENDING",
+      "last_attempt": "2026-11-22T055406Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "florida"
     },
     "https://www.ncdhhs.gov/divisions/aging/long-term-care-ombudsman": {
@@ -2467,16 +2483,18 @@
       "capture": "https://web.archive.org/web/20261120055839/https://www.srca.nm.gov/parts/title08/08.370.0016.html",
       "capture_submitted": "2026-11-20T055905Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-20T055905Z",
-      "last_detail": "stored",
-      "last_result": "PENDING",
+      "last_attempt": "2026-11-22T055401Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "new-mexico"
     },
     "https://www.tn.gov/content/dam/tn/tenncare/documents/NFInvoluntaryDischargeNotice.pdf": {
-      "attempts": 3,
-      "last_attempt": "2026-11-14T053054Z",
-      "last_detail": "submit-401",
-      "last_result": "SKIPPED",
+      "attempts": 4,
+      "consecutive_hard_failures": 1,
+      "last_attempt": "2026-11-22T060018Z",
+      "last_detail": "error:no-request",
+      "last_message": "The target server blocks access to https://www.tn.gov/content/dam/tn/tenncare/documents/NFInvoluntaryDischargeNotice.pdf. (HTTP status=403)",
+      "last_result": "FAILED",
       "page": "tennessee"
     },
     "https://www.tn.gov/tenncare/long-term-services-supports/involuntary-discharge-and-transfer-appeals.html": {
@@ -2525,5 +2543,5 @@
       "page": "wyoming"
     }
   },
-  "updated": "2026-11-21T103457Z"
+  "updated": "2026-11-22T060147Z"
 }
