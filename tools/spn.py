@@ -453,6 +453,23 @@ def is_pending(ledger, url):
     return bool(rec and rec.get("last_result") == "PENDING" and rec.get("capture"))
 
 
+def is_confirmed(ledger, url, page=None):
+    """True when a capture for this source has been read back (OK) -- for
+    `page`, if given, which must be the page the ledger record belongs to. If
+    that page does not link it yet, the capture is waiting for its change-log
+    entry, not for another capture: capturing again would overwrite the
+    confirmed record with a new PENDING one and the entry would never be
+    written (the repeat-capture loop found 2026-11-21).
+
+    The page test matters because the ledger keeps one record per URL, and a
+    source several pages link (a system-wide policy, a state code) belongs to
+    whichever page captured it first. Another page linking the same URL gets
+    no entry from that record, so for it the source is still a candidate."""
+    rec = ledger["sources"].get(url)
+    return bool(rec and rec.get("last_result") == "OK" and rec.get("capture")
+                and (page is None or rec.get("page") == page))
+
+
 def pending_records(ledger, slug=None):
     """[(url, rec)] awaiting confirmation, oldest submission first."""
     rows = [(url, rec) for url, rec in ledger["sources"].items()
@@ -900,7 +917,10 @@ def select(ledger, slug, retry_blocked):
     skipped_pending = []
     for page_slug, info in scan_all(slug).items():
         for url in info["needed"]:
-            if is_pending(ledger, url):
+            if is_pending(ledger, url) or is_confirmed(ledger, url, page_slug):
+                # A confirmed (OK) source lands here only when its page entry
+                # was not written -- a page `record` skipped, or --no-record.
+                # It needs that entry, not a second capture.
                 # A capture is already stored for this source and is waiting to
                 # be read back. Capturing it again would spend the budget on a
                 # source that already has what it needs, and --retry-blocked
@@ -1004,6 +1024,13 @@ def cmd_run(args):
     else:
         confirmed_pages = run_confirmation(ledger, args.slug)
 
+    # Write the entries for what was just confirmed *before* choosing what to
+    # capture. Until 2026-11-21 this ran at the end of the pass, so a source
+    # confirmed a minute earlier still looked uncaptured to select(), was
+    # captured again, and its OK record was overwritten with PENDING before
+    # the recording step could see it: confirmed nightly, never on a page.
+    record_confirmed(ledger, confirmed_pages, args.no_record)
+
     picked, blocked, cooling, pending = select(ledger, args.slug,
                                                args.retry_blocked)
     ceiling = args.max_attempts or (args.budget * ATTEMPT_CEILING_FACTOR)
@@ -1017,7 +1044,6 @@ def cmd_run(args):
             print("%d source(s) held back as blocked." % len(blocked))
         if cooling:
             print("%d source(s) resting after a recent failure." % len(cooling))
-        record_confirmed(ledger, confirmed_pages, args.no_record)
         return
 
     print("Target: %d capture(s) from %d candidate(s), "
@@ -1077,7 +1103,6 @@ def cmd_run(args):
         print("None of them is a capture on the record yet: each is in the "
               "ledger as PENDING, on no page, until the next pass reads it "
               "back.")
-    record_confirmed(ledger, confirmed_pages, args.no_record)
 
 
 def cmd_confirm(args):
@@ -1289,6 +1314,21 @@ def self_test():
         _p2, _b2, _c2, pend2 = select(led4, None, True)
         check([u for _, u in pend2] == ["https://x.edu/p"],
               "--retry-blocked does not override a pending")
+        # Repeat-capture loop (2026-11-21): a source confirmed this pass but
+        # not yet on its page must not be captured again, or its OK record
+        # is overwritten with PENDING and its entry is never written.
+        rec5 = note_attempt(led4, "https://x.edu/q", "x", "OK", "playback")
+        rec5["capture"] = "https://web.archive.org/web/2/https://x.edu/q"
+        check(is_confirmed(led4, "https://x.edu/q"), "an OK capture reads as confirmed")
+        picked5, _b5, _c5, pend5 = select(led4, None, False)
+        check("https://x.edu/q" not in [u for _, u in picked5],
+              "a confirmed source awaiting its entry is never captured again")
+        check(sorted(u for _, u in pend5) == ["https://x.edu/p", "https://x.edu/q"],
+              "select holds a confirmed-but-unrecorded source back")
+        rec5["page"] = "y"
+        picked6, _b6, _c6, _p6 = select(led4, None, False)
+        check("https://x.edu/q" in [u for _, u in picked6],
+              "a source confirmed for another page stays a candidate here")
     finally:
         globals()["scan_all"] = saved_scan
 

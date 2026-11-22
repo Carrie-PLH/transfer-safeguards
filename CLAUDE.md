@@ -753,7 +753,10 @@ run it twice in a pass, do not raise the budget, and do not request captures
 by any other means.
 
 **The pass writes the change-log entry itself (owner decision, 2026-10-06,
-portfolio-wide).** `spn.py run` ends by calling `spn.py record`, which writes
+portfolio-wide).** `spn.py run` calls `spn.py record` as soon as it has confirmed the
+previous pass's pendings, before it captures (moved there 2026-11-21; at
+the end of the pass it let the capture half re-capture, and so un-confirm,
+what it had just confirmed), which writes
 one dated automated-pass entry per page for the captures it confirmed —
 placed at the top of section 04 of `states/<slug>.md` (or `federal.md`),
 newest first, after which the page is re-rendered through `render-state.py`,
