@@ -275,9 +275,9 @@
       "capture": "https://web.archive.org/web/20261122060120/https://app.leg.wa.gov/WAC/default.aspx?cite=388-97-0120",
       "capture_submitted": "2026-11-22T060147Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-22T060147Z",
-      "last_detail": "stored",
-      "last_result": "PENDING",
+      "last_attempt": "2026-11-23T054445Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "washington"
     },
     "https://app.leg.wa.gov/WAC/default.aspx?cite=388-97-0160": {
@@ -773,9 +773,9 @@
       "capture": "https://web.archive.org/web/20261122055648/https://dss.sd.gov/docs/medicaid/providers/billingmanuals/Institutional/Skilled_Nursing_Facilities_and_Nursing_Facilities.pdf",
       "capture_submitted": "2026-11-22T055703Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-22T055703Z",
-      "last_detail": "stored",
-      "last_result": "PENDING",
+      "last_attempt": "2026-11-23T054442Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "south-dakota"
     },
     "https://dss.sd.gov/keyresources/adminhearings/fairhearing.aspx": {
@@ -2025,9 +2025,9 @@
       "capture": "https://web.archive.org/web/20261122060030/https://www.hhs.texas.gov/sites/default/files/documents/pl2022-25.pdf",
       "capture_submitted": "2026-11-22T060046Z",
       "consecutive_hard_failures": 0,
-      "last_attempt": "2026-11-22T060046Z",
-      "last_detail": "stored",
-      "last_result": "PENDING",
+      "last_attempt": "2026-11-23T054444Z",
+      "last_detail": "ok",
+      "last_result": "OK",
       "page": "texas"
     },
     "https://www.ilga.gov/legislation/ILCS/details?MajorTopic=REGULATION&Chapter=HEALTH+FACILITIES+AND+REGULATION&ActName=Nursing+Home+Care+Act.&ActID=1225&ChapterID=21&ChapAct=210+ILCS+45/&SeqStart=17400000&SeqEnd=19900000&Print=True": {
@@ -2543,5 +2543,5 @@
       "page": "wyoming"
     }
   },
-  "updated": "2026-11-22T060147Z"
+  "updated": "2026-11-23T054445Z"
 }
