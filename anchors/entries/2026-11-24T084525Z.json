@@ -1,0 +1,16 @@
+{
+ "entry": {
+  "file_count": 435,
+  "id": "2026-11-24T084525Z",
+  "manifest_file": "manifests/2026-11-24T084525Z.txt",
+  "manifest_sha256": "80399f30ad6048f0cf0d0108fbe26c0fd83ea05467710b3b6b16b8b8d5868b19",
+  "note": "nightly review (portfolio QC): kansas/louisiana confirmed, kentucky unreachable",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "0e85d9ee5de61a3e1bfef4af843ba84b6459a735a68329384244f07d9418e787",
+  "repo": "transfer-safeguards",
+  "utc": "2026-11-24T08:45:25+00:00"
+ },
+ "entry_sha256": "5d33c8e5e8ed289873d75b33d2bb2ea2957e113b21ce60a0b198fffa89f54c2b"
+}
