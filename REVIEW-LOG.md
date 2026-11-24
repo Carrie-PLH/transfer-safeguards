@@ -2117,3 +2117,37 @@ pass and left untouched: CLAUDE.md, tools/spn.py.
 
 Reviewer: scheduled pass (portfolio-nightly-qc-review), 2026-11-22. No
 human review is claimed for this entry.
+
+## 2026-11-24 — nightly review: kansas, kentucky, louisiana (scheduled, portfolio-nightly-qc-review)
+
+Cursor at kansas. Selected kansas, kentucky, louisiana (next two
+alphabetically).
+
+- kansas: CONFIRMED. Recipe capture, 2 of 3 sources direct; source 3
+  (ombudsman.ks.gov .../involuntary-discharge) fetched live through the
+  Claude Browser pane (document.body.innerText, unedited, matching the
+  recipe notes' required extraction) and supplied with `--supply 3=`. All 3
+  sources captured (digest 405261adf039); checked with its one supplement
+  (tools/packets/kansas-packet-kancare.txt). Zero failures on both pages.
+  Retained (hash 7c5c385f24fcc650), promoted. Checked date -> 2026-11-24.
+- kentucky: UNREACHABLE, second consecutive occurrence. Recipe capture, 2 of
+  3 sources. SOURCE 3 (www.chfs.ky.gov/agencies/dail/Pages/ltcomb.aspx)
+  returned HTTP 404 to the documented transport (curl, browser user-agent),
+  confirmed with a direct curl against the exact recipe URL and user-agent
+  (404, not a redirect-chain artifact). No alternate transport is
+  documented for this source. The 2026-10-27 pass logged this same source's
+  first occurrence; this is the second consecutive lap, not yet the
+  third-occurrence threshold. No capture retained (incomplete evidence),
+  checked date untouched, page not modified. Not queued.
+- louisiana: CONFIRMED. Recipe capture, 4 sources, no supplements. Zero
+  failures on both pages. Retained (hash 155feeb9f48f4690), promoted --
+  source 2 shrank from 7395 to 7189 chars (whitespace collapse, fetch
+  differed too) but fidelity still passed, recorded as retained textual
+  movement that did not move any published fact, not independently
+  re-analyzed. Checked date -> 2026-11-24.
+
+Cursor advanced: kansas -> maine (past louisiana, the third selected unit).
+sync-checked-dates.py: 4 derived dates corrected (table + json, kansas/
+louisiana). build-status.py: baseline 51/51, full 50/51 (pre-existing
+Hawaii backfill gap, unaffected by this pass). No queue entries opened or
+bumped this pass.

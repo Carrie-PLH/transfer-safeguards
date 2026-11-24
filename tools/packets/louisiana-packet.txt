@@ -1,7 +1,7 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: louisiana
-ASSEMBLED: 2026-10-27
+ASSEMBLED: 2026-11-24
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/louisiana.json (recipe digest 733a555d0a54). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
@@ -15,7 +15,7 @@ CAPTURE NOTES:
 - SOURCE 4: transport curl; extractor pdftotext-layout; slice from 'II. Leave Days for Residents of Nursing Facilities' to 'TN: 24-0008 Approval Date: May 29, 2024'; filters none.
   Added 2026-09-15, deepening the state to a full page. The slice covers only section II (nursing facility leave/bed-hold days), stopping at the page footer that closes it; section I (ICF/IID) precedes it and is out of scope, and the pages after this excerpt (evacuation-related bed-hold provisions, further back in the same attachment) are a poor scan with visible OCR corruption in the served PDF -- letters dropped, ligatures fused ('ofabsence', 'retum'), diacritics inserted into plain English words -- and are not captured as quotable text for that reason; the ordinary hospital/home leave-day policy this page needs sits entirely in the clean section captured here. 'TN: 24-0008 Approval Date: May 29, 2024' is the transmittal footer text and appears twice in the document with different internal spacing (once after section I, once after section II, whitespace-normalized alike); the slice's 'to' anchor matches the first occurrence after 'from', which is section II's own footer, by construction of the search order rather than an explicit occurrence key.
 
-SOURCE 1: LAC Title 48 Part I, §9775, Transfer and/or Discharge of the Resident (excerpt from the Department of Health's published nursing facility standards) | https://ldh.la.gov/assets/medicaid/hss/docs/NH/NH_Regulations/NF_regs_as_of_3-14-22.pdf | source date: Louisiana Administrative Code February 2022; §9775 historical note LR 42:1911 (November 2016) | retrieved: 2026-10-27
+SOURCE 1: LAC Title 48 Part I, §9775, Transfer and/or Discharge of the Resident (excerpt from the Department of Health's published nursing facility standards) | https://ldh.la.gov/assets/medicaid/hss/docs/NH/NH_Regulations/NF_regs_as_of_3-14-22.pdf | source date: Louisiana Administrative Code February 2022; §9775 historical note LR 42:1911 (November 2016) | retrieved: 2026-11-24
 Title 48, Part I
 Louisiana regarding visitation in a nursing facility during a           family member or other designated person tests positive for
 declared PHE.                                                           an infectious agent or infectious disease;
@@ -170,10 +170,12 @@ state long term care ombudsman;
 
 Louisiana Administrative Code                   February 2022         150
 
-SOURCE 2: Louisiana Governor's Office of Elderly Affairs — Louisiana Ombudsman Program | https://goea.louisiana.gov/services/louisiana-ombudsman-program/ | source date: none stated on page | retrieved: 2026-10-27
+SOURCE 2: Louisiana Governor's Office of Elderly Affairs — Louisiana Ombudsman Program | https://goea.louisiana.gov/services/louisiana-ombudsman-program/ | source date: none stated on page | retrieved: 2026-11-24
 An official Louisiana.gov website.
 
 Here's how you know
+
+The Governor's Office of Elderly Affairs will be closed on November 26th and 27th in observance of the Thanksgiving holiday.
 
 The .gov means it’s official.
 
@@ -209,19 +211,9 @@ The https:// ensures that you are connecting to the official website and that an
 
  Events
 
- 2024 Hurricane Season
-
  Older Americans Month - May
 
  LEBA Quarterly Meeting
-
- Ageism Awareness Day
-
- Financial Exploitation Awareness Month
-
- EBRCOA Drive Thru Food Giveaway
-
- National Senior Nutrition Month
 
  World Elder Abuse Awareness Day
 
@@ -236,8 +228,6 @@ The https:// ensures that you are connecting to the official website and that an
  ADRCLA.org
 
  Caregiver Resources
-
- GOEA Policy & Procedure Manual
 
  GOEA Training
 
@@ -291,19 +281,9 @@ Human Resources
 
  Events
 
-2024 Hurricane Season
-
 Older Americans Month - May
 
 LEBA Quarterly Meeting
-
-Ageism Awareness Day
-
-Financial Exploitation Awareness Month
-
-EBRCOA Drive Thru Food Giveaway
-
-National Senior Nutrition Month
 
 World Elder Abuse Awareness Day
 
@@ -318,8 +298,6 @@ Newsfeed Archive
 ADRCLA.org
 
 Caregiver Resources
-
-GOEA Policy & Procedure Manual
 
 GOEA Training
 
@@ -509,9 +487,9 @@ Beverly Parker, Ombudsman Coordinator
 
 Caddo Council on Aging
 
-1700 Buckner St., Suite 240
+6005 Financial Plaza
 
-Shreveport, LA 71101
+Shreveport, LA 71129
 
 Office: (318) 676-7900 or (800) 256-3003
 
@@ -634,7 +612,7 @@ Fax: (225) 342-7133
 
 © . All rights reserved.
 
-SOURCE 3: Louisiana Division of Administrative Law — Areas of Law: Health | https://www.adminlaw.la.gov/areas-of-law/health.html | source date: none stated on page | retrieved: 2026-10-27
+SOURCE 3: Louisiana Division of Administrative Law — Areas of Law: Health | https://www.adminlaw.la.gov/areas-of-law/health.html | source date: none stated on page | retrieved: 2026-11-24
 Skip to main content
 
  Home
@@ -766,7 +744,7 @@ Fax
 
  Contact
 
-SOURCE 4: Louisiana Medicaid State Plan, Attachment 4.19-C — Methods for Payment for Reserving Beds During a Beneficiary's Absence from an Inpatient Facility (excerpt) | https://ldh.la.gov/assets/medicaid/StatePlan/Sec4/Attachment4.19C.pdf | source date: TN: 24-0008, Approval Date: May 29, 2024, Effective Date: February 20, 2024 | retrieved: 2026-10-27
+SOURCE 4: Louisiana Medicaid State Plan, Attachment 4.19-C — Methods for Payment for Reserving Beds During a Beneficiary's Absence from an Inpatient Facility (excerpt) | https://ldh.la.gov/assets/medicaid/StatePlan/Sec4/Attachment4.19C.pdf | source date: TN: 24-0008, Approval Date: May 29, 2024, Effective Date: February 20, 2024 | retrieved: 2026-11-24
 II.   Leave Days for Residents of Nursing Facilities
       A.      For each Medicaid beneficiary, nursing facilities shall be reimbursed for up to seven hospital leave
               of absence days per occurrence per year, and 15 home leave of absence days per year when
