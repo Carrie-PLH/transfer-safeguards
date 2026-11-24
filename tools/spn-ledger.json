@@ -73,23 +73,26 @@
       "page": "idaho"
     },
     "https://adminrules.utah.gov/public/rule/R410-14/Current%20Rules": {
-      "attempts": 3,
-      "last_attempt": "2026-11-15T152037Z",
+      "attempts": 4,
+      "last_attempt": "2026-11-24T055152Z",
       "last_detail": "error:not-found",
+      "last_message": "The target server cannot find https://adminrules.utah.gov/public/rule/R410-14/Current%20Rules. (HTTP status=404)",
       "last_result": "FAILED",
       "page": "utah"
     },
     "https://adminrules.utah.gov/public/rule/R414-504/Current%20Rules": {
-      "attempts": 3,
-      "last_attempt": "2026-11-15T152227Z",
+      "attempts": 4,
+      "last_attempt": "2026-11-24T055221Z",
       "last_detail": "error:not-found",
+      "last_message": "The target server cannot find https://adminrules.utah.gov/public/rule/R414-504/Current%20Rules. (HTTP status=404)",
       "last_result": "FAILED",
       "page": "utah"
     },
     "https://adminrules.utah.gov/public/rule/R432-150/Current%20Rules": {
-      "attempts": 3,
-      "last_attempt": "2026-11-15T152245Z",
+      "attempts": 4,
+      "last_attempt": "2026-11-24T055319Z",
       "last_detail": "error:not-found",
+      "last_message": "The target server cannot find https://adminrules.utah.gov/public/rule/R432-150/Current%20Rules. (HTTP status=404)",
       "last_result": "FAILED",
       "page": "utah"
     },
@@ -697,16 +700,18 @@
       "page": "vermont"
     },
     "https://docs.legis.wisconsin.gov/code/admin_code/dhs/101/107/09": {
-      "attempts": 3,
-      "last_attempt": "2026-11-15T153103Z",
+      "attempts": 4,
+      "last_attempt": "2026-11-24T055419Z",
       "last_detail": "error:gateway-timeout",
+      "last_message": "The target server didn't respond in time for https://docs.legis.wisconsin.gov/code/admin_code/dhs/101/107/09. Please try again later. (HTTP status=504)",
       "last_result": "FAILED",
       "page": "wisconsin"
     },
     "https://docs.legis.wisconsin.gov/code/admin_code/dhs/110/132/V/53": {
-      "attempts": 3,
-      "last_attempt": "2026-11-15T153147Z",
+      "attempts": 4,
+      "last_attempt": "2026-11-24T055517Z",
       "last_detail": "error:gateway-timeout",
+      "last_message": "The target server didn't respond in time for https://docs.legis.wisconsin.gov/code/admin_code/dhs/110/132/V/53. Please try again later. (HTTP status=504)",
       "last_result": "FAILED",
       "page": "wisconsin"
     },
@@ -2543,5 +2548,5 @@
       "page": "wyoming"
     }
   },
-  "updated": "2026-11-23T054445Z"
+  "updated": "2026-11-24T055517Z"
 }
