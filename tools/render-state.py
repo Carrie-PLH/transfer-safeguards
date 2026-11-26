@@ -150,7 +150,7 @@ def render(slug):
         canonical = f'https://roomandrecourse.com/states/{slug}/'
     federal_href = '/federal/'
     if federal:
-        desc = 'The federal floor for nursing-home involuntary transfer and discharge — 42 CFR 483.15(c), 42 CFR part 431 subpart E, and CMS guidance — quoted and linked to first-party sources.'
+        desc = 'The federal floor for nursing-home involuntary transfer and discharge: 42 CFR 483.15(c), 42 CFR part 431 subpart E and CMS guidance, quoted and linked.'
         limits = 'Reference information, not legal or medical advice. Independent of every facility and operator, of CMS and every state agency, and of the ombudsman programs.'
     else:
         desc = describe(sections, f'{state} nursing-home involuntary transfer and discharge procedure, quoted and linked to first-party sources.')
