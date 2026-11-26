@@ -2151,3 +2151,37 @@ sync-checked-dates.py: 4 derived dates corrected (table + json, kansas/
 louisiana). build-status.py: baseline 51/51, full 50/51 (pre-existing
 Hawaii backfill gap, unaffected by this pass). No queue entries opened or
 bumped this pass.
+
+## 2026-11-26 — nightly review (portfolio-nightly-qc-review): maine, maryland, massachusetts — two confirmed, one drift
+
+Batch selected from cursor maine (next two alphabetically).
+
+- **maine** — confirmed. Fresh capture (7 sources, recipe 0f83b9c046a2) vs
+  both files: 0 failures each. Unchanged since 2026-10-27 (hash
+  16c82f4b5f6bde79). Checked date updated to 2026-11-26; page re-rendered.
+- **maryland** — confirmed. Fresh capture (6 sources, recipe 094cd75387b1)
+  vs both files: 0 failures each. Retained and promoted (hash
+  449927651c3bd03c). Checked date updated to 2026-11-26; page re-rendered.
+- **massachusetts — DRIFT.** Fresh capture (3 sources, recipe f2c8a6194960)
+  vs both files, evidence set resolved via packet-set.py (includes the
+  bedhold and regs supplements): 2 failures each — a QUOTE and an ADDRESS
+  failure, both on the same fact. The page's own prose records a published
+  discrepancy on SOURCE 2 (mass.gov's MassHealth appeals page): the body
+  text gives "1 Enterprise Drive, 3rd Floor, Quincy, MA 02171" as the Board
+  of Hearings' address while "the same page's contact block gives a
+  different mailing address, '100 Hancock Street, 6th Floor, Quincy, MA
+  02171'. Both are shown as published." The fresh capture's Mailing
+  Address contact widget now reads "1 Enterprise Drive, 3rd Floor, Quincy,
+  MA 02171" — the same address already quoted from the body. The 100
+  Hancock Street address is no longer on the live page. Fresh capture
+  retained without promotion (hash bb9cff2c756326c1). Page, checked date
+  and standing packet left untouched. Queued: FA-Q-20261126-03 — the open
+  question is whether MassHealth corrected its own two-address
+  inconsistency (making the page's "reconciled nowhere" framing stale) or
+  whether this needs a second read before concluding that.
+
+Cursor advanced: maine -> michigan (past massachusetts, the third selected
+unit). sync-checked-dates.py: 4 derived dates corrected (table + json,
+maine/maryland). build-status.py: baseline 51/51, full 50/51 (pre-existing
+Hawaii backfill gap, unaffected by this pass). One queue entry opened:
+FA-Q-20261126-03 (massachusetts drift).
