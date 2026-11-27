@@ -1483,14 +1483,38 @@ def render_packet(rec, bodies, day, supplied_ns=(), supplied_files=None):
     `supplied_files`: {n: sha256} for sources given as bytes by --supply-file."""
     supplied_files = supplied_files or {}
     d = digest(rec)
+    attended_ns = [s['n'] for s in rec['sources'] if s.get('attended')]
     lines = [CANARY, '', f'STATE: {rec["state"]}', f'ASSEMBLED: {day}', '',
              'CAPTURE NOTES:',
              f'- Captured by tools/capture.py from tools/recipes/{rec["state"]}.json '
              f'(recipe digest {d}). Each source below was fetched and extracted by '
              f'its recorded recipe; re-running that recipe against an unchanged '
-             f'source reproduces this text.',
+             f'source reproduces this text'
+             + (', with the one exception named in the next note.'
+                if attended_ns else '.'),
              f'- Capture code {code_digest()} (sha256 over tools/capture.py and '
              f'tools/capture-core.py as they ran; FA-D-20261025-05).']
+    if attended_ns:
+        # An attended source's bytes reach the extractor once, by hand, from a
+        # browser. The blanket reproducibility sentence above is false for them
+        # and used to be printed over them anyway; this says so in the record
+        # rather than in a queue entry nobody reads beside the packet.
+        # FA-Q-20261127-03.
+        ns = ', '.join(str(n) for n in attended_ns)
+        lines.append(
+            f'- Attended source(s) {ns}: those bytes were delivered once, by '
+            f'hand, out of a browser, so no later run can fetch them again and '
+            f'the sentence above does not hold for them. The artifact hash '
+            f'recorded for an attended source is a one-time witness of the bytes '
+            f'this extractor read -- taken in the page over the buffer that was '
+            f'delivered, and taken again on the delivered file, with both '
+            f'required to agree -- and not a digest a second run reproduces. It '
+            f'is not stable across serializations either: on a host that '
+            f'rewrites the DOM after load, two serializations of a single page '
+            f'load differ, which is why the hash has to cover the buffer '
+            f'actually delivered. The extracted text below is unaffected, '
+            f'because the scope selectors exclude that machinery -- it is the '
+            f'witness that cannot be reproduced, not the body.')
     for s in rec['sources']:
         bits = [f'transport {s["transport"]}', f'extractor {s["extractor"]}']
         if s.get('scope'):
@@ -1517,7 +1541,9 @@ def render_packet(rec, bodies, day, supplied_ns=(), supplied_files=None):
         if s['n'] in supplied_files:
             supp = (f' (bytes obtained in an attended session and supplied from '
                     f'a file, sha256 {supplied_files[s["n"]]}, read by the '
-                    f'extractor named here)')
+                    f'extractor named here'
+                    + ('; a one-time witness, see the attended note above)'
+                       if s.get('attended') else ')'))
         elif s['n'] in supplied_ns:
             supp = ' (fetched by the session reader and supplied)'
         else:
