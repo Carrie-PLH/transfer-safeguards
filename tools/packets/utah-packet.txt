@@ -1,12 +1,17 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: utah
-ASSEMBLED: 2026-10-15
+ASSEMBLED: 2026-11-27
 
 CAPTURE NOTES:
-- Captured by tools/capture.py from tools/recipes/utah.json (recipe digest 440aa0a4fc67). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
-- SOURCE 1: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
-  adminrules.utah.gov is a client-rendered single-page app: the rule's own address, https://adminrules.utah.gov/public/rule/R432-150/Current%20Rules, returns 404 to any direct fetch and renders only in a browser. The 2026-09-01 capture recorded that and read the rendered page by hand. This address is what the app itself fetches for the rule text, so it is first-party and curl-reachable. IT IS PINNED TO A VERSION, NOT TO THE RULE. The GUID names the current text of R432-150; an amendment produces a new GUID and this URL would keep returning the superseded rule while looking healthy, which is the exact failure this project exists to prevent. Source 8 exists to close that hole and must never be removed: it is keyed by rule number rather than by GUID, so an amendment changes it, the pass sees drift, and a session updates this GUID deliberately. Verified 2026-09-04 before re-basing: all 21 quotations this page draws from the rule appear verbatim in this text, so it is the same instrument the page was built on.
+- Captured by tools/capture.py from tools/recipes/utah.json (recipe digest a2562eef23d6). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 20e47bd89c95 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
+- SOURCE 1: transport curl; extractor next-flight; scope body; filters trim-lines, collapse-blank-runs.
+  adminrules.utah.gov is a Next.js App Router application. The Office of Administrative Rules rebuilt it and retired the whole /api/public/ API this recipe was built on: the old getHTML address now answers 404 (HTTP 400 on one of them), and so does the human /public/rule/<ref>/Current%20Rules address (FA-Q-20261124-03, diagnosed 2026-11-24; the licensure mobility half is FA-Q-20261126-02). This address is the rule's own human page, keyed by ruleId.
+
+WHY THE EXTRACTOR IS next-flight AND NOT html-text. /Rule/<ruleId> answers 200 to plain curl, but the rule text is not in the served DOM: it sits inside a <script> element as an escaped HTML document of absolutely-positioned DOCX-conversion spans, and extract_html drops script nodes. A repoint to this address with html-text was tried on 2026-11-24 and captured 208 characters of site navigation -- worse than the 404, because it looks like a capture that succeeded. next-flight reassembles the RSC flight payload from the page's self.__next_f.push calls and hands it to the same extract_html, so the document arrives exactly as the retired endpoint delivered it. Measured 2026-11-27 against this packet: byte-identical for R432-150 (81,947 chars) and R414-504 (13,232), and 0.9985 for R410-14, whose difference is the amendment below rather than any loss in extraction.
+
+THE VERSION-PINNING HAZARD IS GONE, AND THE WITNESS CHANGES ROLE. The old address pinned a version GUID, so an amendment would have kept returning the superseded rule while every check passed -- the failure this project exists to prevent, and the reason the witness source was added. /Rule/<ruleId> is keyed by the rule's identity instead, so it always serves the current text and cannot go stale. The witness is still required, for the other half of the job: it records which version this capture holds, so an amendment shows as drift and a session reads it deliberately rather than finding the text changed under it.
 - SOURCE 2: transport curl; extractor pdftotext-layout; filters none.
   Re-based 2026-09-04. The address the 2026-09-01 capture recorded, .../SNF-Discharge-Appeal-Form.pdf, now returns an nginx 404: the department renamed the file in place, appending its own revision date, and nothing announced the move. Found again by reading the Long Term Care Ombudsman page, which still links it. Verified before re-basing: all 8 quotations this page draws from the form appear verbatim in the renamed file, so it is the same document under a new name rather than a new form.
 - SOURCE 3: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
@@ -20,17 +25,33 @@ CAPTURE NOTES:
 - SOURCE 7: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
   Re-based 2026-09-04: the recorded address, /ombudsman-locations, 301-redirects here. Same browser-transport history and same resolution as source 6; the regional ombudsman roster's addresses now decode under curl.
 - SOURCE 8: transport curl; extractor none; filters none.
-  Not a source the page quotes. It exists so that source 1's GUID cannot go stale unnoticed. This address is keyed by rule number rather than by version, and returns the rule's effectiveDate together with the htmlDownload GUID that source 1 pins. If Utah amends R432-150, both fields change here, this packet changes, the review pass reports drift, and a session updates source 1's URL as a deliberate act. Without it, source 1 would keep returning a superseded rule and every check would pass. The literal 'undefined' path segment is what the department's own application sends; it is reproduced rather than corrected, because a guess at the intended value would be a different request from the one that is known to work.
-- SOURCE 9: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
-  Added 2026-09-24, deepening the page to full: the Medicaid Provider Manual (source 5) itself names this rule as the one setting forth Medicaid hearing procedures ('Utah Administrative Code R410-14 et seq. sets forth the administrative hearing procedures for Medicaid hearings'), and R410-14-2(2)(d) defines a nursing facility's own determination to transfer or discharge a resident as an 'action' this rule governs, and R410-14-23 names SNF hearings expressly. It is the same adminrules.utah.gov client-rendered application as source 1, reached the same way: this address is what the app itself fetches for the rule text and is first-party and curl-reachable, but IT IS PINNED TO A VERSION, NOT TO THE RULE, for the same reason source 1 is. Source 10 is this source's version witness and must never be removed for the same reason source 8 must not be removed for source 1.
-- SOURCE 10: transport curl; extractor none; filters none.
-  Not a source the page quotes. Same role for source 9 that source 8 holds for source 1: keyed by rule number rather than by version, so an amendment to R410-14 changes this packet and the review pass reports drift rather than silently continuing to quote a superseded rule.
-- SOURCE 11: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
-  Added 2026-09-24, deepening the page to full: this is Utah Medicaid's nursing-facility payment rule, searched for a state-wide bed-hold day count after R432-150-20(9) (source 1) proved to require only a facility's own written bed-hold policy with no state-set duration. This rule addresses case-mix reimbursement and reserved/swing beds by payment category (R414-504-3(9)) but states no bed-hold or reserved-bed day count either; it supports the page's stated absence rather than a quotation of a period. Same client-rendered application and same version-pinning caveat as sources 1 and 9; source 12 is its version witness.
-- SOURCE 12: transport curl; extractor none; filters none.
-  Not a source the page quotes. Same role for source 11 that source 8 holds for source 1.
+  Not a source the page quotes. Repointed 2026-11-27 with its rule text (FA-Q-20261124-03): the old /api/public/rule/<ref>/undefined/Current%20Rules address died with the rest of /api/public/. /api/ruleVersion/<ruleId> is a better witness than the address it replaces and is curl-reachable now. It is keyed by ruleId -- the rule's identity, stable across amendments -- and returns that one rule's whole version history, each entry carrying its ruleTypeName, effectiveDateRange and htmlName. So it changes when this rule is amended and at no other time, where the old address was keyed by rule number and the title-wide alternative (/api/titleRules/<titleId>) would move whenever any rule in the title did.
 
-SOURCE 1: R432-150, Nursing Care Facility — Utah Administrative Code | https://adminrules.utah.gov/api/public/getHTML/uac-html/9635398a-ce5f-438c-8817-197550b951c7.html | source date: Effective Date: 02/18/2025 | retrieved: 2026-10-15
+Its role is no longer to catch a stale pin -- source 1 is keyed by ruleId and cannot pin a version any more -- but to record which version of R432-150 this capture holds, so an amendment is visible as drift instead of arriving silently inside the rule text.
+- SOURCE 9: transport curl; extractor next-flight; scope body; filters trim-lines, collapse-blank-runs.
+  adminrules.utah.gov is a Next.js App Router application. The Office of Administrative Rules rebuilt it and retired the whole /api/public/ API this recipe was built on: the old getHTML address now answers 404 (HTTP 400 on one of them), and so does the human /public/rule/<ref>/Current%20Rules address (FA-Q-20261124-03, diagnosed 2026-11-24; the licensure mobility half is FA-Q-20261126-02). This address is the rule's own human page, keyed by ruleId.
+
+WHY THE EXTRACTOR IS next-flight AND NOT html-text. /Rule/<ruleId> answers 200 to plain curl, but the rule text is not in the served DOM: it sits inside a <script> element as an escaped HTML document of absolutely-positioned DOCX-conversion spans, and extract_html drops script nodes. A repoint to this address with html-text was tried on 2026-11-24 and captured 208 characters of site navigation -- worse than the 404, because it looks like a capture that succeeded. next-flight reassembles the RSC flight payload from the page's self.__next_f.push calls and hands it to the same extract_html, so the document arrives exactly as the retired endpoint delivered it. Measured 2026-11-27 against this packet: byte-identical for R432-150 (81,947 chars) and R414-504 (13,232), and 0.9985 for R410-14, whose difference is the amendment below rather than any loss in extraction.
+
+THE VERSION-PINNING HAZARD IS GONE, AND THE WITNESS CHANGES ROLE. The old address pinned a version GUID, so an amendment would have kept returning the superseded rule while every check passed -- the failure this project exists to prevent, and the reason the witness source was added. /Rule/<ruleId> is keyed by the rule's identity instead, so it always serves the current text and cannot go stale. The witness is still required, for the other half of the job: it records which version this capture holds, so an amendment shows as drift and a session reads it deliberately rather than finding the text changed under it.
+
+THIS SOURCE CHANGED DOCUMENT WITH THE REPOINT. It had been pinned to GUID 73994768-4705-4e78-bf9e-3167834a0136, which the witness now lists as the SUPERSEDED version of R410-14 for 09/19/2025 - 10/13/2026; the current version is ee2be259-9bb8-49e1-9dd6-1fc5b11dccaf, effective 10/14/2026. So this recipe had been quoting a superseded rule since 2026-10-14, which is exactly the failure the witness was added to catch -- it did catch it, and the 404 is why nobody saw it. The amendment: "the department's executive director" becomes "the department's commissioner" in three places, the authority citation moves from Subsection 26B-1-202(1) to 26B-1-202(2)(a) and from 42 CFR 431 Subpart E (2025) to (2026), and the KEY footer's Date of Last Change moves from September 19, 2025 to October 14, 2026. Nothing else differs but whitespace and hyphenation.
+- SOURCE 10: transport curl; extractor none; filters none.
+  Not a source the page quotes. Repointed 2026-11-27 with its rule text (FA-Q-20261124-03): the old /api/public/rule/<ref>/undefined/Current%20Rules address died with the rest of /api/public/. /api/ruleVersion/<ruleId> is a better witness than the address it replaces and is curl-reachable now. It is keyed by ruleId -- the rule's identity, stable across amendments -- and returns that one rule's whole version history, each entry carrying its ruleTypeName, effectiveDateRange and htmlName. So it changes when this rule is amended and at no other time, where the old address was keyed by rule number and the title-wide alternative (/api/titleRules/<titleId>) would move whenever any rule in the title did.
+
+Its role is no longer to catch a stale pin -- source 9 is keyed by ruleId and cannot pin a version any more -- but to record which version of R410-14 this capture holds, so an amendment is visible as drift instead of arriving silently inside the rule text.
+- SOURCE 11: transport curl; extractor next-flight; scope body; filters trim-lines, collapse-blank-runs.
+  adminrules.utah.gov is a Next.js App Router application. The Office of Administrative Rules rebuilt it and retired the whole /api/public/ API this recipe was built on: the old getHTML address now answers 404 (HTTP 400 on one of them), and so does the human /public/rule/<ref>/Current%20Rules address (FA-Q-20261124-03, diagnosed 2026-11-24; the licensure mobility half is FA-Q-20261126-02). This address is the rule's own human page, keyed by ruleId.
+
+WHY THE EXTRACTOR IS next-flight AND NOT html-text. /Rule/<ruleId> answers 200 to plain curl, but the rule text is not in the served DOM: it sits inside a <script> element as an escaped HTML document of absolutely-positioned DOCX-conversion spans, and extract_html drops script nodes. A repoint to this address with html-text was tried on 2026-11-24 and captured 208 characters of site navigation -- worse than the 404, because it looks like a capture that succeeded. next-flight reassembles the RSC flight payload from the page's self.__next_f.push calls and hands it to the same extract_html, so the document arrives exactly as the retired endpoint delivered it. Measured 2026-11-27 against this packet: byte-identical for R432-150 (81,947 chars) and R414-504 (13,232), and 0.9985 for R410-14, whose difference is the amendment below rather than any loss in extraction.
+
+THE VERSION-PINNING HAZARD IS GONE, AND THE WITNESS CHANGES ROLE. The old address pinned a version GUID, so an amendment would have kept returning the superseded rule while every check passed -- the failure this project exists to prevent, and the reason the witness source was added. /Rule/<ruleId> is keyed by the rule's identity instead, so it always serves the current text and cannot go stale. The witness is still required, for the other half of the job: it records which version this capture holds, so an amendment shows as drift and a session reads it deliberately rather than finding the text changed under it.
+- SOURCE 12: transport curl; extractor none; filters none.
+  Not a source the page quotes. Repointed 2026-11-27 with its rule text (FA-Q-20261124-03): the old /api/public/rule/<ref>/undefined/Current%20Rules address died with the rest of /api/public/. /api/ruleVersion/<ruleId> is a better witness than the address it replaces and is curl-reachable now. It is keyed by ruleId -- the rule's identity, stable across amendments -- and returns that one rule's whole version history, each entry carrying its ruleTypeName, effectiveDateRange and htmlName. So it changes when this rule is amended and at no other time, where the old address was keyed by rule number and the title-wide alternative (/api/titleRules/<titleId>) would move whenever any rule in the title did.
+
+Its role is no longer to catch a stale pin -- source 11 is keyed by ruleId and cannot pin a version any more -- but to record which version of R414-504 this capture holds, so an amendment is visible as drift instead of arriving silently inside the rule text.
+
+SOURCE 1: R432-150, Nursing Care Facility — Utah Administrative Code | https://adminrules.utah.gov/Rule/1072 | source date: Effective Date: 02/18/2025 | retrieved: 2026-11-27
 R432. Health and Human Services, Health Care Facility Licensing.
 R432-150. Nursing Care Facility.
 
@@ -1573,7 +1594,7 @@ Notice of Continuation: January 24, 2022
 
 Authorizing, and Implemented or Interpreted Law: 26B-2-202
 
-SOURCE 2: Skilled nursing facility-initiated discharge appeal form — Utah Division of Aging and Adult Services (PDF) | https://daas.utah.gov/wp-content/uploads/2024/07/SNF-Discharge-Appeal-Form-11.7.23.pdf | source date: form dated 11.7.23 in its own filename | retrieved: 2026-10-15
+SOURCE 2: Skilled nursing facility-initiated discharge appeal form — Utah Division of Aging and Adult Services (PDF) | https://daas.utah.gov/wp-content/uploads/2024/07/SNF-Discharge-Appeal-Form-11.7.23.pdf | source date: form dated 11.7.23 in its own filename | retrieved: 2026-11-27
 Skilled nursing facility-initiated discharge appeal form
                           If the nursing facility where you live has told you they intend to transfer you or
                           discharge you, and you would rather stay in the facility, you have the right to
@@ -1699,7 +1720,7 @@ Salt Lake City, UT 84114-3105       Salt Lake City, UT 84116            Fax: 801
 
 Updated: 10/17/2023          Administrative Hearings Telephone #: 801-538-6576              Page 3 of 3
 
-SOURCE 3: Hearings — Medicaid — Utah Department of Health and Human Services | https://medicaid.utah.gov/hearings/ | source date: none stated on page | retrieved: 2026-10-15
+SOURCE 3: Hearings — Medicaid — Utah Department of Health and Human Services | https://medicaid.utah.gov/hearings/ | source date: none stated on page | retrieved: 2026-11-27
 Skip to content
 
 Hearings
@@ -1770,7 +1791,7 @@ Laws and rules:
 
 Utah Administrative Procedures Act: Utah Code Annotated, Title 63G, Chapter 4 opens in a new tab
 
-Utah Administrative Code, Title R410 opens in a new tab: Administrative Hearing Procedures
+Utah Administrative Code, Title R410: Administrative Hearing Procedures
 
 Follow us online
 
@@ -1960,7 +1981,7 @@ Utah Domestic Violence opens in a new tab
 
 Translate ❯
 
-SOURCE 4: Medicaid Fair Hearings — Utah Department of Health and Human Services | https://dhhs.utah.gov/oah/medicaid-fair-hearings/ | source date: none stated on page | retrieved: 2026-10-15
+SOURCE 4: Medicaid Fair Hearings — Utah Department of Health and Human Services | https://dhhs.utah.gov/oah/medicaid-fair-hearings/ | source date: none stated on page | retrieved: 2026-11-27
 Skip to content
 
 Medicaid Fair Hearings
@@ -2134,7 +2155,7 @@ Call or text 988
 
 Translate ❯
 
-SOURCE 5: Utah Medicaid Provider Manual, Section I: General Information, chapter 5-4 Hearings and Administrative Review (PDF) | https://medicaid-documents.dhhs.utah.gov/Documents/manuals/pdfs/Medicaid+Provider+Manuals/All+Providers+General+Information+Section+I/AllProvidersGeneralInfo_Section_1.pdf | source date: Updated September 2026, as the chapter's own footer states (was Updated July 2026 as of the 2026-09-04 capture) | retrieved: 2026-10-15
+SOURCE 5: Utah Medicaid Provider Manual, Section I: General Information, chapter 5-4 Hearings and Administrative Review (PDF) | https://medicaid-documents.dhhs.utah.gov/Documents/manuals/pdfs/Medicaid+Provider+Manuals/All+Providers+General+Information+Section+I/AllProvidersGeneralInfo_Section_1.pdf | source date: Updated September 2026, as the chapter's own footer states (was Updated July 2026 as of the 2026-09-04 capture) | retrieved: 2026-11-27
 55                                                                   Updated September 2026
 
 
@@ -2248,7 +2269,7 @@ SOURCE 5: Utah Medicaid Provider Manual, Section I: General Information, chapter
 
               Utah Medicaid Provider Manual – Section I: General Information
 
-SOURCE 6: Long Term Care Ombudsman — Aging & Adult Services, Utah Department of Health and Human Services | https://daas.utah.gov/long-term-care-ombudsman/ | source date: none stated on page | retrieved: 2026-10-15
+SOURCE 6: Long Term Care Ombudsman — Aging & Adult Services, Utah Department of Health and Human Services | https://daas.utah.gov/long-term-care-ombudsman/ | source date: none stated on page | retrieved: 2026-11-27
 Skip to content
 
 Long Term Care Ombudsman
@@ -2509,40 +2530,18 @@ Utah Domestic Violenceopens in a new tab
 
 Translate ❯
 
-SOURCE 7: Ombudsman Locations — Aging & Adult Services, Utah Department of Health and Human Services | https://daas.utah.gov/ombudsman-locations-3/ | source date: none stated on page | retrieved: 2026-10-15
+SOURCE 7: Ombudsman Locations — Aging & Adult Services, Utah Department of Health and Human Services | https://daas.utah.gov/ombudsman-locations-3/ | source date: none stated on page | retrieved: 2026-11-27
 Skip to content
 
 Ombudsman Locations
 
-Possibly the best way to get your questions answered is by talking to an Ombudsman. The county you live in determines who your Ombudsman is.
-
-If you feel that your concerns have not been addressed or you need further assistance please contact the State Ombudsman .
-
 Long-term care ombudsman contact information
 
+Possibly the best way to get your questions answered is by talking to an Ombudsman. The county you live in determines who your Ombudsman is.
+
+If you feel that your concerns have not been addressed or you need further assistance please contact the State Ombudsman.
+
 County | Ombudsman | Phone # | Email
-
-Cache, Rich, Box Elder | Chad Fairbanks | 435-713-1464 | chadf@brag.utah.gov
-
-Davis County | Jennifer Kay | 801-525-5060 | jkay@co.davis.ut.us
-
-Washington, Beaver, Garfield, Iron, Kane | Kelly Reeder | 435-263-0489 | kreeder@fivecounty.utah.gov
-
-Utah, Wasatch, Summit | Ann Humpherys | 801-229-3809 | ahumpherys@magutah.gov ombudsman@magutah.gov
-
-Salt Lake | Ombudsman Line | 385-468-3255 | ombudsman@saltlakecounty.gov
-
-San Juan | Natalie Freestone | 435-459-2875 | nfreestone@sanjuancountyut.gov
-
-Sevier, Millard, Piute, Wayne, Sanpete, Juab | Michelle Standley | 435-893-0736 | michellestandley@r6.utah.gov
-
-Carbon, Emery, and Grand | Robbie Jensen | 435-613-0023 | rjensen@seualg.utah.gov
-
-Duchesne, Daggett, Uintah | Sam Creamer | 435-722-5229 | samc@ubaog.org
-
-Tooele | Ombudsman line | 435-277-2350 | jennifer.romero@tooeleco.gov
-
-Weber and Morgan | Angela Stout | 801-625-3783 | angelas@weberhs.org
 
 State of Utah
 
@@ -2640,16 +2639,16 @@ Utah Domestic Violenceopens in a new tab
 
 Translate ❯
 
-SOURCE 8: R432-150 rule metadata — Utah Office of Administrative Rules (version witness for source 1) | https://adminrules.utah.gov/api/public/rule/R432-150/undefined/Current%20Rules | source date: carries its own effectiveDate field | retrieved: 2026-10-15
-{"number":"150","name":"Nursing Care Facility","ruleType":"Current Rules","effectiveDate":"2025-02-18T15:24:07.783","effectiveEndDate":"2027-01-24T14:28:42.043","commentDate":"2024-11-16T00:00:00","commentDateEnd":"2024-12-15T19:32:36.4585167","referenceNumber":"R432-150","htmlDownload":"uac-html/9635398a-ce5f-438c-8817-197550b951c7.html","htmlDownloadName":"R432-150.html","pdfDownload":"uac-pdf/9635398a-ce5f-438c-8817-197550b951c7.pdf","pdfDownloadName":"R432-150.pdf","agencyName":"Health and Human Services","programName":"Health Care Facility Licensing","action":"Amendment","linkToRule":"https://adminrules.utah.gov/public/rule/R432-150/Current%20Rules"}
+SOURCE 8: R432-150 rule metadata — Utah Office of Administrative Rules (version witness for source 1) | https://adminrules.utah.gov/api/ruleVersion/1072 | source date: carries its own effectiveDate field | retrieved: 2026-11-27
+[{"ruleVersionId":1073,"effectiveDateRange":"01/11/2018 - 12/11/2023","createdOn":"0001-01-01T00:00:00","agencyId":0,"ruleId":1072,"ruleTypeId":57,"titleId":0,"titleNumber":0,"actionTypeId":null,"documentTypeId":null,"delayedRuleVersionId":null,"emergencyRuleVersionId":null,"proposedRuleVersionId":null,"agencyName":"","docxName":"90e3bf4b-3fda-4ec3-b85e-9e499ebcbcd1.docx","effectiveDateString":"","fullRuleName":"","htmlName":"90e3bf4b-3fda-4ec3-b85e-9e499ebcbcd1.html","pdfName":"90e3bf4b-3fda-4ec3-b85e-9e499ebcbcd1.pdf","ruleName":"Nursing Care Facility","ruleNumber":"R432-150","ruleTypeName":"Superseded Rule","ruleReference":"","titleName":"","publicCommentPeriod":null,"publicCommentResource":null,"isPublicCommentOpen":false,"isDelayRemoved":false,"effectiveDate":"2018-01-11T00:00:00","effectiveEndDate":"2023-12-11T17:12:43.15","publicCommentStartDate":null,"publicCommentEndDate":null,"citations":null},{"ruleVersionId":5589,"effectiveDateRange":"12/12/2023 - 02/17/2025","createdOn":"0001-01-01T00:00:00","agencyId":0,"ruleId":1072,"ruleTypeId":57,"titleId":0,"titleNumber":0,"actionTypeId":null,"documentTypeId":null,"delayedRuleVersionId":null,"emergencyRuleVersionId":null,"proposedRuleVersionId":null,"agencyName":"","docxName":"3afe075c-f6a5-4699-af9b-51510f8a140c.docx","effectiveDateString":"","fullRuleName":"","htmlName":"3afe075c-f6a5-4699-af9b-51510f8a140c.html","pdfName":"3afe075c-f6a5-4699-af9b-51510f8a140c.pdf","ruleName":"Nursing Care Facility","ruleNumber":"R432-150","ruleTypeName":"Superseded Rule","ruleReference":"","titleName":"","publicCommentPeriod":null,"publicCommentResource":null,"isPublicCommentOpen":false,"isDelayRemoved":false,"effectiveDate":"2023-12-12T17:12:43.15","effectiveEndDate":"2025-02-17T15:24:07.783","publicCommentStartDate":null,"publicCommentEndDate":null,"citations":null},{"ruleVersionId":6883,"effectiveDateRange":"02/18/2025 - 01/24/2027","createdOn":"0001-01-01T00:00:00","agencyId":0,"ruleId":1072,"ruleTypeId":51,"titleId":0,"titleNumber":0,"actionTypeId":null,"documentTypeId":null,"delayedRuleVersionId":null,"emergencyRuleVersionId":null,"proposedRuleVersionId":null,"agencyName":"","docxName":"9635398a-ce5f-438c-8817-197550b951c7.docx","effectiveDateString":"","fullRuleName":"","htmlName":"9635398a-ce5f-438c-8817-197550b951c7.html","pdfName":"9635398a-ce5f-438c-8817-197550b951c7.pdf","ruleName":"Nursing Care Facility","ruleNumber":"R432-150","ruleTypeName":"Current Rule","ruleReference":"","titleName":"","publicCommentPeriod":null,"publicCommentResource":null,"isPublicCommentOpen":false,"isDelayRemoved":false,"effectiveDate":"2025-02-18T15:24:07.783","effectiveEndDate":"2027-01-24T14:28:42.043","publicCommentStartDate":null,"publicCommentEndDate":null,"citations":null}]
 
-SOURCE 9: R410-14, Administrative Hearing Procedures — Utah Administrative Code | https://adminrules.utah.gov/api/public/getHTML/uac-html/73994768-4705-4e78-bf9e-3167834a0136.html | source date: Effective Date: 09/19/2025 | retrieved: 2026-10-15
+SOURCE 9: R410-14, Administrative Hearing Procedures — Utah Administrative Code | https://adminrules.utah.gov/Rule/952 | source date: Effective Date: 10/14/2026 | retrieved: 2026-11-27
 R410. Health and Human Services, Integrated Healthcare, Administrative Hearings.
 R410-14. Administrative Hearing Procedures.
 
 R410-14-1. Authority and Purpose.
 
-(1) Subsections 26B-1-202(1) and 26B-1-204(1), 42 CFR 431 Subpart E (2025), and 42 U.S.C. 1396a(a)(3) authorize this rule.
+(1) Subsections 26B-1-202(2)(a) and 26B-1-204(1), 42 CFR 431 Subpart E (2026), and 42 U.S.C. 1396a(a)(3) authorize this rule.
 
 (2) This rule sets forth the administrative hearing procedures for actions that the Division of Integrated Healthcare or other agency, as defined in Section R410-14-2, takes.
 
@@ -3132,9 +3131,9 @@ R410-14-14. Orders.
 
 (3) Each party shall comply with the order from the presiding officer reversing the agency's decision within ten calendar days.
 
-(4)(a) The department's executive director shall review each order to determine approval of medical assistance for an organ transplant.
+(4)(a) The department's commissioner shall review each order to determine approval of medical assistance for an organ transplant.
 
-(b) The executive director's decision constitutes final administrative action and is subject to judicial review.
+(b) The commissioner's decision constitutes final administrative action and is subject to judicial review.
 
 R410-14-15. Amending Administrative Orders.
 
@@ -3144,7 +3143,7 @@ R410-14-15. Amending Administrative Orders.
 
 R410-14-16. Availability of Agency Review.
 
-A party may obtain agency review of a final order by filing a request with the department's executive director, pursuant to Section 63G-4-301.
+A party may obtain agency review of a final order by filing a request with the department's commissioner, pursuant to Section 63G-4-301.
 
 R410-14-17. Judicial Review.
 
@@ -3286,16 +3285,16 @@ DWS conducts eligibility hearings in accordance with Section R414-301-7.
 
 KEY: Medicaid
 
-Date of Last Change: September 19, 2025
+Date of Last Change: October 14, 2026
 
 Notice of Continuation: August 12, 2022
 
-Authorizing, and Implemented or Interpreted Law: 26B-1-202(1); 26B-1-204; 63G-4-102
+Authorizing, and Implemented or Interpreted Law: 26B-1-202(2)(a); 26B-1-204; 63G-4-102
 
-SOURCE 10: R410-14 rule metadata — Utah Office of Administrative Rules (version witness for source 9) | https://adminrules.utah.gov/api/public/rule/R410-14/undefined/Current%20Rules | source date: carries its own effectiveDate field | retrieved: 2026-10-15
-{"number":"14","name":"Administrative Hearing Procedures","ruleType":"Current Rules","effectiveDate":"2025-09-19T13:24:48.64","effectiveEndDate":"2027-08-12T11:12:47.753","commentDate":"2025-07-02T00:00:00","commentDateEnd":"2025-07-31T11:27:58.0151773","referenceNumber":"R410-14","htmlDownload":"uac-html/73994768-4705-4e78-bf9e-3167834a0136.html","htmlDownloadName":"R410-14.html","pdfDownload":"uac-pdf/73994768-4705-4e78-bf9e-3167834a0136.pdf","pdfDownloadName":"R410-14.pdf","agencyName":"Health and Human Services","programName":"Integrated Healthcare, Administrative Hearings","action":"Amendment","linkToRule":"https://adminrules.utah.gov/public/rule/R410-14/Current%20Rules"}
+SOURCE 10: R410-14 rule metadata — Utah Office of Administrative Rules (version witness for source 9) | https://adminrules.utah.gov/api/ruleVersion/952 | source date: carries its own effectiveDate field | retrieved: 2026-11-27
+[{"ruleVersionId":948,"effectiveDateRange":"05/29/2018 - 03/29/2023","createdOn":"0001-01-01T00:00:00","agencyId":0,"ruleId":952,"ruleTypeId":57,"titleId":0,"titleNumber":0,"actionTypeId":null,"documentTypeId":null,"delayedRuleVersionId":null,"emergencyRuleVersionId":null,"proposedRuleVersionId":null,"agencyName":"","docxName":"9a8637a9-f6e4-4d38-b549-7788667ae22c.docx","effectiveDateString":"","fullRuleName":"","htmlName":"9a8637a9-f6e4-4d38-b549-7788667ae22c.html","pdfName":"9a8637a9-f6e4-4d38-b549-7788667ae22c.pdf","ruleName":"Administrative Hearing Procedures","ruleNumber":"R410-14","ruleTypeName":"Superseded Rule","ruleReference":"","titleName":"","publicCommentPeriod":null,"publicCommentResource":null,"isPublicCommentOpen":false,"isDelayRemoved":false,"effectiveDate":"2018-05-29T00:00:00","effectiveEndDate":"2023-03-29T08:31:41.983","publicCommentStartDate":null,"publicCommentEndDate":null,"citations":null},{"ruleVersionId":5218,"effectiveDateRange":"02/01/2023 - 06/01/2023","createdOn":"0001-01-01T00:00:00","agencyId":0,"ruleId":952,"ruleTypeId":54,"titleId":0,"titleNumber":0,"actionTypeId":null,"documentTypeId":null,"delayedRuleVersionId":null,"emergencyRuleVersionId":null,"proposedRuleVersionId":null,"agencyName":"","docxName":"d7e3874b-2b9c-448d-a79c-91c52b1908fa.docx","effectiveDateString":"","fullRuleName":"","htmlName":"d7e3874b-2b9c-448d-a79c-91c52b1908fa.html","pdfName":"d7e3874b-2b9c-448d-a79c-91c52b1908fa.pdf","ruleName":"Administrative Hearing Procedures","ruleNumber":"R410-14","ruleTypeName":"Expired Emergency Rule","ruleReference":"","titleName":"","publicCommentPeriod":null,"publicCommentResource":null,"isPublicCommentOpen":false,"isDelayRemoved":false,"effectiveDate":"2023-02-01T00:00:00","effectiveEndDate":"2023-06-01T00:00:00","publicCommentStartDate":null,"publicCommentEndDate":null,"citations":null},{"ruleVersionId":5219,"effectiveDateRange":"03/30/2023 - 11/04/2023","createdOn":"0001-01-01T00:00:00","agencyId":0,"ruleId":952,"ruleTypeId":57,"titleId":0,"titleNumber":0,"actionTypeId":null,"documentTypeId":null,"delayedRuleVersionId":null,"emergencyRuleVersionId":null,"proposedRuleVersionId":null,"agencyName":"","docxName":"fe87ed0d-86b0-4f45-9ef9-b1a3a266ecff.docx","effectiveDateString":"","fullRuleName":"","htmlName":"fe87ed0d-86b0-4f45-9ef9-b1a3a266ecff.html","pdfName":"fe87ed0d-86b0-4f45-9ef9-b1a3a266ecff.pdf","ruleName":"Administrative Hearing Procedures","ruleNumber":"R410-14","ruleTypeName":"Superseded Rule","ruleReference":"","titleName":"","publicCommentPeriod":null,"publicCommentResource":null,"isPublicCommentOpen":false,"isDelayRemoved":false,"effectiveDate":"2023-03-30T08:31:41.983","effectiveEndDate":"2023-11-04T20:00:21.017","publicCommentStartDate":null,"publicCommentEndDate":null,"citations":null},{"ruleVersionId":5970,"effectiveDateRange":"11/05/2023 - 09/18/2025","createdOn":"0001-01-01T00:00:00","agencyId":0,"ruleId":952,"ruleTypeId":57,"titleId":0,"titleNumber":0,"actionTypeId":null,"documentTypeId":null,"delayedRuleVersionId":null,"emergencyRuleVersionId":null,"proposedRuleVersionId":null,"agencyName":"","docxName":"6f370f1b-93ab-4349-9f4d-57961d8c981e.docx","effectiveDateString":"","fullRuleName":"","htmlName":"6f370f1b-93ab-4349-9f4d-57961d8c981e.html","pdfName":"6f370f1b-93ab-4349-9f4d-57961d8c981e.pdf","ruleName":"Administrative Hearing Procedures","ruleNumber":"R410-14","ruleTypeName":"Superseded Rule","ruleReference":"","titleName":"","publicCommentPeriod":null,"publicCommentResource":null,"isPublicCommentOpen":false,"isDelayRemoved":false,"effectiveDate":"2023-11-05T20:00:21.017","effectiveEndDate":"2025-09-18T13:24:48.64","publicCommentStartDate":null,"publicCommentEndDate":null,"citations":null},{"ruleVersionId":7228,"effectiveDateRange":"09/19/2025 - 10/13/2026","createdOn":"0001-01-01T00:00:00","agencyId":0,"ruleId":952,"ruleTypeId":57,"titleId":0,"titleNumber":0,"actionTypeId":null,"documentTypeId":null,"delayedRuleVersionId":null,"emergencyRuleVersionId":null,"proposedRuleVersionId":null,"agencyName":"","docxName":"73994768-4705-4e78-bf9e-3167834a0136.docx","effectiveDateString":"","fullRuleName":"","htmlName":"73994768-4705-4e78-bf9e-3167834a0136.html","pdfName":"73994768-4705-4e78-bf9e-3167834a0136.pdf","ruleName":"Administrative Hearing Procedures","ruleNumber":"R410-14","ruleTypeName":"Superseded Rule","ruleReference":"","titleName":"","publicCommentPeriod":null,"publicCommentResource":null,"isPublicCommentOpen":false,"isDelayRemoved":false,"effectiveDate":"2025-09-19T13:24:48.64","effectiveEndDate":"2026-10-13T20:34:26.117","publicCommentStartDate":null,"publicCommentEndDate":null,"citations":null},{"ruleVersionId":8288,"effectiveDateRange":"10/14/2026 - 08/12/2027","createdOn":"0001-01-01T00:00:00","agencyId":0,"ruleId":952,"ruleTypeId":51,"titleId":0,"titleNumber":0,"actionTypeId":null,"documentTypeId":null,"delayedRuleVersionId":null,"emergencyRuleVersionId":null,"proposedRuleVersionId":null,"agencyName":"","docxName":"ee2be259-9bb8-49e1-9dd6-1fc5b11dccaf.docx","effectiveDateString":"","fullRuleName":"","htmlName":"ee2be259-9bb8-49e1-9dd6-1fc5b11dccaf.html","pdfName":"ee2be259-9bb8-49e1-9dd6-1fc5b11dccaf.pdf","ruleName":"Administrative Hearing Procedures","ruleNumber":"R410-14","ruleTypeName":"Current Rule","ruleReference":"","titleName":"","publicCommentPeriod":null,"publicCommentResource":null,"isPublicCommentOpen":false,"isDelayRemoved":false,"effectiveDate":"2026-10-14T20:34:26.117","effectiveEndDate":"2027-08-12T11:12:47.753","publicCommentStartDate":null,"publicCommentEndDate":null,"citations":null}]
 
-SOURCE 11: R414-504, Nursing Facility Payments — Utah Administrative Code | https://adminrules.utah.gov/api/public/getHTML/uac-html/285f3d84-7c8f-42a0-bf1f-cca3a6c68d83.html | source date: Effective Date: 07/02/2025 | retrieved: 2026-10-15
+SOURCE 11: R414-504, Nursing Facility Payments — Utah Administrative Code | https://adminrules.utah.gov/Rule/1002 | source date: Effective Date: 07/02/2025 | retrieved: 2026-11-27
 R414. Health and Human Services, Integrated Healthcare.
 R414-504. Nursing Facility Payments.
 
@@ -3467,6 +3466,6 @@ Notice of Continuation: October 12, 2022
 
 Authorizing, and Implemented or Interpreted Law: 26B-1-213; 26B-3-108
 
-SOURCE 12: R414-504 rule metadata — Utah Office of Administrative Rules (version witness for source 11) | https://adminrules.utah.gov/api/public/rule/R414-504/undefined/Current%20Rules | source date: carries its own effectiveDate field | retrieved: 2026-10-15
-{"number":"504","name":"Nursing Facility Payments","ruleType":"Current Rules","effectiveDate":"2025-07-02T09:44:12.19","effectiveEndDate":"2027-10-12T08:40:31.93","commentDate":"2025-05-16T00:00:00","commentDateEnd":"2025-06-14T20:29:07.1758595","referenceNumber":"R414-504","htmlDownload":"uac-html/285f3d84-7c8f-42a0-bf1f-cca3a6c68d83.html","htmlDownloadName":"R414-504.html","pdfDownload":"uac-pdf/285f3d84-7c8f-42a0-bf1f-cca3a6c68d83.pdf","pdfDownloadName":"R414-504.pdf","agencyName":"Health and Human Services","programName":"Integrated Healthcare","action":"Amendment","linkToRule":"https://adminrules.utah.gov/public/rule/R414-504/Current%20Rules"}
+SOURCE 12: R414-504 rule metadata — Utah Office of Administrative Rules (version witness for source 11) | https://adminrules.utah.gov/api/ruleVersion/1002 | source date: carries its own effectiveDate field | retrieved: 2026-11-27
+[{"ruleVersionId":997,"effectiveDateRange":"01/01/2019 - 12/31/2019","createdOn":"0001-01-01T00:00:00","agencyId":0,"ruleId":1002,"ruleTypeId":57,"titleId":0,"titleNumber":0,"actionTypeId":null,"documentTypeId":null,"delayedRuleVersionId":null,"emergencyRuleVersionId":null,"proposedRuleVersionId":null,"agencyName":"","docxName":"r414-504.docx","effectiveDateString":"","fullRuleName":"","htmlName":"r414-504.html","pdfName":"r414-504.pdf","ruleName":"Nursing Facility Payments","ruleNumber":"R414-504","ruleTypeName":"Superseded Rule","ruleReference":"","titleName":"","publicCommentPeriod":null,"publicCommentResource":null,"isPublicCommentOpen":false,"isDelayRemoved":false,"effectiveDate":"2019-01-01T00:00:00","effectiveEndDate":"2019-12-31T00:00:00","publicCommentStartDate":null,"publicCommentEndDate":null,"citations":null},{"ruleVersionId":2260,"effectiveDateRange":"01/01/2020 - 09/30/2020","createdOn":"0001-01-01T00:00:00","agencyId":0,"ruleId":1002,"ruleTypeId":57,"titleId":0,"titleNumber":0,"actionTypeId":null,"documentTypeId":null,"delayedRuleVersionId":null,"emergencyRuleVersionId":null,"proposedRuleVersionId":null,"agencyName":"","docxName":"f1212fac-f361-46f5-bb0f-2bf68b2ab2f8.docx","effectiveDateString":"","fullRuleName":"","htmlName":"f1212fac-f361-46f5-bb0f-2bf68b2ab2f8.html","pdfName":"f1212fac-f361-46f5-bb0f-2bf68b2ab2f8.pdf","ruleName":"Nursing Facility Payments","ruleNumber":"R414-504","ruleTypeName":"Superseded Rule","ruleReference":"","titleName":"","publicCommentPeriod":null,"publicCommentResource":null,"isPublicCommentOpen":false,"isDelayRemoved":false,"effectiveDate":"2020-01-01T00:00:00","effectiveEndDate":"2020-09-30T08:34:13","publicCommentStartDate":null,"publicCommentEndDate":null,"citations":null},{"ruleVersionId":2991,"effectiveDateRange":"10/01/2020 - 06/30/2023","createdOn":"0001-01-01T00:00:00","agencyId":0,"ruleId":1002,"ruleTypeId":57,"titleId":0,"titleNumber":0,"actionTypeId":null,"documentTypeId":null,"delayedRuleVersionId":null,"emergencyRuleVersionId":null,"proposedRuleVersionId":null,"agencyName":"","docxName":"5b2043e1-ce6e-4bb3-a3db-ee6045eb7194.docx","effectiveDateString":"","fullRuleName":"","htmlName":"5b2043e1-ce6e-4bb3-a3db-ee6045eb7194.html","pdfName":"5b2043e1-ce6e-4bb3-a3db-ee6045eb7194.pdf","ruleName":"Nursing Facility Payments","ruleNumber":"R414-504","ruleTypeName":"Superseded Rule","ruleReference":"","titleName":"","publicCommentPeriod":null,"publicCommentResource":null,"isPublicCommentOpen":false,"isDelayRemoved":false,"effectiveDate":"2020-10-01T08:34:13","effectiveEndDate":"2023-06-30T12:32:54","publicCommentStartDate":null,"publicCommentEndDate":null,"citations":null},{"ruleVersionId":5375,"effectiveDateRange":"07/01/2023 - 03/24/2024","createdOn":"0001-01-01T00:00:00","agencyId":0,"ruleId":1002,"ruleTypeId":57,"titleId":0,"titleNumber":0,"actionTypeId":null,"documentTypeId":null,"delayedRuleVersionId":null,"emergencyRuleVersionId":null,"proposedRuleVersionId":null,"agencyName":"","docxName":"9bf3ad85-1858-4581-b2a1-761ed5015de0.docx","effectiveDateString":"","fullRuleName":"","htmlName":"9bf3ad85-1858-4581-b2a1-761ed5015de0.html","pdfName":"9bf3ad85-1858-4581-b2a1-761ed5015de0.pdf","ruleName":"Nursing Facility Payments","ruleNumber":"R414-504","ruleTypeName":"Superseded Rule","ruleReference":"","titleName":"","publicCommentPeriod":null,"publicCommentResource":null,"isPublicCommentOpen":false,"isDelayRemoved":false,"effectiveDate":"2023-07-01T12:32:54","effectiveEndDate":"2024-03-24T08:28:05.773","publicCommentStartDate":null,"publicCommentEndDate":null,"citations":null},{"ruleVersionId":6251,"effectiveDateRange":"03/25/2024 - 07/01/2025","createdOn":"0001-01-01T00:00:00","agencyId":0,"ruleId":1002,"ruleTypeId":57,"titleId":0,"titleNumber":0,"actionTypeId":null,"documentTypeId":null,"delayedRuleVersionId":null,"emergencyRuleVersionId":null,"proposedRuleVersionId":null,"agencyName":"","docxName":"d20fe5e2-b983-4d1c-b77a-17182b843a60.docx","effectiveDateString":"","fullRuleName":"","htmlName":"d20fe5e2-b983-4d1c-b77a-17182b843a60.html","pdfName":"d20fe5e2-b983-4d1c-b77a-17182b843a60.pdf","ruleName":"Nursing Facility Payments","ruleNumber":"R414-504","ruleTypeName":"Superseded Rule","ruleReference":"","titleName":"","publicCommentPeriod":null,"publicCommentResource":null,"isPublicCommentOpen":false,"isDelayRemoved":false,"effectiveDate":"2024-03-25T08:28:05.773","effectiveEndDate":"2025-07-01T09:44:12.19","publicCommentStartDate":null,"publicCommentEndDate":null,"citations":null},{"ruleVersionId":7143,"effectiveDateRange":"07/02/2025 - 10/12/2027","createdOn":"0001-01-01T00:00:00","agencyId":0,"ruleId":1002,"ruleTypeId":51,"titleId":0,"titleNumber":0,"actionTypeId":null,"documentTypeId":null,"delayedRuleVersionId":null,"emergencyRuleVersionId":null,"proposedRuleVersionId":null,"agencyName":"","docxName":"285f3d84-7c8f-42a0-bf1f-cca3a6c68d83.docx","effectiveDateString":"","fullRuleName":"","htmlName":"285f3d84-7c8f-42a0-bf1f-cca3a6c68d83.html","pdfName":"285f3d84-7c8f-42a0-bf1f-cca3a6c68d83.pdf","ruleName":"Nursing Facility Payments","ruleNumber":"R414-504","ruleTypeName":"Current Rule","ruleReference":"","titleName":"","publicCommentPeriod":null,"publicCommentResource":null,"isPublicCommentOpen":false,"isDelayRemoved":false,"effectiveDate":"2025-07-02T09:44:12.19","effectiveEndDate":"2027-10-12T08:40:31.93","publicCommentStartDate":null,"publicCommentEndDate":null,"citations":null}]
 

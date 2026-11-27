@@ -2234,3 +2234,55 @@ HTML, massachusetts against its packet set with both supplements.
 these three pages. Commits ab2fb92, 793665f, 945061f (anchor
 2026-11-27T142009Z), pushed. Queue entries closed (field-assembly-standard
 e08931d). Not deployed.
+
+## 2026-11-27 — utah: adminrules repointed to the rebuilt site, retained on owner approval
+
+Carrie approved route (a) of FA-Q-20261124-03 ("Yes, Utah first") and then the
+retention ("Yes, retain both"). The six dead `adminrules.utah.gov` sources are
+repointed: 1, 9 and 11 to `/Rule/<ruleId>` (1072, 952, 1002) through a new
+`next-flight` extractor, and 8, 10 and 12 to `/api/ruleVersion/<ruleId>`,
+replacing the whole retired `/api/public/` API. Capture went from 6 of 12
+sources to 12 of 12. Fidelity 0 failures on both surfaces against the promoted
+packet. Retained with `retain-packet.py --result rebuild`; recipe digest moved
+440aa0a4fc67 -> a2562eef23d6 and the other 59 are unchanged. Checked date moved
+2026-10-15 -> 2026-11-27 in `states/utah.md`, re-rendered, and
+`sync-checked-dates.py` corrected both derived surfaces.
+
+**Source 9 changed document, deliberately.** It had been pinned to GUID
+73994768-…, which `/api/ruleVersion/952` lists as the SUPERSEDED version of
+R410-14 for 09/19/2025 - 10/13/2026; the current version is ee2be259-…,
+effective 10/14/2026. So this recipe had been quoting a superseded rule since
+2026-10-14 — the failure the version witness was added to catch, which it did
+catch, and the 404 is why nobody saw it. `/Rule/952` is keyed by ruleId, so the
+repoint necessarily takes the current text. The amendment: "the department's
+executive director" becomes "the department's commissioner" in three places,
+the authority citation moves from Subsection 26B-1-202(1) to 26B-1-202(2)(a)
+and from 42 CFR 431 Subpart E (2025) to (2026), and the KEY footer's Date of
+Last Change moves to October 14, 2026. **Nothing on the page is touched by it**
+— confirmed by the gate against a fresh capture, not by grep: `states/utah.md`
+contains neither "executive director" nor "commissioner".
+
+**A second, unrelated source change this pass found, and it is the one worth
+reading.** `retain-packet.py` flagged three sources with less text than the
+2026-09-24 capture, and source 7 was the real one. `daas.utah.gov`'s Ombudsman
+Locations page has **removed its entire table of eleven regional long-term-care
+ombudsman contacts** — region, name, phone and email for Cache/Rich/Box Elder,
+Davis, Washington/Beaver/Garfield/Iron/Kane, Utah/Wasatch/Summit, Salt Lake,
+San Juan, Sevier/Millard/Piute/Wayne/Sanpete/Juab, Carbon/Emery/Grand,
+Duchesne/Daggett/Uintah, Tooele, and Weber/Morgan — leaving only a link to
+contact the State Ombudsman. 66 lines to 55.
+
+No published fact moves: this page quotes the **state** ombudsman (Alianne
+Sipes, 385-222-1273, asipes@utah.gov) and the program's own office contact,
+never the regional table, which is why fidelity passes. Recorded here rather
+than on the page, and not queued, because nothing needs a decision — but it is
+the kind of removal a later pass should not have to rediscover, and R432-150-20(6)(b)(iii)
+requires a facility's own notice to carry "the name, address, and telephone
+number of the state and local long term care ombudsman programs", so the state
+publishing fewer local contacts is relevant context for that finding.
+
+Source 3 also differed, trivially: `medicaid.utah.gov`'s link text lost the
+phrase "opens in a new tab".
+
+Gate: all checks pass, no reviewer placeholders — a checked-date move is not a
+content change and needs no review statement. Not deployed.
