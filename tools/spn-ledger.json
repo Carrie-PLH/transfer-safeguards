@@ -152,16 +152,16 @@
       "page": "new-york"
     },
     "https://aging.ohio.gov/care-and-living/ombudsman/get-help/get-help": {
-      "attempts": 4,
-      "last_attempt": "2026-11-20T061153Z",
+      "attempts": 5,
+      "last_attempt": "2026-11-27T181003Z",
       "last_detail": "timeout",
       "last_result": "FAILED",
       "page": "ohio"
     },
     "https://aging.ohio.gov/care-and-living/ombudsman/residents-rights/discharge-transfer": {
-      "attempts": 4,
-      "last_attempt": "2026-11-20T061221Z",
-      "last_detail": "error:not-found",
+      "attempts": 5,
+      "last_attempt": "2026-11-27T181730Z",
+      "last_detail": "timeout",
       "last_message": "The target server cannot find https://aging.ohio.gov/care-and-living/ombudsman/residents-rights/discharge-transfer. (HTTP status=404)",
       "last_result": "FAILED",
       "page": "ohio"
@@ -1217,16 +1217,16 @@
       "page": "utah"
     },
     "https://medicaid.ms.gov/wp-content/uploads/2025/07/Title-23-Part-300-Appeals-eff.-7.1.2025.pdf": {
-      "attempts": 4,
-      "last_attempt": "2026-11-20T055016Z",
+      "attempts": 5,
+      "last_attempt": "2026-11-27T173909Z",
       "last_detail": "error:no-captures",
       "last_message": "Save Page Now could not capture this URL because it was unreachable. If the site is online, it may be blocking access from our service.",
       "last_result": "FAILED",
       "page": "mississippi"
     },
     "https://medicaid.ms.gov/wp-content/uploads/2026/07/Title-23-Part-207-Institutional-LTC-eff-8.1.26.pdf": {
-      "attempts": 4,
-      "last_attempt": "2026-11-20T055100Z",
+      "attempts": 5,
+      "last_attempt": "2026-11-27T173953Z",
       "last_detail": "error:no-captures",
       "last_message": "Save Page Now could not capture this URL because it was unreachable. If the site is online, it may be blocking access from our service.",
       "last_result": "FAILED",
@@ -1278,9 +1278,9 @@
       "page": "delaware"
     },
     "https://medquest.hawaii.gov/content/dam/formsanddocuments/client-forms/1161-request-for-a-hearing/DHS_1161_Rev_1218_Fillable.pdf/jcr:content?process=&submitUrl=&type=pdf": {
-      "attempts": 4,
-      "last_attempt": "2026-11-19T060342Z",
-      "last_detail": "error:not-found",
+      "attempts": 5,
+      "last_attempt": "2026-11-27T173825Z",
+      "last_detail": "timeout",
       "last_message": "The target server cannot find https://medquest.hawaii.gov/content/dam/formsanddocuments/client-forms/1161-request-for-a-hearing/DHS_1161_Rev_1218_Fillable.pdf/jcr:content?process=&submitUrl=&type=pdf. (HTTP status=404)",
       "last_result": "FAILED",
       "page": "hawaii"
@@ -1385,9 +1385,9 @@
       "page": "nebraska"
     },
     "https://nhmmis.nh.gov/portals/wps/wcm/connect/07669c79-1c8c-4fae-b94e-5a367379f968/NH+Medicaid+Final++Nursing+Facility+Manual+7-14-2020.pdf?MOD=AJPERES&CVID=ninzmzW": {
-      "attempts": 4,
-      "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-20T055343Z",
+      "attempts": 5,
+      "consecutive_hard_failures": 3,
+      "last_attempt": "2026-11-27T174021Z",
       "last_detail": "error:no-request",
       "last_message": "The target server blocks access to https://nhmmis.nh.gov/portals/wps/wcm/connect/07669c79-1c8c-4fae-b94e-5a367379f968/NH+Medicaid+Final++Nursing+Facility+Manual+7-14-2020.pdf?MOD=AJPERES&CVID=ninzmzW. (HTTP status=403)",
       "last_result": "FAILED",
@@ -1511,19 +1511,19 @@
       "page": "tennessee"
     },
     "https://regs.health.ny.gov/content/section-4153-residents-rights": {
-      "attempts": 4,
+      "attempts": 5,
       "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-20T060019Z",
-      "last_detail": "error:no-request",
+      "last_attempt": "2026-11-27T175513Z",
+      "last_detail": "timeout",
       "last_message": "The target server blocks access to https://regs.health.ny.gov/content/section-4153-residents-rights. (HTTP status=403)",
       "last_result": "FAILED",
       "page": "new-york"
     },
     "https://regs.health.ny.gov/content/section-5059-residential-health-care": {
-      "attempts": 4,
+      "attempts": 5,
       "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-20T060047Z",
-      "last_detail": "error:no-request",
+      "last_attempt": "2026-11-27T180239Z",
+      "last_detail": "timeout",
       "last_message": "The target server blocks access to https://regs.health.ny.gov/content/section-5059-residential-health-care. (HTTP status=403)",
       "last_result": "FAILED",
       "page": "new-york"
@@ -1882,10 +1882,10 @@
       "page": "california"
     },
     "https://www.dhhs.nh.gov/about-dhhs/long-term-care-ombudsman": {
-      "attempts": 4,
+      "attempts": 5,
       "consecutive_hard_failures": 2,
-      "last_attempt": "2026-11-20T055411Z",
-      "last_detail": "error:no-request",
+      "last_attempt": "2026-11-27T174746Z",
+      "last_detail": "timeout",
       "last_message": "The target server blocks access to https://www.dhhs.nh.gov/about-dhhs/long-term-care-ombudsman. (HTTP status=403)",
       "last_result": "FAILED",
       "page": "new-hampshire"
@@ -2548,5 +2548,5 @@
       "page": "wyoming"
     }
   },
-  "updated": "2026-11-24T055517Z"
+  "updated": "2026-11-27T181730Z"
 }
