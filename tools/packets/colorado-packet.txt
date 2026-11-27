@@ -1,10 +1,11 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: colorado
-ASSEMBLED: 2026-09-24
+ASSEMBLED: 2026-11-27
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/colorado.json (recipe digest 29dfd40e0168). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 7e8350cc5483 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
 - SOURCE 1: transport curl; extractor pdftotext-layout; slice from '15.6 RESIDENT TRANSFER, DISCHARGE OR ROOM CHANGE' to '15.7 RESIDENT RELOCATION If a facility intends'; filters none.
   The Secretary of State serves 6 CCR 1011-1 Chapter 5 as one generated PDF; the slice runs from section 15.6's heading to the start of 15.7. Anchors proposed mechanically by tools/propose-slice.py from the standing packet's span and confirmed by the checker.
 - SOURCE 2: transport curl; extractor pdftotext-layout; slice from '15.1 STATEMENT OF RIGHTS' to 'the treatment of personal and medical records,'; filters none.
@@ -18,7 +19,7 @@ CAPTURE NOTES:
 - SOURCE 6: transport curl; extractor pdftotext-layout; slice from '8.482.42     ADDITIONAL PAYMENTS' to '8.482.45      ENFORCEMENT BY THE DEPARTMENT'; filters none.
   The Secretary of State serves 10 CCR 2505-10 8.400 (Medical Assistance, Section 8.400, Long Term Care, Nursing Facility Care, Adult Day Care Services) as one generated PDF, the same GenerateRulePdf.do mechanism as sources 1-4, addressed by its own ruleVersionId (12655 for the version effective 08/14/2026, current as of this capture). This is the Medicaid room-reservation ('bed hold') provision the baseline page's 2026-08-30 change log recorded as capture-pending. The slice runs from section 8.482.42's heading through the end of section 8.482.44, which is the rule's last paragraph before section 8.482.45 (Enforcement by the Department); the slice is a superset of the single payment-charge provision needed, kept whole because 8.482.42, .43 and .44 cross-reference each other by section number throughout and none reads independently.
 
-SOURCE 1: 6 CCR 1011-1 Chapter 5, section 15.6 (Resident transfer, discharge or room change) | https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12005&fileName=6+CCR+1011-1+Chapter+05 | source date: Adopted by the Board of Health on April 16, 2025. Effective July 1, 2025. | retrieved: 2026-09-24
+SOURCE 1: 6 CCR 1011-1 Chapter 5, section 15.6 (Resident transfer, discharge or room change) | https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12005&fileName=6+CCR+1011-1+Chapter+05 | source date: Adopted by the Board of Health on April 16, 2025. Effective July 1, 2025. | retrieved: 2026-11-27
 15.6    RESIDENT TRANSFER, DISCHARGE OR ROOM CHANGE
 
         A)      The following definitions apply to this section 15.6:
@@ -196,7 +197,7 @@ Health Facilities and Emergency Medical Services Division
 CODE OF COLORADO REGULATIONS                                                            6 CCR 1011-1 Chapter 5
 Health Facilities and Emergency Medical Services Division
 
-SOURCE 2: 6 CCR 1011-1 Chapter 5, section 15.1 (Statement of rights), excerpt | https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12005&fileName=6+CCR+1011-1+Chapter+05 | source date: Adopted by the Board of Health on April 16, 2025. Effective July 1, 2025. | retrieved: 2026-09-24
+SOURCE 2: 6 CCR 1011-1 Chapter 5, section 15.1 (Statement of rights), excerpt | https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12005&fileName=6+CCR+1011-1+Chapter+05 | source date: Adopted by the Board of Health on April 16, 2025. Effective July 1, 2025. | retrieved: 2026-11-27
 15.1    STATEMENT OF RIGHTS
 
         The facility shall adopt and make public a statement regarding of the rights and responsibilities of
@@ -318,14 +319,14 @@ Health Facilities and Emergency Medical Services Division
 
         M)      The right to have privacy in treatment and in caring for personal needs, confidentiality in
 
-SOURCE 3: 6 CCR 1011-1 Chapter 5, section 5.2 (Bed hold policies) | https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12005&fileName=6+CCR+1011-1+Chapter+05 | source date: Adopted by the Board of Health on April 16, 2025. Effective July 1, 2025. | retrieved: 2026-09-24
+SOURCE 3: 6 CCR 1011-1 Chapter 5, section 5.2 (Bed hold policies) | https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12005&fileName=6+CCR+1011-1+Chapter+05 | source date: Adopted by the Board of Health on April 16, 2025. Effective July 1, 2025. | retrieved: 2026-11-27
 5.2     BED HOLD POLICIES
 
         The facility shall develop policies for holding beds available for residents who are temporarily
         absent from the facility, provide a copy of the policy upon admission and explain these policies to
         residents upon admission and before each temporary absence.
 
-SOURCE 4: 6 CCR 1011-1 Chapter 5, cover page and Editor's Notes | https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12005&fileName=6+CCR+1011-1+Chapter+05 | source date: Adopted by the Board of Health on April 16, 2025. Effective July 1, 2025. | retrieved: 2026-09-24
+SOURCE 4: 6 CCR 1011-1 Chapter 5, cover page and Editor's Notes | https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12005&fileName=6+CCR+1011-1+Chapter+05 | source date: Adopted by the Board of Health on April 16, 2025. Effective July 1, 2025. | retrieved: 2026-11-27
 DEPARTMENT OF PUBLIC HEALTH AND ENVIRONMENT
 
     Health Facilities and Emergency Medical Services Division
@@ -383,7 +384,7 @@ DEPARTMENT OF PUBLIC HEALTH AND ENVIRONMENT
 
 CODE OF COLORADO REGULATIONS                                                         6 CCR 1011-1 Chapter 5
 
-SOURCE 5: Long-Term Care Ombudsman | https://cdhs.colorado.gov/long-term-care-ombudsman | source date: none stated on page | retrieved: 2026-09-24
+SOURCE 5: Long-Term Care Ombudsman | https://cdhs.colorado.gov/long-term-care-ombudsman | source date: none stated on page | retrieved: 2026-11-27
 Skip to main content
  
 
@@ -399,8 +400,22 @@ Skip to main content
 
 
 
- 
 
+Select Language
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ask CDHS
 
 
 
@@ -438,6 +453,8 @@ Skip to main content
 Search
 
 Search
+
+
 
 
 
@@ -682,64 +699,6 @@ Menu
 
 
  Training to Career Pathways
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Energy assistance
- 
- Toggle Energy assistance submenu
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Colorado Low-income Energy Assistance Program (LEAP)
- 
-
-
-
-
-
-
-
-
-
- Energy EBT
  
 
 
@@ -1134,6 +1093,17 @@ Menu
 
 
 
+ Energy EBT
+ 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1298,17 +1268,6 @@ Menu
 
 
  Forensic services
- 
-
-
-
-
-
-
-
-
-
- Mental Health Transitional Living Homes
  
 
 
@@ -3323,6 +3282,85 @@ Menu
 
 
 
+
+
+Browse Questions
+
+
+
+
+
+
+How do I apply for SNAP benefits?
+
+
+
+
+
+
+Where is my County Human Services Office?
+
+
+
+
+
+
+Find information on Colorado EBT.
+
+
+
+
+
+
+How do I apply for energy assistance (LEAP)?
+
+
+
+
+
+
+How do I apply for employment assistance?
+
+
+
+
+
+
+I want to find services on older adults.
+
+
+
+
+
+
+Where do I find services on Behavior Health?
+
+
+
+
+
+
+I want to find services on Child Support.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Home
 
 
@@ -3411,19 +3449,13 @@ Long-Term Care Ombudsman
 
 
 
+The Colorado State Long-Term Care Ombudsman Program fights for residents of skilled nursing homes and licensed assisted living facilities.
 
-The Colorado State Long-Term Care Ombudsman Program advocates for residents of skilled nursing homes, and licensed assisted living residences. The authority of the long-term care ombudsman program comes from Title VII, Chapter 2, of the Older Americans Act, as well as Title 26, Article 11.5, of the Older Coloradans Act. The primary purpose of the Long-Term Care Ombudsman Program is to promote and protect the residents’ rights guaranteed to residents under federal and state law.
+The authority of the long-term care ombudsman program stems from Title VII, Chapter 2, of the Older Americans Act, as well as Title 26, Article 11.5, of the Older Coloradans Act.
 
-
-
-
-
+The Long-Term Care Ombudsman Program exists to protect the rights that federal and state law guarantee to every resident.
 
 
-
-
-
- 
 
 
 
@@ -3488,16 +3520,18 @@ Long-Term Care Ombudsman Program
 
 
 
-
-
-
 Services
-Certified Long-Term Care Ombudsmen are trained to receive complaints and resolve problems in situations involving quality of care, use of restraints, transfer and discharge, abuse, and other aspects of resident dignity and rights. Ombudsman services are free, confidential and resident-directed.
-Contact an Ombudsman
-Every licensed long-term care facility is required to display a poster with the facility's assigned ombudsman's name and contact information. If you are a resident or family member of a resident in a facility, call the ombudsman listed on the poster.
 
-To speak with a long-term care ombudsman, visit the Colorado Long-Term Care Program website or call 303.862.3524.
+Certified Long-Term Care Ombudsmen receive comprehensive training to field complaints and investigate concerns about quality of care, use of restraints, transfer and discharge, abuse, and other aspects of resident dignity and rights. Ombudsman services are always free, confidential and resident-directed.
+
+Contact an ombudsman
+
+State law requires every licensed long-term care facility to display a poster with the facility's assigned ombudsman's name and contact information. If you're a resident (or a family member of someone) in a facility, call the ombudsman listed on the poster.
+
+To speak with a long-term care ombudsman, visit the Colorado Long-Term Care Program website or call 303-862-3524.
+
 Resources
+
 Long-Term Care Ombudsman Program Annual Report 2023
 
 
@@ -3771,10 +3805,6 @@ A to Z index
 
 
 
-
-
-
-
 © 2026 State of Colorado
 
 
@@ -3793,7 +3823,7 @@ General Notices
 
 Colorado Official State Web Portal
 
-SOURCE 6: 10 CCR 2505-10 8.400, sections 8.482.42-8.482.44 (Additional Payments; Medical Leave From Nursing Facility; Room Reservations for Non-Medical and/or Programmatic Leave) — Medical Services Board, Department of Health Care Policy and Financing | https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12655&fileName=10+CCR+2505-10+8.400 | source date: current version effective 08/14/2026 (PDF), per the rule's own DisplayRule listing at https://www.sos.state.co.us/CCR/DisplayRule.do?action=ruleinfo&ruleId=2921&deptID=7&agencyID=69&deptName=Department+of+Health+Care+Policy+and+Financing&agencyName=Medical+Services+Board+(Volume+8%3B+Medical+Assistance,+Children's+Health+Plan)&seriesNum=10+CCR+2505-10+8.400 | retrieved: 2026-09-24
+SOURCE 6: 10 CCR 2505-10 8.400, sections 8.482.42-8.482.44 (Additional Payments; Medical Leave From Nursing Facility; Room Reservations for Non-Medical and/or Programmatic Leave) — Medical Services Board, Department of Health Care Policy and Financing | https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12655&fileName=10+CCR+2505-10+8.400 | source date: current version effective 08/14/2026 (PDF), per the rule's own DisplayRule listing at https://www.sos.state.co.us/CCR/DisplayRule.do?action=ruleinfo&ruleId=2921&deptID=7&agencyID=69&deptName=Department+of+Health+Care+Policy+and+Financing&agencyName=Medical+Services+Board+(Volume+8%3B+Medical+Assistance,+Children's+Health+Plan)&seriesNum=10+CCR+2505-10+8.400 | retrieved: 2026-11-27
 8.482.42     ADDITIONAL PAYMENTS
 
 A.    “Additional payments” are defined as payments made by the resident, or by a
