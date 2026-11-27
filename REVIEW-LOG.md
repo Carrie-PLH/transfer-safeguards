@@ -2219,3 +2219,18 @@ draft returns 0 fidelity failures, markdown and HTML.
 
 Committed this pass: the three retained 2026-11-27 captures, their history
 copies and manifest lines, and this entry.
+
+## 2026-11-27 — drift rebuilds applied on owner approval: wisconsin, colorado, massachusetts
+
+Carrie approved the three rebuilds drafted in the entry above ("Yes, all as
+drafted"). The 2026-11-27 captures promoted with `retain-packet.py --result
+rebuild`; the drafted edits applied to `states/<slug>.md` and, for colorado
+and massachusetts, the status lines in `site/index.html` and
+`site/states/index.html`; pages re-rendered with `render-state.py`
+(`apply-seo-head.py` found nothing to rewrite). Fidelity 0 failures, md and
+HTML, massachusetts against its packet set with both supplements.
+`sync-checked-dates.py`, `build-status.py`, `build-state-picker.py`,
+`generate-sitemap.py` run. Gate: only the intended reviewer placeholder on
+these three pages. Commits ab2fb92, 793665f, 945061f (anchor
+2026-11-27T142009Z), pushed. Queue entries closed (field-assembly-standard
+e08931d). Not deployed.
