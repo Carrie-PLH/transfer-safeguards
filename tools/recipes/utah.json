@@ -1,146 +1,170 @@
 {
-  "recipe_version": 1,
-  "state": "utah",
-  "sources": [
-    {
-      "n": 1,
-      "title": "R432-150, Nursing Care Facility — Utah Administrative Code",
-      "url": "https://adminrules.utah.gov/api/public/getHTML/uac-html/9635398a-ce5f-438c-8817-197550b951c7.html",
-      "source_date": "Effective Date: 02/18/2025",
-      "transport": "curl",
-      "user_agent": "browser",
-      "extractor": "html-text",
-      "scope": "body",
-      "filters": ["trim-lines", "collapse-blank-runs"],
-      "notes": "adminrules.utah.gov is a client-rendered single-page app: the rule's own address, https://adminrules.utah.gov/public/rule/R432-150/Current%20Rules, returns 404 to any direct fetch and renders only in a browser. The 2026-09-01 capture recorded that and read the rendered page by hand. This address is what the app itself fetches for the rule text, so it is first-party and curl-reachable. IT IS PINNED TO A VERSION, NOT TO THE RULE. The GUID names the current text of R432-150; an amendment produces a new GUID and this URL would keep returning the superseded rule while looking healthy, which is the exact failure this project exists to prevent. Source 8 exists to close that hole and must never be removed: it is keyed by rule number rather than by GUID, so an amendment changes it, the pass sees drift, and a session updates this GUID deliberately. Verified 2026-09-04 before re-basing: all 21 quotations this page draws from the rule appear verbatim in this text, so it is the same instrument the page was built on."
-    },
-    {
-      "n": 2,
-      "title": "Skilled nursing facility-initiated discharge appeal form — Utah Division of Aging and Adult Services (PDF)",
-      "url": "https://daas.utah.gov/wp-content/uploads/2024/07/SNF-Discharge-Appeal-Form-11.7.23.pdf",
-      "source_date": "form dated 11.7.23 in its own filename",
-      "transport": "curl",
-      "user_agent": "browser",
-      "extractor": "pdftotext-layout",
-      "filters": [],
-      "notes": "Re-based 2026-09-04. The address the 2026-09-01 capture recorded, .../SNF-Discharge-Appeal-Form.pdf, now returns an nginx 404: the department renamed the file in place, appending its own revision date, and nothing announced the move. Found again by reading the Long Term Care Ombudsman page, which still links it. Verified before re-basing: all 8 quotations this page draws from the form appear verbatim in the renamed file, so it is the same document under a new name rather than a new form."
-    },
-    {
-      "n": 3,
-      "title": "Hearings — Medicaid — Utah Department of Health and Human Services",
-      "url": "https://medicaid.utah.gov/hearings/",
-      "source_date": "none stated on page",
-      "transport": "curl",
-      "user_agent": "browser",
-      "extractor": "html-text",
-      "scope": "body",
-      "filters": ["trim-lines", "collapse-blank-runs"],
-      "notes": "Cloudflare hides this page's contact address behind a client-side script. The 2026-09-01 capture left the placeholder text in the packet because curl cannot run it; decode_cfemail in the shared capture reader resolves it, and this source now yields utmedicaidhearings@utah.gov as the department publishes it."
-    },
-    {
-      "n": 4,
-      "title": "Medicaid Fair Hearings — Utah Department of Health and Human Services",
-      "url": "https://dhhs.utah.gov/oah/medicaid-fair-hearings/",
-      "source_date": "none stated on page",
-      "transport": "curl",
-      "user_agent": "browser",
-      "extractor": "html-text",
-      "scope": "body",
-      "filters": ["trim-lines", "collapse-blank-runs"],
-      "notes": "The same office's contact page published on a second department domain, carried because the two are not word-for-word identical. Same Cloudflare obfuscation and same resolution as source 3."
-    },
-    {
-      "n": 5,
-      "title": "Utah Medicaid Provider Manual, Section I: General Information, chapter 5-4 Hearings and Administrative Review (PDF)",
-      "url": "https://medicaid-documents.dhhs.utah.gov/Documents/manuals/pdfs/Medicaid+Provider+Manuals/All+Providers+General+Information+Section+I/AllProvidersGeneralInfo_Section_1.pdf",
-      "source_date": "Updated September 2026, as the chapter's own footer states (was Updated July 2026 as of the 2026-09-04 capture)",
-      "transport": "curl",
-      "user_agent": "browser",
-      "extractor": "pdftotext-layout",
-      "pages": [55, 57],
-      "filters": [],
-      "notes": "The 2026-09-01 capture sliced this chapter by hand from a 139-page manual. Pages 55 to 57 are the printed range that chapter occupies and contain the standing text exactly; a range is reproducible where a hand slice is not. The chapter heading also appears on pages 4 and 134, in the table of contents and in a later cross-reference, which is why the range is pinned rather than searched for by heading."
-    },
-    {
-      "n": 6,
-      "title": "Long Term Care Ombudsman — Aging & Adult Services, Utah Department of Health and Human Services",
-      "url": "https://daas.utah.gov/long-term-care-ombudsman/",
-      "source_date": "none stated on page",
-      "transport": "curl",
-      "user_agent": "browser",
-      "extractor": "html-text",
-      "scope": "body",
-      "filters": ["trim-lines", "collapse-blank-runs"],
-      "notes": "The 2026-09-01 capture had to render this page in a browser and read document.body.innerText, because every listed address was a Cloudflare placeholder to curl — recorded then as a last-resort transport, not independently re-verifiable by an automated pass. decode_cfemail removes that need: curl now yields the addresses the department publishes, and this source is ordinary again."
-    },
-    {
-      "n": 7,
-      "title": "Ombudsman Locations — Aging & Adult Services, Utah Department of Health and Human Services",
-      "url": "https://daas.utah.gov/ombudsman-locations-3/",
-      "source_date": "none stated on page",
-      "transport": "curl",
-      "user_agent": "browser",
-      "extractor": "html-text",
-      "scope": "body",
-      "filters": ["trim-lines", "collapse-blank-runs"],
-      "notes": "Re-based 2026-09-04: the recorded address, /ombudsman-locations, 301-redirects here. Same browser-transport history and same resolution as source 6; the regional ombudsman roster's addresses now decode under curl."
-    },
-    {
-      "n": 8,
-      "title": "R432-150 rule metadata — Utah Office of Administrative Rules (version witness for source 1)",
-      "url": "https://adminrules.utah.gov/api/public/rule/R432-150/undefined/Current%20Rules",
-      "source_date": "carries its own effectiveDate field",
-      "transport": "curl",
-      "user_agent": "browser",
-      "extractor": "none",
-      "filters": [],
-      "notes": "Not a source the page quotes. It exists so that source 1's GUID cannot go stale unnoticed. This address is keyed by rule number rather than by version, and returns the rule's effectiveDate together with the htmlDownload GUID that source 1 pins. If Utah amends R432-150, both fields change here, this packet changes, the review pass reports drift, and a session updates source 1's URL as a deliberate act. Without it, source 1 would keep returning a superseded rule and every check would pass. The literal 'undefined' path segment is what the department's own application sends; it is reproduced rather than corrected, because a guess at the intended value would be a different request from the one that is known to work."
-    },
-    {
-      "n": 9,
-      "title": "R410-14, Administrative Hearing Procedures — Utah Administrative Code",
-      "url": "https://adminrules.utah.gov/api/public/getHTML/uac-html/73994768-4705-4e78-bf9e-3167834a0136.html",
-      "source_date": "Effective Date: 09/19/2025",
-      "transport": "curl",
-      "user_agent": "browser",
-      "extractor": "html-text",
-      "scope": "body",
-      "filters": ["trim-lines", "collapse-blank-runs"],
-      "notes": "Added 2026-09-24, deepening the page to full: the Medicaid Provider Manual (source 5) itself names this rule as the one setting forth Medicaid hearing procedures ('Utah Administrative Code R410-14 et seq. sets forth the administrative hearing procedures for Medicaid hearings'), and R410-14-2(2)(d) defines a nursing facility's own determination to transfer or discharge a resident as an 'action' this rule governs, and R410-14-23 names SNF hearings expressly. It is the same adminrules.utah.gov client-rendered application as source 1, reached the same way: this address is what the app itself fetches for the rule text and is first-party and curl-reachable, but IT IS PINNED TO A VERSION, NOT TO THE RULE, for the same reason source 1 is. Source 10 is this source's version witness and must never be removed for the same reason source 8 must not be removed for source 1."
-    },
-    {
-      "n": 10,
-      "title": "R410-14 rule metadata — Utah Office of Administrative Rules (version witness for source 9)",
-      "url": "https://adminrules.utah.gov/api/public/rule/R410-14/undefined/Current%20Rules",
-      "source_date": "carries its own effectiveDate field",
-      "transport": "curl",
-      "user_agent": "browser",
-      "extractor": "none",
-      "filters": [],
-      "notes": "Not a source the page quotes. Same role for source 9 that source 8 holds for source 1: keyed by rule number rather than by version, so an amendment to R410-14 changes this packet and the review pass reports drift rather than silently continuing to quote a superseded rule."
-    },
-    {
-      "n": 11,
-      "title": "R414-504, Nursing Facility Payments — Utah Administrative Code",
-      "url": "https://adminrules.utah.gov/api/public/getHTML/uac-html/285f3d84-7c8f-42a0-bf1f-cca3a6c68d83.html",
-      "source_date": "Effective Date: 07/02/2025",
-      "transport": "curl",
-      "user_agent": "browser",
-      "extractor": "html-text",
-      "scope": "body",
-      "filters": ["trim-lines", "collapse-blank-runs"],
-      "notes": "Added 2026-09-24, deepening the page to full: this is Utah Medicaid's nursing-facility payment rule, searched for a state-wide bed-hold day count after R432-150-20(9) (source 1) proved to require only a facility's own written bed-hold policy with no state-set duration. This rule addresses case-mix reimbursement and reserved/swing beds by payment category (R414-504-3(9)) but states no bed-hold or reserved-bed day count either; it supports the page's stated absence rather than a quotation of a period. Same client-rendered application and same version-pinning caveat as sources 1 and 9; source 12 is its version witness."
-    },
-    {
-      "n": 12,
-      "title": "R414-504 rule metadata — Utah Office of Administrative Rules (version witness for source 11)",
-      "url": "https://adminrules.utah.gov/api/public/rule/R414-504/undefined/Current%20Rules",
-      "source_date": "carries its own effectiveDate field",
-      "transport": "curl",
-      "user_agent": "browser",
-      "extractor": "none",
-      "filters": [],
-      "notes": "Not a source the page quotes. Same role for source 11 that source 8 holds for source 1."
-    }
-  ]
+ "recipe_version": 1,
+ "state": "utah",
+ "sources": [
+  {
+   "n": 1,
+   "title": "R432-150, Nursing Care Facility — Utah Administrative Code",
+   "url": "https://adminrules.utah.gov/Rule/1072",
+   "source_date": "Effective Date: 02/18/2025",
+   "transport": "curl",
+   "user_agent": "browser",
+   "extractor": "next-flight",
+   "scope": "body",
+   "filters": [
+    "trim-lines",
+    "collapse-blank-runs"
+   ],
+   "notes": "adminrules.utah.gov is a Next.js App Router application. The Office of Administrative Rules rebuilt it and retired the whole /api/public/ API this recipe was built on: the old getHTML address now answers 404 (HTTP 400 on one of them), and so does the human /public/rule/<ref>/Current%20Rules address (FA-Q-20261124-03, diagnosed 2026-11-24; the licensure mobility half is FA-Q-20261126-02). This address is the rule's own human page, keyed by ruleId.\n\nWHY THE EXTRACTOR IS next-flight AND NOT html-text. /Rule/<ruleId> answers 200 to plain curl, but the rule text is not in the served DOM: it sits inside a <script> element as an escaped HTML document of absolutely-positioned DOCX-conversion spans, and extract_html drops script nodes. A repoint to this address with html-text was tried on 2026-11-24 and captured 208 characters of site navigation -- worse than the 404, because it looks like a capture that succeeded. next-flight reassembles the RSC flight payload from the page's self.__next_f.push calls and hands it to the same extract_html, so the document arrives exactly as the retired endpoint delivered it. Measured 2026-11-27 against this packet: byte-identical for R432-150 (81,947 chars) and R414-504 (13,232), and 0.9985 for R410-14, whose difference is the amendment below rather than any loss in extraction.\n\nTHE VERSION-PINNING HAZARD IS GONE, AND THE WITNESS CHANGES ROLE. The old address pinned a version GUID, so an amendment would have kept returning the superseded rule while every check passed -- the failure this project exists to prevent, and the reason the witness source was added. /Rule/<ruleId> is keyed by the rule's identity instead, so it always serves the current text and cannot go stale. The witness is still required, for the other half of the job: it records which version this capture holds, so an amendment shows as drift and a session reads it deliberately rather than finding the text changed under it."
+  },
+  {
+   "n": 2,
+   "title": "Skilled nursing facility-initiated discharge appeal form — Utah Division of Aging and Adult Services (PDF)",
+   "url": "https://daas.utah.gov/wp-content/uploads/2024/07/SNF-Discharge-Appeal-Form-11.7.23.pdf",
+   "source_date": "form dated 11.7.23 in its own filename",
+   "transport": "curl",
+   "user_agent": "browser",
+   "extractor": "pdftotext-layout",
+   "filters": [],
+   "notes": "Re-based 2026-09-04. The address the 2026-09-01 capture recorded, .../SNF-Discharge-Appeal-Form.pdf, now returns an nginx 404: the department renamed the file in place, appending its own revision date, and nothing announced the move. Found again by reading the Long Term Care Ombudsman page, which still links it. Verified before re-basing: all 8 quotations this page draws from the form appear verbatim in the renamed file, so it is the same document under a new name rather than a new form."
+  },
+  {
+   "n": 3,
+   "title": "Hearings — Medicaid — Utah Department of Health and Human Services",
+   "url": "https://medicaid.utah.gov/hearings/",
+   "source_date": "none stated on page",
+   "transport": "curl",
+   "user_agent": "browser",
+   "extractor": "html-text",
+   "scope": "body",
+   "filters": [
+    "trim-lines",
+    "collapse-blank-runs"
+   ],
+   "notes": "Cloudflare hides this page's contact address behind a client-side script. The 2026-09-01 capture left the placeholder text in the packet because curl cannot run it; decode_cfemail in the shared capture reader resolves it, and this source now yields utmedicaidhearings@utah.gov as the department publishes it."
+  },
+  {
+   "n": 4,
+   "title": "Medicaid Fair Hearings — Utah Department of Health and Human Services",
+   "url": "https://dhhs.utah.gov/oah/medicaid-fair-hearings/",
+   "source_date": "none stated on page",
+   "transport": "curl",
+   "user_agent": "browser",
+   "extractor": "html-text",
+   "scope": "body",
+   "filters": [
+    "trim-lines",
+    "collapse-blank-runs"
+   ],
+   "notes": "The same office's contact page published on a second department domain, carried because the two are not word-for-word identical. Same Cloudflare obfuscation and same resolution as source 3."
+  },
+  {
+   "n": 5,
+   "title": "Utah Medicaid Provider Manual, Section I: General Information, chapter 5-4 Hearings and Administrative Review (PDF)",
+   "url": "https://medicaid-documents.dhhs.utah.gov/Documents/manuals/pdfs/Medicaid+Provider+Manuals/All+Providers+General+Information+Section+I/AllProvidersGeneralInfo_Section_1.pdf",
+   "source_date": "Updated September 2026, as the chapter's own footer states (was Updated July 2026 as of the 2026-09-04 capture)",
+   "transport": "curl",
+   "user_agent": "browser",
+   "extractor": "pdftotext-layout",
+   "pages": [
+    55,
+    57
+   ],
+   "filters": [],
+   "notes": "The 2026-09-01 capture sliced this chapter by hand from a 139-page manual. Pages 55 to 57 are the printed range that chapter occupies and contain the standing text exactly; a range is reproducible where a hand slice is not. The chapter heading also appears on pages 4 and 134, in the table of contents and in a later cross-reference, which is why the range is pinned rather than searched for by heading."
+  },
+  {
+   "n": 6,
+   "title": "Long Term Care Ombudsman — Aging & Adult Services, Utah Department of Health and Human Services",
+   "url": "https://daas.utah.gov/long-term-care-ombudsman/",
+   "source_date": "none stated on page",
+   "transport": "curl",
+   "user_agent": "browser",
+   "extractor": "html-text",
+   "scope": "body",
+   "filters": [
+    "trim-lines",
+    "collapse-blank-runs"
+   ],
+   "notes": "The 2026-09-01 capture had to render this page in a browser and read document.body.innerText, because every listed address was a Cloudflare placeholder to curl — recorded then as a last-resort transport, not independently re-verifiable by an automated pass. decode_cfemail removes that need: curl now yields the addresses the department publishes, and this source is ordinary again."
+  },
+  {
+   "n": 7,
+   "title": "Ombudsman Locations — Aging & Adult Services, Utah Department of Health and Human Services",
+   "url": "https://daas.utah.gov/ombudsman-locations-3/",
+   "source_date": "none stated on page",
+   "transport": "curl",
+   "user_agent": "browser",
+   "extractor": "html-text",
+   "scope": "body",
+   "filters": [
+    "trim-lines",
+    "collapse-blank-runs"
+   ],
+   "notes": "Re-based 2026-09-04: the recorded address, /ombudsman-locations, 301-redirects here. Same browser-transport history and same resolution as source 6; the regional ombudsman roster's addresses now decode under curl."
+  },
+  {
+   "n": 8,
+   "title": "R432-150 rule metadata — Utah Office of Administrative Rules (version witness for source 1)",
+   "url": "https://adminrules.utah.gov/api/ruleVersion/1072",
+   "source_date": "carries its own effectiveDate field",
+   "transport": "curl",
+   "user_agent": "browser",
+   "extractor": "none",
+   "filters": [],
+   "notes": "Not a source the page quotes. Repointed 2026-11-27 with its rule text (FA-Q-20261124-03): the old /api/public/rule/<ref>/undefined/Current%20Rules address died with the rest of /api/public/. /api/ruleVersion/<ruleId> is a better witness than the address it replaces and is curl-reachable now. It is keyed by ruleId -- the rule's identity, stable across amendments -- and returns that one rule's whole version history, each entry carrying its ruleTypeName, effectiveDateRange and htmlName. So it changes when this rule is amended and at no other time, where the old address was keyed by rule number and the title-wide alternative (/api/titleRules/<titleId>) would move whenever any rule in the title did.\n\nIts role is no longer to catch a stale pin -- source 1 is keyed by ruleId and cannot pin a version any more -- but to record which version of R432-150 this capture holds, so an amendment is visible as drift instead of arriving silently inside the rule text."
+  },
+  {
+   "n": 9,
+   "title": "R410-14, Administrative Hearing Procedures — Utah Administrative Code",
+   "url": "https://adminrules.utah.gov/Rule/952",
+   "source_date": "Effective Date: 10/14/2026",
+   "transport": "curl",
+   "user_agent": "browser",
+   "extractor": "next-flight",
+   "scope": "body",
+   "filters": [
+    "trim-lines",
+    "collapse-blank-runs"
+   ],
+   "notes": "adminrules.utah.gov is a Next.js App Router application. The Office of Administrative Rules rebuilt it and retired the whole /api/public/ API this recipe was built on: the old getHTML address now answers 404 (HTTP 400 on one of them), and so does the human /public/rule/<ref>/Current%20Rules address (FA-Q-20261124-03, diagnosed 2026-11-24; the licensure mobility half is FA-Q-20261126-02). This address is the rule's own human page, keyed by ruleId.\n\nWHY THE EXTRACTOR IS next-flight AND NOT html-text. /Rule/<ruleId> answers 200 to plain curl, but the rule text is not in the served DOM: it sits inside a <script> element as an escaped HTML document of absolutely-positioned DOCX-conversion spans, and extract_html drops script nodes. A repoint to this address with html-text was tried on 2026-11-24 and captured 208 characters of site navigation -- worse than the 404, because it looks like a capture that succeeded. next-flight reassembles the RSC flight payload from the page's self.__next_f.push calls and hands it to the same extract_html, so the document arrives exactly as the retired endpoint delivered it. Measured 2026-11-27 against this packet: byte-identical for R432-150 (81,947 chars) and R414-504 (13,232), and 0.9985 for R410-14, whose difference is the amendment below rather than any loss in extraction.\n\nTHE VERSION-PINNING HAZARD IS GONE, AND THE WITNESS CHANGES ROLE. The old address pinned a version GUID, so an amendment would have kept returning the superseded rule while every check passed -- the failure this project exists to prevent, and the reason the witness source was added. /Rule/<ruleId> is keyed by the rule's identity instead, so it always serves the current text and cannot go stale. The witness is still required, for the other half of the job: it records which version this capture holds, so an amendment shows as drift and a session reads it deliberately rather than finding the text changed under it.\n\nTHIS SOURCE CHANGED DOCUMENT WITH THE REPOINT. It had been pinned to GUID 73994768-4705-4e78-bf9e-3167834a0136, which the witness now lists as the SUPERSEDED version of R410-14 for 09/19/2025 - 10/13/2026; the current version is ee2be259-9bb8-49e1-9dd6-1fc5b11dccaf, effective 10/14/2026. So this recipe had been quoting a superseded rule since 2026-10-14, which is exactly the failure the witness was added to catch -- it did catch it, and the 404 is why nobody saw it. The amendment: \"the department's executive director\" becomes \"the department's commissioner\" in three places, the authority citation moves from Subsection 26B-1-202(1) to 26B-1-202(2)(a) and from 42 CFR 431 Subpart E (2025) to (2026), and the KEY footer's Date of Last Change moves from September 19, 2025 to October 14, 2026. Nothing else differs but whitespace and hyphenation."
+  },
+  {
+   "n": 10,
+   "title": "R410-14 rule metadata — Utah Office of Administrative Rules (version witness for source 9)",
+   "url": "https://adminrules.utah.gov/api/ruleVersion/952",
+   "source_date": "carries its own effectiveDate field",
+   "transport": "curl",
+   "user_agent": "browser",
+   "extractor": "none",
+   "filters": [],
+   "notes": "Not a source the page quotes. Repointed 2026-11-27 with its rule text (FA-Q-20261124-03): the old /api/public/rule/<ref>/undefined/Current%20Rules address died with the rest of /api/public/. /api/ruleVersion/<ruleId> is a better witness than the address it replaces and is curl-reachable now. It is keyed by ruleId -- the rule's identity, stable across amendments -- and returns that one rule's whole version history, each entry carrying its ruleTypeName, effectiveDateRange and htmlName. So it changes when this rule is amended and at no other time, where the old address was keyed by rule number and the title-wide alternative (/api/titleRules/<titleId>) would move whenever any rule in the title did.\n\nIts role is no longer to catch a stale pin -- source 9 is keyed by ruleId and cannot pin a version any more -- but to record which version of R410-14 this capture holds, so an amendment is visible as drift instead of arriving silently inside the rule text."
+  },
+  {
+   "n": 11,
+   "title": "R414-504, Nursing Facility Payments — Utah Administrative Code",
+   "url": "https://adminrules.utah.gov/Rule/1002",
+   "source_date": "Effective Date: 07/02/2025",
+   "transport": "curl",
+   "user_agent": "browser",
+   "extractor": "next-flight",
+   "scope": "body",
+   "filters": [
+    "trim-lines",
+    "collapse-blank-runs"
+   ],
+   "notes": "adminrules.utah.gov is a Next.js App Router application. The Office of Administrative Rules rebuilt it and retired the whole /api/public/ API this recipe was built on: the old getHTML address now answers 404 (HTTP 400 on one of them), and so does the human /public/rule/<ref>/Current%20Rules address (FA-Q-20261124-03, diagnosed 2026-11-24; the licensure mobility half is FA-Q-20261126-02). This address is the rule's own human page, keyed by ruleId.\n\nWHY THE EXTRACTOR IS next-flight AND NOT html-text. /Rule/<ruleId> answers 200 to plain curl, but the rule text is not in the served DOM: it sits inside a <script> element as an escaped HTML document of absolutely-positioned DOCX-conversion spans, and extract_html drops script nodes. A repoint to this address with html-text was tried on 2026-11-24 and captured 208 characters of site navigation -- worse than the 404, because it looks like a capture that succeeded. next-flight reassembles the RSC flight payload from the page's self.__next_f.push calls and hands it to the same extract_html, so the document arrives exactly as the retired endpoint delivered it. Measured 2026-11-27 against this packet: byte-identical for R432-150 (81,947 chars) and R414-504 (13,232), and 0.9985 for R410-14, whose difference is the amendment below rather than any loss in extraction.\n\nTHE VERSION-PINNING HAZARD IS GONE, AND THE WITNESS CHANGES ROLE. The old address pinned a version GUID, so an amendment would have kept returning the superseded rule while every check passed -- the failure this project exists to prevent, and the reason the witness source was added. /Rule/<ruleId> is keyed by the rule's identity instead, so it always serves the current text and cannot go stale. The witness is still required, for the other half of the job: it records which version this capture holds, so an amendment shows as drift and a session reads it deliberately rather than finding the text changed under it."
+  },
+  {
+   "n": 12,
+   "title": "R414-504 rule metadata — Utah Office of Administrative Rules (version witness for source 11)",
+   "url": "https://adminrules.utah.gov/api/ruleVersion/1002",
+   "source_date": "carries its own effectiveDate field",
+   "transport": "curl",
+   "user_agent": "browser",
+   "extractor": "none",
+   "filters": [],
+   "notes": "Not a source the page quotes. Repointed 2026-11-27 with its rule text (FA-Q-20261124-03): the old /api/public/rule/<ref>/undefined/Current%20Rules address died with the rest of /api/public/. /api/ruleVersion/<ruleId> is a better witness than the address it replaces and is curl-reachable now. It is keyed by ruleId -- the rule's identity, stable across amendments -- and returns that one rule's whole version history, each entry carrying its ruleTypeName, effectiveDateRange and htmlName. So it changes when this rule is amended and at no other time, where the old address was keyed by rule number and the title-wide alternative (/api/titleRules/<titleId>) would move whenever any rule in the title did.\n\nIts role is no longer to catch a stale pin -- source 11 is keyed by ruleId and cannot pin a version any more -- but to record which version of R414-504 this capture holds, so an amendment is visible as drift instead of arriving silently inside the rule text."
+  }
+ ]
 }

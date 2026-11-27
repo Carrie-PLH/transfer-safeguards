@@ -100,7 +100,8 @@ AGENT_TRANSPORTS = ("web_fetch", "chrome")
 TRANSPORTS = LOCAL_TRANSPORTS + AGENT_TRANSPORTS
 
 EXTRACTORS = ("pdftotext-raw", "pdftotext-layout", "pdfplumber",
-              "html-text", "next-data", "json-doc", "docx", "none")
+              "html-text", "next-data", "next-flight", "json-doc", "docx",
+              "none")
 
 # Opt-in per source (`"compressed": false`), not global, and default on so that
 # omitting it fetches exactly as before this option existed.
@@ -606,9 +607,11 @@ def lint(rec, slug=None):
             errs.append(f'{w}: unknown transport {s["transport"]!r}')
         if s.get('extractor') and s['extractor'] not in EXTRACTORS:
             errs.append(f'{w}: unknown extractor {s["extractor"]!r}')
-        if s.get('extractor') == 'html-text' and not s.get('scope'):
-            errs.append(f'{w}: html-text needs a scope selector; use "body" for '
-                        f'the whole document rather than leaving it unstated')
+        if s.get('extractor') in ('html-text', 'next-flight') \
+                and not s.get('scope'):
+            errs.append(f'{w}: {s["extractor"]} needs a scope selector; use '
+                        f'"body" for the whole document rather than leaving it '
+                        f'unstated')
         if s.get('extractor') in ('next-data', 'json-doc'):
             ex, sc = s['extractor'], s.get('scope')
             where = ('inside the island' if ex == 'next-data'
@@ -626,6 +629,7 @@ def lint(rec, slug=None):
             errs.append(f'{w}: docx scope must be one of '
                         f'{", ".join(DOCX_SCOPES)}')
         if s.get('scope') and s.get('extractor') not in ('html-text', 'next-data',
+                                                         'next-flight',
                                                          'json-doc', 'docx'):
             errs.append(f'{w}: scope has no meaning for extractor '
                         f'{s.get("extractor")!r}')
@@ -643,16 +647,16 @@ def lint(rec, slug=None):
             if not isinstance(s['drop_sr_only'], bool):
                 errs.append(f'{w}: drop_sr_only must be true or false, '
                             f'got {s["drop_sr_only"]!r}')
-            elif s.get('extractor') != 'html-text':
+            elif s.get('extractor') not in ('html-text', 'next-flight'):
                 errs.append(f'{w}: drop_sr_only applies to the html-text '
-                            f'extractor only')
+                            f'and next-flight extractors only')
         if s.get('drop_icon_space') is not None:
             if not isinstance(s['drop_icon_space'], bool):
                 errs.append(f'{w}: drop_icon_space must be true or false, '
                             f'got {s["drop_icon_space"]!r}')
-            elif s.get('extractor') != 'html-text':
+            elif s.get('extractor') not in ('html-text', 'next-flight'):
                 errs.append(f'{w}: drop_icon_space applies to the html-text '
-                            f'extractor only')
+                            f'and next-flight extractors only')
         if s.get('encoding') and s['encoding'] not in ENCODINGS:
             errs.append(f'{w}: unknown encoding {s["encoding"]!r}; '
                         f'one of {", ".join(ENCODINGS)}')
@@ -1068,6 +1072,92 @@ def extract_next_data(text, path):
     return resolve_json_paths(json.loads(m.group(1)), path)
 
 
+NEXT_FLIGHT_RE = re.compile(
+    r'self\.__next_f\.push\(\[1,\s*"((?:[^"\\]|\\.)*)"\]\)')
+
+
+def next_flight_payload(text):
+    """The RSC flight payload of a Next.js App Router page, reassembled.
+
+    An App Router page does not carry a __NEXT_DATA__ island. It streams its
+    server-rendered content as a series of `self.__next_f.push([1, "..."])`
+    calls whose payloads are JSON string literals, so decoding each with
+    json.loads and concatenating in document order gives the markup back.
+    Three chunks on a short rule, more on a long one.
+
+    Returns '' when the response carries no such calls, which lets the caller
+    distinguish "not an App Router page" from "an App Router page with nothing
+    at the scope" -- two different facts about a publisher, worth failing
+    differently, exactly as next-data and json-doc are kept apart."""
+    chunks = NEXT_FLIGHT_RE.findall(text)
+    out = []
+    for c in chunks:
+        try:
+            out.append(json.loads('"' + c + '"'))
+        except json.JSONDecodeError:
+            # A chunk this regex captured but JSON cannot read is a fact about
+            # the response, not something to guess at. Skipping it would make a
+            # partial document look whole, so say so.
+            raise RuntimeError('an RSC flight chunk is not a readable JSON '
+                               'string literal; the response is malformed or '
+                               'this is not a flight payload')
+    return ''.join(out)
+
+
+def extract_next_flight(text, scope, drop_icon_space=False, drop_sr_only=False):
+    """Page HTML out of a Next.js App Router RSC flight payload.
+
+    The sibling of extract_next_data, for the other half of Next.js. next-data
+    reads the Pages Router's __NEXT_DATA__ island, whose content is JSON and is
+    addressed by a dotted path. This reads the App Router's flight stream,
+    whose content is markup, and is therefore addressed by a CSS selector and
+    handed to the same extract_html every other HTML source goes through. One
+    text-extraction path, so a table still arrives pipe-delimited and a block
+    element still becomes a line break.
+
+    Why it exists. The Utah Office of Administrative Rules rebuilt
+    adminrules.utah.gov as an App Router app and retired the whole
+    /api/public/ API that this repo's utah recipe and licensure mobility's were
+    built on (FA-Q-20261124-03, FA-Q-20261126-02). /Rule/<ruleId> answers 200
+    to plain curl, but a DOM text extraction of it returns about 208 characters
+    of site navigation: the rule sits inside a <script> element as an escaped
+    HTML document of absolutely-positioned DOCX-conversion spans, and
+    extract_html drops script nodes -- correctly, since script text is not
+    published prose. So the repoint that looks obvious captures the wrong
+    document and reports success, which is worse than the 404 it replaces.
+
+    The bytes were first-party and present the whole time, which is the same
+    lesson next-data's docstring draws from gadoe.org: an empty body is a fact
+    about where a framework put the content, not about whether it was served.
+
+    That this is extraction rather than interpretation is measurable here,
+    because the retired API's output is still on disk in the standing packets.
+    Against them, with scope "body", 2026-11-27:
+
+        R156-31b  (lm utah source 4)    64,770 chars   byte-identical
+        R432-150  (rr utah source 1)    81,947 chars   byte-identical
+        R414-504  (rr utah source 11)   13,232 chars   byte-identical
+        R410-14   (rr utah source 9)    37,741 vs 37,755, similarity 0.9985
+
+    Three of four reproduce the retired endpoint exactly. R410-14 differs
+    because /Rule/952 serves the current version while that source was pinned
+    to a GUID the Division has since superseded -- the amendment recorded in
+    FA-Q-20261124-03, not a loss in this extractor.
+
+    Scope is a CSS selector, and "body" is the useful one on this host: the
+    flight payload's body is the rule document, while a narrower selector such
+    as ".awpage" takes only the first of fifteen converted pages, since
+    extract_html resolves a bare selector to its first match."""
+    payload = next_flight_payload(text)
+    if not payload:
+        raise RuntimeError('no RSC flight payload in this response '
+                           '(no self.__next_f.push calls); if this is a Pages '
+                           'Router page use next-data')
+    return extract_html(payload, scope,
+                        drop_icon_space=drop_icon_space,
+                        drop_sr_only=drop_sr_only)
+
+
 def extract_json_doc(text, path):
     """Document text out of a bare JSON response body.
 
@@ -1374,6 +1464,10 @@ def _extract_by_kind(raw, src):
                             drop_sr_only=bool(src.get('drop_sr_only')))
     if extractor == 'next-data':
         return extract_next_data(raw, src['scope'])
+    if extractor == 'next-flight':
+        return extract_next_flight(raw, src['scope'],
+                                   drop_icon_space=bool(src.get('drop_icon_space')),
+                                   drop_sr_only=bool(src.get('drop_sr_only')))
     if extractor == 'json-doc':
         return extract_json_doc(raw, src['scope'])
     return raw if isinstance(raw, str) else raw.decode('utf-8', 'replace')
@@ -1998,6 +2092,114 @@ def self_test():
     except RuntimeError as e:
         check('__NEXT_DATA__' in str(e),
               'next-data failed on a bare JSON body for the wrong reason')
+
+    # --- next-flight: the App Router's other half (FA-Q-20261124-03) ---------
+    #
+    # The load-bearing case is the first one. A flight page handed to the
+    # obvious extractor captures navigation and reports success, which is the
+    # failure that made a one-line repoint of the utah recipe worse than the
+    # 404 it replaced, so the test is that next-flight reaches the document
+    # where html-text on the same bytes does not.
+    # The fixture mirrors what adminrules.utah.gov actually serves: the
+    # DOCX-to-HTML conversion arrives inside the payload as a WHOLE document,
+    # <html><head><style>...</style></head><body> and all, which is why
+    # scope "body" is the useful one on this host rather than a wrapper class.
+    flight = (
+        '<html><body><div id="nav">Home Agencies Search</div>'
+        '<script>self.__next_f.push([1,"<html><head><style>'
+        '.awtext1 { font-weight:bold; }</style></head><body>'
+        '<div class=\\"awdiv awpage\\">'
+        '<div class=\\"awdiv\\">'
+        '<span class=\\"awspan\\">R432-150-1.  Legal Authority.</span>'
+        '</div><div class=\\"awdiv\\"><span class=\\"awspan\\">'
+        '(1)  This rule is adopted under the authority of Section </span>'
+        '<span class=\\"awspan\\">26B-2-104.</span></div>'
+        '</div></body></html>"])</script>'
+        '</body></html>')
+    got = extract_next_flight(flight, 'body')
+    # Single-spaced on purpose: the source has two spaces after the section
+    # number and extract_html collapses runs of spaces, which is why the
+    # standing packets match this extractor byte for byte.
+    check('R432-150-1. Legal Authority.' in got,
+          'next-flight did not reach the rule text in the flight payload')
+    # A sentence the DOCX conversion split across two spans must come back
+    # joined with nothing between them: the split is a page-layout artifact,
+    # and a space inserted there would read as published wording.
+    check('authority of Section 26B-2-104.' in got,
+          'next-flight inserted a separator inside a span-split sentence')
+    # The nav outside the payload must not reach the packet.
+    check('Agencies' not in got, 'next-flight captured page navigation')
+    # And html-text on the identical bytes must NOT reach the rule, which is
+    # why this extractor exists rather than a wider scope on the old one.
+    plain = extract_html(flight, 'body')
+    check('Legal Authority' not in plain,
+          'html-text now reads script text; next-flight has no reason to exist')
+
+    # Several pushes are one document, in order.
+    # Several pushes are one document, in order -- and the real stream splits
+    # a 360 kB document across its chunks wherever it likes, so a boundary
+    # falling inside a tag must survive. Reassembling the text before parsing
+    # it is what makes that work; parsing chunk by chunk would not.
+    two = ('<script>self.__next_f.push([1,"<html><body>'
+           '<div class=\\"awdiv\\">'
+           '<span class=\\"awspan\\">First line.</span></div><div cla"])'
+           '</script>'
+           '<script>self.__next_f.push([1,"ss=\\"awdiv\\">'
+           '<span class=\\"awspan\\">Second line.</span></div>'
+           '</body></html>"])</script>')
+    got = extract_next_flight(two, 'body')
+    check('First line.' in got and 'Second line.' in got,
+          'next-flight dropped a chunk, or lost a tag split across a boundary')
+    check(got.index('First line.') < got.index('Second line.'),
+          'next-flight reassembled the chunks out of document order')
+
+    # The two Next.js extractors diagnose different publishers and must keep
+    # their own failures, as next-data and json-doc already do.
+    try:
+        extract_next_flight(island, 'body')
+        check(False, 'next-flight accepted a Pages Router island')
+    except RuntimeError as e:
+        check('next-data' in str(e),
+              'next-flight failed on a __NEXT_DATA__ page without naming '
+              'the extractor that reads it')
+    try:
+        extract_next_data(flight, 'props.page.content')
+        check(False, 'next-data accepted a flight page')
+    except RuntimeError as e:
+        check('__NEXT_DATA__' in str(e),
+              'next-data failed on a flight page for the wrong reason')
+    # A scope that matches nothing is extract_html's own failure, not a quiet
+    # empty capture.
+    try:
+        extract_next_flight(flight, '#absent')
+        check(False, 'next-flight accepted a scope matching nothing')
+    except RuntimeError as e:
+        check('matched nothing' in str(e),
+              'next-flight failed on an unmatched scope for the wrong reason')
+    # A chunk the regex captures but JSON cannot read must stop the capture
+    # rather than yield a partial document that looks whole.
+    try:
+        next_flight_payload('self.__next_f.push([1,"\\q"])')
+        check(False, 'next_flight_payload accepted an unreadable chunk')
+    except RuntimeError as e:
+        check('malformed' in str(e) or 'not a readable' in str(e),
+              'an unreadable flight chunk failed for the wrong reason')
+
+    # lint: it needs a scope, and the scope is a CSS selector rather than the
+    # dotted JSON path next-data takes.
+    nf_noscope = {'recipe_version': RECIPE_VERSION, 'state': 'testland',
+                  'sources': [{'n': 1, 'title': 'T',
+                               'url': 'https://adminrules.utah.gov/Rule/1072',
+                               'transport': 'curl', 'extractor': 'next-flight',
+                               'filters': []}]}
+    check(any('needs a scope selector' in e
+              for e in lint(nf_noscope, 'testland')),
+          'lint accepted next-flight with no scope')
+    nf_ok = copy.deepcopy(nf_noscope)
+    nf_ok['sources'][0]['scope'] = 'body'
+    check(not lint(nf_ok, 'testland'),
+          f'lint rejected a well-formed next-flight source: '
+          f'{lint(nf_ok, "testland")}')
 
 
     # Per-source --compressed opt-out, 2026-09-03. The guarantee that makes it
