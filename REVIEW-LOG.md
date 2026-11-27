@@ -2185,3 +2185,37 @@ unit). sync-checked-dates.py: 4 derived dates corrected (table + json,
 maine/maryland). build-status.py: baseline 51/51, full 50/51 (pre-existing
 Hawaii backfill gap, unaffected by this pass). One queue entry opened:
 FA-Q-20261126-03 (massachusetts drift).
+
+## 2026-11-27 — attended drift diagnosis: wisconsin, colorado, massachusetts (no page edits; held for the owner)
+
+Attended session working the three open rr drift entries in the portfolio
+queue. Diagnosis only: no page, packet, recipe or index was edited, nothing
+promoted, nothing deployed. Re-captured all three through their recipes
+(`tools/.venv/bin/python tools/capture.py`, preflight ok), retained as drift
+2026-11-27; each matches its nightly drift capture apart from whitespace.
+Prepared rebuilds are held as drafts in the session group's notes folder
+(`drift-rebuilds-2026-11-27/<slug>.spec.py`); rendered in a scratch copy
+through `tools/render-state.py`, which reproduces the published wisconsin
+page byte for byte once the search-head block that
+`field-assembly-standard/tools/apply-seo-head.py` adds is set aside. Each
+draft returns 0 fidelity failures, markdown and HTML.
+
+- **wisconsin** (FA-Q-20261114-04). Not an extraction artifact: the board
+  rewrote its home-page contact block. Labels and values are on separate
+  lines with no colon, "Email: BOALTC@Wisconsin.Gov" is gone, the program
+  mailbox is now printed "BOALTC@wisconsin.gov" (as the footer always had
+  it), and each helpline gained its own mailbox. Same number, same address.
+- **colorado** (FA-Q-20261117-03). CDHS rewrote its ombudsman page; the
+  quoted sentence now prints 303-862-3524 where it printed 303.862.3524.
+  The same number also appears, in the old format, in the status lines of
+  `site/index.html` and `site/states/index.html`; the draft updates both.
+- **massachusetts** (FA-Q-20261126-03). MassHealth's appeals page contact
+  block now gives "1 Enterprise Drive, 3rd Floor, Quincy, MA 02171", the
+  address its body gives; "100 Hancock Street" is gone from the page. The
+  page's two-address finding is closed by the source. Both index status
+  lines describe two addresses and are updated in the draft. The bed-hold
+  and regulations supplements were not re-captured, so the draft leaves the
+  docket's checked date at 2026-10-29.
+
+Committed this pass: the three retained 2026-11-27 captures, their history
+copies and manifest lines, and this entry.
