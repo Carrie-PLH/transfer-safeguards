@@ -1,0 +1,16 @@
+{
+ "entry": {
+  "file_count": 456,
+  "id": "2026-11-28T083200Z",
+  "manifest_file": "manifests/2026-11-28T083200Z.txt",
+  "manifest_sha256": "7a6d0ee9080ab5e2f685fff3dd83b8e8ba2a570974f8926f9bfbbe8f464ece35",
+  "note": "QC: nightly review michigan/minnesota/mississippi/missouri/montana 2026-11-28",
+  "paths": [
+   "tools/packets"
+  ],
+  "prev_entry_sha256": "5350a7e75529a3c5c15cf439b4f9059d13e88dfe6c03bc38644c36d834bcfa7b",
+  "repo": "transfer-safeguards",
+  "utc": "2026-11-28T08:32:00+00:00"
+ },
+ "entry_sha256": "d55996eea19f367b28130a2f36a14ed942a68970ba745713f060bd42215b41e6"
+}
