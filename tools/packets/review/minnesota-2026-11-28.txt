@@ -1,0 +1,1322 @@
+FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
+
+STATE: minnesota
+ASSEMBLED: 2026-11-28
+
+CAPTURE NOTES:
+- Captured by tools/capture.py from tools/recipes/minnesota.json (recipe digest 58989314ea0a). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
+- Capture code 20e47bd89c95 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
+- SOURCE 1: transport curl; extractor html-text; scope #xtend; filters pipe-table-cells, trim-lines.
+  Plain curl, no user-agent needed (200 with no UA, tested 2026-09-15). #xtend.statute is the Revisor template's own statute wrapper: narrower than main#legContainerMain, which also carries the breadcrumb, doc_nav prev/next links and the Resources sidebar card. #xtend holds every subdivision (1 through 29) plus the section's History block, so the captured text is a superset of the quoted subd. 29 -- that is expected, not a scope defect.
+- SOURCE 2: transport curl; extractor html-text; scope #xtend; filters pipe-table-cells, trim-lines.
+  Same template and same scope reasoning as source 1. Plain curl, no user-agent needed.
+- SOURCE 3: transport chrome; extractor html-text; scope body; filters pipe-table-cells, trim-lines (fetched by the session reader and supplied).
+  mn.gov sits behind Radware/ShieldSquare bot management (validate.perfdrive.com 302 challenge) -- curl gets a 302 to the challenge URL with or without a browser user-agent and cookie jar reuse across two requests, tested 2026-09-15. A real browser session (Claude Browser pane) reaches the page directly with no interstitial, so the block is a client-fingerprint check a genuine browser passes honestly rather than a request this project should script around; same category as Florida's session-reader sources. scope is body rather than a narrower selector because the two facts the page states -- the OOLTC description under div#content, and the mailing address/phone '540 Cedar Street / St. Paul, MN 55101 / 1-800-657-3591' under footer div.contact-info -- are siblings under body with no smaller common ancestor, and html-text takes one CSS selector (soup.select_one), not a list; the mailing address is the case PROVENANCE.md/CLAUDE.md calls out (Georgia's footer addressLink precedent) where the recipe must reach whatever node the agency puts the contact in.
+- SOURCE 4: transport curl; extractor html-text; scope section#page-content; filters trim-lines, collapse-blank-runs.
+  health.state.mn.us returns HTTP 403 to curl's bare user-agent and 200 to a browser string, tested 2026-09-17; user_agent: browser. This is the department's own statement of the filing route for the hearing row: an online 'HRD Appeals Submission Form', the 30-day filing window, the 14-calendar-day hearing timing at the resident's facility, and the pendency protection -- all absent from the two statutes alone. section#page-content is the Drupal theme's content wrapper; it duplicates a 'Contact Info' sidebar block twice (a responsive-breakpoint artifact, two copies of the same short block for two CSS states), which is harmless to fidelity since the quoted prose itself appears once, contiguously.
+- SOURCE 5: transport curl; extractor html-text; scope #xtend; filters pipe-table-cells, trim-lines.
+  Same Revisor template, scope, and transport reasoning as sources 1 and 2. Plain curl, no user-agent needed, tested 2026-09-17. This is Minnesota's own Medicaid bed-hold/leave-day rule -- 'A reserved bed must be held for a recipient on hospital leave or therapeutic leave', with payment limited to 18 leave days per calendar year for hospital leave and separate per-facility-type limits for therapeutic leave. It states nothing about readmission after the limit is exceeded; that absence is recorded rather than filled.
+- SOURCE 6: transport curl; extractor html-text; scope #xtend; filters pipe-table-cells, trim-lines.
+  Same Revisor template, scope, and transport reasoning as sources 1, 2 and 5. Plain curl, no user-agent needed, tested 2026-09-17. Captured to support the section 01 finding that Minnesota Rules chapter 4658 -- the state's nursing-home rule chapter, capture-pending since the baseline build -- does not enumerate transfer/discharge grounds anywhere in the chapter: the one part titled for the subject, 4658.0465, is a clinical-record documentation rule (what a discharge summary must contain, and that it be sent to a receiving facility), not a grounds provision. The chapter's other parts were read against the Revisor's own rule-listing page (https://www.revisor.mn.gov/rules/4658/, not itself captured as a source because nothing on the page quotes it) and none is titled or worded as a grounds provision either; that page's part titles are checked, not quoted.
+
+SOURCE 1: Minnesota Statutes § 144.651, Health Care Bill of Rights — subdivision 29, Transfers and discharges (excerpt) | https://www.revisor.mn.gov/statutes/cite/144.651 | source date: see the section's own history notes in the Revisor's page | retrieved: 2026-11-28
+144.651 HEALTH CARE BILL OF RIGHTS.
+
+
+
+§
+
+Subdivision 1.Legislative intent.
+
+
+It is the intent of the legislature and the purpose of this section to promote the interests and well being of the patients and residents of health care facilities. No health care facility may require a patient or resident to waive these rights as a condition of admission to the facility. Any guardian or conservator of a patient or resident or, in the absence of a guardian or conservator, an interested person, may seek enforcement of these rights on behalf of a patient or resident. An interested person may also seek enforcement of these rights on behalf of a patient or resident who has a guardian or conservator through administrative agencies or in district court having jurisdiction over guardianships and conservatorships. Pending the outcome of an enforcement proceeding the health care facility may, in good faith, comply with the instructions of a guardian or conservator. It is the intent of this section that every patient's civil and religious liberties, including the right to independent personal decisions and knowledge of available choices, shall not be infringed and that the facility shall encourage and assist in the fullest possible exercise of these rights.
+
+
+
+
+
+§
+
+Subd. 2.Definitions.
+
+
+(a) For the purposes of this section, "patient" means a person who is admitted to an acute care inpatient facility for a continuous period longer than 24 hours, for the purpose of diagnosis or treatment bearing on the physical or mental health of that person. For purposes of subdivisions 4 to 9, 12, 13, 15, 16, and 18 to 20, "patient" also means a person who receives health care services at an outpatient surgical center or at a birth center licensed under section 144.615. "Patient" also means a person who is admitted to a residential program as defined in paragraph (c). "Patient" also means a person who is admitted to a residential substance use disorder treatment program licensed according to Minnesota Rules, parts 2960.0430 to 2960.0490. For purposes of subdivisions 1, 3 to 16, 18, 20 and 30, "patient" also means any person who is receiving mental health treatment or substance use disorder treatment on an outpatient basis or in a community support program or other community-based program.
+
+
+(b) "Resident" means a person who is admitted to a nonacute care facility including extended care facilities, nursing homes, and boarding care homes for care required because of prolonged mental or physical illness or disability, recovery from injury or disease, or advancing age. For purposes of all subdivisions except subdivisions 28 and 29, "resident" also means a person who is admitted to a facility licensed as a board and lodging facility under Minnesota Rules, parts 4625.0100 to 4625.2355, a boarding care home under sections 144.50 to 144.56, or a supervised living facility under Minnesota Rules, parts 4665.0100 to 4665.9900, and that operates a withdrawal management program licensed under chapter 245F, a residential substance use disorder treatment program licensed under chapter 245G, an intensive residential treatment services or residential crisis stabilization program licensed under chapter 245I, or a detoxification program licensed under Minnesota Rules, parts 9530.6510 to 9530.6590. For purposes of all subdivisions except subdivisions 20, 28, 29, 32, and 33, "resident" also means a person who is admitted to a facility licensed to provide intensive residential treatment services or residential crisis stabilization under section 245I.23.
+
+
+(c) "Residential program" means (1) a hospital-based primary treatment program that provides residential treatment to minors with mental illness as defined by the Comprehensive Children's Mental Health Act in sections 245.487 to 245.4889, or (2) a facility licensed by the state under Minnesota Rules, parts 2960.0580 to 2960.0700, to provide services to minors on a 24-hour basis.
+
+
+[See Note.]
+
+
+
+
+
+§
+
+Subd. 3.Public policy declaration.
+
+
+It is declared to be the public policy of this state that the interests of each patient and resident be protected by a declaration of a patients' bill of rights which shall include but not be limited to the rights specified in this section.
+
+
+
+
+
+§
+
+Subd. 4.Information about rights.
+
+
+Patients and residents shall, at admission, be told that there are legal rights for their protection during their stay at the facility or throughout their course of treatment and maintenance in the community and that these are described in an accompanying written statement of the applicable rights and responsibilities set forth in this section. In the case of patients admitted to residential programs, the written statement shall also describe the right of a person 16 years old or older to request release as provided in section 253B.04, subdivision 2, and shall list the names and telephone numbers of individuals and organizations that provide advocacy and legal services for patients in residential programs. Reasonable accommodations shall be made for people who have communication disabilities and those who speak a language other than English. Current facility policies, inspection findings of state and local health authorities, and further explanation of the written statement of rights shall be available to patients, residents, their guardians or their chosen representatives upon reasonable request to the administrator or other designated staff person, consistent with chapter 13, the Data Practices Act, and section 626.557, relating to vulnerable adults.
+
+
+
+
+
+§
+
+Subd. 5.Courteous treatment.
+
+
+Patients and residents have the right to be treated with courtesy and respect for their individuality by employees of or persons providing service in a health care facility.
+
+
+
+
+
+§
+
+Subd. 6.Appropriate health care.
+
+
+Patients and residents shall have the right to appropriate medical and personal care based on individual needs. Appropriate care for residents means care designed to enable residents to achieve their highest level of physical and mental functioning. This right is limited where the service is not reimbursable by public or private resources.
+
+
+
+
+
+§
+
+Subd. 7.Physician's, advanced practice registered nurse's, or physician assistant's identity.
+
+
+Patients and residents shall have or be given, in writing, the name, business address, telephone number, and specialty, if any, of the physician, advanced practice registered nurse, or physician assistant responsible for coordination of their care. In cases where it is medically inadvisable, as documented by the attending physician, advanced practice registered nurse, or physician assistant in a patient's or resident's care record, the information shall be given to the patient's or resident's guardian or other person designated by the patient or resident as a representative.
+
+
+
+
+
+§
+
+Subd. 8.Relationship with other health services.
+
+
+Patients and residents who receive services from an outside provider are entitled, upon request, to be told the identity of the provider. Residents shall be informed, in writing, of any health care services which are provided to those residents by individuals, corporations, or organizations other than their facility. Information shall include the name of the outside provider, the address, and a description of the service which may be rendered. In cases where it is medically inadvisable, as documented by the attending physician, advanced practice registered nurse, or physician assistant in a patient's or resident's care record, the information shall be given to the patient's or resident's guardian or other person designated by the patient or resident as a representative.
+
+
+
+
+
+§
+
+Subd. 9.Information about treatment.
+
+
+Patients and residents shall be given by their physicians, advanced practice registered nurses, or physician assistants complete and current information concerning their diagnosis, treatment, alternatives, risks, and prognosis as required by the physician's, advanced practice registered nurse's, or physician assistant's legal duty to disclose. This information shall be in terms and language the patients or residents can reasonably be expected to understand. Patients and residents may be accompanied by a family member or other chosen representative, or both. This information shall include the likely medical or major psychological results of the treatment and its alternatives. In cases where it is medically inadvisable, as documented by the attending physician, advanced practice registered nurse, or physician assistant in a patient's or resident's medical record, the information shall be given to the patient's or resident's guardian or other person designated by the patient or resident as a representative. Individuals have the right to refuse this information.
+
+
+Every patient or resident suffering from any form of breast cancer shall be fully informed, prior to or at the time of admission and during her stay, of all alternative effective methods of treatment of which the treating physician, advanced practice registered nurse, or physician assistant is knowledgeable, including surgical, radiological, or chemotherapeutic treatments or combinations of treatments and the risks associated with each of those methods.
+
+
+
+
+
+§
+
+Subd. 10.Participation in planning treatment; notification of family members.
+
+
+(a) Patients and residents shall have the right to participate in the planning of their health care. This right includes the opportunity to discuss treatment and alternatives with individual caregivers, the opportunity to request and participate in formal care conferences, and the right to include a family member or other chosen representative, or both. In the event that the patient or resident cannot be present, a family member or other representative chosen by the patient or resident may be included in such conferences. A chosen representative may include a doula of the patient's choice.
+
+
+(b) If a patient or resident who enters a facility is unconscious or comatose or is unable to communicate, the facility shall make reasonable efforts as required under paragraph (c) to notify either a family member or a person designated in writing by the patient as the person to contact in an emergency that the patient or resident has been admitted to the facility. The facility shall allow the family member to participate in treatment planning, unless the facility knows or has reason to believe the patient or resident has an effective advance directive to the contrary or knows the patient or resident has specified in writing that they do not want a family member included in treatment planning. After notifying a family member but prior to allowing a family member to participate in treatment planning, the facility must make reasonable efforts, consistent with reasonable medical practice, to determine if the patient or resident has executed an advance directive relative to the patient or resident's health care decisions. For purposes of this paragraph, "reasonable efforts" include:
+
+
+(1) examining the personal effects of the patient or resident;
+
+
+(2) examining the medical records of the patient or resident in the possession of the facility;
+
+
+(3) inquiring of any emergency contact or family member contacted under this section whether the patient or resident has executed an advance directive and whether the patient or resident has a physician, advanced practice registered nurse, or physician assistant to whom the patient or resident normally goes for care; and
+
+
+(4) inquiring of the physician, advanced practice registered nurse, or physician assistant to whom the patient or resident normally goes for care, if known, whether the patient or resident has executed an advance directive. If a facility notifies a family member or designated emergency contact or allows a family member to participate in treatment planning in accordance with this paragraph, the facility is not liable to the patient or resident for damages on the grounds that the notification of the family member or emergency contact or the participation of the family member was improper or violated the patient's privacy rights.
+
+
+(c) In making reasonable efforts to notify a family member or designated emergency contact, the facility shall attempt to identify family members or a designated emergency contact by examining the personal effects of the patient or resident and the medical records of the patient or resident in the possession of the facility. If the facility is unable to notify a family member or designated emergency contact within 24 hours after the admission, the facility shall notify the county social service agency or local law enforcement agency that the patient or resident has been admitted and the facility has been unable to notify a family member or designated emergency contact. The county social service agency and local law enforcement agency shall assist the facility in identifying and notifying a family member or designated emergency contact. A county social service agency or local law enforcement agency that assists a facility in implementing this subdivision is not liable to the patient or resident for damages on the grounds that the notification of the family member or emergency contact or the participation of the family member was improper or violated the patient's privacy rights.
+
+
+
+
+
+§
+
+Subd. 10a.Designated support person.
+
+
+(a) Subject to paragraph (c), a health care provider and a health care facility must allow, at a minimum, one designated support person chosen by a patient, including but not limited to a pregnant patient, to be physically present while the patient is receiving health care services including during a hospital stay. Subject to paragraph (c), a facility must allow, at a minimum, one designated support person chosen by the resident to be physically present with the resident at times of the resident's choosing while the resident resides at the facility.
+
+
+(b) For purposes of this subdivision, "designated support person" means any person chosen by the patient or resident to provide comfort to the patient or resident, including but not limited to the patient's or resident's spouse, partner, family member, or another person related by affinity. Certified doulas and traditional midwives may not be counted toward the limit of one designated support person.
+
+
+(c) A facility may restrict or prohibit the presence of a designated support person in treatment rooms, procedure rooms, and operating rooms when such a restriction or prohibition is strictly necessary to meet the appropriate standard of care. A facility may also restrict or prohibit the presence of a designated support person if the designated support person is acting in a violent or threatening manner toward others. A facility may restrict the presence of a resident's designated support person to the extent necessary to ensure a designated support person who is not a facility resident is not living at the facility on a short-term or long-term basis. Any restriction or prohibition of a designated support person by the facility is subject to the facility's written internal grievance procedure required by subdivision 20.
+
+
+(d) This subdivision does not apply to a patient or resident at a state-operated treatment program as defined in section 253B.02, subdivision 18d.
+
+
+
+
+
+§
+
+Subd. 11.Continuity of care.
+
+
+Patients and residents shall have the right to be cared for with reasonable regularity and continuity of staff assignment as far as facility policy allows.
+
+
+
+
+
+§
+
+Subd. 12.Right to refuse care.
+
+
+Competent patients and residents shall have the right to refuse treatment based on the information required in subdivision 9. Residents who refuse treatment, medication, or dietary restrictions shall be informed of the likely medical or major psychological results of the refusal, with documentation in the individual medical record. In cases where a patient or resident is incapable of understanding the circumstances but has not been adjudicated incompetent, or when legal requirements limit the right to refuse treatment, the conditions and circumstances shall be fully documented by the attending physician, advanced practice registered nurse, or physician assistant in the patient's or resident's medical record.
+
+
+
+
+
+§
+
+Subd. 13.Experimental research.
+
+
+Written, informed consent must be obtained prior to a patient's or resident's participation in experimental research. Patients and residents have the right to refuse participation. Both consent and refusal shall be documented in the individual care record.
+
+
+
+
+
+§
+
+Subd. 14.Freedom from maltreatment.
+
+
+Patients and residents shall be free from maltreatment as defined in the Vulnerable Adults Protection Act. "Maltreatment" means conduct described in section 626.5572, subdivision 15, or the intentional and nontherapeutic infliction of physical pain or injury, or any persistent course of conduct intended to produce mental or emotional distress. Every patient and resident shall also be free from nontherapeutic chemical and physical restraints, except in fully documented emergencies, or as authorized in writing after examination by a patient's or resident's physician, advanced practice registered nurse, or physician assistant for a specified and limited period of time, and only when necessary to protect the resident from self-injury or injury to others.
+
+
+
+
+
+§
+
+Subd. 15.Treatment privacy.
+
+
+Patients and residents shall have the right to respectfulness and privacy as it relates to their medical and personal care program. Case discussion, consultation, examination, and treatment are confidential and shall be conducted discreetly. Privacy shall be respected during toileting, bathing, and other activities of personal hygiene, except as needed for patient or resident safety or assistance.
+
+
+
+
+
+§
+
+Subd. 16.Confidentiality of records.
+
+
+Patients and residents shall be assured confidential treatment of their personal and medical records, and may approve or refuse their release to any individual outside the facility. Residents shall be notified when personal records are requested by any individual outside the facility and may select someone to accompany them when the records or information are the subject of a personal interview. Copies of records and written information from the records shall be made available in accordance with this subdivision and sections 144.291 to 144.298. This right does not apply to complaint investigations and inspections by the Department of Health, where required by third-party payment contracts, or where otherwise provided by law.
+
+
+
+
+
+§
+
+Subd. 17.Disclosure of services available.
+
+
+Patients and residents shall be informed, prior to or at the time of admission and during their stay, of services which are included in the facility's basic per diem or daily room rate and that other services are available at additional charges. Facilities shall make every effort to assist patients and residents in obtaining information regarding whether the Medicare or medical assistance program will pay for any or all of the aforementioned services.
+
+
+
+
+
+§
+
+Subd. 18.Responsive service.
+
+
+Patients and residents shall have the right to a prompt and reasonable response to their questions and requests.
+
+
+
+
+
+§
+
+Subd. 19.Personal privacy.
+
+
+Patients and residents shall have the right to every consideration of their privacy, individuality, and cultural identity as related to their social, religious, and psychological well-being. Facility staff shall respect the privacy of a resident's room by knocking on the door and seeking consent before entering, except in an emergency or where clearly inadvisable.
+
+
+
+
+
+§
+
+Subd. 20.Grievances.
+
+
+Patients and residents shall be encouraged and assisted, throughout their stay in a facility or their course of treatment, to understand and exercise their rights as patients, residents, and citizens. Patients and residents may voice grievances and recommend changes in policies and services to facility staff and others of their choice, free from restraint, interference, coercion, discrimination, or reprisal, including threat of discharge. Notice of the grievance procedure of the facility or program, as well as addresses and telephone numbers for the Office of Health Facility Complaints and the area nursing home ombudsman pursuant to the Older Americans Act, section 307(a)(12) shall be posted in a conspicuous place.
+
+
+Every acute care inpatient facility, every residential program, every nonacute care facility, and every facility employing more than two people that provides outpatient mental health services shall have a written internal grievance procedure that, at a minimum, sets forth the process to be followed; specifies time limits, including time limits for facility response; provides for the patient or resident to have the assistance of an advocate; requires a written response to written grievances; and provides for a timely decision by an impartial decision maker if the grievance is not otherwise resolved. Compliance by hospitals, residential programs which are hospital-based primary treatment programs, and outpatient surgery centers with section 144.691 and compliance by health maintenance organizations with section 62D.11 is deemed to be compliance with the requirement for a written internal grievance procedure.
+
+
+
+
+
+§
+
+Subd. 21.Communication privacy.
+
+
+Patients and residents may associate and communicate privately with persons of their choice and enter and, except as provided by the Minnesota Commitment Act, leave the facility as they choose. Patients and residents shall have access, at their expense, to writing instruments, stationery, and postage. Personal mail shall be sent without interference and received unopened unless medically or programmatically contraindicated and documented by the physician or advanced practice registered nurse in the medical record. There shall be access to a telephone where patients and residents can make and receive calls as well as speak privately. Facilities which are unable to provide a private area shall make reasonable arrangements to accommodate the privacy of patients' or residents' calls. Upon admission to a facility where federal law prohibits unauthorized disclosure of patient or resident identifying information to callers and visitors, the patient or resident, or the legal guardian or conservator of the patient or resident, shall be given the opportunity to authorize disclosure of the patient's or resident's presence in the facility to callers and visitors who may seek to communicate with the patient or resident. To the extent possible, the legal guardian or conservator of a patient or resident shall consider the opinions of the patient or resident regarding the disclosure of the patient's or resident's presence in the facility. This right is limited where medically inadvisable, as documented by the attending physician or advanced practice registered nurse in a patient's or resident's care record. Where programmatically limited by a facility abuse prevention plan pursuant to section 626.557, subdivision 14, paragraph (b), this right shall also be limited accordingly.
+
+
+
+
+
+§
+
+Subd. 22.Personal property.
+
+
+Patients and residents may retain and use their personal clothing and possessions as space permits, unless to do so would infringe upon rights of other patients or residents, and unless medically or programmatically contraindicated for documented medical, safety, or programmatic reasons. The facility must either maintain a central locked depository or provide individual locked storage areas in which residents may store their valuables for safekeeping. The facility may, but is not required to, provide compensation for or replacement of lost or stolen items.
+
+
+
+
+
+§
+
+Subd. 23.Services for the facility.
+
+
+Patients and residents shall not perform labor or services for the facility unless those activities are included for therapeutic purposes and appropriately goal-related in their individual medical record.
+
+
+
+
+
+§
+
+Subd. 24.Choice of supplier.
+
+
+Residents may purchase or rent goods or services not included in the per diem rate from a supplier of their choice unless otherwise provided by law. The supplier shall ensure that these purchases are sufficient to meet the medical or treatment needs of the residents.
+
+
+
+
+
+§
+
+Subd. 25.Financial affairs.
+
+
+Competent residents may manage their personal financial affairs, or shall be given at least a quarterly accounting of financial transactions on their behalf if they delegate this responsibility in accordance with the laws of Minnesota to the facility for any period of time.
+
+
+
+
+
+§
+
+Subd. 26.Right to associate.
+
+
+(a) Residents may meet with and receive visitors and participate in activities of commercial, religious, political, as defined in section 203B.11 and community groups without interference at their discretion if the activities do not infringe on the right to privacy of other residents or are not programmatically contraindicated. This includes:
+
+
+(1) the right to join with other individuals within and outside the facility to work for improvements in long-term care;
+
+
+(2) the right to visitation by an individual the patient has appointed as the patient's health care agent under chapter 145C;
+
+
+(3) the right to visitation and health care decision making by an individual designated by the patient under paragraph (c).
+
+
+(b) Upon admission to a facility where federal law prohibits unauthorized disclosure of patient or resident identifying information to callers and visitors, the patient or resident, or the legal guardian or conservator of the patient or resident, shall be given the opportunity to authorize disclosure of the patient's or resident's presence in the facility to callers and visitors who may seek to communicate with the patient or resident. To the extent possible, the legal guardian or conservator of a patient or resident shall consider the opinions of the patient or resident regarding the disclosure of the patient's or resident's presence in the facility.
+
+
+(c) Upon admission to a facility, the patient or resident, or the legal guardian or conservator of the patient or resident, must be given the opportunity to designate a person who is not related who will have the status of the patient's next of kin with respect to visitation and making a health care decision. A designation must be included in the patient's health record. With respect to making a health care decision, a health care directive or appointment of a health care agent under chapter 145C prevails over a designation made under this paragraph. The unrelated person may also be identified as such by the patient or by the patient's family.
+
+
+
+
+
+§
+
+Subd. 27.Advisory councils.
+
+
+Residents and their families shall have the right to organize, maintain, and participate in resident advisory and family councils. Each facility shall provide assistance and space for meetings. Council meetings shall be afforded privacy, with staff or visitors attending only upon the council's invitation. A staff person shall be designated the responsibility of providing this assistance and responding to written requests which result from council meetings. Resident and family councils shall be encouraged to make recommendations regarding facility policies.
+
+
+
+
+
+§
+
+Subd. 28.Married residents.
+
+
+Residents, if married, shall be assured privacy for visits by their spouses and, if both spouses are residents of the facility, they shall be permitted to share a room, unless medically contraindicated and documented by their physicians in the medical records.
+
+
+
+
+
+§
+
+Subd. 29.Transfers and discharges.
+
+
+Residents shall not be arbitrarily transferred or discharged. Residents must be notified, in writing, of the proposed discharge or transfer and its justification no later than 30 days before discharge from the facility and seven days before transfer to another room within the facility. This notice shall include the resident's right to contest the proposed action, with the address and telephone number of the area nursing home ombudsman pursuant to the Older Americans Act, section 307(a)(12). The resident, informed of this right, may choose to relocate before the notice period ends. The notice period may be shortened in situations outside the facility's control, such as a determination by utilization review, the accommodation of newly admitted residents, a change in the resident's medical or treatment program, the resident's own or another resident's welfare, or nonpayment for stay unless prohibited by the public program or programs paying for the resident's care, as documented in the medical record. Facilities shall make a reasonable effort to accommodate new residents without disrupting room assignments.
+
+
+
+
+
+§
+
+Subd. 30.Protection and advocacy services.
+
+
+Patients and residents shall have the right of reasonable access at reasonable times to any available rights protection services and advocacy services so that the patient may receive assistance in understanding, exercising, and protecting the rights described in this section and in other law. This right shall include the opportunity for private communication between the patient and a representative of the rights protection service or advocacy service.
+
+
+
+
+
+§
+
+Subd. 31.Isolation and restraints.
+
+
+A minor patient who has been admitted to a residential program has the right to be free from physical restraint and isolation except in emergency situations involving a likelihood that the patient will physically harm the patient's self or others. These procedures may not be used for disciplinary purposes, to enforce program rules, or for the convenience of staff. Isolation or restraint may be used only upon the prior authorization of a physician, advanced practice registered nurse, physician assistant, psychiatrist, or licensed psychologist, only when less restrictive measures are ineffective or not feasible and only for the shortest time necessary.
+
+
+
+
+
+§
+
+Subd. 32.Treatment plan.
+
+
+A minor patient who has been admitted to a residential program has the right to a written treatment plan that describes in behavioral terms the case problems, the precise goals of the plan, and the procedures that will be utilized to minimize the length of time that the minor requires inpatient treatment. The plan shall also state goals for release to a less restrictive facility and follow-up treatment measures and services, if appropriate. To the degree possible, the minor patient and the minor patient's parents or guardian shall be involved in the development of the treatment and discharge plan.
+
+
+
+
+
+§
+
+Subd. 33.Restraints.
+
+
+(a) Competent nursing home residents, family members of residents who are not competent, and legally appointed conservators, guardians, and health care agents as defined under section 145C.01, have the right to request and consent to the use of a physical restraint in order to treat the medical symptoms of the resident.
+
+
+(b) Upon receiving a request for a physical restraint, a nursing home shall inform the resident, family member, or legal representative of alternatives to and the risks involved with physical restraint use. The nursing home shall provide a physical restraint to a resident only upon receipt of a signed consent form authorizing restraint use and a written order from the attending physician, advanced practice registered nurse, or physician assistant that contains statements and determinations regarding medical symptoms and specifies the circumstances under which restraints are to be used.
+
+
+(c) A nursing home providing a restraint under paragraph (b) must:
+
+
+(1) document that the procedures outlined in that paragraph have been followed;
+
+
+(2) monitor the use of the restraint by the resident; and
+
+
+(3) periodically, in consultation with the resident, the family, and the attending physician, advanced practice registered nurse, or physician assistant, reevaluate the resident's need for the restraint.
+
+
+(d) A nursing home shall not be subject to fines, civil money penalties, or other state or federal survey enforcement remedies solely as the result of allowing the use of a physical restraint as authorized in this subdivision. Nothing in this subdivision shall preclude the commissioner from taking action to protect the health and safety of a resident if:
+
+
+(1) the use of the restraint has jeopardized the health and safety of the resident; and
+
+
+(2) the nursing home failed to take reasonable measures to protect the health and safety of the resident.
+
+
+(e) For purposes of this subdivision, "medical symptoms" include:
+
+
+(1) a concern for the physical safety of the resident; and
+
+
+(2) physical or psychological needs expressed by a resident. A resident's fear of falling may be the basis of a medical symptom.
+
+
+A written order from the attending physician, advanced practice registered nurse, or physician assistant that contains statements and determinations regarding medical symptoms is sufficient evidence of the medical necessity of the physical restraint.
+
+
+(f) When determining nursing facility compliance with state and federal standards for the use of physical restraints, the commissioner of health is bound by the statements and determinations contained in the attending physician's, advanced practice registered nurse's, or physician assistant's order regarding medical symptoms. For purposes of this order, "medical symptoms" include the request by a competent resident, family member of a resident who is not competent, or legally appointed conservator, guardian, or health care agent as defined under section 145C.01, that the facility provide a physical restraint in order to enhance the physical safety of the resident.
+
+
+
+
+
+
+
+
+History:
+
+
+1973 c 688 s 1; 1976 c 274 s 1; 1982 c 504 s 1; 1983 c 248 s 1; 1984 c 654 art 5 s 8; 1984 c 657 s 1; 1986 c 326 s 1-6; 1986 c 444; 1989 c 186 s 1; 1989 c 282 art 3 s 5; 1991 c 255 s 19; 1993 c 54 s 1-3; 1995 c 136 s 3,4; 1995 c 189 s 8; 1995 c 229 art 4 s 5,6; 1996 c 277 s 1; 1998 c 254 art 2 s 10; 1999 c 83 s 1; 2004 c 198 s 10; 2007 c 147 art 9 s 18-20; art 10 s 15; 1Sp2010 c 1 art 20 s 15; 2013 c 62 s 4; 2016 c 158 art 1 s 55; 2018 c 170 s 2; 2018 c 182 art 2 s 2; 2020 c 115 art 4 s 38-45; 2021 c 30 art 17 s 4; 2022 c 58 s 44-51; 2023 c 70 art 4 s 44; 2024 c 127 art 59 s 31; 2025 c 38 art 2 s 6; art 3 s 8-12; art 4 s 4; art 5 s 4; 1Sp2025 c 9 art 9 s 6
+
+
+
+
+NOTE: The amendment to subdivision 2 by Laws 2021, chapter 30, article 17, section 4, is effective upon federal approval. The commissioner of human services shall notify the revisor of statutes when federal approval is obtained. Laws 2021, chapter 30, article 17, section 114.
+
+SOURCE 2: Minnesota Statutes § 144A.135, Transfer and discharge appeals | https://www.revisor.mn.gov/statutes/cite/144A.135 | source date: History line begins 1989 c 282 art 3 s 26 | retrieved: 2026-11-28
+144A.135 TRANSFER AND DISCHARGE APPEALS.
+
+
+(a) The commissioner shall establish a mechanism for hearing appeals on transfers and discharges of residents by nursing homes or boarding care homes licensed by the commissioner. The commissioner may adopt permanent rules to implement this section.
+
+
+(b) Until federal regulations are adopted under sections 1819(f)(3) and 1919(f)(3) of the Social Security Act that govern appeals of the discharges or transfers of residents from nursing homes and boarding care homes certified for participation in Medicare or medical assistance, the commissioner shall provide hearings under sections 14.57 to 14.62 and the rules adopted by the Court of Administrative Hearings governing contested cases. To appeal the discharge or transfer, or notification of an intended discharge or transfer, a resident or the resident's representative must request a hearing in writing no later than 30 days after receiving written notice, which conforms to state and federal law, of the intended discharge or transfer.
+
+
+(c) Hearings under this section shall be held no later than 14 days after receipt of the request for hearing, unless impractical to do so or unless the parties agree otherwise. Hearings shall be held in the facility in which the resident resides, unless impractical to do so or unless the parties agree otherwise.
+
+
+(d) A resident who timely appeals a notice of discharge or transfer, and who resides in a certified nursing home or boarding care home, may not be discharged or transferred by the nursing home or boarding care home until resolution of the appeal. The commissioner can order the facility to readmit the resident if the discharge or transfer was in violation of state or federal law. If the resident is required to be hospitalized for medical necessity before resolution of the appeal, the facility shall readmit the resident unless the resident's attending physician, advanced practice registered nurse, or physician assistant documents, in writing, why the resident's specific health care needs cannot be met in the facility.
+
+
+(e) The commissioner and Court of Administrative Hearings shall conduct the hearings in compliance with the federal regulations described in paragraph (b), when adopted.
+
+
+(f) Nothing in this section limits the right of a resident or the resident's representative to request or receive assistance from the Office of Ombudsman for Long-Term Care or the Office of Health Facility Complaints with respect to an intended discharge or transfer.
+
+
+(g) A person required to inform a health care facility of the person's status as a registered predatory offender under section 243.166, subdivision 4b, who knowingly fails to do so shall be deemed to have endangered the safety of individuals in the facility under Code of Federal Regulations, chapter 42, section 483.12. Notwithstanding paragraph (d), any appeal of the notice and discharge shall not constitute a stay of the discharge.
+
+
+
+
+
+
+History:
+
+
+1989 c 282 art 3 s 26; 1991 c 286 s 7; 2005 c 136 art 3 s 2; 2007 c 147 art 7 s 75; 2020 c 115 art 4 s 56; 2022 c 58 s 62; 2025 c 39 art 2 s 68
+
+SOURCE 3: Minnesota Office of Ombudsman for Long-Term Care | https://mn.gov/ooltc/ | source date: page modified 2025-04-21 (meta dc.modified) | retrieved: 2026-11-28
+skip to content
+
+
+
+
+
+
+
+
+
+
+
+
+Office of Ombudsman for Long-Term Care
+
+
+
+
+
+
+
+
+
+
+State of Minnesota
+
+
+
+
+
+
+
+Search:
+
+
+
+submit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Working to preserve individual rights for all who live in a long-term care community.
+
+
+We empower, educate, and advocate for you.
+
+
+
+
+
+
+
+
+
+
+
+The Office of Ombudsman for Long-Term Care (OOLTC) is an independent state agency that serves people needing or receiving long-term care through complaint investigation, advocacy, and education.
+
+
+
+
+
+
+
+
+Keep up to date with our Office
+
+
+Subscribe to our Newsletter to keep up to date and learn about what our Office is up to.
+
+
+
+
+
+
+Policy and Legislation
+
+
+Learn more about the policies we've helped to develop
+
+
+
+
+
+
+
+
+
+
+
+
+
+EMPOWER
+
+
+We empower residents to self advocate and to understand their rights by working with them, their families, health care and service providers, and public agencies to ensure their health, safety, and well-being.
+
+
+
+
+
+
+
+
+
+
+EDUCATE
+
+
+We educate residents about their rights, by offering free services to anyone seeking information about long-term care.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ADVOCATE
+
+
+We advocate for residents, to ensure needs are met and dignity upheld. The office also works to improve the health care and social services delivery systems through changes in state and federal law and policy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The Office of Ombudsman for Long-Term Care
+
+
+
+540 Cedar Street
+
+
+
+St. Paul, MN 55101
+
+
+
+1-800-657-3591
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Back to Top
+
+SOURCE 4: Minnesota Department of Health — Nursing Home Discharge Appeals | https://www.health.state.mn.us/facilities/regulation/ohfc/appeals/nhda.html | source date: Last Updated: 06/25/2026 (page footer) | retrieved: 2026-11-28
+Topic Menu
+
+Office of Health Facility Complaints
+
+OHFC Home
+
+Related Sites
+
+Health Care Facilities, Providers and Insurance
+
+Office of Health Facility Complaints
+
+OHFC Home
+
+Related Sites
+
+Health Care Facilities, Providers and Insurance
+
+ Contact Info
+
+Health Regulation Division
+
+651-201-4200
+
+health.hrd.appeals@state.mn.us
+
+Contact Info
+
+Health Regulation Division
+
+651-201-4200
+
+health.hrd.appeals@state.mn.us
+
+Nursing Home Discharge Appeals
+
+Residents of nursing homes who are being involuntarily transferred or discharged by the facility have the right to appeal the proposed transfer or discharge.  To appeal, please complete and submit an HRD Appeals Submission Form:
+
+Choose “Vulnerable Adult” from the Appellant Identity dropdown
+
+Provide the vulnerable adult’s name and contact information. If another person is a better option for contact, provide their contact information instead.
+
+If an ombudsman, case manager, or attorney is assisting in the appeal, answer “Yes” to the question “Are you represented by an attorney?” Provide their name and contact information in the fields that appear.
+
+Choose “Nursing Home Discharge Appeal” from the Type of Appeal dropdown
+
+Provide the name of the assisted living facility.
+
+Provide a brief summary of the reason for your appeal.
+
+Please attach a copy of the discharge notice issued by the facility, if available.
+
+The appeal must be submitted within 30 days of receiving the discharge/transfer notice.
+
+ What does the appeal process look like?
+
+Upon receiving the appeal, MDH will coordinate with the facility and appellant on potential prehearing and/or hearing dates. MDH will then submit a docket request to the Court of Administrative Hearings. Upon receiving either a prehearing or hearing date from the Court, MDH will issue a notice providing the details of the hearing, including time, date, location, and how to attend remotely; a summary of the matter being contested; and additional information about the process.
+
+The hearing must be held within 14 calendar days at the facility where the appellant lives unless it would be impractical or the parties agree otherwise.
+
+While the appeal is pending, the appellant may not be discharged from the facility.
+
+Tags
+
+regulation
+
+Last Updated: 11/18/2026
+
+SOURCE 5: Minnesota Rules 9505.0415, Long-term care facilities; leave days | https://www.revisor.mn.gov/rules/9505.0415/ | source date: Published Electronically: October 21, 2014 | retrieved: 2026-11-28
+9505.0415 LONG-TERM CARE FACILITIES; LEAVE DAYS.
+
+
+
+§
+
+Subpart 1.
+
+
+Definitions.
+
+
+For the purpose of this part, the following terms have the meanings given them.
+
+
+
+§
+
+A.
+
+
+ "Certified bed" means a bed certified under title XIX of the Social Security Act.
+
+
+
+
+
+§
+
+B.
+
+
+ "Discharge" or "discharged" refers to the status of a recipient as defined in part 9549.0051, subpart 7, as published in the State Register, December 1, 1986, volume 11, number 22.
+
+
+
+
+
+§
+
+C.
+
+
+ "Hospital leave" means the status of a recipient who has been transferred from the long-term care facility to an inpatient hospital for medically necessary health care, with the expectation the recipient will return to the long-term care facility.
+
+
+
+
+
+§
+
+D.
+
+
+ "Leave day" means any calendar day during which the recipient leaves the facility and is absent overnight, and all subsequent, consecutive calendar days. An overnight absence from the facility of less than 23 hours does not constitute a leave day. Nevertheless, if the recipient is absent from the facility to participate in active programming of the facility under the personal direction and observation of facility staff, the day shall not be considered a leave day regardless of the number of hours of the recipient's absence. For purposes of this item, "calendar day" means the 24 hour period ending at midnight.
+
+
+
+
+
+§
+
+E.
+
+
+ "Reserved bed" means the same bed that a recipient occupied before leaving the facility for hospital leave or therapeutic leave or an appropriately certified bed if the recipient's physical condition upon returning to the facility prohibits access to the bed he or she occupied before the leave.
+
+
+
+
+
+§
+
+F.
+
+
+ "Therapeutic leave" means the absence of a recipient from a long-term care facility, with the expectation of the recipient's return to the facility, to a camp meeting applicable licensure requirements of the Minnesota Department of Health, a residential setting other than a long-term care facility, a hospital, or other entity eligible to receive federal, state, or county funds to maintain a recipient. Leave for a home visit or a vacation is a therapeutic leave.
+
+
+
+
+
+
+
+§
+
+Subp. 2.
+
+
+Payment for leave days.
+
+
+ A leave day is eligible for payment under medical assistance, subject to the limitations of this part. The leave day must be for hospital leave or therapeutic leave of a recipient who has not been discharged from the long-term care facility. A reserved bed must be held for a recipient on hospital leave or therapeutic leave.
+
+
+
+
+
+§
+
+Subp. 3.
+
+
+Hospital leave.
+
+
+A hospital leave for which a leave day is claimed must comply with the conditions in items A to C if the leave day is to be eligible for medical assistance payment.
+
+
+
+§
+
+A.
+
+
+ The recipient must have been transferred from the long-term care facility to a hospital.
+
+
+
+
+
+§
+
+B.
+
+
+ The recipient's health record must document the date the recipient was transferred to the hospital and the date the recipient returned to the long-term care facility.
+
+
+
+
+
+§
+
+C.
+
+
+ The leave days must be reported on the invoice submitted by the long-term care facility.
+
+
+
+
+
+
+
+§
+
+Subp. 4.
+
+
+Therapeutic leave.
+
+
+A therapeutic leave for which a leave day is claimed must comply with the conditions in items A and B if the leave day is to be eligible for payment under medical assistance.
+
+
+
+§
+
+A.
+
+
+ The recipient's health care record must document the date and the time the recipient leaves the long-term care facility and the date and the time of return.
+
+
+
+
+
+§
+
+B.
+
+
+ The leave days must be reported on the invoice submitted by the long-term care facility.
+
+
+
+
+
+
+
+§
+
+Subp. 5.
+
+
+Payment limitations on number of leave days for hospital leave.
+
+
+Payment for leave days for hospital leave is limited to 18 consecutive days for each separate and distinct episode of medically necessary hospitalization. For the purpose of this part "separate and distinct episode" means:
+
+
+
+§
+
+A.
+
+
+ the occurrence of a health condition that is an emergency;
+
+
+
+
+
+§
+
+B.
+
+
+ the occurrence of a health condition which requires inpatient hospital services but is not related to a condition which required previous hospitalization and was not evident at the time of discharge; or
+
+
+
+
+
+§
+
+C.
+
+
+ the repeat occurrence of a health condition that is not an emergency but requires inpatient hospitalization at least two calendar days after the recipient's most recent discharge from a hospital.
+
+
+
+
+
+
+
+§
+
+Subp. 6.
+
+
+Payment limitations on number of leave days for therapeutic leave.
+
+
+Payment for leave days for therapeutic leave is limited to the number of days as in items A to D:
+
+
+
+§
+
+A.
+
+
+ recipients receiving skilled nursing facility services as provided in part 9505.0420, subpart 2, 36 leave days per calendar year;
+
+
+
+
+
+§
+
+B.
+
+
+ recipients receiving intermediate care facility services as provided in part 9505.0420, subpart 3, 36 leave days per calendar year;
+
+
+
+
+
+§
+
+C.
+
+
+ recipients receiving intermediate care facility, developmentally disabled services as provided in part 9505.0420, subpart 4, 72 leave days per calendar year. In addition to the number of leave days specified in this item, the commissioner may approve up to 48 additional therapeutic leave days per calendar year for family activities if:
+
+
+
+§
+
+(1)
+
+
+ the recipient or recipient's legal representative requests additional therapeutic leave days;
+
+
+
+
+
+§
+
+(2)
+
+
+ the case manager recommends that the leave is consistent with the goals of the recipient's individual service plan as defined in Minnesota Statutes, section 256B.092, subdivision 1b;
+
+
+
+
+
+§
+
+(3)
+
+
+ an evaluation by the case manager shows that home and community-based services and other alternative services are not feasible; and
+
+
+
+
+
+§
+
+(4)
+
+
+ all other state and federal requirements relating to therapeutic leave days are met;
+
+
+
+
+
+
+
+§
+
+D.
+
+
+ recipients residing in a long-term care facility that has a license to provide services for persons with physical disabilities as provided in parts 9570.2000 to 9570.3400, 72 leave days per calendar year.
+
+
+
+
+
+
+
+§
+
+Subp. 7.
+
+
+Payment limitation on billing for leave days.
+
+
+Payment for leave days for hospital leave and therapeutic leave shall be subject to the limitation as in items A to C. For purposes of this subpart, a reserved bed is not a vacant bed when determining occupancy rates and eligibility for payment of a leave day.
+
+
+
+§
+
+A.
+
+
+ Long-term care facilities with 25 or more licensed beds shall not receive payment for leave days in a month for which the average occupancy rate of licensed beds is 93 percent or less.
+
+
+
+
+
+§
+
+B.
+
+
+ Long-term care facilities with 24 or fewer licensed beds shall not receive payment for leave days if a licensed bed has been vacant for 60 consecutive days prior to the first leave day of a hospital leave or therapeutic leave.
+
+
+
+
+
+§
+
+C.
+
+
+ The long-term care facility charge for a leave day for a recipient must not exceed the charge for a leave day for a private paying resident. "Private paying resident" has the meaning given in Minnesota Statutes, section 256B.441, subdivision 32.
+
+
+
+
+
+
+
+
+
+
+Statutory Authority:
+
+
+MS s 256B.04
+
+
+
+
+
+
+History:
+
+
+12 SR 624; 19 SR 1227; L 2005 c 56 s 2; L 2014 c 262 art 5 s 6
+
+
+
+
+
+
+Published Electronically:
+
+
+ October 21, 2014
+
+SOURCE 6: Minnesota Rules 4658.0465, Transfer, discharge, and death | https://www.revisor.mn.gov/rules/4658.0465/ | source date: Published Electronically: October 11, 2007 | retrieved: 2026-11-28
+4658.0465 TRANSFER, DISCHARGE, AND DEATH.
+
+
+
+§
+
+Subpart 1.
+
+
+Discharge summary at death.
+
+
+When a resident dies, the nursing home must compile a discharge summary that includes the date, time, and cause of death.
+
+
+
+
+
+§
+
+Subp. 2.
+
+
+Other discharge.
+
+
+When a resident is transferred or discharged for any reason other than death, the nursing home must compile a discharge summary that includes the date and time of transfer or discharge, reason for transfer or discharge, transfer or discharge diagnoses, and condition.
+
+
+
+
+
+§
+
+Subp. 3.
+
+
+Transfer or discharge to another facility.
+
+
+When a resident is transferred or discharged to another health care facility or program, the nursing home must send the discharge summary compiled according to subpart 2, and pertinent information about the resident's immediate care and sufficient information to ensure continuity of care prior to or at the time of the transfer or discharge to the other health care facility or program. Additional information not necessary for the resident's immediate care may be sent to the new health care facility or program at the time of or after the transfer or discharge.
+
+
+
+
+
+
+
+
+Statutory Authority:
+
+
+MS s 144A.04; 144A.08; 256B.431
+
+
+
+
+
+
+History:
+
+
+20 SR 303
+
+
+
+
+
+
+Published Electronically:
+
+
+ October 11, 2007
+

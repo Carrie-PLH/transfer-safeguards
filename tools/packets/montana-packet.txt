@@ -1,11 +1,11 @@
 FIRST LINE OF PACKET — if you cannot see this sentence, output only the words PACKET TRUNCATED
 
 STATE: montana
-ASSEMBLED: 2026-10-31
+ASSEMBLED: 2026-11-28
 
 CAPTURE NOTES:
 - Captured by tools/capture.py from tools/recipes/montana.json (recipe digest a5a560fac077). Each source below was fetched and extracted by its recorded recipe; re-running that recipe against an unchanged source reproduces this text.
-- Capture code 477c3bd21497 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
+- Capture code 20e47bd89c95 (sha256 over tools/capture.py and tools/capture-core.py as they ran; FA-D-20261025-05).
 - SOURCE 1: transport curl; extractor html-text; scope body; filters trim-lines, collapse-blank-runs.
   Plain curl with a browser user-agent reaches this cleanly, HTTP 200. body: the page has no main/#content/article landmark; the whole document is one short section page and body carries only the MCA site chrome (Toggle navigation, MCA Contents, Search, Help, Part/Previous/Next Section links) plus the section text and its own disclaimer, matching the standing packet's body closely.
 - SOURCE 2: transport chrome; extractor none; filters trim-lines, collapse-blank-runs (fetched by the session reader and supplied).
@@ -19,7 +19,7 @@ CAPTURE NOTES:
 - SOURCE 6: transport chrome; extractor none; filters trim-lines, collapse-blank-runs (fetched by the session reader and supplied).
   Located via rules.mt.gov's own search for 'bed hold' (first result, exact title match, of 1000 loosely-ranked hits) while deepening the state's baseline page, which had recorded any DPHHS Medicaid bed-hold provision as pending. Same platform and same reasoning as sources 2-4: rules.mt.gov serves no rule text to curl (confirmed 2026-09-26, HTTP 200 but an empty application shell); the trailing UUID is an application-level identifier per PROVENANCE.md, not a stable citation, and a broken link is capture drift to re-establish via the site's search, not evidence of withdrawal. Read with get_page_text, extractor none, verified byte-identical across two independent navigations 2026-09-26. Global site footer trimmed from the supplied text, as with sources 2-4. The rule states no fixed day count for a hospital-absence bed-hold at all -- payment continues only while the facility is full with a waiting list and the department has given written approval, with no outer day limit stated -- and a separate, explicit cap (72 consecutive hours per absence, 24 days per rate year) for therapeutic home visits, a different kind of absence from hospitalization. This is Montana's Medicaid bed-hold policy as published, not a hospitalization day-count comparable to the fixed figures other states publish.
 
-SOURCE 1: MCA 50-5-1104 — Rights of long-term care facility residents | https://leg.mt.gov/bills/mca/title_0500/chapter_0050/part_0110/section_0040/0500-0050-0110-0040.html | source date: Montana Code Annotated 2025 (last amended Sec. 9, Ch. 12, L. 2023) | retrieved: 2026-10-31
+SOURCE 1: MCA 50-5-1104 — Rights of long-term care facility residents | https://leg.mt.gov/bills/mca/title_0500/chapter_0050/part_0110/section_0040/0500-0050-0110-0040.html | source date: Montana Code Annotated 2025 (last amended Sec. 9, Ch. 12, L. 2023) | retrieved: 2026-11-28
 Toggle navigation
 
 MCA Contents
@@ -92,7 +92,7 @@ Disclaimer: The Internet version of the
  Montana Code Annotated is provided as a research tool to users of the Code. In case of
  inconsistencies resulting from omissions or other errors, the printed version will prevail.
 
-SOURCE 2: 37.106.601, Minimum Standards for a Skilled and Skilled/Intermediate Care Facility: General Requirements | https://rules.mt.gov/browse/collections/aec52c46-128e-4279-9068-8af5d5432d74/policies/8d6002f2-7e61-46b9-a8d1-d2915232080b | source date: Effective 09/24/2022 - Present | retrieved: 2026-10-31
+SOURCE 2: 37.106.601, Minimum Standards for a Skilled and Skilled/Intermediate Care Facility: General Requirements | https://rules.mt.gov/browse/collections/aec52c46-128e-4279-9068-8af5d5432d74/policies/8d6002f2-7e61-46b9-a8d1-d2915232080b | source date: Effective 09/24/2022 - Present | retrieved: 2026-11-28
 Skip to main content
 
 Back
@@ -103,6 +103,7 @@ Effective
 
 View in PDF
 NEW
+37.106.601 MINIMUM STANDARDS FOR A SKILLED AND SKILLED/ INTERMEDIATE CARE FACILITY: GENERAL REQUIREMENTS
 37.106.601 MINIMUM STANDARDS FOR A SKILLED AND SKILLED/ INTERMEDIATE CARE FACILITY: GENERAL
 
 REQUIREMENTS
@@ -133,7 +134,7 @@ NEW, 1980 MAR p. 1587, Eff. 6/13/80; TRANS, from DHES, 2002 MAR p. 185; AMD, 202
 
 1876, Eff. 9/24/22.
 
-SOURCE 3: 37.5.105, Nursing Facility Related Cases: Applicable Hearing Procedures | https://rules.mt.gov/browse/collections/aec52c46-128e-4279-9068-8af5d5432d74/policies/adebcd91-e84e-42fa-a58a-711b9e4e9514 | source date: Effective 06/30/2000 - Present | retrieved: 2026-10-31
+SOURCE 3: 37.5.105, Nursing Facility Related Cases: Applicable Hearing Procedures | https://rules.mt.gov/browse/collections/aec52c46-128e-4279-9068-8af5d5432d74/policies/adebcd91-e84e-42fa-a58a-711b9e4e9514 | source date: Effective 06/30/2000 - Present | retrieved: 2026-11-28
 Skip to main content
 
 Back
@@ -217,7 +218,7 @@ History:
 
 NEW, 2000 MAR p. 1653, Eff. 6/30/00.
 
-SOURCE 4: 37.5.307, Opportunity for Hearing | https://rules.mt.gov/browse/collections/aec52c46-128e-4279-9068-8af5d5432d74/policies/71e66051-684a-4882-b57b-5ff6c1491f68 | source date: Effective 03/27/2015 - Present | retrieved: 2026-10-31
+SOURCE 4: 37.5.307, Opportunity for Hearing | https://rules.mt.gov/browse/collections/aec52c46-128e-4279-9068-8af5d5432d74/policies/71e66051-684a-4882-b57b-5ff6c1491f68 | source date: Effective 03/27/2015 - Present | retrieved: 2026-11-28
 Skip to main content
 
 Back
@@ -437,7 +438,7 @@ p. 1301, Eff. 7/1/99; TRANS & AMD, from SRS, 2000 MAR p. 1653, Eff. 6/30/00; AMD
 
 Eff. 1/12/07; AMD, 2007 MAR p. 2132, Eff. 12/21/07; AMD, 2015 MAR p. 306, Eff. 3/27/15.
 
-SOURCE 5: Long-Term Care Ombudsman | https://dphhs.mt.gov/sltc/aging/longtermcareombudsman/ | source date: none stated on page | retrieved: 2026-10-31
+SOURCE 5: Long-Term Care Ombudsman | https://dphhs.mt.gov/sltc/aging/longtermcareombudsman/ | source date: none stated on page | retrieved: 2026-11-28
 Skip to main content
 
 Services
@@ -868,7 +869,7 @@ PRIVACY & SECURITY
 
 ACCESSIBILITY
 
-SOURCE 6: 37.40.338, Bed Hold Payments | https://rules.mt.gov/browse/collections/aec52c46-128e-4279-9068-8af5d5432d74/policies/cad14ad9-fc5b-4382-9f22-9659b92adef9 | source date: Effective 02/11/2000 - Present | retrieved: 2026-10-31
+SOURCE 6: 37.40.338, Bed Hold Payments | https://rules.mt.gov/browse/collections/aec52c46-128e-4279-9068-8af5d5432d74/policies/cad14ad9-fc5b-4382-9f22-9659b92adef9 | source date: Effective 02/11/2000 - Present | retrieved: 2026-11-28
 Skip to main content
 
 Back

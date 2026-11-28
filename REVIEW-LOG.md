@@ -2286,3 +2286,80 @@ phrase "opens in a new tab".
 
 Gate: all checks pass, no reviewer placeholders — a checked-date move is not a
 content change and needs no review statement. Not deployed.
+
+## 2026-11-28 — nightly review: michigan, minnesota, mississippi, missouri, montana (scheduled)
+
+Cursor at michigan. Portfolio routine's per-collection budget is 5 (wider
+than this skill's own suggested 3), so all 5 were taken in one visit rather
+than 3. RR recipe-exception check run first: 51 state pages (`states/README.md`
+excluded), 60 recipe files — every published state page already has a
+recipe, so the Room & Recourse recipe exception (building missing recipes)
+does not apply; reviewed normally.
+
+- michigan: CONFIRMED. Recipe capture (digest 508f3660fd67), 4 sources, zero
+  failures md + html. Retained unchanged since 2026-09-13 (hash
+  bb9c7d582cde5789), promoted. Checked date -> 2026-11-28.
+- minnesota: DRIFT. Recipe capture (digest 58989314ea0a), 6 sources; source 3
+  (mn.gov/ooltc/, the recipe's documented `chrome` transport) fetched through
+  the Claude Browser pane and supplied, matching the standing packet's
+  substantive text with less surrounding navigation markup trimmed. Checker
+  failed 2 quotations on both pages: the § 144A.135(b) span ("...rules
+  adopted by the Office of Administrative Hearings governing contested
+  cases") and the MDH page's "Last Updated: 06/25/2026" footer date (now
+  11/18/2026). Confirmed independently via a live Claude Browser pane fetch
+  of revisor.mn.gov: § 144A.135's version list now shows "2026 144A.135
+  Revisor Instruction 2025 c 39 art 2 s 68", and the statute text itself now
+  reads "Court of Administrative Hearings" throughout — the same phrase the
+  page's own editorial note (line 37) already quotes from the MDH appeals
+  page and calls "not reconciled" against the statute's then-current
+  wording. The two sources have evidently been reconciled by a legislative
+  rename, not by an error in either source. Retained with result drift (hash
+  04647c6027630923, not promoted); page not touched; checked date untouched.
+  Queue: FA-Q-20261128-01 opened (drift).
+- mississippi: UNREACHABLE (partial), worse than the prior pass. Recipe
+  capture lost 6 of 7 sources. Sources 1 and 2
+  (msdh.ms.gov/page/resources/119.pdf, the MSDH Chapter 45 PDF) now return a
+  clean HTTP 404 by both curl and an independent Claude Browser pane fetch —
+  a change from 2026-10-29, when the same URL answered a HEAD request with
+  200 while every GET reset the connection; the document appears to have
+  moved or been withdrawn rather than merely being hard to fetch tonight.
+  Sources 3, 5, 6 and 7 (two medicaid.ms.gov Title 23 PDFs, each cited
+  twice) timed out at 180 seconds on every curl attempt; a Claude Browser
+  pane fetch of the Part 207 PDF confirmed the same host-side cause
+  independently — Cloudflare's own 524 ("A timeout occurred"), the origin
+  server not responding, not a block on this fetcher. This is the second
+  consecutive unreachable pass for medicaid.ms.gov (also 2026-10-29); one
+  more opens unreachable-repeated on its own. Source 4
+  (mdhs.ms.gov/ombudsman/) captured cleanly. No capture retained (1 of 7
+  sources), checked date untouched, page not modified. Queue: FA-Q-20261128-02
+  opened (untraceable, for the msdh.ms.gov 404 only — the medicaid.ms.gov
+  timeouts are logged here, not yet queued).
+- missouri: CONFIRMED. Recipe capture (digest 9d0acc95d4b4), 3 sources, zero
+  failures md + html. Retained a changed body (hash 60c3b42c64f20202),
+  promoted — only a harmless reflow of unrelated page furniture on the DHSS
+  ombudsman page (source 2); no quoted span moved. Checked date -> 2026-11-28.
+- montana: CONFIRMED. Recipe capture (digest a5a560fac077), 6 sources;
+  sources 2, 3, 4 and 6 (rules.mt.gov permalinks, the recipe's documented
+  `chrome` transport — the platform serves no rule text to curl) fetched
+  through the Claude Browser pane's `get_page_text`, trimmed of the
+  platform's global footer per the recipe's own convention, and supplied.
+  All four matched the recipe's recorded text exactly. Zero failures md +
+  html. Retained a changed body (hash 1a5a025522cc9598), promoted — sources
+  2-4 and 6 differ from the standing packet only in markup-to-text
+  whitespace, not wording. Checked date -> 2026-11-28.
+
+Cursor advanced: michigan -> nebraska (past montana, the fifth selected
+unit — unreachable and drift pages advance the cursor the same as confirmed
+ones).
+
+sync-checked-dates.py: 4 derived dates corrected (table + json; missouri,
+montana — michigan's and minnesota's/mississippi's non-dates were handled
+per-state as each was retained). build-status.py: baseline 51/51, full
+50/51 (pre-existing Hawaii backfill gap, unaffected by this pass).
+check-live.py: 5 pages checked, nothing loaded from any other host.
+
+Queue entries opened this pass (field-assembly-standard, committed
+separately): FA-Q-20261128-01 (rr, minnesota, drift), FA-Q-20261128-02 (rr,
+mississippi, untraceable).
+
+Gate: not run; not deployed (scheduled pass).
